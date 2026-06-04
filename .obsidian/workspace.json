@@ -22,22 +22,6 @@
             }
           }
         ]
-      },
-      {
-        "id": "020f61473b749d99",
-        "type": "tabs",
-        "children": [
-          {
-            "id": "f1bc601ef3232580",
-            "type": "leaf",
-            "state": {
-              "type": "graph",
-              "state": {},
-              "icon": "lucide-git-fork",
-              "title": "그래프 뷰"
-            }
-          }
-        ]
       }
     ],
     "direction": "vertical"
@@ -196,12 +180,14 @@
       "daily-notes:오늘의 일일 노트 열기": false,
       "templates:템플릿 삽입": false,
       "command-palette:명령어 팔레트 열기": false,
-      "bases:새 베이스 생성하기": false
+      "bases:새 베이스 생성하기": false,
+      "obsidian-git:Open Git source control": false
     }
   },
   "active": "204cd7c096a22602",
   "lastOpenFiles": [
-    "README.md",
-    "환영합니다!.md"
+    "무제.base",
+    "환영합니다!.md",
+    "README.md"
   ]
 }
