@@ -4,19 +4,17 @@
     "type": "split",
     "children": [
       {
-        "id": "bfc68006d5728502",
+        "id": "abf2d7431c708fc7",
         "type": "tabs",
         "children": [
           {
-            "id": "d0729793db091329",
+            "id": "a7e96ba70b62b3c8",
             "type": "leaf",
             "state": {
-              "type": "pdf",
-              "state": {
-                "file": "정보처리기사/02_필수코드57문제.pdf"
-              },
-              "icon": "lucide-file-text",
-              "title": "02_필수코드57문제"
+              "type": "empty",
+              "state": {},
+              "icon": "lucide-file",
+              "title": "새 탭"
             }
           }
         ]
@@ -192,11 +190,12 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "d0729793db091329",
+  "active": "a7e96ba70b62b3c8",
   "lastOpenFiles": [
+    "환영합니다!.md",
+    "정보처리기사/02_필수코드57문제.pdf",
     "정보처리기사/01_필수계산41문제.pdf",
     "README.md",
-    "환영합니다!.md",
     "English",
     "새 폴더",
     "정보처리기사/04_키워드찾기259문제.pdf",
@@ -204,8 +203,6 @@
     "정보처리기사/2024년_2회.pdf",
     "정보처리기사/2024년_1회.pdf",
     "정보처리기사/2023년_1회.pdf",
-    "정보처리기사/2023년_2회.pdf",
-    "정보처리기사/2023년_3회.pdf",
-    "정보처리기사/05_종류순서114문제.pdf"
+    "정보처리기사/2023년_2회.pdf"
   ]
 }
