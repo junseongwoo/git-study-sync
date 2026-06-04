@@ -11,14 +11,12 @@
             "id": "d0729793db091329",
             "type": "leaf",
             "state": {
-              "type": "markdown",
+              "type": "pdf",
               "state": {
-                "file": "환영합니다!.md",
-                "mode": "source",
-                "source": false
+                "file": "정보처리기사/02_필수코드57문제.pdf"
               },
-              "icon": "lucide-file",
-              "title": "환영합니다!"
+              "icon": "lucide-file-text",
+              "title": "02_필수코드57문제"
             }
           }
         ]
@@ -196,8 +194,18 @@
   },
   "active": "d0729793db091329",
   "lastOpenFiles": [
-    "환영합니다!.md",
+    "정보처리기사/01_필수계산41문제.pdf",
     "README.md",
-    "무제.base"
+    "환영합니다!.md",
+    "English",
+    "새 폴더",
+    "정보처리기사/04_키워드찾기259문제.pdf",
+    "정보처리기사/2024년_3회.pdf",
+    "정보처리기사/2024년_2회.pdf",
+    "정보처리기사/2024년_1회.pdf",
+    "정보처리기사/2023년_1회.pdf",
+    "정보처리기사/2023년_2회.pdf",
+    "정보처리기사/2023년_3회.pdf",
+    "정보처리기사/05_종류순서114문제.pdf"
   ]
 }
