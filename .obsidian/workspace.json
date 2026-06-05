@@ -11,10 +11,14 @@
             "id": "a7e96ba70b62b3c8",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {},
+              "type": "markdown",
+              "state": {
+                "file": "Project/uLED/README.md",
+                "mode": "source",
+                "source": false
+              },
               "icon": "lucide-file",
-              "title": "새 탭"
+              "title": "README"
             }
           }
         ]
@@ -192,6 +196,9 @@
   },
   "active": "a7e96ba70b62b3c8",
   "lastOpenFiles": [
+    "Project/uLED/README.md",
+    "Project/uLED",
+    "Project",
     "환영합니다!.md",
     "정보처리기사/02_필수코드57문제.pdf",
     "정보처리기사/01_필수계산41문제.pdf",
@@ -201,8 +208,6 @@
     "정보처리기사/04_키워드찾기259문제.pdf",
     "정보처리기사/2024년_3회.pdf",
     "정보처리기사/2024년_2회.pdf",
-    "정보처리기사/2024년_1회.pdf",
-    "정보처리기사/2023년_1회.pdf",
-    "정보처리기사/2023년_2회.pdf"
+    "정보처리기사/2024년_1회.pdf"
   ]
 }
