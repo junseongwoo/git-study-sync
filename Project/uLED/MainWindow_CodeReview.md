@@ -1,6 +1,7 @@
 # MainWindow + MainWindowViewModel 코드 리뷰
 
-> **파일 범위**: `MainWindow.xaml` / `MainWindow.xaml.cs` / `MainWindowViewModel.cs` (3,822줄)
+> **파일 범위**: `MainWindow.xaml` / `MainWindow.xaml.cs` / `MainWindowViewModel.cs`
+> 
 > **리뷰 목적**: 핵심 목적·기능, 함수/클래스 문서, 알고리즘 설명, 가정 및 제한 사항
 
 ---
