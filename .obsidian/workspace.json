@@ -41,12 +41,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "정보처리기사/0_일정.md",
+                "file": "Project/uLED/MainWindow_CodeReview.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "0_일정"
+              "title": "MainWindow_CodeReview"
             }
           }
         ],
@@ -227,6 +227,7 @@
   "lastOpenFiles": [
     "Project/uLED/uLedAoiConsole_프로젝트_분석.md",
     "정보처리기사/0_일정.md",
+    "Project/uLED/MainWindow_CodeReview.md",
     "Project/uLED/README.md",
     "Project/uLED",
     "Project",
