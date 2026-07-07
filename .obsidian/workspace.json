@@ -48,9 +48,23 @@
               "icon": "lucide-file",
               "title": "0_일정"
             }
+          },
+          {
+            "id": "6fce064f0461a199",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "CS/OS 공부.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "OS 공부"
+            }
           }
         ],
-        "currentTab": 2
+        "currentTab": 3
       }
     ],
     "direction": "vertical"
@@ -209,7 +223,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 649.5
+    "width": 336.5
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -223,8 +237,12 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "6ab1c6578c2926a1",
+  "active": "6fce064f0461a199",
   "lastOpenFiles": [
+    "무제.md",
+    "CS/OS 공부.md",
+    "CS",
+    "정보처리기사/0_일정.md",
     "전기기사/전기기기 요점정리.pdf",
     "전기기사/전기기사 전력공학 공식.pdf",
     "전기기사/전력공학 요약.pdf",
@@ -235,13 +253,10 @@
     "정보처리기사/무제",
     "Project/uLED/uLedAoiConsole_MainWindow_CodeReview.md",
     "English/OPIC/오픽 AL 스크립트.pdf",
-    "English/OPIC/오픽 AL 스크립.pdf",
-    "English/OPIC/오픽 AL 스크립트 공유_최종.pdf",
     "Project/uLED/uLedAoiConsole_RecipeWindow_CodeReview.md",
     "Project/uLED/README.md",
     "Project/uLED/uLedAoiConsole_프로젝트_분석.md",
     "Project/uLED/MainWindow_CodeReview.md",
-    "정보처리기사/0_일정.md",
     "환영합니다!.md",
     "README.md"
   ]
