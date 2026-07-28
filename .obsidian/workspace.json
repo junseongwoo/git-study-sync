@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Project/uLED/정규_Docs/표준맵사용검사-technical-manual.md",
+                "file": "Project/uLED/UI_Docs/RecipeWindow/Ca410/UserManual.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "표준맵사용검사-technical-manual"
+              "title": "UserManual"
             }
           }
         ]
@@ -196,33 +196,41 @@
   },
   "active": "a7e96ba70b62b3c8",
   "lastOpenFiles": [
+    "Project/uLED/UI_Docs/RecipeWindow/Aging/Analysis.md",
+    "Project/uLED/UI_Docs/RecipeWindow/Aging/DevNote.md",
+    "Project/uLED/UI_Docs/RecipeWindow/Aging/UserManual.md",
     "Project/uLED/README.md",
+    "Project/uLED/UI_Docs/RecipeWindow/WhiteDotInspection/UserManual.md",
+    "Project/uLED/UI_Docs/RecipeWindow/WhiteDotInspection/Analysis.md",
+    "Project/uLED/UI_Docs/RecipeWindow/WhiteDotInspection/DevNote.md",
+    "Project/uLED/UI_Docs/RecipeWindow/WhiteDotInspection",
+    "Project/uLED/UI_Docs/RecipeWindow/InspectionPatterns/UserManual.md",
+    "Project/uLED/UI_Docs/RecipeWindow/InspectionPatterns/Analysis.md",
+    "Project/uLED/UI_Docs/RecipeWindow/InspectionPatterns/DevNote.md",
+    "Project/uLED/UI_Docs/RecipeWindow/InspectionPatterns",
+    "Project/uLED/UI_Docs/RecipeWindow/Ca410/DevNote.md",
+    "Project/uLED/UI_Docs/RecipeWindow/Ca410/UserManual.md",
+    "Project/uLED/UI_Docs/RecipeWindow/Ca410/Analysis.md",
+    "Project/uLED/UI_Docs/RecipeWindow/Ca410",
+    "Project/uLED/UI_Docs/RecipeWindow/BasicSettings/DevNote.md",
+    "Project/uLED/UI_Docs/RecipeWindow/BasicSettings/UserManual.md",
+    "Project/uLED/UI_Docs/RecipeWindow/BasicSettings/Analysis.md",
+    "Project/uLED/UI_Docs/RecipeWindow/BasicSettings",
+    "Project/uLED/UI_Docs/RecipeWindow/Aging",
+    "Project/uLED/UI_Docs/MainWindow/DevNote.md",
+    "Project/uLED/UI_Docs/MainWindow/Analysis.md",
+    "Project/uLED/UI_Docs/RecipeWindow",
+    "Project/uLED/정규_Docs/표준맵사용검사-technical-manual.md",
+    "Project/uLED/UI_Docs/MainWindow",
+    "Project/uLED/UI_Docs",
+    "Project/uLED/분석_Docs/프로젝트-이해-커리큘럼-TestRunner-Camera.md",
+    "Project/uLED/분석_Docs/표준맵사용검사-분석.md",
+    "Project/uLED/분석_Docs/TestRunner-Camera-전체-코드분석.md",
     "Project/uLED/분석_Docs",
     "Project/uLED/무제.md",
-    "Project/uLED/정규_Docs/표준맵사용검사-technical-manual.md",
     "정보처리기사/0_일정.md",
     "CS/OS 공부.md",
     "Project/Memo App/MemoApp_WorkLog_Guide.md",
-    "Project/Memo App/MemoApp_Feature_UI_Guide.md",
-    "Project/Memo App/MemoApp_Daily_Schedule_Guide.md",
-    "Project/Memo App/MemoApp_Architecture_v2.md",
-    "Project/Memo App/MemoApp_Architecture.md",
-    "무제.md",
-    "무제 1.md",
-    "포트폴리오/포트폴리오_20260124.pdf",
-    "포트폴리오",
-    "Project/Memo App",
-    "CS",
-    "전기기사/전기기기 요점정리.pdf",
-    "전기기사/전기기사 전력공학 공식.pdf",
-    "전기기사/전력공학 요약.pdf",
-    "전기기사/정전계와 정자계의 대응관계.pdf",
-    "전기기사/회로_제어_전자기학_정리.pdf",
-    "Project/uLED/uLedAoiConsole_MainWindow_CodeReview.md",
-    "Project/uLED/uLedAoiConsole_RecipeWindow_CodeReview.md",
-    "Project/uLED/uLedAoiConsole_프로젝트_분석.md",
-    "Project/uLED/MainWindow_CodeReview.md",
-    "환영합니다!.md",
-    "README.md"
+    "포트폴리오/포트폴리오_20260124.pdf"
   ]
 }
