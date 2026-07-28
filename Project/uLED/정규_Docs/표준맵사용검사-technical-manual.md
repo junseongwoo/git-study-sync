@@ -522,16 +522,16 @@ StdMap=[similarity theta=-0.0012deg scale=0.999938 shift=(9.4,1.0) measured=(9.4
 
 ### 6.2 항목별 상세
 
-| 파라미터 | 기본값 | 설명 |
-|---|---|---|
-| `DisplayPixelObjectSearchRadius` | 10.0 | chain 확장 시 예측 위치에서 object를 찾는 탐색 반경(px). 검출 기반 dense map을 구축하는 경로에서만 사용 — 표준맵 고정배치에는 무관 |
-| `DisplayPixelPositionTolerancePx` | 1.5 | object 위치 허용 이탈량(px). **경로별 의미가 다르다** — 맵생성검사: 전역 fit 대비 기각 gate / 표준맵 검사: similarity trim(`max(1.0, tol)`) + deviated 통계(기각 없음). 하한 0.5 |
-| `DisplayPixelMapShiftMargin` | 30 | MatchShift 국소 격자 확장 칸 수 |
-| `DisplayPixelBackgroundFlattenEnabled` | true | 검출 전 white top-hat 배경 평탄화. 활성 시 threshold는 배경 위 상대 높이(권장 15~30)로 해석. 커널은 pitch에서 자동 산출(별도 파라미터 없음) |
-| `Threshold` / `ThresholdCandidates` | pattern별 검사 설정 | 검출 이진화 임계. 후보 여러 개면 각각 검출 후 채점 최고 결과 채택 |
-| `DisplayPixelBlobMin/MaxWidth/Height` | 1 / 1000 (px) | blob 검출 크기 필터. pattern별 검사 설정(`InspectionConfig.Blob*`)이 정본, recipe 전역값은 기본 주입 |
-| `StandardMapMaxSearchMarginPx` | Console 100 / verifier 300 | 자동정합 median offset 최대 탐색 마진(±px). 초과 시 `identity(margin-exceeded)` |
-| `RgbPhaseOffsets.GFromR/BFromR (Dx,Dy)` | 표준맵 생성 시 실측 권장값 | G/B 맵 파생 offset. 물리 관계라 셀과 무관한 상수 |
+| 파라미터                                    | 기본값                        | 설명                                                                                                                                       |
+| --------------------------------------- | -------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------- |
+| `DisplayPixelObjectSearchRadius`        | 10.0                       | chain 확장 시 예측 위치에서 object를 찾는 탐색 반경(px). 검출 기반 dense map을 구축하는 경로에서만 사용 — 표준맵 고정배치에는 무관                                                  |
+| `DisplayPixelPositionTolerancePx`       | 1.5                        | object 위치 허용 이탈량(px). **경로별 의미가 다르다** — 맵생성검사: 전역 fit 대비 기각 gate / 표준맵 검사: similarity trim(`max(1.0, tol)`) + deviated 통계(기각 없음). 하한 0.5 |
+| `DisplayPixelMapShiftMargin`            | 30                         | MatchShift 국소 격자 확장 칸 수                                                                                                                  |
+| `DisplayPixelBackgroundFlattenEnabled`  | true                       | 검출 전 white top-hat 배경 평탄화. 활성 시 threshold는 배경 위 상대 높이(권장 15~30)로 해석. 커널은 pitch에서 자동 산출(별도 파라미터 없음)                                       |
+| `Threshold` / `ThresholdCandidates`     | pattern별 검사 설정             | 검출 이진화 임계. 후보 여러 개면 각각 검출 후 채점 최고 결과 채택                                                                                                  |
+| `DisplayPixelBlobMin/MaxWidth/Height`   | 1 / 1000 (px)              | blob 검출 크기 필터. pattern별 검사 설정(`InspectionConfig.Blob*`)이 정본, recipe 전역값은 기본 주입                                                           |
+| `StandardMapMaxSearchMarginPx`          | Console 100 / verifier 300 | 자동정합 median offset 최대 탐색 마진(±px). 초과 시 `identity(margin-exceeded)`                                                                       |
+| `RgbPhaseOffsets.GFromR/BFromR (Dx,Dy)` | 표준맵 생성 시 실측 권장값            | G/B 맵 파생 offset. 물리 관계라 셀과 무관한 상수                                                                                                        |
 
 metadata 규약 (Console/IP/verifier 공통): `console.useStandardDenseMap`,
 `console.standardDenseMapPath`, `console.displayPixel*` 스칼라 키, `console.standardDenseMapDisabled`

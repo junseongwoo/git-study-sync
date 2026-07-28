@@ -13,21 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Project/uLED/uLedAoiConsole_프로젝트_분석.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "uLedAoiConsole_프로젝트_분석"
-            }
-          },
-          {
-            "id": "b8f265516415f6f4",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Project/uLED/Docs/표준맵사용검사-technical-manual.md",
+                "file": "Project/uLED/정규_Docs/표준맵사용검사-technical-manual.md",
                 "mode": "source",
                 "source": false
               },
@@ -35,8 +21,7 @@
               "title": "표준맵사용검사-technical-manual"
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -209,17 +194,19 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "b8f265516415f6f4",
+  "active": "a7e96ba70b62b3c8",
   "lastOpenFiles": [
+    "Project/uLED/README.md",
+    "Project/uLED/분석_Docs",
+    "Project/uLED/무제.md",
+    "Project/uLED/정규_Docs/표준맵사용검사-technical-manual.md",
     "정보처리기사/0_일정.md",
     "CS/OS 공부.md",
-    "Project/uLED/무제.md",
     "Project/Memo App/MemoApp_WorkLog_Guide.md",
     "Project/Memo App/MemoApp_Feature_UI_Guide.md",
     "Project/Memo App/MemoApp_Daily_Schedule_Guide.md",
     "Project/Memo App/MemoApp_Architecture_v2.md",
     "Project/Memo App/MemoApp_Architecture.md",
-    "Project/uLED/README.md",
     "무제.md",
     "무제 1.md",
     "포트폴리오/포트폴리오_20260124.pdf",
@@ -231,7 +218,6 @@
     "전기기사/전력공학 요약.pdf",
     "전기기사/정전계와 정자계의 대응관계.pdf",
     "전기기사/회로_제어_전자기학_정리.pdf",
-    "회로_제어_전자기학_정리.pdf",
     "Project/uLED/uLedAoiConsole_MainWindow_CodeReview.md",
     "Project/uLED/uLedAoiConsole_RecipeWindow_CodeReview.md",
     "Project/uLED/uLedAoiConsole_프로젝트_분석.md",
