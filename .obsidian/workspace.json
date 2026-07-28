@@ -27,12 +27,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "정보처리기사/0_일정.md",
+                "file": "Project/uLED/Docs/표준맵사용검사-technical-manual.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "0_일정"
+              "title": "표준맵사용검사-technical-manual"
             }
           }
         ],
@@ -211,6 +211,7 @@
   },
   "active": "b8f265516415f6f4",
   "lastOpenFiles": [
+    "정보처리기사/0_일정.md",
     "CS/OS 공부.md",
     "Project/uLED/무제.md",
     "Project/Memo App/MemoApp_WorkLog_Guide.md",
@@ -225,7 +226,6 @@
     "포트폴리오",
     "Project/Memo App",
     "CS",
-    "정보처리기사/0_일정.md",
     "전기기사/전기기기 요점정리.pdf",
     "전기기사/전기기사 전력공학 공식.pdf",
     "전기기사/전력공학 요약.pdf",
