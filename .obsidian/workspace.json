@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "코테준비/C++/1일차 - C++ vector와 배열 순회.md",
+                "file": "코테준비/C++/3일차 - 빈도 배열과 기초 해시 사고방식.md",
                 "mode": "preview",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "1일차 - C++ vector와 배열 순회"
+              "title": "3일차 - 빈도 배열과 기초 해시 사고방식"
             }
           }
         ]
@@ -196,11 +196,11 @@
   },
   "active": "a7e96ba70b62b3c8",
   "lastOpenFiles": [
+    "코테준비/C++/1일차 - C++ vector와 배열 순회.md",
     "코테준비/C++/3일차 - 빈도 배열과 기초 해시 사고방식.md",
     "코테준비/C++/2일차 - 문자열 string과 문자 순회.md",
     "CS/OS 공부.md",
     "README.md",
-    "코테준비/C++/1일차 - C++ vector와 배열 순회.md",
     "Project/uLED/분석_Docs/08.Recipe-GlassSize-Config-검사파라미터-영향분석.md",
     "Project/uLED/분석_Docs/07.Align-UVW-상세분석.md",
     "Project/uLED/분석_Docs/06.Threshold-해상도-DenseMap-Defect분석.md",
