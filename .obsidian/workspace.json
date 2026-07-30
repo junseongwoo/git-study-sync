@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Project/uLED/분석_Docs/Threshold-해상도-DenseMap-Defect분석.md",
+                "file": "코테준비/C++/1일차 - C++ vector와 배열 순회.md",
                 "mode": "preview",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Threshold-해상도-DenseMap-Defect분석"
+              "title": "1일차 - C++ vector와 배열 순회"
             }
           }
         ]
@@ -196,8 +196,10 @@
   },
   "active": "a7e96ba70b62b3c8",
   "lastOpenFiles": [
-    "Project/uLED/분석_Docs/표준맵-Shift와-Defect검출-상세분석.md",
+    "코테준비/C++/2일차 - 문자열 string과 문자 순회.md",
+    "코테준비/C++/1일차 - C++ vector와 배열 순회.md",
     "Project/uLED/분석_Docs/Threshold-해상도-DenseMap-Defect분석.md",
+    "Project/uLED/분석_Docs/표준맵-Shift와-Defect검출-상세분석.md",
     "Project/uLED/UI_Docs/RecipeWindow/Ca410/UserManual.md",
     "Project/uLED/UI_Docs/MainWindow/MenuToolbar/UserManual.md",
     "Project/uLED/UI_Docs/MainWindow/MenuToolbar/DevNote.md",
@@ -227,9 +229,7 @@
     "Project/uLED/UI_Docs/ConfigWindow/LightPattern",
     "Project/uLED/UI_Docs/ConfigWindow/Heads/UserManual.md",
     "Project/uLED/UI_Docs/ConfigWindow/Heads/DevNote.md",
-    "Project/uLED/UI_Docs/ConfigWindow/Heads/Analysis.md",
     "Project/uLED/UI_Docs/ConfigWindow/Heads",
-    "Project/uLED/UI_Docs/ConfigWindow/General/DevNote.md",
     "Project/uLED/UI_Docs/ConfigWindow/General",
     "Project/uLED/UI_Docs/ConfigWindow/Connections"
   ]
