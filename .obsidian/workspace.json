@@ -11,14 +11,10 @@
             "id": "a7e96ba70b62b3c8",
             "type": "leaf",
             "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Project/uLED/분석_Docs/Threshold-해상도-DenseMap-Defect분석.md",
-                "mode": "preview",
-                "source": false
-              },
+              "type": "empty",
+              "state": {},
               "icon": "lucide-file",
-              "title": "Threshold-해상도-DenseMap-Defect분석"
+              "title": "새 탭"
             }
           }
         ]
@@ -196,8 +192,19 @@
   },
   "active": "a7e96ba70b62b3c8",
   "lastOpenFiles": [
-    "Project/uLED/분석_Docs/표준맵-Shift와-Defect검출-상세분석.md",
+    "Project/uLED/분석_Docs/08.Recipe-GlassSize-Config-검사파라미터-영향분석.md",
+    "Project/uLED/분석_Docs/07.Align-UVW-상세분석.md",
     "Project/uLED/분석_Docs/Threshold-해상도-DenseMap-Defect분석.md",
+    "Project/uLED/분석_Docs/06.Threshold-해상도-DenseMap-Defect분석.md",
+    "Project/uLED/분석_Docs/05.DenseMap-표준맵미사용-RGB검사-Recipe적용.md",
+    "Project/uLED/분석_Docs/04.표준맵-Shift와-Defect검출-상세분석.md",
+    "Project/uLED/분석_Docs/03.표준맵사용검사-분석.md",
+    "Project/uLED/분석_Docs/02.설정에서-TestRunner까지-장비개발자-관점.md",
+    "Project/uLED/분석_Docs/01.프로젝트-이해-커리큘럼-TestRunner-Camera.md",
+    "Project/uLED/분석_Docs/01.설정에서-TestRunner까지-장비개발자-관점.md",
+    "Project/uLED/분석_Docs/Recipe-GlassSize-Config-검사파라미터-영향분석.md",
+    "Project/uLED/분석_Docs/Align-UVW-상세분석.md",
+    "Project/uLED/분석_Docs/표준맵-Shift와-Defect검출-상세분석.md",
     "Project/uLED/UI_Docs/RecipeWindow/Ca410/UserManual.md",
     "Project/uLED/UI_Docs/MainWindow/MenuToolbar/UserManual.md",
     "Project/uLED/UI_Docs/MainWindow/MenuToolbar/DevNote.md",
@@ -212,24 +219,13 @@
     "Project/uLED/UI_Docs/GlassSizeModel/GlassSizeOpenDialog/Analysis.md",
     "Project/uLED/UI_Docs/GlassSizeModel/CoordinateCalibration/UserManual.md",
     "Project/uLED/UI_Docs/GlassSizeModel/CoordinateCalibration/DevNote.md",
-    "Project/uLED/UI_Docs/GlassSizeModel/CoordinateCalibration/Analysis.md",
     "Project/uLED/UI_Docs/GlassSizeModel/General",
     "Project/uLED/UI_Docs/GlassSizeModel/GlassSizeOpenDialog",
     "Project/uLED/UI_Docs/GlassSizeModel/CoordinateCalibration",
     "Project/uLED/UI_Docs/GlassSizeModel",
-    "Project/uLED/UI_Docs/ConfigWindow/MotionCoordinate/UserManual.md",
-    "Project/uLED/UI_Docs/ConfigWindow/MotionCoordinate/DevNote.md",
-    "Project/uLED/UI_Docs/ConfigWindow/MotionCoordinate/Analysis.md",
     "Project/uLED/UI_Docs/ConfigWindow/MotionCoordinate",
-    "Project/uLED/UI_Docs/ConfigWindow/LightPattern/UserManual.md",
-    "Project/uLED/UI_Docs/ConfigWindow/LightPattern/DevNote.md",
-    "Project/uLED/UI_Docs/ConfigWindow/LightPattern/Analysis.md",
     "Project/uLED/UI_Docs/ConfigWindow/LightPattern",
-    "Project/uLED/UI_Docs/ConfigWindow/Heads/UserManual.md",
-    "Project/uLED/UI_Docs/ConfigWindow/Heads/DevNote.md",
-    "Project/uLED/UI_Docs/ConfigWindow/Heads/Analysis.md",
     "Project/uLED/UI_Docs/ConfigWindow/Heads",
-    "Project/uLED/UI_Docs/ConfigWindow/General/DevNote.md",
     "Project/uLED/UI_Docs/ConfigWindow/General",
     "Project/uLED/UI_Docs/ConfigWindow/Connections"
   ]
