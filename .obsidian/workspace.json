@@ -4,17 +4,21 @@
     "type": "split",
     "children": [
       {
-        "id": "abf2d7431c708fc7",
+        "id": "5529f64e0ac8c034",
         "type": "tabs",
         "children": [
           {
-            "id": "a7e96ba70b62b3c8",
+            "id": "aefd23f51a747367",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {},
+              "type": "markdown",
+              "state": {
+                "file": "코테준비/C++/1일차 - C++ vector와 배열 순회.md",
+                "mode": "source",
+                "source": false
+              },
               "icon": "lucide-file",
-              "title": "새 탭"
+              "title": "1일차 - C++ vector와 배열 순회"
             }
           }
         ]
@@ -190,8 +194,13 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "a7e96ba70b62b3c8",
+  "active": "aefd23f51a747367",
   "lastOpenFiles": [
+    "conflict-files-obsidian-git.md",
+    "코테준비/C++/1일차 - C++ vector와 배열 순회.md",
+    "코테준비/C++/2일차 - 문자열 string과 문자 순회.md",
+    "코테준비/C++",
+    "코테준비",
     "Project/uLED/분석_Docs/08.Recipe-GlassSize-Config-검사파라미터-영향분석.md",
     "Project/uLED/분석_Docs/07.Align-UVW-상세분석.md",
     "Project/uLED/분석_Docs/Threshold-해상도-DenseMap-Defect분석.md",
@@ -216,17 +225,12 @@
     "Project/uLED/UI_Docs/GlassSizeModel/General/UserManual.md",
     "Project/uLED/UI_Docs/GlassSizeModel/General/DevNote.md",
     "Project/uLED/UI_Docs/GlassSizeModel/General/Analysis.md",
-    "Project/uLED/UI_Docs/GlassSizeModel/GlassSizeOpenDialog/Analysis.md",
-    "Project/uLED/UI_Docs/GlassSizeModel/CoordinateCalibration/UserManual.md",
-    "Project/uLED/UI_Docs/GlassSizeModel/CoordinateCalibration/DevNote.md",
     "Project/uLED/UI_Docs/GlassSizeModel/General",
     "Project/uLED/UI_Docs/GlassSizeModel/GlassSizeOpenDialog",
     "Project/uLED/UI_Docs/GlassSizeModel/CoordinateCalibration",
     "Project/uLED/UI_Docs/GlassSizeModel",
     "Project/uLED/UI_Docs/ConfigWindow/MotionCoordinate",
     "Project/uLED/UI_Docs/ConfigWindow/LightPattern",
-    "Project/uLED/UI_Docs/ConfigWindow/Heads",
-    "Project/uLED/UI_Docs/ConfigWindow/General",
-    "Project/uLED/UI_Docs/ConfigWindow/Connections"
+    "Project/uLED/UI_Docs/ConfigWindow/Heads"
   ]
 }
