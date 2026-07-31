@@ -55,7 +55,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Project/uLED/UI_Docs/RecipeWindow/BasicSettings/UserManual.md",
+                "file": "Project/uLED/UI_Docs/RecipeWindow/InspectionPatterns/UserManual.md",
                 "mode": "source",
                 "source": false
               },
@@ -242,6 +242,9 @@
   },
   "active": "f3b0dc595bf0f763",
   "lastOpenFiles": [
+    "Project/uLED/UI_Docs/RecipeWindow/WhiteDotInspection/Analysis.md",
+    "Project/uLED/UI_Docs/RecipeWindow/WhiteDotInspection/UserManual.md",
+    "Project/uLED/UI_Docs/RecipeWindow/BasicSettings/UserManual.md",
     "Project/uLED/UI_Docs/GlassSizeModel/CoordinateCalibration/UserManual.md",
     "Project/uLED/UI_Docs/GlassSizeModel/General/UserManual.md",
     "Project/uLED/UI_Docs/RecipeFolderBrowserWindow/UserManual.md",
@@ -266,9 +269,6 @@
     "Project/uLED/분석_Docs/02.설정에서-TestRunner까지-장비개발자-관점.md",
     "Project/uLED/분석_Docs/01.프로젝트-이해-커리큘럼-TestRunner-Camera.md",
     "코테준비/C++/2일차 - 문자열 string과 문자 순회.md",
-    "Project/uLED/분석_Docs/Threshold-해상도-DenseMap-Defect분석.md",
-    "Project/uLED/분석_Docs/표준맵-Shift와-Defect검출-상세분석.md",
-    "Project/uLED/UI_Docs/RecipeWindow/Ca410/UserManual.md",
     "Project/uLED/UI_Docs/MainWindow/MenuToolbar",
     "Project/uLED/UI_Docs/GlassSizeModel/General",
     "Project/uLED/UI_Docs/GlassSizeModel/GlassSizeOpenDialog",
