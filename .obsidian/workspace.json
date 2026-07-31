@@ -25,12 +25,14 @@
             "id": "ead046fd261f4b6f",
             "type": "leaf",
             "state": {
-              "type": "release-notes",
+              "type": "markdown",
               "state": {
-                "currentVersion": "1.13.4"
+                "file": "코테준비/C++/1일차 - C++ vector와 배열 순회.md",
+                "mode": "source",
+                "source": false
               },
-              "icon": "lucide-book-up",
-              "title": "릴리즈 노트 1.13.4"
+              "icon": "lucide-file",
+              "title": "1일차 - C++ vector와 배열 순회"
             }
           }
         ],
