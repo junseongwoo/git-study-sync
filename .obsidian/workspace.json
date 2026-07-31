@@ -55,12 +55,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Project/uLED/분석_Docs/09.검사등급-ABCD-Cell판정-상세분석.md",
+                "file": "Project/uLED/UI_Docs/MainWindow/UserManual.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "09.검사등급-ABCD-Cell판정-상세분석"
+              "title": "UserManual"
             }
           }
         ],
@@ -225,7 +225,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 338.5
+    "width": 338.5,
+    "collapsed": true
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -241,8 +242,9 @@
   },
   "active": "f3b0dc595bf0f763",
   "lastOpenFiles": [
-    "conflict-files-obsidian-git.md",
+    "Project/uLED/UI_Docs/MainWindow/MenuToolbar/UserManual.md",
     "Project/uLED/분석_Docs/09.검사등급-ABCD-Cell판정-상세분석.md",
+    "conflict-files-obsidian-git.md",
     "Project/uLED/분석_Docs/08.Recipe-GlassSize-Config-검사파라미터-영향분석.md",
     "Project/uLED/분석_Docs/검사등급-ABCD-Cell판정-상세분석.md",
     "코테준비/C++/3일차 - 빈도 배열과 기초 해시 사고방식.md",
@@ -260,7 +262,6 @@
     "Project/uLED/분석_Docs/Threshold-해상도-DenseMap-Defect분석.md",
     "Project/uLED/분석_Docs/표준맵-Shift와-Defect검출-상세분석.md",
     "Project/uLED/UI_Docs/RecipeWindow/Ca410/UserManual.md",
-    "Project/uLED/UI_Docs/MainWindow/MenuToolbar/UserManual.md",
     "Project/uLED/UI_Docs/MainWindow/MenuToolbar/DevNote.md",
     "Project/uLED/UI_Docs/MainWindow/MenuToolbar/Analysis.md",
     "Project/uLED/UI_Docs/MainWindow/MenuToolbar",
