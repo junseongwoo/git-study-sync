@@ -4,21 +4,21 @@
     "type": "split",
     "children": [
       {
-        "id": "abf2d7431c708fc7",
+        "id": "a8d24668bf9ec497",
         "type": "tabs",
         "children": [
           {
-            "id": "a7e96ba70b62b3c8",
+            "id": "e932dbe12f9f67f0",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "README.md",
+                "file": "Project/uLED/분석_Docs/09.검사등급-ABCD-Cell판정-상세분석.md",
                 "mode": "preview",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "README"
+              "title": "09.검사등급-ABCD-Cell판정-상세분석"
             }
           }
         ]
@@ -196,8 +196,10 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "6ab1c6578c2926a1",
+  "active": "e932dbe12f9f67f0",
   "lastOpenFiles": [
+    "Project/uLED/분석_Docs/09.검사등급-ABCD-Cell판정-상세분석.md",
+    "Project/uLED/분석_Docs/검사등급-ABCD-Cell판정-상세분석.md",
     "README.md",
     "Project/uLED/README.md",
     "코테준비/C++/1일차 - C++ vector와 배열 순회.md",
@@ -223,8 +225,6 @@
     "Project/uLED/UI_Docs/GlassSizeModel/General/UserManual.md",
     "Project/uLED/UI_Docs/GlassSizeModel/General/DevNote.md",
     "Project/uLED/UI_Docs/GlassSizeModel/General/Analysis.md",
-    "Project/uLED/UI_Docs/GlassSizeModel/GlassSizeOpenDialog/Analysis.md",
-    "Project/uLED/UI_Docs/GlassSizeModel/CoordinateCalibration/UserManual.md",
     "Project/uLED/UI_Docs/GlassSizeModel/General",
     "Project/uLED/UI_Docs/GlassSizeModel/GlassSizeOpenDialog",
     "Project/uLED/UI_Docs/GlassSizeModel/CoordinateCalibration",
