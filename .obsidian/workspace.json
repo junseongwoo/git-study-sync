@@ -55,7 +55,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Project/uLED/UI_Docs/MainWindow/UserManual.md",
+                "file": "Project/uLED/UI_Docs/RecipeFolderBrowserWindow/UserManual.md",
                 "mode": "source",
                 "source": false
               },
@@ -242,6 +242,11 @@
   },
   "active": "f3b0dc595bf0f763",
   "lastOpenFiles": [
+    "Project/uLED/UI_Docs/MainWindow/UserManual.md",
+    "Project/uLED/UI_Docs/RecipeFolderBrowserWindow/UserManual.md",
+    "Project/uLED/UI_Docs/RecipeFolderBrowserWindow/DevNote.md",
+    "Project/uLED/UI_Docs/RecipeFolderBrowserWindow/Analysis.md",
+    "Project/uLED/UI_Docs/RecipeFolderBrowserWindow",
     "Project/uLED/UI_Docs/MainWindow/MenuToolbar/UserManual.md",
     "Project/uLED/분석_Docs/09.검사등급-ABCD-Cell판정-상세분석.md",
     "conflict-files-obsidian-git.md",
@@ -265,10 +270,6 @@
     "Project/uLED/UI_Docs/MainWindow/MenuToolbar/DevNote.md",
     "Project/uLED/UI_Docs/MainWindow/MenuToolbar/Analysis.md",
     "Project/uLED/UI_Docs/MainWindow/MenuToolbar",
-    "Project/uLED/UI_Docs/MainWindow/UserManual.md",
-    "Project/uLED/UI_Docs/GlassSizeModel/GlassSizeOpenDialog/UserManual.md",
-    "Project/uLED/UI_Docs/GlassSizeModel/GlassSizeOpenDialog/DevNote.md",
-    "Project/uLED/UI_Docs/GlassSizeModel/General/UserManual.md",
     "Project/uLED/UI_Docs/GlassSizeModel/General",
     "Project/uLED/UI_Docs/GlassSizeModel/GlassSizeOpenDialog",
     "Project/uLED/UI_Docs/GlassSizeModel/CoordinateCalibration",
@@ -276,7 +277,6 @@
     "Project/uLED/UI_Docs/ConfigWindow/MotionCoordinate",
     "Project/uLED/UI_Docs/ConfigWindow/LightPattern",
     "Project/uLED/UI_Docs/ConfigWindow/Heads",
-    "Project/uLED/UI_Docs/ConfigWindow/General",
-    "Project/uLED/UI_Docs/ConfigWindow/Connections"
+    "Project/uLED/UI_Docs/ConfigWindow/General"
   ]
 }
