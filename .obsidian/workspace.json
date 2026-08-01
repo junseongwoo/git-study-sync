@@ -4,54 +4,24 @@
     "type": "split",
     "children": [
       {
-        "id": "abf2d7431c708fc7",
+        "id": "2d1e7d968ba27d6a",
         "type": "tabs",
         "children": [
           {
-            "id": "a7e96ba70b62b3c8",
+            "id": "c22e32df63539cfa",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "코테준비/C++/1일차 - C++ vector와 배열 순회.md",
-                "mode": "preview",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "1일차 - C++ vector와 배열 순회"
-            }
-          },
-          {
-            "id": "ead046fd261f4b6f",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "코테준비/C++/1일차 - C++ vector와 배열 순회.md",
+                "file": "CS/OS 공부.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "1일차 - C++ vector와 배열 순회"
-            }
-          },
-          {
-            "id": "cad3d2f3488f5c1f",
-            "type": "leaf",
-            "state": {
-              "type": "split-diff-view",
-              "state": {
-                "aFile": "Project/uLED/UI_Docs/RecipeFolderBrowserWindow/Analysis.md",
-                "bFile": "Project/uLED/UI_Docs/RecipeFolderBrowserWindow/Analysis.md",
-                "aRef": "HEAD",
-                "bRef": ""
-              },
-              "icon": "diff",
-              "title": "Diff: Analysis  (Index)"
+              "title": "OS 공부"
             }
           }
-        ],
-        "currentTab": 2
+        ]
       }
     ],
     "direction": "vertical"
@@ -226,8 +196,9 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "cad3d2f3488f5c1f",
+  "active": "6ab1c6578c2926a1",
   "lastOpenFiles": [
+    "CS/01.프로세스와 스레드.md",
     "conflict-files-obsidian-git.md",
     "코테준비/C++/1일차 - C++ vector와 배열 순회.md",
     "Project/uLED/분석_Docs/09.검사등급-ABCD-Cell판정-상세분석.md",
@@ -255,7 +226,6 @@
     "Project/uLED/분석_Docs/표준맵-Shift와-Defect검출-상세분석.md",
     "Project/uLED/UI_Docs/RecipeWindow/Ca410/UserManual.md",
     "Project/uLED/UI_Docs/MainWindow/MenuToolbar/UserManual.md",
-    "Project/uLED/UI_Docs/MainWindow/MenuToolbar/DevNote.md",
     "Project/uLED/UI_Docs/MainWindow/MenuToolbar",
     "Project/uLED/UI_Docs/GlassSizeModel/General",
     "Project/uLED/UI_Docs/GlassSizeModel/GlassSizeOpenDialog",
