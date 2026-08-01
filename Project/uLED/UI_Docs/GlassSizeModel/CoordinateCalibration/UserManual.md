@@ -6,13 +6,13 @@
 
 ## 각 항목의 사용 방법
 
-|항목|무엇을 입력하나요?|어떻게 설정하나요?|
-|---|---|---|
-|기본 Matrix 값 적용|Panel Angle 기준 기본 방향값|새 모델 또는 Panel Angle 변경 후 출발값이 필요할 때 누릅니다. 실제 계측 보정을 대신하지는 않습니다.|
-|GlassX / GlassY × StageX / UnitY1|Glass 1 µm 변화에 대한 motor 축 변화량|승인된 calibration 결과가 있을 때 4개 계수를 입력합니다. 일반 운영 중에는 임의 수정하지 않습니다.|
-|StageX|좌/우 align mark 위치에서 공통인 StageX 절대값|카메라가 mark에 정확히 맞은 상태에서 `현재값 읽기`를 누릅니다.|
-|Left Y2|왼쪽 align mark 위치의 InspectionUnit2Y 절대값|왼쪽 Y2 카메라가 mark를 보는 위치에서 읽습니다.|
-|Right Y1|오른쪽 align mark 위치의 InspectionUnit1Y 절대값|오른쪽 Y1 카메라가 mark를 보는 위치에서 읽습니다.|
+| 항목                                | 무엇을 입력하나요?                              | 어떻게 설정하나요?                                                      |
+| --------------------------------- | --------------------------------------- | --------------------------------------------------------------- |
+| 기본 Matrix 값 적용                    | Panel Angle 기준 기본 방향값                   | 새 모델 또는 Panel Angle 변경 후 출발값이 필요할 때 누릅니다. 실제 계측 보정을 대신하지는 않습니다. |
+| GlassX / GlassY × StageX / UnitY1 | Glass 1 µm 변화에 대한 motor 축 변화량           | 승인된 calibration 결과가 있을 때 4개 계수를 입력합니다. 일반 운영 중에는 임의 수정하지 않습니다.  |
+| StageX                            | 좌/우 align mark 위치에서 공통인 StageX 절대값      | 카메라가 mark에 정확히 맞은 상태에서 `현재값 읽기`를 누릅니다.                          |
+| Left Y2                           | 왼쪽 align mark 위치의 InspectionUnit2Y 절대값  | 왼쪽 Y2 카메라가 mark를 보는 위치에서 읽습니다.                                  |
+| Right Y1                          | 오른쪽 align mark 위치의 InspectionUnit1Y 절대값 | 오른쪽 Y1 카메라가 mark를 보는 위치에서 읽습니다.                                 |
 
 ## 안전한 설정 순서
 
