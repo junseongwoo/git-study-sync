@@ -11,14 +11,10 @@
             "id": "c22e32df63539cfa",
             "type": "leaf",
             "state": {
-              "type": "markdown",
-              "state": {
-                "file": "CS/01.프로세스와 스레드.md",
-                "mode": "source",
-                "source": false
-              },
+              "type": "empty",
+              "state": {},
               "icon": "lucide-file",
-              "title": "01.프로세스와 스레드"
+              "title": "새 탭"
             }
           }
         ]
@@ -80,7 +76,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300
+    "width": 625.5
   },
   "right": {
     "id": "f61d04a0c36f1212",
@@ -198,12 +194,14 @@
   },
   "active": "c22e32df63539cfa",
   "lastOpenFiles": [
+    "코테준비/C++/3일차 - 빈도 배열과 기초 해시 사고방식.md",
+    "코테준비/C++/1일차 - C++ vector와 배열 순회.md",
+    "코테준비/C++/2일차 - 문자열 string과 문자 순회.md",
+    "CS/01.프로세스와 스레드.md",
     "CS/00.메모리·객체 수명·RAII.md",
     "CS/02.동시성과 병렬성.md",
     "CS/OS 공부.md",
-    "CS/01.프로세스와 스레드.md",
     "conflict-files-obsidian-git.md",
-    "코테준비/C++/1일차 - C++ vector와 배열 순회.md",
     "Project/uLED/분석_Docs/09.검사등급-ABCD-Cell판정-상세분석.md",
     "Project/uLED/UI_Docs/RecipeWindow/AlignWindow/UserManual.md",
     "Project/uLED/UI_Docs/RecipeWindow/AlignWindow/Analysis.md",
@@ -213,8 +211,6 @@
     "Project/uLED/UI_Docs/RecipeFolderBrowserWindow/UserManual.md",
     "Project/uLED/UI_Docs/RecipeFolderBrowserWindow/Analysis.md",
     "Project/uLED/UI_Docs/RecipeFolderBrowserWindow",
-    "코테준비/C++/3일차 - 빈도 배열과 기초 해시 사고방식.md",
-    "코테준비/C++/2일차 - 문자열 string과 문자 순회.md",
     "README.md",
     "Project/uLED/분석_Docs/08.Recipe-GlassSize-Config-검사파라미터-영향분석.md",
     "Project/uLED/분석_Docs/07.Align-UVW-상세분석.md",
