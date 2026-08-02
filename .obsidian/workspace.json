@@ -192,8 +192,9 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "c22e32df63539cfa",
+  "active": "2ff9545607ac062d",
   "lastOpenFiles": [
+    "코테준비/C++/2일차 - 빈도 배열과 해시 테이블 원리 (책 보완 개정판).md",
     "코테준비/C++/3일차 - 빈도 배열과 기초 해시 사고방식.md",
     "코테준비/C++/1일차 - C++ vector와 배열 순회.md",
     "코테준비/C++/2일차 - 문자열 string과 문자 순회.md",
@@ -221,7 +222,6 @@
     "Project/uLED/분석_Docs/02.설정에서-TestRunner까지-장비개발자-관점.md",
     "Project/uLED/분석_Docs/01.프로젝트-이해-커리큘럼-TestRunner-Camera.md",
     "Project/uLED/분석_Docs/Threshold-해상도-DenseMap-Defect분석.md",
-    "Project/uLED/분석_Docs/표준맵-Shift와-Defect검출-상세분석.md",
     "Project/uLED/UI_Docs/MainWindow/MenuToolbar",
     "Project/uLED/UI_Docs/GlassSizeModel/General",
     "Project/uLED/UI_Docs/GlassSizeModel/GlassSizeOpenDialog",
