@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "코테준비/C++/1일차 - 배열·vector와 문자열·string.md",
+                "file": "Project/uLED/UI_Docs/RecipeWindow/CellMap/UserManual.md",
                 "mode": "preview",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "1일차 - 배열·vector와 문자열·string"
+              "title": "UserManual"
             }
           }
         ]
@@ -198,6 +198,7 @@
   },
   "active": "0bb90f33563d027b",
   "lastOpenFiles": [
+    "코테준비/C++/1일차 - 배열·vector와 문자열·string.md",
     "CS/01.프로세스와 스레드.md",
     "CS/00.메모리·객체 수명·RAII.md",
     "Project/uLED/UI_Docs/RecipeWindow/CellList/UserManual.md",
@@ -212,7 +213,6 @@
     "English/TOEIC",
     "코테준비/C++/3일차 - STL 해시 컨테이너와 Stack·Queue·Priority Queue.md",
     "코테준비/C++/2일차 - 빈도 배열과 해시 테이블 원리.md",
-    "코테준비/C++/1일차 - 배열·vector와 문자열·string.md",
     "무제.base",
     "코테준비/C++/2일차 - 빈도 배열과 해시 테이블 원리 (책 보완 개정판).md",
     "코테준비/C++/3일차 - 빈도 배열과 기초 해시 사고방식.md",
