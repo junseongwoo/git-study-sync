@@ -4,11 +4,11 @@
     "type": "split",
     "children": [
       {
-        "id": "2d1e7d968ba27d6a",
+        "id": "56624e48c3ed07f5",
         "type": "tabs",
         "children": [
           {
-            "id": "c22e32df63539cfa",
+            "id": "73e54a2dc1298d0a",
             "type": "leaf",
             "state": {
               "type": "empty",
@@ -192,7 +192,7 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "c22e32df63539cfa",
+  "active": "2ff9545607ac062d",
   "lastOpenFiles": [
     "conflict-files-obsidian-git.md",
     "CS/04.C++ 메모리와 객체 수명 보완.md",
