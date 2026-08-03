@@ -192,8 +192,9 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "2ff9545607ac062d",
+  "active": "6ab1c6578c2926a1",
   "lastOpenFiles": [
+    "English/TOEIC",
     "코테준비/C++/3일차 - STL 해시 컨테이너와 Stack·Queue·Priority Queue.md",
     "코테준비/C++/2일차 - 빈도 배열과 해시 테이블 원리.md",
     "코테준비/C++/1일차 - 배열·vector와 문자열·string.md",
@@ -222,7 +223,6 @@
     "Project/uLED/분석_Docs/06.Threshold-해상도-DenseMap-Defect분석.md",
     "Project/uLED/분석_Docs/05.DenseMap-표준맵미사용-RGB검사-Recipe적용.md",
     "Project/uLED/분석_Docs/04.표준맵-Shift와-Defect검출-상세분석.md",
-    "Project/uLED/분석_Docs/03.표준맵사용검사-분석.md",
     "Project/uLED/UI_Docs/MainWindow/MenuToolbar",
     "Project/uLED/UI_Docs/GlassSizeModel/General",
     "Project/uLED/UI_Docs/GlassSizeModel/GlassSizeOpenDialog",
