@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Project/uLED/UI_Docs/ConfigWindow/General/UserManual.md",
+                "file": "Project/uLED/UI_Docs/ConfigWindow/MotionCoordinate/UserManual.md",
                 "mode": "preview",
                 "source": false
               },
@@ -198,6 +198,7 @@
   },
   "active": "0bb90f33563d027b",
   "lastOpenFiles": [
+    "Project/uLED/UI_Docs/ConfigWindow/General/UserManual.md",
     "Project/uLED/UI_Docs/RecipeWindow/ContactCheck/UserManual.md",
     "Project/uLED/UI_Docs/RecipeWindow/AlignControl/UserManual.md",
     "Project/uLED/UI_Docs/RecipeWindow/CellMap/UserManual.md",
@@ -225,7 +226,6 @@
     "CS/OS 공부.md",
     "Project/uLED/분석_Docs/09.검사등급-ABCD-Cell판정-상세분석.md",
     "Project/uLED/UI_Docs/RecipeWindow/AlignWindow/UserManual.md",
-    "Project/uLED/UI_Docs/RecipeWindow/AlignWindow/Analysis.md",
     "Project/uLED/UI_Docs/RecipeWindow/AlignWindow",
     "Project/uLED/UI_Docs/RecipeFolderBrowserWindow",
     "Project/uLED/UI_Docs/MainWindow/MenuToolbar",
