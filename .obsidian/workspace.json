@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Project/uLED/UI_Docs/RecipeWindow/CellList/UserManual.md",
-                "mode": "source",
+                "file": "코테준비/C++/1일차 - 배열·vector와 문자열·string.md",
+                "mode": "preview",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "UserManual"
+              "title": "1일차 - 배열·vector와 문자열·string"
             }
           }
         ]
@@ -196,12 +196,14 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "2ff9545607ac062d",
+  "active": "0bb90f33563d027b",
   "lastOpenFiles": [
+    "CS/01.프로세스와 스레드.md",
+    "CS/00.메모리·객체 수명·RAII.md",
+    "Project/uLED/UI_Docs/RecipeWindow/CellList/UserManual.md",
     "Project/uLED/분석_Docs/00.TestRunner-Camera-전체-코드분석.md",
     "Project/uLED/분석_Docs/10.Dot-Level측정-7x7Gaussian-Shift-Threshold-표준맵-상세분석.md",
     "conflict-files-obsidian-git.md",
-    "Project/uLED/UI_Docs/RecipeWindow/CellList/UserManual.md",
     "Project/uLED/UI_Docs/RecipeWindow/CellList/DevNote.md",
     "Project/uLED/UI_Docs/RecipeWindow/PgMapping/UserManual.md",
     "Project/uLED/UI_Docs/RecipeWindow/Aging/UserManual.md",
@@ -216,8 +218,6 @@
     "코테준비/C++/3일차 - 빈도 배열과 기초 해시 사고방식.md",
     "코테준비/C++/1일차 - C++ vector와 배열 순회.md",
     "코테준비/C++/2일차 - 문자열 string과 문자 순회.md",
-    "CS/01.프로세스와 스레드.md",
-    "CS/00.메모리·객체 수명·RAII.md",
     "CS/02.동시성과 병렬성.md",
     "CS/OS 공부.md",
     "Project/uLED/분석_Docs/09.검사등급-ABCD-Cell판정-상세분석.md",
