@@ -194,6 +194,7 @@
   },
   "active": "6ab1c6578c2926a1",
   "lastOpenFiles": [
+    "코테준비/C++ 문법/01.string과-char.md",
     "코테준비/C++ 문법",
     "Project/uLED/분석_Docs/10.Dot-Level측정-7x7Gaussian-Shift-Threshold-표준맵-상세분석.md",
     "Project/uLED/분석_Docs/00.TestRunner-Camera-전체-코드분석.md",
@@ -228,7 +229,6 @@
     "Project/uLED/UI_Docs/GlassSizeModel/GlassSizeOpenDialog",
     "Project/uLED/UI_Docs/GlassSizeModel/CoordinateCalibration",
     "Project/uLED/UI_Docs/GlassSizeModel",
-    "Project/uLED/UI_Docs/ConfigWindow/MotionCoordinate",
-    "Project/uLED/UI_Docs/ConfigWindow/LightPattern"
+    "Project/uLED/UI_Docs/ConfigWindow/MotionCoordinate"
   ]
 }
