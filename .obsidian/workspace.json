@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Project/uLED/UI_Docs/ConfigWindow/LightPattern/UserManual.md",
+                "file": "Project/uLED/분석_Docs/10.Dot-Level측정-7x7Gaussian-Shift-Threshold-표준맵-상세분석.md",
                 "mode": "preview",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "UserManual"
+              "title": "10.Dot-Level측정-7x7Gaussian-Shift-Threshold-표준맵-상세분석"
             }
           }
         ]
@@ -198,6 +198,7 @@
   },
   "active": "0bb90f33563d027b",
   "lastOpenFiles": [
+    "Project/uLED/UI_Docs/ConfigWindow/LightPattern/UserManual.md",
     "Project/uLED/UI_Docs/ConfigWindow/Connections/UserManual.md",
     "Project/uLED/UI_Docs/ConfigWindow/Heads/UserManual.md",
     "Project/uLED/UI_Docs/ConfigWindow/MotionCoordinate/UserManual.md",
@@ -225,7 +226,6 @@
     "코테준비/C++/3일차 - 빈도 배열과 기초 해시 사고방식.md",
     "코테준비/C++/1일차 - C++ vector와 배열 순회.md",
     "코테준비/C++/2일차 - 문자열 string과 문자 순회.md",
-    "CS/02.동시성과 병렬성.md",
     "Project/uLED/UI_Docs/RecipeWindow/AlignWindow",
     "Project/uLED/UI_Docs/RecipeFolderBrowserWindow",
     "Project/uLED/UI_Docs/MainWindow/MenuToolbar",
