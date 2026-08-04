@@ -192,8 +192,9 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "6ab1c6578c2926a1",
+  "active": "2ff9545607ac062d",
   "lastOpenFiles": [
+    "무제.base",
     "Project/uLED/분석_Docs/10.Dot-Level측정-7x7Gaussian-Shift-Threshold-표준맵-상세분석.md",
     "CS/05.파일·소켓·비동기 IO와 Buffer.md",
     "conflict-files-obsidian-git.md",
@@ -219,9 +220,7 @@
     "English/TOEIC",
     "코테준비/C++/3일차 - STL 해시 컨테이너와 Stack·Queue·Priority Queue.md",
     "코테준비/C++/2일차 - 빈도 배열과 해시 테이블 원리.md",
-    "무제.base",
     "코테준비/C++/2일차 - 빈도 배열과 해시 테이블 원리 (책 보완 개정판).md",
-    "코테준비/C++/3일차 - 빈도 배열과 기초 해시 사고방식.md",
     "Project/uLED/UI_Docs/RecipeWindow/AlignWindow",
     "Project/uLED/UI_Docs/RecipeFolderBrowserWindow",
     "Project/uLED/UI_Docs/MainWindow/MenuToolbar",
