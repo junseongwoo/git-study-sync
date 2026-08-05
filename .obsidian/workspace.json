@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Project/uLED/UI_Docs/MainWindow/UserManual.md",
-                "mode": "source",
+                "file": "Project/uLED/분석_Docs/05.DenseMap-표준맵미사용-RGB검사-Recipe적용.md",
+                "mode": "preview",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "UserManual"
+              "title": "05.DenseMap-표준맵미사용-RGB검사-Recipe적용"
             }
           }
         ]
@@ -198,8 +198,10 @@
   },
   "active": "e28f8fa4047c16bb",
   "lastOpenFiles": [
-    "Project/uLED/UI_Docs/MainWindow/DevNote.md",
+    "Project/uLED/분석_Docs/08.Recipe-GlassSize-Config-검사파라미터-영향분석.md",
+    "Project/uLED/분석_Docs/09.검사등급-ABCD-Cell판정-상세분석.md",
     "Project/uLED/UI_Docs/MainWindow/UserManual.md",
+    "Project/uLED/UI_Docs/MainWindow/DevNote.md",
     "Project/uLED/UI_Docs/TestRunnerWindow/UserManual.md",
     "Project/uLED/UI_Docs/RecipeWindow/InspectionPatterns/UserManual.md",
     "Project/uLED/UI_Docs/RecipeWindow/BasicSettings/UserManual.md",
@@ -229,8 +231,6 @@
     "CS/05.파일·소켓·비동기 IO와 Buffer.md",
     "코테준비/C++/4일차 - 정렬과 이분 탐색.md",
     "Project/uLED/UI_Docs/ConfigWindow/LightPattern/UserManual.md",
-    "Project/uLED/UI_Docs/ConfigWindow/Connections/UserManual.md",
-    "Project/uLED/UI_Docs/ConfigWindow/Heads/UserManual.md",
     "English/TOEIC",
     "Project/uLED/UI_Docs/RecipeWindow/AlignWindow",
     "Project/uLED/UI_Docs/RecipeFolderBrowserWindow"
