@@ -23,18 +23,18 @@ AlignWindow는 좌·우 Align 카메라의 영상을 확인하고 기준 이미�
 
 왼쪽과 오른쪽 카메라에 동일한 도구가 있습니다.
 
-| 아이콘 ToolTip | 사용 방법 |
-|---|---|
-| Connect | Camera Name에 입력한 카메라를 연결합니다. |
-| Disconnect | 해당 카메라 연결을 종료합니다. |
-| Grab One | 한 장을 촬영합니다. |
-| Start Live | 연속 영상을 시작합니다. |
-| Stop Live | 연속 영상을 중지합니다. |
-| Load Image | 파일의 이미지를 현재 영상으로 불러옵니다. |
-| Save Image | 현재 영상을 사용자가 지정한 파일로 저장합니다. |
-| Load Align Image | 현재 Recipe의 등록된 Align template을 불러옵니다. |
-| Test Match | 현재 영상이 template과 얼마나 일치하는지 시험합니다. |
-| Select Search Area | 검색 영역 사각형을 선택해 위치와 크기를 조절합니다. |
+| 아이콘 ToolTip        | 사용 방법                                 |
+| ------------------ | ------------------------------------- |
+| Connect            | Camera Name에 입력한 카메라를 연결합니다.          |
+| Disconnect         | 해당 카메라 연결을 종료합니다.                     |
+| Grab One           | 한 장을 촬영합니다.                           |
+| Start Live         | 연속 영상을 시작합니다.                         |
+| Stop Live          | 연속 영상을 중지합니다.                         |
+| Load Image         | 파일의 이미지를 현재 영상으로 불러옵니다.               |
+| Save Image         | 현재 영상을 사용자가 지정한 파일로 저장합니다.            |
+| Load Align Image   | 현재 Recipe의 등록된 Align template을 불러옵니다. |
+| Test Match         | 현재 영상이 template과 얼마나 일치하는지 시험합니다.     |
+| Select Search Area | 검색 영역 사각형을 선택해 위치와 크기를 조절합니다.         |
 
 ## Overlay 색상
 

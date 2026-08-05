@@ -11,14 +11,14 @@
             "id": "cc321299818e0655",
             "type": "leaf",
             "state": {
-              "type": "markdown",
+              "type": "split-diff-view",
               "state": {
-                "file": "Project/uLED/UI_Docs/RecipeGlassMapWindow/UserManual.md",
-                "mode": "source",
-                "source": false
+                "aFile": "Project/uLED/UI_Docs/AlignWindow/UserManual.md",
+                "bFile": "Project/uLED/UI_Docs/AlignWindow/UserManual.md",
+                "aRef": ""
               },
-              "icon": "lucide-file",
-              "title": "UserManual"
+              "icon": "diff",
+              "title": "Diff: UserManual  (Working Tree)"
             }
           }
         ]
@@ -198,9 +198,19 @@
   },
   "active": "2ff9545607ac062d",
   "lastOpenFiles": [
-    "conflict-files-obsidian-git.md",
-    "Project/uLED/UI_Docs/RecipeGlassMapWindow/UserManual.md",
     "Project/uLED/UI_Docs/AlignWindow/UserManual.md",
+    "conflict-files-obsidian-git.md",
+    "Project/uLED/UI_Docs/RecipeWindow/ToolsMenu/UserManual.md",
+    "Project/uLED/UI_Docs/RecipeWindow/ToolsMenu/DevNote.md",
+    "Project/uLED/UI_Docs/RecipeWindow/ToolsMenu/Analysis.md",
+    "Project/uLED/UI_Docs/RecipeWindow/ToolsMenu",
+    "Project/uLED/UI_Docs/RecipeWindow/InspectionPatterns/UserManual.md",
+    "Project/uLED/UI_Docs/RecipeWindow/InspectionPatterns/DevNote.md",
+    "Project/uLED/UI_Docs/RecipeWindow/InspectionPatterns/Analysis.md",
+    "Project/uLED/UI_Docs/RecipeWindow/InspectionPatterns",
+    "Project/uLED/UI_Docs/RecipeGlassMapWindow/UserManual.md",
+    "코테준비/C++ 문법/01.string과-char.md",
+    "코테준비/C++ 문법",
     "Project/uLED/UI_Docs/AlignWindow/DevNote.md",
     "Project/uLED/UI_Docs/AlignWindow/Analysis.md",
     "Project/uLED/UI_Docs/AlignWindow",
@@ -221,18 +231,8 @@
     "Project/uLED/UI_Docs/ConfigWindow/MotionCoordinate/UserManual.md",
     "Project/uLED/UI_Docs/ConfigWindow/General/UserManual.md",
     "Project/uLED/UI_Docs/RecipeWindow/ContactCheck/UserManual.md",
-    "Project/uLED/UI_Docs/RecipeWindow/AlignControl/UserManual.md",
-    "Project/uLED/UI_Docs/RecipeWindow/CellMap/UserManual.md",
-    "코테준비/C++/1일차 - 배열·vector와 문자열·string.md",
-    "CS/01.프로세스와 스레드.md",
-    "CS/00.메모리·객체 수명·RAII.md",
-    "Project/uLED/UI_Docs/RecipeWindow/CellList/UserManual.md",
-    "Project/uLED/분석_Docs/00.TestRunner-Camera-전체-코드분석.md",
     "English/TOEIC",
     "Project/uLED/UI_Docs/RecipeWindow/AlignWindow",
-    "Project/uLED/UI_Docs/RecipeFolderBrowserWindow",
-    "Project/uLED/UI_Docs/MainWindow/MenuToolbar",
-    "Project/uLED/UI_Docs/GlassSizeModel/General",
-    "Project/uLED/UI_Docs/GlassSizeModel/GlassSizeOpenDialog"
+    "Project/uLED/UI_Docs/RecipeFolderBrowserWindow"
   ]
 }
