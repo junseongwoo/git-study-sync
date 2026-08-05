@@ -4,17 +4,21 @@
     "type": "split",
     "children": [
       {
-        "id": "a26d919ad9d195a8",
+        "id": "10b28a938ced1950",
         "type": "tabs",
         "children": [
           {
-            "id": "28d4abf94bd99f32",
+            "id": "cc321299818e0655",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {},
+              "type": "markdown",
+              "state": {
+                "file": "Project/uLED/UI_Docs/RecipeGlassMapWindow/UserManual.md",
+                "mode": "source",
+                "source": false
+              },
               "icon": "lucide-file",
-              "title": "새 탭"
+              "title": "UserManual"
             }
           }
         ]
@@ -194,10 +198,22 @@
   },
   "active": "2ff9545607ac062d",
   "lastOpenFiles": [
+    "conflict-files-obsidian-git.md",
+    "Project/uLED/UI_Docs/RecipeGlassMapWindow/UserManual.md",
+    "Project/uLED/UI_Docs/AlignWindow/UserManual.md",
+    "Project/uLED/UI_Docs/AlignWindow/DevNote.md",
+    "Project/uLED/UI_Docs/AlignWindow/Analysis.md",
+    "Project/uLED/UI_Docs/AlignWindow",
+    "Project/uLED/UI_Docs/TestRunnerWindow/UserManual.md",
+    "Project/uLED/UI_Docs/TestRunnerWindow/DevNote.md",
+    "Project/uLED/UI_Docs/TestRunnerWindow/Analysis.md",
+    "Project/uLED/UI_Docs/TestRunnerWindow",
+    "Project/uLED/UI_Docs/RecipeGlassMapWindow/DevNote.md",
+    "Project/uLED/UI_Docs/RecipeGlassMapWindow/Analysis.md",
+    "Project/uLED/UI_Docs/RecipeGlassMapWindow",
     "무제.base",
     "Project/uLED/분석_Docs/10.Dot-Level측정-7x7Gaussian-Shift-Threshold-표준맵-상세분석.md",
     "CS/05.파일·소켓·비동기 IO와 Buffer.md",
-    "conflict-files-obsidian-git.md",
     "코테준비/C++/4일차 - 정렬과 이분 탐색.md",
     "Project/uLED/UI_Docs/ConfigWindow/LightPattern/UserManual.md",
     "Project/uLED/UI_Docs/ConfigWindow/Connections/UserManual.md",
@@ -212,22 +228,11 @@
     "CS/00.메모리·객체 수명·RAII.md",
     "Project/uLED/UI_Docs/RecipeWindow/CellList/UserManual.md",
     "Project/uLED/분석_Docs/00.TestRunner-Camera-전체-코드분석.md",
-    "Project/uLED/UI_Docs/RecipeWindow/CellList/DevNote.md",
-    "Project/uLED/UI_Docs/RecipeWindow/PgMapping/UserManual.md",
-    "Project/uLED/UI_Docs/RecipeWindow/Aging/UserManual.md",
-    "Project/uLED/UI_Docs/RecipeWindow/Ca410/UserManual.md",
-    "CS/04.C++ 메모리와 객체 수명 보완.md",
     "English/TOEIC",
-    "코테준비/C++/3일차 - STL 해시 컨테이너와 Stack·Queue·Priority Queue.md",
-    "코테준비/C++/2일차 - 빈도 배열과 해시 테이블 원리.md",
-    "코테준비/C++/2일차 - 빈도 배열과 해시 테이블 원리 (책 보완 개정판).md",
     "Project/uLED/UI_Docs/RecipeWindow/AlignWindow",
     "Project/uLED/UI_Docs/RecipeFolderBrowserWindow",
     "Project/uLED/UI_Docs/MainWindow/MenuToolbar",
     "Project/uLED/UI_Docs/GlassSizeModel/General",
-    "Project/uLED/UI_Docs/GlassSizeModel/GlassSizeOpenDialog",
-    "Project/uLED/UI_Docs/GlassSizeModel/CoordinateCalibration",
-    "Project/uLED/UI_Docs/GlassSizeModel",
-    "Project/uLED/UI_Docs/ConfigWindow/MotionCoordinate"
+    "Project/uLED/UI_Docs/GlassSizeModel/GlassSizeOpenDialog"
   ]
 }
