@@ -4,21 +4,21 @@
     "type": "split",
     "children": [
       {
-        "id": "10b28a938ced1950",
+        "id": "acedc859d346bd59",
         "type": "tabs",
         "children": [
           {
-            "id": "cc321299818e0655",
+            "id": "e28f8fa4047c16bb",
             "type": "leaf",
             "state": {
-              "type": "split-diff-view",
+              "type": "markdown",
               "state": {
-                "aFile": "Project/uLED/UI_Docs/AlignWindow/UserManual.md",
-                "bFile": "Project/uLED/UI_Docs/AlignWindow/UserManual.md",
-                "aRef": ""
+                "file": "Project/uLED/UI_Docs/RecipeWindow/InspectionPatterns/UserManual.md",
+                "mode": "source",
+                "source": false
               },
-              "icon": "diff",
-              "title": "Diff: UserManual  (Working Tree)"
+              "icon": "lucide-file",
+              "title": "UserManual"
             }
           }
         ]
@@ -196,8 +196,9 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "2ff9545607ac062d",
+  "active": "e28f8fa4047c16bb",
   "lastOpenFiles": [
+    "Project/uLED/UI_Docs/RecipeWindow/BasicSettings/UserManual.md",
     "Project/uLED/UI_Docs/AlignWindow/UserManual.md",
     "conflict-files-obsidian-git.md",
     "Project/uLED/UI_Docs/RecipeWindow/ToolsMenu/UserManual.md",
@@ -230,7 +231,6 @@
     "Project/uLED/UI_Docs/ConfigWindow/Heads/UserManual.md",
     "Project/uLED/UI_Docs/ConfigWindow/MotionCoordinate/UserManual.md",
     "Project/uLED/UI_Docs/ConfigWindow/General/UserManual.md",
-    "Project/uLED/UI_Docs/RecipeWindow/ContactCheck/UserManual.md",
     "English/TOEIC",
     "Project/uLED/UI_Docs/RecipeWindow/AlignWindow",
     "Project/uLED/UI_Docs/RecipeFolderBrowserWindow"
