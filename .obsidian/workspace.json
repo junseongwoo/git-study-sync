@@ -20,6 +20,24 @@
             }
           }
         ]
+      },
+      {
+        "id": "48fbe0a20d64fdcd",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "d5caf4e95c6592af",
+            "type": "leaf",
+            "state": {
+              "type": "pdf",
+              "state": {
+                "file": "정보처리기사/핵심요약집_2026_정보처리기사필기핵심요약.pdf"
+              },
+              "icon": "lucide-file-text",
+              "title": "핵심요약집_2026_정보처리기사필기핵심요약"
+            }
+          }
+        ]
       }
     ],
     "direction": "vertical"
@@ -194,11 +212,11 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "e28f8fa4047c16bb",
+  "active": "d5caf4e95c6592af",
   "lastOpenFiles": [
     "정보처리기사/필기(요약).pdf",
-    "Project/uLED/분석_Docs/05.DenseMap-표준맵미사용-RGB검사-Recipe적용.md",
     "정보처리기사/핵심요약집_2026_정보처리기사필기핵심요약.pdf",
+    "Project/uLED/분석_Docs/05.DenseMap-표준맵미사용-RGB검사-Recipe적용.md",
     "Project/uLED/분석_Docs/08.Recipe-GlassSize-Config-검사파라미터-영향분석.md",
     "Project/uLED/분석_Docs/09.검사등급-ABCD-Cell판정-상세분석.md",
     "Project/uLED/UI_Docs/MainWindow/UserManual.md",
