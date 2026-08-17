@@ -4,19 +4,17 @@
     "type": "split",
     "children": [
       {
-        "id": "acedc859d346bd59",
+        "id": "56624e48c3ed07f5",
         "type": "tabs",
         "children": [
           {
-            "id": "e28f8fa4047c16bb",
+            "id": "73e54a2dc1298d0a",
             "type": "leaf",
             "state": {
-              "type": "pdf",
-              "state": {
-                "file": "정보처리기사/핵심요약집_2026_정보처리기사필기핵심요약.pdf"
-              },
-              "icon": "lucide-file-text",
-              "title": "핵심요약집_2026_정보처리기사필기핵심요약"
+              "type": "empty",
+              "state": {},
+              "icon": "lucide-file",
+              "title": "새 탭"
             }
           }
         ]
@@ -78,7 +76,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 408.5
+    "width": 625.5
   },
   "right": {
     "id": "f61d04a0c36f1212",
@@ -194,42 +192,43 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "e28f8fa4047c16bb",
+  "active": "6ab1c6578c2926a1",
   "lastOpenFiles": [
-    "정보처리기사/필기(요약).pdf",
     "정보처리기사/핵심요약집_2026_정보처리기사필기핵심요약.pdf",
-    "Project/uLED/분석_Docs/05.DenseMap-표준맵미사용-RGB검사-Recipe적용.md",
-    "Project/uLED/분석_Docs/08.Recipe-GlassSize-Config-검사파라미터-영향분석.md",
-    "Project/uLED/분석_Docs/09.검사등급-ABCD-Cell판정-상세분석.md",
-    "Project/uLED/UI_Docs/MainWindow/UserManual.md",
-    "Project/uLED/UI_Docs/MainWindow/DevNote.md",
+    "정보처리기사/필기(요약).pdf",
     "Project/uLED/UI_Docs/TestRunnerWindow/UserManual.md",
-    "Project/uLED/UI_Docs/RecipeWindow/InspectionPatterns/UserManual.md",
-    "Project/uLED/UI_Docs/RecipeWindow/BasicSettings/UserManual.md",
-    "Project/uLED/UI_Docs/AlignWindow/UserManual.md",
-    "conflict-files-obsidian-git.md",
+    "Project/uLED/UI_Docs/TestRunnerWindow/DevNote.md",
+    "Project/uLED/UI_Docs/TestRunnerWindow/Analysis.md",
+    "Project/uLED/UI_Docs/TestRunnerWindow",
     "Project/uLED/UI_Docs/RecipeWindow/ToolsMenu/UserManual.md",
     "Project/uLED/UI_Docs/RecipeWindow/ToolsMenu/DevNote.md",
     "Project/uLED/UI_Docs/RecipeWindow/ToolsMenu/Analysis.md",
     "Project/uLED/UI_Docs/RecipeWindow/ToolsMenu",
+    "Project/uLED/UI_Docs/RecipeWindow/InspectionPatterns/UserManual.md",
     "Project/uLED/UI_Docs/RecipeWindow/InspectionPatterns/DevNote.md",
     "Project/uLED/UI_Docs/RecipeWindow/InspectionPatterns/Analysis.md",
     "Project/uLED/UI_Docs/RecipeWindow/InspectionPatterns",
     "Project/uLED/UI_Docs/RecipeGlassMapWindow/UserManual.md",
-    "코테준비/C++ 문법/01.string과-char.md",
-    "코테준비/C++ 문법",
-    "Project/uLED/UI_Docs/AlignWindow/DevNote.md",
-    "Project/uLED/UI_Docs/AlignWindow/Analysis.md",
-    "Project/uLED/UI_Docs/AlignWindow",
-    "Project/uLED/UI_Docs/TestRunnerWindow/DevNote.md",
-    "Project/uLED/UI_Docs/TestRunnerWindow/Analysis.md",
-    "Project/uLED/UI_Docs/TestRunnerWindow",
     "Project/uLED/UI_Docs/RecipeGlassMapWindow/DevNote.md",
     "Project/uLED/UI_Docs/RecipeGlassMapWindow/Analysis.md",
     "Project/uLED/UI_Docs/RecipeGlassMapWindow",
-    "무제.base",
+    "Project/uLED/UI_Docs/AlignWindow/DevNote.md",
+    "Project/uLED/UI_Docs/AlignWindow/UserManual.md",
+    "Project/uLED/UI_Docs/AlignWindow/Analysis.md",
+    "Project/uLED/UI_Docs/AlignWindow",
+    "코테준비/C++ 문법/01.string과-char.md",
+    "코테준비/C++ 문법",
     "Project/uLED/분석_Docs/10.Dot-Level측정-7x7Gaussian-Shift-Threshold-표준맵-상세분석.md",
-    "CS/05.파일·소켓·비동기 IO와 Buffer.md",
-    "English/TOEIC"
+    "Project/uLED/분석_Docs/00.TestRunner-Camera-전체-코드분석.md",
+    "conflict-files-obsidian-git.md",
+    "CS/04.C++ 메모리와 객체 수명 보완.md",
+    "코테준비/C++/3일차 - STL 해시 컨테이너와 Stack·Queue·Priority Queue.md",
+    "코테준비/C++/2일차 - 빈도 배열과 해시 테이블 원리.md",
+    "코테준비/C++/1일차 - 배열·vector와 문자열·string.md",
+    "무제.base",
+    "코테준비/C++/2일차 - 빈도 배열과 해시 테이블 원리 (책 보완 개정판).md",
+    "코테준비/C++/3일차 - 빈도 배열과 기초 해시 사고방식.md",
+    "Project/uLED/UI_Docs/RecipeWindow/AlignWindow",
+    "Project/uLED/UI_Docs/RecipeFolderBrowserWindow"
   ]
 }
