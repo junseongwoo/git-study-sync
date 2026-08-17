@@ -4,11 +4,11 @@
     "type": "split",
     "children": [
       {
-        "id": "70b976ca2e930737",
+        "id": "e0b993fee1a6a197",
         "type": "tabs",
         "children": [
           {
-            "id": "84a96eaa5e6ed2db",
+            "id": "0999ad0283da0396",
             "type": "leaf",
             "state": {
               "type": "empty",
@@ -194,6 +194,9 @@
   },
   "active": "2ff9545607ac062d",
   "lastOpenFiles": [
+    "conflict-files-obsidian-git.md",
+    "코테준비/C++/5일차 - DFS·BFS와 간단한 동적 계획법.md",
+    "CS/06.C++ 객체지향 설계와 테스트 가능한 시스템.md",
     "정보처리기사/핵심요약집_2026_정보처리기사필기핵심요약.pdf",
     "정보처리기사/필기(요약).pdf",
     "Project/uLED/분석_Docs/05.DenseMap-표준맵미사용-RGB검사-Recipe적용.md",
@@ -205,7 +208,6 @@
     "Project/uLED/UI_Docs/RecipeWindow/InspectionPatterns/UserManual.md",
     "Project/uLED/UI_Docs/RecipeWindow/BasicSettings/UserManual.md",
     "Project/uLED/UI_Docs/AlignWindow/UserManual.md",
-    "conflict-files-obsidian-git.md",
     "Project/uLED/UI_Docs/RecipeWindow/ToolsMenu/UserManual.md",
     "Project/uLED/UI_Docs/RecipeWindow/ToolsMenu/DevNote.md",
     "Project/uLED/UI_Docs/RecipeWindow/ToolsMenu/Analysis.md",
@@ -227,7 +229,6 @@
     "Project/uLED/UI_Docs/RecipeGlassMapWindow",
     "무제.base",
     "Project/uLED/분석_Docs/10.Dot-Level측정-7x7Gaussian-Shift-Threshold-표준맵-상세분석.md",
-    "CS/05.파일·소켓·비동기 IO와 Buffer.md",
     "English/TOEIC"
   ]
 }
