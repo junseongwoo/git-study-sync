@@ -11,10 +11,12 @@
             "id": "73e54a2dc1298d0a",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {},
-              "icon": "lucide-file",
-              "title": "새 탭"
+              "type": "release-notes",
+              "state": {
+                "currentVersion": "1.13.7"
+              },
+              "icon": "lucide-book-up",
+              "title": "릴리즈 노트 1.13.7"
             }
           }
         ]
@@ -192,7 +194,7 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "6ab1c6578c2926a1",
+  "active": "73e54a2dc1298d0a",
   "lastOpenFiles": [
     "정보처리기사/핵심요약집_2026_정보처리기사필기핵심요약.pdf",
     "정보처리기사/필기(요약).pdf",
