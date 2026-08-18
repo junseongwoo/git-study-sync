@@ -198,11 +198,12 @@
   },
   "active": "c86ae2651d6db084",
   "lastOpenFiles": [
+    "conflict-files-obsidian-git.md",
+    "CV/vision-study/01-equipment-vision-overview.md",
+    "Project/uLED/분석_Docs/07.Align-UVW-상세분석.md",
     "CV/vision-study/README.md",
     "CV/vision-study/VALIDATION.md",
-    "CV/vision-study/01-equipment-vision-overview.md",
     "CV/vision-study/00-roadmap.md",
-    "conflict-files-obsidian-git.md",
     "CV/vision-study",
     "CV",
     "Project/uLED/분석_Docs/07.2_3점 Align 분석.md",
@@ -232,7 +233,6 @@
     "코테준비/C++ 문법/01.string과-char.md",
     "코테준비/C++ 문법",
     "Project/uLED/분석_Docs/10.Dot-Level측정-7x7Gaussian-Shift-Threshold-표준맵-상세분석.md",
-    "Project/uLED/분석_Docs/00.TestRunner-Camera-전체-코드분석.md",
-    "CS/04.C++ 메모리와 객체 수명 보완.md"
+    "Project/uLED/분석_Docs/00.TestRunner-Camera-전체-코드분석.md"
   ]
 }
