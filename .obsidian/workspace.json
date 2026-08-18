@@ -194,6 +194,11 @@
   },
   "active": "2ff9545607ac062d",
   "lastOpenFiles": [
+    "CV/vision-study/VALIDATION.md",
+    "CV/vision-study/README.md",
+    "CV/vision-study/01-equipment-vision-overview.md",
+    "CV/vision-study/00-roadmap.md",
+    "CV/vision-study",
     "CV",
     "conflict-files-obsidian-git.md",
     "Project/uLED/분석_Docs/07.2_3점 Align 분석.md",
@@ -224,11 +229,6 @@
     "코테준비/C++ 문법",
     "Project/uLED/분석_Docs/10.Dot-Level측정-7x7Gaussian-Shift-Threshold-표준맵-상세분석.md",
     "Project/uLED/분석_Docs/00.TestRunner-Camera-전체-코드분석.md",
-    "CS/04.C++ 메모리와 객체 수명 보완.md",
-    "코테준비/C++/3일차 - STL 해시 컨테이너와 Stack·Queue·Priority Queue.md",
-    "코테준비/C++/2일차 - 빈도 배열과 해시 테이블 원리.md",
-    "코테준비/C++/1일차 - 배열·vector와 문자열·string.md",
-    "무제.base",
-    "Project/uLED/UI_Docs/RecipeWindow/AlignWindow"
+    "CS/04.C++ 메모리와 객체 수명 보완.md"
   ]
 }
