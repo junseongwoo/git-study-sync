@@ -4,39 +4,20 @@
     "type": "split",
     "children": [
       {
-        "id": "815d059a996f91eb",
+        "id": "56624e48c3ed07f5",
         "type": "tabs",
         "children": [
           {
-            "id": "344bc93e11d201c8",
+            "id": "73e54a2dc1298d0a",
             "type": "leaf",
             "state": {
-              "type": "split-diff-view",
-              "state": {
-                "aFile": ".obsidian/workspace.json",
-                "bFile": ".obsidian/workspace.json",
-                "aRef": ""
-              },
-              "icon": "diff",
-              "title": "Diff: workspace.json  (Working Tree)"
-            }
-          },
-          {
-            "id": "a2534de8874653f1",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "conflict-files-obsidian-git.md",
-                "mode": "source",
-                "source": false
-              },
+              "type": "empty",
+              "state": {},
               "icon": "lucide-file",
-              "title": "conflict-files-obsidian-git"
+              "title": "새 탭"
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -211,12 +192,8 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "a2534de8874653f1",
+  "active": "6ab1c6578c2926a1",
   "lastOpenFiles": [
-    "CV",
-    "conflict-files-obsidian-git.md",
-    "Project/uLED/분석_Docs/07.2_3점 Align 분석.md",
-    "Project/uLED/분석_Docs/07.1_Align-UVW-상세분석.md",
     "정보처리기사/핵심요약집_2026_정보처리기사필기핵심요약.pdf",
     "정보처리기사/필기(요약).pdf",
     "Project/uLED/UI_Docs/TestRunnerWindow/UserManual.md",
@@ -243,11 +220,15 @@
     "코테준비/C++ 문법",
     "Project/uLED/분석_Docs/10.Dot-Level측정-7x7Gaussian-Shift-Threshold-표준맵-상세분석.md",
     "Project/uLED/분석_Docs/00.TestRunner-Camera-전체-코드분석.md",
+    "conflict-files-obsidian-git.md",
     "CS/04.C++ 메모리와 객체 수명 보완.md",
     "코테준비/C++/3일차 - STL 해시 컨테이너와 Stack·Queue·Priority Queue.md",
     "코테준비/C++/2일차 - 빈도 배열과 해시 테이블 원리.md",
     "코테준비/C++/1일차 - 배열·vector와 문자열·string.md",
     "무제.base",
-    "Project/uLED/UI_Docs/RecipeWindow/AlignWindow"
+    "코테준비/C++/2일차 - 빈도 배열과 해시 테이블 원리 (책 보완 개정판).md",
+    "코테준비/C++/3일차 - 빈도 배열과 기초 해시 사고방식.md",
+    "Project/uLED/UI_Docs/RecipeWindow/AlignWindow",
+    "Project/uLED/UI_Docs/RecipeFolderBrowserWindow"
   ]
 }
