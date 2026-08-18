@@ -53,6 +53,7 @@
 | `README.md` | 통과 | 통과 | 해당 없음 | 통과 | 통과 |
 | `00-roadmap.md` | 통과 | 통과 | 해당 없음 | 통과 | 통과 |
 | `01-equipment-vision-overview.md` | 통과 | 통과 | 정적 검토 통과 | 통과 | 통과 |
+| `02-image-basic.md` | 통과 | 통과 | 정적 검토 통과 | 통과 | 통과 |
 
 ## Chapter 1 상세 검토 기록
 
@@ -67,6 +68,21 @@
 - ROI가 Image 내부에 완전히 포함되는지 검사하고, 빈 Image와 잘못된 Recipe를 Error로 분리했다.
 - 모든 Markdown 파일이 유효한 UTF-8이며 코드 Fence 수가 짝수임을 확인했다.
 - 현재 환경의 OpenCV C++ 개발 도구 설치 여부와 무관하게 읽을 수 있도록 코드는 문서 내부 예제로 유지했다. 실제 Build 검증은 프로젝트 파일을 생성하는 Phase에서 CMake 구성과 함께 수행한다.
+
+## Chapter 2 상세 검토 기록
+
+- 검증일: 2026-08-18
+- 고정 형식 12개 항목을 모두 확인했다.
+- Camera Resolution, Image Resolution, Pixel Size, Spatial Resolution, Optical Resolution의 정의·단위·결정 요인을 비교했다.
+- `2048 × 2048 × 1 byte = 4,194,304 byte = 4 MiB`를 재계산했다.
+- `4096 × 3000` 12-bit Image가 16-bit Container일 때 `24,576,000 byte ≈ 23.44 MiB`임을 재계산했다.
+- 동일 Image의 이상적 12-bit Packed 크기가 `18,432,000 byte ≈ 17.58 MiB`임을 재계산했다.
+- `10 mm / 2000 pixel = 5 μm/pixel`, `240 pixel = 1.2 mm` 계산과 단위 변환을 확인했다.
+- 12-bit 값 `3072`의 전체 범위 8-bit Mapping이 약 `191`임을 확인했다.
+- C++ 표준 헤더, `cv::Mat` Type/Depth/Channel, `elemSize`, `step`, 통계 및 12→8-bit 변환 코드를 정적 검토했다.
+- 면접 질문 6개에 초보자/실무자/30초 답변이 모두 포함되어 있다.
+- 내부 Obsidian 링크 대상, UTF-8, 34개 Code Fence의 짝을 자동 확인했다.
+- 현재 시스템에서 C++ Compiler, CMake 및 OpenCV C++ Header를 찾지 못해 실제 Build는 환경 미검증이다. 독립 프로젝트를 시작할 때 Toolchain과 OpenCV를 구성한 뒤 Build/Test를 추가 수행한다.
 
 ## 검증 결과 표기 규칙
 

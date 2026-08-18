@@ -135,14 +135,6 @@ Measurement와 Judgement를 분리하면 Spec만 변경할 때 영상처리를 �
 - 전체 OK/NG 및 Error Code
 - 원본/NG/Overlay Image 경로
 
-#### Review
-
-결과를 사람이 재확인하는 기능이다. 단순히 NG Image만 표시하지 않고 ROI, 검출 특징, 측정값, Spec, 사용한 Recipe/Calibration 버전을 함께 보여줘야 원인 분석이 가능하다.
-
-#### CIM(Customer Interface Module)
-
-설비와 상위 Host/MES 간 생산 정보와 상태를 교환한다. Vision Result를 그대로 전송하기보다 설비의 제품 ID와 검사 Sequence에 정확히 결합하고, 재전송·중복·통신 실패 정책을 관리한다.
-
 ### 3.6 좌표계
 
 ```text
@@ -234,11 +226,7 @@ move & settle     │             │               │
 
 검사 Buffer를 Camera가 재사용한 뒤 Review Thread가 같은 메모리를 읽었을 수 있다. Frame을 복사하거나 참조 카운팅된 불변 Image로 전달하고, `Frame ID ↔ Product ID ↔ Result ID`를 한 묶음으로 관리해야 한다.
 
-### 상황 C: CIM에는 NG인데 장비 UI에는 OK로 보인다
-
-측정, 판정, UI 표시, CIM 메시지 생성이 서로 다른 기준이나 Recipe Version을 사용했을 가능성이 있다. 단일 `InspectionResult`를 불변 데이터로 확정한 뒤 UI/저장/CIM이 동일한 Result를 소비하게 설계한다.
-
-### 상황 D: 카메라는 촬영했지만 이전 제품 이미지가 검사된다
+### 상황 C: 카메라는 촬영했지만 이전 제품 이미지가 검사된다
 
 Trigger Sequence와 Frame ID 검증이 없거나 비동기 Queue에 오래된 Frame이 남아 있을 수 있다. Trigger ID, Timestamp, Encoder/Stage Position을 Metadata로 묶고 예상 Sequence와 일치하는지 검사한다.
 

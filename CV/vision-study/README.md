@@ -12,8 +12,8 @@
 
 1. [[00-roadmap|전체 로드맵]]을 읽고 학습 순서를 확인한다.
 2. [[01-equipment-vision-overview|Chapter 1. 검사 장비와 비전 SW 전체 구조]]를 학습한다.
-3. Chapter 1의 실습과 면접 질문에 답한다.
-4. 학습이 끝나면 다음 Chapter를 생성한다.
+3. [[02-image-basic|Chapter 2. Image와 Pixel 기본]]을 학습한다.
+4. 각 Chapter의 실습과 면접 질문에 답한 뒤 다음 Chapter로 이동한다.
 
 ## 최종 학습 목표
 
@@ -104,6 +104,7 @@
 
 - [[00-roadmap|00. 32주 학습 로드맵]]
 - [[01-equipment-vision-overview|01. 검사 장비와 비전 SW 전체 구조]]
+- [[02-image-basic|02. Image와 Pixel 기본]]
 - [[VALIDATION|문서·수식·C++ 검증 기록]]
 
 > 이후 Chapter는 앞 Chapter 학습과 질문 정리가 끝난 뒤 순차적으로 추가한다.
