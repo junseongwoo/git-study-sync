@@ -54,6 +54,9 @@
 | `00-roadmap.md` | 통과 | 통과 | 해당 없음 | 통과 | 통과 |
 | `01-equipment-vision-overview.md` | 통과 | 통과 | 정적 검토 통과 | 통과 | 통과 |
 | `02-image-basic.md` | 통과 | 통과 | 정적 검토 통과 | 통과 | 통과 |
+| `03-camera-pixel.md` | 통과 | 통과 | 정적 검토 통과 | 통과 | 통과 |
+| `04-lens-optics.md` | 통과 | 통과 | 정적 검토 통과 | 통과 | 통과 |
+| `05-fov-resolution.md` | 통과 | 통과 | 정적 검토 통과 | 통과 | 통과 |
 
 ## Chapter 1 상세 검토 기록
 
@@ -83,6 +86,50 @@
 - 면접 질문 6개에 초보자/실무자/30초 답변이 모두 포함되어 있다.
 - 내부 Obsidian 링크 대상, UTF-8, 34개 Code Fence의 짝을 자동 확인했다.
 - 현재 시스템에서 C++ Compiler, CMake 및 OpenCV C++ Header를 찾지 못해 실제 Build는 환경 미검증이다. 독립 프로젝트를 시작할 때 Toolchain과 OpenCV를 구성한 뒤 Build/Test를 추가 수행한다.
+
+## Chapter 3 상세 검토 기록
+
+- 검증일: 2026-08-19
+- 고정 형식 12개 항목과 면접 질문 6개의 3단계 답변을 모두 확인했다.
+- `2048 pixel × 3 μm/pixel = 6144 μm = 6.144 mm` Sensor Size를 재계산했다.
+- 0.5×/1×/2×의 FOV가 각각 `12.288/6.144/3.072 mm`임을 재계산했다.
+- 같은 배율에서 Object Space Sampling이 각각 `6/3/1.5 μm/pixel`이며 `FOV/N` 결과와 일치함을 확인했다.
+- 실측 FOV 12.20 mm에서 `5.95703125 μm/pixel`, 유효 배율 약 `0.5036066×`임을 재계산했다.
+- 10 mm FOV와 2048 Pixel에서 `4.8828125 μm/pixel`, 4 Pixel 특징이 `19.53125 μm`임을 확인했다.
+- 이상적 배율 계산과 실제 검출 성능을 구분하고 MTF, Focus, Illumination, Noise 및 Motion Blur 조건을 포함했는지 확인했다.
+- C++ 입력의 0/음수/NaN 검증, μm/mm 변환, `p/M`과 `FOV/N` 교차 검산 Test를 정적 검토했다.
+- 범위 반복이 간접 헤더 포함에 의존하지 않도록 `<initializer_list>`를 명시했다.
+- 내부 Obsidian 링크, UTF-8 및 50개 Code Fence의 짝을 자동 확인했다.
+- 현재 시스템에 C++ Build Toolchain이 없어 실제 Compile/Run은 환경 미검증이며, 프로젝트 단계에서 CMake 기반으로 추가 검증한다.
+
+## Chapter 4 상세 검토 기록
+
+- 검증일: 2026-08-19
+- 고정 형식 12개 항목과 면접 질문 6개의 3단계 답변을 모두 확인했다.
+- `2448×2048`, 3.45 μm Sensor의 크기가 `8.4456×7.0656 mm`임을 재계산했다.
+- 0.5× Lens의 FOV가 `16.8912×14.1312 mm`, Sampling이 `6.9 μm/pixel`임을 확인했다.
+- Sensor 대각선이 약 `11.0114 mm`여서 문서의 `≈11.01 mm`와 일치함을 확인했다.
+- Thin Lens 예제의 `u=550 mm`, `v=55 mm`, `1/u+1/v=1/50`을 독립적으로 검산했다.
+- Macro DOF 근사 예제의 0.5×/1× 결과가 각각 `0.96/0.32 mm`임을 재계산했다.
+- Working Distance와 주평면 기준 Object Distance를 동일시하지 않도록 경고가 있는지 확인했다.
+- DOF 식을 제조사 Datasheet와 실제 Target 검증을 대체하지 않는 비교용 근사식으로 제한했는지 확인했다.
+- C++의 단위 표현, 유효 입력 검사, Sensor/FOV/Diagonal 및 교육용 Thin Lens/DOF 함수 분리를 정적 검토했다.
+- 내부 Obsidian 링크, UTF-8 및 52개 Code Fence의 짝을 자동 확인했다.
+- 실제 Compile/Run은 C++ Build Toolchain 미설치로 환경 미검증이다.
+
+## Chapter 5 상세 검토 기록
+
+- 검증일: 2026-08-19
+- 고정 형식 12개 항목과 면접 질문 6개의 3단계 답변을 모두 확인했다.
+- 2048 Pixel, 3 μm Sensor에서 0.25×/0.5×/1×/2× FOV가 `24.576/12.288/6.144/3.072 mm`임을 재계산했다.
+- 같은 조건의 Object Sampling이 `12/6/3/1.5 μm/pixel`임을 확인했다.
+- 10 mm FOV와 2048 Pixel에서 `4.8828125 μm/pixel`, 20 μm Feature가 `4.096 Pixel`임을 확인했다.
+- 18 mm FOV, 30 μm Feature, 최소 5 Pixel 조건에서 최소 가로 Pixel Count가 3000임을 재계산했다.
+- `10×6 mm` Rectangle의 5° 회전 Bounding Box가 약 `10.4849×6.8487 mm`임을 독립적으로 계산했다.
+- 설계 6.00 μm/pixel과 실측 6.08 μm/pixel의 상대 차이가 약 `1.3333%`임을 확인했다.
+- C++ 평가기가 FOV와 Sampling 합격을 분리하고 최소 Pixel Count를 올림하는지 정적 검토했다.
+- 내부 Obsidian 링크, UTF-8 및 60개 Code Fence의 짝을 자동 확인했다.
+- 실제 Compile/Run은 C++ Build Toolchain 미설치로 환경 미검증이다.
 
 ## 검증 결과 표기 규칙
 
