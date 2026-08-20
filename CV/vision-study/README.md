@@ -16,7 +16,25 @@
 4. [[03-camera-pixel|Chapter 3. Camera Pixel Size와 실제 물체의 관계]]를 학습한다.
 5. [[04-lens-optics|Chapter 4. Camera + Lens + Optical System]]을 학습한다.
 6. [[05-fov-resolution|Chapter 5. FOV · Resolution · Magnification 집중 계산]]을 학습한다.
-7. 각 Chapter의 실습과 면접 질문에 답한 뒤 다음 Chapter로 이동한다.
+7. [[06-optical-resolution|Chapter 6. Optical Resolution과 실제 검사 Resolution]]을 학습한다.
+8. [[07-illumination|Chapter 7. Illumination: 조명으로 검사 특징 만들기]]를 학습한다.
+9. [[08-vision-align-glass|8일차. 3개 Align Mark로 370×470 Glass 중심 정렬하기]]를 학습한다.
+10. [[09-image-processing-01-threshold|9일차. 영상처리 기초 1: Histogram · Contrast · Threshold]]를 학습한다.
+11. [[10-image-processing-02-filter-edge|10일차. 영상처리 기초 2: Filtering · Gradient · Edge]]를 학습한다.
+12. [[11-image-processing-03-morphology-blob|11일차. Morphology · Connected Component · Blob]]을 학습한다.
+13. [[12-roi-transform|12일차. ROI와 Align 기반 Coordinate Transform]]을 학습한다.
+14. [[13-alignment-advanced|13일차. Alignment 심화]]를 학습한다.
+15. [[14a-calibration-coordinate-transform|14일차 A. Image→Machine Calibration]]을 학습한다.
+16. [[14b-camera-calibration|14일차 B. Camera Calibration]]을 학습한다.
+17. [[15-coordinate-systems|15일차. Coordinate System과 Transform Chain]]을 학습한다.
+18. [[16a-inspection-algorithms|16일차 A. 산업용 검사 알고리즘]]을 학습한다.
+19. [[16b-inspection-pipeline|16일차 B. Inspection Pipeline]]을 학습한다.
+20. [[17a-recipe-software-architecture|17일차 A. Recipe와 검사 장비 SW 아키텍처]]를 학습한다.
+21. [[17b-modern-cpp-opencv|17일차 B. Modern C++17과 OpenCV 구현 원칙]]을 학습한다.
+22. [[18-interview-troubleshooting|18일차. 비전·광학 통합 면접과 트러블슈팅]]으로 설명과 진단 능력을 점검한다.
+23. [[final-project/mini-vision-inspection-system|19일차 Final Project]]로 전체 Pipeline을 통합한다.
+24. [[20-advanced-deep-learning-vision|20일차 Advanced. 산업 검사에서 딥러닝 Vision을 선택하는 기준]]은 필요할 때 선택 학습한다.
+25. 각 Chapter의 실습과 면접 질문에 답한 뒤 다음 Chapter로 이동한다.
 
 ## 최종 학습 목표
 
@@ -93,6 +111,16 @@
 6. Recipe 기반 Inspection Engine
 7. 최종 Mini Vision Inspection System
 
+### 단계별 프로젝트 문서
+
+1. [[projects/project-01-basic-image|Project 01. Image Load → Gray → Threshold → Blob]]
+2. [[projects/project-02-edge|Project 02. Edge 기반 위치와 폭 측정]]
+3. [[projects/project-03-blob|Project 03. Blob 특징 기반 결함 검사]]
+4. [[projects/project-04-alignment|Project 04. 3-Mark 기반 370×470 Glass Align]]
+5. [[projects/project-05-calibration|Project 05. Image–Machine Calibration과 좌표 변환]]
+6. [[projects/project-06-inspection-engine|Project 06. Recipe 기반 Inspection Engine]]
+7. [[final-project/mini-vision-inspection-system|19일차 Final Project. Mini Vision Inspection System]]
+
 ## 면접 준비 방법
 
 각 질문을 세 단계로 연습한다.
@@ -111,6 +139,24 @@
 - [[03-camera-pixel|03. Camera Pixel Size와 실제 물체의 관계]]
 - [[04-lens-optics|04. Camera + Lens + Optical System]]
 - [[05-fov-resolution|05. FOV · Resolution · Magnification 집중 계산]]
+- [[06-optical-resolution|06. Optical Resolution과 실제 검사 Resolution]]
+- [[07-illumination|07. Illumination: 조명으로 검사 특징 만들기]]
+- [[08-vision-align-glass|08. 3개 Align Mark로 370×470 Glass 중심 정렬하기]]
+- [[09-image-processing-01-threshold|09. 영상처리 기초 1: Histogram · Contrast · Threshold]]
+- [[10-image-processing-02-filter-edge|10. 영상처리 기초 2: Filtering · Gradient · Edge]]
+- [[11-image-processing-03-morphology-blob|11. Morphology · Connected Component · Blob]]
+- [[12-roi-transform|12. ROI와 Align 기반 Coordinate Transform]]
+- [[13-alignment-advanced|13. Alignment 심화]]
+- [[14a-calibration-coordinate-transform|14A. Image→Machine Calibration]]
+- [[14b-camera-calibration|14B. Camera Calibration]]
+- [[15-coordinate-systems|15. Coordinate System과 Transform Chain]]
+- [[16a-inspection-algorithms|16A. 산업용 검사 알고리즘]]
+- [[16b-inspection-pipeline|16B. Inspection Pipeline]]
+- [[17a-recipe-software-architecture|17A. Recipe와 검사 장비 SW 아키텍처]]
+- [[17b-modern-cpp-opencv|17B. Modern C++17과 OpenCV 구현 원칙]]
+- [[18-interview-troubleshooting|18. 비전·광학 통합 면접과 트러블슈팅]]
+- [[final-project/mini-vision-inspection-system|19. Final Project — Mini Vision Inspection System]]
+- [[20-advanced-deep-learning-vision|20. Advanced — 산업 검사에서 딥러닝 Vision을 선택하는 기준]]
 - [[VALIDATION|문서·수식·C++ 검증 기록]]
 
 > 이후 Chapter는 앞 Chapter 학습과 질문 정리가 끝난 뒤 순차적으로 추가한다.

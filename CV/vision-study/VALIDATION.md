@@ -57,6 +57,7 @@
 | `03-camera-pixel.md` | 통과 | 통과 | 정적 검토 통과 | 통과 | 통과 |
 | `04-lens-optics.md` | 통과 | 통과 | 정적 검토 통과 | 통과 | 통과 |
 | `05-fov-resolution.md` | 통과 | 통과 | 정적 검토 통과 | 통과 | 통과 |
+| `06-optical-resolution.md` | 통과 | 통과 | 정적 검토 통과 | 통과 | 통과 |
 
 ## Chapter 1 상세 검토 기록
 
@@ -129,6 +130,22 @@
 - 설계 6.00 μm/pixel과 실측 6.08 μm/pixel의 상대 차이가 약 `1.3333%`임을 확인했다.
 - C++ 평가기가 FOV와 Sampling 합격을 분리하고 최소 Pixel Count를 올림하는지 정적 검토했다.
 - 내부 Obsidian 링크, UTF-8 및 60개 Code Fence의 짝을 자동 확인했다.
+- 실제 Compile/Run은 C++ Build Toolchain 미설치로 환경 미검증이다.
+
+## Chapter 6 상세 검토 기록
+
+- 검증일: 2026-08-19
+- 고정 형식 12개 항목과 면접 질문 6개의 3단계 답변을 모두 확인했다.
+- 3 μm Pixel의 Image-space Nyquist가 약 `166.6667 lp/mm`, 0.5×의 Object-space Nyquist가 약 `83.3333 lp/mm`임을 재계산했다.
+- Object Contrast 0.8과 MTF 0.25의 단순 선형 출력 Contrast가 0.2임을 확인했다.
+- 50 mm/s, 2 ms에서 이동량이 100 μm이고, 5 μm/pixel에서 20 Pixel Blur임을 확인했다.
+- 같은 조건에서 0.5 Pixel Blur를 위한 최대 Exposure가 `0.05 ms = 50 μs`임을 확인했다.
+- 0.55 μm 파장에서 F/4, F/8, F/16 Airy 지름 근사가 `5.368/10.736/21.472 μm`임을 재계산했다.
+- Rayleigh 근사에서 NA 0.10/0.25가 각각 약 `3.355/1.342 μm`임을 확인했다.
+- Defect/Background 통계 예제의 CNR이 약 `3.1235`임을 재계산했다.
+- Nyquist 2 Sample 기준, Airy/Rayleigh 식 및 C++ Analyzer가 실제 검출 가능성을 보증하지 않는다는 제한을 확인했다.
+- C++의 Sampling, Nyquist, Motion, Diffraction, CNR 계산과 0/음수/NaN 입력 검증을 정적 검토했다.
+- 내부 Obsidian 링크, UTF-8 및 64개 Code Fence의 짝을 자동 확인했다.
 - 실제 Compile/Run은 C++ Build Toolchain 미설치로 환경 미검증이다.
 
 ## 검증 결과 표기 규칙
