@@ -10,27 +10,27 @@
 
 ## 단계별 로드맵
 
-| 기간 | Phase | 학습 결과물 |
-|---|---|---|
-| 1~2주 | Phase 0. 검사 장비 구조 | Acquisition부터 CIM까지 데이터 흐름도와 인터페이스 정의 |
-| 3~4주 | Phase 1. Image 기본 | Bit Depth·Pixel·Resolution 설명 및 `cv::Mat` 분석 도구 |
-| 5~6주 | Phase 2. Camera / Pixel | Pixel Size와 Object Space Pixel Resolution 계산기 |
-| 7~8주 | Phase 3. Lens / Optical | Camera-Lens-Object 관계도와 렌즈 선정표 |
-| 9~10주 | Phase 4. FOV / Resolution | 배율별 FOV·샘플링 계산 및 요구사항 역산 |
-| 11~12주 | Phase 5. Optical Resolution | Defect 검출 가능성 평가표, Blur/MTF/Sampling 실험 |
-| 13~14주 | Phase 6. Illumination | 조명별 영상 비교 및 조명 선정 근거 |
-| 15~18주 | Phase 7. Image Processing | Threshold/Filter/Edge/Morphology/Blob 실습 3종 |
-| 19주 | Phase 8. ROI | Static/Dynamic ROI와 Transform 구현 |
-| 20~22주 | Phase 9. Alignment | Pattern Matching 기반 X/Y/Theta 보정 |
-| 23~24주 | Phase 10. Calibration | Image → Machine 좌표 변환 모듈 |
-| 25주 | Phase 11. Camera Calibration | 왜곡 보정 및 Intrinsic/Extrinsic 해석 |
-| 26주 | Phase 12. Coordinate System | 좌표계 계약서와 변환 검증 테스트 |
-| 27~28주 | Phase 13. Inspection Algorithm | Presence/치수/결함 검사 선택표와 구현 |
-| 29주 | Phase 14. Inspection Pipeline | 단계별 책임과 오류 처리 Pipeline |
-| 30주 | Phase 15. Recipe / Architecture | Recipe·Result·NG Image 저장 구조 |
-| 31주 | Phase 16. C++ Implementation | RAII·병렬 처리·Unit Test를 적용한 엔진 |
-| 32주 | Phase 17 + Final Project 계획 | 면접 답변 정리와 최종 시스템 설계서 |
-| 33~36주(선택) | Final Project | Mini Vision Inspection System 완성·검증 |
+| 기간         | Phase                           | 학습 결과물                                          |
+| ---------- | ------------------------------- | ----------------------------------------------- |
+| 1~2주       | Phase 0. 검사 장비 구조               | Acquisition부터 CIM까지 데이터 흐름도와 인터페이스 정의           |
+| 3~4주       | Phase 1. Image 기본               | Bit Depth·Pixel·Resolution 설명 및 `cv::Mat` 분석 도구 |
+| 5~6주       | Phase 2. Camera / Pixel         | Pixel Size와 Object Space Pixel Resolution 계산기   |
+| 7~8주       | Phase 3. Lens / Optical         | Camera-Lens-Object 관계도와 렌즈 선정표                  |
+| 9~10주      | Phase 4. FOV / Resolution       | 배율별 FOV·샘플링 계산 및 요구사항 역산                        |
+| 11~12주     | Phase 5. Optical Resolution     | Defect 검출 가능성 평가표, Blur/MTF/Sampling 실험         |
+| 13~14주     | Phase 6. Illumination           | 조명별 영상 비교 및 조명 선정 근거                            |
+| 15~18주     | Phase 7. Image Processing       | Threshold/Filter/Edge/Morphology/Blob 실습 3종     |
+| 19주        | Phase 8. ROI                    | Static/Dynamic ROI와 Transform 구현                |
+| 20~22주     | Phase 9. Alignment              | Pattern Matching 기반 X/Y/Theta 보정                |
+| 23~24주     | Phase 10. Calibration           | Image → Machine 좌표 변환 모듈                        |
+| 25주        | Phase 11. Camera Calibration    | 왜곡 보정 및 Intrinsic/Extrinsic 해석                  |
+| 26주        | Phase 12. Coordinate System     | 좌표계 계약서와 변환 검증 테스트                              |
+| 27~28주     | Phase 13. Inspection Algorithm  | Presence/치수/결함 검사 선택표와 구현                       |
+| 29주        | Phase 14. Inspection Pipeline   | 단계별 책임과 오류 처리 Pipeline                          |
+| 30주        | Phase 15. Recipe / Architecture | Recipe·Result·NG Image 저장 구조                    |
+| 31주        | Phase 16. C++ Implementation    | RAII·병렬 처리·Unit Test를 적용한 엔진                    |
+| 32주        | Phase 17 + Final Project 계획     | 면접 답변 정리와 최종 시스템 설계서                            |
+| 33~36주(선택) | Final Project                   | Mini Vision Inspection System 완성·검증             |
 
 ## 전체 Chapter 목록
 
