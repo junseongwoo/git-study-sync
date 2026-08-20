@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "CV/vision-study/08-vision-align-glass.md",
+                "file": "Project/uLED/분석_Docs/11.AutoAlign_기능_설명.md",
                 "mode": "preview",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "08-vision-align-glass"
+              "title": "11.AutoAlign_기능_설명"
             }
           }
         ]
@@ -198,6 +198,7 @@
   "active": "0999ad0283da0396",
   "lastOpenFiles": [
     "Project/uLED/분석_Docs/11.AutoAlign_기능_설명.md",
+    "CV/vision-study/08-vision-align-glass.md",
     "CV/vision-study/projects/project-06-inspection-engine.md",
     "CV/vision-study/projects/project-04-alignment.md",
     "CV/vision-study/projects/project-05-calibration.md",
@@ -221,7 +222,6 @@
     "CV/vision-study/11-image-processing-03-morphology-blob.md",
     "CV/vision-study/10-image-processing-02-filter-edge.md",
     "CV/vision-study/09-image-processing-01-threshold.md",
-    "CV/vision-study/08-vision-align-glass.md",
     "CV/vision-study/07-illumination.md",
     "CV/vision-study/06-optical-resolution.md",
     "CV/vision-study/05-fov-resolution.md",
