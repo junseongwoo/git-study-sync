@@ -11,10 +11,14 @@
             "id": "0999ad0283da0396",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {},
+              "type": "markdown",
+              "state": {
+                "file": "Project/uLED/분석_Docs/11.AutoAlign_설명.md",
+                "mode": "source",
+                "source": false
+              },
               "icon": "lucide-file",
-              "title": "새 탭"
+              "title": "11.AutoAlign_설명"
             }
           }
         ]
@@ -191,8 +195,9 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "2ff9545607ac062d",
+  "active": "0999ad0283da0396",
   "lastOpenFiles": [
+    "Project/uLED/분석_Docs/11.AutoAlign_설명.md",
     "Project/uLED/분석_Docs/11.AutoAlign_기능_설명.md",
     "CV/vision-study/08-vision-align-glass.md",
     "CV/vision-study/projects/project-06-inspection-engine.md",
@@ -220,7 +225,6 @@
     "CV/vision-study/09-image-processing-01-threshold.md",
     "CV/vision-study/07-illumination.md",
     "CV/vision-study/06-optical-resolution.md",
-    "CV/vision-study/05-fov-resolution.md",
     "CV/vision-study",
     "CV",
     "정보처리기사/핵심요약집_2026_정보처리기사필기핵심요약.pdf",
