@@ -11,14 +11,10 @@
             "id": "0999ad0283da0396",
             "type": "leaf",
             "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Project/uLED/분석_Docs/11.AutoAlign_설명.md",
-                "mode": "preview",
-                "source": false
-              },
+              "type": "empty",
+              "state": {},
               "icon": "lucide-file",
-              "title": "11.AutoAlign_설명"
+              "title": "새 탭"
             }
           }
         ]
@@ -195,7 +191,7 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "0999ad0283da0396",
+  "active": "6ab1c6578c2926a1",
   "lastOpenFiles": [
     "Project/uLED/분석_Docs/11.AutoAlign_설명.md",
     "Project/uLED/분석_Docs/11.AutoAlign_기능_설명.md",
