@@ -193,8 +193,10 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "671e1e7dacd56710",
+  "active": "6ab1c6578c2926a1",
   "lastOpenFiles": [
+    "CS/JAVA/OS_Java_01_Kernel_Process_Thread.pdf",
+    "CS/JAVA/OS_Java_01_Kernel_Process_Thread.docx",
     "CS/CPP/00.메모리·객체 수명·RAII.md",
     "CS/JAVA/OS_Java_00_Roadmap.pdf",
     "CS/JAVA",
@@ -228,8 +230,6 @@
     "코테준비/C++ 문법",
     "Project/uLED/UI_Docs/AlignWindow/DevNote.md",
     "Project/uLED/UI_Docs/AlignWindow/Analysis.md",
-    "Project/uLED/UI_Docs/AlignWindow",
-    "Project/uLED/UI_Docs/TestRunnerWindow/DevNote.md",
-    "Project/uLED/UI_Docs/TestRunnerWindow"
+    "Project/uLED/UI_Docs/AlignWindow"
   ]
 }
