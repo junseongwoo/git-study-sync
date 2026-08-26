@@ -11,10 +11,14 @@
             "id": "0999ad0283da0396",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {},
+              "type": "markdown",
+              "state": {
+                "file": "CS/CPP/00.메모리·객체 수명·RAII.md",
+                "mode": "source",
+                "source": false
+              },
               "icon": "lucide-file",
-              "title": "새 탭"
+              "title": "00.메모리·객체 수명·RAII"
             }
           }
         ]
@@ -191,14 +195,17 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "2ff9545607ac062d",
+  "active": "6ab1c6578c2926a1",
   "lastOpenFiles": [
+    "CS/JAVA/OS_Java_00_Roadmap.pdf",
+    "CS/JAVA",
+    "CS/CPP",
     "Project/uLED/분석_Docs/11.AutoAlign_설명.md",
     "Project/uLED/분석_Docs/07.1_Align-UVW-상세분석.md",
     "Project/uLED/분석_Docs/07.2_3점 Align 분석.md",
     "conflict-files-obsidian-git.md",
     "코테준비/C++/5일차 - DFS·BFS와 간단한 동적 계획법.md",
-    "CS/06.C++ 객체지향 설계와 테스트 가능한 시스템.md",
+    "CS/CPP/06.C++ 객체지향 설계와 테스트 가능한 시스템.md",
     "정보처리기사/핵심요약집_2026_정보처리기사필기핵심요약.pdf",
     "정보처리기사/필기(요약).pdf",
     "Project/uLED/분석_Docs/05.DenseMap-표준맵미사용-RGB검사-Recipe적용.md",
@@ -224,10 +231,7 @@
     "Project/uLED/UI_Docs/AlignWindow/Analysis.md",
     "Project/uLED/UI_Docs/AlignWindow",
     "Project/uLED/UI_Docs/TestRunnerWindow/DevNote.md",
-    "Project/uLED/UI_Docs/TestRunnerWindow/Analysis.md",
     "Project/uLED/UI_Docs/TestRunnerWindow",
-    "Project/uLED/UI_Docs/RecipeGlassMapWindow",
-    "무제.base",
-    "English/TOEIC"
+    "Project/uLED/UI_Docs/RecipeGlassMapWindow"
   ]
 }
