@@ -4,21 +4,19 @@
     "type": "split",
     "children": [
       {
-        "id": "e0b993fee1a6a197",
+        "id": "c8f64311b72fcd23",
         "type": "tabs",
         "children": [
           {
-            "id": "0999ad0283da0396",
+            "id": "671e1e7dacd56710",
             "type": "leaf",
             "state": {
-              "type": "markdown",
+              "type": "pdf",
               "state": {
-                "file": "CS/CPP/00.메모리·객체 수명·RAII.md",
-                "mode": "source",
-                "source": false
+                "file": "CS/JAVA/OS_Java_00_Roadmap.pdf"
               },
-              "icon": "lucide-file",
-              "title": "00.메모리·객체 수명·RAII"
+              "icon": "lucide-file-text",
+              "title": "OS_Java_00_Roadmap"
             }
           }
         ]
@@ -195,8 +193,9 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "6ab1c6578c2926a1",
+  "active": "671e1e7dacd56710",
   "lastOpenFiles": [
+    "CS/CPP/00.메모리·객체 수명·RAII.md",
     "CS/JAVA/OS_Java_00_Roadmap.pdf",
     "CS/JAVA",
     "CS/CPP",
@@ -231,7 +230,6 @@
     "Project/uLED/UI_Docs/AlignWindow/Analysis.md",
     "Project/uLED/UI_Docs/AlignWindow",
     "Project/uLED/UI_Docs/TestRunnerWindow/DevNote.md",
-    "Project/uLED/UI_Docs/TestRunnerWindow",
-    "Project/uLED/UI_Docs/RecipeGlassMapWindow"
+    "Project/uLED/UI_Docs/TestRunnerWindow"
   ]
 }
