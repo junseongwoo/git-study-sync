@@ -4,19 +4,17 @@
     "type": "split",
     "children": [
       {
-        "id": "c8f64311b72fcd23",
+        "id": "e0b993fee1a6a197",
         "type": "tabs",
         "children": [
           {
-            "id": "671e1e7dacd56710",
+            "id": "0999ad0283da0396",
             "type": "leaf",
             "state": {
-              "type": "pdf",
-              "state": {
-                "file": "CS/JAVA/OS_Java_00_Roadmap.pdf"
-              },
-              "icon": "lucide-file-text",
-              "title": "OS_Java_00_Roadmap"
+              "type": "empty",
+              "state": {},
+              "icon": "lucide-file",
+              "title": "새 탭"
             }
           }
         ]
@@ -197,39 +195,39 @@
   "lastOpenFiles": [
     "CS/JAVA/OS_Java_01_Kernel_Process_Thread.pdf",
     "CS/JAVA/OS_Java_01_Kernel_Process_Thread.docx",
-    "CS/CPP/00.메모리·객체 수명·RAII.md",
     "CS/JAVA/OS_Java_00_Roadmap.pdf",
     "CS/JAVA",
+    "CS/CPP/08.다중 카메라 이미지 검사 스레드 설계와 멈춤 진단.md",
+    "CS/CPP/07.비동기 작업 취소와 UI 이미지 처리.md",
+    "CS/CPP/05.파일·소켓·비동기 IO와 Buffer.md",
+    "CS/CPP/06.C++ 객체지향 설계와 테스트 가능한 시스템.md",
+    "CS/CPP/04.C++ 메모리와 객체 수명 보완.md",
+    "CS/CPP/03.Mutex와 Condition Variable.md",
+    "CS/CPP/01.프로세스와 스레드.md",
+    "CS/CPP/02.동시성과 병렬성.md",
+    "CS/CPP/00.메모리·객체 수명·RAII.md",
     "CS/CPP",
     "Project/uLED/분석_Docs/11.AutoAlign_설명.md",
-    "Project/uLED/분석_Docs/07.1_Align-UVW-상세분석.md",
-    "Project/uLED/분석_Docs/07.2_3점 Align 분석.md",
-    "conflict-files-obsidian-git.md",
-    "코테준비/C++/5일차 - DFS·BFS와 간단한 동적 계획법.md",
-    "CS/CPP/06.C++ 객체지향 설계와 테스트 가능한 시스템.md",
+    "Project/uLED/분석_Docs/11.AutoAlign_기능_설명.md",
+    "CV/vision-study/08-vision-align-glass.md",
+    "CV/vision-study/projects/project-06-inspection-engine.md",
+    "CV/vision-study/projects/project-04-alignment.md",
+    "CV/vision-study/projects/project-05-calibration.md",
+    "CV/vision-study/projects/project-03-blob.md",
+    "CV/vision-study/projects/project-02-edge.md",
+    "CV/vision-study/projects/project-01-basic-image.md",
+    "CV/vision-study/projects",
+    "CV/vision-study/final-project/mini-vision-inspection-system.md",
+    "CV/vision-study/final-project",
+    "CV/vision-study/20-advanced-deep-learning-vision.md",
+    "CV/vision-study/18-interview-troubleshooting.md",
+    "CV/vision-study/17b-modern-cpp-opencv.md",
+    "CV/vision-study/17a-recipe-software-architecture.md",
+    "CV/vision-study/16b-inspection-pipeline.md",
+    "CV/vision-study/16a-inspection-algorithms.md",
+    "CV/vision-study",
+    "CV",
     "정보처리기사/핵심요약집_2026_정보처리기사필기핵심요약.pdf",
-    "정보처리기사/필기(요약).pdf",
-    "Project/uLED/분석_Docs/05.DenseMap-표준맵미사용-RGB검사-Recipe적용.md",
-    "Project/uLED/분석_Docs/08.Recipe-GlassSize-Config-검사파라미터-영향분석.md",
-    "Project/uLED/분석_Docs/09.검사등급-ABCD-Cell판정-상세분석.md",
-    "Project/uLED/UI_Docs/MainWindow/UserManual.md",
-    "Project/uLED/UI_Docs/MainWindow/DevNote.md",
-    "Project/uLED/UI_Docs/TestRunnerWindow/UserManual.md",
-    "Project/uLED/UI_Docs/RecipeWindow/InspectionPatterns/UserManual.md",
-    "Project/uLED/UI_Docs/RecipeWindow/BasicSettings/UserManual.md",
-    "Project/uLED/UI_Docs/AlignWindow/UserManual.md",
-    "Project/uLED/UI_Docs/RecipeWindow/ToolsMenu/UserManual.md",
-    "Project/uLED/UI_Docs/RecipeWindow/ToolsMenu/DevNote.md",
-    "Project/uLED/UI_Docs/RecipeWindow/ToolsMenu/Analysis.md",
-    "Project/uLED/UI_Docs/RecipeWindow/ToolsMenu",
-    "Project/uLED/UI_Docs/RecipeWindow/InspectionPatterns/DevNote.md",
-    "Project/uLED/UI_Docs/RecipeWindow/InspectionPatterns/Analysis.md",
-    "Project/uLED/UI_Docs/RecipeWindow/InspectionPatterns",
-    "Project/uLED/UI_Docs/RecipeGlassMapWindow/UserManual.md",
-    "코테준비/C++ 문법/01.string과-char.md",
-    "코테준비/C++ 문법",
-    "Project/uLED/UI_Docs/AlignWindow/DevNote.md",
-    "Project/uLED/UI_Docs/AlignWindow/Analysis.md",
-    "Project/uLED/UI_Docs/AlignWindow"
+    "정보처리기사/필기(요약).pdf"
   ]
 }
