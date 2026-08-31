@@ -13,10 +13,10 @@
             "state": {
               "type": "pdf",
               "state": {
-                "file": "CS/JAVA/OS_Java_00_Roadmap.pdf"
+                "file": "CS/JAVA/OS_Java_01_Kernel_Process_Thread.pdf"
               },
               "icon": "lucide-file-text",
-              "title": "OS_Java_00_Roadmap"
+              "title": "OS_Java_01_Kernel_Process_Thread"
             }
           }
         ]
@@ -193,12 +193,12 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "6ab1c6578c2926a1",
+  "active": "671e1e7dacd56710",
   "lastOpenFiles": [
+    "CS/JAVA/OS_Java_00_Roadmap.pdf",
     "CS/JAVA/OS_Java_01_Kernel_Process_Thread.pdf",
     "CS/JAVA/OS_Java_01_Kernel_Process_Thread.docx",
     "CS/CPP/00.메모리·객체 수명·RAII.md",
-    "CS/JAVA/OS_Java_00_Roadmap.pdf",
     "CS/JAVA",
     "CS/CPP",
     "Project/uLED/분석_Docs/11.AutoAlign_설명.md",
