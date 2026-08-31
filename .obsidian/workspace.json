@@ -11,10 +11,14 @@
             "id": "0999ad0283da0396",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {},
+              "type": "markdown",
+              "state": {
+                "file": "CV/vision-study/final-project/mini-vision-inspection-system.md",
+                "mode": "source",
+                "source": false
+              },
               "icon": "lucide-file",
-              "title": "새 탭"
+              "title": "mini-vision-inspection-system"
             }
           }
         ]
@@ -193,9 +197,10 @@
   },
   "active": "6ab1c6578c2926a1",
   "lastOpenFiles": [
+    "CS/CPP/00.메모리·객체 수명·RAII.md",
+    "CS/JAVA/OS_Java_00_Roadmap.pdf",
     "CS/JAVA/OS_Java_01_Kernel_Process_Thread.pdf",
     "CS/JAVA/OS_Java_01_Kernel_Process_Thread.docx",
-    "CS/JAVA/OS_Java_00_Roadmap.pdf",
     "CS/JAVA",
     "CS/CPP/08.다중 카메라 이미지 검사 스레드 설계와 멈춤 진단.md",
     "CS/CPP/07.비동기 작업 취소와 UI 이미지 처리.md",
@@ -205,7 +210,6 @@
     "CS/CPP/03.Mutex와 Condition Variable.md",
     "CS/CPP/01.프로세스와 스레드.md",
     "CS/CPP/02.동시성과 병렬성.md",
-    "CS/CPP/00.메모리·객체 수명·RAII.md",
     "CS/CPP",
     "Project/uLED/분석_Docs/11.AutoAlign_설명.md",
     "Project/uLED/분석_Docs/11.AutoAlign_기능_설명.md",
@@ -227,7 +231,6 @@
     "CV/vision-study/16a-inspection-algorithms.md",
     "CV/vision-study",
     "CV",
-    "정보처리기사/핵심요약집_2026_정보처리기사필기핵심요약.pdf",
-    "정보처리기사/필기(요약).pdf"
+    "정보처리기사/핵심요약집_2026_정보처리기사필기핵심요약.pdf"
   ]
 }
