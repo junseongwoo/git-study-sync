@@ -4,21 +4,17 @@
     "type": "split",
     "children": [
       {
-        "id": "127570f28a587112",
+        "id": "b484e8882776fb7a",
         "type": "tabs",
         "children": [
           {
-            "id": "e5e6f74cb2ec1444",
+            "id": "d68f36796545ada6",
             "type": "leaf",
             "state": {
-              "type": "split-diff-view",
-              "state": {
-                "aFile": "CV/vision-study/final-project/mini-vision-inspection-system.md",
-                "bFile": "CV/vision-study/final-project/mini-vision-inspection-system.md",
-                "aRef": ""
-              },
-              "icon": "diff",
-              "title": "Diff: mini-vision-inspection-system  (Working Tree)"
+              "type": "empty",
+              "state": {},
+              "icon": "lucide-file",
+              "title": "새 탭"
             }
           }
         ]
@@ -195,8 +191,9 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "e5e6f74cb2ec1444",
+  "active": "d68f36796545ada6",
   "lastOpenFiles": [
+    "Project/uLED/분석_Docs/12.align1-mark3-cam2-stage-t-uvw-explanation.txt",
     "CV/vision-study/final-project/mini-vision-inspection-system.md",
     "CV/vision-study/PDF/01_광학_영상_시스템_기초.pdf",
     "Project/uLED/분석_Docs/align1-mark3-cam2-stage-t-uvw-explanation.txt",
