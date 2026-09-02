@@ -4,37 +4,24 @@
     "type": "split",
     "children": [
       {
-        "id": "e0b993fee1a6a197",
+        "id": "127570f28a587112",
         "type": "tabs",
         "children": [
           {
-            "id": "0999ad0283da0396",
+            "id": "e5e6f74cb2ec1444",
             "type": "leaf",
             "state": {
-              "type": "markdown",
+              "type": "split-diff-view",
               "state": {
-                "file": "CV/vision-study/final-project/mini-vision-inspection-system.md",
-                "mode": "source",
-                "source": false
+                "aFile": "CV/vision-study/final-project/mini-vision-inspection-system.md",
+                "bFile": "CV/vision-study/final-project/mini-vision-inspection-system.md",
+                "aRef": ""
               },
-              "icon": "lucide-file",
-              "title": "mini-vision-inspection-system"
-            }
-          },
-          {
-            "id": "d1cff975b84ec225",
-            "type": "leaf",
-            "state": {
-              "type": "pdf",
-              "state": {
-                "file": "CV/vision-study/PDF/01_광학_영상_시스템_기초.pdf"
-              },
-              "icon": "lucide-file-text",
-              "title": "01_광학_영상_시스템_기초"
+              "icon": "diff",
+              "title": "Diff: mini-vision-inspection-system  (Working Tree)"
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -208,16 +195,17 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "6ab1c6578c2926a1",
+  "active": "e5e6f74cb2ec1444",
   "lastOpenFiles": [
+    "CV/vision-study/final-project/mini-vision-inspection-system.md",
     "CV/vision-study/PDF/01_광학_영상_시스템_기초.pdf",
+    "Project/uLED/분석_Docs/align1-mark3-cam2-stage-t-uvw-explanation.txt",
     "conflict-files-obsidian-git.md",
     "CV/vision-study/projects/project-05-calibration.md",
     "CV/vision-study/projects/project-04-alignment.md",
     "CV/vision-study/projects/project-03-blob.md",
     "CV/vision-study/projects/project-02-edge.md",
     "CV/vision-study/projects/project-01-basic-image.md",
-    "CV/vision-study/final-project/mini-vision-inspection-system.md",
     "CV/vision-study/PDF/04_Recipe_Inspection_SW_Modern_CPP.pdf",
     "CV/vision-study/PDF/03_영상처리_검사_알고리즘.pdf",
     "CV/vision-study/PDF/02_Align_ROI_Calibration_좌표계.pdf",
@@ -235,7 +223,6 @@
     "CS/CPP/03.Mutex와 Condition Variable.md",
     "CS/CPP/01.프로세스와 스레드.md",
     "CS/CPP/02.동시성과 병렬성.md",
-    "CS/CPP",
     "Project/uLED/분석_Docs/11.AutoAlign_설명.md",
     "Project/uLED/분석_Docs/11.AutoAlign_기능_설명.md",
     "CV/vision-study/08-vision-align-glass.md",
