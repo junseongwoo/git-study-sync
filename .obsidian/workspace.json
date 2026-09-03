@@ -11,14 +11,12 @@
             "id": "d68f36796545ada6",
             "type": "leaf",
             "state": {
-              "type": "markdown",
+              "type": "pdf",
               "state": {
-                "file": "Project/uLED/분석_Docs/12.align1-mark3-cam2-stage-t-uvw-explanation.md",
-                "mode": "source",
-                "source": false
+                "file": "CS/JAVA/OS_Java_00_Roadmap.pdf"
               },
-              "icon": "lucide-file",
-              "title": "12.align1-mark3-cam2-stage-t-uvw-explanation"
+              "icon": "lucide-file-text",
+              "title": "OS_Java_00_Roadmap"
             }
           }
         ]
@@ -197,25 +195,31 @@
   },
   "active": "6ab1c6578c2926a1",
   "lastOpenFiles": [
-    "Project/uLED/분석_Docs/12.align1-mark3-cam2-stage-t-uvw-explanation.md",
-    "Project/uLED/분석_Docs/12.align1-mark3-cam2-stage-t-uvw-explanation.txt",
-    "CV/vision-study/final-project/mini-vision-inspection-system.md",
-    "CV/vision-study/PDF/01_광학_영상_시스템_기초.pdf",
-    "Project/uLED/분석_Docs/align1-mark3-cam2-stage-t-uvw-explanation.txt",
-    "conflict-files-obsidian-git.md",
+    "CS/JAVA/OS_Java_01_Kernel_Process_Thread.pdf",
+    "CV/vision-study/projects/project-06-inspection-engine.md",
     "CV/vision-study/projects/project-05-calibration.md",
     "CV/vision-study/projects/project-04-alignment.md",
     "CV/vision-study/projects/project-03-blob.md",
     "CV/vision-study/projects/project-02-edge.md",
     "CV/vision-study/projects/project-01-basic-image.md",
+    "CV/vision-study/00-roadmap.md",
+    "CV/vision-study/PDF/05_Template_Match_Align_Logic_Guide.pdf",
+    "CV/vision-study/17b-modern-cpp-opencv.md",
+    "CV/vision-study/18-interview-troubleshooting.md",
+    "CV/vision-study/20-advanced-deep-learning-vision.md",
+    "Project/uLED/분석_Docs/12.align1-mark3-cam2-stage-t-uvw-explanation.md",
+    "CV/vision-study/PDF/Template_Match_Align_Logic_Guide.pdf",
+    "Project/uLED/분석_Docs/12.align1-mark3-cam2-stage-t-uvw-explanation.txt",
+    "CV/vision-study/final-project/mini-vision-inspection-system.md",
+    "CV/vision-study/PDF/01_광학_영상_시스템_기초.pdf",
+    "Project/uLED/분석_Docs/align1-mark3-cam2-stage-t-uvw-explanation.txt",
+    "conflict-files-obsidian-git.md",
     "CV/vision-study/PDF/04_Recipe_Inspection_SW_Modern_CPP.pdf",
     "CV/vision-study/PDF/03_영상처리_검사_알고리즘.pdf",
     "CV/vision-study/PDF/02_Align_ROI_Calibration_좌표계.pdf",
     "CV/vision-study/PDF",
     "CS/CPP/00.메모리·객체 수명·RAII.md",
     "CS/JAVA/OS_Java_00_Roadmap.pdf",
-    "CS/JAVA/OS_Java_01_Kernel_Process_Thread.pdf",
-    "CS/JAVA/OS_Java_01_Kernel_Process_Thread.docx",
     "CS/CPP/08.다중 카메라 이미지 검사 스레드 설계와 멈춤 진단.md",
     "CS/CPP/07.비동기 작업 취소와 UI 이미지 처리.md",
     "CS/CPP/05.파일·소켓·비동기 IO와 Buffer.md",
@@ -226,12 +230,6 @@
     "CS/CPP/02.동시성과 병렬성.md",
     "Project/uLED/분석_Docs/11.AutoAlign_설명.md",
     "Project/uLED/분석_Docs/11.AutoAlign_기능_설명.md",
-    "CV/vision-study/08-vision-align-glass.md",
-    "CV/vision-study/projects/project-06-inspection-engine.md",
-    "CV/vision-study/20-advanced-deep-learning-vision.md",
-    "CV/vision-study/18-interview-troubleshooting.md",
-    "CV/vision-study/17b-modern-cpp-opencv.md",
-    "CV/vision-study/17a-recipe-software-architecture.md",
-    "CV/vision-study/16b-inspection-pipeline.md"
+    "CV/vision-study/08-vision-align-glass.md"
   ]
 }
