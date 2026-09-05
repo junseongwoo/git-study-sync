@@ -195,8 +195,9 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "d68f36796545ada6",
+  "active": "6ab1c6578c2926a1",
   "lastOpenFiles": [
+    "Project/uLED/Dot_측정영역_가우시안_시프트_상세설명.pptx",
     "CS/CPP/04.C++ 메모리와 객체 수명 보완.md",
     "CS/CPP/06.C++ 객체지향 설계와 테스트 가능한 시스템.md",
     "CS/CPP/07.비동기 작업 취소와 UI 이미지 처리.md",
@@ -231,7 +232,6 @@
     "CV/vision-study/PDF/02_Align_ROI_Calibration_좌표계.pdf",
     "CS/CPP/05.파일·소켓·비동기 IO와 Buffer.md",
     "Project/uLED/분석_Docs/11.AutoAlign_설명.md",
-    "Project/uLED/분석_Docs/11.AutoAlign_기능_설명.md",
-    "CV/vision-study/08-vision-align-glass.md"
+    "Project/uLED/분석_Docs/11.AutoAlign_기능_설명.md"
   ]
 }
