@@ -11,14 +11,12 @@
             "id": "d68f36796545ada6",
             "type": "leaf",
             "state": {
-              "type": "markdown",
+              "type": "pdf",
               "state": {
-                "file": "CS/CPP/03.Mutex와 Condition Variable.md",
-                "mode": "source",
-                "source": false
+                "file": "Project/uLED/실촬영_Dot_검사영역_가우시안_분석.pdf"
               },
-              "icon": "lucide-file",
-              "title": "03.Mutex와 Condition Variable"
+              "icon": "lucide-file-text",
+              "title": "실촬영_Dot_검사영역_가우시안_분석"
             }
           }
         ]
@@ -195,8 +193,9 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "6ab1c6578c2926a1",
+  "active": "d68f36796545ada6",
   "lastOpenFiles": [
+    "CS/CPP/03.Mutex와 Condition Variable.md",
     "Project/uLED/실촬영_Dot_검사영역_가우시안_분석.pdf",
     "Project/uLED/Dot_측정영역_가우시안_시프트_상세설명.pptx",
     "CS/CPP/04.C++ 메모리와 객체 수명 보완.md",
@@ -204,7 +203,6 @@
     "CS/CPP/07.비동기 작업 취소와 UI 이미지 처리.md",
     "CS/CPP/08.다중 카메라 이미지 검사 스레드 설계와 멈춤 진단.md",
     "CS/OS 공부.md",
-    "CS/CPP/03.Mutex와 Condition Variable.md",
     "CS/CPP/02.동시성과 병렬성.md",
     "CS/CPP/01.프로세스와 스레드.md",
     "CS/CPP/00.메모리·객체 수명·RAII.md",
@@ -229,7 +227,6 @@
     "Project/uLED/분석_Docs/align1-mark3-cam2-stage-t-uvw-explanation.txt",
     "conflict-files-obsidian-git.md",
     "CV/vision-study/PDF/04_Recipe_Inspection_SW_Modern_CPP.pdf",
-    "CV/vision-study/PDF/03_영상처리_검사_알고리즘.pdf",
     "CS/CPP/05.파일·소켓·비동기 IO와 Buffer.md",
     "Project/uLED/분석_Docs/11.AutoAlign_설명.md",
     "Project/uLED/분석_Docs/11.AutoAlign_기능_설명.md"
