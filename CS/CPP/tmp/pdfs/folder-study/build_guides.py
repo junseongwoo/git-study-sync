@@ -32,7 +32,7 @@ pdfmetrics.registerFontFamily('Malgun',normal='Malgun',bold='Malgun-Bold',italic
 pdfmetrics.registerFont(TTFont('Code','C:/Windows/Fonts/consola.ttf'))
 
 def normalize(s):
-    return str(s).replace('\u2011','-').replace('\u2013','-').replace('\u2014','-').replace('\u00a0',' ')
+    return str(s).replace('\u2011','-').replace('\u2013','-').replace('\u2014','-').replace('\u2212','-').replace('\u00a0',' ')
 
 def rich(s):
     s = html.escape(normalize(s))
@@ -168,9 +168,10 @@ def supplement_pages(d):
     pages=[]
     ev=d.get('evidence',[])
     if ev:
-        for i in range(0,len(ev),5):
+        chunk=7 if len(ev)<=7 else 6
+        for i in range(0,len(ev),chunk):
             blocks=[]
-            for e in ev[i:i+5]:
+            for e in ev[i:i+chunk]:
                 blocks.extend([{'type':'h3','text':e['path']},{'type':'p','text':e['finding']}])
             if i==0: blocks.append({'type':'callout','title':'검토 기준','text':'기존 자료의 주제와 실습을 검토해 다음 과제를 골랐습니다. 문서에서 확인되지 않는 내용은 자료상의 빈칸으로 해석하며, 개인의 실제 경험이나 숙련도를 단정하지 않습니다.'})
             pages.append({'label':'APPENDIX / LOCAL NOTES','title':'어떤 자료에서 이어졌나'+(' · 계속' if i else ''),'lead':'경로는 표지의 기준 폴더 안에서 읽습니다. 기존 노트를 함께 펴놓고 이어서 학습하세요.','blocks':blocks})

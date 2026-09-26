@@ -2,8 +2,8 @@
   {
     "id": "cpp",
     "path": "C:\\Users\\user\\Desktop\\Obsidian\\git-study-sync\\CS\\CPP\\output\\pdf\\CPP_이직준비_추가학습_검증과제품화.pdf",
-    "pages": 15,
-    "text_chars": 15957,
+    "pages": 14,
+    "text_chars": 15850,
     "layout": [
       {
         "page": 2,
@@ -21,7 +21,7 @@
         "page": 4,
         "title": "유효한 Frame만 경계를 통과시킨다",
         "scale": 1.0,
-        "bottom": 161.2
+        "bottom": 137.0
       },
       {
         "page": 5,
@@ -69,22 +69,16 @@
         "page": 12,
         "title": "어떤 자료에서 이어졌나",
         "scale": 1.0,
-        "bottom": 285.4
+        "bottom": 221.7
       },
       {
         "page": 13,
         "title": "어떤 자료에서 이어졌나 · 계속",
         "scale": 1.0,
-        "bottom": 377.9
+        "bottom": 346.4
       },
       {
         "page": 14,
-        "title": "어떤 자료에서 이어졌나 · 계속",
-        "scale": 1.0,
-        "bottom": 585.3
-      },
-      {
-        "page": 15,
         "title": "참고 자료와 활용 범위",
         "scale": 1.0,
         "bottom": 318.5
@@ -94,8 +88,8 @@
   {
     "id": "cv",
     "path": "C:\\Users\\user\\Desktop\\Obsidian\\git-study-sync\\CV\\output\\pdf\\CV_이직준비_추가학습_측정과검증.pdf",
-    "pages": 14,
-    "text_chars": 14420,
+    "pages": 13,
+    "text_chars": 13976,
     "layout": [
       {
         "page": 2,
@@ -161,19 +155,93 @@
         "page": 12,
         "title": "어떤 자료에서 이어졌나",
         "scale": 1.0,
-        "bottom": 285.4
+        "bottom": 157.9
       },
       {
         "page": 13,
-        "title": "어떤 자료에서 이어졌나 · 계속",
-        "scale": 1.0,
-        "bottom": 553.1
-      },
-      {
-        "page": 14,
         "title": "참고 자료와 활용 범위",
         "scale": 1.0,
         "bottom": 318.5
+      }
+    ]
+  },
+  {
+    "id": "coding",
+    "path": "C:\\Users\\user\\Desktop\\Obsidian\\git-study-sync\\코테준비\\output\\pdf\\코테_이직준비_추가학습_6일차이후.pdf",
+    "pages": 13,
+    "text_chars": 13317,
+    "layout": [
+      {
+        "page": 2,
+        "title": "5일차 다음은 유형 선택과 검증",
+        "scale": 1.0,
+        "bottom": 280.4
+      },
+      {
+        "page": 3,
+        "title": "구간마다 다시 계산하지 않기",
+        "scale": 1.0,
+        "bottom": 209.8
+      },
+      {
+        "page": 4,
+        "title": "포인터가 돌아가지 않는 이유",
+        "scale": 1.0,
+        "bottom": 209.2
+      },
+      {
+        "page": 5,
+        "title": "음수가 있으면 이전 합을 센다",
+        "scale": 1.0,
+        "bottom": 171.3
+      },
+      {
+        "page": 6,
+        "title": "BFS에서 Dijkstra로 넘어갈 때",
+        "scale": 1.0,
+        "bottom": 136.7
+      },
+      {
+        "page": 7,
+        "title": "연결 여부와 이동 비용은 다르다",
+        "scale": 1.0,
+        "bottom": 130.7
+      },
+      {
+        "page": 8,
+        "title": "외운 템플릿 대신 판정식을 증명",
+        "scale": 1.0,
+        "bottom": 111.3
+      },
+      {
+        "page": 9,
+        "title": "한 줄의 반복문이 문제를 바꾼다",
+        "scale": 1.0,
+        "bottom": 205.7
+      },
+      {
+        "page": 10,
+        "title": "한 유형을 두 번 풀고 넘어가기",
+        "scale": 1.0,
+        "bottom": 218.2
+      },
+      {
+        "page": 11,
+        "title": "90분 안에 설명까지 완성하기",
+        "scale": 1.0,
+        "bottom": 171.9
+      },
+      {
+        "page": 12,
+        "title": "어떤 자료에서 이어졌나",
+        "scale": 1.0,
+        "bottom": 318.3
+      },
+      {
+        "page": 13,
+        "title": "참고 자료와 활용 범위",
+        "scale": 1.0,
+        "bottom": 390.9
       }
     ]
   }
