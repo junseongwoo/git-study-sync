@@ -202,7 +202,7 @@ def main():
         pages=d['pages']+supplement_pages(d)
         dest=OUTPUTS[key];dest.parent.mkdir(parents=True,exist_ok=True)
         c=canvas.Canvas(str(dest),pagesize=(W,H),pageCompression=1)
-        c.setTitle(d['title']);c.setAuthor('학습 자료');c.setSubject(d['subtitle']);c.setLang('ko-KR')
+        c.setTitle(d['title']);c.setAuthor('학습 자료');c.setSubject(d['subtitle'])
         cover(c,d,len(pages)+1,accent)
         qa=[]
         for idx,p in enumerate(pages,start=2): qa.append(render_page(c,d,p,idx,len(pages)+1,accent))
