@@ -4,37 +4,20 @@
     "type": "split",
     "children": [
       {
-        "id": "e0b993fee1a6a197",
+        "id": "942d3fffc692ff85",
         "type": "tabs",
         "children": [
           {
-            "id": "0999ad0283da0396",
+            "id": "3d5939434b10fcf7",
             "type": "leaf",
             "state": {
-              "type": "markdown",
-              "state": {
-                "file": "CV/vision-study/final-project/mini-vision-inspection-system.md",
-                "mode": "source",
-                "source": false
-              },
+              "type": "empty",
+              "state": {},
               "icon": "lucide-file",
-              "title": "mini-vision-inspection-system"
-            }
-          },
-          {
-            "id": "d1cff975b84ec225",
-            "type": "leaf",
-            "state": {
-              "type": "pdf",
-              "state": {
-                "file": "CV/vision-study/PDF/01_광학_영상_시스템_기초.pdf"
-              },
-              "icon": "lucide-file-text",
-              "title": "01_광학_영상_시스템_기초"
+              "title": "새 탭"
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
