@@ -4,17 +4,19 @@
     "type": "split",
     "children": [
       {
-        "id": "942d3fffc692ff85",
+        "id": "b484e8882776fb7a",
         "type": "tabs",
         "children": [
           {
-            "id": "3d5939434b10fcf7",
+            "id": "d68f36796545ada6",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {},
-              "icon": "lucide-file",
-              "title": "새 탭"
+              "type": "pdf",
+              "state": {
+                "file": "Project/uLED/실촬영_Dot_검사영역_가우시안_분석.pdf"
+              },
+              "icon": "lucide-file-text",
+              "title": "실촬영_Dot_검사영역_가우시안_분석"
             }
           }
         ]
@@ -177,7 +179,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 855.5
+    "width": 855.5,
+    "collapsed": true
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -191,53 +194,53 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "2ff9545607ac062d",
+  "active": "d68f36796545ada6",
   "lastOpenFiles": [
-    "CV/vision-study/PDF/01_광학_영상_시스템_기초.pdf",
-    "CS/CPP/tmp/pdfs/folder-study/final_verify.py",
-    "CS/CPP/tmp/pdfs/folder-study/coding-sheet-4.png",
-    "CS/CPP/tmp/pdfs/folder-study/coding-sheet-3.png",
-    "CS/CPP/tmp/pdfs/folder-study/coding-sheet-2.png",
-    "CS/CPP/tmp/pdfs/folder-study/coding-sheet-1.png",
-    "CS/CPP/tmp/pdfs/folder-study/coding/page-14.png",
-    "CS/CPP/tmp/pdfs/folder-study/coding/page-13.png",
-    "CS/CPP/tmp/pdfs/folder-study/coding/page-12.png",
-    "CS/CPP/tmp/pdfs/folder-study/coding/page-11.png",
-    "CS/CPP/tmp/pdfs/folder-study/coding/page-10.png",
-    "CS/CPP/tmp/pdfs/folder-study/coding/page-09.png",
-    "CS/CPP/tmp/pdfs/folder-study/coding",
-    "CS/CPP/tmp/pdfs/folder-study/cv",
-    "CS/CPP/tmp/pdfs/folder-study/cpp",
-    "CS/CPP/tmp/pdfs/folder-study/render_guides.py",
-    "CS/CPP/tmp/pdfs/folder-study/qa_guides.py",
     "코테준비/output/pdf/코테_이직준비_추가학습_6일차이후.pdf",
     "코테준비/output/pdf",
     "코테준비/output",
-    "CS/CPP/tmp/pdfs/folder-study/coding.json",
-    "Project/uLED/분석_Docs/12.align1-mark3-cam2-stage-t-uvw-explanation.md",
-    "conflict-files-obsidian-git.md",
+    "CV/output/pdf/CV_이직준비_추가학습_측정과검증.pdf",
+    "CV/output/pdf",
+    "CV/output",
+    "CS/CPP/tmp/pdfs/folder-study/__pycache__/build_guides.cpython-312.pyc",
+    "CS/CPP/tmp/pdfs/folder-study/cv/page-13.png",
+    "CS/CPP/tmp/pdfs/folder-study/cv/page-14.png",
+    "CS/CPP/tmp/pdfs/folder-study/cv/page-12.png",
+    "CS/CPP/tmp/pdfs/folder-study/cv/page-11.png",
+    "CS/CPP/tmp/pdfs/folder-study/cv/page-09.png",
+    "CS/CPP/tmp/pdfs/folder-study/cv/page-10.png",
+    "CS/CPP/tmp/pdfs/folder-study/cv/page-08.png",
+    "CS/CPP/tmp/pdfs/folder-study/cv/page-07.png",
+    "CS/CPP/tmp/pdfs/folder-study/cv/page-06.png",
+    "CS/CPP/tmp/pdfs/folder-study/cv/page-05.png",
+    "CS/CPP/tmp/pdfs/folder-study/__pycache__",
+    "CS/CPP/tmp/pdfs/folder-study/write_coding.py",
+    "CS/CPP/tmp/pdfs/folder-study/render_guides.py",
+    "CS/CPP/tmp/pdfs/folder-study/qa_guides.py",
+    "CS/CPP/03.Mutex와 Condition Variable.md",
+    "CS/CPP/04.C++ 메모리와 객체 수명 보완.md",
+    "CS/CPP/06.C++ 객체지향 설계와 테스트 가능한 시스템.md",
+    "CS/CPP/07.비동기 작업 취소와 UI 이미지 처리.md",
+    "CS/CPP/08.다중 카메라 이미지 검사 스레드 설계와 멈춤 진단.md",
+    "CS/OS 공부.md",
+    "CS/CPP/02.동시성과 병렬성.md",
+    "CS/CPP/01.프로세스와 스레드.md",
+    "CS/CPP/00.메모리·객체 수명·RAII.md",
+    "CV/vision-study/projects/project-06-inspection-engine.md",
     "CV/vision-study/projects/project-05-calibration.md",
     "CV/vision-study/projects/project-04-alignment.md",
     "CV/vision-study/projects/project-03-blob.md",
     "CV/vision-study/projects/project-02-edge.md",
     "CV/vision-study/projects/project-01-basic-image.md",
-    "CV/vision-study/final-project/mini-vision-inspection-system.md",
-    "CS/CPP/00.메모리·객체 수명·RAII.md",
-    "CS/CPP/08.다중 카메라 이미지 검사 스레드 설계와 멈춤 진단.md",
-    "CS/CPP/07.비동기 작업 취소와 UI 이미지 처리.md",
-    "CS/CPP/05.파일·소켓·비동기 IO와 Buffer.md",
-    "CS/CPP/06.C++ 객체지향 설계와 테스트 가능한 시스템.md",
-    "CS/CPP/04.C++ 메모리와 객체 수명 보완.md",
-    "CS/CPP/03.Mutex와 Condition Variable.md",
-    "CS/CPP/01.프로세스와 스레드.md",
-    "CS/CPP/02.동시성과 병렬성.md",
-    "Project/uLED/분석_Docs/11.AutoAlign_설명.md",
-    "Project/uLED/분석_Docs/11.AutoAlign_기능_설명.md",
-    "CV/vision-study/08-vision-align-glass.md",
-    "CV/vision-study/projects/project-06-inspection-engine.md",
-    "CV/vision-study/20-advanced-deep-learning-vision.md",
-    "CV/vision-study/18-interview-troubleshooting.md",
+    "CV/vision-study/00-roadmap.md",
     "CV/vision-study/17b-modern-cpp-opencv.md",
-    "CV/vision-study/17a-recipe-software-architecture.md"
+    "CV/vision-study/18-interview-troubleshooting.md",
+    "CV/vision-study/20-advanced-deep-learning-vision.md",
+    "Project/uLED/분석_Docs/12.align1-mark3-cam2-stage-t-uvw-explanation.md",
+    "CV/vision-study/final-project/mini-vision-inspection-system.md",
+    "conflict-files-obsidian-git.md",
+    "CS/CPP/05.파일·소켓·비동기 IO와 Buffer.md",
+    "Project/uLED/분석_Docs/11.AutoAlign_설명.md",
+    "Project/uLED/분석_Docs/11.AutoAlign_기능_설명.md"
   ]
 }
