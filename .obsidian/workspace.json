@@ -11,10 +11,14 @@
             "id": "3d5939434b10fcf7",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {},
+              "type": "markdown",
+              "state": {
+                "file": "CS/CPP/08.다중 카메라 이미지 검사 스레드 설계와 멈춤 진단.md",
+                "mode": "source",
+                "source": false
+              },
               "icon": "lucide-file",
-              "title": "새 탭"
+              "title": "08.다중 카메라 이미지 검사 스레드 설계와 멈춤 진단"
             }
           }
         ]
@@ -191,8 +195,9 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "2ff9545607ac062d",
+  "active": "3d5939434b10fcf7",
   "lastOpenFiles": [
+    "CS/OS 공부.md",
     "CV/vision-study/PDF/01_광학_영상_시스템_기초.pdf",
     "CS/CPP/tmp/pdfs/folder-study/final_verify.py",
     "CS/CPP/tmp/pdfs/folder-study/coding-sheet-4.png",
@@ -213,7 +218,6 @@
     "코테준비/output/pdf/코테_이직준비_추가학습_6일차이후.pdf",
     "코테준비/output/pdf",
     "코테준비/output",
-    "CS/CPP/tmp/pdfs/folder-study/coding.json",
     "Project/uLED/분석_Docs/12.align1-mark3-cam2-stage-t-uvw-explanation.md",
     "conflict-files-obsidian-git.md",
     "CV/vision-study/projects/project-05-calibration.md",
