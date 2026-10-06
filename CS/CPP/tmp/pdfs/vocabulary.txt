@@ -1238,3 +1238,313 @@ unexpectedly|adv|예상치 못하게|V:close unexpectedly|예상치 못하게 �
 precaution|n|예방 조치|D:safety precautions|안전 예방 조치
 swiftly|adv|신속히|V:restore service swiftly|서비스를 신속히 복구
 urgently|adv|긴급히|V:request assistance urgently|도움을 긴급히 요청
+@41|재무 전략과 투자|자산·부채·투자 판단의 추상적 어휘를 연어로 이해한다.
+asset|n|자산|D:fixed assets|고정 자산
+liability|n|부채; 법적 책임|D:current liabilities|유동 부채
+equity|n|자기자본; 지분|D:shareholder equity|주주 자본
+debt|n|부채|D:outstanding debt|미상환 부채
+bond|n|채권|D:government bond|국채
+dividend|n|배당금|D:annual dividend|연간 배당금
+portfolio|n|투자 자산 구성|D:investment portfolio|투자 포트폴리오
+liquidity|n|유동성|D:financial liquidity|재무 유동성
+solvency|n|지급 능력|D:company solvency|기업 지급 능력
+valuation|n|가치 평가|D:asset valuation|자산 가치 평가
+borrow|v|빌리다|V:borrow funds from a bank|은행에서 자금을 차입
+lend|v|빌려주다|V:lend money to businesses|기업에 자금을 대여
+diversify|v|다각화하다|V:diversify investments|투자를 다각화
+acquire|v|취득하다; 인수하다|V:acquire new assets|새 자산을 취득
+liquidate|v|처분하다; 청산하다|V:liquidate surplus inventory|잉여 재고를 처분
+appreciate|v|가치가 오르다; 감사하다|V:appreciate the assistance|지원에 대한 감사를 표시
+depreciate|v|감가상각하다; 가치가 떨어지다|V:depreciate fixed assets|고정 자산을 감가상각
+financing|n|자금 조달|D:project financing|프로젝트 자금 조달
+solvent|adj|지급 능력 있는|D:solvent company|지급 능력 있는 회사
+insolvent|adj|지급 불능의|D:insolvent business|지급 불능 사업체
+liquid|adj|현금화하기 쉬운|D:liquid assets|유동 자산
+fiscal|adj|재정의; 회계의|D:fiscal year|회계연도
+monetary|adj|금전의|D:monetary compensation|금전 보상
+capital-intensive|adj|자본 집약적인|D:capital-intensive industry|자본 집약 산업
+long-term|adj|장기적인|D:long-term investment|장기 투자
+short-term|adj|단기적인|D:short-term loan|단기 대출
+prudently|adv|신중하게|V:invest prudently|신중하게 투자
+conservatively|adv|보수적으로|V:estimate revenue conservatively|매출을 보수적으로 추정
+safeguard|v/n|보호하다; 보호 장치|V:safeguard company assets|회사 자산을 보호
+increasingly|adv|점점 더|A:increasingly profitable|점점 더 수익성이 높음
+@42|회계·감사·예산|정산·감사·회계 보고의 표현을 익히고 여섯째 주를 복습한다.
+audit|n/v|감사; 감사하다|D:internal audit|내부 감사
+auditor|n|감사인|H:external auditor|외부 감사인
+ledger|n|회계 장부|D:general ledger|총계정 원장
+transaction|n|거래|D:financial transaction|금융 거래
+reconciliation|n|대사; 불일치 조정|D:bank reconciliation|은행 계정 대사
+discrepancy|n|불일치|D:billing discrepancy|청구 불일치
+depreciation|n|감가상각|D:annual depreciation|연간 감가상각
+surplus|n|잉여; 흑자|D:budget surplus|예산 흑자
+deficit|n|적자; 부족|D:budget deficit|예산 적자
+overhead|n|간접비|D:operating overhead|운영 간접비
+reconcile|v|일치시키다; 조정하다|V:reconcile the accounts|계정을 대사
+itemize|v|항목별로 적다|V:itemize expenses|경비를 항목별로 작성
+accrue|v|누적되다; 발생하다|V:accrue interest|이자의 누적을 유발
+remit|v|송금하다|V:remit payment|대금을 송금
+withhold|v|원천징수하다; 보류하다|V:withhold taxes|세금을 원천징수
+offset|v/n|상쇄하다; 상쇄|V:offset higher costs|비용 증가분을 상쇄
+budgetary|adj|예산의|D:budgetary constraints|예산 제약
+record|v/n|기록하다; 기록|V:record the transaction|거래를 기록
+audited|adj|감사를 받은|D:audited statements|감사를 받은 재무제표
+itemized|adj|항목별로 작성된|D:itemized invoice|항목별 청구서
+deductible|adj/n|공제 가능한; 자기부담금|D:deductible expenses|공제 가능한 경비
+taxable|adj|과세 대상인|D:taxable income|과세 소득
+excessive|adj|과도한|D:excessive spending|과도한 지출
+incremental|adj|점진적 증가의|D:incremental cost|증분 비용
+recurrent|adj|반복 발생하는|D:recurrent expenditure|반복 지출
+transparent|adj|투명한|D:transparent accounting|투명한 회계
+transparently|adv|투명하게|V:report costs transparently|비용을 투명하게 보고
+nominally|adv|명목상으로|A:nominally independent|명목상 독립적임
+cumulatively|adv|누적하여|V:calculate totals cumulatively|총액을 누적 계산
+retrospectively|adv|소급하여; 되돌아보아|V:review records retrospectively|기록을 소급하여 검토
+@43|계약 조건과 입찰|입찰·제안·의무 조항의 차이를 문맥에서 판단한다.
+bid|n/v|입찰; 입찰하다|D:competitive bid|경쟁 입찰
+tender|n|입찰 제안|D:public tender|공개 입찰
+quotation|n|견적|D:written quotation|서면 견적
+quote|n/v|견적; 인용하다|D:price quote|가격 견적
+procurement|n|조달|D:procurement process|조달 절차
+provision|n|조항; 제공|D:contract provision|계약 조항
+breach|n|위반|D:breach of contract|계약 위반
+termination|n|종료|D:early termination|조기 종료
+expiration|n|만료|D:contract expiration|계약 만료
+penalty|n|벌금; 위약금|D:late-payment penalty|연체 위약금
+solicit|v|요청하다; 모집하다|V:solicit competitive bids|경쟁 입찰을 모집
+bidder|n|입찰자|D:successful bidder|낙찰자
+procure|v|조달하다|V:procure office supplies|사무용품을 조달
+extendable|adj|연장 가능한|D:extendable deadline|연장 가능한 마감일
+expire|v|만료되다|V:expire at the end of June|6월 말에 만료
+default|v/n|채무를 불이행하다; 기본값|V:default on payment|대금 지급 의무를 불이행
+forfeit|v|몰수당하다; 상실하다|V:forfeit the deposit|보증금에 대한 권리를 상실
+honor|v|이행하다; 존중하다|V:honor the agreement|계약을 이행
+contractual|adj|계약상의|D:contractual obligations|계약상 의무
+contingent|adj|~에 달려 있는|A:contingent on approval|승인 여부에 달려 있음
+enforceable|adj|집행 가능한|D:enforceable agreement|집행 가능한 합의
+void|adj|무효인|D:void contract|무효 계약
+irrevocable|adj|취소할 수 없는|D:irrevocable commitment|취소할 수 없는 약속
+revocable|adj|취소 가능한|D:revocable permission|철회 가능한 허가
+defer|v|미루다|V:defer payment|결제를 유예
+contractually|adv|계약상으로|A:contractually obligated|계약상 의무가 있음
+expressly|adv|명시적으로|V:expressly prohibit resale|재판매를 명시적으로 금지
+hereby|adv|이로써|V:hereby authorize payment|이 문서로 결제를 승인
+thereafter|adv|그 이후에|V:review terms thereafter|그 이후에 조건을 검토
+herein|adv|이 문서 안에|V:describe the terms herein|이 문서 안에 조건을 기술
+@44|보험과 법적 책임|청구·보상·면책과 책임 범위를 구별한다.
+insurer|n|보험사|D:approved insurer|승인 보험사
+policyholder|n|보험 계약자|H:current policyholder|현재 보험 계약자
+premium|n|보험료; 웃돈|D:annual premium|연간 보험료
+claim|n/v|보험금 청구; 주장하다|D:insurance claim|보험금 청구
+exclusion|n|제외 항목|D:policy exclusions|보험 제외 항목
+indemnity|n|손해 배상; 보상|D:professional indemnity|업무상 손해 배상 보장
+damages|n|손해 배상금|D:compensatory damages|보상적 손해 배상금
+litigation|n|소송|D:commercial litigation|상업 소송
+waiver|n|권리 포기; 면제|D:liability waiver|책임 면제 동의서
+disclaimer|n|면책 문구|D:legal disclaimer|법적 면책 문구
+insure|v|보험에 가입하다|V:insure the property|부동산에 보험 가입
+claimant|n|청구인|H:eligible claimant|자격 있는 청구인
+indemnify|v|손해를 배상하다|V:indemnify the client|고객에게 손해를 배상
+revoke|v|취소하다; 철회하다|V:revoke a license|면허를 취소
+contest|v/n|이의를 제기하다; 대회|V:contest the decision|결정에 이의를 제기
+disclose|v|공개하다|V:disclose relevant information|관련 정보를 공개
+conceal|v|숨기다|V:conceal a material fact|중요 사실을 은폐
+defend|v|방어하다; 변호하다|V:defend the company|회사를 변호
+insured|adj|보험에 가입된|D:insured property|보험에 가입된 부동산
+uninsured|adj|보험에 가입되지 않은|D:uninsured loss|보험 미가입 손실
+compensatory|adj|보상 목적의|D:compensatory payment|보상금
+negligent|adj|과실이 있는|D:negligent conduct|과실 있는 행위
+negligence|n|과실; 태만|D:professional negligence|업무상 과실
+legitimate|adj|정당한|D:legitimate claim|정당한 청구
+fraudulent|adj|사기의|D:fraudulent transaction|사기 거래
+disclosure|n|공개; 공시|D:full disclosure|전면 공개
+legitimately|adv|정당하게|V:claim expenses legitimately|경비를 정당하게 청구
+negligently|adv|부주의하게|V:handle property negligently|재산을 부주의하게 취급
+partially|adv|부분적으로|A:partially covered|일부 보장됨
+wholly|adv|전적으로|A:wholly responsible|전적으로 책임이 있음
+@45|마케팅 전략과 소비자|시장 포지셔닝과 고객 행동의 추상적 표현을 읽는다.
+segmentation|n|세분화|D:market segmentation|시장 세분화
+positioning|n|포지셔닝; 자리매김|D:brand positioning|브랜드 포지셔닝
+differentiation|n|차별화|D:product differentiation|제품 차별화
+loyalty|n|충성도|D:brand loyalty|브랜드 충성도
+perception|n|인식|D:consumer perception|소비자 인식
+preference|n|선호|D:customer preferences|고객 선호
+exposure|n|노출|D:media exposure|매체 노출
+engagement|n|참여; 관여|D:customer engagement|고객 참여
+conversion|n|전환|D:sales conversion|구매 전환
+outreach|n|접촉 활동; 지원 활동|D:community outreach|지역사회 접촉 활동
+differentiate|v|차별화하다|V:differentiate the product|제품을 차별화
+segment|v/n|세분화하다; 부문|V:segment the market|시장을 세분화
+cultivate|v|육성하다; 키우다|V:cultivate brand loyalty|브랜드 충성도를 육성
+engage|v|관심을 끌다; 참여시키다|V:engage potential customers|잠재 고객의 참여를 유도
+capitalize|v|활용하다|V:capitalize on market opportunities|시장 기회를 활용
+leverage|v/n|활용하다; 영향력|V:leverage customer feedback|고객 의견을 활용
+endorse|v|추천하다; 지지하다|V:endorse the new product|신제품을 추천
+influence|v/n|영향을 주다; 영향|V:influence buying decisions|구매 결정에 영향을 제공
+distinctive|adj|독특한|D:distinctive design|독특한 디자인
+compelling|adj|설득력 있는|D:compelling message|설득력 있는 메시지
+targeted|adj|대상을 정한|D:targeted advertising|표적 광고
+demographic|adj/n|인구 통계의; 인구 집단|D:demographic data|인구 통계 자료
+diverse|adj|다양한|D:diverse audience|다양한 고객층
+exclusive|adj|독점적인; 전용의|D:exclusive offer|독점 제공 혜택
+mainstream|adj/n|주류의; 주류|D:mainstream market|주류 시장
+niche|n/adj|틈새시장; 특정 소수의|D:niche market|틈새시장
+distinctively|adv|독특하게|A:distinctively designed|독특하게 디자인됨
+persuasively|adv|설득력 있게|V:present benefits persuasively|이점을 설득력 있게 제시
+predominantly|adv|주로|A:predominantly digital|주로 디지털 방식임
+selectively|adv|선별적으로|V:target customers selectively|고객을 선별적으로 공략
+@46|경영과 조직 전략|조직 구조·목표·효율을 설명하는 어휘를 연결한다.
+leadership|n|리더십|D:effective leadership|효과적인 리더십
+management|n|경영; 관리자 집단|D:senior management|고위 경영진
+governance|n|관리 체계; 지배구조|D:corporate governance|기업 지배구조
+stakeholder|n|이해관계자|D:key stakeholders|주요 이해관계자
+shareholder|n|주주|D:major shareholder|대주주
+partnership|n|협력 관계|D:strategic partnership|전략적 협력 관계
+alliance|n|동맹; 제휴|D:business alliance|사업 제휴
+merger|n|합병|D:proposed merger|제안된 합병
+acquisition|n|인수; 취득|D:company acquisition|기업 인수
+restructuring|n|구조조정|D:organizational restructuring|조직 구조조정
+collaborate|v|협력하다|V:collaborate with suppliers|공급업체와 협력
+consolidate|v|통합하다|V:consolidate operations|운영을 통합
+restructure|v|재구조화하다|V:restructure the department|부서를 재구조화
+merge|v|합병하다|V:merge the two divisions|두 사업부를 통합
+align|v|일치시키다|V:align goals with strategy|목표를 전략에 맞춰 조정
+facilitate|v|촉진하다|V:facilitate communication|의사소통을 촉진
+foster|v|장려하다; 조성하다|V:foster collaboration|협력을 장려
+sustain|v|지속시키다|V:sustain growth|성장을 지속
+strategic|adj|전략적인|D:strategic objective|전략 목표
+organizational|adj|조직의|D:organizational structure|조직 구조
+corporate|adj|기업의|D:corporate policy|기업 정책
+collaborative|adj|협력적인|D:collaborative approach|협력적 접근법
+cohesive|adj|결속력 있는|D:cohesive team|결속력 있는 팀
+decentralized|adj|분권화된|D:decentralized management|분권형 경영
+centralized|adj|중앙 집중의|D:centralized purchasing|중앙 집중 구매
+viable|adj|실행 가능한|D:viable business model|실행 가능한 사업 모델
+collaboratively|adv|협력하여|V:solve problems collaboratively|협력하여 문제를 해결
+purposefully|adv|목적을 갖고|V:plan expansion purposefully|확장을 목적에 맞춰 계획
+jointly|adv|공동으로|V:develop products jointly|제품을 공동 개발
+proactively|adv|주도적으로; 미리|V:address risks proactively|위험에 선제 대응
+@47|인사 정책과 근로 조건|권리·휴가·성과 평가에서 오답이 되는 표현을 구분한다.
+probation|n|수습 기간|D:probation period|수습 기간
+tenure|n|재직 기간|D:employee tenure|직원 재직 기간
+seniority|n|근속 연수; 선임 지위|D:seniority system|연공 제도
+leave|n/v|휴가; 떠나다|D:paid leave|유급 휴가
+overtime|n/adv|초과 근무; 시간 외에|D:overtime pay|초과 근무 수당
+severance|n|퇴직 시 지급금|D:severance pay|퇴직 수당
+grievance|n|고충; 불만|D:employee grievance|직원 고충
+appraisal|n|평가|D:performance appraisal|성과 평가
+succession|n|승계|D:succession planning|승계 계획
+delegation|n|위임; 대표단|D:delegation of authority|권한 위임
+appraise|v|평가하다|V:appraise employee performance|직원 성과를 평가
+entitle|v|권리를 주다|V:entitle staff to benefits|직원에게 혜택 수급 권리를 부여
+accrual|n|누적; 발생|D:leave accrual|휴가 누적
+portability|n|이전 가능성; 휴대성|D:benefit portability|복리후생의 이전 가능성
+redeploy|v|재배치하다|V:redeploy staff|직원을 재배치
+discipline|v/n|징계하다; 규율|V:discipline an employee|직원을 징계
+discriminate|v|차별하다; 구별하다|V:discriminate between the options|선택 사항의 차이를 구별
+mediate|v|중재하다|V:mediate a workplace dispute|직장 내 분쟁을 중재
+probationary|adj|수습의|D:probationary period|수습 기간
+statutory|adj|법정의|D:statutory leave|법정 휴가
+parental|adj|부모의; 육아의|D:parental leave|육아 휴가
+disciplinary|adj|징계의|D:disciplinary action|징계 조치
+equitable|adj|공평한|D:equitable compensation|공평한 보상
+welcoming|adj|환대하는; 친근한|D:welcoming workplace|친근한 직장
+impartial|adj|공정한; 편견 없는|D:impartial assessment|공정한 평가
+discriminatory|adj|차별적인|D:discriminatory practices|차별적 관행
+impartially|adv|공정하게|V:evaluate candidates impartially|후보자를 공정하게 평가
+discreetly|adv|신중하게; 조용히|V:handle complaints discreetly|불만을 조심스럽게 처리
+confidentially|adv|기밀로|V:discuss personnel issues confidentially|인사 문제를 기밀로 논의
+uniformity|n|일관성; 균일성|D:policy uniformity|정책의 일관성
+@48|고객 관계와 협력|관계 유지·신뢰·접점 개선을 나타내는 말에 익숙해진다.
+client|n|의뢰인; 거래처|D:long-term client|장기 거래처
+clientele|n|전체 고객층|D:loyal clientele|충성도 높은 고객층
+rapport|n|친밀한 관계|D:client rapport|고객과의 친밀 관계
+trust|n/v|신뢰; 신뢰하다|D:customer trust|고객 신뢰
+credibility|n|신뢰성|D:brand credibility|브랜드 신뢰성
+reputation|n|평판|D:professional reputation|업무상 평판
+expectation|n|기대|D:customer expectations|고객 기대
+goodwill|n|호의; 영업권|D:customer goodwill|고객 호의
+referral|n|추천; 소개|D:client referral|고객 소개
+testimonial|n|추천 의견; 사용 후기|D:customer testimonial|고객 사용 후기
+consult|v|상의하다|V:consult a specialist|전문가에게 자문을 요청
+liaise|v|연락하며 협력하다|V:liaise with clients|거래처와 연락하며 협력
+nurture|v|육성하다; 키우다|V:nurture customer relationships|고객 관계를 육성
+strengthen|v|강화하다|V:strengthen the partnership|협력 관계를 강화
+personalize|v|개인에 맞추다|V:personalize the service|서비스를 개인별로 조정
+reconnect|v|다시 연락하다|V:reconnect with former clients|이전 거래처에 재연락
+refer|v|소개하다; 참조하다|V:refer clients to a specialist|고객을 전문가에게 소개
+enrich|v|풍부하게 하다|V:enrich the customer experience|고객 경험을 풍부하게 제공
+trustworthy|adj|믿을 만한|H:trustworthy adviser|믿을 만한 조언자
+credible|adj|신뢰할 만한|D:credible explanation|믿을 만한 설명
+reputable|adj|평판 좋은|D:reputable supplier|평판 좋은 공급업체
+attentive|adj|세심한|D:attentive service|세심한 서비스
+personalized|adj|개인 맞춤의|D:personalized assistance|개인 맞춤 지원
+customer-oriented|adj|고객 지향의|D:customer-oriented approach|고객 지향적 접근법
+dependable|adj|신뢰할 수 있는|D:dependable support|믿을 만한 지원
+lasting|adj|지속적인|D:lasting relationship|지속적인 관계
+attentively|adv|주의 깊게|V:listen attentively|주의 깊게 경청
+sensitively|adv|민감하게; 배려하여|V:handle concerns sensitively|우려 사항을 배려하여 처리
+constructively|adv|건설적으로|V:respond to criticism constructively|비판에 건설적으로 대응
+sincerely|adv|진심으로|V:thank clients sincerely|거래처에 진심으로 감사를 표시
+@49|운영·조달·공급망|공급망과 운영 개선의 추상적 어휘를 연결해 복습한다.
+operation|n|운영; 작업|D:daily operations|일상 운영
+sourcing|n|조달처 확보|D:global sourcing|글로벌 조달
+outsourcing|n|외주|D:service outsourcing|서비스 외주
+subcontractor|n|하청업체|D:approved subcontractor|승인된 하청업체
+lead|n/v|잠재 고객; 이끌다|D:qualified leads|구매 자격을 갖춘 잠재 고객
+bottleneck|n|병목|D:production bottleneck|생산 병목
+workflow|n|업무 흐름|D:efficient workflow|효율적인 업무 흐름
+benchmark|n|비교 기준|D:industry benchmark|업계 비교 기준
+optimization|n|최적화|D:process optimization|공정 최적화
+resilience|n|회복력|D:supply-chain resilience|공급망 회복력
+outsource|v|외주를 맡기다|V:outsource delivery services|배송 서비스를 외주 처리
+subcontract|v|하청을 주다|V:subcontract maintenance work|유지보수 작업을 하청 처리
+source|v/n|조달하다; 출처|V:source materials locally|자재를 현지 조달
+scale|v/n|확대하다; 규모|V:scale production gradually|생산 규모를 점진적으로 확대
+reallocate|v|재배분하다|V:reallocate resources|자원을 재배분
+deploy|v|배치하다|V:deploy additional staff|추가 직원을 배치
+centralize|v|중앙에 집중하다|V:centralize purchasing|구매를 중앙 집중화
+decentralize|v|분산하다|V:decentralize decision-making|의사결정을 분산
+scalable|adj|규모 확장 가능한|D:scalable system|확장 가능한 시스템
+resilient|adj|회복력이 있는|D:resilient supply chain|회복력 있는 공급망
+cost-effective|adj|비용 대비 효과적인|D:cost-effective solution|비용 대비 효과적인 해결책
+time-consuming|adj|시간이 많이 드는|D:time-consuming process|시간이 많이 드는 과정
+labor-intensive|adj|노동 집약적인|D:labor-intensive task|노동 집약 업무
+resourceful|adj|문제 해결 능력 있는|H:resourceful manager|해결 능력이 뛰어난 관리자
+lean|adj|효율적인; 낭비 없는|D:lean manufacturing|낭비를 줄인 제조
+agile|adj|기민한|D:agile organization|기민한 조직
+resourcefully|adv|기지를 발휘하여|V:solve problems resourcefully|기지를 발휘하여 문제를 해결
+cost-effectively|adv|비용 효율적으로|V:deliver services cost-effectively|서비스를 비용 효율적으로 제공
+flexibly|adv|유연하게|V:allocate staff flexibly|직원을 유연하게 배분
+operationally|adv|운영상으로|A:operationally efficient|운영상 효율적임
+@50|공공행정과 환경 경영|기관 문서와 지속 가능성 보고의 어휘를 읽는다.
+institution|n|기관|D:public institution|공공기관
+administration|n|행정; 관리|D:public administration|공공행정
+legislation|n|법률; 입법|D:environmental legislation|환경 법률
+ordinance|n|조례|D:municipal ordinance|지방 자치 조례
+subsidy|n|보조금|D:government subsidy|정부 보조금
+grant|n/v|지원금; 부여하다|D:research grant|연구 지원금
+funding|n|자금 지원|D:public funding|공적 자금 지원
+emission|n|배출|D:carbon emissions|탄소 배출
+conservation|n|보존; 절약|D:energy conservation|에너지 절약
+footprint|n|영향 범위; 발자국|D:carbon footprint|탄소 발자국
+legislate|v|법률을 제정하다|V:legislate for cleaner transport|청정 교통 관련 법률을 제정
+administer|v|관리하다; 집행하다|V:administer the program|프로그램을 운영 관리
+subsidize|v|보조금을 주다|V:subsidize public transport|대중교통에 보조금을 지원
+fundraise|v|모금하다|V:fundraise for the community project|지역 사업을 위한 모금을 실시
+eradicate|v|근절하다|V:eradicate workplace hazards|작업장 위험을 제거
+preserve|v|보존하다|V:preserve natural resources|천연자원을 보존
+regeneration|n|재생|D:urban regeneration|도시 재생
+rehabilitate|v|복구하다; 재활시키다|V:rehabilitate the site|부지를 복구
+administrative|adj|행정의|D:administrative procedures|행정 절차
+institutional|adj|기관의; 제도적인|D:institutional support|기관 지원
+ecological|adj|생태의|D:ecological impact|생태 영향
+biodegradable|adj|생분해 가능한|C:biodegradable packaging|생분해 포장
+energy-efficient|adj|에너지 효율적인|C:energy-efficient appliances|에너지 효율적인 가전
+eco-friendly|adj|환경친화적인|C:eco-friendly products|환경친화적 제품
+civic|adj|시민의; 도시의|D:civic responsibility|시민의 책임
+stewardship|n|책임 있는 관리|D:environmental stewardship|책임 있는 환경 관리
+administratively|adv|행정적으로|A:administratively complex|행정적으로 복잡함
+publicly|adv|공개적으로|V:announce results publicly|결과를 공개 발표
+sustainably|adv|지속 가능하게|V:source materials sustainably|자재를 지속 가능한 방식으로 조달
+ethically|adv|윤리적으로|V:conduct business ethically|사업을 윤리적으로 수행
