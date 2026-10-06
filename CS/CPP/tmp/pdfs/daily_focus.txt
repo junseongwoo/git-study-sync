@@ -11,7 +11,7 @@
 6|The store offers a full _______ if an item cannot be repaired.|refund;brand;price;warranty|refund|수리가 불가능할 때 돌려주는 금액은 refund. full refund는 전액 환불이다.
 6|Please respond _______ to the customer's complaint.|politely;polite;politeness;policy|politely|응대 방식은 동사 respond를 수식하는 부사로 나타낸다.
 7|Applicants must _______ their resumes before Monday.|submit;retire;promote;evaluate|submit|지원자가 이력서를 제출하는 상황. submit a resume라는 연어를 기억한다.
-7|Only _______ candidates will be invited to an interview.|qualified;qualification;qualify;qualifyingly|qualified|명사 candidates를 수식하는 qualified. qualification은 자격이라는 명사다.
+7|Only _______ candidates will be invited to an interview.|qualified;qualification;qualify;qualifications|qualified|명사 candidates를 수식하는 qualified. qualification은 자격이라는 명사다.
 8|The new printer is _______ with our existing software.|compatible;portable;digital;automatic|compatible|be compatible with는 ~와 호환되다. 나머지 형용사는 with와 이 의미로 연결되지 않는다.
 8|The system saves all changes _______.|automatically;automatic;automation;automate|automatically|동사 saves를 수식하는 부사. automatic update에서는 형용사가 된다.
 9|Please settle the _______ balance before the end of the month.|outstanding;competitive;portable;domestic|outstanding|settle a balance는 잔액을 결제하다. outstanding은 여기서 미지급의 뜻이다.

@@ -308,3 +308,313 @@ daily|adv/adj|매일; 매일의|V:inspect facilities daily|시설을 매일 점�
 clearly|adv|명확하게|V:display notices clearly|공지를 명확히 게시
 normally|adv|보통; 정상적으로|A:normally open|보통 개방됨
 outside|adv/prep|밖에; 바깥에|V:display signs outside|외부에 표지판을 게시
+@11|업무 실행 동사|목적어와 함께 동사를 기억하고 업무 절차를 읽는다.
+approve|v|승인하다|V:approve the budget|예산을 승인
+authorize|v|권한을 부여하다; 승인하다|V:authorize a payment|결제를 승인
+implement|v|실행하다|V:implement a new policy|새 정책을 시행
+fulfill|v|이행하다; 충족하다|V:fulfill an obligation|의무를 이행
+accomplish|v|달성하다|V:accomplish a goal|목표를 달성
+achieve|v|달성하다|V:achieve sales targets|매출 목표를 달성
+conduct|v|실시하다|V:conduct a survey|설문조사를 실시
+perform|v|수행하다|V:perform routine checks|정기 점검을 수행
+review|v/n|검토하다; 검토|V:review the contract|계약서를 검토
+revise|v|수정하다|V:revise the schedule|일정을 수정
+approval|n|승인|D:final approval|최종 승인
+authorization|n|권한 부여; 승인|D:written authorization|서면 승인
+implementation|n|시행|D:policy implementation|정책 시행
+completion|n|완료|D:project completion|프로젝트 완료
+achievement|n|성과; 달성|D:significant achievement|중요한 성과
+performance|n|성과; 수행|D:employee performance|직원 성과
+procedure|n|절차|D:standard procedure|표준 절차
+process|n|과정; 절차|D:approval process|승인 절차
+objective|n/adj|목표; 객관적인|D:primary objective|주요 목표
+priority|n|우선순위|D:top priority|최우선 과제
+effective|adj|효과적인|D:effective strategy|효과적인 전략
+productive|adj|생산적인|E:productive meeting|생산적인 회의
+practical|adj|실용적인|D:practical solution|실용적인 해결책
+specific|adj|구체적인|D:specific instructions|구체적인 지시
+initial|adj|초기의|D:initial assessment|초기 평가
+final|adj|최종의|D:final decision|최종 결정
+effectively|adv|효과적으로|V:communicate effectively|효과적으로 의사소통
+efficiently|adv|효율적으로|V:allocate resources efficiently|자원을 효율적으로 배분
+consistently|adv|일관되게|V:meet targets consistently|목표를 꾸준히 달성
+initially|adv|처음에|A:initially unavailable|처음에는 이용 불가
+@12|공지와 업무 소통|알림·첨부·전달 동사와 정보의 성격을 구분한다.
+announce|v|발표하다; 알리다|V:announce the results|결과를 발표
+notify|v|통지하다|V:notify employees of changes|직원에게 변경 사항을 통지
+inform|v|알리다|V:inform customers of the delay|고객에게 지연을 안내
+communicate|v|전달하다; 소통하다|V:communicate with clients|거래처와 소통
+attach|v|첨부하다|V:attach the document|서류를 첨부
+enclose|v|동봉하다|V:enclose a receipt|영수증을 동봉
+forward|v|전달하다|V:forward the message|메시지를 전달
+distribute|v|배포하다|V:distribute the handouts|유인물을 배포
+clarify|v|명확히 하다|V:clarify the instructions|지시 사항을 명확히 설명
+reply|v/n|답변하다; 답변|V:reply to the email|이메일에 답변
+announcement|n|발표; 공지|D:official announcement|공식 발표
+notification|n|통지|D:email notification|이메일 통지
+information|n|정보(불가산)|D:additional information|추가 정보
+message|n|메시지|D:urgent message|긴급 메시지
+attachment|n|첨부 파일|D:email attachment|이메일 첨부 파일
+document|n|문서|D:supporting document|증빙 문서
+correspondence|n|서신; 연락|D:business correspondence|업무 서신
+memo|n|메모; 사내 공문|D:internal memo|사내 공문
+bulletin|n|게시 공지|D:staff bulletin|직원 공지
+response|n|응답|D:prompt response|신속한 응답
+official|adj|공식적인|D:official statement|공식 성명
+confidential|adj|기밀의|D:confidential information|기밀 정보
+internal|adj|내부의|D:internal communication|내부 소통
+external|adj|외부의|D:external contact|외부 연락처
+detailed|adj|자세한|D:detailed explanation|자세한 설명
+clear|adj|명확한|D:clear instructions|명확한 지시
+verbally|adv|구두로|V:confirm arrangements verbally|합의 사항을 구두로 확인
+officially|adv|공식적으로|V:announce changes officially|변경 사항을 공식 발표
+specifically|adv|구체적으로; 특히|V:identify requirements specifically|요건을 구체적으로 식별
+accordingly|adv|그에 맞춰; 따라서|V:adjust the schedule accordingly|일정을 그에 맞춰 조정
+@13|판매와 성과|매출·수요·실적의 변화를 나타내는 말에 익숙해진다.
+sales|n|매출; 판매|D:quarterly sales|분기 매출
+revenue|n|매출액; 수입|D:annual revenue|연간 매출액
+target|n|목표|D:sales target|매출 목표
+market|n|시장|D:overseas market|해외 시장
+demand|n|수요|D:consumer demand|소비자 수요
+supply|n/v|공급; 공급하다|D:limited supply|제한된 공급
+growth|n|성장|D:steady growth|꾸준한 성장
+trend|n|추세|D:market trend|시장 추세
+result|n|결과|D:survey results|설문조사 결과
+competition|n|경쟁|D:intense competition|치열한 경쟁
+sell|v|팔다|V:sell products online|제품을 온라인 판매
+expand|v|확장하다|V:expand the business|사업을 확대
+boost|v|증대시키다|V:boost sales|매출을 증대
+attract|v|끌어들이다|V:attract new customers|신규 고객을 유치
+retain|v|유지하다; 보유하다|V:retain loyal customers|단골 고객을 유지
+exceed|v|초과하다|V:exceed expectations|기대 수준을 초과 달성
+meet|v|충족하다; 만나다|V:meet customer needs|고객 요구를 충족
+monitor|v|관찰하다; 점검하다|V:monitor sales figures|매출 수치를 점검
+strategy|n|전략|D:pricing strategy|가격 전략
+competitor|n|경쟁사|D:major competitor|주요 경쟁사
+successful|adj|성공적인|D:successful campaign|성공적인 캠페인
+profitable|adj|수익성 있는|D:profitable business|수익성 있는 사업
+steady|adj|꾸준한|D:steady demand|꾸준한 수요
+strong|adj|강한; 호조인|D:strong sales|호조인 매출
+significant|adj|상당한; 중요한|D:significant increase|상당한 증가
+potential|adj/n|잠재적인; 가능성|H:potential customer|잠재 고객
+steadily|adv|꾸준히|V:increase sales steadily|매출을 꾸준히 확대
+significantly|adv|상당히|V:reduce costs significantly|비용을 상당히 절감
+substantially|adv|상당히; 크게|V:improve profits substantially|이익을 크게 개선
+rapidly|adv|빠르게|V:expand rapidly|빠르게 확장
+@14|광고와 마케팅|홍보 수단과 소비자 반응을 연결하고 둘째 주를 복습한다.
+advertisement|n|광고|D:online advertisement|온라인 광고
+advertising|n|광고 활동|D:advertising budget|광고 예산
+campaign|n|캠페인|D:marketing campaign|마케팅 캠페인
+promotion|n|판촉; 승진|D:sales promotion|판촉 행사
+brochure|n|안내 책자|D:product brochure|제품 안내 책자
+catalog|n|목록; 카탈로그|D:product catalog|제품 카탈로그
+audience|n|청중; 독자층|D:target audience|목표 고객층
+consumer|n|소비자|D:consumer preferences|소비자 선호
+survey|n|설문조사|D:customer survey|고객 설문조사
+feedback|n|의견; 피드백|D:customer feedback|고객 의견
+advertise|v|광고하다|V:advertise a new service|새 서비스를 광고
+publicize|v|홍보하다|V:publicize an event|행사를 홍보
+launch|v/n|출시하다; 출시|V:launch a new product|신제품을 출시
+design|v/n|설계하다; 디자인|V:design a brochure|안내 책자를 디자인
+develop|v|개발하다|V:develop a marketing plan|마케팅 계획을 개발
+research|v/n|조사하다; 연구|V:research consumer needs|소비자 요구를 조사
+analyze|v|분석하다|V:analyze survey data|설문 자료를 분석
+appeal|v/n|호소하다; 매력|V:appeal to younger buyers|젊은 구매층에 대한 소구를 강화
+awareness|n|인지도|D:brand awareness|브랜드 인지도
+image|n|이미지|D:corporate image|기업 이미지
+creative|adj|창의적인|D:creative approach|창의적인 접근법
+innovative|adj|혁신적인|D:innovative design|혁신적인 디자인
+attractive|adj|매력적인|D:attractive offer|매력적인 제안
+persuasive|adj|설득력 있는|D:persuasive message|설득력 있는 메시지
+promotional|adj|판촉용의|D:promotional materials|판촉 자료
+original|adj|독창적인; 원본의|D:original design|독창적인 디자인
+widely|adv|널리|A:widely advertised|널리 광고됨
+primarily|adv|주로|A:primarily intended for businesses|주로 기업을 위한 것임
+creatively|adv|창의적으로|V:design advertisements creatively|광고를 창의적으로 디자인
+strategically|adv|전략적으로|V:position products strategically|제품을 전략적으로 배치
+@15|계약의 기본|합의·조건·의무를 나타내는 핵심 명사와 동사를 구분한다.
+contract|n|계약; 계약서|D:service contract|서비스 계약
+agreement|n|합의; 계약|D:written agreement|서면 합의
+term|n|조건; 기간|D:payment terms|결제 조건
+condition|n|조건; 상태|D:contract conditions|계약 조건
+clause|n|조항|D:cancellation clause|취소 조항
+signature|n|서명|D:authorized signature|권한 있는 서명
+obligation|n|의무|D:contractual obligation|계약상 의무
+requirement|n|요건|D:legal requirement|법적 요건
+negotiation|n|협상|D:contract negotiation|계약 협상
+partner|n|협력사; 동업자|D:business partner|사업 협력사
+negotiate|v|협상하다|V:negotiate the terms|조건을 협상
+sign|v|서명하다|V:sign the agreement|계약서에 서명
+renew|v|갱신하다|V:renew the contract|계약을 갱신
+terminate|v|종료하다|V:terminate the agreement|계약을 종료
+comply|v|준수하다|V:comply with regulations|규정을 준수
+require|v|요구하다|V:require written consent|서면 동의를 요구
+agree|v|동의하다|V:agree to the terms|조건에 동의
+protect|v|보호하다|V:protect customer data|고객 자료를 보호
+renewal|n|갱신|D:contract renewal|계약 갱신
+consent|n|동의|D:written consent|서면 동의
+binding|adj|법적 구속력 있는|D:binding agreement|구속력 있는 합의
+legal|adj|법률상의; 합법적인|D:legal advice|법률 자문
+mutual|adj|상호의|D:mutual consent|상호 동의
+written|adj|서면의|D:written notice|서면 통지
+standard|adj/n|표준의; 기준|D:standard terms|표준 조건
+required|adj|필수의; 요구되는|D:required documents|필수 서류
+legally|adv|법적으로|A:legally binding|법적 구속력이 있음
+mutually|adv|상호 간에|A:mutually beneficial|상호 이익이 됨
+strictly|adv|엄격히|V:strictly follow the rules|규칙을 엄격히 준수
+formally|adv|공식적으로; 격식 있게|V:formally accept the offer|제안을 공식적으로 수락
+@16|교육과 직무 역량|교육 프로그램과 능력 평가에서 쓰이는 품사를 익힌다.
+course|n|강좌|E:training course|교육 강좌
+workshop|n|워크숍|E:practical workshop|실습 워크숍
+seminar|n|세미나|E:professional seminar|전문 세미나
+instructor|n|강사|H:qualified instructor|유자격 강사
+skill|n|기술; 능력|D:communication skills|의사소통 능력
+knowledge|n|지식|D:technical knowledge|기술 지식
+expertise|n|전문 지식|D:industry expertise|업계 전문 지식
+certificate|n|증명서; 수료증|D:completion certificate|수료증
+curriculum|n|교육과정|D:training curriculum|교육과정
+assessment|n|평가|D:skills assessment|능력 평가
+instruct|v|지도하다; 지시하다|V:instruct new staff|신입 직원을 지도
+educate|v|교육하다|V:educate staff about safety|직원에게 안전 교육을 실시
+learn|v|배우다|V:learn new skills|새 기술을 학습
+practice|v/n|연습하다; 관행|V:practice interview techniques|면접 기술을 연습
+demonstrate|v|시연하다; 입증하다|V:demonstrate the procedure|절차를 시연
+improve|v|개선하다|V:improve communication skills|의사소통 능력을 개선
+encourage|v|격려하다; 권장하다|V:encourage participation|참여를 장려
+participate|v|참여하다|V:participate in training|교육에 참여
+education|n|교육|D:continuing education|지속 교육
+participation|n|참여|D:active participation|적극적인 참여
+educational|adj|교육의|D:educational materials|교육 자료
+professional|adj/n|전문적인; 전문가|D:professional development|전문 역량 개발
+skilled|adj|숙련된|H:skilled technician|숙련된 기술자
+capable|adj|능력 있는|H:capable instructor|유능한 강사
+relevant|adj|관련 있는|D:relevant information|관련 정보
+optional|adj|선택적인|E:optional session|선택 교육 시간
+actively|adv|적극적으로|V:participate actively|적극적으로 참여
+gradually|adv|점차|V:improve skills gradually|능력을 점차 향상
+thoroughly|adv|철저하게|V:review materials thoroughly|자료를 철저히 검토
+independently|adv|독립적으로|V:work independently|독립적으로 업무를 수행
+@17|제품 개발과 제조|생산·검사·품질을 설명하는 말의 쓰임을 익힌다.
+manufacturing|n|제조|D:manufacturing process|제조 과정
+production|n|생산|D:production capacity|생산 능력
+factory|n|공장|L:assembly factory|조립 공장
+material|n|재료; 자료|D:raw materials|원자재
+component|n|부품; 구성 요소|C:electronic component|전자 부품
+part|n|부품; 부분|C:spare part|예비 부품
+sample|n|견본|C:product sample|제품 견본
+inspection|n|검사|D:quality inspection|품질 검사
+defect|n|결함|D:manufacturing defect|제조 결함
+inventory|n|재고|D:current inventory|현재 재고
+manufacture|v|제조하다|V:manufacture electronic devices|전자 기기를 제조
+produce|v|생산하다|V:produce high-quality goods|고품질 제품을 생산
+assemble|v|조립하다|V:assemble the components|부품을 조립
+fabricate|v|제작하다|V:fabricate metal parts|금속 부품을 제작
+examine|v|검사하다|V:examine the samples|견본을 검사
+detect|v|발견하다; 감지하다|V:detect defects|결함을 발견
+maintain|v|유지하다|V:maintain quality standards|품질 기준을 유지
+ensure|v|보장하다; 확실히 하다|V:ensure product safety|제품 안전을 확보
+machinery|n|기계류(불가산)|C:heavy machinery|중장비
+output|n|생산량; 산출|D:production output|생산량
+durable|adj|내구성 있는|C:durable materials|내구성 있는 자재
+industrial|adj|산업의|C:industrial equipment|산업 장비
+mechanical|adj|기계의|D:mechanical failure|기계 고장
+consistent|adj|일관된|D:consistent quality|일관된 품질
+precise|adj|정밀한; 정확한|D:precise measurements|정밀한 측정값
+high-quality|adj|고품질의|C:high-quality components|고품질 부품
+precisely|adv|정확히|V:measure components precisely|부품을 정확히 측정
+continuously|adv|계속해서|V:monitor quality continuously|품질을 계속 점검
+repeatedly|adv|반복해서|V:test samples repeatedly|견본을 반복 검사
+uniformly|adv|균일하게|V:apply coatings uniformly|코팅을 균일하게 도포
+@18|임대와 시설 관리|건물·임대·보수 공지의 빈출 표현을 읽는다.
+property|n|부동산; 재산|D:commercial property|상업용 부동산
+lease|n/v|임대차; 임대하다|D:lease agreement|임대차 계약
+rent|n/v|임대료; 빌리다|D:monthly rent|월 임대료
+tenant|n|임차인|H:current tenant|현재 임차인
+landlord|n|임대인|D:property landlord|건물 임대인
+premises|n|건물과 부지|D:business premises|사업장 건물과 부지
+space|n|공간|D:available office space|사용 가능한 사무 공간
+renovation|n|보수 공사|D:building renovation|건물 보수 공사
+construction|n|건설|D:construction project|건설 사업
+permit|n|허가증|D:building permit|건축 허가증
+inspector|n|검사관|H:building inspector|건축 검사관
+renovate|v|개보수하다|V:renovate the lobby|로비를 개보수
+construct|v|건설하다|V:construct a warehouse|창고를 건설
+relocate|v|이전하다|V:relocate the office|사무실을 이전
+occupy|v|차지하다; 입주하다|V:occupy the second floor|2층을 점유
+extend|v|연장하다|V:extend the lease|임대차 기간을 연장
+restore|v|복구하다|V:restore the building|건물을 복구
+upgrade|v/n|개선하다; 업그레이드|V:upgrade the facilities|시설을 개선
+utilities|n|공공요금; 공공 서비스|D:monthly utilities|월 공공요금
+security|n|보안|D:building security|건물 보안
+residential|adj|주거용의|D:residential property|주거용 부동산
+commercial|adj|상업용의|D:commercial building|상업용 건물
+vacant|adj|비어 있는|D:vacant office space|빈 사무 공간
+occupied|adj|사용 중인|D:occupied units|입주된 호실
+adjacent|adj|인접한|D:adjacent property|인접 부동산
+conveniently|adv|편리하게|A:conveniently located|편리한 곳에 위치함
+centrally|adv|중앙에|A:centrally located|중심지에 위치함
+newly|adv|새로|A:newly renovated|새로 개보수됨
+extensively|adv|광범위하게|A:extensively renovated|대규모로 개보수됨
+secure|adj/v|안전한; 확보하다|D:secure storage|안전한 보관
+@19|건강·복지·안전|보험·안전 안내와 직원 복지의 기본 어휘를 익힌다.
+health|n|건강|D:employee health|직원 건강
+safety|n|안전|D:workplace safety|작업장 안전
+insurance|n|보험|D:health insurance|건강 보험
+coverage|n|보장 범위|D:insurance coverage|보험 보장 범위
+medical|adj|의료의|D:medical benefits|의료 혜택
+clinic|n|진료소|L:local clinic|지역 진료소
+treatment|n|치료; 처리|D:medical treatment|의료 처치
+emergency|n|비상사태|D:emergency procedure|비상 절차
+accident|n|사고|D:workplace accident|작업장 사고
+injury|n|부상|D:minor injury|가벼운 부상
+prevent|v|예방하다|V:prevent accidents|사고를 예방
+avoid|v|피하다|V:avoid unnecessary risks|불필요한 위험을 회피
+cover|v|보장하다; 포함하다|V:cover medical expenses|의료 비용을 보장
+enroll|v|등록하다|V:enroll in the insurance plan|보험 제도에 가입
+exercise|v/n|운동하다; 운동|V:exercise during breaks|휴식 시간에 운동
+recover|v|회복하다|V:recover from an injury|부상에서 회복
+follow|v|따르다|V:follow safety guidelines|안전 지침을 준수
+support|v/n|지원하다; 지원|V:support employee wellness|직원 건강 증진을 지원
+wellness|n|건강한 상태; 건강 증진|D:wellness program|건강 증진 프로그램
+guideline|n|지침|D:safety guidelines|안전 지침
+healthy|adj|건강한|D:healthy workplace|건강한 근무 환경
+mandatory|adj|의무적인|D:mandatory training|의무 교육
+preventive|adj|예방의|D:preventive care|예방 관리
+protective|adj|보호용의|C:protective clothing|보호복
+minor|adj|경미한|D:minor accident|경미한 사고
+serious|adj|심각한|D:serious injury|심각한 부상
+physically|adv|신체적으로|A:physically demanding|신체적으로 힘듦
+adequately|adv|충분히; 적절히|A:adequately insured|충분히 보험에 가입됨
+improperly|adv|부적절하게|A:improperly stored|부적절하게 보관됨
+otherwise|adv|그렇지 않으면; 달리|A:otherwise unchanged|그 밖에는 변동 없음
+@20|환경과 공공기관|환경 정책과 공공 안내에서 쓰이는 핵심 어휘를 읽는다.
+environment|n|환경|D:working environment|근무 환경
+energy|n|에너지|D:renewable energy|재생 에너지
+waste|n/v|폐기물; 낭비하다|D:industrial waste|산업 폐기물
+resource|n|자원|D:natural resources|천연자원
+recycling|n|재활용|D:recycling program|재활용 프로그램
+pollution|n|오염|D:air pollution|대기 오염
+government|n|정부|D:local government|지방 정부
+agency|n|기관; 대행사|D:government agency|정부 기관
+regulation|n|규정|D:environmental regulations|환경 규정
+community|n|지역사회|D:local community|지역사회
+recycle|v|재활용하다|V:recycle office paper|사무용 종이를 재활용
+conserve|v|절약하다; 보존하다|V:conserve energy|에너지를 절약
+dispose|v|처분하다|V:dispose of waste properly|폐기물을 적절히 처리
+collect|v|수거하다; 모으다|V:collect used batteries|사용한 배터리를 수거
+donate|v|기부하다|V:donate unused equipment|미사용 장비를 기부
+volunteer|v/n|자원봉사하다; 봉사자|V:volunteer at a community event|지역 행사에서 자원봉사를 실시
+contribute|v|기여하다; 기부하다|V:contribute to the campaign|캠페인에 기여
+compost|v/n|퇴비화하다; 퇴비|V:compost food waste|음식물 쓰레기를 퇴비화
+sustainability|n|지속 가능성|D:environmental sustainability|환경 지속 가능성
+initiative|n|계획; 주도권|D:energy-saving initiative|에너지 절약 계획
+environmental|adj|환경의|D:environmental impact|환경 영향
+renewable|adj|재생 가능한|D:renewable resources|재생 가능한 자원
+sustainable|adj|지속 가능한|D:sustainable development|지속 가능한 개발
+reusable|adj|재사용 가능한|C:reusable containers|재사용 용기
+recyclable|adj|재활용 가능한|C:recyclable packaging|재활용 가능 포장
+donation|n|기부|D:equipment donation|장비 기부
+responsibly|adv|책임감 있게|V:use resources responsibly|자원을 책임감 있게 사용
+environmentally|adv|환경 면에서|A:environmentally friendly|환경친화적임
+collectively|adv|공동으로|V:reduce waste collectively|폐기물을 공동으로 감축
+voluntarily|adv|자발적으로|V:participate voluntarily|자발적으로 참여
