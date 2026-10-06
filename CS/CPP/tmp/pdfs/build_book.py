@@ -167,7 +167,10 @@ class Book:
         self.c.setStrokeColor(RULE);self.c.line(LEFT,H-43,RIGHT,H-43);self.c.line(LEFT,34,RIGHT,34);self.c.setFont('KR',8);self.c.setFillColor(GRAY);self.c.drawString(LEFT,22,'60 DAY CHALLENGE  |  1,800 WORDS');self.c.drawRightString(RIGHT,22,f'{self.p:03d}')
         if title:self.para(title,'title',after=10)
         if sub:self.para(sub,'small',after=15)
-        if key:self.sections[key]=self.p
+        if key:
+            self.sections[key]=self.p;self.c.bookmarkPage(key)
+            level=1 if key.startswith(('mini','answer','weekanswer')) else 0
+            self.c.addOutlineEntry(title or label,key,level=level,closed=level==0)
         return self.p
     def para(self,text,style='body',after=8,x=None,width=None):
         p=P(text,style); ww,hh=p.wrap(width or CW,1000)
@@ -203,7 +206,7 @@ DAILY_FOCUS=read_focus()
 def daily_questions(d):
     es=d['entries'];qs=[]
     for e in es[:5]:qs.append(dict(type='영어 → 한국어',prompt=e['word'],answer=e['meaning'],why=e['colloc']))
-    for e in es[10:15]:qs.append(dict(type='한국어 → 영어',prompt=e['meaning']+' ('+e['pos']+'.)',answer=e['word'],why=e['colloc']))
+    for e in es[10:15]:qs.append(dict(type='한국어 → 영어',prompt=e['meaning']+' ('+e['pos']+'.) · '+e['word'][:3]+'...',answer=e['word'],why=e['colloc']))
     picked=[]
     for pos in ['n','v','adj','adv','n']:
         pool=[e for e in es if e['pos'].split('/')[0]==pos and e not in picked]
@@ -232,6 +235,10 @@ FOCUS={
 9:'outstanding 미지급의·뛰어난; expense 비용 / expensive 비싼; deposit 예치 / withdraw 인출; profit 이익 / revenue 매출; due 지급 예정의 / overdue 연체된',
 10:'maintenance 유지보수 / maintain 유지하다; accessible 접근 가능한 / access 접근; notice 공지·알아차리다; register for 행사; closed 상태 / close 동작',
 }
+
+for _line in (BASE/'focus_notes.txt').read_text(encoding='utf-8').splitlines():
+    if _line.strip():
+        _day,_note=_line.split('|',1);FOCUS[int(_day)]=_note
 
 def day_pages(b,d,refs=None):
     day=d['day'];es=d['entries'];phase=(day-1)//10+1
@@ -268,17 +275,23 @@ def day_pages(b,d,refs=None):
     b.para("Today's Review",'sub',after=8)
     b.para('오늘 신규 단어: <b>30개</b>  /  점수: ____ / 15  /  재시험: ____ / 15','body')
     important=[es[i]['word'] for i in [0,4,10,12,22]]
-    confusing=[es[i]['word'] for i in [1,8,15,23,26]]
+    focus=FOCUS[day]
+    matches=[]
+    for e in es:
+        match=re.search(wordpattern(e['word']),focus,re.I)
+        if match:matches.append((match.start(),e['word']))
+    confusing=[w for _,w in sorted(matches)[:5]]
+    for e in es:
+        if len(confusing)<5 and e['word'] not in confusing:confusing.append(e['word'])
     expressions=[es[i]['colloc'] for i in [10,13,19,22,28]]
     b.para('<b>가장 중요한 단어 5개</b><br/>'+ ' · '.join(important),'small')
     b.para('<b>헷갈리기 쉬운 단어 5개</b><br/>'+ ' · '.join(confusing),'small')
     b.para('<b>오늘 반드시 외울 표현 5개</b><br/>'+ ' / '.join(expressions),'small')
-    focus=FOCUS.get(day,' / '.join(e['word']+' ('+e['pos']+'.)' for e in es[20:25]))
     b.para('<b>구분 포인트</b><br/>'+esc(focus),'small')
     b.para('복습 체크  [ ] 오늘 저녁  [ ] D+1  [ ] D+3  [ ] D+7  [ ] D+14<br/>취약 단어  ____________________  ____________________  ____________________','small')
     old=[f'Day {day-x:02d}' for x in [1,3,7,14] if day-x>=1]
     if old:b.para('오늘 되짚을 이전 학습: '+', '.join(old)+' (틀린 단어부터 회상)','small')
-    if day in WEEKLY:b.para(f'오늘의 주간 복습: Weekly Review {day//7:02d}  /  p. {(refs or {}).get("week"+str(day),0):03d}','small')
+    if day in WEEKLY:b.para(f'오늘의 주간 복습: <link href="#week{day}" color="#2463A3">Weekly Review {day//7:02d}  /  p. {(refs or {}).get("week"+str(day),0):03d}</link>','small')
 
 def mc_question(b,no,q):
     b.para(f'<b>{no:02d}.</b> '+esc(q['prompt']),'en',after=5)
@@ -444,8 +457,6 @@ def build_all(path,days,refs=None):
     for d in days:day_pages(b,d,refs)
     weekly={day:weekly_pages(b,day,days) for day in WEEKLY}
     final=final_pages(b);worksheets(b,days)
-    for name,page in b.sections.items():
-        pass
     b.finish()
     return b,weekly,final
 

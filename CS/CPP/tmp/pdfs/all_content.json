@@ -18728,16 +18728,16 @@
         "why": "participate in + 행사. 나머지 동사는 이 자리에 in과 같은 방식으로 연결되지 않는다."
       },
       {
-        "prompt": "The factory keeps extra components as _______ parts.",
+        "prompt": "Inspectors examined the sample and found a manufacturing _______.",
         "options": [
-          "spare",
-          "raw",
-          "heavy",
-          "precise"
+          "defect",
+          "output",
+          "inventory",
+          "production"
         ],
         "answer": 0,
-        "word": "spare",
-        "why": "교체를 위해 보유하는 부품은 spare parts다."
+        "word": "defect",
+        "why": "견본 검사에서 발견하는 제조 결함은 manufacturing defect다."
       },
       {
         "prompt": "The firm will _______ its office to a larger building next month.",
@@ -19008,16 +19008,16 @@
     ],
     "35": [
       {
-        "prompt": "The venue can _______ up to 300 attendees at one time.",
+        "prompt": "The hall has a seating _______ of 300 people.",
         "options": [
-          "accommodate",
-          "escort",
-          "entertain",
-          "greet"
+          "capacity",
+          "attendance",
+          "registration",
+          "admission"
         ],
         "answer": 0,
-        "word": "accommodate",
-        "why": "수용 인원을 말하므로 accommodate. escort는 손님을 안내하다."
+        "word": "capacity",
+        "why": "seating capacity는 좌석 수용 능력. 실제 참석자 수 attendance와 구별한다."
       },
       {
         "prompt": "The committee will _______ the new policy after reviewing the proposal.",

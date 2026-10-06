@@ -1,0 +1,50 @@
+11|approve 승인 / authorize 권한 부여를 동반한 승인; fulfill 의무 이행 / accomplish 목표 달성; implementation 명사 / implement 동사; effective 효과적 / efficient 효율적; productive 형용사 / productively 부사
+12|attach 첨부 / enclose 동봉; notify 사람 of 내용 / announce 내용; inform 사람 of 내용 / communicate with 사람; confidential 기밀의 / confidentiality 기밀 유지; accordingly 결과에 맞춰 / subsequently 그 후에
+13|revenue 매출 / profit 이익; retain 기존 고객 유지 / attract 신규 고객 유치; exceed 목표 초과 / meet 목표 충족; steady 형용사 / steadily 부사; significant 형용사 / significantly 부사
+14|advertisement 개별 광고 / advertising 광고 활동; promotion 판촉·승진 / promotional 판촉용; publicize 널리 알림 / advertise 광고; consumer 소비자 / customer 구매 고객; creative 형용사 / creatively 부사
+15|contract 계약 / agreement 합의; term 조건·기간 / condition 조건·상태; renew 갱신 / terminate 종료; binding 구속력 있는 / bind 묶다; consent 동의 / permission 허가
+16|instructor 사람 / instruction 지시; practice 연습·관행 / practical 실용적인; participate in 교육 / participation 참여; capable of + 동명사 / ability to + 동사; professional 전문적인·전문가 / professionally 전문적으로
+17|manufacture 동사 / manufacturing 제조 활동; defect 명사 / defective 형용사; material 재료·자료 / machinery 기계류; assemble 조립 / assembly 조립 과정; precise 형용사 / precisely 부사
+18|tenant 임차인 / landlord 임대인; lease 임대차 계약 / rent 임대료; renovate 개보수 / restore 복구; vacant 빈 / occupied 사용 중인; convenient 형용사 / conveniently 부사
+19|insurance 보험 / coverage 보장 범위; prevent 예방 / avoid 회피; mandatory 의무적 / optional 선택적; injury 부상 / accident 사고; adequate 형용사 / adequately 부사
+20|reusable 재사용 가능 / recyclable 재활용 가능; conserve 보존·절약 / preserve 보존; dispose of 폐기 / recycle 재활용; environmental 형용사 / environmentally 부사; contribute to 기여 / donate 물품·돈 기부
+21|analysis 분석 / analyst 분석가; assess 평가 / verify 정확성 확인; estimate 추정 / calculate 계산; preliminary 예비 / final 최종; accurate 형용사 / accurately 부사
+22|credential 자격 증명 / qualification 자격; recruitment 채용 과정 / recruiter 채용 담당자; appointee 임명된 사람 / appoint 임명하다; proficient 형용사 / proficiency 명사; applicable to 적용 / eligibility 자격 요건
+23|payable 지급할 / receivable 수취할; creditor 채권자 / debtor 채무자; reimburse 경비 상환 / refund 구매 환불; economic 경제의 / economical 절약되는; deduction 공제 / deduct 공제하다
+24|satisfactory 만족스러운 / satisfying 만족감을 주는; courtesy 정중함 / courteous 정중한; resolution 해결 / resolve 해결하다; responsive 빠르게 대응하는 / responsible 책임 있는; compensate 손해 보상 / accommodate 요청 수용
+25|interest 관심·이자 / rate 요율; stock 재고·주식 / share 점유율·주식; plant 공장·식물 / capital 자본·수도; principal 주요한·원금 / principle 원칙; hardly 거의 않다 / nearly 거의
+26|overdue 기한 경과 / pending 미결; tentative 잠정 / final 확정; timely 시기적절한(형용사) / promptly 신속히; extension 연장·내선 / duration 지속 기간; simultaneous 형용사 / simultaneously 부사
+27|freight 운송 화물 / cargo 화물 자체; carrier 운송업체 / courier 배송 기사·업체; incoming 들어오는 / outgoing 나가는; perishable 상하기 쉬운 / fragile 깨지기 쉬운; shortage 부족 / backorder 재고 부족 미처리 주문
+28|retailer 소매업체 / wholesaler 도매업체; assortment 상품 구색 / range 제품 범위; superior 우수한 / inferior 열등한; comparable 비교할 만한 / compatible 호환되는; exclusively 오직 / preferably 가급적
+29|access 접근 / accessibility 접근성; configure 설정 / configuration 설정 상태; activate 활성화 / deactivate 비활성화; encrypted 암호화된 / secure 안전한; operational 작동 가능한 / operation 운영
+30|admission 입장·입장료 / registration 등록; attendance 참석·참석자 수 / attendee 참가자; cater 음식 제공 / catering 음식 제공 서비스; host 주최자 / hospitality 접대; respective 각자의 / respectively 각각
+31|adopt 채택 / adapt 적응·조정; adjust 조정 / adjustment 조정 결과; modification 수정 / revision 개정; considerable 상당한 / thoughtful 배려 깊은; decisive 결정적인 / decision 결정
+32|forecast 예측 / outlook 전망; projection 예상치 / prospect 가능성·전망; decline 감소·거절 / reject 거절; robust 견실한 / volatile 변동이 심한; marginal 작은 / dramatically 급격히
+33|compromise 타협 / concession 양보; assurance 확언 / assure 확신시키다; stipulation 명시 조건 / stipulate 규정하다; explicit 명시적 / implicit 암묵적; unanimous 형용사 / unanimously 부사
+34|comply 동사 / compliance 명사 / compliant 형용사; permit 허가증 / permission 허가; obligatory 의무적 / permissible 허용되는; authorized 권한 있는 / unauthorized 권한 없는; regulate 규제 / enforce 집행
+35|cause 원인 / consequence 결과; rectify 시정 / justify 정당화; minimize 최소화 / mitigate 완화; accountable 설명·결과 책임 / liable 법적 책임; avoidable 회피 가능 / inevitable 불가피
+36|turnover 이직률·매출 / retention 유지; compensation 보상·급여 / remuneration 보수; bonus 상여금 / allowance 수당; entitled to 혜택 / entitlement 권리; discretionary 재량의 / merit-based 성과 기준의
+37|layover 경유 대기 / stopover 중간 체류; inbound 도착 / outbound 출발; one-way 편도 / round-trip 왕복; waive 면제 / waiver 면제 동의서; transferable 양도 가능 / nontransferable 양도 불가
+38|refurbish 새단장 / renovate 개보수; demolish 철거 / erect 건설; foundation 기초 / structure 구조; adjoining 인접한 / adjacent 인접한; structural 형용사 / structurally 부사
+39|precision 정밀성 / accuracy 정확도; efficiency 효율 / productivity 생산성; calibrate 교정 / overhaul 전면 정비; uniform 균일한 / consistent 일관된; rigorous 형용사 / rigorously 부사
+40|outage 정전·중단 / downtime 가동 중단 시간; interrupt 중단 / disrupt 차질 초래; restoration 복구 / replacement 교체; provisional 잠정 / interim 임시; unforeseen 예측 못한 / preventable 예방 가능한
+41|asset 자산 / liability 부채·책임; equity 자기자본 / debt 부채; borrow 빌리다 / lend 빌려주다; liquid 유동적인 / liquidity 유동성; solvent 지급 능력 있는 / insolvent 지급 불능
+42|reconcile 대사 / reconciliation 대사 과정; itemize 항목화 / itemized 항목별 작성된; surplus 흑자 / deficit 적자; deductible 공제 가능·자기부담금 / taxable 과세 대상; depreciation 감가상각 / appreciate 가치 상승·감사
+43|quotation 견적 / tender 입찰; provision 조항 / procurement 조달; expiration 만료 / termination 종료; contingent on 조건부 / binding 구속력 있는; revoke 철회 / irrevocable 취소 불가
+44|insurer 보험사 / policyholder 보험 계약자; premium 보험료 / claim 보험금 청구; exclusion 제외 / coverage 보장; negligence 과실 / negligent 과실 있는; legitimate 정당한 / fraudulent 사기의
+45|segmentation 세분화 / segment 부문·세분화하다; positioning 자리매김 / differentiation 차별화; perception 인식 / preference 선호; exclusive 독점의 / exclusively 독점적으로; subscribe 구독 / subscription 구독 계약
+46|stakeholder 이해관계자 / shareholder 주주; merger 합병 / acquisition 인수; consolidate 통합 / restructure 구조조정; collaborative 협력적인 / collaboration 협업; viable 실행 가능한 / viability 실현 가능성
+47|tenure 재직 기간 / seniority 선임 지위; leave 휴가 / severance 퇴직 지급금; appraisal 성과 평가 / appraise 평가하다; statutory 법정의 / discretionary 재량의; impartial 형용사 / impartially 부사
+48|client 개별 거래처 / clientele 전체 고객층; rapport 친밀 관계 / goodwill 호의; credible 신뢰할 만한 / credibility 신뢰성; reputable 평판 좋은 / reputation 평판; attentive 형용사 / attentively 부사
+49|sourcing 조달처 확보 / outsourcing 외주; bottleneck 병목 / workflow 업무 흐름; benchmark 비교 기준 / lead 잠재 고객; scalable 확장 가능 / scale 규모·확대; resilient 회복력 있는 / resilience 회복력
+50|grant 지원금 / subsidy 보조금; legislation 법률 / ordinance 조례; conservation 보존 / regeneration 재생; emission 배출 / footprint 영향 범위; sustainable 형용사 / sustainably 부사
+51|advice 명사 / advise 동사; affect 영향 주다 / effect 영향·효과; imply 암시 / infer 추론; discreet 신중한 / discrete 별개의; complimentary 무료 / complementary 보완적
+52|consequently 결과 / nevertheless 대조; meanwhile 동시 진행 / subsequently 이후 진행; although 절 / despite 명사; unless ~하지 않는 한 / provided ~라는 조건으로; conclusive 확실한 / inconclusive 결론 불가
+53|appreciation 감사·가치 상승 / appreciative 감사하는; exhaustive 철저한 / exhausted 소진된; disappointed 사람 / disappointing 결과; praise 칭찬 / criticism 비판; rewarding 보람 있는 / reward 보상하다
+54|customs 물품 통관 / immigration 사람 출입국; clearance 통관·승인·재고 정리 / clear 명확한; exhibit 전시물 / exhibitor 전시 참가자; inaugural 첫 개막의 / inaugurate 개시하다; tourist 관광객 / tourism 관광 산업
+55|hygiene 명사 / hygienic 형용사; sanitation 위생 관리 / sanitize 소독; flammable 가연성 / toxic 유독성; fixture 고정 설비 / appliance 가전; insulate 단열 / insulation 단열재·단열
+56|rebate 환급금 / surcharge 추가 요금; markdown 가격 인하 / markup 원가 가산액; redeem 이용권 사용 / redeemable 사용 가능한; reimbursable 환급 가능한 / reimbursement 경비 상환; obsolete 구식의 / discontinued 생산 중단된
+57|cooperation 협조 / collaboration 협업; clarification 명확한 설명 / ambiguity 모호함; concise 간결한 / coherent 논리적인; articulate 명확히 표현 / reiterate 재강조; confidential 기밀의 / confidentiality 기밀 유지
+58|feasible 실행 가능한 / feasibility 실행 가능성; constraint 제약 / constrain 제약하다; scarcity 부족 / scarce 부족한; sufficient 형용사 / sufficiently 부사; essential 필수적 / indispensable 없어서는 안 되는
+59|gross 공제 전 총액 / net 공제 후 순액; nominal 명목상·소액 / actual 실제; overestimate 과대평가 / underestimate 과소평가; proportion 비율 / proportional 비례하는; erroneously 잘못하여 / legitimate 정당한
+60|prospective 잠재적인 / forthcoming 곧 있을; notable 주목할 만한 / remarkable 두드러진; exceptional 뛰어난 / unprecedented 전례 없는; obtain 얻다 / ascertain 알아내다; seek 구하다 / pursue 추구하다

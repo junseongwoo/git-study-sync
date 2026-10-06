@@ -19,7 +19,7 @@
 10|The elevators are closed for routine _______.|maintenance;parking;direction;exhibition|maintenance|승강기 폐쇄 이유는 정기 유지보수. routine maintenance를 묶어 기억한다.
 10|Safety notices must be displayed _______ near every exit.|clearly;clear;clarity;clearance|clearly|displayed를 수식하는 부사 clearly가 필요하다.
 11|A manager must _______ the budget before any funds can be spent.|approve;accomplish;perform;conduct|approve|지출 전 필요한 조치는 예산 승인이다. approve the budget를 기억한다.
-11|The new scheduling system has improved operational _______.|efficiency;efficient;efficiently;inefficient|efficiency|형용사 operational 뒤의 명사 자리. 여기서는 운영 효율성이라는 추상 명사를 쓴다.
+11|The revised policy requires final _______ from the board before implementation.|approval;approve;approved;approving|approval|형용사 final 뒤 명사 approval이 필요하다. approve는 승인하다라는 동사다.
 12|Please _______ the updated price list to your reply.|attach;distribute;announce;notify|attach|이메일 답장에 문서를 첨부하는 상황. attach A to B를 확인한다.
 12|All salary information must remain _______.|confidential;confidentially;confidentiality;confide|confidential|remain 뒤에서 상태를 나타내는 형용사 confidential. confidential information은 기밀 정보다.
 13|Strong demand helped the company _______ its annual sales target.|exceed;retain;attract;monitor|exceed|연간 매출 목표를 넘어선 것이므로 exceed. retain은 유지, monitor는 점검이다.
@@ -30,12 +30,12 @@
 15|This contract is legally _______ once both parties sign it.|binding;bind;binds;bond|binding|be동사 뒤 형용사 binding. legally binding은 법적 구속력이 있는이다.
 16|Employees are encouraged to _______ in the safety workshop.|participate;instruct;learn;demonstrate|participate|participate in + 행사. 나머지 동사는 이 자리에 in과 같은 방식으로 연결되지 않는다.
 16|The new technician is _______ of operating the equipment independently.|capable;capability;capably;capabilities|capable|be capable of + 동명사. capable은 형용사이며 capability는 명사다.
-17|The factory keeps extra components as _______ parts.|spare;raw;heavy;precise|spare|교체를 위해 보유하는 부품은 spare parts다.
+17|Inspectors examined the sample and found a manufacturing _______.|defect;output;inventory;production|defect|견본 검사에서 발견하는 제조 결함은 manufacturing defect다.
 17|Quality inspectors measure every component _______.|precisely;precise;precision;precisions|precisely|measure를 수식하는 부사 precisely. precision은 정밀성이라는 명사다.
 18|The firm will _______ its office to a larger building next month.|relocate;restore;construct;occupy|relocate|현재 사무실을 더 큰 건물로 이전하므로 relocate. occupy는 공간을 점유하다.
 18|The property is _______ located near a subway station.|conveniently;convenient;convenience;conveniences|conveniently|located를 수식하는 부사 conveniently. conveniently located는 편리한 곳에 위치한이다.
 19|Safety training is _______ for every employee, so attendance is required.|mandatory;preventive;minor;healthy|mandatory|required가 의무 교육이라는 의미를 확정한다.
-19|All goods must be _______ stored to prevent damage.|properly;proper;property;properties|properly|stored를 수식하는 부사 properly. property는 재산이라는 명사다.
+19|All property must be _______ insured to ensure full protection.|adequately;adequate;adequacy;inadequate|adequately|insured를 수식하는 부사 adequately. 충분한 보험 보장을 뜻한다.
 20|Please _______ of used batteries at an approved collection point.|dispose;recycle;collect;conserve|dispose|dispose of는 처분하다. recycle은 목적어를 직접 취한다.
 20|The company now uses _______ packaging that can be used again.|reusable;reuse;reusably;reusability|reusable|packaging을 수식하는 형용사. used again이 재사용 가능한이라는 뜻을 준다.
 21|Analysts will _______ actual sales with the figures forecast last month.|compare;calculate;summarize;verify|compare|compare A with B. verify는 수치의 정확성을 검증한다.
@@ -56,7 +56,7 @@
 28|All items are _______ priced to attract budget-conscious customers.|reasonably;reasonable;reason;reasons|reasonably|priced를 수식하는 부사 reasonably. reasonable price에서는 형용사다.
 29|Please _______ your password if you cannot sign in.|reset;integrate;upload;configure|reset|로그인할 수 없을 때 비밀번호를 재설정하는 상황이다.
 29|The upgraded interface is easier to use and more _______.|interactive;interact;interaction;interactively|interactive|more 뒤에서 interface를 설명하는 형용사. interaction은 명사다.
-30|The venue can _______ up to 300 attendees at one time.|accommodate;escort;entertain;greet|accommodate|수용 인원을 말하므로 accommodate. escort는 손님을 안내하다.
+30|The hall has a seating _______ of 300 people.|capacity;attendance;registration;admission|capacity|seating capacity는 좌석 수용 능력. 실제 참석자 수 attendance와 구별한다.
 30|Meals can be adjusted to meet special _______ requirements.|dietary;diet;diets;dieting|dietary|명사 requirements를 수식하는 형용사. dietary requirements는 식단 요구 사항이다.
 31|The committee will _______ the new policy after reviewing the proposal.|adopt;adapt;adjust;alter|adopt|새 정책을 채택하는 adopt. adapt는 적응하거나 용도에 맞게 조정하다.
 31|The upgrade should reduce operating costs _______.|considerably;considerable;consideration;considerate|considerably|reduce를 수식하는 부사 considerably. considerate는 배려하는이다.
