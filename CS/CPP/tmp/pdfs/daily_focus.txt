@@ -18,3 +18,103 @@
 9|The firm reviews its budget _______, usually in January.|annually;annual;anniversary;annuity|annually|reviews를 수식하는 부사 annually. usually in January가 매년이라는 문맥을 준다.
 10|The elevators are closed for routine _______.|maintenance;parking;direction;exhibition|maintenance|승강기 폐쇄 이유는 정기 유지보수. routine maintenance를 묶어 기억한다.
 10|Safety notices must be displayed _______ near every exit.|clearly;clear;clarity;clearance|clearly|displayed를 수식하는 부사 clearly가 필요하다.
+11|A manager must _______ the budget before any funds can be spent.|approve;accomplish;perform;conduct|approve|지출 전 필요한 조치는 예산 승인이다. approve the budget를 기억한다.
+11|The new scheduling system has improved operational _______.|efficiency;efficient;efficiently;efficiencies|efficiency|형용사 operational 뒤의 명사 자리. 여기서는 운영 효율성이라는 추상 명사 단수형을 쓴다.
+12|Please _______ the updated price list to your reply.|attach;distribute;announce;notify|attach|이메일 답장에 문서를 첨부하는 상황. attach A to B를 확인한다.
+12|All salary information must remain _______.|confidential;confidentially;confidentiality;confide|confidential|remain 뒤에서 상태를 나타내는 형용사 confidential. confidential information은 기밀 정보다.
+13|Strong demand helped the company _______ its annual sales target.|exceed;retain;attract;monitor|exceed|연간 매출 목표를 넘어선 것이므로 exceed. retain은 유지, monitor는 점검이다.
+13|Revenue increased _______ following the successful launch.|significantly;significant;significance;signify|significantly|increased를 수식하는 부사 significantly. substantial도 큰 정도를 나타내지만 품사를 확인한다.
+14|The campaign is intended to increase brand _______ among local shoppers.|awareness;image;survey;brochure|awareness|increase brand awareness는 브랜드 인지도를 높이다. image는 형성·개선하는 대상이다.
+14|The agency proposed an _______ design unlike anything used before.|innovative;innovation;innovate;innovatively|innovative|명사 design을 수식하는 형용사. 전에 없던 설계라는 의미가 혁신적인을 뒷받침한다.
+15|Both parties must _______ the agreement before it becomes valid.|sign;protect;require;terminate|sign|계약 효력 발생 전에 양 당사자가 서명하는 상황이다.
+15|This contract is legally _______ once both parties sign it.|binding;bind;binds;bindingly|binding|be동사 뒤 형용사 binding. legally binding은 법적 구속력이 있는이다.
+16|Employees are encouraged to _______ in the safety workshop.|participate;instruct;learn;demonstrate|participate|participate in + 행사. 나머지 동사는 이 자리에 in과 같은 방식으로 연결되지 않는다.
+16|The new technician is _______ of operating the equipment independently.|capable;capability;capably;capabilities|capable|be capable of + 동명사. capable은 형용사이며 capability는 명사다.
+17|The factory keeps extra components as _______ parts.|spare;raw;heavy;precise|spare|교체를 위해 보유하는 부품은 spare parts다.
+17|Quality inspectors measure every component _______.|precisely;precise;precision;precisions|precisely|measure를 수식하는 부사 precisely. precision은 정밀성이라는 명사다.
+18|The firm will _______ its office to a larger building next month.|relocate;restore;construct;occupy|relocate|현재 사무실을 더 큰 건물로 이전하므로 relocate. occupy는 공간을 점유하다.
+18|The property is _______ located near a subway station.|conveniently;convenient;convenience;conveniences|conveniently|located를 수식하는 부사 conveniently. conveniently located는 편리한 곳에 위치한이다.
+19|Safety training is _______ for every employee, so attendance is required.|mandatory;preventive;minor;healthy|mandatory|required가 의무 교육이라는 의미를 확정한다.
+19|All goods must be _______ stored to prevent damage.|properly;proper;property;properties|properly|stored를 수식하는 부사 properly. property는 재산이라는 명사다.
+20|Please _______ of used batteries at an approved collection point.|dispose;recycle;collect;conserve|dispose|dispose of는 처분하다. recycle은 목적어를 직접 취한다.
+20|The company now uses _______ packaging that can be used again.|reusable;reuse;reusably;reusability|reusable|packaging을 수식하는 형용사. used again이 재사용 가능한이라는 뜻을 준다.
+21|Analysts will _______ actual sales with the figures forecast last month.|compare;calculate;summarize;verify|compare|compare A with B. verify는 수치의 정확성을 검증한다.
+21|The report provides a _______ analysis of all major markets.|comprehensive;comprehensively;comprehend;comprehension|comprehensive|명사 analysis를 수식하는 형용사 comprehensive. all major markets가 종합적 범위를 나타낸다.
+22|The software policy is _______ to every department, without exception.|applicable;unqualified;knowledgeable;inexperienced|applicable|be applicable to는 ~에 적용되다. 사람의 능력·경험을 나타내는 형용사는 맞지 않는다.
+22|Candidates must demonstrate _______ in written and spoken English.|proficiency;proficient;proficiently;profess|proficiency|demonstrate의 목적어 자리에 명사 proficiency. proficient는 능숙한이라는 형용사다.
+23|The company will _______ employees for approved travel expenses.|reimburse;deduct;owe;invest|reimburse|reimburse 사람 for 비용. deduct는 비용을 공제하다.
+23|Tickets marked _______ cannot be exchanged for money after purchase.|nonrefundable;refund;refunding;refunds|nonrefundable|marked 뒤에서 티켓의 특성을 나타내는 형용사. cannot be exchanged for money가 환불 불가를 뜻한다.
+24|The hotel can _______ guests who require special meals.|accommodate;investigate;acknowledge;compensate|accommodate|특별 식단 요구를 수용하는 상황. compensate는 손해를 보상하다.
+24|The complaint was resolved _______ within two working days.|satisfactorily;satisfactory;satisfaction;satisfying|satisfactorily|resolved를 수식하는 부사. satisfactory result에서는 형용사를 쓴다.
+25|The new service should _______ positive results within six months.|yield;bear;hold;carry|yield|yield results는 결과를 산출하다. bear costs는 비용을 부담하다.
+25|The report says the project is _______ complete, with only final checks remaining.|nearly;near;nearness;nearer|nearly|complete를 수식하는 부사 nearly. near는 위치상 가까움을 나타내거나 형용사로 쓰인다.
+26|The May date is only _______; the venue has not been confirmed.|tentative;timely;overdue;ongoing|tentative|장소 미확정이 잠정 일정임을 나타낸다. tentative schedule을 기억한다.
+26|Two teams will work _______ to finish the project faster.|simultaneously;simultaneous;simultaneity;simultaneousness|simultaneously|work를 수식하는 부사. simultaneously는 동시에이다.
+27|Fresh fruit must be shipped quickly because it is _______.|perishable;bulky;traceable;outgoing|perishable|과일이 상하기 쉬워 빠른 배송이 필요하다는 문맥이다.
+27|Boxes must be packed _______ to prevent items from moving in transit.|securely;secure;security;securing|securely|packed를 수식하는 부사 securely. 여기서는 안전하게·단단히라는 뜻이다.
+28|The retailer offers a wide _______ of appliances, from basic to premium models.|range;specification;description;endorsement|range|a wide range of는 다양한 ~. 제품 선택 폭을 나타낸다.
+28|All items are _______ priced to attract budget-conscious customers.|reasonably;reasonable;reason;reasons|reasonably|priced를 수식하는 부사 reasonably. reasonable price에서는 형용사다.
+29|Please _______ your password if you cannot sign in.|reset;integrate;upload;configure|reset|로그인할 수 없을 때 비밀번호를 재설정하는 상황이다.
+29|The upgraded interface is easier to use and more _______.|interactive;interact;interaction;interactively|interactive|more 뒤에서 interface를 설명하는 형용사. interaction은 명사다.
+30|The venue can _______ up to 300 attendees at one time.|accommodate;escort;entertain;greet|accommodate|수용 인원을 말하므로 accommodate. escort는 손님을 안내하다.
+30|Meals can be adjusted to meet special _______ requirements.|dietary;diet;diets;dieting|dietary|명사 requirements를 수식하는 형용사. dietary requirements는 식단 요구 사항이다.
+31|The committee will _______ the new policy after reviewing the proposal.|adopt;adapt;adjust;alter|adopt|새 정책을 채택하는 adopt. adapt는 적응하거나 용도에 맞게 조정하다.
+31|The upgrade should reduce operating costs _______.|considerably;considerable;consideration;considerate|considerably|reduce를 수식하는 부사 considerably. considerate는 배려하는이다.
+32|Prices may _______ as supply and demand change.|fluctuate;surpass;reject;outperform|fluctuate|수요·공급에 따라 가격이 변동하므로 fluctuate다.
+32|Analysts predict only a _______ increase of about one percent.|marginal;marginally;margin;margins|marginal|명사 increase를 수식한다. 약 1퍼센트라는 작은 폭은 marginal에 해당한다.
+33|Both parties made concessions to reach a _______.|compromise;dispute;stipulation;counteroffer|compromise|양측이 양보한 결과는 타협 compromise. dispute는 분쟁이다.
+33|The board _______ approved the proposal; every member voted in favor.|unanimously;unanimous;unanimity;unanimities|unanimously|approved를 수식하는 부사. every member가 만장일치 의미를 확정한다.
+34|Access is limited to _______ personnel who have valid badges.|authorized;prohibited;regulatory;restrictive|authorized|출입증을 가진 권한 있는 직원만 접근한다는 문맥이다.
+34|The contractor must demonstrate full _______ with safety regulations.|compliance;compliant;comply;compliantly|compliance|full 뒤 명사 자리. compliance with + 규정이라는 연어다.
+35|We need to identify the _______ cause, not just fix the symptoms.|underlying;avoidable;accountable;liable|underlying|증상에 대비되는 근본 원인이므로 underlying cause가 맞다.
+35|The delivery vehicle was _______ damaged in the accident.|severely;severe;severity;severities|severely|damaged를 수식하는 부사 severely. severe damage에서는 형용사를 쓴다.
+36|A performance _______ is paid in addition to the regular salary.|bonus;turnover;entitlement;workforce|bonus|정규 급여 외에 지급하는 성과 상여금 bonus다.
+36|Annual bonuses are _______ and are not guaranteed by the contract.|discretionary;discretion;discreetly;discriminate|discretionary|are 뒤 형용사 자리. 보장되지 않는 상여금은 회사 재량에 따른 것이다.
+37|The airline agreed to _______ the change fee because the original flight was canceled.|waive;charter;embark;reroute|waive|수수료를 면제하다 waive the fee. reroute는 경로를 바꾸다.
+37|The ticket is _______ and may not be used by another person.|nontransferable;transfer;transferring;transfers|nontransferable|is 뒤 형용사. 다른 사람이 사용할 수 없으므로 양도 불가다.
+38|The contractor will _______ the old building before constructing a new one.|demolish;refurbish;reinforce;supervise|demolish|새 건물을 짓기 전에 기존 건물을 철거하는 문맥이다.
+38|An inspection confirmed that the building was _______ sound.|structurally;structural;structure;structures|structurally|sound를 수식하는 부사. structurally sound는 구조적으로 견고한이다.
+39|Automation will help _______ repetitive production tasks.|streamline;calibrate;overhaul;fabricate|streamline|반복 업무를 간소화하는 streamline. calibrate는 장비를 교정하다.
+39|Every component undergoes _______ testing before it is shipped.|rigorous;rigorously;rigor;rigors|rigorous|명사 testing을 수식하는 형용사 rigorous. rigorously는 동사를 수식한다.
+40|Repairs caused a brief service _______ this morning.|interruption;restoration;replacement;preparedness|interruption|수리 중 서비스가 잠깐 중단되었으므로 interruption이다.
+40|The service was restored _______ after technicians arrived.|swiftly;swift;swiftness;swifts|swiftly|restored를 수식하는 부사 swiftly. 신속하게라는 뜻이다.
+41|The company will _______ its investments to reduce dependence on one industry.|diversify;borrow;lend;depreciate|diversify|한 업종 의존도를 낮추기 위해 투자 대상을 다각화한다.
+41|The firm remained _______ and could pay all debts when they became due.|solvent;solvency;insolvency;solvents|solvent|지급 기한에 부채를 갚을 수 있는 상태는 solvent. solvency는 명사다.
+42|Please _______ the accounts to resolve differences between our ledger and bank statement.|reconcile;itemize;remit;withhold|reconcile|장부와 명세서의 차이를 대사·조정하는 reconcile accounts다.
+42|The client requested an _______ invoice showing each charge separately.|itemized;itemize;itemization;itemizing|itemized|각 요금이 나뉘어 적힌 청구서는 itemized invoice. 수동 의미가 필요하다.
+43|The agreement will _______ on June 30 unless it is renewed.|expire;procure;honor;solicit|expire|갱신하지 않을 때 계약이 만료된다. terminate는 누군가 종료시키는 행위를 강조한다.
+43|The offer is _______ on written approval from the board.|contingent;contingency;contingently;contingencies|contingent|be contingent on은 ~에 달려 있다. contingency는 만일의 사태라는 명사다.
+44|The insurance policy does not cover losses caused by professional _______.|negligence;premium;claimant;waiver|negligence|원인이 되는 업무상 과실은 negligence. premium은 보험료다.
+44|The damaged equipment is only _______ covered under the policy.|partially;partial;partiality;partition|partially|covered를 수식하는 부사 partially. 일부만 보장된다는 뜻이다.
+45|The company will _______ its products by offering features that competitors lack.|differentiate;endorse;engage;capitalize|differentiate|경쟁사에 없는 기능으로 차별화하는 문맥이다.
+45|The campaign relies on a _______ message that persuades buyers to act.|compelling;compel;compellingly;compulsion|compelling|명사 message를 수식하는 형용사. 행동하도록 설득하는 강력한 메시지다.
+46|The two companies intend to _______ into a single organization.|merge;align;facilitate;foster|merge|하나의 조직으로 합병하므로 merge. align은 목표 등을 일치시키다.
+46|Several teams developed the product _______.|jointly;joint;joints;junction|jointly|developed를 수식하는 부사 jointly. 여러 팀의 공동 개발이다.
+47|The firm provides paid _______ for parents caring for a new child.|leave;tenure;seniority;severance|leave|신생아를 돌보기 위한 유급 휴가는 paid leave. severance는 퇴직 지급금이다.
+47|All candidates must receive an _______ assessment regardless of personal connections.|impartial;impartially;impartiality;impart|impartial|명사 assessment를 수식하는 형용사. 인맥과 무관한 공정한 평가다.
+48|The consultant built strong _______ with the client through regular meetings.|rapport;referral;testimonial;goodwill|rapport|build rapport with는 ~와 친밀한 관계를 형성하다. goodwill은 호의다.
+48|The receptionist listened _______ to the visitor's concerns.|attentively;attentive;attention;attend|attentively|listened를 수식하는 부사. attentive service에서는 형용사다.
+49|A single slow process has become a production _______ that delays all subsequent work.|bottleneck;benchmark;workflow;sourcing|bottleneck|전체 후속 작업을 늦추는 병목 단계는 bottleneck이다.
+49|The supplier built a _______ system that can support twice as many orders.|scalable;scale;scaling;scalability|scalable|명사 system을 수식하는 형용사. 주문량 확장 가능성을 설명한다.
+50|The city awarded a _______ to support the community's research project.|grant;ordinance;emission;footprint|grant|연구 프로젝트에 지급하는 지원금은 grant. subsidy도 지원금이지만 선택지에 없다.
+50|The company now sources all materials _______.|sustainably;sustainable;sustainability;sustain|sustainably|sources를 수식하는 부사 sustainably. sustainability는 명사다.
+51|The firm offers _______ services that supplement, rather than duplicate, existing products.|complementary;complimentary;adverse;discrete|complementary|기존 제품을 보완한다는 뜻이므로 complementary. complimentary는 무료의이다.
+51|The revised schedule may _______ delivery times at every branch.|affect;effect;effective;effectively|affect|조동사 may 뒤 동사 원형. affect는 영향을 주다, effect는 주로 효과라는 명사다.
+52|The costs exceeded the budget; _______ , the project was postponed.|consequently;nevertheless;meanwhile;likewise|consequently|예산 초과 때문에 연기되었으므로 결과를 나타내는 consequently가 맞다.
+52|Work cannot begin _______ the permit has been issued.|unless;despite;regarding;within|unless|주어+동사 절 앞 접속사. 허가가 발급되지 않는 한 시작할 수 없다는 뜻이다.
+53|The audit involved an _______ review of every financial record.|exhaustive;exhausted;rewarding;grateful|exhaustive|모든 기록을 빠짐없이 검토한 exhaustive. exhausted는 지친·소진된이다.
+53|The company expressed its _______ for the team's hard work.|appreciation;appreciative;appreciatively;appreciate|appreciation|소유격 its 뒤 명사 appreciation. express appreciation for는 ~에 감사를 표시하다.
+54|All imported goods must pass through _______ before delivery.|customs;immigration;boarding;commencement|customs|수입 물품 통관은 customs. immigration은 사람의 출입국 관리다.
+54|The _______ flight will mark the opening of the new route.|inaugural;inaugurate;inauguration;inaugurally|inaugural|명사 flight를 수식하는 형용사. 새 노선 첫 취항편이다.
+55|Do not _______ emergency exits with boxes or furniture.|obstruct;sanitize;insulate;ventilate|obstruct|비상구를 상자 등으로 막지 말라는 안전 지침이다.
+55|The cleaning process must maintain _______ conditions in the kitchen.|hygienic;hygiene;hygienically;hygienist|hygienic|명사 conditions를 수식하는 형용사. hygiene는 위생이라는 명사다.
+56|Passengers must pay a fuel _______ in addition to the basic fare.|surcharge;rebate;markdown;voucher|surcharge|기본 운임에 더해 내는 추가 요금이므로 surcharge. rebate는 환급금이다.
+56|Only approved travel expenses are _______ under the policy.|reimbursable;reimburse;reimbursement;reimbursing|reimbursable|are 뒤에서 expenses의 성격을 나타내는 형용사. 환급 가능한 경비라는 뜻이다.
+57|Please _______ the safety requirements so that every employee understands them.|articulate;cooperate;underscore;reiterate|articulate|모든 직원이 이해하도록 요건을 명확히 표현하는 articulate. underscore는 중요성을 강조하다.
+57|The terms must be stated _______ to avoid misunderstandings.|unambiguously;unambiguous;ambiguity;ambiguous|unambiguously|stated를 수식하는 부사. 오해 방지를 위해 명확하게 써야 한다.
+58|A feasibility study will determine whether the proposed plan is _______.|viable;scarce;minimal;budgeted|viable|타당성 조사는 실행 가능한지 판단한다. scarce는 자원이 부족한 상태다.
+58|The instructions must be _______ clear for new staff to follow them.|sufficiently;sufficient;sufficiency;suffice|sufficiently|형용사 clear를 수식하는 부사 sufficiently. 충분히 명확한이다.
+59|The estimate excluded taxes, so the _______ cost was higher.|actual;nominal;relative;absolute|actual|견적과 대비되는 실제 비용 actual cost다.
+59|The customer was _______ billed twice for the same order.|erroneously;erroneous;error;errors|erroneously|billed를 수식하는 부사. 잘못해서 중복 청구된 것이다.
+60|Management decided to _______ a study before committing more funds.|undertake;obtain;ascertain;reaffirm|undertake|연구나 프로젝트에 착수하는 undertake a study. ascertain은 원인 등을 알아내다.
+60|The team achieved a _______ improvement in delivery speed.|remarkable;remarkably;remark;remarks|remarkable|명사 improvement를 수식하는 형용사 remarkable. remarkably는 부사다.
