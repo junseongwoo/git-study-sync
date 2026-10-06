@@ -909,7 +909,7 @@ receptionist|n|접수 담당자|H:front-desk receptionist|프런트 접수 담�
 hospitality|n|접대; 숙박 서비스|D:hospitality industry|숙박 서비스 산업
 host|n/v|주최자; 주최하다|H:event host|행사 주최자
 cater|v|음식을 제공하다|V:cater the reception|환영 행사에 음식을 제공
-hostess|n|여성 안내원; 여주인|H:restaurant hostess|식당 안내원
+attendee|n|행사 참석자|H:registered attendee|등록 참석자
 welcome|v|환영하다|V:welcome international visitors|해외 방문객을 환영
 greet|v|인사하다|V:greet arriving guests|도착한 손님에게 인사
 accompany|v|동행하다|V:accompany visitors to the hall|방문객과 행사장까지 동행
@@ -1050,7 +1050,7 @@ unauthorized|adj|권한 없는|D:unauthorized access|무단 접근
 validity|n|유효성|D:license validity|면허 유효성
 lawfully|adv|합법적으로|V:process data lawfully|자료를 합법적으로 처리
 illegally|adv|불법으로|V:dispose of waste illegally|폐기물을 불법 처리
-strictness|n|엄격함|D:regulatory strictness|규정의 엄격함
+enforcement|n|집행; 시행|D:regulatory enforcement|규정 집행
 restrictive|adj|제한적인|D:restrictive policy|제한적인 정책
 @35|문제 해결과 책임|원인·책임·대응 조치를 연결하고 다섯째 주를 복습한다.
 cause|n|원인|D:underlying cause|근본 원인
@@ -1136,7 +1136,7 @@ rerouting|n|경로 변경|D:temporary rerouting|임시 경로 변경
 nonstop|adj/adv|직항의; 중간 정차 없이|D:nonstop flight|직항 항공편
 round-trip|adj|왕복의|D:round-trip fare|왕복 운임
 one-way|adj|편도의|D:one-way ticket|편도 항공권
-changeable|adj|변경 가능한; 변하기 쉬운|D:changeable reservation|변경 가능한 예약
+flexibility|n|유연성|D:schedule flexibility|일정 유연성
 unrestricted|adj|제한 없는|D:unrestricted fare|제한 없는 운임
 transferable|adj|양도 가능한|D:transferable ticket|양도 가능한 항공권
 nontransferable|adj|양도 불가능한|D:nontransferable pass|양도 불가 이용권
@@ -1297,7 +1297,7 @@ incremental|adj|점진적 증가의|D:incremental cost|증분 비용
 recurrent|adj|반복 발생하는|D:recurrent expenditure|반복 지출
 transparent|adj|투명한|D:transparent accounting|투명한 회계
 transparently|adv|투명하게|V:report costs transparently|비용을 투명하게 보고
-nominally|adv|명목상으로|A:nominally independent|명목상 독립적임
+currency|n|통화; 화폐|D:foreign currency|외국 통화
 cumulatively|adv|누적하여|V:calculate totals cumulatively|총액을 누적 계산
 retrospectively|adv|소급하여; 되돌아보아|V:review records retrospectively|기록을 소급하여 검토
 @43|계약 조건과 입찰|입찰·제안·의무 조항의 차이를 문맥에서 판단한다.
@@ -1389,7 +1389,7 @@ diverse|adj|다양한|D:diverse audience|다양한 고객층
 exclusive|adj|독점적인; 전용의|D:exclusive offer|독점 제공 혜택
 mainstream|adj/n|주류의; 주류|D:mainstream market|주류 시장
 niche|n/adj|틈새시장; 특정 소수의|D:niche market|틈새시장
-distinctively|adv|독특하게|A:distinctively designed|독특하게 디자인됨
+subscribe|v|구독하다; 가입하다|V:subscribe to a newsletter|소식지 구독 신청
 persuasively|adv|설득력 있게|V:present benefits persuasively|이점을 설득력 있게 제시
 predominantly|adv|주로|A:predominantly digital|주로 디지털 방식임
 selectively|adv|선별적으로|V:target customers selectively|고객을 선별적으로 공략
@@ -1438,7 +1438,7 @@ delegation|n|위임; 대표단|D:delegation of authority|권한 위임
 appraise|v|평가하다|V:appraise employee performance|직원 성과를 평가
 entitle|v|권리를 주다|V:entitle staff to benefits|직원에게 혜택 수급 권리를 부여
 accrual|n|누적; 발생|D:leave accrual|휴가 누적
-portability|n|이전 가능성; 휴대성|D:benefit portability|복리후생의 이전 가능성
+pension|n|연금|D:company pension|기업 연금
 redeploy|v|재배치하다|V:redeploy staff|직원을 재배치
 discipline|v/n|징계하다; 규율|V:discipline an employee|직원을 징계
 discriminate|v|차별하다; 구별하다|V:discriminate against applicants|지원자를 차별
@@ -1646,8 +1646,8 @@ customs|n|세관|D:customs clearance|통관
 immigration|n|출입국 관리|D:immigration procedures|출입국 절차
 clearance|n|통관; 승인; 재고 정리|D:customs clearance|통관
 boarding|n|탑승|D:boarding pass|탑승권
-embarkation|n|탑승; 승선|D:embarkation point|탑승 지점
-disembarkation|n|하선; 하차|D:disembarkation time|하선 시간
+tourism|n|관광 산업|D:local tourism|지역 관광 산업
+tourist|n|관광객|H:international tourist|외국인 관광객
 vessel|n|선박|D:passenger vessel|여객선
 vehicle|n|차량|D:company vehicle|회사 차량
 fleet|n|차량·선박 전체|D:delivery fleet|배송 차량군
@@ -1699,10 +1699,10 @@ flammable|adj|가연성의|C:flammable materials|가연성 물질
 combustible|adj|타기 쉬운|C:combustible waste|가연성 폐기물
 toxic|adj|유독한|C:toxic substances|유독 물질
 nonhazardous|adj|위험하지 않은|D:nonhazardous waste|비위험 폐기물
-thermally|adv|열적으로|A:thermally insulated|단열 처리됨
+heating|n|난방|D:central heating|중앙 난방
 visibly|adv|눈에 띄게|A:visibly damaged|눈에 띄게 손상됨
 noticeably|adv|눈에 띄게|A:noticeably cleaner|눈에 띄게 더 깨끗함
-thoroughness|n|철저함|D:inspection thoroughness|검사의 철저함
+waterproof|adj|방수의|C:waterproof equipment|방수 장비
 @56|문서·배송·구매의 종합|정산과 물류 문서의 혼동어를 비교하며 여덟째 주를 복습한다.
 fulfillment|n|이행; 주문 처리|D:order fulfillment|주문 처리
 billing|n|청구|D:billing address|청구지 주소
@@ -1731,7 +1731,7 @@ equivalent|adj/n|동등한; 동등한 것|D:equivalent value|동등한 가치
 compliment|n/v|칭찬; 칭찬하다|D:sincere compliment|진심 어린 칭찬
 freely|adv|자유롭게; 거리낌 없이|V:share information freely|정보를 자유롭게 공유
 supplementary|adj|추가의; 보충의|D:supplementary materials|보충 자료
-collectible|adj|수금 가능한; 수집용의|D:collectible debt|수금 가능한 채무
+overstock|n/v|과잉 재고; 과다 비축하다|D:seasonal overstock|계절 상품 과잉 재고
 thereof|adv|그것의; 그에 속하는|S:The contract specifies the services and the costs thereof.|계약은 서비스와 그에 따른 비용을 명시한다.
 whereby|adv|그에 따라; ~하는 방식으로|S:We use a system whereby orders are tracked automatically.|우리는 주문을 자동 추적하는 시스템을 사용한다.
 @57|팀 협업과 커뮤니케이션|협력의 질과 문서의 명확성을 실전 문맥에서 판단한다.
@@ -1771,7 +1771,7 @@ viability|n|실현 가능성|D:commercial viability|상업적 실현 가능성
 constraint|n|제약|D:budget constraint|예산 제약
 scarcity|n|부족; 희소성|D:resource scarcity|자원 부족
 abundance|n|풍부함|D:abundance of options|풍부한 선택지
-sufficiency|n|충분함|D:funding sufficiency|자금의 충분함
+staffing|n|인력 배치|D:staffing levels|인력 배치 수준
 adequacy|n|적정성|D:staffing adequacy|인력 배치의 적정성
 necessity|n|필요성|D:business necessity|사업상 필요성
 urgency|n|긴급성|D:matter of urgency|긴급한 사안

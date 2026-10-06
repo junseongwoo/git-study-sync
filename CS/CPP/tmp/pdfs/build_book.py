@@ -94,7 +94,7 @@ SPECIAL_EX={
 }
 
 def predicate(k):
-    pairs=[('위치함','위치해 있다'),('힘듦','힘들다'),('같음','같다'),('높음','높다'),('느림','느리다'),('많음','많다'),('없음','없다'),('있음','있다'),('않음','않다'),('됨','되어 있다'),('임','이다'),('함','하다'),('불가','불가능하다'),('가능','가능하다')]
+    pairs=[('위치함','위치해 있다'),('힘듦','힘들다'),('같음','같다'),('높음','높다'),('느림','느리다'),('많음','많다'),('없음','없다'),('있음','있다'),('않음','않다'),('받음','받는다'),('됨','되어 있다'),('임','이다'),('함','하다'),('불가','불가능하다'),('가능','가능하다')]
     for a,z in pairs:
         if k.endswith(a):return k[:-len(a)]+z
     if k.endswith('담당'):return k+'한다'
@@ -233,14 +233,15 @@ FOCUS={
 10:'maintenance 유지보수 / maintain 유지하다; accessible 접근 가능한 / access 접근; notice 공지·알아차리다; register for 행사; closed 상태 / close 동작',
 }
 
-def day_pages(b,d):
+def day_pages(b,d,refs=None):
     day=d['day'];es=d['entries'];phase=(day-1)//10+1
     for part in range(3):
         b.new(f'DAY {day:02d} / WORDS {part*10+1:02d}-{part*10+10:02d}',f'Day {day:02d}  |  {d["title"]}',f'Phase {phase}  ·  {d["goal"]}' if part==0 else '예문을 읽고 빈출 표현을 소리 내어 반복하세요.',key=f'day{day}' if part==0 else None)
-        rows=[['번호','단어','품사','핵심 뜻','TOEIC 표현','예문 / 해석']]
+        rows=[['No.','단어','품사','핵심 뜻','TOEIC 표현','예문 / 해석']]
         for i,e in enumerate(es[part*10:(part+1)*10],part*10+1):
-            rows.append([f'{i:02d}',f'<b>{esc(e["word"])}</b>',e['pos']+'.',esc(e['meaning']),esc(e['colloc']),esc(e['en'])+'<br/><font color="#657080">'+esc(e['ko'])+'</font>'])
-        b.table(rows,[28,78,35,65,108,CW-314],rowpad=7)
+            pos='<br/>'.join(x+'.' for x in e['pos'].split('/'))
+            rows.append([f'{i:02d}',f'<b>{esc(e["word"])}</b>',pos,esc(e['meaning']),esc(e['colloc']),esc(e['en'])+'<br/><font color="#657080">'+esc(e['ko'])+'</font>'])
+        b.table(rows,[28,86,35,65,108,CW-322],rowpad=5)
         b.para('인식 체크  [ ] 뜻이 바로 떠오름   [ ] 표현을 말할 수 있음   [ ] 예문을 이해함','small')
     qs=daily_questions(d)
     b.new(f'DAY {day:02d} / MINI TEST',f'Day {day:02d}  Mini Test','책을 덮고 8~10분 안에 풀어 보세요. 각 1점, 총 15점. 뜻은 핵심 의미가 맞으면 인정합니다.',key=f'mini{day}')
@@ -275,6 +276,189 @@ def day_pages(b,d):
     focus=FOCUS.get(day,' / '.join(e['word']+' ('+e['pos']+'.)' for e in es[20:25]))
     b.para('<b>구분 포인트</b><br/>'+esc(focus),'small')
     b.para('복습 체크  [ ] 오늘 저녁  [ ] D+1  [ ] D+3  [ ] D+7  [ ] D+14<br/>취약 단어  ____________________  ____________________  ____________________','small')
+    old=[f'Day {day-x:02d}' for x in [1,3,7,14] if day-x>=1]
+    if old:b.para('오늘 되짚을 이전 학습: '+', '.join(old)+' (틀린 단어부터 회상)','small')
+    if day in WEEKLY:b.para(f'오늘의 주간 복습: Weekly Review {day//7:02d}  /  p. {(refs or {}).get("week"+str(day),0):03d}','small')
+
+def mc_question(b,no,q):
+    b.para(f'<b>{no:02d}.</b> '+esc(q['prompt']),'en',after=5)
+    b.para(' &nbsp; '.join(f'({chr(65+i)}) {esc(v)}' for i,v in enumerate(q['options'])),'small',after=12)
+
+def pack_question(prompt,options,answer,why,seed):
+    options=options.split(';') if isinstance(options,str) else options[:]
+    assert len(options)==4 and len(set(options))==4 and answer in options,(prompt,options,answer)
+    random.Random(seed).shuffle(options)
+    return dict(prompt=prompt,options=options,answer=options.index(answer),word=answer,why=why)
+
+def weekly_pages(b,day,days):
+    w=WEEKLY[day];week=day//7;source=days[day-7:day]
+    entries=[d['entries'][i] for d in source for i in [0,10,20,27]]+[source[-1]['entries'][i] for i in [1,11]]
+    assert len(entries)==30 and len(set(e['word'] for e in entries))==30
+    b.new(f'WEEKLY REVIEW {week:02d}',f'Weekly Review {week:02d}',f'Day {day-6:02d}-{day:02d}  |  {w["title"]}  |  신규 단어 없음',key=f'week{day}')
+    b.para('핵심 단어 30개 - 오른쪽을 가리고 뜻과 표현을 떠올리세요.','sub')
+    rows=[['01-15','16-30']]
+    for i in range(15):
+        row=[]
+        for ix in [i,i+15]:
+            e=entries[ix];row.append(f'<b>{ix+1:02d} {esc(e["word"])}</b>  {esc(e["meaning"])}<br/><font color="#657080">{esc(e["colloc"])}</font>')
+        rows.append(row)
+    b.table(rows,[CW/2,CW/2],rowpad=4)
+    b.para('회상 성공: ____ / 30  |  다시 볼 단어: ______________________________','small')
+    qs=[]
+    for d in source[-6:]:
+        q=DAILY_FOCUS[d['day']][0];qs.append(pack_question(q['prompt'],q['options'],q['word'],q['why'],week*100+len(qs)))
+    b.new(f'WEEKLY REVIEW {week:02d} / PART 5',f'Word Connections','먼저 구분 포인트를 확인하고, 아래 6문제를 푸세요.')
+    for n in w['notes']:b.para(esc(n),'small',after=7)
+    b.para('연어 5개: '+ ' / '.join(esc(e['colloc']) for e in entries[::6]),'small',after=14)
+    b.para('Part 5  |  01-06','sub')
+    for i,q in enumerate(qs,1):mc_question(b,i,q)
+    b.new(f'WEEKLY REVIEW {week:02d} / PART 6 & 7',f'Context Practice','각 지문의 흐름과 단서를 연결하세요. 총점은 Part 5까지 합해 12점입니다.')
+    b.para('Part 6  |  07-09','sub');b.para(w['p6'],'en',after=13)
+    for i,(ops,ans,why) in enumerate(w['p6q'],7):
+        q=pack_question(f'[{i}]에 알맞은 단어를 고르세요.',ops,ans,why,week*100+i);qs.append(q);mc_question(b,i,q)
+    b.para('Part 7  |  10-12','sub');b.para(w['p7'],'en',after=12)
+    for i,(prompt,ops,ans,why) in enumerate(w['p7q'],10):
+        q=pack_question(prompt,ops,ans,why,week*100+i);qs.append(q);mc_question(b,i,q)
+    b.new(f'WEEKLY REVIEW {week:02d} / ANSWERS',f'Weekly {week:02d}  Answers','각 1점. 문맥 문제는 근거가 되는 표현에도 밑줄을 그으세요.',key=f'weekanswer{day}')
+    for i,q in enumerate(qs,1):b.para(f'<b>{i:02d}. ({chr(65+q["answer"])}) {esc(q["word"])}</b><br/>'+esc(q['why']),'small',after=9)
+    b.para('점수 ____ / 12   [ ] 재시험 완료   [ ] 취약 표현을 기록함','body')
+    b.para('10-12점: 다음 주로 진행하며 오답을 복습<br/>7-9점: 이번 주 핵심 단어 30개를 다시 회상<br/>0-6점: 해당 Day의 예문과 품사부터 다시 확인','small')
+    return qs
+
+def front_pages(b,days,refs):
+    b.new('PERSONAL STUDY EDITION',key='cover')
+    b.c.setFillColor(BLUE);b.c.rect(LEFT,392,5,291,fill=1,stroke=0)
+    for txt,y,size,col in [('TOEIC 900',668,49,NAVY),('VOCABULARY',601,40,NAVY),('60 DAY CHALLENGE',518,25,BLUE),('1,800 WORDS',442,29,NAVY),('"From 780 to 900"',350,20,GRAY)]:
+        b.c.setFont('KRB',size);b.c.setFillColor(col);b.c.drawString(LEFT+22,y,txt)
+    b.y=281;b.para('TOEIC 900 Vocabulary - 60 Day Challenge','sub',after=18)
+    b.para('780점 경험자, 4~5년 공백 이후의 다시 시작<br/>하루 30단어 · 60일 · 뜻에서 문맥 인식까지','body',after=24)
+    b.para('NEW WORDS 1,800  /  DAILY TESTS 60  /  WEEKLY REVIEWS 8<br/>FINAL VOCABULARY TEST 100 QUESTIONS','small')
+    b.new('HOW TO USE', '사용 방법', '매일 신규 30개를 배우고, 이전에 틀린 단어를 함께 회상합니다.',key='use')
+    for label,body in [
+        ('하루 40~60분의 기본 흐름','1. 10분: 이전 Day의 취약 단어를 답을 가리고 떠올립니다.<br/>2. 20~25분: 신규 30개를 뜻 → 연어 → 예문 순서로 읽습니다.<br/>3. 8~10분: Mini Test를 풉니다.<br/>4. 5~10분: 오답의 원인을 표시하고 핵심 표현 5개를 다시 말합니다.'),
+        ('단어 페이지를 읽는 순서','영어 단어를 보고 핵심 뜻이 떠오르는지 확인합니다. 다음에는 표현 전체를 읽습니다. 마지막으로 해석을 가리고 예문을 이해합니다. 단어의 모든 사전적 의미보다 표에 제시한 업무상 의미를 우선하세요.'),
+        ('복습 간격','당일 저녁, 다음 날, 3일 뒤, 7일 뒤, 14일 뒤에 다시 떠올립니다. 하루의 복습 대상은 D-1·D-3·D-7·D-14이며, 정답 페이지 아래에 해당 Day를 표시했습니다. Day 60 이후에도 마지막 단어들의 14일 복습을 이어갑니다.'),
+        ('주간 복습과 정답','Day 07·14·21·28·35·42·49·56 학습 후 해당 Weekly Review로 이동합니다. 주간 복습은 단어를 새로 세지 않습니다. Mini Test 정답은 다음 페이지, Weekly Review 정답은 해당 세트 뒤에 있습니다.'),
+        ('채점 기준','미니 테스트는 15점, 주간 복습은 12점, 최종 테스트는 100점입니다. 영→한은 핵심 의미가 맞으면 정답, 한→영은 제시한 목표 단어의 철자가 맞아야 정답입니다. 뜻이 여러 개인 단어는 질문에 제시된 학습 의미를 사용하세요.')]:b.box(label,body)
+    b.new('CONTENTS','목차','표시된 쪽수는 PDF의 실제 페이지 번호와 같습니다.',key='contents')
+    def pg(k):return f'{refs.get(k,0):03d}'
+    rows=[['섹션','쪽']]+[['사용 방법',pg('use')],['60일 학습 계획표',pg('plan')],['TOEIC 어휘 공부법',pg('method')]]
+    labels=['감각 회복 · Day 01-10','800점 핵심 · Day 11-20','연어와 파생어 · Day 21-30','고급 문맥 · Day 31-40','추상적 업무 표현 · Day 41-50','실전 인식 마무리 · Day 51-60']
+    for i,l in enumerate(labels):rows.append([l,pg('day'+str(i*10+1))])
+    rows += [['Weekly Review 01-08',pg('week7')],['Final 900 Vocabulary Test',pg('final')],['Final 정답 및 해설',pg('finalanswers')],['취약 단어 기록표',pg('weak')],['60일 학습 완료 체크표',pg('check')]]
+    b.table(rows,[CW-60,60],rowpad=5)
+    b.para('주간 복습 바로 찾기','sub')
+    b.para(' / '.join(f'Week {i+1:02d}: p. {pg("week"+str(n))}' for i,n in enumerate(WEEKLY)),'small')
+    for block in range(3):
+        b.new('60 DAY STUDY PLAN',f'학습 계획  {block*20+1:02d}-{block*20+20:02d}', '일정은 시작일 기준으로 직접 적으세요. 하루 신규 단어는 항상 30개입니다.',key='plan' if block==0 else None)
+        rows=[['Day','학습 주제','누적','이전 Day 복습','학습 / 주간 쪽']]
+        for d in days[block*20:(block+1)*20]:
+            n=d['day'];old=', '.join(f'{n-x:02d}' for x in [1,3,7,14] if n-x>0) or '-'
+            p=pg('day'+str(n));p+=(' / '+pg('week'+str(n))) if n in WEEKLY else ''
+            rows.append([f'{n:02d}',esc(d['title']),f'{n*30:,}',old,p])
+        b.table(rows,[36,179,55,143,CW-413],rowpad=5)
+        b.para('복습은 해당 Day의 취약 단어부터 시작합니다. 주간 복습은 학습을 마친 뒤 추가로 풉니다.','small')
+    b.new('STUDY METHOD','TOEIC 어휘 공부법','뜻을 외운 뒤, 문제에서 쓰임을 즉시 알아보는 순서로 훈련합니다.',key='method')
+    for label,body in [
+        ('01  품사와 자리를 함께 본다','형용사 + 명사: accurate information.<br/>동사 + 부사: record data accurately.<br/>소유격 + 명사: the company\'s profitability.<br/>형태를 고르기 전에 빈칸이 수식하는 대상과 문장 구조를 확인합니다.'),
+        ('02  동사와 목적어를 묶는다','approve a budget / meet a deadline / place an order / bear costs.<br/>동사만 한국어로 암기하지 말고, 자연스럽게 붙는 명사까지 한 번에 말합니다.'),
+        ('03  전치사를 표현의 일부로 기억한다','comply with regulations / eligible for benefits / contingent on approval / liable for damages.<br/>전치사만 따로 외우면 비슷한 표현끼리 섞이기 쉽습니다.'),
+        ('04  유사어는 문맥과 기능으로 구분한다','complimentary는 무료 제공, complementary는 보완적입니다.<br/>invoice는 청구, receipt는 결제 증빙입니다. receipt of payment에서는 수령을 뜻합니다.<br/>adapt는 조정·적응, adopt는 채택입니다.'),
+        ('05  문맥의 신호를 읽는다','Part 6에서는 however·therefore·provided처럼 논리와 조건을 표시하는 말을 확인합니다. Part 7에서는 기한·예외·요금 포함 여부를 연결합니다. 단어 뜻을 알아도 문장 사이의 관계를 놓치면 오답이 됩니다.')]:b.box(label,body)
+    b.new('LEARNING FRAMEWORK','학습 기준과 출처','점수대는 학습 순서를 위한 편집 기준입니다. 현재 실력은 학습과 모의시험으로 다시 확인하세요.')
+    rows=[['단계','초점']]
+    phases=[('01-10','700~800점대 감각 회복: 회사·일정·여행·고객 서비스'),('11-20','800점대 핵심: 실행 동사·기본 연어·품사'),('21-30','800~850점대: 파생어·다의어·실용 연어'),('31-40','850~900점대: 유의어·혼동어·긴 지문 어휘'),('41-50','900점 목표: 계약·회계·인사·경영의 추상 표현'),('51-60','900점 마무리: 문맥·논리·철자·연어 인식')]
+    for a,z in phases:rows.append([a,z])
+    b.table(rows,[74,CW-74],rowpad=8)
+    b.para('이 교재는 직장·비즈니스·여행·서비스 상황을 중심으로 편집한 독립 학습 자료입니다. 공식 빈도순 어휘 목록이나 ETS 기출문제를 재현한 교재는 아닙니다. 예문과 문제는 이 교재를 위해 새로 작성했습니다.','body',after=14)
+    b.para('어휘 학습과 함께 듣기, 문법, 제한 시간 안에 지문을 읽는 연습을 병행하세요. 최종 100문제의 점수는 이 교재의 어휘 학습 점검용이며 TOEIC 환산점수가 아닙니다.','body',after=18)
+    b.para('시험 형식 참고 자료','sub')
+    b.para('ETS, About the TOEIC Listening and Reading Test<br/><link href="https://www.ets.org/toeic/test-takers/about/listening-reading.html" color="#2463A3">ets.org/toeic/test-takers/about/listening-reading.html</link><br/>업무 상황의 듣기·읽기, Part 5 문장 완성·Part 6 지문 완성·Part 7 독해 형식을 참고했습니다.','small',after=12)
+    b.para('ETS, TOEIC Listening and Reading Score Descriptors<br/><link href="https://www.ets.org/pdfs/toeic/toeic-listening-reading-score-descriptors.pdf" color="#2463A3">ets.org/pdfs/toeic/toeic-listening-reading-score-descriptors.pdf</link><br/>상위 점수 구간의 어휘·문법·지문 정보 연결 요구를 학습 방향에 반영했습니다.','small')
+
+def final_questions():
+    out=[]
+    for line in (BASE/'final_questions.txt').read_text(encoding='utf-8').splitlines():
+        n,prompt,ops,answer,why=line.split('|');n=int(n);assert n==len(out)+1
+        out.append(pack_question(prompt,ops,answer,why,91000+n))
+    assert len(out)==70
+    return out
+
+def final_pages(b):
+    qs=final_questions()
+    sections=[('A  어휘 의미',0,10),('B  품사',10,20),('C  유의어',20,30),('D  Collocation',30,40),('E  Part 5',40,50),('E  Part 5',50,60),('E  Part 5',60,70)]
+    for j,(label,start,end) in enumerate(sections):
+        b.new('FINAL 900 VOCABULARY TEST', 'Final 900 Vocabulary Test' if j==0 else f'{label}  |  {start+1:02d}-{end:02d}', '권장 60분 · 총 100문제 · 각 1점 · 정답은 전체 문제 뒤에 있습니다.' if j==0 else '빈칸에 가장 알맞은 답을 고르세요.',key='final' if j==0 else None)
+        if j==0:b.para(label,'sub',after=12)
+        for i,q in enumerate(qs[start:end],start+1):mc_question(b,i,q)
+    for item in FINAL_PASSAGES:
+        start=item['start'];part=item['part'];b.new(f'FINAL / PART {part}',f'Part {part}  |  {start:02d}-{start+2:02d}',item['title'])
+        b.para(item['text'],'en',after=22)
+        for i,data in enumerate(item['qs'],start):
+            if part==6:
+                ops,ans,why=data;prompt=f'[{i}]에 알맞은 단어를 고르세요.'
+            else:prompt,ops,ans,why=data
+            q=pack_question(prompt,ops,ans,why,91000+i);qs.append(q);mc_question(b,i,q)
+        b.para('답을 고른 근거가 되는 표현에 밑줄을 그으세요.','small')
+    assert len(qs)==100
+    b.new('FINAL / ANSWER SHEET','Final Answer Sheet','문제만 출력할 경우 이 답안지를 함께 사용하세요.')
+    rows=[['01-20','21-40','41-60','61-80','81-100']]
+    for i in range(20):rows.append([f'{i+1+20*j:03d}. ( A / B / C / D )' for j in range(5)])
+    b.table(rows,[CW/5]*5,rowpad=5)
+    b.para('이름 __________________  날짜 __________________<br/>소요 시간 ______분  /  점수 ______ / 100','body')
+    b.new('FINAL / ANSWERS','Final Answers','먼저 정답을 확인한 후, 다음 페이지의 해설로 근거를 검토하세요.',key='finalanswers')
+    rows=[['01-20','21-40','41-60','61-80','81-100']]
+    for i in range(20):rows.append([f'{i+1+20*j:03d}. {chr(65+qs[i+20*j]["answer"])}' for j in range(5)])
+    b.table(rows,[CW/5]*5,rowpad=5)
+    b.para('영역별 점수','sub')
+    b.para('어휘 01-10: ___/10  |  품사 11-20: ___/10  |  유의어 21-30: ___/10<br/>연어 31-40: ___/10  |  Part 5 41-70: ___/30<br/>Part 6 71-85: ___/15  |  Part 7 86-100: ___/15','body')
+    for block in range(7):
+        start=block*15;end=min(start+15,100)
+        b.new('FINAL / EXPLANATIONS',f'정답 해설  {start+1:02d}-{end:02d}','문맥·품사·연어 중 어느 단서를 놓쳤는지 확인하세요.')
+        for i,q in enumerate(qs[start:end],start+1):b.para(f'<b>{i:02d}. ({chr(65+q["answer"])}) {esc(q["word"])}</b><br/>'+esc(q['why']),'small',after=9)
+    b.new('FINAL / SELF ASSESSMENT','자기 평가','최종 테스트는 이 교재의 어휘 인식 점검입니다. 실제 TOEIC 점수와 직접 환산되지 않습니다.')
+    rows=[['점수','해석과 다음 행동'],['90-100','어휘력이 900점 목표에 매우 적합. 틀린 연어를 복습하고 듣기·독해 속도를 점검하세요.'],['80-89','충분히 강하지만 일부 취약 영역 보완 필요. 영역별 점수가 낮은 문제부터 다시 푸세요.'],['70-79','핵심 어휘 추가 복습 필요. 오답 단어의 예문과 품사를 다시 회상하세요.'],['70 미만','취약 단어 집중 복습 권장. 해당 Day로 돌아가 뜻·연어·예문 순서로 다시 학습하세요.']]
+    b.table(rows,[70,CW-70],rowpad=12)
+    b.para('가장 약한 영역 __________________________<br/>우선 복습할 Day ________________________<br/>7일 후 재시험 날짜 ______________________<br/>첫 점수 ______ / 100   재시험 ______ / 100','body',after=25)
+    b.para('빠른 인식 확인','sub')
+    b.para('[ ] 핵심 뜻이 2~3초 안에 떠오른다.<br/>[ ] 전치사를 포함한 표현을 말할 수 있다.<br/>[ ] 명사·동사·형용사·부사를 구분한다.<br/>[ ] 지문의 조건·예외·기한을 함께 읽는다.<br/>[ ] 배운 단어를 듣기에서도 알아보기 위해 반복해 듣는다.','body')
+    return qs
+
+def worksheets(b,days):
+    for block in range(3):
+        b.new('WEAK WORD LOG',f'취약 단어 기록표  {block+1:02d}', '원인: 뜻 / 품사 / 철자 / 연어 / 문맥. 필요하면 이 페이지를 추가 인쇄하세요.',key='weak' if block==0 else None)
+        rows=[['Day / 단어','핵심 뜻 / 표현','틀린 원인','D+1 / 3 / 7 / 14']]
+        rows += [['________________<br/><br/>________________','________________________<br/><br/>________________________','________<br/><br/>________','[ ] [ ] [ ] [ ]'] for _ in range(10)]
+        b.table(rows,[116,185,83,CW-384],rowpad=10)
+        b.para('재시험에서 맞혀도 다음 간격 복습을 이어갑니다. 해석을 가리고 표현과 예문을 다시 읽으세요.','small')
+    for block in range(3):
+        b.new('60 DAY COMPLETION CHECK',f'60일 학습 완료 체크  {block*20+1:02d}-{block*20+20:02d}','30개 학습 완료, 점수, 복습 여부를 직접 기록하세요.',key='check' if block==0 else None)
+        rows=[['Day','날짜','신규','누적','Mini','당일','+1','+3','+7','+14']]
+        for d in days[block*20:(block+1)*20]:
+            n=d['day'];rows.append([f'{n:02d}','____/____','[ ]',f'{n*30:,}','__/15','[ ]','[ ]','[ ]','[ ]','[ ]'])
+        b.table(rows,[34,72,38,54,57,45,45,45,45,CW-435],rowpad=7)
+        b.para('Week 점수: __________________________________________<br/>완료일 __________________  /  최종 테스트 ______ / 100','body')
+
+def build_all(path,days,refs=None):
+    b=Book(path);refs=refs or {};front_pages(b,days,refs)
+    for d in days:day_pages(b,d,refs)
+    weekly={day:weekly_pages(b,day,days) for day in WEEKLY}
+    final=final_pages(b);worksheets(b,days)
+    for name,page in b.sections.items():
+        pass
+    b.finish()
+    return b,weekly,final
+
+def integrated_build():
+    days=load_days();assert len(days)==60 and [d['day'] for d in days]==list(range(1,61))
+    draft,_,_=build_all(BASE/'integration_draft.pdf',days)
+    b,weeks,final=build_all(OUT/'TOEIC_900_Vocabulary_60_Day_Challenge.pdf',days,draft.sections)
+    assert b.sections==draft.sections,(b.sections,draft.sections)
+    r=PdfReader(str(b.path));assert len(r.pages)==b.p
+    audit=dict(day_count=60,words_per_day=[len(d['entries']) for d in days],unique_headwords=1800,mini_tests=60,mini_questions=900,weekly_reviews=8,weekly_questions=sum(len(v) for v in weeks.values()),final_questions=len(final),page_count=b.p,sections=b.sections,overflows=b.overflows,pos_counts=dict(collections.Counter(e['pos'].split('/')[0] for d in days for e in d['entries'])))
+    (BASE/'final_audit.json').write_text(json.dumps(audit,ensure_ascii=False,indent=2),encoding='utf-8')
+    (BASE/'all_content.json').write_text(json.dumps(dict(days=days,weekly=weeks,final=final),ensure_ascii=False,indent=2),encoding='utf-8')
+    print(json.dumps(audit,ensure_ascii=False))
 
 def sample_build():
     days=load_days();b=Book(BASE/'stage_day01_10.pdf')
@@ -282,4 +466,6 @@ def sample_build():
     b.finish(); print(json.dumps(dict(days=len(days),headwords=sum(len(d['entries']) for d in days),pages=b.p,duplicates=0,overflows=b.overflows),ensure_ascii=False))
     (BASE/'stage_audit.json').write_text(json.dumps(days,ensure_ascii=False,indent=2),encoding='utf-8')
 
-if __name__=='__main__':sample_build()
+if __name__=='__main__':
+    import sys
+    integrated_build() if '--final' in sys.argv else sample_build()
