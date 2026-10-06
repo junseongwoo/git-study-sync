@@ -1,0 +1,310 @@
+@01|회사와 직장|익숙한 회사 어휘를 뜻과 연어로 다시 연결한다.
+employee|n|직원|H:new employee|신입 직원
+employer|n|고용주|D:current employer|현재 고용주
+staff|n|직원 전체|R:additional staff|추가 직원
+department|n|부서|L:sales department|영업 부서
+manager|n|관리자|H:experienced manager|경험 많은 관리자
+supervisor|n|감독자; 상사|H:production supervisor|생산 감독자
+colleague|n|동료|H:new colleague|새 동료
+branch|n|지점|L:regional branch|지역 지점
+headquarters|n|본사|L:company headquarters|회사 본사
+position|n|직위; 일자리|D:available position|채용 가능한 자리
+hire|v|고용하다|V:hire more staff|직원을 추가로 채용
+train|v|교육하다|V:train new employees|신입 직원을 교육
+manage|v|관리하다|V:manage the project|프로젝트를 관리
+assign|v|배정하다|V:assign specific tasks|구체적인 업무를 배정
+attend|v|참석하다|V:attend a staff meeting|직원 회의에 참석
+report|v/n|보고하다; 보고서|V:report a problem|문제를 보고
+office|n|사무실|L:main office|주 사무실
+task|n|업무; 과제|D:daily task|일일 업무
+team|n|팀|H:project team|프로젝트팀
+workplace|n|직장; 작업장|D:safe workplace|안전한 작업장
+full-time|adj|상근의|D:full-time position|상근직
+part-time|adj|시간제의|D:part-time position|시간제 일자리
+local|adj|현지의; 지역의|L:local office|지역 사무실
+regional|adj|지역의|D:regional sales|지역 매출
+annual|adj|연례의; 연간의|D:annual meeting|연례 회의
+monthly|adj|매월의|D:monthly report|월간 보고서
+regularly|adv|정기적으로|V:check equipment regularly|장비를 정기적으로 점검
+currently|adv|현재|A:currently available|현재 이용 가능
+directly|adv|직접; 곧바로|V:contact the manager directly|관리자에게 직접 연락
+responsible|adj|담당하는; 책임이 있는|A:responsible for scheduling|일정 조정을 담당
+@02|회의와 일정|예약과 일정 변경에 쓰이는 동사를 빠르게 알아본다.
+meeting|n|회의|E:weekly meeting|주간 회의
+agenda|n|의제; 안건|D:meeting agenda|회의 안건
+schedule|n/v|일정; 일정을 잡다|D:work schedule|업무 일정
+appointment|n|예약; 약속|D:scheduled appointment|예정된 약속
+deadline|n|마감일|D:application deadline|지원 마감일
+conference|n|학회; 대규모 회의|E:business conference|비즈니스 회의
+presentation|n|발표|E:product presentation|제품 발표
+minute|n|분; 회의록(복수)|D:meeting minutes|회의록
+session|n|시간; 회의 회차|E:training session|교육 시간
+participant|n|참가자|H:registered participant|등록한 참가자
+arrange|v|준비하다; 주선하다|V:arrange a meeting|회의를 준비
+confirm|v|확인하다; 확정하다|V:confirm the appointment|약속을 확정
+postpone|v|연기하다|V:postpone the meeting|회의를 연기
+cancel|v|취소하다|V:cancel the reservation|예약을 취소
+discuss|v|논의하다|V:discuss the proposal|제안을 논의
+reserve|v|예약하다; 확보하다|V:reserve a meeting room|회의실을 예약
+remind|v|상기시키다|V:remind staff of the deadline|직원에게 마감일을 안내
+prepare|v|준비하다|V:prepare the agenda|안건을 준비
+available|adj|이용 가능한|A:available on request|요청 시 제공 가능
+convenient|adj|편리한|D:convenient location|편리한 위치
+busy|adj|바쁜|D:busy schedule|바쁜 일정
+early|adj/adv|이른; 일찍|D:early arrival|이른 도착
+late|adj/adv|늦은; 늦게|D:late payment|늦은 결제
+upcoming|adj|다가오는|E:upcoming conference|다가오는 회의
+brief|adj|짧은; 간단한|D:brief presentation|간단한 발표
+promptly|adv|신속히; 정각에|V:respond promptly|신속하게 답변
+previously|adv|이전에|A:previously approved|이전에 승인됨
+recently|adv|최근에|A:recently updated|최근에 갱신됨
+approximately|adv|대략|A:approximately ten minutes long|길이가 약 10분임
+punctual|adj|시간을 잘 지키는|D:punctual attendance|제시간 출석
+@03|주문과 배송|주문부터 수령까지의 절차를 연어로 묶어 익힌다.
+order|n/v|주문; 주문하다|D:purchase order|구매 주문서
+shipment|n|배송 물품; 선적|D:international shipment|국제 배송 물품
+delivery|n|배송; 배달|D:scheduled delivery|예정된 배송
+package|n|소포; 포장물|C:sealed package|밀봉된 소포
+parcel|n|소포|C:small parcel|작은 소포
+warehouse|n|창고|L:central warehouse|중앙 창고
+supplier|n|공급업체|D:local supplier|현지 공급업체
+customer|n|고객|H:regular customer|단골 고객
+invoice|n|송장; 청구서|D:commercial invoice|상업 송장
+receipt|n|영수증|D:original receipt|원본 영수증
+ship|v|발송하다|V:ship the goods|상품을 발송
+deliver|v|배달하다|V:deliver the package|소포를 배달
+receive|v|받다|V:receive the shipment|배송 물품을 수령
+track|v|추적하다|V:track an order|주문을 추적
+pack|v|포장하다|V:pack the merchandise|상품을 포장
+return|v/n|반품하다; 반품|V:return a damaged item|손상된 물품을 반품
+replace|v|교체하다|V:replace a broken part|고장 난 부품을 교체
+item|n|물품; 항목|C:replacement item|교환 물품
+quantity|n|수량|D:order quantity|주문 수량
+address|n/v|주소; 다루다|D:shipping address|배송 주소
+fragile|adj|깨지기 쉬운|C:fragile goods|깨지기 쉬운 상품
+damaged|adj|손상된|C:damaged packaging|손상된 포장
+urgent|adj|긴급한|D:urgent request|긴급 요청
+express|adj|특급의|D:express delivery|특급 배송
+complete|adj/v|완전한; 완료하다|D:complete order|완전한 주문
+correct|adj/v|올바른; 수정하다|D:correct address|정확한 주소
+carefully|adv|주의 깊게|V:handle packages carefully|소포를 조심스럽게 취급
+safely|adv|안전하게|V:store materials safely|자재를 안전하게 보관
+immediately|adv|즉시|V:report damage immediately|손상을 즉시 보고
+properly|adv|적절히; 제대로|V:label boxes properly|상자에 올바르게 표시
+@04|여행과 항공|이동 안내에서 장소·시간·상태를 구분한다.
+flight|n|항공편|D:connecting flight|연결 항공편
+airport|n|공항|L:international airport|국제공항
+terminal|n|터미널|L:departure terminal|출발 터미널
+gate|n|탑승구|L:boarding gate|탑승구
+passenger|n|승객|H:transit passenger|환승 승객
+ticket|n|승차권; 항공권|D:round-trip ticket|왕복 항공권
+fare|n|운임|D:discounted fare|할인 운임
+baggage|n|수하물|C:checked baggage|위탁 수하물
+luggage|n|여행 짐|C:carry-on luggage|기내 휴대 짐
+itinerary|n|여행 일정표|D:travel itinerary|여행 일정표
+depart|v|출발하다|V:depart from Terminal Two|2번 터미널에서 출발
+arrive|v|도착하다|V:arrive at the airport|공항에 도착
+board|v|탑승하다|V:board the plane|비행기에 탑승
+transfer|v/n|환승하다; 이동|V:transfer to another train|다른 열차로 환승
+delay|n/v|지연; 지연시키다|D:flight delay|항공편 지연
+travel|v/n|여행하다; 여행|V:travel on business|업무상 여행
+book|v|예약하다|V:book a flight|항공편을 예약
+destination|n|목적지|D:final destination|최종 목적지
+route|n|노선; 경로|D:alternative route|대체 경로
+passport|n|여권|D:valid passport|유효한 여권
+domestic|adj|국내의|D:domestic flight|국내 항공편
+international|adj|국제적인|D:international travel|국제 여행
+direct|adj|직항의; 직접적인|D:direct flight|직항편
+valid|adj|유효한|D:valid ticket|유효한 항공권
+nearby|adj/adv|인근의; 근처에|L:nearby station|인근 역
+scheduled|adj|예정된|D:scheduled departure|예정된 출발
+aboard|adv/prep|탑승하여; 탑승한|V:welcome guests aboard|탑승객을 환영
+abroad|adv|해외로; 해외에서|V:attend a conference abroad|해외 회의에 참석
+frequently|adv|자주|V:travel frequently|자주 여행
+temporarily|adv|일시적으로|A:temporarily closed|일시적으로 폐쇄됨
+@05|호텔과 식당|서비스 요청과 시설 설명의 기본 표현을 회복한다.
+reservation|n|예약|D:hotel reservation|호텔 예약
+guest|n|투숙객; 손님|H:hotel guest|호텔 투숙객
+reception|n|접수처; 환영 행사|L:reception desk|접수 데스크
+room|n|객실; 공간|L:meeting room|회의실
+suite|n|스위트룸|L:executive suite|임원용 스위트룸
+accommodation|n|숙박 시설|D:overnight accommodation|하룻밤 숙박 시설
+amenity|n|편의 시설|D:hotel amenities|호텔 편의 시설
+menu|n|메뉴|D:dinner menu|저녁 메뉴
+beverage|n|음료|C:hot beverage|뜨거운 음료
+meal|n|식사|C:prepared meal|준비된 식사
+serve|v|제공하다; 응대하다|V:serve breakfast|아침 식사를 제공
+recommend|v|추천하다|V:recommend a restaurant|식당을 추천
+charge|v/n|청구하다; 요금|V:charge a service fee|서비스 요금을 부과
+include|v|포함하다|V:include breakfast|아침 식사를 포함
+offer|v/n|제공하다; 제안|V:offer a discount|할인을 제공
+request|v/n|요청하다; 요청|V:request a quiet room|조용한 객실을 요청
+check|v/n|확인하다; 수표|V:check the reservation|예약을 확인
+service|n|서비스|D:room service|룸서비스
+facility|n|시설|D:fitness facility|체력 단련 시설
+fee|n|수수료; 요금|D:parking fee|주차 요금
+comfortable|adj|편안한|C:comfortable seating|편안한 좌석
+complimentary|adj|무료로 제공되는|D:complimentary breakfast|무료 아침 식사
+delicious|adj|맛있는|C:delicious meal|맛있는 식사
+private|adj|개인용의; 비공개의|L:private dining room|개인 식당 공간
+spacious|adj|넓은|L:spacious lobby|넓은 로비
+friendly|adj|친절한|D:friendly service|친절한 서비스
+personally|adv|직접; 개인적으로|V:welcome guests personally|손님을 직접 환영
+usually|adv|보통|A:usually available|보통 이용 가능
+especially|adv|특히|A:especially popular|특히 인기 있음
+fully|adv|완전히|A:fully booked|예약이 꽉 참
+@06|고객 응대와 쇼핑|문의·불만·반품 상황에서 자주 쓰는 뜻을 익힌다.
+inquiry|n|문의|D:customer inquiry|고객 문의
+complaint|n|불만; 항의|D:formal complaint|공식 항의
+refund|n/v|환불; 환불하다|D:full refund|전액 환불
+exchange|n/v|교환; 교환하다|D:product exchange|제품 교환
+purchase|n/v|구매; 구매하다|D:recent purchase|최근 구매
+discount|n|할인|D:bulk discount|대량 구매 할인
+price|n|가격|D:retail price|소매 가격
+product|n|제품|C:new product|신제품
+brand|n|브랜드|D:popular brand|인기 브랜드
+warranty|n|보증|D:extended warranty|연장 보증
+assist|v|돕다|V:assist customers|고객을 지원
+respond|v|답변하다; 대응하다|V:respond to an inquiry|문의에 답변
+resolve|v|해결하다|V:resolve a complaint|불만을 해결
+explain|v|설명하다|V:explain the return policy|반품 정책을 설명
+apologize|v|사과하다|V:apologize for the delay|지연에 대해 사과
+accept|v|받아들이다; 수락하다|V:accept credit cards|신용카드 결제를 수락
+provide|v|제공하다|V:provide assistance|도움을 제공
+policy|n|정책; 규정|D:return policy|반품 규정
+assistance|n|도움; 지원|D:technical assistance|기술 지원
+satisfaction|n|만족|D:customer satisfaction|고객 만족
+helpful|adj|도움이 되는|D:helpful advice|유용한 조언
+satisfied|adj|만족한|H:satisfied customer|만족한 고객
+reasonable|adj|합리적인; 적정한|D:reasonable price|적정 가격
+affordable|adj|구입 가능한 가격의|D:affordable housing|저렴한 주택
+defective|adj|결함이 있는|C:defective product|결함 있는 제품
+reliable|adj|믿을 만한|D:reliable service|믿을 만한 서비스
+politely|adv|정중하게|V:answer politely|정중하게 답변
+quickly|adv|빠르게|V:process orders quickly|주문을 빠르게 처리
+simply|adv|간단히; 단순히|V:explain the process simply|절차를 간단히 설명
+easily|adv|쉽게|V:identify problems easily|문제를 쉽게 식별
+@07|인사와 채용|지원·면접·자격 요건을 연결하고 첫 주를 복습한다.
+application|n|지원서; 신청|D:job application|입사 지원서
+applicant|n|지원자|H:qualified applicant|자격을 갖춘 지원자
+candidate|n|후보자|H:successful candidate|합격한 후보자
+resume|n|이력서|D:updated resume|갱신된 이력서
+interview|n/v|면접; 면접하다|E:job interview|채용 면접
+experience|n|경험; 경력|D:relevant experience|관련 경력
+qualification|n|자격|D:professional qualification|전문 자격
+reference|n|추천인; 참고 자료|D:professional reference|업무 관련 추천인
+salary|n|급여|D:starting salary|초임
+benefit|n|혜택; 복리후생|D:employee benefits|직원 복리후생
+apply|v|지원하다; 적용하다|V:apply for a position|일자리에 지원
+recruit|v|채용하다; 모집하다|V:recruit qualified workers|유자격 근로자를 모집
+select|v|선택하다|V:select a candidate|후보자를 선정
+submit|v|제출하다|V:submit an application|지원서를 제출
+evaluate|v|평가하다|V:evaluate candidates|후보자를 평가
+promote|v|승진시키다; 홍보하다|V:promote qualified employees|유자격 직원을 승진시키는 결정
+retire|v|은퇴하다|V:retire from the company|회사에서 은퇴
+employment|n|고용|D:employment contract|고용 계약
+training|n|교육; 훈련|D:on-the-job training|직무 교육
+career|n|직업 경력|D:career development|경력 개발
+qualified|adj|자격을 갖춘|H:qualified candidate|유자격 후보자
+experienced|adj|경험 많은|H:experienced professional|경험 많은 전문가
+eligible|adj|자격이 되는|A:eligible for benefits|복리후생을 받을 자격이 있음
+permanent|adj|영구적인; 정규의|D:permanent position|정규직
+temporary|adj|임시의|D:temporary employment|임시 고용
+competitive|adj|경쟁력 있는|D:competitive salary|경쟁력 있는 급여
+successfully|adv|성공적으로|V:complete training successfully|교육을 성공적으로 완료
+professionally|adv|전문적으로|V:handle inquiries professionally|문의를 전문적으로 처리
+individually|adv|개별적으로|V:interview candidates individually|후보자를 개별적으로 면접
+equally|adv|동등하게|V:treat applicants equally|지원자를 동등하게 대우
+@08|제품과 기술|제품 특징과 기초 기술 안내를 자연스럽게 읽는다.
+equipment|n|장비(불가산)|C:office equipment|사무 장비
+device|n|기기|C:portable device|휴대용 기기
+software|n|소프트웨어(불가산)|C:accounting software|회계 소프트웨어
+hardware|n|하드웨어(불가산)|C:computer hardware|컴퓨터 하드웨어
+feature|n|특징; 기능|D:new feature|새 기능
+function|n/v|기능; 작동하다|D:basic function|기본 기능
+model|n|모델; 기종|C:latest model|최신 기종
+version|n|버전|D:updated version|갱신된 버전
+screen|n|화면|C:touch screen|터치스크린
+manual|n|설명서|D:user manual|사용 설명서
+install|v|설치하다|V:install the software|소프트웨어를 설치
+operate|v|작동시키다; 운영하다|V:operate the equipment|장비를 조작
+repair|v|수리하다|V:repair the printer|프린터를 수리
+update|v/n|갱신하다; 최신 정보|V:update the system|시스템을 갱신
+connect|v|연결하다|V:connect the device|기기를 연결
+test|v/n|시험하다; 검사|V:test the new software|새 소프트웨어를 시험
+use|v/n|사용하다; 사용|V:use the new scanner|새 스캐너를 사용
+system|n|시스템|D:security system|보안 시스템
+instruction|n|지시; 사용법|D:operating instructions|사용 지침
+quality|n|품질|D:product quality|제품 품질
+automatic|adj|자동의|D:automatic update|자동 갱신
+digital|adj|디지털의|C:digital camera|디지털 카메라
+portable|adj|휴대용의|C:portable charger|휴대용 충전기
+wireless|adj|무선의|D:wireless connection|무선 연결
+compatible|adj|호환되는|C:compatible devices|호환 기기
+efficient|adj|효율적인|D:efficient operation|효율적 운영
+automatically|adv|자동으로|V:save files automatically|파일을 자동으로 저장
+electronically|adv|전자적으로|V:submit forms electronically|양식을 전자적으로 제출
+accurately|adv|정확히|V:record data accurately|자료를 정확히 기록
+smoothly|adv|원활하게|V:operate smoothly|원활하게 운영
+@09|은행과 기초 재무|비용·결제·계좌 관련 어휘의 기본 뜻을 회복한다.
+account|n|계좌; 거래처|D:bank account|은행 계좌
+payment|n|결제; 납부|D:monthly payment|월 납부금
+balance|n|잔액; 균형|D:account balance|계좌 잔액
+budget|n|예산|D:annual budget|연간 예산
+expense|n|비용|D:travel expenses|출장 경비
+cost|n/v|비용; 비용이 들다|D:operating costs|운영 비용
+profit|n|이익|D:net profit|순이익
+income|n|소득|D:annual income|연간 소득
+tax|n|세금|D:income tax|소득세
+loan|n|대출|D:business loan|사업 대출
+pay|v|지불하다|V:pay the invoice|청구 금액을 결제
+deposit|v/n|예금하다; 예금|V:deposit funds|자금을 예치
+withdraw|v|인출하다; 철회하다|V:withdraw cash|현금을 인출
+save|v|절약하다; 저축하다|V:save money|돈을 절약
+spend|v|쓰다; 지출하다|V:spend less on supplies|소모품 지출을 절감
+reduce|v|줄이다|V:reduce expenses|비용을 절감
+increase|v/n|늘리다; 증가|V:increase profits|이익을 확대
+cash|n|현금|D:cash payment|현금 결제
+credit|n|신용; 공제 금액|D:credit limit|신용 한도
+statement|n|명세서; 진술|D:bank statement|은행 거래 명세서
+financial|adj|재무의|D:financial report|재무 보고서
+total|adj/n|전체의; 합계|D:total cost|총비용
+due|adj|기한이 된; 지급 예정인|D:payment due date|납부 기한
+outstanding|adj|미지급의; 뛰어난|D:outstanding balance|미결제 잔액
+low|adj|낮은|D:low interest rate|낮은 이자율
+high|adj|높은|D:high operating costs|높은 운영 비용
+annually|adv|매년|V:review budgets annually|예산을 매년 검토
+monthly|adv|매월|V:pay rent monthly|임대료를 매월 납부
+inexpensively|adv|저렴하게|V:produce goods inexpensively|상품을 저렴하게 생산
+separately|adv|별도로|V:list fees separately|수수료를 별도로 표시
+@10|시설·행사·기본 안내|일상 공지의 핵심 표현을 익히고 감각 회복을 마친다.
+building|n|건물|L:office building|사무용 건물
+entrance|n|입구|L:main entrance|정문
+exit|n|출구|L:emergency exit|비상구
+floor|n|층; 바닥|L:second floor|2층
+parking|n|주차|D:free parking|무료 주차
+maintenance|n|유지보수|D:regular maintenance|정기 유지보수
+notice|n/v|공지; 알아차리다|D:public notice|공공 공지
+event|n|행사|E:community event|지역 행사
+exhibition|n|전시회|E:trade exhibition|무역 전시회
+visitor|n|방문객|H:first-time visitor|첫 방문객
+open|v/adj|열다; 열린|V:open the main entrance|정문을 개방
+close|v/adj|닫다; 가까운|V:close the office early|사무실 운영을 조기 종료
+clean|v/adj|청소하다; 깨끗한|V:clean the meeting room|회의실을 청소
+inspect|v|점검하다|V:inspect the building|건물을 점검
+organize|v|조직하다; 준비하다|V:organize an event|행사를 준비
+register|v|등록하다|V:register for the workshop|워크숍에 등록
+visit|v|방문하다|V:visit the new facility|새 시설을 방문
+location|n|위치; 장소|D:event location|행사 장소
+map|n|지도|D:building map|건물 지도
+direction|n|방향; 안내|D:driving directions|차량 이동 안내
+public|adj|공공의|D:public transportation|대중교통
+safe|adj|안전한|D:safe working conditions|안전한 근무 환경
+necessary|adj|필요한|D:necessary repairs|필요한 수리
+accessible|adj|접근 가능한|A:accessible to visitors|방문객이 접근 가능
+closed|adj|닫힌; 휴업 중인|A:closed for maintenance|유지보수로 폐쇄됨
+crowded|adj|붐비는|L:crowded lobby|붐비는 로비
+daily|adv/adj|매일; 매일의|V:inspect facilities daily|시설을 매일 점검
+clearly|adv|명확하게|V:display notices clearly|공지를 명확히 게시
+normally|adv|보통; 정상적으로|A:normally open|보통 개방됨
+outside|adv/prep|밖에; 바깥에|V:display signs outside|외부에 표지판을 게시
