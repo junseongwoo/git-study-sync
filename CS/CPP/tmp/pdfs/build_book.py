@@ -160,7 +160,7 @@ def load_days():
 
 class Book:
     def __init__(self,path):
-        self.path=path;self.c=canvas.Canvas(str(path),pagesize=A4,pageCompression=1);self.c.setTitle('TOEIC 900 Vocabulary - 60 Day Challenge');self.c.setAuthor('Personal Study Edition');self.p=0;self.toc=[];self.overflows=[];self.sections={};self.logs=[]
+        self.path=path;self.c=canvas.Canvas(str(path),pagesize=A4,pageCompression=1);self.c.setTitle('TOEIC 900 Vocabulary — 60 Day Challenge');self.c.setAuthor('Personal Study Edition');self.p=0;self.toc=[];self.overflows=[];self.sections={};self.logs=[]
     def new(self,label,title=None,sub=None,key=None):
         if self.p:self.c.showPage()
         self.p+=1;self.y=H-86;self.c.setFillColor(NAVY);self.c.setFont('KRB',8.5);self.c.drawString(LEFT,H-32,'TOEIC 900  /  VOCABULARY');self.c.setFont('KR',8);self.c.drawRightString(RIGHT,H-32,label)
@@ -207,12 +207,19 @@ def daily_questions(d):
     es=d['entries'];qs=[]
     for e in es[:5]:qs.append(dict(type='영어 → 한국어',prompt=e['word'],answer=e['meaning'],why=e['colloc']))
     for e in es[10:15]:qs.append(dict(type='한국어 → 영어',prompt=e['meaning']+' ('+e['pos']+'.) · '+e['word'][:3]+'...',answer=e['word'],why=e['colloc']))
-    picked=[]
+    picked=[];blocked={q['word'].lower() for q in DAILY_FOCUS.get(d['day'],[])}
     for pos in ['n','v','adj','adv','n']:
-        pool=[e for e in es if e['pos'].split('/')[0]==pos and e not in picked]
+        pool=[e for e in es if e['pos'].split('/')[0]==pos and e not in picked and e['word'] not in blocked]
         e=pool[-1] if pool else next(e for e in es if e not in picked);picked.append(e)
         base=e['pos'].split('/')[0]
-        distract={'n':['carefully','eligible','apologize'],'v':['equipment','reliable','promptly'],'adj':['equipment','apologize','carefully'],'adv':['equipment','reliable','apologize']}[base]
+        rng=random.Random(d['day']*101+len(qs))
+        pure_verbs=['apologize','withdraw','participate','comply','negotiate','achieve','reimburse','contribute']
+        adverbs=['carefully','promptly','regularly','accurately','directly','politely','efficiently','independently']
+        nouns=['equipment','information','assistance','reliability','satisfaction','permission','participation','reimbursement']
+        adjectives=['reliable','eligible','confidential','annual','mandatory','comprehensive','tentative','regional']
+        if base in ['n','adj']:distract=rng.sample(adverbs,2)+rng.sample(pure_verbs,1)
+        elif base=='adv':distract=rng.sample(pure_verbs,2)+rng.sample(nouns,1)
+        else:distract=rng.sample(adjectives,2)+rng.sample(nouns,1)
         target=re.search(wordpattern(e['word']),e['en'],re.I).group()
         options=[target]+distract;random.Random(d['day']*31+len(qs)).shuffle(options)
         question=re.sub(wordpattern(e['word']),'_______',e['en'],count=1,flags=re.I)
@@ -256,7 +263,7 @@ def day_pages(b,d,refs=None):
     rows=[]
     for i,q in enumerate(qs[:5],1):rows.append([f'{i:02d}. '+q['prompt'],'________________________________'])
     b.table(rows,[CW*.46,CW*.54],header=False,rowpad=6)
-    b.para('06-10  한국어 → 영어','sub',after=7)
+    b.para('06-10  한국어 → 영어  (첫 3글자 단서)','sub',after=7)
     rows=[]
     for i,q in enumerate(qs[5:10],6):rows.append([f'{i:02d}. '+q['prompt'],'________________________________'])
     b.table(rows,[CW*.46,CW*.54],header=False,rowpad=6)
@@ -308,7 +315,7 @@ def weekly_pages(b,day,days):
     entries=[d['entries'][i] for d in source for i in [0,10,20,27]]+[source[-1]['entries'][i] for i in [1,11]]
     assert len(entries)==30 and len(set(e['word'] for e in entries))==30
     b.new(f'WEEKLY REVIEW {week:02d}',f'Weekly Review {week:02d}',f'Day {day-6:02d}-{day:02d}  |  {w["title"]}  |  신규 단어 없음',key=f'week{day}')
-    b.para('핵심 단어 30개 - 오른쪽을 가리고 뜻과 표현을 떠올리세요.','sub')
+    b.para('핵심 단어 30개 - 뜻과 표현을 가리고 회상하세요.','sub')
     rows=[['01-15','16-30']]
     for i in range(15):
         row=[]
@@ -343,7 +350,7 @@ def front_pages(b,days,refs):
     b.c.setFillColor(BLUE);b.c.rect(LEFT,392,5,291,fill=1,stroke=0)
     for txt,y,size,col in [('TOEIC 900',668,49,NAVY),('VOCABULARY',601,40,NAVY),('60 DAY CHALLENGE',518,25,BLUE),('1,800 WORDS',442,29,NAVY),('"From 780 to 900"',350,20,GRAY)]:
         b.c.setFont('KRB',size);b.c.setFillColor(col);b.c.drawString(LEFT+22,y,txt)
-    b.y=281;b.para('TOEIC 900 Vocabulary - 60 Day Challenge','sub',after=18)
+    b.y=281;b.para('TOEIC 900 Vocabulary — 60 Day Challenge','sub',after=18)
     b.para('780점 경험자, 4~5년 공백 이후의 다시 시작<br/>하루 30단어 · 60일 · 뜻에서 문맥 인식까지','body',after=24)
     b.para('NEW WORDS 1,800  /  DAILY TESTS 60  /  WEEKLY REVIEWS 8<br/>FINAL VOCABULARY TEST 100 QUESTIONS','small')
     b.new('HOW TO USE', '사용 방법', '매일 신규 30개를 배우고, 이전에 틀린 단어를 함께 회상합니다.',key='use')
@@ -355,13 +362,14 @@ def front_pages(b,days,refs):
         ('채점 기준','미니 테스트는 15점, 주간 복습은 12점, 최종 테스트는 100점입니다. 영→한은 핵심 의미가 맞으면 정답, 한→영은 제시한 목표 단어의 철자가 맞아야 정답입니다. 뜻이 여러 개인 단어는 질문에 제시된 학습 의미를 사용하세요.')]:b.box(label,body)
     b.new('CONTENTS','목차','표시된 쪽수는 PDF의 실제 페이지 번호와 같습니다.',key='contents')
     def pg(k):return f'{refs.get(k,0):03d}'
-    rows=[['섹션','쪽']]+[['사용 방법',pg('use')],['60일 학습 계획표',pg('plan')],['TOEIC 어휘 공부법',pg('method')]]
+    def tocrow(label,key):return [f'<link href="#{key}" color="#15334F">{label}</link>',f'<link href="#{key}" color="#2463A3">{pg(key)}</link>']
+    rows=[['섹션','쪽']]+[tocrow('사용 방법','use'),tocrow('60일 학습 계획표','plan'),tocrow('TOEIC 어휘 공부법','method')]
     labels=['감각 회복 · Day 01-10','800점 핵심 · Day 11-20','연어와 파생어 · Day 21-30','고급 문맥 · Day 31-40','추상적 업무 표현 · Day 41-50','실전 인식 마무리 · Day 51-60']
-    for i,l in enumerate(labels):rows.append([l,pg('day'+str(i*10+1))])
-    rows += [['Weekly Review 01-08',pg('week7')],['Final 900 Vocabulary Test',pg('final')],['Final 정답 및 해설',pg('finalanswers')],['취약 단어 기록표',pg('weak')],['60일 학습 완료 체크표',pg('check')]]
+    for i,l in enumerate(labels):rows.append(tocrow(l,'day'+str(i*10+1)))
+    rows += [tocrow('Weekly Review 01-08','week7'),tocrow('Final 900 Vocabulary Test','final'),tocrow('Final 정답 및 해설','finalanswers'),tocrow('취약 단어 기록표','weak'),tocrow('60일 학습 완료 체크표','check')]
     b.table(rows,[CW-60,60],rowpad=5)
     b.para('주간 복습 바로 찾기','sub')
-    b.para(' / '.join(f'Week {i+1:02d}: p. {pg("week"+str(n))}' for i,n in enumerate(WEEKLY)),'small')
+    b.para(' / '.join(f'<link href="#week{n}" color="#2463A3">Week {i+1:02d}: p. {pg("week"+str(n))}</link>' for i,n in enumerate(WEEKLY)),'small')
     for block in range(3):
         b.new('60 DAY STUDY PLAN',f'학습 계획  {block*20+1:02d}-{block*20+20:02d}', '일정은 시작일 기준으로 직접 적으세요. 하루 신규 단어는 항상 30개입니다.',key='plan' if block==0 else None)
         rows=[['Day','학습 주제','누적','이전 Day 복습','학습 / 주간 쪽']]

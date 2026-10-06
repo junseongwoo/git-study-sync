@@ -9,6 +9,17 @@ ROOT=Path.cwd();PDF=ROOT/'output/pdf/TOEIC_900_Vocabulary_60_Day_Challenge.pdf'
 data=json.loads((BASE/'all_content.json').read_text(encoding='utf-8'))
 audit=json.loads((BASE/'final_audit.json').read_text(encoding='utf-8'))
 r=PdfReader(str(PDF));texts=[p.extract_text() for p in r.pages]
+fonts={}
+for p in r.pages:
+    for ref in p['/Resources']['/Font'].values():
+        f=ref.get_object()
+        if f.get('/Subtype')=='/TrueType':fonts[str(f['/BaseFont'])]=f
+assert len(fonts)>=2
+for name,f in fonts.items():
+    desc=f['/FontDescriptor'].get_object()
+    assert '/FontFile2' in desc or '/FontFile3' in desc,('unembedded font',name)
+assert r.outline
+assert len(r.pages[2].get('/Annots',[]))>=20, 'TOC links missing'
 assert len(texts)==373
 for i,t in enumerate(texts,1):
     assert t.rstrip().endswith(f'{i:03d}') or re.search(r'(?m)^'+f'{i:03d}'+r'$',t),('footer',i)

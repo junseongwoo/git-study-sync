@@ -64,7 +64,7 @@
 64|The supplier has a strong track record and is considered highly _______.|reputable;refundable;provisional;hazardous|reputable|신뢰성 있는 과거 기록이 좋은 평판 reputable을 뒷받침한다.
 65|The original model is _______ and is no longer being manufactured.|discontinued;customized;interchangeable;renewable|discontinued|더 이상 제조되지 않는 것은 생산 중단된 discontinued다.
 66|The proposal contains several _______ clauses that can be interpreted in more than one way.|ambiguous;explicit;unambiguous;binding|ambiguous|여러 해석이 가능한 조항은 모호한 ambiguous다.
-67|The team made an _______ review, checking every document without exception.|exhaustive;exhausted;excessive;exclusive|exhaustive|빠짐없이 철저한 검토 exhaustive review. exhausted는 소진된이다.
+67|The team conducted an _______ review, checking every document without exception.|exhaustive;exhausted;excessive;exclusive|exhaustive|빠짐없이 철저한 검토 exhaustive review. exhausted는 소진된이다.
 68|The duplicate charge was made _______ and will be removed from the invoice.|erroneously;legitimately;contractually;proportionally|erroneously|중복 청구를 삭제하므로 잘못 청구된 erroneously가 맞다.
 69|The new process reduces waste and is therefore more _______.|cost-effective;time-consuming;labor-intensive;capital-intensive|cost-effective|낭비 감소로 비용 대비 효과가 좋아지는 문맥이다.
 70|The policy aims to increase employee _______ by encouraging staff to stay with the company.|retention;turnover;remuneration;probation|retention|직원이 회사에 남도록 장려하는 것은 유지 retention. turnover는 이직률이다.
