@@ -1548,3 +1548,313 @@ administratively|adv|행정적으로|A:administratively complex|행정적으로 
 publicly|adv|공개적으로|V:announce results publicly|결과를 공개 발표
 sustainably|adv|지속 가능하게|V:source materials sustainably|자재를 지속 가능한 방식으로 조달
 ethically|adv|윤리적으로|V:conduct business ethically|사업을 윤리적으로 수행
+@51|혼동어와 의미 추론|철자가 비슷한 어휘와 지문 속 함축 의미를 구별한다.
+advice|n|조언(불가산)|D:expert advice|전문가 조언
+adviser|n|조언자; 자문관|H:financial adviser|재무 자문관
+effect|n|효과; 영향|D:adverse effects|부정적 영향
+affect|v|영향을 주다|V:affect delivery schedules|배송 일정에 영향을 제공
+advise|v|조언하다|V:advise clients on investments|고객에게 투자 자문을 제공
+imply|v|암시하다|V:imply a change in policy|정책 변경을 암시
+infer|v|추론하다|V:infer the intended meaning|의도된 의미를 추론
+implication|n|영향; 함축|D:financial implications|재무적 영향
+inference|n|추론|D:reasonable inference|합리적 추론
+consideration|n|고려; 검토 사항|D:careful consideration|신중한 고려
+adaptation|n|적응; 수정|D:system adaptation|시스템 적응
+adoption|n|채택|D:policy adoption|정책 채택
+assumption|n|가정|D:underlying assumption|기본 가정
+presumption|n|추정|D:legal presumption|법적 추정
+accountability|n|책임성|D:management accountability|경영진 책임성
+discretion|n|재량; 신중함|D:managerial discretion|관리자 재량
+advisable|adj|바람직한|D:advisable precautions|권장되는 예방 조치
+adverse|adj|불리한; 부정적인|D:adverse conditions|불리한 조건
+discrete|adj|별개의|D:discrete tasks|별개의 업무
+discreet|adj|신중한; 조용한|D:discreet inquiry|조심스러운 문의
+complementary|adj|보완적인|D:complementary services|보완적 서비스
+corresponding|adj|상응하는|D:corresponding increase|상응하는 증가
+respective|adj|각자의|D:respective responsibilities|각자의 책임
+imminent|adj|임박한|D:imminent deadline|임박한 마감일
+eminent|adj|저명한|H:eminent speaker|저명한 연사
+adversely|adv|부정적으로|V:affect sales adversely|매출에 부정적 영향을 제공
+discretely|adv|별개로|V:process requests discretely|요청을 별개로 처리
+correspondingly|adv|그에 상응하여|V:adjust prices correspondingly|가격을 그에 상응하여 조정
+presumably|adv|아마; 추정상|A:presumably available|아마 이용 가능함
+apparently|adv|보아하니; 겉보기에는|A:apparently successful|보아하니 성공적임
+@52|문장 연결과 논리|문맥 연결어와 부사·전치사의 역할을 정확히 판단한다.
+nevertheless|adv|그럼에도 불구하고|V:nevertheless proceed with repairs|그럼에도 수리를 진행
+nonetheless|adv|그럼에도 불구하고|V:nonetheless honor the agreement|그럼에도 계약을 이행
+however|adv|그러나|V:however request further details|그러나 추가 정보를 요청
+therefore|adv|그러므로|V:therefore revise the budget|따라서 예산을 수정
+thus|adv|따라서; 이렇게|V:thus reduce overhead|이렇게 간접비를 절감
+consequently|adv|그 결과|V:consequently adjust the schedule|그 결과 일정을 조정
+moreover|adv|게다가|V:moreover provide free training|게다가 무료 교육을 제공
+furthermore|adv|더 나아가; 게다가|V:furthermore extend the warranty|추가로 보증을 연장
+meanwhile|adv|그동안; 한편|V:meanwhile prepare the documents|그동안 서류를 준비
+alternatively|adv|대안으로|V:alternatively book a later flight|대안으로 더 늦은 항공편을 예약
+instead|adv|대신에|V:instead request a refund|대신 환불을 요청
+indeed|adv|정말로; 사실|V:indeed meet the requirements|실제로 요건을 충족
+likewise|adv|마찬가지로|V:likewise follow the new policy|마찬가지로 새 정책을 준수
+additionally|adv|추가로|V:additionally offer technical support|추가로 기술 지원을 제공
+regardless|adv|상관없이|V:proceed regardless of the weather|날씨에 상관없이 진행
+despite|prep|~에도 불구하고|D:progress despite delays|지연에도 불구한 진척
+although|conj|비록 ~이지만|S:Although costs rose, sales remained strong.|비용이 올랐지만 매출은 호조였다.
+unless|conj|~하지 않는 한|S:Unless approval is granted, work cannot begin.|승인을 받지 않으면 작업을 시작할 수 없다.
+provided|conj|~라는 조건으로|S:We can proceed provided funding is secured.|자금을 확보한다는 조건으로 진행할 수 있다.
+whereas|conj|반면에|S:Sales rose, whereas profits declined.|매출은 올랐지만 이익은 감소했다.
+throughout|prep|~내내; 도처에|D:service throughout the year|연중 서비스
+within|prep|~이내에|D:delivery within five days|5일 이내 배송
+beyond|prep|~을 넘어|D:costs beyond the estimate|견적을 초과한 비용
+regarding|prep|~에 관하여|D:inquiries regarding payment|결제 관련 문의
+concerning|prep|~에 관하여|D:questions concerning delivery|배송 관련 질문
+except|prep|~을 제외하고|S:The office is open daily except Sunday.|사무실은 일요일을 제외하고 매일 운영한다.
+pertinent|adj|관련된; 적절한|D:pertinent information|관련 정보
+contrary|adj|반대의|D:contrary opinion|반대 의견
+conclusive|adj|결정적인; 확실한|D:conclusive evidence|확실한 증거
+inconclusive|adj|결론이 나지 않은|D:inconclusive results|결론이 나지 않은 결과
+@53|서비스의 뉘앙스와 평가|감정·평가·피드백 표현의 뜻과 품사를 구별한다.
+appreciation|n|감사; 가치 상승|D:customer appreciation|고객 감사
+gratitude|n|감사|D:sincere gratitude|진심 어린 감사
+recognition|n|인정; 인지도|D:employee recognition|직원 공로 인정
+criticism|n|비판|D:constructive criticism|건설적 비판
+commendation|n|칭찬; 표창|D:official commendation|공식 표창
+praise|n/v|칭찬; 칭찬하다|D:high praise|높은 평가
+reassurance|n|안심시키는 말|D:customer reassurance|고객 안심 안내
+frustration|n|답답함; 좌절|D:customer frustration|고객의 답답함
+disappointment|n|실망|D:great disappointment|큰 실망
+enthusiasm|n|열의|D:staff enthusiasm|직원 열의
+commend|v|칭찬하다|V:commend the team's effort|팀의 노력을 칭찬
+criticize|v|비판하다|V:criticize the policy|정책을 비판
+regret|v/n|유감스럽게 여기다; 유감|V:regret the inconvenience|불편에 대한 유감을 표시
+value|v/n|소중히 여기다; 가치|V:value customer feedback|고객 의견을 존중
+exhaust|v|소진하다|V:exhaust the budget|예산을 소진
+disappoint|v|실망시키다|V:disappoint our customers|고객에게 실망을 초래
+frustrate|v|좌절시키다|V:frustrate attempts to improve|개선 시도에 장애를 초래
+appreciative|adj|감사하는|H:appreciative customer|감사하는 고객
+grateful|adj|감사하는|H:grateful recipient|감사하는 수혜자
+enthusiastic|adj|열정적인|H:enthusiastic participant|열정적인 참가자
+rewarding|adj|보람 있는|D:rewarding career|보람 있는 경력
+challenging|adj|어려운; 도전적인|D:challenging assignment|어려운 업무
+exhaustive|adj|빠짐없이 철저한|D:exhaustive review|철저한 검토
+exhausted|adj|소진된; 지친|D:exhausted resources|소진된 자원
+disappointed|adj|실망한|H:disappointed customer|실망한 고객
+disappointing|adj|실망스러운|D:disappointing result|실망스러운 결과
+gratefully|adv|감사하게|V:accept assistance gratefully|도움을 감사히 수락
+regrettably|adv|유감스럽게도|V:regrettably cancel the event|유감스럽게 행사를 취소
+frustratingly|adv|답답할 정도로|A:frustratingly slow|답답할 정도로 느림
+constructive|adj|건설적인|D:constructive feedback|건설적인 피드백
+@54|여행 절차와 전시 행사|입출국·전시·행사 지문에서 구체적 정보를 연결한다.
+customs|n|세관|D:customs clearance|통관
+immigration|n|출입국 관리|D:immigration procedures|출입국 절차
+clearance|n|통관; 승인; 재고 정리|D:customs clearance|통관
+boarding|n|탑승|D:boarding pass|탑승권
+embarkation|n|탑승; 승선|D:embarkation point|탑승 지점
+disembarkation|n|하선; 하차|D:disembarkation time|하선 시간
+vessel|n|선박|D:passenger vessel|여객선
+vehicle|n|차량|D:company vehicle|회사 차량
+fleet|n|차량·선박 전체|D:delivery fleet|배송 차량군
+excursion|n|짧은 여행|D:guided excursion|안내가 있는 짧은 여행
+exhibit|n/v|전시물; 전시하다|D:interactive exhibit|체험형 전시물
+exhibitor|n|전시 참가자|H:registered exhibitor|등록 전시 참가자
+curator|n|전시 기획자; 학예사|H:museum curator|박물관 학예사
+gala|n|축하 행사|E:annual gala|연례 축하 행사
+commencement|n|시작; 졸업식|D:project commencement|사업 시작
+commence|v|시작하다|V:commence boarding|탑승을 시작
+display|v/n|전시하다; 진열|V:display the products|제품을 전시
+showcase|v/n|선보이다; 전시|V:showcase new technology|새 기술을 선보이는 전시를 진행
+navigate|v|경로를 찾다; 항해하다|V:navigate the terminal|터미널 내 경로를 탐색
+inaugurate|v|개시하다; 취임시키다|V:inaugurate the new route|새 노선을 개통
+inaugural|adj|최초의; 개막의|D:inaugural flight|첫 취항편
+multinational|adj|다국적의|D:multinational company|다국적 기업
+guided|adj|안내가 있는|D:guided tour|가이드 투어
+scenic|adj|경치 좋은|D:scenic route|경치 좋은 경로
+coastal|adj|해안의|D:coastal destination|해안 목적지
+deluxe|adj|호화로운; 고급의|L:deluxe accommodation|고급 숙박 시설
+globally|adv|전 세계적으로|A:globally recognized|전 세계적으로 인정받음
+internationally|adv|국제적으로|A:internationally renowned|국제적으로 유명함
+locally|adv|지역에서|A:locally produced|지역에서 생산됨
+abundant|adj|풍부한|D:abundant amenities|풍부한 편의 시설
+@55|시설·건강·환경의 실전어|시설 상태와 예방 조치를 구체적 연어로 이해한다.
+occupant|n|사용자; 입주자|H:building occupant|건물 사용자
+appliance|n|가전제품|C:energy-efficient appliance|에너지 효율적인 가전제품
+fixture|n|고정 설비|C:lighting fixture|조명 설비
+ceiling|n|천장; 상한|D:budget ceiling|예산 상한
+plumbing|n|배관|D:plumbing repairs|배관 수리
+landscaping|n|조경|D:landscaping service|조경 서비스
+insulation|n|단열; 절연|D:thermal insulation|단열
+thermostat|n|온도 조절기|C:programmable thermostat|설정 가능한 온도 조절기
+extinguisher|n|소화기|C:fire extinguisher|소화기
+hazard|n|위험 요소|D:workplace hazard|작업장 위험 요소
+evacuation|n|대피|D:evacuation route|대피 경로
+sanitation|n|위생 관리|D:sanitation standards|위생 기준
+hygiene|n|위생|D:food hygiene|식품 위생
+checkup|n|검진; 점검|D:annual checkup|연례 검진
+ventilate|v|환기하다|V:ventilate the room|방에 환기를 실시
+insulate|v|단열하다; 절연하다|V:insulate the building|건물에 단열 시공
+sanitize|v|소독하다|V:sanitize work surfaces|작업 표면을 소독
+obstruct|v|막다; 방해하다|V:obstruct the entrance|입구 통행에 장애를 초래
+discard|v|버리다|V:discard used packaging|사용한 포장을 폐기
+reclaim|v|회수하다; 재생하다|V:reclaim reusable materials|재사용 자재를 회수
+hygienic|adj|위생적인|D:hygienic conditions|위생적인 상태
+sanitary|adj|위생적인|D:sanitary facilities|위생 설비
+flammable|adj|가연성의|C:flammable materials|가연성 물질
+combustible|adj|타기 쉬운|C:combustible waste|가연성 폐기물
+toxic|adj|유독한|C:toxic substances|유독 물질
+nonhazardous|adj|위험하지 않은|D:nonhazardous waste|비위험 폐기물
+thermally|adv|열적으로|A:thermally insulated|단열 처리됨
+visibly|adv|눈에 띄게|A:visibly damaged|눈에 띄게 손상됨
+noticeably|adv|눈에 띄게|A:noticeably cleaner|눈에 띄게 더 깨끗함
+thoroughness|n|철저함|D:inspection thoroughness|검사의 철저함
+@56|문서·배송·구매의 종합|정산과 물류 문서의 혼동어를 비교하며 여덟째 주를 복습한다.
+fulfillment|n|이행; 주문 처리|D:order fulfillment|주문 처리
+billing|n|청구|D:billing address|청구지 주소
+consignee|n|수하인; 수령인|H:designated consignee|지정 수하인
+remittance|n|송금|D:remittance advice|송금 안내서
+voucher|n|상품권; 증빙 전표|D:travel voucher|여행 이용권
+coupon|n|쿠폰|D:discount coupon|할인 쿠폰
+rebate|n|환급금; 장려 할인|D:manufacturer rebate|제조사 환급금
+surcharge|n|추가 요금|D:fuel surcharge|유류 할증료
+markdown|n|가격 인하|D:seasonal markdown|계절 가격 인하
+markup|n|원가에 붙인 금액|D:retail markup|소매 가산 금액
+shelve|v|보류하다; 진열하다|V:shelve the proposal|제안을 보류
+discontinue|v|중단하다|V:discontinue the product line|제품군 생산을 중단
+substitute|v/n|대체하다; 대체품|V:substitute a similar item|유사 물품으로 대체
+substitution|n|대체|D:product substitution|제품 대체
+duplicate|v/adj|복제하다; 중복의|V:duplicate the document|문서를 복제
+reissue|v|재발행하다|V:reissue the invoice|청구서를 재발행
+resubmit|v|다시 제출하다|V:resubmit the application|신청서를 재제출
+reimbursable|adj|환급 가능한|D:reimbursable expenses|환급 가능한 경비
+redeem|v|교환하여 사용하다|V:redeem the voucher|이용권을 교환 사용
+redeemable|adj|교환 사용 가능한|D:redeemable coupon|사용 가능한 쿠폰
+obsolete|adj|구식의; 더 이상 쓰지 않는|C:obsolete equipment|구식 장비
+discontinued|adj|생산 중단된|D:discontinued model|생산 중단된 기종
+interchangeable|adj|서로 교환 가능한|C:interchangeable parts|서로 교환 가능한 부품
+equivalent|adj/n|동등한; 동등한 것|D:equivalent value|동등한 가치
+compliment|n/v|칭찬; 칭찬하다|D:sincere compliment|진심 어린 칭찬
+freely|adv|자유롭게; 거리낌 없이|V:share information freely|정보를 자유롭게 공유
+supplementary|adj|추가의; 보충의|D:supplementary materials|보충 자료
+collectible|adj|수금 가능한; 수집용의|D:collectible debt|수금 가능한 채무
+thereof|adv|그것의; 그에 속하는|S:The contract specifies the services and the costs thereof.|계약은 서비스와 그에 따른 비용을 명시한다.
+whereby|adv|그에 따라; ~하는 방식으로|S:We use a system whereby orders are tracked automatically.|우리는 주문을 자동 추적하는 시스템을 사용한다.
+@57|팀 협업과 커뮤니케이션|협력의 질과 문서의 명확성을 실전 문맥에서 판단한다.
+cooperation|n|협조|D:interdepartmental cooperation|부서 간 협조
+collaboration|n|협업|D:cross-team collaboration|팀 간 협업
+coordination|n|조율|D:event coordination|행사 조율
+consultation|n|상담; 협의|D:initial consultation|초기 상담
+liaison|n|연락 담당자; 협력|D:client liaison|고객 연락 담당자
+clarification|n|명확한 설명|D:written clarification|서면 설명
+ambiguity|n|모호함|D:contract ambiguity|계약의 모호함
+transparency|n|투명성|D:pricing transparency|가격 투명성
+integrity|n|진실성; 완전성|D:data integrity|데이터 완전성
+confidentiality|n|기밀 유지|D:confidentiality agreement|기밀 유지 계약
+cooperate|v|협력하다|V:cooperate with the audit team|감사팀과 협력
+consultative|adj|자문 방식의|D:consultative approach|자문 방식의 접근법
+elaborate|v/adj|자세히 설명하다; 정교한|V:elaborate on the proposal|제안에 관해 상세히 설명
+articulate|v/adj|명확히 표현하다; 말이 명확한|V:articulate the requirements|요건을 명확히 표현
+convey|v|전달하다|V:convey the message|메시지를 전달
+emphasize|v|강조하다|V:emphasize the benefits|이점을 강조
+underscore|v|강조하다|V:underscore the importance of safety|안전의 중요성을 강조
+reiterate|v|되풀이하여 강조하다|V:reiterate the deadline|마감일을 재강조
+cooperative|adj|협조적인|H:cooperative staff|협조적인 직원
+ambiguous|adj|모호한|D:ambiguous wording|모호한 표현
+unambiguous|adj|명확한|D:unambiguous instructions|명확한 지시
+concise|adj|간결한|D:concise report|간결한 보고서
+coherent|adj|일관되고 논리적인|D:coherent explanation|논리적인 설명
+articulation|n|명확한 표현|D:clear articulation|명확한 표현
+emphatic|adj|강조하는; 단호한|D:emphatic response|단호한 응답
+unreserved|adj|거리낌 없는; 전적인|D:unreserved support|전적인 지지
+concisely|adv|간결하게|V:summarize findings concisely|조사 결과를 간결하게 요약
+coherently|adv|논리적으로|V:explain the plan coherently|계획을 논리적으로 설명
+unambiguously|adv|명확하게|V:state terms unambiguously|조건을 명확하게 제시
+emphatically|adv|단호하게|V:reject the proposal emphatically|제안을 단호하게 거절
+@58|사업의 가능성과 자원|실행 가능성·자원 제한·수준 표현을 정밀하게 읽는다.
+feasibility|n|실행 가능성|D:feasibility study|타당성 조사
+viability|n|실현 가능성|D:commercial viability|상업적 실현 가능성
+constraint|n|제약|D:budget constraint|예산 제약
+scarcity|n|부족; 희소성|D:resource scarcity|자원 부족
+abundance|n|풍부함|D:abundance of options|풍부한 선택지
+sufficiency|n|충분함|D:funding sufficiency|자금의 충분함
+adequacy|n|적정성|D:staffing adequacy|인력 배치의 적정성
+necessity|n|필요성|D:business necessity|사업상 필요성
+urgency|n|긴급성|D:matter of urgency|긴급한 사안
+readiness|n|준비 상태|D:operational readiness|운영 준비 상태
+budgeted|adj|예산에 책정된|D:budgeted expenditure|예산에 책정된 지출
+utilize|v|활용하다|V:utilize available space|사용 가능한 공간을 활용
+utilization|n|활용|D:capacity utilization|생산 능력 활용
+maximize|v|최대화하다|V:maximize productivity|생산성을 극대화
+curtail|v|축소하다|V:curtail unnecessary spending|불필요한 지출을 축소
+constrain|v|제약하다|V:constrain the budget|예산을 제한
+jeopardize|v|위태롭게 하다|V:jeopardize project success|프로젝트 성공에 위험을 초래
+facilitation|n|촉진; 지원|D:trade facilitation|무역 촉진
+feasible|adj|실행 가능한|D:feasible proposal|실행 가능한 제안
+infeasible|adj|실행 불가능한|D:infeasible plan|실행 불가능한 계획
+sufficient|adj|충분한|D:sufficient funds|충분한 자금
+scarce|adj|부족한|D:scarce resources|부족한 자원
+abundantly|adv|풍부하게; 매우|A:abundantly clear|매우 명확함
+minimal|adj|최소한의|D:minimal disruption|최소한의 차질
+maximum|adj/n|최대의; 최댓값|D:maximum capacity|최대 용량
+indispensable|adj|필수적인|C:indispensable equipment|필수 장비
+essential|adj|필수적인|D:essential services|필수 서비스
+sufficiently|adv|충분히|A:sufficiently prepared|충분히 준비됨
+minimally|adv|최소한으로|A:minimally affected|최소한의 영향을 받음
+readily|adv|쉽게; 기꺼이|A:readily available|쉽게 이용 가능
+@59|재무·상태·수량의 함정|금액·비율·상태 표현을 구분하여 오답을 줄인다.
+acknowledgment|n|수령 확인; 인정|D:acknowledgment of receipt|수령 확인
+proceeds|n|판매 수익금|D:sales proceeds|판매 수익금
+earnings|n|수익; 소득|D:quarterly earnings|분기 수익
+debit|n/v|차변; 차감하다|D:debit transaction|직불 거래
+margin|n|이윤율; 여백|D:profit margin|이윤율
+ratio|n|비율|D:debt ratio|부채 비율
+proportion|n|비율; 부분|D:large proportion|큰 비중
+percentage|n|백분율|D:percentage increase|백분율 증가
+increment|n|증가분|D:salary increment|급여 인상분
+inflation|n|물가 상승|D:annual inflation|연간 물가 상승
+inflate|v|부풀리다; 올리다|V:inflate expense claims|경비 청구액을 부풀려 작성
+underpay|v|적정액보다 적게 지급하다|V:underpay temporary workers|임시 근로자에게 적정액보다 적게 지급
+overestimate|v|과대평가하다|V:overestimate demand|수요를 과대평가
+underestimate|v|과소평가하다|V:underestimate costs|비용을 과소평가
+overcharge|v|과다 청구하다|V:overcharge customers|고객에게 과다 청구
+undercharge|v|적게 청구하다|V:undercharge for shipping|배송료를 적게 청구
+miscalculate|v|계산을 잘못하다|V:miscalculate the total|합계를 잘못 계산
+misinterpret|v|잘못 해석하다|V:misinterpret the instructions|지시 사항을 잘못 해석
+net|adj|순수익의; 공제 후의|D:net income|순소득
+gross|adj|총액의; 공제 전의|D:gross revenue|총매출
+nominal|adj|명목상의; 소액의|D:nominal fee|소액 수수료
+actual|adj|실제의|D:actual cost|실제 비용
+relative|adj|상대적인|D:relative advantage|상대적 이점
+absolute|adj|절대적인|D:absolute minimum|절대 최솟값
+proportional|adj|비례하는|D:proportional allocation|비례 배분
+disproportionate|adj|비례하지 않는|D:disproportionate expense|불균형하게 큰 비용
+relatively|adv|상대적으로|A:relatively inexpensive|상대적으로 저렴함
+absolutely|adv|절대적으로; 완전히|A:absolutely essential|반드시 필요함
+disproportionately|adv|불균형하게|A:disproportionately high|불균형하게 높음
+erroneously|adv|잘못하여|A:erroneously billed|잘못 청구됨
+@60|최종 인식과 실전 표현|핵심 동사·가치·문맥 신호를 빠르게 인식하며 마무리한다.
+advantage|n|이점|D:competitive advantage|경쟁 우위
+drawback|n|단점|D:major drawback|주요 단점
+opportunity|n|기회|D:business opportunity|사업 기회
+challenge|n|과제; 어려움|D:operational challenge|운영 과제
+accomplishment|n|성과; 업적|D:major accomplishment|주요 성과
+milestone|n|중요 단계|D:project milestone|프로젝트 중요 단계
+innovation|n|혁신|D:product innovation|제품 혁신
+distinction|n|차이; 명성|D:clear distinction|명확한 차이
+exception|n|예외|D:policy exception|정책 예외
+precedent|n|선례|D:legal precedent|법적 선례
+obtain|v|얻다|V:obtain written approval|서면 승인을 획득
+mobilize|v|동원하다|V:mobilize additional resources|추가 자원을 동원
+seek|v|구하다; 추구하다|V:seek professional advice|전문가 자문을 요청
+pursue|v|추구하다|V:pursue new opportunities|새 기회를 추구
+undertake|v|착수하다; 맡다|V:undertake a project|프로젝트에 착수
+commit|v|전념하다; 약속하다|V:commit resources to the project|프로젝트에 자원 투입을 약정
+reaffirm|v|재확인하다|V:reaffirm the commitment|약속을 재확인
+ascertain|v|확인하다; 알아내다|V:ascertain the cause|원인을 확인
+notable|adj|주목할 만한|D:notable achievement|주목할 만한 성과
+remarkable|adj|놀라운; 두드러진|D:remarkable improvement|두드러진 개선
+exceptional|adj|뛰어난; 예외적인|D:exceptional service|탁월한 서비스
+unprecedented|adj|전례 없는|D:unprecedented demand|전례 없는 수요
+prospective|adj|장래의; 잠재적인|H:prospective client|잠재 거래처
+forthcoming|adj|곧 있을; 기꺼이 알리는|D:forthcoming announcement|곧 있을 발표
+instrumental|adj|중요 역할을 하는|D:instrumental role|중요한 역할
+worthwhile|adj|가치 있는|D:worthwhile investment|가치 있는 투자
+notably|adv|특히; 두드러지게|A:notably improved|두드러지게 개선됨
+remarkably|adv|놀랍게도|A:remarkably efficient|놀라울 정도로 효율적임
+exceptionally|adv|매우; 예외적으로|A:exceptionally reliable|매우 신뢰할 만함
+invariably|adv|변함없이; 항상|V:meet standards invariably|기준을 항상 충족

@@ -53,6 +53,7 @@ SPECIAL_A={
 
 def example(e,i):
     w,pos,m,code,c,k=e['word'],e['pos'],e['meaning'],e['code'],e['colloc'],e['kr']
+    if code=='S':return c,k
     if code=='A' and w in SPECIAL_A:return SPECIAL_A[w]
     if code=='A':return ('The notice says the service is '+c+'.','공지에 따르면 해당 서비스는 '+k+'.')
     if code=='V':
@@ -87,6 +88,7 @@ def load_days():
             w,pos,m,c,k=line.split('|');code,coll=c.split(':',1)
             e=dict(word=w,pos=pos,meaning=m,code=code,colloc=coll,kr=k)
             en,ko=example(e,len(days[-1]['entries'])+days[-1]['day']);e.update(en=en,ko=ko)
+            if code=='S':e['colloc']={'although':'although + clause','unless':'unless + clause','provided':'provided (that) + clause','whereas':'whereas + clause','except':'except Sunday','thereof':'the costs thereof','whereby':'a system whereby'}[w]
             days[-1]['entries'].append(e)
     seen=collections.Counter(e['word'].lower() for d in days for e in d['entries'])
     dup=[w for w,n in seen.items() if n>1]
