@@ -19,7 +19,7 @@
 10|The elevators are closed for routine _______.|maintenance;parking;direction;exhibition|maintenance|승강기 폐쇄 이유는 정기 유지보수. routine maintenance를 묶어 기억한다.
 10|Safety notices must be displayed _______ near every exit.|clearly;clear;clarity;clearance|clearly|displayed를 수식하는 부사 clearly가 필요하다.
 11|A manager must _______ the budget before any funds can be spent.|approve;accomplish;perform;conduct|approve|지출 전 필요한 조치는 예산 승인이다. approve the budget를 기억한다.
-11|The new scheduling system has improved operational _______.|efficiency;efficient;efficiently;efficiencies|efficiency|형용사 operational 뒤의 명사 자리. 여기서는 운영 효율성이라는 추상 명사 단수형을 쓴다.
+11|The new scheduling system has improved operational _______.|efficiency;efficient;efficiently;inefficient|efficiency|형용사 operational 뒤의 명사 자리. 여기서는 운영 효율성이라는 추상 명사를 쓴다.
 12|Please _______ the updated price list to your reply.|attach;distribute;announce;notify|attach|이메일 답장에 문서를 첨부하는 상황. attach A to B를 확인한다.
 12|All salary information must remain _______.|confidential;confidentially;confidentiality;confide|confidential|remain 뒤에서 상태를 나타내는 형용사 confidential. confidential information은 기밀 정보다.
 13|Strong demand helped the company _______ its annual sales target.|exceed;retain;attract;monitor|exceed|연간 매출 목표를 넘어선 것이므로 exceed. retain은 유지, monitor는 점검이다.
@@ -27,7 +27,7 @@
 14|The campaign is intended to increase brand _______ among local shoppers.|awareness;image;survey;brochure|awareness|increase brand awareness는 브랜드 인지도를 높이다. image는 형성·개선하는 대상이다.
 14|The agency proposed an _______ design unlike anything used before.|innovative;innovation;innovate;innovatively|innovative|명사 design을 수식하는 형용사. 전에 없던 설계라는 의미가 혁신적인을 뒷받침한다.
 15|Both parties must _______ the agreement before it becomes valid.|sign;protect;require;terminate|sign|계약 효력 발생 전에 양 당사자가 서명하는 상황이다.
-15|This contract is legally _______ once both parties sign it.|binding;bind;binds;bindingly|binding|be동사 뒤 형용사 binding. legally binding은 법적 구속력이 있는이다.
+15|This contract is legally _______ once both parties sign it.|binding;bind;binds;bond|binding|be동사 뒤 형용사 binding. legally binding은 법적 구속력이 있는이다.
 16|Employees are encouraged to _______ in the safety workshop.|participate;instruct;learn;demonstrate|participate|participate in + 행사. 나머지 동사는 이 자리에 in과 같은 방식으로 연결되지 않는다.
 16|The new technician is _______ of operating the equipment independently.|capable;capability;capably;capabilities|capable|be capable of + 동명사. capable은 형용사이며 capability는 명사다.
 17|The factory keeps extra components as _______ parts.|spare;raw;heavy;precise|spare|교체를 위해 보유하는 부품은 spare parts다.
@@ -110,7 +110,7 @@
 55|The cleaning process must maintain _______ conditions in the kitchen.|hygienic;hygiene;hygienically;hygienist|hygienic|명사 conditions를 수식하는 형용사. hygiene는 위생이라는 명사다.
 56|Passengers must pay a fuel _______ in addition to the basic fare.|surcharge;rebate;markdown;voucher|surcharge|기본 운임에 더해 내는 추가 요금이므로 surcharge. rebate는 환급금이다.
 56|Only approved travel expenses are _______ under the policy.|reimbursable;reimburse;reimbursement;reimbursing|reimbursable|are 뒤에서 expenses의 성격을 나타내는 형용사. 환급 가능한 경비라는 뜻이다.
-57|Please _______ the safety requirements so that every employee understands them.|articulate;cooperate;underscore;reiterate|articulate|모든 직원이 이해하도록 요건을 명확히 표현하는 articulate. underscore는 중요성을 강조하다.
+57|Please _______ the safety requirements in clear, precise language for the first time.|articulate;cooperate;underscore;reiterate|articulate|요건을 처음으로 명확히 표현하는 articulate. reiterate는 이미 한 말을 되풀이하다.
 57|The terms must be stated _______ to avoid misunderstandings.|unambiguously;unambiguous;ambiguity;ambiguous|unambiguously|stated를 수식하는 부사. 오해 방지를 위해 명확하게 써야 한다.
 58|A feasibility study will determine whether the proposed plan is _______.|viable;scarce;minimal;budgeted|viable|타당성 조사는 실행 가능한지 판단한다. scarce는 자원이 부족한 상태다.
 58|The instructions must be _______ clear for new staff to follow them.|sufficiently;sufficient;sufficiency;suffice|sufficiently|형용사 clear를 수식하는 부사 sufficiently. 충분히 명확한이다.

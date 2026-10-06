@@ -8,6 +8,7 @@ from reportlab.pdfbase.ttfonts import TTFont
 from reportlab.platypus import Paragraph, Table, TableStyle
 from reportlab.lib.styles import ParagraphStyle
 from pypdf import PdfReader
+from review_data import WEEKLY, FINAL_PASSAGES
 
 BASE=Path(__file__).resolve().parent
 OUT=Path.cwd()/'output/pdf'
@@ -51,11 +52,69 @@ SPECIAL_A={
 'normally':('The office is normally open on Saturdays.','사무실은 보통 토요일에 문을 연다.'),
 }
 
+SPECIAL_EX={
+'mean':('A higher fee could mean a change in policy.','요금 인상은 정책 변경을 의미할 수 있다.'),
+'owe':('Our records show that we owe money to a supplier.','기록에 따르면 우리는 공급업체에 지급할 돈이 있다.'),
+'fluctuate':('Prices may fluctuate within a narrow range.','가격은 좁은 범위 안에서 변동할 수 있다.'),
+'carelessly':('The device was handled carelessly during delivery.','배송 중 기기가 부주의하게 취급되었다.'),
+'illegally':('The contractor was fined for dumping waste illegally.','시공업체는 폐기물을 불법 투기해 벌금을 부과받았다.'),
+'negligently':('The equipment had been handled negligently.','장비가 부주의하게 취급되어 있었다.'),
+'conceal':('Employees must not conceal a material fact when filing a claim.','직원은 보험금을 청구할 때 중요한 사실을 숨기면 안 된다.'),
+'inflate':('Do not inflate expense claims.','경비 청구액을 부풀리지 마세요.'),
+'overcharge':('Please check that we do not overcharge customers.','고객에게 과다 청구하지 않는지 확인해 주세요.'),
+'undercharge':('An error may cause the store to undercharge for shipping.','오류로 매장이 배송료를 적게 청구할 수 있다.'),
+'underpay':('Employers must not underpay temporary workers.','고용주는 임시 근로자에게 적정액보다 적게 지급하면 안 된다.'),
+'discriminate':('It is unlawful to discriminate against job applicants.','입사 지원자를 차별하는 것은 위법이다.'),
+'frustrate':('Unexpected delays can frustrate customers.','예상치 못한 지연은 고객을 답답하게 만들 수 있다.'),
+'disappoint':('Delays may disappoint our customers.','지연은 고객을 실망시킬 수 있다.'),
+'exhaust':('Unexpected repairs could exhaust the budget.','예상치 못한 수리로 예산이 소진될 수 있다.'),
+'jeopardize':('A late delivery could jeopardize project success.','늦은 배송은 프로젝트 성공을 위태롭게 할 수 있다.'),
+'obstruct':('Do not obstruct the entrance.','입구를 막지 마세요.'),
+'disrupt':('Construction may disrupt normal operations.','공사로 정상 운영에 차질이 생길 수 있다.'),
+'default':('The company could default on payment if revenue falls.','매출이 감소하면 회사가 대금 지급 의무를 이행하지 못할 수 있다.'),
+'forfeit':('Guests who cancel after Friday forfeit the deposit.','금요일 이후 취소하는 투숙객은 보증금 반환 권리를 잃는다.'),
+'accrue':('The account will accrue interest monthly.','해당 계좌에는 매월 이자가 쌓인다.'),
+'adversely':('The delay could affect sales adversely.','지연은 매출에 부정적인 영향을 줄 수 있다.'),
+'respectively':('Rooms 201 and 202 were assigned to Lee and Park, respectively.','201호와 202호는 각각 이 씨와 박 씨에게 배정되었다.'),
+'nevertheless':('Costs rose; nevertheless, the company remained profitable.','비용이 올랐지만 회사는 여전히 수익을 냈다.'),
+'nonetheless':('The schedule is tight; nonetheless, the team can finish on time.','일정이 빠듯하지만 팀은 제시간에 끝낼 수 있다.'),
+'however':('The hotel is small; however, its meeting rooms are spacious.','호텔은 작지만 회의실은 넓다.'),
+'therefore':('Demand increased; therefore, we hired more staff.','수요가 늘어 직원들을 더 채용했다.'),
+'thus':('The new process reduces waste, thus lowering costs.','새 공정은 낭비를 줄여 비용을 낮춘다.'),
+'consequently':('The flight was canceled; consequently, the meeting was postponed.','항공편이 취소되어 그 결과 회의가 연기되었다.'),
+'moreover':('The printer is reliable; moreover, it is inexpensive to maintain.','프린터는 믿을 만하며 유지 비용도 저렴하다.'),
+'furthermore':('We offer free delivery. Furthermore, installation is included.','무료 배송을 제공하며 설치도 포함되어 있다.'),
+'meanwhile':('The technicians are repairing the system. Meanwhile, we accept phone orders.','기술자들이 시스템을 수리하고 있다. 그동안 전화 주문을 받는다.'),
+'alternatively':('You may call our office. Alternatively, send us an email.','사무실로 전화하거나 대안으로 이메일을 보내도 된다.'),
+'instead':('The model is unavailable, so we will send a replacement instead.','그 기종을 제공할 수 없어 대신 대체품을 보낼 예정이다.'),
+'indeed':('The new process is indeed more efficient.','새 공정은 실제로 더 효율적이다.'),
+'likewise':('The main office is closed. Likewise, all branches are closed today.','본사는 닫혀 있다. 마찬가지로 오늘 모든 지점도 닫혀 있다.'),
+'additionally':('The hotel provides breakfast. Additionally, guests can use the gym.','호텔은 아침 식사를 제공하며 투숙객은 체육관도 이용할 수 있다.'),
+'regardless':('The event will proceed regardless of the weather.','행사는 날씨에 상관없이 진행된다.'),
+}
+
+def predicate(k):
+    pairs=[('위치함','위치해 있다'),('힘듦','힘들다'),('같음','같다'),('높음','높다'),('느림','느리다'),('많음','많다'),('없음','없다'),('있음','있다'),('않음','않다'),('됨','되어 있다'),('임','이다'),('함','하다'),('불가','불가능하다'),('가능','가능하다')]
+    for a,z in pairs:
+        if k.endswith(a):return k[:-len(a)]+z
+    if k.endswith('담당'):return k+'한다'
+    if k.endswith('다'):return k
+    return k+' 상태이다'
+
+def a_subject(c):
+    rules=[(['entitled','eligible','insured'],'The employees','직원들'),(['liable','responsible','obligated'],'The company','회사'),(['priced'],'The product','제품'),(['located','renovated','open','closed','accessible'],'The office','사무실'),(['damaged','stored','produced'],'The goods','물품'),(['billed'],'The customer','고객'),(['equal','higher'],'The prices','가격'),(['complete','approved','scheduled','unchanged'],'The schedule','일정'),(['sound','insulated','cleaner'],'The building','건물'),(['demanding'],'The work','업무'),(['independent','profitable','viable','stable','successful','recognized','renowned'],'The company','회사'),(['clear'],'The instructions','지시 사항'),(['significant'],'The result','결과'),(['prepared'],'The team','팀'),(['noticeable'],'The change','변화'),(['covered'],'The loss','손해'),(['digital','advertised','designed'],'The product','제품'),(['contingent'],'The offer','제안'),(['friendly','complex'],'The process','절차')]
+    for keys,en,ko in rules:
+        if any(k in c for k in keys):return en,ko
+    return 'The service','서비스'
+
 def example(e,i):
     w,pos,m,code,c,k=e['word'],e['pos'],e['meaning'],e['code'],e['colloc'],e['kr']
+    if w in SPECIAL_EX:return SPECIAL_EX[w]
     if code=='S':return c,k
     if code=='A' and w in SPECIAL_A:return SPECIAL_A[w]
-    if code=='A':return ('The notice says the service is '+c+'.','공지에 따르면 해당 서비스는 '+k+'.')
+    if code=='A':
+        sub,sk=a_subject(c);be='are' if sub in ['The employees','The goods','The prices','The instructions'] else 'is'
+        return (sub+' '+be+' '+c+'.',topic(sk)+' '+predicate(k)+'.')
     if code=='V':
         templates=[('Our staff will {c} this week.','직원들은 이번 주에 {k}할 예정이다.'),('We need to {c} before Friday.','금요일 전까지 {k}해야 한다.'),('The team plans to {c} soon.','팀은 곧 {k}할 계획이다.'),('Please {c} as soon as possible.','가능한 한 빨리 {k}해 주세요.'),('The company has decided to {c}.','회사는 {k}하기로 결정했다.')]
     elif code=='L':

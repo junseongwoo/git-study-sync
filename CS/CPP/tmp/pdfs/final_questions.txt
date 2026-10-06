@@ -1,0 +1,70 @@
+1|A "contingency plan" is a plan for _______.|unexpected events;annual promotions;routine salary payments;customer testimonials|unexpected events|contingency는 만일의 사태. 예상치 못한 사건에 대비하는 계획이다.
+2|In accounting, "outstanding debt" is debt that _______.|has not yet been paid;has earned an award;is unrelated to the business;has been fully repaid|has not yet been paid|outstanding은 부채·잔액과 함께 미상환의 뜻이다.
+3|A "discrepancy" between two invoices is _______.|a difference that needs explaining;a formal endorsement;a scheduled payment;a tax exemption|a difference that needs explaining|discrepancy는 일치해야 할 수치·기록 간 불일치다.
+4|A company that is "solvent" can _______.|pay its debts;avoid all taxes;guarantee growth;stop all operations|pay its debts|solvent는 지급 능력 있는. profitable과 동일한 뜻이 아니다.
+5|"Employee retention" concerns _______.|keeping employees in the organization;hiring temporary visitors;reducing product prices;replacing office equipment|keeping employees in the organization|retention은 직원 유지. turnover는 이직과 관련된다.
+6|An "itemized invoice" shows _______.|each charge separately;only the final total;the delivery route;employee qualifications|each charge separately|itemized는 비용을 항목별로 구분한 것이다.
+7|A "waiver" of a fee means the fee _______.|does not have to be paid;has been increased;must be paid twice;is paid monthly|does not have to be paid|waive a fee는 요금을 면제하다. waiver는 면제·권리 포기다.
+8|A "scalable" system can _______.|handle a larger volume of work;operate without any maintenance;eliminate all errors;avoid written approval|handle a larger volume of work|scalable은 수요·규모 증가에 맞춰 확장 가능한이다.
+9|"Procurement" is the process of _______.|obtaining goods or services;evaluating employee emotions;canceling legal claims;reporting travel delays|obtaining goods or services|procurement는 조직의 물품·서비스 조달이다.
+10|A "nominal fee" is usually _______.|a small charge;a refundable salary;a large penalty;a market forecast|a small charge|nominal fee는 소액 요금. nominal의 명목상의 뜻과 구분한다.
+11|The proposal's commercial _______ will be assessed before funding is approved.|viability;viable;viably;revive|viability|소유격 뒤 명사 자리. commercial viability는 상업적 실현 가능성이다.
+12|All expenses must be documented _______ and supported by receipts.|accurately;accurate;accuracy;inaccurate|accurately|documented를 수식하는 부사 accurately가 필요하다.
+13|The committee gave _______ approval after every member voted in favor.|unanimous;unanimously;unanimity;unify|unanimous|명사 approval을 수식하는 형용사 unanimous. every member가 의미 근거다.
+14|The consultant demonstrated exceptional _______ in negotiating the agreement.|competence;competent;competently;compete|competence|demonstrated의 목적어인 명사. exceptional은 명사를 수식한다.
+15|The new delivery schedule is more _______ than the previous one.|reliable;reliably;reliability;rely|reliable|be동사 뒤 비교되는 성질을 나타내는 형용사 reliable이다.
+16|Customer concerns should be addressed _______ and confidentially.|discreetly;discreet;discretion;discrete|discreetly|addressed를 수식하는 부사. discrete는 별개의, discreet는 신중한이다.
+17|The factory's _______ has increased without additional workers.|productivity;productive;productively;produce|productivity|소유격 뒤 주어 명사. productivity는 생산성이다.
+18|The contractor must comply with all _______ regulations.|applicable;applicability;apply;applicably|applicable|명사 regulations를 수식하는 applicable. applicability는 명사다.
+19|The regional offices operate _______ of the headquarters.|independently;independent;independence;depend|independently|operate를 수식하는 부사. independently of는 ~와 독립적으로이다.
+20|The manager asked for written _______ of the unclear clause.|clarification;clarify;clear;clearly|clarification|written 뒤 명사 clarification. unclear clause를 명확히 설명하는 것이다.
+21|In "We will expedite the repair," "expedite" is closest to _______.|speed up;postpone;inspect;cancel|speed up|expedite는 더 신속하게 처리하다. 단순 점검 inspect와 다르다.
+22|In "The date remains tentative," "tentative" is closest to _______.|provisional;permanent;overdue;binding|provisional|tentative와 provisional은 잠정적인. 최종 확정이 아니다.
+23|In "We must rectify the billing error," "rectify" means _______.|correct;conceal;calculate;duplicate|correct|오류를 바로잡는 rectify. conceal은 은폐하다.
+24|In "The lease will expire in June," "expire" means _______.|come to an end;be negotiated;be renewed;be signed|come to an end|expire는 기간 만료로 끝나는 것이다.
+25|In "The policy is stringent," "stringent" is closest to _______.|strict;optional;flexible;temporary|strict|stringent는 엄격한. optional은 선택적인이다.
+26|In "The company will consolidate operations," "consolidate" means _______.|combine;inspect;outsource;abandon|combine|운영을 하나로 통합하는 consolidate. outsource는 외주를 맡기다.
+27|In "The results are inconclusive," "inconclusive" means _______.|not sufficient for a definite conclusion;entirely inaccurate;exceptionally profitable;legally prohibited|not sufficient for a definite conclusion|inconclusive는 결론을 확정할 수 없다는 뜻이며 틀린 결과와 다르다.
+28|In "We need an impartial assessment," "impartial" means _______.|unbiased;incomplete;confidential;preliminary|unbiased|impartial은 편견 없는 공정한. confidential은 기밀의이다.
+29|In "The service is readily available," "readily" means _______.|easily;occasionally;reluctantly;separately|easily|readily available은 쉽게 이용 가능한. 기꺼이의 뜻은 다른 문맥에서 쓴다.
+30|In "The new design is distinctive," "distinctive" means _______.|recognizably different;easy to replace;low in price;legally binding|recognizably different|distinctive는 남과 구별되는 독특한 특징을 말한다.
+31|Contractors must comply _______ the revised safety rules.|with;to;for;from|with|comply with + 규정. 전치사까지 한 덩어리로 기억한다.
+32|New employees are eligible _______ medical benefits.|for;with;by;from|for|be eligible for + 혜택. entitle 사람 to 혜택과 구별한다.
+33|The offer is contingent _______ board approval.|on;in;at;of|on|be contingent on은 ~에 달려 있다.
+34|The company is liable _______ damage caused by its negligence.|for;with;to;by|for|be liable for + 손해·책임. negligence는 과실이다.
+35|The insurer will compensate the client _______ the covered loss.|for;to;with;at|for|compensate 사람 for 손해. 대상과 사유를 구분한다.
+36|Please acknowledge _______ of this email.|receipt;invoice;quotation;remittance|receipt|acknowledge receipt of는 수령을 확인하다. 영수증 뜻이 아니다.
+37|The company will bear the shipping _______.|costs;invoices;quotes;receipts|costs|bear costs는 비용을 부담하다.
+38|The committee reached a general _______ after discussing all objections.|consensus;dispute;restriction;discrepancy|consensus|reach a consensus는 합의에 도달하다.
+39|The manufacturer offers a one-year _______ covering repairs.|warranty;premium;penalty;tender|warranty|a warranty covers repairs는 수리 보증. premium은 보험료다.
+40|Please place an _______ before the special offer expires.|order;inventory;assortment;exhibit|order|place an order는 주문하다. inventory는 재고다.
+41|The firm will _______ a feasibility study before committing funds to the project.|undertake;withhold;revoke;honor|undertake|undertake a study는 연구·조사에 착수하다.
+42|The airline waived the change fee, but the ticket remains _______ and cannot be given to another traveler.|nontransferable;nonrefundable;overbooked;inbound|nontransferable|다른 사람에게 넘길 수 없는 것은 양도 불가. 환불 여부와 구별한다.
+43|The hotel offers _______ breakfast, so guests pay nothing extra for it.|complimentary;complementary;compensatory;competitive|complimentary|추가 요금이 없으므로 complimentary. complementary는 보완적인이다.
+44|The two services are _______: one provides delivery and the other provides installation.|complementary;complimentary;conditional;confidential|complementary|서로 다른 기능으로 보완하므로 complementary다.
+45|The report predicts _______ growth of only 0.5 percent.|marginal;robust;dramatic;unprecedented|marginal|작은 증가 폭이므로 marginal. dramatic은 급격한이다.
+46|The committee decided to _______ the policy rather than adapt it from an existing model.|adopt;adapt;disclose;restrict|adopt|정책을 채택하다 adopt. adapt는 기존 것을 조정하여 쓰다.
+47|Technicians _______ the instrument to ensure that its measurements were accurate.|calibrated;assembled;transported;outsourced|calibrated|측정 정확도를 위한 기기 교정은 calibrate다.
+48|The supplier offered a refund because the goods were _______ and did not function properly.|defective;perishable;versatile;exclusive|defective|정상 작동하지 않는 결함 제품 defective goods. perishable은 상하기 쉬운이라는 특성이다.
+49|The company will _______ the contract because it no longer needs the service.|terminate;renew;extend;honor|terminate|서비스가 불필요하여 계약을 종료하는 terminate다.
+50|The agreement is _______ unless both parties sign it.|void;binding;irrevocable;enforceable|void|서명 전 효력이 없다는 조건이므로 무효인 void다.
+51|The firm took precautions to _______ the financial impact of possible delays.|mitigate;inflate;disclose;attribute|mitigate|지연의 영향을 완화하는 mitigate. inflate는 부풀리다.
+52|The store will _______ a similar model for the one that is unavailable.|substitute;reconcile;withhold;disclose|substitute|substitute A for B는 B 대신 A를 사용하다. 무엇이 대체품인지 구분한다.
+53|The board approved the proposal _______; all members voted in favor.|unanimously;conditionally;reluctantly;selectively|unanimously|all members가 만장일치 의미를 확정한다.
+54|Our ledger and the bank statement do not match, so the accountant must _______ the accounts.|reconcile;itemize;remit;accrue|reconcile|장부와 명세서의 불일치를 대사한다. itemize는 항목별로 적다.
+55|An itemized invoice must show each charge _______.|separately;separate;separation;separating|separately|show를 수식하는 부사 separately. 각 요금을 별도로 표시한다.
+56|The project was postponed because _______ funds were available to complete it.|insufficient;sufficient;abundant;surplus|insufficient|자금 부족이 연기의 원인이다. 앞뒤 인과관계를 읽는다.
+57|Customer complaints should be handled by staff who are both courteous and _______.|responsive;discretionary;negligent;restrictive|responsive|정중함과 함께 빠른 대응이 필요한 고객 응대 문맥이다.
+58|The committee found the results _______ and requested further evidence before making a decision.|inconclusive;conclusive;exhaustive;unanimous|inconclusive|추가 증거 요청은 아직 확실한 결론을 낼 수 없다는 뜻이다.
+59|The launch was delayed; _______ , preorders continued to increase.|nevertheless;consequently;therefore;thus|nevertheless|출시 지연과 주문 증가의 대조 관계. 결과 연결어와 구별한다.
+60|The premises will be renovated, _______ funding is approved.|provided;despite;regarding;within|provided|주어+동사 절에 조건을 붙이는 provided (that)이다.
+61|Employees may not disclose _______ information to unauthorized parties.|confidential;promotional;preliminary;statistical|confidential|무단 공개가 금지되는 대상은 기밀 정보다.
+62|The policy _______ every employee to two additional days of paid leave.|entitles;qualifies;permits;requires|entitles|entitle 사람 to 혜택. qualify 사람 for 자격과 구조를 구별한다.
+63|The estimate was too high because analysts had _______ customer demand.|overestimated;underestimated;overcharged;underpaid|overestimated|예상치가 실제보다 높았으므로 수요를 과대평가했다.
+64|The supplier has a strong track record and is considered highly _______.|reputable;refundable;provisional;hazardous|reputable|신뢰성 있는 과거 기록이 좋은 평판 reputable을 뒷받침한다.
+65|The original model is _______ and is no longer being manufactured.|discontinued;customized;interchangeable;renewable|discontinued|더 이상 제조되지 않는 것은 생산 중단된 discontinued다.
+66|The proposal contains several _______ clauses that can be interpreted in more than one way.|ambiguous;explicit;unambiguous;binding|ambiguous|여러 해석이 가능한 조항은 모호한 ambiguous다.
+67|The team made an _______ review, checking every document without exception.|exhaustive;exhausted;excessive;exclusive|exhaustive|빠짐없이 철저한 검토 exhaustive review. exhausted는 소진된이다.
+68|The duplicate charge was made _______ and will be removed from the invoice.|erroneously;legitimately;contractually;proportionally|erroneously|중복 청구를 삭제하므로 잘못 청구된 erroneously가 맞다.
+69|The new process reduces waste and is therefore more _______.|cost-effective;time-consuming;labor-intensive;capital-intensive|cost-effective|낭비 감소로 비용 대비 효과가 좋아지는 문맥이다.
+70|The policy aims to increase employee _______ by encouraging staff to stay with the company.|retention;turnover;remuneration;probation|retention|직원이 회사에 남도록 장려하는 것은 유지 retention. turnover는 이직률이다.

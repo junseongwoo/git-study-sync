@@ -1441,7 +1441,7 @@ accrual|n|누적; 발생|D:leave accrual|휴가 누적
 portability|n|이전 가능성; 휴대성|D:benefit portability|복리후생의 이전 가능성
 redeploy|v|재배치하다|V:redeploy staff|직원을 재배치
 discipline|v/n|징계하다; 규율|V:discipline an employee|직원을 징계
-discriminate|v|차별하다; 구별하다|V:discriminate between the options|선택 사항의 차이를 구별
+discriminate|v|차별하다; 구별하다|V:discriminate against applicants|지원자를 차별
 mediate|v|중재하다|V:mediate a workplace dispute|직장 내 분쟁을 중재
 probationary|adj|수습의|D:probationary period|수습 기간
 statutory|adj|법정의|D:statutory leave|법정 휴가
