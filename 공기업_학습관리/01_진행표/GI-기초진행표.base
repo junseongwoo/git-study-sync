@@ -1,0 +1,65 @@
+{
+  "filters": {
+    "and": [
+      "note_type == \"study-foundation\""
+    ]
+  },
+  "properties": {
+    "foundation_day": {
+      "displayName": "기초 일차"
+    },
+    "completed": {
+      "displayName": "완료"
+    },
+    "actual_minutes": {
+      "displayName": "누적 공부분"
+    },
+    "completed_date": {
+      "displayName": "실제 완료일"
+    }
+  },
+  "views": [
+    {
+      "type": "table",
+      "name": "다음 기초",
+      "order": [
+        "file.name",
+        "actual_minutes",
+        "completed"
+      ],
+      "sort": [
+        {
+          "property": "foundation_day",
+          "direction": "ASC"
+        }
+      ],
+      "filters": {
+        "and": [
+          "completed != true"
+        ]
+      },
+      "limit": 1
+    },
+    {
+      "type": "table",
+      "name": "기초14 전체",
+      "order": [
+        "foundation_day",
+        "file.name",
+        "completed",
+        "actual_minutes",
+        "completed_date"
+      ],
+      "sort": [
+        {
+          "property": "foundation_day",
+          "direction": "ASC"
+        }
+      ],
+      "summaries": {
+        "completed": "Checked",
+        "actual_minutes": "Sum"
+      }
+    }
+  ]
+}

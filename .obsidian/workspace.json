@@ -20,8 +20,49 @@
               "icon": "lucide-file",
               "title": "08.다중 카메라 이미지 검사 스레드 설계와 멈춤 진단"
             }
+          },
+          {
+            "id": "ec9df096823558d9",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "공기업_학습관리/03_교재/장별/GI-C02-01 언어 실행·자료형·정수 연산·비트 연산.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "GI-C02-01 언어 실행·자료형·정수 연산·비트 연산"
+            }
+          },
+          {
+            "id": "bb27902aa9438eb4",
+            "type": "leaf",
+            "state": {
+              "type": "release-notes",
+              "state": {
+                "currentVersion": "1.14.4"
+              },
+              "icon": "lucide-book-up",
+              "title": "릴리즈 노트 1.14.4"
+            }
+          },
+          {
+            "id": "38fac76ac3ff8cfe",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "공기업_학습관리/02_일별공부/GI-D005 S005 전산 혼합.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "GI-D005 S005 전산 혼합"
+            }
           }
-        ]
+        ],
+        "currentTab": 3
       }
     ],
     "direction": "vertical"
@@ -195,9 +236,42 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "3d5939434b10fcf7",
+  "active": "38fac76ac3ff8cfe",
   "lastOpenFiles": [
-    "CS/OS 공부.md",
+    "공기업_학습관리/02_일별공부/GI-D003 S003 NCS 의사소통.md",
+    "공기업_학습관리/02_일별공부/GI-D002 S002 프로그래밍.md",
+    "공기업_학습관리/02_일별공부/GI-D001 S001 프로그래밍.md",
+    "공기업_학습관리/01_진행표/GI-기초14일 시작표.md",
+    "공기업_학습관리/00_관리/GI-시작하기.md",
+    "conflict-files-obsidian-git.md",
+    "공기업_학습관리/99_출처/GI-최종검증.json",
+    "공기업_학습관리/99_출처/GI-보강내역.md",
+    "공기업_학습관리/99_출처/GI-기초보강 검산.json",
+    "공기업_학습관리/07_기초14일/GI-기초11 해시와 합계·평균.md",
+    "공기업_학습관리/07_기초14일/GI-기초14 2주 재풀이와 다음 단계.md",
+    "공기업_학습관리/07_기초14일/GI-기초13 SELECT·NULL과 자료해석.md",
+    "공기업_학습관리/07_기초14일/GI-기초12 객체·참조와 조건 추론.md",
+    "공기업_학습관리/07_기초14일/GI-기초10 큐와 지문 요약.md",
+    "공기업_학습관리/07_기초14일/GI-기초08 배열·연결리스트와 표 읽기.md",
+    "공기업_학습관리/07_기초14일/GI-기초09 스택과 증감률 재풀이.md",
+    "공기업_학습관리/07_기초14일/GI-기초07 1주 복습과 약점 확인.md",
+    "공기업_학습관리/07_기초14일/GI-기초05 함수와 증감률.md",
+    "공기업_학습관리/07_기초14일/GI-기초06 배열 순회와 보기의 근거.md",
+    "공기업_학습관리/07_기초14일/GI-기초01 반복문과 백분율.md",
+    "공기업_학습관리/07_기초14일/GI-기초04 배열 인덱스와 비율 계산.md",
+    "공기업_학습관리/07_기초14일/GI-기초03 정수 나눗셈과 지문 조건.md",
+    "공기업_학습관리/07_기초14일/GI-기초02 시간복잡도와 비율의 분모.md",
+    "공기업_학습관리/07_기초14일",
+    "공기업_학습관리/99_출처/GI-사용개선 검증.json",
+    "공기업_학습관리/99_출처/GI-使用改善 검증.json",
+    "공기업_학습관리/01_진행표/GI-주별 찾아보기.md",
+    "공기업_학습관리/03_교재/GI-핵심과목 지도.md",
+    "공기업_학습관리/00_관리/GI-과제유형별 공부법.md",
+    "공기업_학습관리/00_관리/GI-질문과 오답 기록법.md",
+    "공기업_학습관리/00_관리/GI-학습규칙과 출처.md",
+    "공기업_학습관리/01_진행표/GI-기초진행표.base",
+    "공기업_학습관리/01_진행표/GI-추가질문표.base",
+    "공기업_학습관리/01_진행표/GI-진행표.base",
     "CV/vision-study/PDF/01_광학_영상_시스템_기초.pdf",
     "CS/CPP/tmp/pdfs/folder-study/final_verify.py",
     "CS/CPP/tmp/pdfs/folder-study/coding-sheet-4.png",
@@ -209,39 +283,6 @@
     "CS/CPP/tmp/pdfs/folder-study/coding/page-12.png",
     "CS/CPP/tmp/pdfs/folder-study/coding/page-11.png",
     "CS/CPP/tmp/pdfs/folder-study/coding/page-10.png",
-    "CS/CPP/tmp/pdfs/folder-study/coding/page-09.png",
-    "CS/CPP/tmp/pdfs/folder-study/coding",
-    "CS/CPP/tmp/pdfs/folder-study/cv",
-    "CS/CPP/tmp/pdfs/folder-study/cpp",
-    "CS/CPP/tmp/pdfs/folder-study/render_guides.py",
-    "CS/CPP/tmp/pdfs/folder-study/qa_guides.py",
-    "코테준비/output/pdf/코테_이직준비_추가학습_6일차이후.pdf",
-    "코테준비/output/pdf",
-    "코테준비/output",
-    "Project/uLED/분석_Docs/12.align1-mark3-cam2-stage-t-uvw-explanation.md",
-    "conflict-files-obsidian-git.md",
-    "CV/vision-study/projects/project-05-calibration.md",
-    "CV/vision-study/projects/project-04-alignment.md",
-    "CV/vision-study/projects/project-03-blob.md",
-    "CV/vision-study/projects/project-02-edge.md",
-    "CV/vision-study/projects/project-01-basic-image.md",
-    "CV/vision-study/final-project/mini-vision-inspection-system.md",
-    "CS/CPP/00.메모리·객체 수명·RAII.md",
-    "CS/CPP/08.다중 카메라 이미지 검사 스레드 설계와 멈춤 진단.md",
-    "CS/CPP/07.비동기 작업 취소와 UI 이미지 처리.md",
-    "CS/CPP/05.파일·소켓·비동기 IO와 Buffer.md",
-    "CS/CPP/06.C++ 객체지향 설계와 테스트 가능한 시스템.md",
-    "CS/CPP/04.C++ 메모리와 객체 수명 보완.md",
-    "CS/CPP/03.Mutex와 Condition Variable.md",
-    "CS/CPP/01.프로세스와 스레드.md",
-    "CS/CPP/02.동시성과 병렬성.md",
-    "Project/uLED/분석_Docs/11.AutoAlign_설명.md",
-    "Project/uLED/분석_Docs/11.AutoAlign_기능_설명.md",
-    "CV/vision-study/08-vision-align-glass.md",
-    "CV/vision-study/projects/project-06-inspection-engine.md",
-    "CV/vision-study/20-advanced-deep-learning-vision.md",
-    "CV/vision-study/18-interview-troubleshooting.md",
-    "CV/vision-study/17b-modern-cpp-opencv.md",
-    "CV/vision-study/17a-recipe-software-architecture.md"
+    "CS/CPP/tmp/pdfs/folder-study/coding/page-09.png"
   ]
 }

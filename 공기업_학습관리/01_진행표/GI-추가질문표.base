@@ -1,0 +1,118 @@
+{
+  "filters": {
+    "and": [
+      "note_type == \"study-question\"",
+      "plan_id == \"public-it-216\"",
+      "!file.name.endsWith(\"템플릿\")",
+      "!file.inFolder(\"공기업_학습관리/06_템플릿\")"
+    ]
+  },
+  "formulas": {
+    "priority_rank": "if(priority == \"S\", 0, if(priority == \"A\", 1, if(priority == \"B\", 2, 3)))"
+  },
+  "properties": {
+    "understood": {
+      "displayName": "답 없이 설명 가능"
+    },
+    "priority": {
+      "displayName": "우선순위"
+    },
+    "review_date": {
+      "displayName": "다시 볼 날"
+    },
+    "related_day": {
+      "displayName": "공부일"
+    },
+    "related_chapter": {
+      "displayName": "단원"
+    }
+  },
+  "views": [
+    {
+      "type": "table",
+      "name": "오늘 질문5",
+      "order": [
+        "file.name",
+        "priority",
+        "understood"
+      ],
+      "sort": [
+        {
+          "property": "formula.priority_rank",
+          "direction": "ASC"
+        }
+      ],
+      "filters": {
+        "and": [
+          "understood != true"
+        ]
+      },
+      "limit": 5
+    },
+    {
+      "type": "table",
+      "name": "답 없이 설명할 질문",
+      "order": [
+        "file.name",
+        "priority",
+        "related_chapter",
+        "review_date"
+      ],
+      "sort": [
+        {
+          "property": "formula.priority_rank",
+          "direction": "ASC"
+        }
+      ],
+      "filters": {
+        "and": [
+          "understood != true"
+        ]
+      }
+    },
+    {
+      "type": "table",
+      "name": "추가질문 전체",
+      "order": [
+        "file.name",
+        "understood",
+        "priority",
+        "related_day",
+        "related_chapter",
+        "review_date"
+      ],
+      "sort": [
+        {
+          "property": "formula.priority_rank",
+          "direction": "ASC"
+        }
+      ]
+    },
+    {
+      "type": "table",
+      "name": "질문 복습기한",
+      "order": [
+        "file.name",
+        "review_date",
+        "understood",
+        "priority"
+      ],
+      "sort": [
+        {
+          "property": "review_date",
+          "direction": "ASC"
+        },
+        {
+          "property": "formula.priority_rank",
+          "direction": "ASC"
+        }
+      ],
+      "filters": {
+        "and": [
+          "review_date != null",
+          "date(review_date) <= today()"
+        ]
+      }
+    }
+  ]
+}

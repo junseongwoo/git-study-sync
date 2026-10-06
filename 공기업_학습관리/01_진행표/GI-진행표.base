@@ -1,0 +1,200 @@
+{
+  "filters": {
+    "and": [
+      "note_type == \"study-day\"",
+      "plan_id == \"public-it-216\""
+    ]
+  },
+  "formulas": {
+    "study_link": "file.asLink(study_title)",
+    "review_stage": "if(!review_1, \"1일\", if(!review_7, \"7일\", if(!review_21, \"21일\", \"복습 완료\")))",
+    "next_review": "if(completed && completed_date, if(!review_1, date(completed_date) + \"1d\", if(!review_7, date(completed_date) + \"7d\", if(!review_21, date(completed_date) + \"21d\", null))), null)"
+  },
+  "properties": {
+    "formula.study_link": {
+      "displayName": "공부 내용"
+    },
+    "plan_date": {
+      "displayName": "예정일"
+    },
+    "completed": {
+      "displayName": "완료"
+    },
+    "actual_minutes": {
+      "displayName": "누적 공부분"
+    },
+    "completed_date": {
+      "displayName": "실제 완료일"
+    },
+    "formula.next_review": {
+      "displayName": "복습할 날"
+    },
+    "formula.review_stage": {
+      "displayName": "복습 차례"
+    },
+    "review_1": {
+      "displayName": "1일 복습"
+    },
+    "review_7": {
+      "displayName": "7일 복습"
+    },
+    "review_21": {
+      "displayName": "21일 복습"
+    }
+  },
+  "summaries": {
+    "courseProgress": "values.filter(value == true).length + \"/\" + values.length + \" (\" + (values.map(if(value, 1, 0)).mean() * 100).round(1) + \"%)\""
+  },
+  "views": [
+    {
+      "type": "table",
+      "name": "다음 공부",
+      "order": [
+        "formula.study_link",
+        "actual_minutes",
+        "completed"
+      ],
+      "sort": [
+        {
+          "property": "day_index",
+          "direction": "ASC"
+        }
+      ],
+      "filters": {
+        "and": [
+          "completed != true"
+        ]
+      },
+      "limit": 1
+    },
+    {
+      "type": "table",
+      "name": "이번주",
+      "order": [
+        "plan_date",
+        "formula.study_link",
+        "completed",
+        "actual_minutes"
+      ],
+      "sort": [
+        {
+          "property": "day_index",
+          "direction": "ASC"
+        }
+      ],
+      "filters": {
+        "and": [
+          "date(plan_date) >= today()",
+          "date(plan_date) < today() + \"7d\""
+        ]
+      }
+    },
+    {
+      "type": "table",
+      "name": "전체216",
+      "order": [
+        "formula.study_link",
+        "plan_date",
+        "completed",
+        "actual_minutes",
+        "completed_date"
+      ],
+      "sort": [
+        {
+          "property": "day_index",
+          "direction": "ASC"
+        }
+      ],
+      "summaries": {
+        "completed": "courseProgress",
+        "actual_minutes": "Sum"
+      }
+    },
+    {
+      "type": "table",
+      "name": "기록 확인",
+      "order": [
+        "formula.study_link",
+        "actual_minutes",
+        "completed_date"
+      ],
+      "sort": [
+        {
+          "property": "day_index",
+          "direction": "ASC"
+        }
+      ],
+      "filters": {
+        "and": [
+          "completed == true",
+          "!completed_date || actual_minutes <= 0"
+        ]
+      }
+    },
+    {
+      "type": "table",
+      "name": "복습3",
+      "order": [
+        "formula.next_review",
+        "formula.study_link",
+        "formula.review_stage"
+      ],
+      "sort": [
+        {
+          "property": "formula.next_review",
+          "direction": "ASC"
+        }
+      ],
+      "filters": {
+        "and": [
+          "formula.next_review != null",
+          "formula.next_review <= today()"
+        ]
+      },
+      "limit": 3
+    },
+    {
+      "type": "table",
+      "name": "복습 전체",
+      "order": [
+        "formula.next_review",
+        "formula.study_link",
+        "review_1",
+        "review_7",
+        "review_21"
+      ],
+      "sort": [
+        {
+          "property": "formula.next_review",
+          "direction": "ASC"
+        }
+      ],
+      "filters": {
+        "and": [
+          "formula.next_review != null",
+          "formula.next_review <= today()"
+        ]
+      }
+    },
+    {
+      "type": "table",
+      "name": "완료",
+      "order": [
+        "formula.study_link",
+        "completed_date",
+        "actual_minutes"
+      ],
+      "sort": [
+        {
+          "property": "day_index",
+          "direction": "ASC"
+        }
+      ],
+      "filters": {
+        "and": [
+          "completed == true"
+        ]
+      }
+    }
+  ]
+}

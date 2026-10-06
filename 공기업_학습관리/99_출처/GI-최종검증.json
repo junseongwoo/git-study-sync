@@ -1,0 +1,15 @@
+{
+  "status": "passed",
+  "main_days": 216,
+  "foundation_lessons": 14,
+  "minutes_per_lesson": 120,
+  "original_daily_records_preserved": 216,
+  "wiki_links_checked": 4276,
+  "properties_parsed": 324,
+  "native_bases_parsed": 3,
+  "review_logic_cases": 6,
+  "foundation_independent_answer_checks": 17,
+  "native_ui_checked": false,
+  "native_ui_limitation": "Obsidian screen connection timeout",
+  "issues": []
+}
