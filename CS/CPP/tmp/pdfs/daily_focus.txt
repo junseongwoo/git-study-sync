@@ -1,0 +1,20 @@
+1|The company will _______ two technicians to fill the vacant positions.|hire;retire;attend;assign|hire|빈자리에 기술자를 채용하므로 hire가 맞다. retire는 은퇴하다, assign은 업무를 배정하다.
+1|Each employee is _______ for keeping the work area clean.|responsible;responsibility;responsibly;respond|responsible|be동사 뒤에서 주어의 상태를 설명하는 형용사. be responsible for는 ~을 담당하다.
+2|The meeting has been _______ until Friday because the speaker is ill.|postponed;canceled;confirmed;reserved|postponed|until Friday는 새 날짜까지 미뤘다는 뜻. canceled라면 회의 자체를 취소한 것이다.
+2|Please respond _______ so that we can finalize the schedule today.|promptly;prompt;promptness;prompting|promptly|동사 respond를 수식하는 부사 promptly가 필요하다.
+3|Keep the _______ as proof that you paid for the item.|receipt;invoice;address;quantity|receipt|결제 완료 증빙은 영수증 receipt. invoice는 결제를 요청하는 청구서다.
+3|The parcel must be handled _______ because it contains glassware.|carefully;careful;care;careless|carefully|handled를 수식하는 부사 carefully. 깨지기 쉬운 물품이라는 의미도 확인한다.
+4|The _______ does not include the cost of checked baggage.|fare;gate;route;passport|fare|수하물 비용이 포함되는 대상은 항공 운임 fare다.
+4|The airline apologized for the _______ departure.|delayed;delay;delaying;delays|delayed|출발이 지연된 것이므로 수동 의미의 delayed가 departure를 수식한다.
+5|Guests receive a _______ breakfast at no extra charge.|complimentary;private;spacious;delicious|complimentary|at no extra charge가 무료 제공이라는 뜻을 뒷받침한다.
+5|The hotel is _______ booked for the weekend, so no rooms remain.|fully;full;fullness;fill|fully|booked를 수식하는 부사 fully. fully booked는 예약이 꽉 찬 상태다.
+6|The store offers a full _______ if an item cannot be repaired.|refund;brand;price;warranty|refund|수리가 불가능할 때 돌려주는 금액은 refund. full refund는 전액 환불이다.
+6|Please respond _______ to the customer's complaint.|politely;polite;politeness;policy|politely|응대 방식은 동사 respond를 수식하는 부사로 나타낸다.
+7|Applicants must _______ their resumes before Monday.|submit;retire;promote;evaluate|submit|지원자가 이력서를 제출하는 상황. submit a resume라는 연어를 기억한다.
+7|Only _______ candidates will be invited to an interview.|qualified;qualification;qualify;qualifyingly|qualified|명사 candidates를 수식하는 qualified. qualification은 자격이라는 명사다.
+8|The new printer is _______ with our existing software.|compatible;portable;digital;automatic|compatible|be compatible with는 ~와 호환되다. 나머지 형용사는 with와 이 의미로 연결되지 않는다.
+8|The system saves all changes _______.|automatically;automatic;automation;automate|automatically|동사 saves를 수식하는 부사. automatic update에서는 형용사가 된다.
+9|Please settle the _______ balance before the end of the month.|outstanding;competitive;portable;domestic|outstanding|settle a balance는 잔액을 결제하다. outstanding은 여기서 미지급의 뜻이다.
+9|The firm reviews its budget _______, usually in January.|annually;annual;anniversary;annuity|annually|reviews를 수식하는 부사 annually. usually in January가 매년이라는 문맥을 준다.
+10|The elevators are closed for routine _______.|maintenance;parking;direction;exhibition|maintenance|승강기 폐쇄 이유는 정기 유지보수. routine maintenance를 묶어 기억한다.
+10|Safety notices must be displayed _______ near every exit.|clearly;clear;clarity;clearance|clearly|displayed를 수식하는 부사 clearly가 필요하다.

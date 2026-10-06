@@ -37,7 +37,7 @@ appointment|n|예약; 약속|D:scheduled appointment|예정된 약속
 deadline|n|마감일|D:application deadline|지원 마감일
 conference|n|학회; 대규모 회의|E:business conference|비즈니스 회의
 presentation|n|발표|E:product presentation|제품 발표
-minute|n|분; 회의록(복수)|D:meeting minutes|회의록
+minutes|n|회의록(복수형)|D:meeting minutes|회의록
 session|n|시간; 회의 회차|E:training session|교육 시간
 participant|n|참가자|H:registered participant|등록한 참가자
 arrange|v|준비하다; 주선하다|V:arrange a meeting|회의를 준비
@@ -200,7 +200,7 @@ recruit|v|채용하다; 모집하다|V:recruit qualified workers|유자격 근�
 select|v|선택하다|V:select a candidate|후보자를 선정
 submit|v|제출하다|V:submit an application|지원서를 제출
 evaluate|v|평가하다|V:evaluate candidates|후보자를 평가
-promote|v|승진시키다; 홍보하다|V:promote qualified employees|유자격 직원을 승진시키는 결정
+promote|v|승진시키다; 홍보하다|V:promote qualified employees|유자격 직원의 승진을 추진
 retire|v|은퇴하다|V:retire from the company|회사에서 은퇴
 employment|n|고용|D:employment contract|고용 계약
 training|n|교육; 훈련|D:on-the-job training|직무 교육
@@ -274,7 +274,7 @@ outstanding|adj|미지급의; 뛰어난|D:outstanding balance|미결제 잔액
 low|adj|낮은|D:low interest rate|낮은 이자율
 high|adj|높은|D:high operating costs|높은 운영 비용
 annually|adv|매년|V:review budgets annually|예산을 매년 검토
-monthly|adv|매월|V:pay rent monthly|임대료를 매월 납부
+quarterly|adv/adj|분기마다; 분기의|V:review accounts quarterly|계좌를 분기마다 검토
 inexpensively|adv|저렴하게|V:produce goods inexpensively|상품을 저렴하게 생산
 separately|adv|별도로|V:list fees separately|수수료를 별도로 표시
 @10|시설·행사·기본 안내|일상 공지의 핵심 표현을 익히고 감각 회복을 마친다.

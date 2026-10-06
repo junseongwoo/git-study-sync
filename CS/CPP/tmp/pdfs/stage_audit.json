@@ -1,0 +1,3072 @@
+[
+  {
+    "day": 1,
+    "title": "회사와 직장",
+    "goal": "익숙한 회사 어휘를 뜻과 연어로 다시 연결한다.",
+    "entries": [
+      {
+        "word": "employee",
+        "pos": "n",
+        "meaning": "직원",
+        "code": "H",
+        "colloc": "new employee",
+        "kr": "신입 직원",
+        "en": "Please contact the new employee for details.",
+        "ko": "자세한 내용은 신입 직원에게 문의해 주세요."
+      },
+      {
+        "word": "employer",
+        "pos": "n",
+        "meaning": "고용주",
+        "code": "D",
+        "colloc": "current employer",
+        "kr": "현재 고용주",
+        "en": "Please review the information about the current employer.",
+        "ko": "현재 고용주에 관한 정보를 검토해 주세요."
+      },
+      {
+        "word": "staff",
+        "pos": "n",
+        "meaning": "직원 전체",
+        "code": "R",
+        "colloc": "additional staff",
+        "kr": "추가 직원",
+        "en": "We need additional staff for the new project.",
+        "ko": "새 프로젝트에는 추가 직원이 필요하다."
+      },
+      {
+        "word": "department",
+        "pos": "n",
+        "meaning": "부서",
+        "code": "L",
+        "colloc": "sales department",
+        "kr": "영업 부서",
+        "en": "The meeting will be held at the sales department.",
+        "ko": "회의는 영업 부서에서 열린다."
+      },
+      {
+        "word": "manager",
+        "pos": "n",
+        "meaning": "관리자",
+        "code": "H",
+        "colloc": "experienced manager",
+        "kr": "경험 많은 관리자",
+        "en": "Please contact the experienced manager for details.",
+        "ko": "자세한 내용은 경험 많은 관리자에게 문의해 주세요."
+      },
+      {
+        "word": "supervisor",
+        "pos": "n",
+        "meaning": "감독자; 상사",
+        "code": "H",
+        "colloc": "production supervisor",
+        "kr": "생산 감독자",
+        "en": "The manager spoke with the production supervisor.",
+        "ko": "관리자는 생산 감독자와 이야기를 나눴다."
+      },
+      {
+        "word": "colleague",
+        "pos": "n",
+        "meaning": "동료",
+        "code": "H",
+        "colloc": "new colleague",
+        "kr": "새 동료",
+        "en": "Please contact the new colleague for details.",
+        "ko": "자세한 내용은 새 동료에게 문의해 주세요."
+      },
+      {
+        "word": "branch",
+        "pos": "n",
+        "meaning": "지점",
+        "code": "L",
+        "colloc": "regional branch",
+        "kr": "지역 지점",
+        "en": "Please meet us at the regional branch.",
+        "ko": "지역 지점에서 만나 주세요."
+      },
+      {
+        "word": "headquarters",
+        "pos": "n",
+        "meaning": "본사",
+        "code": "L",
+        "colloc": "company headquarters",
+        "kr": "회사 본사",
+        "en": "Visitors should go to the company headquarters.",
+        "ko": "방문객은 회사 본사로 가야 한다."
+      },
+      {
+        "word": "position",
+        "pos": "n",
+        "meaning": "직위; 일자리",
+        "code": "D",
+        "colloc": "available position",
+        "kr": "채용 가능한 자리",
+        "en": "The email includes details about the available position.",
+        "ko": "이메일에는 채용 가능한 자리에 대한 자세한 정보가 있다."
+      },
+      {
+        "word": "hire",
+        "pos": "v",
+        "meaning": "고용하다",
+        "code": "V",
+        "colloc": "hire more staff",
+        "kr": "직원을 추가로 채용",
+        "en": "We need to hire more staff before Friday.",
+        "ko": "금요일 전까지 직원을 추가로 채용해야 한다."
+      },
+      {
+        "word": "train",
+        "pos": "v",
+        "meaning": "교육하다",
+        "code": "V",
+        "colloc": "train new employees",
+        "kr": "신입 직원을 교육",
+        "en": "The team plans to train new employees soon.",
+        "ko": "팀은 곧 신입 직원을 교육할 계획이다."
+      },
+      {
+        "word": "manage",
+        "pos": "v",
+        "meaning": "관리하다",
+        "code": "V",
+        "colloc": "manage the project",
+        "kr": "프로젝트를 관리",
+        "en": "Please manage the project as soon as possible.",
+        "ko": "가능한 한 빨리 프로젝트를 관리해 주세요."
+      },
+      {
+        "word": "assign",
+        "pos": "v",
+        "meaning": "배정하다",
+        "code": "V",
+        "colloc": "assign specific tasks",
+        "kr": "구체적인 업무를 배정",
+        "en": "The company has decided to assign specific tasks.",
+        "ko": "회사는 구체적인 업무를 배정하기로 결정했다."
+      },
+      {
+        "word": "attend",
+        "pos": "v",
+        "meaning": "참석하다",
+        "code": "V",
+        "colloc": "attend a staff meeting",
+        "kr": "직원 회의에 참석",
+        "en": "Our staff will attend a staff meeting this week.",
+        "ko": "직원들은 이번 주에 직원 회의에 참석할 예정이다."
+      },
+      {
+        "word": "report",
+        "pos": "v/n",
+        "meaning": "보고하다; 보고서",
+        "code": "V",
+        "colloc": "report a problem",
+        "kr": "문제를 보고",
+        "en": "We need to report a problem before Friday.",
+        "ko": "금요일 전까지 문제를 보고해야 한다."
+      },
+      {
+        "word": "office",
+        "pos": "n",
+        "meaning": "사무실",
+        "code": "L",
+        "colloc": "main office",
+        "kr": "주 사무실",
+        "en": "Please meet us at the main office.",
+        "ko": "주 사무실에서 만나 주세요."
+      },
+      {
+        "word": "task",
+        "pos": "n",
+        "meaning": "업무; 과제",
+        "code": "D",
+        "colloc": "daily task",
+        "kr": "일일 업무",
+        "en": "Contact our office for details about the daily task.",
+        "ko": "일일 업무에 관한 자세한 사항은 사무실로 문의해 주세요."
+      },
+      {
+        "word": "team",
+        "pos": "n",
+        "meaning": "팀",
+        "code": "H",
+        "colloc": "project team",
+        "kr": "프로젝트팀",
+        "en": "Please contact the project team for details.",
+        "ko": "자세한 내용은 프로젝트팀에게 문의해 주세요."
+      },
+      {
+        "word": "workplace",
+        "pos": "n",
+        "meaning": "직장; 작업장",
+        "code": "D",
+        "colloc": "safe workplace",
+        "kr": "안전한 작업장",
+        "en": "The email includes details about the safe workplace.",
+        "ko": "이메일에는 안전한 작업장에 대한 자세한 정보가 있다."
+      },
+      {
+        "word": "full-time",
+        "pos": "adj",
+        "meaning": "상근의",
+        "code": "D",
+        "colloc": "full-time position",
+        "kr": "상근직",
+        "en": "We discussed the full-time position at the meeting.",
+        "ko": "회의에서 상근직에 대해 논의했다."
+      },
+      {
+        "word": "part-time",
+        "pos": "adj",
+        "meaning": "시간제의",
+        "code": "D",
+        "colloc": "part-time position",
+        "kr": "시간제 일자리",
+        "en": "Please review the information about the part-time position.",
+        "ko": "시간제 일자리에 관한 정보를 검토해 주세요."
+      },
+      {
+        "word": "local",
+        "pos": "adj",
+        "meaning": "현지의; 지역의",
+        "code": "L",
+        "colloc": "local office",
+        "kr": "지역 사무실",
+        "en": "Please meet us at the local office.",
+        "ko": "지역 사무실에서 만나 주세요."
+      },
+      {
+        "word": "regional",
+        "pos": "adj",
+        "meaning": "지역의",
+        "code": "D",
+        "colloc": "regional sales",
+        "kr": "지역 매출",
+        "en": "The report contains a section on the regional sales.",
+        "ko": "보고서에는 지역 매출에 관한 부분이 있다."
+      },
+      {
+        "word": "annual",
+        "pos": "adj",
+        "meaning": "연례의; 연간의",
+        "code": "D",
+        "colloc": "annual meeting",
+        "kr": "연례 회의",
+        "en": "The email includes details about the annual meeting.",
+        "ko": "이메일에는 연례 회의에 대한 자세한 정보가 있다."
+      },
+      {
+        "word": "monthly",
+        "pos": "adj",
+        "meaning": "매월의",
+        "code": "D",
+        "colloc": "monthly report",
+        "kr": "월간 보고서",
+        "en": "We discussed the monthly report at the meeting.",
+        "ko": "회의에서 월간 보고서에 대해 논의했다."
+      },
+      {
+        "word": "regularly",
+        "pos": "adv",
+        "meaning": "정기적으로",
+        "code": "V",
+        "colloc": "check equipment regularly",
+        "kr": "장비를 정기적으로 점검",
+        "en": "The team plans to check equipment regularly soon.",
+        "ko": "팀은 곧 장비를 정기적으로 점검할 계획이다."
+      },
+      {
+        "word": "currently",
+        "pos": "adv",
+        "meaning": "현재",
+        "code": "A",
+        "colloc": "currently available",
+        "kr": "현재 이용 가능",
+        "en": "The service is currently available.",
+        "ko": "현재 서비스를 이용할 수 있다."
+      },
+      {
+        "word": "directly",
+        "pos": "adv",
+        "meaning": "직접; 곧바로",
+        "code": "V",
+        "colloc": "contact the manager directly",
+        "kr": "관리자에게 직접 연락",
+        "en": "The company has decided to contact the manager directly.",
+        "ko": "회사는 관리자에게 직접 연락하기로 결정했다."
+      },
+      {
+        "word": "responsible",
+        "pos": "adj",
+        "meaning": "담당하는; 책임이 있는",
+        "code": "A",
+        "colloc": "responsible for scheduling",
+        "kr": "일정 조정을 담당",
+        "en": "The assistant is responsible for scheduling.",
+        "ko": "일정 조정은 비서가 담당한다."
+      }
+    ]
+  },
+  {
+    "day": 2,
+    "title": "회의와 일정",
+    "goal": "예약과 일정 변경에 쓰이는 동사를 빠르게 알아본다.",
+    "entries": [
+      {
+        "word": "meeting",
+        "pos": "n",
+        "meaning": "회의",
+        "code": "E",
+        "colloc": "weekly meeting",
+        "kr": "주간 회의",
+        "en": "The notice confirms the date of the weekly meeting.",
+        "ko": "공지에서 주간 회의의 날짜를 확인할 수 있다."
+      },
+      {
+        "word": "agenda",
+        "pos": "n",
+        "meaning": "의제; 안건",
+        "code": "D",
+        "colloc": "meeting agenda",
+        "kr": "회의 안건",
+        "en": "Contact our office for details about the meeting agenda.",
+        "ko": "회의 안건에 관한 자세한 사항은 사무실로 문의해 주세요."
+      },
+      {
+        "word": "schedule",
+        "pos": "n/v",
+        "meaning": "일정; 일정을 잡다",
+        "code": "D",
+        "colloc": "work schedule",
+        "kr": "업무 일정",
+        "en": "The report contains a section on the work schedule.",
+        "ko": "보고서에는 업무 일정에 관한 부분이 있다."
+      },
+      {
+        "word": "appointment",
+        "pos": "n",
+        "meaning": "예약; 약속",
+        "code": "D",
+        "colloc": "scheduled appointment",
+        "kr": "예정된 약속",
+        "en": "The email includes details about the scheduled appointment.",
+        "ko": "이메일에는 예정된 약속에 대한 자세한 정보가 있다."
+      },
+      {
+        "word": "deadline",
+        "pos": "n",
+        "meaning": "마감일",
+        "code": "D",
+        "colloc": "application deadline",
+        "kr": "지원 마감일",
+        "en": "We discussed the application deadline at the meeting.",
+        "ko": "회의에서 지원 마감일에 대해 논의했다."
+      },
+      {
+        "word": "conference",
+        "pos": "n",
+        "meaning": "학회; 대규모 회의",
+        "code": "E",
+        "colloc": "business conference",
+        "kr": "비즈니스 회의",
+        "en": "We are preparing for the business conference.",
+        "ko": "우리는 비즈니스 회의를 준비하고 있다."
+      },
+      {
+        "word": "presentation",
+        "pos": "n",
+        "meaning": "발표",
+        "code": "E",
+        "colloc": "product presentation",
+        "kr": "제품 발표",
+        "en": "The notice confirms the date of the product presentation.",
+        "ko": "공지에서 제품 발표의 날짜를 확인할 수 있다."
+      },
+      {
+        "word": "minutes",
+        "pos": "n",
+        "meaning": "회의록(복수형)",
+        "code": "D",
+        "colloc": "meeting minutes",
+        "kr": "회의록",
+        "en": "The report contains a section on the meeting minutes.",
+        "ko": "보고서에는 회의록에 관한 부분이 있다."
+      },
+      {
+        "word": "session",
+        "pos": "n",
+        "meaning": "시간; 회의 회차",
+        "code": "E",
+        "colloc": "training session",
+        "kr": "교육 시간",
+        "en": "The notice confirms the date of the training session.",
+        "ko": "공지에서 교육 시간의 날짜를 확인할 수 있다."
+      },
+      {
+        "word": "participant",
+        "pos": "n",
+        "meaning": "참가자",
+        "code": "H",
+        "colloc": "registered participant",
+        "kr": "등록한 참가자",
+        "en": "Please contact the registered participant for details.",
+        "ko": "자세한 내용은 등록한 참가자에게 문의해 주세요."
+      },
+      {
+        "word": "arrange",
+        "pos": "v",
+        "meaning": "준비하다; 주선하다",
+        "code": "V",
+        "colloc": "arrange a meeting",
+        "kr": "회의를 준비",
+        "en": "The team plans to arrange a meeting soon.",
+        "ko": "팀은 곧 회의를 준비할 계획이다."
+      },
+      {
+        "word": "confirm",
+        "pos": "v",
+        "meaning": "확인하다; 확정하다",
+        "code": "V",
+        "colloc": "confirm the appointment",
+        "kr": "약속을 확정",
+        "en": "Please confirm the appointment as soon as possible.",
+        "ko": "가능한 한 빨리 약속을 확정해 주세요."
+      },
+      {
+        "word": "postpone",
+        "pos": "v",
+        "meaning": "연기하다",
+        "code": "V",
+        "colloc": "postpone the meeting",
+        "kr": "회의를 연기",
+        "en": "The company has decided to postpone the meeting.",
+        "ko": "회사는 회의를 연기하기로 결정했다."
+      },
+      {
+        "word": "cancel",
+        "pos": "v",
+        "meaning": "취소하다",
+        "code": "V",
+        "colloc": "cancel the reservation",
+        "kr": "예약을 취소",
+        "en": "Our staff will cancel the reservation this week.",
+        "ko": "직원들은 이번 주에 예약을 취소할 예정이다."
+      },
+      {
+        "word": "discuss",
+        "pos": "v",
+        "meaning": "논의하다",
+        "code": "V",
+        "colloc": "discuss the proposal",
+        "kr": "제안을 논의",
+        "en": "We need to discuss the proposal before Friday.",
+        "ko": "금요일 전까지 제안을 논의해야 한다."
+      },
+      {
+        "word": "reserve",
+        "pos": "v",
+        "meaning": "예약하다; 확보하다",
+        "code": "V",
+        "colloc": "reserve a meeting room",
+        "kr": "회의실을 예약",
+        "en": "The team plans to reserve a meeting room soon.",
+        "ko": "팀은 곧 회의실을 예약할 계획이다."
+      },
+      {
+        "word": "remind",
+        "pos": "v",
+        "meaning": "상기시키다",
+        "code": "V",
+        "colloc": "remind staff of the deadline",
+        "kr": "직원에게 마감일을 안내",
+        "en": "Please remind staff of the deadline as soon as possible.",
+        "ko": "가능한 한 빨리 직원에게 마감일을 안내해 주세요."
+      },
+      {
+        "word": "prepare",
+        "pos": "v",
+        "meaning": "준비하다",
+        "code": "V",
+        "colloc": "prepare the agenda",
+        "kr": "안건을 준비",
+        "en": "The company has decided to prepare the agenda.",
+        "ko": "회사는 안건을 준비하기로 결정했다."
+      },
+      {
+        "word": "available",
+        "pos": "adj",
+        "meaning": "이용 가능한",
+        "code": "A",
+        "colloc": "available on request",
+        "kr": "요청 시 제공 가능",
+        "en": "Printed copies are available on request.",
+        "ko": "요청하면 인쇄본을 받을 수 있다."
+      },
+      {
+        "word": "convenient",
+        "pos": "adj",
+        "meaning": "편리한",
+        "code": "D",
+        "colloc": "convenient location",
+        "kr": "편리한 위치",
+        "en": "We discussed the convenient location at the meeting.",
+        "ko": "회의에서 편리한 위치에 대해 논의했다."
+      },
+      {
+        "word": "busy",
+        "pos": "adj",
+        "meaning": "바쁜",
+        "code": "D",
+        "colloc": "busy schedule",
+        "kr": "바쁜 일정",
+        "en": "Please review the information about the busy schedule.",
+        "ko": "바쁜 일정에 관한 정보를 검토해 주세요."
+      },
+      {
+        "word": "early",
+        "pos": "adj/adv",
+        "meaning": "이른; 일찍",
+        "code": "D",
+        "colloc": "early arrival",
+        "kr": "이른 도착",
+        "en": "Contact our office for details about the early arrival.",
+        "ko": "이른 도착에 관한 자세한 사항은 사무실로 문의해 주세요."
+      },
+      {
+        "word": "late",
+        "pos": "adj/adv",
+        "meaning": "늦은; 늦게",
+        "code": "D",
+        "colloc": "late payment",
+        "kr": "늦은 결제",
+        "en": "The report contains a section on the late payment.",
+        "ko": "보고서에는 늦은 결제에 관한 부분이 있다."
+      },
+      {
+        "word": "upcoming",
+        "pos": "adj",
+        "meaning": "다가오는",
+        "code": "E",
+        "colloc": "upcoming conference",
+        "kr": "다가오는 회의",
+        "en": "We are preparing for the upcoming conference.",
+        "ko": "우리는 다가오는 회의를 준비하고 있다."
+      },
+      {
+        "word": "brief",
+        "pos": "adj",
+        "meaning": "짧은; 간단한",
+        "code": "D",
+        "colloc": "brief presentation",
+        "kr": "간단한 발표",
+        "en": "We discussed the brief presentation at the meeting.",
+        "ko": "회의에서 간단한 발표에 대해 논의했다."
+      },
+      {
+        "word": "promptly",
+        "pos": "adv",
+        "meaning": "신속히; 정각에",
+        "code": "V",
+        "colloc": "respond promptly",
+        "kr": "신속하게 답변",
+        "en": "The team plans to respond promptly soon.",
+        "ko": "팀은 곧 신속하게 답변할 계획이다."
+      },
+      {
+        "word": "previously",
+        "pos": "adv",
+        "meaning": "이전에",
+        "code": "A",
+        "colloc": "previously approved",
+        "kr": "이전에 승인됨",
+        "en": "The committee reviewed a previously approved proposal.",
+        "ko": "위원회는 이전에 승인된 제안을 검토했다."
+      },
+      {
+        "word": "recently",
+        "pos": "adv",
+        "meaning": "최근에",
+        "code": "A",
+        "colloc": "recently updated",
+        "kr": "최근에 갱신됨",
+        "en": "Please visit our recently updated website.",
+        "ko": "최근에 갱신된 당사 웹사이트를 방문해 주세요."
+      },
+      {
+        "word": "approximately",
+        "pos": "adv",
+        "meaning": "대략",
+        "code": "A",
+        "colloc": "approximately ten minutes long",
+        "kr": "길이가 약 10분임",
+        "en": "The presentation is approximately ten minutes long.",
+        "ko": "발표 길이는 약 10분이다."
+      },
+      {
+        "word": "punctual",
+        "pos": "adj",
+        "meaning": "시간을 잘 지키는",
+        "code": "D",
+        "colloc": "punctual attendance",
+        "kr": "제시간 출석",
+        "en": "We discussed the punctual attendance at the meeting.",
+        "ko": "회의에서 제시간 출석에 대해 논의했다."
+      }
+    ]
+  },
+  {
+    "day": 3,
+    "title": "주문과 배송",
+    "goal": "주문부터 수령까지의 절차를 연어로 묶어 익힌다.",
+    "entries": [
+      {
+        "word": "order",
+        "pos": "n/v",
+        "meaning": "주문; 주문하다",
+        "code": "D",
+        "colloc": "purchase order",
+        "kr": "구매 주문서",
+        "en": "Contact our office for details about the purchase order.",
+        "ko": "구매 주문서에 관한 자세한 사항은 사무실로 문의해 주세요."
+      },
+      {
+        "word": "shipment",
+        "pos": "n",
+        "meaning": "배송 물품; 선적",
+        "code": "D",
+        "colloc": "international shipment",
+        "kr": "국제 배송 물품",
+        "en": "The report contains a section on the international shipment.",
+        "ko": "보고서에는 국제 배송 물품에 관한 부분이 있다."
+      },
+      {
+        "word": "delivery",
+        "pos": "n",
+        "meaning": "배송; 배달",
+        "code": "D",
+        "colloc": "scheduled delivery",
+        "kr": "예정된 배송",
+        "en": "The email includes details about the scheduled delivery.",
+        "ko": "이메일에는 예정된 배송에 대한 자세한 정보가 있다."
+      },
+      {
+        "word": "package",
+        "pos": "n",
+        "meaning": "소포; 포장물",
+        "code": "C",
+        "colloc": "sealed package",
+        "kr": "밀봉된 소포",
+        "en": "The delivery contained a sealed package.",
+        "ko": "배송 물품에는 밀봉된 소포가 포함되어 있었다."
+      },
+      {
+        "word": "parcel",
+        "pos": "n",
+        "meaning": "소포",
+        "code": "C",
+        "colloc": "small parcel",
+        "kr": "작은 소포",
+        "en": "Please inspect the small parcel carefully.",
+        "ko": "작은 소포를 주의 깊게 점검해 주세요."
+      },
+      {
+        "word": "warehouse",
+        "pos": "n",
+        "meaning": "창고",
+        "code": "L",
+        "colloc": "central warehouse",
+        "kr": "중앙 창고",
+        "en": "Please meet us at the central warehouse.",
+        "ko": "중앙 창고에서 만나 주세요."
+      },
+      {
+        "word": "supplier",
+        "pos": "n",
+        "meaning": "공급업체",
+        "code": "D",
+        "colloc": "local supplier",
+        "kr": "현지 공급업체",
+        "en": "The report contains a section on the local supplier.",
+        "ko": "보고서에는 현지 공급업체에 관한 부분이 있다."
+      },
+      {
+        "word": "customer",
+        "pos": "n",
+        "meaning": "고객",
+        "code": "H",
+        "colloc": "regular customer",
+        "kr": "단골 고객",
+        "en": "The manager spoke with the regular customer.",
+        "ko": "관리자는 단골 고객과 이야기를 나눴다."
+      },
+      {
+        "word": "invoice",
+        "pos": "n",
+        "meaning": "송장; 청구서",
+        "code": "D",
+        "colloc": "commercial invoice",
+        "kr": "상업 송장",
+        "en": "We discussed the commercial invoice at the meeting.",
+        "ko": "회의에서 상업 송장에 대해 논의했다."
+      },
+      {
+        "word": "receipt",
+        "pos": "n",
+        "meaning": "영수증",
+        "code": "D",
+        "colloc": "original receipt",
+        "kr": "원본 영수증",
+        "en": "Please review the information about the original receipt.",
+        "ko": "원본 영수증에 관한 정보를 검토해 주세요."
+      },
+      {
+        "word": "ship",
+        "pos": "v",
+        "meaning": "발송하다",
+        "code": "V",
+        "colloc": "ship the goods",
+        "kr": "상품을 발송",
+        "en": "Please ship the goods as soon as possible.",
+        "ko": "가능한 한 빨리 상품을 발송해 주세요."
+      },
+      {
+        "word": "deliver",
+        "pos": "v",
+        "meaning": "배달하다",
+        "code": "V",
+        "colloc": "deliver the package",
+        "kr": "소포를 배달",
+        "en": "The company has decided to deliver the package.",
+        "ko": "회사는 소포를 배달하기로 결정했다."
+      },
+      {
+        "word": "receive",
+        "pos": "v",
+        "meaning": "받다",
+        "code": "V",
+        "colloc": "receive the shipment",
+        "kr": "배송 물품을 수령",
+        "en": "Our staff will receive the shipment this week.",
+        "ko": "직원들은 이번 주에 배송 물품을 수령할 예정이다."
+      },
+      {
+        "word": "track",
+        "pos": "v",
+        "meaning": "추적하다",
+        "code": "V",
+        "colloc": "track an order",
+        "kr": "주문을 추적",
+        "en": "We need to track an order before Friday.",
+        "ko": "금요일 전까지 주문을 추적해야 한다."
+      },
+      {
+        "word": "pack",
+        "pos": "v",
+        "meaning": "포장하다",
+        "code": "V",
+        "colloc": "pack the merchandise",
+        "kr": "상품을 포장",
+        "en": "The team plans to pack the merchandise soon.",
+        "ko": "팀은 곧 상품을 포장할 계획이다."
+      },
+      {
+        "word": "return",
+        "pos": "v/n",
+        "meaning": "반품하다; 반품",
+        "code": "V",
+        "colloc": "return a damaged item",
+        "kr": "손상된 물품을 반품",
+        "en": "Please return a damaged item as soon as possible.",
+        "ko": "가능한 한 빨리 손상된 물품을 반품해 주세요."
+      },
+      {
+        "word": "replace",
+        "pos": "v",
+        "meaning": "교체하다",
+        "code": "V",
+        "colloc": "replace a broken part",
+        "kr": "고장 난 부품을 교체",
+        "en": "The company has decided to replace a broken part.",
+        "ko": "회사는 고장 난 부품을 교체하기로 결정했다."
+      },
+      {
+        "word": "item",
+        "pos": "n",
+        "meaning": "물품; 항목",
+        "code": "C",
+        "colloc": "replacement item",
+        "kr": "교환 물품",
+        "en": "The delivery contained a replacement item.",
+        "ko": "배송 물품에는 교환 물품이 포함되어 있었다."
+      },
+      {
+        "word": "quantity",
+        "pos": "n",
+        "meaning": "수량",
+        "code": "D",
+        "colloc": "order quantity",
+        "kr": "주문 수량",
+        "en": "We discussed the order quantity at the meeting.",
+        "ko": "회의에서 주문 수량에 대해 논의했다."
+      },
+      {
+        "word": "address",
+        "pos": "n/v",
+        "meaning": "주소; 다루다",
+        "code": "D",
+        "colloc": "shipping address",
+        "kr": "배송 주소",
+        "en": "Please review the information about the shipping address.",
+        "ko": "배송 주소에 관한 정보를 검토해 주세요."
+      },
+      {
+        "word": "fragile",
+        "pos": "adj",
+        "meaning": "깨지기 쉬운",
+        "code": "C",
+        "colloc": "fragile goods",
+        "kr": "깨지기 쉬운 상품",
+        "en": "Please inspect the fragile goods carefully.",
+        "ko": "깨지기 쉬운 상품을 주의 깊게 점검해 주세요."
+      },
+      {
+        "word": "damaged",
+        "pos": "adj",
+        "meaning": "손상된",
+        "code": "C",
+        "colloc": "damaged packaging",
+        "kr": "손상된 포장",
+        "en": "The delivery contained damaged packaging.",
+        "ko": "배송 물품에는 손상된 포장이 포함되어 있었다."
+      },
+      {
+        "word": "urgent",
+        "pos": "adj",
+        "meaning": "긴급한",
+        "code": "D",
+        "colloc": "urgent request",
+        "kr": "긴급 요청",
+        "en": "The email includes details about the urgent request.",
+        "ko": "이메일에는 긴급 요청에 대한 자세한 정보가 있다."
+      },
+      {
+        "word": "express",
+        "pos": "adj",
+        "meaning": "특급의",
+        "code": "D",
+        "colloc": "express delivery",
+        "kr": "특급 배송",
+        "en": "We discussed the express delivery at the meeting.",
+        "ko": "회의에서 특급 배송에 대해 논의했다."
+      },
+      {
+        "word": "complete",
+        "pos": "adj/v",
+        "meaning": "완전한; 완료하다",
+        "code": "D",
+        "colloc": "complete order",
+        "kr": "완전한 주문",
+        "en": "Please review the information about the complete order.",
+        "ko": "완전한 주문에 관한 정보를 검토해 주세요."
+      },
+      {
+        "word": "correct",
+        "pos": "adj/v",
+        "meaning": "올바른; 수정하다",
+        "code": "D",
+        "colloc": "correct address",
+        "kr": "정확한 주소",
+        "en": "Contact our office for details about the correct address.",
+        "ko": "정확한 주소에 관한 자세한 사항은 사무실로 문의해 주세요."
+      },
+      {
+        "word": "carefully",
+        "pos": "adv",
+        "meaning": "주의 깊게",
+        "code": "V",
+        "colloc": "handle packages carefully",
+        "kr": "소포를 조심스럽게 취급",
+        "en": "The company has decided to handle packages carefully.",
+        "ko": "회사는 소포를 조심스럽게 취급하기로 결정했다."
+      },
+      {
+        "word": "safely",
+        "pos": "adv",
+        "meaning": "안전하게",
+        "code": "V",
+        "colloc": "store materials safely",
+        "kr": "자재를 안전하게 보관",
+        "en": "Our staff will store materials safely this week.",
+        "ko": "직원들은 이번 주에 자재를 안전하게 보관할 예정이다."
+      },
+      {
+        "word": "immediately",
+        "pos": "adv",
+        "meaning": "즉시",
+        "code": "V",
+        "colloc": "report damage immediately",
+        "kr": "손상을 즉시 보고",
+        "en": "We need to report damage immediately before Friday.",
+        "ko": "금요일 전까지 손상을 즉시 보고해야 한다."
+      },
+      {
+        "word": "properly",
+        "pos": "adv",
+        "meaning": "적절히; 제대로",
+        "code": "V",
+        "colloc": "label boxes properly",
+        "kr": "상자에 올바르게 표시",
+        "en": "The team plans to label boxes properly soon.",
+        "ko": "팀은 곧 상자에 올바르게 표시할 계획이다."
+      }
+    ]
+  },
+  {
+    "day": 4,
+    "title": "여행과 항공",
+    "goal": "이동 안내에서 장소·시간·상태를 구분한다.",
+    "entries": [
+      {
+        "word": "flight",
+        "pos": "n",
+        "meaning": "항공편",
+        "code": "D",
+        "colloc": "connecting flight",
+        "kr": "연결 항공편",
+        "en": "The report contains a section on the connecting flight.",
+        "ko": "보고서에는 연결 항공편에 관한 부분이 있다."
+      },
+      {
+        "word": "airport",
+        "pos": "n",
+        "meaning": "공항",
+        "code": "L",
+        "colloc": "international airport",
+        "kr": "국제공항",
+        "en": "Please meet us at the international airport.",
+        "ko": "국제공항에서 만나 주세요."
+      },
+      {
+        "word": "terminal",
+        "pos": "n",
+        "meaning": "터미널",
+        "code": "L",
+        "colloc": "departure terminal",
+        "kr": "출발 터미널",
+        "en": "Visitors should go to the departure terminal.",
+        "ko": "방문객은 출발 터미널으로 가야 한다."
+      },
+      {
+        "word": "gate",
+        "pos": "n",
+        "meaning": "탑승구",
+        "code": "L",
+        "colloc": "boarding gate",
+        "kr": "탑승구",
+        "en": "The meeting will be held at the boarding gate.",
+        "ko": "회의는 탑승구에서 열린다."
+      },
+      {
+        "word": "passenger",
+        "pos": "n",
+        "meaning": "승객",
+        "code": "H",
+        "colloc": "transit passenger",
+        "kr": "환승 승객",
+        "en": "The manager spoke with the transit passenger.",
+        "ko": "관리자는 환승 승객과 이야기를 나눴다."
+      },
+      {
+        "word": "ticket",
+        "pos": "n",
+        "meaning": "승차권; 항공권",
+        "code": "D",
+        "colloc": "round-trip ticket",
+        "kr": "왕복 항공권",
+        "en": "The report contains a section on the round-trip ticket.",
+        "ko": "보고서에는 왕복 항공권에 관한 부분이 있다."
+      },
+      {
+        "word": "fare",
+        "pos": "n",
+        "meaning": "운임",
+        "code": "D",
+        "colloc": "discounted fare",
+        "kr": "할인 운임",
+        "en": "The email includes details about the discounted fare.",
+        "ko": "이메일에는 할인 운임에 대한 자세한 정보가 있다."
+      },
+      {
+        "word": "baggage",
+        "pos": "n",
+        "meaning": "수하물",
+        "code": "C",
+        "colloc": "checked baggage",
+        "kr": "위탁 수하물",
+        "en": "Please inspect the checked baggage carefully.",
+        "ko": "위탁 수하물을 주의 깊게 점검해 주세요."
+      },
+      {
+        "word": "luggage",
+        "pos": "n",
+        "meaning": "여행 짐",
+        "code": "C",
+        "colloc": "carry-on luggage",
+        "kr": "기내 휴대 짐",
+        "en": "The delivery contained carry-on luggage.",
+        "ko": "배송 물품에는 기내 휴대 짐이 포함되어 있었다."
+      },
+      {
+        "word": "itinerary",
+        "pos": "n",
+        "meaning": "여행 일정표",
+        "code": "D",
+        "colloc": "travel itinerary",
+        "kr": "여행 일정표",
+        "en": "Contact our office for details about the travel itinerary.",
+        "ko": "여행 일정표에 관한 자세한 사항은 사무실로 문의해 주세요."
+      },
+      {
+        "word": "depart",
+        "pos": "v",
+        "meaning": "출발하다",
+        "code": "V",
+        "colloc": "depart from Terminal Two",
+        "kr": "2번 터미널에서 출발",
+        "en": "The company has decided to depart from Terminal Two.",
+        "ko": "회사는 2번 터미널에서 출발하기로 결정했다."
+      },
+      {
+        "word": "arrive",
+        "pos": "v",
+        "meaning": "도착하다",
+        "code": "V",
+        "colloc": "arrive at the airport",
+        "kr": "공항에 도착",
+        "en": "Our staff will arrive at the airport this week.",
+        "ko": "직원들은 이번 주에 공항에 도착할 예정이다."
+      },
+      {
+        "word": "board",
+        "pos": "v",
+        "meaning": "탑승하다",
+        "code": "V",
+        "colloc": "board the plane",
+        "kr": "비행기에 탑승",
+        "en": "We need to board the plane before Friday.",
+        "ko": "금요일 전까지 비행기에 탑승해야 한다."
+      },
+      {
+        "word": "transfer",
+        "pos": "v/n",
+        "meaning": "환승하다; 이동",
+        "code": "V",
+        "colloc": "transfer to another train",
+        "kr": "다른 열차로 환승",
+        "en": "The team plans to transfer to another train soon.",
+        "ko": "팀은 곧 다른 열차로 환승할 계획이다."
+      },
+      {
+        "word": "delay",
+        "pos": "n/v",
+        "meaning": "지연; 지연시키다",
+        "code": "D",
+        "colloc": "flight delay",
+        "kr": "항공편 지연",
+        "en": "Contact our office for details about the flight delay.",
+        "ko": "항공편 지연에 관한 자세한 사항은 사무실로 문의해 주세요."
+      },
+      {
+        "word": "travel",
+        "pos": "v/n",
+        "meaning": "여행하다; 여행",
+        "code": "V",
+        "colloc": "travel on business",
+        "kr": "업무상 여행",
+        "en": "The company has decided to travel on business.",
+        "ko": "회사는 업무상 여행하기로 결정했다."
+      },
+      {
+        "word": "book",
+        "pos": "v",
+        "meaning": "예약하다",
+        "code": "V",
+        "colloc": "book a flight",
+        "kr": "항공편을 예약",
+        "en": "Our staff will book a flight this week.",
+        "ko": "직원들은 이번 주에 항공편을 예약할 예정이다."
+      },
+      {
+        "word": "destination",
+        "pos": "n",
+        "meaning": "목적지",
+        "code": "D",
+        "colloc": "final destination",
+        "kr": "최종 목적지",
+        "en": "We discussed the final destination at the meeting.",
+        "ko": "회의에서 최종 목적지에 대해 논의했다."
+      },
+      {
+        "word": "route",
+        "pos": "n",
+        "meaning": "노선; 경로",
+        "code": "D",
+        "colloc": "alternative route",
+        "kr": "대체 경로",
+        "en": "Please review the information about the alternative route.",
+        "ko": "대체 경로에 관한 정보를 검토해 주세요."
+      },
+      {
+        "word": "passport",
+        "pos": "n",
+        "meaning": "여권",
+        "code": "D",
+        "colloc": "valid passport",
+        "kr": "유효한 여권",
+        "en": "Contact our office for details about the valid passport.",
+        "ko": "유효한 여권에 관한 자세한 사항은 사무실로 문의해 주세요."
+      },
+      {
+        "word": "domestic",
+        "pos": "adj",
+        "meaning": "국내의",
+        "code": "D",
+        "colloc": "domestic flight",
+        "kr": "국내 항공편",
+        "en": "The report contains a section on the domestic flight.",
+        "ko": "보고서에는 국내 항공편에 관한 부분이 있다."
+      },
+      {
+        "word": "international",
+        "pos": "adj",
+        "meaning": "국제적인",
+        "code": "D",
+        "colloc": "international travel",
+        "kr": "국제 여행",
+        "en": "The email includes details about the international travel.",
+        "ko": "이메일에는 국제 여행에 대한 자세한 정보가 있다."
+      },
+      {
+        "word": "direct",
+        "pos": "adj",
+        "meaning": "직항의; 직접적인",
+        "code": "D",
+        "colloc": "direct flight",
+        "kr": "직항편",
+        "en": "We discussed the direct flight at the meeting.",
+        "ko": "회의에서 직항편에 대해 논의했다."
+      },
+      {
+        "word": "valid",
+        "pos": "adj",
+        "meaning": "유효한",
+        "code": "D",
+        "colloc": "valid ticket",
+        "kr": "유효한 항공권",
+        "en": "Please review the information about the valid ticket.",
+        "ko": "유효한 항공권에 관한 정보를 검토해 주세요."
+      },
+      {
+        "word": "nearby",
+        "pos": "adj/adv",
+        "meaning": "인근의; 근처에",
+        "code": "L",
+        "colloc": "nearby station",
+        "kr": "인근 역",
+        "en": "The meeting will be held at the nearby station.",
+        "ko": "회의는 인근 역에서 열린다."
+      },
+      {
+        "word": "scheduled",
+        "pos": "adj",
+        "meaning": "예정된",
+        "code": "D",
+        "colloc": "scheduled departure",
+        "kr": "예정된 출발",
+        "en": "The report contains a section on the scheduled departure.",
+        "ko": "보고서에는 예정된 출발에 관한 부분이 있다."
+      },
+      {
+        "word": "aboard",
+        "pos": "adv/prep",
+        "meaning": "탑승하여; 탑승한",
+        "code": "V",
+        "colloc": "welcome guests aboard",
+        "kr": "탑승객을 환영",
+        "en": "Our staff will welcome guests aboard this week.",
+        "ko": "직원들은 이번 주에 탑승객을 환영할 예정이다."
+      },
+      {
+        "word": "abroad",
+        "pos": "adv",
+        "meaning": "해외로; 해외에서",
+        "code": "V",
+        "colloc": "attend a conference abroad",
+        "kr": "해외 회의에 참석",
+        "en": "We need to attend a conference abroad before Friday.",
+        "ko": "금요일 전까지 해외 회의에 참석해야 한다."
+      },
+      {
+        "word": "frequently",
+        "pos": "adv",
+        "meaning": "자주",
+        "code": "V",
+        "colloc": "travel frequently",
+        "kr": "자주 여행",
+        "en": "The team plans to travel frequently soon.",
+        "ko": "팀은 곧 자주 여행할 계획이다."
+      },
+      {
+        "word": "temporarily",
+        "pos": "adv",
+        "meaning": "일시적으로",
+        "code": "A",
+        "colloc": "temporarily closed",
+        "kr": "일시적으로 폐쇄됨",
+        "en": "The ticket office is temporarily closed.",
+        "ko": "매표소는 일시적으로 운영을 중단했다."
+      }
+    ]
+  },
+  {
+    "day": 5,
+    "title": "호텔과 식당",
+    "goal": "서비스 요청과 시설 설명의 기본 표현을 회복한다.",
+    "entries": [
+      {
+        "word": "reservation",
+        "pos": "n",
+        "meaning": "예약",
+        "code": "D",
+        "colloc": "hotel reservation",
+        "kr": "호텔 예약",
+        "en": "The email includes details about the hotel reservation.",
+        "ko": "이메일에는 호텔 예약에 대한 자세한 정보가 있다."
+      },
+      {
+        "word": "guest",
+        "pos": "n",
+        "meaning": "투숙객; 손님",
+        "code": "H",
+        "colloc": "hotel guest",
+        "kr": "호텔 투숙객",
+        "en": "The manager spoke with the hotel guest.",
+        "ko": "관리자는 호텔 투숙객과 이야기를 나눴다."
+      },
+      {
+        "word": "reception",
+        "pos": "n",
+        "meaning": "접수처; 환영 행사",
+        "code": "L",
+        "colloc": "reception desk",
+        "kr": "접수 데스크",
+        "en": "The meeting will be held at the reception desk.",
+        "ko": "회의는 접수 데스크에서 열린다."
+      },
+      {
+        "word": "room",
+        "pos": "n",
+        "meaning": "객실; 공간",
+        "code": "L",
+        "colloc": "meeting room",
+        "kr": "회의실",
+        "en": "Please meet us at the meeting room.",
+        "ko": "회의실에서 만나 주세요."
+      },
+      {
+        "word": "suite",
+        "pos": "n",
+        "meaning": "스위트룸",
+        "code": "L",
+        "colloc": "executive suite",
+        "kr": "임원용 스위트룸",
+        "en": "Visitors should go to the executive suite.",
+        "ko": "방문객은 임원용 스위트룸으로 가야 한다."
+      },
+      {
+        "word": "accommodation",
+        "pos": "n",
+        "meaning": "숙박 시설",
+        "code": "D",
+        "colloc": "overnight accommodation",
+        "kr": "하룻밤 숙박 시설",
+        "en": "The email includes details about the overnight accommodation.",
+        "ko": "이메일에는 하룻밤 숙박 시설에 대한 자세한 정보가 있다."
+      },
+      {
+        "word": "amenity",
+        "pos": "n",
+        "meaning": "편의 시설",
+        "code": "D",
+        "colloc": "hotel amenities",
+        "kr": "호텔 편의 시설",
+        "en": "We discussed the hotel amenities at the meeting.",
+        "ko": "회의에서 호텔 편의 시설에 대해 논의했다."
+      },
+      {
+        "word": "menu",
+        "pos": "n",
+        "meaning": "메뉴",
+        "code": "D",
+        "colloc": "dinner menu",
+        "kr": "저녁 메뉴",
+        "en": "Please review the information about the dinner menu.",
+        "ko": "저녁 메뉴에 관한 정보를 검토해 주세요."
+      },
+      {
+        "word": "beverage",
+        "pos": "n",
+        "meaning": "음료",
+        "code": "C",
+        "colloc": "hot beverage",
+        "kr": "뜨거운 음료",
+        "en": "Please inspect the hot beverage carefully.",
+        "ko": "뜨거운 음료를 주의 깊게 점검해 주세요."
+      },
+      {
+        "word": "meal",
+        "pos": "n",
+        "meaning": "식사",
+        "code": "C",
+        "colloc": "prepared meal",
+        "kr": "준비된 식사",
+        "en": "The delivery contained a prepared meal.",
+        "ko": "배송 물품에는 준비된 식사가 포함되어 있었다."
+      },
+      {
+        "word": "serve",
+        "pos": "v",
+        "meaning": "제공하다; 응대하다",
+        "code": "V",
+        "colloc": "serve breakfast",
+        "kr": "아침 식사를 제공",
+        "en": "Our staff will serve breakfast this week.",
+        "ko": "직원들은 이번 주에 아침 식사를 제공할 예정이다."
+      },
+      {
+        "word": "recommend",
+        "pos": "v",
+        "meaning": "추천하다",
+        "code": "V",
+        "colloc": "recommend a restaurant",
+        "kr": "식당을 추천",
+        "en": "We need to recommend a restaurant before Friday.",
+        "ko": "금요일 전까지 식당을 추천해야 한다."
+      },
+      {
+        "word": "charge",
+        "pos": "v/n",
+        "meaning": "청구하다; 요금",
+        "code": "V",
+        "colloc": "charge a service fee",
+        "kr": "서비스 요금을 부과",
+        "en": "The team plans to charge a service fee soon.",
+        "ko": "팀은 곧 서비스 요금을 부과할 계획이다."
+      },
+      {
+        "word": "include",
+        "pos": "v",
+        "meaning": "포함하다",
+        "code": "V",
+        "colloc": "include breakfast",
+        "kr": "아침 식사를 포함",
+        "en": "Please include breakfast as soon as possible.",
+        "ko": "가능한 한 빨리 아침 식사를 포함해 주세요."
+      },
+      {
+        "word": "offer",
+        "pos": "v/n",
+        "meaning": "제공하다; 제안",
+        "code": "V",
+        "colloc": "offer a discount",
+        "kr": "할인을 제공",
+        "en": "The company has decided to offer a discount.",
+        "ko": "회사는 할인을 제공하기로 결정했다."
+      },
+      {
+        "word": "request",
+        "pos": "v/n",
+        "meaning": "요청하다; 요청",
+        "code": "V",
+        "colloc": "request a quiet room",
+        "kr": "조용한 객실을 요청",
+        "en": "Our staff will request a quiet room this week.",
+        "ko": "직원들은 이번 주에 조용한 객실을 요청할 예정이다."
+      },
+      {
+        "word": "check",
+        "pos": "v/n",
+        "meaning": "확인하다; 수표",
+        "code": "V",
+        "colloc": "check the reservation",
+        "kr": "예약을 확인",
+        "en": "We need to check the reservation before Friday.",
+        "ko": "금요일 전까지 예약을 확인해야 한다."
+      },
+      {
+        "word": "service",
+        "pos": "n",
+        "meaning": "서비스",
+        "code": "D",
+        "colloc": "room service",
+        "kr": "룸서비스",
+        "en": "Please review the information about the room service.",
+        "ko": "룸서비스에 관한 정보를 검토해 주세요."
+      },
+      {
+        "word": "facility",
+        "pos": "n",
+        "meaning": "시설",
+        "code": "D",
+        "colloc": "fitness facility",
+        "kr": "체력 단련 시설",
+        "en": "Contact our office for details about the fitness facility.",
+        "ko": "체력 단련 시설에 관한 자세한 사항은 사무실로 문의해 주세요."
+      },
+      {
+        "word": "fee",
+        "pos": "n",
+        "meaning": "수수료; 요금",
+        "code": "D",
+        "colloc": "parking fee",
+        "kr": "주차 요금",
+        "en": "The report contains a section on the parking fee.",
+        "ko": "보고서에는 주차 요금에 관한 부분이 있다."
+      },
+      {
+        "word": "comfortable",
+        "pos": "adj",
+        "meaning": "편안한",
+        "code": "C",
+        "colloc": "comfortable seating",
+        "kr": "편안한 좌석",
+        "en": "Please inspect the comfortable seating carefully.",
+        "ko": "편안한 좌석을 주의 깊게 점검해 주세요."
+      },
+      {
+        "word": "complimentary",
+        "pos": "adj",
+        "meaning": "무료로 제공되는",
+        "code": "D",
+        "colloc": "complimentary breakfast",
+        "kr": "무료 아침 식사",
+        "en": "We discussed the complimentary breakfast at the meeting.",
+        "ko": "회의에서 무료 아침 식사에 대해 논의했다."
+      },
+      {
+        "word": "delicious",
+        "pos": "adj",
+        "meaning": "맛있는",
+        "code": "C",
+        "colloc": "delicious meal",
+        "kr": "맛있는 식사",
+        "en": "Please inspect the delicious meal carefully.",
+        "ko": "맛있는 식사를 주의 깊게 점검해 주세요."
+      },
+      {
+        "word": "private",
+        "pos": "adj",
+        "meaning": "개인용의; 비공개의",
+        "code": "L",
+        "colloc": "private dining room",
+        "kr": "개인 식당 공간",
+        "en": "The meeting will be held at the private dining room.",
+        "ko": "회의는 개인 식당 공간에서 열린다."
+      },
+      {
+        "word": "spacious",
+        "pos": "adj",
+        "meaning": "넓은",
+        "code": "L",
+        "colloc": "spacious lobby",
+        "kr": "넓은 로비",
+        "en": "Please meet us at the spacious lobby.",
+        "ko": "넓은 로비에서 만나 주세요."
+      },
+      {
+        "word": "friendly",
+        "pos": "adj",
+        "meaning": "친절한",
+        "code": "D",
+        "colloc": "friendly service",
+        "kr": "친절한 서비스",
+        "en": "The email includes details about the friendly service.",
+        "ko": "이메일에는 친절한 서비스에 대한 자세한 정보가 있다."
+      },
+      {
+        "word": "personally",
+        "pos": "adv",
+        "meaning": "직접; 개인적으로",
+        "code": "V",
+        "colloc": "welcome guests personally",
+        "kr": "손님을 직접 환영",
+        "en": "We need to welcome guests personally before Friday.",
+        "ko": "금요일 전까지 손님을 직접 환영해야 한다."
+      },
+      {
+        "word": "usually",
+        "pos": "adv",
+        "meaning": "보통",
+        "code": "A",
+        "colloc": "usually available",
+        "kr": "보통 이용 가능",
+        "en": "A meeting room is usually available.",
+        "ko": "보통 회의실을 이용할 수 있다."
+      },
+      {
+        "word": "especially",
+        "pos": "adv",
+        "meaning": "특히",
+        "code": "A",
+        "colloc": "especially popular",
+        "kr": "특히 인기 있음",
+        "en": "This model is especially popular with commuters.",
+        "ko": "이 모델은 특히 통근자에게 인기가 많다."
+      },
+      {
+        "word": "fully",
+        "pos": "adv",
+        "meaning": "완전히",
+        "code": "A",
+        "colloc": "fully booked",
+        "kr": "예약이 꽉 참",
+        "en": "The hotel is fully booked this weekend.",
+        "ko": "이번 주말 호텔 예약은 모두 찼다."
+      }
+    ]
+  },
+  {
+    "day": 6,
+    "title": "고객 응대와 쇼핑",
+    "goal": "문의·불만·반품 상황에서 자주 쓰는 뜻을 익힌다.",
+    "entries": [
+      {
+        "word": "inquiry",
+        "pos": "n",
+        "meaning": "문의",
+        "code": "D",
+        "colloc": "customer inquiry",
+        "kr": "고객 문의",
+        "en": "We discussed the customer inquiry at the meeting.",
+        "ko": "회의에서 고객 문의에 대해 논의했다."
+      },
+      {
+        "word": "complaint",
+        "pos": "n",
+        "meaning": "불만; 항의",
+        "code": "D",
+        "colloc": "formal complaint",
+        "kr": "공식 항의",
+        "en": "Please review the information about the formal complaint.",
+        "ko": "공식 항의에 관한 정보를 검토해 주세요."
+      },
+      {
+        "word": "refund",
+        "pos": "n/v",
+        "meaning": "환불; 환불하다",
+        "code": "D",
+        "colloc": "full refund",
+        "kr": "전액 환불",
+        "en": "Contact our office for details about the full refund.",
+        "ko": "전액 환불에 관한 자세한 사항은 사무실로 문의해 주세요."
+      },
+      {
+        "word": "exchange",
+        "pos": "n/v",
+        "meaning": "교환; 교환하다",
+        "code": "D",
+        "colloc": "product exchange",
+        "kr": "제품 교환",
+        "en": "The report contains a section on the product exchange.",
+        "ko": "보고서에는 제품 교환에 관한 부분이 있다."
+      },
+      {
+        "word": "purchase",
+        "pos": "n/v",
+        "meaning": "구매; 구매하다",
+        "code": "D",
+        "colloc": "recent purchase",
+        "kr": "최근 구매",
+        "en": "The email includes details about the recent purchase.",
+        "ko": "이메일에는 최근 구매에 대한 자세한 정보가 있다."
+      },
+      {
+        "word": "discount",
+        "pos": "n",
+        "meaning": "할인",
+        "code": "D",
+        "colloc": "bulk discount",
+        "kr": "대량 구매 할인",
+        "en": "We discussed the bulk discount at the meeting.",
+        "ko": "회의에서 대량 구매 할인에 대해 논의했다."
+      },
+      {
+        "word": "price",
+        "pos": "n",
+        "meaning": "가격",
+        "code": "D",
+        "colloc": "retail price",
+        "kr": "소매 가격",
+        "en": "Please review the information about the retail price.",
+        "ko": "소매 가격에 관한 정보를 검토해 주세요."
+      },
+      {
+        "word": "product",
+        "pos": "n",
+        "meaning": "제품",
+        "code": "C",
+        "colloc": "new product",
+        "kr": "신제품",
+        "en": "Please inspect the new product carefully.",
+        "ko": "신제품을 주의 깊게 점검해 주세요."
+      },
+      {
+        "word": "brand",
+        "pos": "n",
+        "meaning": "브랜드",
+        "code": "D",
+        "colloc": "popular brand",
+        "kr": "인기 브랜드",
+        "en": "The report contains a section on the popular brand.",
+        "ko": "보고서에는 인기 브랜드에 관한 부분이 있다."
+      },
+      {
+        "word": "warranty",
+        "pos": "n",
+        "meaning": "보증",
+        "code": "D",
+        "colloc": "extended warranty",
+        "kr": "연장 보증",
+        "en": "The email includes details about the extended warranty.",
+        "ko": "이메일에는 연장 보증에 대한 자세한 정보가 있다."
+      },
+      {
+        "word": "assist",
+        "pos": "v",
+        "meaning": "돕다",
+        "code": "V",
+        "colloc": "assist customers",
+        "kr": "고객을 지원",
+        "en": "We need to assist customers before Friday.",
+        "ko": "금요일 전까지 고객을 지원해야 한다."
+      },
+      {
+        "word": "respond",
+        "pos": "v",
+        "meaning": "답변하다; 대응하다",
+        "code": "V",
+        "colloc": "respond to an inquiry",
+        "kr": "문의에 답변",
+        "en": "The team plans to respond to an inquiry soon.",
+        "ko": "팀은 곧 문의에 답변할 계획이다."
+      },
+      {
+        "word": "resolve",
+        "pos": "v",
+        "meaning": "해결하다",
+        "code": "V",
+        "colloc": "resolve a complaint",
+        "kr": "불만을 해결",
+        "en": "Please resolve a complaint as soon as possible.",
+        "ko": "가능한 한 빨리 불만을 해결해 주세요."
+      },
+      {
+        "word": "explain",
+        "pos": "v",
+        "meaning": "설명하다",
+        "code": "V",
+        "colloc": "explain the return policy",
+        "kr": "반품 정책을 설명",
+        "en": "The company has decided to explain the return policy.",
+        "ko": "회사는 반품 정책을 설명하기로 결정했다."
+      },
+      {
+        "word": "apologize",
+        "pos": "v",
+        "meaning": "사과하다",
+        "code": "V",
+        "colloc": "apologize for the delay",
+        "kr": "지연에 대해 사과",
+        "en": "Our staff will apologize for the delay this week.",
+        "ko": "직원들은 이번 주에 지연에 대해 사과할 예정이다."
+      },
+      {
+        "word": "accept",
+        "pos": "v",
+        "meaning": "받아들이다; 수락하다",
+        "code": "V",
+        "colloc": "accept credit cards",
+        "kr": "신용카드 결제를 수락",
+        "en": "We need to accept credit cards before Friday.",
+        "ko": "금요일 전까지 신용카드 결제를 수락해야 한다."
+      },
+      {
+        "word": "provide",
+        "pos": "v",
+        "meaning": "제공하다",
+        "code": "V",
+        "colloc": "provide assistance",
+        "kr": "도움을 제공",
+        "en": "The team plans to provide assistance soon.",
+        "ko": "팀은 곧 도움을 제공할 계획이다."
+      },
+      {
+        "word": "policy",
+        "pos": "n",
+        "meaning": "정책; 규정",
+        "code": "D",
+        "colloc": "return policy",
+        "kr": "반품 규정",
+        "en": "Contact our office for details about the return policy.",
+        "ko": "반품 규정에 관한 자세한 사항은 사무실로 문의해 주세요."
+      },
+      {
+        "word": "assistance",
+        "pos": "n",
+        "meaning": "도움; 지원",
+        "code": "D",
+        "colloc": "technical assistance",
+        "kr": "기술 지원",
+        "en": "The report contains a section on the technical assistance.",
+        "ko": "보고서에는 기술 지원에 관한 부분이 있다."
+      },
+      {
+        "word": "satisfaction",
+        "pos": "n",
+        "meaning": "만족",
+        "code": "D",
+        "colloc": "customer satisfaction",
+        "kr": "고객 만족",
+        "en": "The email includes details about the customer satisfaction.",
+        "ko": "이메일에는 고객 만족에 대한 자세한 정보가 있다."
+      },
+      {
+        "word": "helpful",
+        "pos": "adj",
+        "meaning": "도움이 되는",
+        "code": "D",
+        "colloc": "helpful advice",
+        "kr": "유용한 조언",
+        "en": "We discussed the helpful advice at the meeting.",
+        "ko": "회의에서 유용한 조언에 대해 논의했다."
+      },
+      {
+        "word": "satisfied",
+        "pos": "adj",
+        "meaning": "만족한",
+        "code": "H",
+        "colloc": "satisfied customer",
+        "kr": "만족한 고객",
+        "en": "Please contact the satisfied customer for details.",
+        "ko": "자세한 내용은 만족한 고객에게 문의해 주세요."
+      },
+      {
+        "word": "reasonable",
+        "pos": "adj",
+        "meaning": "합리적인; 적정한",
+        "code": "D",
+        "colloc": "reasonable price",
+        "kr": "적정 가격",
+        "en": "Contact our office for details about the reasonable price.",
+        "ko": "적정 가격에 관한 자세한 사항은 사무실로 문의해 주세요."
+      },
+      {
+        "word": "affordable",
+        "pos": "adj",
+        "meaning": "구입 가능한 가격의",
+        "code": "D",
+        "colloc": "affordable housing",
+        "kr": "저렴한 주택",
+        "en": "The report contains a section on the affordable housing.",
+        "ko": "보고서에는 저렴한 주택에 관한 부분이 있다."
+      },
+      {
+        "word": "defective",
+        "pos": "adj",
+        "meaning": "결함이 있는",
+        "code": "C",
+        "colloc": "defective product",
+        "kr": "결함 있는 제품",
+        "en": "The delivery contained a defective product.",
+        "ko": "배송 물품에는 결함 있는 제품이 포함되어 있었다."
+      },
+      {
+        "word": "reliable",
+        "pos": "adj",
+        "meaning": "믿을 만한",
+        "code": "D",
+        "colloc": "reliable service",
+        "kr": "믿을 만한 서비스",
+        "en": "We discussed the reliable service at the meeting.",
+        "ko": "회의에서 믿을 만한 서비스에 대해 논의했다."
+      },
+      {
+        "word": "politely",
+        "pos": "adv",
+        "meaning": "정중하게",
+        "code": "V",
+        "colloc": "answer politely",
+        "kr": "정중하게 답변",
+        "en": "The team plans to answer politely soon.",
+        "ko": "팀은 곧 정중하게 답변할 계획이다."
+      },
+      {
+        "word": "quickly",
+        "pos": "adv",
+        "meaning": "빠르게",
+        "code": "V",
+        "colloc": "process orders quickly",
+        "kr": "주문을 빠르게 처리",
+        "en": "Please process orders quickly as soon as possible.",
+        "ko": "가능한 한 빨리 주문을 빠르게 처리해 주세요."
+      },
+      {
+        "word": "simply",
+        "pos": "adv",
+        "meaning": "간단히; 단순히",
+        "code": "V",
+        "colloc": "explain the process simply",
+        "kr": "절차를 간단히 설명",
+        "en": "The company has decided to explain the process simply.",
+        "ko": "회사는 절차를 간단히 설명하기로 결정했다."
+      },
+      {
+        "word": "easily",
+        "pos": "adv",
+        "meaning": "쉽게",
+        "code": "V",
+        "colloc": "identify problems easily",
+        "kr": "문제를 쉽게 식별",
+        "en": "Our staff will identify problems easily this week.",
+        "ko": "직원들은 이번 주에 문제를 쉽게 식별할 예정이다."
+      }
+    ]
+  },
+  {
+    "day": 7,
+    "title": "인사와 채용",
+    "goal": "지원·면접·자격 요건을 연결하고 첫 주를 복습한다.",
+    "entries": [
+      {
+        "word": "application",
+        "pos": "n",
+        "meaning": "지원서; 신청",
+        "code": "D",
+        "colloc": "job application",
+        "kr": "입사 지원서",
+        "en": "Please review the information about the job application.",
+        "ko": "입사 지원서에 관한 정보를 검토해 주세요."
+      },
+      {
+        "word": "applicant",
+        "pos": "n",
+        "meaning": "지원자",
+        "code": "H",
+        "colloc": "qualified applicant",
+        "kr": "자격을 갖춘 지원자",
+        "en": "The manager spoke with the qualified applicant.",
+        "ko": "관리자는 자격을 갖춘 지원자와 이야기를 나눴다."
+      },
+      {
+        "word": "candidate",
+        "pos": "n",
+        "meaning": "후보자",
+        "code": "H",
+        "colloc": "successful candidate",
+        "kr": "합격한 후보자",
+        "en": "Please contact the successful candidate for details.",
+        "ko": "자세한 내용은 합격한 후보자에게 문의해 주세요."
+      },
+      {
+        "word": "resume",
+        "pos": "n",
+        "meaning": "이력서",
+        "code": "D",
+        "colloc": "updated resume",
+        "kr": "갱신된 이력서",
+        "en": "The email includes details about the updated resume.",
+        "ko": "이메일에는 갱신된 이력서에 대한 자세한 정보가 있다."
+      },
+      {
+        "word": "interview",
+        "pos": "n/v",
+        "meaning": "면접; 면접하다",
+        "code": "E",
+        "colloc": "job interview",
+        "kr": "채용 면접",
+        "en": "We are preparing for the job interview.",
+        "ko": "우리는 채용 면접을 준비하고 있다."
+      },
+      {
+        "word": "experience",
+        "pos": "n",
+        "meaning": "경험; 경력",
+        "code": "D",
+        "colloc": "relevant experience",
+        "kr": "관련 경력",
+        "en": "Please review the information about the relevant experience.",
+        "ko": "관련 경력에 관한 정보를 검토해 주세요."
+      },
+      {
+        "word": "qualification",
+        "pos": "n",
+        "meaning": "자격",
+        "code": "D",
+        "colloc": "professional qualification",
+        "kr": "전문 자격",
+        "en": "Contact our office for details about the professional qualification.",
+        "ko": "전문 자격에 관한 자세한 사항은 사무실로 문의해 주세요."
+      },
+      {
+        "word": "reference",
+        "pos": "n",
+        "meaning": "추천인; 참고 자료",
+        "code": "D",
+        "colloc": "professional reference",
+        "kr": "업무 관련 추천인",
+        "en": "The report contains a section on the professional reference.",
+        "ko": "보고서에는 업무 관련 추천인에 관한 부분이 있다."
+      },
+      {
+        "word": "salary",
+        "pos": "n",
+        "meaning": "급여",
+        "code": "D",
+        "colloc": "starting salary",
+        "kr": "초임",
+        "en": "The email includes details about the starting salary.",
+        "ko": "이메일에는 초임에 대한 자세한 정보가 있다."
+      },
+      {
+        "word": "benefit",
+        "pos": "n",
+        "meaning": "혜택; 복리후생",
+        "code": "D",
+        "colloc": "employee benefits",
+        "kr": "직원 복리후생",
+        "en": "We discussed the employee benefits at the meeting.",
+        "ko": "회의에서 직원 복리후생에 대해 논의했다."
+      },
+      {
+        "word": "apply",
+        "pos": "v",
+        "meaning": "지원하다; 적용하다",
+        "code": "V",
+        "colloc": "apply for a position",
+        "kr": "일자리에 지원",
+        "en": "The team plans to apply for a position soon.",
+        "ko": "팀은 곧 일자리에 지원할 계획이다."
+      },
+      {
+        "word": "recruit",
+        "pos": "v",
+        "meaning": "채용하다; 모집하다",
+        "code": "V",
+        "colloc": "recruit qualified workers",
+        "kr": "유자격 근로자를 모집",
+        "en": "Please recruit qualified workers as soon as possible.",
+        "ko": "가능한 한 빨리 유자격 근로자를 모집해 주세요."
+      },
+      {
+        "word": "select",
+        "pos": "v",
+        "meaning": "선택하다",
+        "code": "V",
+        "colloc": "select a candidate",
+        "kr": "후보자를 선정",
+        "en": "The company has decided to select a candidate.",
+        "ko": "회사는 후보자를 선정하기로 결정했다."
+      },
+      {
+        "word": "submit",
+        "pos": "v",
+        "meaning": "제출하다",
+        "code": "V",
+        "colloc": "submit an application",
+        "kr": "지원서를 제출",
+        "en": "Our staff will submit an application this week.",
+        "ko": "직원들은 이번 주에 지원서를 제출할 예정이다."
+      },
+      {
+        "word": "evaluate",
+        "pos": "v",
+        "meaning": "평가하다",
+        "code": "V",
+        "colloc": "evaluate candidates",
+        "kr": "후보자를 평가",
+        "en": "We need to evaluate candidates before Friday.",
+        "ko": "금요일 전까지 후보자를 평가해야 한다."
+      },
+      {
+        "word": "promote",
+        "pos": "v",
+        "meaning": "승진시키다; 홍보하다",
+        "code": "V",
+        "colloc": "promote qualified employees",
+        "kr": "유자격 직원의 승진을 추진",
+        "en": "The team plans to promote qualified employees soon.",
+        "ko": "팀은 곧 유자격 직원의 승진을 추진할 계획이다."
+      },
+      {
+        "word": "retire",
+        "pos": "v",
+        "meaning": "은퇴하다",
+        "code": "V",
+        "colloc": "retire from the company",
+        "kr": "회사에서 은퇴",
+        "en": "Please retire from the company as soon as possible.",
+        "ko": "가능한 한 빨리 회사에서 은퇴해 주세요."
+      },
+      {
+        "word": "employment",
+        "pos": "n",
+        "meaning": "고용",
+        "code": "D",
+        "colloc": "employment contract",
+        "kr": "고용 계약",
+        "en": "The report contains a section on the employment contract.",
+        "ko": "보고서에는 고용 계약에 관한 부분이 있다."
+      },
+      {
+        "word": "training",
+        "pos": "n",
+        "meaning": "교육; 훈련",
+        "code": "D",
+        "colloc": "on-the-job training",
+        "kr": "직무 교육",
+        "en": "The email includes details about the on-the-job training.",
+        "ko": "이메일에는 직무 교육에 대한 자세한 정보가 있다."
+      },
+      {
+        "word": "career",
+        "pos": "n",
+        "meaning": "직업 경력",
+        "code": "D",
+        "colloc": "career development",
+        "kr": "경력 개발",
+        "en": "We discussed the career development at the meeting.",
+        "ko": "회의에서 경력 개발에 대해 논의했다."
+      },
+      {
+        "word": "qualified",
+        "pos": "adj",
+        "meaning": "자격을 갖춘",
+        "code": "H",
+        "colloc": "qualified candidate",
+        "kr": "유자격 후보자",
+        "en": "Please contact the qualified candidate for details.",
+        "ko": "자세한 내용은 유자격 후보자에게 문의해 주세요."
+      },
+      {
+        "word": "experienced",
+        "pos": "adj",
+        "meaning": "경험 많은",
+        "code": "H",
+        "colloc": "experienced professional",
+        "kr": "경험 많은 전문가",
+        "en": "The manager spoke with the experienced professional.",
+        "ko": "관리자는 경험 많은 전문가와 이야기를 나눴다."
+      },
+      {
+        "word": "eligible",
+        "pos": "adj",
+        "meaning": "자격이 되는",
+        "code": "A",
+        "colloc": "eligible for benefits",
+        "kr": "복리후생을 받을 자격이 있음",
+        "en": "Full-time employees are eligible for benefits.",
+        "ko": "상근 직원은 복리후생을 받을 자격이 있다."
+      },
+      {
+        "word": "permanent",
+        "pos": "adj",
+        "meaning": "영구적인; 정규의",
+        "code": "D",
+        "colloc": "permanent position",
+        "kr": "정규직",
+        "en": "The email includes details about the permanent position.",
+        "ko": "이메일에는 정규직에 대한 자세한 정보가 있다."
+      },
+      {
+        "word": "temporary",
+        "pos": "adj",
+        "meaning": "임시의",
+        "code": "D",
+        "colloc": "temporary employment",
+        "kr": "임시 고용",
+        "en": "We discussed the temporary employment at the meeting.",
+        "ko": "회의에서 임시 고용에 대해 논의했다."
+      },
+      {
+        "word": "competitive",
+        "pos": "adj",
+        "meaning": "경쟁력 있는",
+        "code": "D",
+        "colloc": "competitive salary",
+        "kr": "경쟁력 있는 급여",
+        "en": "Please review the information about the competitive salary.",
+        "ko": "경쟁력 있는 급여에 관한 정보를 검토해 주세요."
+      },
+      {
+        "word": "successfully",
+        "pos": "adv",
+        "meaning": "성공적으로",
+        "code": "V",
+        "colloc": "complete training successfully",
+        "kr": "교육을 성공적으로 완료",
+        "en": "Please complete training successfully as soon as possible.",
+        "ko": "가능한 한 빨리 교육을 성공적으로 완료해 주세요."
+      },
+      {
+        "word": "professionally",
+        "pos": "adv",
+        "meaning": "전문적으로",
+        "code": "V",
+        "colloc": "handle inquiries professionally",
+        "kr": "문의를 전문적으로 처리",
+        "en": "The company has decided to handle inquiries professionally.",
+        "ko": "회사는 문의를 전문적으로 처리하기로 결정했다."
+      },
+      {
+        "word": "individually",
+        "pos": "adv",
+        "meaning": "개별적으로",
+        "code": "V",
+        "colloc": "interview candidates individually",
+        "kr": "후보자를 개별적으로 면접",
+        "en": "Our staff will interview candidates individually this week.",
+        "ko": "직원들은 이번 주에 후보자를 개별적으로 면접할 예정이다."
+      },
+      {
+        "word": "equally",
+        "pos": "adv",
+        "meaning": "동등하게",
+        "code": "V",
+        "colloc": "treat applicants equally",
+        "kr": "지원자를 동등하게 대우",
+        "en": "We need to treat applicants equally before Friday.",
+        "ko": "금요일 전까지 지원자를 동등하게 대우해야 한다."
+      }
+    ]
+  },
+  {
+    "day": 8,
+    "title": "제품과 기술",
+    "goal": "제품 특징과 기초 기술 안내를 자연스럽게 읽는다.",
+    "entries": [
+      {
+        "word": "equipment",
+        "pos": "n",
+        "meaning": "장비(불가산)",
+        "code": "C",
+        "colloc": "office equipment",
+        "kr": "사무 장비",
+        "en": "The delivery contained office equipment.",
+        "ko": "배송 물품에는 사무 장비가 포함되어 있었다."
+      },
+      {
+        "word": "device",
+        "pos": "n",
+        "meaning": "기기",
+        "code": "C",
+        "colloc": "portable device",
+        "kr": "휴대용 기기",
+        "en": "Please inspect the portable device carefully.",
+        "ko": "휴대용 기기를 주의 깊게 점검해 주세요."
+      },
+      {
+        "word": "software",
+        "pos": "n",
+        "meaning": "소프트웨어(불가산)",
+        "code": "C",
+        "colloc": "accounting software",
+        "kr": "회계 소프트웨어",
+        "en": "The delivery contained accounting software.",
+        "ko": "배송 물품에는 회계 소프트웨어가 포함되어 있었다."
+      },
+      {
+        "word": "hardware",
+        "pos": "n",
+        "meaning": "하드웨어(불가산)",
+        "code": "C",
+        "colloc": "computer hardware",
+        "kr": "컴퓨터 하드웨어",
+        "en": "Please inspect the computer hardware carefully.",
+        "ko": "컴퓨터 하드웨어를 주의 깊게 점검해 주세요."
+      },
+      {
+        "word": "feature",
+        "pos": "n",
+        "meaning": "특징; 기능",
+        "code": "D",
+        "colloc": "new feature",
+        "kr": "새 기능",
+        "en": "Please review the information about the new feature.",
+        "ko": "새 기능에 관한 정보를 검토해 주세요."
+      },
+      {
+        "word": "function",
+        "pos": "n/v",
+        "meaning": "기능; 작동하다",
+        "code": "D",
+        "colloc": "basic function",
+        "kr": "기본 기능",
+        "en": "Contact our office for details about the basic function.",
+        "ko": "기본 기능에 관한 자세한 사항은 사무실로 문의해 주세요."
+      },
+      {
+        "word": "model",
+        "pos": "n",
+        "meaning": "모델; 기종",
+        "code": "C",
+        "colloc": "latest model",
+        "kr": "최신 기종",
+        "en": "The delivery contained a latest model.",
+        "ko": "배송 물품에는 최신 기종이 포함되어 있었다."
+      },
+      {
+        "word": "version",
+        "pos": "n",
+        "meaning": "버전",
+        "code": "D",
+        "colloc": "updated version",
+        "kr": "갱신된 버전",
+        "en": "The email includes details about the updated version.",
+        "ko": "이메일에는 갱신된 버전에 대한 자세한 정보가 있다."
+      },
+      {
+        "word": "screen",
+        "pos": "n",
+        "meaning": "화면",
+        "code": "C",
+        "colloc": "touch screen",
+        "kr": "터치스크린",
+        "en": "The delivery contained a touch screen.",
+        "ko": "배송 물품에는 터치스크린이 포함되어 있었다."
+      },
+      {
+        "word": "manual",
+        "pos": "n",
+        "meaning": "설명서",
+        "code": "D",
+        "colloc": "user manual",
+        "kr": "사용 설명서",
+        "en": "Please review the information about the user manual.",
+        "ko": "사용 설명서에 관한 정보를 검토해 주세요."
+      },
+      {
+        "word": "install",
+        "pos": "v",
+        "meaning": "설치하다",
+        "code": "V",
+        "colloc": "install the software",
+        "kr": "소프트웨어를 설치",
+        "en": "Please install the software as soon as possible.",
+        "ko": "가능한 한 빨리 소프트웨어를 설치해 주세요."
+      },
+      {
+        "word": "operate",
+        "pos": "v",
+        "meaning": "작동시키다; 운영하다",
+        "code": "V",
+        "colloc": "operate the equipment",
+        "kr": "장비를 조작",
+        "en": "The company has decided to operate the equipment.",
+        "ko": "회사는 장비를 조작하기로 결정했다."
+      },
+      {
+        "word": "repair",
+        "pos": "v",
+        "meaning": "수리하다",
+        "code": "V",
+        "colloc": "repair the printer",
+        "kr": "프린터를 수리",
+        "en": "Our staff will repair the printer this week.",
+        "ko": "직원들은 이번 주에 프린터를 수리할 예정이다."
+      },
+      {
+        "word": "update",
+        "pos": "v/n",
+        "meaning": "갱신하다; 최신 정보",
+        "code": "V",
+        "colloc": "update the system",
+        "kr": "시스템을 갱신",
+        "en": "We need to update the system before Friday.",
+        "ko": "금요일 전까지 시스템을 갱신해야 한다."
+      },
+      {
+        "word": "connect",
+        "pos": "v",
+        "meaning": "연결하다",
+        "code": "V",
+        "colloc": "connect the device",
+        "kr": "기기를 연결",
+        "en": "The team plans to connect the device soon.",
+        "ko": "팀은 곧 기기를 연결할 계획이다."
+      },
+      {
+        "word": "test",
+        "pos": "v/n",
+        "meaning": "시험하다; 검사",
+        "code": "V",
+        "colloc": "test the new software",
+        "kr": "새 소프트웨어를 시험",
+        "en": "Please test the new software as soon as possible.",
+        "ko": "가능한 한 빨리 새 소프트웨어를 시험해 주세요."
+      },
+      {
+        "word": "use",
+        "pos": "v/n",
+        "meaning": "사용하다; 사용",
+        "code": "V",
+        "colloc": "use the new scanner",
+        "kr": "새 스캐너를 사용",
+        "en": "The company has decided to use the new scanner.",
+        "ko": "회사는 새 스캐너를 사용하기로 결정했다."
+      },
+      {
+        "word": "system",
+        "pos": "n",
+        "meaning": "시스템",
+        "code": "D",
+        "colloc": "security system",
+        "kr": "보안 시스템",
+        "en": "The email includes details about the security system.",
+        "ko": "이메일에는 보안 시스템에 대한 자세한 정보가 있다."
+      },
+      {
+        "word": "instruction",
+        "pos": "n",
+        "meaning": "지시; 사용법",
+        "code": "D",
+        "colloc": "operating instructions",
+        "kr": "사용 지침",
+        "en": "We discussed the operating instructions at the meeting.",
+        "ko": "회의에서 사용 지침에 대해 논의했다."
+      },
+      {
+        "word": "quality",
+        "pos": "n",
+        "meaning": "품질",
+        "code": "D",
+        "colloc": "product quality",
+        "kr": "제품 품질",
+        "en": "Please review the information about the product quality.",
+        "ko": "제품 품질에 관한 정보를 검토해 주세요."
+      },
+      {
+        "word": "automatic",
+        "pos": "adj",
+        "meaning": "자동의",
+        "code": "D",
+        "colloc": "automatic update",
+        "kr": "자동 갱신",
+        "en": "Contact our office for details about the automatic update.",
+        "ko": "자동 갱신에 관한 자세한 사항은 사무실로 문의해 주세요."
+      },
+      {
+        "word": "digital",
+        "pos": "adj",
+        "meaning": "디지털의",
+        "code": "C",
+        "colloc": "digital camera",
+        "kr": "디지털 카메라",
+        "en": "Please inspect the digital camera carefully.",
+        "ko": "디지털 카메라를 주의 깊게 점검해 주세요."
+      },
+      {
+        "word": "portable",
+        "pos": "adj",
+        "meaning": "휴대용의",
+        "code": "C",
+        "colloc": "portable charger",
+        "kr": "휴대용 충전기",
+        "en": "The delivery contained a portable charger.",
+        "ko": "배송 물품에는 휴대용 충전기가 포함되어 있었다."
+      },
+      {
+        "word": "wireless",
+        "pos": "adj",
+        "meaning": "무선의",
+        "code": "D",
+        "colloc": "wireless connection",
+        "kr": "무선 연결",
+        "en": "We discussed the wireless connection at the meeting.",
+        "ko": "회의에서 무선 연결에 대해 논의했다."
+      },
+      {
+        "word": "compatible",
+        "pos": "adj",
+        "meaning": "호환되는",
+        "code": "C",
+        "colloc": "compatible devices",
+        "kr": "호환 기기",
+        "en": "The delivery contained compatible devices.",
+        "ko": "배송 물품에는 호환 기기가 포함되어 있었다."
+      },
+      {
+        "word": "efficient",
+        "pos": "adj",
+        "meaning": "효율적인",
+        "code": "D",
+        "colloc": "efficient operation",
+        "kr": "효율적 운영",
+        "en": "Contact our office for details about the efficient operation.",
+        "ko": "효율적 운영에 관한 자세한 사항은 사무실로 문의해 주세요."
+      },
+      {
+        "word": "automatically",
+        "pos": "adv",
+        "meaning": "자동으로",
+        "code": "V",
+        "colloc": "save files automatically",
+        "kr": "파일을 자동으로 저장",
+        "en": "The company has decided to save files automatically.",
+        "ko": "회사는 파일을 자동으로 저장하기로 결정했다."
+      },
+      {
+        "word": "electronically",
+        "pos": "adv",
+        "meaning": "전자적으로",
+        "code": "V",
+        "colloc": "submit forms electronically",
+        "kr": "양식을 전자적으로 제출",
+        "en": "Our staff will submit forms electronically this week.",
+        "ko": "직원들은 이번 주에 양식을 전자적으로 제출할 예정이다."
+      },
+      {
+        "word": "accurately",
+        "pos": "adv",
+        "meaning": "정확히",
+        "code": "V",
+        "colloc": "record data accurately",
+        "kr": "자료를 정확히 기록",
+        "en": "We need to record data accurately before Friday.",
+        "ko": "금요일 전까지 자료를 정확히 기록해야 한다."
+      },
+      {
+        "word": "smoothly",
+        "pos": "adv",
+        "meaning": "원활하게",
+        "code": "V",
+        "colloc": "operate smoothly",
+        "kr": "원활하게 운영",
+        "en": "The team plans to operate smoothly soon.",
+        "ko": "팀은 곧 원활하게 운영할 계획이다."
+      }
+    ]
+  },
+  {
+    "day": 9,
+    "title": "은행과 기초 재무",
+    "goal": "비용·결제·계좌 관련 어휘의 기본 뜻을 회복한다.",
+    "entries": [
+      {
+        "word": "account",
+        "pos": "n",
+        "meaning": "계좌; 거래처",
+        "code": "D",
+        "colloc": "bank account",
+        "kr": "은행 계좌",
+        "en": "The report contains a section on the bank account.",
+        "ko": "보고서에는 은행 계좌에 관한 부분이 있다."
+      },
+      {
+        "word": "payment",
+        "pos": "n",
+        "meaning": "결제; 납부",
+        "code": "D",
+        "colloc": "monthly payment",
+        "kr": "월 납부금",
+        "en": "The email includes details about the monthly payment.",
+        "ko": "이메일에는 월 납부금에 대한 자세한 정보가 있다."
+      },
+      {
+        "word": "balance",
+        "pos": "n",
+        "meaning": "잔액; 균형",
+        "code": "D",
+        "colloc": "account balance",
+        "kr": "계좌 잔액",
+        "en": "We discussed the account balance at the meeting.",
+        "ko": "회의에서 계좌 잔액에 대해 논의했다."
+      },
+      {
+        "word": "budget",
+        "pos": "n",
+        "meaning": "예산",
+        "code": "D",
+        "colloc": "annual budget",
+        "kr": "연간 예산",
+        "en": "Please review the information about the annual budget.",
+        "ko": "연간 예산에 관한 정보를 검토해 주세요."
+      },
+      {
+        "word": "expense",
+        "pos": "n",
+        "meaning": "비용",
+        "code": "D",
+        "colloc": "travel expenses",
+        "kr": "출장 경비",
+        "en": "Contact our office for details about the travel expenses.",
+        "ko": "출장 경비에 관한 자세한 사항은 사무실로 문의해 주세요."
+      },
+      {
+        "word": "cost",
+        "pos": "n/v",
+        "meaning": "비용; 비용이 들다",
+        "code": "D",
+        "colloc": "operating costs",
+        "kr": "운영 비용",
+        "en": "The report contains a section on the operating costs.",
+        "ko": "보고서에는 운영 비용에 관한 부분이 있다."
+      },
+      {
+        "word": "profit",
+        "pos": "n",
+        "meaning": "이익",
+        "code": "D",
+        "colloc": "net profit",
+        "kr": "순이익",
+        "en": "The email includes details about the net profit.",
+        "ko": "이메일에는 순이익에 대한 자세한 정보가 있다."
+      },
+      {
+        "word": "income",
+        "pos": "n",
+        "meaning": "소득",
+        "code": "D",
+        "colloc": "annual income",
+        "kr": "연간 소득",
+        "en": "We discussed the annual income at the meeting.",
+        "ko": "회의에서 연간 소득에 대해 논의했다."
+      },
+      {
+        "word": "tax",
+        "pos": "n",
+        "meaning": "세금",
+        "code": "D",
+        "colloc": "income tax",
+        "kr": "소득세",
+        "en": "Please review the information about the income tax.",
+        "ko": "소득세에 관한 정보를 검토해 주세요."
+      },
+      {
+        "word": "loan",
+        "pos": "n",
+        "meaning": "대출",
+        "code": "D",
+        "colloc": "business loan",
+        "kr": "사업 대출",
+        "en": "Contact our office for details about the business loan.",
+        "ko": "사업 대출에 관한 자세한 사항은 사무실로 문의해 주세요."
+      },
+      {
+        "word": "pay",
+        "pos": "v",
+        "meaning": "지불하다",
+        "code": "V",
+        "colloc": "pay the invoice",
+        "kr": "청구 금액을 결제",
+        "en": "The company has decided to pay the invoice.",
+        "ko": "회사는 청구 금액을 결제하기로 결정했다."
+      },
+      {
+        "word": "deposit",
+        "pos": "v/n",
+        "meaning": "예금하다; 예금",
+        "code": "V",
+        "colloc": "deposit funds",
+        "kr": "자금을 예치",
+        "en": "Our staff will deposit funds this week.",
+        "ko": "직원들은 이번 주에 자금을 예치할 예정이다."
+      },
+      {
+        "word": "withdraw",
+        "pos": "v",
+        "meaning": "인출하다; 철회하다",
+        "code": "V",
+        "colloc": "withdraw cash",
+        "kr": "현금을 인출",
+        "en": "We need to withdraw cash before Friday.",
+        "ko": "금요일 전까지 현금을 인출해야 한다."
+      },
+      {
+        "word": "save",
+        "pos": "v",
+        "meaning": "절약하다; 저축하다",
+        "code": "V",
+        "colloc": "save money",
+        "kr": "돈을 절약",
+        "en": "The team plans to save money soon.",
+        "ko": "팀은 곧 돈을 절약할 계획이다."
+      },
+      {
+        "word": "spend",
+        "pos": "v",
+        "meaning": "쓰다; 지출하다",
+        "code": "V",
+        "colloc": "spend less on supplies",
+        "kr": "소모품 지출을 절감",
+        "en": "Please spend less on supplies as soon as possible.",
+        "ko": "가능한 한 빨리 소모품 지출을 절감해 주세요."
+      },
+      {
+        "word": "reduce",
+        "pos": "v",
+        "meaning": "줄이다",
+        "code": "V",
+        "colloc": "reduce expenses",
+        "kr": "비용을 절감",
+        "en": "The company has decided to reduce expenses.",
+        "ko": "회사는 비용을 절감하기로 결정했다."
+      },
+      {
+        "word": "increase",
+        "pos": "v/n",
+        "meaning": "늘리다; 증가",
+        "code": "V",
+        "colloc": "increase profits",
+        "kr": "이익을 확대",
+        "en": "Our staff will increase profits this week.",
+        "ko": "직원들은 이번 주에 이익을 확대할 예정이다."
+      },
+      {
+        "word": "cash",
+        "pos": "n",
+        "meaning": "현금",
+        "code": "D",
+        "colloc": "cash payment",
+        "kr": "현금 결제",
+        "en": "We discussed the cash payment at the meeting.",
+        "ko": "회의에서 현금 결제에 대해 논의했다."
+      },
+      {
+        "word": "credit",
+        "pos": "n",
+        "meaning": "신용; 공제 금액",
+        "code": "D",
+        "colloc": "credit limit",
+        "kr": "신용 한도",
+        "en": "Please review the information about the credit limit.",
+        "ko": "신용 한도에 관한 정보를 검토해 주세요."
+      },
+      {
+        "word": "statement",
+        "pos": "n",
+        "meaning": "명세서; 진술",
+        "code": "D",
+        "colloc": "bank statement",
+        "kr": "은행 거래 명세서",
+        "en": "Contact our office for details about the bank statement.",
+        "ko": "은행 거래 명세서에 관한 자세한 사항은 사무실로 문의해 주세요."
+      },
+      {
+        "word": "financial",
+        "pos": "adj",
+        "meaning": "재무의",
+        "code": "D",
+        "colloc": "financial report",
+        "kr": "재무 보고서",
+        "en": "The report contains a section on the financial report.",
+        "ko": "보고서에는 재무 보고서에 관한 부분이 있다."
+      },
+      {
+        "word": "total",
+        "pos": "adj/n",
+        "meaning": "전체의; 합계",
+        "code": "D",
+        "colloc": "total cost",
+        "kr": "총비용",
+        "en": "The email includes details about the total cost.",
+        "ko": "이메일에는 총비용에 대한 자세한 정보가 있다."
+      },
+      {
+        "word": "due",
+        "pos": "adj",
+        "meaning": "기한이 된; 지급 예정인",
+        "code": "D",
+        "colloc": "payment due date",
+        "kr": "납부 기한",
+        "en": "We discussed the payment due date at the meeting.",
+        "ko": "회의에서 납부 기한에 대해 논의했다."
+      },
+      {
+        "word": "outstanding",
+        "pos": "adj",
+        "meaning": "미지급의; 뛰어난",
+        "code": "D",
+        "colloc": "outstanding balance",
+        "kr": "미결제 잔액",
+        "en": "Please review the information about the outstanding balance.",
+        "ko": "미결제 잔액에 관한 정보를 검토해 주세요."
+      },
+      {
+        "word": "low",
+        "pos": "adj",
+        "meaning": "낮은",
+        "code": "D",
+        "colloc": "low interest rate",
+        "kr": "낮은 이자율",
+        "en": "Contact our office for details about the low interest rate.",
+        "ko": "낮은 이자율에 관한 자세한 사항은 사무실로 문의해 주세요."
+      },
+      {
+        "word": "high",
+        "pos": "adj",
+        "meaning": "높은",
+        "code": "D",
+        "colloc": "high operating costs",
+        "kr": "높은 운영 비용",
+        "en": "The report contains a section on the high operating costs.",
+        "ko": "보고서에는 높은 운영 비용에 관한 부분이 있다."
+      },
+      {
+        "word": "annually",
+        "pos": "adv",
+        "meaning": "매년",
+        "code": "V",
+        "colloc": "review budgets annually",
+        "kr": "예산을 매년 검토",
+        "en": "Our staff will review budgets annually this week.",
+        "ko": "직원들은 이번 주에 예산을 매년 검토할 예정이다."
+      },
+      {
+        "word": "quarterly",
+        "pos": "adv/adj",
+        "meaning": "분기마다; 분기의",
+        "code": "V",
+        "colloc": "review accounts quarterly",
+        "kr": "계좌를 분기마다 검토",
+        "en": "We need to review accounts quarterly before Friday.",
+        "ko": "금요일 전까지 계좌를 분기마다 검토해야 한다."
+      },
+      {
+        "word": "inexpensively",
+        "pos": "adv",
+        "meaning": "저렴하게",
+        "code": "V",
+        "colloc": "produce goods inexpensively",
+        "kr": "상품을 저렴하게 생산",
+        "en": "The team plans to produce goods inexpensively soon.",
+        "ko": "팀은 곧 상품을 저렴하게 생산할 계획이다."
+      },
+      {
+        "word": "separately",
+        "pos": "adv",
+        "meaning": "별도로",
+        "code": "V",
+        "colloc": "list fees separately",
+        "kr": "수수료를 별도로 표시",
+        "en": "Please list fees separately as soon as possible.",
+        "ko": "가능한 한 빨리 수수료를 별도로 표시해 주세요."
+      }
+    ]
+  },
+  {
+    "day": 10,
+    "title": "시설·행사·기본 안내",
+    "goal": "일상 공지의 핵심 표현을 익히고 감각 회복을 마친다.",
+    "entries": [
+      {
+        "word": "building",
+        "pos": "n",
+        "meaning": "건물",
+        "code": "L",
+        "colloc": "office building",
+        "kr": "사무용 건물",
+        "en": "The meeting will be held at the office building.",
+        "ko": "회의는 사무용 건물에서 열린다."
+      },
+      {
+        "word": "entrance",
+        "pos": "n",
+        "meaning": "입구",
+        "code": "L",
+        "colloc": "main entrance",
+        "kr": "정문",
+        "en": "Please meet us at the main entrance.",
+        "ko": "정문에서 만나 주세요."
+      },
+      {
+        "word": "exit",
+        "pos": "n",
+        "meaning": "출구",
+        "code": "L",
+        "colloc": "emergency exit",
+        "kr": "비상구",
+        "en": "Visitors should go to the emergency exit.",
+        "ko": "방문객은 비상구로 가야 한다."
+      },
+      {
+        "word": "floor",
+        "pos": "n",
+        "meaning": "층; 바닥",
+        "code": "L",
+        "colloc": "second floor",
+        "kr": "2층",
+        "en": "The meeting will be held at the second floor.",
+        "ko": "회의는 2층에서 열린다."
+      },
+      {
+        "word": "parking",
+        "pos": "n",
+        "meaning": "주차",
+        "code": "D",
+        "colloc": "free parking",
+        "kr": "무료 주차",
+        "en": "The report contains a section on the free parking.",
+        "ko": "보고서에는 무료 주차에 관한 부분이 있다."
+      },
+      {
+        "word": "maintenance",
+        "pos": "n",
+        "meaning": "유지보수",
+        "code": "D",
+        "colloc": "regular maintenance",
+        "kr": "정기 유지보수",
+        "en": "The email includes details about the regular maintenance.",
+        "ko": "이메일에는 정기 유지보수에 대한 자세한 정보가 있다."
+      },
+      {
+        "word": "notice",
+        "pos": "n/v",
+        "meaning": "공지; 알아차리다",
+        "code": "D",
+        "colloc": "public notice",
+        "kr": "공공 공지",
+        "en": "We discussed the public notice at the meeting.",
+        "ko": "회의에서 공공 공지에 대해 논의했다."
+      },
+      {
+        "word": "event",
+        "pos": "n",
+        "meaning": "행사",
+        "code": "E",
+        "colloc": "community event",
+        "kr": "지역 행사",
+        "en": "We are preparing for the community event.",
+        "ko": "우리는 지역 행사를 준비하고 있다."
+      },
+      {
+        "word": "exhibition",
+        "pos": "n",
+        "meaning": "전시회",
+        "code": "E",
+        "colloc": "trade exhibition",
+        "kr": "무역 전시회",
+        "en": "The notice confirms the date of the trade exhibition.",
+        "ko": "공지에서 무역 전시회의 날짜를 확인할 수 있다."
+      },
+      {
+        "word": "visitor",
+        "pos": "n",
+        "meaning": "방문객",
+        "code": "H",
+        "colloc": "first-time visitor",
+        "kr": "첫 방문객",
+        "en": "Please contact the first-time visitor for details.",
+        "ko": "자세한 내용은 첫 방문객에게 문의해 주세요."
+      },
+      {
+        "word": "open",
+        "pos": "v/adj",
+        "meaning": "열다; 열린",
+        "code": "V",
+        "colloc": "open the main entrance",
+        "kr": "정문을 개방",
+        "en": "Our staff will open the main entrance this week.",
+        "ko": "직원들은 이번 주에 정문을 개방할 예정이다."
+      },
+      {
+        "word": "close",
+        "pos": "v/adj",
+        "meaning": "닫다; 가까운",
+        "code": "V",
+        "colloc": "close the office early",
+        "kr": "사무실 운영을 조기 종료",
+        "en": "We need to close the office early before Friday.",
+        "ko": "금요일 전까지 사무실 운영을 조기 종료해야 한다."
+      },
+      {
+        "word": "clean",
+        "pos": "v/adj",
+        "meaning": "청소하다; 깨끗한",
+        "code": "V",
+        "colloc": "clean the meeting room",
+        "kr": "회의실을 청소",
+        "en": "The team plans to clean the meeting room soon.",
+        "ko": "팀은 곧 회의실을 청소할 계획이다."
+      },
+      {
+        "word": "inspect",
+        "pos": "v",
+        "meaning": "점검하다",
+        "code": "V",
+        "colloc": "inspect the building",
+        "kr": "건물을 점검",
+        "en": "Please inspect the building as soon as possible.",
+        "ko": "가능한 한 빨리 건물을 점검해 주세요."
+      },
+      {
+        "word": "organize",
+        "pos": "v",
+        "meaning": "조직하다; 준비하다",
+        "code": "V",
+        "colloc": "organize an event",
+        "kr": "행사를 준비",
+        "en": "The company has decided to organize an event.",
+        "ko": "회사는 행사를 준비하기로 결정했다."
+      },
+      {
+        "word": "register",
+        "pos": "v",
+        "meaning": "등록하다",
+        "code": "V",
+        "colloc": "register for the workshop",
+        "kr": "워크숍에 등록",
+        "en": "Our staff will register for the workshop this week.",
+        "ko": "직원들은 이번 주에 워크숍에 등록할 예정이다."
+      },
+      {
+        "word": "visit",
+        "pos": "v",
+        "meaning": "방문하다",
+        "code": "V",
+        "colloc": "visit the new facility",
+        "kr": "새 시설을 방문",
+        "en": "We need to visit the new facility before Friday.",
+        "ko": "금요일 전까지 새 시설을 방문해야 한다."
+      },
+      {
+        "word": "location",
+        "pos": "n",
+        "meaning": "위치; 장소",
+        "code": "D",
+        "colloc": "event location",
+        "kr": "행사 장소",
+        "en": "Please review the information about the event location.",
+        "ko": "행사 장소에 관한 정보를 검토해 주세요."
+      },
+      {
+        "word": "map",
+        "pos": "n",
+        "meaning": "지도",
+        "code": "D",
+        "colloc": "building map",
+        "kr": "건물 지도",
+        "en": "Contact our office for details about the building map.",
+        "ko": "건물 지도에 관한 자세한 사항은 사무실로 문의해 주세요."
+      },
+      {
+        "word": "direction",
+        "pos": "n",
+        "meaning": "방향; 안내",
+        "code": "D",
+        "colloc": "driving directions",
+        "kr": "차량 이동 안내",
+        "en": "The report contains a section on the driving directions.",
+        "ko": "보고서에는 차량 이동 안내에 관한 부분이 있다."
+      },
+      {
+        "word": "public",
+        "pos": "adj",
+        "meaning": "공공의",
+        "code": "D",
+        "colloc": "public transportation",
+        "kr": "대중교통",
+        "en": "The email includes details about the public transportation.",
+        "ko": "이메일에는 대중교통에 대한 자세한 정보가 있다."
+      },
+      {
+        "word": "safe",
+        "pos": "adj",
+        "meaning": "안전한",
+        "code": "D",
+        "colloc": "safe working conditions",
+        "kr": "안전한 근무 환경",
+        "en": "We discussed the safe working conditions at the meeting.",
+        "ko": "회의에서 안전한 근무 환경에 대해 논의했다."
+      },
+      {
+        "word": "necessary",
+        "pos": "adj",
+        "meaning": "필요한",
+        "code": "D",
+        "colloc": "necessary repairs",
+        "kr": "필요한 수리",
+        "en": "Please review the information about the necessary repairs.",
+        "ko": "필요한 수리에 관한 정보를 검토해 주세요."
+      },
+      {
+        "word": "accessible",
+        "pos": "adj",
+        "meaning": "접근 가능한",
+        "code": "A",
+        "colloc": "accessible to visitors",
+        "kr": "방문객이 접근 가능",
+        "en": "The exhibition hall is accessible to visitors.",
+        "ko": "방문객은 전시장에 접근할 수 있다."
+      },
+      {
+        "word": "closed",
+        "pos": "adj",
+        "meaning": "닫힌; 휴업 중인",
+        "code": "A",
+        "colloc": "closed for maintenance",
+        "kr": "유지보수로 폐쇄됨",
+        "en": "The lobby is closed for maintenance.",
+        "ko": "로비는 유지보수로 폐쇄되어 있다."
+      },
+      {
+        "word": "crowded",
+        "pos": "adj",
+        "meaning": "붐비는",
+        "code": "L",
+        "colloc": "crowded lobby",
+        "kr": "붐비는 로비",
+        "en": "Please meet us at the crowded lobby.",
+        "ko": "붐비는 로비에서 만나 주세요."
+      },
+      {
+        "word": "daily",
+        "pos": "adv/adj",
+        "meaning": "매일; 매일의",
+        "code": "V",
+        "colloc": "inspect facilities daily",
+        "kr": "시설을 매일 점검",
+        "en": "We need to inspect facilities daily before Friday.",
+        "ko": "금요일 전까지 시설을 매일 점검해야 한다."
+      },
+      {
+        "word": "clearly",
+        "pos": "adv",
+        "meaning": "명확하게",
+        "code": "V",
+        "colloc": "display notices clearly",
+        "kr": "공지를 명확히 게시",
+        "en": "The team plans to display notices clearly soon.",
+        "ko": "팀은 곧 공지를 명확히 게시할 계획이다."
+      },
+      {
+        "word": "normally",
+        "pos": "adv",
+        "meaning": "보통; 정상적으로",
+        "code": "A",
+        "colloc": "normally open",
+        "kr": "보통 개방됨",
+        "en": "The office is normally open on Saturdays.",
+        "ko": "사무실은 보통 토요일에 문을 연다."
+      },
+      {
+        "word": "outside",
+        "pos": "adv/prep",
+        "meaning": "밖에; 바깥에",
+        "code": "V",
+        "colloc": "display signs outside",
+        "kr": "외부에 표지판을 게시",
+        "en": "The company has decided to display signs outside.",
+        "ko": "회사는 외부에 표지판을 게시하기로 결정했다."
+      }
+    ]
+  }
+]
