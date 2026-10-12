@@ -8471,8 +8471,8 @@
           "code": "V",
           "colloc": "afford the upgrade",
           "kr": "업그레이드 비용을 감당",
-          "en": "Our staff will afford the upgrade this week.",
-          "ko": "직원들은 이번 주에 업그레이드 비용을 감당할 예정이다."
+          "en": "The department cannot afford the upgrade this year.",
+          "ko": "부서는 올해 업그레이드 비용을 감당할 수 없다."
         },
         {
           "word": "durability",
@@ -10740,8 +10740,8 @@
           "code": "V",
           "colloc": "increase costs unnecessarily",
           "kr": "비용을 불필요하게 확대",
-          "en": "The company has decided to increase costs unnecessarily.",
-          "ko": "회사는 비용을 불필요하게 확대하기로 결정했다."
+          "en": "Poor planning can increase costs unnecessarily.",
+          "ko": "부실한 계획은 불필요하게 비용을 늘릴 수 있다."
         }
       ]
     },
@@ -12442,8 +12442,8 @@
           "code": "V",
           "colloc": "appreciate the assistance",
           "kr": "지원에 대한 감사를 표시",
-          "en": "We need to appreciate the assistance before Friday.",
-          "ko": "금요일 전까지 지원에 대한 감사를 표시해야 한다."
+          "en": "We appreciate the assistance provided by your staff.",
+          "ko": "귀사 직원들이 제공한 도움에 감사드립니다."
         },
         {
           "word": "depreciate",
@@ -13779,9 +13779,9 @@
           "meaning": "구독하다; 가입하다",
           "code": "V",
           "colloc": "subscribe to a newsletter",
-          "kr": "소식지 구독 신청",
+          "kr": "소식지 구독을 신청",
           "en": "We need to subscribe to a newsletter before Friday.",
-          "ko": "금요일 전까지 소식지 구독 신청해야 한다."
+          "ko": "금요일 전까지 소식지 구독을 신청해야 한다."
         },
         {
           "word": "persuasively",
@@ -14244,8 +14244,8 @@
           "code": "V",
           "colloc": "entitle staff to benefits",
           "kr": "직원에게 혜택 수급 권리를 부여",
-          "en": "Please entitle staff to benefits as soon as possible.",
-          "ko": "가능한 한 빨리 직원에게 혜택 수급 권리를 부여해 주세요."
+          "en": "The new policy will entitle staff to additional benefits.",
+          "ko": "새 정책은 직원에게 추가 혜택을 받을 권리를 부여한다."
         },
         {
           "word": "accrual",
@@ -15155,8 +15155,8 @@
           "code": "V",
           "colloc": "legislate for cleaner transport",
           "kr": "청정 교통 관련 법률을 제정",
-          "en": "Our staff will legislate for cleaner transport this week.",
-          "ko": "직원들은 이번 주에 청정 교통 관련 법률을 제정할 예정이다."
+          "en": "Parliament will legislate for cleaner transport.",
+          "ko": "의회는 더 친환경적인 교통을 위한 법률을 제정할 예정이다."
         },
         {
           "word": "administer",
@@ -20385,7 +20385,7 @@
       "why": "여러 해석이 가능한 조항은 모호한 ambiguous다."
     },
     {
-      "prompt": "The team made an _______ review, checking every document without exception.",
+      "prompt": "The team conducted an _______ review, checking every document without exception.",
       "options": [
         "excessive",
         "exclusive",

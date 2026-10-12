@@ -1389,7 +1389,7 @@ diverse|adj|다양한|D:diverse audience|다양한 고객층
 exclusive|adj|독점적인; 전용의|D:exclusive offer|독점 제공 혜택
 mainstream|adj/n|주류의; 주류|D:mainstream market|주류 시장
 niche|n/adj|틈새시장; 특정 소수의|D:niche market|틈새시장
-subscribe|v|구독하다; 가입하다|V:subscribe to a newsletter|소식지 구독 신청
+subscribe|v|구독하다; 가입하다|V:subscribe to a newsletter|소식지 구독을 신청
 persuasively|adv|설득력 있게|V:present benefits persuasively|이점을 설득력 있게 제시
 predominantly|adv|주로|A:predominantly digital|주로 디지털 방식임
 selectively|adv|선별적으로|V:target customers selectively|고객을 선별적으로 공략

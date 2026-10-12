@@ -11,46 +11,15 @@
             "id": "3d5939434b10fcf7",
             "type": "leaf",
             "state": {
-              "type": "markdown",
+              "type": "pdf",
               "state": {
-                "file": "CS/CPP/08.다중 카메라 이미지 검사 스레드 설계와 멈춤 진단.md",
-                "mode": "source",
-                "source": false
+                "file": "English/Toeic/Voca_60_Day.pdf"
               },
-              "icon": "lucide-file",
-              "title": "08.다중 카메라 이미지 검사 스레드 설계와 멈춤 진단"
-            }
-          },
-          {
-            "id": "ec9df096823558d9",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "공기업_학습관리/03_교재/장별/GI-C02-01 언어 실행·자료형·정수 연산·비트 연산.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "GI-C02-01 언어 실행·자료형·정수 연산·비트 연산"
-            }
-          },
-          {
-            "id": "bb27902aa9438eb4",
-            "type": "leaf",
-            "state": {
-              "type": "split-diff-view",
-              "state": {
-                "aFile": "conflict-files-obsidian-git.md",
-                "bFile": "conflict-files-obsidian-git.md",
-                "aRef": ""
-              },
-              "icon": "diff",
-              "title": "Diff: conflict-files-obsidian-git  (Working Tree)"
+              "icon": "lucide-file-text",
+              "title": "Voca_60_Day"
             }
           }
-        ],
-        "currentTab": 2
+        ]
       }
     ],
     "direction": "vertical"
@@ -210,7 +179,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 855.5
+    "width": 267.5
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -224,53 +193,53 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "6ab1c6578c2926a1",
+  "active": "3d5939434b10fcf7",
   "lastOpenFiles": [
-    "CS/CPP/tmp/pdfs/lateDay-268.png",
-    "CS/CPP/tmp/pdfs/lateDay-267.png",
-    "CS/CPP/tmp/pdfs/lateDay-266.png",
-    "CS/CPP/tmp/pdfs/worksheets-373.png",
-    "CS/CPP/tmp/pdfs/worksheets-372.png",
-    "CS/CPP/tmp/pdfs/worksheets-371.png",
-    "CS/CPP/tmp/pdfs/worksheets-370.png",
-    "CS/CPP/tmp/pdfs/worksheets-369.png",
-    "CS/CPP/tmp/pdfs/worksheets-368.png",
-    "CS/CPP/tmp/pdfs/worksheets-367.png",
-    "CS/CPP/tmp/pdfs/finalsample-348.png",
-    "CS/CPP/tmp/pdfs/montages",
-    "CS/CPP/tmp/pdfs/quality_audit.json",
-    "CS/CPP/tmp/pdfs/__pycache__/build_book.cpython-312.pyc",
-    "CS/CPP/tmp/pdfs/rendered",
-    "CS/CPP/tmp/pdfs/qa_book.py",
-    "CS/CPP/tmp/pdfs/focus_notes.txt",
-    "CS/CPP/tmp/pdfs/all_content.json",
-    "CS/CPP/tmp/pdfs/final_audit.json",
-    "CS/CPP/output/pdf/TOEIC_900_Vocabulary_60_Day_Challenge.pdf",
-    "CS/CPP/tmp/pdfs/integration_draft.pdf",
-    "Project/uLED/분석_Docs/uLED 노출.md",
-    "Project/uLED/분석_Docs/RecipeWindow_파라미터_교육해설_20260928.md",
-    "conflict-files-obsidian-git.md",
-    "공기업_학습관리/02_일별공부/GI-D005 S005 전산 혼합.md",
-    "공기업_학습관리/02_일별공부/GI-D003 S003 NCS 의사소통.md",
-    "공기업_학습관리/02_일별공부/GI-D002 S002 프로그래밍.md",
-    "공기업_학습관리/02_일별공부/GI-D001 S001 프로그래밍.md",
-    "공기업_학습관리/01_진행표/GI-기초14일 시작표.md",
-    "공기업_학습관리/00_관리/GI-시작하기.md",
-    "공기업_학습관리/99_출처/GI-보강내역.md",
-    "공기업_학습관리/07_기초14일/GI-기초11 해시와 합계·평균.md",
-    "공기업_학습관리/07_기초14일/GI-기초14 2주 재풀이와 다음 단계.md",
-    "공기업_학습관리/07_기초14일/GI-기초13 SELECT·NULL과 자료해석.md",
-    "공기업_학습관리/07_기초14일/GI-기초12 객체·참조와 조건 추론.md",
-    "공기업_학습관리/07_기초14일/GI-기초10 큐와 지문 요약.md",
-    "공기업_학습관리/07_기초14일/GI-기초08 배열·연결리스트와 표 읽기.md",
-    "공기업_학습관리/07_기초14일/GI-기초09 스택과 증감률 재풀이.md",
-    "공기업_학습관리/07_기초14일/GI-기초07 1주 복습과 약점 확인.md",
-    "공기업_학습관리/07_기초14일/GI-기초05 함수와 증감률.md",
-    "공기업_학습관리/07_기초14일/GI-기초06 배열 순회와 보기의 근거.md",
-    "공기업_학습관리/07_기초14일/GI-기초01 반복문과 백분율.md",
-    "공기업_학습관리/07_기초14일/GI-기초04 배열 인덱스와 비율 계산.md",
-    "공기업_학습관리/07_기초14일/GI-기초03 정수 나눗셈과 지문 조건.md",
-    "공기업_학습관리/07_기초14일/GI-기초02 시간복잡도와 비율의 분모.md",
-    "공기업_학습관리/01_진행표/GI-주별 찾아보기.md"
+    "공기업_학습관리/02_과목별PDF/12.SQL.pdf",
+    "공기업_학습관리/02_과목별PDF/11.Python·C++.pdf",
+    "공기업_학습관리/02_과목별PDF/10.NCS.pdf",
+    "공기업_학습관리/02_과목별PDF/09.빅데이터·AI.pdf",
+    "공기업_학습관리/02_과목별PDF/08.컴퓨터구조.pdf",
+    "공기업_학습관리/02_과목별PDF/07.네트워크.pdf",
+    "공기업_학습관리/02_과목별PDF/06.정보보안.pdf",
+    "공기업_학습관리/02_과목별PDF/05.소프트웨어공학.pdf",
+    "공기업_학습관리/02_과목별PDF/04.운영체제.pdf",
+    "공기업_학습관리/02_과목별PDF/03.DB·SQL.pdf",
+    "공기업_학습관리/02_과목별PDF/02.자료구조·알고리즘.pdf",
+    "공기업_학습관리/00_시작하기.md",
+    "공기업_학습관리/01_공부기록/공부기록.md",
+    "CS/CPP/08.다중 카메라 이미지 검사 스레드 설계와 멈춤 진단.md",
+    "공기업_학습관리/03_템플릿/하루공부.md",
+    "공기업_학습관리/01_커리큘럼/전체커리큘럼.md",
+    "공기업_학습관리/04_실습과NCS/매일15분/01_진행목차.md",
+    "공기업_학습관리/02_일별공부/L002 프로그래밍 02회차.md",
+    "공기업_학습관리/02_일별공부/L008 프로그래밍 06회차.md",
+    "공기업_학습관리/01_커리큘럼/사용방법.md",
+    "공기업_학습관리/04_실습과NCS/매일15분/00_시작하기.md",
+    "공기업_학습관리/02_일별공부/L001 프로그래밍 01회차.md",
+    "공기업_학습관리/04_실습과NCS/매일15분/기록/M129 CX09 SX09.md",
+    "공기업_학습관리/04_실습과NCS/매일15분/기록/M130 CX09 SX09.md",
+    "공기업_학습관리/04_실습과NCS/매일15분/기록/M128 CX08 SX08.md",
+    "공기업_학습관리/04_실습과NCS/매일15분/기록/M125 CX08 SX08.md",
+    "공기업_학습관리/04_실습과NCS/매일15분/기록/M127 CX08 SX08.md",
+    "공기업_학습관리/04_실습과NCS/매일15분/기록/M126 CX08 SX08.md",
+    "공기업_학습관리/04_실습과NCS/매일15분/기록/M118 CX06 SX06.md",
+    "공기업_학습관리/04_실습과NCS/매일15분/기록/M124 CX07 SX07.md",
+    "공기업_학습관리/04_실습과NCS/매일15분/기록/M123 CX07 SX07.md",
+    "공기업_학습관리/04_실습과NCS/매일15분/기록/M115 CX05 SX05.md",
+    "공기업_학습관리/04_실습과NCS/매일15분/기록/M122 CX07 SX07.md",
+    "공기업_학습관리/04_실습과NCS/매일15분/기록/M116 CX05 SX05.md",
+    "공기업_학습관리/04_실습과NCS/매일15분/기록/M121 CX07 SX07.md",
+    "공기업_학습관리/04_실습과NCS/매일15분/기록/M120 CX06 SX06.md",
+    "CS/CPP/tmp/pdfs/rc_restart/render/detail-233-233.png",
+    "CS/CPP/tmp/pdfs/rc_restart/render/detail-131-131.png",
+    "CS/CPP/tmp/pdfs/rc_restart/render/detail-9-009.png",
+    "CS/CPP/tmp/pdfs/rc_restart/render/detail-5-005.png",
+    "CS/CPP/tmp/pdfs/rc_restart/contact-14.jpg",
+    "CS/CPP/tmp/pdfs/rc_restart/contact-13.jpg",
+    "CS/CPP/tmp/pdfs/rc_restart/contact-12.jpg",
+    "CS/CPP/tmp/pdfs/rc_restart/contact-11.jpg",
+    "CS/CPP/tmp/pdfs/rc_restart/contact-10.jpg",
+    "CS/CPP/tmp/pdfs/rc_restart/contact-09.jpg"
   ]
 }

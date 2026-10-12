@@ -53,6 +53,11 @@ SPECIAL_A={
 }
 
 SPECIAL_EX={
+'afford':('The department cannot afford the upgrade this year.','부서는 올해 업그레이드 비용을 감당할 수 없다.'),
+'appreciate':('We appreciate the assistance provided by your staff.','귀사 직원들이 제공한 도움에 감사드립니다.'),
+'entitle':('The new policy will entitle staff to additional benefits.','새 정책은 직원에게 추가 혜택을 받을 권리를 부여한다.'),
+'legislate':('Parliament will legislate for cleaner transport.','의회는 더 친환경적인 교통을 위한 법률을 제정할 예정이다.'),
+'unnecessarily':('Poor planning can increase costs unnecessarily.','부실한 계획은 불필요하게 비용을 늘릴 수 있다.'),
 'mean':('A higher fee could mean a change in policy.','요금 인상은 정책 변경을 의미할 수 있다.'),
 'owe':('Our records show that we owe money to a supplier.','기록에 따르면 우리는 공급업체에 지급할 돈이 있다.'),
 'fluctuate':('Prices may fluctuate within a narrow range.','가격은 좁은 범위 안에서 변동할 수 있다.'),
@@ -359,7 +364,7 @@ def front_pages(b,days,refs):
         ('단어 페이지를 읽는 순서','영어 단어를 보고 핵심 뜻이 떠오르는지 확인합니다. 다음에는 표현 전체를 읽습니다. 마지막으로 해석을 가리고 예문을 이해합니다. 단어의 모든 사전적 의미보다 표에 제시한 업무상 의미를 우선하세요.'),
         ('복습 간격','당일 저녁, 다음 날, 3일 뒤, 7일 뒤, 14일 뒤에 다시 떠올립니다. 하루의 복습 대상은 D-1·D-3·D-7·D-14이며, 정답 페이지 아래에 해당 Day를 표시했습니다. Day 60 이후에도 마지막 단어들의 14일 복습을 이어갑니다.'),
         ('주간 복습과 정답','Day 07·14·21·28·35·42·49·56 학습 후 해당 Weekly Review로 이동합니다. 주간 복습은 단어를 새로 세지 않습니다. Mini Test 정답은 다음 페이지, Weekly Review 정답은 해당 세트 뒤에 있습니다.'),
-        ('채점 기준','미니 테스트는 15점, 주간 복습은 12점, 최종 테스트는 100점입니다. 영→한은 핵심 의미가 맞으면 정답, 한→영은 제시한 목표 단어의 철자가 맞아야 정답입니다. 뜻이 여러 개인 단어는 질문에 제시된 학습 의미를 사용하세요.')]:b.box(label,body)
+        ('채점 기준','미니 테스트는 15점, 주간 복습은 12점, 최종 테스트는 100점입니다. 영→한은 핵심 의미가 맞으면 정답, 한→영은 첫 3글자 단서에 맞는 목표 단어의 철자가 맞아야 정답입니다. 뜻이 여러 개인 단어는 질문에 제시된 학습 의미를 사용하세요.')]:b.box(label,body)
     b.new('CONTENTS','목차','표시된 쪽수는 PDF의 실제 페이지 번호와 같습니다.',key='contents')
     def pg(k):return f'{refs.get(k,0):03d}'
     def tocrow(label,key):return [f'<link href="#{key}" color="#15334F">{label}</link>',f'<link href="#{key}" color="#2463A3">{pg(key)}</link>']
