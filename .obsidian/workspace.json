@@ -13,10 +13,10 @@
             "state": {
               "type": "pdf",
               "state": {
-                "file": "공기업_학습관리/02_과목별PDF/07.네트워크.pdf"
+                "file": "English/Toeic/Voca_60_Day.pdf"
               },
               "icon": "lucide-file-text",
-              "title": "07.네트워크"
+              "title": "Voca_60_Day"
             }
           }
         ]
@@ -195,7 +195,6 @@
   },
   "active": "3d5939434b10fcf7",
   "lastOpenFiles": [
-    "English/Toeic/Voca_60_Day.pdf",
     "공기업_학습관리/02_과목별PDF/12.SQL.pdf",
     "공기업_학습관리/02_과목별PDF/11.Python·C++.pdf",
     "공기업_학습관리/02_과목별PDF/10.NCS.pdf",
@@ -206,6 +205,7 @@
     "공기업_학습관리/02_과목별PDF/05.소프트웨어공학.pdf",
     "공기업_학습관리/02_과목별PDF/04.운영체제.pdf",
     "공기업_학습관리/02_과목별PDF/03.DB·SQL.pdf",
+    "공기업_학습관리/02_과목별PDF/02.자료구조·알고리즘.pdf",
     "공기업_학습관리/00_시작하기.md",
     "공기업_학습관리/01_공부기록/공부기록.md",
     "CS/CPP/08.다중 카메라 이미지 검사 스레드 설계와 멈춤 진단.md",
