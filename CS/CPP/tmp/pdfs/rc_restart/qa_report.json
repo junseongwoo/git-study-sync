@@ -1,0 +1,39 @@
+{
+  "pages": 347,
+  "questions": 332,
+  "concepts": 54,
+  "reading_passages": 18,
+  "notes_pages": 18,
+  "chapter_count": 18,
+  "answers": {
+    "A": 83,
+    "D": 83,
+    "C": 83,
+    "B": 83
+  },
+  "fonts": [
+    "/AAAAAA+Arial-BoldMT",
+    "/AAAAAA+ArialMT",
+    "/AAAAAA+MalgunGothic",
+    "/AAAAAA+MalgunGothicBold",
+    "/AAAAAB+MalgunGothic",
+    "/AAAAAB+MalgunGothicBold",
+    "/AAAAAC+MalgunGothic",
+    "/Helvetica"
+  ],
+  "issues": [],
+  "bytes": 1019050,
+  "visual_review": {
+    "result": "passed",
+    "detailed_pages": [
+      5,
+      9,
+      131,
+      233,
+      313,
+      337,
+      347
+    ],
+    "all_pages": "347 pages inspected in rendered contact sheets"
+  }
+}

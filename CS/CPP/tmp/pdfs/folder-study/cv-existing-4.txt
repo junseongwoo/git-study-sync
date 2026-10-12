@@ -1,0 +1,370 @@
+Template Match Align - 구현 및 계산 로직 가이드
+1
+Y_Align_Add / 2026-09-04
+ Template Match Align
+ 구현 및 계산 로직 가이드
+ CAM2 한 대를 사용하는 Align1-Mark3 도면 좌표 기반 T Align
+문서 목적
+Template Matching Score가 어떻게 만들어지고, 현재 Mark Pixel 중심과 실제 Encoder가 어떻게 전역 Stage 좌표가 되며,
+도면 벡터와 측정 벡터로 Theta를 계산한 뒤 기존 Center Pivot UVW 이동으로 연결되는지를 구현 코드 기준으로 설명한
+다.
+대상 브랜치
+Y_Align_Add
+핵심 구현
+TemplateMatchAlignViewModel / TemplateMatchThetaCalc / TemplateMatchAlignWindow
+작성 기준일
+2026-09-04
+기능 범위
+Mark1-Mark3 Template Matching을 이용한 T 회전 보정. X/Y 평행 이동은 수행하지 않는다.
+
+Template Match Align - 구현 및 계산 로직 가이드
+2
+Y_Align_Add / 2026-09-04
+목차
+1. 설계 원칙과 전체 구조
+2. 자동 Align 실행 순서
+3. Template 등록과 ROI 검증
+4. Template Matching과 Score 산출
+5. 촬영과 Encoder 좌표 취득
+6. Pixel 중심을 전역 Stage 좌표로 변환
+7. 도면 기준 벡터 생성
+8. Theta 계산
+9. 보정 부호와 Center Pivot UVW 이동
+10. 반복 수렴 및 안전 중단
+11. 코드 추적표와 실패 조건
+12. 장비 검증 체크리스트
+읽는 순서
+처음 보는 개발자는 1-2장을 먼저 읽고, 현장 Match 불량은 3-4장, 좌표 및 Theta 부호 문제는 5-9장, 반복 발산 문제는
+10-12장을 확인한다.
+
+Template Match Align - 구현 및 계산 로직 가이드
+3
+Y_Align_Add / 2026-09-04
+1. 설계 원칙과 전체 구조
+새 기능은 기존 AlignWindow의 카메라 연결, Camera Geometry, Center Pivot UVW 변환, Control 상대 이동을 재
+사용한다. 새로 분리한 것은 도면 벡터와 전역 측정 벡터 사이의 Theta를 계산하는 순수 계산 클래스뿐이다. 장비
+제어와 수학 계산을 분리하여 계산은 단위 테스트로 검증하고, 실제 이동은 이미 검증된 기존 경로를 사용하도록
+했다.
+TemplateMatchAlignWindow
+사용자 입력과 결과 표시
+TemplateMatchAlignViewModel
+촬영 -> 계산 -> 이동 순서 관리
+AlignCameraPaneViewModel
+Template Matching / Score / 현재 중심
+TemplateMatchThetaCalc
+Pixel->Stage / Vdesign / Vmeasure / Theta
+AlignViewModel
+Center Pivot UVW 변환 / Control 상대 이동
+왜 별도 계산 클래스를 만들었는가?
+Template 등록 중심을 정상 T=0 기준에서 구조적으로 배제하고, Camera/Control 없이도 수학과 안전 조건을 단위 테스
+트하기 위해서다. Interface, Factory, Manager는 추가하지 않았다.
+
+Template Match Align - 구현 및 계산 로직 가이드
+4
+Y_Align_Add / 2026-09-04
+2. 자동 Align 실행 순서
+자동 실행은 RunAutomaticAlignAsync() 한 메서드에서 아래 순서로 읽히도록 구현했다. 장비가 어느 위치에 있고 
+어느 단계에서 실패했는지 현장에서 쉽게 추적하기 위한 구조다.
+1. Align 기준 위치 이동
+기존 MoveAlignPositionForStepTestAsync 재사용
+2. Mark1 촬영/검출
+C1, Score1, S1, P1 저장
+3. Mark3 StageX 이동
+도면 Q3-Q1을 PanelAngle로 변환한 거리
+4. Mark3 촬영/검출
+C3, Score3, S3, P3 저장
+5. Mark1 복귀
+항상 계산 전에 기준 위치로 복귀
+6. Theta 계산 / 허용 오차 판정
+PASS 또는 50% 보정
+7. UVW Jog 후 측정값 폐기
+다음 반복은 반드시 새 촬영 사용
+핵심 구현 위치: TemplateMatchAlignViewModel.cs:273-318
+
+Template Match Align - 구현 및 계산 로직 가이드
+5
+Y_Align_Add / 2026-09-04
+3. Template 등록과 ROI 검증
+Template 등록 시 저장하는 값은 Mark 모양 이미지, Template ROI, Search ROI뿐이다. 등록 당시 Mark 중심 Pixel
+은 Profile에 저장하지 않는다. 따라서 기울어진 Glass에서 Template을 등록해도 그 기울기는 정상 T=0 기준이 되
+지 않는다.
+항목
+구현
+이유
+Template 이미지
+현재 전체 Frame 저장
+Mark 모양 원본을 유지
+Template ROI
+실제 Matching에 사용할 Mark 영역
+배경 영향을 줄이고 계산량 감소
+Search ROI
+현재 영상에서 검색할 범위
+오검출 방지와 초기 위치 오차 허용
+등록 중심
+저장/계산하지 않음
+등록 당시 기울기를 T=0으로 오인하지 않기 위해
+ROI 안전 검증
+ValidateTemplateProfile()은 다음을 확인한다.
+- Template ROI와 Search ROI가 모두 유효한가
+- Search ROI가 Template ROI 전체를 포함하는가
+- Search ROI 사방 여유가 Camera Geometry 기준 최소 100 um 이상인가
+100 um 여유는 100 / max(PixelSizeX, PixelSizeY)로 Pixel 수를 계산한다. 초기 Mark 위치가 조금 벗어나도 검색할 
+수 있도록 하기 위한 최소 범위다.
+핵심 구현 위치: TemplateMatchAlignViewModel.cs:400-480
+
+Template Match Align - 구현 및 계산 로직 가이드
+6
+Y_Align_Add / 2026-09-04
+4.  Template Matching과 Score 산출
+등록 영상
+Template ROI
+현재 영상
+Search ROI
+MatchTemplate
+CCoeffNormed
+MinMaxLoc
+maxVal/maxLoc
+Score
+maxVal
+현재 중심 C
+maxLoc + 1/2 ROI
++ subpixel
+4.1 입력 준비
+현재 영상과 등록 영상을 Gray로 변환한 뒤 등록 영상의 Template ROI와 현재 영상의 Search ROI를 잘라낸다.
+Template이 Search보다 크면 즉시 실패한다.
+4.2 OpenCV Matching
+Cv2.MatchTemplate(search, template, result,
+                  TemplateMatchModes.CCoeffNormed);
+Cv2.MinMaxLoc(result, out _, out double maxVal,
+              out _, out Point maxLoc);
+CCoeffNormed는 평균 밝기 성분을 제거한 정규화 상관계수 방식이다. 단순 밝기 차이보다 Mark 패턴의 형태 유
+사도를 비교하기 적합하다.
+4.3 Score와 중심
+maxVal이 Match Score이고 maxLoc이 가장 높은 점수의 좌측 상단이다. 중심은 maxLoc에 Template 크기의 절반
+과 포물선 기반 Subpixel 보정값을 더해 계산한다.
+CenterX = matchRect.X + subpixel.X + template.Width / 2
+CenterY = matchRect.Y + subpixel.Y + template.Height / 2
+Subpixel 보정은 정수 Pixel 단위 계단 현상을 줄이기 위해 사용한다. Mark 간 거리가 약 393,000 um이므로 작은
+Pixel 오차도 미세 Theta 측정에 영향을 줄 수 있다.
+핵심 구현 위치: AlignViewModel.cs:1814-1853, 2074-2102
+
+Template Match Align - 구현 및 계산 로직 가이드
+7
+Y_Align_Add / 2026-09-04
+5. 촬영과 Encoder 좌표 취득
+저장 ROI 적용 / Template 파일 확인
+CAM2 Live 중이면 Stop
+GrabOnceAsync 실행
+같은 Status 응답에서 StageX + UnitY2 읽기
+현재 영상에 Template Matching
+Score 통과 후 C, S, P 저장
+Encoder를 사용하는 이유
+명령한 StageX 이동거리만 사용하면 실제 정착 위치 오차와 Servo 추종 오차가 계산에서 빠진다. 각 촬영 직후 실
+제 StageX와 InspectionUnit2Y를 읽어 Mark의 전역 위치에 반영한다.
+장비 의존 주의
+현재 Control 계약에는 카메라 Exposure 시점 Encoder latch가 없다. 구현은 Grab 완료 직후 Status를 읽는다. 따라서 촬
+영 전에 축 이동이 완료되고 축이 정지해 있어야 한다. 장비 검증 시 촬영 중 Busy/정착 상태를 반드시 확인한다.
+핵심 구현 위치: TemplateMatchAlignViewModel.cs:321-358, AxisPositionReader.cs:47-71
+
+Template Match Align - 구현 및 계산 로직 가이드
+8
+Y_Align_Add / 2026-09-04
+6. Pixel 중심을 전역 Stage 좌표로 변환
+Mark1과 Mark3은 서로 다른 Stage 위치에서 촬영하므로 두 영상의 Pixel 중심을 바로 빼지 않는다. 각 중심을 같은
+ Stage 전역좌표계로 변환한 뒤 차이를 계산한다.
+현재 Mark 중심 C
+CurrentCenter Pixel
+CameraOrigin 차감
+dxPixel, dyPixel
+Camera Geometry 방향 벡터 투영
+Stage +X / +Y 이미지 방향
+PixelSize 평균으로 um 변환
+StageOffsetX / StageOffsetY
+촬영 Encoder S와 합산
+P = S + StageOffset
+구현 수식
+dx = CurrentCenter.X - CameraOrigin.X
+dy = CurrentCenter.Y - CameraOrigin.Y
+pixelSize = (PixelSizeXUm + PixelSizeYUm) / 2
+offsetX = (dx * StagePlusXImageUnitX
+         + dy * StagePlusXImageUnitY) * pixelSize
+offsetY = (dx * StagePlusYImageUnitX
+         + dy * StagePlusYImageUnitY) * pixelSize
+P = (EncoderX + offsetX, EncoderY + offsetY)
+왜 Camera Geometry가 필요한가?
+이미지의 오른쪽/아래쪽 방향이 실제 Stage +X/+Y와 일치한다는 보장이 없다. 카메라 회전, 축 교환, 반전 상태를
+기존 보정 방향 벡터로 해석해야 한다. 기존 Align과 동일한 Pixel Size 평균을 사용해 기존 Geometry의 의미를 바
+꾸지 않았다.
+핵심 구현 위치: TemplateMatchThetaCalc.cs:27-50
+
+Template Match Align - 구현 및 계산 로직 가이드
+9
+Y_Align_Add / 2026-09-04
+7. 도면 기준 벡터 생성
+Recipe의 Mark 좌표는 Glass 도면 좌표이고 측정값은 Stage 좌표다. 두 벡터를 비교하려면 같은 좌표계로 변환해
+야 한다.
+Glass 도면 Q1 / Q3
+GlassSizeModel.PanelAngleDeg 적용
+Q1Stage / Q3Stage
+Vdesign = Q3Stage - Q1Stage
+QStage.X = Q.X * cos(angle) - Q.Y * sin(angle)
+QStage.Y = Q.X * sin(angle) + Q.Y * cos(angle)
+Vdesign = Q3Stage - Q1Stage
+Mark3 이동은 변환된 Stage 선분의 X 성분을 사용한다. CAM2 고정 + StageX 단독 이동 구조이므로 Stage Y 성분
+이 1 um보다 크면 측정 불가능 상태로 판단해 이동하지 않는다.
+핵심 구현 위치: TemplateMatchAlignViewModel.cs:490-526
+
+Template Match Align - 구현 및 계산 로직 가이드
+10
+Y_Align_Add / 2026-09-04
+8. Theta 계산
+Vdesign
+Vmeasure
+cross = Vdesign.X * Vmeasure.Y
+        - Vdesign.Y * Vmeasure.X
+dot = Vdesign.X * Vmeasure.X
+      + Vdesign.Y * Vmeasure.Y
+Theta = atan2(cross, dot)
+Vdesign  = Q3Stage - Q1Stage
+Vmeasure = P3 - P1
+cross = Vdesign.X * Vmeasure.Y
+      - Vdesign.Y * Vmeasure.X
+dot = Vdesign.X * Vmeasure.X
+    + Vdesign.Y * Vmeasure.Y
+thetaErrorDeg = atan2(cross, dot) * 180 / PI
+왜 atan2(cross, dot)인가?
+작은 각도 근사식은 기준선이 특정 축과 평행하고 각도가 매우 작다는 전제가 필요하다. atan2 방식은 PanelAngle
+이 있거나 Vdesign에 X/Y 성분이 모두 있어도 같은 수식으로 방향과 크기를 계산할 수 있다.
+길이 안전 검증
+도면 선분 또는 측정 선분이 0이면 계산하지 않는다. 또한 측정 길이/도면 길이 비율이 0.8-1.2 밖이면 Mark 오검출,
+ Encoder 오류 또는 Geometry 오류 가능성이 높으므로 이동을 금지한다.
+예시: 393,000 um 기준에서 횡방향 100 um
+atan2(100, 393000)의 절대값은 약 0.014579 deg이다. 따라서 0.001 deg 허용 오차를 사용하려면 Pixel 중심과
+Geometry, Encoder 정착 반복성이 모두 중요하다.
+핵심 구현 위치: TemplateMatchThetaCalc.cs:53-100
+
+Template Match Align - 구현 및 계산 로직 가이드
+11
+Y_Align_Add / 2026-09-04
+9. 보정 부호와 Center Pivot UVW 이동
+측정 Theta Error
+Correction = -Error * 0.5
+부호 반전은 여기서 단 1회
+XYT 입력 = (0, 0, Correction)
+X/Y 평행 이동 금지
+기존 Center Pivot UVW 변환
+StageU / StageV / StageW Relative Move
+왜 반대 부호인가?
+thetaError는 현재 Glass가 도면 기준에서 돌아간 물리적 방향이다. 보정은 그 반대 방향이어야 하므로 -thetaError
+를 사용한다. 여러 계층에서 임의로 부호를 뒤집지 않고 CalculateThetaCore() 한 곳에서만 반전한다.
+왜 50%만 적용하는가?
+UVW 기구 오차와 보정 파라미터 오차 때문에 100% 이동 시 목표를 지나칠 수 있다. 50%씩 이동하고 재측정하면
+보수적으로 수렴하며, 방향이 틀렸을 때도 한 번의 이동량을 제한할 수 있다.
+기존 UVW 로직 재사용
+AlignViewModel.CalculateThetaUvwForStepTest()는 X=0, Y=0, T=보정각을 기존 Center Pivot 변환기에 전달한다.
+ApplyThetaUvwForStepTestAsync()는 검증된 기존 Control 상대 이동 경로로 StageU/V/W를 전송한다.
+핵심 구현 위치: TemplateMatchAlignViewModel.cs:361-387, AlignViewModel.cs:359-363, 959-987
+
+Template Match Align - 구현 및 계산 로직 가이드
+12
+Y_Align_Add / 2026-09-04
+10. 반복 수렴 및 안전 중단
+현재 |Theta| 저장
+50% T Jog
+기존 Mark 측정값 P1/P3 폐기
+Mark1/Mark3 새 촬영
+새 |Theta| 계산
+새 |Theta| < 이전 |Theta| 확인
+보정 후 오차가 감소하지 않으면 자동으로 추가 이동하지 않는다. 부호, UVW 기구 방향, Camera Geometry 중 하
+나가 잘못됐을 가능성이 있기 때문이다.
+완료 조건
+abs(thetaErrorDeg) <= Recipe.AlignPlan.ToleranceThetaDeg
+중단 조건
+오차 미감소, MaxIteration 초과, Match Score 미달, Theta 안전 제한 ±0.1 deg 초과, 좌표/길이 비정상, Control 응답 실
+패
+핵심 구현 위치: TemplateMatchAlignViewModel.cs:299-317, 382-397
+
+Template Match Align - 구현 및 계산 로직 가이드
+13
+Y_Align_Add / 2026-09-04
+11. 코드 추적표와 실패 조건
+단계
+메서드
+출력/실패
+창 진입
+RecipeWindow.OpenTemplateMatchAlignWindow_
+Click
+전용 Window 생성/활성화
+자동 실행
+RunAutomaticAlignAsync
+반복 순서와 MaxIteration
+촬영/측정
+CaptureAndMeasureAsync
+C, Score, S, P
+Matching
+MatchCurrentToReference / MatchCenterInImage
+CurrentCenter, maxVal
+Score 검증
+TemplateMatchThetaCalc.ValidateMatchScore
+미달 시 이동 금지
+Encoder
+AxisPositionReader.ReadCamY2StagePointAsync
+StageX, UnitY2
+Pixel->Stage
+ConvertPixelCenterToGlobalStage
+전역 P1/P3
+도면 좌표
+ResolveDesignStagePoints
+Q1Stage/Q3Stage
+Theta
+TemplateMatchThetaCalc.Calculate
+cross, dot, Theta
+UVW 계산
+CalculateThetaUvwForStepTest
+X=0, Y=0, T only
+UVW 이동
+ApplyThetaUvwForStepTestAsync
+U/V/W Relative Move
+ReferenceCenter는 기존 공용 Match API의 반환값으로 남아 있지만 새 Theta 경로에서는 사용하지 않는다. 새 계
+산 입력은 CurrentCenter, Encoder, Camera Geometry, 도면 Q1/Q3뿐이다.
+
+Template Match Align - 구현 및 계산 로직 가이드
+14
+Y_Align_Add / 2026-09-04
+12. 장비 검증 체크리스트
+검증
+확인 내용
+판정/기록
+T=0 반복
+동일 Glass 30회 Mark1/Mark3 측정
+Theta 평균, 표준편차, Score 기록
++0.01 deg
+알려진 +T 적용 후 측정
+계산 부호 및 T- 보정 확인
+-0.01 deg
+알려진 -T 적용 후 측정
+계산 부호 및 T+ 보정 확인
+50% 수렴
+Jog 전/후 재측정
+다음 |Theta|가 감소해야 함
+허용 오차
+ToleranceThetaDeg=0.001 설정
+MaxIteration 안에 PASS 확인
+Template 기울기
+약 0.015 deg 기울어진 상태에서 등록
+등록 각도가 T=0으로 들어가지 않는지 확인
+Encoder
+명령 이동량과 S3-S1 비교
+실제 Encoder가 P3-P1에 반영되는지 확인
+기존 Align 비교
+Align1/Align2 결과와 교차검증
+T 방향과 잔여 오차 비교
+X/Y 무이동
+Control Raw/PARSED 로그 확인
+StageU/V/W 외 X/Y 명령 없음
+창 종료 복귀
+Mark3 위치에서 창 닫기
+Mark1 복귀 성공/실패 로그 확인
+최종 판단
+소프트웨어 계산식과 단위 테스트가 통과해도 실제 보정 부호는 UVW 기구 방향과 Control 좌표 정의에 의존한다. +0.01
+deg / -0.01 deg 장비 시험에서 Jog 후 |Theta| 감소를 확인하기 전에는 자동 연속 운전에 사용하지 않는다.
