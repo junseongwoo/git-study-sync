@@ -11,12 +11,10 @@
             "id": "3d5939434b10fcf7",
             "type": "leaf",
             "state": {
-              "type": "pdf",
-              "state": {
-                "file": "English/Toeic/Voca_60_Day.pdf"
-              },
-              "icon": "lucide-file-text",
-              "title": "Voca_60_Day"
+              "type": "empty",
+              "state": {},
+              "icon": "lucide-file",
+              "title": "새 탭"
             }
           }
         ]
@@ -195,21 +193,34 @@
   },
   "active": "3d5939434b10fcf7",
   "lastOpenFiles": [
-    "공기업_학습관리/02_과목별PDF/12.SQL.pdf",
-    "공기업_학습관리/02_과목별PDF/11.Python·C++.pdf",
+    "코테준비/output/pdf/코테_이직준비_추가학습_6일차이후.pdf",
+    "코테준비/output/pdf",
+    "코테준비/output",
+    "공기업_학습관리/01_공부기록/공부기록.md",
+    "공기업_학습관리/03_템플릿/하루공부.md",
     "공기업_학습관리/02_과목별PDF/10.NCS.pdf",
+    "공기업_학습관리/02_과목별PDF/11.Python·C++.pdf",
+    "공기업_학습관리/02_과목별PDF/12.SQL.pdf",
     "공기업_학습관리/02_과목별PDF/09.빅데이터·AI.pdf",
     "공기업_학습관리/02_과목별PDF/08.컴퓨터구조.pdf",
-    "공기업_학습관리/02_과목별PDF/07.네트워크.pdf",
     "공기업_학습관리/02_과목별PDF/06.정보보안.pdf",
     "공기업_학습관리/02_과목별PDF/05.소프트웨어공학.pdf",
-    "공기업_학습관리/02_과목별PDF/04.운영체제.pdf",
-    "공기업_학습관리/02_과목별PDF/03.DB·SQL.pdf",
-    "공기업_학습관리/02_과목별PDF/02.자료구조·알고리즘.pdf",
+    "공기업_학습관리/02_과목별PDF/07.네트워크.pdf",
     "공기업_학습관리/00_시작하기.md",
-    "공기업_학습관리/01_공부기록/공부기록.md",
+    "Project/uLED/분석_Docs/uLED 노출.md",
+    "Project/uLED/분석_Docs/RecipeWindow_파라미터_교육해설_20260928.md",
+    "Project/uLED/분석_Docs/12.align1-mark3-cam2-stage-t-uvw-explanation.md",
+    "CS/CPP/tmp/pdfs/weekly-309.png",
+    "CS/CPP/tmp/pdfs/testreview-05.png",
+    "CS/CPP/tmp/pdfs/testreview-04.png",
+    "CS/CPP/tmp/pdfs/stage-05.png",
+    "CS/CPP/tmp/pdfs/stage-04.png",
+    "CS/CPP/tmp/pdfs/stage-03.png",
+    "CS/CPP/tmp/pdfs/stage-02.png",
+    "CS/CPP/tmp/pdfs/stage-01.png",
+    "CS/CPP/tmp/pdfs/revised-02.png",
+    "CS/CPP/tmp/pdfs/revised-01.png",
     "CS/CPP/08.다중 카메라 이미지 검사 스레드 설계와 멈춤 진단.md",
-    "공기업_학습관리/03_템플릿/하루공부.md",
     "공기업_학습관리/01_커리큘럼/전체커리큘럼.md",
     "공기업_학습관리/04_실습과NCS/매일15분/01_진행목차.md",
     "공기업_학습관리/02_일별공부/L002 프로그래밍 02회차.md",
@@ -227,19 +238,6 @@
     "공기업_학습관리/04_실습과NCS/매일15분/기록/M124 CX07 SX07.md",
     "공기업_학습관리/04_실습과NCS/매일15분/기록/M123 CX07 SX07.md",
     "공기업_학습관리/04_실습과NCS/매일15분/기록/M115 CX05 SX05.md",
-    "공기업_학습관리/04_실습과NCS/매일15분/기록/M122 CX07 SX07.md",
-    "공기업_학습관리/04_실습과NCS/매일15분/기록/M116 CX05 SX05.md",
-    "공기업_학습관리/04_실습과NCS/매일15분/기록/M121 CX07 SX07.md",
-    "공기업_학습관리/04_실습과NCS/매일15분/기록/M120 CX06 SX06.md",
-    "CS/CPP/tmp/pdfs/rc_restart/render/detail-233-233.png",
-    "CS/CPP/tmp/pdfs/rc_restart/render/detail-131-131.png",
-    "CS/CPP/tmp/pdfs/rc_restart/render/detail-9-009.png",
-    "CS/CPP/tmp/pdfs/rc_restart/render/detail-5-005.png",
-    "CS/CPP/tmp/pdfs/rc_restart/contact-14.jpg",
-    "CS/CPP/tmp/pdfs/rc_restart/contact-13.jpg",
-    "CS/CPP/tmp/pdfs/rc_restart/contact-12.jpg",
-    "CS/CPP/tmp/pdfs/rc_restart/contact-11.jpg",
-    "CS/CPP/tmp/pdfs/rc_restart/contact-10.jpg",
-    "CS/CPP/tmp/pdfs/rc_restart/contact-09.jpg"
+    "공기업_학습관리/04_실습과NCS/매일15분/기록/M122 CX07 SX07.md"
   ]
 }
