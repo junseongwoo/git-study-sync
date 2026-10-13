@@ -1,0 +1,590 @@
+{
+  "files": [
+    {
+      "label": "Part 5",
+      "file": "C:\\Users\\user\\Desktop\\Obsidian\\git-study-sync\\CS\\CPP\\output\\pdf\\Toeic RC - Part 5.pdf",
+      "pages": 99,
+      "questions": 80,
+      "contents": {
+        "chapters": 20,
+        "worked_blocks": 60,
+        "original_questions": 40,
+        "new_questions": 40
+      },
+      "toc": [
+        {
+          "title": "Part 5",
+          "page": 3,
+          "level": 0
+        },
+        {
+          "title": "학습 순서와 근거 기록",
+          "page": 3,
+          "level": 1
+        },
+        {
+          "title": "5.01 품사 선택과 문법 문제·어휘 문제의 구별",
+          "page": 3,
+          "level": 1
+        },
+        {
+          "title": "5.02 명사와 명사구의 중심어",
+          "page": 5,
+          "level": 1
+        },
+        {
+          "title": "5.03 대명사, 재귀대명사와 지시 대상",
+          "page": 7,
+          "level": 1
+        },
+        {
+          "title": "5.04 형용사와 부사의 수식 범위",
+          "page": 9,
+          "level": 1
+        },
+        {
+          "title": "5.05 정동사 형태와 주어·동사의 수일치",
+          "page": 11,
+          "level": 1
+        },
+        {
+          "title": "5.06 시제와 사건의 시간 관계",
+          "page": 13,
+          "level": 1
+        },
+        {
+          "title": "5.07 능동태와 수동태의 역할 배분",
+          "page": 15,
+          "level": 1
+        },
+        {
+          "title": "5.08 to부정사와 동명사의 선택",
+          "page": 17,
+          "level": 1
+        },
+        {
+          "title": "5.09 분사, 축약 관계절과 분사구문",
+          "page": 19,
+          "level": 1
+        },
+        {
+          "title": "5.10 동사의 목적어·보어와 1~5형식",
+          "page": 21,
+          "level": 1
+        },
+        {
+          "title": "5.11 전치사구·부사구와 수식 관계",
+          "page": 23,
+          "level": 1
+        },
+        {
+          "title": "5.12 관계대명사와 관계부사",
+          "page": 25,
+          "level": 1
+        },
+        {
+          "title": "5.13 접속사·전치사·연결부사의 구별",
+          "page": 27,
+          "level": 1
+        },
+        {
+          "title": "5.14 명사절·형용사절·부사절",
+          "page": 29,
+          "level": 1
+        },
+        {
+          "title": "5.15 등위접속과 병렬 구조",
+          "page": 31,
+          "level": 1
+        },
+        {
+          "title": "5.16 비교급·최상급과 비교 대상",
+          "page": 33,
+          "level": 1
+        },
+        {
+          "title": "5.17 조건 표현과 가정법·제안절",
+          "page": 35,
+          "level": 1
+        },
+        {
+          "title": "5.18 도치와 강조 (저빈도 확장 학습)",
+          "page": 37,
+          "level": 1
+        },
+        {
+          "title": "5.19 관사·한정사·수량 표현",
+          "page": 39,
+          "level": 1
+        },
+        {
+          "title": "5.20 복합 단서로 문장 완성하기",
+          "page": 41,
+          "level": 1
+        },
+        {
+          "title": "정답표",
+          "page": 43,
+          "level": 1
+        },
+        {
+          "title": "Part 5 전체 상세 해설",
+          "page": 44,
+          "level": 1
+        },
+        {
+          "title": "구조 분석과 시간 훈련",
+          "page": 98,
+          "level": 1
+        },
+        {
+          "title": "구조 표시 실습: 해석 전에 문장 뼈대를 고정하기",
+          "page": 98,
+          "level": 1
+        },
+        {
+          "title": "시간 제한 혼합 복습: 정확도와 근거를 함께 기록하기",
+          "page": 98,
+          "level": 1
+        }
+      ]
+    },
+    {
+      "label": "Part 6",
+      "file": "C:\\Users\\user\\Desktop\\Obsidian\\git-study-sync\\CS\\CPP\\output\\pdf\\Toeic RC - Part 6.pdf",
+      "pages": 51,
+      "questions": 48,
+      "contents": {
+        "core_sections": 8,
+        "worked_cases": 8,
+        "sets": 12,
+        "original_questions": 16,
+        "new_questions": 32
+      },
+      "toc": [
+        {
+          "title": "Part 6",
+          "page": 3,
+          "level": 0
+        },
+        {
+          "title": "학습 순서와 근거 기록",
+          "page": 3,
+          "level": 1
+        },
+        {
+          "title": "6.01 문장 삽입: 앞뒤 문장의 연결 고리를 찾는다",
+          "page": 3,
+          "level": 1
+        },
+        {
+          "title": "6.02 시제와 동사: 글 속 시간표를 만든다",
+          "page": 4,
+          "level": 1
+        },
+        {
+          "title": "6.03 대명사와 지시어: 무엇을 가리키는지 이름을 붙인다",
+          "page": 4,
+          "level": 1
+        },
+        {
+          "title": "6.04 연결어: 이유·대조·추가·예시를 구분한다",
+          "page": 4,
+          "level": 1
+        },
+        {
+          "title": "6.05 문법과 문맥: 두 번에 나누어 검증한다",
+          "page": 4,
+          "level": 1
+        },
+        {
+          "title": "6.06 글의 장르: 독자가 해야 할 일을 파악한다",
+          "page": 5,
+          "level": 1
+        },
+        {
+          "title": "6.07 고난도 통합: 한 단서로 결정하지 않는다",
+          "page": 5,
+          "level": 1
+        },
+        {
+          "title": "6.08 풀이와 복습: 정답보다 판단 과정을 기록한다",
+          "page": 5,
+          "level": 1
+        },
+        {
+          "title": "유형별 판단을 재현하는 강화 사례",
+          "page": 6,
+          "level": 1
+        },
+        {
+          "title": "심화 사례 1 · 문장 삽입의 양쪽 경계를 검사하기",
+          "page": 6,
+          "level": 1
+        },
+        {
+          "title": "심화 사례 2 · 문맥 속 시제와 동사의 역할 분리하기",
+          "page": 6,
+          "level": 1
+        },
+        {
+          "title": "심화 사례 3 · 대명사 선행사를 동사와 함께 검증하기",
+          "page": 6,
+          "level": 1
+        },
+        {
+          "title": "심화 사례 4 · 연결어의 논리와 문장 구조를 따로 채점하기",
+          "page": 7,
+          "level": 1
+        },
+        {
+          "title": "심화 사례 5 · 문법 통과와 문맥 통과를 별도로 판단하기",
+          "page": 7,
+          "level": 1
+        },
+        {
+          "title": "심화 사례 6 · 장르별로 독자의 행동과 예외를 읽기",
+          "page": 8,
+          "level": 1
+        },
+        {
+          "title": "심화 사례 7 · 고난도 통합에서 범위 제한을 읽기",
+          "page": 8,
+          "level": 1
+        },
+        {
+          "title": "심화 사례 8 · 풀이 기록을 재현 가능한 판단으로 바꾸기",
+          "page": 8,
+          "level": 1
+        },
+        {
+          "title": "연습 전: 네 빈칸의 근거를 기록하는 방법",
+          "page": 9,
+          "level": 1
+        },
+        {
+          "title": "Part 6 지문별 연습 | 12세트",
+          "page": 10,
+          "level": 1
+        },
+        {
+          "title": "정답표",
+          "page": 22,
+          "level": 1
+        },
+        {
+          "title": "Part 6 전체 상세 해설",
+          "page": 23,
+          "level": 1
+        },
+        {
+          "title": "문맥 연결과 오답 교정",
+          "page": 51,
+          "level": 1
+        },
+        {
+          "title": "복습 점검 1 · 선행사와 논리 흐름을 짧게 그리기",
+          "page": 51,
+          "level": 1
+        },
+        {
+          "title": "복습 점검 2 · 정답의 근거와 오답의 가정을 분리해 기록하기",
+          "page": 51,
+          "level": 1
+        }
+      ]
+    },
+    {
+      "label": "Part 7",
+      "file": "C:\\Users\\user\\Desktop\\Obsidian\\git-study-sync\\CS\\CPP\\output\\pdf\\Toeic RC - Part 7.pdf",
+      "pages": 61,
+      "questions": 50,
+      "contents": {
+        "core_sections": 10,
+        "worked_cases": 10,
+        "sets": 12,
+        "original_questions": 22,
+        "new_questions": 28
+      },
+      "toc": [
+        {
+          "title": "Part 7",
+          "page": 3,
+          "level": 0
+        },
+        {
+          "title": "학습 순서와 근거 기록",
+          "page": 3,
+          "level": 1
+        },
+        {
+          "title": "7.01 핵심 성분을 먼저 잡는 독해",
+          "page": 3,
+          "level": 1
+        },
+        {
+          "title": "7.02 긴 수식어·관계절·분사·동격 분석",
+          "page": 3,
+          "level": 1
+        },
+        {
+          "title": "7.03 문장 간 논리와 글의 전개",
+          "page": 4,
+          "level": 1
+        },
+        {
+          "title": "7.04 목적·세부 정보·추론의 근거 범위",
+          "page": 4,
+          "level": 1
+        },
+        {
+          "title": "7.05 NOT/EXCEPT에서 세 근거를 확인하는 법",
+          "page": 4,
+          "level": 1
+        },
+        {
+          "title": "7.06 문맥상 의미와 지칭 대상",
+          "page": 4,
+          "level": 1
+        },
+        {
+          "title": "7.07 문장 삽입: 앞뒤 두 방향 연결",
+          "page": 5,
+          "level": 1
+        },
+        {
+          "title": "7.08 이중·삼중 지문: 동일 대상과 갱신 정보",
+          "page": 5,
+          "level": 1
+        },
+        {
+          "title": "7.09 장르별 정보의 위치",
+          "page": 5,
+          "level": 1
+        },
+        {
+          "title": "7.10 읽는 순서·시간 배분·근거 복습",
+          "page": 5,
+          "level": 1
+        },
+        {
+          "title": "근거 판단을 재현하는 강화 사례",
+          "page": 6,
+          "level": 1
+        },
+        {
+          "title": "사례 01 | S·V·O·C와 수식어를 분리하는 실제 절차",
+          "page": 6,
+          "level": 1
+        },
+        {
+          "title": "사례 02 | 관계절·분사구·동격이 겹치는 긴 문장",
+          "page": 6,
+          "level": 1
+        },
+        {
+          "title": "사례 03 | 원인·조치·예외의 논리 지도",
+          "page": 6,
+          "level": 1
+        },
+        {
+          "title": "사례 04 | 목적·세부 정보·추론의 증거를 따로 쓰기",
+          "page": 7,
+          "level": 1
+        },
+        {
+          "title": "사례 05 | NOT/EXCEPT의 세 근거와 한 공백",
+          "page": 7,
+          "level": 1
+        },
+        {
+          "title": "사례 06 | 표현의 행동 의미와 대명사의 실제 대상",
+          "page": 7,
+          "level": 1
+        },
+        {
+          "title": "사례 07 | 양방향 지칭으로 삽입 위치를 확정",
+          "page": 8,
+          "level": 1
+        },
+        {
+          "title": "사례 08 | 이중·삼중 지문의 조건을 같은 대상에 적용",
+          "page": 8,
+          "level": 1
+        },
+        {
+          "title": "사례 09 | 장르가 바뀌어도 행위·상태·조건을 구분",
+          "page": 8,
+          "level": 1
+        },
+        {
+          "title": "사례 10 | 탐색 순서를 정하고 근거 없는 속도를 교정",
+          "page": 9,
+          "level": 1
+        },
+        {
+          "title": "Part 7 단일·복수 지문 연습 | 12세트",
+          "page": 10,
+          "level": 1
+        },
+        {
+          "title": "정답표",
+          "page": 29,
+          "level": 1
+        },
+        {
+          "title": "Part 7 전체 상세 해설",
+          "page": 30,
+          "level": 1
+        },
+        {
+          "title": "독해 근거와 제한 시간 훈련",
+          "page": 61,
+          "level": 1
+        },
+        {
+          "title": "근거 점검표 | 맞힌 문항도 다시 검사하는 네 질문",
+          "page": 61,
+          "level": 1
+        },
+        {
+          "title": "시간 제한 독해 계획 | 세 차례로 근거 품질까지 측정",
+          "page": 61,
+          "level": 1
+        }
+      ]
+    },
+    {
+      "label": "실전 모의고사",
+      "file": "C:\\Users\\user\\Desktop\\Obsidian\\git-study-sync\\CS\\CPP\\output\\pdf\\Toeic RC - 실전 모의고사.pdf",
+      "pages": 113,
+      "questions": 115,
+      "contents": {
+        "full_mock_questions": 100,
+        "full_mock_minutes": 75,
+        "supplemental_questions": 15,
+        "diagnostic_sections": 6
+      },
+      "toc": [
+        {
+          "title": "실전 모의고사",
+          "page": 3,
+          "level": 0
+        },
+        {
+          "title": "시험 안내와 시간 기록",
+          "page": 3,
+          "level": 1
+        },
+        {
+          "title": "본시험 답안 기록표 | 101-200",
+          "page": 4,
+          "level": 1
+        },
+        {
+          "title": "본시험 Part 5 | 101-130",
+          "page": 5,
+          "level": 1
+        },
+        {
+          "title": "본시험 Part 6 | 131-146",
+          "page": 10,
+          "level": 1
+        },
+        {
+          "title": "본시험 Part 7 | 147-200",
+          "page": 14,
+          "level": 1
+        },
+        {
+          "title": "본시험 정답표",
+          "page": 32,
+          "level": 1
+        },
+        {
+          "title": "본시험 Part 5 상세 해설",
+          "page": 33,
+          "level": 1
+        },
+        {
+          "title": "본시험 Part 6 상세 해설",
+          "page": 50,
+          "level": 1
+        },
+        {
+          "title": "본시험 Part 7 상세 해설",
+          "page": 59,
+          "level": 1
+        },
+        {
+          "title": "시험 후 진단과 근거 교정",
+          "page": 89,
+          "level": 1
+        },
+        {
+          "title": "시험 전: 시간과 근거를 동시에 측정하는 방법",
+          "page": 89,
+          "level": 1
+        },
+        {
+          "title": "채점 뒤: 원점수와 근거 확인율을 나누어 기록한다",
+          "page": 89,
+          "level": 1
+        },
+        {
+          "title": "근거가 틀린 정답을 고치는 세 사례",
+          "page": 89,
+          "level": 1
+        },
+        {
+          "title": "오답 선택지를 바꾸어 규칙을 검증한다",
+          "page": 89,
+          "level": 1
+        },
+        {
+          "title": "24시간·3일·7일의 재훈련 계획",
+          "page": 90,
+          "level": 1
+        },
+        {
+          "title": "최종 점검: 보기의 한 부분만 맞는 함정을 막는다",
+          "page": 90,
+          "level": 1
+        },
+        {
+          "title": "파트별 재훈련 경로",
+          "page": 91,
+          "level": 1
+        },
+        {
+          "title": "문항별 진단 기록표",
+          "page": 92,
+          "level": 1
+        },
+        {
+          "title": "강화 보완 훈련 | 15문항",
+          "page": 98,
+          "level": 1
+        },
+        {
+          "title": "보완 훈련 정답표",
+          "page": 103,
+          "level": 1
+        },
+        {
+          "title": "보완 훈련 전체 상세 해설",
+          "page": 104,
+          "level": 1
+        },
+        {
+          "title": "복습 기록과 다음 회차 점검",
+          "page": 113,
+          "level": 1
+        }
+      ]
+    }
+  ],
+  "total_pages": 324,
+  "total_questions": 293,
+  "new_questions": 115
+}

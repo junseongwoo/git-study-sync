@@ -1,0 +1,2647 @@
+[
+  {
+    "id": "101",
+    "prompt": "The company is seeking an ------- and practical approach to reducing packaging waste.",
+    "options": [
+      "innovate",
+      "innovative",
+      "innovation",
+      "innovatively"
+    ],
+    "answer": "B",
+    "type": "문법·형용사",
+    "level": "기본",
+    "clue": "an ___ and practical approach에서 빈칸은 practical과 함께 approach를 수식한다.",
+    "analysis": "and로 병렬 연결된 practical이 형용사다. 빈칸도 같은 역할의 형용사로 명사 approach를 수식해야 한다.",
+    "why": "innovative는 ‘혁신적인’이라는 형용사로 approach를 수식한다.",
+    "wrong": {
+      "A": "innovate는 동사원형이므로 명사를 수식하는 이 자리에 맞지 않는다.",
+      "C": "innovation은 명사이므로 형용사 practical과 병렬로 approach를 수식하는 구조에 맞지 않는다.",
+      "D": "innovatively는 부사이므로 명사 approach를 직접 수식하지 못한다."
+    },
+    "order": "병렬 요소 practical 확인 → 명사 approach의 수식 자리 판단 → 형용사 선택.",
+    "rule": "and로 연결된 수식어가 같은 역할을 하면 품사와 구조를 병렬로 맞춘다."
+  },
+  {
+    "id": "102",
+    "prompt": "The revised budget ------- by the finance director yesterday.",
+    "options": [
+      "approves",
+      "approving",
+      "has approved",
+      "was approved"
+    ],
+    "answer": "D",
+    "type": "문법·과거 수동태",
+    "level": "기본",
+    "clue": "budget은 승인 대상이고 yesterday는 끝난 과거 시점을 나타낸다.",
+    "analysis": "문장에 주절 동사가 필요하다. by the finance director는 승인 행위자를 나타내므로 수동태를 쓰며 시제는 과거다.",
+    "why": "was approved는 단수 주어 budget에 맞는 과거 수동태다.",
+    "wrong": {
+      "A": "approves는 현재 능동태로 예산이 승인하는 행위자가 되는 문제가 있다.",
+      "B": "approving은 분사이며 문장의 유한 동사가 될 수 없다.",
+      "C": "has approved는 현재완료 능동태이므로 주어의 역할과 yesterday에 모두 맞지 않는다."
+    },
+    "order": "주어의 역할 확인 → by 행위자 확인 → yesterday에 맞는 과거 수동태 선택.",
+    "rule": "대상이 주어이면 be + 과거분사를 쓰고, 명시된 과거 시점에는 과거시제를 사용한다."
+  },
+  {
+    "id": "103",
+    "prompt": "All subcontractors must ------- with the safety regulations posted at the entrance.",
+    "options": [
+      "comply",
+      "compete",
+      "contribute",
+      "coincide"
+    ],
+    "answer": "A",
+    "type": "문맥·동사 결합",
+    "level": "중급",
+    "clue": "하도급 업체가 안전 규정을 준수해야 한다는 의무를 설명한다.",
+    "analysis": "must 뒤의 형태는 네 보기 모두 동사원형이다. with the safety regulations와 결합하여 ‘규정을 지키다’를 뜻하는 동사를 고른다.",
+    "why": "comply with regulations는 ‘규정을 준수하다’라는 결합이다.",
+    "wrong": {
+      "B": "compete with는 ‘~와 경쟁하다’로 안전 규정을 준수한다는 뜻이 아니다.",
+      "C": "contribute는 ‘기여하다’이며 보통 contribute to로 기여 대상을 표시한다.",
+      "D": "coincide with는 시점이나 사실이 ‘일치하다’라는 뜻으로 업체가 규정을 지키는 행위를 나타내지 않는다."
+    },
+    "order": "must 뒤 형태 확인 → with regulations의 의미 확인 → comply with 선택.",
+    "rule": "어휘 문제에서는 동사와 전치사의 결합뿐 아니라 주어·목적 대상 사이의 의미 관계를 확인한다."
+  },
+  {
+    "id": "104",
+    "prompt": "Each of the replacement parts ------- a one-year warranty.",
+    "options": [
+      "carry",
+      "carrying",
+      "carries",
+      "have carried"
+    ],
+    "answer": "C",
+    "type": "문법·수일치",
+    "level": "기본",
+    "clue": "주어 중심어는 복수형 parts가 아니라 Each다.",
+    "analysis": "Each of + 복수명사는 각각 하나를 가리키므로 단수 동사를 쓴다. 일반적인 보증 조건이므로 현재시제가 적합하다.",
+    "why": "carries는 단수 주어 Each에 맞는 현재 동사다.",
+    "wrong": {
+      "A": "carry는 복수 주어 또는 I/you와 쓰는 현재형이어서 Each와 맞지 않는다.",
+      "B": "carrying은 분사로 주절 동사가 되지 못한다.",
+      "D": "have carried는 복수형 have를 사용하므로 Each와 수가 맞지 않는다."
+    },
+    "order": "of 뒤 명사를 주어 중심어와 구별 → Each의 단수 확인 → carries 선택.",
+    "rule": "each of + 복수명사의 주어 중심어는 each이며 단수 동사를 쓴다."
+  },
+  {
+    "id": "105",
+    "prompt": "The vendor has ------- updated its order-tracking software.",
+    "options": [
+      "recent",
+      "recently",
+      "recency",
+      "more recent"
+    ],
+    "answer": "B",
+    "type": "문법·부사",
+    "level": "기본",
+    "clue": "has ___ updated에서 빈칸은 업데이트가 이루어진 시점을 설명한다.",
+    "analysis": "has updated는 이미 완성된 현재완료 동사구다. 동사 updated를 수식하는 시간 부사가 필요하다.",
+    "why": "recently는 ‘최근에’라는 부사로 has updated 사이에 자연스럽게 들어간다.",
+    "wrong": {
+      "A": "recent는 형용사이므로 동사 updated를 수식하지 못한다.",
+      "C": "recency는 ‘최근성’이라는 명사로 이 자리에 맞지 않는다.",
+      "D": "more recent는 형용사 비교급이므로 업데이트 동작을 수식하지 못한다."
+    },
+    "order": "완료 동사구 확인 → 동사 수식 자리 판단 → 시간 부사 선택.",
+    "rule": "완료형의 have와 과거분사 사이에는 recently, already 같은 부사가 올 수 있다."
+  },
+  {
+    "id": "106",
+    "prompt": "------- the temporary closure of the main entrance, the store remained open through a side door.",
+    "options": [
+      "Despite",
+      "Although",
+      "Nevertheless",
+      "However"
+    ],
+    "answer": "A",
+    "type": "문법·전치사와 접속사",
+    "level": "중급",
+    "clue": "빈칸 뒤 the temporary closure는 동사가 없는 명사구다.",
+    "analysis": "주 출입구 폐쇄에도 매장은 계속 영업했다는 양보 의미가 필요하다. 명사구를 목적어로 받는 전치사를 고른다.",
+    "why": "Despite + 명사구는 ‘~에도 불구하고’를 뜻한다.",
+    "wrong": {
+      "B": "Although는 접속사이므로 뒤에 주어와 동사가 있는 절이 필요하다.",
+      "C": "Nevertheless는 접속부사이므로 closure라는 명사구를 목적어로 받지 않는다.",
+      "D": "However도 접속부사여서 명사구 앞 전치사로 사용할 수 없다."
+    },
+    "order": "빈칸 뒤 명사구 확인 → 양보 의미 확인 → Despite 선택.",
+    "rule": "despite는 명사·동명사를, although는 완전한 절을 이끈다."
+  },
+  {
+    "id": "107",
+    "prompt": "A customs inspection caused a two-day ------- in the arrival of the imported components.",
+    "options": [
+      "balance",
+      "forecast",
+      "reminder",
+      "delay"
+    ],
+    "answer": "D",
+    "type": "문맥·명사",
+    "level": "중급",
+    "clue": "세관 검사가 수입 부품의 도착에 이틀의 영향을 주었다.",
+    "analysis": "a two-day 뒤에는 기간으로 측정할 수 있는 사건 명사가 필요하다. 검사 때문에 도착이 늦어지는 문맥이다.",
+    "why": "delay in the arrival는 ‘도착 지연’을 뜻하며 two-day와도 자연스럽게 결합한다.",
+    "wrong": {
+      "A": "balance는 잔액·균형이므로 도착이 이틀 늦어진다는 뜻이 아니다.",
+      "B": "forecast는 예측으로 검사로 발생한 도착 지연을 표현하지 못한다.",
+      "C": "reminder는 알림이며 a two-day reminder in the arrival라는 결합은 자연스럽지 않다."
+    },
+    "order": "검사의 결과 파악 → two-day가 수식할 사건 확인 → 도착 지연 의미 선택.",
+    "rule": "원인 동사 cause의 목적어는 문맥에서 실제로 발생한 결과를 나타내야 한다."
+  },
+  {
+    "id": "108",
+    "prompt": "The applicant ------- portfolio received the highest score will be invited to a final interview.",
+    "options": [
+      "whom",
+      "who",
+      "whose",
+      "which"
+    ],
+    "answer": "C",
+    "type": "문법·소유격 관계대명사",
+    "level": "중급",
+    "clue": "빈칸 뒤 portfolio는 지원자가 소유한 포트폴리오다.",
+    "analysis": "관계절의 주어는 portfolio이며 빈칸은 applicant와 portfolio의 소유 관계를 연결한다.",
+    "why": "whose portfolio는 ‘그 지원자의 포트폴리오’를 뜻하는 소유격 관계절을 만든다.",
+    "wrong": {
+      "A": "whom은 목적격이므로 뒤의 portfolio를 소유 관계로 수식하지 못한다.",
+      "B": "who는 주격 관계대명사지만 여기서는 portfolio가 관계절의 주어다.",
+      "D": "which는 사물 선행사의 주격·목적격이며 applicant의 소유 관계를 나타내지 않는다."
+    },
+    "order": "관계절 주어 portfolio 확인 → 지원자와의 소유 관계 판단 → whose 선택.",
+    "rule": "관계절 안에 소유 관계가 필요하고 바로 뒤에 명사가 오면 whose + 명사를 검토한다."
+  },
+  {
+    "id": "109",
+    "prompt": "Employees who have completed six months of service are ------- for the annual training allowance.",
+    "options": [
+      "eligible",
+      "fluent",
+      "familiar",
+      "comparable"
+    ],
+    "answer": "A",
+    "type": "문맥·형용사 결합",
+    "level": "중급",
+    "clue": "6개월 근무라는 요건을 충족한 직원에게 연간 교육 수당을 지급한다.",
+    "analysis": "근무 기간은 수당을 받을 자격 기준이다. be ___ for an allowance에 자격을 뜻하는 형용사가 필요하다.",
+    "why": "be eligible for는 ‘~을 받을 자격이 있다’를 뜻한다.",
+    "wrong": {
+      "B": "fluent는 언어 사용이 유창하다는 뜻으로 수당 자격과 무관하다.",
+      "C": "familiar는 익숙하다는 뜻이며 familiar with를 사용한다.",
+      "D": "comparable는 비교할 수 있다는 뜻으로 수당을 받을 자격을 나타내지 않는다."
+    },
+    "order": "근무 기간 요건 확인 → 자격 부여 문맥 판단 → eligible for 선택.",
+    "rule": "요건 충족에 따른 자격은 eligible for + 혜택·참여 대상으로 표현한다."
+  },
+  {
+    "id": "110",
+    "prompt": "The second prototype consumes ------- energy than the original model.",
+    "options": [
+      "lower",
+      "less",
+      "least",
+      "little"
+    ],
+    "answer": "B",
+    "type": "문법·비교급과 불가산명사",
+    "level": "중급",
+    "clue": "than이 두 모델을 비교하며 energy는 불가산명사다.",
+    "analysis": "소비하는 에너지의 양을 비교하므로 little의 비교급 less가 필요하다.",
+    "why": "less energy than은 ‘~보다 적은 에너지’를 뜻한다.",
+    "wrong": {
+      "A": "lower는 level, price 등의 높낮이를 비교하지만 여기서는 energy의 양을 less로 나타낸다.",
+      "C": "least는 최상급이므로 than과 두 대상 비교를 만들 수 없다.",
+      "D": "little은 원급이므로 than이 있는 비교급 구조에 맞지 않는다."
+    },
+    "order": "than 확인 → energy의 불가산성 확인 → less 선택.",
+    "rule": "불가산명사의 적은 양은 less, 복수 가산명사의 적은 수는 fewer로 비교한다."
+  },
+  {
+    "id": "111",
+    "prompt": "The safety committee requires that every visitor ------- a badge while on site.",
+    "options": [
+      "wore",
+      "wearing",
+      "wear",
+      "worn"
+    ],
+    "answer": "C",
+    "type": "문법·요구의 that절",
+    "level": "고급",
+    "clue": "requires that절은 현장 방문객의 의무를 요구한다.",
+    "analysis": "요구·권고를 나타내는 동사 뒤의 that절에서 당위적인 행동을 나타낼 때 동사원형을 사용한다.",
+    "why": "wear는 every visitor의 수와 관계없이 요구의 that절에 쓰는 동사원형이다.",
+    "wrong": {
+      "A": "wore는 과거 행동을 보고하는 형태로 현재 요구하는 의무를 나타내지 않는다.",
+      "B": "wearing은 분사이므로 that절의 유한 동사가 될 수 없다.",
+      "D": "worn은 과거분사이며 be 없이 that절의 동사가 될 수 없다."
+    },
+    "order": "requires의 요구 의미 확인 → that절의 당위 판단 → 동사원형 선택.",
+    "rule": "require/recommend/suggest that + 주어 + 동사원형 구조는 요구·권고하는 행동을 표현할 수 있다."
+  },
+  {
+    "id": "112",
+    "prompt": "The report offers a ------- overview of expenses, covering every department and all four quarters.",
+    "options": [
+      "vacant",
+      "incomplete",
+      "partial",
+      "comprehensive"
+    ],
+    "answer": "D",
+    "type": "문맥·형용사",
+    "level": "중급",
+    "clue": "every department와 all four quarters가 전체 범위를 포함함을 명시한다.",
+    "analysis": "뒤의 covering 구가 overview의 범위를 설명하므로 전체를 포괄하는 의미의 형용사가 필요하다.",
+    "why": "comprehensive는 ‘종합적인, 포괄적인’이라는 뜻으로 모든 부서와 분기를 포함하는 보고서와 맞는다.",
+    "wrong": {
+      "A": "vacant는 비어 있거나 공석인 상태로 개요의 범위를 설명하지 못한다.",
+      "B": "incomplete는 불완전하거나 일부가 빠졌다는 뜻으로 모든 부서와 네 분기 전체를 포함한다는 설명에 반한다.",
+      "C": "partial은 일부만 포함한다는 뜻으로 every와 all이라는 명시적 단서에 반한다."
+    },
+    "order": "covering 이하 근거 읽기 → 전체 범위 확인 → comprehensive 선택.",
+    "rule": "부가 설명의 every/all 같은 범위 표현은 형용사 어휘 선택의 직접적인 근거가 된다."
+  },
+  {
+    "id": "113",
+    "prompt": "Please confirm ------- the supplier can deliver before Friday.",
+    "options": [
+      "whether",
+      "unless",
+      "during",
+      "either"
+    ],
+    "answer": "A",
+    "type": "문법·명사절",
+    "level": "중급",
+    "clue": "confirm의 목적어는 공급업체가 금요일 전에 납품할 수 있는지 여부다.",
+    "analysis": "빈칸 뒤는 완전한 절이며, 그 절을 confirm의 목적어인 명사절로 만들어야 한다.",
+    "why": "whether는 ‘~인지’를 뜻하는 명사절을 이끈다.",
+    "wrong": {
+      "B": "unless는 조건 부사절을 이끌므로 confirm의 확인 내용을 나타내지 못한다.",
+      "C": "during은 전치사이므로 완전한 절을 받을 수 없다.",
+      "D": "either는 단독으로 확인 내용을 담은 절을 이끌 수 없다."
+    },
+    "order": "confirm의 목적어 필요 확인 → 완전한 절 확인 → 여부 명사절 선택.",
+    "rule": "whether + 완전한 절은 확인하거나 결정해야 하는 ‘~인지’라는 내용을 나타낸다."
+  },
+  {
+    "id": "114",
+    "prompt": "The auditorium can ------- up to 250 guests, including those seated in the balcony.",
+    "options": [
+      "relocate",
+      "accommodate",
+      "establish",
+      "participate"
+    ],
+    "answer": "B",
+    "type": "문맥·동사",
+    "level": "중급",
+    "clue": "auditorium과 250 guests, seated가 수용 인원을 설명한다.",
+    "analysis": "can 뒤에는 모두 원형이지만, 강당이 일정 수의 손님을 수용한다는 의미로 guests를 목적어로 받는 동사가 필요하다.",
+    "why": "accommodate는 공간이 사람을 ‘수용하다’라는 뜻으로 쓰인다.",
+    "wrong": {
+      "A": "relocate는 옮기다는 뜻으로 강당의 좌석 수용 능력을 나타내지 않는다.",
+      "C": "establish는 설립·확립을 뜻하며 손님을 수용하는 뜻이 아니다.",
+      "D": "participate는 자동사로 participate in을 쓰며 guests를 직접 목적어로 받지 않는다."
+    },
+    "order": "강당의 수용 인원 문맥 확인 → guests와 동사 결합 검사 → accommodate 선택.",
+    "rule": "공간의 인원 수용 능력은 accommodate + 사람 수로 표현할 수 있다."
+  },
+  {
+    "id": "115",
+    "prompt": "To avoid ------- the same data twice, staff should upload the completed form to the shared folder.",
+    "options": [
+      "repeat",
+      "repeated",
+      "repetition",
+      "repeating"
+    ],
+    "answer": "D",
+    "type": "문법·동명사",
+    "level": "중급",
+    "clue": "avoid는 뒤에 동명사 목적어를 받는다.",
+    "analysis": "the same data는 빈칸 표현의 목적어다. 따라서 명사 repetition보다 동사 성질을 유지하는 동명사가 필요하다.",
+    "why": "avoid repeating the same data는 ‘같은 자료를 반복하는 것을 피하다’라는 구조다.",
+    "wrong": {
+      "A": "avoid 뒤에 동사원형 repeat를 바로 쓸 수 없다.",
+      "B": "repeated는 과거형·과거분사로 avoid의 동명사 목적어 역할을 하지 못한다.",
+      "C": "repetition은 명사이지만 the same data를 직접 목적어로 받을 수 없다."
+    },
+    "order": "avoid의 목적어 형태 확인 → 뒤 data를 목적어로 받는 동명사 판단 → repeating 선택.",
+    "rule": "avoid, finish, consider 같은 동사 뒤에는 동명사 목적어가 자주 쓰인다."
+  },
+  {
+    "id": "116",
+    "prompt": "The company introduced a cash ------- to encourage customers to return reusable containers.",
+    "options": [
+      "vacancy",
+      "invoice",
+      "incentive",
+      "liability"
+    ],
+    "answer": "C",
+    "type": "문맥·명사",
+    "level": "중급",
+    "clue": "고객의 용기 반환을 encourage하기 위해 현금을 제공한다.",
+    "analysis": "빈칸은 행동을 유도하기 위해 제공하는 보상을 뜻해야 한다. 목적의 to encourage가 결정적 단서다.",
+    "why": "cash incentive는 ‘현금 장려금’으로 원하는 행동을 유도하는 보상이다.",
+    "wrong": {
+      "A": "vacancy는 공석·빈방으로 행동을 장려하는 현금 보상이 아니다.",
+      "B": "invoice는 청구서로 고객에게 지급하는 장려금을 뜻하지 않는다.",
+      "D": "liability는 책임·부채로 반환 행동을 유도하는 혜택과 맞지 않는다."
+    },
+    "order": "to encourage의 목적 확인 → 현금 보상의 기능 판단 → incentive 선택.",
+    "rule": "목적을 나타내는 구가 어휘의 기능을 설명하면 그 기능과 일치하는 단어를 선택한다."
+  },
+  {
+    "id": "117",
+    "prompt": "All delivery drivers must show ------- identification cards at the security gate.",
+    "options": [
+      "their",
+      "theirs",
+      "them",
+      "they"
+    ],
+    "answer": "A",
+    "type": "문법·소유격",
+    "level": "기본",
+    "clue": "identification cards 앞에서 운전자의 소유 관계를 표시한다.",
+    "analysis": "빈칸 뒤에 명사가 있으므로 복수 drivers를 받는 소유격 한정사가 필요하다.",
+    "why": "their identification cards는 ‘그들의 신분증’을 뜻한다.",
+    "wrong": {
+      "B": "theirs는 소유대명사로 명사를 포함하므로 뒤에 identification cards를 붙이지 않는다.",
+      "C": "them은 목적격 대명사여서 명사 앞 소유 관계를 표시하지 못한다.",
+      "D": "they는 주격 대명사이므로 명사를 수식하지 못한다."
+    },
+    "order": "뒤 명사 확인 → drivers의 복수 확인 → 명사 앞 소유격 선택.",
+    "rule": "명사 앞에는 my/your/their 같은 소유격을, 명사 없이 독립적으로는 mine/yours/theirs를 쓴다."
+  },
+  {
+    "id": "118",
+    "prompt": "The installer will begin work as soon as the replacement unit -------.",
+    "options": [
+      "arrival",
+      "arrives",
+      "will arrive",
+      "arriving"
+    ],
+    "answer": "B",
+    "type": "문법·미래 시간 부사절",
+    "level": "중급",
+    "clue": "as soon as가 미래에 일어날 작업 시작 시점을 나타내는 시간 부사절을 이끈다.",
+    "analysis": "미래 시간 부사절에서는 현재시제로 미래를 나타낸다. 주어 unit은 단수다.",
+    "why": "arrives는 단수 현재형으로 as soon as절의 미래 도착 시점을 표현한다.",
+    "wrong": {
+      "A": "arrival은 명사로 절의 동사가 되지 못한다.",
+      "C": "시간 부사절에서 미래 시점을 표현할 때 will arrive 대신 현재형을 쓴다.",
+      "D": "arriving은 분사로 be 없이 절의 동사가 될 수 없다."
+    },
+    "order": "as soon as의 시간절 역할 확인 → 미래 시간절 규칙 적용 → unit과 수일치.",
+    "rule": "when/as soon as/until이 미래의 시간을 이끄는 부사절에서는 현재시제를 쓴다."
+  },
+  {
+    "id": "119",
+    "prompt": "Because the client changed the specifications, the designer must ------- the original drawings before construction begins.",
+    "options": [
+      "conclude",
+      "resume",
+      "preserve",
+      "revise"
+    ],
+    "answer": "D",
+    "type": "문맥·동사",
+    "level": "중급",
+    "clue": "고객의 규격 변경 때문에 기존 설계도를 바꾸어야 한다.",
+    "analysis": "Because절의 변경은 original drawings에 반영되어야 한다. 기존 자료를 새 조건에 맞게 수정하는 동사가 필요하다.",
+    "why": "revise는 문서·설계도를 ‘수정하다’라는 뜻이다.",
+    "wrong": {
+      "A": "conclude는 마무리·결론을 뜻하며 설계도를 새 규격에 맞게 바꾼다는 뜻이 아니다.",
+      "B": "resume는 중단한 활동을 재개하는 뜻으로 설계 내용 변경을 표현하지 못한다.",
+      "C": "preserve는 그대로 보존한다는 뜻으로 변경된 규격 반영과 맞지 않는다."
+    },
+    "order": "규격 변경이라는 원인 확인 → 설계도에 필요한 조치 판단 → revise 선택.",
+    "rule": "원인절의 변화에 맞추어 기존 자료를 고치는 행위는 revise로 표현한다."
+  },
+  {
+    "id": "120",
+    "prompt": "The team held an additional session in order ------- new employees how to use the scheduling system.",
+    "options": [
+      "teaches",
+      "teaching",
+      "to teach",
+      "taught"
+    ],
+    "answer": "C",
+    "type": "문법·목적의 부정사",
+    "level": "중급",
+    "clue": "in order 뒤에는 목적을 나타내는 to + 동사원형이 필요하다.",
+    "analysis": "추가 교육 시간을 연 목적을 in order to teach로 표현한다. teach는 new employees와 how to use절을 받는다.",
+    "why": "in order to teach는 사용법을 가르치기 위해 추가 교육을 열었다는 목적을 나타낸다.",
+    "wrong": {
+      "A": "in order 뒤에 현재형 teaches를 바로 연결할 수 없다.",
+      "B": "목적을 나타내는 in order to 뒤에는 원형이 필요하며 in order teaching이라는 구조는 성립하지 않는다.",
+      "D": "in order 뒤에 과거형·과거분사 taught를 바로 연결할 수 없다."
+    },
+    "order": "in order 확인 → 목적의 to부정사 구조 적용 → to teach 선택.",
+    "rule": "in order to + 동사원형은 행동의 목적을 명시적으로 나타낸다."
+  },
+  {
+    "id": "121",
+    "prompt": "If an invoice contains an error, notify the accounting team ------- so that payment can be corrected before the due date.",
+    "options": [
+      "promptly",
+      "severely",
+      "rarely",
+      "approximately"
+    ],
+    "answer": "A",
+    "type": "문맥·부사",
+    "level": "중급",
+    "clue": "지급 기한 전에 수정하려면 오류를 즉시 알려야 한다.",
+    "analysis": "네 보기 모두 부사지만 so that 이하의 목적을 이루는 통보 방식은 신속한 통보다.",
+    "why": "promptly는 ‘신속하게’로 기한 전에 오류를 고치려는 목적과 맞는다.",
+    "wrong": {
+      "B": "severely는 심하게·엄격하게라는 뜻으로 오류 통보의 필요한 속도를 표현하지 않는다.",
+      "C": "rarely는 드물게라는 뜻이며 오류를 발견하면 알리라는 조건과 맞지 않는다.",
+      "D": "approximately는 대략이라는 뜻으로 정확한 오류 통보에 필요한 행동 방식이 아니다."
+    },
+    "order": "목적절의 due date 확인 → 필요한 통보 속도 판단 → promptly 선택.",
+    "rule": "같은 품사의 어휘는 뒤의 목적·결과 문구를 통해 필요한 의미를 결정한다."
+  },
+  {
+    "id": "122",
+    "prompt": "Please review the instructions ------- to this message before filling out the registration form.",
+    "options": [
+      "attachment",
+      "attached",
+      "attach",
+      "attaching"
+    ],
+    "answer": "B",
+    "type": "문법·과거분사 수식",
+    "level": "중급",
+    "clue": "instructions는 메시지에 첨부되는 대상이다.",
+    "analysis": "명령문 주절 동사는 review이며, 빈칸 이후는 instructions를 꾸민다. that are attached의 축약된 수동 수식 구조다.",
+    "why": "attached to this message는 ‘이 메시지에 첨부된’이라는 과거분사구다.",
+    "wrong": {
+      "A": "attachment는 명사이므로 instructions 뒤에서 이 수식 구조를 만들지 못한다.",
+      "C": "attach는 동사원형으로 접속사 없이 주절에 추가될 수 없다.",
+      "D": "attaching은 안내문이 무언가를 첨부하는 능동 관계를 나타내므로 맞지 않는다."
+    },
+    "order": "주절 동사 review 확인 → instructions의 수동 관계 판단 → attached 선택.",
+    "rule": "행동의 대상인 명사는 과거분사구로 수식한다: instructions attached to a message."
+  },
+  {
+    "id": "123",
+    "prompt": "To meet the record-keeping requirement, the office must ------- copies of all signed contracts for seven years.",
+    "options": [
+      "negotiate",
+      "purchase",
+      "retain",
+      "distribute"
+    ],
+    "answer": "C",
+    "type": "문맥·동사",
+    "level": "중급",
+    "clue": "record-keeping requirement와 for seven years가 보관 의무를 나타낸다.",
+    "analysis": "계약서 사본을 7년 동안 기록으로 유지하는 행위가 필요하다. 보유 기간이 제시된 점이 핵심이다.",
+    "why": "retain copies는 ‘사본을 보관하다’로 기록 유지 의무에 맞는다.",
+    "wrong": {
+      "A": "negotiate는 협상한다는 뜻으로 이미 서명한 계약서 사본을 보관하는 행위를 나타내지 않는다.",
+      "B": "purchase는 구매한다는 뜻이며 7년간 기록 보존이라는 목적과 맞지 않는다.",
+      "D": "distribute는 배포한다는 뜻으로 기록을 장기간 보유하는 의무와 다르다."
+    },
+    "order": "기록 유지 목적 확인 → 7년간 유지할 대상 확인 → retain 선택.",
+    "rule": "기록·사본의 보관 기간을 설명할 때 retain/keep + 문서가 자주 쓰인다."
+  },
+  {
+    "id": "124",
+    "prompt": "Neither the branch manager nor the two assistant managers ------- available to attend tomorrow's training.",
+    "options": [
+      "is",
+      "was",
+      "be",
+      "are"
+    ],
+    "answer": "D",
+    "type": "문법·상관접속사 수일치",
+    "level": "고급",
+    "clue": "neither A nor B에서 동사 가까이에 있는 B는 the two assistant managers다.",
+    "analysis": "가까운 주어가 복수이므로 복수 현재형 be 동사가 필요하다. tomorrow's training의 참석 가능 상태를 설명한다.",
+    "why": "are는 가까운 복수 주어 assistant managers와 수가 맞는다.",
+    "wrong": {
+      "A": "is는 단수 동사이므로 가까운 복수 주어와 맞지 않는다.",
+      "B": "was는 단수 과거형이며 복수 주어와 맞지 않는다.",
+      "C": "be는 원형으로 조동사나 부정사 표지가 없는 이 주절에서 유한 동사가 될 수 없다."
+    },
+    "order": "neither...nor 구조 확인 → nor 뒤 가까운 주어의 수 확인 → are 선택.",
+    "rule": "neither A nor B, either A or B의 동사는 일반적으로 가까운 주어 B와 수를 맞춘다."
+  },
+  {
+    "id": "125",
+    "prompt": "Several orders could not be filled because a ------- of raw materials left the assembly line without enough supplies.",
+    "options": [
+      "shortage",
+      "strategy",
+      "reward",
+      "surplus"
+    ],
+    "answer": "A",
+    "type": "문맥·명사",
+    "level": "중급",
+    "clue": "without enough supplies는 조립 라인에 공급 물량이 부족했음을 명시한다.",
+    "analysis": "주문 미충족의 원인은 원자재 부족이다. without enough라는 명시적 단서가 부족과 초과를 구별한다.",
+    "why": "a shortage of raw materials는 원자재 부족으로 조립 라인에 필요한 물량이 없다는 상황과 일치한다.",
+    "wrong": {
+      "B": "strategy는 전략으로 원자재가 부족한 상태를 나타내지 않는다.",
+      "C": "reward는 보상으로 필요한 공급량이 모자란 상태와 무관하다.",
+      "D": "surplus는 초과분으로 without enough supplies라는 명시적 부족 상태와 반대다."
+    },
+    "order": "without enough supplies 확인 → 자원 부족 판단 → shortage 선택.",
+    "rule": "shortage of + 자원은 해당 자원의 부족을, surplus of는 초과를 뜻한다."
+  },
+  {
+    "id": "126",
+    "prompt": "The manufacturer expects ------- to increase once the new assembly line opens.",
+    "options": [
+      "productive",
+      "produced",
+      "production",
+      "productively"
+    ],
+    "answer": "C",
+    "type": "문법·명사 주체",
+    "level": "중급",
+    "clue": "expects ___ to increase에서 빈칸은 증가할 대상이다.",
+    "analysis": "expect + 목적어 + to부정사 구조에서 목적어 자리에 명사가 필요하다. 새 조립 라인으로 생산량이 증가한다.",
+    "why": "production은 ‘생산’이라는 명사로 increase의 의미상 주어가 된다.",
+    "wrong": {
+      "A": "productive는 형용사로 목적어 명사 자리를 채우지 못한다.",
+      "B": "produced는 과거형·과거분사로 expects의 목적어인 생산량 명사 자리를 채우지 못한다.",
+      "D": "productively는 부사이므로 목적어가 될 수 없다."
+    },
+    "order": "expect의 목적어 구조 확인 → 증가 대상 명사 필요 판단 → production 선택.",
+    "rule": "expect + 명사 + to부정사에서 명사는 부정사 동작의 의미상 주어가 된다."
+  },
+  {
+    "id": "127",
+    "prompt": "The service team has met its monthly response target ------- for the past year, without missing a single month.",
+    "options": [
+      "occasionally",
+      "consistently",
+      "inconsistently",
+      "briefly"
+    ],
+    "answer": "B",
+    "type": "문맥·부사",
+    "level": "고급",
+    "clue": "without missing a single month는 모든 달에 계속 목표를 달성했음을 뜻한다.",
+    "analysis": "빈칸은 목표 달성의 반복적인 안정성을 설명한다. 한 번도 빠뜨리지 않았다는 부가구가 직접적인 단서다.",
+    "why": "consistently는 ‘꾸준히, 일관되게’로 매달 목표를 달성한 결과를 표현한다.",
+    "wrong": {
+      "A": "occasionally는 가끔이라는 뜻으로 한 달도 빠짐없이 매달 달성했다는 명시적 단서와 맞지 않는다.",
+      "C": "inconsistently는 일관되지 않게라는 뜻으로 매달 예외 없이 목표를 달성했다는 설명과 맞지 않는다.",
+      "D": "briefly는 잠깐이라는 뜻으로 1년 내내 매달 달성했다는 설명에 맞지 않는다."
+    },
+    "order": "without missing의 반복 단서 확인 → 지속성 의미 판단 → consistently 선택.",
+    "rule": "without exception/missing 같은 표현은 지속성과 일관성을 나타내는 어휘의 단서가 된다."
+  },
+  {
+    "id": "128",
+    "prompt": "The final estimate was ------- detailed that the client approved it without requesting further clarification.",
+    "options": [
+      "such",
+      "very",
+      "too",
+      "so"
+    ],
+    "answer": "D",
+    "type": "문법·so...that",
+    "level": "중급",
+    "clue": "형용사 detailed 뒤에 결과절 that the client approved가 이어진다.",
+    "analysis": "정도가 높아 어떤 결과가 생겼다는 so + 형용사 + that절 구조다.",
+    "why": "so detailed that은 ‘아주 상세해서 ~했다’라는 결과를 나타낸다.",
+    "wrong": {
+      "A": "such는 보통 명사구와 함께 쓰며 여기에는 detailed 뒤의 명사가 없다.",
+      "B": "very는 형용사를 강화하지만 very detailed that이라는 결과절 구조를 만들지 않는다.",
+      "C": "too는 일반적으로 too + 형용사 + to부정사 구조로 쓰며 여기의 that 결과절과 맞지 않는다."
+    },
+    "order": "detailed의 형용사 역할 확인 → that 결과절 확인 → so...that 선택.",
+    "rule": "so + 형용사/부사 + that절, such + 명사구 + that절을 구별한다."
+  },
+  {
+    "id": "129",
+    "prompt": "Ms. Park ------- as the branch supervisor since May 2022 and still holds the position.",
+    "options": [
+      "has served",
+      "served",
+      "will serve",
+      "had served"
+    ],
+    "answer": "A",
+    "type": "문법·현재완료 계속",
+    "level": "중급",
+    "clue": "since May 2022와 still holds가 과거부터 현재까지의 재직을 나타낸다.",
+    "analysis": "특정 과거 시점에서 시작해 현재까지 이어지는 상태이므로 현재완료를 사용한다.",
+    "why": "has served는 과거부터 지금까지 지점 감독으로 일해 왔다는 뜻이다.",
+    "wrong": {
+      "B": "served는 단순과거로 현재까지의 계속을 since와 연결하는 이 문장에 적합하지 않다.",
+      "C": "will serve는 미래 재직을 뜻해 이미 시작했고 현재도 유지한다는 단서와 맞지 않는다.",
+      "D": "had served는 과거의 기준 시점까지를 나타내지만 본문은 현재 still holds를 기준으로 삼는다."
+    },
+    "order": "since의 시작점 확인 → still의 현재 지속 확인 → 현재완료 선택.",
+    "rule": "since + 시작 시점과 현재까지 계속되는 상태는 현재완료의 대표적인 단서다."
+  },
+  {
+    "id": "130",
+    "prompt": "The supplier signed an ------- agreement under which our company is the only distributor permitted to sell its products in this region.",
+    "options": [
+      "optional",
+      "approximate",
+      "ordinary",
+      "exclusive"
+    ],
+    "answer": "D",
+    "type": "문맥·형용사",
+    "level": "고급",
+    "clue": "the only distributor permitted가 특정 회사에만 판매권을 부여한다.",
+    "analysis": "under which 이하가 agreement의 조건을 설명한다. 다른 유통업체는 허용하지 않는 독점 계약이다.",
+    "why": "exclusive agreement는 ‘독점 계약’으로 유일한 판매권자라는 조건과 맞는다.",
+    "wrong": {
+      "A": "optional은 선택 가능한이라는 뜻으로 독점 판매권을 설명하지 않는다.",
+      "B": "approximate는 대략적인이라는 뜻으로 계약의 유통 권한 범위와 무관하다.",
+      "C": "ordinary는 평범한이라는 뜻으로 only distributor라는 제한을 나타내지 않는다."
+    },
+    "order": "under which 이하 조건 읽기 → 유일한 유통권 확인 → exclusive 선택.",
+    "rule": "관계절은 앞 명사의 구체적 의미를 설명하며 only 같은 제한 표현이 어휘 선택의 근거가 된다."
+  },
+  {
+    "id": "131",
+    "prompt": "Choose the best word or phrase for [131].",
+    "options": [
+      "has been unavailable",
+      "will be unavailable",
+      "unavailable",
+      "being unavailable"
+    ],
+    "answer": "B",
+    "type": "동사·미래 상태",
+    "level": "중급",
+    "clue": "공지된 점검 시간과 will not affect, will proceed가 앞으로의 운영 계획을 나타낸다.",
+    "analysis": "주어 service 뒤에 점검 기간 동안 이용 불가 상태를 나타내는 유한 동사가 필요하다. 예정된 중단을 설명한다.",
+    "why": "will be unavailable은 예정된 시간 동안 이용할 수 없게 될 상태를 표현한다.",
+    "wrong": {
+      "A": "has been unavailable은 과거부터 현재까지의 중단을 뜻하지만 본문은 앞으로의 점검을 안내한다.",
+      "C": "unavailable은 형용사만 있으므로 문장의 동사가 빠진다.",
+      "D": "being unavailable은 분사구이며 주절의 유한 동사가 될 수 없다."
+    },
+    "order": "공지의 미래 계획 확인 → 주절 동사 필요 확인 → will be unavailable 선택.",
+    "rule": "예정된 기간의 서비스 상태는 will be + 형용사로 나타낼 수 있다."
+  },
+  {
+    "id": "132",
+    "prompt": "Choose the best word or phrase for [132].",
+    "options": [
+      "restore",
+      "recruit",
+      "refund",
+      "retain"
+    ],
+    "answer": "A",
+    "type": "문맥·동사",
+    "level": "중급",
+    "clue": "점검으로 끊긴 normal access를 testing 완료 후 다시 제공한다.",
+    "analysis": "빈칸은 중단된 온라인 서비스 접근을 원래 상태로 돌리는 조치다. 동사의 목적어 normal access와 이전 중단 설명을 함께 본다.",
+    "why": "restore normal access는 ‘정상 접근을 복구하다’라는 의미다.",
+    "wrong": {
+      "B": "recruit는 인력을 모집하는 뜻으로 서비스 접근을 목적어로 받지 않는다.",
+      "C": "refund는 돈을 환불하는 뜻으로 접근 권한을 복구한다는 의미가 아니다.",
+      "D": "retain은 이미 가진 것을 유지하는 뜻으로 중단 뒤 다시 제공하는 조치를 나타내지 않는다."
+    },
+    "order": "점검 중단 상황 확인 → 완료 후 필요한 조치 판단 → restore와 access의 결합 확인.",
+    "rule": "중단되거나 손상된 기능을 원상태로 되돌리는 행위는 restore로 표현한다."
+  },
+  {
+    "id": "133",
+    "prompt": "Choose the best sentence for [133].",
+    "options": [
+      "Bulk orders qualify for a reduced delivery fee.",
+      "Our delivery drivers will follow their regular routes.",
+      "Please download any invoices you need before the work begins.",
+      "You can register a new customer account without charge."
+    ],
+    "answer": "C",
+    "type": "문장 삽입·지시어와 조치",
+    "level": "고급",
+    "clue": "These files와 saving copies가 미리 내려받을 청구서 파일을 가리킨다.",
+    "analysis": "빈칸 뒤는 계정 중단으로 파일 접근이 막힌다는 경고다. 앞에는 필요한 파일을 사전에 내려받는 조치가 와야 한다.",
+    "why": "C는 invoices를 파일의 선행 내용으로 제시하고, 점검 전 다운로드와 개인 기기 저장이라는 절차를 이어 준다.",
+    "wrong": {
+      "A": "대량 주문 할인은 접근할 수 없는 files를 소개하지 않는다.",
+      "B": "배송 경로는 파일 다운로드와 월별 비용 보고 준비를 설명하지 못한다.",
+      "D": "계정 등록 안내는 These files의 구체적인 대상을 제공하지 않는다."
+    },
+    "order": "These files의 선행 정보 확인 → 점검 전 대비 행동 판단 → invoices 다운로드 문장 선택.",
+    "rule": "문장 삽입은 지시 대상과 앞뒤 행동의 시간 순서가 함께 맞아야 한다."
+  },
+  {
+    "id": "134",
+    "prompt": "Choose the best word or phrase for [134].",
+    "options": [
+      "Previously",
+      "For example",
+      "Similarly",
+      "However"
+    ],
+    "answer": "D",
+    "type": "연결어·대조",
+    "level": "고급",
+    "clue": "웹사이트 주문은 불가능하지만 긴급 전화 주문은 가능하다.",
+    "analysis": "두 문장은 주문 가능 여부가 반대다. 전화가 열려 있는 것은 웹 주문 금지의 사례나 같은 현상이 아니라 대안이다.",
+    "why": "However는 온라인 주문 제한과 전화 주문 허용을 대조한다.",
+    "wrong": {
+      "A": "Previously는 이전 시점을 뜻하지만 다음 문장은 앞으로의 점검 중에도 전화선이 열려 있을 것이라는 미래 계획이다.",
+      "B": "For example은 앞 진술의 예시가 필요하지만 전화 주문 허용은 주문 불가의 예가 아니다.",
+      "C": "Similarly는 동일한 경향을 연결하지만 한 채널은 닫히고 다른 채널은 열린다."
+    },
+    "order": "웹/전화 주문 가능 여부 비교 → 대조 관계 확인 → However 선택.",
+    "rule": "서로 다른 경로의 이용 가능성이 반대이면 대조 연결부사를 검토한다."
+  },
+  {
+    "id": "135",
+    "prompt": "Choose the best word or phrase for [135].",
+    "options": [
+      "assigning",
+      "assigns",
+      "assigned",
+      "assignment"
+    ],
+    "answer": "C",
+    "type": "분사·수동 수식",
+    "level": "중급",
+    "clue": "주절은 Lockers ... may be used이며 보관함은 회원에게 배정되는 대상이다.",
+    "analysis": "빈칸 구는 lockers를 수식해야 한다. lockers that are assigned의 축약형이 적합하다.",
+    "why": "assigned to monthly members는 ‘월 회원에게 배정된’이라는 수동 수식 관계를 만든다.",
+    "wrong": {
+      "A": "assigning은 보관함이 무언가를 배정하는 능동 관계가 되어 문맥에 맞지 않는다.",
+      "B": "assigns는 단수 현재 동사로 복수 lockers와 맞지 않고 may be used와의 연결 구조도 없다.",
+      "D": "assignment는 명사로 이 위치에서 lockers를 수동 관계로 수식하지 못한다."
+    },
+    "order": "주절 동사 may be used 확인 → 보관함의 수동 역할 확인 → assigned 선택.",
+    "rule": "배정·첨부·제출 등의 동작을 받는 명사는 과거분사구로 수식한다."
+  },
+  {
+    "id": "136",
+    "prompt": "Choose the best word or phrase for [136].",
+    "options": [
+      "maintenance",
+      "transaction",
+      "appointment",
+      "expiration"
+    ],
+    "answer": "D",
+    "type": "문맥·명사 결합",
+    "level": "중급",
+    "clue": "예약은 회원 카드에 인쇄된 기한까지 유지된다.",
+    "analysis": "회원권 유효 기간이 보관함 사용 종료 시점을 결정한다. 카드의 유효기간 종료를 뜻하는 date 결합이 필요하다.",
+    "why": "expiration date는 ‘만료일’로 membership 종료와 연결된다.",
+    "wrong": {
+      "A": "maintenance date는 정비일로 개인 회원권의 유효 기한을 나타내지 않는다.",
+      "B": "transaction date는 거래일로 보관함 사용을 끝내는 회원권 만료 시점과 다르다.",
+      "C": "appointment date는 약속 날짜로 월 회원권의 유효 기한과 무관하다."
+    },
+    "order": "lasts until의 종료점 확인 → 회원 카드의 유효 기한 판단 → expiration date 선택.",
+    "rule": "사용 권리나 유효성이 끝나는 날짜는 expiration date로 표현한다."
+  },
+  {
+    "id": "137",
+    "prompt": "Choose the best word or phrase for [137].",
+    "options": [
+      "it",
+      "them",
+      "themselves",
+      "they"
+    ],
+    "answer": "B",
+    "type": "대명사·목적격",
+    "level": "중급",
+    "clue": "회원이 받는 two keys를 회원권 종료 전에 반환해야 한다.",
+    "analysis": "return의 목적어는 두 열쇠이며 복수 사물이다. members와 keys 중 반환할 수 있는 대상을 구별한다.",
+    "why": "them은 two keys를 받는 복수 목적격 대명사다.",
+    "wrong": {
+      "A": "it은 단수형이므로 two keys와 수가 맞지 않는다.",
+      "C": "themselves는 회원들 자신을 가리켜 열쇠 반환 의미를 나타내지 못한다.",
+      "D": "they는 주격으로 return의 목적어 자리에 맞지 않는다."
+    },
+    "order": "return의 목적 대상 확인 → two keys의 복수 확인 → them 선택.",
+    "rule": "대명사 문제는 동사의 목적어 역할과 선행사의 수를 동시에 확인한다."
+  },
+  {
+    "id": "138",
+    "prompt": "Choose the best sentence for [138].",
+    "options": [
+      "Do not store damaged batteries, flammable liquids, or food that requires refrigeration.",
+      "Members can use the lounge for informal meetings.",
+      "The reception desk is staffed from nine until six.",
+      "Additional shelves will be installed in the corridor."
+    ],
+    "answer": "A",
+    "type": "문장 삽입·금지와 지시어",
+    "level": "고급",
+    "clue": "Such items could create a safety risk의 items는 위험을 유발하는 보관 금지 물품이다.",
+    "analysis": "앞은 일반 업무 물품 보관 용도이며 뒤는 안전상 위험 물품 제거다. 사이에는 그 위험 물품의 구체적인 예가 필요하다.",
+    "why": "A는 위험한 전지·가연성 액체·냉장 음식물을 제시해 Such items와 시설팀의 제거 조치를 설명한다.",
+    "wrong": {
+      "B": "라운지 회의는 제거할 위험 물품을 소개하지 않는다.",
+      "C": "운영 시간은 Such items의 선행 정보가 될 수 없다.",
+      "D": "복도 선반 설치는 보관함에서 제거할 물품과 다른 대상이다."
+    },
+    "order": "Such items와 safety risk 확인 → 금지 물품 필요 판단 → 구체적인 위험 목록 선택.",
+    "rule": "such + 복수명사는 앞에서 제시한 같은 종류의 대상을 받아 일반화한다."
+  },
+  {
+    "id": "139",
+    "prompt": "Choose the best word or phrase for [139].",
+    "options": [
+      "Before",
+      "During",
+      "Prior to",
+      "Following"
+    ],
+    "answer": "A",
+    "type": "접속사·전치사·절차 순서",
+    "level": "중급",
+    "clue": "빈칸 뒤 you submit a replacement request는 완전한 절이고, 카드 비활성화가 선행하는 절차다.",
+    "analysis": "완전한 절을 이끄는 접속사가 필요하다. 분실 신고와 비활성화를 먼저 시행하고 재발급 요청을 제출하는 순서도 확인한다.",
+    "why": "Before는 재발급 요청을 제출하기 전 기존 카드를 비활성화한다는 선행 조건을 나타낸다.",
+    "wrong": {
+      "B": "During은 명사구를 받는 전치사이므로 you submit이라는 완전한 절을 직접 받을 수 없다.",
+      "C": "Prior to는 before와 뜻이 유사하지만 명사·동명사를 받는 전치사구여서 완전한 절 앞에 쓸 수 없다.",
+      "D": "Following은 여기서 ‘~후에’라는 전치사로 쓰일 수 있지만 명사구가 필요하며 완전한 절을 직접 이끌지 못한다."
+    },
+    "order": "빈칸 뒤 완전한 절 확인 → 전치사 보기 제외 → Before가 나타내는 선행 보안 조치 확인.",
+    "rule": "before는 절을 이끄는 접속사로 쓸 수 있지만 during/prior to/following은 이 구조에서 명사·동명사를 받는다."
+  },
+  {
+    "id": "140",
+    "prompt": "Choose the best sentence for [140].",
+    "options": [
+      "All permanent access cards have a blue border.",
+      "The employee cafeteria will remain open during normal hours.",
+      "The security desk will issue a temporary pass after checking an official photo ID.",
+      "The new laboratory equipment will arrive on Thursday."
+    ],
+    "answer": "C",
+    "type": "문장 삽입·대체 수단 소개",
+    "level": "고급",
+    "clue": "앞의 alternative form of access를 구체화하고 뒤의 This pass를 소개해야 한다.",
+    "analysis": "재발급 카드가 준비될 때까지의 대체 출입 수단에 관한 문단이다. 다음 문장은 그 출입증의 유효 기간을 설명한다.",
+    "why": "C가 temporary pass를 처음 소개해 대체 출입 수단과 This pass의 선행 내용을 동시에 제공한다.",
+    "wrong": {
+      "A": "정식 카드의 색은 대체 출입 수단이 아니며 This pass를 소개하지 않는다.",
+      "B": "식당 운영 안내는 출입증의 발급·기간 설명과 연결되지 않는다.",
+      "D": "실험실 장비 배송은 임시 출입 수단과 무관하다."
+    },
+    "order": "앞의 대체 출입 수단 확인 → 뒤의 This pass 확인 → 임시 출입증 발급 문장 선택.",
+    "rule": "일반 개념 소개 → 구체적인 대상 → 그 대상의 조건 순서로 문단이 전개될 수 있다."
+  },
+  {
+    "id": "141",
+    "prompt": "Choose the best word or phrase for [141].",
+    "options": [
+      "will be ready",
+      "is ready",
+      "readiness",
+      "being ready"
+    ],
+    "answer": "B",
+    "type": "시제·미래 시간 부사절",
+    "level": "중급",
+    "clue": "You will receive ... once it ___는 카드가 준비되는 미래 시점을 뜻한다.",
+    "analysis": "once는 여기서 이메일 발송 시점을 나타내는 시간 부사절을 이끈다. 미래라도 절 안에서는 현재시제를 쓴다.",
+    "why": "is ready는 단수 it과 일치하며 미래의 준비 완료 시점을 나타낸다.",
+    "wrong": {
+      "A": "미래 시간 부사절에서는 will be ready 대신 현재형 is ready를 사용한다.",
+      "C": "readiness는 명사이므로 once절의 동사가 없다.",
+      "D": "being ready는 분사구로 once절의 유한 동사가 될 수 없다."
+    },
+    "order": "once의 시간절 역할 확인 → 미래 시간절 현재형 적용 → 단수 it에 맞춰 is 선택.",
+    "rule": "once가 ‘~하자마자, ~하면’이라는 미래 시간을 이끌 때 현재시제를 사용한다."
+  },
+  {
+    "id": "142",
+    "prompt": "Choose the best word or phrase for [142].",
+    "options": [
+      "delay",
+      "display",
+      "transfer",
+      "verify"
+    ],
+    "answer": "D",
+    "type": "문맥·동사",
+    "level": "중급",
+    "clue": "공식 사진 신분증을 가져와야 직원이 카드를 내주기 전에 신원을 확인할 수 있다.",
+    "analysis": "신분증의 목적과 카드 발급 전 보안 확인을 연결한다. identity의 정확성을 확인하는 동사가 필요하다.",
+    "why": "verify your identity는 ‘신원을 확인하다’라는 자연스러운 결합이다.",
+    "wrong": {
+      "A": "delay는 지연시키다라는 뜻으로 신분 확인을 나타내지 않는다.",
+      "B": "display는 보여 주다라는 뜻이며 직원이 신청자의 신원을 검증하는 행위가 아니다.",
+      "C": "transfer는 이전하다라는 뜻으로 신원을 확인하는 뜻이 없다."
+    },
+    "order": "신분증 지참 목적 확인 → identity에 필요한 보안 행동 판단 → verify 선택.",
+    "rule": "신분·정보·정확성을 확인하는 행위는 verify + identity/information로 표현할 수 있다."
+  },
+  {
+    "id": "143",
+    "prompt": "Choose the best word or phrase for [143].",
+    "options": [
+      "find",
+      "will find",
+      "is finding",
+      "found"
+    ],
+    "answer": "D",
+    "type": "시제·과거 조사 결과",
+    "level": "중급",
+    "clue": "During August와 reviewed가 이미 진행한 검토를 나타낸다.",
+    "analysis": "빈칸은 종료된 review에서 무엇을 발견했는지 보고하는 주절 동사다. 문단 전체가 과거 조사와 시험 결과를 설명한다.",
+    "why": "found는 완료된 검토의 발견을 과거시제로 표현한다.",
+    "wrong": {
+      "A": "find는 현재 동사로 쓰면 단수 주어 The review와 수가 맞지 않는다. 이 절에는 동사원형을 허용하는 조동사나 부정사 표지도 없다.",
+      "B": "will find는 아직 확인하지 않은 미래 결과를 뜻하지만 감축 비율이 이미 제시되어 있다.",
+      "C": "is finding은 현재 진행 중인 조사로 과거에 reviewed한 검토와 맞지 않는다."
+    },
+    "order": "During August와 reviewed 확인 → 종료된 검토 결과 판단 → found 선택.",
+    "rule": "끝난 검토·시험의 발견을 보고할 때 시간 설정에 맞는 과거 동사를 선택한다."
+  },
+  {
+    "id": "144",
+    "prompt": "Choose the best word or phrase for [144].",
+    "options": [
+      "Although",
+      "Despite",
+      "Once",
+      "Unless"
+    ],
+    "answer": "A",
+    "type": "접속사·양보",
+    "level": "고급",
+    "clue": "환경 성과는 좋았지만 접수 직원의 분류 업무가 늘었다.",
+    "analysis": "유리한 환경 결과를 인정하면서 운영상 단점을 함께 제시한다. 빈칸 뒤와 주절이 대조 관계다.",
+    "why": "Although는 긍정적인 성과에도 부담이 발생했다는 양보 관계를 만든다.",
+    "wrong": {
+      "B": "Despite는 양보 의미가 있지만 전치사이므로 the environmental results were favorable라는 완전한 절을 직접 받을 수 없다.",
+      "C": "Once는 성과가 좋아진 시점에 업무가 생겼다는 시간 조건을 만들지만 본문은 장단점을 비교한다.",
+      "D": "Unless는 성과가 좋지 않을 경우에만 업무가 늘어난다는 조건이 되어 본문과 맞지 않는다."
+    },
+    "order": "환경 성과와 직원 부담 비교 → 양보 관계 판단 → Although 선택.",
+    "rule": "성과와 그에 반하는 운영상 부담을 함께 제시할 때 although절로 양보 관계를 나타낼 수 있다."
+  },
+  {
+    "id": "145",
+    "prompt": "Choose the best word or phrase for [145].",
+    "options": [
+      "disposable",
+      "expired",
+      "reusable",
+      "confidential"
+    ],
+    "answer": "C",
+    "type": "문맥·형용사",
+    "level": "중급",
+    "clue": "suppliers delivered ... reusable containers와 collected the empty containers가 반복 사용·반환을 명시한다.",
+    "analysis": "빈칸은 공급업체에 다시 돌려줄 용기의 종류다. 일회용 포장 감소를 위해 사용하는 재사용 용기와 일치해야 한다.",
+    "why": "reusable은 ‘재사용 가능한’으로 반환·회수하는 용기라는 문맥과 맞는다.",
+    "wrong": {
+      "A": "disposable은 일회용으로 사용 후 회수해 다시 쓰는 프로그램의 용기와 다르다.",
+      "B": "expired는 유효기간이 지난 상태지만 용기의 만료에 대한 내용은 없다.",
+      "D": "confidential은 기밀이라는 뜻으로 반환 대상 용기의 성격을 설명하지 못한다."
+    },
+    "order": "첫 문단의 용기 종류 확인 → 회수·반환 행동 연결 → reusable 선택.",
+    "rule": "지문에 반복 등장하는 동일 대상의 속성은 앞에서 명시된 정보와 일관되어야 한다."
+  },
+  {
+    "id": "146",
+    "prompt": "Choose the best sentence for [146].",
+    "options": [
+      "Suppliers have agreed to collect containers more frequently.",
+      "The second trial will involve our headquarters and the East and West branch offices.",
+      "Each supplier will use a different color for its labels.",
+      "An independent consultant reviewed the results of the first trial."
+    ],
+    "answer": "B",
+    "type": "문장 삽입·수와 지시 대상",
+    "level": "실전 최상급",
+    "clue": "These three sites와 Managers at the selected sites는 세 개의 시험 장소를 요구한다.",
+    "analysis": "다음 단계에서 저장 공간을 평가할 장소를 소개해야 한다. 본사 한 곳과 동·서 지점 두 곳은 정확히 세 장소다.",
+    "why": "B는 세 시험 장소를 명시하여 These three sites의 수와 의미, 후속 관리자 안내를 모두 충족한다.",
+    "wrong": {
+      "A": "회수 빈도는 저장 공간과 관련 있어도 세 장소를 소개하지 못한다.",
+      "C": "색상 구분은 이전 문단 주제와 관련 있지만 sites의 선행 정보를 제공하지 않는다.",
+      "D": "기존 결과 검토자는 새로운 시험의 세 장소와 무관하다."
+    },
+    "order": "These three sites의 수 확인 → 앞의 저장 공간 평가 목적 확인 → 본사+두 지점 선택.",
+    "rule": "문장 삽입에서는 these/three 같은 지시어와 수 표현이 요구하는 대상의 개수까지 검사한다."
+  },
+  {
+    "id": "147",
+    "prompt": "What is the main purpose of the email?",
+    "options": [
+      "To request an increase in the order quantity",
+      "To explain delivery options for an incomplete order",
+      "To offer a new discount on desk lamps",
+      "To confirm that all items have already been delivered"
+    ],
+    "answer": "B",
+    "type": "목적",
+    "level": "중급",
+    "clue": "Email: Calton Supplies의 \"send the ten available lamps now\"와 \"all twelve together\"",
+    "analysis": "12개 중 10개만 준비되어 두 가지 발송 방안을 제시하고 당일 응답을 요청한다. 할인은 기존 내용의 확인이다.",
+    "why": "부분 준비된 주문의 배송 선택지를 설명하는 B가 전체 용건이다.",
+    "wrong": {
+      "A": "수량 증가 요청은 없고 원래 12개를 완성하려 한다.",
+      "C": "할인은 주문 시 합의된 기존 할인이며 새로운 제안이 아니다.",
+      "D": "두 개는 아직 준비되지 않았고 배송 완료도 아니다."
+    },
+    "order": "제목과 발신·수신 관계를 확인하고, 첫 문장의 요청과 마지막 행동 지시를 연결한 뒤 글 전체를 설명하는 보기를 고른다.",
+    "rule": "목적은 한 문장의 소재보다 발신자가 독자에게 기대하는 행동 또는 전달하려는 변화로 판단한다."
+  },
+  {
+    "id": "148",
+    "prompt": "What will the supplier do if Ms. Wu does not reply by 2:00 p.m.?",
+    "options": [
+      "Cancel the twelve-lamp order",
+      "Wait until all lamps are ready",
+      "Issue an additional shipping invoice",
+      "Send the ten available lamps first"
+    ],
+    "answer": "D",
+    "type": "세부 정보",
+    "level": "중급",
+    "clue": "Email: Calton Supplies의 \"we will use the first option\"",
+    "analysis": "첫 번째 옵션은 준비된 10개를 지금 발송하고 두 개를 나중에 별도 발송하는 것이다. 무응답 조건이 이 옵션을 선택하게 한다.",
+    "why": "대명사적 표현 first option을 앞 문장과 연결한 D가 기본 조치다.",
+    "wrong": {
+      "A": "무응답 때 취소한다는 규칙은 없다.",
+      "B": "전체를 기다리는 것은 second option이다.",
+      "C": "별도 배송에도 추가 배송 요금이 없다고 한다."
+    },
+    "order": "질문의 대상과 조건을 표시하고 같은 대상을 다루는 문장을 찾은 뒤, 시간·수량·조건까지 보기와 대조한다.",
+    "rule": "같은 명사가 보인다는 이유로 고르지 말고, 그 명사에 붙은 조건과 행위자를 함께 확인한다."
+  },
+  {
+    "id": "149",
+    "prompt": "Why is Mr. Ellis offering an exchange without the usual fee?",
+    "options": [
+      "The theater changed the starting time after the purchase.",
+      "Ms. Baker bought tickets for a cancelled production.",
+      "The theater sold more seats than it could provide.",
+      "Ms. Baker is a member of the production team."
+    ],
+    "answer": "A",
+    "type": "세부 정보",
+    "level": "중급",
+    "clue": "Letter: Ellery Theater의 \"adjustment was announced after your purchase\"",
+    "analysis": "Because절이 무료 교환의 이유를 직접 제시한다. 공연은 취소되지 않고 시작 시각이 앞당겨졌다.",
+    "why": "구매 후 시간 변경이라는 A가 요금 면제의 명시된 이유다.",
+    "wrong": {
+      "B": "공연 취소가 아니라 7:30에서 6:00으로 시각 조정이다.",
+      "C": "초과 판매 사실은 없다.",
+      "D": "수신자가 제작팀 구성원이라는 근거가 없다."
+    },
+    "order": "질문의 대상과 조건을 표시하고 같은 대상을 다루는 문장을 찾은 뒤, 시간·수량·조건까지 보기와 대조한다.",
+    "rule": "같은 명사가 보인다는 이유로 고르지 말고, 그 명사에 붙은 조건과 행위자를 함께 확인한다."
+  },
+  {
+    "id": "150",
+    "prompt": "What is required for Ms. Baker to receive a refund?",
+    "options": [
+      "Selecting seats in a higher-priced section",
+      "Sending a digital copy of the tickets",
+      "Returning the original tickets by April 12",
+      "Visiting the box office on a Monday"
+    ],
+    "answer": "C",
+    "type": "세부 정보",
+    "level": "기본",
+    "clue": "Letter: Ellery Theater의 \"return the original tickets ... by April 12\"",
+    "analysis": "환불 절차는 원본과 기한을 요구한다. 디지털 사본 불가라는 다음 문장이 이 조건을 강화한다.",
+    "why": "원본 반환과 4월 12일 마감을 모두 유지한 C가 맞다.",
+    "wrong": {
+      "A": "비싼 좌석 선택은 교환의 추가금 조건이다.",
+      "B": "digital copy cannot be accepted라고 명시한다.",
+      "D": "매표소는 화요일부터 토요일까지 운영한다."
+    },
+    "order": "질문의 대상과 조건을 표시하고 같은 대상을 다루는 문장을 찾은 뒤, 시간·수량·조건까지 보기와 대조한다.",
+    "rule": "같은 명사가 보인다는 이유로 고르지 말고, 그 명사에 붙은 조건과 행위자를 함께 확인한다."
+  },
+  {
+    "id": "151",
+    "prompt": "What is NOT included in the Office Care plan?",
+    "options": [
+      "An annual inspection",
+      "Replacement of worn rollers",
+      "Weekday telephone support",
+      "Ink cartridges"
+    ],
+    "answer": "D",
+    "type": "NOT/EXCEPT",
+    "level": "중급",
+    "clue": "Advertisement: Meridian Print의 \"Ink cartridges ... are not covered\"",
+    "analysis": "첫 문단은 포함되는 세 서비스와 제외되는 소모품·오용 손상을 구분한다. 선택지 세 개는 모두 포함 항목이다.",
+    "why": "명시적으로 제외된 잉크 카트리지를 제시한 D가 정답이다.",
+    "wrong": {
+      "A": "annual inspection은 covers 뒤 포함 목록에 있다.",
+      "B": "worn rollers의 교체도 포함된다.",
+      "C": "weekday business hours의 전화 지원도 포함된다."
+    },
+    "order": "부정형 질문 표시를 먼저 하고 보기 네 개의 근거를 각각 찾은 뒤, 확인된 세 항목을 제외한다.",
+    "rule": "부정형 문제는 지문에 언급되거나 성립하는 세 선택지를 확인해 남은 하나를 선택한다."
+  },
+  {
+    "id": "152",
+    "prompt": "What can be inferred about a four-year-old printer from another manufacturer?",
+    "options": [
+      "It qualifies without any inspection.",
+      "It may enter the plan if it passes the required inspection and needs no major repairs.",
+      "It can be enrolled only when five other printers are enrolled.",
+      "Its monthly fee will be lower than $35."
+    ],
+    "answer": "B",
+    "type": "추론",
+    "level": "고급",
+    "clue": "Advertisement: Meridian Print의 \"any manufacturer\", \"less than six years old\", \"Before enrollment ... inspect\"",
+    "analysis": "타사 제품과 4년 사용이라는 조건은 허용 범위다. 다만 가입 전 검사 및 큰 수리 해결 조건은 그대로 적용된다.",
+    "why": "제조사·연식·검사 조건을 모두 보존한 조건부 진술 B가 가능하다.",
+    "wrong": {
+      "A": "모든 장비는 사전 검사 대상이다.",
+      "C": "5대 조건은 통합 청구서에만 적용되며 가입 최소 수량이 아니다.",
+      "D": "대수와 관계없이 월 요금은 바뀌지 않는다고 한다."
+    },
+    "order": "질문 대상에 관한 직접 진술을 찾고 필요한 전제만 결합한 뒤, 지문이 뒷받침하는 최소 범위의 결론을 고른다.",
+    "rule": "추론은 근거의 결합이다. 일반 상식이나 가능성만으로 지문보다 강한 결론을 만들지 않는다."
+  },
+  {
+    "id": "153",
+    "prompt": "What is the purpose of the notice?",
+    "options": [
+      "To explain how customers should request equipment returns",
+      "To advertise discounted office equipment",
+      "To announce the closure of independent retailers",
+      "To require customers to replace all old packaging"
+    ],
+    "answer": "A",
+    "type": "목적",
+    "level": "기본",
+    "clue": "Notice: Norland Returns의 \"process returns through its online customer portal\"",
+    "analysis": "공지의 중심은 새 반품 접수와 승인·검사·환불 순서다. 대상 및 예외 조건을 함께 설명한다.",
+    "why": "온라인 반품 요청 절차를 설명하는 A가 글 전체를 포괄한다.",
+    "wrong": {
+      "B": "가격 할인 광고가 아니다.",
+      "C": "판매점 폐쇄 내용은 없고 해당 판매점 반품을 안내한다.",
+      "D": "원래 포장 보관을 권하며 대체 포장도 허용한다."
+    },
+    "order": "제목과 발신·수신 관계를 확인하고, 첫 문장의 요청과 마지막 행동 지시를 연결한 뒤 글 전체를 설명하는 보기를 고른다.",
+    "rule": "목적은 한 문장의 소재보다 발신자가 독자에게 기대하는 행동 또는 전달하려는 변화로 판단한다."
+  },
+  {
+    "id": "154",
+    "prompt": "The word \"retain\" is closest in meaning to",
+    "options": [
+      "purchase",
+      "deliver",
+      "keep",
+      "repair"
+    ],
+    "answer": "C",
+    "type": "문맥상 의미",
+    "level": "중급",
+    "clue": "Notice: Norland Returns의 \"retain the original packaging until ... reviewed\"",
+    "analysis": "until절이 포장을 검토 때까지 갖고 있어야 하는 기간을 한정한다. 뒤 문장의 unavailable일 때 대안 안내도 보관의 의미와 연결된다.",
+    "why": "원래 포장을 계속 가지고 있다는 keep이 문맥상 적절하다.",
+    "wrong": {
+      "A": "이미 원래 포장을 갖고 있는 상황이며 새 구매가 아니다.",
+      "B": "승인 전 장비를 보내지 말라고 하므로 포장 배송을 뜻하지 않는다.",
+      "D": "손상된 장비 검사는 기술자가 하며 포장 수리가 아니다."
+    },
+    "order": "해당 표현의 앞뒤 문장과 목적어를 확인하고 후보 표현으로 바꾸어 문장의 의도가 유지되는지 검토한다.",
+    "rule": "문맥상 의미는 익숙한 첫 뜻보다 해당 문장이 수행하는 기능과 결합 관계로 결정한다."
+  },
+  {
+    "id": "155",
+    "prompt": "Where does the following sentence best belong? \"The next step depends on what the technician finds.\"",
+    "options": [
+      "[1]",
+      "[2]",
+      "[3]",
+      "[4]"
+    ],
+    "answer": "D",
+    "type": "문장 삽입",
+    "level": "고급",
+    "clue": "Notice: Norland Returns의 \"a technician will examine it\"와 [4]",
+    "analysis": "the technician은 직전 도입된 검사자를 받고, 다음 문장은 승인 반품의 환불 방법을 제시한다. 검사 결과가 후속 조치를 좌우하는 흐름이다.",
+    "why": "기술자 검사 뒤이며 환불 안내 앞인 [4]가 양쪽 연결을 충족한다.",
+    "wrong": {
+      "A": "기술자가 아직 소개되지 않았고 온라인 접수 설명이 이어진다.",
+      "B": "사진 제출 단계에는 기술자의 검사 결과가 아직 없다.",
+      "C": "포장 보관 안내 사이에 검사 결과를 넣으면 절차 순서가 끊긴다."
+    },
+    "order": "삽입 문장의 지시어와 연결어를 표시하고 앞쪽 선행 정보와 뒤쪽 전개를 모두 연결하는 위치를 찾는다.",
+    "rule": "문장 삽입은 앞 문장과의 연결만으로 결정하지 않는다. 뒤 문장의 논리와 반복 정보도 확인한다."
+  },
+  {
+    "id": "156",
+    "prompt": "Why is the company extending the trial?",
+    "options": [
+      "To avoid returning customer deposits",
+      "To gather more reliable information",
+      "To introduce a higher lunch price",
+      "To replace all suburban shop employees"
+    ],
+    "answer": "B",
+    "type": "세부 정보",
+    "level": "중급",
+    "clue": "Article: Brindle Foods의 \"provide a more reliable picture\"",
+    "analysis": "2월 한 점포의 임시 폐점으로 데이터가 줄었다. 기간 연장은 재사용 빈도를 더 신뢰할 만하게 평가하기 위한 조치다.",
+    "why": "정보의 충분성과 신뢰도를 보완한다는 B가 직접 설명된 이유다.",
+    "wrong": {
+      "A": "보증금 반환 중단은 없고 반환 조건을 계속 안내한다.",
+      "C": "식사 가격 인상은 언급되지 않는다.",
+      "D": "직원 교체 계획은 없다."
+    },
+    "order": "질문의 대상과 조건을 표시하고 같은 대상을 다루는 문장을 찾은 뒤, 시간·수량·조건까지 보기와 대조한다.",
+    "rule": "같은 명사가 보인다는 이유로 고르지 말고, 그 명사에 붙은 조건과 행위자를 함께 확인한다."
+  },
+  {
+    "id": "157",
+    "prompt": "What happens to a container with a damaged lid?",
+    "options": [
+      "It is removed from circulation.",
+      "It is sold to the customer.",
+      "It is accepted only with a new purchase.",
+      "It is immediately sent to a suburban shop."
+    ],
+    "answer": "A",
+    "type": "세부 정보",
+    "level": "기본",
+    "clue": "Article: Brindle Foods의 \"Containers with damaged lids are removed\"",
+    "analysis": "뚜껑 손상이 있으면 아래 부분이 쓸 만해도 사용 순환에서 제외한다. 고객 보증금 지급과 회사의 용기 재사용은 별개 조건이다.",
+    "why": "재사용 대상에서 제거한다는 A가 명시된 처리다.",
+    "wrong": {
+      "B": "고객에게 판매한다는 내용은 없다.",
+      "C": "반환 때 구매는 필요 없다고 한다.",
+      "D": "교외 도입은 아직 결정되지 않았고 손상품 이전도 없다."
+    },
+    "order": "질문의 대상과 조건을 표시하고 같은 대상을 다루는 문장을 찾은 뒤, 시간·수량·조건까지 보기와 대조한다.",
+    "rule": "같은 명사가 보인다는 이유로 고르지 말고, 그 명사에 붙은 조건과 행위자를 함께 확인한다."
+  },
+  {
+    "id": "158",
+    "prompt": "What is suggested about the suburban shops?",
+    "options": [
+      "They have refused to accept any returns.",
+      "They are closing permanently in October.",
+      "They may require a separate assessment before joining the program.",
+      "They currently use more containers than the downtown shops."
+    ],
+    "answer": "C",
+    "type": "추론",
+    "level": "고급",
+    "clue": "Article: Brindle Foods의 \"different patterns of customer visits\"와 \"consider those differences\"",
+    "analysis": "교외 점포의 고객 방문 양상이 달라 확대 전 차이를 고려해야 한다. 아직 도입 여부도 미정이다.",
+    "why": "별도 특성 평가가 필요할 수 있다는 C는 문장의 제한적 계획을 보존한다.",
+    "wrong": {
+      "A": "참여 여부 미정이지 반환 거부 사실이 아니다.",
+      "B": "10월은 결과 발표 시점이며 영구 폐점 시점이 아니다.",
+      "D": "현재 교외 사용량을 비교하는 수치는 없다."
+    },
+    "order": "질문 대상에 관한 직접 진술을 찾고 필요한 전제만 결합한 뒤, 지문이 뒷받침하는 최소 범위의 결론을 고른다.",
+    "rule": "추론은 근거의 결합이다. 일반 상식이나 가능성만으로 지문보다 강한 결론을 만들지 않는다."
+  },
+  {
+    "id": "159",
+    "prompt": "Which session begins at 11:30 a.m.?",
+    "options": [
+      "Spreadsheet Reporting",
+      "Budget Planning Basics",
+      "Meeting Facilitation",
+      "Project Review Clinic"
+    ],
+    "answer": "C",
+    "type": "세부 정보",
+    "level": "기본",
+    "clue": "Schedule: Easton Skills Center의 \"11:30-1:00: Meeting Facilitation\"",
+    "analysis": "시간표 Room 2의 시작 시각을 확인한다. 11:00 시작 회차와 11:30 회차를 구분한다.",
+    "why": "11:30 시작 회차 이름과 일치하는 C가 맞다.",
+    "wrong": {
+      "A": "Spreadsheet Reporting은 11:00에 시작한다.",
+      "B": "Budget Planning Basics는 9:00에 시작한다.",
+      "D": "Project Review Clinic은 2:00에 시작한다."
+    },
+    "order": "질문의 대상과 조건을 표시하고 같은 대상을 다루는 문장을 찾은 뒤, 시간·수량·조건까지 보기와 대조한다.",
+    "rule": "같은 명사가 보인다는 이유로 고르지 말고, 그 명사에 붙은 조건과 행위자를 함께 확인한다."
+  },
+  {
+    "id": "160",
+    "prompt": "Who would be most suited to attend the Project Review Clinic?",
+    "options": [
+      "A participant with a project outline and basic planning experience",
+      "A participant seeking an introduction to planning",
+      "A participant who can attend only before noon",
+      "A participant who needs the center to supply a project topic"
+    ],
+    "answer": "A",
+    "type": "추론",
+    "level": "중급",
+    "clue": "Schedule: Easton Skills Center의 \"bring a current project outline\"와 \"already be familiar\"",
+    "analysis": "클리닉은 현재 개요를 가져오고 기본 계획법을 아는 사람을 전제로 한다. 두 조건과 오후 시간을 함께 확인한다.",
+    "why": "개요와 기본 경험을 모두 갖춘 A가 대상 조건에 부합한다.",
+    "wrong": {
+      "B": "does not provide introductory instruction이라고 명시한다.",
+      "C": "클리닉은 오후 2시부터라 오전만 가능한 사람에게 맞지 않는다.",
+      "D": "센터가 주제를 제공한다고 하지 않고 본인의 개요를 요구한다."
+    },
+    "order": "질문 대상에 관한 직접 진술을 찾고 필요한 전제만 결합한 뒤, 지문이 뒷받침하는 최소 범위의 결론을 고른다.",
+    "rule": "추론은 근거의 결합이다. 일반 상식이나 가능성만으로 지문보다 강한 결론을 만들지 않는다."
+  },
+  {
+    "id": "161",
+    "prompt": "What is NOT indicated in the participation notes?",
+    "options": [
+      "A digital confirmation is acceptable.",
+      "Registered participants have priority in the afternoon.",
+      "Drinking water will be provided.",
+      "Lunch is included in the session fee."
+    ],
+    "answer": "D",
+    "type": "NOT/EXCEPT",
+    "level": "중급",
+    "clue": "Schedule: Easton Skills Center의 \"no food service on site\"",
+    "analysis": "안내에는 디지털 확인, 오후 우선권, 식수 제공이 각각 명시된다. 점심 포함은 없으며 현장 식사 서비스 자체가 없다.",
+    "why": "언급되지 않고 식사 안내와도 맞지 않는 D가 남는다.",
+    "wrong": {
+      "A": "a digital copy is sufficient이라고 직접 말한다.",
+      "B": "registered participants have priority라고 명시한다.",
+      "C": "provide drinking water라고 명시한다."
+    },
+    "order": "부정형 질문 표시를 먼저 하고 보기 네 개의 근거를 각각 찾은 뒤, 확인된 세 항목을 제외한다.",
+    "rule": "부정형 문제는 지문에 언급되거나 성립하는 세 선택지를 확인해 남은 하나를 선택한다."
+  },
+  {
+    "id": "162",
+    "prompt": "What problem did the customer report?",
+    "options": [
+      "The equipment was damaged during delivery.",
+      "The display stops working after a period of use.",
+      "The serial number cannot be found.",
+      "The unit fails to restart under any circumstances."
+    ],
+    "answer": "B",
+    "type": "세부 정보",
+    "level": "기본",
+    "clue": "Form: Aster Equipment Service의 \"screen becomes blank after approximately twenty minutes\"",
+    "analysis": "고객이 보고한 문제는 사용 후 약 20분에 화면이 꺼지는 것이다. 재시작하면 잠시 복구된다는 제한도 있다.",
+    "why": "일정 시간 사용 뒤 표시 문제가 생긴다는 B가 정확하다.",
+    "wrong": {
+      "A": "visible damage는 없다고 보고되며 배송 중 손상은 아니다.",
+      "C": "일련번호가 양식에 기재되어 있다.",
+      "D": "재시작은 일시적으로 화면을 복구한다고 한다."
+    },
+    "order": "질문의 대상과 조건을 표시하고 같은 대상을 다루는 문장을 찾은 뒤, 시간·수량·조건까지 보기와 대조한다.",
+    "rule": "같은 명사가 보인다는 이유로 고르지 말고, 그 명사에 붙은 조건과 행위자를 함께 확인한다."
+  },
+  {
+    "id": "163",
+    "prompt": "Why is a longer test needed?",
+    "options": [
+      "The customer requested a loan unit.",
+      "The warranty has already expired.",
+      "The technician has replaced all components.",
+      "The initial check did not reproduce the reported problem."
+    ],
+    "answer": "D",
+    "type": "추론",
+    "level": "고급",
+    "clue": "Form: Aster Equipment Service의 \"operated normally during a ten-minute initial check\"",
+    "analysis": "신고 문제는 약 20분 사용 후 발생하지만 초기 검사는 10분 동안 정상 작동했다. 아직 고장이 재현되지 않아 긴 시험이 필요하다.",
+    "why": "검사 길이와 증상 발생 시점을 연결하면 D가 필요한 이유다.",
+    "wrong": {
+      "A": "Loan unit requested는 No다.",
+      "B": "보증 만료일은 제시되지 않았고 진단은 보증 대상이라고 한다.",
+      "C": "재현 전 부품을 교체하지 말라는 지시가 있다."
+    },
+    "order": "질문 대상에 관한 직접 진술을 찾고 필요한 전제만 결합한 뒤, 지문이 뒷받침하는 최소 범위의 결론을 고른다.",
+    "rule": "추론은 근거의 결합이다. 일반 상식이나 가능성만으로 지문보다 강한 결론을 만들지 않는다."
+  },
+  {
+    "id": "164",
+    "prompt": "When must the service team obtain Ms. Ortiz’s authorization?",
+    "options": [
+      "When the estimated repair cost is over $120",
+      "Before sending any email",
+      "Whenever a diagnosis is performed",
+      "Only after courier delivery has failed"
+    ],
+    "answer": "A",
+    "type": "세부 정보",
+    "level": "중급",
+    "clue": "Form: Aster Equipment Service의 \"exceeds $120 ... authorization before proceeding\"",
+    "analysis": "허가는 견적이 120달러를 넘을 때 수리 진행 전에 필요하다. 진단 보장과 수리 부품 보장은 분리된다.",
+    "why": "금액 경계 exceeds와 사전 승인 조건을 유지한 A가 맞다.",
+    "wrong": {
+      "B": "견적 이메일 발송 자체에 사전 승인을 요구하지 않는다.",
+      "C": "모든 진단에 승인 요구가 아니라 비용 초과 조건이다.",
+      "D": "배송 실패는 본인 수령의 조건으로 수리 승인과 무관하다."
+    },
+    "order": "질문의 대상과 조건을 표시하고 같은 대상을 다루는 문장을 찾은 뒤, 시간·수량·조건까지 보기와 대조한다.",
+    "rule": "같은 명사가 보인다는 이유로 고르지 말고, 그 명사에 붙은 조건과 행위자를 함께 확인한다."
+  },
+  {
+    "id": "165",
+    "prompt": "What does Ben mean when he writes, \"I can take it from here\"?",
+    "options": [
+      "He will attend Hana’s client call.",
+      "He will choose a new cover design.",
+      "He will handle the file submission.",
+      "He will ask the author to set the price."
+    ],
+    "answer": "C",
+    "type": "대화 의도",
+    "level": "중급",
+    "clue": "Chat: Solace Publishing의 \"send the finished file directly to Mara\"와 \"forward her address\"",
+    "analysis": "Hana가 파일을 직접 보내 달라고 부탁한 데 Ben이 업무 인수를 수락한다. 이어 주소와 작업 번호를 요청한다.",
+    "why": "최종 파일 전송을 맡겠다는 C가 앞 요청과 뒤 행동을 연결한다.",
+    "wrong": {
+      "A": "고객 통화는 Hana의 일정이며 Ben이 대신한다는 말이 없다.",
+      "B": "표지 디자인은 이미 승인되었다.",
+      "D": "판매팀이 가격을 제공했고 계약상 출판사가 결정한다."
+    },
+    "order": "발언 앞의 질문과 뒤의 응답을 읽고, 말하는 사람이 해결하려는 상황에 맞추어 의미를 바꾸어 표현한다.",
+    "rule": "채팅 발언의 의도는 직역보다 발언을 유발한 문제와 이어지는 행동에서 확인한다."
+  },
+  {
+    "id": "166",
+    "prompt": "What was preventing Ben from exporting the file?",
+    "options": [
+      "He had not confirmed the updated price.",
+      "The barcode had not been created.",
+      "Mara had rejected the job reference.",
+      "The author had withdrawn design approval."
+    ],
+    "answer": "A",
+    "type": "세부 정보",
+    "level": "중급",
+    "clue": "Chat: Solace Publishing의 \"still need the updated price from sales\"",
+    "analysis": "바코드는 전날 추가했고 남은 정보는 새 가격이다. Ravi의 최신 이메일 대신 앞 이메일을 보았던 정황도 설명한다.",
+    "why": "가격 확인 미완료라는 A가 실제 지연 원인이다.",
+    "wrong": {
+      "B": "I added it last night라고 바코드 작업 완료를 말한다.",
+      "C": "Mara가 작업 번호를 거부한 내용이 없다.",
+      "D": "저자는 표지를 승인했고 철회한 적이 없다."
+    },
+    "order": "질문의 대상과 조건을 표시하고 같은 대상을 다루는 문장을 찾은 뒤, 시간·수량·조건까지 보기와 대조한다.",
+    "rule": "같은 명사가 보인다는 이유로 고르지 말고, 그 명사에 붙은 조건과 행위자를 함께 확인한다."
+  },
+  {
+    "id": "167",
+    "prompt": "What is suggested about the author’s approval?",
+    "options": [
+      "It must be renewed every morning.",
+      "It includes a final decision on the retail price.",
+      "It cannot be sent by email.",
+      "It concerns the design rather than the retail price."
+    ],
+    "answer": "D",
+    "type": "추론",
+    "level": "고급",
+    "clue": "Chat: Solace Publishing의 \"only needed to approve the cover design\"",
+    "analysis": "only가 승인 범위를 디자인에 한정하고 계약은 출판사에 판매가 결정 권한을 준다. 가격 변경 때문에 새 승인이 필요하지 않다.",
+    "why": "승인의 대상 범위를 정확히 표현한 D가 성립한다.",
+    "wrong": {
+      "A": "매일 갱신 조건은 없다.",
+      "B": "가격 결정 권한은 계약상 출판사에 있다.",
+      "C": "승인 전달 수단의 제한은 제시되지 않는다."
+    },
+    "order": "질문 대상에 관한 직접 진술을 찾고 필요한 전제만 결합한 뒤, 지문이 뒷받침하는 최소 범위의 결론을 고른다.",
+    "rule": "추론은 근거의 결합이다. 일반 상식이나 가능성만으로 지문보다 강한 결론을 만들지 않는다."
+  },
+  {
+    "id": "168",
+    "prompt": "Where does the following sentence best belong? \"The additional date will allow more employees to attend without enlarging the classes.\"",
+    "options": [
+      "[1]",
+      "[2]",
+      "[3]",
+      "[4]"
+    ],
+    "answer": "B",
+    "type": "문장 삽입",
+    "level": "고급",
+    "clue": "Email: Luma Training의 \"added a second session on December 13\"와 [2]",
+    "analysis": "The additional date는 추가된 12월 13일 회차를 받는다. [2] 앞에는 두 회차의 날짜·시간·장소가 소개되었고 뒤에는 새 회차의 우선 배정 절차가 이어진다. [1]에서는 추가 날짜가 아직 나오지 않는다.",
+    "why": "회차 추가의 효과를 설명하고 등록 절차로 넘어가는 [2]가 앞뒤 전개를 모두 연결한다.",
+    "wrong": {
+      "A": "[1] 앞에는 기존 회차가 가득 찼다는 정보만 있어 additional date의 선행 대상이 없다.",
+      "C": "[3]은 연습 파일 소개와 These의 지칭 연결을 갈라놓는다.",
+      "D": "[4]는 예비 노트북과 소프트웨어 도움 안내 사이로 새 날짜의 효과와 멀다."
+    },
+    "order": "삽입 문장의 지시어와 연결어를 표시하고 앞쪽 선행 정보와 뒤쪽 전개를 모두 연결하는 위치를 찾는다.",
+    "rule": "문장 삽입은 앞 문장과의 연결만으로 결정하지 않는다. 뒤 문장의 논리와 반복 정보도 확인한다."
+  },
+  {
+    "id": "169",
+    "prompt": "What does \"These\" refer to?",
+    "options": [
+      "The course invitations",
+      "The classroom laptops",
+      "The practice files",
+      "The software versions"
+    ],
+    "answer": "C",
+    "type": "지칭",
+    "level": "중급",
+    "clue": "Email: Luma Training의 \"The practice files will be sent\"와 \"These should be downloaded\"",
+    "analysis": "복수 지시어 These와 downloaded라는 행동은 직전 소개한 연습 파일에 맞는다. 노트북은 내려받는 대상이 아니다.",
+    "why": "연습 파일을 미리 다운로드하라는 연결이므로 C다.",
+    "wrong": {
+      "A": "초대장은 이전 문단의 등록 수락 대상이며 연습용 다운로드 안내가 아니다.",
+      "B": "노트북 자체는 다운로드할 수 없다.",
+      "D": "이 문단의 직전 명사는 파일이며 버전은 마지막 도움 안내에서 언급된다."
+    },
+    "order": "지시어의 수·문법적 역할을 확인하고 앞 문장의 후보들을 대입해 실제 행동이나 속성이 맞는지 검토한다.",
+    "rule": "가장 가까운 명사가 항상 지칭 대상은 아니다. 문법적 일치와 문맥상 행동의 적합성을 함께 검증한다."
+  },
+  {
+    "id": "170",
+    "prompt": "The word \"hold\" is closest in meaning to",
+    "options": [
+      "reserve",
+      "repair",
+      "examine",
+      "purchase"
+    ],
+    "answer": "A",
+    "type": "문맥상 의미",
+    "level": "중급",
+    "clue": "Email: Luma Training의 \"hold a small number of spare laptops\"",
+    "analysis": "예기치 않은 장비 고장을 대비해 소수의 예비 노트북을 확보해 두는 상황이다. 물리적으로 손에 쥐거나 새 구매한다는 뜻은 아니다.",
+    "why": "필요할 때 쓰도록 마련해 둔다는 reserve가 문맥에 맞는다.",
+    "wrong": {
+      "B": "대상은 고장 난 노트북의 수리가 아니라 정상 예비 장비다.",
+      "C": "검사 행위가 아니라 비상 사용을 위해 남겨 두는 행동이다.",
+      "D": "새 구매 여부는 명시되지 않으며 목적은 예비분 확보다."
+    },
+    "order": "해당 표현의 앞뒤 문장과 목적어를 확인하고 후보 표현으로 바꾸어 문장의 의도가 유지되는지 검토한다.",
+    "rule": "문맥상 의미는 익숙한 첫 뜻보다 해당 문장이 수행하는 기능과 결합 관계로 결정한다."
+  },
+  {
+    "id": "171",
+    "prompt": "What must waiting-list employees do to secure a place in the new session?",
+    "options": [
+      "Attend both December sessions",
+      "Pay for a spare laptop",
+      "Download the files by November 28",
+      "Respond to their invitations by November 28"
+    ],
+    "answer": "D",
+    "type": "세부 정보",
+    "level": "중급",
+    "clue": "Email: Luma Training의 \"respond to their individual invitations by November 28\"",
+    "analysis": "대기 명단 등록만으로 확정되지 않으므로 개별 초대에 기한 내 응답해야 한다. 파일 발송은 각 회차 이틀 전이다.",
+    "why": "수락 응답과 마감일을 모두 유지한 D가 필요한 행동이다.",
+    "wrong": {
+      "A": "두 회차 참석 요구는 없다.",
+      "B": "예비 노트북 구매·대금 납부는 언급되지 않는다.",
+      "C": "11월 28일은 초대 응답 마감이지 연습 파일 다운로드일이 아니다."
+    },
+    "order": "질문의 대상과 조건을 표시하고 같은 대상을 다루는 문장을 찾은 뒤, 시간·수량·조건까지 보기와 대조한다.",
+    "rule": "같은 명사가 보인다는 이유로 고르지 말고, 그 명사에 붙은 조건과 행위자를 함께 확인한다."
+  },
+  {
+    "id": "172",
+    "prompt": "What is the purpose of the report?",
+    "options": [
+      "To announce a year-round shuttle contract",
+      "To evaluate a trial and recommend further steps",
+      "To advertise a new medical center",
+      "To request refunds from all passengers"
+    ],
+    "answer": "B",
+    "type": "목적",
+    "level": "중급",
+    "clue": "Report: Northgate Shuttle의 \"Trial Review\"와 \"a second trial during the autumn\"",
+    "analysis": "이용·조사·비용·인력 문제를 평가하고 경로 유지, 예비 기사, 가을 재시험을 권고한다. 연중 계약은 권고하지 않는다.",
+    "why": "시범 운영 평가와 후속 조치를 포괄하는 B가 목적이다.",
+    "wrong": {
+      "A": "does not recommend ... year-round contract라고 반대된다.",
+      "C": "의료센터는 경유 요청 대상으로 등장할 뿐 광고가 아니다.",
+      "D": "환불 요청은 제시되지 않는다."
+    },
+    "order": "제목과 발신·수신 관계를 확인하고, 첫 문장의 요청과 마지막 행동 지시를 연결한 뒤 글 전체를 설명하는 보기를 고른다.",
+    "rule": "목적은 한 문장의 소재보다 발신자가 독자에게 기대하는 행동 또는 전달하려는 변화로 판단한다."
+  },
+  {
+    "id": "173",
+    "prompt": "Which action is NOT recommended in the report?",
+    "options": [
+      "Keeping the direct route for the next phase",
+      "Establishing a reserve-driver arrangement",
+      "Conducting a second trial in autumn",
+      "Adding the medical-center stop to the existing route immediately"
+    ],
+    "answer": "D",
+    "type": "NOT/EXCEPT",
+    "level": "고급",
+    "clue": "Report: Northgate Shuttle의 \"keeping the direct route\"와 \"separate midday service\"",
+    "analysis": "기존 직행 유지와 의료센터 별도 낮 서비스 검토가 권고된다. 기존 노선에 즉시 정류장을 추가하는 것은 그 권고와 다르다.",
+    "why": "별도 검토를 즉시 기존 경로 변경으로 바꾼 D가 권고되지 않은 행동이다.",
+    "wrong": {
+      "A": "직행 경로 유지는 명시적 권고다.",
+      "B": "정기 운영 전 예비 기사 체계를 마련하라고 한다.",
+      "C": "계절 수요 확인을 위한 가을 재시험을 권고한다."
+    },
+    "order": "부정형 질문 표시를 먼저 하고 보기 네 개의 근거를 각각 찾은 뒤, 확인된 세 항목을 제외한다.",
+    "rule": "부정형 문제는 지문에 언급되거나 성립하는 세 선택지를 확인해 남은 하나를 선택한다."
+  },
+  {
+    "id": "174",
+    "prompt": "What can be inferred about one morning during the trial?",
+    "options": [
+      "The replacement bus could not carry everyone on one departure.",
+      "No passengers arrived at the station.",
+      "The direct route was permanently removed.",
+      "The contractor exceeded the full trial budget."
+    ],
+    "answer": "A",
+    "type": "추론",
+    "level": "고급",
+    "clue": "Report: Northgate Shuttle의 \"fewer seats\"와 \"had to wait for the next bus\"",
+    "analysis": "대체 차량 좌석이 적었고 일부가 다음 차량을 기다렸다. 해당 회차의 수용 능력이 모든 대기 승객을 태우기에 부족했다는 최소 결론이 성립한다.",
+    "why": "좌석 수와 대기 결과를 연결한 A가 타당하다.",
+    "wrong": {
+      "B": "다음 차량을 기다린 승객이 있으므로 아무도 오지 않았다는 말은 틀리다.",
+      "C": "직행은 유지 권고 대상이며 영구 제거되지 않았다.",
+      "D": "총 운영비는 승인 예산 이내였다고 한다."
+    },
+    "order": "질문 대상에 관한 직접 진술을 찾고 필요한 전제만 결합한 뒤, 지문이 뒷받침하는 최소 범위의 결론을 고른다.",
+    "rule": "추론은 근거의 결합이다. 일반 상식이나 가능성만으로 지문보다 강한 결론을 만들지 않는다."
+  },
+  {
+    "id": "175",
+    "prompt": "The word \"drew\" is closest in meaning to",
+    "options": [
+      "illustrated",
+      "transported",
+      "received",
+      "withdrew"
+    ],
+    "answer": "C",
+    "type": "문맥상 의미",
+    "level": "중급",
+    "clue": "Report: Northgate Shuttle의 \"survey drew 186 responses\"",
+    "analysis": "주어는 survey이고 목적어는 응답 수다. 설문이 응답을 얻었다는 참여 결과를 표현한다.",
+    "why": "응답을 받았다는 received가 문장 의미를 유지한다.",
+    "wrong": {
+      "A": "설문이 그림을 그렸다는 뜻으로 responses와 결합할 수 없다.",
+      "B": "승객 운송은 서비스의 행동이며 설문 응답을 운반했다는 의미가 아니다.",
+      "D": "응답을 철회했다는 뜻은 긍정적으로 수집한 응답 수와 반대다."
+    },
+    "order": "해당 표현의 앞뒤 문장과 목적어를 확인하고 후보 표현으로 바꾸어 문장의 의도가 유지되는지 검토한다.",
+    "rule": "문맥상 의미는 익숙한 첫 뜻보다 해당 문장이 수행하는 기능과 결합 관계로 결정한다."
+  },
+  {
+    "id": "176",
+    "prompt": "Why was the room information most likely sent to Ms. Ortiz?",
+    "options": [
+      "To advertise a new catering company",
+      "To help her choose a workshop venue",
+      "To confirm that her deposit was overdue",
+      "To announce a change in opening hours"
+    ],
+    "answer": "B",
+    "type": "목적",
+    "level": "고급",
+    "clue": "예약 메일의 “Thank you for sending the room information”과 “Please reserve the room”을 함께 본다.",
+    "analysis": "메일 작성자는 안내를 받은 뒤 워크숍용 방 선택과 예약을 요청한다. 예약 완료나 체납 통보는 아직 없다.",
+    "why": "안내가 교육장 선택에 쓰였다는 흐름이 직접 드러나므로 B가 목적이다.",
+    "wrong": {
+      "A": "센터가 직접 점심을 제공한다는 안내이며 외부 업체 홍보가 아니다.",
+      "C": "보증금은 내일 보낼 예정이다. 납부 기한을 넘겼다는 내용이 없다.",
+      "D": "9시 이전 입장은 개별 문의 대상이며 운영시간 변경 공지가 아니다."
+    },
+    "order": "보낸 자료의 성격→답장 첫 문장→후속 요청을 확인한다.",
+    "rule": "메일의 목적은 주제어 하나보다 수신자가 하도록 요청받은 행동으로 판단한다."
+  },
+  {
+    "id": "177",
+    "prompt": "Which room best meets Harbor Analytics' requirements?",
+    "options": [
+      "The Cedar Room, because it includes a projector",
+      "The Cedar Room, because it has movable tables",
+      "The Willow Room, because it allows separate work groups",
+      "The Willow Room, because it is the only room with Internet access"
+    ],
+    "answer": "C",
+    "type": "복수 지문 연계·조건",
+    "level": "실전 최상급",
+    "clue": "안내의 “tables can be moved into separate groups”와 메일의 “work at separate tables”가 대응한다.",
+    "analysis": "18명은 두 방 모두 수용한다. 결정 조건은 인원 자체가 아니라 가구 재배치다. Cedar는 고정식 줄 배치, Willow는 이동식 탁자다.",
+    "why": "C는 Willow의 특징과 요청 조건을 정확히 연결한다.",
+    "wrong": {
+      "A": "프로젝터는 두 방에 모두 포함되므로 별도 탁자 작업 조건을 해결하지 못한다.",
+      "B": "Cedar의 자리는 fixed rows로 명시되어 있어 이동식이라는 설명이 틀리다.",
+      "D": "무선 인터넷은 두 방 모두 제공한다. 방 선택의 차별 조건이 아니다."
+    },
+    "order": "요청 메일에서 필수 조건 표시→안내에서 해당 특징 대조→방과 이유 모두 확인한다.",
+    "rule": "한 보기 안의 결론과 이유가 모두 사실이어야 정답이다."
+  },
+  {
+    "id": "178",
+    "prompt": "What room deposit should Harbor Analytics send?",
+    "options": [
+      "$160",
+      "$215",
+      "$288",
+      "$860"
+    ],
+    "answer": "B",
+    "type": "복수 지문 연계·수량",
+    "level": "실전 최상급",
+    "clue": "안내의 Willow $860 및 “25 percent room deposit”, 메일의 재배치 요구를 연결한다.",
+    "analysis": "요구에 맞는 방은 Willow다. 보증금은 방 요금의 25%이고 식대에는 적용되지 않는다. 860×0.25=215다.",
+    "why": "B의 $215가 예약 조건과 보증금 산정 기준에 일치한다.",
+    "wrong": {
+      "A": "$160은 Cedar $640의 25%로, 선택해야 할 방이 다르다.",
+      "C": "$288은 18명의 식대 18×16이며 방 보증금이 아니다.",
+      "D": "$860은 방 전체 요금으로 25% 보증금과 다르다."
+    },
+    "order": "필요한 방 결정→보증금 계산 대상 확인→비율 적용→식대 제외 여부 확인한다.",
+    "rule": "여러 문서의 금액 문제는 상품 선택과 계산 기준을 먼저 확정한다."
+  },
+  {
+    "id": "179",
+    "prompt": "What has NOT yet been confirmed?",
+    "options": [
+      "The number of employees expected",
+      "The need for a projector",
+      "The availability of early access",
+      "The intended deposit payment date"
+    ],
+    "answer": "C",
+    "type": "NOT·상태 확인",
+    "level": "고급",
+    "clue": "메일의 “Could you check whether a staff member will be available”이 미확정 요청이다.",
+    "analysis": "인원 18명, 포함 프로젝터 사용, 내일 보증금 납부 계획은 명시되어 있다. 8:30 입장은 직원 가능 여부를 확인해 달라는 단계다.",
+    "why": "C만 아직 승인·확정되지 않았다.",
+    "wrong": {
+      "A": "18 employees가 계획 인원으로 명시되어 있다.",
+      "B": "프로젝터 사용과 추가 지원 불필요를 메일에서 밝혔다.",
+      "D": "accounts team can send ... tomorrow로 예정 날짜를 밝혔다."
+    },
+    "order": "NOT 표시→각 보기의 확인 문장 찾기→요청과 확정 표현 구별→근거 없는 항목 선택한다.",
+    "rule": "문의·제안·희망을 확정된 사실로 바꾸어 읽지 않는다."
+  },
+  {
+    "id": "180",
+    "prompt": "What must Ms. Ortiz provide when confirming the lunch order?",
+    "options": [
+      "A separate equipment deposit",
+      "A list of outside food suppliers",
+      "A revised room layout",
+      "Information about dietary needs"
+    ],
+    "answer": "D",
+    "type": "세부 정보",
+    "level": "고급",
+    "clue": "안내의 “advise ... about dietary restrictions”와 메일의 “confirm their dietary requirements”가 일치한다.",
+    "analysis": "식사 인원 최종 확인과 함께 직원들의 식이 조건을 알릴 예정이다. 장비 보증금이나 외부 음식은 요청하지 않았다.",
+    "why": "D는 두 문서의 같은 요구를 바꾸어 표현한 것이다.",
+    "wrong": {
+      "A": "보증금은 방 요금에만 적용하며 별도 장비 보증금은 없다.",
+      "B": "외부 음식 반입은 허용되지 않는다. 공급업체 명단도 요청하지 않았다.",
+      "C": "배치 변경 가능성은 방 선택 조건이지 점심 확정 때 제출할 정보가 아니다."
+    },
+    "order": "질문의 행동 시점 확인→식사 확정 관련 문장 찾기→동일 의미 표현 대조한다.",
+    "rule": "세부 정보는 질문의 시점과 대상에 맞는 문장에서 찾는다."
+  },
+  {
+    "id": "181",
+    "prompt": "What is included in a standard bicycle rental?",
+    "options": [
+      "Admission to the museum",
+      "A reusable water bottle",
+      "A helmet and a route map",
+      "A guided riverside tour"
+    ],
+    "answer": "C",
+    "type": "세부 정보",
+    "level": "고급",
+    "clue": "안내의 “Helmets and route maps are included in both rates”가 직접 근거다.",
+    "analysis": "both rates는 standard와 electric 요금을 지칭한다. 안내에서 가이드 투어는 별도 $60이고 물병과 박물관 입장료는 포함 항목이 아니다.",
+    "why": "C의 두 물품이 기본 대여 요금에 포함된다.",
+    "wrong": {
+      "A": "박물관 방문 계획은 메일에 있으나 입장료 포함 내용은 없다.",
+      "B": "물병은 고객이 직접 가져온다고 메일에서 말한다.",
+      "D": "가이드 투어는 optional이며 별도 비용이다."
+    },
+    "order": "included 문장 찾기→both의 범위 확인→별도 비용 항목 제거한다.",
+    "rule": "두 종류에 공통으로 포함되는 항목과 선택 서비스는 구분한다."
+  },
+  {
+    "id": "182",
+    "prompt": "How much should the group pay for the booking described in the email?",
+    "options": [
+      "$237.60",
+      "$264.00",
+      "$297.60",
+      "$456.00"
+    ],
+    "answer": "A",
+    "type": "복수 지문 연계·수량",
+    "level": "실전 최상급",
+    "clue": "메일의 standard bicycles twelve, 안내의 $22와 ten percent reduction, 메일의 투어 제외를 연결한다.",
+    "analysis": "12명 기본 대여료는 12×22=$264다. 10명 이상 공동 예약으로 10% 할인하여 $237.60이다. 가이드 투어는 신청하지 않는다.",
+    "why": "A가 선택한 상품·인원·할인·추가 서비스 여부를 모두 반영한다.",
+    "wrong": {
+      "B": "$264는 할인 전 금액이라 공동 예약 할인을 빠뜨렸다.",
+      "C": "$297.60은 할인 대여료에 $60 투어를 더한 값이지만 투어를 신청하지 않았다.",
+      "D": "$456은 12명 전기 자전거의 할인 전 금액이며 신청 상품이 다르다."
+    },
+    "order": "메일에서 상품·인원·추가 서비스 확인→정책에서 할인 대상 확인→계산한다.",
+    "rule": "금액 문제는 할인 적용 범위와 선택하지 않은 추가 서비스를 먼저 구별한다."
+  },
+  {
+    "id": "183",
+    "prompt": "Why does the group most likely decline the guided tour?",
+    "options": [
+      "It requires more than twelve riders",
+      "They want a route suited to their museum visit",
+      "It is available only in the afternoon",
+      "It requires participants to bring their own helmets"
+    ],
+    "answer": "B",
+    "type": "복수 지문 연계·추론",
+    "level": "실전 최상급",
+    "clue": "정책의 “does not stop at the local museum”과 메일의 “visit the local museum at noon. For this reason”을 연결한다.",
+    "analysis": "고객은 정오 박물관 방문에 맞추어 자율적으로 이동하려 한다. 투어 경로는 박물관에 들르지 않으므로 자기 일정에 맞게 지도를 이용한다.",
+    "why": "B는 명시된 이유와 정책상 경로를 연결한 추론이다.",
+    "wrong": {
+      "A": "최소 인원 조건 때문에 거절했다는 말이 없고 12명은 문제없다.",
+      "C": "투어는 각 대여 기간 시작에 출발하므로 오전에도 가능하다.",
+      "D": "헬멧은 모든 요금에 포함된다."
+    },
+    "order": "박물관 방문 계획→For this reason 뒤 선택→정책의 투어 경로를 대조한다.",
+    "rule": "추론은 본문에 있는 계획과 제약을 결합하며 새로운 이유를 덧붙이지 않는다."
+  },
+  {
+    "id": "184",
+    "prompt": "What is true about a change from a standard bicycle to an electric bicycle requested less than three days before collection?",
+    "options": [
+      "It automatically receives an additional discount",
+      "It cancels the entire group reservation",
+      "It guarantees a guided tour place",
+      "It depends on electric bicycle availability"
+    ],
+    "answer": "D",
+    "type": "복수 지문 연계·조건",
+    "level": "실전 최상급",
+    "clue": "정책의 “after that deadline ... only if electric bicycles remain available”와 메일의 늦은 변경 문의가 근거다.",
+    "analysis": "3일 전 이후 standard→electric 변경은 재고가 남아 있을 때만 가능하다. 고객이 문의했어도 무조건 예약을 확보한 것은 아니다.",
+    "why": "D는 only if의 제한 조건을 그대로 반영한다.",
+    "wrong": {
+      "A": "추가 할인을 주는 규정은 없다.",
+      "B": "변경 문의가 전체 예약 취소를 유발한다는 내용은 없다.",
+      "C": "자전거 종류 변경은 투어 예약과 별개이며 고객은 투어를 거절했다."
+    },
+    "order": "변경 방향과 시점 확인→only if 뒤 조건 확인→무조건적 표현 제거한다.",
+    "rule": "조건부 허용을 보장으로 바꾸는 보기를 주의한다."
+  },
+  {
+    "id": "185",
+    "prompt": "What does Mr. Reed plan to do if rain is expected?",
+    "options": [
+      "Request a new date before the morning rental begins",
+      "Return the bicycles after the stated deadline",
+      "Replace all standard bicycles with electric ones",
+      "Ask the museum to postpone its opening time"
+    ],
+    "answer": "A",
+    "type": "세부 정보·시점",
+    "level": "고급",
+    "clue": "메일의 “contact you before 9:00 A.M. ... arrange another date”가 근거다.",
+    "analysis": "정책은 대여 시작 전 연락하면 악천후 일정 변경 수수료가 없다고 한다. 오전 대여 시작은 9시이며 고객도 그 전에 연락할 계획이다.",
+    "why": "A가 행동과 연락 시점을 함께 정확히 나타낸다.",
+    "wrong": {
+      "B": "늦은 반납은 별도 비용 대상이고 악천후 대응 계획이 아니다.",
+      "C": "전기 자전거 변경은 한 동료의 개별 문의다.",
+      "D": "박물관 영업시간 변경을 요청할 계획은 없다."
+    },
+    "order": "비 조건 문장 찾기→연락 시점과 행동 확인→정책과 일치 확인한다.",
+    "rule": "시간 표현 before/after를 행동과 함께 묶어 읽는다."
+  },
+  {
+    "id": "186",
+    "prompt": "What is the main purpose of the finance email?",
+    "options": [
+      "To invite Ms. Cho to another conference",
+      "To ask for information needed to finalize a claim",
+      "To announce that train expenses are ineligible",
+      "To confirm that the requested total has been paid"
+    ],
+    "answer": "B",
+    "type": "목적",
+    "level": "고급",
+    "clue": "메일의 “Please send us any written approval”와 “wait for your response before accepting”이 중심이다.",
+    "analysis": "등록비와 교통비는 충족했으나 호텔 한도 예외 승인 여부를 확인해야 최종 금액을 확정할 수 있다. 지급 완료 안내가 아니다.",
+    "why": "B가 추가 정보 요청과 처리 목적을 반영한다.",
+    "wrong": {
+      "A": "새 행사 초대 내용은 없다.",
+      "C": "train expenses meet our requirements라고 했다.",
+      "D": "청구는 아직 accepted되지 않아 지급 완료가 아니다."
+    },
+    "order": "문제 발생 항목→요청 행동→처리 상태를 확인한다.",
+    "rule": "업무 메일의 목적은 문제 설명 뒤의 구체적 요청과 연결한다."
+  },
+  {
+    "id": "187",
+    "prompt": "Why is the supervisor's authorization insufficient for the full hotel amount?",
+    "options": [
+      "The supervisor approved only one hotel night",
+      "The authorization was submitted after June 18",
+      "An exception requires advance approval from Finance",
+      "The conference organizer selected a different hotel"
+    ],
+    "answer": "C",
+    "type": "삼중 지문 연계·승인 조건",
+    "level": "실전 최상급",
+    "clue": "정책의 “finance manager before ... reservation”, 신청서의 supervisor authorization, 메일의 “does not authorize an exception”이 근거다.",
+    "analysis": "상사의 일반 출장 승인은 제출했지만 1박 $140 초과 예외는 재무관리자의 사전 서면 승인을 별도로 요구한다. 행사 주최자 추천도 대체하지 못한다.",
+    "why": "C는 승인 권한과 승인 시점을 정확히 구별한다.",
+    "wrong": {
+      "A": "상사가 1박만 승인했다는 내용은 없다. 신청 호텔은 3박이다.",
+      "B": "신청은 6월 10일, 답변 요청은 18일까지다. 기한 경과가 아니다.",
+      "D": "신청서는 주최자 웹사이트에 실린 호텔을 예약했다고 명시한다. 다른 호텔을 선택했다는 보기의 전제가 틀리며, 문제는 재무팀의 사전 예외 승인이 없다는 점이다."
+    },
+    "order": "정책의 승인 주체·시점 표시→신청서 첨부 확인→메일의 미충족 조건 대조한다.",
+    "rule": "일반 승인과 예외 승인의 권한·절차를 분리한다."
+  },
+  {
+    "id": "188",
+    "prompt": "If no hotel exception was approved, how much can Ms. Cho receive in total?",
+    "options": [
+      "$420",
+      "$826",
+      "$876",
+      "$901"
+    ],
+    "answer": "B",
+    "type": "삼중 지문 연계·계산",
+    "level": "실전 최상급",
+    "clue": "정책의 $140×최대3박, 신청서 등록비$320·교통비$86·3박, 메일의 standard nightly limit를 연결한다.",
+    "analysis": "호텔 인정액은 140×3=$420다. 이미 인정된 $320+$86를 더하면 $826이다. 청구액과 인정액은 다르다.",
+    "why": "B가 예외 승인 부재 상황에서 정책상 지급 가능한 전체액이다.",
+    "wrong": {
+      "A": "$420은 호텔만 계산하여 등록비와 교통비를 누락했다.",
+      "C": "$876은 제시된 한도·항목으로 산출되지 않으며 $826보다 $50 많다.",
+      "D": "$901은 초과 호텔비까지 포함한 신청액으로 예외 없이는 전액 인정되지 않는다."
+    },
+    "order": "예외 없는 조건 확인→한도에 따라 호텔액 조정→다른 인정 항목 합산한다.",
+    "rule": "신청액과 승인 가능한 금액을 구별하고 항목별 한도를 적용한다."
+  },
+  {
+    "id": "189",
+    "prompt": "What does Ms. Cho need to do by June 18?",
+    "options": [
+      "Respond about the hotel approval or reimbursement basis",
+      "Purchase a new economy train ticket",
+      "Return to the conference organizer's office",
+      "Submit receipts for meals taken at the conference"
+    ],
+    "answer": "A",
+    "type": "세부 정보",
+    "level": "고급",
+    "clue": "메일의 “wait for your response”와 “Please reply by June 18”이 직접 단서다.",
+    "analysis": "재무팀은 사전 예외 승인 증빙을 보낼 수 있는지, 없으면 한도에 따른 처리 여부를 확정하는 답변을 기다린다. 새 영수증은 필요하지 않다.",
+    "why": "A가 기한 내 요구된 응답의 대상이다.",
+    "wrong": {
+      "B": "교통비는 이미 인정했고 새 표 구매를 요구하지 않았다.",
+      "C": "행사 주최자 방문을 요구하지 않았다.",
+      "D": "식대는 이 신청 항목에 없으며 추가 여행 영수증도 불필요하다."
+    },
+    "order": "기한 문장 찾기→reply의 앞선 요청 내용 확인→관련 없는 행동 제거한다.",
+    "rule": "대명사나 일반 행동어의 구체적 대상은 직전 업무 맥락에서 복구한다."
+  },
+  {
+    "id": "190",
+    "prompt": "What can be inferred about payment on June 30?",
+    "options": [
+      "It will include all hotel costs regardless of approval",
+      "It is impossible because the claim was submitted too late",
+      "It requires the claim to be accepted first",
+      "It depends on the organizer reducing the hotel rate"
+    ],
+    "answer": "C",
+    "type": "삼중 지문 연계·처리 순서",
+    "level": "실전 최상급",
+    "clue": "정책의 “after the claim has been accepted”, 신청일6월10일, 메일의 “Once ... accepted ... June 30”을 연결한다.",
+    "analysis": "정책과 메일 모두 승인 후 지급을 조건으로 한다. 6월30일 지급 가능성이 있으나 현재 금액 확인과 수락 단계가 남아 있다.",
+    "why": "C는 지급을 위해 필요한 선행 단계만을 추론한다.",
+    "wrong": {
+      "A": "호텔 초과 비용은 별도 승인 없으면 한도까지만 인정한다.",
+      "B": "신청이 늦었다는 근거는 없고 재무팀도 6월30일 지급 가능성을 밝혔다.",
+      "D": "호텔이 사후 요금을 인하해야 한다는 조건은 없다."
+    },
+    "order": "현재 상태 확인→once/after의 선행 조건 확인→가능성과 확정을 구별한다.",
+    "rule": "예정 지급일은 필수 처리 단계 완료를 전제로 하며 자동 보장이 아니다."
+  },
+  {
+    "id": "191",
+    "prompt": "Which activity requires the interns to register in advance?",
+    "options": [
+      "The Digital Design general talk",
+      "A visit to the café",
+      "The design portfolio editing workshop",
+      "Monday's team meeting"
+    ],
+    "answer": "C",
+    "type": "삼중 지문 연계·등록 조건",
+    "level": "실전 최상급",
+    "clue": "광고의 practical ... advance reservation와 메일의 reserve ... design portfolio editing을 연결한다.",
+    "analysis": "일반 강연은 등록 불필요이고 실습 워크숍만 선예약이다. 메일이 요청한 워크숍은 시간표의 design portfolio editing이다.",
+    "why": "C는 참가 활동과 사전 예약 대상이 일치한다.",
+    "wrong": {
+      "A": "일반 강연은 등록 없이 참석할 수 있다.",
+      "B": "카페 이용은 행사 등록 활동이 아니며 예약 안내도 없다.",
+      "D": "월요일 팀 회의는 회사 후속 활동이며 행사 예약 대상이 아니다."
+    },
+    "order": "메일의 요구 활동 표시→광고의 예약 규정 확인→시간표의 세션명 대조한다.",
+    "rule": "같은 행사 안에서도 활동별 참가 조건을 따로 적용한다."
+  },
+  {
+    "id": "192",
+    "prompt": "At what time does the studio's general talk begin?",
+    "options": [
+      "9:15 A.M.",
+      "9:30 A.M.",
+      "10:30 A.M.",
+      "11:30 A.M."
+    ],
+    "answer": "C",
+    "type": "복수 지문 연계·일정",
+    "level": "실전 최상급",
+    "clue": "메일의 “our studio's general talk”, 시간표의 Fenton Studio 발표10:30을 연결한다.",
+    "analysis": "회사는 Fenton Studio이며 담당 강연은 Working in Digital Design이다. 모임 시각과 워크숍 시각을 혼동하지 않아야 한다.",
+    "why": "C가 해당 회사 강연의 시작 시각이다.",
+    "wrong": {
+      "A": "9:15는 입구에서 만나는 시각이다.",
+      "B": "9:30은 디자인 워크숍과 물류 강연의 시작이다.",
+      "D": "11:30은 면접 강연 및 기술 프로젝트 워크숍 시각이다."
+    },
+    "order": "소속 회사 확인→발표자 기준으로 시간표 찾기→시작 시간 읽기한다.",
+    "rule": "사람·기관의 고유명을 문서 간 연결 열쇠로 사용한다."
+  },
+  {
+    "id": "193",
+    "prompt": "Why does the email emphasize bringing a laptop?",
+    "options": [
+      "The general talk is broadcast online",
+      "The workshop involves editing digital files",
+      "No charging points are available at the venue",
+      "The interns must pay their lunch costs online"
+    ],
+    "answer": "B",
+    "type": "삼중 지문 연계·이유",
+    "level": "실전 최상급",
+    "clue": "광고의 “cannot be used for the editing exercises”, 시간표의 individual editing exercise, 메일의 “Bring your laptop”을 연결한다.",
+    "analysis": "실습에서 디지털 포트폴리오를 직접 편집해야 하므로 노트북과 최신 파일이 필요하다. 인쇄물만으로는 실습을 할 수 없다.",
+    "why": "B는 물품 요구의 구체적 활동상 이유다.",
+    "wrong": {
+      "A": "온라인 방송을 한다는 내용은 없다.",
+      "C": "충전 지점은 각 워크숍 방에 있다고 광고에 밝혔다.",
+      "D": "점심 결제를 온라인으로 해야 한다는 내용은 없다."
+    },
+    "order": "준비물 요청 확인→워크숍 활동 찾기→인쇄물 제한과 연결한다.",
+    "rule": "준비물의 필요성은 실제 수행 활동과 제한 사항으로 설명한다."
+  },
+  {
+    "id": "194",
+    "prompt": "By what time should the interns be seated for their workshop?",
+    "options": [
+      "9:25 A.M.",
+      "9:45 A.M.",
+      "10:25 A.M.",
+      "11:25 A.M."
+    ],
+    "answer": "A",
+    "type": "삼중 지문 연계·시간 조건",
+    "level": "실전 최상급",
+    "clue": "메일의 design workshop, 시간표9:30 시작 및 “five minutes before”가 단서다.",
+    "analysis": "참석할 세션은 9:30 디자인 워크숍이다. 착석 요구 시각은 시작5분 전이므로9:25다. 9:15 만남은 별도 이동 준비 시각이다.",
+    "why": "A가 세션 선택과 착석 규칙을 모두 적용했다.",
+    "wrong": {
+      "B": "9:45는 워크숍 시작15분 후로 늦다.",
+      "C": "10:25는 다음 일반 강연5분 전이며 워크숍 착석 시각이 아니다.",
+      "D": "11:25는 다른 워크숍5분 전이다."
+    },
+    "order": "메일로 세션 결정→시작시각 확인→5분을 빼기→모임 시각과 구별한다.",
+    "rule": "일정 연계 문제는 어떤 행사의 시간인지 먼저 확정하고 상대시간 조건을 적용한다."
+  },
+  {
+    "id": "195",
+    "prompt": "What will the interns do after the fair?",
+    "options": [
+      "Submit printed files to CareerBridge",
+      "Attend a second portfolio workshop that day",
+      "Meet the café staff to discuss catering",
+      "Discuss their revised portfolios at a team meeting"
+    ],
+    "answer": "D",
+    "type": "세부 정보·후속 행동",
+    "level": "고급",
+    "clue": "메일의 “review the changes ... during Monday's team meeting”이 직접 근거다.",
+    "analysis": "행사 실습에서 수정한 내용을 월요일 팀 회의에서 검토한다. 당일 실습은 하나만 예약할 수 있다.",
+    "why": "D가 행사 이후 계획된 후속 활동이다.",
+    "wrong": {
+      "A": "CareerBridge에 인쇄물을 제출한다는 요청은 없다.",
+      "B": "실습 예약은1개 제한이고 두 번째 실습 참석 계획도 없다.",
+      "C": "식사는 개인 책임이라는 말이지 음식 제공 상담 계획은 아니다."
+    },
+    "order": "행사 이후 시간표현 찾기→review의 목적어 확인→수정된 포트폴리오와 연결한다.",
+    "rule": "질문이 묻는 시간 범위에 맞추어 행사 당일과 후속 업무를 구별한다."
+  },
+  {
+    "id": "196",
+    "prompt": "What benefit of the portal is mentioned in the bulletin?",
+    "options": [
+      "It will eliminate urgent repair calls",
+      "It will allow access to records outside office hours",
+      "It will replace every existing maintenance contract",
+      "It will provide free replacement machines"
+    ],
+    "answer": "B",
+    "type": "목적·효과",
+    "level": "고급",
+    "clue": "기사의 “give clients access outside office hours”가 직접 근거다.",
+    "analysis": "온라인 기록 접근으로 지원팀의 문서 검색 시간을 줄이고 고객은 근무시간 외에도 자료를 볼 수 있다. 긴급전화는 계속 유지한다.",
+    "why": "B가 기사에서 제시한 고객 측 이점이다.",
+    "wrong": {
+      "A": "긴급전화는 기존 팀이 계속 처리한다.",
+      "C": "유지보수 계약 전체 교체를 말하지 않는다.",
+      "D": "기계 무상 교체 제공 내용은 없다."
+    },
+    "order": "기사의 intended to 이후 효과 확인→주체가 고객인지 직원인지 구별한다.",
+    "rule": "효과 문항은 실제 제시된 변화의 범위 안에서 답한다."
+  },
+  {
+    "id": "197",
+    "prompt": "How should Millstone Foods obtain its May and June invoices?",
+    "options": [
+      "Download them after August 1",
+      "Ask Carlos to recreate them in the portal",
+      "Request them from the support desk",
+      "Contact the demonstration presenter during a live session"
+    ],
+    "answer": "C",
+    "type": "삼중 지문 연계·자료 시점",
+    "level": "실전 최상급",
+    "clue": "공지의 “Invoices issued before August 1 ... support desk”, 메일의 “May and June”를 연결한다.",
+    "analysis": "고객이 필요한 두 달의 청구서는8월1일 이전 발행 자료다. 이전 자료는 포털로 이동하지 않으므로 기존 지원팀에서 받아야 한다. 기사상의 일반 다운로드 기능만으로 판단하면 안 된다.",
+    "why": "C가 날짜 조건에 따른 적절한 입수 방법이다.",
+    "wrong": {
+      "A": "8월1일이 지나도 과거 청구서는 포털로 전송되지 않는다.",
+      "B": "관리자가 과거 청구서를 다시 만드는 기능이나 책임은 없다.",
+      "D": "시연 발표자에게 직접 받는 절차는 안내되지 않았다."
+    },
+    "order": "필요 자료의 발행월 확인→공지의 이전/이후 구분 적용→지원팀 경로 선택한다.",
+    "rule": "일반 서비스 소개보다 구체적인 시행일·자료 범위 조건이 우선한다."
+  },
+  {
+    "id": "198",
+    "prompt": "What can Carlos do to meet the client's access requirements?",
+    "options": [
+      "Grant the accounting assistants permission to download invoices",
+      "Give every employee administrator status",
+      "Prevent the production supervisors from viewing maintenance records",
+      "Arrange for urgent faults to be submitted as routine requests"
+    ],
+    "answer": "A",
+    "type": "삼중 지문 연계·권한",
+    "level": "실전 최상급",
+    "clue": "기사의 조직관리자 선정, 공지의 only administrators can change ... download invoices, 메일의 회계보조2명만 다운로드 요청이 단서다.",
+    "analysis": "고객은 Carlos를 관리자로 지정했다. 관리자는 청구서 다운로드 권한을 조정하므로 회계 담당자에게만 그 권한을 줄 수 있다. 다른 사용자도 유지보수 기록과 일반요청 기능은 사용한다.",
+    "why": "A가 관리자 권한과 고객이 원하는 제한을 일치시킨다.",
+    "wrong": {
+      "B": "고객은 모두를 관리자로 만들라고 요청하지 않았다.",
+      "C": "생산 감독자도 기록을 보게 하려는 요청이다.",
+      "D": "긴급 고장은 전화로 보고해야 한다."
+    },
+    "order": "메일의 사용자별 요구 구분→관리자 지정 확인→공지의 변경 가능한 권한 확인한다.",
+    "rule": "사용자 역할과 기능별 권한을 문서 간에 정확히 연결한다."
+  },
+  {
+    "id": "199",
+    "prompt": "How will Carlos most likely learn to use the portal?",
+    "options": [
+      "By attending the July 22 live demonstration",
+      "By calling the urgent response team",
+      "By waiting for the annual equipment review",
+      "By watching a demonstration recording"
+    ],
+    "answer": "D",
+    "type": "복수 지문 연계·추론",
+    "level": "실전 최상급",
+    "clue": "공지의 “recordings ... available”, 메일의 “Carlos will use the recording”이 근거다.",
+    "analysis": "Carlos는7월24일 시연 시간에 다른 일정이 있다. 녹화본을 이용할 계획을 명시했으며 공지에서도 녹화본 제공을 확인한다.",
+    "why": "D가 이용 가능한 대체 학습 경로와 실제 계획에 일치한다.",
+    "wrong": {
+      "A": "7월22일 참석 계획은 없고 메일은 녹화본 사용을 밝혔다.",
+      "B": "긴급 대응팀은 기기 고장 접수용이지 포털 시연 안내 경로가 아니다.",
+      "C": "연례 검토는 청구서가 필요한 이유이지 포털 학습 방법이 아니다."
+    },
+    "order": "Carlos 이름 찾기→시간 충돌 확인→대체 자료 제공과 사용 계획 대조한다.",
+    "rule": "여러 날짜가 나오면 인물별 실제 선택을 따로 기록한다."
+  },
+  {
+    "id": "200",
+    "prompt": "According to the documents, what should production staff do when a machine fails urgently?",
+    "options": [
+      "Wait until the next monthly invoice appears",
+      "Use the existing telephone response line",
+      "Submit a routine service request through the portal",
+      "Email Carlos to ask him to download the maintenance record"
+    ],
+    "answer": "B",
+    "type": "삼중 지문 연계·예외 절차",
+    "level": "실전 최상급",
+    "clue": "기사와 공지의 urgent faults 전화 유지, 메일의 “retain the response line number beside each machine”이 근거다.",
+    "analysis": "새 포털은 일반 방문 요청에 쓰인다. 긴급고장은 기존 전화 대응 경로를 유지한다. 고객도 현장 기계 옆에 그 번호를 보관하겠다고 했다.",
+    "why": "B가 새 시스템의 기능에 대한 명시된 예외 절차다.",
+    "wrong": {
+      "A": "정기 청구서 발행은 고장 대응과 무관하다.",
+      "C": "공지는 긴급 고장을 routine visit requests로 제출하지 말라고 했다.",
+      "D": "기록 다운로드나 관리자 메일은 긴급 신고의 지정 경로가 아니다."
+    },
+    "order": "문제의 urgently 표시→일반·긴급 서비스 구별→세 문서의 동일 절차 확인한다.",
+    "rule": "새 제도가 생겨도 예외적으로 유지되는 기존 절차를 놓치지 않는다."
+  },
+  {
+    "id": "M-B01",
+    "prompt": "The accounts listed in the attached report ------- inactive since the system migration in May and remain unavailable.",
+    "options": [
+      "has been",
+      "have been",
+      "were being",
+      "to be"
+    ],
+    "answer": "B",
+    "type": "수일치·현재완료·수식어",
+    "level": "고급",
+    "clue": "주어의 중심어는 복수 accounts이다. listed in the attached report는 accounts를 수식하며 since와 remain이 현재까지의 상태를 연결한다.",
+    "analysis": "골격은 The accounts have been inactive ... and remain unavailable이다. 단수 report는 전치사구 내부 명사이므로 주절 수일치 기준이 아니다.",
+    "why": "B는 복수 주어에 맞는 have와 과거부터 현재까지의 상태를 나타내는 현재완료를 함께 충족한다.",
+    "wrong": {
+      "A": "has는 단수형이므로 가까운 report에 끌려 고른 오류다.",
+      "C": "were being inactive는 이 상태를 나타내는 통상적 표현이 아니며 현재까지 계속되는 상태의 시간 기준도 충족하지 못한다.",
+      "D": "to be는 정동사가 아니므로 주절의 시제와 수일치가 완성되지 않는다."
+    },
+    "order": "분사 수식어를 묶는다→accounts와 빈칸을 연결한다→since와 현재 상태를 확인한다.",
+    "rule": "수일치와 시제를 따로 검사한 뒤 두 조건을 동시에 통과한 동사구를 고른다."
+  },
+  {
+    "id": "M-B02",
+    "prompt": "The purchasing team requested that the missing items ------- before a revised invoice was issued.",
+    "options": [
+      "replace",
+      "to replace",
+      "be replaced",
+      "replacing"
+    ],
+    "answer": "C",
+    "type": "요구 명사절·수동태",
+    "level": "고급",
+    "clue": "requested that은 요구 내용을 이끌고 items는 교체를 수행하는 사람이 아닌 교체 대상이다.",
+    "analysis": "that절의 주어는 the missing items이다. 요구 내용의 원형 동사구가 필요하며, 대상 역할이므로 be + 과거분사로 수동태를 만든다.",
+    "why": "C는 요구절의 원형 be와 수동 과거분사 replaced를 동시에 충족한다.",
+    "wrong": {
+      "A": "replace를 넣으면 물품이 다른 대상을 교체하는 능동 구조가 되어 역할이 어긋난다.",
+      "B": "to replace는 이 that절의 정동사 자리를 채우지 못한다.",
+      "D": "replacing은 단독 정동사가 아니므로 that절이 완성되지 않는다."
+    },
+    "order": "requested의 요구 의미 확인→that절 주어 확인→행위자/대상 구분→원형 수동 선택한다.",
+    "rule": "요구절의 원형 규칙은 능동에만 적용되지 않는다. 수동이면 be + 과거분사를 쓴다."
+  },
+  {
+    "id": "M-B03",
+    "prompt": "The auditors reviewed the figures ------- by the branch offices, rather than preparing new estimates themselves.",
+    "options": [
+      "submits",
+      "submitting",
+      "submission",
+      "submitted"
+    ],
+    "answer": "D",
+    "type": "정동사 구별·축약 관계절",
+    "level": "고급",
+    "clue": "reviewed가 주절 동사이고 by the branch offices가 제출 행위자를 나타낸다.",
+    "analysis": "The auditors reviewed the figures가 주절이다. 빈칸 이하가 figures를 설명하며 원래 관계절은 which were submitted by the branch offices다.",
+    "why": "D는 figures가 제출된 대상이라는 수동 수식 관계를 만든다.",
+    "wrong": {
+      "A": "submits는 정동사이므로 관계사 없이 reviewed와 함께 연결할 수 없다.",
+      "B": "submitting은 figures가 제출을 수행하는 능동 수식이 되며 by구와 역할이 맞지 않는다.",
+      "C": "submission은 명사로 이 위치의 수동 수식 구조를 만들지 못한다."
+    },
+    "order": "이미 있는 정동사 찾기→빈칸의 명사 수식 기능 확인→by구의 역할 대조한다.",
+    "rule": "수동 분사 수식은 시제 동사를 추가하지 않고 명사에 업무 이력을 붙인다."
+  },
+  {
+    "id": "M-B04",
+    "prompt": "------- the team had verified the delivery dates, it could not approve the schedule without confirmation from the venue.",
+    "options": [
+      "Despite",
+      "Because of",
+      "Although",
+      "During"
+    ],
+    "answer": "C",
+    "type": "절·전치사구·양보 관계",
+    "level": "고급",
+    "clue": "빈칸 뒤에 the team + had verified라는 완전한 절이 있고, 날짜 확인에도 일정 승인 불가라는 제한이 남는다.",
+    "analysis": "Although절은 확인 완료를, 주절은 장소 확인 부족으로 승인하지 못하는 상황을 나타낸다. 두 사실의 기대와 제한을 연결한다.",
+    "why": "C만 완전한 절을 직접 이끌며 양보 관계를 나타낸다.",
+    "wrong": {
+      "A": "Despite는 전치사이므로 명사구 또는 despite the fact that ... 구조가 필요하다.",
+      "B": "Because of는 전치사구여서 완전한 절을 바로 받을 수 없고 원인 연결도 주어진 제한 관계와 다르다.",
+      "D": "During은 기간 명사를 받는 전치사이므로 완전한 절을 직접 이끌지 못한다."
+    },
+    "order": "빈칸 뒤 S/V 확인→절을 받을 수 있는 보기 남기기→양보 관계 검증한다.",
+    "rule": "뜻이 비슷하거나 업무 맥락에 어울려도 뒤 구조를 받을 수 없으면 먼저 탈락시킨다."
+  },
+  {
+    "id": "M-B05",
+    "prompt": "The new system enables users to view invoices, compare previous charges, and ------- discrepancies without calling the support desk.",
+    "options": [
+      "report",
+      "reporting",
+      "reported",
+      "reportable"
+    ],
+    "answer": "A",
+    "type": "병렬 구조·공유 to",
+    "level": "중급",
+    "clue": "to view, compare, and 빈칸이 같은 사용자의 세 행동을 열거한다.",
+    "analysis": "enables + users + to부정사 구문에서 to를 공유한 세 동사구가 병렬이다. discrepancies는 마지막 동사의 목적어다.",
+    "why": "A는 원형 report로 앞의 view와 compare와 같은 문장 역할을 한다.",
+    "wrong": {
+      "B": "reporting은 동명사·분사로 공유된 to 뒤 원형 동사 목록과 맞지 않는다.",
+      "C": "reported는 과거형·과거분사로 동작 목록의 원형 자리에 맞지 않는다.",
+      "D": "reportable은 형용사이므로 discrepancies를 목적어로 받는 동사 역할을 하지 못한다."
+    },
+    "order": "enables 구조 확인→to의 공유 범위 표시→마지막 목적어와 연결되는 원형 선택한다.",
+    "rule": "병렬은 형태만 보는 작업이 아니라 같은 상위 구조에 결합하는 기능을 확인하는 작업이다."
+  },
+  {
+    "id": "M-B06",
+    "prompt": "Choose the best word or phrase for [M-B06].",
+    "options": [
+      "reveal",
+      "revealing",
+      "revelation",
+      "revealed"
+    ],
+    "answer": "D",
+    "type": "수일치·정동사·결과 보고",
+    "level": "고급",
+    "clue": "주어 The review는 단수이고 빈칸은 that절을 목적어로 받는 주절 동사 자리다.",
+    "analysis": "첫 문장은 완료된 검토를 보고한다. 현재형으로 결과를 보고하는 문체도 가능하지만 보기 reveal은 단수 주어의 현재형 reveals가 아니므로 탈락한다.",
+    "why": "D는 완료된 검토의 발견 내용을 보고하는 과거 정동사다.",
+    "wrong": {
+      "A": "현재형을 쓰려면 단수 주어에 맞게 reveals여야 한다. 과거의 연구 결과를 현재형으로 보고하는 문체 자체가 금지되는 것은 아니다.",
+      "B": "revealing은 분사이며 be동사가 없어 정동사 자리를 채우지 못한다.",
+      "C": "revelation은 명사이므로 that절을 목적어로 받는 동사가 될 수 없다."
+    },
+    "order": "주어의 수와 정동사 존재 확인→형태상 탈락 보기 제거→검토 보고의 시간 관계 확인한다.",
+    "rule": "인접 문장에 과거시제가 있다는 이유만으로 현재형을 모두 배제하지 말고 실제 형태와 보고 기준을 확인한다."
+  },
+  {
+    "id": "M-B07",
+    "prompt": "Choose the best word or phrase for [M-B07].",
+    "options": [
+      "They",
+      "It",
+      "Its",
+      "Itself"
+    ],
+    "answer": "A",
+    "type": "대명사 지칭·수일치",
+    "level": "중급",
+    "clue": "직전 문장에서 two entrances를 소개하고 뒤 문장은 큰 표지판으로 표시되는 대상을 설명한다.",
+    "analysis": "표지판으로 표시될 것은 두 출입구다. 빈칸은 will be marked의 주어이며 복수 출입구를 대신한다.",
+    "why": "They는 two entrances와 수가 맞고 주어 기능을 한다.",
+    "wrong": {
+      "B": "It은 단수 대명사이므로 두 출입구와 수가 맞지 않는다.",
+      "C": "Its는 소유 한정사로 뒤 명사가 필요하며 독립 주어 역할을 하지 못한다.",
+      "D": "Itself는 단수 재귀대명사이며 되받을 단수 주어도 없고 복수 출입구를 대신하지 못한다."
+    },
+    "order": "will be marked의 대상 확인→선행사 two entrances 복구→복수 주격 선택한다.",
+    "rule": "대명사는 가까운 명사를 고르는 대신 뒤 동작의 대상과 수를 함께 검증한다."
+  },
+  {
+    "id": "M-B08",
+    "prompt": "Choose the best sentence for [M-B08].",
+    "options": [
+      "A digital map will be posted on the festival website.",
+      "Visitors will be asked to arrive before the first presentation.",
+      "Printed check-in forms will be provided for guests who cannot use a mobile device.",
+      "The review also examined the design of last year's entrance signs."
+    ],
+    "answer": "C",
+    "type": "문장 삽입·대체 절차",
+    "level": "고급",
+    "clue": "뒤의 These forms와 either version은 전자 코드와 대응되는 종이 양식을 요구한다.",
+    "analysis": "앞 문장은 전자 코드를 소개한다. 삽입문은 휴대기기를 사용하지 못하는 사람의 대안을 소개하고 뒤에서 양식의 예약번호가 전자 코드와 같다고 설명한다.",
+    "why": "C만 forms의 선행 대상과 전자 방식의 대안을 동시에 제공한다.",
+    "wrong": {
+      "A": "디지털 지도는 check-in forms를 소개하지 않으며 예약번호 확인 방식도 연결하지 못한다.",
+      "B": "도착 시각은 forms 또는 either version의 선행 내용을 만들지 못한다.",
+      "D": "이전 표지판 검토는 전자 코드의 대체 양식과 관계없다."
+    },
+    "order": "These forms 및 either version 표시→앞 전자 코드와 대응할 대상 찾기→기기 부재와 중복 예약 방지까지 확인한다.",
+    "rule": "삽입문은 지시어뿐 아니라 문단의 업무 문제를 해결하는 기능도 충족해야 한다."
+  },
+  {
+    "id": "M-B09",
+    "prompt": "Choose the best word or phrase for [M-B09].",
+    "options": [
+      "during",
+      "whether",
+      "either",
+      "despite"
+    ],
+    "answer": "B",
+    "type": "명사절·확인 대상",
+    "level": "중급",
+    "clue": "confirm 뒤에 the temporary reception desk can be staffed라는 완전한 절이 있다.",
+    "analysis": "확인하려는 내용은 4시 이후 임시 접수대에 직원을 배치할 수 있는지 여부다. that이 아닌 whether로 불확실한 가능 여부를 목적어로 나타낸다.",
+    "why": "B는 확인 대상의 여부를 담은 명사절을 이끈다.",
+    "wrong": {
+      "A": "during은 전치사이므로 완전한 절을 직접 받지 못한다.",
+      "C": "either는 이처럼 단독으로 확인 내용을 담은 절을 이끌 수 없다.",
+      "D": "despite는 전치사여서 완전한 절을 confirm의 목적어로 만들지 못한다."
+    },
+    "order": "confirm의 목적어 자리 확인→확인할 사실인지 가능 여부인지 구별→완전한 절을 받는 whether 선택한다.",
+    "rule": "의문사가 이끄는 명사절은 질문 어순이 아니라 평서문 어순을 유지한다."
+  },
+  {
+    "id": "M-B10",
+    "prompt": "Which package meets the office's copy requirements?",
+    "options": [
+      "The Basic package with express production",
+      "The Basic package with a second proof",
+      "Two Basic packages with standard production",
+      "The Plus package with standard production"
+    ],
+    "answer": "D",
+    "type": "복수 지문 연계·조건",
+    "level": "고급",
+    "clue": "Document 1의 Basic black-and-white와 Plus full-color, Document 2의 “60 copies ... in full color”가 근거다.",
+    "analysis": "수량만 보아 Basic 두 개를 선택하면 색상 조건을 놓친다. Plus는80매 이내 컬러를 제공하고 고객은 빠른 제작이 필요 없다고 밝혔다.",
+    "why": "D가 수량·색상·제작 방식 세 조건을 함께 충족한다.",
+    "wrong": {
+      "A": "Basic은 흑백이므로 express를 선택해도 색상 요구를 충족하지 못한다.",
+      "B": "추가 교정본은 색상 기능을 변경하지 않는다.",
+      "C": "Basic 두 개도 흑백이므로60매 컬러 요구에 맞지 않는다."
+    },
+    "order": "이메일의 필수 조건 표시→패키지별 속성 대조→불필요한 express 제외한다.",
+    "rule": "가격·수량만 일치하는 보기는 색상·기간 같은 다른 필수 조건도 확인한다."
+  },
+  {
+    "id": "M-B11",
+    "prompt": "How much should the office pay, excluding any unrelated services?",
+    "options": [
+      "$265",
+      "$240",
+      "$290",
+      "$300"
+    ],
+    "answer": "A",
+    "type": "복수 지문 연계·비용",
+    "level": "고급",
+    "clue": "Document 1의 Plus $240·추가 교정본 $25, Document 2의 자체 변경1회·무료 방문 수령을 연결한다.",
+    "analysis": "60매여도 Plus의 고정 요금240달러다. 고객이 원한 추가 교정본1회는 업체 오류 수정이 아니므로25달러를 더한다. 배송은 신청하지 않아 추가하지 않는다.",
+    "why": "A의265달러가 실제 선택 서비스와 예외 조건을 모두 반영한다.",
+    "wrong": {
+      "B": "240달러는 고객 자체 변경으로 발생한 추가 교정본 비용을 빠뜨렸다.",
+      "C": "290달러는 추가 교정본 비용을 두 번 더한 금액이지만 추가본은1회다.",
+      "D": "300달러는 문서의 선택 서비스로 산출되지 않으며60매에 비례한 가격도 아니다."
+    },
+    "order": "패키지 요금 확인→추가본이 무료 예외인지 검사→횟수와 수령 방식 확인→합산한다.",
+    "rule": "무료 예외의 원인과 실제 추가 횟수를 확인한 뒤 비용을 계산한다."
+  },
+  {
+    "id": "M-B12",
+    "prompt": "What must happen before Oakline begins printing?",
+    "options": [
+      "The office must purchase delivery service.",
+      "Ms. Holt must approve the corrected proof in writing.",
+      "The director must submit a new package application.",
+      "All 80 copies must be requested."
+    ],
+    "answer": "B",
+    "type": "복수 지문 연계·선행 조건",
+    "level": "고급",
+    "clue": "Document 1의 “approves ... in writing”과 Document 2의 “approved ... by email”이 대응한다.",
+    "analysis": "파일 제출이나 추가비 수락만으로 인쇄 허가가 완료되지 않는다. 고객은 교체 문단을 확인한 뒤 이메일로 최종 승인하겠다고 했다.",
+    "why": "B가 정책의 서면 승인 조건과 고객의 실제 승인 경로를 일치시킨다.",
+    "wrong": {
+      "A": "방문 수령이 무료이며 배송 구매는 필요 없다.",
+      "C": "새 패키지 신청서는 요구되지 않았다.",
+      "D": "Plus는 최대80매이고 더 적은 매수도 같은 요금으로 제공한다."
+    },
+    "order": "정책의 until 조건 표시→현재 요청 상태 확인→최종 승인 행동을 찾는다.",
+    "rule": "준비 완료·비용 수락·최종 승인을 서로 다른 단계로 구분한다."
+  },
+  {
+    "id": "M-B13",
+    "prompt": "Which tool meets Vela Interiors' stated measurement requirements?",
+    "options": [
+      "The LM1 unit",
+      "The TM2 tape measure",
+      "The LM3 unit",
+      "Any of the three tools"
+    ],
+    "answer": "C",
+    "type": "삼중 지문 연계·기능",
+    "level": "고급",
+    "clue": "Document 3의 four meters·transfer ... mobile과 Document 2의 LM3 up to5meters·Bluetooth가 근거다.",
+    "analysis": "필요 거리4m와 자동 모바일 전송을 함께 충족해야 한다. LM1은 거리도 짧고 전송도 없으며 TM2는 거리만 충족한다.",
+    "why": "C만 두 기능 조건을 동시에 만족하고 고객은 호환성도 확인했다.",
+    "wrong": {
+      "A": "LM1은 최대2.5m이고 기기 전송이 없다.",
+      "B": "TM2는8m까지 측정하지만 수동 기록이 필요해 전송 조건을 충족하지 못한다.",
+      "D": "각 도구의 거리·전송 기능이 달라 모두 적합한 것은 아니다."
+    },
+    "order": "신청 메일의 거리·전송 조건 추출→각 제품의 두 속성 대조→호환성 확인한다.",
+    "rule": "복수 조건 문제에서는 한 조건만 충족하는 선택지를 제거한다."
+  },
+  {
+    "id": "M-B14",
+    "prompt": "What van-service charge will apply to the requested loan?",
+    "options": [
+      "$0",
+      "$15",
+      "$45",
+      "$30"
+    ],
+    "answer": "D",
+    "type": "삼중 지문 연계·비용",
+    "level": "고급",
+    "clue": "Document 1의 $15 per trip·two trips, Document 3의 delivery와 final-day collection을 연결한다.",
+    "analysis": "고객은 수령과 반환을 모두 밴에 맡긴다. 방문 수령·반환 무료 규정은 신청 방식과 다르다. 두 번의 이동 요금15×2=30이다.",
+    "why": "D가 선택한 수령·반환 방식에 맞는 비용이다.",
+    "wrong": {
+      "A": "무료는 창구에서 수령·반환하는 경우다.",
+      "B": "$15는 한 번만 계산한 금액이며 고객은 배달과 회수를 모두 신청했다.",
+      "C": "$45는 세 번의 이동 요금인데 신청은 두 번이다."
+    },
+    "order": "메일의 수령/반환 방식 확인→규정의 per-trip 기준 확인→횟수를 센 뒤 계산한다.",
+    "rule": "기간당·물품당·방문당 요금 단위를 구별한다."
+  },
+  {
+    "id": "M-B15",
+    "prompt": "What is required at both van visits?",
+    "options": [
+      "A representative must sign for the tool.",
+      "The mobile device must be inspected by library staff.",
+      "An extension must be approved.",
+      "A second reservation request must be submitted."
+    ],
+    "answer": "A",
+    "type": "복수 지문 연계·절차",
+    "level": "중급",
+    "clue": "Document 1의 “present to sign ... delivered ... collected”와 Document 3의 receptionist ... both visits가 근거다.",
+    "analysis": "배달과 회수 양쪽 모두 담당자가 현장에서 서명해야 한다. 고객은 접수 직원이 두 방문에 서명할 것이라고 계획을 밝혔다.",
+    "why": "A가 규정의 두 시점 공통 의무와 고객의 준비를 일치시킨다.",
+    "wrong": {
+      "B": "호환성은 고객이 확인했고 현장 기기 검사 요구는 없다.",
+      "C": "대여 기간은12일로 최대14일 이내이며 연장하지 않을 계획이다.",
+      "D": "요청을 다시 보내는 것이 아니라 도서관 확인 메시지를 기다려야 한다."
+    },
+    "order": "both visits의 두 행동 복구→규정의 공통 요구 확인→신청 메일의 담당자와 연결한다.",
+    "rule": "한 절차에서 각 시점에 반복되는 의무와 조건부 추가 절차를 구분한다."
+  }
+]

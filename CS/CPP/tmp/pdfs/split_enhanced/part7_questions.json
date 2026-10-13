@@ -1,0 +1,1152 @@
+[
+  {
+    "id": "P7-01",
+    "prompt": "Why was this email sent?",
+    "options": [
+      "To request payment for repairs",
+      "To announce changes to workshop arrangements",
+      "To cancel a photography workshop",
+      "To introduce a new market tour"
+    ],
+    "answer": "B",
+    "type": "목적",
+    "level": "기본",
+    "clue": "Email: Harbor Workshop의 \"will therefore take place in the training room\"",
+    "analysis": "수리 때문에 방과 출입구가 바뀌었고 점심 및 준비물 안내가 이어진다. 취소가 아니라 기존 참가자에게 변경된 운영 정보를 전달한다.",
+    "why": "장소 변경과 참가 지침 전체를 포괄하는 B가 글의 목적이다.",
+    "wrong": {
+      "A": "수리비 지불을 참가자에게 요청하는 문장이 없다.",
+      "C": "workshop will take place라고 개최를 확인한다.",
+      "D": "시장 방문은 점심 중 선택 사항이며 새 투어 소개가 아니다."
+    },
+    "order": "제목과 발신·수신 관계를 확인하고, 첫 문장의 요청과 마지막 행동 지시를 연결한 뒤 글 전체를 설명하는 보기를 고른다.",
+    "rule": "목적은 한 문장의 소재보다 발신자가 독자에게 기대하는 행동 또는 전달하려는 변화로 판단한다."
+  },
+  {
+    "id": "P7-02",
+    "prompt": "What should participants bring?",
+    "options": [
+      "Sample products",
+      "Portable lamps",
+      "A camera with a charged battery",
+      "A replacement confirmation letter"
+    ],
+    "answer": "C",
+    "type": "세부 정보",
+    "level": "기본",
+    "clue": "Email: Harbor Workshop의 \"bring a fully charged camera\"",
+    "analysis": "bring의 목적어는 camera이고 fully charged가 그 상태를 한정한다. 나머지 장비는 주최 측이 제공하며 기존 확인서는 유효하다.",
+    "why": "충전된 카메라를 가져오라는 직접 지시와 C가 일치한다.",
+    "wrong": {
+      "A": "sample products는 제공 품목이다.",
+      "B": "lamps도 주최 측이 제공한다.",
+      "D": "새 등록이 필요 없으며 대체 확인서를 가져오라는 지시가 없다."
+    },
+    "order": "질문의 대상과 조건을 표시하고 같은 대상을 다루는 문장을 찾은 뒤, 시간·수량·조건까지 보기와 대조한다.",
+    "rule": "같은 명사가 보인다는 이유로 고르지 말고, 그 명사에 붙은 조건과 행위자를 함께 확인한다."
+  },
+  {
+    "id": "P7-03",
+    "prompt": "What is suggested about the parking spaces?",
+    "options": [
+      "They are available to every participant automatically.",
+      "They are located inside the market.",
+      "They can be reserved after the workshop starts.",
+      "Earlier requests have an advantage."
+    ],
+    "answer": "D",
+    "type": "추론",
+    "level": "중급",
+    "clue": "Email: Harbor Workshop의 \"assigned in the order requests are received\"",
+    "analysis": "공간 수가 제한되고 접수 순서대로 배정된다. 따라서 같은 조건에서 먼저 요청한 사람이 배정받는 데 유리하다.",
+    "why": "접수 순서가 우선순위라는 규칙을 바꿔 표현한 D가 타당하다.",
+    "wrong": {
+      "A": "Spaces are limited이므로 자동 전원 배정이 아니다.",
+      "B": "주차 공간의 위치는 제시되지 않았다.",
+      "C": "신청 기한은 May 14이며 행사 시작 후 예약 근거는 없다."
+    },
+    "order": "질문 대상에 관한 직접 진술을 찾고 필요한 전제만 결합한 뒤, 지문이 뒷받침하는 최소 범위의 결론을 고른다.",
+    "rule": "추론은 근거의 결합이다. 일반 상식이나 가능성만으로 지문보다 강한 결론을 만들지 않는다."
+  },
+  {
+    "id": "P7-04",
+    "prompt": "What is NOT mentioned as a requirement for furniture deliveries?",
+    "options": [
+      "Payment of an access fee",
+      "A morning arrival time",
+      "Advance notification",
+      "A facilities team escort"
+    ],
+    "answer": "A",
+    "type": "NOT/EXCEPT",
+    "level": "중급",
+    "clue": "Notice: Riverside Offices의 \"morning\", \"at least one working day in advance\", \"must accompany\"",
+    "analysis": "본문은 오전 배송, 하루 전 정보 전달, 시설팀 동행을 요구한다. 요금 지불은 어떤 문장에도 요구되지 않는다.",
+    "why": "언급된 세 조건을 제거하면 출입 요금인 A만 남는다.",
+    "wrong": {
+      "B": "첫 문장에서 must be scheduled for the morning이라고 명시한다.",
+      "C": "공급업체는 적어도 하루 전 도착 정보를 보내야 한다.",
+      "D": "시설팀 직원이 각 배송에 동행해야 한다."
+    },
+    "order": "부정형 질문 표시를 먼저 하고 보기 네 개의 근거를 각각 찾은 뒤, 확인된 세 항목을 제외한다.",
+    "rule": "부정형 문제는 지문에 언급되거나 성립하는 세 선택지를 확인해 남은 하나를 선택한다."
+  },
+  {
+    "id": "P7-05",
+    "prompt": "What does \"This information\" refer to?",
+    "options": [
+      "The elevator operating hours",
+      "The arrival time and item dimensions",
+      "The safety inspection results",
+      "The number of stored bicycles"
+    ],
+    "answer": "B",
+    "type": "지칭",
+    "level": "중급",
+    "clue": "Notice: Riverside Offices의 \"their expected arrival time and the dimensions\"",
+    "analysis": "This information은 직전 문장에서 제출하라고 한 두 정보를 받는다. 그 정보로 추가 도움이 필요한지 판단한다는 뒤 문장도 크기·도착 정보와 연결된다.",
+    "why": "예상 도착 시각과 최대 물품 치수를 함께 제시한 B가 선행 내용이다.",
+    "wrong": {
+      "A": "운영 시간은 업체가 제출하는 정보가 아니다.",
+      "C": "검사 결과는 마지막 문단에서 나중에 소개된다.",
+      "D": "자전거 수량 제출은 요구되지 않았다."
+    },
+    "order": "지시어의 수·문법적 역할을 확인하고 앞 문장의 후보들을 대입해 실제 행동이나 속성이 맞는지 검토한다.",
+    "rule": "가장 가까운 명사가 항상 지칭 대상은 아니다. 문법적 일치와 문맥상 행동의 적합성을 함께 검증한다."
+  },
+  {
+    "id": "P7-06",
+    "prompt": "Where does the following sentence best belong? \"This outdoor route will be marked with temporary signs.\"",
+    "options": [
+      "[1]",
+      "[2]",
+      "[3]",
+      "[4]"
+    ],
+    "answer": "C",
+    "type": "문장 삽입",
+    "level": "고급",
+    "clue": "Notice: Riverside Offices의 \"reach it from the garden path\"와 [3]",
+    "analysis": "This outdoor route는 garden path라는 외부 접근로를 받는다. [3] 뒤의 자전거 주차 금지 지침도 같은 이용자에게 이어지는 안내다.",
+    "why": "정원 길을 소개한 직후인 [3]에 삽입해야 선행 대상과 안내 흐름이 모두 맞는다.",
+    "wrong": {
+      "A": "[1] 앞에는 계단 폐쇄만 있고 외부 경로가 소개되지 않았다.",
+      "B": "[2] 앞의 화물 엘리베이터와 동행 조건은 outdoor route가 아니다.",
+      "D": "[4] 앞의 재개방·검사는 야외 경로 소개와 연결되지 않는다."
+    },
+    "order": "삽입 문장의 지시어와 연결어를 표시하고 앞쪽 선행 정보와 뒤쪽 전개를 모두 연결하는 위치를 찾는다.",
+    "rule": "문장 삽입은 앞 문장과의 연결만으로 결정하지 않는다. 뒤 문장의 논리와 반복 정보도 확인한다."
+  },
+  {
+    "id": "P7-07",
+    "prompt": "Why did the library introduce the collection service?",
+    "options": [
+      "To reduce its collection of large books",
+      "To allow members to return books electronically",
+      "To help readers who cannot visit during opening hours",
+      "To replace all indoor reservation shelves"
+    ],
+    "answer": "C",
+    "type": "목적",
+    "level": "기본",
+    "clue": "Article: Linden Library의 \"could not visit during\"와 \"regular opening hours\"",
+    "analysis": "조사에서 이용 시간의 어려움이 확인되어 외부 보관함 수령을 도입했다. 수령과 반납은 구분된다.",
+    "why": "개관 시간에 방문하기 어려운 독자를 돕는다는 C가 도입 이유와 일치한다.",
+    "wrong": {
+      "A": "대형 칸은 큰 책 수령용이지 장서 축소 목적이 아니다.",
+      "B": "반납 보관함 계획은 없고 전자 반납도 언급되지 않는다.",
+      "D": "실내 예약 선반은 미수령 도서를 보관하는 데 계속 사용된다."
+    },
+    "order": "제목과 발신·수신 관계를 확인하고, 첫 문장의 요청과 마지막 행동 지시를 연결한 뒤 글 전체를 설명하는 보기를 고른다.",
+    "rule": "목적은 한 문장의 소재보다 발신자가 독자에게 기대하는 행동 또는 전달하려는 변화로 판단한다."
+  },
+  {
+    "id": "P7-08",
+    "prompt": "What happens when a locker access code expires?",
+    "options": [
+      "The books are moved to an indoor shelf.",
+      "The membership is suspended.",
+      "A new code is sent automatically.",
+      "The order is transferred to the north branch."
+    ],
+    "answer": "A",
+    "type": "세부 정보",
+    "level": "중급",
+    "clue": "Article: Linden Library의 \"returned to the indoor reservation shelf\"",
+    "analysis": "forty-eight hours 후 미수령 주문은 실내 선반으로 이동하고 5일 더 수령할 수 있다. 자동 재발급은 명시적으로 부정된다.",
+    "why": "코드 만료 뒤 도서의 위치 변화가 A에 정확히 반영된다.",
+    "wrong": {
+      "B": "회원 정지라는 조치는 제시되지 않았다.",
+      "C": "will not automatically generate라고 반대 사실을 명시한다.",
+      "D": "북부 지점 추가 설치는 향후 가능성일 뿐 주문 이전이 아니다."
+    },
+    "order": "질문의 대상과 조건을 표시하고 같은 대상을 다루는 문장을 찾은 뒤, 시간·수량·조건까지 보기와 대조한다.",
+    "rule": "같은 명사가 보인다는 이유로 고르지 말고, 그 명사에 붙은 조건과 행위자를 함께 확인한다."
+  },
+  {
+    "id": "P7-09",
+    "prompt": "What can be inferred about the north branch?",
+    "options": [
+      "It already operates twelve collection lockers.",
+      "It will certainly close next year.",
+      "It accepts all book returns through lockers.",
+      "Its participation in the service has not been decided."
+    ],
+    "answer": "D",
+    "type": "추론",
+    "level": "고급",
+    "clue": "Article: Linden Library의 \"If demand remains strong, it may add lockers\"",
+    "analysis": "조건절과 may가 설치를 수요에 달린 가능성으로 표현한다. 현재 시행되는 본관 시험과 북부 지점의 장래 검토를 나눈다.",
+    "why": "아직 확정되지 않은 확대 계획이라는 D가 조건부 진술의 범위를 지킨다.",
+    "wrong": {
+      "A": "12개는 현재 본관 시험 수량이다.",
+      "B": "지점 폐쇄는 언급되지 않는다.",
+      "C": "보관함 반납 계획 자체가 없다고 한다."
+    },
+    "order": "질문 대상에 관한 직접 진술을 찾고 필요한 전제만 결합한 뒤, 지문이 뒷받침하는 최소 범위의 결론을 고른다.",
+    "rule": "추론은 근거의 결합이다. 일반 상식이나 가능성만으로 지문보다 강한 결론을 만들지 않는다."
+  },
+  {
+    "id": "P7-10",
+    "prompt": "What problem is the team discussing?",
+    "options": [
+      "A cancelled visitor seminar",
+      "Missing equipment needed for an installation",
+      "A damaged service elevator",
+      "An incorrect exhibition date"
+    ],
+    "answer": "B",
+    "type": "목적",
+    "level": "기본",
+    "clue": "Chat: Exhibit Team의 \"two stands are missing\"와 \"installation ... this afternoon\"",
+    "analysis": "패널을 설치할 받침대가 부족하지만 공급업체 배송은 다음 날이다. 대화는 오늘 설치를 유지할 대안을 찾는 흐름이다.",
+    "why": "설치에 필요한 장비 누락을 해결하는 대화라는 B가 중심 상황이다.",
+    "wrong": {
+      "A": "세미나는 취소되지 않았고 받침대를 사용 중이다.",
+      "C": "서비스 엘리베이터 고장은 없으며 오히려 사용하라고 한다.",
+      "D": "전시 날짜 오류는 언급되지 않는다."
+    },
+    "order": "제목과 발신·수신 관계를 확인하고, 첫 문장의 요청과 마지막 행동 지시를 연결한 뒤 글 전체를 설명하는 보기를 고른다.",
+    "rule": "목적은 한 문장의 소재보다 발신자가 독자에게 기대하는 행동 또는 전달하려는 변화로 판단한다."
+  },
+  {
+    "id": "P7-11",
+    "prompt": "What does Mina mean when she writes, \"That would keep us on schedule\"?",
+    "options": [
+      "Priya’s offer will allow the installation to proceed as planned.",
+      "The supplier must deliver the panels again.",
+      "The seminar should end before noon.",
+      "The team should postpone tomorrow’s delivery."
+    ],
+    "answer": "A",
+    "type": "대화 의도",
+    "level": "중급",
+    "clue": "Chat: Exhibit Team의 \"bring them upstairs before noon\"와 \"keep us on schedule\"",
+    "analysis": "That은 Priya가 지하 예비 받침대를 정오 전 가져오는 제안을 받는다. 오늘 오후 설치를 유지할 수 있다는 의미다.",
+    "why": "직전 제안이 당일 설치 일정 문제를 해결한다는 A가 발언 의도다.",
+    "wrong": {
+      "B": "패널은 이미 도착했고 재배송 요구가 아니다.",
+      "C": "세미나 종료 시각을 바꾸는 제안이 없다.",
+      "D": "다음 날 배송은 그대로 수락할 계획이다."
+    },
+    "order": "발언 앞의 질문과 뒤의 응답을 읽고, 말하는 사람이 해결하려는 상황에 맞추어 의미를 바꾸어 표현한다.",
+    "rule": "채팅 발언의 의도는 직역보다 발언을 유발한 문제와 이어지는 행동에서 확인한다."
+  },
+  {
+    "id": "P7-12",
+    "prompt": "What will Priya most likely do after the new stands are fitted?",
+    "options": [
+      "Move the seminar to the basement",
+      "Cancel the supplier’s invoice",
+      "Return the spare stands to storage",
+      "Use the visitor elevator for the panels"
+    ],
+    "answer": "C",
+    "type": "세부 정보",
+    "level": "중급",
+    "clue": "Chat: Exhibit Team의 \"return our spare stands to the basement\"",
+    "analysis": "once절은 새 받침대 설치가 끝난 뒤의 시점을 표시한다. 돌려놓는 대상은 빌려 쓴 예비 받침대다.",
+    "why": "지하 보관 공간으로 예비 받침대를 반환하는 C가 마지막 발언의 약속이다.",
+    "wrong": {
+      "A": "세미나 장소 변경은 언급되지 않았다.",
+      "B": "청구서 취소는 대화에 없다.",
+      "D": "방문자 엘리베이터는 크기가 부족하다고 명시한다."
+    },
+    "order": "질문의 대상과 조건을 표시하고 같은 대상을 다루는 문장을 찾은 뒤, 시간·수량·조건까지 보기와 대조한다.",
+    "rule": "같은 명사가 보인다는 이유로 고르지 말고, 그 명사에 붙은 조건과 행위자를 함께 확인한다."
+  },
+  {
+    "id": "P7-13",
+    "prompt": "Which room meets Mr. Lim’s needs?",
+    "options": [
+      "The Birch Room for one morning",
+      "The Cedar Room for a full day",
+      "The Birch Room for a full day",
+      "The Cedar Room for one afternoon"
+    ],
+    "answer": "B",
+    "type": "복수 지문 연계",
+    "level": "고급",
+    "clue": "Advertisement: Oakfield Meeting Rooms의 \"Cedar Room seats up to twenty-four\"; Email: Oakfield Booking Request의 \"twenty-person\"와 \"9:00 a.m. until 5:00 p.m.\"",
+    "analysis": "예약자는 20명에 점심을 포함한 종일 사용을 원한다. 광고에서 수용 인원 24명인 Cedar와 점심 시간 접근을 포함하는 full-day를 결합한다.",
+    "why": "Cedar 종일 예약만 인원과 사용 시간 두 조건을 모두 충족한다.",
+    "wrong": {
+      "A": "Birch의 최대 16명과 오전만의 사용이 둘 다 부족하다.",
+      "C": "종일 시간은 맞지만 Birch는 20명을 수용하지 못한다.",
+      "D": "Cedar 인원은 맞지만 오후만으로 오전 이용을 충족하지 못한다."
+    },
+    "order": "질문의 연결 대상인 이름·날짜·번호를 각 문서에서 찾고 두 근거를 나란히 놓은 뒤 공통 조건을 적용한다.",
+    "rule": "복수 지문 정답은 서로 다른 문서의 사실이 같은 대상에 적용될 때 성립한다. 작성 시점과 갱신 내용도 확인한다."
+  },
+  {
+    "id": "P7-14",
+    "prompt": "What room-charge total should be quoted, excluding the cleaning charge?",
+    "options": [
+      "$180",
+      "$216",
+      "$300",
+      "$324"
+    ],
+    "answer": "D",
+    "type": "복수 지문 연계",
+    "level": "고급",
+    "clue": "Advertisement: Oakfield Meeting Rooms의 \"$180 per session\"와 \"ten-percent reduction\"; Email: Oakfield Booking Request의 \"9:00 a.m. until 5:00 p.m.\"",
+    "analysis": "Cedar 두 회차 합계는 180 × 2 = 360달러다. 종일 예약의 10% 감액 36달러를 빼면 객실 요금은 324달러다.",
+    "why": "종일 감액을 정확히 적용한 324달러가 D다.",
+    "wrong": {
+      "A": "180달러는 Cedar 한 회차 가격이다.",
+      "B": "216달러는 Birch 종일 가격이며 인원 조건이 맞지 않는다.",
+      "C": "300달러가 되는 요금 규칙은 광고에 없다."
+    },
+    "order": "질문의 연결 대상인 이름·날짜·번호를 각 문서에서 찾고 두 근거를 나란히 놓은 뒤 공통 조건을 적용한다.",
+    "rule": "복수 지문 정답은 서로 다른 문서의 사실이 같은 대상에 적용될 때 성립한다. 작성 시점과 갱신 내용도 확인한다."
+  },
+  {
+    "id": "P7-15",
+    "prompt": "Why will a cleaning charge apply?",
+    "options": [
+      "The group will use outside catering.",
+      "The group requested two whiteboards.",
+      "The event will exceed room capacity.",
+      "The deposit will be paid late."
+    ],
+    "answer": "A",
+    "type": "복수 지문 연계",
+    "level": "중급",
+    "clue": "Advertisement: Oakfield Meeting Rooms의 \"Outside catering is permitted\"와 \"a $25 cleaning charge applies\"; Email: Oakfield Booking Request의 \"Our office kitchen will prepare sandwiches\"",
+    "analysis": "회사 주방 음식이 회의장으로 배달되므로 외부 제공 음식에 해당한다. 광고의 외부 케이터링 청소비 규칙을 이 예약에 적용한다.",
+    "why": "외부 음식 반입이라는 요금 적용 이유가 A다.",
+    "wrong": {
+      "B": "화이트보드는 기본 제공 장비이므로 청소비 이유가 아니다.",
+      "C": "최대 22명은 Cedar의 24명 한도를 넘지 않는다.",
+      "D": "지연 납부는 언급되지 않았고 청소비 조건도 아니다."
+    },
+    "order": "질문의 연결 대상인 이름·날짜·번호를 각 문서에서 찾고 두 근거를 나란히 놓은 뒤 공통 조건을 적용한다.",
+    "rule": "복수 지문 정답은 서로 다른 문서의 사실이 같은 대상에 적용될 때 성립한다. 작성 시점과 갱신 내용도 확인한다."
+  },
+  {
+    "id": "P7-16",
+    "prompt": "What must happen before the booking is confirmed?",
+    "options": [
+      "The participant list must be printed.",
+      "The meeting must begin.",
+      "A deposit must be received.",
+      "The lunch menu must be approved."
+    ],
+    "answer": "C",
+    "type": "세부 정보",
+    "level": "기본",
+    "clue": "Advertisement: Oakfield Meeting Rooms의 \"only after a deposit\"와 \"has been received\"",
+    "analysis": "only after는 확정 전 필요한 조건을 표시한다. 보증금은 객실 요금 절반이며 잔금 납부일과 구분된다.",
+    "why": "보증금 수령이 선행되어야 한다는 C가 명시된 확정 조건이다.",
+    "wrong": {
+      "A": "참가자 목록 인쇄는 요구되지 않는다.",
+      "B": "행사 시작이 예약 확정 조건일 수 없으며 글에도 없다.",
+      "D": "주최 측 점심을 주문하지 않으므로 메뉴 승인 근거가 없다."
+    },
+    "order": "질문의 대상과 조건을 표시하고 같은 대상을 다루는 문장을 찾은 뒤, 시간·수량·조건까지 보기와 대조한다.",
+    "rule": "같은 명사가 보인다는 이유로 고르지 말고, 그 명사에 붙은 조건과 행위자를 함께 확인한다."
+  },
+  {
+    "id": "P7-17",
+    "prompt": "What is suggested about adding two colleagues?",
+    "options": [
+      "It would make lunch service compulsory.",
+      "It would not change the Cedar Room charge.",
+      "It would require an afternoon-only booking.",
+      "It would remove the full-day reduction."
+    ],
+    "answer": "B",
+    "type": "복수 지문 연계",
+    "level": "고급",
+    "clue": "Advertisement: Oakfield Meeting Rooms의 \"do not affect the room charge\"와 \"capacity is not exceeded\"; Email: Oakfield Booking Request의 \"will not exceed twenty-two\"",
+    "analysis": "Cedar 한도는 24명이고 변경 후 인원은 최대 22명이다. 따라서 인원 변경이 객실 요금을 바꾸지 않는 조건이 계속 충족된다.",
+    "why": "추가 두 명으로도 한도 이내이므로 B가 성립한다.",
+    "wrong": {
+      "A": "인원 증가와 점심 주문 의무는 연결되지 않는다.",
+      "C": "인원 변화는 오전 이용을 제거하지 않는다.",
+      "D": "종일 감액은 예약 시간에 대한 규칙이며 인원 증가로 취소되지 않는다."
+    },
+    "order": "질문의 연결 대상인 이름·날짜·번호를 각 문서에서 찾고 두 근거를 나란히 놓은 뒤 공통 조건을 적용한다.",
+    "rule": "복수 지문 정답은 서로 다른 문서의 사실이 같은 대상에 적용될 때 성립한다. 작성 시점과 갱신 내용도 확인한다."
+  },
+  {
+    "id": "P7-18",
+    "prompt": "Why was Maren Ceramics eligible for the first allocation round?",
+    "options": [
+      "Its application arrived before the deadline.",
+      "It had already paid for two stalls.",
+      "Its assistant would work all day.",
+      "It had participated in the market before."
+    ],
+    "answer": "A",
+    "type": "복수 지문 연계",
+    "level": "고급",
+    "clue": "Notice: City Market Stalls의 \"by August 5\"; Application: Maren Ceramics의 \"received: August 4\"",
+    "analysis": "첫 배정 심사는 8월 5일까지 접수된 신청서에 적용되고 Maren은 8월 4일 접수되었다. 전기나 과거 참여 여부가 이 자격의 기준은 아니다.",
+    "why": "마감 이전 접수라는 두 문서의 날짜 관계가 A를 뒷받침한다.",
+    "wrong": {
+      "B": "두 자리 예약이나 사전 납부는 명시되지 않았다.",
+      "C": "보조자는 하루 종일 머무르지 않는다고 한다.",
+      "D": "과거 참가 경험은 제시되지 않았다."
+    },
+    "order": "질문의 연결 대상인 이름·날짜·번호를 각 문서에서 찾고 두 근거를 나란히 놓은 뒤 공통 조건을 적용한다.",
+    "rule": "복수 지문 정답은 서로 다른 문서의 사실이 같은 대상에 적용될 때 성립한다. 작성 시점과 갱신 내용도 확인한다."
+  },
+  {
+    "id": "P7-19",
+    "prompt": "How much must Ms. Hale pay for the assigned stall?",
+    "options": [
+      "$45",
+      "$50",
+      "$65",
+      "$110"
+    ],
+    "answer": "C",
+    "type": "복수 지문 연계",
+    "level": "중급",
+    "clue": "Notice: City Market Stalls의 \"cost $65\"; Email: Market Assignment의 \"corner stall C7\"",
+    "analysis": "최종 배정 이메일이 C7을 corner stall로 지정한다. 해당 유형의 공지 요금을 적용하면 65달러다.",
+    "why": "배정 유형과 요금표를 연결한 C가 정답이다.",
+    "wrong": {
+      "A": "45달러는 standard stall 가격이다.",
+      "B": "50달러 요금은 안내에 없다.",
+      "D": "110달러는 두 유형 가격 합계이나 한 자리만 배정되었다."
+    },
+    "order": "질문의 연결 대상인 이름·날짜·번호를 각 문서에서 찾고 두 근거를 나란히 놓은 뒤 공통 조건을 적용한다.",
+    "rule": "복수 지문 정답은 서로 다른 문서의 사실이 같은 대상에 적용될 때 성립한다. 작성 시점과 갱신 내용도 확인한다."
+  },
+  {
+    "id": "P7-20",
+    "prompt": "What must Ms. Hale do by August 12?",
+    "options": [
+      "Finish selling all of her products",
+      "Submit a second application",
+      "Move her table to King Street",
+      "Ensure that the payment reaches the organizers"
+    ],
+    "answer": "D",
+    "type": "복수 지문 연계",
+    "level": "고급",
+    "clue": "Notice: City Market Stalls의 \"payment is due by August 12\"; Email: Market Assignment의 \"must reach us by the date specified\"",
+    "analysis": "이메일은 납부 마감 날짜를 공지로 되돌려 연결한다. 공지에서 그 날짜는 8월 12일이며 송금 실행만 아니라 도착이 요구된다.",
+    "why": "납부금이 주최 측에 도달해야 한다는 D가 날짜와 행동을 모두 맞춘다.",
+    "wrong": {
+      "A": "판매 행사는 8월 24일이다.",
+      "B": "새 신청서 제출 요구는 없다.",
+      "C": "King Street는 차량 주차장 위치이며 판매 테이블 이동 장소가 아니다."
+    },
+    "order": "질문의 연결 대상인 이름·날짜·번호를 각 문서에서 찾고 두 근거를 나란히 놓은 뒤 공통 조건을 적용한다.",
+    "rule": "복수 지문 정답은 서로 다른 문서의 사실이 같은 대상에 적용될 때 성립한다. 작성 시점과 갱신 내용도 확인한다."
+  },
+  {
+    "id": "P7-21",
+    "prompt": "Which request in the application appears to have been accommodated?",
+    "options": [
+      "An assistant’s full-day admission",
+      "A location near water",
+      "A table supplied by the organizers",
+      "Two separate unloading periods before opening"
+    ],
+    "answer": "B",
+    "type": "복수 지문 연계",
+    "level": "고급",
+    "clue": "Application: Maren Ceramics의 \"near a water point\"; Email: Market Assignment의 \"beside the fountain\"",
+    "analysis": "신청서의 물 가까운 위치 선호와 배정 이메일의 분수 옆 위치를 연결한다. 수돗물 사용 가능 여부까지는 주장하지 않는다.",
+    "why": "물 주변 위치라는 범위에서 B가 수용된 요청으로 판단된다.",
+    "wrong": {
+      "A": "보조자 종일 입장 요청은 신청서에 없다.",
+      "C": "테이블은 업체가 직접 준비해야 한다.",
+      "D": "개장 전 하역 시간은 한 구간으로 안내되며 별도 두 구간 요청이 없다."
+    },
+    "order": "질문의 연결 대상인 이름·날짜·번호를 각 문서에서 찾고 두 근거를 나란히 놓은 뒤 공통 조건을 적용한다.",
+    "rule": "복수 지문 정답은 서로 다른 문서의 사실이 같은 대상에 적용될 때 성립한다. 작성 시점과 갱신 내용도 확인한다."
+  },
+  {
+    "id": "P7-22",
+    "prompt": "What should Ms. Hale bring to help staff locate her stall?",
+    "options": [
+      "A photograph of her pottery wheel",
+      "A parking ticket",
+      "A printed copy of the assignment email",
+      "An extra application fee"
+    ],
+    "answer": "C",
+    "type": "세부 정보",
+    "level": "기본",
+    "clue": "Email: Market Assignment의 \"A printed copy of this message\"",
+    "analysis": "this message는 현재 배정 이메일이며 출력본이 직원의 자리 확인을 돕는다고 명시한다.",
+    "why": "배정 이메일 출력본이라는 C가 마지막 안내의 대상이다.",
+    "wrong": {
+      "A": "물레 사진은 요청하지 않는다.",
+      "B": "주차권이 자리 확인에 필요하다는 근거가 없다.",
+      "D": "추가 신청 수수료는 안내에 없다."
+    },
+    "order": "질문의 대상과 조건을 표시하고 같은 대상을 다루는 문장을 찾은 뒤, 시간·수량·조건까지 보기와 대조한다.",
+    "rule": "같은 명사가 보인다는 이유로 고르지 말고, 그 명사에 붙은 조건과 행위자를 함께 확인한다."
+  },
+  {
+    "id": "P7-B01",
+    "prompt": "Why was the email sent?",
+    "options": [
+      "To request that supervisors prepare a new course",
+      "To announce a permanent change to office hours",
+      "To explain revised workshop arrangements and registration steps",
+      "To ask employees to purchase analysis software"
+    ],
+    "answer": "C",
+    "type": "목적",
+    "level": "고급",
+    "clue": "Email: Stonebridge Data Workshop의 \"will now take place on October 28\"와 \"nominate participants by October 16\"",
+    "analysis": "교육 개최일과 추천 마감이 변경되며 세션 선택·준비물·기존 등록자 처리까지 안내한다. 직장 전체의 운영 시간 변경이 아니다.",
+    "why": "날짜와 등록 절차의 조정을 모두 포괄한 C가 용건이다.",
+    "wrong": {
+      "A": "교육은 기존 과정이며 감독자에게 새 과정 제작을 요구하지 않는다.",
+      "B": "두 교육 회차의 시간이 제시되었을 뿐 영구 근무 시간 변경은 없다.",
+      "D": "현재 프로그램 설치를 요구하지만 프로그램 구매를 요청하지는 않는다."
+    },
+    "order": "제목·발신 관계를 확인한다 → 첫 용건과 마지막 요청을 연결한다 → 글 전체의 행동 목적을 고른다.",
+    "rule": "목적은 등장 소재 하나보다 문서를 통해 독자가 해야 할 행동이나 알아야 할 변화로 판단한다."
+  },
+  {
+    "id": "P7-B02",
+    "prompt": "What does \"These\" refer to?",
+    "options": [
+      "The practice datasets",
+      "The participants’ registrations",
+      "The room allocations",
+      "The laptops"
+    ],
+    "answer": "A",
+    "type": "지칭",
+    "level": "고급",
+    "clue": "Email: Stonebridge Data Workshop의 \"The practice datasets will be emailed\"와 \"These must be saved\"",
+    "analysis": "복수 지시어가 받고 노트북에 저장할 수 있는 것은 직전의 연습 데이터다. 노트북은 저장 장소이며 저장 대상이 아니다.",
+    "why": "메일로 받은 데이터 파일을 미리 저장한다는 관계를 유지한 A가 맞다.",
+    "wrong": {
+      "B": "등록은 마지막 문단에 등장하며 실습을 위해 노트북에 저장하는 대상이 아니다.",
+      "C": "방 배정은 주최 측 작업으로 참가자의 실습 저장 대상이 아니다.",
+      "D": "laptops는 on 뒤 저장 장소이고 자기 자신을 저장한다는 뜻이 될 수 없다."
+    },
+    "order": "지시어의 수와 역할을 확인한다 → 앞 문장의 후보들을 실제 명사로 바꾼다 → 뒤의 행동이 가능한 대상을 고른다.",
+    "rule": "가장 가까운 명사가 항상 지칭 대상은 아니다. 수·문장 역할·행동의 적합성을 함께 확인한다."
+  },
+  {
+    "id": "P7-B03",
+    "prompt": "Where does the following sentence best belong? \"This earlier deadline may be difficult for departments whose employees work rotating shifts.\"",
+    "options": [
+      "[1]",
+      "[2]",
+      "[3]",
+      "[4]"
+    ],
+    "answer": "B",
+    "type": "문장 삽입",
+    "level": "실전 최상급",
+    "clue": "Email: Stonebridge Data Workshop의 \"October 16 rather than October 20\"와 \"Those departments\"",
+    "analysis": "This earlier deadline은 추천 마감이 앞당겨진 문장을 받아야 한다. 삽입 문장의 교대 근무 부서가 뒤 Those departments의 선행 대상이 되어 임시 이름 제출 예외를 설명한다.",
+    "why": "[2]만 앞의 구체적 마감 변경과 뒤의 특정 부서 예외를 동시에 연결한다.",
+    "wrong": {
+      "A": "[1] 앞에는 개최일이 늦춰진 정보뿐이므로 earlier deadline의 근거가 없다.",
+      "C": "[3]에 넣으면 Those departments가 소개 없이 먼저 등장하고 데이터와 These의 연결도 끊긴다.",
+      "D": "[4]에서도 앞의 Those departments에 필요한 소개가 뒤늦게 나오며 등록 확인 흐름과 멀어진다."
+    },
+    "order": "삽입 문장의 지시어를 표시한다 → 앞의 선행 정보와 뒤의 새로운 지칭 표현을 찾는다 → 두 방향 연결을 동시에 검증한다.",
+    "rule": "같은 주제만으로 위치를 결정하지 않는다. 앞에서 받아야 할 정보와 뒤에 제공해야 할 정보가 모두 있어야 한다."
+  },
+  {
+    "id": "P7-B04",
+    "prompt": "Which information is NOT required when a supervisor nominates a participant?",
+    "options": [
+      "The participant’s preferred session",
+      "Any accessibility requirements",
+      "The participant’s name",
+      "The participant’s job title"
+    ],
+    "answer": "D",
+    "type": "NOT/EXCEPT",
+    "level": "고급",
+    "clue": "Email: Stonebridge Data Workshop의 \"name, preferred session, and any accessibility requirements\"와 \"job title is not needed\"",
+    "analysis": "추천 제출의 필수 목록은 이름·희망 회차·접근성 요구다. 직함은 필요하지 않다는 별도 문장으로 제외된다.",
+    "why": "명시적으로 제외된 직함이 D다.",
+    "wrong": {
+      "A": "preferred session은 제출 목록에 있다.",
+      "B": "accessibility requirements도 목록에 있으며 없으면 그 상황을 전달할 수 있다.",
+      "C": "각 추천자의 name은 요구되는 기본 정보다."
+    },
+    "order": "질문의 부정 표시를 확인한다 → 보기마다 근거를 찾는다 → 성립하는 세 항목을 지우고 남은 하나를 검증한다.",
+    "rule": "언급되지 않았다는 것과 사실이 아니라는 것은 다르다. 질문의 NOT mentioned 또는 NOT true 범위에 맞추어 판단한다."
+  },
+  {
+    "id": "P7-B05",
+    "prompt": "What does Maya mean by \"That buys us some breathing room\"?",
+    "options": [
+      "The printer has agreed to lower its price.",
+      "The earlier completion gives the team more time to prepare.",
+      "The team can postpone the opening until noon.",
+      "The posters no longer need to be unpacked."
+    ],
+    "answer": "B",
+    "type": "대화 의도",
+    "level": "고급",
+    "clue": "Chat: Rowan Community Showcase의 \"ready at 7:40 rather than 8:00\"와 \"some breathing room\"",
+    "analysis": "That은 준비 완료가 20분 앞당겨졌다는 통보를 받는다. 직접 수령할 수 있으면 개장 전 작업 여유가 늘어난다는 조건부 평가다.",
+    "why": "더 이른 수령으로 준비 시간을 확보한다는 B가 직전 정보와 연결된다.",
+    "wrong": {
+      "A": "인쇄 요금 변화는 대화에 없다.",
+      "C": "개장은 9시로 유지되며 정오는 차량 반환 기한이다.",
+      "D": "도착 뒤 30분의 포장 해체·배치 작업이 계속 필요하다."
+    },
+    "order": "발언을 유발한 문제를 읽는다 → 직전 제안과 다음 행동을 연결한다 → 발언의 업무상 의미를 바꾸어 표현한다.",
+    "rule": "채팅의 간접 발언은 대화의 문제와 후속 행동으로 해석한다. 표현만 분리하여 직역하지 않는다."
+  },
+  {
+    "id": "P7-B06",
+    "prompt": "Why can Ken use the company van?",
+    "options": [
+      "He is responsible for the catering order.",
+      "He has already returned the key.",
+      "He is included on the approved driver register.",
+      "He has asked the printer to deliver the posters."
+    ],
+    "answer": "C",
+    "type": "추론",
+    "level": "고급",
+    "clue": "Chat: Rowan Community Showcase의 \"only employees on the approved driver register\"와 \"My name is on the register\"",
+    "analysis": "Luis의 사용 자격 규칙과 Ken의 등록 상태를 결합한다. 케이터링 팀은 정오 이후 사용 예정이며 Ken의 자격 근거가 아니다.",
+    "why": "등록 명단에 포함되어 있다는 C가 필요한 조건을 충족한다.",
+    "wrong": {
+      "A": "케이터링 업무 담당이라는 진술은 없으며 사용 자격도 운전자 등록이다.",
+      "B": "열쇠는 아직 접수대에 있고 반환은 나중에 할 행동이다.",
+      "D": "팀은 직접 수령해 인쇄 업체 배송이 필요 없다고 한다."
+    },
+    "order": "직접 진술을 찾는다 → 질문에 필요한 조건만 결합한다 → 지문이 보장하는 가장 좁은 결론을 고른다.",
+    "rule": "추론은 근거의 결합이다. 가능한 일과 반드시 성립하는 일을 구별하고 새로운 전제를 넣지 않는다."
+  },
+  {
+    "id": "P7-B07",
+    "prompt": "In this conversation, the word \"clear\" is closest in meaning to",
+    "options": [
+      "unobstructed",
+      "transparent",
+      "approved",
+      "certain"
+    ],
+    "answer": "A",
+    "type": "문맥상 의미",
+    "level": "고급",
+    "clue": "Chat: Rowan Community Showcase의 \"front entrance has to stay clear\"와 \"move our empty packing cases out\"",
+    "analysis": "의자 배송 하역을 위해 출입구의 상자를 치우는 상황이다. 따라서 clear는 방해물이 없는 상태이며 빛이 통과하는 물질의 성질이 아니다.",
+    "why": "실제 후속 조치인 상자 이동과 맞는 unobstructed가 정답이다.",
+    "wrong": {
+      "B": "출입구의 투명성을 논의하지 않는다.",
+      "C": "승인된 운전자는 별도 문장이며 clear는 출입 통로 상태를 설명한다.",
+      "D": "확실성의 정도가 아니라 통행을 가로막는 물건의 유무다."
+    },
+    "order": "해당 표현의 목적어와 앞뒤 사건을 읽는다 → 대체 표현을 넣는다 → 실제 행동과 조건이 유지되는지 확인한다.",
+    "rule": "문맥상 의미는 익숙한 뜻보다 그 문장에서 수행되는 행동과 주변 조건으로 정한다."
+  },
+  {
+    "id": "P7-B08",
+    "prompt": "If Ken follows the stated plan, when should the posters be fully unpacked and positioned?",
+    "options": [
+      "7:50 a.m.",
+      "8:00 a.m.",
+      "9:00 a.m.",
+      "8:30 a.m."
+    ],
+    "answer": "D",
+    "type": "추론",
+    "level": "실전 최상급",
+    "clue": "Chat: Rowan Community Showcase의 \"7:40\", \"Loading the boxes takes ten minutes\", \"the drive from the shop to our hall takes another ten\", \"thirty minutes\"",
+    "analysis": "7:40에 준비된 상자를 10분 동안 싣고 7:50에 출발하여 10분 뒤 8:00 도착한다. 즉시 포장 해체·배치 30분을 더하면 8:30 완료다.",
+    "why": "수령·적재·운송·배치 순서를 모두 적용한 D가 계산 결과다.",
+    "wrong": {
+      "A": "7:50은 적재가 끝나 출발하는 시각이다.",
+      "B": "8:00은 홀 도착 시각이며 배치 30분이 남아 있다.",
+      "C": "9:00은 관람객 입장 시각으로 계산된 작업 완료 시각이 아니다."
+    },
+    "order": "직접 진술을 찾는다 → 질문에 필요한 조건만 결합한다 → 지문이 보장하는 가장 좁은 결론을 고른다.",
+    "rule": "추론은 근거의 결합이다. 가능한 일과 반드시 성립하는 일을 구별하고 새로운 전제를 넣지 않는다."
+  },
+  {
+    "id": "P7-B09",
+    "prompt": "Why does Ms. Patel need a refresher session before collecting the camera?",
+    "options": [
+      "Her previous orientation record will be more than twelve months old.",
+      "Every reservation requires a new orientation regardless of its date.",
+      "She has requested a projector for more than two days.",
+      "She has never registered as a member."
+    ],
+    "answer": "A",
+    "type": "복수 지문 연계",
+    "level": "실전 최상급",
+    "clue": "Policy: Ellington Media Hub Equipment Loans의 \"valid for twelve months\"; Email: Request from Naomi Patel의 \"May 30 of the previous year\"와 \"July 12\"",
+    "analysis": "작년 5월 30일 이수에서 올해 7월 12일 수령까지 12개월을 넘는다. 회원 등록 사실과 별개로 기록이 만료되어 재교육 조건이 적용된다.",
+    "why": "유효 기간과 개인 이수·수령 날짜를 결합한 A가 이유다.",
+    "wrong": {
+      "B": "12개월 이내 유효 기록이면 매 예약마다 재교육하는 규칙이 아니다.",
+      "C": "Patel은 카메라와 삼각대를 요청했으며 프로젝터를 요청하지 않았다.",
+      "D": "메일 첫 문장에서 registered member라고 밝혔다."
+    },
+    "order": "같은 이름·날짜·예약 번호를 문서마다 찾는다 → 정책과 개인 상황을 나란히 놓는다 → 조건 충족과 미확정 상태를 구별한다.",
+    "rule": "일반 규정과 개인 사례를 같은 대상에 적용해야 연계 추론이 성립한다. 신청과 승인을 같은 단계로 처리하지 않는다."
+  },
+  {
+    "id": "P7-B10",
+    "prompt": "What must be approved for Ms. Patel to keep the camera until July 18?",
+    "options": [
+      "A second membership account",
+      "A waiver of the photo ID requirement",
+      "A two-day extension",
+      "A transfer of her orientation record to another hub"
+    ],
+    "answer": "C",
+    "type": "복수 지문 연계",
+    "level": "실전 최상급",
+    "clue": "Policy: Ellington Media Hub Equipment Loans의 \"five calendar days\"와 \"collection date as the first day\"; Email: Request from Naomi Patel의 \"July 12\"와 \"July 18\"",
+    "analysis": "7월 12일을 1일로 계산한 기본 5일은 16일까지다. 18일 반환에는 17·18일 두 날을 추가하는 승인이 필요하며 다른 예약 충돌이 없어야 한다.",
+    "why": "요청 사용 기간과 기본 규정을 비교하면 필요한 조치는 C다.",
+    "wrong": {
+      "A": "계정 추가가 대여 기간을 늘린다는 규정은 없다.",
+      "B": "신분증 요구는 면제 요청 대상이 아니고 사용 기간과 무관하다.",
+      "D": "다른 허브로 기록을 이동하는 절차는 제시되지 않는다."
+    },
+    "order": "같은 이름·날짜·예약 번호를 문서마다 찾는다 → 정책과 개인 상황을 나란히 놓는다 → 조건 충족과 미확정 상태를 구별한다.",
+    "rule": "일반 규정과 개인 사례를 같은 대상에 적용해야 연계 추론이 성립한다. 신청과 승인을 같은 단계로 처리하지 않는다."
+  },
+  {
+    "id": "P7-B11",
+    "prompt": "What should Ms. Patel obtain before collecting the camera?",
+    "options": [
+      "A separate charger supplied by a retailer",
+      "A memory card",
+      "A projector replacement bulb",
+      "A new camera bag"
+    ],
+    "answer": "B",
+    "type": "복수 지문 연계",
+    "level": "고급",
+    "clue": "Policy: Ellington Media Hub Equipment Loans의 \"must bring their own memory cards\"; Email: Request from Naomi Patel의 \"have not yet purchased a memory card\"",
+    "analysis": "카메라에는 배터리·충전기·가방이 제공되지만 저장 카드는 개인 준비 항목이다. Patel은 아직 카드를 마련하지 않았다고 밝혔다.",
+    "why": "필수 개인 준비 항목과 아직 없는 물품을 연결한 B가 맞다.",
+    "wrong": {
+      "A": "충전기는 카메라에 제공된다.",
+      "C": "프로젝터를 예약하지 않았고 교체 전구 준비 규정도 없다.",
+      "D": "보호 가방은 기본 제공 물품이다."
+    },
+    "order": "같은 이름·날짜·예약 번호를 문서마다 찾는다 → 정책과 개인 상황을 나란히 놓는다 → 조건 충족과 미확정 상태를 구별한다.",
+    "rule": "일반 규정과 개인 사례를 같은 대상에 적용해야 연계 추론이 성립한다. 신청과 승인을 같은 단계로 처리하지 않는다."
+  },
+  {
+    "id": "P7-B12",
+    "prompt": "What does Ms. Patel request for July 11?",
+    "options": [
+      "Permission to collect the camera before the desk opens",
+      "An extra day of photography at the project site",
+      "A refund for an unused orientation course",
+      "A place in a refresher session"
+    ],
+    "answer": "D",
+    "type": "세부 정보",
+    "level": "고급",
+    "clue": "Email: Request from Naomi Patel의 \"reserve a place for me in the refresher session advertised for July 11\"",
+    "analysis": "7월 11일 4시 요청은 재교육 회차 예약이다. 장비 수령은 그 다음 날 10시로 따로 요청한다.",
+    "why": "재교육 참가 자리를 요청하는 D가 날짜와 행동을 모두 맞춘다.",
+    "wrong": {
+      "A": "장비 수령은 12일 10시이며 개장 전 수령을 요청하지 않는다.",
+      "B": "촬영 사용 기간은 12~18일이며 11일 촬영 요청은 없다.",
+      "C": "사용하지 않은 강좌의 환불은 요청하지 않았다."
+    },
+    "order": "질문의 대상과 조건을 표시한다 → 해당 문장을 찾는다 → 행위자·시점·범위까지 보기와 대조한다.",
+    "rule": "같은 명사가 보인다는 사실만으로 답을 고르지 않는다. 그 명사에 붙은 조건도 일치해야 한다."
+  },
+  {
+    "id": "P7-B13",
+    "prompt": "Which statement is NOT supported by the equipment loan policy?",
+    "options": [
+      "A tripod may be included without an extra fee.",
+      "Members must show a current photo ID at collection.",
+      "An extension request automatically secures the extra days.",
+      "Expired orientation records must be renewed before release."
+    ],
+    "answer": "C",
+    "type": "NOT/EXCEPT",
+    "level": "고급",
+    "clue": "Policy: Ellington Media Hub Equipment Loans의 \"does not guarantee approval\"",
+    "analysis": "연장은 다른 예약 충돌 여부에 따라 승인된다. 요청 제출만으로 자동 확보되는 것은 명시적으로 부정된다.",
+    "why": "조건부 심사를 자동 승인으로 바꾼 C만 규정에 어긋난다.",
+    "wrong": {
+      "A": "삼각대는 가용 여부 조건 아래 추가 요금 없이 포함할 수 있다.",
+      "B": "current photo ID를 수령 때 제시해야 한다.",
+      "D": "만료 기록은 장비를 내주기 전에 재교육으로 갱신해야 한다."
+    },
+    "order": "질문의 부정 표시를 확인한다 → 보기마다 근거를 찾는다 → 성립하는 세 항목을 지우고 남은 하나를 검증한다.",
+    "rule": "언급되지 않았다는 것과 사실이 아니라는 것은 다르다. 질문의 NOT mentioned 또는 NOT true 범위에 맞추어 판단한다."
+  },
+  {
+    "id": "P7-B14",
+    "prompt": "Which guided walk should Ms. Reed reserve to complete both requested activities?",
+    "options": [
+      "The 1:00 p.m. walk",
+      "The 10:00 a.m. walk",
+      "Either walk, followed by a noon workshop",
+      "A private walk starting at 12:15 p.m."
+    ],
+    "answer": "B",
+    "type": "복수 지문 연계",
+    "level": "실전 최상급",
+    "clue": "Information: Brookmere Science Gardens Visits의 \"only to school groups that have reserved the morning walk\"; Email: Visit Request from Meadow School의 \"walk and the indoor science workshop\"와 \"12:15 p.m.\"",
+    "analysis": "실내 워크숍은 오전 견학을 예약한 학교만 이용하며 11:15~12:00 운영된다. 오전 10시 견학 뒤 워크숍을 끝내면 12:15 귀환 차량 계획도 유지된다.",
+    "why": "활동 참가 조건과 귀환 시간을 함께 충족하는 B가 맞다.",
+    "wrong": {
+      "A": "오후 견학은 해당 워크숍 참가 자격이 없고 귀환 계획보다 늦다.",
+      "C": "워크숍은 정오 시작이 아니라 정오 종료이며 오후 견학 참가자는 이용할 수 없다.",
+      "D": "12:15 사설 견학 회차는 제공되지 않고 그 시각은 버스 픽업 계획이다."
+    },
+    "order": "같은 이름·날짜·예약 번호를 문서마다 찾는다 → 정책과 개인 상황을 나란히 놓는다 → 조건 충족과 미확정 상태를 구별한다.",
+    "rule": "일반 규정과 개인 사례를 같은 대상에 적용해야 연계 추론이 성립한다. 신청과 승인을 같은 단계로 처리하지 않는다."
+  },
+  {
+    "id": "P7-B15",
+    "prompt": "What is suggested about the group’s supervising adults?",
+    "options": [
+      "The bus driver must remain with the group.",
+      "One teacher is enough for all eleven children.",
+      "A third teacher is required solely because the group has thirteen people.",
+      "The two teachers meet the stated minimum requirement."
+    ],
+    "answer": "D",
+    "type": "복수 지문 연계",
+    "level": "실전 최상급",
+    "clue": "Information: Brookmere Science Gardens Visits의 \"one supervising adult for every six children, or part\"; Email: Visit Request from Meadow School의 \"eleven children aged ten and two teachers\"",
+    "analysis": "12세 미만 아이 11명은 첫 6명에 성인 1명, 나머지 5명에 1명이 필요하다. 두 교사는 전체 방문에 동행하므로 최소 2명을 충족한다. 총원 13명도 18명 한도 이내다.",
+    "why": "연령·아이 수·교사 동행 조건을 결합하면 추가 감독자 없이 D가 성립한다.",
+    "wrong": {
+      "A": "운전자는 전체 참가 때만 감독자로 세지만 두 교사만으로 이미 최소를 충족한다.",
+      "B": "7~12명 규모에는 성인 2명이 필요하다.",
+      "C": "감독자 비율은 아이 수를 기준으로 하며 교사를 포함한 총원 13명을 다시 나누지 않는다."
+    },
+    "order": "같은 이름·날짜·예약 번호를 문서마다 찾는다 → 정책과 개인 상황을 나란히 놓는다 → 조건 충족과 미확정 상태를 구별한다.",
+    "rule": "일반 규정과 개인 사례를 같은 대상에 적용해야 연계 추론이 성립한다. 신청과 승인을 같은 단계로 처리하지 않는다."
+  },
+  {
+    "id": "P7-B16",
+    "prompt": "Which arrival arrangement would meet the morning walk’s check-in requirement?",
+    "options": [
+      "Arriving at 9:40 a.m.",
+      "Arriving at 9:50 a.m.",
+      "Arriving at 10:00 a.m. after a telephone call",
+      "Arriving at 11:00 a.m. before the workshop"
+    ],
+    "answer": "A",
+    "type": "복수 지문 연계",
+    "level": "고급",
+    "clue": "Information: Brookmere Science Gardens Visits의 \"at least fifteen minutes before\"; Email: Visit Request from Meadow School의 \"9:50 a.m.\"와 \"9:40\"",
+    "analysis": "10시 견학은 늦어도 9:45에 접수해야 한다. 제안된 두 버스 시각 중 9:40만 그 마감보다 앞선다. 전화는 지연을 알릴 수 있지만 대기 보장은 아니다.",
+    "why": "정책의 상대 시간 조건을 실제 두 도착안에 적용한 A가 맞다.",
+    "wrong": {
+      "B": "9:50은 접수 마감 9:45보다 5분 늦다.",
+      "C": "10시는 시작 시각이며 전화가 사전 접수 조건을 없애지 않는다.",
+      "D": "11시 도착은 오전 견학이 끝난 뒤이고 워크숍도 오전 견학 예약자 대상이다."
+    },
+    "order": "같은 이름·날짜·예약 번호를 문서마다 찾는다 → 정책과 개인 상황을 나란히 놓는다 → 조건 충족과 미확정 상태를 구별한다.",
+    "rule": "일반 규정과 개인 사례를 같은 대상에 적용해야 연계 추론이 성립한다. 신청과 승인을 같은 단계로 처리하지 않는다."
+  },
+  {
+    "id": "P7-B17",
+    "prompt": "Which statement about heavy rain is NOT supported by the information?",
+    "options": [
+      "The walk route will change.",
+      "The workshop will remain on schedule.",
+      "Both activities will automatically be canceled.",
+      "The school will not need a new reservation for the route change."
+    ],
+    "answer": "C",
+    "type": "NOT/EXCEPT",
+    "level": "고급",
+    "clue": "Information: Brookmere Science Gardens Visits의 \"covered courtyard displays\", \"operate as scheduled\", \"does not require a new reservation\"",
+    "analysis": "악천후에는 견학 장소만 지붕 있는 안뜰로 바뀌고 실내 워크숍 및 기존 예약은 유지된다.",
+    "why": "두 활동의 자동 취소를 주장한 C는 명시된 대체 운영과 모순된다.",
+    "wrong": {
+      "A": "야외 정원 길 대신 지붕 있는 안뜰을 사용하므로 맞다.",
+      "B": "워크숍은 operate as scheduled라고 유지된다.",
+      "D": "경로 변경에는 새 예약이 필요 없다고 직접 안내한다."
+    },
+    "order": "질문의 부정 표시를 확인한다 → 보기마다 근거를 찾는다 → 성립하는 세 항목을 지우고 남은 하나를 검증한다.",
+    "rule": "언급되지 않았다는 것과 사실이 아니라는 것은 다르다. 질문의 NOT mentioned 또는 NOT true 범위에 맞추어 판단한다."
+  },
+  {
+    "id": "P7-B18",
+    "prompt": "The word \"allocated\" is closest in meaning to",
+    "options": [
+      "forgotten",
+      "assigned",
+      "extended",
+      "recorded"
+    ],
+    "answer": "B",
+    "type": "문맥상 의미",
+    "level": "고급",
+    "clue": "Information: Brookmere Science Gardens Visits의 \"keep to their allocated times\"와 \"later groups are not delayed\"",
+    "analysis": "뒤 단체가 늦어지지 않도록 각 단체에게 배정된 이용 시각을 지키라는 안내다. 기록을 보관하거나 시간을 연장하라는 의미가 아니다.",
+    "why": "단체별로 배정된 시간이라는 assigned가 문맥과 일치한다.",
+    "wrong": {
+      "A": "시간을 잊었다는 상태가 아니라 지켜야 할 예약 시각이다.",
+      "C": "시간 연장은 오히려 뒤 단체의 지연을 만들 수 있다.",
+      "D": "안내의 초점은 기록 행위가 아니라 배정된 시간 준수다."
+    },
+    "order": "해당 표현의 목적어와 앞뒤 사건을 읽는다 → 대체 표현을 넣는다 → 실제 행동과 조건이 유지되는지 확인한다.",
+    "rule": "문맥상 의미는 익숙한 뜻보다 그 문장에서 수행되는 행동과 주변 조건으로 정한다."
+  },
+  {
+    "id": "P7-B19",
+    "prompt": "Why is Gallery B necessary for the complete collection proposed by Ms. Osei?",
+    "options": [
+      "Gallery A accepts only photographs larger than sixty centimeters.",
+      "Gallery B is the only gallery that permits freestanding work.",
+      "Gallery A is closed for the entire exhibition.",
+      "Gallery B offers a discount to applicants who apply early."
+    ],
+    "answer": "B",
+    "type": "복수 지문 연계",
+    "level": "실전 최상급",
+    "clue": "Rules: Calder Community Exhibition의 \"Freestanding works may be displayed only in Gallery B\"; Application: Clara Osei, E-214의 \"one freestanding wooden sculpture\"; Email: Calder Exhibition Assignment for E-214의 \"space B4 in Gallery B\"",
+    "analysis": "신청 컬렉션에 독립형 조각이 있으므로 보호된 바닥 공간이 있는 B가 필요하다. 선호한 A의 창문 조건보다 작품 유형 제한이 최종 배정을 결정한다.",
+    "why": "조각 포함 여부와 갤러리별 허용 규정을 연결한 B가 맞다.",
+    "wrong": {
+      "A": "60cm는 전체 액자 최대 치수이며 그보다 큰 작품만 허용한다는 규칙이 아니다.",
+      "C": "A의 전 기간 폐관은 안내되지 않았다.",
+      "D": "조기 접수에 따른 갤러리 할인은 없다."
+    },
+    "order": "같은 이름·날짜·예약 번호를 문서마다 찾는다 → 정책과 개인 상황을 나란히 놓는다 → 조건 충족과 미확정 상태를 구별한다.",
+    "rule": "일반 규정과 개인 사례를 같은 대상에 적용해야 연계 추론이 성립한다. 신청과 승인을 같은 단계로 처리하지 않는다."
+  },
+  {
+    "id": "P7-B20",
+    "prompt": "Which courier delivery would comply with the final arrangements?",
+    "options": [
+      "May 17 at 10:00 a.m.",
+      "May 19 at 10:30 a.m.",
+      "May 18 at 3:30 p.m.",
+      "May 18 at 4:30 p.m."
+    ],
+    "answer": "C",
+    "type": "복수 지문 연계",
+    "level": "실전 최상급",
+    "clue": "Rules: Calder Community Exhibition의 \"9:00 a.m. to 4:00 p.m.\"와 \"does not accept deliveries during installation\"; Email: Calder Exhibition Assignment for E-214의 \"cannot accept any courier deliveries on May 17\"와 \"May 18 hours remain unchanged\"",
+    "analysis": "최신 이메일은 원래 두 배송일 중 17일을 제거한다. 18일에는 기존 9~16시가 유지되며 19일 설치 중에는 배송을 받지 않는다.",
+    "why": "5월 18일 15:30만 변경된 날짜와 유지된 시간 범위를 동시에 충족한다.",
+    "wrong": {
+      "A": "17일은 최신 이메일에서 유지보수 때문에 접수가 중단되었다.",
+      "B": "19일 10:30은 설치 기간이며 그때 택배를 받지 않는다.",
+      "D": "18일의 접수 종료는 16시이므로 16:30은 늦다."
+    },
+    "order": "같은 이름·날짜·예약 번호를 문서마다 찾는다 → 정책과 개인 상황을 나란히 놓는다 → 조건 충족과 미확정 상태를 구별한다.",
+    "rule": "일반 규정과 개인 사례를 같은 대상에 적용해야 연계 추론이 성립한다. 신청과 승인을 같은 단계로 처리하지 않는다."
+  },
+  {
+    "id": "P7-B21",
+    "prompt": "Which requested item will be provided without a charge?",
+    "options": [
+      "A display plinth",
+      "A courier collection service",
+      "A replacement frame",
+      "A personal storage locker"
+    ],
+    "answer": "A",
+    "type": "복수 지문 연계",
+    "level": "고급",
+    "clue": "Rules: Calder Community Exhibition의 \"plinths are supplied at no charge\"; Application: Clara Osei, E-214의 \"Display plinth requested: Yes\"; Email: Calder Exhibition Assignment for E-214의 \"has been reserved\"",
+    "analysis": "규정의 무료 제공 조건에 신청과 사무실 확인이 모두 필요하다. 4일 신청한 받침대가 최종 이메일에서 예약되었다고 확인된다.",
+    "why": "비용 규정·요청·확정이라는 세 단계를 연결한 A가 성립한다.",
+    "wrong": {
+      "B": "작가는 스스로 택배를 보내며 수거 서비스 제공은 없다.",
+      "C": "액자 교체 제공은 요구하거나 약속하지 않았다.",
+      "D": "개인 사물함 제공은 어느 문서에도 없다."
+    },
+    "order": "같은 이름·날짜·예약 번호를 문서마다 찾는다 → 정책과 개인 상황을 나란히 놓는다 → 조건 충족과 미확정 상태를 구별한다.",
+    "rule": "일반 규정과 개인 사례를 같은 대상에 적용해야 연계 추론이 성립한다. 신청과 승인을 같은 단계로 처리하지 않는다."
+  },
+  {
+    "id": "P7-B22",
+    "prompt": "What does \"These\" in the assignment email refer to?",
+    "options": [
+      "The photographs",
+      "The volunteers",
+      "The galleries",
+      "The enclosed labels"
+    ],
+    "answer": "D",
+    "type": "지칭",
+    "level": "고급",
+    "clue": "Email: Calder Exhibition Assignment for E-214의 \"The enclosed labels contain\"와 \"These must be attached\"",
+    "analysis": "복수 지시어는 직전의 동봉 라벨을 받는다. 이름과 신청 번호가 담긴 라벨을 택배 바깥에 붙이고 읽을 수 있게 유지해야 한다.",
+    "why": "부착하고 글자를 읽을 수 있어야 하는 대상인 D가 맞다.",
+    "wrong": {
+      "A": "작품 사진은 택배 안에 보호해 보내며 이름·번호를 표시하는 라벨 자체가 아니다.",
+      "B": "봉사자를 택배 바깥에 붙일 수 없고 그들은 마지막 문장에 등장한다.",
+      "C": "갤러리는 장소이며 택배에 부착하는 대상이 아니다."
+    },
+    "order": "지시어의 수와 역할을 확인한다 → 앞 문장의 후보들을 실제 명사로 바꾼다 → 뒤의 행동이 가능한 대상을 고른다.",
+    "rule": "가장 가까운 명사가 항상 지칭 대상은 아니다. 수·문장 역할·행동의 적합성을 함께 확인한다."
+  },
+  {
+    "id": "P7-B23",
+    "prompt": "Which action is NOT permitted under the stated arrangements?",
+    "options": [
+      "Having the office store the delivered parcels",
+      "Sending a different sculpture without written permission",
+      "Installing the approved work on May 19",
+      "Taking empty packaging home after installation"
+    ],
+    "answer": "B",
+    "type": "NOT/EXCEPT",
+    "level": "고급",
+    "clue": "Rules: Calder Community Exhibition의 \"differs from the approved application without written permission\"; Application: Clara Osei, E-214의 \"take the packing materials home\"",
+    "analysis": "승인 목록과 다른 작품은 서면 허가 없이 보낼 수 없다. 보관·지정일 설치·포장재 수거는 규정과 신청 계획에 맞는다.",
+    "why": "작품 변경의 필수 허가를 생략한 B가 금지 행동이다.",
+    "wrong": {
+      "A": "사무실은 택배를 보관한다고 규정에 명시한다.",
+      "C": "5월 19일 10~12시는 정식 설치 시간이며 이메일도 그 기간을 유지한다.",
+      "D": "포장재 수거는 작가 책임이며 신청서의 집으로 가져가는 계획과 맞는다."
+    },
+    "order": "질문의 부정 표시를 확인한다 → 보기마다 근거를 찾는다 → 성립하는 세 항목을 지우고 남은 하나를 검증한다.",
+    "rule": "언급되지 않았다는 것과 사실이 아니라는 것은 다르다. 질문의 NOT mentioned 또는 NOT true 범위에 맞추어 판단한다."
+  },
+  {
+    "id": "P7-B24",
+    "prompt": "Which orientation session can Ms. Delgado attend in full before her proposed shift?",
+    "options": [
+      "March 10, 6:00-8:00 p.m.",
+      "March 11, 2:00-4:00 p.m.",
+      "March 12, 10:00 a.m.-noon",
+      "March 13, 1:00-4:00 p.m."
+    ],
+    "answer": "C",
+    "type": "복수 지문 연계",
+    "level": "실전 최상급",
+    "clue": "Notice: Haven Community Volunteer Program의 세 orientation 시간과 \"full session is required\"; Application: Ana Delgado의 \"cannot attend any event on March 10\", \"only after 3:00 p.m.\", \"throughout March 12\"",
+    "analysis": "10일은 전혀 불가능하고 11일은 14시 시작에 늦는다. 12일에는 하루 종일 가능하므로 10~12시 전체 교육을 이수할 수 있으며 13일 업무보다 앞선다.",
+    "why": "날짜뿐 아니라 전체 회차 참석 조건까지 충족하는 C가 맞다.",
+    "wrong": {
+      "A": "신청서에서 10일에는 어떤 행사도 참가할 수 없다고 한다.",
+      "B": "11일에는 15시 이후 도착 가능하므로 14시 시작부터 참가하지 못한다.",
+      "D": "13일 13~16시는 오후 업무 시간이며 교육 회차가 아니고 개인 가능 시간도 벗어난다."
+    },
+    "order": "같은 이름·날짜·예약 번호를 문서마다 찾는다 → 정책과 개인 상황을 나란히 놓는다 → 조건 충족과 미확정 상태를 구별한다.",
+    "rule": "일반 규정과 개인 사례를 같은 대상에 적용해야 연계 추론이 성립한다. 신청과 승인을 같은 단계로 처리하지 않는다."
+  },
+  {
+    "id": "P7-B25",
+    "prompt": "Why is the morning welcome-desk shift suitable for Ms. Delgado?",
+    "options": [
+      "It matches both her language skills and her March 13 availability.",
+      "It requires only a driving license.",
+      "It ends after her other appointment.",
+      "It allows her to attend orientation for only one hour."
+    ],
+    "answer": "A",
+    "type": "복수 지문 연계",
+    "level": "실전 최상급",
+    "clue": "Notice: Haven Community Volunteer Program의 \"English and Spanish\"와 \"9:00 a.m. to noon\"; Application: Ana Delgado의 두 언어와 \"leave by noon\"; Email: Provisional Shift for Ana Delgado의 \"morning welcome-desk shift\"",
+    "analysis": "안내 역할은 두 언어를 사용해야 하고 오전 회차는 정오에 끝난다. 신청자는 두 언어를 구사하며 정오까지 가능하므로 역할 자격과 시간 조건이 함께 맞는다.",
+    "why": "독립적인 두 조건을 모두 충족한다는 A가 배정 적합성을 설명한다.",
+    "wrong": {
+      "B": "운전면허는 배달 조건의 일부이며 안내 데스크 자격이 아니다.",
+      "C": "정오 전에 마치는 회차로 개인 약속을 지키려는 계획이지 약속 뒤 종료가 아니다.",
+      "D": "모든 신규 봉사자는 전체 2시간 교육을 이수해야 한다."
+    },
+    "order": "같은 이름·날짜·예약 번호를 문서마다 찾는다 → 정책과 개인 상황을 나란히 놓는다 → 조건 충족과 미확정 상태를 구별한다.",
+    "rule": "일반 규정과 개인 사례를 같은 대상에 적용해야 연계 추론이 성립한다. 신청과 승인을 같은 단계로 처리하지 않는다."
+  },
+  {
+    "id": "P7-B26",
+    "prompt": "What should Ms. Delgado do now to have the proposed shift confirmed?",
+    "options": [
+      "Begin delivery work without authorization",
+      "Ask another volunteer to attend orientation for her",
+      "Change her preferred shift directly in the portal",
+      "Book an orientation session and tell Mr. Cho which one"
+    ],
+    "answer": "D",
+    "type": "복수 지문 연계",
+    "level": "고급",
+    "clue": "Notice: Haven Community Volunteer Program의 \"which orientation session has been booked\"; Email: Provisional Shift for Ana Delgado의 \"Once you tell me which session you have booked\"",
+    "analysis": "현재는 임시 배정 상태이며 교육 예약 후 어떤 회차를 예약했는지 담당자에게 알려야 확정된다. 교육 이수는 별도로 첫 업무 전에 완료해야 한다.",
+    "why": "현재 확정 절차의 예약·통보 두 행동을 모두 포함한 D가 맞다.",
+    "wrong": {
+      "A": "배달 권한을 받지 않았고 현재 제안도 안내 데스크다.",
+      "B": "교육은 본인이 전체 참석해야 하므로 대리 참석은 조건을 충족하지 못한다.",
+      "C": "담당자는 시간 변경 때 먼저 통보하라고 하며 직접 다른 업무를 선택하라고 하지 않는다."
+    },
+    "order": "같은 이름·날짜·예약 번호를 문서마다 찾는다 → 정책과 개인 상황을 나란히 놓는다 → 조건 충족과 미확정 상태를 구별한다.",
+    "rule": "일반 규정과 개인 사례를 같은 대상에 적용해야 연계 추론이 성립한다. 신청과 승인을 같은 단계로 처리하지 않는다."
+  },
+  {
+    "id": "P7-B27",
+    "prompt": "Which statement is NOT supported by the documents?",
+    "options": [
+      "Ms. Delgado is willing to work at the welcome desk.",
+      "Ms. Delgado is already qualified for program delivery work solely because she has a license.",
+      "Orientation must be completed before the first shift.",
+      "The proposed shift could move if she cannot complete an orientation in time."
+    ],
+    "answer": "B",
+    "type": "NOT/EXCEPT",
+    "level": "실전 최상급",
+    "clue": "Application: Ana Delgado의 \"road-safety course completed: No\"; Notice: Haven Community Volunteer Program의 \"receive driver authorization\"; Email: Provisional Shift for Ana Delgado의 \"license alone does not complete\"",
+    "analysis": "배달은 면허뿐 아니라 별도 교육과 승인도 요구한다. 신청자는 교육을 이수하지 않았고 이메일도 면허만으로 충분하지 않다고 확인한다.",
+    "why": "하나의 조건만으로 전체 자격 완료를 주장하는 B는 세 문서의 제한과 모순된다.",
+    "wrong": {
+      "A": "신청서에 welcome desk acceptable as an alternative라고 적었다.",
+      "C": "안내는 before their first shift라고 이수 시점을 명시한다.",
+      "D": "이메일은 13일 전 전체 교육이 불가능하면 나중 날짜로 옮겨야 한다고 한다."
+    },
+    "order": "질문의 부정 표시를 확인한다 → 보기마다 근거를 찾는다 → 성립하는 세 항목을 지우고 남은 하나를 검증한다.",
+    "rule": "언급되지 않았다는 것과 사실이 아니라는 것은 다르다. 질문의 NOT mentioned 또는 NOT true 범위에 맞추어 판단한다."
+  },
+  {
+    "id": "P7-B28",
+    "prompt": "What is implied about the visitor-information sheet?",
+    "options": [
+      "It replaces the required orientation.",
+      "It has already been sent with the application.",
+      "It will be sent after the shift is confirmed.",
+      "It is intended only for approved delivery drivers."
+    ],
+    "answer": "C",
+    "type": "추론",
+    "level": "고급",
+    "clue": "Email: Provisional Shift for Ana Delgado의 \"After the shift is confirmed, I will send\"",
+    "analysis": "자료 발송은 업무 확정 뒤의 예정 행동이다. 현재는 교육 예약 회차를 아직 알리지 않은 임시 배정이므로 이 메일이 자료를 이미 보냈다고 뜻하지 않는다.",
+    "why": "명시된 선행 조건과 미래 행동을 보존한 C가 맞다.",
+    "wrong": {
+      "A": "자료 읽기는 업무 준비이며 전체 교육 이수 요구를 대체하지 않는다.",
+      "B": "신청서에는 자료 첨부가 없고 이메일도 이후 발송으로 설명한다.",
+      "D": "이 자료는 안내 데스크 담당 예정인 Ana에게 보낼 방문자 안내 자료다."
+    },
+    "order": "직접 진술을 찾는다 → 질문에 필요한 조건만 결합한다 → 지문이 보장하는 가장 좁은 결론을 고른다.",
+    "rule": "추론은 근거의 결합이다. 가능한 일과 반드시 성립하는 일을 구별하고 새로운 전제를 넣지 않는다."
+  }
+]

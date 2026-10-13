@@ -1,0 +1,446 @@
+{
+  "sections": [
+    {
+      "title": "시험 전: 시간과 근거를 동시에 측정하는 방법",
+      "paragraphs": [
+        "이번 파일의 본시험은 기존100문항으로 구성한75분 시험이다. 뒤의15문항 보완 훈련은 시험 종료·채점·진단 후에 푼다. 첫 시험 중에는 해설과 정답표를 가리고, 시작 시각과 Part5·6·7 종료 시각을 기록한다. 문제마다 정답을 고른 이유를 길게 적는 대신 확신 E, 근거 불완전 G, 시간 때문에 생략 T로 작게 표시한다.",
+        "훈련 시간 배분의 출발점은 Part5 10분, Part6 8분, Part7 54분, 검토3분이다. 이 배분은 공식 파트별 제한시간이 아니라 개인 훈련용이다. 빠르게 풀어도 G가 늘었다면 속도 개선으로 보지 않는다. E 정답 수, G 정답 수, 시간 초과 수를 별도로 기록해야 실제 판단 능력의 변화를 알 수 있다.",
+        "문제101처럼 품사·병렬 단서가 눈에 보이는 문항은 먼저 구조로 해결한다. 문제177처럼 방 선택의 이유까지 들어 있는 보기는 결론과 이유가 둘 다 사실인지 대조한다. 문제197처럼 일반 기능과 날짜 예외가 함께 있으면 구체적 시행일 조건을 우선한다. 시험 전 이 세 판단을 말로 재현해 본다."
+      ]
+    },
+    {
+      "title": "채점 뒤: 원점수와 근거 확인율을 나누어 기록한다",
+      "paragraphs": [
+        "예를 들어100문항 중90개를 맞혔지만20개가 추측 정답이라면 E 정답은70개다. 원점수 정답률은90%지만 근거 확인 정답 비율은70%다. 이 수치들은 교재의 자기진단 지표이며 TOEIC 공식 환산점수와 동일하지 않다.90개 정답을950점 등으로 변환하지 않는다.",
+        "시간이 지난 뒤 무제한 재풀이에서 모든 오류가 해결된다면 탐색 순서·해석 속도·시간 분배를 우선 보완한다. 재풀이에서도 같은 규칙을 잘못 적용했다면 지식이나 구조·문맥 이해를 먼저 보완한다. 두 문제가 동시에 있으면 정답 근거를 안정시킨 뒤 제한시간을 줄인다.",
+        "Part7 오답은 근거 위치를 못 찾았는지, 위치는 찾았지만 조건을 놓쳤는지, 보기의 바꿔 말하기를 이해하지 못했는지 구분한다. 같은 틀린 답이라도 다음 훈련은 달라진다. 아래 문항별 복습 경로에서 관련 단원을 고르고, 그 단원의 새문제에 규칙을 전이한다."
+      ]
+    },
+    {
+      "title": "근거가 틀린 정답을 고치는 세 사례",
+      "paragraphs": [
+        "101번의 답을 innovative라는 단어가 익숙해서 선택했다면 정답 근거를 보완해야 한다. 빈칸은 practical과 and로 연결되어 approach를 수식한다. “형용사라서”라는 답에서 더 나아가 명사 자체보다 병렬 형용사 구조가 innovation을 배제하는 강한 단서임을 설명한다.",
+        "143번을 주변 문장이 과거형이므로 모든 결과 보고도 반드시 과거형이어야 한다고 설명하면 규칙을 과도하게 일반화한 것이다. 완료된 연구 결과를 현재형으로 보고하는 문체도 있다. 이 문항의 find는 단수 주어 review와 수가 맞지 않으며 found는 완료된 검토를 보고한다. 형태와 시간 단서를 각각 확인한다.",
+        "178번은18명만 보고 작은 방의 보증금을 계산하면 실패한다. 고객은 별도 그룹 활동을 위해 이동식 탁자가 필요하므로 먼저 Willow를 선택하고860달러의25%를 계산한다. 수량 문제도 상품 선택→적용 범위→계산 순서를 따라야 한다."
+      ]
+    },
+    {
+      "title": "오답 선택지를 바꾸어 규칙을 검증한다",
+      "paragraphs": [
+        "106번의 Although가 틀린 이유를 “대조가 아니다”라고 쓰면 의미 판단이 틀렸다. the temporary closure는 명사구이므로 Although가 절을 직접 받는 형태로 바뀌어야 한다. Although the main entrance was temporarily closed, ...로 고치면 양보 의미가 성립한다. 뜻과 뒤 구조의 오류를 구분한다.",
+        "122번의 attaching을 사용할 수 있도록 문장을 고치려면 안내문이 아니라 첨부를 수행하는 사람을 수식하도록 바꿀 수 있다: The employee attaching the instructions should check the file name. 원문의 instructions attached to this message는 첨부된 대상이다. 형태의 차이는 행위자·대상 차이와 연결된다.",
+        "190번의6월30일 지급을 확정으로 단정한 오답은 Once the claim is accepted라는 선행 조건을 놓친다. 먼저 승인 여부를 명시하는 확정 문장이 추가된다면 결론이 달라질 수 있다. 보기의 참·거짓만 외우지 말고 어떤 근거가 있어야 참이 되는지 설명한다."
+      ]
+    },
+    {
+      "title": "24시간·3일·7일의 재훈련 계획",
+      "paragraphs": [
+        "24시간 후에는 답을 가리고 틀린 문제와 G 정답 문제의 핵심 단서·오답3개를 설명한다. 설명하지 못한 문제만 다시 개념을 읽는다.3일 후에는 각 파트 PDF의 새연습문제를 같은 규칙으로 풀어, 정답 기억과 규칙 적용을 분리한다.",
+        "7일 후에는 먼저15문항 보완 훈련을 제한시간 없이 정확히 풀고, 다음 회에 개인 목표시간으로 재현한다.15문항에 공식 시험의 파트별 수량이 적용되는 것은 아니며 혼합 판단 연습이다. 시간 목표는 정확도와 근거 확인율이 안정된 이후 설정한다.",
+        "같은100문항을 다시 풀면 읽기 내용과 답을 기억할 수 있으므로 최초 시험과 재시험 시간을 단순 비교하지 않는다. 동일 규칙을 처음 보는 지문에서 설명할 수 있는지 확인하고, 실제 시험 준비에서는 새로운 공식 연습시험도 활용한다."
+      ]
+    },
+    {
+      "title": "최종 점검: 보기의 한 부분만 맞는 함정을 막는다",
+      "paragraphs": [
+        "보기의 이유절까지 검증한다.177번의 Willow Room은 맞아도 “인터넷이 제공되는 유일한 방”이라는 이유는 틀리다. 실제 문항의 결론·주체·조건·시점을 각각 지문에 대조한다.",
+        "NOT/EXCEPT에서는 맞는 항목3개를 먼저 근거와 연결한다. 확인되지 않은 사실을 지문과 모순되는 사실로 바꾸지 않는다. “NOT mentioned”와 “NOT true”의 요구를 구별하고, 일정 계획·현재 상태·이미 완료한 행동의 차이를 보존한다.",
+        "최종 검토에서는 모든 지문을 재독하기보다 표시한 조건 하나를 확인한다. 답안 번호·미응답·주체·날짜·only/except 조건이 우선이다. 검토 후에도 근거가 없었던 정답은 학습 완료로 처리하지 않는다."
+      ]
+    }
+  ],
+  "grammar": [
+    {
+      "id": "M-B01",
+      "prompt": "The accounts listed in the attached report ------- inactive since the system migration in May and remain unavailable.",
+      "options": [
+        "has been",
+        "have been",
+        "were being",
+        "to be"
+      ],
+      "answer": "B",
+      "type": "수일치·현재완료·수식어",
+      "level": "고급",
+      "clue": "주어의 중심어는 복수 accounts이다. listed in the attached report는 accounts를 수식하며 since와 remain이 현재까지의 상태를 연결한다.",
+      "analysis": "골격은 The accounts have been inactive ... and remain unavailable이다. 단수 report는 전치사구 내부 명사이므로 주절 수일치 기준이 아니다.",
+      "why": "B는 복수 주어에 맞는 have와 과거부터 현재까지의 상태를 나타내는 현재완료를 함께 충족한다.",
+      "wrong": {
+        "A": "has는 단수형이므로 가까운 report에 끌려 고른 오류다.",
+        "C": "were being inactive는 이 상태를 나타내는 통상적 표현이 아니며 현재까지 계속되는 상태의 시간 기준도 충족하지 못한다.",
+        "D": "to be는 정동사가 아니므로 주절의 시제와 수일치가 완성되지 않는다."
+      },
+      "order": "분사 수식어를 묶는다→accounts와 빈칸을 연결한다→since와 현재 상태를 확인한다.",
+      "rule": "수일치와 시제를 따로 검사한 뒤 두 조건을 동시에 통과한 동사구를 고른다."
+    },
+    {
+      "id": "M-B02",
+      "prompt": "The purchasing team requested that the missing items ------- before a revised invoice was issued.",
+      "options": [
+        "replace",
+        "to replace",
+        "be replaced",
+        "replacing"
+      ],
+      "answer": "C",
+      "type": "요구 명사절·수동태",
+      "level": "고급",
+      "clue": "requested that은 요구 내용을 이끌고 items는 교체를 수행하는 사람이 아닌 교체 대상이다.",
+      "analysis": "that절의 주어는 the missing items이다. 요구 내용의 원형 동사구가 필요하며, 대상 역할이므로 be + 과거분사로 수동태를 만든다.",
+      "why": "C는 요구절의 원형 be와 수동 과거분사 replaced를 동시에 충족한다.",
+      "wrong": {
+        "A": "replace를 넣으면 물품이 다른 대상을 교체하는 능동 구조가 되어 역할이 어긋난다.",
+        "B": "to replace는 이 that절의 정동사 자리를 채우지 못한다.",
+        "D": "replacing은 단독 정동사가 아니므로 that절이 완성되지 않는다."
+      },
+      "order": "requested의 요구 의미 확인→that절 주어 확인→행위자/대상 구분→원형 수동 선택한다.",
+      "rule": "요구절의 원형 규칙은 능동에만 적용되지 않는다. 수동이면 be + 과거분사를 쓴다."
+    },
+    {
+      "id": "M-B03",
+      "prompt": "The auditors reviewed the figures ------- by the branch offices, rather than preparing new estimates themselves.",
+      "options": [
+        "submits",
+        "submitting",
+        "submission",
+        "submitted"
+      ],
+      "answer": "D",
+      "type": "정동사 구별·축약 관계절",
+      "level": "고급",
+      "clue": "reviewed가 주절 동사이고 by the branch offices가 제출 행위자를 나타낸다.",
+      "analysis": "The auditors reviewed the figures가 주절이다. 빈칸 이하가 figures를 설명하며 원래 관계절은 which were submitted by the branch offices다.",
+      "why": "D는 figures가 제출된 대상이라는 수동 수식 관계를 만든다.",
+      "wrong": {
+        "A": "submits는 정동사이므로 관계사 없이 reviewed와 함께 연결할 수 없다.",
+        "B": "submitting은 figures가 제출을 수행하는 능동 수식이 되며 by구와 역할이 맞지 않는다.",
+        "C": "submission은 명사로 이 위치의 수동 수식 구조를 만들지 못한다."
+      },
+      "order": "이미 있는 정동사 찾기→빈칸의 명사 수식 기능 확인→by구의 역할 대조한다.",
+      "rule": "수동 분사 수식은 시제 동사를 추가하지 않고 명사에 업무 이력을 붙인다."
+    },
+    {
+      "id": "M-B04",
+      "prompt": "------- the team had verified the delivery dates, it could not approve the schedule without confirmation from the venue.",
+      "options": [
+        "Despite",
+        "Because of",
+        "Although",
+        "During"
+      ],
+      "answer": "C",
+      "type": "절·전치사구·양보 관계",
+      "level": "고급",
+      "clue": "빈칸 뒤에 the team + had verified라는 완전한 절이 있고, 날짜 확인에도 일정 승인 불가라는 제한이 남는다.",
+      "analysis": "Although절은 확인 완료를, 주절은 장소 확인 부족으로 승인하지 못하는 상황을 나타낸다. 두 사실의 기대와 제한을 연결한다.",
+      "why": "C만 완전한 절을 직접 이끌며 양보 관계를 나타낸다.",
+      "wrong": {
+        "A": "Despite는 전치사이므로 명사구 또는 despite the fact that ... 구조가 필요하다.",
+        "B": "Because of는 전치사구여서 완전한 절을 바로 받을 수 없고 원인 연결도 주어진 제한 관계와 다르다.",
+        "D": "During은 기간 명사를 받는 전치사이므로 완전한 절을 직접 이끌지 못한다."
+      },
+      "order": "빈칸 뒤 S/V 확인→절을 받을 수 있는 보기 남기기→양보 관계 검증한다.",
+      "rule": "뜻이 비슷하거나 업무 맥락에 어울려도 뒤 구조를 받을 수 없으면 먼저 탈락시킨다."
+    },
+    {
+      "id": "M-B05",
+      "prompt": "The new system enables users to view invoices, compare previous charges, and ------- discrepancies without calling the support desk.",
+      "options": [
+        "report",
+        "reporting",
+        "reported",
+        "reportable"
+      ],
+      "answer": "A",
+      "type": "병렬 구조·공유 to",
+      "level": "중급",
+      "clue": "to view, compare, and 빈칸이 같은 사용자의 세 행동을 열거한다.",
+      "analysis": "enables + users + to부정사 구문에서 to를 공유한 세 동사구가 병렬이다. discrepancies는 마지막 동사의 목적어다.",
+      "why": "A는 원형 report로 앞의 view와 compare와 같은 문장 역할을 한다.",
+      "wrong": {
+        "B": "reporting은 동명사·분사로 공유된 to 뒤 원형 동사 목록과 맞지 않는다.",
+        "C": "reported는 과거형·과거분사로 동작 목록의 원형 자리에 맞지 않는다.",
+        "D": "reportable은 형용사이므로 discrepancies를 목적어로 받는 동사 역할을 하지 못한다."
+      },
+      "order": "enables 구조 확인→to의 공유 범위 표시→마지막 목적어와 연결되는 원형 선택한다.",
+      "rule": "병렬은 형태만 보는 작업이 아니라 같은 상위 구조에 결합하는 기능을 확인하는 작업이다."
+    }
+  ],
+  "sets": [
+    {
+      "title": "보완 훈련 | 방문객 등록 절차 검토",
+      "documents": [
+        {
+          "title": "Memo: Visitor Registration Review",
+          "text": "To: Festival operations staff\nSubject: Registration improvements\n\nOn September 8, the events team completed a review of visitor registration. The review [M-B06] that many guests had spent extra time searching for the correct entrance. Staff had already sent confirmation messages, but these messages did not include a clear map of the building. The review covered the entire previous festival, rather than just its busiest afternoon.\n\nFor the next event, we will keep two entrances open: the south entrance for registered guests and the east entrance for walk-in visitors. [M-B07] will be marked with large signs so that visitors can choose the appropriate route before joining a line. Staff should use the same names for the entrances in all reminder messages.\n\nAll registered visitors will receive an electronic check-in code. [M-B08] These forms will show the same reservation number as the electronic code, so staff can check either version against the registration record. We do not want visitors to make a second reservation simply because they lack a suitable device.\n\nPlease confirm [M-B09] the temporary reception desk can be staffed after 4 P.M. We will finalize the late-afternoon arrangements only after receiving that information from each team leader."
+        }
+      ],
+      "questions": [
+        {
+          "id": "M-B06",
+          "prompt": "Choose the best word or phrase for [M-B06].",
+          "options": [
+            "reveal",
+            "revealing",
+            "revelation",
+            "revealed"
+          ],
+          "answer": "D",
+          "type": "수일치·정동사·결과 보고",
+          "level": "고급",
+          "clue": "주어 The review는 단수이고 빈칸은 that절을 목적어로 받는 주절 동사 자리다.",
+          "analysis": "첫 문장은 완료된 검토를 보고한다. 현재형으로 결과를 보고하는 문체도 가능하지만 보기 reveal은 단수 주어의 현재형 reveals가 아니므로 탈락한다.",
+          "why": "D는 완료된 검토의 발견 내용을 보고하는 과거 정동사다.",
+          "wrong": {
+            "A": "현재형을 쓰려면 단수 주어에 맞게 reveals여야 한다. 과거의 연구 결과를 현재형으로 보고하는 문체 자체가 금지되는 것은 아니다.",
+            "B": "revealing은 분사이며 be동사가 없어 정동사 자리를 채우지 못한다.",
+            "C": "revelation은 명사이므로 that절을 목적어로 받는 동사가 될 수 없다."
+          },
+          "order": "주어의 수와 정동사 존재 확인→형태상 탈락 보기 제거→검토 보고의 시간 관계 확인한다.",
+          "rule": "인접 문장에 과거시제가 있다는 이유만으로 현재형을 모두 배제하지 말고 실제 형태와 보고 기준을 확인한다."
+        },
+        {
+          "id": "M-B07",
+          "prompt": "Choose the best word or phrase for [M-B07].",
+          "options": [
+            "They",
+            "It",
+            "Its",
+            "Itself"
+          ],
+          "answer": "A",
+          "type": "대명사 지칭·수일치",
+          "level": "중급",
+          "clue": "직전 문장에서 two entrances를 소개하고 뒤 문장은 큰 표지판으로 표시되는 대상을 설명한다.",
+          "analysis": "표지판으로 표시될 것은 두 출입구다. 빈칸은 will be marked의 주어이며 복수 출입구를 대신한다.",
+          "why": "They는 two entrances와 수가 맞고 주어 기능을 한다.",
+          "wrong": {
+            "B": "It은 단수 대명사이므로 두 출입구와 수가 맞지 않는다.",
+            "C": "Its는 소유 한정사로 뒤 명사가 필요하며 독립 주어 역할을 하지 못한다.",
+            "D": "Itself는 단수 재귀대명사이며 되받을 단수 주어도 없고 복수 출입구를 대신하지 못한다."
+          },
+          "order": "will be marked의 대상 확인→선행사 two entrances 복구→복수 주격 선택한다.",
+          "rule": "대명사는 가까운 명사를 고르는 대신 뒤 동작의 대상과 수를 함께 검증한다."
+        },
+        {
+          "id": "M-B08",
+          "prompt": "Choose the best sentence for [M-B08].",
+          "options": [
+            "A digital map will be posted on the festival website.",
+            "Visitors will be asked to arrive before the first presentation.",
+            "Printed check-in forms will be provided for guests who cannot use a mobile device.",
+            "The review also examined the design of last year's entrance signs."
+          ],
+          "answer": "C",
+          "type": "문장 삽입·대체 절차",
+          "level": "고급",
+          "clue": "뒤의 These forms와 either version은 전자 코드와 대응되는 종이 양식을 요구한다.",
+          "analysis": "앞 문장은 전자 코드를 소개한다. 삽입문은 휴대기기를 사용하지 못하는 사람의 대안을 소개하고 뒤에서 양식의 예약번호가 전자 코드와 같다고 설명한다.",
+          "why": "C만 forms의 선행 대상과 전자 방식의 대안을 동시에 제공한다.",
+          "wrong": {
+            "A": "디지털 지도는 check-in forms를 소개하지 않으며 예약번호 확인 방식도 연결하지 못한다.",
+            "B": "도착 시각은 forms 또는 either version의 선행 내용을 만들지 못한다.",
+            "D": "이전 표지판 검토는 전자 코드의 대체 양식과 관계없다."
+          },
+          "order": "These forms 및 either version 표시→앞 전자 코드와 대응할 대상 찾기→기기 부재와 중복 예약 방지까지 확인한다.",
+          "rule": "삽입문은 지시어뿐 아니라 문단의 업무 문제를 해결하는 기능도 충족해야 한다."
+        },
+        {
+          "id": "M-B09",
+          "prompt": "Choose the best word or phrase for [M-B09].",
+          "options": [
+            "during",
+            "whether",
+            "either",
+            "despite"
+          ],
+          "answer": "B",
+          "type": "명사절·확인 대상",
+          "level": "중급",
+          "clue": "confirm 뒤에 the temporary reception desk can be staffed라는 완전한 절이 있다.",
+          "analysis": "확인하려는 내용은 4시 이후 임시 접수대에 직원을 배치할 수 있는지 여부다. that이 아닌 whether로 불확실한 가능 여부를 목적어로 나타낸다.",
+          "why": "B는 확인 대상의 여부를 담은 명사절을 이끈다.",
+          "wrong": {
+            "A": "during은 전치사이므로 완전한 절을 직접 받지 못한다.",
+            "C": "either는 이처럼 단독으로 확인 내용을 담은 절을 이끌 수 없다.",
+            "D": "despite는 전치사여서 완전한 절을 confirm의 목적어로 만들지 못한다."
+          },
+          "order": "confirm의 목적어 자리 확인→확인할 사실인지 가능 여부인지 구별→완전한 절을 받는 whether 선택한다.",
+          "rule": "의문사가 이끄는 명사절은 질문 어순이 아니라 평서문 어순을 유지한다."
+        }
+      ]
+    },
+    {
+      "title": "보완 훈련 | 인쇄 서비스와 주문 요청",
+      "documents": [
+        {
+          "title": "Document 1: Oakline PrintLab - Newsletter Packages",
+          "text": "Oakline PrintLab produces newsletters for local businesses. The Basic package provides 40 black-and-white copies for $120. The Plus package provides up to 80 full-color copies for $240. A customer requesting fewer than 80 copies under the Plus package pays the same package price. Both packages use A4 paper and include one digital proof for checking text and layout.\n\nThe standard production time is five business days after the print-ready file is received. Customers should allow additional time for reviewing the proof. We will not begin printing until the customer approves the final proof in writing. A corrected proof prepared after the first proof costs $25, except when the correction is needed because of our own error. The package includes a basic layout check, but it does not include writing or editing the newsletter text.\n\nExpress production is available only for the Basic package, subject to current workload. Delivery is charged separately; pickup from the print shop is free. Customers who choose pickup will receive a message once their order is ready. Please contact us before submitting the file if your project requires a different paper size or more copies than the package allows."
+        },
+        {
+          "title": "Document 2: Email from Beacon Community Office",
+          "text": "To: Oakline PrintLab\nFrom: Maya Holt, Beacon Community Office\nSubject: Monthly newsletter order\n\nWe originally ordered 60 copies of our monthly newsletter in full color on A4 paper. We selected your Plus package even though we are ordering fewer than 80 copies. We have allowed more than five business days for the project and do not need express production. We have not yet authorized printing.\n\nAfter receiving your first proof yesterday, our director decided to replace one paragraph with updated information. The change is ours, not a correction of a printing error. Please prepare one corrected proof with the attached replacement paragraph. We accept the additional proof charge stated in your package information. Do not print until I have checked the replacement paragraph and approved the corrected proof by email.\n\nI will collect the completed copies at your shop, so delivery will not be necessary. Please confirm the amount we should pay for the package and the one additional proof. Thank you for helping us prepare this month's newsletter."
+        }
+      ],
+      "questions": [
+        {
+          "id": "M-B10",
+          "prompt": "Which package meets the office's copy requirements?",
+          "options": [
+            "The Basic package with express production",
+            "The Basic package with a second proof",
+            "Two Basic packages with standard production",
+            "The Plus package with standard production"
+          ],
+          "answer": "D",
+          "type": "복수 지문 연계·조건",
+          "level": "고급",
+          "clue": "Document 1의 Basic black-and-white와 Plus full-color, Document 2의 “60 copies ... in full color”가 근거다.",
+          "analysis": "수량만 보아 Basic 두 개를 선택하면 색상 조건을 놓친다. Plus는80매 이내 컬러를 제공하고 고객은 빠른 제작이 필요 없다고 밝혔다.",
+          "why": "D가 수량·색상·제작 방식 세 조건을 함께 충족한다.",
+          "wrong": {
+            "A": "Basic은 흑백이므로 express를 선택해도 색상 요구를 충족하지 못한다.",
+            "B": "추가 교정본은 색상 기능을 변경하지 않는다.",
+            "C": "Basic 두 개도 흑백이므로60매 컬러 요구에 맞지 않는다."
+          },
+          "order": "이메일의 필수 조건 표시→패키지별 속성 대조→불필요한 express 제외한다.",
+          "rule": "가격·수량만 일치하는 보기는 색상·기간 같은 다른 필수 조건도 확인한다."
+        },
+        {
+          "id": "M-B11",
+          "prompt": "How much should the office pay, excluding any unrelated services?",
+          "options": [
+            "$265",
+            "$240",
+            "$290",
+            "$300"
+          ],
+          "answer": "A",
+          "type": "복수 지문 연계·비용",
+          "level": "고급",
+          "clue": "Document 1의 Plus $240·추가 교정본 $25, Document 2의 자체 변경1회·무료 방문 수령을 연결한다.",
+          "analysis": "60매여도 Plus의 고정 요금240달러다. 고객이 원한 추가 교정본1회는 업체 오류 수정이 아니므로25달러를 더한다. 배송은 신청하지 않아 추가하지 않는다.",
+          "why": "A의265달러가 실제 선택 서비스와 예외 조건을 모두 반영한다.",
+          "wrong": {
+            "B": "240달러는 고객 자체 변경으로 발생한 추가 교정본 비용을 빠뜨렸다.",
+            "C": "290달러는 추가 교정본 비용을 두 번 더한 금액이지만 추가본은1회다.",
+            "D": "300달러는 문서의 선택 서비스로 산출되지 않으며60매에 비례한 가격도 아니다."
+          },
+          "order": "패키지 요금 확인→추가본이 무료 예외인지 검사→횟수와 수령 방식 확인→합산한다.",
+          "rule": "무료 예외의 원인과 실제 추가 횟수를 확인한 뒤 비용을 계산한다."
+        },
+        {
+          "id": "M-B12",
+          "prompt": "What must happen before Oakline begins printing?",
+          "options": [
+            "The office must purchase delivery service.",
+            "Ms. Holt must approve the corrected proof in writing.",
+            "The director must submit a new package application.",
+            "All 80 copies must be requested."
+          ],
+          "answer": "B",
+          "type": "복수 지문 연계·선행 조건",
+          "level": "고급",
+          "clue": "Document 1의 “approves ... in writing”과 Document 2의 “approved ... by email”이 대응한다.",
+          "analysis": "파일 제출이나 추가비 수락만으로 인쇄 허가가 완료되지 않는다. 고객은 교체 문단을 확인한 뒤 이메일로 최종 승인하겠다고 했다.",
+          "why": "B가 정책의 서면 승인 조건과 고객의 실제 승인 경로를 일치시킨다.",
+          "wrong": {
+            "A": "방문 수령이 무료이며 배송 구매는 필요 없다.",
+            "C": "새 패키지 신청서는 요구되지 않았다.",
+            "D": "Plus는 최대80매이고 더 적은 매수도 같은 요금으로 제공한다."
+          },
+          "order": "정책의 until 조건 표시→현재 요청 상태 확인→최종 승인 행동을 찾는다.",
+          "rule": "준비 완료·비용 수락·최종 승인을 서로 다른 단계로 구분한다."
+        }
+      ]
+    },
+    {
+      "title": "보완 훈련 | 장비 대여 규정·제품 안내·신청 메일",
+      "documents": [
+        {
+          "title": "Document 1: Briarfield Tool Library - Loan Rules",
+          "text": "Member businesses may borrow measuring tools for up to fourteen calendar days. Reservations should be made at least three days before the requested start date. A tool is reserved only after the library sends a confirmation message; sending a request does not guarantee availability.\n\nCollection and return at the library counter are free. For businesses within our service area, delivery or collection by our van costs $15 per trip. A business using the van both to receive and to return a tool pays for two trips. Staff will arrange the time window by email. A representative must be present to sign when the tool is delivered and again when it is collected. Please contact the library before the return date if you require an extension. Extensions need approval and may be refused when another member has reserved the tool."
+        },
+        {
+          "title": "Document 2: Available Measuring Tools",
+          "text": "LM1 laser measuring unit\nMeasures distances up to 2.5 meters. Results are shown on the unit's display. It does not transfer measurements to a computer or mobile device. The compact case is useful for small indoor spaces.\n\nLM3 laser measuring unit\nMeasures distances up to 5 meters. It can transfer recorded measurements to a compatible mobile device using Bluetooth. A short setup guide is included in the case. Users should check that their device is compatible before requesting this model.\n\nTM2 tape measure\nMeasures distances up to 8 meters. Measurements must be read and recorded manually. This item has no electronic display or data-transfer function.\n\nAll tools are checked before each loan. Batteries for electronic tools are supplied; borrowers should return the cases and guides with the tools. The library can send a copy of a setup guide before the loan begins."
+        },
+        {
+          "title": "Document 3: Email from Vela Interiors",
+          "text": "To: Briarfield Tool Library\nFrom: Arun Shah, Vela Interiors\nSubject: Measuring-tool reservation\n\nWe would like to borrow a tool for a twelve-day office survey beginning October 6. The largest distance we need to measure is four meters. We want to transfer the results to our mobile device rather than copy them by hand. We have checked the compatibility requirements in your online guide, and our device is supported.\n\nPlease deliver the tool to our office within your service area. We also want your van to collect it on the final day, as our project staff will remain at the client site. Our receptionist will be available to sign at both visits. We accept the per-trip charge in the loan rules.\n\nPlease confirm availability and send the proposed delivery and collection windows. We will treat the reservation as pending until your confirmation arrives. The twelve-day period is sufficient for the survey, so we do not expect to need an extension. We will return the guide and case along with the tool."
+        }
+      ],
+      "questions": [
+        {
+          "id": "M-B13",
+          "prompt": "Which tool meets Vela Interiors' stated measurement requirements?",
+          "options": [
+            "The LM1 unit",
+            "The TM2 tape measure",
+            "The LM3 unit",
+            "Any of the three tools"
+          ],
+          "answer": "C",
+          "type": "삼중 지문 연계·기능",
+          "level": "고급",
+          "clue": "Document 3의 four meters·transfer ... mobile과 Document 2의 LM3 up to5meters·Bluetooth가 근거다.",
+          "analysis": "필요 거리4m와 자동 모바일 전송을 함께 충족해야 한다. LM1은 거리도 짧고 전송도 없으며 TM2는 거리만 충족한다.",
+          "why": "C만 두 기능 조건을 동시에 만족하고 고객은 호환성도 확인했다.",
+          "wrong": {
+            "A": "LM1은 최대2.5m이고 기기 전송이 없다.",
+            "B": "TM2는8m까지 측정하지만 수동 기록이 필요해 전송 조건을 충족하지 못한다.",
+            "D": "각 도구의 거리·전송 기능이 달라 모두 적합한 것은 아니다."
+          },
+          "order": "신청 메일의 거리·전송 조건 추출→각 제품의 두 속성 대조→호환성 확인한다.",
+          "rule": "복수 조건 문제에서는 한 조건만 충족하는 선택지를 제거한다."
+        },
+        {
+          "id": "M-B14",
+          "prompt": "What van-service charge will apply to the requested loan?",
+          "options": [
+            "$0",
+            "$15",
+            "$45",
+            "$30"
+          ],
+          "answer": "D",
+          "type": "삼중 지문 연계·비용",
+          "level": "고급",
+          "clue": "Document 1의 $15 per trip·two trips, Document 3의 delivery와 final-day collection을 연결한다.",
+          "analysis": "고객은 수령과 반환을 모두 밴에 맡긴다. 방문 수령·반환 무료 규정은 신청 방식과 다르다. 두 번의 이동 요금15×2=30이다.",
+          "why": "D가 선택한 수령·반환 방식에 맞는 비용이다.",
+          "wrong": {
+            "A": "무료는 창구에서 수령·반환하는 경우다.",
+            "B": "$15는 한 번만 계산한 금액이며 고객은 배달과 회수를 모두 신청했다.",
+            "C": "$45는 세 번의 이동 요금인데 신청은 두 번이다."
+          },
+          "order": "메일의 수령/반환 방식 확인→규정의 per-trip 기준 확인→횟수를 센 뒤 계산한다.",
+          "rule": "기간당·물품당·방문당 요금 단위를 구별한다."
+        },
+        {
+          "id": "M-B15",
+          "prompt": "What is required at both van visits?",
+          "options": [
+            "A representative must sign for the tool.",
+            "The mobile device must be inspected by library staff.",
+            "An extension must be approved.",
+            "A second reservation request must be submitted."
+          ],
+          "answer": "A",
+          "type": "복수 지문 연계·절차",
+          "level": "중급",
+          "clue": "Document 1의 “present to sign ... delivered ... collected”와 Document 3의 receptionist ... both visits가 근거다.",
+          "analysis": "배달과 회수 양쪽 모두 담당자가 현장에서 서명해야 한다. 고객은 접수 직원이 두 방문에 서명할 것이라고 계획을 밝혔다.",
+          "why": "A가 규정의 두 시점 공통 의무와 고객의 준비를 일치시킨다.",
+          "wrong": {
+            "B": "호환성은 고객이 확인했고 현장 기기 검사 요구는 없다.",
+            "C": "대여 기간은12일로 최대14일 이내이며 연장하지 않을 계획이다.",
+            "D": "요청을 다시 보내는 것이 아니라 도서관 확인 메시지를 기다려야 한다."
+          },
+          "order": "both visits의 두 행동 복구→규정의 공통 요구 확인→신청 메일의 담당자와 연결한다.",
+          "rule": "한 절차에서 각 시점에 반복되는 의무와 조건부 추가 절차를 구분한다."
+        }
+      ]
+    }
+  ]
+}

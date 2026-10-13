@@ -1,0 +1,283 @@
+import json
+import re
+from pathlib import Path
+
+ROOT = Path(__file__).parent
+STRATEGIES = {
+ '목적': ('제목·발신 관계를 확인한다 → 첫 용건과 마지막 요청을 연결한다 → 글 전체의 행동 목적을 고른다.', '목적은 등장 소재 하나보다 문서를 통해 독자가 해야 할 행동이나 알아야 할 변화로 판단한다.'),
+ '세부 정보': ('질문의 대상과 조건을 표시한다 → 해당 문장을 찾는다 → 행위자·시점·범위까지 보기와 대조한다.', '같은 명사가 보인다는 사실만으로 답을 고르지 않는다. 그 명사에 붙은 조건도 일치해야 한다.'),
+ '추론': ('직접 진술을 찾는다 → 질문에 필요한 조건만 결합한다 → 지문이 보장하는 가장 좁은 결론을 고른다.', '추론은 근거의 결합이다. 가능한 일과 반드시 성립하는 일을 구별하고 새로운 전제를 넣지 않는다.'),
+ 'NOT/EXCEPT': ('질문의 부정 표시를 확인한다 → 보기마다 근거를 찾는다 → 성립하는 세 항목을 지우고 남은 하나를 검증한다.', '언급되지 않았다는 것과 사실이 아니라는 것은 다르다. 질문의 NOT mentioned 또는 NOT true 범위에 맞추어 판단한다.'),
+ '문맥상 의미': ('해당 표현의 목적어와 앞뒤 사건을 읽는다 → 대체 표현을 넣는다 → 실제 행동과 조건이 유지되는지 확인한다.', '문맥상 의미는 익숙한 뜻보다 그 문장에서 수행되는 행동과 주변 조건으로 정한다.'),
+ '지칭': ('지시어의 수와 역할을 확인한다 → 앞 문장의 후보들을 실제 명사로 바꾼다 → 뒤의 행동이 가능한 대상을 고른다.', '가장 가까운 명사가 항상 지칭 대상은 아니다. 수·문장 역할·행동의 적합성을 함께 확인한다.'),
+ '문장 삽입': ('삽입 문장의 지시어를 표시한다 → 앞의 선행 정보와 뒤의 새로운 지칭 표현을 찾는다 → 두 방향 연결을 동시에 검증한다.', '같은 주제만으로 위치를 결정하지 않는다. 앞에서 받아야 할 정보와 뒤에 제공해야 할 정보가 모두 있어야 한다.'),
+ '대화 의도': ('발언을 유발한 문제를 읽는다 → 직전 제안과 다음 행동을 연결한다 → 발언의 업무상 의미를 바꾸어 표현한다.', '채팅의 간접 발언은 대화의 문제와 후속 행동으로 해석한다. 표현만 분리하여 직역하지 않는다.'),
+ '복수 지문 연계': ('같은 이름·날짜·예약 번호를 문서마다 찾는다 → 정책과 개인 상황을 나란히 놓는다 → 조건 충족과 미확정 상태를 구별한다.', '일반 규정과 개인 사례를 같은 대상에 적용해야 연계 추론이 성립한다. 신청과 승인을 같은 단계로 처리하지 않는다.'),
+}
+
+def Q(i, prompt, options, answer, typ, level, clue, analysis, why, wrong):
+    assert len(options) == 4
+    assert set(wrong) == set('ABCD') - {answer}
+    order, rule = STRATEGIES[typ]
+    return dict(id=i, prompt=prompt, options=options, answer=answer, type=typ, level=level,
+                clue=clue, analysis=analysis, why=why, wrong=wrong, order=order, rule=rule)
+
+def D(title, text):
+    return dict(title=title, text=text.strip())
+
+def S(title, docs, questions):
+    return dict(title=title, documents=docs, questions=questions)
+
+data = {'sections': [], 'sets': [], 'review_sections': []}
+
+data['sections'] = [
+ {'title':'사례 01 | S·V·O·C와 수식어를 분리하는 실제 절차', 'paragraphs':[
+  '예문: After checking the updated figures, the analyst found the sales forecast too optimistic and sent the regional managers a revised copy. 처음 읽을 때는 모든 구를 같은 비중으로 번역하지 말고, 과거형 found와 sent를 찾아 두 동작을 표시한다. 문장 앞 After checking은 확인 작업이 두 판단·발송보다 앞선다는 순서를 제시한다.',
+  '공통 주어는 the analyst다. 첫 동사 found 뒤에는 목적어 the sales forecast와 목적격 보어 too optimistic이 있으며, 예측이 지나치게 낙관적이었다는 판단을 나타낸다. 두 번째 동사 sent 뒤에는 간접목적어 the regional managers와 직접목적어 a revised copy가 있다. managers는 발송 주체가 아니라 수신자다. revised는 copy를 수식하며 독립적인 과거 동사가 아니다.',
+  '오답 함정은 분석가가 수정본을 받았다는 역할 전환, 지역 관리자들이 예측을 작성했다는 근거 없는 추론, 수정본이 optimistic하다는 수식 대상 전환이다. 실전에서는 누가 무엇을 어떤 상태로 판단했고 누구에게 무엇을 보냈는지 한 줄로 적는다. 동사가 두 개면 접속사와 공유 주어를 확인하고, 뒤 명사 두 개가 목적어·보어인지 두 목적어인지 각각의 동사에 맞추어 검증한다.'
+ ]},
+ {'title':'사례 02 | 관계절·분사구·동격이 겹치는 긴 문장', 'paragraphs':[
+  '예문: The contracts that the legal team reviewed last week, including the agreement signed by Aster Logistics, require approval from Elena Shaw, the finance director. 긴 주어 안에서 reviewed와 signed가 보여도 바로 주절 동사로 정하지 않는다. 마지막 require를 기준으로 주어 덩어리의 끝을 찾고, approval이 그 목적어인지 확인한다.',
+  '골격은 The contracts require approval이다. that the legal team reviewed last week는 contracts를 수식하고 that은 reviewed의 목적어다. including 이하가 추가 예시를 삽입하며, signed by Aster Logistics는 agreement를 수동 관계로 수식한다. from Elena Shaw는 승인 주체를 제시하고 the finance director는 Elena Shaw와 같은 인물을 다시 설명하는 동격이다. 따라서 검토자·서명자·승인권자는 서로 다르다.',
+  '계약이 지난주 승인되었다고 읽으면 검토와 승인을 바꾼 것이다. Aster Logistics가 재무부서라고 읽으면 서명 기관과 승인 인물을 섞은 것이다. 관계절을 지운 최소 문장과 원문을 나란히 읽은 뒤 질문이 요구하는 역할만 수식어에서 복구한다. 긴 문장의 난도는 단어 길이보다 같은 문장에 들어 있는 서로 다른 행위자의 역할을 보존하는 데서 나온다.'
+ ]},
+ {'title':'사례 03 | 원인·조치·예외의 논리 지도', 'paragraphs':[
+  '예문: The server upgrade was completed yesterday. However, the mobile booking page still displays outdated times. Until that page is corrected, customers should make new reservations by telephone. Existing confirmed reservations remain valid. 이 네 문장은 완료 사실만 전달하지 않는다. 완료했지만 남아 있는 문제, 임시 조치, 조치의 적용 범위를 차례로 제시한다.',
+  '문장 1은 전체 업그레이드의 완료다. 문장 2의 However가 모바일 화면의 잔여 문제를 제시하여 완료가 모든 기능의 정상화를 뜻하지 않음을 보여 준다. 문장 3의 Until절은 전화 예약의 종료 조건이며 new reservations가 대상이다. 문장 4는 기존 확정 예약의 유효성을 보존하는 예외다. 시간 지도는 업그레이드 완료 → 현재 화면 오류 지속 → 수정될 때까지 새 예약 전화 접수다.',
+  '모든 예약이 취소되었다는 보기, 전화 예약을 영구 정책이라고 하는 보기, 어제 모바일 화면도 수정되었다는 보기는 범위·기간·완료 대상을 각각 바꾼다. 연결어를 표시한 뒤 원인과 조치의 화살표를 그려 보자. 반대 방향의 결론이 남으면 however 뒤의 제한 또는 existing/new 같은 범위 표현을 다시 확인한다. 글의 주제만 이해해도 이 제한을 놓치면 오답이 된다.'
+ ]},
+ {'title':'사례 04 | 목적·세부 정보·추론의 증거를 따로 쓰기', 'paragraphs':[
+  '미니 이메일: Your exhibition proposal has been approved. To retain the assigned space, please sign the attached agreement by June 6. We will send the setup instructions after receiving it. 질문이 이메일의 목적을 묻는지, 제출 기한을 묻는지, 현재 절차 상태를 추론하게 하는지에 따라 사용할 근거의 범위가 달라진다.',
+  '목적은 승인된 전시 자리 유지를 위한 계약 서명을 요청하는 것이다. 세부 정보의 기한은 by June 6에 직접 있다. after receiving it은 서명 계약서 수령 뒤 설치 지침을 발송한다는 순서를 만든다. 이 이메일만으로 설치 지침이 이미 발송되었다고 단정할 수 없고, 계약 서명이 자리 유지의 조건이라는 사실은 알 수 있다. proposal 승인과 agreement 서명은 별개 단계다.',
+  '오답은 approved를 보고 모든 절차 완료로 확장하거나, June 6을 전시 개최일로 바꾸거나, sign 대신 새 제안서 작성으로 행동을 바꾼다. 복습에는 목적 문항은 기대 행동, 세부 문항은 직접 표현, 추론 문항은 결합한 두 전제를 각각 적는다. 답이 문장의 단어를 그대로 반복해도 역할이나 시간 조건이 다르면 제거하고, 바꾸어 표현했어도 같은 행동과 조건이면 연결한다.'
+ ]},
+ {'title':'사례 05 | NOT/EXCEPT의 세 근거와 한 공백', 'paragraphs':[
+  '안내 예문: The repair plan includes telephone assistance, an annual inspection, and replacement of worn rollers. Ink and paper must be purchased separately. Support is available on weekdays from 9:00 a.m. to 5:00 p.m. NOT included를 묻는다면 전화 지원, 점검, 롤러 교체는 포함 근거가 있고 잉크는 별도 구매 근거가 있다.',
+  '문제의 부정 범위를 먼저 고정한다. NOT included는 제공 범위를, NOT mentioned는 언급 여부를, NOT true는 지문과의 성립 여부를 확인한다. 이 안내는 주말 지원을 포함한다고 말하지 않으며 실제 지원 시간은 평일로 제한한다. 반면 기술자의 경력은 아예 제시되지 않았다. 주말 지원이 가능하다는 진술과 기술자의 경력이 알려졌다는 진술은 각각 다른 이유로 근거를 확보할 수 없다.',
+  '세 보기의 근거를 확인하기 전 눈에 낯선 보기 하나를 고르면, 바꾸어 표현된 포함 항목을 놓치기 쉽다. 각 보기에 대상·행동·조건을 세 칸으로 표시해 지문과 비교한다. 틀린 이유도 단순히 언급 없음이라고 하지 말고 별도 비용, 다른 시간, 다른 대상 또는 실제 부재로 구분한다. 부정 질문 표시를 빠뜨린 실수는 지식 부족과 구별해 다음 재풀이의 첫 단계로 교정한다.'
+ ]},
+ {'title':'사례 06 | 표현의 행동 의미와 대명사의 실제 대상', 'paragraphs':[
+  '예문: Please hold the shipment until the revised labels arrive. They show the correct installation dates, unlike the labels already attached to the cartons. The warehouse will replace the old labels before releasing the order. hold를 따로 암기한 뜻으로 처리하기보다 무엇을 어떤 조건까지 멈추는지 읽는다.',
+  'hold의 목적어 shipment와 until절의 새 라벨 도착 조건을 연결하면 발송 보류라는 행동이 된다. They는 복수이고 show the correct installation dates라는 속성을 가진다. 따라서 직전의 revised labels를 받으며 shipment를 받지 않는다. 마지막 문장의 releasing the order는 보류 종료에 필요한 라벨 교체 후의 행동이다. old labels와 revised labels를 구분해야 교체 방향도 보존된다.',
+  'hold를 손에 쥐다, They를 물품 자체, release를 신규 주문 접수로 바꾸면 업무의 흐름이 깨진다. 의미 문제는 대체 표현을 전체 문장에 넣어 조건이 유지되는지 확인한다. 지칭 문제는 실제 명사를 대입하여 수와 행동이 모두 맞는지 읽는다. 가장 가까운 명사라는 위치 단서만 사용하지 않고, 날짜를 표시할 수 있는 대상이라는 의미 단서까지 확인하는 습관을 적용한다.'
+ ]},
+ {'title':'사례 07 | 양방향 지칭으로 삽입 위치를 확정', 'paragraphs':[
+  '삽입 예문: The course has been moved to the annex. [1] It will start at 10:00 a.m. instead of 9:00 a.m. [2] Those commuters may use the 9:20 station shuttle. [3] Registration still closes on Friday. [4] 넣을 문장은 This later start should benefit participants who travel by train.이다. 위치 판단에서 앞 연결과 뒤 연결을 별도로 적는다.',
+  'This later start 앞에는 9시에서 10시로 늦어진 구체적인 시각 변경이 필요하다. participants who travel by train은 뒤 문장의 Those commuters가 받을 대상이다. 따라서 [2]는 시간 변경을 받아 통근 참가자를 소개한 뒤 셔틀 안내로 이어진다. [1]에는 later의 근거가 아직 없고 [3]·[4]에 넣으면 Those commuters가 먼저 등장하여 필요한 소개 없이 남는다.',
+  '같은 과정에 관한 문장이라는 이유로 등록 마감 뒤를 고르는 것은 주제 일치만 확인한 결과다. 삽입 문장에 밑줄 두 개를 그어 하나는 앞에서 받아야 할 표현에, 다른 하나는 뒤에 넘겨줄 새 대상에 연결한다. 앞 연결만 맞는 위치가 여러 개면 뒤 문장의 지시어·결과·대조를 추가로 확인한다. 검토할 때는 정답 위치뿐 아니라 세 오답 위치에서 끊기는 연결을 하나씩 설명한다.'
+ ]},
+ {'title':'사례 08 | 이중·삼중 지문의 조건을 같은 대상에 적용', 'paragraphs':[
+  '세 문서의 핵심 예문: Policy: Full-day bookings receive a ten-percent room discount; catering is excluded. Form: The group requests both the morning and afternoon sessions and lunch for twelve people. Confirmation: The room charge before discount is $300; the lunch charge is $180. 할인율을 본 순간 두 금액을 합산하기보다 적용 대상을 먼저 확정한다.',
+  '양식의 오전·오후 선택이 종일 조건을 충족한다. 정책은 객실만 10% 감액하므로 300달러에서 30달러를 빼 객실은 270달러가 된다. 식대 180달러는 그대로여서 합계는 450달러다. 확인 이메일의 charge는 이 신청 건에 적용되는 실제 금액이고, 정책은 그 금액에 적용할 산정 기준이다. 정책·신청·확정 문서가 각각 담당하는 역할을 분리한다.',
+  '480달러에 할인하면 제외 조건을 놓쳤고, 300달러만 답하면 식대 포함 총액 질문의 범위를 놓쳤다. 모든 연계 문제에서 숫자를 계산할 필요는 없다. 이름·날짜·번호로 같은 건을 찾고 정책 조건을 만족하는지 판단한 뒤 필요한 경우에만 계산한다. 신청서에 원하는 옵션이 있어도 확인 이메일에서 배정되지 않았다면 확정 사실로 쓰지 않는다는 원칙도 같은 방식으로 적용한다.'
+ ]},
+ {'title':'사례 09 | 장르가 바뀌어도 행위·상태·조건을 구분', 'paragraphs':[
+  '짧은 장르 예문을 비교하자. 광고: Book by August 4 to receive installation at no extra charge. 일정표: Installation appointments, August 12-14. 양식: Preferred date, August 13. 이메일: Your appointment is confirmed for August 14. 기사: The company plans to open another service center next spring. 각 문장은 조건, 제공 구간, 희망, 최종 배정, 계획을 서로 다르게 표현한다.',
+  '광고의 by August 4는 무료 설치 신청 마감이고 실제 설치 날짜가 아니다. 일정표의 12~14일은 가능한 운영 구간이다. 양식의 13일은 요청일이며 확인 이메일의 14일이 실제 배정일이다. 기사 속 plans to open은 장래 계획이므로 새 센터가 이미 운영 중이라는 결론을 내릴 수 없다. 편지는 이메일과 마찬가지로 수신 관계와 요청을, 채팅은 발언 순서와 즉시 후속 행동을 단서로 삼는다.',
+  '희망 날짜를 최종 배정으로 처리하거나 계획을 완료 사실로 처리하는 함정은 장르를 가리지 않고 반복된다. 문서 제목 옆에 신청·규정·확정·보고처럼 기능을 적고, 동사 옆에 요청·예정·완료·필요 조건을 표시한다. 시간표·양식에서는 열 이름과 선택 표시가 문장 역할을 대신하므로 본문만 찾지 않는다. 채팅도 한 줄만 읽지 말고 직전의 질문과 다음 응답으로 실제 의도를 검증한다.'
+ ]},
+ {'title':'사례 10 | 탐색 순서를 정하고 근거 없는 속도를 교정', 'paragraphs':[
+  '훈련 상황: 260단어 이메일에 목적·기한·지칭·문장 삽입 네 문제가 있다. 시작 전에 질문의 종류만 빠르게 확인한다. 목적과 삽입이 있으므로 전체 흐름을 한 번 읽고, 문단별로 변경 이유·새 조건·준비물이라는 기능을 표시한다. 기한 문제는 두 번째 문단의 by 표현으로 돌아가고 지칭 문제는 해당 표현의 앞뒤 두 문장으로 범위를 좁힌다.',
+  '첫 풀이를 4분으로 설정한 경우 읽기 90초, 네 문항의 근거 확인과 선택 120초, 마지막 불확실한 조건 점검 30초를 출발점으로 사용할 수 있다. 이 수치는 개인 연습용이며 실제 난도와 정확도 기록에 맞추어 조정한다. 삽입에서 두 위치가 남으면 앞뒤 연결 한 개씩을 표시하고, 답이 확정되지 않으면 표시 후 다음 문제로 이동한다. 복수 지문은 문서 관계와 공통 이름부터 찾는 시간을 따로 확보한다.',
+  '오답 수정 사례: June 6을 행사일로 골랐다면 다음 풀이에서 날짜를 빠르게 찾는 것만 강화하지 않는다. by June 6의 행동 동사 sign을 함께 묶어 제출 마감으로 교정한다. 맞혔더라도 앞 문장과만 연결해 삽입 답을 골랐다면 뒤 지시어의 선행 대상을 추가로 확인한다. 복습 기록은 시간·정확도·근거 품질을 함께 남겨, 빠르지만 근거 없는 정답과 느리지만 정확한 풀이를 구별한다.'
+ ]},
+]
+
+data['sets'].append(S('확장 훈련 1 | 교육 일정 변경과 등록 예외', [D('Email: Stonebridge Data Workshop', '''To: Team supervisors
+From: Amira Cole, Training Coordinator
+Subject: Revised dates and registration requirements
+
+Our data-checking workshop, originally scheduled for October 21, will now take place on October 28. The instructor has been assigned to an urgent client project on the original date. [1] Both the morning and afternoon sessions will cover the same material, so employees should attend only one. The morning session runs from 9:00 a.m. to noon, and the afternoon session runs from 1:30 to 4:30 p.m.
+
+To give us time to adjust the room allocations, supervisors must nominate participants by October 16 rather than October 20. [2] Those departments may submit provisional names by the new deadline and confirm them by October 18. Other nominations must be final when submitted. Please include each nominee's name, preferred session, and any accessibility requirements. The participant's job title is not needed.
+
+Participants should bring laptops with the current analysis program installed. The practice datasets will be emailed on October 26. [3] These must be saved on the laptops before participants arrive, as the classroom network will be used only for the instructor's demonstration. A printed dataset will not be sufficient for the exercises.
+
+The workshop will be held in the second-floor training suite. Employees who registered for the original date do not need to register again, but their supervisors should confirm that they can attend the new date. [4] Please contact the training desk if neither session is possible. We will keep those employees informed about a later course rather than automatically canceling their existing registrations.''')], [
+ Q('P7-B01', 'Why was the email sent?', ['To request that supervisors prepare a new course', 'To announce a permanent change to office hours', 'To explain revised workshop arrangements and registration steps', 'To ask employees to purchase analysis software'], 'C', '목적', '고급', 'Email: Stonebridge Data Workshop의 "will now take place on October 28"와 "nominate participants by October 16"', '교육 개최일과 추천 마감이 변경되며 세션 선택·준비물·기존 등록자 처리까지 안내한다. 직장 전체의 운영 시간 변경이 아니다.', '날짜와 등록 절차의 조정을 모두 포괄한 C가 용건이다.', {'A':'교육은 기존 과정이며 감독자에게 새 과정 제작을 요구하지 않는다.', 'B':'두 교육 회차의 시간이 제시되었을 뿐 영구 근무 시간 변경은 없다.', 'D':'현재 프로그램 설치를 요구하지만 프로그램 구매를 요청하지는 않는다.'}),
+ Q('P7-B02', 'What does "These" refer to?', ['The practice datasets', 'The participants’ registrations', 'The room allocations', 'The laptops'], 'A', '지칭', '고급', 'Email: Stonebridge Data Workshop의 "The practice datasets will be emailed"와 "These must be saved"', '복수 지시어가 받고 노트북에 저장할 수 있는 것은 직전의 연습 데이터다. 노트북은 저장 장소이며 저장 대상이 아니다.', '메일로 받은 데이터 파일을 미리 저장한다는 관계를 유지한 A가 맞다.', {'B':'등록은 마지막 문단에 등장하며 실습을 위해 노트북에 저장하는 대상이 아니다.', 'C':'방 배정은 주최 측 작업으로 참가자의 실습 저장 대상이 아니다.', 'D':'laptops는 on 뒤 저장 장소이고 자기 자신을 저장한다는 뜻이 될 수 없다.'}),
+ Q('P7-B03', 'Where does the following sentence best belong? "This earlier deadline may be difficult for departments whose employees work rotating shifts."', ['[1]', '[2]', '[3]', '[4]'], 'B', '문장 삽입', '실전 최상급', 'Email: Stonebridge Data Workshop의 "October 16 rather than October 20"와 "Those departments"', 'This earlier deadline은 추천 마감이 앞당겨진 문장을 받아야 한다. 삽입 문장의 교대 근무 부서가 뒤 Those departments의 선행 대상이 되어 임시 이름 제출 예외를 설명한다.', '[2]만 앞의 구체적 마감 변경과 뒤의 특정 부서 예외를 동시에 연결한다.', {'A':'[1] 앞에는 개최일이 늦춰진 정보뿐이므로 earlier deadline의 근거가 없다.', 'C':'[3]에 넣으면 Those departments가 소개 없이 먼저 등장하고 데이터와 These의 연결도 끊긴다.', 'D':'[4]에서도 앞의 Those departments에 필요한 소개가 뒤늦게 나오며 등록 확인 흐름과 멀어진다.'}),
+ Q('P7-B04', 'Which information is NOT required when a supervisor nominates a participant?', ['The participant’s preferred session', 'Any accessibility requirements', 'The participant’s name', 'The participant’s job title'], 'D', 'NOT/EXCEPT', '고급', 'Email: Stonebridge Data Workshop의 "name, preferred session, and any accessibility requirements"와 "job title is not needed"', '추천 제출의 필수 목록은 이름·희망 회차·접근성 요구다. 직함은 필요하지 않다는 별도 문장으로 제외된다.', '명시적으로 제외된 직함이 D다.', {'A':'preferred session은 제출 목록에 있다.', 'B':'accessibility requirements도 목록에 있으며 없으면 그 상황을 전달할 수 있다.', 'C':'각 추천자의 name은 요구되는 기본 정보다.'}),
+]))
+
+data['sets'].append(S('확장 훈련 2 | 인쇄물 준비와 운송 팀 채팅', [D('Chat: Rowan Community Showcase', '''6:55 Maya: The showcase opens at 9:00 a.m. Our posters are still at the printer, and the courier cannot collect them until 8:30. We need thirty minutes to unpack and position them after they arrive.
+6:57 Ken: The printer just called. The posters will be ready at 7:40 rather than 8:00. Loading the boxes takes ten minutes, and the drive from the shop to our hall takes another ten.
+6:59 Maya: That buys us some breathing room, if we can collect them ourselves. Is the small company van available?
+7:01 Luis: Yes, but only employees on the approved driver register can use it. The key is at reception. The van must be back by noon because the catering team needs it afterward.
+7:03 Ken: My name is on the register. I can be at the printer at 7:40 and leave as soon as the boxes are loaded. I'll bring the posters straight to the hall.
+7:05 Maya: Good. Please use the rear entrance. The front entrance has to stay clear while the chair delivery is unloaded.
+7:07 Luis: I will move our empty packing cases out of the front entrance now. I can also help unload Ken's boxes at the rear.
+7:09 Ken: Please have someone ready there. The van cannot remain in the rear loading space after unloading.
+7:11 Maya: I will tell the display team to begin positioning the posters immediately. We can finish before visitors enter without asking the printer to deliver them.
+7:13 Luis: I'll return the van key to reception once Ken brings the vehicle back.''')], [
+ Q('P7-B05', 'What does Maya mean by "That buys us some breathing room"?', ['The printer has agreed to lower its price.', 'The earlier completion gives the team more time to prepare.', 'The team can postpone the opening until noon.', 'The posters no longer need to be unpacked.'], 'B', '대화 의도', '고급', 'Chat: Rowan Community Showcase의 "ready at 7:40 rather than 8:00"와 "some breathing room"', 'That은 준비 완료가 20분 앞당겨졌다는 통보를 받는다. 직접 수령할 수 있으면 개장 전 작업 여유가 늘어난다는 조건부 평가다.', '더 이른 수령으로 준비 시간을 확보한다는 B가 직전 정보와 연결된다.', {'A':'인쇄 요금 변화는 대화에 없다.', 'C':'개장은 9시로 유지되며 정오는 차량 반환 기한이다.', 'D':'도착 뒤 30분의 포장 해체·배치 작업이 계속 필요하다.'}),
+ Q('P7-B06', 'Why can Ken use the company van?', ['He is responsible for the catering order.', 'He has already returned the key.', 'He is included on the approved driver register.', 'He has asked the printer to deliver the posters.'], 'C', '추론', '고급', 'Chat: Rowan Community Showcase의 "only employees on the approved driver register"와 "My name is on the register"', 'Luis의 사용 자격 규칙과 Ken의 등록 상태를 결합한다. 케이터링 팀은 정오 이후 사용 예정이며 Ken의 자격 근거가 아니다.', '등록 명단에 포함되어 있다는 C가 필요한 조건을 충족한다.', {'A':'케이터링 업무 담당이라는 진술은 없으며 사용 자격도 운전자 등록이다.', 'B':'열쇠는 아직 접수대에 있고 반환은 나중에 할 행동이다.', 'D':'팀은 직접 수령해 인쇄 업체 배송이 필요 없다고 한다.'}),
+ Q('P7-B07', 'In this conversation, the word "clear" is closest in meaning to', ['unobstructed', 'transparent', 'approved', 'certain'], 'A', '문맥상 의미', '고급', 'Chat: Rowan Community Showcase의 "front entrance has to stay clear"와 "move our empty packing cases out"', '의자 배송 하역을 위해 출입구의 상자를 치우는 상황이다. 따라서 clear는 방해물이 없는 상태이며 빛이 통과하는 물질의 성질이 아니다.', '실제 후속 조치인 상자 이동과 맞는 unobstructed가 정답이다.', {'B':'출입구의 투명성을 논의하지 않는다.', 'C':'승인된 운전자는 별도 문장이며 clear는 출입 통로 상태를 설명한다.', 'D':'확실성의 정도가 아니라 통행을 가로막는 물건의 유무다.'}),
+ Q('P7-B08', 'If Ken follows the stated plan, when should the posters be fully unpacked and positioned?', ['7:50 a.m.', '8:00 a.m.', '9:00 a.m.', '8:30 a.m.'], 'D', '추론', '실전 최상급', 'Chat: Rowan Community Showcase의 "7:40", "Loading ... ten minutes", "drive ... another ten", "thirty minutes"', '7:40에 준비된 상자를 10분 동안 싣고 7:50에 출발하여 10분 뒤 8:00 도착한다. 즉시 포장 해체·배치 30분을 더하면 8:30 완료다.', '수령·적재·운송·배치 순서를 모두 적용한 D가 계산 결과다.', {'A':'7:50은 적재가 끝나 출발하는 시각이다.', 'B':'8:00은 홀 도착 시각이며 배치 30분이 남아 있다.', 'C':'9:00은 관람객 입장 시각으로 계산된 작업 완료 시각이 아니다.'}),
+]))
+
+data['sets'].append(S('확장 훈련 3 | 장비 대여 규정과 장기 사용 요청', [D('Policy: Ellington Media Hub Equipment Loans', '''Equipment loans at Ellington Media Hub
+
+Registered members may borrow a camera after completing the hub's equipment orientation. The orientation record is valid for twelve months from the completion date. Members whose records have expired must attend a refresher session before equipment can be released, even if a reservation has already been made. The sessions are offered on several dates each month and must be booked separately from the equipment reservation.
+
+A standard camera loan lasts five calendar days, counting the collection date as the first day. Members may request an extension of up to two days, but an extension is approved only if the camera has no conflicting reservation. Submitting an extension request does not guarantee approval. Projectors have a two-day loan period and cannot be extended under this policy.
+
+A tripod can be included in a camera reservation at no additional charge, subject to availability. Each camera is supplied with a battery, charger, and protective bag. Members must bring their own memory cards. Files should be copied to a personal device before equipment is returned; hub staff do not store customers' images.
+
+Equipment is collected from and returned to the service desk between 9:00 a.m. and 4:30 p.m. A current photo ID must be shown at collection. All items should be checked with the desk assistant before leaving the building.'''), D('Email: Request from Naomi Patel', '''To: Ellington Media Hub service desk
+From: Naomi Patel
+Subject: Camera reservation and refresher session
+
+I am a registered member and would like to collect a camera and tripod on July 12 at about 10:00 a.m. I plan to photograph a community restoration project and return everything on July 18 before the desk closes. Please let me know whether the camera can be kept for that entire period; I understand that a longer loan requires an additional decision.
+
+My last equipment orientation was completed on May 30 of the previous year. Could you reserve a place for me in the refresher session advertised for July 11 at 4:00 p.m.? I will bring my membership details so the instructor can update the record. Please confirm this session separately from the camera request.
+
+I will use my own laptop to copy the photographs each evening. I have not yet purchased a memory card, so please advise whether I need to bring one rather than relying on any storage already in the camera. I will also bring my photo ID when I collect the equipment. Thank you for checking these arrangements.''')], [
+ Q('P7-B09', 'Why does Ms. Patel need a refresher session before collecting the camera?', ['Her previous orientation record will be more than twelve months old.', 'Every reservation requires a new orientation regardless of its date.', 'She has requested a projector for more than two days.', 'She has never registered as a member.'], 'A', '복수 지문 연계', '실전 최상급', 'Policy: Ellington Media Hub Equipment Loans의 "valid for twelve months"; Email: Request from Naomi Patel의 "May 30 of the previous year"와 "July 12"', '작년 5월 30일 이수에서 올해 7월 12일 수령까지 12개월을 넘는다. 회원 등록 사실과 별개로 기록이 만료되어 재교육 조건이 적용된다.', '유효 기간과 개인 이수·수령 날짜를 결합한 A가 이유다.', {'B':'12개월 이내 유효 기록이면 매 예약마다 재교육하는 규칙이 아니다.', 'C':'Patel은 카메라와 삼각대를 요청했으며 프로젝터를 요청하지 않았다.', 'D':'메일 첫 문장에서 registered member라고 밝혔다.'}),
+ Q('P7-B10', 'What must be approved for Ms. Patel to keep the camera until July 18?', ['A second membership account', 'A waiver of the photo ID requirement', 'A two-day extension', 'A transfer of her orientation record to another hub'], 'C', '복수 지문 연계', '실전 최상급', 'Policy: Ellington Media Hub Equipment Loans의 "five calendar days"와 "collection date as the first day"; Email: Request from Naomi Patel의 "July 12"와 "July 18"', '7월 12일을 1일로 계산한 기본 5일은 16일까지다. 18일 반환에는 17·18일 두 날을 추가하는 승인이 필요하며 다른 예약 충돌이 없어야 한다.', '요청 사용 기간과 기본 규정을 비교하면 필요한 조치는 C다.', {'A':'계정 추가가 대여 기간을 늘린다는 규정은 없다.', 'B':'신분증 요구는 면제 요청 대상이 아니고 사용 기간과 무관하다.', 'D':'다른 허브로 기록을 이동하는 절차는 제시되지 않는다.'}),
+ Q('P7-B11', 'What should Ms. Patel obtain before collecting the camera?', ['A separate charger supplied by a retailer', 'A memory card', 'A projector replacement bulb', 'A new camera bag'], 'B', '복수 지문 연계', '고급', 'Policy: Ellington Media Hub Equipment Loans의 "must bring their own memory cards"; Email: Request from Naomi Patel의 "have not yet purchased a memory card"', '카메라에는 배터리·충전기·가방이 제공되지만 저장 카드는 개인 준비 항목이다. Patel은 아직 카드를 마련하지 않았다고 밝혔다.', '필수 개인 준비 항목과 아직 없는 물품을 연결한 B가 맞다.', {'A':'충전기는 카메라에 제공된다.', 'C':'프로젝터를 예약하지 않았고 교체 전구 준비 규정도 없다.', 'D':'보호 가방은 기본 제공 물품이다.'}),
+ Q('P7-B12', 'What does Ms. Patel request for July 11?', ['Permission to collect the camera before the desk opens', 'An extra day of photography at the project site', 'A refund for an unused orientation course', 'A place in a refresher session'], 'D', '세부 정보', '고급', 'Email: Request from Naomi Patel의 "reserve a place ... refresher session ... July 11"', '7월 11일 4시 요청은 재교육 회차 예약이다. 장비 수령은 그 다음 날 10시로 따로 요청한다.', '재교육 참가 자리를 요청하는 D가 날짜와 행동을 모두 맞춘다.', {'A':'장비 수령은 12일 10시이며 개장 전 수령을 요청하지 않는다.', 'B':'촬영 사용 기간은 12~18일이며 11일 촬영 요청은 없다.', 'C':'사용하지 않은 강좌의 환불은 요청하지 않았다.'}),
+ Q('P7-B13', 'Which statement is NOT supported by the equipment loan policy?', ['A tripod may be included without an extra fee.', 'Members must show a current photo ID at collection.', 'An extension request automatically secures the extra days.', 'Expired orientation records must be renewed before release.'], 'C', 'NOT/EXCEPT', '고급', 'Policy: Ellington Media Hub Equipment Loans의 "does not guarantee approval"', '연장은 다른 예약 충돌 여부에 따라 승인된다. 요청 제출만으로 자동 확보되는 것은 명시적으로 부정된다.', '조건부 심사를 자동 승인으로 바꾼 C만 규정에 어긋난다.', {'A':'삼각대는 가용 여부 조건 아래 추가 요금 없이 포함할 수 있다.', 'B':'current photo ID를 수령 때 제시해야 한다.', 'D':'만료 기록은 장비를 내주기 전에 재교육으로 갱신해야 한다.'}),
+]))
+
+data['sets'].append(S('확장 훈련 4 | 단체 견학 조건과 방문 요청', [D('Information: Brookmere Science Gardens Visits', '''School group visits to Brookmere Science Gardens
+
+Guided garden walks begin at 10:00 a.m. and 1:00 p.m. and last fifty minutes. Each walk can accommodate a maximum of eighteen people, including children and accompanying adults. School groups with children younger than twelve must provide at least one supervising adult for every six children, or part of a group of six. The bus driver is not counted as a supervising adult unless the driver takes part in the entire visit.
+
+The indoor science workshop runs from 11:15 a.m. to noon. It is available only to school groups that have reserved the morning walk. The afternoon walk does not include access to this workshop. Schools should request both activities when making the initial booking; adding the workshop on arrival is not permitted.
+
+Groups must check in at least fifteen minutes before their walk begins. If travel is delayed, the school should call the visitor desk, but a telephone call does not guarantee that a guide can wait. Visitors should keep to their allocated times so that later groups are not delayed.
+
+In heavy rain, the walk will take place under the covered courtyard displays instead of using the outdoor garden paths. The indoor workshop will operate as scheduled. A change to the walk route does not require a new reservation. Teachers should bring the final participant list and inform the desk of any changes in the adult count.'''), D('Email: Visit Request from Meadow School', '''To: Brookmere visitor desk
+From: Laura Reed, Meadow School
+Subject: November 5 class visit
+
+I would like to book a guided walk and the indoor science workshop for eleven children aged ten and two teachers on November 5. Our driver will drop us off and leave, then return to collect us at 12:15 p.m. The teachers will stay with the children throughout both activities.
+
+The bus company originally proposed arrival at 9:50 a.m. If that is too late for the check-in procedure, we can request an earlier departure that would bring us to the gardens at 9:40. Please advise which arrangement meets your requirements.
+
+The children are studying plant growth, and we would like to complete both activities before the return journey. If rain changes the walk route, we still intend to attend the workshop. I will bring a printed list of all thirteen participants and notify you if another teacher has to replace one of the two listed adults. Please confirm whether we need to recruit any additional supervisors for this group.''')], [
+ Q('P7-B14', 'Which guided walk should Ms. Reed reserve to complete both requested activities?', ['The 1:00 p.m. walk', 'The 10:00 a.m. walk', 'Either walk, followed by a noon workshop', 'A private walk starting at 12:15 p.m.'], 'B', '복수 지문 연계', '실전 최상급', 'Information: Brookmere Science Gardens Visits의 "only ... reserved the morning walk"; Email: Visit Request from Meadow School의 "walk and the indoor science workshop"와 "12:15 p.m."', '실내 워크숍은 오전 견학을 예약한 학교만 이용하며 11:15~12:00 운영된다. 오전 10시 견학 뒤 워크숍을 끝내면 12:15 귀환 차량 계획도 유지된다.', '활동 참가 조건과 귀환 시간을 함께 충족하는 B가 맞다.', {'A':'오후 견학은 해당 워크숍 참가 자격이 없고 귀환 계획보다 늦다.', 'C':'워크숍은 정오 시작이 아니라 정오 종료이며 오후 견학 참가자는 이용할 수 없다.', 'D':'12:15 사설 견학 회차는 제공되지 않고 그 시각은 버스 픽업 계획이다.'}),
+ Q('P7-B15', 'What is suggested about the group’s supervising adults?', ['The bus driver must remain with the group.', 'One teacher is enough for all eleven children.', 'A third teacher is required solely because the group has thirteen people.', 'The two teachers meet the stated minimum requirement.'], 'D', '복수 지문 연계', '실전 최상급', 'Information: Brookmere Science Gardens Visits의 "one supervising adult for every six children, or part"; Email: Visit Request from Meadow School의 "eleven children aged ten and two teachers"', '12세 미만 아이 11명은 첫 6명에 성인 1명, 나머지 5명에 1명이 필요하다. 두 교사는 전체 방문에 동행하므로 최소 2명을 충족한다. 총원 13명도 18명 한도 이내다.', '연령·아이 수·교사 동행 조건을 결합하면 추가 감독자 없이 D가 성립한다.', {'A':'운전자는 전체 참가 때만 감독자로 세지만 두 교사만으로 이미 최소를 충족한다.', 'B':'7~12명 규모에는 성인 2명이 필요하다.', 'C':'감독자 비율은 아이 수를 기준으로 하며 교사를 포함한 총원 13명을 다시 나누지 않는다.'}),
+ Q('P7-B16', 'Which arrival arrangement would meet the morning walk’s check-in requirement?', ['Arriving at 9:40 a.m.', 'Arriving at 9:50 a.m.', 'Arriving at 10:00 a.m. after a telephone call', 'Arriving at 11:00 a.m. before the workshop'], 'A', '복수 지문 연계', '고급', 'Information: Brookmere Science Gardens Visits의 "at least fifteen minutes before"; Email: Visit Request from Meadow School의 "9:50 a.m."와 "9:40"', '10시 견학은 늦어도 9:45에 접수해야 한다. 제안된 두 버스 시각 중 9:40만 그 마감보다 앞선다. 전화는 지연을 알릴 수 있지만 대기 보장은 아니다.', '정책의 상대 시간 조건을 실제 두 도착안에 적용한 A가 맞다.', {'B':'9:50은 접수 마감 9:45보다 5분 늦다.', 'C':'10시는 시작 시각이며 전화가 사전 접수 조건을 없애지 않는다.', 'D':'11시 도착은 오전 견학이 끝난 뒤이고 워크숍도 오전 견학 예약자 대상이다.'}),
+ Q('P7-B17', 'Which statement about heavy rain is NOT supported by the information?', ['The walk route will change.', 'The workshop will remain on schedule.', 'Both activities will automatically be canceled.', 'The school will not need a new reservation for the route change.'], 'C', 'NOT/EXCEPT', '고급', 'Information: Brookmere Science Gardens Visits의 "covered courtyard displays", "operate as scheduled", "does not require a new reservation"', '악천후에는 견학 장소만 지붕 있는 안뜰로 바뀌고 실내 워크숍 및 기존 예약은 유지된다.', '두 활동의 자동 취소를 주장한 C는 명시된 대체 운영과 모순된다.', {'A':'야외 정원 길 대신 지붕 있는 안뜰을 사용하므로 맞다.', 'B':'워크숍은 operate as scheduled라고 유지된다.', 'D':'경로 변경에는 새 예약이 필요 없다고 직접 안내한다.'}),
+ Q('P7-B18', 'The word "allocated" is closest in meaning to', ['forgotten', 'assigned', 'extended', 'recorded'], 'B', '문맥상 의미', '고급', 'Information: Brookmere Science Gardens Visits의 "keep to their allocated times"와 "later groups are not delayed"', '뒤 단체가 늦어지지 않도록 각 단체에게 배정된 이용 시각을 지키라는 안내다. 기록을 보관하거나 시간을 연장하라는 의미가 아니다.', '단체별로 배정된 시간이라는 assigned가 문맥과 일치한다.', {'A':'시간을 잊었다는 상태가 아니라 지켜야 할 예약 시각이다.', 'C':'시간 연장은 오히려 뒤 단체의 지연을 만들 수 있다.', 'D':'안내의 초점은 기록 행위가 아니라 배정된 시간 준수다.'}),
+]))
+
+data['sets'].append(S('확장 훈련 5 | 전시 규정·작품 신청·최종 배정', [D('Rules: Calder Community Exhibition', '''Calder Community Exhibition: Artist Information
+
+The exhibition will run from May 20 to May 22. Artists may display up to four pieces. Framed works must measure no more than sixty centimeters on either side, including the frame. Freestanding works may be displayed only in Gallery B because Gallery A does not have protected floor space. Artists who need a display plinth should request one by May 6. Available plinths are supplied at no charge, but the request must be confirmed by the exhibition office.
+
+Artists should install their work on May 19 between 10:00 a.m. and noon. The office normally accepts courier parcels on May 17 and May 18 from 9:00 a.m. to 4:00 p.m.; it does not accept deliveries during installation. Staff will store parcels but will not mount or arrange the artwork. Each artist remains responsible for installation and for collecting empty packaging.
+
+All parcels must carry the artist's name and application number. Do not send a piece that differs from the approved application without written permission. Collection of exhibited work takes place on May 22 between 5:00 and 6:00 p.m., after the galleries close to visitors.'''), D('Application: Clara Osei, E-214', '''Artist: Clara Osei
+Application received: May 4
+Preferred gallery: Gallery A
+Proposed collection: Three framed photographs and one freestanding wooden sculpture
+Photograph dimensions: Each 55 by 45 centimeters, including the frame
+Sculpture dimensions: 35 centimeters high; base 20 by 20 centimeters
+Display plinth requested: Yes
+
+Artist's notes: The photographs show small workshops in the district, while the sculpture represents a traditional hand tool. I have requested Gallery A because its windows provide natural light, but I can use another suitable gallery if necessary. I plan to send the four pieces by courier and arrive personally for installation on May 19. Please confirm whether a plinth will be available so that I know if I must transport my own stand. I will take the packing materials home after arranging the display.'''), D('Email: Calder Exhibition Assignment for E-214', '''To: Clara Osei
+From: Calder Exhibition Office
+Subject: Approved collection and delivery update
+
+We have approved the collection listed in application E-214 and assigned space B4 in Gallery B. A display plinth has been reserved for your sculpture. We will place it in your assigned space before you arrive for installation; please arrange the photographs and sculpture yourself.
+
+Please note one change to the published parcel schedule. Building maintenance means we cannot accept any courier deliveries on May 17. The May 18 hours remain unchanged. Please use that date if you send your work rather than bringing it yourself. Your installation appointment remains within the published May 19 period.
+
+The enclosed labels contain your name and application number. These must be attached to the outside of every parcel and remain easy for staff to read. Please avoid covering them with opaque tape. Bring a copy of this assignment email when you arrive so that our volunteers can direct you to space B4. We look forward to seeing your collection.''')], [
+ Q('P7-B19', 'Why is Gallery B necessary for the complete collection proposed by Ms. Osei?', ['Gallery A accepts only photographs larger than sixty centimeters.', 'Gallery B is the only gallery that permits freestanding work.', 'Gallery A is closed for the entire exhibition.', 'Gallery B offers a discount to applicants who apply early.'], 'B', '복수 지문 연계', '실전 최상급', 'Rules: Calder Community Exhibition의 "Freestanding works ... only in Gallery B"; Application: Clara Osei, E-214의 "one freestanding wooden sculpture"; Email: Calder Exhibition Assignment for E-214의 "space B4 in Gallery B"', '신청 컬렉션에 독립형 조각이 있으므로 보호된 바닥 공간이 있는 B가 필요하다. 선호한 A의 창문 조건보다 작품 유형 제한이 최종 배정을 결정한다.', '조각 포함 여부와 갤러리별 허용 규정을 연결한 B가 맞다.', {'A':'60cm는 전체 액자 최대 치수이며 그보다 큰 작품만 허용한다는 규칙이 아니다.', 'C':'A의 전 기간 폐관은 안내되지 않았다.', 'D':'조기 접수에 따른 갤러리 할인은 없다.'}),
+ Q('P7-B20', 'Which courier delivery would comply with the final arrangements?', ['May 17 at 10:00 a.m.', 'May 19 at 10:30 a.m.', 'May 18 at 3:30 p.m.', 'May 18 at 4:30 p.m.'], 'C', '복수 지문 연계', '실전 최상급', 'Rules: Calder Community Exhibition의 "9:00 a.m. to 4:00 p.m."와 "does not accept deliveries during installation"; Email: Calder Exhibition Assignment for E-214의 "cannot accept ... May 17"와 "May 18 hours remain unchanged"', '최신 이메일은 원래 두 배송일 중 17일을 제거한다. 18일에는 기존 9~16시가 유지되며 19일 설치 중에는 배송을 받지 않는다.', '5월 18일 15:30만 변경된 날짜와 유지된 시간 범위를 동시에 충족한다.', {'A':'17일은 최신 이메일에서 유지보수 때문에 접수가 중단되었다.', 'B':'19일 10:30은 설치 기간이며 그때 택배를 받지 않는다.', 'D':'18일의 접수 종료는 16시이므로 16:30은 늦다.'}),
+ Q('P7-B21', 'Which requested item will be provided without a charge?', ['A display plinth', 'A courier collection service', 'A replacement frame', 'A personal storage locker'], 'A', '복수 지문 연계', '고급', 'Rules: Calder Community Exhibition의 "plinths are supplied at no charge"; Application: Clara Osei, E-214의 "Display plinth requested: Yes"; Email: Calder Exhibition Assignment for E-214의 "has been reserved"', '규정의 무료 제공 조건에 신청과 사무실 확인이 모두 필요하다. 4일 신청한 받침대가 최종 이메일에서 예약되었다고 확인된다.', '비용 규정·요청·확정이라는 세 단계를 연결한 A가 성립한다.', {'B':'작가는 스스로 택배를 보내며 수거 서비스 제공은 없다.', 'C':'액자 교체 제공은 요구하거나 약속하지 않았다.', 'D':'개인 사물함 제공은 어느 문서에도 없다.'}),
+ Q('P7-B22', 'What does "These" in the assignment email refer to?', ['The photographs', 'The volunteers', 'The galleries', 'The enclosed labels'], 'D', '지칭', '고급', 'Email: Calder Exhibition Assignment for E-214의 "The enclosed labels contain"와 "These must be attached"', '복수 지시어는 직전의 동봉 라벨을 받는다. 이름과 신청 번호가 담긴 라벨을 택배 바깥에 붙이고 읽을 수 있게 유지해야 한다.', '부착하고 글자를 읽을 수 있어야 하는 대상인 D가 맞다.', {'A':'작품 사진은 택배 안에 보호해 보내며 이름·번호를 표시하는 라벨 자체가 아니다.', 'B':'봉사자를 택배 바깥에 붙일 수 없고 그들은 마지막 문장에 등장한다.', 'C':'갤러리는 장소이며 택배에 부착하는 대상이 아니다.'}),
+ Q('P7-B23', 'Which action is NOT permitted under the stated arrangements?', ['Having the office store the delivered parcels', 'Sending a different sculpture without written permission', 'Installing the approved work on May 19', 'Taking empty packaging home after installation'], 'B', 'NOT/EXCEPT', '고급', 'Rules: Calder Community Exhibition의 "Do not send a piece that differs ... without written permission"; Application: Clara Osei, E-214의 "take the packing materials home"', '승인 목록과 다른 작품은 서면 허가 없이 보낼 수 없다. 보관·지정일 설치·포장재 수거는 규정과 신청 계획에 맞는다.', '작품 변경의 필수 허가를 생략한 B가 금지 행동이다.', {'A':'사무실은 택배를 보관한다고 규정에 명시한다.', 'C':'5월 19일 10~12시는 정식 설치 시간이며 이메일도 그 기간을 유지한다.', 'D':'포장재 수거는 작가 책임이며 신청서의 집으로 가져가는 계획과 맞는다.'}),
+]))
+
+data['sets'].append(S('확장 훈련 6 | 봉사 역할·개인 가능 시간·임시 배정', [D('Notice: Haven Community Volunteer Program', '''Haven Community Program: March Volunteer Arrangements
+
+All new volunteers must complete a two-hour orientation before their first shift. Three sessions are available: March 10 from 6:00 to 8:00 p.m. online, March 11 from 2:00 to 4:00 p.m. at the center, and March 12 from 10:00 a.m. to noon at the center. Attendance for the full session is required. Joining a session after its start does not meet the requirement. Book one session through the volunteer portal.
+
+On March 13, the welcome desk has shifts from 9:00 a.m. to noon and from 1:00 to 4:00 p.m. Volunteers at this desk must be able to assist visitors in English and Spanish. The packing team works from 9:00 a.m. to noon and handles boxes weighing up to eight kilograms. Delivery volunteers work from 10:00 a.m. to 2:00 p.m.; they must have a valid driving license, complete the program's road-safety course, and receive driver authorization.
+
+Selecting a role on the application form does not guarantee assignment. Coordinators consider available hours and role requirements. A proposed shift becomes confirmed only after the volunteer tells the coordinator which orientation session has been booked. Completion of that session is still required before the first shift. Volunteers should report any later change in availability promptly.'''), D('Application: Ana Delgado', '''Applicant: Ana Delgado
+New volunteer: Yes
+Languages: English and Spanish
+Driving license: Valid
+Program road-safety course completed: No
+Maximum box weight comfortable handling: Five kilograms
+Preferred role: Deliveries; welcome desk acceptable as an alternative
+
+Availability notes: I cannot attend any event on March 10. On March 11, I can reach the center only after 3:00 p.m. I am available throughout March 12. On March 13, I must leave by noon for another appointment. I can arrive before 9:00 a.m. if needed. I have not yet booked an orientation session because I wanted to check the proposed shift first. Please contact me by email so that I can confirm the training and work arrangements together.'''), D('Email: Provisional Shift for Ana Delgado', '''To: Ana Delgado
+From: Daniel Cho, Haven Volunteer Coordinator
+Subject: Proposed March 13 assignment
+
+Thank you for your application. We have provisionally assigned you to the morning welcome-desk shift on March 13. Your language skills would be useful there, and the shift ends by the time you need to leave. We have not assigned you to delivery work. A driving license alone does not complete the program's driver requirements.
+
+Please choose an orientation session from the notice and book it through the portal. Once you tell me which session you have booked, I can confirm the welcome-desk assignment. If you cannot attend an entire orientation session before March 13, let me know; the proposed shift would need to move to a later date.
+
+After the shift is confirmed, I will send the visitor-information sheet for you to read before arriving. You do not need to complete the road-safety course for welcome-desk work. Please notify me if your availability changes rather than choosing a different shift directly in the portal.''')], [
+ Q('P7-B24', 'Which orientation session can Ms. Delgado attend in full before her proposed shift?', ['March 10, 6:00-8:00 p.m.', 'March 11, 2:00-4:00 p.m.', 'March 12, 10:00 a.m.-noon', 'March 13, 1:00-4:00 p.m.'], 'C', '복수 지문 연계', '실전 최상급', 'Notice: Haven Community Volunteer Program의 세 orientation 시간과 "full session is required"; Application: Ana Delgado의 "cannot ... March 10", "only after 3:00 p.m.", "throughout March 12"', '10일은 전혀 불가능하고 11일은 14시 시작에 늦는다. 12일에는 하루 종일 가능하므로 10~12시 전체 교육을 이수할 수 있으며 13일 업무보다 앞선다.', '날짜뿐 아니라 전체 회차 참석 조건까지 충족하는 C가 맞다.', {'A':'신청서에서 10일에는 어떤 행사도 참가할 수 없다고 한다.', 'B':'11일에는 15시 이후 도착 가능하므로 14시 시작부터 참가하지 못한다.', 'D':'13일 13~16시는 오후 업무 시간이며 교육 회차가 아니고 개인 가능 시간도 벗어난다.'}),
+ Q('P7-B25', 'Why is the morning welcome-desk shift suitable for Ms. Delgado?', ['It matches both her language skills and her March 13 availability.', 'It requires only a driving license.', 'It ends after her other appointment.', 'It allows her to attend orientation for only one hour.'], 'A', '복수 지문 연계', '실전 최상급', 'Notice: Haven Community Volunteer Program의 "English and Spanish"와 "9:00 a.m. to noon"; Application: Ana Delgado의 두 언어와 "leave by noon"; Email: Provisional Shift for Ana Delgado의 "morning welcome-desk shift"', '안내 역할은 두 언어를 사용해야 하고 오전 회차는 정오에 끝난다. 신청자는 두 언어를 구사하며 정오까지 가능하므로 역할 자격과 시간 조건이 함께 맞는다.', '독립적인 두 조건을 모두 충족한다는 A가 배정 적합성을 설명한다.', {'B':'운전면허는 배달 조건의 일부이며 안내 데스크 자격이 아니다.', 'C':'정오 전에 마치는 회차로 개인 약속을 지키려는 계획이지 약속 뒤 종료가 아니다.', 'D':'모든 신규 봉사자는 전체 2시간 교육을 이수해야 한다.'}),
+ Q('P7-B26', 'What should Ms. Delgado do now to have the proposed shift confirmed?', ['Begin delivery work without authorization', 'Ask another volunteer to attend orientation for her', 'Change her preferred shift directly in the portal', 'Book an orientation session and tell Mr. Cho which one'], 'D', '복수 지문 연계', '고급', 'Notice: Haven Community Volunteer Program의 "confirmed only after ... which orientation ... booked"; Email: Provisional Shift for Ana Delgado의 "Once you tell me ... I can confirm"', '현재는 임시 배정 상태이며 교육 예약 후 어떤 회차를 예약했는지 담당자에게 알려야 확정된다. 교육 이수는 별도로 첫 업무 전에 완료해야 한다.', '현재 확정 절차의 예약·통보 두 행동을 모두 포함한 D가 맞다.', {'A':'배달 권한을 받지 않았고 현재 제안도 안내 데스크다.', 'B':'교육은 본인이 전체 참석해야 하므로 대리 참석은 조건을 충족하지 못한다.', 'C':'담당자는 시간 변경 때 먼저 통보하라고 하며 직접 다른 업무를 선택하라고 하지 않는다.'}),
+ Q('P7-B27', 'Which statement is NOT supported by the documents?', ['Ms. Delgado is willing to work at the welcome desk.', 'Ms. Delgado is already qualified for program delivery work solely because she has a license.', 'Orientation must be completed before the first shift.', 'The proposed shift could move if she cannot complete an orientation in time.'], 'B', 'NOT/EXCEPT', '실전 최상급', 'Application: Ana Delgado의 "road-safety course completed: No"; Notice: Haven Community Volunteer Program의 "receive driver authorization"; Email: Provisional Shift for Ana Delgado의 "license alone does not complete"', '배달은 면허뿐 아니라 별도 교육과 승인도 요구한다. 신청자는 교육을 이수하지 않았고 이메일도 면허만으로 충분하지 않다고 확인한다.', '하나의 조건만으로 전체 자격 완료를 주장하는 B는 세 문서의 제한과 모순된다.', {'A':'신청서에 welcome desk acceptable as an alternative라고 적었다.', 'C':'안내는 before their first shift라고 이수 시점을 명시한다.', 'D':'이메일은 13일 전 전체 교육이 불가능하면 나중 날짜로 옮겨야 한다고 한다.'}),
+ Q('P7-B28', 'What is implied about the visitor-information sheet?', ['It replaces the required orientation.', 'It has already been sent with the application.', 'It will be sent after the shift is confirmed.', 'It is intended only for approved delivery drivers.'], 'C', '추론', '고급', 'Email: Provisional Shift for Ana Delgado의 "After the shift is confirmed, I will send"', '자료 발송은 업무 확정 뒤의 예정 행동이다. 현재는 교육 예약 회차를 아직 알리지 않은 임시 배정이므로 이 메일이 자료를 이미 보냈다고 뜻하지 않는다.', '명시된 선행 조건과 미래 행동을 보존한 C가 맞다.', {'A':'자료 읽기는 업무 준비이며 전체 교육 이수 요구를 대체하지 않는다.', 'B':'신청서에는 자료 첨부가 없고 이메일도 이후 발송으로 설명한다.', 'D':'이 자료는 안내 데스크 담당 예정인 Ana에게 보낼 방문자 안내 자료다.'}),
+]))
+
+data['review_sections'] = [
+ {'title':'근거 점검표 | 맞힌 문항도 다시 검사하는 네 질문', 'paragraphs':[
+  '정답 근거를 확인할 때 ① 실제 문서 제목과 짧은 영어 표현을 기록했는가 ② 보기의 행위자·대상·시간·조건이 모두 일치하는가 ③ 추론에 새 전제를 넣지 않았는가 ④ 세 오답이 각각 어떤 지점에서 탈락하는가를 묻는다. 근거가 복수 문서에 있으면 각 문서의 문장을 하나씩 적고 둘을 연결하는 공통 이름·날짜·번호를 표시한다. 답을 맞혔더라도 이 연결을 설명할 수 없으면 근거 미확인으로 기록한다.',
+  '교정 사례: 장비 규정의 five calendar days와 7월 12일 수령·18일 반환 요청을 보고 기간이 6일이라고 골랐다면 날짜 차이만 계산한 것이다. collection date as the first day를 적용해 12일이 1일, 16일이 5일, 18일이 7일로 다시 표시한다. 필요한 연장은 2일이다. 이어 request does not guarantee approval을 확인해 요청한 7일 사용을 확정 사실로 쓰지 않는다. 계산 오류와 승인 상태 오류를 각각 기록한다.',
+  '오답 분석에는 다른 문장의 참인 내용을 가져왔다는 오류와 지문에 없는 내용을 만들어 냈다는 오류를 구별한다. 예를 들어 전시 설치일 19일 자체는 참이지만 그날 택배 배송을 할 수 있다는 결론은 접수 금지 조건 때문에 틀리다. 정답 근거 문장 아래에는 보기와 달라진 단어가 아니라 달라진 역할·범위·시점을 적는다. 이후 재풀이에서는 그 조건을 찾는 행동이 실제로 먼저 이루어졌는지 점검한다.'
+ ]},
+ {'title':'시간 제한 독해 계획 | 세 차례로 근거 품질까지 측정', 'paragraphs':[
+  '첫 회차는 확장 훈련 1·2의 단일 지문 8문항을 8분 안에 풀어 본다. 각 지문에서 전체 흐름 확인 90초, 네 문항 근거 연결 120초, 검토 30초를 시작 배분으로 사용한다. 둘째 회차는 이중 지문 한 세트 5문항을 5분, 셋째 회차는 삼중 지문 한 세트 5문항을 6분으로 설정한다. 이는 개인 연습용 기준이며 실제 소요 시간·정답률·근거 기록을 보고 조정한다. 빠르게 읽는 것만 목표로 삼지 않는다.',
+  '채점 후에는 오답과 추측 정답을 먼저 다시 풀고 각 문항에 구조 실패·정보 위치 실패·조건 누락·시간 압박 중 주원인 하나를 적는다. 다음 날에는 답을 가리고 같은 문항의 근거만 30~45초 안에 찾는 재훈련을 한다. 그 다음에는 낯선 다른 세트에 같은 절차를 적용해 개선이 특정 지문 암기 때문인지 구별한다. 복수 지문에서는 공통 대상 표식과 최종 변경 문서를 먼저 확인했는지 함께 기록한다.',
+  '교정 사례: 도착 8시를 작업 완료로 골랐다면 운송 시간 탐색은 성공했지만 after they arrive의 배치 30분을 누락했다. 재훈련에서는 7:40 준비 → 10분 적재 → 10분 이동 → 30분 배치라는 사건 줄을 먼저 그린다. 검토 30초는 지문 전체 재독에 쓰지 않고 불확실했던 완료 시점과 조건만 확인한다. 시간이 줄어도 조건 누락이 늘면 제한을 조금 늘려 정확한 절차를 안정시킨 후 다시 단축한다.'
+ ]},
+]
+
+evidence_expansions = {
+ 'Loading ... ten minutes': 'Loading the boxes takes ten minutes',
+ 'drive ... another ten': 'the drive from the shop to our hall takes another ten',
+ 'reserve a place ... refresher session ... July 11': 'reserve a place for me in the refresher session advertised for July 11',
+ 'only ... reserved the morning walk': 'only to school groups that have reserved the morning walk',
+ 'Freestanding works ... only in Gallery B': 'Freestanding works may be displayed only in Gallery B',
+ 'cannot accept ... May 17': 'cannot accept any courier deliveries on May 17',
+ 'Do not send a piece that differs ... without written permission': 'differs from the approved application without written permission',
+ 'cannot ... March 10': 'cannot attend any event on March 10',
+ 'confirmed only after ... which orientation ... booked': 'which orientation session has been booked',
+ 'Once you tell me ... I can confirm': 'Once you tell me which session you have booked',
+}
+for s in data['sets']:
+    for q in s['questions']:
+        for abbreviated, exact in evidence_expansions.items():
+            q['clue'] = q['clue'].replace(abbreviated, exact)
+        for phrase in re.findall(r'"([^"]+)"', q['clue']):
+            assert any(phrase in doc['text'] for doc in s['documents']), (q['id'], phrase)
+
+all_ids = [q['id'] for s in data['sets'] for q in s['questions']]
+assert all_ids == [f'P7-B{n:02}' for n in range(1,29)], all_ids
+assert [len(s['questions']) for s in data['sets']] == [4,4,5,5,5,5]
+assert [len(s['documents']) for s in data['sets']] == [1,1,2,2,3,3]
+assert len(data['sections']) == 10
+assert all(len(s['paragraphs']) == 3 for s in data['sections'])
+assert len(data['review_sections']) == 2
+for s in data['sets']:
+    words = sum(len(re.findall(r"[A-Za-z0-9]+(?:[-'’][A-Za-z0-9]+)*", d['text'])) for d in s['documents'])
+    expected = {1:(240,280), 2:(380,460), 3:(450,550)}[len(s['documents'])]
+    assert expected[0] <= words <= expected[1], (s['title'], words, expected)
+    if len(s['documents']) > 1:
+        assert sum(q['type'] == '복수 지문 연계' for q in s['questions']) >= 2
+assert '\u2014' not in json.dumps(data, ensure_ascii=False)
+
+def save():
+    ROOT.mkdir(parents=True, exist_ok=True)
+    target = ROOT / 'part7_extra.json'
+    target.write_text(json.dumps(data, ensure_ascii=False, indent=2), encoding='utf-8')
+    for s in data['sets']:
+        words = sum(len(re.findall(r"[A-Za-z0-9]+(?:[-'’][A-Za-z0-9]+)*", d['text'])) for d in s['documents'])
+        print('Set', len(s['documents']), 'documents;', words, 'words;', len(s['questions']), 'questions; first ID', s['questions'][0]['id'])
+    print('Saved', target)
+
+save()

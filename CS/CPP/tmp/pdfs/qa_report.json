@@ -1,0 +1,1738 @@
+{
+  "pages": 184,
+  "issues": [],
+  "font_files_embedded": true,
+  "fonts": [
+    [
+      "/AAAAAC+MalgunGothic",
+      true
+    ],
+    [
+      "/AAAAAB+MalgunGothic",
+      true
+    ],
+    [
+      "/AAAAAA+MalgunGothicBold",
+      true
+    ],
+    [
+      "/AAAAAA+MalgunGothic",
+      true
+    ],
+    [
+      "/AAAAAB+MalgunGothicBold",
+      true
+    ]
+  ],
+  "page_metrics": [
+    {
+      "page": 1,
+      "characters": 297,
+      "body_bottom": 453.36,
+      "body_fonts": {
+        "23.0": 8,
+        "10.4": 154,
+        "10.0": 91,
+        "9.0": 43
+      }
+    },
+    {
+      "page": 2,
+      "characters": 2525,
+      "body_bottom": 762.6,
+      "body_fonts": {
+        "15.0": 2,
+        "10.4": 51,
+        "11.2": 15,
+        "10.0": 2440
+      }
+    },
+    {
+      "page": 3,
+      "characters": 2652,
+      "body_bottom": 761.8,
+      "body_fonts": {
+        "10.0": 2618,
+        "11.2": 17
+      }
+    },
+    {
+      "page": 4,
+      "characters": 1187,
+      "body_bottom": 309.36,
+      "body_fonts": {
+        "10.0": 1170
+      }
+    },
+    {
+      "page": 5,
+      "characters": 1022,
+      "body_bottom": 537.44,
+      "body_fonts": {
+        "15.0": 9,
+        "10.4": 870,
+        "10.0": 126
+      }
+    },
+    {
+      "page": 6,
+      "characters": 950,
+      "body_bottom": 668.64,
+      "body_fonts": {
+        "15.0": 12,
+        "10.0": 347,
+        "10.4": 574
+      }
+    },
+    {
+      "page": 7,
+      "characters": 1766,
+      "body_bottom": 781.44,
+      "body_fonts": {
+        "23.0": 6,
+        "10.4": 1718,
+        "15.0": 27
+      }
+    },
+    {
+      "page": 8,
+      "characters": 1235,
+      "body_bottom": 744.64,
+      "body_fonts": {
+        "10.4": 1180,
+        "11.3": 40
+      }
+    },
+    {
+      "page": 9,
+      "characters": 1392,
+      "body_bottom": 773.64,
+      "body_fonts": {
+        "10.4": 1343,
+        "11.3": 17,
+        "15.0": 17
+      }
+    },
+    {
+      "page": 10,
+      "characters": 1496,
+      "body_bottom": 704.64,
+      "body_fonts": {
+        "10.4": 1457,
+        "11.3": 23
+      }
+    },
+    {
+      "page": 11,
+      "characters": 1143,
+      "body_bottom": 732.04,
+      "body_fonts": {
+        "11.3": 34,
+        "10.4": 1093
+      }
+    },
+    {
+      "page": 12,
+      "characters": 1696,
+      "body_bottom": 775.04,
+      "body_fonts": {
+        "10.4": 1658,
+        "15.0": 22
+      }
+    },
+    {
+      "page": 13,
+      "characters": 1179,
+      "body_bottom": 759.44,
+      "body_fonts": {
+        "10.4": 1123,
+        "11.3": 40
+      }
+    },
+    {
+      "page": 14,
+      "characters": 1185,
+      "body_bottom": 729.24,
+      "body_fonts": {
+        "10.4": 1133,
+        "11.3": 17,
+        "15.0": 19
+      }
+    },
+    {
+      "page": 15,
+      "characters": 1487,
+      "body_bottom": 729.24,
+      "body_fonts": {
+        "10.4": 1448,
+        "11.3": 23
+      }
+    },
+    {
+      "page": 16,
+      "characters": 1051,
+      "body_bottom": 767.64,
+      "body_fonts": {
+        "10.4": 1001,
+        "11.3": 34
+      }
+    },
+    {
+      "page": 17,
+      "characters": 1539,
+      "body_bottom": 745.44,
+      "body_fonts": {
+        "10.4": 1500,
+        "15.0": 23
+      }
+    },
+    {
+      "page": 18,
+      "characters": 1366,
+      "body_bottom": 782.24,
+      "body_fonts": {
+        "10.4": 1310,
+        "11.3": 40
+      }
+    },
+    {
+      "page": 19,
+      "characters": 1249,
+      "body_bottom": 724.64,
+      "body_fonts": {
+        "10.4": 1216,
+        "11.3": 17
+      }
+    },
+    {
+      "page": 20,
+      "characters": 1529,
+      "body_bottom": 713.72,
+      "body_fonts": {
+        "15.0": 18,
+        "10.4": 1472,
+        "11.3": 23
+      }
+    },
+    {
+      "page": 21,
+      "characters": 1140,
+      "body_bottom": 749.84,
+      "body_fonts": {
+        "10.4": 1090,
+        "11.3": 34
+      }
+    },
+    {
+      "page": 22,
+      "characters": 1365,
+      "body_bottom": 730.64,
+      "body_fonts": {
+        "10.4": 1329,
+        "15.0": 20
+      }
+    },
+    {
+      "page": 23,
+      "characters": 1356,
+      "body_bottom": 759.44,
+      "body_fonts": {
+        "10.4": 1300,
+        "11.3": 40
+      }
+    },
+    {
+      "page": 24,
+      "characters": 1344,
+      "body_bottom": 747.44,
+      "body_fonts": {
+        "10.4": 1311,
+        "11.3": 17
+      }
+    },
+    {
+      "page": 25,
+      "characters": 1575,
+      "body_bottom": 745.44,
+      "body_fonts": {
+        "10.4": 1540,
+        "15.0": 19
+      }
+    },
+    {
+      "page": 26,
+      "characters": 1178,
+      "body_bottom": 782.24,
+      "body_fonts": {
+        "10.4": 1122,
+        "11.3": 40
+      }
+    },
+    {
+      "page": 27,
+      "characters": 1387,
+      "body_bottom": 758.84,
+      "body_fonts": {
+        "11.3": 17,
+        "10.4": 1333,
+        "15.0": 21
+      }
+    },
+    {
+      "page": 28,
+      "characters": 1443,
+      "body_bottom": 774.24,
+      "body_fonts": {
+        "10.4": 1387,
+        "11.3": 40
+      }
+    },
+    {
+      "page": 29,
+      "characters": 1216,
+      "body_bottom": 695.04,
+      "body_fonts": {
+        "10.4": 1183,
+        "11.3": 17
+      }
+    },
+    {
+      "page": 30,
+      "characters": 1487,
+      "body_bottom": 722.64,
+      "body_fonts": {
+        "10.4": 1449,
+        "15.0": 22
+      }
+    },
+    {
+      "page": 31,
+      "characters": 1089,
+      "body_bottom": 700.24,
+      "body_fonts": {
+        "10.4": 1033,
+        "11.3": 40
+      }
+    },
+    {
+      "page": 32,
+      "characters": 1323,
+      "body_bottom": 739.44,
+      "body_fonts": {
+        "10.4": 1290,
+        "11.3": 17
+      }
+    },
+    {
+      "page": 33,
+      "characters": 1457,
+      "body_bottom": 698.92,
+      "body_fonts": {
+        "15.0": 20,
+        "10.4": 1398,
+        "11.3": 23
+      }
+    },
+    {
+      "page": 34,
+      "characters": 1106,
+      "body_bottom": 736.44,
+      "body_fonts": {
+        "10.4": 1073,
+        "11.3": 17
+      }
+    },
+    {
+      "page": 35,
+      "characters": 1401,
+      "body_bottom": 744.84,
+      "body_fonts": {
+        "11.3": 17,
+        "10.4": 1352,
+        "15.0": 16
+      }
+    },
+    {
+      "page": 36,
+      "characters": 1348,
+      "body_bottom": 782.24,
+      "body_fonts": {
+        "10.4": 1292,
+        "11.3": 40
+      }
+    },
+    {
+      "page": 37,
+      "characters": 1313,
+      "body_bottom": 739.44,
+      "body_fonts": {
+        "10.4": 1280,
+        "11.3": 17
+      }
+    },
+    {
+      "page": 38,
+      "characters": 1526,
+      "body_bottom": 760.24,
+      "body_fonts": {
+        "10.4": 1489,
+        "15.0": 21
+      }
+    },
+    {
+      "page": 39,
+      "characters": 1146,
+      "body_bottom": 744.64,
+      "body_fonts": {
+        "10.4": 1090,
+        "11.3": 40
+      }
+    },
+    {
+      "page": 40,
+      "characters": 1315,
+      "body_bottom": 773.64,
+      "body_fonts": {
+        "10.4": 1265,
+        "11.3": 17,
+        "15.0": 17
+      }
+    },
+    {
+      "page": 41,
+      "characters": 1535,
+      "body_bottom": 734.24,
+      "body_fonts": {
+        "10.4": 1496,
+        "11.3": 23
+      }
+    },
+    {
+      "page": 42,
+      "characters": 1188,
+      "body_bottom": 776.44,
+      "body_fonts": {
+        "11.3": 34,
+        "10.4": 1138
+      }
+    },
+    {
+      "page": 43,
+      "characters": 1546,
+      "body_bottom": 722.64,
+      "body_fonts": {
+        "10.4": 1514,
+        "15.0": 16
+      }
+    },
+    {
+      "page": 44,
+      "characters": 1178,
+      "body_bottom": 729.84,
+      "body_fonts": {
+        "10.4": 1122,
+        "11.3": 40
+      }
+    },
+    {
+      "page": 45,
+      "characters": 1276,
+      "body_bottom": 709.84,
+      "body_fonts": {
+        "10.4": 1243,
+        "11.3": 17
+      }
+    },
+    {
+      "page": 46,
+      "characters": 1660,
+      "body_bottom": 767.24,
+      "body_fonts": {
+        "15.0": 19,
+        "10.4": 1602,
+        "11.3": 23
+      }
+    },
+    {
+      "page": 47,
+      "characters": 1039,
+      "body_bottom": 752.84,
+      "body_fonts": {
+        "10.4": 989,
+        "11.3": 34
+      }
+    },
+    {
+      "page": 48,
+      "characters": 1585,
+      "body_bottom": 745.44,
+      "body_fonts": {
+        "10.4": 1550,
+        "15.0": 19
+      }
+    },
+    {
+      "page": 49,
+      "characters": 1418,
+      "body_bottom": 752.64,
+      "body_fonts": {
+        "10.4": 1362,
+        "11.3": 40
+      }
+    },
+    {
+      "page": 50,
+      "characters": 1210,
+      "body_bottom": 709.84,
+      "body_fonts": {
+        "10.4": 1177,
+        "11.3": 17
+      }
+    },
+    {
+      "page": 51,
+      "characters": 1639,
+      "body_bottom": 713.72,
+      "body_fonts": {
+        "15.0": 23,
+        "10.4": 1577,
+        "11.3": 23
+      }
+    },
+    {
+      "page": 52,
+      "characters": 1064,
+      "body_bottom": 757.84,
+      "body_fonts": {
+        "10.4": 1014,
+        "11.3": 34
+      }
+    },
+    {
+      "page": 53,
+      "characters": 1570,
+      "body_bottom": 730.64,
+      "body_fonts": {
+        "10.4": 1537,
+        "15.0": 17
+      }
+    },
+    {
+      "page": 54,
+      "characters": 1243,
+      "body_bottom": 744.64,
+      "body_fonts": {
+        "10.4": 1187,
+        "11.3": 40
+      }
+    },
+    {
+      "page": 55,
+      "characters": 1405,
+      "body_bottom": 747.44,
+      "body_fonts": {
+        "10.4": 1372,
+        "11.3": 17
+      }
+    },
+    {
+      "page": 56,
+      "characters": 1559,
+      "body_bottom": 722.64,
+      "body_fonts": {
+        "10.4": 1524,
+        "15.0": 19
+      }
+    },
+    {
+      "page": 57,
+      "characters": 1262,
+      "body_bottom": 736.64,
+      "body_fonts": {
+        "10.4": 1206,
+        "11.3": 40
+      }
+    },
+    {
+      "page": 58,
+      "characters": 1119,
+      "body_bottom": 642.64,
+      "body_fonts": {
+        "10.4": 1086,
+        "11.3": 17
+      }
+    },
+    {
+      "page": 59,
+      "characters": 1845,
+      "body_bottom": 761.44,
+      "body_fonts": {
+        "23.0": 6,
+        "10.4": 1737,
+        "15.0": 86
+      }
+    },
+    {
+      "page": 60,
+      "characters": 1816,
+      "body_bottom": 716.44,
+      "body_fonts": {
+        "10.4": 1719,
+        "15.0": 81
+      }
+    },
+    {
+      "page": 61,
+      "characters": 1166,
+      "body_bottom": 527.64,
+      "body_fonts": {
+        "15.0": 71,
+        "10.4": 1079
+      }
+    },
+    {
+      "page": 62,
+      "characters": 1711,
+      "body_bottom": 674.84,
+      "body_fonts": {
+        "11.3": 17,
+        "9.0": 21,
+        "10.4": 1657
+      }
+    },
+    {
+      "page": 63,
+      "characters": 1719,
+      "body_bottom": 653.04,
+      "body_fonts": {
+        "11.3": 15,
+        "9.0": 21,
+        "10.4": 1667
+      }
+    },
+    {
+      "page": 64,
+      "characters": 1677,
+      "body_bottom": 667.84,
+      "body_fonts": {
+        "11.3": 16,
+        "9.0": 21,
+        "10.4": 1624
+      }
+    },
+    {
+      "page": 65,
+      "characters": 1728,
+      "body_bottom": 638.24,
+      "body_fonts": {
+        "11.3": 21,
+        "9.0": 21,
+        "10.4": 1670
+      }
+    },
+    {
+      "page": 66,
+      "characters": 1017,
+      "body_bottom": 772.24,
+      "body_fonts": {
+        "15.0": 16,
+        "11.3": 34,
+        "10.4": 951
+      }
+    },
+    {
+      "page": 67,
+      "characters": 1148,
+      "body_bottom": 776.84,
+      "body_fonts": {
+        "10.4": 1098,
+        "11.3": 34
+      }
+    },
+    {
+      "page": 68,
+      "characters": 905,
+      "body_bottom": 747.24,
+      "body_fonts": {
+        "10.4": 855,
+        "11.3": 34
+      }
+    },
+    {
+      "page": 69,
+      "characters": 1071,
+      "body_bottom": 776.84,
+      "body_fonts": {
+        "10.4": 1021,
+        "11.3": 34
+      }
+    },
+    {
+      "page": 70,
+      "characters": 983,
+      "body_bottom": 776.84,
+      "body_fonts": {
+        "10.4": 933,
+        "11.3": 34
+      }
+    },
+    {
+      "page": 71,
+      "characters": 1193,
+      "body_bottom": 754.04,
+      "body_fonts": {
+        "10.4": 1143,
+        "11.3": 34
+      }
+    },
+    {
+      "page": 72,
+      "characters": 1085,
+      "body_bottom": 756.64,
+      "body_fonts": {
+        "10.4": 1052,
+        "11.3": 17
+      }
+    },
+    {
+      "page": 73,
+      "characters": 1136,
+      "body_bottom": 748.04,
+      "body_fonts": {
+        "11.3": 34,
+        "10.4": 1086
+      }
+    },
+    {
+      "page": 74,
+      "characters": 682,
+      "body_bottom": 516.24,
+      "body_fonts": {
+        "10.4": 649,
+        "11.3": 17
+      }
+    },
+    {
+      "page": 75,
+      "characters": 1946,
+      "body_bottom": 725.84,
+      "body_fonts": {
+        "23.0": 6,
+        "10.4": 1862,
+        "15.0": 62
+      }
+    },
+    {
+      "page": 76,
+      "characters": 2022,
+      "body_bottom": 719.64,
+      "body_fonts": {
+        "15.0": 93,
+        "10.4": 1913
+      }
+    },
+    {
+      "page": 77,
+      "characters": 1379,
+      "body_bottom": 624.84,
+      "body_fonts": {
+        "15.0": 82,
+        "10.4": 1281
+      }
+    },
+    {
+      "page": 78,
+      "characters": 1833,
+      "body_bottom": 632.24,
+      "body_fonts": {
+        "11.3": 16,
+        "9.0": 21,
+        "10.4": 1780
+      }
+    },
+    {
+      "page": 79,
+      "characters": 1765,
+      "body_bottom": 624.44,
+      "body_fonts": {
+        "11.3": 20,
+        "9.0": 21,
+        "10.4": 1708
+      }
+    },
+    {
+      "page": 80,
+      "characters": 2121,
+      "body_bottom": 639.24,
+      "body_fonts": {
+        "11.3": 21,
+        "9.0": 21,
+        "10.4": 2063
+      }
+    },
+    {
+      "page": 81,
+      "characters": 1644,
+      "body_bottom": 581.64,
+      "body_fonts": {
+        "11.3": 16,
+        "9.0": 21,
+        "10.4": 1591
+      }
+    },
+    {
+      "page": 82,
+      "characters": 2396,
+      "body_bottom": 745.84,
+      "body_fonts": {
+        "11.3": 20,
+        "9.0": 21,
+        "10.4": 2339
+      }
+    },
+    {
+      "page": 83,
+      "characters": 2243,
+      "body_bottom": 777.64,
+      "body_fonts": {
+        "10.4": 2184,
+        "11.3": 22,
+        "9.0": 21
+      }
+    },
+    {
+      "page": 84,
+      "characters": 1608,
+      "body_bottom": 687.64,
+      "body_fonts": {
+        "10.4": 1592
+      }
+    },
+    {
+      "page": 85,
+      "characters": 963,
+      "body_bottom": 779.04,
+      "body_fonts": {
+        "15.0": 16,
+        "11.3": 34,
+        "10.4": 897
+      }
+    },
+    {
+      "page": 86,
+      "characters": 962,
+      "body_bottom": 776.84,
+      "body_fonts": {
+        "10.4": 912,
+        "11.3": 34
+      }
+    },
+    {
+      "page": 87,
+      "characters": 924,
+      "body_bottom": 739.24,
+      "body_fonts": {
+        "10.4": 874,
+        "11.3": 34
+      }
+    },
+    {
+      "page": 88,
+      "characters": 1079,
+      "body_bottom": 776.84,
+      "body_fonts": {
+        "10.4": 1029,
+        "11.3": 34
+      }
+    },
+    {
+      "page": 89,
+      "characters": 1008,
+      "body_bottom": 733.84,
+      "body_fonts": {
+        "10.4": 975,
+        "11.3": 17
+      }
+    },
+    {
+      "page": 90,
+      "characters": 1036,
+      "body_bottom": 777.64,
+      "body_fonts": {
+        "11.3": 34,
+        "10.4": 986
+      }
+    },
+    {
+      "page": 91,
+      "characters": 947,
+      "body_bottom": 724.44,
+      "body_fonts": {
+        "10.4": 897,
+        "11.3": 34
+      }
+    },
+    {
+      "page": 92,
+      "characters": 941,
+      "body_bottom": 760.84,
+      "body_fonts": {
+        "10.4": 891,
+        "11.3": 34
+      }
+    },
+    {
+      "page": 93,
+      "characters": 1111,
+      "body_bottom": 748.64,
+      "body_fonts": {
+        "10.4": 1078,
+        "11.3": 17
+      }
+    },
+    {
+      "page": 94,
+      "characters": 1077,
+      "body_bottom": 769.64,
+      "body_fonts": {
+        "11.3": 34,
+        "10.4": 1027
+      }
+    },
+    {
+      "page": 95,
+      "characters": 961,
+      "body_bottom": 768.84,
+      "body_fonts": {
+        "10.4": 911,
+        "11.3": 34
+      }
+    },
+    {
+      "page": 96,
+      "characters": 862,
+      "body_bottom": 688.24,
+      "body_fonts": {
+        "10.4": 829,
+        "11.3": 17
+      }
+    },
+    {
+      "page": 97,
+      "characters": 490,
+      "body_bottom": 420.24,
+      "body_fonts": {
+        "11.3": 17,
+        "10.4": 457
+      }
+    },
+    {
+      "page": 98,
+      "characters": 302,
+      "body_bottom": 225.56,
+      "body_fonts": {
+        "23.0": 7,
+        "10.4": 186,
+        "10.0": 92
+      }
+    },
+    {
+      "page": 99,
+      "characters": 928,
+      "body_bottom": 643.36,
+      "body_fonts": {
+        "15.0": 11,
+        "10.0": 900
+      }
+    },
+    {
+      "page": 100,
+      "characters": 1022,
+      "body_bottom": 726.64,
+      "body_fonts": {
+        "15.0": 21,
+        "10.4": 983
+      }
+    },
+    {
+      "page": 101,
+      "characters": 935,
+      "body_bottom": 690.64,
+      "body_fonts": {
+        "10.4": 917
+      }
+    },
+    {
+      "page": 102,
+      "characters": 1053,
+      "body_bottom": 720.24,
+      "body_fonts": {
+        "10.4": 1035
+      }
+    },
+    {
+      "page": 103,
+      "characters": 1092,
+      "body_bottom": 735.04,
+      "body_fonts": {
+        "10.4": 1074
+      }
+    },
+    {
+      "page": 104,
+      "characters": 352,
+      "body_bottom": 240.84,
+      "body_fonts": {
+        "10.4": 334
+      }
+    },
+    {
+      "page": 105,
+      "characters": 1688,
+      "body_bottom": 699.04,
+      "body_fonts": {
+        "15.0": 21,
+        "10.4": 1597,
+        "11.3": 35,
+        "9.0": 17
+      }
+    },
+    {
+      "page": 106,
+      "characters": 1631,
+      "body_bottom": 638.24,
+      "body_fonts": {
+        "11.3": 31,
+        "9.0": 17,
+        "10.4": 1565
+      }
+    },
+    {
+      "page": 107,
+      "characters": 1668,
+      "body_bottom": 653.04,
+      "body_fonts": {
+        "11.3": 34,
+        "9.0": 17,
+        "10.4": 1599
+      }
+    },
+    {
+      "page": 108,
+      "characters": 1810,
+      "body_bottom": 704.44,
+      "body_fonts": {
+        "11.3": 37,
+        "9.0": 17,
+        "10.4": 1738
+      }
+    },
+    {
+      "page": 109,
+      "characters": 1789,
+      "body_bottom": 599.04,
+      "body_fonts": {
+        "15.0": 21,
+        "10.4": 1711,
+        "11.3": 22,
+        "9.0": 17
+      }
+    },
+    {
+      "page": 110,
+      "characters": 1771,
+      "body_bottom": 574.04,
+      "body_fonts": {
+        "11.3": 24,
+        "9.0": 17,
+        "10.4": 1712
+      }
+    },
+    {
+      "page": 111,
+      "characters": 1867,
+      "body_bottom": 552.24,
+      "body_fonts": {
+        "11.3": 19,
+        "9.0": 17,
+        "10.4": 1813
+      }
+    },
+    {
+      "page": 112,
+      "characters": 1807,
+      "body_bottom": 654.04,
+      "body_fonts": {
+        "11.3": 21,
+        "9.0": 17,
+        "10.4": 1751
+      }
+    },
+    {
+      "page": 113,
+      "characters": 2052,
+      "body_bottom": 639.24,
+      "body_fonts": {
+        "11.3": 21,
+        "9.0": 17,
+        "10.4": 1996
+      }
+    },
+    {
+      "page": 114,
+      "characters": 2054,
+      "body_bottom": 705.44,
+      "body_fonts": {
+        "11.3": 20,
+        "9.0": 17,
+        "10.4": 1999
+      }
+    },
+    {
+      "page": 115,
+      "characters": 1947,
+      "body_bottom": 735.04,
+      "body_fonts": {
+        "11.3": 21,
+        "9.0": 17,
+        "10.4": 1891
+      }
+    },
+    {
+      "page": 116,
+      "characters": 1688,
+      "body_bottom": 581.64,
+      "body_fonts": {
+        "11.3": 17,
+        "9.0": 17,
+        "10.4": 1636
+      }
+    },
+    {
+      "page": 117,
+      "characters": 1934,
+      "body_bottom": 741.04,
+      "body_fonts": {
+        "11.3": 22,
+        "9.0": 17,
+        "10.4": 1877
+      }
+    },
+    {
+      "page": 118,
+      "characters": 2220,
+      "body_bottom": 726.24,
+      "body_fonts": {
+        "11.3": 23,
+        "9.0": 17,
+        "10.4": 2162
+      }
+    },
+    {
+      "page": 119,
+      "characters": 2771,
+      "body_bottom": 760.64,
+      "body_fonts": {
+        "11.3": 22,
+        "9.0": 17,
+        "10.4": 2714
+      }
+    },
+    {
+      "page": 120,
+      "characters": 2319,
+      "body_bottom": 755.04,
+      "body_fonts": {
+        "10.4": 2259,
+        "11.3": 25,
+        "9.0": 17
+      }
+    },
+    {
+      "page": 121,
+      "characters": 1598,
+      "body_bottom": 604.64,
+      "body_fonts": {
+        "10.4": 1580
+      }
+    },
+    {
+      "page": 122,
+      "characters": 2576,
+      "body_bottom": 700.24,
+      "body_fonts": {
+        "11.3": 25,
+        "9.0": 17,
+        "10.4": 2516
+      }
+    },
+    {
+      "page": 123,
+      "characters": 1182,
+      "body_bottom": 487.04,
+      "body_fonts": {
+        "10.4": 1164
+      }
+    },
+    {
+      "page": 124,
+      "characters": 2934,
+      "body_bottom": 734.84,
+      "body_fonts": {
+        "11.3": 27,
+        "9.0": 17,
+        "10.4": 2872
+      }
+    },
+    {
+      "page": 125,
+      "characters": 2360,
+      "body_bottom": 768.84,
+      "body_fonts": {
+        "10.4": 2298,
+        "11.3": 27,
+        "9.0": 17
+      }
+    },
+    {
+      "page": 126,
+      "characters": 2545,
+      "body_bottom": 753.84,
+      "body_fonts": {
+        "10.4": 2527
+      }
+    },
+    {
+      "page": 127,
+      "characters": 645,
+      "body_bottom": 693.64,
+      "body_fonts": {
+        "15.0": 8,
+        "10.0": 500,
+        "10.4": 119
+      }
+    },
+    {
+      "page": 128,
+      "characters": 986,
+      "body_bottom": 749.44,
+      "body_fonts": {
+        "15.0": 17,
+        "11.3": 30,
+        "10.4": 921
+      }
+    },
+    {
+      "page": 129,
+      "characters": 911,
+      "body_bottom": 762.04,
+      "body_fonts": {
+        "10.4": 863,
+        "11.3": 30
+      }
+    },
+    {
+      "page": 130,
+      "characters": 937,
+      "body_bottom": 762.04,
+      "body_fonts": {
+        "10.4": 889,
+        "11.3": 30
+      }
+    },
+    {
+      "page": 131,
+      "characters": 911,
+      "body_bottom": 762.04,
+      "body_fonts": {
+        "10.4": 863,
+        "11.3": 30
+      }
+    },
+    {
+      "page": 132,
+      "characters": 981,
+      "body_bottom": 747.24,
+      "body_fonts": {
+        "10.4": 933,
+        "11.3": 30
+      }
+    },
+    {
+      "page": 133,
+      "characters": 974,
+      "body_bottom": 747.24,
+      "body_fonts": {
+        "10.4": 926,
+        "11.3": 30
+      }
+    },
+    {
+      "page": 134,
+      "characters": 995,
+      "body_bottom": 727.04,
+      "body_fonts": {
+        "10.4": 962,
+        "11.3": 15
+      }
+    },
+    {
+      "page": 135,
+      "characters": 996,
+      "body_bottom": 762.84,
+      "body_fonts": {
+        "11.3": 30,
+        "10.4": 948
+      }
+    },
+    {
+      "page": 136,
+      "characters": 928,
+      "body_bottom": 747.24,
+      "body_fonts": {
+        "10.4": 880,
+        "11.3": 30
+      }
+    },
+    {
+      "page": 137,
+      "characters": 845,
+      "body_bottom": 732.44,
+      "body_fonts": {
+        "10.4": 797,
+        "11.3": 30
+      }
+    },
+    {
+      "page": 138,
+      "characters": 974,
+      "body_bottom": 776.84,
+      "body_fonts": {
+        "10.4": 926,
+        "11.3": 30
+      }
+    },
+    {
+      "page": 139,
+      "characters": 1007,
+      "body_bottom": 762.04,
+      "body_fonts": {
+        "10.4": 959,
+        "11.3": 30
+      }
+    },
+    {
+      "page": 140,
+      "characters": 988,
+      "body_bottom": 762.04,
+      "body_fonts": {
+        "10.4": 940,
+        "11.3": 30
+      }
+    },
+    {
+      "page": 141,
+      "characters": 1019,
+      "body_bottom": 689.44,
+      "body_fonts": {
+        "10.4": 986,
+        "11.3": 15
+      }
+    },
+    {
+      "page": 142,
+      "characters": 1052,
+      "body_bottom": 748.04,
+      "body_fonts": {
+        "11.3": 30,
+        "10.4": 1004
+      }
+    },
+    {
+      "page": 143,
+      "characters": 1011,
+      "body_bottom": 747.24,
+      "body_fonts": {
+        "10.4": 963,
+        "11.3": 30
+      }
+    },
+    {
+      "page": 144,
+      "characters": 147,
+      "body_bottom": 129.24,
+      "body_fonts": {
+        "10.4": 129
+      }
+    },
+    {
+      "page": 145,
+      "characters": 991,
+      "body_bottom": 764.24,
+      "body_fonts": {
+        "15.0": 17,
+        "11.3": 30,
+        "10.4": 926
+      }
+    },
+    {
+      "page": 146,
+      "characters": 935,
+      "body_bottom": 762.04,
+      "body_fonts": {
+        "10.4": 887,
+        "11.3": 30
+      }
+    },
+    {
+      "page": 147,
+      "characters": 1025,
+      "body_bottom": 776.84,
+      "body_fonts": {
+        "10.4": 977,
+        "11.3": 30
+      }
+    },
+    {
+      "page": 148,
+      "characters": 1027,
+      "body_bottom": 747.24,
+      "body_fonts": {
+        "10.4": 979,
+        "11.3": 30
+      }
+    },
+    {
+      "page": 149,
+      "characters": 1042,
+      "body_bottom": 696.24,
+      "body_fonts": {
+        "10.4": 1009,
+        "11.3": 15
+      }
+    },
+    {
+      "page": 150,
+      "characters": 1071,
+      "body_bottom": 762.84,
+      "body_fonts": {
+        "11.3": 30,
+        "10.4": 1023
+      }
+    },
+    {
+      "page": 151,
+      "characters": 1017,
+      "body_bottom": 776.84,
+      "body_fonts": {
+        "10.4": 969,
+        "11.3": 30
+      }
+    },
+    {
+      "page": 152,
+      "characters": 967,
+      "body_bottom": 762.04,
+      "body_fonts": {
+        "10.4": 919,
+        "11.3": 30
+      }
+    },
+    {
+      "page": 153,
+      "characters": 926,
+      "body_bottom": 576.64,
+      "body_fonts": {
+        "10.4": 893,
+        "11.3": 15
+      }
+    },
+    {
+      "page": 154,
+      "characters": 966,
+      "body_bottom": 779.04,
+      "body_fonts": {
+        "15.0": 17,
+        "11.3": 30,
+        "10.4": 901
+      }
+    },
+    {
+      "page": 155,
+      "characters": 940,
+      "body_bottom": 747.24,
+      "body_fonts": {
+        "10.4": 892,
+        "11.3": 30
+      }
+    },
+    {
+      "page": 156,
+      "characters": 998,
+      "body_bottom": 754.04,
+      "body_fonts": {
+        "10.4": 950,
+        "11.3": 30
+      }
+    },
+    {
+      "page": 157,
+      "characters": 943,
+      "body_bottom": 754.04,
+      "body_fonts": {
+        "10.4": 895,
+        "11.3": 30
+      }
+    },
+    {
+      "page": 158,
+      "characters": 1022,
+      "body_bottom": 741.84,
+      "body_fonts": {
+        "10.4": 989,
+        "11.3": 15
+      }
+    },
+    {
+      "page": 159,
+      "characters": 861,
+      "body_bottom": 740.04,
+      "body_fonts": {
+        "11.3": 30,
+        "10.4": 813
+      }
+    },
+    {
+      "page": 160,
+      "characters": 957,
+      "body_bottom": 747.24,
+      "body_fonts": {
+        "10.4": 909,
+        "11.3": 30
+      }
+    },
+    {
+      "page": 161,
+      "characters": 1020,
+      "body_bottom": 754.04,
+      "body_fonts": {
+        "10.4": 972,
+        "11.3": 30
+      }
+    },
+    {
+      "page": 162,
+      "characters": 1028,
+      "body_bottom": 754.04,
+      "body_fonts": {
+        "10.4": 980,
+        "11.3": 30
+      }
+    },
+    {
+      "page": 163,
+      "characters": 1039,
+      "body_bottom": 756.64,
+      "body_fonts": {
+        "10.4": 1006,
+        "11.3": 15
+      }
+    },
+    {
+      "page": 164,
+      "characters": 996,
+      "body_bottom": 777.64,
+      "body_fonts": {
+        "11.3": 30,
+        "10.4": 948
+      }
+    },
+    {
+      "page": 165,
+      "characters": 906,
+      "body_bottom": 724.44,
+      "body_fonts": {
+        "10.4": 858,
+        "11.3": 30
+      }
+    },
+    {
+      "page": 166,
+      "characters": 953,
+      "body_bottom": 739.24,
+      "body_fonts": {
+        "10.4": 905,
+        "11.3": 30
+      }
+    },
+    {
+      "page": 167,
+      "characters": 998,
+      "body_bottom": 754.04,
+      "body_fonts": {
+        "10.4": 950,
+        "11.3": 30
+      }
+    },
+    {
+      "page": 168,
+      "characters": 1057,
+      "body_bottom": 756.64,
+      "body_fonts": {
+        "10.4": 1024,
+        "11.3": 15
+      }
+    },
+    {
+      "page": 169,
+      "characters": 993,
+      "body_bottom": 762.84,
+      "body_fonts": {
+        "11.3": 30,
+        "10.4": 945
+      }
+    },
+    {
+      "page": 170,
+      "characters": 1080,
+      "body_bottom": 776.84,
+      "body_fonts": {
+        "10.4": 1032,
+        "11.3": 30
+      }
+    },
+    {
+      "page": 171,
+      "characters": 870,
+      "body_bottom": 732.44,
+      "body_fonts": {
+        "10.4": 822,
+        "11.3": 30
+      }
+    },
+    {
+      "page": 172,
+      "characters": 1014,
+      "body_bottom": 776.84,
+      "body_fonts": {
+        "10.4": 966,
+        "11.3": 30
+      }
+    },
+    {
+      "page": 173,
+      "characters": 991,
+      "body_bottom": 776.84,
+      "body_fonts": {
+        "10.4": 943,
+        "11.3": 30
+      }
+    },
+    {
+      "page": 174,
+      "characters": 972,
+      "body_bottom": 754.04,
+      "body_fonts": {
+        "10.4": 924,
+        "11.3": 30
+      }
+    },
+    {
+      "page": 175,
+      "characters": 945,
+      "body_bottom": 741.84,
+      "body_fonts": {
+        "10.4": 912,
+        "11.3": 15
+      }
+    },
+    {
+      "page": 176,
+      "characters": 1104,
+      "body_bottom": 777.64,
+      "body_fonts": {
+        "11.3": 30,
+        "10.4": 1056
+      }
+    },
+    {
+      "page": 177,
+      "characters": 889,
+      "body_bottom": 724.44,
+      "body_fonts": {
+        "10.4": 841,
+        "11.3": 30
+      }
+    },
+    {
+      "page": 178,
+      "characters": 993,
+      "body_bottom": 776.84,
+      "body_fonts": {
+        "10.4": 945,
+        "11.3": 30
+      }
+    },
+    {
+      "page": 179,
+      "characters": 885,
+      "body_bottom": 776.84,
+      "body_fonts": {
+        "10.4": 837,
+        "11.3": 30
+      }
+    },
+    {
+      "page": 180,
+      "characters": 950,
+      "body_bottom": 762.04,
+      "body_fonts": {
+        "10.4": 902,
+        "11.3": 30
+      }
+    },
+    {
+      "page": 181,
+      "characters": 933,
+      "body_bottom": 704.24,
+      "body_fonts": {
+        "10.4": 900,
+        "11.3": 15
+      }
+    },
+    {
+      "page": 182,
+      "characters": 1061,
+      "body_bottom": 777.64,
+      "body_fonts": {
+        "11.3": 30,
+        "10.4": 1013
+      }
+    },
+    {
+      "page": 183,
+      "characters": 621,
+      "body_bottom": 486.64,
+      "body_fonts": {
+        "10.4": 588,
+        "11.3": 15
+      }
+    },
+    {
+      "page": 184,
+      "characters": 1067,
+      "body_bottom": 569.44,
+      "body_fonts": {
+        "15.0": 12,
+        "10.4": 711,
+        "10.0": 326
+      }
+    }
+  ],
+  "answer_distribution": {
+    "B": 51,
+    "C": 49,
+    "D": 37,
+    "A": 41
+  }
+}

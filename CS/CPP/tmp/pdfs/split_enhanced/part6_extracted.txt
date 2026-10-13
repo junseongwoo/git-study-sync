@@ -1,0 +1,1973 @@
+--- PAGE 1 ---
+Toeic RC
+Part 6
+문법 자리를 정하고, 앞뒤 문맥과 지시어를 연결해 빈칸을 완성합니다.
+수록 문항 48개 | 문제·정답표·전체 해설 포함
+학습 구성 이 파일에서 할 일
+핵심 전략 8가지 문맥 판단과 장르별 접근
+풀이 사례 유형별 영문 사례·오답의 성립 조건·판단 순서
+지문 훈련 기존4세트+새8세트, 총12세트·48문항
+전체 해설 각 문항의 구조·문맥·오답3개·일반화 규칙
+총점 700점대에서 950점 이상을 목표로 하는 학습자를 위한 RC 교재입니다. RC 자체는 495점 만점이며,
+이 파일은 해당 파트의 판단 능력을 기르는 독립 교재입니다.
+강화판: 기존 학습 내용을 유지하면서 실제 풀이 예시·규칙의 경계·새 문제·오답 교정을 보강했습니다. 단
+어장과 암기용 단어 목록은 제외했습니다.
+A4 세로 · 본문 10.4pt · 한글 글꼴 포함 · 파일별 목차와 페이지 번호
+1
+
+--- PAGE 2 ---
+Toeic RC Part 6
+목차
+Part 6 3
+학습 순서와 근거 기록 . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 3
+6.01 문장 삽입: 앞뒤 문장의 연결 고리를 찾는다 . . . . . . . . . . . . . . . . . . . . . . . . . . . 3
+6.02 시제와 동사: 글 속 시간표를 만든다 . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 4
+6.03 대명사와 지시어: 무엇을 가리키는지 이름을 붙인다 . . . . . . . . . . . . . . . . . . . . . . . 4
+6.04 연결어: 이유·대조·추가·예시를 구분한다 . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 4
+6.05 문법과 문맥: 두 번에 나누어 검증한다 . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 4
+6.06 글의 장르: 독자가 해야 할 일을 파악한다 . . . . . . . . . . . . . . . . . . . . . . . . . . . . 5
+6.07 고난도 통합: 한 단서로 결정하지 않는다 . . . . . . . . . . . . . . . . . . . . . . . . . . . . 5
+6.08 풀이와 복습: 정답보다 판단 과정을 기록한다 . . . . . . . . . . . . . . . . . . . . . . . . . . 5
+유형별 판단을 재현하는 강화 사례 . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 6
+심화 사례 1 · 문장 삽입의 양쪽 경계를 검사하기 . . . . . . . . . . . . . . . . . . . . . . . . . . . 6
+심화 사례 2 · 문맥 속 시제와 동사의 역할 분리하기 . . . . . . . . . . . . . . . . . . . . . . . . . 6
+심화 사례 3 · 대명사 선행사를 동사와 함께 검증하기 . . . . . . . . . . . . . . . . . . . . . . . . . 6
+심화 사례 4 · 연결어의 논리와 문장 구조를 따로 채점하기 . . . . . . . . . . . . . . . . . . . . . . 7
+심화 사례 5 · 문법 통과와 문맥 통과를 별도로 판단하기 . . . . . . . . . . . . . . . . . . . . . . . 7
+심화 사례 6 · 장르별로 독자의 행동과 예외를 읽기 . . . . . . . . . . . . . . . . . . . . . . . . . . 8
+심화 사례 7 · 고난도 통합에서 범위 제한을 읽기 . . . . . . . . . . . . . . . . . . . . . . . . . . . 8
+심화 사례 8 · 풀이 기록을 재현 가능한 판단으로 바꾸기 . . . . . . . . . . . . . . . . . . . . . . . 8
+연습 전: 네 빈칸의 근거를 기록하는 방법 . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 9
+Part 6 지문별 연습 | 12세트 . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 10
+정답표 . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 22
+Part 6 전체 상세 해설 . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 23
+문맥 연결과 오답 교정 . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 51
+복습 점검 1 · 선행사와 논리 흐름을 짧게 그리기 . . . . . . . . . . . . . . . . . . . . . . . . . . 51
+복습 점검 2 · 정답의 근거와 오답의 가정을 분리해 기록하기 . . . . . . . . . . . . . . . . . . . . 51
+2
+
+--- PAGE 3 ---
+Toeic RC Part 6
+Part 6
+학습 순서와 근거 기록
+지문 목적→빈칸 문장 구조→앞뒤 문장의 시간과 지칭 대상→문장 삽입의 양쪽 연결 순서로 판단합니다.
+문장 삽입은 앞 문장에만 어울리는 답을 경계합니다.
+핵심 전략을 읽은 뒤 강화 사례에서 단서를 먼저 표시합니다.12개 지문을 풀고 정답표·해설을 확인합니
+다. 처음에는 근거 정확성을 우선하고, 이후에는 개인 기록을 바탕으로 지문당 목표시간을 정합니다.
+단계 완료 기준
+개념 규칙뿐 아니라 적용 조건과 예외를 설명한다.
+예제 문장 성분 또는 문장 간 연결을 표시한다.
+문제 해설을 가리고 정답과 근거를 고른다.
+복습 오답 세 개를 제거한 이유까지 설명한다.
+난도는 기본·중급·고급·실전 최상급으로 표기합니다. 문제 번호의 B는 강화판에서 추가한 문항을 뜻합니
+다. 정확한 근거를 확보한 뒤 제한 시간을 줄여 갑니다.
+Part 6는 한 지문에 네 개의 빈칸이 있는 문맥 완성 문제다. 현재 TOEIC RC의 Part 6는 네 지문, 총 16문
+항이며, 단어·구·문장 삽입을 함께 평가한다. 단어 빈칸도 문장 하나만 보고 풀면 시제, 지시 대상, 글의
+목적을 놓칠 수 있다.
+학습 목표는 ‘문법적으로 들어갈 수 있는 표현’과 ‘이 문맥에 들어가야 하는 표현’을 구별하는 것이다. 아
+래 훈련은 이메일, 공지, 절차 안내, 보고서로 구성했다. 먼저 문제를 풀고, 해설의 단서와 자신이 실제로
+사용한 단서를 비교한다. 모든 예제와 모의고사 문항은 학습용으로 새로 작성한 독창적 문제다.
+6.01 문장 삽입: 앞뒤 문장의 연결 고리를 찾는다
+문장 삽입 문제는 빈칸 앞 문장과 뒤 문장을 한 덩어리로 읽는 것이 출발점이다. 앞 문장이 제기한 문제
+를 해결하는지, 다음 문장의 This, These, Such, it에 필요한 선행 내용을 제공하는지 확인한다. 예를 들어
+빈칸 뒤가 ‘This temporary room has twenty seats.’라면, 삽입 문장은 임시 회의실을 처음 소개해야 자
+연스럽다.
+선택지가 모두 글의 주제와 관련 있어 보여도 연결 방식은 다를 수 있다. 회의실 공사 안내에 식당 할인
+문장을 넣으면 장소와 운영이라는 넓은 주제는 겹치지만, 앞뒤 논리와 지시어를 설명하지 못한다. 주제
+관련성만으로 정답을 고르지 말고 ‘앞 문장 → 삽입 문장 → 뒤 문장’의 정보 순서를 실제로 읽어 본다.
+삽입 문장 안의 연결 표현도 검사한다. However는 앞 내용과 대조되는 정보를, For example은 바로 앞
+의 일반 진술을 구체화하는 정보를 요구한다. 정답을 넣은 뒤에는 시점과 대상이 바뀌지 않는지 마지막
+으로 확인한다. 빈칸 주변 두 문장만으로 근거가 부족할 때에만 해당 문단과 글의 목적까지 읽는 범위를
+넓힌다.
+3
+
+--- PAGE 4 ---
+Toeic RC Part 6
+6.02 시제와 동사: 글 속 시간표를 만든다
+시제 선택은 시간 부사 하나를 찾는 데서 끝나지 않는다. 작성 시점, 이미 완료한 조치, 지금 유지되는 상
+태, 앞으로의 계획을 구별한다. ‘Last month, the team tested the system.’은 끝난 시험을 보고하므로 과
+거시제가 자연스럽고, ‘The system will be tested next month.’는 앞으로 시행될 수동태다.
+동사 형태를 고르기 전에 주어와 목적어를 확인한다. 신청서가 제출되는 대상이면 ‘must be submitted’
+처럼 수동태가 필요하다. 직원이 신청서를 제출하는 행위자이면 ‘must submit’이 된다. 조동사 뒤에는
+동사원형이 온다는 규칙과 능동·수동 판단을 한 번에 적용해야 한다.
+한 지문에서 과거와 미래가 함께 나오는 것은 흔하다. 이전 조사 결과를 근거로 다음 달 정책을 예고할
+수 있기 때문이다. 주변 동사를 무조건 같은 시제로 맞추지 말고, 빈칸 문장 자체가 보고인지 계획인지
+판단한다. 시간 단서를 동그라미 치고 ‘완료 / 현재 상태 / 예정’으로 짧게 분류하면 불필요한 재독을 줄
+일 수 있다.
+6.03 대명사와 지시어: 무엇을 가리키는지 이름을 붙인다
+it, they, them, this, these를 읽을 때 머릿속에서 구체적인 명사로 바꾸어 본다. ‘Drivers should use it.’의
+it이 지정 출입구를 가리킨다면 단수 대명사가 맞다. 앞에 drivers가 가깝게 있다고 해서 복수형을 고르
+면 의미가 ‘운전자들이 운전자들을 사용한다’로 무너진다.
+수일치만 맞아도 의미가 맞지 않을 수 있다. 후보 선행사가 두 개라면 동사와 함께 읽어 실제로 그 동작
+이나 속성을 가질 수 있는 대상인지 확인한다. ‘This list must be signed.’라면 서명할 수 있는 목록이 앞
+에 있어야 하며, 단수인 입구나 행사 자체는 선행사가 될 수 없다.
+문장 전체를 가리키는 This도 있다. 예를 들어 배송이 하루 지연된 사실 뒤의 ‘This will affect
+installation.’은 특정 명사 하나가 아니라 지연이라는 상황을 받는다. 따라서 지시어 문제는 가까운 명사
+찾기와 의미 연결을 동시에 수행해야 한다. 해설을 볼 때에는 선행 내용을 직접 표시하고 그 표현을 대
+명사 자리에 다시 넣어 검증한다.
+6.04 연결어: 이유·대조·추가·예시를 구분한다
+연결어를 보기 전에 두 문장 사이의 관계를 한국어로 짧게 적는다. 앞의 조치 때문에 뒤의 결과가 생기
+면 therefore, 앞의 예상과 다른 결과가 나오면 however, 같은 방향의 정보가 추가되면 furthermore, 추
+상적인 설명 뒤에 구체적인 사례가 나오면 for example이 후보가 된다.
+뜻과 문장 구조는 별도의 검사 항목이다. Although와 because는 뒤에 절을 이끄는 접속사이고, despite
+는 명사나 동명사를 목적어로 받는 전치사다. However는 접속부사여서 문장 두 개를 쉼표 하나만으로
+연결하는 접속사처럼 사용할 수 없다. 보기의 뜻이 맞아도 빈칸 뒤 구조와 맞지 않으면 제외한다.
+대조는 단순히 부정어가 있는지를 세는 문제가 아니다. ‘절차가 간단해졌다. 그러나 재고 오류가 계속되
+었다.’처럼 기대와 실제의 차이를 찾아야 한다. 추가와 예시도 구별한다. 새로운 별도 혜택을 소개하면
+추가이고, 바로 앞 주장을 대표하는 구체적인 항목이면 예시다. 연결어를 넣고 양쪽 내용을 한 문장으로
+요약해 보면 관계가 선명해진다.
+6.05 문법과 문맥: 두 번에 나누어 검증한다
+첫 단계는 빈칸에 필요한 문법 자리를 정하는 것이다. 명사 앞인지, 동사를 수식하는 자리인지, 절을 연
+결하는 자리인지 확인하면 형태가 맞지 않는 선택지를 빠르게 제거할 수 있다. ‘a measurable ___ in
+errors’는 관사와 형용사 뒤의 명사 자리이므로 reduction이 형태상 적합하다.
+4
+
+--- PAGE 5 ---
+Toeic RC Part 6
+두 번째 단계는 남은 표현이 앞뒤 내용과 맞는지 확인하는 것이다. 문법적으로 모두 가능한 restore,
+replace, advertise, postpone 중에서 중단된 온라인 서비스를 다시 가동한다면 restore가 문맥에 맞다.
+단어의 익숙함이나 긍정적인 인상보다 빈칸의 목적어와 글의 목적이 더 강한 근거다.
+문법만으로 정답이 결정되는 문항도 있지만, 이를 모든 문항에 확대하지 않는다. 특히 동사 시제, 연결어,
+어휘, 문장 삽입은 최소한 전후 한 문장을 읽는다. 문제를 푼 뒤 ‘형태 때문에 제외한 보기’와 ‘의미 때문
+에 제외한 보기’를 따로 설명해 보면 자신의 실수 유형을 정확하게 찾을 수 있다.
+6.06 글의 장르: 독자가 해야 할 일을 파악한다
+이메일은 발신 목적과 수신자의 행동을 중심으로 읽는다. 변경 안내라면 무엇이 언제 바뀌고 누가 어떤
+조치를 해야 하는지를 찾는다. 공지는 적용 대상, 시행일, 예외 조건이 핵심이다. 제목과 첫 문장은 전체
+목적을 알려 주지만, 정답은 본문 속 구체적인 조건으로 확인한다.
+절차 안내문에서는 단계 순서와 선행 조건이 중요하다. 서류 제출 전에 영수증을 확인하는지, 제출 후
+승인 메시지를 기다리는지 구분한다. before, after, once 같은 표현을 실제 행동 순서로 바꾸면 연결어
+와 시제 판단이 쉬워진다. 번호나 시간 표현이 있으면 순서를 표시하며 읽는다.
+보고서는 시험이나 조사 결과를 제시하고 다음 조치를 제안하는 경우가 많다. 사실로 확인된 결과와 작
+성자의 권고를 구분하고, 수치가 어떤 기간·집단을 설명하는지 확인한다. 장르 지식은 읽을 위치를 안내
+하는 도구이지 내용을 추측하는 근거가 아니다. 실제 본문에 없는 전형적인 업무 절차를 임의로 추가하
+지 않는다.
+6.07 고난도 통합: 한 단서로 결정하지 않는다
+어려운 문제는 문법·시간·지시 대상·논리 중 둘 이상을 동시에 검사한다. 예를 들어 조사 보고서의 빈칸
+동사는 주어의 수와 맞아야 하고, 지난달에 종료된 조사라는 시간표에도 맞아야 한다. 수일치가 맞는 현
+재시제를 먼저 고르면 시간 조건을 놓칠 수 있다.
+문장 삽입에서는 앞 문장과만 잘 연결되는 오답을 경계한다. 비용 증가 이야기에 절약 대책이 자연스럽
+게 보여도, 뒤 문장이 ‘These three locations...’라면 세 장소를 소개한 문장이 필요하다. 정답은 양쪽 경
+계를 모두 통과해야 한다. 특히 지시어, 비교급, one/another, first/then은 앞뒤 정보의 형태까지 제한한
+다.
+선택지를 읽은 뒤 본문을 계속 고쳐 해석하지 않는다. 정답 후보가 둘이라면 각 후보를 넣었을 때 설명
+되지 않는 단서가 무엇인지 찾는다. 본문에 없는 상황을 가정해야만 성립하는 후보는 약하다. 근거가 문
+장 구조에서 나온 것인지, 본문에 명시된 사실에서 나온 것인지 구분하면 과도한 추론을 줄일 수 있다.
+6.08 풀이와 복습: 정답보다 판단 과정을 기록한다
+첫 문장과 제목으로 목적을 확인하고, 빈칸이 있는 문장부터 구조를 살핀다. 문법으로 해결되는 빈칸은
+먼저 처리하되, 문맥형 빈칸과 문장 삽입은 앞뒤를 연결해 읽는다. 마지막에는 채운 문장을 포함한 문단
+을 한 번 읽어 시점과 지시어가 자연스럽게 이어지는지 확인한다.
+오답 노트에는 문제 전체를 옮기기보다 ‘놓친 단서 / 잘못 적용한 규칙 / 다음 행동’을 한 줄씩 적는다.
+예: ‘지난달이라는 시간 단서를 놓침 / 주변 현재시제에 맞춤 / 동사 보기 전에 사건 시점을 표시’. 맞힌
+문제도 확신 없이 골랐다면 복습 대상으로 남긴다.
+훈련 지문은 처음에 정확도를 우선하고, 재풀이에서는 지문당 약 2분 30초를 출발점으로 시간을 재 본
+다. 이 시간은 개인 학습용 기준이며 공식 제한 시간이 아니다. 속도가 느린 이유를 어휘 부족, 구조 분석,
+앞뒤 재독으로 나누어 확인하고, 필요한 단계만 반복한다. 아래 해설을 읽기 전에 자신의 단서를 먼저
+적어야 해설을 수동적으로 읽는 일을 줄일 수 있다.
+5
+
+--- PAGE 6 ---
+Toeic RC Part 6
+유형별 판단을 재현하는 강화 사례
+심화 사례 1 · 문장 삽입의 양쪽 경계를 검사하기
+삽입 문제에서 먼저 정할 것은 ‘어떤 내용이 들어가야 하는가’다. 선택지를 보기 전에 앞 문장이 남긴 정
+보의 빈자리와 뒤 문장이 요구하는 선행 내용을 적는다. 새 대상을 소개해야 하는지, 문제의 해결책이
+필요한지, 일반적인 설명 뒤의 사례인지 구별하면 주제만 비슷한 보기에 끌리지 않는다.
+사례: ‘The old printer cannot handle large design files. [Blank] This replacement will be installed
+beside the reception desk.’ 정답 후보가 ‘A higher-capacity printer has therefore been ordered.’라면
+앞의 처리 능력 문제를 해결하며, 뒤의 This replacement가 받을 새 프린터를 소개한다. therefore도 앞
+의 고장·성능 문제와 주문 조치를 연결한다. 세 문장이 문제 → 조치 → 설치 위치 순서로 이어진다.
+‘A technician will visit on Friday.’는 프린터 문제와 관련 있지만 교체품을 소개하지 않는다. 뒤 문장이
+‘This visit will take about an hour.’로 바뀌면 기술자 방문 문장이 강한 후보가 된다. 즉 오답은 현실적으
+로 불가능해서가 아니라 현재의 지시어와 연결되지 않아서 탈락한다. 이 차이를 설명할 수 있어야 비슷
+한 소재의 보기에도 흔들리지 않는다.
+결정 순서는 ① 뒤의 지시어·수 표현 확인 ② 앞의 문제 또는 일반 진술 확인 ③ 선택지를 넣어 양쪽 연
+결 검사 ④ 글의 목적과 시점 확인이다. ‘앞과는 맞음 / 뒤와도 맞음’을 따로 표시한다. 한쪽만 자연스러
+운 보기는 보류하지 말고 그쪽에서 설명하지 못한 단서를 정확히 기록한다.
+심화 사례 2 · 문맥 속 시제와 동사의 역할 분리하기
+보고서에서 현재시제는 현재에도 유효한 결과를 소개할 수 있으므로, 이전 문장에 last month가 있다는
+이유만으로 현재형을 모두 배제하면 안 된다. 해당 빈칸 절에 붙은 시간 표현, 주어의 행위자·대상 관계,
+동사에 필요한 보조동사를 분리해서 검사한다. 시점이 불분명하면 수일치나 수동 구조 같은 확실한 단
+서부터 적용한다.
+사례: ‘At yesterday's meeting, the director approved the plan. The revised schedule was distributed
+immediately afterward. It is now available on the staff portal.’ 첫 문장의 approved는 같은 절의
+yesterday's meeting 때문에 종료된 과거 사건이다. 둘째 문장의 schedule은 배포를 받는 대상이므로
+was distributed이며, immediately afterward가 앞의 승인 이후 시점을 연결한다. 셋째 문장의 is now
+available은 현재 상태다.
+첫 문장을 ‘The director approves plans that meet all safety requirements.’로 바꾸면 반복되는 일반적
+인 승인 기준이므로 현재형이 가능하다. 둘째 문장의 주어를 ‘The assistant’로 바꾸고 목적어 the
+schedule을 붙이면 distributed라는 능동형을 쓸 수 있다. 시제와 태의 오답 조건을 따로 설명해야 과거
+라는 단서 하나로 수동태까지 추측하는 실수를 막을 수 있다.
+결정 순서는 ① 빈칸 절의 시간 범위 표시 ② 주어 중심어와 수 확인 ③ 행위자·대상 판단 ④ 유한 동사
+또는 수식 분사 구별 ⑤ 앞뒤 문장과 시간표 대조다. ‘지난 사건 / 현재 결과 / 다음 조치’로 문단을 나누
+면 한 지문 안의 과거·현재·미래가 섞여도 자연스럽게 읽을 수 있다.
+심화 사례 3 · 대명사 선행사를 동사와 함께 검증하기
+선행사를 찾을 때 가까운 명사만 고르면 사람과 자료, 건물과 목록을 혼동하기 쉽다. 후보마다 대명사
+자리에 실제 명사를 넣고 동사와 읽는다. 그 대상이 동작을 하거나 받을 수 있는지, 단수·복수는 맞는지,
+지시 범위가 명사 하나인지 앞의 상황 전체인지 확인한다.
+6
+
+--- PAGE 7 ---
+Toeic RC Part 6
+사례: ‘Two organizers received a revised room list. Please check it before contacting the speakers.
+Any changes must be reported to the facilities team.’ it의 선행사는 가까운 단수 명사 room list다.
+check the room list가 실제 확인할 자료이고, 뒤의 changes도 배정 목록 변경으로 이어진다. 두
+organizers가 앞에 있어도 check them으로 바꾸면 사람 자체를 확인하는 다른 뜻이 된다.
+첫 문장이 ‘The coordinator received two room lists.’라면 확인 자료는 복수이므로 them이 필요하다.
+‘The room was closed unexpectedly. This delayed the presentation.’에서 This는 room이라는 물건보다
+예기치 않은 폐쇄라는 상황을 받는다. 명사만 강제로 찾는 방식도 틀릴 수 있다. 문맥을 바꾸었을 때 정
+답이 어떻게 달라지는지 비교하면 수일치와 의미 판단이 함께 훈련된다.
+결정 순서는 ① 대명사의 문장 역할 확인 ② 직전 두 문장의 선행 후보 나열 ③ 동사와 의미 결합 ④ 수·
+격 검사 ⑤ 후속 문장의 같은 대상 연결 확인이다. 복습에서는 ‘it = revised room list’처럼 등식을 쓰고,
+단수라서 맞는다는 설명에 그치지 않고 ‘발표자 연락 전 확인할 자료’라는 기능도 함께 적는다.
+심화 사례 4 · 연결어의 논리와 문장 구조를 따로 채점하기
+대조·원인·추가·예시라는 의미 관계와, 절·명사구를 이끄는 문법 구조는 독립된 검사다. despite와
+although는 둘 다 양보 의미지만 같은 자리에 자유롭게 바꿔 넣을 수 없다. however는 문장 사이를 연
+결하는 접속부사이며, 주어와 동사가 있는 종속절을 이끄는 although와 역할이 다르다.
+사례: ‘Although the main entrance is closed, the shop is still open. Customers should use the side
+door. This route is clearly marked on the attached map.’ 첫 문장의 빈칸 후보는 closed라는 동사가 있
+는 절을 받아야 한다. 폐쇄라는 불리한 조건과 계속 영업한다는 결과의 대조도 충족하므로 Although가
+맞다. 다음 두 문장은 대체 동선과 그 동선의 표시를 설명한다.
+‘Despite the closure of the main entrance, the shop is still open.’처럼 뒤를 명사구로 바꾸면 despite가
+가능하다. ‘The main entrance is closed. However, the shop is still open.’처럼 문장을 나누면 however
+가 가능하다. Because를 쓰려면 폐쇄가 영업 지속을 일으킨다는 인과가 필요하므로 현재 내용과 맞지
+않는다. 같은 뜻의 표현이 왜 다른 구조를 요구하는지 직접 고쳐 본다.
+결정 순서는 ① 두 내용의 관계를 한국어 한 문장으로 요약 ② 빈칸 뒤가 절인지 명사구인지 확인 ③ 후
+보의 연결 역할 확인 ④ 쉼표·문장 경계 검사다. 관계를 ‘불리한 사실에도 계속 영업’처럼 적으면 부정어
+의 개수만 세는 습관을 줄일 수 있다. 뜻이 맞아도 구조가 틀린 보기는 먼저 제거한다.
+심화 사례 5 · 문법 통과와 문맥 통과를 별도로 판단하기
+형태가 맞는 보기 여러 개가 남으면 목적어, 기간, 조건, 글의 목적이 어떤 행동을 요구하는지 확인한다.
+문법 통과는 최종 정답의 필요조건이지 충분조건은 아니다. 반대로 문맥상 자연스러운 단어라도 품사나
+전치사 결합이 맞지 않으면 사용할 수 없다.
+사례: ‘All signed agreements have been scanned. Retain the digital copies for seven years. They may
+be needed during a future audit.’ for seven years와 future audit가 장기간 보관이라는 기능을 설명한
+다. retain, distribute, revise가 모두 동사원형이어도 사본을 감사 자료로 유지하라는 지시에는 retain이
+맞는다. They는 앞의 digital copies를 받는다.
+둘째 문장이 ‘Send the digital copies to all branch managers today.’라면 distribute가 후보가 된다.
+‘Update the digital copies to reflect the amended terms.’라면 revise가 맞을 수 있다. 현재 본문에는 수
+신자 확대나 계약 내용 변경이 없으므로 그런 사정을 임의로 가정하지 않는다. 오답을 가능하게 만드는
+본문 조건을 쓰면 단순 번역 암기보다 의미 구별이 정확해진다.
+결정 순서는 ① 빈칸의 품사·동사 형태 제한 ② 목적어와 자연스러운 결합 ③ 기간·목적절·후속 결과 확
+인 ④ 본문에 없는 가정이 필요한 보기 제거다. 선택지마다 ‘형태 탈락’ 또는 ‘문맥 탈락’을 한 가지 이상
+적고, 정답은 같은 검사에서 어떻게 살아남았는지 설명한다.
+7
+
+--- PAGE 8 ---
+Toeic RC Part 6
+심화 사례 6 · 장르별로 독자의 행동과 예외를 읽기
+이메일은 요청·변경·확인 중 발신 목적을 먼저 정한다. 공지는 적용 대상과 시행일, 예외를 찾는다. 절차
+안내는 행동 순서와 필요한 자료, 보고서는 관찰 결과와 해석·권고를 구분한다. 장르를 알아도 본문에 없
+는 상식적인 절차를 추가하지 말고, 각 행동의 주체와 조건을 문장으로 확인한다.
+사례: ‘First, report the damaged device through the service portal. Before shipping it, print the
+return label issued by the system. Devices sent without a label may take longer to process.’ 첫 문장
+은 신고, 둘째는 배송 전 준비, 셋째는 누락의 결과다. before와 without은 서로 다른 구조를 쓰지만 모두
+신고 → 라벨 발급·인쇄 → 배송이라는 순서를 유지한다.
+‘After shipping the device, keep the tracking receipt.’로 바뀌면 배송 후 보관 단계이므로 after가 맞다.
+하지만 현재의 return label은 배송 전에 물품에 붙여야 하므로 after shipping과 연결할 수 없다. 실제
+업무 상식보다 issued by the system과 sent without a label이라는 본문 단서가 순서를 뒷받침한다. 예
+외 문장도 일반 규칙을 적용할 수 없는 경우를 정확히 제한한다.
+결정 순서는 ① 글의 목적·독자 확인 ② 의무·허용·금지 표현 표시 ③ 조건과 예외 연결 ④ 행동 순서 또
+는 보고서의 결과·권고 구분이다. 보고서의 recommends는 관찰된 사실이 아니라 제안이며, 공지의 may
+는 허용 또는 가능성을 뜻할 수 있다. 같은 조동사라도 장르와 문장 내용을 함께 읽는다.
+심화 사례 7 · 고난도 통합에서 범위 제한을 읽기
+어려운 문항은 결과가 좋다는 내용 뒤에 적용 범위의 제한을 둔다. all, only, both, neither, yet 같은 작은
+표현이 조사 대상, 승인 조건, 예외를 제한한다. 하나의 수치가 회사 전체에 적용되는지 특정 지점에만
+적용되는지 확인하고, 정보가 없는 집단까지 결론을 확장하지 않는다.
+사례: ‘The new form reduced errors among desktop users. Participants who used only mobile
+devices were excluded from the trial. This exclusion prevents us from drawing conclusions about
+mobile performance.’ 둘째 문장은 첫 문장의 조사 범위를 제한하고, 셋째의 This exclusion을 설명한다.
+빈칸 삽입이라면 모바일 사용자 제외 문장이 양쪽에 연결되는 이유가 바로 이 범위 제한이다.
+‘Mobile users were included and showed the same reduction.’이라는 문장이 있다면 모바일에도 개선
+이 확인되었다고 판단할 수 있다. 현재 본문은 excluded라고 했으므로 모바일 성능이 나쁘다고도 좋다
+고도 결론 내릴 수 없다. 미검증과 부정적 결과를 구별한다. 오답이 ‘모바일 성능 실패’를 주장한다면 데
+이터 부재를 실패 증거로 바꾼 것이 문제다.
+결정 순서는 ① 결과의 대상·기간 표시 ② 제외·예외·조건 제한 표시 ③ 삽입 문장이나 어휘가 제한을 유
+지하는지 확인 ④ 정답의 주장 범위가 본문보다 커지지 않는지 검증이다. 두 단서 이상이 같은 답을 가
+리키는지 찾되, 약한 추측 두 개를 합쳐 명시적 사실처럼 취급하지 않는다.
+심화 사례 8 · 풀이 기록을 재현 가능한 판단으로 바꾸기
+재풀이 때 같은 답을 기억하는 것과 같은 판단을 재현하는 것은 다르다. 처음 풀 때 사용한 단서를 한 줄
+로 남기고, 해설을 읽은 뒤 놓친 단서나 잘못 적용한 규칙을 추가한다. 확신 없이 맞힌 문항은 정답 개수
+와 별도로 관리해야 실전 속도가 안정된다.
+사례: ‘Your request has been assigned the reference code RT-604. Include this code in every
+message about the repair. This will help staff locate the correct case.’ this code는 RT-604라는 참조
+번호를 받으며, 마지막 This는 번호를 메시지에 포함하는 행동을 가리킨다. 두 This의 지시 범위가 다르
+다. ‘코드니까 단수’만 기록하면 마지막 문장까지 설명하지 못한다.
+8
+
+--- PAGE 9 ---
+Toeic RC Part 6
+둘째 문장이 ‘Several photos have been uploaded.’로 바뀌고 뒤가 ‘These will help staff assess the
+damage.’라면 선행사는 복수 사진이다. 현재 문제에서 photos를 골랐다면 없는 정보를 만들어 낸 것이
+다. 반대로 참조 번호 문장 앞에 번호가 없었다면 코드 소개 문장 삽입을 검토해야 한다. 복습은 이런 최
+소 변경에서 답이 달라지는지를 확인하는 과정이다.
+기록 순서는 ① 내가 실제로 쓴 단서 ② 정답을 결정하는 정확한 단서 ③ 오답을 골라야만 성립하는 추
+가 가정 ④ 다음 풀이의 첫 행동이다. 예: ‘가까운 명사만 봄 / this code = RT-604 / 사진은 본문에 없음
+/ 동사 include의 목적어를 먼저 확인’. 이 형태로 쓰면 틀린 이유가 모호한 ‘문맥 부족’으로 끝나지 않는
+다.
+연습 전: 네 빈칸의 근거를 기록하는 방법
+아래12세트는 먼저 글의 목적을 확인하고 네 빈칸을 푼 뒤 문단을 다시 읽는 순서로 연습합니다. 각 빈
+칸 옆에 G(문법), C(문맥), I(문장 삽입)를 적어 어떤 단서로 결정했는지 분리합니다. 두 범주가 함께 필요
+하면 둘 다 표시합니다.
+대명사·시제는 문장 내부 형태와 앞뒤 내용이 모두 맞는지 검사합니다. 문장 삽입은 “앞에서 해결할 내
+용”과 “뒤에서 되받는 대상”을 각각 한 줄로 적습니다. 정답을 고른 뒤에는 가장 그럴듯했던 오답이 어느
+단서를 설명하지 못하는지 기록합니다.
+빈칸 문법 / 문맥 / 삽입 직접 단서와 제거 이유
+1 ________________ ________________________
+2 ________________ ________________________
+3 ________________ ________________________
+4 ________________ ________________________
+9
+
+--- PAGE 10 ---
+Toeic RC Part 6
+Part 6 지문별 연습 | 12세트
+훈련 1 · 회의실 공사 이메일
+Questions P6-01-P6-04
+Email: Temporary Meeting Arrangements
+To: All department coordinators
+Subject: Conference room renovation
+The renovation of our third-floor conference room [P6-01] to begin on Monday, March 8. The work
+will improve sound insulation and add two accessible entrances. Contractors will work during
+regular office hours, so employees may hear drilling near the elevators. Please advise visitors about
+the work when confirming their appointments.
+The room will remain closed for three weeks. [P6-02], all reservations already made for that period
+must be moved to another location. The facilities team will contact each organizer by Thursday and
+help select an appropriate alternative. You do not need to cancel your reservation yourself.
+[P6-03] This temporary room has twenty seats and a wall-mounted display. Any additional [P6-04]
+required for a presentation should be requested at least two working days in advance. Please send
+questions about room access to the facilities desk. We appreciate your cooperation while these
+improvements are completed.
+P6-01. [기본] Choose the best word or phrase for [P6-01].
+(A) are scheduled
+(B) schedule
+(C) is scheduled
+(D) have scheduled
+P6-02. [중급] Choose the best word or phrase for [P6-02].
+(A) Therefore
+(B) Nevertheless
+(C) For example
+(D) Similarly
+P6-03. [중급] Choose the best sentence for [P6-03].
+(A) Visitors may purchase lunch in the cafeteria.
+(B) During the renovation, group meetings will be held in the ground-floor training room.
+(C) The new elevators were installed last summer.
+(D) Please return all borrowed books to the library.
+P6-04. [기본] Choose the best word or phrase for [P6-04].
+(A) equip
+(B) equipping
+(C) equipped
+(D) equipment
+10
+
+--- PAGE 11 ---
+Toeic RC Part 6
+훈련 2 · 창고 배송 공지
+Questions P6-05-P6-08
+Notice: Delivery Check-In Procedure
+Beginning April 12, all deliveries to the Northbridge warehouse will follow a revised check-in
+procedure. Delivery appointments [P6-05] through the online portal no later than noon on the
+preceding business day. This change will allow our receiving team to assign staff before a truck
+arrives. Suppliers who have an urgent shipment should telephone the receiving desk instead of
+making an unscheduled visit.
+The warehouse has designated a single entrance for deliveries. Drivers should use [P6-06] even if
+their vehicle is carrying only one small package. The main office entrance is reserved for customers.
+[P6-07] This list must be signed by both the driver and the receiving clerk before any goods are
+unloaded.
+Most shipments will be processed within twenty minutes. [P6-08], deliveries containing refrigerated
+products may take longer because temperature records must be checked. Please allow sufficient
+time when planning the driver's next stop. A diagram of the entrance is attached to this notice.
+P6-05. [기본] Choose the best word or phrase for [P6-05].
+(A) must be submitted
+(B) must submit
+(C) must submitting
+(D) must have submitting
+P6-06. [중급] Choose the best word or phrase for [P6-06].
+(A) they
+(B) themselves
+(C) it
+(D) which
+P6-07. [고급] Choose the best sentence for [P6-07].
+(A) The warehouse roof will be replaced next year.
+(B) Customers can park beside the main office.
+(C) Our company offers discounts for large orders.
+(D) At the delivery entrance, drivers will receive a printed checklist of the items in their shipment.
+P6-08. [중급] Choose the best word or phrase for [P6-08].
+(A) Consequently
+(B) However
+(C) Furthermore
+(D) For instance
+11
+
+--- PAGE 12 ---
+Toeic RC Part 6
+훈련 3 · 출장비 정산 절차
+Questions P6-09-P6-12
+Instructions: Submitting Travel Expenses
+Use the employee portal to request reimbursement for approved business travel. [P6-09] you open
+a new expense claim, gather the receipts for transportation, accommodation, and meals. Each
+receipt should show the date, amount, and business name. Expenses without a readable receipt
+cannot be processed under the standard procedure, so contact the finance team if a document is
+missing.
+Enter each expense separately and select the appropriate category from the menu. Documents
+[P6-10] to the claim must be in PDF format. The portal will display a warning if a file is too large,
+and you can then upload a smaller version.
+[P6-11] This format helps the team match your message with the correct claim. After submitting,
+monitor your company inbox for a confirmation. If finance requests further information, respond
+[P6-12] so that approval is not delayed. Claims approved by the twentieth day of the month will be
+included in that month's payment cycle.
+P6-09. [중급] Choose the best word or phrase for [P6-09].
+(A) Despite
+(B) During
+(C) Before
+(D) Unless
+P6-10. [중급] Choose the best word or phrase for [P6-10].
+(A) attaching
+(B) attachment
+(C) attach
+(D) attached
+P6-11. [고급] Choose the best sentence for [P6-11].
+(A) The finance department closes at six o'clock.
+(B) When asking finance a question by email, use your employee number followed by the claim
+number in the subject line.
+(C) Please keep your passport in a secure place while traveling.
+(D) Meals are reimbursed at the same rate in every city.
+P6-12. [기본] Choose the best word or phrase for [P6-12].
+(A) promptly
+(B) prompt
+(C) promptness
+(D) prompting
+12
+
+--- PAGE 13 ---
+Toeic RC Part 6
+훈련 4 · 고객지원 시범 운영 보고서
+Questions P6-13-P6-16
+Report: Results of the Support Pilot
+Last month, the customer support team tested a new online form at two branch offices. The trial
+[P6-13] that customers completed the form faster when examples appeared beside each question.
+Staff members also spent less time correcting incomplete submissions. These findings are based on
+records from the entire four-week pilot, rather than on a single busy day.
+The changes produced a measurable [P6-14] in processing errors. However, several customers still
+reported difficulty locating the form on the website. [P6-15] Complaints about finding the form
+declined sharply during the final week, after this change was introduced.
+[P6-16] the results are encouraging, unresolved mobile-access issues rule out immediate expansion
+to all branches. The team therefore recommends one further test. The additional test should include
+customers who use mobile devices, since the first pilot primarily involved desktop computers. A
+revised test plan will be submitted to the operations director by Friday for review and approval.
+P6-13. [중급] Choose the best word or phrase for [P6-13].
+(A) reveal
+(B) is revealing
+(C) will reveal
+(D) revealed
+P6-14. [중급] Choose the best word or phrase for [P6-14].
+(A) reduce
+(B) reduction
+(C) reduced
+(D) reducing
+P6-15. [실전 최상급] Choose the best sentence for [P6-15].
+(A) In response, the team placed a prominent link to the form on the website's home page.
+(B) The two offices have different opening hours.
+(C) Customers who submitted a form received a printed receipt.
+(D) The operations director will attend a conference next month.
+P6-16. [고급] Choose the best word or phrase for [P6-16].
+(A) Because
+(B) Unless
+(C) Although
+(D) Until
+13
+
+--- PAGE 14 ---
+Toeic RC Part 6
+추가 훈련 1 · 중급 이메일 · 교육 장소 변경
+Questions P6-B01-P6-B04
+Email: Revised Orientation Arrangements
+To: Session leaders
+Subject: Rooms for next week's orientation
+At yesterday's planning meeting, the facilities manager [P6-B01] that repairs to the central training
+hall would take longer than expected. The hall will therefore be unavailable for next week's
+orientation. The dates of the sessions will remain unchanged, and participants do not need to
+register again. Please use the attendance lists that were sent on Monday rather than creating new
+ones.
+We have reserved two replacement rooms for sessions that cannot be postponed. Session leaders
+should inspect [P6-B02] before deciding how to arrange the chairs. Both rooms contain movable
+tables, but neither has the fixed seating found in the central hall. The facilities team can help move
+furniture if it receives a request by Friday afternoon.
+[P6-B03] This diagram also marks the nearest accessible entrances and the locations of the
+restrooms. Include a copy in the reminder you send to participants so they can find the correct
+room. If your agenda requires a projector, [P6-B04] one from the service desk no later than two
+working days before your session. Projectors will be allocated in the order that requests are received.
+P6-B01. [중급] Choose the best word or phrase for [P6-B01].
+(A) announced
+(B) announce
+(C) announcing
+(D) announcement
+P6-B02. [중급] Choose the best word or phrase for [P6-B02].
+(A) it
+(B) themselves
+(C) them
+(D) they
+P6-B03. [고급] Choose the best sentence for [P6-B03].
+(A) The orientation program includes a presentation by the director.
+(B) A floor plan showing both replacement rooms has been uploaded to the staff portal.
+(C) The main office will open thirty minutes earlier on Monday.
+(D) Participants should bring their own notebooks to the sessions.
+P6-B04. [중급] Choose the best word or phrase for [P6-B04].
+(A) submit
+(B) recruit
+(C) return
+(D) reserve
+14
+
+--- PAGE 15 ---
+Toeic RC Part 6
+추가 훈련 2 · 중급 공지 · 직원 주차 허가
+Questions P6-B05-P6-B08
+Notice: Employee Parking During Resurfacing
+Beginning July 6, employees using company parking facilities must obtain the new blue permit from
+reception. Permits [P6-B05] on the inside of the windshield whenever a vehicle is parked on
+company property. Security officers will check permits each morning, and an email confirmation of
+registration cannot be used as a substitute for the printed permit.
+These permits are [P6-B06] only for spaces marked for employees. They do not authorize parking in
+loading areas or in spaces reserved for customers, even when those spaces are empty. Employees
+who change vehicles should update the registration record before transferring the permit to the
+new vehicle.
+The north lot will be closed for resurfacing from July 6 through July 10. [P6-B07] These two areas
+will remain open throughout the work, and signs will direct employees to the available spaces.
+Please allow extra time on your first visit because the walking route to the office will be different.
+To avoid [P6-B08] the entrance used by construction vehicles, do not stop beside the north gate
+while waiting for a space. Questions about accessibility arrangements should be sent to reception
+before the closure begins.
+P6-B05. [중급] Choose the best word or phrase for [P6-B05].
+(A) must display
+(B) must be displayed
+(C) must displaying
+(D) must have displaying
+P6-B06. [중급] Choose the best word or phrase for [P6-B06].
+(A) vacant
+(B) portable
+(C) valid
+(D) distant
+P6-B07. [고급] Choose the best sentence for [P6-B07].
+(A) All vehicles must display a permit issued by reception.
+(B) Customer spaces are located near the main office entrance.
+(C) The construction company will bring several trucks to the site.
+(D) During the closure, employees may use the west lot or the garage beside the annex.
+P6-B08. [중급] Choose the best word or phrase for [P6-B08].
+(A) blocking
+(B) block
+(C) blockage
+(D) blocked
+15
+
+--- PAGE 16 ---
+Toeic RC Part 6
+추가 훈련 3 · 중급 절차 · 측정 장비 반송
+Questions P6-B09-P6-B12
+Instructions: Returning a Measuring Device for Inspection
+Use the service portal to arrange an inspection of a measuring device that appears to give
+inaccurate readings. [P6-B09] you begin the online request, note the serial number printed on the
+underside of the device and describe the conditions under which the problem occurs. This
+information helps the technician distinguish a calibration problem from damage caused during
+transport.
+Items [P6-B10] by customers for inspection must be packed in their original protective case
+whenever that case is available. Remove any detachable batteries and place them in a separate
+compartment. Do not include unrelated accessories, since the receiving team will check the package
+against the list in your request.
+After choosing the inspection category, review your contact details and submit the request. [P6-B11]
+This number enables the receiving team to match the package with your service record. Keep it
+available when contacting the service desk about the progress of the inspection.
+The confirmation page also contains a return label. Use the download button [P6-B12] a clear copy
+and attach it to the outside of the package. A device sent without this label may be delayed
+because staff must identify the sender manually.
+P6-B09. [중급] Choose the best word or phrase for [P6-B09].
+(A) During
+(B) Prior to
+(C) Following
+(D) Before
+P6-B10. [중급] Choose the best word or phrase for [P6-B10].
+(A) returned
+(B) returning
+(C) returns
+(D) return
+P6-B11. [고급] Choose the best sentence for [P6-B11].
+(A) Inspection times vary depending on the type of device.
+(B) The portal will then generate a unique service reference number.
+(C) The technician may contact you after inspecting the device.
+(D) Devices should not be used in extremely humid conditions.
+P6-B12. [중급] Choose the best word or phrase for [P6-B12].
+(A) prints
+(B) printed
+(C) to print
+(D) to printing
+16
+
+--- PAGE 17 ---
+Toeic RC Part 6
+추가 훈련 4 · 중급 보고서 · 신속 발송 시험
+Questions P6-B13-P6-B16
+Report: Express Dispatch Pilot
+In the final week of September, the distribution supervisor [P6-B13] that the new express dispatch
+process reduced the average preparation time for small orders. The team measured each order
+from the moment it entered the packing queue until the shipping label was printed. This method
+excluded delivery time, which remained the responsibility of the carrier.
+The results showed an [P6-B14] in the number of orders prepared before the daily collection
+deadline. However, packers at one station still had difficulty reading the order details because the
+monitor was positioned too far from the work surface. [P6-B15] After this adjustment, staff at that
+station completed their tasks without repeatedly leaving their packing position.
+[P6-B16] the results were favorable, the trial covered only small orders and lasted just one week. It
+would be premature to assume that the same gains would occur with large or unusually shaped
+packages. The team recommends a second trial with a wider range of order types before the
+procedure becomes standard. Supervisors should also collect feedback on equipment placement,
+since that issue affected the first trial independently of the dispatch software.
+P6-B13. [중급] Choose the best word or phrase for [P6-B13].
+(A) finding
+(B) find
+(C) found
+(D) foundation
+P6-B14. [중급] Choose the best word or phrase for [P6-B14].
+(A) improve
+(B) improved
+(C) improves
+(D) improvement
+P6-B15. [고급] Choose the best sentence for [P6-B15].
+(A) The monitor was moved closer to the packing surface to make the details easier to read.
+(B) The carrier changed its collection route in another city.
+(C) All orders were sent in newly designed cardboard boxes.
+(D) The company plans to recruit additional sales representatives.
+P6-B16. [중급] Choose the best word or phrase for [P6-B16].
+(A) Despite
+(B) Although
+(C) Nevertheless
+(D) In spite of
+17
+
+--- PAGE 18 ---
+Toeic RC Part 6
+추가 훈련 5 · 고급 이메일 · 입찰 비용 비교
+Questions P6-B17-P6-B20
+Email: Materials for the Procurement Review
+To: Procurement analyst
+Subject: Additional comparison requested
+The panel [P6-B17] its preliminary recommendation before the budget hearing began last Tuesday.
+At that hearing, however, the finance director asked for a fuller comparison of the proposals. A
+summary of quotations from the three bidders, along with a comparison of annual service charges,
+[P6-B18] to this message. Please use these documents rather than the earlier spreadsheet, which
+omitted the service charges.
+The quotations use different formats, so the figures cannot be compared merely by reading the
+final amount on each first page. [P6-B19] This breakdown will let the panel compare the same cost
+categories across all proposals and identify charges that recur after installation. For each bidder,
+include the assumptions used to calculate a three-year total. If a charge is not specified, ask the
+bidder for written clarification instead of treating it as zero.
+The panel will [P6-B20] its final decision until every bidder has answered the outstanding questions
+about maintenance fees. This does not require restarting the competition or inviting new bids.
+Please submit the completed comparison by Friday, including copies of the bidders' written
+responses, so that the panel can reconvene next week.
+P6-B17. [고급] Choose the best word or phrase for [P6-B17].
+(A) is submitting
+(B) will submit
+(C) have submitted
+(D) had submitted
+P6-B18. [고급] Choose the best word or phrase for [P6-B18].
+(A) are attached
+(B) is attached
+(C) attaching
+(D) attachment
+P6-B19. [실전 최상급] Choose the best sentence for [P6-B19].
+(A) The bidders will be invited to give presentations at a later date.
+(B) The hearing room has been reserved for the next panel meeting.
+(C) Prepare a table that separates installation charges, annual maintenance fees, and any optional
+services.
+(D) The company has worked with two of the bidders on previous projects.
+P6-B20. [중급] Choose the best word or phrase for [P6-B20].
+(A) defer
+(B) announce
+(C) implement
+(D) confirm
+18
+
+--- PAGE 19 ---
+Toeic RC Part 6
+추가 훈련 6 · 고급 공지 · 회의실 예약과 방문자 출입
+Questions P6-B21-P6-B24
+Notice: Meeting Reservations and Guest Access
+Beginning November 1, meeting rooms may be reserved through the member portal. Only
+members [P6-B21] accounts are current may make a reservation. The member making the booking
+remains responsible for the room even if a colleague hosts the meeting.
+Cancellations made at least twenty-four hours before the meeting are free of charge. A late
+cancellation normally incurs a fee equal to one hour's room rental. If another member books the
+entire released time slot before it begins, the original member pays nothing and the fee is [P6-B22].
+A shorter replacement booking does not qualify, and reception cannot guarantee that a released
+slot will be taken.
+Members planning to invite guests should register each visitor's name in advance. [P6-B23] These
+two periods are the only times when the staffed reception desk releases visitor badges. Meetings
+outside those periods require the host to collect the badges earlier and meet guests at the entrance.
+No badge will be issued [P6-B24] the guest has been registered by the host. Guests must remain
+accompanied by a member while on the premises, including when using the shared kitchen or
+leaving the meeting room.
+P6-B21. [중급] Choose the best word or phrase for [P6-B21].
+(A) who
+(B) whom
+(C) which
+(D) whose
+P6-B22. [중급] Choose the best word or phrase for [P6-B22].
+(A) collected
+(B) waived
+(C) introduced
+(D) increased
+P6-B23. [실전 최상급] Choose the best sentence for [P6-B23].
+(A) Visitor badges can be collected from eight to ten in the morning or from four to six in the
+afternoon.
+(B) Members can use the online calendar to see which rooms are available.
+(C) The shared kitchen contains a refrigerator and a microwave oven.
+(D) Reception staff will review the rental charges at the end of each month.
+P6-B24. [중급] Choose the best word or phrase for [P6-B24].
+(A) Except for
+(B) During
+(C) unless
+(D) Despite
+19
+
+--- PAGE 20 ---
+Toeic RC Part 6
+추가 훈련 7 · 고급 절차 · 출장 사전 승인
+Questions P6-B25-P6-B28
+Instructions: Obtaining Travel Approval
+Employees must obtain written approval before purchasing tickets for business travel. Start by
+entering the proposed destination, dates, and purpose in the travel portal. The projected total,
+rather than the listed fares, [P6-B25] which level of approval is required. Include accommodation
+and local transportation in this total, and use the exchange rate specified on the portal for overseas
+trips.
+Your manager must confirm [P6-B26] the proposed dates are compatible with the department's
+work schedule. Trips exceeding the spending threshold also require the travel director's
+authorization. A manager's approval alone is not sufficient for those trips, even if the ticket price
+appears unusually low.
+The request must include supporting documents that allow the approvers to verify both the
+schedule and the estimated expenditure. [P6-B27] Both attachments must show the proposed travel
+dates and be readable without special software. If [P6-B28] is incomplete, the request will be
+returned rather than sent to the next approver.
+After all required approvals are recorded, the travel desk will send booking instructions. If your
+dates or projected total subsequently change, submit an amended request before making a new
+purchase. Retain the approval record with your receipts for expense review.
+P6-B25. [고급] Choose the best word or phrase for [P6-B25].
+(A) determine
+(B) are determining
+(C) determines
+(D) have determined
+P6-B26. [중급] Choose the best word or phrase for [P6-B26].
+(A) unless
+(B) during
+(C) either
+(D) whether
+P6-B27. [실전 최상급] Choose the best sentence for [P6-B27].
+(A) The travel desk maintains a list of preferred airlines.
+(B) Attach the proposed itinerary and a written estimate of the total travel cost.
+(C) Employees should arrive at the airport well before departure.
+(D) The finance team processes approved expense claims twice a month.
+P6-B28. [고급] Choose the best word or phrase for [P6-B28].
+(A) either
+(B) neither
+(C) both
+(D) several
+20
+
+--- PAGE 21 ---
+Toeic RC Part 6
+추가 훈련 8 · 고급 보고서 · 접근성 시험의 적용 범위
+Questions P6-B29-P6-B32
+Report: Accessibility Test of the Revised Website
+During tests conducted on October 8 and 9, the revised website [P6-B29] by twelve volunteers
+using identical desktop computers. Each volunteer completed the same set of tasks on both the
+original and revised versions. The order of the versions was alternated to reduce the possibility that
+practice alone would make the second attempt faster.
+Keyboard users completed the revised form with fewer navigation errors. The observed gains were
+[P6-B30] to that group, since the revision changed the tab sequence but left the color contrast
+unchanged. Volunteers who relied primarily on color cues showed no measurable improvement. The
+report therefore distinguishes a successful navigation change from issues that still require attention.
+The test used equipment in a controlled room rather than participants' own devices. [P6-B31] This
+exclusion means that the results cannot establish how the revised design performs on mobile
+screens. It should not be interpreted as evidence that the mobile version is either effective or
+ineffective.
+The researchers recommend that the color-contrast design [P6-B32] before any general claim of
+improved accessibility is published. A separate mobile trial should use participants' own devices and
+record screen size and browser settings so that any differences can be investigated.
+P6-B29. [중급] Choose the best word or phrase for [P6-B29].
+(A) was evaluated
+(B) evaluate
+(C) evaluating
+(D) evaluation
+P6-B30. [고급] Choose the best word or phrase for [P6-B30].
+(A) equivalent
+(B) resistant
+(C) subjected
+(D) limited
+P6-B31. [실전 최상급] Choose the best sentence for [P6-B31].
+(A) The volunteers completed a short questionnaire after each task.
+(B) Participants who used only mobile devices were not included in the trial.
+(C) The revised form contains fewer optional questions than the original.
+(D) Several employees helped prepare the computers before the tests.
+P6-B32. [고급] Choose the best word or phrase for [P6-B32].
+(A) testing
+(B) to test
+(C) be tested
+(D) has testing
+21
+
+--- PAGE 22 ---
+Toeic RC Part 6
+정답표
+P6-01 C P6-02 A P6-03 B P6-04 D
+P6-05 A P6-06 C P6-07 D P6-08 B
+P6-09 C P6-10 D P6-11 B P6-12 A
+P6-13 D P6-14 B P6-15 A P6-16 C
+P6-B01 A P6-B02 C P6-B03 B P6-B04 D
+P6-B05 B P6-B06 C P6-B07 D P6-B08 A
+P6-B09 D P6-B10 A P6-B11 B P6-B12 C
+P6-B13 C P6-B14 D P6-B15 A P6-B16 B
+P6-B17 D P6-B18 B P6-B19 C P6-B20 A
+P6-B21 D P6-B22 B P6-B23 A P6-B24 C
+P6-B25 C P6-B26 D P6-B27 B P6-B28 A
+P6-B29 A P6-B30 D P6-B31 B P6-B32 C
+22
+
+--- PAGE 23 ---
+Toeic RC Part 6
+Part 6 전체 상세 해설
+훈련 1 · 회의실 공사 이메일
+P6-01 해설 | 정답 (C)
+1. 정답
+(C) is scheduled
+2. 문제 유형
+동사·수일치·수동태
+3. 핵심 단서
+The renovation은 단수 주어이며 공사는 일정에 잡히는 대상이다.
+4. 문장 구조 또는 문맥 분석
+빈칸 뒤 to begin은 be scheduled to do와 결합한다. 주어 renovation에 맞는 단수 수동태가 필요하다.
+5. 정답이 성립하는 이유
+is scheduled는 ‘시작하도록 예정되어 있다’라는 현재의 예정 상태를 나타낸다.
+6. 오답 선택지 분석
+(A) are는 단수 주어 renovation과 수가 맞지 않는다.
+(B) schedule은 능동 동사원형으로 주어가 일정을 정한다는 구조가 되며 목적어도 없다.
+(D) have scheduled는 단수 주어와 맞지 않고, 일정을 정할 목적어도 없다.
+7. 실전 풀이 순서
+주어의 중심어 확인 → 행위자/대상 구분 → scheduled to begin 결합 확인.
+8. 다른 문제에 적용할 규칙
+be scheduled to + 동사원형은 ‘~할 예정이다’를 뜻한다. be의 수는 주어 중심어에 맞춘다.
+P6-02 해설 | 정답 (A)
+1. 정답
+(A) Therefore
+2. 문제 유형
+연결어·원인과 결과
+3. 핵심 단서
+회의실이 3주 동안 닫히므로 그 기간 예약을 다른 장소로 옮겨야 한다.
+4. 문장 구조 또는 문맥 분석
+앞 문장의 폐쇄가 뒤 문장의 예약 이동 의무를 직접 발생시킨다. 두 내용은 대조나 예시 관계가 아니다.
+5. 정답이 성립하는 이유
+Therefore는 앞의 원인에서 이어지는 결과를 연결한다.
+6. 오답 선택지 분석
+(B) Nevertheless는 예상과 반대되는 결과를 이끌지만 예약 이동은 폐쇄의 자연스러운 결과다.
+(C) For example은 일반 진술의 구체적 예시가 필요하다. 예약 이동은 폐쇄의 예가 아니다.
+(D) Similarly는 비교 가능한 별도 사례가 필요하지만 그런 사례가 없다.
+23
+
+--- PAGE 24 ---
+Toeic RC Part 6
+7. 실전 풀이 순서
+앞뒤 문장 요약 → ‘폐쇄 때문에 이동’ 관계 확인 → 결과 연결어 선택.
+8. 다른 문제에 적용할 규칙
+연결부사는 두 문장의 논리 관계를 보고 고른다. 원인 다음의 필연적 조치에는 therefore가 적합하다.
+P6-03 해설 | 정답 (B)
+1. 정답
+(B) During the renovation, group meetings will be held in the ground-floor training room.
+2. 문제 유형
+문장 삽입·지시어
+3. 핵심 단서
+뒤의 This temporary room은 앞에서 소개한 임시 회의 장소를 가리켜야 한다.
+4. 문장 구조 또는 문맥 분석
+이메일의 목적은 공사 기간 회의 장소 변경 안내다. 빈칸은 임시 회의실을 처음 제시하고 다음 문장의
+시설 설명으로 연결해야 한다.
+5. 정답이 성립하는 이유
+B는 ground-floor training room을 대체 장소로 소개하여 This temporary room의 선행 내용을 제공한
+다.
+6. 오답 선택지 분석
+(A) 식당 이야기는 임시 회의실을 소개하지 않으므로 This temporary room이 설명되지 않는다.
+(C) 엘리베이터 설치 시점은 회의 장소 변경과 연결되지 않는다.
+(D) 도서 반납 요청은 공사 안내의 목적과 무관하다.
+7. 실전 풀이 순서
+뒤 문장의 This temporary room 확인 → 필요한 선행 내용 규정 → 앞의 예약 이동 내용과도 연결.
+8. 다른 문제에 적용할 규칙
+문장 삽입은 글의 주제뿐 아니라 뒤의 지시어가 받을 구체적 정보가 있는지 검사한다.
+P6-04 해설 | 정답 (D)
+1. 정답
+(D) equipment
+2. 문제 유형
+품사·불가산명사
+3. 핵심 단서
+Any additional ___ required for a presentation에서 additional 뒤에 명사가 필요하다.
+4. 문장 구조 또는 문맥 분석
+required는 장비를 수식하는 과거분사이며, 빈칸은 should be requested의 주어 중심어다.
+5. 정답이 성립하는 이유
+equipment는 ‘장비’라는 불가산명사로 additional의 수식을 받고 요청 대상이 된다.
+24
+
+--- PAGE 25 ---
+Toeic RC Part 6
+6. 오답 선택지 분석
+(A) equip은 ‘갖추다’라는 동사이므로 명사 자리에 들어갈 수 없다.
+(B) equipping은 장비를 갖추는 행위이며 발표에 필요한 요청 물품을 뜻하지 않는다.
+(C) equipped는 과거분사·형용사로 명사 중심어가 되지 못한다.
+7. 실전 풀이 순서
+빈칸 포함 주어 범위 확인 → additional 뒤 명사 자리 확인 → 장비라는 의미 검증.
+8. 다른 문제에 적용할 규칙
+equipment는 불가산명사이므로 equipments나 an equipment로 쓰지 않는다. 수량은 pieces of
+equipment로 표현한다.
+훈련 2 · 창고 배송 공지
+P6-05 해설 | 정답 (A)
+1. 정답
+(A) must be submitted
+2. 문제 유형
+조동사·수동태
+3. 핵심 단서
+Delivery appointments는 제출하는 행위자가 아니라 접수되는 예약이다.
+4. 문장 구조 또는 문맥 분석
+조동사 must 뒤에는 동사원형이 필요하며, 예약이 제출되는 수동 관계이므로 be + 과거분사를 사용한
+다.
+5. 정답이 성립하는 이유
+must be submitted는 ‘반드시 제출되어야 한다’라는 의무를 정확하게 표현한다.
+6. 오답 선택지 분석
+(B) must submit은 능동태여서 예약이 무언가를 제출하는 뜻이 된다.
+(C) must 뒤에 submitting을 바로 쓸 수 없다.
+(D) have submitting은 완료형이나 수동태를 만드는 올바른 동사 구조가 아니다.
+7. 실전 풀이 순서
+주어 appointment의 역할 확인 → must 뒤 형태 검사 → 수동태 선택.
+8. 다른 문제에 적용할 규칙
+조동사 수동태의 기본 구조는 modal + be + 과거분사다.
+P6-06 해설 | 정답 (C)
+1. 정답
+(C) it
+2. 문제 유형
+대명사·선행사
+3. 핵심 단서
+직전 문장의 a single entrance가 use의 목적어가 되어야 한다.
+25
+
+--- PAGE 26 ---
+Toeic RC Part 6
+4. 문장 구조 또는 문맥 분석
+운전자가 사용해야 하는 대상은 지정 출입구다. 단수 출입구를 받는 목적격 대명사가 필요하다.
+5. 정답이 성립하는 이유
+it은 a single entrance를 받아 ‘그 출입구를 이용해야 한다’는 뜻이 된다.
+6. 오답 선택지 분석
+(A) they는 주격 복수형이며 use의 목적어 자리에 맞지 않는다.
+(B) themselves는 drivers 자신을 가리켜 운전자가 자신을 이용한다는 부자연스러운 의미가 된다.
+(D) which는 여기서 독립적인 평서문 목적어로 사용할 수 없고 관계절도 이끌지 않는다.
+7. 실전 풀이 순서
+use의 목적어 확인 → 사용 대상 entrance 찾기 → 단수 목적격 선택.
+8. 다른 문제에 적용할 규칙
+대명사는 가까운 명사의 수뿐 아니라 동사와 결합했을 때의 의미까지 확인한다.
+P6-07 해설 | 정답 (D)
+1. 정답
+(D) At the delivery entrance, drivers will receive a printed checklist of the items in their shipment.
+2. 문제 유형
+문장 삽입·명사 연결
+3. 핵심 단서
+뒤의 This list must be signed에는 서명할 배송 목록이 먼저 등장해야 한다.
+4. 문장 구조 또는 문맥 분석
+빈칸 앞은 배송 출입구를 설명하고, 뒤는 하역 전 목록 서명 절차를 안내한다. 두 내용을 연결하는 체크
+리스트 발급 문장이 필요하다.
+5. 정답이 성립하는 이유
+D는 출입구에서 받는 checklist를 소개하며 다음 문장의 This list와 하역 전 서명 절차로 이어진다.
+6. 오답 선택지 분석
+(A) 지붕 공사는 배송 목록과 관련이 없다.
+(B) 고객 주차는 출입구 주제와 일부 겹쳐도 서명할 목록을 소개하지 않는다.
+(C) 할인 안내는 물품 확인과 서명 절차를 설명하지 못한다.
+7. 실전 풀이 순서
+This list의 선행 정보 찾기 → checklist 포함 보기 선택 → 배송 출입구와 하역 절차에 연결.
+8. 다른 문제에 적용할 규칙
+지시어가 있는 다음 문장은 삽입 문장에 필요한 정보의 종류를 구체적으로 제한한다.
+P6-08 해설 | 정답 (B)
+1. 정답
+(B) However
+2. 문제 유형
+연결어·대조
+26
+
+--- PAGE 27 ---
+Toeic RC Part 6
+3. 핵심 단서
+대부분은 20분 이내지만 냉장 제품은 더 오래 걸린다.
+4. 문장 구조 또는 문맥 분석
+일반 처리 시간에 대한 예외를 다음 문장이 제시한다. 빠른 처리라는 기대와 추가 검사에 따른 지연이
+대조된다.
+5. 정답이 성립하는 이유
+However가 일반적인 소요 시간과 예외적인 지연을 자연스럽게 연결한다.
+6. 오답 선택지 분석
+(A) Consequently는 결과를 이끌지만 냉장품 지연은 ‘대부분 20분 이내’의 결과가 아니다.
+(C) Furthermore는 같은 방향의 정보 추가에 쓰이며 이 예외를 드러내지 못한다.
+(D) For instance는 앞 문장의 사례를 이끌어야 하지만 더 오래 걸리는 배송은 20분 이내 처리의 사례가
+아니다.
+7. 실전 풀이 순서
+most와 may take longer 대비 확인 → 예외 관계 판단 → 대조 연결부사 선택.
+8. 다른 문제에 적용할 규칙
+전체적인 경향 뒤의 예외나 예상과 다른 결과에는 however가 자주 사용된다.
+훈련 3 · 출장비 정산 절차
+P6-09 해설 | 정답 (C)
+1. 정답
+(C) Before
+2. 문제 유형
+접속사·절차 순서
+3. 핵심 단서
+새 정산 요청을 열기 전에 영수증을 모으는 준비 단계다.
+4. 문장 구조 또는 문맥 분석
+빈칸 뒤 you open은 완전한 절이다. 준비 자료를 먼저 모으고 그다음 포털 입력을 시작하는 순서가 필
+요하다.
+5. 정답이 성립하는 이유
+Before는 ‘새 비용 청구를 열기 전에’라는 선행 준비 조건을 나타낸다.
+6. 오답 선택지 분석
+(A) Despite는 전치사이므로 you open이라는 절을 바로 받을 수 없다.
+(B) During도 전치사여서 완전한 절을 목적어로 받을 수 없다.
+(D) Unless는 ‘열지 않는 한’이라는 조건을 만들어 절차의 준비 순서를 왜곡한다.
+7. 실전 풀이 순서
+뒤의 완전한 절 확인 → 전치사 제거 → gather와 open의 순서 결정.
+8. 다른 문제에 적용할 규칙
+before는 접속사로 절을 이끌 수 있다. 절차 문제에서는 문법과 실제 작업 순서를 함께 판단한다.
+27
+
+--- PAGE 28 ---
+Toeic RC Part 6
+P6-10 해설 | 정답 (D)
+1. 정답
+(D) attached
+2. 문제 유형
+과거분사·명사 수식
+3. 핵심 단서
+Documents ___ to the claim은 청구서에 첨부되는 서류를 뜻한다.
+4. 문장 구조 또는 문맥 분석
+주절 동사는 must be이며 빈칸은 documents를 수식한다. documents that are attached에서 관계대명
+사와 be를 생략한 구조다.
+5. 정답이 성립하는 이유
+attached는 서류가 첨부되는 수동 관계를 나타내는 과거분사다.
+6. 오답 선택지 분석
+(A) attaching은 서류가 다른 것을 첨부하는 능동 관계를 나타내어 문맥에 맞지 않는다.
+(B) attachment는 명사이며 documents와 to the claim 사이의 수식 구조를 만들지 못한다.
+(C) attach는 동사원형으로 조동사 없는 별도 동사가 되어 주절 구조와 충돌한다.
+7. 실전 풀이 순서
+주절 동사 must be 찾기 → 빈칸의 수식 역할 확인 → 서류의 수동 관계 판단.
+8. 다른 문제에 적용할 규칙
+명사가 동작의 대상일 때 과거분사구로 수식할 수 있다: documents attached to the claim.
+P6-11 해설 | 정답 (B)
+1. 정답
+(B) When asking finance a question by email, use your employee number followed by the claim
+number in the subject line.
+2. 문제 유형
+문장 삽입·지시어와 목적
+3. 핵심 단서
+This format이 가리킬 이메일 작성 형식과 match your message의 연결이 필요하다.
+4. 문장 구조 또는 문맥 분석
+다음 문장은 메시지를 올바른 청구 건과 대조하는 방법의 효과를 설명한다. 직원 번호와 청구 번호를 이
+메일 제목에 쓰는 규칙이 그 형식이다.
+5. 정답이 성립하는 이유
+B는 subject line의 구체적인 형식을 제시하고 message와 claim의 연결 목적도 충족한다.
+6. 오답 선택지 분석
+(A) 마감 시간은 형식이 아니므로 This format의 선행 내용이 될 수 없다.
+(C) 여권 보관은 정산 문의 메시지와 연결되지 않는다.
+(D) 식비 지급률은 message를 claim과 대조하는 형식을 제공하지 않는다.
+7. 실전 풀이 순서
+This format과 message/claim 확인 → 형식을 소개하는 보기 찾기 → 효과 문장과 연결.
+28
+
+--- PAGE 29 ---
+Toeic RC Part 6
+8. 다른 문제에 적용할 규칙
+This format처럼 분류 명사가 붙은 지시어는 앞에 같은 종류의 구체적 규칙이나 방식이 있어야 한다.
+P6-12 해설 | 정답 (A)
+1. 정답
+(A) promptly
+2. 문제 유형
+품사·동사 수식
+3. 핵심 단서
+respond ___ so that approval is not delayed에서 응답의 속도를 설명한다.
+4. 문장 구조 또는 문맥 분석
+respond는 자동사이며 뒤의 빈칸은 동사를 수식하는 부사 자리다. 빠른 응답이 승인 지연을 막는다는
+목적절도 이를 뒷받침한다.
+5. 정답이 성립하는 이유
+promptly는 ‘신속하게’라는 부사로 respond를 수식한다.
+6. 오답 선택지 분석
+(B) prompt는 형용사 또는 동사로 이 자리에서 respond를 수식하지 못한다.
+(C) promptness는 명사여서 자동사 respond 뒤의 방식 부사 역할을 할 수 없다.
+(D) prompting은 분사·동명사이며 필요한 응답 방식의 부사가 아니다.
+7. 실전 풀이 순서
+respond의 역할 확인 → 동사 수식 부사 선택 → 승인 지연 방지 의미 확인.
+8. 다른 문제에 적용할 규칙
+행동의 방식이나 속도를 설명할 때 동사를 부사로 수식한다.
+훈련 4 · 고객지원 시범 운영 보고서
+P6-13 해설 | 정답 (D)
+1. 정답
+(D) revealed
+2. 문제 유형
+시제·완료된 조사
+3. 핵심 단서
+Last month와 entire four-week pilot은 종료된 시범 시험을 보고한다.
+4. 문장 구조 또는 문맥 분석
+빈칸은 지난달 시행한 trial의 결과를 서술하는 주절 동사다. 종료된 사건을 과거시제로 표현해야 한다.
+5. 정답이 성립하는 이유
+revealed는 ‘시험을 통해 드러났다’라는 완료된 결과를 보고한다.
+29
+
+--- PAGE 30 ---
+Toeic RC Part 6
+6. 오답 선택지 분석
+(A) reveal은 현재 동사로 쓰면 단수 주어 The trial과 수가 맞지 않는다. 이 절에는 동사원형을 허용하는
+조동사나 부정사 표지도 없다.
+(B) is revealing은 현재 진행 중인 조사를 뜻해 종료된 four-week pilot과 맞지 않는다.
+(C) will reveal은 미래 결과를 예고하지만 본문은 이미 확보한 findings를 제시한다.
+7. 실전 풀이 순서
+Last month 확인 → trial의 완료 여부 판단 → 과거 단순형 선택.
+8. 다른 문제에 적용할 규칙
+이미 끝난 특정 시점의 조사와 결과는 과거시제가 기본이다. 주변 문장에 현재시제가 있어도 사건 시점
+을 따로 본다.
+P6-14 해설 | 정답 (B)
+1. 정답
+(B) reduction
+2. 문제 유형
+품사·명사와 전치사
+3. 핵심 단서
+a measurable ___ in processing errors에서 관사와 형용사 뒤의 명사가 필요하다.
+4. 문장 구조 또는 문맥 분석
+produced의 목적어가 되는 명사구이며 reduction in errors는 오류 감소라는 자연스러운 결합이다.
+5. 정답이 성립하는 이유
+reduction은 가산명사로 a measurable reduction in이라는 구조를 완성한다.
+6. 오답 선택지 분석
+(A) reduce는 동사원형으로 관사 a와 형용사 measurable 뒤에 쓸 수 없다.
+(C) reduced는 형용사·과거분사로 목적어의 명사 중심어가 되지 못한다.
+(D) reducing은 동명사일 수 있지만 a measurable reducing in이라는 결합은 쓰지 않는다.
+7. 실전 풀이 순서
+a measurable 뒤 품사 확인 → 목적어 중심어 필요 확인 → reduction in 결합 검증.
+8. 다른 문제에 적용할 규칙
+a/an + 형용사 + 단수 가산명사 구조를 확인하고 명사 뒤의 전치사 결합까지 검사한다.
+P6-15 해설 | 정답 (A)
+1. 정답
+(A) In response, the team placed a prominent link to the form on the website's home page.
+2. 문제 유형
+문장 삽입·문제와 해결
+3. 핵심 단서
+앞은 양식을 찾기 어렵다는 문제, 뒤는 this change 이후 위치 관련 불만 감소다.
+30
+
+--- PAGE 31 ---
+Toeic RC Part 6
+4. 문장 구조 또는 문맥 분석
+빈칸에는 웹사이트에서 양식을 찾기 쉽게 만든 실제 변경이 필요하다. 다음 문장의 감소 결과와 인과적
+으로 연결되어야 한다.
+5. 정답이 성립하는 이유
+A의 홈페이지 링크 추가는 찾기 어려운 문제를 해결하며 this change의 구체적인 선행 내용이 된다.
+6. 오답 선택지 분석
+(B) 영업시간 차이는 양식 위치를 찾는 문제를 해결하지 않는다.
+(C) 제출 후 영수증 제공은 양식에 접근하기 전의 위치 문제와 관계가 없다.
+(D) 다음 달 회의 참석은 이미 감소한 마지막 주 불만의 원인이 될 수 없다.
+7. 실전 풀이 순서
+앞의 문제 특정 → 뒤의 감소 결과와 this change 확인 → 문제를 해결하는 변경 선택.
+8. 다른 문제에 적용할 규칙
+문제 → 조치 → 결과 구조의 삽입 문장은 앞의 문제를 해결하고 뒤의 결과를 설명해야 한다.
+P6-16 해설 | 정답 (C)
+1. 정답
+(C) Although
+2. 문제 유형
+접속사·양보
+3. 핵심 단서
+결과는 긍정적이지만 해결되지 않은 모바일 접근 문제가 즉시 확대를 막는다.
+4. 문장 구조 또는 문맥 분석
+긍정적 결과라면 확대를 기대할 수 있지만, 주절은 아직 해결되지 않은 문제 때문에 즉시 확대할 수 없
+다고 한다. 두 절은 양보 관계다.
+5. 정답이 성립하는 이유
+Although는 결과가 좋다는 사실을 인정하면서도 그 기대와 반대되는 확대 제한을 연결한다.
+6. 오답 선택지 분석
+(A) Because는 긍정적인 결과가 확대를 막는 이유라고 하지만 본문에서 확대를 막는 원인은 미해결 모
+바일 문제다.
+(B) Unless는 결과가 긍정적이지 않을 때만 확대가 제한된다는 조건으로 바뀌어 현재의 미해결 문제 설
+명과 맞지 않는다.
+(D) Until은 결과가 좋아지는 시점까지 확대가 제한된다는 뜻이지만 본문은 이미 결과가 긍정적이라고
+한다.
+7. 실전 풀이 순서
+긍정적 결과와 immediate expansion 제한 비교 → 기대와 반대인 조치 확인 → Although 선택.
+8. 다른 문제에 적용할 규칙
+although + 절은 사실을 인정하면서 그 사실과 대조되는 주절을 이어 준다.
+31
+
+--- PAGE 32 ---
+Toeic RC Part 6
+추가 훈련 1 · 중급 이메일 · 교육 장소 변경
+P6-B01 해설 | 정답 (A)
+1. 정답
+(A) announced
+2. 문제 유형
+동사·시간 단서와 수일치
+3. 핵심 단서
+빈칸 절에 At yesterday's planning meeting가 직접 붙어 있고 주어 manager는 단수다.
+4. 문장 구조 또는 문맥 분석
+회의에서 발표한 완료된 사건을 서술하는 주절 동사가 필요하다. that절은 발표 내용이다.
+5. 정답이 성립하는 이유
+announced는 어제 회의에서 수리 지연을 발표했다는 과거 사건을 표현한다.
+6. 오답 선택지 분석
+(B) announce는 현재형으로 쓰면 단수 manager와 수가 맞지 않으며 어제라는 시간에도 맞지 않는다.
+(C) announcing은 분사이므로 be 없이 주절의 유한 동사가 될 수 없다.
+(D) announcement는 명사로 주절 동사 자리를 채우지 못한다.
+7. 실전 풀이 순서
+같은 절의 yesterday 확인 → manager의 단수 확인 → that절을 받는 과거 동사 선택.
+8. 다른 문제에 적용할 규칙
+동사 선택에서는 빈칸 절의 시간 단서와 주어 수를 먼저 확인한다. 이전 문장의 과거 표현만으로 시제를
+단정하지 않는다.
+P6-B02 해설 | 정답 (C)
+1. 정답
+(C) them
+2. 문제 유형
+대명사·문맥 선행사
+3. 핵심 단서
+의자 배치를 정하기 전에 inspect할 대상은 two replacement rooms다.
+4. 문장 구조 또는 문맥 분석
+Session leaders는 행동 주체이고 빈칸은 inspect의 목적어다. 다음 문장의 Both rooms도 같은 두 방을
+이어 설명한다.
+5. 정답이 성립하는 이유
+them은 복수인 replacement rooms를 받아 방을 먼저 살펴보라는 뜻이 된다.
+6. 오답 선택지 분석
+(A) it은 단수이므로 두 대체 교육실과 수가 맞지 않는다.
+(B) themselves는 진행자 자신을 가리켜 방의 의자 배치를 위한 공간 점검과 맞지 않는다.
+(D) they는 주격으로 inspect의 목적어 자리에 들어갈 수 없다.
+32
+
+--- PAGE 33 ---
+Toeic RC Part 6
+7. 실전 풀이 순서
+inspect의 목적 대상 판단 → two rooms와 Both rooms 연결 → 복수 목적격 선택.
+8. 다른 문제에 적용할 규칙
+대명사는 문장 역할, 선행사의 수, 동사와의 의미를 모두 충족해야 한다.
+P6-B03 해설 | 정답 (B)
+1. 정답
+(B) A floor plan showing both replacement rooms has been uploaded to the staff portal.
+2. 문제 유형
+문장 삽입·앞뒤 공간 정보
+3. 핵심 단서
+앞은 두 대체 교육실의 배치이고 뒤의 This diagram은 출입구·화장실까지 표시한 도면이다.
+4. 문장 구조 또는 문맥 분석
+두 방의 위치를 설명하는 도면을 소개해야 다음의 diagram과 include a copy가 연결된다. 행사 소재가
+같다는 이유만으로는 충분하지 않다.
+5. 정답이 성립하는 이유
+B는 두 대체 방을 표시한 floor plan을 소개해 앞의 공간 변경과 뒤의 접근 경로 안내를 동시에 연결한다.
+6. 오답 선택지 분석
+(A) 프로그램 내용은 도면을 소개하지 않아 This diagram의 대상이 없다.
+(C) 사무실 개장 시간은 두 교육실을 표시한 diagram과 연결되지 않는다.
+(D) 준비물 안내는 참가자에게 보낼 도면 사본을 설명하지 못한다.
+7. 실전 풀이 순서
+This diagram 확인 → 앞의 two rooms 연결 → 도면 소개와 사본 배포의 흐름 검사.
+8. 다른 문제에 적용할 규칙
+삽입 문장은 앞에서 다루는 대상과 뒤의 지시 명사·후속 행동을 모두 이어 주어야 한다.
+P6-B04 해설 | 정답 (D)
+1. 정답
+(D) reserve
+2. 문제 유형
+문맥·장비 요청 절차
+3. 핵심 단서
+프로젝터가 필요한 경우 이틀 전에 요청하고 접수 순서대로 배정한다.
+4. 문장 구조 또는 문맥 분석
+one은 projector를 받는다. 사용 전 확보 요청이라는 단계와 다음 문장의 allocated in the order of
+requests가 핵심이다.
+5. 정답이 성립하는 이유
+reserve는 행사 전에 프로젝터를 예약해 확보하는 조치다.
+33
+
+--- PAGE 34 ---
+Toeic RC Part 6
+6. 오답 선택지 분석
+(A) submit은 자료·신청서를 제출할 때 쓰며 여기서 프로젝터 자체를 서비스 데스크에 제출하는 단계가
+아니다.
+(B) recruit는 인력을 모집하는 뜻으로 프로젝터를 목적어로 받을 수 없다.
+(C) return은 사용 후 반납이지만 본문은 필요한 장비를 사용 전에 확보하는 절차다.
+7. 실전 풀이 순서
+one = projector 확인 → 사용 전 요청 시점 확인 → 접수 순 배정과 reserve 연결.
+8. 다른 문제에 적용할 규칙
+같은 사물이라도 업무 단계가 예약·사용·반납 중 어디인지에 따라 동사가 달라진다.
+추가 훈련 2 · 중급 공지 · 직원 주차 허가
+P6-B05 해설 | 정답 (B)
+1. 정답
+(B) must be displayed
+2. 문제 유형
+조동사·수동태
+3. 핵심 단서
+Permits는 표시를 하는 행위자가 아니라 차량에 표시되는 허가증이다.
+4. 문장 구조 또는 문맥 분석
+조동사 must 뒤의 유한 동사구를 완성한다. 주어가 동작을 받는 대상이므로 be + 과거분사가 필요하다.
+5. 정답이 성립하는 이유
+must be displayed는 허가증을 유리 안쪽에 반드시 표시해야 한다는 규칙을 나타낸다.
+6. 오답 선택지 분석
+(A) must display는 능동태여서 허가증 자체가 무언가를 표시하는 행위자가 된다.
+(C) must 뒤에 displaying을 바로 연결할 수 없다.
+(D) have displaying은 완료형·수동태를 만드는 동사 구조가 아니다.
+7. 실전 풀이 순서
+주어 permit의 역할 확인 → must 뒤 동사원형 필요 확인 → be displayed 선택.
+8. 다른 문제에 적용할 규칙
+조동사 수동태는 modal + be + 과거분사 구조다.
+P6-B06 해설 | 정답 (C)
+1. 정답
+(C) valid
+2. 문제 유형
+문맥·허가의 적용 범위
+3. 핵심 단서
+only for employee spaces와 do not authorize customer parking이 허가 효력의 범위를 제한한다.
+34
+
+--- PAGE 35 ---
+Toeic RC Part 6
+4. 문장 구조 또는 문맥 분석
+파란 허가증이 어디에서 효력을 가지는지 설명하는 형용사가 필요하다. 빈 공간 여부가 아니라 사용 자
+격의 범위다.
+5. 정답이 성립하는 이유
+valid only for는 ‘~에 대해서만 유효한’이라는 뜻으로 직원용 공간에 한정된 주차 허가를 표현한다.
+6. 오답 선택지 분석
+(A) vacant는 공간이 비어 있다는 뜻이며 허가증의 효력을 설명하지 않는다.
+(B) portable는 휴대 가능하다는 뜻으로 직원용 공간에만 적용된다는 제한을 나타내지 못한다.
+(D) distant는 멀리 있다는 뜻으로 주차 허가의 유효 범위와 무관하다.
+7. 실전 풀이 순서
+only for와 authorize 확인 → 공간 상태와 허가 효력 구별 → valid 선택.
+8. 다른 문제에 적용할 규칙
+유효 범위를 설명하는 valid for와 실제 공간의 상태를 나타내는 어휘를 구별한다.
+P6-B07 해설 | 정답 (D)
+1. 정답
+(D) During the closure, employees may use the west lot or the garage beside the annex.
+2. 문제 유형
+문장 삽입·대체 장소와 수
+3. 핵심 단서
+앞은 north lot 폐쇄이고 뒤의 These two areas는 이용 가능한 대체 주차장 두 곳이다.
+4. 문장 구조 또는 문맥 분석
+닫힌 북쪽 주차장을 대신할 두 장소를 소개해야 signs와 변경된 보행 경로까지 자연스럽게 이어진다.
+5. 정답이 성립하는 이유
+D는 west lot와 annex 옆 garage를 제시해 두 곳의 대체 주차 공간이라는 수·의미 조건을 모두 충족한다.
+6. 오답 선택지 분석
+(A) 허가증 규칙은 이미 있지만 These two areas가 받을 두 장소를 소개하지 않는다.
+(B) 고객 공간 한 종류만 소개하며 앞에서 직원의 고객 공간 주차를 금지했다.
+(C) 공사 차량은 이용할 대체 주차장 두 곳이 아니다.
+7. 실전 풀이 순서
+폐쇄 문제 확인 → These two areas의 수와 기능 확인 → 직원용 대체 두 장소 선택.
+8. 다른 문제에 적용할 규칙
+수 표현이 붙은 지시어는 앞에 필요한 대상의 개수와 종류를 제한한다.
+P6-B08 해설 | 정답 (A)
+1. 정답
+(A) blocking
+2. 문제 유형
+동명사·목적어 구조
+35
+
+--- PAGE 36 ---
+Toeic RC Part 6
+3. 핵심 단서
+avoid 뒤에서 the entrance를 목적어로 받는 동명사가 필요하다.
+4. 문장 구조 또는 문맥 분석
+공사 차량 출입구를 막는 행위를 피하라는 목적의 to부정사구다. avoid의 목적어는 blocking the
+entrance 전체다.
+5. 정답이 성립하는 이유
+avoid blocking은 ‘막는 것을 피하다’라는 동명사 목적어 구조다.
+6. 오답 선택지 분석
+(B) avoid 뒤에 동사원형 block을 직접 쓸 수 없다.
+(C) blockage는 명사이지만 the entrance를 직접 목적어로 받을 수 없다.
+(D) blocked는 과거형·과거분사로 avoid의 동명사 목적어가 되지 못한다.
+7. 실전 풀이 순서
+avoid의 목적어 형태 확인 → entrance를 받을 동사 성질 확인 → blocking 선택.
+8. 다른 문제에 적용할 규칙
+동명사는 명사 역할을 하면서도 동사처럼 목적어를 받을 수 있다.
+추가 훈련 3 · 중급 절차 · 측정 장비 반송
+P6-B09 해설 | 정답 (D)
+1. 정답
+(D) Before
+2. 문제 유형
+접속사·전치사와 절차
+3. 핵심 단서
+you begin the online request는 완전한 절이며 일련번호 확인이 입력의 준비 단계다.
+4. 문장 구조 또는 문맥 분석
+완전한 절을 이끄는 접속사가 필요하다. 일련번호와 문제 조건을 먼저 정리한 뒤 온라인 요청을 시작한
+다.
+5. 정답이 성립하는 이유
+Before는 절을 이끌 수 있으며 요청 시작 전에 자료를 준비하라는 순서를 나타낸다.
+6. 오답 선택지 분석
+(A) During은 전치사여서 you begin이라는 완전한 절을 직접 받을 수 없다.
+(B) Prior to는 명사·동명사를 받는 전치사구로 현재 절 구조에 맞지 않는다.
+(C) Following은 여기서 ‘~후에’라는 전치사로 쓸 수 있지만 명사구가 필요하다.
+7. 실전 풀이 순서
+뒤의 절 구조 확인 → 전치사 보기 제외 → 준비와 입력의 시간 순서 확인.
+8. 다른 문제에 적용할 규칙
+같은 시간 의미라도 before + 절과 prior to + 명사/동명사의 구조를 구별한다.
+36
+
+--- PAGE 37 ---
+Toeic RC Part 6
+P6-B10 해설 | 정답 (A)
+1. 정답
+(A) returned
+2. 문제 유형
+과거분사·명시된 행위자
+3. 핵심 단서
+by customers는 반송 행위자이고 Items는 고객이 반송하는 대상이다. 주절 동사는 must be packed다.
+4. 문장 구조 또는 문맥 분석
+items that are returned by customers에서 관계대명사와 be가 생략된 수동 수식어가 필요하다. 행위자
+는 고객, 대상은 장비라는 관계가 by 구로 명시된다.
+5. 정답이 성립하는 이유
+returned by customers는 고객에 의해 반송되는 물품이라는 수동 수식 관계를 만든다.
+6. 오답 선택지 분석
+(B) returning은 능동·자동사 분사로 명시된 반송 행위자 by customers와 대상 items의 수동 관계를 만들
+지 못한다. 단순히 무생물이라 return을 못 한다는 이유는 아니다.
+(C) returns는 단수 현재형으로 복수 items와 수가 맞지 않으며 주절 동사와 연결할 구조도 없다.
+(D) return은 동사원형으로 조동사 없는 수식 자리에 들어갈 수 없다.
+7. 실전 풀이 순서
+must be packed로 주절 확인 → by customers의 행위자 확인 → items를 받는 수동 분사 선택.
+8. 다른 문제에 적용할 규칙
+by + 행위자가 명시된 명사 수식에서는 행위자와 대상의 수동 관계를 확인한다.
+P6-B11 해설 | 정답 (B)
+1. 정답
+(B) The portal will then generate a unique service reference number.
+2. 문제 유형
+문장 삽입·순서와 식별 번호
+3. 핵심 단서
+앞은 요청 제출, 뒤의 This number는 포장물과 서비스 기록을 대조할 식별 번호다.
+4. 문장 구조 또는 문맥 분석
+제출 후 시스템이 번호를 발급하고 그 번호를 조회에 사용하는 순서가 필요하다. 첫 문단의 serial
+number와 새 요청의 reference number를 구별한다.
+5. 정답이 성립하는 이유
+B는 제출 직후 발급되는 unique reference number를 소개해 This number와 서비스 진행 문의를 이어
+준다.
+6. 오답 선택지 분석
+(A) 검사 시간 설명은 제출 후 발급할 번호를 제공하지 않는다.
+(C) 검사 후 연락은 단계가 더 늦고 This number를 소개하지 않는다.
+(D) 습도에 관한 사용 주의는 서비스 기록 식별 번호와 무관하다.
+37
+
+--- PAGE 38 ---
+Toeic RC Part 6
+7. 실전 풀이 순서
+제출 단계 확인 → This number의 업무 기능 확인 → 제출 직후 참조 번호 발급 선택.
+8. 다른 문제에 적용할 규칙
+절차 문서에서 같은 종류의 번호가 여러 개면 발급 시점과 사용 목적까지 비교한다.
+P6-B12 해설 | 정답 (C)
+1. 정답
+(C) to print
+2. 문제 유형
+목적의 부정사
+3. 핵심 단서
+다운로드 버튼을 사용하는 목적은 선명한 반송 라벨 사본을 출력하는 것이다.
+4. 문장 구조 또는 문맥 분석
+명령문 동사 Use 뒤의 목적어가 the download button이다. 그다음은 버튼 사용 목적을 나타내는 to부
+정사구다.
+5. 정답이 성립하는 이유
+to print a clear copy는 ‘선명한 사본을 출력하기 위해’라는 목적을 표현한다.
+6. 오답 선택지 분석
+(A) prints는 접속사 없이 추가된 별도 현재 동사로 구조가 맞지 않는다.
+(B) printed는 별도 과거 동사나 분사로 버튼 사용의 목적을 나타내지 못한다.
+(D) 목적의 to부정사에서 to 뒤에는 printing이 아니라 동사원형이 필요하다.
+7. 실전 풀이 순서
+Use의 목적어 범위 확인 → 출력 목적 판단 → to + 원형 선택.
+8. 다른 문제에 적용할 규칙
+use + 도구 + to부정사는 그 도구를 사용하는 목적을 설명할 수 있다.
+추가 훈련 4 · 중급 보고서 · 신속 발송 시험
+P6-B13 해설 | 정답 (C)
+1. 정답
+(C) found
+2. 문제 유형
+동사·절 내부의 과거 시점
+3. 핵심 단서
+In the final week of September가 빈칸 절의 완료된 조사 시점을 직접 한정하며 주어 supervisor는 단수
+다.
+4. 문장 구조 또는 문맥 분석
+단수 주어 supervisor의 주절 동사가 필요하고 that절은 확인한 결과다. 끝난 시험의 발견을 보고한다.
+5. 정답이 성립하는 이유
+found는 특정 과거 주간에 감독자가 확인한 결과를 서술한다.
+38
+
+--- PAGE 39 ---
+Toeic RC Part 6
+6. 오답 선택지 분석
+(A) finding은 분사이므로 be 없이 유한 동사가 될 수 없다.
+(B) find는 현재형으로 쓰면 단수 supervisor와 수가 맞지 않고 완료된 시점에도 맞지 않는다.
+(D) foundation은 명사로 발견했다는 주절 동사를 만들지 못한다.
+7. 실전 풀이 순서
+같은 절의 과거 기간 확인 → 단수 supervisor와 주절 동사 필요 확인 → found 선택.
+8. 다른 문제에 적용할 규칙
+과거 결과 문제에서 현재 보고형과 혼동하지 않도록 빈칸 절 자체의 시간 표현과 주어 수를 확인한다.
+P6-B14 해설 | 정답 (D)
+1. 정답
+(D) improvement
+2. 문제 유형
+명사·결과 수치
+3. 핵심 단서
+showed an ___ in the number에서 관사 an 뒤의 목적어 명사가 필요하다.
+4. 문장 구조 또는 문맥 분석
+improvement in the number of orders는 마감 전 준비한 주문 수의 향상을 뜻한다. 빈칸은 showed의
+목적어 중심어다.
+5. 정답이 성립하는 이유
+improvement는 가산명사로 an improvement in이라는 구조를 완성한다.
+6. 오답 선택지 분석
+(A) improve는 동사원형으로 an 뒤의 목적어 명사가 될 수 없다.
+(B) improved는 형용사·분사여서 명사 중심어가 빠진다.
+(C) improves는 현재 유한 동사로 관사 an 뒤의 목적어 명사구 중심어가 될 수 없다.
+7. 실전 풀이 순서
+관사 an과 showed의 목적어 확인 → 명사 중심어 선택 → improvement in 결합 확인.
+8. 다른 문제에 적용할 규칙
+a/an 뒤에 목적어의 중심어가 필요하면 동사 파생 명사의 형태와 전치사 결합을 확인한다.
+P6-B15 해설 | 정답 (A)
+1. 정답
+(A) The monitor was moved closer to the packing surface to make the details easier to read.
+2. 문제 유형
+문장 삽입·구체적 문제 해결
+3. 핵심 단서
+앞은 멀리 놓인 모니터 때문에 주문을 읽기 어려운 문제, 뒤는 this adjustment 후 자리를 떠나지 않은
+결과다.
+39
+
+--- PAGE 40 ---
+Toeic RC Part 6
+4. 문장 구조 또는 문맥 분석
+작업 위치를 벗어나던 원인을 해소하는 장비 위치 변경이 필요하다. 발송 속도라는 넓은 주제보다 해당
+작업대의 문제가 직접 단서다.
+5. 정답이 성립하는 이유
+A의 모니터 이동은 가독성 문제를 해결하며 this adjustment와 자리 이동 감소를 모두 설명한다.
+6. 오답 선택지 분석
+(B) 다른 도시의 배송 경로는 포장 작업대의 모니터 문제를 해결하지 않는다.
+(C) 새 상자는 주문 내용을 읽기 위해 작업 위치를 떠나던 원인과 무관하다.
+(D) 영업 직원 채용은 포장 작업대의 즉시 조치가 아니다.
+7. 실전 풀이 순서
+구체적인 문제 확인 → this adjustment와 후속 결과 확인 → 위치 변경 선택.
+8. 다른 문제에 적용할 규칙
+삽입 문장은 글 전체의 주제보다 빈칸 주변의 구체적인 문제·조치·결과 사슬을 우선한다.
+P6-B16 해설 | 정답 (B)
+1. 정답
+(B) Although
+2. 문제 유형
+양보·절과 명사구
+3. 핵심 단서
+the results were favorable는 완전한 절이며 뒤는 시험 범위가 작아 일반화하기 이르다는 제한이다.
+4. 문장 구조 또는 문맥 분석
+양보 의미와 완전한 절을 이끄는 기능을 동시에 충족해야 한다. 범위 제한은 좋은 결과에도 즉시 확대할
+수 없음을 설명한다.
+5. 정답이 성립하는 이유
+Although는 좋은 결과를 인정하며 시험 범위의 한계를 이어 주는 접속사다.
+6. 오답 선택지 분석
+(A) Despite는 명사·동명사를 받는 전치사로 현재의 완전한 절을 직접 이끌 수 없다.
+(C) Nevertheless는 접속부사로 이 종속절을 이끌지 못한다.
+(D) In spite of는 전치사구여서 the results were라는 완전한 절을 직접 받을 수 없다.
+7. 실전 풀이 순서
+뒤의 절 구조 확인 → 좋은 결과와 제한의 관계 확인 → 양보 접속사 선택.
+8. 다른 문제에 적용할 규칙
+양보 의미가 같은 보기라도 although + 절과 despite/in spite of + 명사구를 구별한다.
+40
+
+--- PAGE 41 ---
+Toeic RC Part 6
+추가 훈련 5 · 고급 이메일 · 입찰 비용 비교
+P6-B17 해설 | 정답 (D)
+1. 정답
+(D) had submitted
+2. 문제 유형
+과거완료·두 사건의 순서
+3. 핵심 단서
+before the budget hearing began last Tuesday가 추천 제출과 이미 끝난 청문회의 선후 관계를 같은
+문장에 명시한다.
+4. 문장 구조 또는 문맥 분석
+지난 화요일 청문회라는 과거 기준 시점보다 제출이 먼저다. 그 이전의 완료를 나타낼 과거완료가 보기
+중 적합하다.
+5. 정답이 성립하는 이유
+had submitted는 과거 청문회가 시작되기 전에 예비 추천안을 이미 제출한 순서를 표현한다.
+6. 오답 선택지 분석
+(A) is submitting은 현재 진행 중인 제출로, 이미 끝난 청문회 이전에 완료한 행동과 맞지 않는다.
+(B) will submit은 미래 제출로, 지난 화요일의 사건보다 먼저라는 단서에 반한다.
+(C) have submitted는 단수로 취급한 panel과 수가 맞지 않고 과거 기준 시점 이전의 완료를 나타내는
+had도 아니다.
+7. 실전 풀이 순서
+began last Tuesday로 과거 기준 확인 → before의 선행 행동 확인 → 과거완료 선택.
+8. 다른 문제에 적용할 규칙
+과거 사건보다 앞선 완료를 강조할 때 had + 과거분사를 쓴다. before와 단순과거도 함께 쓰일 수 있으
+므로 보기 전체를 검사한다.
+P6-B18 해설 | 정답 (B)
+1. 정답
+(B) is attached
+2. 문제 유형
+수일치·삽입구·수동태
+3. 핵심 단서
+주어 중심어는 A summary이고 from the three bidders와 along with 이하가 이를 수식·보충한다.
+4. 문장 구조 또는 문맥 분석
+복수 quotations, bidders, charges가 가까워도 주어 중심어 summary는 단수다. 문서가 이메일에 첨부
+되는 수동 관계도 필요하다.
+5. 정답이 성립하는 이유
+is attached는 단수 summary와 수가 맞으며 첨부된 상태를 나타낸다.
+41
+
+--- PAGE 42 ---
+Toeic RC Part 6
+6. 오답 선택지 분석
+(A) are는 주어 중심어 A summary와 수가 맞지 않는다. along with는 두 주어를 and처럼 병렬로 묶지
+않는다.
+(C) attaching은 분사로 주절의 유한 동사가 빠지며, 자료가 스스로 첨부한다는 능동 관계도 부적절하다.
+(D) attachment는 명사로 주절 동사가 될 수 없다.
+7. 실전 풀이 순서
+쉼표 삽입구를 잠시 제외 → A summary를 중심어로 확인 → 단수 수동태 선택.
+8. 다른 문제에 적용할 규칙
+주어의 수는 수식구 속 가까운 명사가 아니라 중심어로 판단한다. along with는 일반적으로 중심어의 수
+를 바꾸지 않는다.
+P6-B19 해설 | 정답 (C)
+1. 정답
+(C) Prepare a table that separates installation charges, annual maintenance fees, and any optional
+services.
+2. 문제 유형
+문장 삽입·비교 기준의 통일
+3. 핵심 단서
+앞은 견적 양식 차이로 총액만 비교할 수 없는 문제이고 뒤의 This breakdown은 같은 비용 항목을 구분
+한 자료다.
+4. 문장 구조 또는 문맥 분석
+빈칸은 형식이 다른 견적을 공통 비용 범주로 정리하는 구체적 조치여야 한다. 다음의 recurring
+charges와 three-year total에도 이어져야 한다.
+5. 정답이 성립하는 이유
+C의 설치비·연간 유지비·선택 서비스 표는 breakdown의 선행 내용이며 견적 양식 차이와 반복 비용 누
+락을 해결한다.
+6. 오답 선택지 분석
+(A) 발표 초대는 금액을 같은 비용 범주로 나누는 자료를 만들지 않는다.
+(B) 회의실 예약은 This breakdown이 가리킬 비용 구분을 제공하지 않는다.
+(D) 이전 협업 이력은 세 입찰의 반복 비용을 비교하는 기준을 설명하지 못한다.
+7. 실전 풀이 순서
+총액 비교의 한계 확인 → This breakdown의 필요한 정보 정의 → 세 비용 범주를 나눈 표 선택.
+8. 다른 문제에 적용할 규칙
+비교 문제의 삽입 문장은 비교 대상의 형식 차이를 해소하는 공통 기준을 제공해야 한다.
+P6-B20 해설 | 정답 (A)
+1. 정답
+(A) defer
+2. 문제 유형
+문맥·결정 보류와 기한
+42
+
+--- PAGE 43 ---
+Toeic RC Part 6
+3. 핵심 단서
+until every bidder has answered와 reconvene next week가 추가 답변을 기다린 뒤 결정함을 나타낸다.
+4. 문장 구조 또는 문맥 분석
+예비 추천은 이미 제출했지만 최종 결정은 비용 답변이 모두 확보될 때까지 미뤄진다. 경쟁 재시작은 아
+니라는 다음 문장도 절차를 제한한다.
+5. 정답이 성립하는 이유
+defer its final decision until은 ‘~할 때까지 최종 결정을 미루다’라는 결합이다.
+6. 오답 선택지 분석
+(B) announce는 한 번 결정을 발표하는 행동으로 여기서는 until까지 계속 보류하는 동작을 나타내지 못
+한다.
+(C) implement는 결정을 실행한다는 뜻이지만 아직 최종 결정에 필요한 답변을 기다리는 단계다.
+(D) confirm은 확정·확인한다는 뜻으로 현재부터 답변 완료까지 결정을 미루는 의미가 아니다.
+7. 실전 풀이 순서
+예비 추천과 최종 결정 구별 → until의 대기 종료점 확인 → defer 선택.
+8. 다른 문제에 적용할 규칙
+결정이나 행동을 특정 조건이 충족될 때까지 미루는 표현은 defer/postpone ... until이다.
+추가 훈련 6 · 고급 공지 · 회의실 예약과 방문자 출입
+P6-B21 해설 | 정답 (D)
+1. 정답
+(D) whose
+2. 문제 유형
+소유격 관계대명사·이용 자격
+3. 핵심 단서
+accounts가 관계절 주어이고 회원이 가진 계정이라는 소유 관계가 필요하다.
+4. 문장 구조 또는 문맥 분석
+members를 꾸미는 관계절에서 accounts are current는 완전한 주어·동사 구조지만 accounts 앞의 소유
+자가 빠져 있다.
+5. 정답이 성립하는 이유
+whose accounts는 ‘계정 상태가 유효한 회원’이라는 소유격 관계절을 만든다.
+6. 오답 선택지 분석
+(A) who는 주격이므로 이미 주어 accounts가 있는 관계절에서 소유 관계를 표시하지 못한다.
+(B) whom은 목적격이므로 accounts 앞의 소유자 역할을 할 수 없다.
+(C) which는 사물의 주격·목적격 관계대명사이며 회원과 계정의 소유 관계를 나타내지 않는다.
+7. 실전 풀이 순서
+관계절 주어 accounts 확인 → 회원의 계정이라는 소유 관계 확인 → whose 선택.
+8. 다른 문제에 적용할 규칙
+관계절 안에 소유 관계가 필요하고 명사가 바로 뒤따르면 whose + 명사를 사용한다.
+43
+
+--- PAGE 44 ---
+Toeic RC Part 6
+P6-B22 해설 | 정답 (B)
+1. 정답
+(B) waived
+2. 문제 유형
+문맥·예외 조건 적용
+3. 핵심 단서
+원래 회원이 pays nothing이라고 명시하며 전체 슬롯 재예약 때만 그 예외를 적용한다.
+4. 문장 구조 또는 문맥 분석
+일반적인 늦은 취소 요금과 전체 슬롯 재예약 시의 면제 조건을 구분한다. pays nothing이 빈칸의 요금
+처리 방식을 직접 결정한다.
+5. 정답이 성립하는 이유
+waived는 요금을 면제한다는 뜻으로 pays nothing과 정확히 일치한다.
+6. 오답 선택지 분석
+(A) collected는 요금 징수로 원래 회원이 아무것도 내지 않는다는 명시적 단서에 반한다.
+(C) introduced는 요금을 새로 도입한다는 뜻이지만 late fee는 이미 일반 규칙으로 존재한다.
+(D) increased는 요금 인상으로 아무것도 내지 않는다는 예외와 반대다.
+7. 실전 풀이 순서
+pays nothing 확인 → 전체 슬롯 재예약의 조건 확인 → waived 선택.
+8. 다른 문제에 적용할 규칙
+요금이 부과되지 않는다는 명시적 설명과 waive a fee라는 표현을 연결하되 면제 조건의 범위도 확인한
+다.
+P6-B23 해설 | 정답 (A)
+1. 정답
+(A) Visitor badges can be collected from eight to ten in the morning or from four to six in the
+afternoon.
+2. 문제 유형
+문장 삽입·두 시간대와 후속 예외
+3. 핵심 단서
+앞은 방문자 등록이고 뒤의 These two periods는 출입증을 받을 수 있는 두 시간대다.
+4. 문장 구조 또는 문맥 분석
+두 시간대를 소개해야 only times와 outside those periods의 예외 절차가 연결된다. 예약 가능일이나
+청구 주기는 출입증 발급 시간대가 아니다.
+5. 정답이 성립하는 이유
+A는 오전·오후의 두 출입증 수령 시간을 제시해 등록 → 수령 → 시간대 밖의 사전 수령 순서를 만든다.
+6. 오답 선택지 분석
+(B) 빈 회의실 조회는 두 발급 시간대를 소개하지 않는다.
+(C) 주방 기기 두 개는 periods라는 시간 지시어의 선행 내용이 아니다.
+(D) 월말 요금 검토는 두 일일 출입증 발급 시간대와 무관하다.
+44
+
+--- PAGE 45 ---
+Toeic RC Part 6
+7. 실전 풀이 순서
+These two periods와 only times 확인 → 방문자 출입증 발급 기능 확인 → 두 수령 시간대 선택.
+8. 다른 문제에 적용할 규칙
+삽입 문장에서는 지시 대상의 개수뿐 아니라 시간·장소·물품 중 어떤 종류인지도 구분한다.
+P6-B24 해설 | 정답 (C)
+1. 정답
+(C) unless
+2. 문제 유형
+조건 접속사·발급 요건
+3. 핵심 단서
+No badge will be issued 뒤에 the guest has been registered라는 완전한 절이 온다.
+4. 문장 구조 또는 문맥 분석
+방문자 등록은 출입증 발급의 필수 조건이다. 부정 주절과 unless절을 연결하면 등록하지 않으면 발급하
+지 않는다는 뜻이다.
+5. 정답이 성립하는 이유
+unless는 완전한 절을 이끌며 ‘등록되어 있지 않으면 발급하지 않는다’는 조건을 표현한다.
+6. 오답 선택지 분석
+(A) Except for는 명사구를 받는 전치사구로 이 완전한 절을 직접 이끌지 못한다.
+(B) During은 명사구를 받는 전치사이므로 the guest has been registered 앞에 쓸 수 없다.
+(D) Despite는 명사·동명사를 받는 전치사로 현재의 절 구조에 맞지 않는다.
+7. 실전 풀이 순서
+뒤의 완전한 절 확인 → 부정 주절과 필수 조건 연결 → unless 선택.
+8. 다른 문제에 적용할 규칙
+not ... unless ...는 ‘~하지 않으면 …하지 않는다’, 즉 ~가 필요조건이라는 의미를 만든다.
+추가 훈련 7 · 고급 절차 · 출장 사전 승인
+P6-B25 해설 | 정답 (C)
+1. 정답
+(C) determines
+2. 문제 유형
+수일치·대조 삽입구
+3. 핵심 단서
+주어 중심어는 The projected total이고 rather than 이하의 복수 fares는 비교에서 제외한 대상이다.
+4. 문장 구조 또는 문맥 분석
+삽입구가 주어를 복수로 바꾸지 않는다. 일반적인 승인 기준을 설명하는 단수 현재 동사가 필요하다.
+5. 정답이 성립하는 이유
+determines는 단수 total에 맞으며 전체 예상 비용이 승인 단계를 결정한다는 규칙을 표현한다.
+45
+
+--- PAGE 46 ---
+Toeic RC Part 6
+6. 오답 선택지 분석
+(A) determine은 복수 현재형으로 단수 total과 수가 맞지 않는다.
+(B) are determining은 복수형 are를 사용하므로 중심어 total과 맞지 않는다.
+(D) have determined는 복수형 have를 사용하므로 단수 total과 맞지 않는다.
+7. 실전 풀이 순서
+rather than 삽입구를 제외 → 주어 total의 단수 확인 → 현재 단수 동사 선택.
+8. 다른 문제에 적용할 규칙
+rather than/as well as/along with가 주어 뒤에 와도 일반적으로 첫 중심어에 동사의 수를 맞춘다.
+P6-B26 해설 | 정답 (D)
+1. 정답
+(D) whether
+2. 문제 유형
+명사절·확인 내용
+3. 핵심 단서
+confirm의 목적어는 출장 날짜가 부서 일정과 양립하는지 여부다.
+4. 문장 구조 또는 문맥 분석
+the proposed dates are compatible는 완전한 절이다. 이를 confirm의 확인 내용인 명사절로 만들어야
+한다.
+5. 정답이 성립하는 이유
+whether는 ‘제안한 날짜가 업무 일정과 맞는지’를 나타내는 명사절을 이끈다.
+6. 오답 선택지 분석
+(A) unless는 조건 부사절을 이끌어 확인할 내용의 목적어 역할을 하지 못한다.
+(B) during은 전치사로 완전한 절을 받을 수 없다.
+(C) either는 단독으로 confirm의 목적어인 완전한 명사절을 이끌지 못한다.
+7. 실전 풀이 순서
+confirm의 목적어 필요 확인 → 뒤의 완전한 절 확인 → whether 명사절 선택.
+8. 다른 문제에 적용할 규칙
+확인·판단할 여부를 나타낼 때 confirm/check/determine + whether절을 쓸 수 있다.
+P6-B27 해설 | 정답 (B)
+1. 정답
+(B) Attach the proposed itinerary and a written estimate of the total travel cost.
+2. 문제 유형
+문장 삽입·두 증빙과 기능 연결
+3. 핵심 단서
+앞은 일정·예상 지출을 검증할 증빙이고 뒤의 Both attachments는 그 두 자료다.
+4. 문장 구조 또는 문맥 분석
+여행 일정표가 schedule을, 총비용 견적이 expenditure를 검증한다. 두 기능에 하나씩 대응하는 두 첨부
+문서가 필요하다.
+46
+
+--- PAGE 47 ---
+Toeic RC Part 6
+5. 정답이 성립하는 이유
+B는 itinerary와 cost estimate 두 개를 소개하여 앞의 검증 기능과 뒤의 Both attachments를 모두 충족
+한다.
+6. 오답 선택지 분석
+(A) 항공사 목록은 여행 일정과 총비용을 검증하는 두 첨부 문서가 아니다.
+(C) 공항 도착 시점은 첨부할 두 증빙을 제공하지 않는다.
+(D) 정산 처리 주기는 출장 구매 전 승인 증빙과 다른 단계다.
+7. 실전 풀이 순서
+앞의 schedule/expenditure 두 기능 확인 → Both attachments의 수 확인 → 일정표와 비용 견적 선택.
+8. 다른 문제에 적용할 규칙
+both가 뒤따르는 삽입 문제는 대상 두 개와 각 대상의 문맥상 역할을 함께 확인한다.
+P6-B28 해설 | 정답 (A)
+1. 정답
+(A) either
+2. 문제 유형
+부정대명사·수일치와 조건
+3. 핵심 단서
+첨부 자료는 두 개이며 하나라도 불완전하면 반려한다. 동사는 단수 is다.
+4. 문장 구조 또는 문맥 분석
+두 자료 중 어느 하나를 나타내는 단수 부정대명사가 필요하다. 수가 맞는 neither도 불완전하지 않은 두
+자료를 반려한다는 반대 의미가 된다.
+5. 정답이 성립하는 이유
+either is incomplete는 ‘둘 중 하나라도 불완전하면’이라는 조건을 만들어 두 증빙 모두 완전해야 한다
+는 규칙과 맞는다.
+6. 오답 선택지 분석
+(B) neither is incomplete는 둘 다 불완전하지 않다는 뜻으로, 완전한 요청을 반려한다는 반대 결과가 된
+다.
+(C) both는 복수 의미이므로 is가 아니라 are가 필요하다.
+(D) several은 복수이며 두 개로 한정된 자료와도 맞지 않고 is와 수가 맞지 않는다.
+7. 실전 풀이 순서
+앞의 두 첨부 자료 확인 → is로 단수 후보 제한 → 반려 조건에서 either/neither 의미 구별.
+8. 다른 문제에 적용할 규칙
+either/neither는 두 대상 중 하나/어느 것도 아님을 나타내며 단수 동사를 쓴다. 부정 의미의 범위를 꼭
+확인한다.
+47
+
+--- PAGE 48 ---
+Toeic RC Part 6
+추가 훈련 8 · 고급 보고서 · 접근성 시험의 적용 범위
+P6-B29 해설 | 정답 (A)
+1. 정답
+(A) was evaluated
+2. 문제 유형
+과거 수동태·행위자
+3. 핵심 단서
+동일 절의 During tests conducted on October 8 and 9와 by twelve volunteers가 시점과 평가 행위자
+를 명시한다.
+4. 문장 구조 또는 문맥 분석
+website는 평가를 받는 단수 대상이다. 끝난 이틀간의 시험에서 자원봉사자들이 평가했다는 과거 수동
+태가 필요하다.
+5. 정답이 성립하는 이유
+was evaluated는 단수 website와 수가 맞고 과거의 평가를 받는 관계를 나타낸다.
+6. 오답 선택지 분석
+(B) evaluate는 능동 원형이며 단수 website와 수가 맞지 않고 평가 대상의 수동 관계도 만들지 못한다.
+(C) evaluating은 분사여서 유한 동사가 없고, 사이트가 사람을 평가하는 능동 관계도 부적절하다.
+(D) evaluation은 명사로 주절 동사 역할을 하지 못한다.
+7. 실전 풀이 순서
+같은 절의 시험 기간 확인 → by 행위자 확인 → 단수 대상의 과거 수동태 선택.
+8. 다른 문제에 적용할 규칙
+by + 행위자와 주어의 역할을 함께 보아 수동태를 판단하고, 해당 절의 시점에 맞는 be 형태를 고른다.
+P6-B30 해설 | 정답 (D)
+1. 정답
+(D) limited
+2. 문제 유형
+문맥·개선 범위 제한
+3. 핵심 단서
+tab sequence만 바뀌었고 color contrast는 그대로이며 색에 의존한 집단은 개선이 없었다.
+4. 문장 구조 또는 문맥 분석
+that group은 keyboard users다. 이익을 얻은 집단과 개선되지 않은 집단의 대비가 관찰된 개선의 범위
+를 제한한다.
+5. 정답이 성립하는 이유
+limited to that group은 개선이 키보드 사용자 집단에 한정되었다는 결과를 정확히 표현한다.
+48
+
+--- PAGE 49 ---
+Toeic RC Part 6
+6. 오답 선택지 분석
+(A) equivalent to는 동등함을 비교하지만 개선 효과와 사용자 집단 자체를 같은 단위로 비교할 수 없다.
+(B) resistant to는 저항한다는 뜻으로 특정 집단에만 개선이 관찰되었다는 의미가 아니다.
+(C) subjected to는 어떤 처리나 상황을 겪게 한다는 뜻으로 gains를 사용자 집단에 한정하는 결합이 아
+니다.
+7. 실전 풀이 순서
+that group의 선행사 확인 → 색 대비 불변과 다른 집단의 결과 대조 → limited to 선택.
+8. 다른 문제에 적용할 규칙
+변경된 기능과 영향을 받지 않은 집단을 함께 읽어 관찰 결과의 적용 범위를 제한한다.
+P6-B31 해설 | 정답 (B)
+1. 정답
+(B) Participants who used only mobile devices were not included in the trial.
+2. 문제 유형
+문장 삽입·제외와 결론의 한계
+3. 핵심 단서
+앞은 통제된 데스크톱 장비이고 뒤의 This exclusion은 모바일 성능을 확정할 수 없는 이유다.
+4. 문장 구조 또는 문맥 분석
+모바일 사용자 제외를 소개해야 exclusion과 mobile screens가 연결된다. 미검증은 모바일의 성공·실패
+어느 쪽의 증거도 아니라는 다음 문장도 유지해야 한다.
+5. 정답이 성립하는 이유
+B는 모바일 전용 사용자를 시험에서 제외했다는 제한을 명시하여 장비 조건과 결론 범위의 한계를 이어
+준다.
+6. 오답 선택지 분석
+(A) 설문 실시 여부는 모바일 성능을 평가하지 못한 제외 조건을 설명하지 않는다.
+(C) 문항 수 감소는 모바일 사용자 제외가 아니며 exclusion의 선행 정보가 없다.
+(D) 컴퓨터 준비 지원은 연구 대상에서 제외된 집단을 소개하지 않는다.
+7. 실전 풀이 순서
+통제 장비와 모바일 결론의 한계 확인 → This exclusion이 받을 제외 집단 규정 → 모바일 전용 사용자
+제외 선택.
+8. 다른 문제에 적용할 규칙
+연구 보고서의 삽입 문제는 조사 대상의 제외 조건과 결론을 적용할 수 없는 범위를 연결한다.
+P6-B32 해설 | 정답 (C)
+1. 정답
+(C) be tested
+2. 문제 유형
+권고 that절·수동태
+49
+
+--- PAGE 50 ---
+Toeic RC Part 6
+3. 핵심 단서
+recommend that절의 주어 color-contrast design은 시험을 받는 대상이고 출판 전 추가 검증을 권고한
+다.
+4. 문장 구조 또는 문맥 분석
+권고의 that절에서 당위 동사원형을 사용하며, design이 시험되는 수동 관계이므로 be + 과거분사를 쓴
+다.
+5. 정답이 성립하는 이유
+be tested는 색 대비 설계가 추가 시험을 받도록 권고하는 원형 수동태다.
+6. 오답 선택지 분석
+(A) testing은 분사이며 that절의 유한 동사가 되지 못하고 설계의 수동 관계도 만들지 못한다.
+(B) to test는 부정사로 that절의 동사가 될 수 없다.
+(D) has testing은 올바른 완료형이 아니며 시험 대상의 수동 관계를 나타내지 못한다.
+7. 실전 풀이 순서
+recommend that의 권고 의미 확인 → design의 대상 역할 판단 → 원형 수동태 be tested 선택.
+8. 다른 문제에 적용할 규칙
+권고·요구의 that절에서 동사원형을 쓸 때 수동 의미는 be + 과거분사로 표현한다.
+50
+
+--- PAGE 51 ---
+Toeic RC Part 6
+문맥 연결과 오답 교정
+복습 점검 1 · 선행사와 논리 흐름을 짧게 그리기
+대명사 점검표: 대명사의 격은 맞는가 → 선행 대상의 수는 맞는가 → 그 대상이 동사와 의미상 결합하
+는가 → 다음 문장도 같은 대상을 이어 설명하는가. 각 문항에서 ‘them = two replacement rooms’,
+‘This diagram = floor plan’처럼 한 줄을 적는다. 가까운 명사를 고르는 것과 실제 지시 대상을 찾는 것
+을 구분한다.
+논리 흐름은 긴 번역 대신 세 마디로 적는다. ‘주차장 폐쇄 → 대체 두 곳 소개 → 두 곳 계속 운영’, ‘모니
+터 멀리 배치 → 가까이 이동 → 작업 위치 이탈 감소’가 예다. 빈칸 선택지가 가운데 단계에 들어갔을 때
+앞의 원인을 받고 뒤의 결과를 만드는지 확인한다. 추가 정보형 문단이면 원인·결과로 억지로 바꾸지
+말고 ‘일반 규칙 → 구체 사례 → 예외’로 표시한다.
+삽입 문제에서 these two, both, this change, such items를 발견하면 필요한 정보의 종류와 개수를 먼저
+정한다. 두 장소가 필요하면 두 장소를 세어 보고, 변경이 필요하면 실제로 바뀐 조치를 찾는다. 정답 후
+보를 넣은 뒤 앞 문장만 읽지 말고 다음 문장까지 소리 없이 이어 읽는다. 설명되지 않는 지시어가 남으
+면 연결은 아직 완성되지 않았다.
+복습 점검 2 · 정답의 근거와 오답의 가정을 분리해 기록하기
+근거 기록은 ‘정답 / 직접 단서 / 적용 규칙 / 오답이 필요로 하는 가정’의 네 칸으로 정리한다. 예:
+‘Before / 뒤에 you begin이라는 절 / before는 절을 이끌 수 있음 / Prior to를 쓰려면 beginning이라는
+동명사로 바꿔야 함’. 문법형은 실제 필요한 형태를 적고, 문맥형은 본문에 있는 목적·기간·조건을 인용한
+다.
+오답이 가능한 최소 변경을 한 가지 써 본다. them을 it으로 바꾸려면 대상이 하나여야 하고, returned를
+returning으로 바꾸려면 명사가 동작의 행위자여야 한다. 비교 대상이나 조사 범위를 추가해야만 성립
+하는 어휘라면 그 정보가 현재 본문에 없다는 점을 표시한다. 이는 실제 지문을 임의로 고쳐 답을 합리
+화하는 활동과 다르며, 채점 후 문법·논리의 경계를 확인하는 복습이다.
+재풀이 점검표: 해설을 닫고 단서를 다시 찾았는가 → 정답과 세 오답의 탈락 이유를 구분했는가 → 삽
+입 문장을 양쪽에 연결했는가 → 시점·선행사·예외를 지문 전체와 대조했는가. 시간이 오래 걸린 문항은
+어휘 해석, 구조 확인, 선행사 탐색, 논리 연결 중 실제로 막힌 단계 하나를 표시한다. 같은 단계를 두 번
+이상 틀리면 그 유형을 먼저 재훈련한다.
+문항 앞→빈칸→뒤 연결 오답이 가능해지는 조건
+________ ________________________ ________________________
+________ ________________________ ________________________
+________ ________________________ ________________________
+51

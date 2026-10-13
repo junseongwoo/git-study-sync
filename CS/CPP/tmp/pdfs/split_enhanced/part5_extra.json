@@ -1,0 +1,1332 @@
+{
+  "chapters": [
+    {
+      "chapter": 1,
+      "blocks": [
+        {
+          "label": "최소 대립 예문으로 경계 확인",
+          "text": "① The estimate is realistic. ② The analyst estimated the cost realistically. 첫 문장의 realistic은 estimate의 성질을 설명하는 보어이고, 둘째 문장의 realistically는 estimated의 방식을 설명한다. 두 형태의 의미가 비슷하더라도 들어가는 문장 성분은 다르다. 빈칸을 해석하기 전에 '무엇의 성질인가, 어떤 동작의 방식인가'를 질문하면 판단 기준을 세울 수 있다."
+        },
+        {
+          "label": "예제 판단을 단계별로 재현",
+          "text": "예제: The revised terms are mutually _____. 선택지는 (A) benefit, (B) benefits, (C) beneficial, (D) beneficially이다. [The revised terms] [are] [mutually _____]로 나누면 be동사 뒤에서 terms의 성질을 설명할 보어가 필요하며 mutually가 그 보어를 수식한다. A·B는 명사 형태여서 mutually가 수식할 형용사 보어를 만들지 못하고, D는 부사여서 terms의 성질 자체가 빠진다. 따라서 C beneficial을 넣어 '서로에게 이로운 조건'이라는 형용사 보어를 완성한다."
+        },
+        {
+          "label": "고득점에서 놓치기 쉬운 예외",
+          "text": "명사 앞은 형용사 전용 자리가 아니므로 sales forecast처럼 명사가 다른 명사를 수식하는 구조도 확인한다. friendly와 costly는 -ly로 끝나지만 형용사이며 fast는 문맥에 따라 형용사와 부사로 쓰일 수 있다. 반대로 의미가 맞는 같은 품사 후보가 두 개 남으면 형태만으로 정답을 확정할 수 없다. 구조로 제거한 범위와 문맥으로 제거한 범위를 따로 설명하는 것이 고득점 복습의 기준이다."
+        }
+      ],
+      "questions": [
+        {
+          "id": "P5-B01",
+          "prompt": "The administrator responded _____ to the request.",
+          "options": [
+            "prompt",
+            "promptly",
+            "promptness",
+            "prompted"
+          ],
+          "answer": "B",
+          "type": "품사: 동사 수식",
+          "level": "기본",
+          "clue": "responded는 정동사이며 to the request가 반응 대상을 설명한다. 빈칸은 반응의 방식을 나타낸다.",
+          "analysis": "[The administrator] [responded] [_____] [to the request]이다. 이 용법의 respond에는 형용사 목적격 보어를 둘 구조가 없다.",
+          "why": "promptly는 부사로 responded를 수식하여 요청에 신속하게 응답했다는 뜻을 만든다.",
+          "wrong": {
+            "A": "prompt는 형용사 또는 동사·명사 형태이다. responded의 방식을 설명하는 이 자리에 필요한 부사 형태가 아니다.",
+            "C": "promptness는 명사이다. responded 뒤에 직접 목적어를 추가하는 구조가 아니므로 방식 수식어를 대신하지 못한다.",
+            "D": "prompted는 과거형·과거분사이다. 요청에 응답하는 방식이 아니며 접속 없이 새 정동사로 연결할 수도 없다."
+          },
+          "order": "responded를 찾는다 → to구를 묶는다 → 남은 방식 수식 자리의 부사 B를 선택한다.",
+          "rule": "동사의 방식 수식어와 명사·형용사 보어를 구별한다. 위치보다 동사의 용법과 남아 있는 문장 역할을 기준으로 판단한다."
+        },
+        {
+          "id": "P5-B02",
+          "prompt": "The pilot system reduced waiting times without raising labor costs. The review panel therefore judged it operationally _____.",
+          "options": [
+            "success",
+            "succeed",
+            "successfully",
+            "successful"
+          ],
+          "answer": "D",
+          "type": "복합 품사: 목적격 보어·부사 범위·결과 문맥",
+          "level": "실전 최상급",
+          "clue": "judged 뒤 it이 목적어이고 operationally가 빈칸을 수식한다. 첫 문장은 시스템의 성공적인 운영 결과를 제시한다.",
+          "analysis": "첫 문장은 평가의 근거이다. 둘째 문장은 [The review panel] [judged] [it] [operationally _____]라는 목적어·보어 구조이며 it은 pilot system을 가리킨다.",
+          "why": "successful은 시스템의 상태를 설명하는 형용사 목적격 보어이다. operationally는 성공의 평가 범위를 운영 측면으로 한정하고 therefore는 앞의 성과와 판단을 연결한다.",
+          "wrong": {
+            "A": "success는 명사이다. judge it a success라는 다른 구조는 가능하지만 operationally success에서는 필요한 관사·명사 보어 구조도 형용사 수식 구조도 완성되지 않는다.",
+            "B": "succeed는 원형 동사이다. judge + 목적어 뒤에 원형을 직접 붙이는 구조가 아니며 operationally가 수식할 상태 보어도 아니다.",
+            "C": "successfully는 부사이다. operationally와 부사를 나란히 두면 평가 대상 it의 성질을 나타내는 보어가 빠진다."
+          },
+          "order": "앞 문장의 평가 결과를 읽는다 → judged의 목적어 it을 찾는다 → operationally의 수식 대상을 결정한다 → 형용사 보어 D를 검증한다.",
+          "rule": "find/judge/consider + 목적어 + 형용사 보어를 읽을 때 앞 부사는 보어를 수식할 수 있다. 동일 어근의 명사 보어는 관사 등 다른 구조가 필요할 수 있다."
+        }
+      ]
+    },
+    {
+      "chapter": 2,
+      "blocks": [
+        {
+          "label": "최소 대립 예문으로 경계 확인",
+          "text": "① The team needs new equipment. ② The team needs three pieces of equipment. 첫 문장은 equipment를 불가산 명사로 사용하고, 둘째 문장은 pieces라는 가산 중심어로 수량을 센다. three가 있다고 equipment까지 복수형으로 바꾸는 것은 이 뜻의 명사구 구조와 맞지 않는다. 수량 표현의 중심 명사와 내용 명사를 구별하자."
+        },
+        {
+          "label": "예제 판단을 단계별로 재현",
+          "text": "예제: The _____ of the final audit has been delayed. 선택지는 (A) complete, (B) completion, (C) completed, (D) completely이다. [The _____ of the final audit] [has been delayed]에서 빈칸은 단수 주어 명사구의 중심어이고 of구는 그 대상을 설명한다. A·C는 이 위치에서 수식할 명사를 갖추지 못하며, D는 부사이므로 주어 중심어가 될 수 없다. B completion을 넣으면 '최종 감사의 완료가 지연되었다'는 명사구와 단수 has의 호응이 모두 완성된다."
+        },
+        {
+          "label": "고득점에서 놓치기 쉬운 예외",
+          "text": "-ing형은 명사 역할을 할 수 있으므로 The careful handling of samples prevents damage. 같은 문장을 잘못된 구조로 취급하지 않는다. event, result, action을 나타내는 명사와 동명사형이 모두 가능한 경우에는 문항이 단일 정답을 요구할 수 있는지 특히 조심해야 한다. 명사의 가산성은 의미에 따라 달라질 수 있으며 paper는 문서·논문이면 셀 수 있고 재료로서의 종이면 보통 불가산이다. 단어의 한글 뜻만으로 가산성을 고정하지 말고 현재 명사구의 용법을 확인한다."
+        }
+      ],
+      "questions": [
+        {
+          "id": "P5-B03",
+          "prompt": "The brochure contains useful _____ about the training course.",
+          "options": [
+            "information",
+            "informations",
+            "inform",
+            "informative"
+          ],
+          "answer": "A",
+          "type": "명사: 불가산 목적어",
+          "level": "기본",
+          "clue": "contains의 목적어가 필요하고 useful이 명사를 수식한다. 교육 안내 내용이라는 뜻의 information은 불가산이다.",
+          "analysis": "[The brochure] [contains] [useful _____ about the training course]이다. useful과 about구 사이에서 목적어 명사구의 중심어가 필요하다.",
+          "why": "information은 안내 내용이라는 불가산 명사로 useful의 수식을 받아 목적어를 완성한다.",
+          "wrong": {
+            "B": "informations라는 복수형은 교육 안내 내용이라는 이 문장의 용법에 맞지 않는다. 일반적인 information은 복수형으로 수량을 표시하지 않는다.",
+            "C": "inform은 동사이다. contains와 접속 없이 다른 정동사를 넣을 수 없고 useful이 수식할 명사도 되지 않는다.",
+            "D": "informative는 형용사이다. useful informative만으로는 contains의 목적어가 되는 명사구의 중심어가 없다."
+          },
+          "order": "contains 뒤 목적어 자리를 확인한다 → useful이 꾸밀 명사를 찾는다 → 안내 내용의 불가산 명사 A를 선택한다.",
+          "rule": "형용사 뒤 명사구 중심어와 그 문맥상의 가산성을 함께 확인한다. 불가산 내용은 pieces of information 같은 구조로 셀 수 있다."
+        },
+        {
+          "id": "P5-B04",
+          "prompt": "Only one final inspection remains. Its _____ is required before the production line can restart.",
+          "options": [
+            "complete",
+            "completely",
+            "completed",
+            "completion"
+          ],
+          "answer": "D",
+          "type": "명사구: 소유 한정사·수동 보어·시간 문맥",
+          "level": "실전 최상급",
+          "clue": "Its는 inspection을 받는 소유 한정사이며 뒤에 중심 명사가 필요하다. is required는 이미 주절의 정동사이다.",
+          "analysis": "첫 문장은 남은 절차가 검사 하나라고 정한다. 둘째 문장의 [Its _____]가 주어, [is required]가 수동 동사구이며 before절은 재가동의 선행 조건을 설명한다.",
+          "why": "completion은 검사의 완료라는 명사로 Its와 결합하고 단수 is와 호응한다. 검사를 끝내야 생산 라인이 다시 가동될 수 있다는 절차도 완성한다.",
+          "wrong": {
+            "A": "complete는 형용사 또는 동사이다. Its 뒤에서 명사구 중심어가 빠진 상태를 해결하지 못한다.",
+            "B": "completely는 부사이다. 소유 한정사 Its가 한정할 중심 명사가 없고 주어 자리를 만들 수 없다.",
+            "C": "completed는 과거분사이다. Its completed inspection처럼 뒤 명사가 있다면 수식할 수 있지만 이 문장에는 그 중심 명사가 없다."
+          },
+          "order": "Its의 지칭 대상을 찾는다 → 주어 명사구의 빈 중심어를 확인한다 → is required와 before절을 검증하여 D를 선택한다.",
+          "rule": "소유 한정사 뒤에 수식어가 올 수 있지만 명사구 중심어는 필요하다. 정동사가 이미 있으면 빈칸을 별도의 동사로 읽지 않는다."
+        }
+      ]
+    },
+    {
+      "chapter": 3,
+      "blocks": [
+        {
+          "label": "최소 대립 예문으로 경계 확인",
+          "text": "① They sent him a revised contract. ② They sent themselves a reminder. 첫 문장의 him은 발신자와 다른 사람을, 둘째 문장의 themselves는 발신자와 같은 집단을 가리킨다. 일반 목적격과 재귀형의 차이는 '주어와 가까운가'가 아니라 동일 대상인지에 있다. 지칭 대상을 실제 이름이나 명사구로 바꾸어 읽으면 오해를 줄일 수 있다."
+        },
+        {
+          "label": "예제 판단을 단계별로 재현",
+          "text": "예제: The travel department updated _____ guidelines yesterday. 선택지는 (A) it, (B) its, (C) itself, (D) theirs이다. [The travel department] [updated] [_____ guidelines] [yesterday]에서 빈칸은 guidelines 앞 소유 한정사이다. A는 독립 대명사이고 C는 재귀대명사여서 명사를 소유 한정하지 못하며, D는 명사 없이 소유 대상을 대신하는 소유 대명사이다. 단수 부서의 지침을 나타내는 B its가 guidelines와 결합하여 목적어를 완성한다."
+        },
+        {
+          "label": "고득점에서 놓치기 쉬운 예외",
+          "text": "단수의 특정인을 성별 없이 가리키는 they는 현대 영어에서 쓰이므로 'they는 언제나 복수 사람만 가리킨다'고 단정하지 않는다. 다만 이 교재의 문항에서는 지칭 범위를 명확히 제시하며 동사·소유 형태도 함께 확인한다. that/those는 비교되는 명사구를 대신하고 one/ones는 같은 종류의 다른 개체를 대신할 수 있다. 대명사 하나의 번역보다 선행 명사와 문장 성분을 복원하는 것이 안전하다."
+        }
+      ],
+      "questions": [
+        {
+          "id": "P5-B05",
+          "prompt": "Please return the signed form to _____ by noon.",
+          "options": [
+            "I",
+            "my",
+            "me",
+            "mine"
+          ],
+          "answer": "C",
+          "type": "대명사: 전치사 목적격",
+          "level": "기본",
+          "clue": "전치사 to 뒤에서 서류를 받을 사람을 나타내는 목적어가 필요하다.",
+          "analysis": "[Please return] [the signed form] [to _____] [by noon]이다. 빈칸은 문장의 주어가 아니라 전치사구 내부의 목적어이다.",
+          "why": "me는 I의 목적격으로 to의 목적어가 된다. 정오까지 화자에게 서류를 돌려 달라는 뜻을 완성한다.",
+          "wrong": {
+            "A": "I는 주격이다. 이 문장에서 전치사 to의 목적어 자리에 쓰는 형태가 아니다.",
+            "B": "my는 소유 한정사로 뒤 명사가 필요하다. 서류를 받을 사람을 단독으로 대신하지 못한다.",
+            "D": "mine은 소유 대명사로 '내 것'을 뜻한다. 문맥에 소유 대상이 제시되지 않았고 여기에는 사람 목적격이 필요하다."
+          },
+          "order": "to의 목적어 자리를 찾는다 → 받을 사람을 나타내는 목적격 C를 선택한다 → by noon을 기한 부사구로 분리한다.",
+          "rule": "전치사 뒤 대명사의 격과 지칭 의미를 함께 확인한다. 소유 대명사는 사람의 일반 목적격을 대신하지 않는다."
+        },
+        {
+          "id": "P5-B06",
+          "prompt": "The two offices use different booking systems. The reservation rules for the downtown office are stricter than _____ for the airport office.",
+          "options": [
+            "those",
+            "that",
+            "them",
+            "themselves"
+          ],
+          "answer": "A",
+          "type": "지시 대용: 복수 비교 대상과 수식구",
+          "level": "실전 최상급",
+          "clue": "비교 대상은 두 사무실 자체가 아니라 각 사무실의 reservation rules이다. rules는 복수이며 for the airport office가 대용 표현을 수식한다.",
+          "analysis": "둘째 문장은 [The reservation rules for the downtown office] [are stricter than _____ for the airport office]이다. 빈칸을 reservation rules로 복원하면 같은 종류의 규정을 비교한다.",
+          "why": "those는 앞의 복수 rules를 대신하고 for the airport office의 수식을 받을 수 있다. 첫 문장의 다른 시스템이라는 정보도 사무실별 규정 차이를 뒷받침한다.",
+          "wrong": {
+            "B": "that은 단수 명사구 대용에 쓰는 형태이다. 복수 rules를 대신해야 하므로 수가 맞지 않는다.",
+            "C": "them은 일반 목적격 인칭대명사이다. them for the airport office처럼 뒤 수식구를 붙여 앞 명사구를 비교 대용하는 구조가 아니다.",
+            "D": "themselves는 재귀대명사이다. 규정이 자신에게 어떤 행동을 하는 문장이 아니며 서로 다른 사무실의 규정 대용에도 쓰지 않는다."
+          },
+          "order": "두 비교 대상을 복원한다 → rules의 복수형을 확인한다 → 뒤 for구의 수식을 받는 대용 표현 A를 고른다.",
+          "rule": "비교 대용 that/those는 대신하는 명사구의 수에 맞춘다. 수식구가 붙은 명사구 전체를 복원해 비교 대상의 종류를 검증한다."
+        }
+      ]
+    },
+    {
+      "chapter": 4,
+      "blocks": [
+        {
+          "label": "최소 대립 예문으로 경계 확인",
+          "text": "① The shipment arrived late. ② The assistant has lately handled shipping inquiries. late는 첫 문장에서 도착이 늦었다는 동작 수식이고, lately는 둘째 문장에서 최근이라는 시간 범위를 나타낸다. -ly를 붙였다고 의미가 단순히 같은 방식 부사로 유지되는 것은 아니다. 문장 속 시간·정도·방식의 기능을 구별하여 후보의 의미를 검증한다."
+        },
+        {
+          "label": "예제 판단을 단계별로 재현",
+          "text": "예제: The new unit is _____ smaller than the original model. 선택지는 (A) significant, (B) significance, (C) significantly, (D) signify이다. [The new unit] [is] [_____ smaller than the original model]에서 smaller는 비교급 형용사 보어이고 빈칸은 그 차이의 정도를 수식한다. A는 형용사, B는 명사, D는 동사라서 smaller의 정도를 직접 나타내는 부사 역할을 하지 못한다. C significantly를 넣으면 '상당히 더 작은'이라는 비교급 수식구가 완성된다."
+        },
+        {
+          "label": "고득점에서 놓치기 쉬운 예외",
+          "text": "fast와 hard는 -ly 없이 부사로 쓰일 수 있으며 hardly는 '거의 ~않다'라는 별도 의미이다. feel good은 일반적인 상태를, feel well은 특히 건강 상태를 나타내는 형용사 보어로 쓰일 수 있어 well을 언제나 부사라고만 분류하지 않는다. 연결동사인지 동작 동사인지에 따라 look confident와 look carefully처럼 필요한 형태가 달라진다. 품사 꼬리 모양보다 동사의 용법과 수식 대상이 우선이다."
+        }
+      ],
+      "questions": [
+        {
+          "id": "P5-B07",
+          "prompt": "The instructions are easy to follow and remarkably _____.",
+          "options": [
+            "clearly",
+            "clarity",
+            "clarify",
+            "clear"
+          ],
+          "answer": "D",
+          "type": "형용사: 보어 병렬과 부사 수식",
+          "level": "기본",
+          "clue": "are 뒤 easy to follow가 첫 보어이고 and 뒤에는 지시문의 또 다른 성질이 필요하다. remarkably는 빈칸을 수식하는 부사이다.",
+          "analysis": "[The instructions] [are] [easy to follow and remarkably _____]이다. 두 형용사구가 주격 보어로 병렬을 이룬다.",
+          "why": "clear는 instructions의 명확한 성질을 나타내는 형용사이다. remarkably clear는 '눈에 띄게 명확한'이라는 형용사구가 된다.",
+          "wrong": {
+            "A": "clearly는 부사이다. remarkably와 함께 부사만 놓으면 지시문의 성질을 나타내는 보어가 없다.",
+            "B": "clarity는 명사이다. remarkably clarity라는 방식으로 부사가 명사 보어를 한정하지 못한다.",
+            "C": "clarify는 동사 원형이다. be동사 뒤에서 지시문의 성질을 설명하는 형용사 보어가 아니며 별도 동사로도 연결되지 않는다."
+          },
+          "order": "are의 보어를 확인한다 → and가 연결하는 성질 표현을 찾는다 → remarkably가 수식할 형용사 D를 고른다.",
+          "rule": "보어 병렬에서도 부사와 형용사의 역할을 구별한다. 정도 부사는 형용사 보어 자체를 대체하지 않는다."
+        },
+        {
+          "id": "P5-B08",
+          "prompt": "The new routing plan has shortened delivery times. Drivers can now travel between the two depots considerably _____ than before.",
+          "options": [
+            "quick",
+            "more quickly",
+            "most quickly",
+            "quickest"
+          ],
+          "answer": "B",
+          "type": "부사 비교: 동작·강조 부사·than 결합",
+          "level": "실전 최상급",
+          "clue": "travel은 동작 동사이고 than before는 이전보다 빠르게 이동한다는 비교이다. considerably는 차이의 정도를 강조한다.",
+          "analysis": "둘째 문장은 [Drivers] [can travel] [between the two depots] [considerably _____ than before]이다. 빈칸은 travel의 방식을 비교하는 부사구 중심어이다.",
+          "why": "more quickly는 부사 quickly의 비교급으로 travel을 수식한다. considerably가 비교급의 차이를 강조하며 앞 문장의 시간 단축과도 맞는다.",
+          "wrong": {
+            "A": "quick은 형용사이고 비교급 표지도 없다. 이 자리에서 travel의 방식과 than 비교를 동시에 완성하지 못한다.",
+            "C": "most quickly는 부사 최상급이다. 집단 중 가장 빠른 대상을 고르는 문장이 아니라 before와 비교하므로 비교급이 필요하다.",
+            "D": "quickest는 형용사 최상급 형태이다. travel의 방식 비교에 필요한 more quickly와 문장 역할·비교 범위가 다르다."
+          },
+          "order": "travel의 동작 수식 자리로 판단한다 → than과 considerably를 확인한다 → 앞의 시간 단축 결과를 검증하고 B를 선택한다.",
+          "rule": "동작의 정도를 than으로 비교할 때 적절한 부사 비교급을 쓴다. 비교급 강조 표현과 형용사·부사 구별을 함께 확인한다."
+        }
+      ]
+    },
+    {
+      "chapter": 5,
+      "blocks": [
+        {
+          "label": "최소 대립 예문으로 경계 확인",
+          "text": "① A number of employees are attending the briefing. ② The number of employees is recorded on the form. 첫 문장은 여러 직원을 가리키는 a number of employees가 복수로 쓰이고, 둘째 문장은 직원 수라는 하나의 수치를 나타내는 the number가 단수이다. employees의 형태는 같아도 한정사와 중심 의미가 동사의 수를 바꾼다. 가까운 명사를 보는 대신 명사구를 전체로 읽어야 한다."
+        },
+        {
+          "label": "예제 판단을 단계별로 재현",
+          "text": "예제: The contents of the storage boxes _____ listed on the inventory sheet. 선택지는 (A) is, (B) are, (C) has, (D) listing이다. [The contents of the storage boxes] [_____ listed] [on the inventory sheet]에서 중심어 contents는 복수이고 listed는 수동·상태를 나타내는 분사이다. A는 단수 be동사라서 수가 틀리고 C는 has listed라는 능동 완료를 만들어 내용물이 무엇을 기재한다는 역할로 바뀌며 D만으로는 정동사가 완성되지 않는다. B are를 넣어 복수 중심어와 수동 기재 상태를 연결한다."
+        },
+        {
+          "label": "고득점에서 놓치기 쉬운 예외",
+          "text": "none of + 복수 명사에서 단수·복수 동사는 문체와 의미에 따라 모두 나타나므로 한쪽을 언제나 금지하지 않는다. 단체 명사도 미국·영국 영어 및 집단을 하나로 보는지 구성원으로 보는지에 따라 수일치가 달라질 수 있다. 비율 표현에서는 하나의 통계 수치를 설명하는지 집단의 일부 사람·물건을 설명하는지 확인한다. 이 교재의 문항은 중심어와 문맥을 명시하여 정답을 결정하도록 구성한다."
+        }
+      ],
+      "questions": [
+        {
+          "id": "P5-B09",
+          "prompt": "The office _____ at nine every weekday.",
+          "options": [
+            "open",
+            "opens",
+            "opening",
+            "to open"
+          ],
+          "answer": "B",
+          "type": "정동사: 단수 현재와 반복 시간",
+          "level": "기본",
+          "clue": "The office는 단수 주어이고 every weekday는 반복적인 운영 일정을 나타낸다.",
+          "analysis": "[The office] [_____] [at nine every weekday]이다. 별도 조동사나 정동사가 없어 빈칸에 단수 현재 정동사가 필요하다.",
+          "why": "opens는 3인칭 단수 현재형으로 office와 호응하며 매주 평일 아홉 시에 문을 연다는 절차를 나타낸다.",
+          "wrong": {
+            "A": "open은 원형 또는 복수 현재형이다. 단수 office 앞뒤에 조동사가 없으므로 이 문장의 현재 수일치가 맞지 않는다.",
+            "C": "opening은 분사로 단독 정동사가 될 수 없다. 앞에 be동사가 없어 진행형도 완성되지 않는다.",
+            "D": "to open은 부정사이며 주절 시제와 수일치를 표시하지 않는다. 문장에 정동사가 없게 된다."
+          },
+          "order": "주어 office의 단수를 본다 → 반복 시간 every weekday를 확인한다 → 단수 현재 정동사 B를 고른다.",
+          "rule": "정동사가 없는 절에는 시제·수일치를 표시할 동사구가 필요하다. 준동사 형태를 정동사와 구별한다."
+        },
+        {
+          "id": "P5-B10",
+          "prompt": "The company tracks two measures separately. The percentage of orders delivered on time _____ higher this month than it was last month.",
+          "options": [
+            "are",
+            "have",
+            "is",
+            "being"
+          ],
+          "answer": "C",
+          "type": "수일치: 통계 중심어·축약 수식·비교",
+          "level": "실전 최상급",
+          "clue": "주어는 The percentage라는 단일 통계 수치이다. delivered on time은 orders를 수식하고 it was도 앞 percentage의 단수를 확인해 준다.",
+          "analysis": "[The percentage of orders delivered on time] [_____ higher] [this month than it was last month]이다. of구 내부 orders와 delivered는 주절의 수를 바꾸지 않는다.",
+          "why": "is는 단수 percentage와 호응하고 higher를 형용사 보어로 받는다. 회사가 추적하는 통계 비율이 지난달보다 높다는 의미를 완성한다.",
+          "wrong": {
+            "A": "are는 복수 be동사이다. orders가 복수라는 사실에 끌리면 선택하기 쉽지만 주절의 중심 수치는 단수 percentage이다.",
+            "B": "have는 여기서 higher를 보어로 받을 수 없다. 완료 조동사로 쓰려면 필요한 과거분사도 없고 수일치도 맞지 않는다.",
+            "D": "being은 분사로 단독 정동사가 되지 않는다. delivered가 주절 정동사라는 오해로 고르면 절이 미완성이다."
+          },
+          "order": "percentage를 중심어로 잡는다 → orders delivered on time을 수식구로 묶는다 → it was와 higher를 검증하여 C를 선택한다.",
+          "rule": "하나의 비율 수치를 주어로 제시하면 그 중심어에 동사를 맞춘다. 전치사구 안 복수 명사와 축약 분사를 주절 성분으로 오해하지 않는다."
+        }
+      ]
+    },
+    {
+      "chapter": 6,
+      "blocks": [
+        {
+          "label": "최소 대립 예문으로 경계 확인",
+          "text": "① We revised the rates last Monday. ② We have used the revised rates since Monday. 첫 문장은 월요일에 끝난 개정 사건을 특정하고, 둘째 문장은 월요일부터 현재까지 이어지는 사용을 나타낸다. last Monday와 since Monday는 비슷한 날짜를 가리켜도 기준점과 동작 범위가 다르다. 날짜만 표시하지 말고 사건이 종료되었는지 현재와 이어지는지 확인하자."
+        },
+        {
+          "label": "예제 판단을 단계별로 재현",
+          "text": "예제: The office _____ in this building since 2022. 선택지는 (A) operates, (B) operated, (C) has operated, (D) will operate이다. [The office] [_____] [in this building] [since 2022]에서 since는 2022년부터 현재까지의 운영 기간을 제시한다. A는 단순 현재로 그 시작점부터의 지속을 표시하지 못하고 B는 종료 과거 기준의 운영으로 바꾸며 D는 2022년부터 현재까지라는 기간에 맞지 않는 미래형이다. 현재까지 지속된 운영을 나타내는 C has operated를 고른다."
+        },
+        {
+          "label": "고득점에서 놓치기 쉬운 예외",
+          "text": "과거 보고동사 뒤에서 종속절 시제가 언제나 과거로 바뀌는 것은 아니다. The director said the policy is still in force.처럼 내용이 현재도 유효하다는 관점을 유지하면 현재형을 쓸 수 있고 was in force는 과거 보고 기준으로 표현할 수 있다. 현재를 포함하는 기간에서도 단순과거와 현재완료가 문맥에 따라 달라질 수 있으므로 this week만으로 정답을 고정하지 않는다. 시제를 검증할 때는 선택지에서 실제로 표현한 사건의 시간과 기준 시점을 비교한다."
+        }
+      ],
+      "questions": [
+        {
+          "id": "P5-B11",
+          "prompt": "The courier _____ the package at 3 p.m. yesterday.",
+          "options": [
+            "collected",
+            "collects",
+            "will collect",
+            "has collected"
+          ],
+          "answer": "A",
+          "type": "시제: 종료된 특정 과거",
+          "level": "기본",
+          "clue": "at 3 p.m. yesterday는 수거 사건의 특정한 종료 과거 시점을 나타낸다.",
+          "analysis": "[The courier] [_____] [the package] [at 3 p.m. yesterday]이다. 빈칸은 주절 정동사이며 수거가 일어난 과거 시간을 직접 나타낸다.",
+          "why": "collected는 단순과거로 어제 오후 세 시의 수거 사건과 일치한다.",
+          "wrong": {
+            "B": "collects는 현재의 일반적·반복적 사실을 나타내는 형태이다. 특정한 어제 세 시 사건의 시제와 맞지 않는다.",
+            "C": "will collect는 미래형이다. 어제라는 종료 과거 시점에 일어난 수거를 표현하지 못한다.",
+            "D": "has collected는 현재완료이다. 종료된 특정 과거 시점을 직접 지정한 이 문장에서는 단순과거가 필요하다."
+          },
+          "order": "yesterday와 3 p.m.을 확인한다 → 특정 종료 과거임을 결정한다 → 단순과거 A를 고른다.",
+          "rule": "특정한 종료 과거 시점을 직접 제시하면 일반적으로 단순과거를 사용한다. 현재완료를 과거시제의 단순 대체형으로 처리하지 않는다."
+        },
+        {
+          "id": "P5-B12",
+          "prompt": "When the billing error was discovered on Tuesday, the corrected invoice had not yet been issued. The clerk _____ the original invoice to the client the day before.",
+          "options": [
+            "has sent",
+            "will send",
+            "had sent",
+            "sends"
+          ],
+          "answer": "C",
+          "type": "시간축: 과거 발견 이전 발송과 문장 간 연결",
+          "level": "실전 최상급",
+          "clue": "오류 발견은 화요일이라는 과거 기준점이고 the day before는 그보다 앞선 원본 발송이다. 첫 문장의 had not yet been issued도 과거 기준을 유지한다.",
+          "analysis": "첫 문장에서 [the billing error was discovered on Tuesday]가 기준 사건이다. 둘째 문장은 [The clerk] [_____] [the original invoice] [to the client the day before]이며 원본 발송을 그 기준점 이전에 배치한다.",
+          "why": "had sent는 화요일 발견 이전 날의 발송을 과거완료로 나타낸다. original과 corrected invoice를 구별하면 먼저 발송된 원본과 아직 발급되지 않은 수정본의 시간 관계가 일치한다.",
+          "wrong": {
+            "A": "has sent는 현재 기준 완료이다. 화요일 오류 발견을 기준으로 전날 발송을 설명하는 과거 시간축과 맞지 않는다.",
+            "B": "will send는 미래 발송이다. the day before가 나타내는 발견 이전의 완료된 발송과 반대이다.",
+            "D": "sends는 단순 현재이다. 특정한 원본 청구서의 과거 발송을 일반적인 발송 절차로 바꾸어 시간 관계가 어긋난다."
+          },
+          "order": "Tuesday를 기준점으로 정한다 → the day before를 그 이전으로 배치한다 → 두 청구서의 구별을 확인한다 → 과거완료 C를 선택한다.",
+          "rule": "여러 문장의 시제 문제는 같은 물건의 반복 표현과 기준 사건을 함께 추적한다. 과거 기준점보다 앞선 완료 사건을 과거완료로 명시할 수 있다."
+        }
+      ]
+    },
+    {
+      "chapter": 7,
+      "blocks": [
+        {
+          "label": "최소 대립 예문으로 경계 확인",
+          "text": "① The warehouse staff delivered the crates. ② The crates were delivered by the warehouse staff. 두 문장은 같은 사건을 설명하지만 첫 문장의 주어는 수행자이고 둘째 문장의 주어는 배송 대상이다. 과거시점은 delivered와 were delivered에 각각 표시된다. 수동으로 바꿀 때 행동 대상·시제·수일치가 모두 유지되는지 확인한다."
+        },
+        {
+          "label": "예제 판단을 단계별로 재현",
+          "text": "예제: A parking permit will _____ to each visitor by the receptionist. 선택지는 (A) issue, (B) be issued, (C) issuing, (D) have issued이다. [A parking permit] [will _____] [to each visitor] [by the receptionist]에서 permit은 발급 대상이고 by구는 발급 수행자를 제시한다. A·D는 permit이 발급하는 능동 구조가 되어 역할이 틀리고 C는 will 뒤 원형 동사구를 완성하지 못한다. B be issued를 넣으면 will 뒤 원형 be와 수동 과거분사가 정확히 연결된다."
+        },
+        {
+          "label": "고득점에서 놓치기 쉬운 예외",
+          "text": "수동문 뒤에 명사가 있다는 이유만으로 수동을 제거하지 않는다. Visitors were issued permits.는 issue가 두 목적어를 취하는 용법에서 다른 목적어 permits가 남은 정상적인 수동문이다. arrive나 happen처럼 보통 목적어 없는 동사를 일반 수동으로 만들 수는 없지만, take care of 같은 전치사 결합 표현은 수동화가 가능하다. 목적어의 개수와 동사의 실제 용법을 확인한 뒤 능동·수동을 판단한다."
+        }
+      ],
+      "questions": [
+        {
+          "id": "P5-B13",
+          "prompt": "The damaged screen must _____ before the kiosk can be used.",
+          "options": [
+            "repaired",
+            "be repaired",
+            "repairing",
+            "repair"
+          ],
+          "answer": "B",
+          "type": "태: 조동사 뒤 수동",
+          "level": "기본",
+          "clue": "screen은 수리 대상이고 must 뒤에는 원형 동사구가 필요하다.",
+          "analysis": "[The damaged screen] [must _____] [before the kiosk can be used]이다. 화면 수리가 키오스크 사용보다 앞선 조건이다.",
+          "why": "be repaired는 must 뒤 원형 be와 과거분사 repaired로 수동을 완성한다. 손상된 화면을 수리해야 한다는 뜻이다.",
+          "wrong": {
+            "A": "repaired만으로는 must 뒤 원형 동사구가 되지 않는다. 수동을 만들 원형 be가 빠졌다.",
+            "C": "repairing은 분사 형태여서 must 뒤에 직접 올 수 없다. 화면이 수리받는 수동 의미도 표시하지 못한다.",
+            "D": "repair는 원형 능동이다. 화면이 다른 것을 수리하는 뜻이 되어 역할이 틀리고 수리할 목적어도 없다."
+          },
+          "order": "screen의 수리 대상 역할을 확인한다 → must 뒤 원형을 확인한다 → be + 과거분사 B를 고른다.",
+          "rule": "조동사 뒤 수동은 조동사 + be + 과거분사로 만든다. 주어의 수행자·대상 역할을 먼저 판단한다."
+        },
+        {
+          "id": "P5-B14",
+          "prompt": "The safety review is still in progress, and the report has not been approved. No changes may _____ to the operating procedure until the director gives written authorization.",
+          "options": [
+            "have made",
+            "make",
+            "be making",
+            "be made"
+          ],
+          "answer": "D",
+          "type": "수동과 승인 조건: 조동사·부정 주어·문맥",
+          "level": "실전 최상급",
+          "clue": "No changes는 변경되는 대상이다. to the operating procedure는 변경이 적용될 대상을 설명하며 until절은 서면 승인 전의 금지를 나타낸다.",
+          "analysis": "둘째 문장은 [No changes] [may _____] [to the operating procedure] [until ...]이다. make changes to ...의 목적어 changes가 수동문 주어가 된 구조이다.",
+          "why": "be made는 may 뒤에 원형 be를 두고 changes가 이루어지는 수동 관계를 나타낸다. 진행 중인 검토와 미승인 보고서라는 첫 문장에 따라 승인 전 변경을 허용하지 않는다는 의미가 된다.",
+          "wrong": {
+            "A": "have made는 완료 능동이다. changes가 다른 변경을 수행했다는 역할이 되며 make가 받을 직접 목적어도 없다.",
+            "B": "make는 원형 능동이다. changes가 operating procedure에 무엇인가를 만드는 주체가 되는 구조로 주어 역할이 맞지 않는다.",
+            "C": "be making은 진행 능동이다. 시제·진행 여부보다 changes가 작업 수행자가 아닌 변경 대상이라는 점에서 탈락한다."
+          },
+          "order": "make changes to의 원래 목적어를 복원한다 → No changes의 대상 역할을 확인한다 → 승인 전 금지 문맥과 may 뒤 형태를 검증하여 D를 고른다.",
+          "rule": "타동사 목적어가 주어로 나온 경우 수동을 확인한다. 조동사·시간 조건을 맞추기 전에 주어의 의미 역할을 확정한다."
+        }
+      ]
+    },
+    {
+      "chapter": 8,
+      "blocks": [
+        {
+          "label": "최소 대립 예문으로 경계 확인",
+          "text": "① The supervisor remembered to submit the form before the deadline. ② The supervisor remembered submitting the form the previous day. 첫 문장은 해야 할 제출을 잊지 않았다는 뜻이고, 둘째 문장은 이미 한 제출을 기억했다는 뜻이다. 두 구조는 모두 가능하므로 remember 뒤라는 이유만으로 한 형식을 항상 제거할 수 없다. 앞뒤 사건의 시간과 기억의 대상을 함께 확인한다."
+        },
+        {
+          "label": "예제 판단을 단계별로 재현",
+          "text": "예제: The accounts team avoided _____ duplicate charges. 선택지는 (A) creating, (B) to create, (C) created, (D) create이다. [The accounts team] [avoided] [_____ duplicate charges]에서 빈칸은 avoided가 피한 행동 내용을 나타낸다. avoid의 이 목적어 용법은 동명사구를 받으므로 B·D는 연결 형태가 틀리고 C는 접속 없이 새 정동사를 더하거나 필요한 동명사 역할을 대신하지 못한다. A creating이 duplicate charges를 목적어로 취하여 피한 행동을 완성한다."
+        },
+        {
+          "label": "고득점에서 놓치기 쉬운 예외",
+          "text": "begin, start, continue처럼 동명사와 부정사를 모두 허용하는 동사에서는 한쪽을 기계적으로 금지하지 않는다. used to work는 과거 습관의 준조동사 구조이고 be used to working은 현재 익숙함을 나타내는 전치사 to 구조이다. 동명사형은 정동사가 아니지만 그 안에서 목적어·부사 등의 동사적 성분을 유지할 수 있다. 동사 앞 표현의 결합과 준동사 내부 구조를 각각 검증해야 한다."
+        }
+      ],
+      "questions": [
+        {
+          "id": "P5-B15",
+          "prompt": "The board decided _____ the meeting until next week.",
+          "options": [
+            "postpone",
+            "postponing",
+            "postponed",
+            "to postpone"
+          ],
+          "answer": "D",
+          "type": "준동사: decide 뒤 부정사",
+          "level": "기본",
+          "clue": "decided가 정동사이며 결정한 행동을 나타내는 부정사가 필요하다.",
+          "analysis": "[The board] [decided] [_____ the meeting] [until next week]이다. postpone은 meeting을 목적어로 받아 연기 행동을 만든다.",
+          "why": "to postpone는 decided의 행동 내용을 나타내는 부정사구를 완성한다.",
+          "wrong": {
+            "A": "postpone는 원형이다. decide 뒤 이 목적어 용법에서는 to 없이 원형을 직접 연결하지 않는다.",
+            "B": "postponing은 동명사이다. decide가 이처럼 행동을 결정하는 구조에서는 decided postponing으로 직접 연결하지 않는다.",
+            "C": "postponed는 과거형·과거분사이다. decided와 접속 없이 정동사를 나열하거나 목적어 부정사 역할을 대신할 수 없다."
+          },
+          "order": "decided를 찾는다 → 결정 내용의 준동사 결합을 확인한다 → the meeting을 목적어로 취하는 D를 선택한다.",
+          "rule": "준동사의 형태는 앞 동사의 용법과 함께 판단한다. 의미만 맞는 동사형을 임의로 고르지 않는다."
+        },
+        {
+          "id": "P5-B16",
+          "prompt": "The portal was redesigned to prevent duplicate requests. The support team is now committed to _____ each submission only once.",
+          "options": [
+            "processing",
+            "process",
+            "processed",
+            "be processed"
+          ],
+          "answer": "A",
+          "type": "전치사 to·동명사 목적어·능동 관계",
+          "level": "실전 최상급",
+          "clue": "is committed to는 전치사 to를 포함한다. support team이 각 제출 건을 처리하는 수행자이며 each submission이 목적어이다.",
+          "analysis": "첫 문장은 중복 요청 방지를 위한 재설계를 설명한다. 둘째 문장의 [is committed to] 뒤 [_____ each submission only once]가 팀의 약속한 행동을 나타낸다.",
+          "why": "processing은 전치사 to의 목적어 동명사이며 each submission을 직접 목적어로 취한다. 각 건을 한 번만 처리하겠다는 약속이 중복 방지 문맥과 연결된다.",
+          "wrong": {
+            "B": "process는 원형이다. 여기의 to는 부정사 표지가 아니라 committed to의 전치사이므로 원형을 직접 받을 수 없다.",
+            "C": "processed는 과거형·과거분사이다. 전치사의 명사적 목적어 구를 만들지 못하고 뒤 submission과 능동 목적어 관계도 완성하지 못한다.",
+            "D": "be processed는 원형 수동 동사구이다. 전치사 뒤에 원형이 올 수 없으며 support team이 처리 대상이 되는 의미도 맞지 않는다."
+          },
+          "order": "committed to를 통째로 읽는다 → to의 전치사 기능을 확인한다 → 처리 수행자와 목적어를 연결한다 → A를 선택한다.",
+          "rule": "전치사 to 뒤 동작은 동명사구로 표현할 수 있다. 능동·수동을 바꿀 때는 뒤 목적어가 남아 있는지도 확인한다."
+        }
+      ]
+    },
+    {
+      "chapter": 9,
+      "blocks": [
+        {
+          "label": "최소 대립 예문으로 경계 확인",
+          "text": "① Staff preparing the display should check the labels. ② The display prepared by staff includes new labels. 첫 문장의 staff는 준비 수행자이고 둘째 문장의 display는 준비 대상이다. preparing과 prepared는 각각 그 명사와의 능동·수동 관계를 표시하며 should check와 includes가 실제 정동사이다. 분사를 고르기 전에 수식 대상과 주절 동사를 따로 찾자."
+        },
+        {
+          "label": "예제 판단을 단계별로 재현",
+          "text": "예제: _____ the application form, the clerk found several missing fields. 선택지는 (A) Check, (B) Checking, (C) Checked, (D) Checks이다. [_____ the application form] [the clerk] [found] [several missing fields]에서 clerk가 서류를 확인하면서 누락 항목을 발견한다. A·D는 주어·접속사 없이 독립 정동사 구조를 만들 수 없고 C의 수동 분사는 서류를 직접 목적어로 남긴 이 구조와 맞지 않는다. B Checking이 application form을 목적어로 취하는 능동 분사구문을 완성한다."
+        },
+        {
+          "label": "고득점에서 놓치기 쉬운 예외",
+          "text": "분사구문이 언제나 원인 관계인 것은 아니며 시간·동시 동작·조건·결과 등은 문맥으로 해석한다. having + 과거분사는 선행 완료를 명시하지만 선후 관계가 뚜렷한 문장에서 단순 -ing형이 쓰일 수도 있으므로 기계적으로 금지하지 않는다. employees given awards처럼 두 목적어 동사의 수동 분사에는 다른 목적어가 남을 수 있다. 분사의 철자만 보지 말고 논리적 주어와 동사의 목적어 구조를 함께 확인한다."
+        }
+      ],
+      "questions": [
+        {
+          "id": "P5-B17",
+          "prompt": "All files _____ on the shared drive are backed up nightly.",
+          "options": [
+            "store",
+            "stores",
+            "storing",
+            "stored"
+          ],
+          "answer": "D",
+          "type": "분사: 수동 명사 수식",
+          "level": "기본",
+          "clue": "are backed up이 주절 정동사이다. files는 저장을 수행하는 주체가 아니라 저장 대상이다.",
+          "analysis": "[All files _____ on the shared drive] [are backed up] [nightly]이다. 빈칸 구는 files를 수식하며 which are stored ...로 복원할 수 있다.",
+          "why": "stored는 과거분사로 공유 드라이브에 저장된 파일을 한정한다.",
+          "wrong": {
+            "A": "store는 원형·복수 현재형이다. 관계사나 접속사 없이 주절 are backed up과 별도 정동사를 연결할 수 없다.",
+            "B": "stores는 단수 현재형이다. 정동사 연결 문제가 있고 복수 files와 수일치도 맞지 않는다.",
+            "C": "storing은 능동 현재분사이다. files가 무엇인가를 저장하는 관계를 만들지만 이 문장에는 그 목적어가 없고 파일은 저장 대상이다."
+          },
+          "order": "are backed up을 찾는다 → files의 저장 대상 역할을 확인한다 → 수동 수식 분사 D를 선택한다.",
+          "rule": "명사 뒤 분사와 주절 정동사를 구별한다. 수식 명사가 동작을 받는지 수행하는지가 분사 형태를 결정한다."
+        },
+        {
+          "id": "P5-B18",
+          "prompt": "The figures were verified before the report was circulated. _____ the totals against the original receipts, the accountant authorized its distribution.",
+          "options": [
+            "Having been checked",
+            "Having checked",
+            "Has checked",
+            "To checking"
+          ],
+          "answer": "B",
+          "type": "분사구문: 선행 완료·능동 목적어·지칭",
+          "level": "실전 최상급",
+          "clue": "the totals는 check의 직접 목적어이고 accountant가 검증 수행자이다. 첫 문장은 검증이 배포보다 앞서야 하는 순서를 명시한다.",
+          "analysis": "둘째 문장은 [_____ the totals against the original receipts] [the accountant authorized its distribution]이다. its는 report를 받으며 분사구문의 의미상 주어는 accountant이다.",
+          "why": "Having checked는 원본 영수증과 총액을 대조한 뒤 배포를 승인했다는 능동 완료 분사구문이다. check의 목적어 totals와 선행 검증의 시간 관계가 모두 맞는다.",
+          "wrong": {
+            "A": "Having been checked는 완료 수동이다. accountant가 검증받는 주어가 되며 check의 단일 직접 목적어 totals를 그대로 남긴 구조도 맞지 않는다.",
+            "C": "Has checked는 정동사구이다. 문장 앞 절의 주어·접속사가 없고 분사구문으로 주절에 연결되지 않는다.",
+            "D": "To checking은 부정사 표지와 -ing형의 잘못된 결합이다. 여기에는 to를 전치사로 요구하는 앞 표현도 없다."
+          },
+          "order": "totals가 check의 목적어임을 확인한다 → 주절 accountant와 능동 관계를 연결한다 → 첫 문장의 선후 순서를 검증하여 B를 선택한다.",
+          "rule": "완료 분사구문의 능동·수동은 의미상 주어와 목적어 구조로 판별한다. 선행 완료의 근거는 앞뒤 문장의 사건 순서에서 찾을 수 있다."
+        }
+      ]
+    },
+    {
+      "chapter": 10,
+      "blocks": [
+        {
+          "label": "최소 대립 예문으로 경계 확인",
+          "text": "① The director gave the team a revised budget. ② The director made the budget clearer. 첫 문장은 team과 a revised budget라는 두 목적어를 연결하고, 둘째 문장은 budget과 그 상태인 clearer를 연결한다. 4형식의 두 후행 성분과 5형식의 목적어·보어는 의미 관계가 다르다. '누구에게 무엇을 주는가'와 '무엇을 어떤 상태로 만드는가'를 구별한다."
+        },
+        {
+          "label": "예제 판단을 단계별로 재현",
+          "text": "예제: The service team kept the queue _____ during the lunch rush. 선택지는 (A) move, (B) moved, (C) moving, (D) movement이다. [The service team] [kept] [the queue] [_____]에서 빈칸은 줄이 계속 움직이는 상태를 나타내는 목적격 보어이다. A는 이 keep 용법에 필요한 원형 구조가 아니고 B는 줄이 옮겨진 결과 상태로 바꾸어 계속 진행시키는 뜻과 다르며 D는 명사여서 동작 상태를 표시하지 못한다. C moving을 넣으면 keep + 목적어 + -ing의 지속 동작 구조를 완성한다."
+        },
+        {
+          "label": "고득점에서 놓치기 쉬운 예외",
+          "text": "사역 have + 수행자 + 원형과 get + 수행자 + to부정사는 연결 형태가 다르다. 장비가 수리 대상이면 have/get the equipment repaired처럼 과거분사 보어가 가능하다. make someone complete a form의 수동은 someone was made to complete a form으로 to가 나타나므로 능동 규칙을 그대로 적용하지 않는다. 문장형식 표시는 출발점이며 최종 판단은 실제 동사의 결합 용법으로 검증한다."
+        }
+      ],
+      "questions": [
+        {
+          "id": "P5-B19",
+          "prompt": "The new ventilation system keeps the laboratory _____.",
+          "options": [
+            "cool",
+            "coolly",
+            "coolness",
+            "to cool"
+          ],
+          "answer": "A",
+          "type": "목적격 보어: 상태 형용사",
+          "level": "기본",
+          "clue": "keeps 뒤 the laboratory가 목적어이며 빈칸은 유지되는 실험실 상태를 설명한다.",
+          "analysis": "[The new ventilation system] [keeps] [the laboratory] [_____]의 목적어·보어 구조이다.",
+          "why": "cool은 실험실의 시원한 상태를 설명하는 형용사 보어이다. 환기 장치가 그 상태를 유지한다는 뜻이다.",
+          "wrong": {
+            "B": "coolly는 부사이다. 장치의 행동 방식이 아니라 laboratory의 상태를 설명하는 보어가 필요하다.",
+            "C": "coolness는 추상 명사이다. laboratory가 coolness라는 정체라고 보는 명사 보어가 아니라 온도 상태의 형용사가 필요하다.",
+            "D": "to cool은 부정사이다. keep + 목적어 뒤에서 이 상태 유지 의미를 to부정사로 직접 연결하지 않는다."
+          },
+          "order": "keeps의 목적어를 찾는다 → 목적어의 유지 상태를 판단한다 → 형용사 A를 선택한다.",
+          "rule": "keep + 목적어 + 형용사는 목적어의 상태 유지를 나타낸다. 동사 수식 부사와 목적어 상태 보어를 구별한다."
+        },
+        {
+          "id": "P5-B20",
+          "prompt": "The auditor found the signed copies incomplete and required the clerk _____ the missing schedules before the file was closed.",
+          "options": [
+            "attach",
+            "attached",
+            "attachment",
+            "to attach"
+          ],
+          "answer": "D",
+          "type": "동사 구조: 목적격 보어와 목적어 뒤 부정사",
+          "level": "실전 최상급",
+          "clue": "found ... incomplete와 required the clerk ...는 and로 연결된 두 동사 구조이다. require + 사람 목적어는 이 용법에서 to부정사 보어를 취한다.",
+          "analysis": "[The auditor] [found the signed copies incomplete] and [required the clerk _____ the missing schedules] + before절이다. found의 보어 incomplete를 required의 보어 형태에 그대로 복사하지 않는다.",
+          "why": "to attach는 clerk가 해야 하는 행동을 나타내는 부정사이며 missing schedules가 attach의 목적어가 된다. 미완성 사본을 확인한 뒤 누락 부속 서류를 붙이도록 요구했다는 의미이다.",
+          "wrong": {
+            "A": "attach는 원형이다. require + 사람 목적어 뒤의 이 보어 용법은 to 없는 사역 원형 구조가 아니다.",
+            "B": "attached는 과거형·과거분사이다. required 뒤에 접속 없는 정동사로 붙일 수 없고 clerk가 첨부 대상이라는 수동 관계도 아니다.",
+            "C": "attachment는 명사이다. clerk가 수행할 행동과 뒤 missing schedules의 목적어 관계를 만들지 못한다."
+          },
+          "order": "and가 연결하는 두 동사구를 나눈다 → require의 목적어 clerk를 확인한다 → attach의 목적어를 검증한다 → D를 선택한다.",
+          "rule": "한 주어가 여러 동사를 병렬로 쓸 때 각 동사가 요구하는 보어 형태는 다를 수 있다. 다른 동사의 목적어·보어 구조를 복사하지 않는다."
+        }
+      ]
+    },
+    {
+      "chapter": 11,
+      "blocks": [
+        {
+          "label": "최소 대립 예문으로 경계 확인",
+          "text": "① The notice on the door lists the opening hours. ② The clerk placed the notice on the door. 첫 문장의 on the door는 어떤 공지인지 한정하는 명사 수식이고, 둘째 문장에서는 placed가 요구하는 배치 장소를 나타낸다. 같은 전치사구라도 연결되는 성분과 동사의 용법에 따라 기능이 달라진다. 위치 정보라는 번역만으로 모든 구를 선택적인 부사 수식어로 처리하지 않는다."
+        },
+        {
+          "label": "예제 판단을 단계별로 재현",
+          "text": "예제: The report concerning last year's figures _____ ready for distribution. 선택지는 (A) are, (B) is, (C) have, (D) being이다. [The report concerning last year's figures] [_____ ready] [for distribution]에서 concerning 이하를 묶으면 단수 report가 주어 중심어임을 알 수 있다. A는 figures가 아닌 report에 수를 맞춰야 하므로 탈락하고 C는 ready를 이 위치의 상태 보어로 연결하지 못하며 D는 단독 정동사가 아니다. B is를 넣으면 보고서가 배포 준비된 상태라는 중심 문장이 완성된다."
+        },
+        {
+          "label": "고득점에서 놓치기 쉬운 예외",
+          "text": "depend on the supplier의 on구는 동사의 결합을 완성하고 place the notice on the door의 장소 표현도 해당 의미에 필요한 보충어가 된다. 따라서 '전치사구는 모두 지워도 된다'는 방식은 구조 파악의 최종 규칙으로 삼지 않는다. together with, as well as가 주어에 부가 정보를 붙이면 and로 연결한 복수 주어와 수일치가 다를 수 있다. 중심 문장을 임시로 줄인 뒤 삭제한 구의 필수성·수식 범위를 다시 확인한다."
+        }
+      ],
+      "questions": [
+        {
+          "id": "P5-B21",
+          "prompt": "The meeting will start _____ 10 a.m.",
+          "options": [
+            "in",
+            "at",
+            "on",
+            "during"
+          ],
+          "answer": "B",
+          "type": "전치사구: 특정 시각",
+          "level": "기본",
+          "clue": "10 a.m.은 특정한 하루 시각이며 빈칸은 start에 시간 정보를 붙이는 전치사이다.",
+          "analysis": "[The meeting] [will start] [_____ 10 a.m.]이다. 시간 전치사구는 정동사 will start와 구별된다.",
+          "why": "at은 특정 시각 10 a.m.을 목적어로 받아 시작 시점을 나타낸다.",
+          "wrong": {
+            "A": "in은 월·연도·기간 또는 하루의 일부와 결합할 수 있지만 이 특정 시각 앞 형태로 맞지 않는다.",
+            "C": "on은 날짜·요일 등과 결합하는 시간 용법이 대표적이다. 이 문장의 10 a.m.이라는 시각 앞에는 at이 필요하다.",
+            "D": "during은 일정 기간·행사 동안을 나타낸다. 한 시각인 10 a.m.을 기간으로 직접 받아 쓰는 이 구조와 맞지 않는다."
+          },
+          "order": "10 a.m.이 시각임을 확인한다 → 시간 전치사구가 start를 설명함을 본다 → B를 선택한다.",
+          "rule": "시간 전치사는 시각·날짜·기간의 단위를 구별한다. 전치사구를 정동사나 주어의 일부로 오해하지 않는다."
+        },
+        {
+          "id": "P5-B22",
+          "prompt": "The latest cost estimate includes fees for all three branches. The estimate, together with the revised delivery schedule, _____ attached to this message.",
+          "options": [
+            "are",
+            "have",
+            "is",
+            "being"
+          ],
+          "answer": "C",
+          "type": "부가 수식구: together with와 단수 수동",
+          "level": "실전 최상급",
+          "clue": "The estimate가 단수 주어 중심어이다. 쉼표 사이 together with ...는 부가 정보이며 and로 연결된 복수 주어가 아니다.",
+          "analysis": "둘째 문장은 [The estimate] [, together with the revised delivery schedule,] [_____ attached] [to this message]이다. 첫 문장의 three branches는 견적에 포함된 비용 범위로 둘째 문장 주어의 수를 바꾸지 않는다.",
+          "why": "is는 단수 estimate와 호응하여 첨부 상태를 나타낸다. 추가 일정표가 함께 있다는 정보는 주어를 복수 등위 구조로 바꾸지 않는다.",
+          "wrong": {
+            "A": "are는 복수 be동사이다. estimate와 schedule을 together with 때문에 and 주어처럼 묶으면 수일치를 잘못 판단하게 된다.",
+            "B": "have는 복수 완료 조동사로도 수가 맞지 않으며 have attached라는 능동이면 estimate가 무엇을 첨부한 역할이 되어 의미도 맞지 않는다.",
+            "D": "being은 분사로 단독 정동사가 아니다. 부가 구를 제외한 The estimate being attached만으로 주절이 완성되지 않는다."
+          },
+          "order": "쉼표 사이 구를 묶는다 → together with를 and와 구별한다 → estimate의 단수와 첨부 대상 역할을 확인하여 C를 선택한다.",
+          "rule": "부가 전치사구는 등위접속 복수 주어와 다르다. 중심 명사의 수와 동작 대상 여부를 각각 검증한다."
+        }
+      ]
+    },
+    {
+      "chapter": 12,
+      "blocks": [
+        {
+          "label": "최소 대립 예문으로 경계 확인",
+          "text": "① The hotel where we held the conference has closed. ② The hotel which we booked for the conference has closed. 첫 관계절은 we held the conference라는 완전한 절에 장소를 더하고, 둘째 관계절은 booked의 목적어인 hotel을 대신한다. 장소 명사라는 이유만으로 where를 선택할 수는 없다. 관계절을 We held the conference at the hotel.과 We booked the hotel.로 복원하여 역할을 확인한다."
+        },
+        {
+          "label": "예제 판단을 단계별로 재현",
+          "text": "예제: The engineer _____ design won the award will supervise the project. 선택지는 (A) who, (B) whom, (C) whose, (D) which이다. [The engineer] [_____ design won the award] [will supervise the project]에서 관계절의 주어는 design이고 빈칸은 그 설계의 소유 관계를 표시한다. A·B는 design을 소유 한정하지 못하고 D는 engineer라는 사람 선행사와 이 소유 구조에 맞지 않는다. C whose가 design 앞에 놓여 '그 기술자의 설계가 상을 받은'이라는 관계절을 만든다."
+        },
+        {
+          "label": "고득점에서 놓치기 쉬운 예외",
+          "text": "whose는 사람뿐 아니라 사물의 소유·부분 관계에도 쓰일 수 있어 a building whose roof was repaired는 정상적인 표현이다. 제한적 사물 관계절에서 which와 that가 모두 가능한 경우에는 둘 중 하나를 무조건 틀렸다고 하지 않는다. 전치사 바로 뒤에는 that 대신 which/whom 등을 쓰지만 전치사를 절 뒤에 남긴 구조는 제약이 달라진다. 선행사 유형, 절 내부 역할, 쉼표·전치사의 위치를 함께 검증한다."
+        }
+      ],
+      "questions": [
+        {
+          "id": "P5-B23",
+          "prompt": "Employees _____ work on weekends receive an additional allowance.",
+          "options": [
+            "whose",
+            "whom",
+            "who",
+            "which"
+          ],
+          "answer": "C",
+          "type": "관계대명사: 주격 사람",
+          "level": "기본",
+          "clue": "Employees는 사람 선행사이다. work 앞에 관계절의 주어가 빠져 있다.",
+          "analysis": "[Employees _____ work on weekends] [receive] [an additional allowance]이다. 빈칸은 receive의 목적어가 아니라 work의 주어 역할을 한다.",
+          "why": "who는 사람 선행사를 받아 관계절 주어가 된다. 주말 근무 직원을 한정한다.",
+          "wrong": {
+            "A": "whose는 소유 관계를 나타내며 뒤 명사를 한정해야 한다. 바로 동사 work가 이어지므로 이 구조에 맞지 않는다.",
+            "B": "whom은 목적격이다. 관계절 주어가 빠져 있어 목적격으로는 절이 완성되지 않는다.",
+            "D": "which는 일반적으로 사물 선행사를 받는다. Employees라는 사람 선행사와 맞지 않는다."
+          },
+          "order": "receive를 주절 동사로 찾는다 → work 앞 주어 공백을 확인한다 → 사람 주격 C를 선택한다.",
+          "rule": "관계사는 선행사 종류와 관계절 내부 역할을 함께 확인한다. 주절 동사와 관계절 동사를 따로 표시한다."
+        },
+        {
+          "id": "P5-B24",
+          "prompt": "The committee rejected the first venue because its meeting rooms were upstairs and it had no elevator. It selected the conference center in _____ all meeting rooms are on the ground floor.",
+          "options": [
+            "that",
+            "which",
+            "where",
+            "what"
+          ],
+          "answer": "B",
+          "type": "관계절: 선행사·전치사·완전한 내부절",
+          "level": "실전 최상급",
+          "clue": "conference center가 선행사이고 in이 관계사 앞에 있다. all meeting rooms are on the ground floor는 주어·동사·장소 보어가 갖추어진 절이다.",
+          "analysis": "둘째 문장은 [It selected the conference center] [in _____ all meeting rooms are on the ground floor]이다. 관계절은 모든 회의실이 그 센터 안의 1층에 있다는 장소 정보를 더한다.",
+          "why": "which는 전치사 in의 목적어로 conference center를 받는다. in which를 in the conference center로 복원하면 완전한 절의 장소 관계가 유지된다.",
+          "wrong": {
+            "A": "that은 전치사 바로 뒤의 이 관계대명사 구조에 쓰지 않는다. 전치사를 관계절 뒤에 남긴 구조와 구별해야 한다.",
+            "C": "where는 관계부사이며 in where로 장소 기능을 중복한 이 관계절을 만들지 않는다. 전치사 in의 명사적 목적어가 필요하다.",
+            "D": "what은 선행사를 포함하는 명사절을 만들 수 있지만 이미 conference center가 선행사로 있다. 앞 명사를 수식하는 in which 구조를 대신하지 못한다."
+          },
+          "order": "center라는 선행사를 찾는다 → 앞에 놓인 in의 목적어를 확인한다 → 관계절을 독립문장으로 복원하여 B를 선택한다.",
+          "rule": "완전한 절 앞에 전치사 + 관계대명사를 사용하여 장소 등의 관계를 나타낼 수 있다. where와 in which를 혼합하지 않는다."
+        }
+      ]
+    },
+    {
+      "chapter": 13,
+      "blocks": [
+        {
+          "label": "최소 대립 예문으로 경계 확인",
+          "text": "① We postponed the launch because delivery was delayed. ② We postponed the launch because of the delivery delay. 첫 문장에서 because는 주어 delivery와 동사 was delayed가 있는 절을 받고, 둘째 문장에서 because of는 명사구 the delivery delay를 받는다. 인과 의미는 같지만 연결하는 단위는 다르다. 선택지의 뜻을 보기 전에 빈칸 뒤 구조를 한 덩어리로 표시한다."
+        },
+        {
+          "label": "예제 판단을 단계별로 재현",
+          "text": "예제: _____ the shipment was late, assembly began as scheduled. 선택지는 (A) Despite, (B) Although, (C) Because of, (D) During이다. [_____ the shipment was late] [assembly began as scheduled]에서 앞은 완전한 절이고 뒤는 지연에도 예정대로 조립을 시작한 결과이다. A·C·D는 전치사 또는 전치사구여서 이 완전한 절을 그대로 받을 수 없다. B Although가 절의 형식과 예상에 반대되는 양보 관계를 모두 충족한다."
+        },
+        {
+          "label": "고득점에서 놓치기 쉬운 예외",
+          "text": "before, after, until 등은 뒤에 명사구가 오느냐 절이 오느냐에 따라 전치사·접속사 기능이 달라질 수 있다. while checking the equipment처럼 주어·be 등이 생략된 구조도 있으므로 -ing가 보인다고 무조건 전치사 뒤 명사구라고 단정하지 않는다. however, therefore 등은 연결부사로 문장 간 관계를 나타내지만 단독으로 쉼표만 써서 두 독립절을 접속하지는 않는다. 문장 경계·구두점과 논리 관계를 마지막에 함께 검증한다."
+        }
+      ],
+      "questions": [
+        {
+          "id": "P5-B25",
+          "prompt": "Please switch off the lights _____ you leave the conference room.",
+          "options": [
+            "during",
+            "before",
+            "despite",
+            "because of"
+          ],
+          "answer": "B",
+          "type": "접속사: 완전한 시간절",
+          "level": "기본",
+          "clue": "you leave the conference room은 주어와 정동사가 있는 절이다. 퇴실 전에 불을 끄는 시간 관계를 나타낸다.",
+          "analysis": "[Please switch off the lights] [_____ you leave the conference room]이다. 빈칸은 명령문에 시간 부사절을 연결한다.",
+          "why": "before는 완전한 절을 받아 퇴실 이전에 소등하라는 지시를 만든다.",
+          "wrong": {
+            "A": "during은 전치사이다. during you leave ...처럼 완전한 절을 직접 목적어로 받지 않는다.",
+            "C": "despite는 전치사이며 이 완전한 절을 직접 받지 못한다. 소등과 퇴실의 순서라는 시간 관계도 아니다.",
+            "D": "because of는 전치사구이다. 뒤 절을 직접 받지 못하고 이 지시의 앞뒤 시간 순서를 나타내지도 않는다."
+          },
+          "order": "you와 leave로 절을 확인한다 → 지시의 선후 순서를 읽는다 → 시간 접속사 B를 고른다.",
+          "rule": "절을 연결하는 표현과 명사구를 받는 표현을 구별한다. 동일한 주제의 단어라도 앞뒤 사건 관계가 맞아야 한다."
+        },
+        {
+          "id": "P5-B26",
+          "prompt": "The revised contract contains the requested warranty clause. _____, it still cannot be approved because the payment schedule is missing.",
+          "options": [
+            "Therefore",
+            "For example",
+            "Nevertheless",
+            "Similarly"
+          ],
+          "answer": "C",
+          "type": "연결부사: 형식이 같은 후보의 양보 논리",
+          "level": "실전 최상급",
+          "clue": "첫 문장은 요청된 조항을 갖추었다는 긍정적 진전이다. still cannot과 누락된 결제 일정은 그럼에도 승인이 불가능한 제약을 제시한다.",
+          "analysis": "두 문장은 마침표로 분리되어 있고 빈칸 뒤 쉼표가 있으므로 네 후보 모두 연결 표현으로 검토할 수 있다. 정답은 앞의 충족 사실과 뒤의 계속되는 미승인을 연결하는 논리에 달려 있다.",
+          "why": "Nevertheless는 충족된 조항이 있어도 다른 누락으로 승인할 수 없다는 양보 관계를 나타낸다. still이 예상과 반대 결과가 남아 있음을 강화한다.",
+          "wrong": {
+            "A": "Therefore는 첫 사실에서 뒤 결과가 발생하는 인과를 나타낸다. 보증 조항을 갖췄다는 사실이 미승인의 원인이 아니므로 맞지 않는다.",
+            "B": "For example는 앞의 일반 내용을 구체적 사례로 설명한다. 미승인 사유는 요청한 보증 조항 포함의 예시가 아니다.",
+            "D": "Similarly는 앞뒤 상황의 유사성을 강조한다. 조항 충족과 계속되는 승인 불가의 대비를 표현하지 못한다."
+          },
+          "order": "문장 경계와 쉼표를 확인한다 → contains와 still cannot의 대비를 찾는다 → 미승인 원인은 payment schedule 누락임을 확인하여 C를 선택한다.",
+          "rule": "연결어 후보가 모두 문법적으로 가능하면 문맥 논리로 결정한다. 앞 사실이 뒤 결과의 원인인지, 그럼에도 남은 제약인지 구별한다."
+        }
+      ]
+    },
+    {
+      "chapter": 14,
+      "blocks": [
+        {
+          "label": "최소 대립 예문으로 경계 확인",
+          "text": "① We know that the director approved the schedule. ② We know what the director approved. 첫 문장에서 that 뒤에는 approved의 목적어 schedule이 이미 있고, 둘째 문장에서 what은 승인한 대상이라는 목적어 역할을 포함한다. 두 절 모두 know의 목적어이지만 접속사 that와 명사 성분 what의 내부 역할은 다르다. what 뒤의 절이 길다고 무조건 완전한 진술절로 판단하지 않는다."
+        },
+        {
+          "label": "예제 판단을 단계별로 재현",
+          "text": "예제: The manager explained _____ the delivery would arrive late. 선택지는 (A) why, (B) whose, (C) despite, (D) during이다. [The manager] [explained] [_____ the delivery would arrive late]에서 explained가 설명한 내용은 배송이 늦을 이유이다. B는 뒤 명사를 소유 한정하는 구조가 아니고 C·D는 완전한 절을 직접 받는 명사절 표지가 아니다. A why가 이유에 관한 명사절을 만들어 explained의 목적어 자리를 채운다."
+        },
+        {
+          "label": "고득점에서 놓치기 쉬운 예외",
+          "text": "the fact that the office closed의 that절은 앞 명사의 내용을 설명하므로 절 내부에 성분 공백이 없다. the office that closed yesterday의 that절은 office를 수식하면서 주어 공백을 채운다. whether와 if는 여부 명사절에서 모두 가능할 때가 있지만 전치사 바로 뒤나 whether to do처럼 구조에 따라 차이가 난다. 절 유형을 이름으로만 외우지 말고 '내용 설명인가, 선행사 대신 성분이 되는가, 의문 내용인가'를 검증한다."
+        }
+      ],
+      "questions": [
+        {
+          "id": "P5-B27",
+          "prompt": "The notice states _____ the building will be closed at 6 p.m.",
+          "options": [
+            "that",
+            "what",
+            "whose",
+            "despite"
+          ],
+          "answer": "A",
+          "type": "명사절: 완전한 진술 내용",
+          "level": "기본",
+          "clue": "states 뒤에서 공지의 내용을 나타내는 명사절이 필요하다. the building will be closed at 6 p.m.은 폐관을 나타내는 완전한 진술절이다.",
+          "analysis": "[The notice] [states] [_____ the building will be closed at 6 p.m.]이다. be closed는 수동 동사구이며 이 절에는 주어나 직접 목적어의 공백이 없다.",
+          "why": "that은 완전한 진술절을 연결하여 공지가 밝히는 내용을 states의 목적어로 만든다.",
+          "wrong": {
+            "B": "what은 절 내부 명사 성분을 맡을 때 쓰지만 폐관을 나타내는 이 절에는 주어·목적어 공백이 없다.",
+            "C": "whose는 소유 관계를 나타낸다. whose the building처럼 정관사와 소유 한정사를 겹쳐 쓰는 구조가 아니며 공지 내용절도 완성하지 못한다.",
+            "D": "despite는 전치사이다. 완전한 절을 직접 목적어로 받지 못하고 states의 진술 내용절을 만들지 않는다."
+          },
+          "order": "states의 목적어 절을 확인한다 → building will be closed의 완전성을 검증한다 → 내용 접속사 A를 선택한다.",
+          "rule": "완전한 진술 내용을 명사절로 연결하는 that는 절 내부의 명사 성분을 대신하지 않는다. 능동·수동 동사구의 실제 구조를 기준으로 공백을 판단한다."
+        },
+        {
+          "id": "P5-B28",
+          "prompt": "The traveler provided two sets of receipts, only one of which the director approved. Before authorizing reimbursement, the finance team must determine _____ of the two sets the director approved.",
+          "options": [
+            "which",
+            "that",
+            "whose",
+            "whether"
+          ],
+          "answer": "A",
+          "type": "명사절: 한정된 대안의 간접 의문과 목적어 공백",
+          "level": "실전 최상급",
+          "clue": "대안이 two sets로 한정되어 있고 승인된 것은 그중 하나이다. determine 뒤 절에서 approved의 목적어가 빈칸으로 이동해 있다.",
+          "analysis": "둘째 문장은 [Before authorizing reimbursement] [the finance team must determine] [_____ of the two sets the director approved]이다. 의문사가 이끄는 목적어 명사절은 the director approved라는 평서문 어순을 유지한다.",
+          "why": "which는 두 세트 중 어느 것을 승인했는지 묻는 대명사로 of the two sets와 결합한다. 절 내부 approved의 목적어와 determine의 의문 내용 목적어를 동시에 연결한다.",
+          "wrong": {
+            "B": "that은 완전한 진술절을 연결할 수 있지만 approved의 빠진 목적어를 대신하지 못한다. that of the two sets the director approved라는 내용절도 형성되지 않는다.",
+            "C": "whose는 소유자를 묻는 형태이다. 세트의 소유자가 아니라 두 세트 중 어느 것이 승인되었는지를 묻는 문맥이며 whose of the two sets 구조도 맞지 않는다.",
+            "D": "whether는 여부를 나타내지만 두 세트 중 하나라는 목적어 선택을 직접 대신하지 않는다. whether of the two sets ...는 필요한 명사절 구조가 아니다."
+          },
+          "order": "첫 문장으로 대안 두 개를 확인한다 → determine의 간접 의문 역할을 찾는다 → approved의 목적어 공백을 연결하여 A를 선택한다.",
+          "rule": "which of + 한정된 집단은 어느 대상을 선택하는지 묻는 명사절 성분이 될 수 있다. 간접 의문절은 일반적으로 평서문 어순을 유지한다."
+        }
+      ]
+    },
+    {
+      "chapter": 15,
+      "blocks": [
+        {
+          "label": "최소 대립 예문으로 경계 확인",
+          "text": "① The system can store and retrieve records. ② The system is designed for storing and retrieving records. 첫 문장에서는 can이 store와 retrieve에 공유되고, 둘째 문장에서는 전치사 for가 두 동명사구를 받는다. 같은 두 작업을 연결해도 앞의 조동사·전치사가 요구하는 형태가 다르다. and의 바로 앞 단어가 아니라 병렬 항목의 머리와 공유 표지를 찾는다."
+        },
+        {
+          "label": "예제 판단을 단계별로 재현",
+          "text": "예제: The new policy requires managers to document requests and _____ responses. 선택지는 (A) recording, (B) record, (C) recorded, (D) recorder이다. [requires managers to [document requests] and [_____ responses]]에서 to가 두 동사구에 공유된다. A·C는 to 뒤 원형 동사와의 병렬이 맞지 않고 D는 명사라서 responses를 목적어로 취하는 행동 항목을 만들지 못한다. B record를 넣으면 문서화와 응답 기록이라는 두 행동이 같은 부정사 범위에 놓인다."
+        },
+        {
+          "label": "고득점에서 놓치기 쉬운 예외",
+          "text": "병렬이라고 언제나 단어의 품사 모양이 똑같아야 하는 것은 아니다. We discussed expanding the office and the new budget.는 서로 다른 형태가 discussed의 목적어로 같은 역할을 할 수 있는 예이다. 반면 하나의 can이나 to에 공유된 동사 항목은 그 표지가 요구하는 동사 형태를 유지해야 한다. 먼저 기능과 연결 범위를 검증하고 그다음 형태·의미의 일관성을 확인한다."
+        }
+      ],
+      "questions": [
+        {
+          "id": "P5-B29",
+          "prompt": "The assistant printed the agenda and _____ it to all participants.",
+          "options": [
+            "distribute",
+            "distributing",
+            "distribution",
+            "distributed"
+          ],
+          "answer": "D",
+          "type": "병렬: 과거 정동사",
+          "level": "기본",
+          "clue": "printed는 주절 과거 정동사이고 and가 같은 주어의 두 업무를 연결한다. 뒤 it은 agenda를 가리키는 목적어이다.",
+          "analysis": "[The assistant] [printed the agenda] and [_____ it to all participants]이다. 두 항목은 동일 주어를 공유하는 동사구이다.",
+          "why": "distributed는 과거 정동사로 printed와 병렬을 이루며 it을 목적어로 취한다.",
+          "wrong": {
+            "A": "distribute는 원형·복수 현재형이다. 조동사가 없고 단수 assistant의 과거 업무를 printed와 병렬로 설명하는 형태가 아니다.",
+            "B": "distributing은 분사이다. 두 번째 정동사구에 필요한 형태가 아니며 앞에 공유할 be동사도 없다.",
+            "C": "distribution은 명사이다. it을 동사 목적어로 취하지 못하고 printed와 같은 동사구 역할도 하지 못한다."
+          },
+          "order": "and의 연결 범위를 찾는다 → printed의 과거 정동사 역할을 확인한다 → 같은 동사구 D를 선택한다.",
+          "rule": "등위접속된 동사구는 공유 주어·시제 구조를 확인한다. 분사·명사를 의미만으로 정동사에 병렬시키지 않는다."
+        },
+        {
+          "id": "P5-B30",
+          "prompt": "The board requires that each branch either submit its monthly report by Friday or _____ an extension in writing.",
+          "options": [
+            "requests",
+            "requesting",
+            "request",
+            "requested"
+          ],
+          "answer": "C",
+          "type": "제안·요구절과 either ... or의 원형 병렬",
+          "level": "실전 최상급",
+          "clue": "requires that는 요구 내용을 나타낸다. each branch는 단수이지만 이 절의 submit이 원형이며 either ... or가 두 대안 동작을 연결한다.",
+          "analysis": "[The board requires] [that each branch either [submit its monthly report by Friday] or [_____ an extension in writing]]이다. that절의 두 동사는 요구 내용의 원형 용법을 공유한다.",
+          "why": "request는 원형으로 submit과 병렬을 이룬다. 단수 branch에 -s를 붙이는 일반 현재 수일치 규칙보다 이 요구절의 원형 구조를 먼저 확인해야 한다.",
+          "wrong": {
+            "A": "requests는 단수 현재형이다. 일반 사실 진술이면 가능하지만 여기서는 requires that의 요구 내용과 원형 submit에 공유된 병렬 구조가 맞지 않는다.",
+            "B": "requesting은 분사·동명사이다. that절에서 submit과 같은 정동사 역할을 하지 않는다.",
+            "D": "requested는 과거형이다. 요구 내용의 원형 용법과 submit의 병렬을 깨며 주절도 과거가 아니다."
+          },
+          "order": "requires that의 요구 의미를 확인한다 → either ... or를 괄호로 묶는다 → submit의 원형과 같은 C를 선택한다.",
+          "rule": "요구·제안 의미의 that절 원형 용법은 일반 현재 수일치와 구별한다. 병렬 범위 안 동사에는 같은 절의 문법 조건이 적용된다."
+        }
+      ]
+    },
+    {
+      "chapter": 16,
+      "blocks": [
+        {
+          "label": "최소 대립 예문으로 경계 확인",
+          "text": "① This unit is more efficient than that one. ② This unit works more efficiently than that one. 첫 문장은 unit의 성질을 비교하는 형용사 보어이고, 둘째 문장은 작동 방식을 비교하는 부사 수식어이다. more와 than이 같아도 efficient와 efficiently가 맡는 문장 역할은 다르다. 비교 표지 확인 뒤에 반드시 수식 대상을 다시 검증한다."
+        },
+        {
+          "label": "예제 판단을 단계별로 재현",
+          "text": "예제: The seminar attracted _____ participants than expected. 선택지는 (A) many, (B) more, (C) most, (D) much이다. [The seminar] [attracted] [_____ participants] [than expected]에서 기대한 인원보다 많은 수를 비교한다. A는 비교급이 아니고 C는 집단의 최상급이라 than과 맞지 않으며 D는 이 가산 복수 participants의 수량 한정에 맞지 않는다. B more를 넣으면 기대 인원과 실제 참석자 수의 비교가 완성된다."
+        },
+        {
+          "label": "고득점에서 놓치기 쉬운 예외",
+          "text": "비교급의 -er형과 more형 선택은 단어와 문체에 따라 두 형태가 모두 가능할 때가 있으므로 짧은 단어는 언제나 -er만 가능하다고 단정하지 않는다. as ... as에서는 기본형을 사용하며 twice as many orders as ...처럼 배수도 붙을 수 있다. 최상급은 소유 표현이나 서술 위치에 따라 the의 사용이 달라질 수 있다. 형태 선택과 비교 범위, 실제 수식 역할을 각각 검증한다."
+        }
+      ],
+      "questions": [
+        {
+          "id": "P5-B31",
+          "prompt": "The updated form is as _____ to complete as the old one.",
+          "options": [
+            "easy",
+            "easier",
+            "easiest",
+            "easily"
+          ],
+          "answer": "A",
+          "type": "동등 비교: 형용사 기본형",
+          "level": "기본",
+          "clue": "as ... as가 같은 정도를 비교한다. is 뒤에는 form의 완료하기 쉬운 성질을 설명하는 보어가 필요하다.",
+          "analysis": "[The updated form] [is] [as _____ to complete as the old one]이다. the old one은 이전 양식을 대신한다.",
+          "why": "easy는 형용사 기본형으로 as easy to complete as ...의 동등 비교를 만든다.",
+          "wrong": {
+            "B": "easier는 비교급이다. 이 문장의 as ... as 동등 비교 틀에는 기본형이 필요하다.",
+            "C": "easiest는 최상급이다. 두 양식의 같은 정도를 나타내는 as ... as 구조와 맞지 않는다.",
+            "D": "easily는 부사이다. is 뒤에서 form의 성질을 설명할 형용사 보어가 없어지고 easy to complete 구조도 완성되지 않는다."
+          },
+          "order": "두 as를 확인한다 → form의 성질 보어를 찾는다 → 형용사 기본형 A를 고른다.",
+          "rule": "동등 비교 as ... as의 중심 형태와 문장 속 품사 역할을 함께 확인한다. 비교급·최상급을 중복하여 쓰지 않는다."
+        },
+        {
+          "id": "P5-B32",
+          "prompt": "The two workflows complete identical tasks. The updated version handles orders just as _____ as the original version, but it requires significantly fewer manual checks.",
+          "options": [
+            "efficient",
+            "more efficiently",
+            "efficiently",
+            "efficiency"
+          ],
+          "answer": "C",
+          "type": "동등 비교·동작 수식·대조 문맥",
+          "level": "실전 최상급",
+          "clue": "handles가 동작 동사이고 just as ... as가 처리 방식의 동등 비교이다. fewer checks라는 뒤 정보는 수동 확인 절차의 감소이지 비교 틀을 바꾸는 근거가 아니다.",
+          "analysis": "둘째 문장은 [The updated version] [handles orders] [just as _____ as the original version], but [it requires significantly fewer manual checks]이다. 앞 비교는 처리 효율, 뒤 비교는 확인 횟수라는 다른 기준이다.",
+          "why": "efficiently는 handles를 수식하는 부사 기본형이며 as ... as를 완성한다. 효율은 동일하게 유지하면서 확인 작업은 더 적게 요구한다는 대조가 성립한다.",
+          "wrong": {
+            "A": "efficient는 형용사이다. handle은 여기서 orders를 efficient라는 보어로 직접 연결하는 용법이 아니며 처리 동작에는 부사가 필요하다.",
+            "B": "more efficiently는 부사 비교급이다. 효율이 더 높아 보인다는 문맥 추측으로 고르기 쉽지만 just as ... as의 동등 비교와 형태가 맞지 않는다.",
+            "D": "efficiency는 명사이다. handles의 방식 수식어가 되지 못하고 as ... as 안의 정도 비교 역할도 채우지 못한다."
+          },
+          "order": "앞뒤의 비교 기준을 나눈다 → handles의 부사 수식 자리를 확인한다 → as ... as의 기본형을 검증하여 C를 선택한다.",
+          "rule": "문맥의 개선 결과가 모든 비교를 우등 비교로 만들지는 않는다. 비교 틀과 동사 수식 역할을 먼저 고정하고 각 기준을 따로 읽는다."
+        }
+      ]
+    },
+    {
+      "chapter": 17,
+      "blocks": [
+        {
+          "label": "최소 대립 예문으로 경계 확인",
+          "text": "① If the schedule changes, we will send a notice. ② If the schedule had changed, we would have sent a notice. 첫 문장은 열려 있는 조건과 미래 결과이고, 둘째 문장은 과거 사실과 다른 가정의 결과를 나타낸다. 과거형·완료형의 차이는 단순한 문장 길이가 아니라 가정한 사건의 시간과 현실성을 반영한다. 두 사건을 시간축에 배치한 뒤 동사구를 선택한다."
+        },
+        {
+          "label": "예제 판단을 단계별로 재현",
+          "text": "예제: The committee requested that each new employee review the handbook and _____ the training. 선택지는 (A) completes, (B) complete, (C) completed, (D) completing이다. [The committee requested] [that each new employee review the handbook and _____ the training]에서 이미 쓰인 원형 review가 이 요구절의 원형 용법과 공유 주어 병렬을 확정한다. A·C는 원형 review와 같은 절에서 병렬로 연결할 형태가 아니며 D는 이 절의 원형 정동사 자리를 채우지 못한다. B complete를 넣으면 review와 complete라는 두 요구 행동이 연결된다. 영국 영어의 요구절에는 should 또는 직설법 변형도 나타날 수 있으므로, 요구 의미만 보고 다른 변형을 언제나 비문이라고 단정하지 않는다."
+        },
+        {
+          "label": "고득점에서 놓치기 쉬운 예외",
+          "text": "if절에서 will이 언제나 금지되는 것은 아니며 의지·정중한 요청을 나타내는 If you will sign here, ... 같은 용법이 있다. 실제 미래 조건에서 단순한 미래 시간을 나타내는 will과 이런 의지 의미를 구별해야 한다. 과거 선택이 현재 결과에 영향을 주는 혼합 조건문도 있어 If we had booked earlier, we would have better seats now.는 과거 조건과 현재 상태를 연결한다. 공식보다 각 동작의 기준 시점과 뜻을 먼저 확인한다."
+        }
+      ],
+      "questions": [
+        {
+          "id": "P5-B33",
+          "prompt": "Please notify the service desk if you _____ a damaged cable during tomorrow's inspection.",
+          "options": [
+            "find",
+            "finding",
+            "to find",
+            "finds"
+          ],
+          "answer": "A",
+          "type": "실제 조건: 현재형 정동사",
+          "level": "기본",
+          "clue": "if절 주어는 you이며 tomorrow's inspection은 미래의 열린 조건이다. 빈칸에는 if절의 정동사가 필요하다.",
+          "analysis": "[Please notify the service desk] [if you _____ a damaged cable during tomorrow's inspection]이다. 주절 명령과 조건절을 구별한다.",
+          "why": "find는 you와 맞는 현재형으로 미래 조건에서 손상 케이블을 발견하는 경우를 나타낸다.",
+          "wrong": {
+            "B": "finding은 분사여서 if절의 단독 정동사가 되지 않는다. 앞에 be동사도 없다.",
+            "C": "to find는 부정사로 조건절의 시제·주어 호응을 표시하지 못한다.",
+            "D": "finds는 3인칭 단수 현재형이다. 주어 you와 수·인칭이 맞지 않는다."
+          },
+          "order": "if절 주어 you를 확인한다 → 미래 열린 조건을 현재형으로 표현함을 본다 → 정동사 A를 고른다.",
+          "rule": "열린 미래 조건절에서 현재형이 사용될 수 있다. 그 절의 주어·정동사는 주절과 따로 검증한다."
+        },
+        {
+          "id": "P5-B34",
+          "prompt": "The replacement part did not arrive before Friday's shutdown. If it had arrived on Thursday, the repair team _____ the work before the weekend.",
+          "options": [
+            "completes",
+            "will complete",
+            "has completed",
+            "could have completed"
+          ],
+          "answer": "D",
+          "type": "과거 반사실: 실제 지연과 가상 완료 결과",
+          "level": "실전 최상급",
+          "clue": "첫 문장은 부품이 셧다운 전에 도착하지 않았다는 실제 과거를 제시한다. if it had arrived는 그 사실과 반대인 목요일 도착을 가정한다.",
+          "analysis": "둘째 문장은 [If it had arrived on Thursday] [the repair team _____ the work before the weekend]이다. it은 replacement part를 받고, 수리 완료는 가정한 과거의 결과이다.",
+          "why": "could have completed는 과거에 끝낼 수 있었던 가능성을 나타낸다. 실제로는 부품이 늦었으므로 주말 전 완료를 가상의 결과로 표현한다.",
+          "wrong": {
+            "A": "completes는 현재의 일반 사실이다. 특정한 과거 반사실 조건의 결과를 나타내지 못한다.",
+            "B": "will complete는 미래형이다. 첫 문장과 had arrived가 만든 과거 사건의 가상 결과와 시점이 맞지 않는다.",
+            "C": "has completed는 현재완료로 실제 완료를 현재와 연결한다. 부품 미도착과 반대 조건의 실현되지 않은 과거 가능성을 표현하지 못한다."
+          },
+          "order": "첫 문장의 실제 미도착을 확인한다 → 목요일 도착을 반사실로 배치한다 → 과거 가상 완료 결과 D를 선택한다.",
+          "rule": "가정법은 실제 사건을 먼저 확인하면 판단이 쉬워진다. 과거 반사실의 결과는 의미에 맞는 would/could/might have + 과거분사로 표현할 수 있다."
+        }
+      ]
+    },
+    {
+      "chapter": 18,
+      "blocks": [
+        {
+          "label": "최소 대립 예문으로 경계 확인",
+          "text": "① Only the finance director signed the check. ② Only after the audit did the finance director sign the check. 첫 문장은 only가 주어를 한정하므로 정상 어순이고, 둘째 문장은 시간 제한 부사어를 앞세워 주절이 도치된다. 두 번째 문장의 과거시제는 did에 있어 sign이 원형으로 나타난다. only의 존재가 아니라 수식 대상과 문장 앞 성분의 역할이 핵심이다."
+        },
+        {
+          "label": "예제 판단을 단계별로 재현",
+          "text": "예제: Never _____ the new checklist failed to detect a missing field since it was introduced. 선택지는 (A) has, (B) have, (C) did, (D) was이다. [Never] [_____ the new checklist] [failed to detect a missing field] [since ...]는 부정 부사어를 앞세운 완료 도치이며 checklist는 단수 사물 주어이다. B는 단수 checklist와 수가 맞지 않고 C는 뒤 failed를 원형으로 바꿔야 하며 D는 체크리스트의 탐지 실패를 나타내는 능동 완료 구조를 만들지 못한다. A has를 넣어 '도입 이후 누락 항목을 찾아내는 데 한 번도 실패하지 않았다'는 현재완료를 완성한다."
+        },
+        {
+          "label": "고득점에서 놓치기 쉬운 예외",
+          "text": "이 단원은 기본 구조가 안정된 뒤 다루는 저빈도 확장 학습으로 배치하며 특정 출제 횟수나 빈도를 수치로 단정하지 않는다. only가 주어를 한정하면 도치하지 않고 부정·제한 부사어의 전면 배치일 때 주절의 조건을 확인한다. 강조 구문에서는 사람 주어를 강조할 때 that와 who가 모두 가능한 경우가 있으므로 둘을 함께 놓고 무조건 한쪽을 오답으로 만들지 않는다. 기본문 복원으로 뜻과 시제를 확인한 뒤 구조만 추가로 학습한다."
+        }
+      ],
+      "questions": [
+        {
+          "id": "P5-B35",
+          "prompt": "It was the operations manager _____ approved the revised schedule.",
+          "options": [
+            "where",
+            "what",
+            "that",
+            "whom"
+          ],
+          "answer": "C",
+          "type": "강조 구문: 저빈도 확장",
+          "level": "기본",
+          "clue": "It was ...라는 틀에서 operations manager가 승인 주체로 강조된다. approved의 주어 역할이 필요하다.",
+          "analysis": "[It was] [the operations manager] [_____ approved the revised schedule]이다. 기본문은 The operations manager approved the revised schedule이다.",
+          "why": "that은 강조 구문을 완성하며 강조된 manager와 승인 사건을 연결한다. 이 문장에서는 who도 가능한 다른 표현이지만 선택지에 없다.",
+          "wrong": {
+            "A": "where는 장소 관계부사이다. manager는 사람이면서 approved의 주어여야 하므로 역할이 맞지 않는다.",
+            "B": "what은 선행사를 포함하는 명사절 성분이다. 이미 강조한 manager가 있는 it was ... that 구조를 대신하지 못한다.",
+            "D": "whom은 사람 목적격이다. 여기에는 approved의 주어가 필요하므로 격이 틀린다."
+          },
+          "order": "It was의 강조 틀을 확인한다 → manager를 기본문의 주어로 복원한다 → 선택지 중 맞는 연결 C를 고른다.",
+          "rule": "강조 구문은 기본문으로 복원하여 역할을 확인한다. 사람 강조에서 that/who가 모두 가능한 구조도 있으므로 선택지 구성과 격을 확인한다."
+        },
+        {
+          "id": "P5-B36",
+          "prompt": "The shipment was finally dispatched yesterday. Not until the customs forms had been approved _____ the warehouse authorize dispatch.",
+          "options": [
+            "did",
+            "has",
+            "was",
+            "does"
+          ],
+          "answer": "A",
+          "type": "부정 도치·완료 수동 조건·종료 과거: 저빈도 확장",
+          "level": "실전 최상급",
+          "clue": "Not until ...이 앞에 놓였으므로 주절이 도치된다. yesterday는 종료 과거이고 본동사 authorize는 원형이다.",
+          "analysis": "[Not until the customs forms had been approved] [_____ the warehouse authorize dispatch]이다. until절의 had been approved는 승인 대상인 forms의 선행 완료 수동이며 도치는 주절에 일어난다.",
+          "why": "did는 종료 과거의 주절 도치를 만들고 authorize를 원형으로 받는다. 서류 승인에 이르러서야 창고가 발송을 허가했고 어제 실제 출하했다는 시간 관계가 맞는다.",
+          "wrong": {
+            "B": "has는 완료 조동사인데 뒤 authorized라는 과거분사가 필요하다. 원형 authorize와 결합하지 못하며 첫 문장의 종료 과거 기준도 다르다.",
+            "C": "was는 be동사이며 뒤 원형 authorize를 직접 받아 능동 허가 동사구를 만들 수 없다.",
+            "D": "does는 현재 도치 조동사이다. 실제 어제 출하한 사건과 had been approved가 제시한 과거 시간축에 맞지 않는다."
+          },
+          "order": "Not until절을 묶는다 → 실제 yesterday 출하를 과거 기준으로 삼는다 → 주절의 원형 authorize 앞 did를 선택한다.",
+          "rule": "부정·제한 부사절을 앞세운 도치는 주절에서 확인한다. 과거 did 뒤 원형과 종속절의 완료 수동을 각각 검증한다."
+        }
+      ]
+    },
+    {
+      "chapter": 19,
+      "blocks": [
+        {
+          "label": "최소 대립 예문으로 경계 확인",
+          "text": "① Few errors were found, so revision will be quick. ② A few errors were found, so a revision is still needed. 첫 문장은 오류 수가 아주 적다는 점을, 둘째 문장은 일부 오류가 존재한다는 점을 강조한다. 두 표현 모두 소수의 존재와 양립할 수 있어 few를 항상 '전혀 없음'으로 읽지 않는다. 충분한지 부족한지는 뒤의 quick 또는 still needed 같은 실제 문맥으로 판단한다."
+        },
+        {
+          "label": "예제 판단을 단계별로 재현",
+          "text": "예제: _____ of the two signatures is missing; both are clearly visible. 선택지는 (A) Neither, (B) Each, (C) Both, (D) All이다. [_____ of the two signatures] [is missing] 뒤에 두 서명이 모두 보인다는 확인이 있다. B는 단수 동사와는 맞지만 각각 누락되었다는 뜻이 되어 뒤 내용과 모순되고 C·D는 복수 주어라 is와 맞지 않는다. A Neither를 넣으면 두 서명 어느 것도 빠지지 않았다는 뜻이 되어 형식과 문맥이 모두 맞는다."
+        },
+        {
+          "label": "고득점에서 놓치기 쉬운 예외",
+          "text": "a/an은 a university와 an hour처럼 바로 뒤 단어의 실제 발음에 따라 달라진다. a few/a little이 있다고 양이 반드시 충분한 것은 아니며 a little time may still be insufficient처럼 부족할 수도 있다. many/few와 much/little은 해당 문장의 가산성에 맞추되 명사의 뜻이 달라지면 용법도 달라질 수 있다. 수량 판단은 형태 검증과 업무 조건 충족 여부를 나누어 확인한다."
+        }
+      ],
+      "questions": [
+        {
+          "id": "P5-B37",
+          "prompt": "There is not _____ space for another desk in this office.",
+          "options": [
+            "many",
+            "much",
+            "several",
+            "few"
+          ],
+          "answer": "B",
+          "type": "수량 표현: 불가산 공간",
+          "level": "기본",
+          "clue": "space는 여기서 가구를 놓을 공간이라는 불가산 명사이다. 빈칸은 그 양을 한정한다.",
+          "analysis": "[There is not] [_____ space for another desk] [in this office]이다. desk는 셀 수 있어도 빈칸이 한정하는 중심어는 space이다.",
+          "why": "much는 불가산 space의 양을 나타내며 not much space는 공간이 많지 않다는 뜻이다.",
+          "wrong": {
+            "A": "many는 가산 복수 명사를 한정한다. 공간 의미의 불가산 space와 결합하지 않는다.",
+            "C": "several은 여러 개의 가산 복수를 요구한다. 이 문장은 space를 여러 장소·칸으로 세는 용법이 아니다.",
+            "D": "few도 가산 복수의 적은 수를 나타낸다. 공간 양을 나타내려면 little 등 불가산 수량 표현이 필요하다."
+          },
+          "order": "빈칸이 꾸미는 space를 찾는다 → 공간이라는 불가산 용법을 확인한다 → B를 선택한다.",
+          "rule": "수량 표현은 가장 가까운 명사가 아니라 실제 한정하는 중심 명사의 가산성에 맞춘다."
+        },
+        {
+          "id": "P5-B38",
+          "prompt": "Both proposed sites meet the technical requirements. The board may select _____ site, but it must choose only one.",
+          "options": [
+            "neither",
+            "all",
+            "either",
+            "both"
+          ],
+          "answer": "C",
+          "type": "한정사: 두 대안·단수 명사·선택 제한",
+          "level": "실전 최상급",
+          "clue": "첫 문장으로 선택 가능한 대상이 두 곳임을 알 수 있다. site는 단수이고 must choose only one은 하나를 선택해야 한다는 조건이다.",
+          "analysis": "둘째 문장은 [The board may select _____ site] but [it must choose only one]이다. 조건을 갖춘 두 후보 중 어느 하나를 고를 수 있으나 두 곳 모두를 고르지는 않는다.",
+          "why": "either는 두 대상 중 어느 하나를 단수 site와 함께 나타낸다. 양쪽 모두 적합하다는 첫 문장과 반드시 하나만 선택한다는 제한을 모두 충족한다.",
+          "wrong": {
+            "A": "neither는 두 곳 어느 것도 선택하지 않는다는 뜻이다. 반드시 하나를 선택해야 한다는 뒤의 must choose only one과 맞지 않는다.",
+            "B": "all은 여기서 두 후보 전체를 나타내려면 복수 sites와 결합해야 한다. 단수 site와 형태가 맞지 않고 하나만 선택해야 한다는 제한도 충족하지 않는다.",
+            "D": "both는 두 후보 모두를 뜻하며 이 위치에서는 복수 sites가 필요하다. 단수 site와 수가 맞지 않고 하나만 선택한다는 의미에도 어긋난다."
+          },
+          "order": "후보 수 두 개를 확인한다 → 단수 site와 결합 형태를 본다 → only one의 선택 제한을 검증하여 C를 선택한다.",
+          "rule": "두 후보가 모두 가능하다는 사실과 실제 선택 수는 다르다. either/neither/both의 수와 문맥상 선택 범위를 함께 확인한다."
+        }
+      ]
+    },
+    {
+      "chapter": 20,
+      "blocks": [
+        {
+          "label": "최소 대립 예문으로 경계 확인",
+          "text": "① The employees hired last month have completed training. ② The recruiter hired employees last month. 첫 문장에서 hired는 employees의 수동 수식어이고 have completed가 정동사이다. 둘째 문장에서 hired는 recruiter가 수행한 과거 정동사로 employees를 목적어로 취한다. 같은 철자도 위치·주어 역할·다른 정동사 유무에 따라 기능이 달라진다."
+        },
+        {
+          "label": "예제 판단을 단계별로 재현",
+          "text": "예제: By the time the annual review begins next Friday, the engineers assigned to the project _____ all performance checks. 선택지는 (A) have completed, (B) had completed, (C) completing, (D) will have completed이다. [By the time the annual review begins next Friday] [the engineers assigned to the project] [_____] [all performance checks]에서 assigned는 engineers 수식어이고 next Friday는 미래 기준점이다. A는 현재 기준 완료, B는 과거 기준 완료라 미래 검토 시작까지의 완료와 맞지 않고 C는 정동사를 만들지 못한다. D will have completed가 프로젝트 배정 수식과 미래 시간축을 모두 유지하며 기준 시점까지의 점검 완료를 나타낸다."
+        },
+        {
+          "label": "고득점에서 놓치기 쉬운 예외",
+          "text": "정동사가 하나 보인다고 남은 모든 동사 형태를 분사로 결정하지 않는다. 관계절·명사절·등위접속된 절에는 별도의 정동사가 있을 수 있으므로 먼저 절 경계를 나눈다. 구조에 맞는 두 후보가 남으면 지칭 대상·실제 사건의 시간·논리 관계를 읽고 정답 근거를 좁힌다. 정답을 맞혀도 잘못된 근거로 선택했다면 구조 재표시와 다른 날 재풀이를 거쳐 복습을 완료한다."
+        }
+      ],
+      "questions": [
+        {
+          "id": "P5-B39",
+          "prompt": "All applications must _____ by the stated deadline.",
+          "options": [
+            "submit",
+            "be submitted",
+            "submitting",
+            "submission"
+          ],
+          "answer": "B",
+          "type": "복합 기초: 조동사와 수동 대상",
+          "level": "기본",
+          "clue": "applications는 제출 대상이고 must 뒤에는 원형 동사구가 필요하다. by the stated deadline은 제출 기한이다.",
+          "analysis": "[All applications] [must _____] [by the stated deadline]이다. by구가 수행자가 아니라 기한을 나타내더라도 주어의 대상 역할로 수동을 결정할 수 있다.",
+          "why": "be submitted는 must 뒤 원형 be와 과거분사 submitted로 제출 대상의 수동을 완성한다.",
+          "wrong": {
+            "A": "submit은 원형 능동이다. 지원서가 제출을 수행하는 주체가 되는 뜻이어서 역할이 맞지 않고 목적어도 없다.",
+            "C": "submitting은 분사여서 must 뒤 원형 동사구를 직접 만들지 못한다.",
+            "D": "submission은 명사이다. 조동사 must 뒤에 필요한 동사구가 되지 못한다."
+          },
+          "order": "must 뒤 형태를 확인한다 → applications의 제출 대상 역할을 본다 → deadline의 기한 의미를 검증하여 B를 선택한다.",
+          "rule": "수동은 by 수행자 표현이 없어도 주어와 동사의 역할로 결정한다. 같은 by가 기한을 나타낼 수도 있다."
+        },
+        {
+          "id": "P5-B40",
+          "prompt": "The revised safety procedure was introduced last year and is still in use. The number of incidents _____ by staff each month has fallen sharply since the procedure was introduced.",
+          "options": [
+            "reporting",
+            "report",
+            "reported",
+            "reports"
+          ],
+          "answer": "C",
+          "type": "종합 구조: 중심어·수동 분사·현재완료·시간절",
+          "level": "실전 최상급",
+          "clue": "has fallen이 주절 정동사이고 The number가 단수 중심어이다. incidents는 보고 대상, by staff는 보고 수행자이며 each month는 월별 건수를 나타낸다.",
+          "analysis": "둘째 문장은 [The number of incidents _____ by staff each month] [has fallen sharply] [since the procedure was introduced]이다. 빈칸은 incidents의 축약 수동 관계절이고 since절은 과거 도입을 현재까지의 감소와 연결한다.",
+          "why": "reported는 직원들이 보고한 incidents를 수식하는 과거분사이다. 월별 보고 건수라는 단수 통계 주어, has fallen의 현재완료, 과거 도입 since절이 서로 맞는다.",
+          "wrong": {
+            "A": "reporting은 능동 분사이다. incidents가 보고 수행자라는 관계가 되어 by staff가 제시한 실제 수행자와 맞지 않는다.",
+            "B": "report는 원형·복수 현재형이다. 관계사나 접속사 없이 주어 명사구 안에 정동사를 추가할 수 없다.",
+            "D": "reports는 단수 현재형 또는 복수 명사이다. 단수 정동사로는 incidents와 수가 맞지 않고 주절 has fallen과 연결되지 않으며 복수 명사로도 수동 수식 관계를 만들지 못한다."
+          },
+          "order": "has fallen을 정동사로 찾는다 → number와 incidents의 역할을 분리한다 → by staff로 수동 관계를 확인한다 → since절과 현재완료를 검증하여 C를 선택한다.",
+          "rule": "긴 통계 주어 안의 분사 수식과 주절 동사는 별도로 분석한다. 수일치·태·시간 관계를 단계별로 검증하면 복합 단서를 놓치지 않는다."
+        }
+      ]
+    }
+  ],
+  "review_sections": [
+    {
+      "title": "구조 표시 실습: 해석 전에 문장 뼈대를 고정하기",
+      "paragraphs": [
+        "이 페이지에서는 정답 고르기를 잠시 멈추고 긴 문장의 구조를 표시한다. 먼저 3분 동안 아래 예문의 정동사에는 밑줄, 주어 중심어에는 동그라미, 관계절·분사구·전치사구에는 대괄호를 그린다. 표시가 끝난 뒤 제시된 분석과 비교하며, 단어를 아는 것과 문장 성분을 정확히 구별하는 것을 따로 평가한다.",
+        "표시 원칙은 S(주어), V(정동사), O(목적어), C(보어)와 수식구의 구별이다. 주어 전체가 길면 중심 명사 하나를 먼저 표시하고 나머지를 붙는 범위에 따라 묶는다. depend on이나 place ... on the desk처럼 동사의 뜻을 완성하는 보충구는 선택적 수식어와 구별하여 다시 포함한다.",
+        "실습 1: The proposal submitted by the design team is financially feasible after the finance office approved the revised budget. 먼저 주절과 after절의 주어·동사를 따로 찾아 본다. 분석은 [The proposal submitted by the design team](S) [is](V) [financially feasible](C) [after the finance office approved the revised budget]이며, submitted는 proposal의 수동 수식어이고 after절에서는 finance office가 S, approved가 V, revised budget가 O이다.",
+        "실습 2: The supervisor asked staff who had completed training to review their access levels. asked의 목적어와 who절의 주어를 구별하고 to review가 어느 동사 구조에 연결되는지 표시한다. 분석은 [The supervisor](S) [asked](V) [staff who had completed training](O) [to review their access levels]이며 who는 staff를 받아 관계절 주어가 되고 had completed는 그 절의 정동사이다. to review는 ask + 사람 + to부정사의 요청 내용을 완성한다.",
+        "실습 3: By the time the new portal opens next week, the documents requested by the auditor will have been uploaded. opens가 현재형이어도 next week에 놓인 미래 시간절이고, documents는 요청·업로드의 대상이다. 중심 구조는 [the documents requested by the auditor](S) [will have been uploaded](V)이며 requested는 명사 수식, will have been uploaded는 미래 기준점까지의 완료 수동이다. 동사구가 길어도 will, have, been, uploaded를 서로 다른 정동사로 세지 않는다.",
+        "실습 4: The notice explains why visitors must use the side entrance while the main entrance is being repaired. why절은 explains의 목적어인 이유 명사절이며 visitors must use의 목적어는 the side entrance이다. while절은 main entrance를 주어로 한 진행 수동으로, 방문객 출입 지시의 배경을 설명한다. 절 내부의 주어·목적어와 주절 목적어 역할을 혼동하지 않는지 확인한다.",
+        "경계 확인: The employees selected for the assignment have received their schedules.와 The employees selected the schedules for the assignment.를 비교한다. 첫 문장의 selected는 employees가 선발된 수동 수식이고, 둘째 문장의 selected는 직원들이 일정표를 선택한 정동사이다. 한 문장의 분사를 다른 문장에서 그대로 수식어로 판단하지 말고 정동사 존재와 목적어를 다시 확인한다.",
+        "자기 점검은 네 문장을 다시 가려 분석하는 것으로 마친다. 주어 중심어·정동사·절 경계·수행자와 대상 중 틀린 지점에 하나씩 표시하고, 그 단계만 다시 연습한다. 해석은 맞지만 표시가 틀렸다면 구조 분석 실패로 기록한다. 다음 복습에서는 같은 문장에서 수식구 하나를 바꾼 뒤 중심 구조가 유지되는지 검증한다."
+      ]
+    },
+    {
+      "title": "시간 제한 혼합 복습: 정확도와 근거를 함께 기록하기",
+      "paragraphs": [
+        "학습용 미니 세트는 기본·중급·고급·실전 최상급에서 각각 세 문항을 골라 총 12문항으로 구성한다. 서로 다른 단원을 섞고 이미 답을 기억하는 문항은 제외한다. 처음에는 6분을 주되 정확도와 근거가 안정되면 4분으로 줄인다. 이 시간은 단계별 학습 목표이며 공식 시험의 파트별 의무 시간으로 해석하지 않는다.",
+        "첫 풀이에는 선택한 답, 확신도, 사용한 핵심 단서를 한 줄씩 적는다. 단서는 '부사' 같은 결론만 적지 말고 'is 뒤 형용사 보어, 앞 operationally가 그 보어를 수식'처럼 연결 관계를 기록한다. 30초가 지나도 구조를 못 잡으면 표시하고 다음 문항으로 이동한 뒤 마지막에 돌아온다. 빠르게 맞힌 답이라도 근거를 적지 못했으면 추측으로 분류한다.",
+        "채점은 정답 수와 근거 적중 수를 따로 센다. 답은 맞았지만 than을 보지 않고 의미만으로 고른 경우처럼 결정적 단서를 놓쳤다면 근거 점수를 주지 않는다. 반대로 구조는 정확히 봤으나 답 표기를 잘못 옮겼다면 지식 오류와 구별하여 기록한다. 소요 시간은 평균뿐 아니라 오래 걸린 문항과 그 원인도 남긴다.",
+        "두 번째 검토에는 제한 시간을 없애고 모든 오답 선택지를 원문에 대입한다. 명사구 중심어가 사라지는지, 정동사가 두 개가 되는지, 수동의 목적어가 잘못 남는지, 시간 기준이 바뀌는지 구체적으로 설명한다. 한 선택지가 다른 문맥에서 가능하다면 현재 문장의 어떤 단서가 그것을 배제하는지 적는다. 구조상 가능한 후보를 '어색하다' 한마디로 제거하지 않는다.",
+        "오류 분류는 문법 지식 부족, 문장 구조 분석 실패, 문맥 이해 부족, 시간 부족의 네 가지를 사용한다. 하나의 문제에 여러 원인이 있으면 최초 실패를 주원인으로 적고 나머지는 보조 원인으로 기록한다. 예를 들어 긴 주어에서 중심어를 놓쳐 복수 동사를 골랐다면 단순히 수일치 규칙 암기 부족이라고만 적지 않는다. 다음 훈련은 주원인을 바꾸는 짧은 활동으로 연결한다.",
+        "문법 지식 부족에는 규칙을 실제 예문 두 개로 비교하고, 구조 실패에는 수식구를 제외한 최소 문장을 만든다. 문맥 부족에는 사건의 선후 관계 또는 지칭 대상을 한 줄로 복원한다. 시간 부족에는 12문항을 다시 풀되 첫 단서 확인과 후보 제거까지만 말로 재현하여 불필요한 번역을 줄인다. 단어 목록을 추가하는 대신 문장의 역할·논리를 재검토한다.",
+        "다음 날에는 오답과 근거 미흡 문항만 선택지를 가리고 다시 분석한다. 일주일 뒤에는 그 문항을 다른 단원의 문항과 섞어서 한 번 더 푼다. 새로 변형한 연습에서는 시간 부사·주어 중심어·접속 표지 중 하나만 바꾸고 정답이 달라지는지 확인한다. 두 후보가 모두 자연스러워졌다면 억지로 하나를 오답으로 만들지 말고 변형을 다시 조정한다.",
+        "세트 종료 조건은 단순한 만점이 아니라 답과 결정적 근거가 함께 안정되는 것이다. 12문항 중 한 문항이라도 오답 이유를 설명하지 못하면 그 문항은 다음 복습 세트에 남긴다. 반복할수록 긴 문장을 처음부터 끝까지 번역하는 대신 절 경계와 핵심 역할을 더 빨리 찾는지 확인한다. 정확도가 떨어진 상태에서 시간만 줄였다면 제한을 한 단계 되돌려 구조 판단을 회복한다."
+      ]
+    }
+  ]
+}
