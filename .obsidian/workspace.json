@@ -11,10 +11,14 @@
             "id": "3d5939434b10fcf7",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {},
+              "type": "markdown",
+              "state": {
+                "file": "공기업_학습관리/00_시작하기.md",
+                "mode": "source",
+                "source": false
+              },
               "icon": "lucide-file",
-              "title": "새 탭"
+              "title": "00_시작하기"
             }
           }
         ]
@@ -191,9 +195,13 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "3d5939434b10fcf7",
+  "active": "6ab1c6578c2926a1",
   "lastOpenFiles": [
-    "코테준비/output/pdf/코테_이직준비_추가학습_6일차이후.pdf",
+    "English/Toeic/Toeic RC - Part 7.pdf",
+    "English/Toeic/Toeic RC - Part 6.pdf",
+    "English/Toeic/Toeic RC - Part 5.pdf",
+    "English/Toeic/Toeic RC - 실전 모의고사.pdf",
+    "코테준비/C++/코테_이직준비_추가학습_6일차이후.pdf",
     "코테준비/output/pdf",
     "코테준비/output",
     "공기업_학습관리/03_템플릿/하루공부.md",
@@ -201,10 +209,6 @@
     "공기업_학습관리/02_과목별PDF/09.빅데이터·AI.pdf",
     "공기업_학습관리/02_과목별PDF/10.NCS.pdf",
     "공기업_학습관리/02_과목별PDF/12.SQL.pdf",
-    "공기업_학습관리/02_과목별PDF/08.컴퓨터구조.pdf",
-    "공기업_학습관리/02_과목별PDF/07.네트워크.pdf",
-    "공기업_학습관리/02_과목별PDF/05.소프트웨어공학.pdf",
-    "공기업_학습관리/02_과목별PDF/06.정보보안.pdf",
     "공기업_학습관리/01_공부기록/공부기록.md",
     "공기업_학습관리/00_시작하기.md",
     "Project/uLED/분석_Docs/uLED 노출.md",
