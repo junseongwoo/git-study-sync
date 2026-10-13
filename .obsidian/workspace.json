@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "공기업_학습관리/00_시작하기.md",
+                "file": "CS/CPP/03.Mutex와 Condition Variable.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "00_시작하기"
+              "title": "03.Mutex와 Condition Variable"
             }
           }
         ]
@@ -195,8 +195,9 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "6ab1c6578c2926a1",
+  "active": "3d5939434b10fcf7",
   "lastOpenFiles": [
+    "공기업_학습관리/00_시작하기.md",
     "English/Toeic/Toeic RC - Part 7.pdf",
     "English/Toeic/Toeic RC - Part 6.pdf",
     "English/Toeic/Toeic RC - Part 5.pdf",
@@ -208,9 +209,7 @@
     "공기업_학습관리/02_과목별PDF/11.Python·C++.pdf",
     "공기업_학습관리/02_과목별PDF/09.빅데이터·AI.pdf",
     "공기업_학습관리/02_과목별PDF/10.NCS.pdf",
-    "공기업_학습관리/02_과목별PDF/12.SQL.pdf",
     "공기업_학습관리/01_공부기록/공부기록.md",
-    "공기업_학습관리/00_시작하기.md",
     "Project/uLED/분석_Docs/uLED 노출.md",
     "Project/uLED/분석_Docs/RecipeWindow_파라미터_교육해설_20260928.md",
     "Project/uLED/분석_Docs/12.align1-mark3-cam2-stage-t-uvw-explanation.md",
