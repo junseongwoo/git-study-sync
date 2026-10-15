@@ -541,8 +541,10 @@ class Book:
         self.story.append(toc)
 
         self.start("책 정보 및 정리 범위", "book-scope")
-        self.p("원문에서 확인한 책 정보", "sub")
+        self.p("책 정보", "sub")
         self.p("책 제목: " + self.info["confirmed_title"])
+        if self.info.get("title_note"):
+            self.p(self.info["title_note"], "small")
         if self.info.get("author"):
             self.p("저자: " + str(self.info["author"]))
         self.p(self.info["scope_note"])
