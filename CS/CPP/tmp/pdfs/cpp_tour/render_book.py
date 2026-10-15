@@ -259,6 +259,9 @@ class CodeBlock(Flowable):
 
     def split(self, availWidth, availHeight):
         self.wrap(availWidth, availHeight)
+        # Short examples stay intact; long examples retain continued panels.
+        if len(self.lines) <= 20:
+            return []
         count = math.floor((availHeight - 2 * self.pad - self.head) / self.leading)
         if count < 3 or count >= len(self.lines):
             return []
@@ -453,7 +456,8 @@ class Book:
         self.rendered_codes[cid] += 1
         self.source(code.get("source"), "코드 출처")
         if code.get("excerpt"):
-            self.p(code.get("excerpt_note") or "원문 코드의 일부를 발췌했으며, 나머지 부분은 생략했습니다.", "small")
+            note = self.p(code.get("excerpt_note") or "원문 코드의 일부를 발췌했으며, 나머지 부분은 생략했습니다.", "small")
+            note.keepWithNext = True
         if str(code.get("code", "")).strip():
             self.story.append(CodeBlock(code["code"]))
         if code.get("meaning"):

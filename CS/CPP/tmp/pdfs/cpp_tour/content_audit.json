@@ -1,0 +1,98 @@
+{
+  "chapter_count": 11,
+  "all_chapters_present": false,
+  "errors": [],
+  "warnings": [],
+  "summary": [
+    {
+      "chapter": "C01",
+      "sections": 16,
+      "codes": 8,
+      "prose_chars": 5963,
+      "limitations": []
+    },
+    {
+      "chapter": "C02",
+      "sections": 6,
+      "codes": 7,
+      "prose_chars": 3110,
+      "limitations": []
+    },
+    {
+      "chapter": "C03",
+      "sections": 15,
+      "codes": 8,
+      "prose_chars": 5995,
+      "limitations": []
+    },
+    {
+      "chapter": "C04",
+      "sections": 12,
+      "codes": 8,
+      "prose_chars": 5982,
+      "limitations": []
+    },
+    {
+      "chapter": "C06",
+      "sections": 14,
+      "codes": 7,
+      "prose_chars": 4235,
+      "limitations": [
+        "원문 Buffer의 T[N]; 및 복사 캡처 설명의 [=x]는 의심되는 원문 표기를 보존하고 확인 필요로 표시했다."
+      ]
+    },
+    {
+      "chapter": "C07",
+      "sections": 14,
+      "codes": 7,
+      "prose_chars": 4791,
+      "limitations": [
+        "컨셉의 표준·기술 명세 상태와 코드 표기는 원문 당시의 설명을 유지했다."
+      ]
+    },
+    {
+      "chapter": "C08",
+      "sections": 4,
+      "codes": 2,
+      "prose_chars": 1426,
+      "limitations": []
+    },
+    {
+      "chapter": "C09",
+      "sections": 9,
+      "codes": 6,
+      "prose_chars": 3917,
+      "limitations": [
+        "cat의 문자열 생성 표기를 원문 그대로 보존했다. 일부 정규 표현식 코드 기호는 원문 확인 필요로 표시하고 임의로 수정하지 않았다."
+      ]
+    },
+    {
+      "chapter": "C11",
+      "sections": 9,
+      "codes": 5,
+      "prose_chars": 3823,
+      "limitations": []
+    },
+    {
+      "chapter": "C12",
+      "sections": 10,
+      "codes": 5,
+      "prose_chars": 3925,
+      "limitations": [
+        "[원문 확인 필요] 책 270쪽 RandomAccessIterator 표의 일부 산술 기호는 제공 이미지에서 물음표 모양으로 보인다. 해당 기호를 임의로 복원하지 않고 연산 범주만 요약했다."
+      ]
+    },
+    {
+      "chapter": "C16",
+      "sections": 22,
+      "codes": 4,
+      "prose_chars": 6721,
+      "limitations": [
+        "인쇄 371쪽 이후의 참고 자료 나머지와 16.5 조언 본문은 제공되지 않았다. 16.5는 목차에서 존재와 시작 번호만 확인했다.",
+        "제공 PDF의 1~12쪽에 놓인 인쇄 359~370쪽을 347~358쪽 뒤로 돌려 원문 장 순서로 편집했다.",
+        "연혁과 기능 지원·예정 상태를 현재 사실로 갱신하지 않았다.",
+        "363쪽 packaged_thread 표기는 원문 확인이 필요한 표기로 보존했다."
+      ]
+    }
+  ]
+}
