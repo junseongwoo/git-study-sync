@@ -525,7 +525,12 @@ class Book:
                     seen_pages.add(page)
             rows.append([term, ", ".join(links)])
         if rows:
-            self.table(["개념", "학습 교재 쪽"], rows, [TEXT_W * .70, TEXT_W * .30], markup_columns={1})
+            paired = []
+            for i in range(0, len(rows), 2):
+                paired.append(rows[i] + (rows[i + 1] if i + 1 < len(rows) else ["", ""]))
+            self.table(["개념", "교재 쪽", "개념", "교재 쪽"], paired,
+                       [TEXT_W * .38, TEXT_W * .12, TEXT_W * .38, TEXT_W * .12],
+                       markup_columns={1, 3}, compact=True)
 
     def compose(self):
         self.story.extend([Cover(self.info["confirmed_title"], self.s), NextPageTemplate("normal"), PageBreak()])
