@@ -1,0 +1,96 @@
+{
+  "errors": [],
+  "chapters": [
+    {
+      "chapter": 6,
+      "sections_and_subsections": 14,
+      "codes": 7,
+      "section_prose_chars": 4369
+    },
+    {
+      "chapter": 7,
+      "sections_and_subsections": 14,
+      "codes": 7,
+      "section_prose_chars": 4888
+    },
+    {
+      "chapter": 8,
+      "sections_and_subsections": 4,
+      "codes": 2,
+      "section_prose_chars": 1426
+    },
+    {
+      "chapter": 9,
+      "sections_and_subsections": 9,
+      "codes": 6,
+      "section_prose_chars": 3917
+    },
+    {
+      "chapter": 10,
+      "sections_and_subsections": 11,
+      "codes": 8,
+      "section_prose_chars": 4529
+    }
+  ],
+  "source_review": {
+    "only_source": "C:/Users/user/Desktop/책/A_Tour_Of_C++.pdf",
+    "read_ocr_in_full_for_chapters": [
+      6,
+      7,
+      8,
+      9,
+      10
+    ],
+    "selected_code_images_reviewed": [
+      139,
+      140,
+      141,
+      143,
+      147,
+      148,
+      150,
+      157,
+      163,
+      167,
+      171,
+      173,
+      174,
+      175,
+      176,
+      183,
+      184,
+      187,
+      188,
+      192,
+      193,
+      194,
+      195,
+      196,
+      197,
+      198,
+      200,
+      201,
+      202,
+      203,
+      204,
+      212,
+      213,
+      214,
+      215,
+      216,
+      217,
+      218,
+      220,
+      223
+    ],
+    "scope": "대표 코드 및 주요 표는 원문 이미지와 직접 대조. 전체 원문 모든 문자에 대한 독립적 교정 완료를 뜻하지 않음.",
+    "known_original_uncertainties": [
+      "인쇄146 T[N];",
+      "인쇄153 [=x]",
+      "인쇄195 string res(...) 생성",
+      "인쇄200·204·205 일부 정규 표현식 기호",
+      "인쇄216 is/cin 혼용",
+      "인쇄228 확장자 옮긴이 설명"
+    ]
+  }
+}

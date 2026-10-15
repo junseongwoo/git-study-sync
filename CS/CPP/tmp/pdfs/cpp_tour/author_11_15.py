@@ -426,7 +426,289 @@ constexpr bool Is_arithmetic()
        '[원문 확인 필요] 책 300쪽의 any 예외 이름 bad_any_access를 원문대로 보존했다. 의심되는 표기를 외부 지식으로 수정하지 않았다.'])
 
 
+def chapter14():
+    sections=[
+      section('14.1','소개',316,316,
+        p('수치 계산은 데이터베이스·네트워킹·장비 제어·그래픽스·시뮬레이션·금융 분석 등 큰 시스템의 일부로 쓰인다. C++는 계산 과정에 복잡한 자료 구조가 함께 필요할 때 장점을 가진다. 이 장은 그런 작업을 지원하는 표준 라이브러리 수치 기능을 정리한다.')),
+      section('14.2','수학 함수',316,317,
+        p('<cmath>는 float·double·long double에 대한 표준 수학 함수를 제공한다. 대응하는 복소수 버전은 <complex>에서 찾을 수 있고 반환 타입은 인자 타입과 같다.'),
+        table(['함수','원문에서 설명한 역할·조건'],[
+          ['abs / ceil / floor','절댓값 / x 이상인 가장 작은 정수 / x 이하인 가장 큰 정수'],
+          ['sqrt','제곱근; x는 음수가 아니어야 함'],['cos / sin / tan','코사인 / 사인 / 탄젠트'],
+          ['acos / asin / atan','역코사인 / 역사인 / 역탄젠트; acos는 음이 아닌 결과, asin은 0에서 가장 가까운 결과'],
+          ['sinh / cosh / tanh','하이퍼볼릭 사인 / 코사인 / 탄젠트'],['exp / log / log10','밑 e의 지수 / 자연 로그 / 밑 10의 로그; log의 x는 양수']],316,317),
+        p('원문은 <cerrno>의 errno로 에러를 나타내며 EDOM은 정의역 에러, ERANGE는 구간 에러라고 설명한다. 예제는 먼저 errno를 0으로 지운 뒤 음수의 sqrt와 너무 큰 pow 결과를 검사한다. <cstdlib>에도 몇 가지 수학 함수가 있고, <cmath>에는 beta·riemann_zeta·sph_bessel 같은 특수 수학 함수도 있다.',317,317)),
+      section('14.3','수치 알고리즘',318,319,
+        p('<numeric>은 시퀀스의 합·내적·부분합·이웃한 차이 등을 일반화한다. 각 알고리즘에는 흔히 쓰는 기본 연산 버전과, 적용 연산을 인자로 받는 일반화 버전이 있다. 모든 표준 라이브러리 시퀀스에 적용할 수 있다.'),
+        table(['알고리즘','원문에서 정리한 역할'],[
+          ['accumulate(b,e,i) / accumulate(b,e,i,f)','초기 값 i를 바탕으로 합산 / + 대신 f 사용'],
+          ['inner_product','두 시퀀스의 대응 요소 곱을 합산하고 초기 값에 더함; +·*를 별도 연산으로 바꾸는 버전 제공'],
+          ['partial_sum','각 위치까지의 부분합; + 대신 f를 지정할 수 있음'],
+          ['adjacent_difference','이웃한 요소의 차이; 비어 있지 않으면 첫 출력은 첫 입력 값; - 대신 f 지정 가능'],
+          ['iota','연속적인 값으로 구간을 채우는 기능; 원문 표는 각 요소에 ++v를 대입한다고 표기'],
+          ['gcd / lcm','정수의 최대공약수 / 최소공배수']],318,318),ref('C14-E01'),
+        p('[원문 확인 필요] 318쪽 iota 표는 ++v와 v+1, v+2, ...로 설명한다. 이 노트는 의심되는 시작 값 표기를 임의로 고치거나 다른 실행 결과를 만들지 않았다.',318,318)),
+      section('14.3.1','병렬 알고리즘',319,320,
+        p('<numeric>의 병렬 수치 알고리즘은 기존 함수와 비슷하지만 일부 의미가 다르다. **reduce**는 accumulate와 달리 요소 연산의 순서가 정해지지 않는다. 초기 값과 실행 정책을 주는 형태, 기본 값을 사용하는 형태가 제공된다.'),
+        table(['알고리즘','차이와 역할'],[
+          ['reduce','순서가 정해지지 않는 누적'],['exclusive_scan / inclusive_scan','i번째 합에서 i번째 입력 제외 / 포함'],
+          ['transform_reduce','각 요소에 f를 적용한 뒤 reduce'],['transform_exclusive_scan / transform_inclusive_scan','각 요소에 f를 적용한 뒤 각각의 scan 실행']],319,319),
+        ref('C14-E02'),p('일반 병렬 알고리즘과 마찬가지로 실행 정책을 지정할 수 있다. 기본 연산 대신 별도의 연산을 받거나 기본 정책·기본 값을 쓰는 형태도 있다고 원문은 설명하며, 표에서는 편의상 일부를 생략했다.',319,320)),
+      section('14.4','복소수',320,321,
+        p('<complex>의 **complex<Scalar>**는 실수부와 허수부 타입을 매개변수로 받는 복소수 템플릿이다. 원문은 float·double·long double에 대한 복소수 사용을 보여 준다. 일반적인 산술 연산과 sqrt·pow 같은 수학 함수를 사용할 수 있고 생성자의 실수부·허수부에는 기본 인자가 제공된다.')),
+      section('14.5','난수',321,323,
+        p('<random>의 난수 생성기는 **엔진**과 **분포**를 결합한다. 엔진은 난수 또는 의사 난수 시퀀스를 만들고, 분포는 그 값을 수학적 분포의 특정 구간으로 매핑한다. 원문은 같은 확률로 정수를 만드는 uniform_int_distribution, 종형 곡선의 normal_distribution, exponential_distribution을 예로 든다.',321,321),
+        p('엔진과 분포를 직접 조합한 주사위 예제에 이어 원문은 두 구성 요소를 Rand_int 클래스에 묶어 간단한 사용 인터페이스를 제시한다. 이 클래스는 기본 난수 엔진, 정수 분포, 호출 연산자, 시드 설정 연산을 가진다.',321,322),ref('C14-E03'),
+        p('원문의 히스토그램 예는 0부터 9까지의 값을 200번 생성하고 각 값의 빈도만큼 별표를 출력한다. 결과는 통계적 변동이 있는 분포로 제시되므로 이 노트에서 새로운 난수값이나 고정 출력표를 만들지 않는다. 조언에서는 충분한 무작위성을 확인하고 C의 rand()를 사용하지 않도록 권한다.',322,323)),
+      section('14.6','벡터 산술',323,324,
+        p('일반 컨테이너 **vector**는 값을 저장하고 반복자·알고리즘 구조와 결합하는 데 초점을 두며 수학적인 벡터 연산을 직접 제공하지 않는다. <valarray>의 **valarray**는 일반성이 다소 낮은 대신 수치 계산 최적화에 더 적합하도록 제공되는 배열 템플릿이다.'),ref('C14-E04'),
+        p('valarray는 배열 수준의 산술 연산과 일반적인 수학 함수, 요소 인덱싱을 제공한다. 다차원 계산을 구현하기 위한 건너뛰기 접근(stride access)도 지원한다. 원문은 연산·요소 타입의 유연성보다 실행 효율이 중요할 때의 선택으로 설명한다.',324,324)),
+      section('14.7','수치 한계',324,324,
+        p('<limits>의 **numeric_limits**는 내장 수치 타입의 속성을 기술한다. 원문은 char의 부호 유무와 int가 필요한 큰 값을 표현할 수 있는지 static_assert로 검사한다. max()가 constexpr 함수이므로 컴파일 시간 조건으로 사용할 수 있다.'),ref('C14-E05')),
+      section('14.8','조언',325,325,
+        ul(['수치 문제를 수학적으로 확신할 수 없다면 전문적인 조언과 실험을 활용한다. 기본 언어 기능만으로 직접 만들기보다 라이브러리를 사용한다.',
+          '시퀀스를 계산하는 루프 전에 accumulate·inner_product·partial_sum·adjacent_difference를 고려한다.',
+          '복소수에는 std::complex를 사용한다. 난수 생성은 엔진과 분포를 결합하고 무작위성에 주의를 기울인다.',
+          '수치 효율에 우선순위가 있으면 valarray를 고려한다. numeric_limits로 수치 타입이 용도에 맞는지 검사한다.']))]
+    codes=[
+      code('C14-E01','accumulate의 초기 값과 합산',318,318,r'''list<double> lst {1, 2, 3, 4, 5, 9999.99999};
+auto s = accumulate(lst.begin(),lst.end(),0.0); // 합 계산: 10014.9999''','초기 값 0.0을 바탕으로 list의 구간을 합산한다. 원문 주석의 자릿수는 변경하지 않았다.',output='원문 코드 주석은 합을 10014.9999로 표기한다.',cautions=['[원문 확인 필요] 주석의 자릿수 표기를 그대로 보존했으며 별도 계산 결과로 교체하지 않았다.']),
+      code('C14-E02','reduce와 병렬 실행 정책',320,320,r'''vector<double> v {1, 2, 3, 4, 5, 9999.99999};
+auto s = reduce(v.begin(),v.end()); // double을 누적자로 사용해 합을 계산
+
+vector<double> large;
+// ... 많은 값들로 large를 채운다 ...
+auto s2 = reduce(par_unseq, large.begin(),large.end()); // 가능한 병렬화 정도로 합을 계산''','기본 누적과 par_unseq를 요청한 누적의 원문 예제다. large의 실제 데이터는 원문부터 생략되어 있다.',cautions=['reduce는 accumulate와 달리 요소에 연산을 적용하는 순서가 정해져 있지 않다.']),
+      code('C14-E03','엔진과 분포를 묶은 Rand_int',322,322,r'''class Rand_int {
+public:
+    Rand_int(int low, int high) :dist{low,high} { }
+    int operator()() { return dist(re); } // int 생성
+    void seed(int s) { re.seed(s); } // 난수 엔진에 새로운 시드 선택
+private:
+    default_random_engine re;
+    uniform_int_distribution<> dist;
+};''','생성자에서 정수 분포의 구간을 정하고, 호출할 때 dist가 엔진 re를 사용해 int를 생성한다. seed는 엔진의 시드를 바꾼다.'),
+      code('C14-E04','valarray의 배열 수준 산술',324,324,r'''void f(valarray<double>& a1, valarray<double>& a2)
+{
+    valarray<double> a = a1*3.14+a2/a1; // 수치 배열 연산자 *, +, /, =
+    a2 += a1*3.14;
+    a = abs(a);
+    double d = a2[7];
+    // ...
+}''','배열 수준 연산과 수학 함수 적용, 인덱스 접근을 함께 보여 주는 원문 함수다. 원문의 생략 주석을 유지했다.'),
+      code('C14-E05','수치 타입의 성질을 컴파일 시간에 검사',324,324,r'''static_assert(numeric_limits<char>::is_signed,"부호 없는 문자!");
+static_assert(100000<numeric_limits<int>::max(),"작은 int!");''','char의 부호 유무와 int가 100000보다 큰 최대 값을 제공하는지 원문의 static_assert 조건으로 확인한다. max()는 constexpr 함수다.')]
+    comparisons=[{'title':'vector와 valarray','source':src(323,325),'headers':['기준','vector','valarray'],'rows':[
+      ['목적','일반적인 값 저장·컨테이너 구조','수치 계산 최적화'],['일반성','유연한 일반 컨테이너','일반성은 상대적으로 낮음'],['수치 배열 연산','수학 벡터 연산을 직접 제공하지 않음','배열 산술·수학 함수·stride access']]},
+      {'title':'accumulate와 reduce','source':src(318,320),'headers':['기준','accumulate','reduce'],'rows':[
+      ['구분','순차 수치 알고리즘','병렬 수치 알고리즘'],['적용 순서','순차 처리의 누적','요소 연산 순서가 정해지지 않음'],['정책','원문의 순차 예','실행 정책 지정 가능']]}]
+    finish(14,'수치',315,325,
+      ['표준 수학 함수와 에러 표현, 시퀀스 수치 알고리즘을 다룬다.','복소수·난수·수치 배열·수치 타입 속성을 연결한다.'],
+      ['수학 함수와 errno','수치 누적 및 병렬 알고리즘','복소수와 엔진·분포','valarray와 numeric_limits'],sections,codes,
+      ['수학 함수의 정의역·구간 에러 조건을 유지한다.','수치 알고리즘은 기본 연산을 일반화하고 다른 연산도 인자로 받는다.','reduce의 연산 순서는 accumulate와 구별한다.','난수 생성기는 엔진과 분포의 결합이다.','numeric_limits와 constexpr로 타입의 용도 적합성을 검사할 수 있다.'],comparisons,
+      ['합·내적·부분합·인접 차이의 목적과 연산 매개변수를 구분한다.','엔진은 값의 시퀀스를 만들고 분포는 필요한 범위와 분포로 매핑한다.','일반 저장 vector와 수치 계산 valarray의 선택 기준을 복습한다.','수치 타입의 표현 가능성은 numeric_limits로 확인한다.'],
+      [('수학 함수 / errno','14.2'),('수치 알고리즘 / accumulate','14.3'),('reduce / 병렬 수치 알고리즘','14.3.1'),('complex','14.4'),('난수 엔진과 분포','14.5'),('valarray','14.6'),('numeric_limits','14.7')],
+      ['[원문 확인 필요] 318쪽 iota 표의 ++v 및 시작 값, accumulate 예제의 합 주석 자릿수는 원문 표기를 유지했다.'])
+
+
+def chapter15():
+    sections=[
+      section('15.1','소개',327,328,
+        p('**동시성**은 여러 태스크를 동시에 실행하는 것으로, 여러 프로세서로 처리량을 늘리거나 대기 중에도 다른 일을 진행하여 반응성을 높이는 데 사용한다. 원문의 표준 라이브러리는 정교한 고수준 모델보다는 시스템 수준 동시성을 이식성과 타입 안전성을 고려해 제공한다.'),
+        p('C++는 한 주소 공간의 여러 스레드를 지원하며 메모리 모델과 원자적 연산을 제공한다. **데이터 경합**은 변경 가능한 데이터에 대한 무질서한 동시 접근이다. 원자적 연산은 락 없는 프로그래밍의 기반이지만 원문은 이를 전문가에게 맡기도록 조언한다. 동시성 자체가 해답은 아니며, 순차 해결이 더 간단하고 빠를 수 있다. 직접 스레드를 관리하는 대신 병렬 알고리즘을 이용하는 방법도 있다.')),
+      section('15.2','태스크와 thread',328,330,
+        p('**태스크**는 다른 계산과 동시에 실행할 수 있는 작업이며, **thread**는 이를 표현하는 시스템 수준 개념이다. <thread>의 std::thread에 함수 또는 함수 객체를 넘겨 실행을 시작한다. join()은 해당 스레드의 종료를 기다린다.',328,329),ref('C15-E01'),
+        p('한 프로그램의 스레드는 주소 공간을 공유하므로 객체를 통한 통신이 가능하지만 락 등으로 접근을 제어해야 한다. 원문은 두 태스크가 동기화 없이 cout을 쓰면 실행 순서가 정해지지 않아 출력이 뒤섞일 수 있음을 보여 준다. 명확한 통신 외에는 태스크를 분리하고, 인자를 받아 결과를 반환하는 함수처럼 다루는 것이 가장 단순한 접근이다.',329,330)),
+      section('15.3','인자 전달',330,331,
+        p('태스크에는 값·포인터·참조로 데이터를 전달할 수 있다. thread의 가변 템플릿 생성자는 실행할 함수와 그 인자들을 받는다. <functional>의 ref()를 쓰면 객체를 값으로 전달하는 대신 참조로 취급한다. 함수 객체는 생성 시 받은 참조를 멤버에 저장할 수도 있다.'),ref('C15-E02'),
+        p('원문의 F{vec2}가 vec2를 참조하는 동안 다른 태스크가 vec2에 접근해서는 안 된다. vec2를 값으로 넘기면 이 공유 위험을 피할 수 있다. 컴파일러는 함수가 주어진 인자로 호출 가능한지 검사하고 스레드가 실행할 함수 객체를 구성한다.')),
+      section('15.4','결과 반환',331,332,
+        p('비const 참조로 입력을 받아 그것을 변경하는 방식으로 결과를 돌려줄 수도 있다. 원문은 입력을 const 참조로 받고 결과 저장 위치를 별도 인자로 넘기는 편이 더 명확하다고 설명한다. 함수 포인터 인자·함수 객체 멤버·참조 캡처 람다의 세 방식을 나란히 보여 준다.'),ref('C15-E03'),
+        p('모든 join() 뒤에 결과를 사용하므로 각 태스크의 완료를 기다린다. 원문은 이런 참조 기반 결과 전달이 흔하고 동작하지만 덜 우아하다고 평가하고, 이후 future·promise로 더 높은 수준의 결과 전달을 설명한다.')),
+      section('15.5','데이터 공유',333,335,
+        p('공유 데이터를 동시에 변경할 때는 한 번에 한 태스크만 해당 데이터에 접근하도록 동기화한다. 변경 불가능한 데이터를 여러 태스크가 읽는 경우는 구별한다. <mutex>의 **mutex**는 상호 배제 객체이며 lock()으로 획득하고 unlock()으로 해제한다. scoped_lock은 이 획득·해제를 RAII로 묶는다.',333,333),ref('C15-E04'),
+        p('다른 스레드가 mutex를 가진 동안 획득 시도는 대기하며, 해제되면 기다리던 스레드가 진행한다. mutex와 보호 데이터의 관계는 관례적이므로 같은 Record 안에 두거나 이름·주석으로 관계를 명확히 해야 한다. 명시적인 lock/unlock보다 자원 핸들이 간단하고 안전하다.',333,334),
+        p('서로 다른 순서로 여러 mutex를 획득하면 상대가 가진 mutex를 기다리느라 모두 멈추는 **교착 상태(데드락)**가 생길 수 있다. 원문의 scoped_lock은 여러 mutex를 한 번에 받고 모두 획득한 뒤 진행하며, 일부만 획득한 채로 블록되지 않는다. 소멸 시에는 모두 해제한다.',334,334),
+        p('공유 데이터는 호출·반환보다 낮은 수준의 통신이며 락 비용도 있다. 데이터 복사보다 더 빠르다고 측정 없이 가정하지 않는다. **shared_mutex**는 읽기 스레드의 shared_lock을 함께 허용하고, 쓰기 스레드의 unique_lock에는 배타적 접근을 제공하여 읽기/쓰기 락을 구현한다.',334,335)),
+      section('15.6','이벤트 대기',335,338,
+        p('시간 경과는 가장 간단한 이벤트다. this_thread는 현재 스레드를 가리키며 sleep_for로 기다릴 수 있다. chrono의 시각 차이와 duration_cast로 경과 시간을 표시할 수 있고 별도 스레드를 만들 필요는 없다.',335,336),
+        p('<condition_variable>의 **condition_variable**은 다른 태스크의 행동으로 조건이나 이벤트가 생기기를 기다리는 수단이다. 원문의 메시지 큐는 queue·조건 변수·mutex를 함께 사용한다. 소비자는 unique_lock을 획득한 뒤 큐가 비어 있지 않다는 술어로 기다린다. wait는 대기 중 락을 해제하고 깨어날 때 다시 획득한다.',336,337),ref('C15-E05'),
+        p('깨어났다는 이유만으로 필요한 조건이 성립하는 것은 아니다. 다른 태스크가 먼저 큐에 접근했을 수 있으므로 !mqueue.empty()를 다시 확인한다. 메시지를 가져와 제거한 뒤에는 락을 해제하고 메시지를 처리해 임계 영역 시간을 줄인다. 생산자는 락으로 큐 삽입을 보호하고 notify_one()으로 통지한다.',337,338),
+        p('unique_lock은 lock()/unlock()으로 낮은 수준의 제어가 가능하며 원문은 하나의 mutex만 다룬다고 설명한다. [원문 확인 필요] 337쪽은 scoped_lock과 비교하면서 unique_lock은 복사가 가능하다고 서술한다. 이 문장은 의심되는 원문 표기로 남겨 두며, 이 노트에서 다른 규칙으로 조용히 교체하지 않는다.',337,337)),
+      section('15.7','태스크 간 통신',338,338,
+        p('<future>는 직접 thread·락을 다루는 것보다 높은 수준의 통신 수단을 제공한다. future·promise는 태스크 사이의 결과 전달, packaged_task는 태스크 실행과 결과의 연결, async는 함수 호출과 비슷한 태스크 시작에 사용한다.')),
+      section('15.7.1','future와 promise',338,340,
+        p('**promise**에 값을 넣으면 연결된 **future**에서 그 값을 볼 수 있다. future<X>::get()은 필요한 경우 값 계산이 끝날 때까지 기다리고 X를 얻는다. 값 대신 예외가 전달되거나 값을 계산할 수 없으면 get()에서 예외를 던질 수 있다.',338,339),
+        p('promise의 set_value()와 set_exception()은 future의 get()에 대응한다. 태스크는 결과 또는 예외 중 하나를 전달한다. current_exception()은 현재 잡힌 예외를 참조하며, 전달된 예외는 get()의 호출 경로 어딘가에서 처리해야 한다. 락을 명시적으로 조작하지 않고도 시스템이 전달을 수행한다.',339,340),ref('C15-E06')),
+      section('15.7.2','packaged_task',340,342,
+        p('**packaged_task**는 태스크의 반환값이나 예외를 promise에 넣는 래퍼를 제공하고, get_future()로 대응 future를 돌려준다. 템플릿 인자는 태스크의 호출 타입이며 생성자 인자는 수행할 함수다. 원문의 accum 예제는 vector 구간의 두 절반을 별도 태스크로 합산한다.',340,341),ref('C15-E07'),
+        p('packaged_task는 promise를 소유하는 자원 핸들이므로 복사할 수 없고 thread로 전달할 때 move가 필요하다. 명시적인 락 없이 태스크와 결과에 집중할 수 있으며 별도 스레드의 두 작업은 잠재적으로 병렬 실행된다.',341,342)),
+      section('15.7.3','async()',342,343,
+        p('**async()**는 잠재적으로 비동기 실행할 태스크를 함수 호출과 유사하게 시작한다. 호출 시작·결과 가져오기·실제 실행을 분리하여 thread나 락보다 태스크 자체에 집중하게 한다. 원문은 충분히 큰 vector를 네 구간으로 나누고 future의 결과를 모으는 예를 든다.',342,342),ref('C15-E08'),
+        p('원문은 락을 이용해 데이터를 공유하는 태스크에 async를 사용할 수 없다는 한계로 서술하며, 스레드 수는 호출 시점의 시스템 자원을 고려해 결정되므로 알 수 없다고 설명한다. v.size()<10000 같은 기준은 스레드 시작 비용과 계산 비용에 대한 원시적인 가정으로, 성능 판단을 잘못할 수 있음을 경고한다.',343,343),
+        p('accumulate 같은 표준 연산을 직접 병렬화하기보다 reduce(par_unseq, ...) 같은 병렬 알고리즘이 더 잘 동작할 수 있다고 원문은 권한다. async는 성능을 위한 병렬 계산만을 위한 것이 아니며 메인 작업 중 사용자 입력을 받는 태스크 같은 반응성 용도도 있다.',343,343)),
+      section('15.8','조언',343,345,
+        ul(['처리량·반응성에 동시성이 필요한지 살피고 가능한 높은 추상화 수준에서 작업한다. 순차 해법과 병렬 알고리즘을 먼저 고려한다.',
+          '공유 데이터와 데이터 경합을 가능한 피한다. thread의 종료는 join으로 기다린다.',
+          'mutex는 보호하는 데이터와 가까이 두고 RAII 핸들로 관리한다. 여러 락은 scoped_lock으로 함께 획득한다.',
+          '이벤트 통신에는 condition_variable과 unique_lock을 쓰고 조건 없이 기다리지 않는다. 임계 영역 시간을 최소화한다.',
+          '태스크를 동시에 실행할 수 있는 함수로 생각한다. promise로 결과를 제공하고 future로 얻으며 packaged_task로 값·예외 전달을 묶는다.',
+          '간단한 태스크 시작에는 async를 사용하고 thread·mutex를 직접 다루는 일을 줄인다.']))]
+    codes=[
+      code('C15-E01','함수와 함수 객체를 스레드에서 실행',329,329,r'''void f(); // 함수
+
+struct F { // 함수 객체
+    void operator()(); // F의 호출 연산자(6.3.2절)
+};
+
+void user()
+{
+    thread t1 {f}; // 별도 스레드에서 f() 실행
+    thread t2 {F()}; // 별도 스레드에서 F()() 실행
+
+    t1.join(); // t1을 기다림
+    t2.join(); // t2를 기다림
+}''','함수 f와 함수 객체 F를 각각 thread로 시작하고 두 join으로 종료를 기다리는 원문 예다.'),
+      code('C15-E02','참조 인자를 전달하는 두 방식',330,331,r'''void f(vector<double>& v); // v로 무언가를 수행하는 함수
+
+struct F { // 함수 객체: v로 무언가를 수행
+    vector<double>& v;
+    F(vector<double>& vv) :v{vv} { }
+    void operator()(); // 적용 연산자; 6.3.2절
+};
+
+int main()
+{
+    vector<double> some_vec {1,2,3,4,5,6,7,8,9};
+    vector<double> vec2 {10,11,12,13,14};
+
+    thread t1 {f,ref(some_vec)}; // f(some_vec)을 별도의 스레드에서 실행
+    thread t2 {F{vec2}}; // F(vec2)()를 별도의 스레드에서 실행
+
+    t1.join();
+    t2.join();
+}''','ref(some_vec)는 참조 전달을 명시하고 F{vec2}는 함수 객체 멤버에 참조를 저장한다.',cautions=['F가 vec2를 사용하는 동안 다른 태스크에서 vec2에 접근하지 않아야 한다.']),
+      code('C15-E03','별도 출력 위치로 결과를 돌려받기',332,332,r'''void f(const vector<double>& v, double* res); // v에서 입력을 받아 *res에 결과를 저장
+
+class F {
+public:
+    F(const vector<double>& vv, double* p) :v{vv}, res{p} { }
+    void operator()(); // *res에 결과 저장
+private:
+    const vector<double>& v; // 입력
+    double* res; // 출력을 저장할 곳
+};
+
+double g(const vector<double>&); // 반환 값 사용
+
+void user(vector<double>& vec1, vector<double> vec2, vector<double> vec3)
+{
+    double res1;
+    double res2;
+    double res3;
+
+    thread t1 {f,cref(vec1),&res1}; // f(vec1,&res1)을 별도 스레드로 실행
+    thread t2 {F{vec2,&res2}}; // F{vec2,&res2}()를 별도 스레드로 실행
+    thread t3 { [&](){ res3 = g(vec3); }}; // 지역 변수를 참조로 전달
+
+    t1.join();
+    t2.join();
+    t3.join();
+
+    cout << res1 << ' ' << res2 << ' ' << res3 << '\n';
+}''','입력의 const 참조와 결과 저장 위치를 분리한다. 함수·함수 객체·람다의 세 태스크가 완료된 후 결과들을 출력한다. f·F의 호출 연산자·g의 계산 내용은 원문부터 선언만 제시한다.'),
+      code('C15-E04','scoped_lock으로 공유 데이터 보호',333,333,r'''mutex m; // 제어용 mutex
+int sh; // 공유 데이터
+
+void f()
+{
+    scoped_lock lck {m}; // mutex 획득
+    sh += 7; // 공유 데이터 조작
+} // 암묵적인 mutex 해제''','RAII 락이 mutex 획득과 해제를 스코프에 연결해 공유 값 sh의 변경을 보호한다.'),
+      code('C15-E05','조건 변수로 메시지 큐를 기다리는 소비자',337,337,r'''void consumer()
+{
+    while(true) {
+        unique_lock lck {mutex}; // mutex 획득
+        mcond.wait(lck,[] { return !mqueue.empty(); }); // lck을 해제하고 대기;
+            // 깨어날 때 lck을 다시 획득
+            // mqueue가 비어있는 동안 깨어나지 않음
+        auto m = mqueue.front(); // 메시지 가져오기
+        mqueue.pop();
+        lck.unlock(); // lck 해제
+        // ... m을 처리 ...
+    }
+}''','큐가 비어 있지 않을 때까지 기다리고 메시지를 꺼낸 후 락을 해제하고 처리한다. mqueue·mcond·보호 mutex의 선언과 생산자는 원문의 앞뒤 페이지에 있다.',
+        ['락을 획득하고 wait에서 조건을 검사한다.','대기 중 락을 놓고 깨어나면 다시 획득한다.','큐에서 메시지를 제거한 뒤 unlock하여 처리 중 락을 오래 잡지 않는다.'],cautions=['[원문 확인 필요] 336쪽의 mutex 변수 선언은 mmutex이고 이 소비자 코드는 mutex로 표기되어 있다. 이름을 임의로 통일하지 않았다.'],excerpt=True,note='소비자 함수 전체를 발췌했습니다. 336쪽의 전역 선언과 338쪽의 producer 함수는 생략했습니다. 원문의 메시지 처리 생략 주석을 유지했습니다.'),
+      code('C15-E06','promise로 값 또는 예외 전달',339,340,r'''void f(promise<X>& px) // 태스크: 결과를 px에 넣기
+{
+    // ...
+    try {
+        X res;
+        // ... res에 값을 계산 ...
+        px.set_value(res);
+    }
+    catch (...) { // res를 계산할 수 없는 경우
+        px.set_exception(current_exception()); // future의 스레드로 예외 전달
+    }
+}''','정상 계산이면 set_value, 예외이면 현재 예외를 set_exception으로 연결된 future에 전달한다. 계산·연결 설정은 원문부터 생략되어 있으며 get() 호출자는 전달된 예외를 처리해야 한다.'),
+      code('C15-E07','packaged_task로 두 구간의 계산과 결과 연결',341,341,r'''double accum(double* beg, double* end, double init)
+    // 초깃값 init부터 시작해 [beg:end)를 모두 더함
+{
+    return accumulate(beg,end,init);
+}
+
+double comp2(vector<double>& v)
+{
+    using Task_type = double(double*,double*,double); // 태스크의 타입
+
+    packaged_task<Task_type> pt0 {accum}; // 태스크(즉, accum)를 패키징
+    packaged_task<Task_type> pt1 {accum};
+
+    future<double> f0 {pt0.get_future()}; // pt0의 future를 저장
+    future<double> f1 {pt1.get_future()}; // pt1의 future를 저장
+
+    double* first = &v[0];
+    thread t1 {move(pt0),first,first+v.size()/2,0}; // pt0를 위한 스레드 시작
+    thread t2 {move(pt1),first+v.size()/2,first+v.size(),0}; // pt1을 위한 스레드 시작
+
+    // ...
+
+    return f0.get()+f1.get(); // 결과 가져오기
+}''','accum 함수와 comp2의 전체 원문 블록을 보존했다. packaged_task에서 future를 얻고 두 절반의 계산을 시작한 다음 두 결과를 가져와 합친다.',cautions=['원문 자체에 // ... 생략 구간이 있다. join 등 이 구간에서 확인되지 않는 코드를 추가하지 않았다.']),
+      code('C15-E08','async로 네 구간의 결과를 모으기',342,342,r'''double comp4(vector<double>& v)
+    // v가 충분히 크면 많은 태스크를 시작
+{
+    if (v.size()<10000) // 동시성을 활용할 만한가?
+        return accum(v.begin(),v.end(),0.0);
+
+    auto v0 = &v[0];
+    auto sz = v.size();
+
+    auto f0 = async(accum,v0,v0+sz/4,0.0); // 첫 번째 1/4
+    auto f1 = async(accum,v0+sz/4,v0+sz/2,0.0); // 두 번째 1/4
+    auto f2 = async(accum,v0+sz/2,v0+sz*3/4,0.0); // 세 번째 1/4
+    auto f3 = async(accum,v0+sz*3/4,v0+sz,0.0); // 네 번째 1/4
+
+    return f0.get()+f1.get()+f2.get()+f3.get(); // 결과를 모아서 병합
+}''','작으면 순차 누적을 호출하고 그렇지 않으면 네 태스크를 시작하여 결과를 합치는 원문 함수다. 앞 절의 accum을 사용한다.',cautions=['10000이라는 기준은 원문이 원시적이고 잘못된 성능 가정일 수 있다고 경고하는 예다.','원문은 async의 스레드 수를 알 수 없으며 락으로 데이터를 공유하는 태스크에는 사용할 수 없다는 제한으로 설명한다.'])]
+    comparisons=[{'title':'태스크 통신 수단의 역할','source':src(338,343),'headers':['수단','원문에서의 역할'],'rows':[
+      ['promise','값이나 예외를 넣는 쪽'],['future','값이 준비될 때까지 기다리고 결과·예외를 받는 쪽'],
+      ['packaged_task','태스크와 promise를 묶고 대응 future를 제공'],['async','함수 호출처럼 태스크를 시작하고 결과 획득을 분리']]},
+      {'title':'원문에서 구별하는 락 핸들','source':src(333,337),'headers':['핸들','용도와 원문 조건'],'rows':[
+      ['scoped_lock','스코프 기반 mutex 관리; 여러 mutex를 함께 획득'],['unique_lock','조건 변수 wait와 명시적인 lock/unlock; 한 mutex 관리'],['shared_lock','shared_mutex에서 여러 읽기 접근을 공유']]}]
+    finish(15,'동시성',327,345,
+      ['태스크·스레드와 인자·결과 전달을 다룬다.','공유 데이터의 경합·락·데드락·이벤트 대기 조건을 이해한다.','future·promise·packaged_task·async로 태스크 통신을 표현한다.'],
+      ['시스템 수준 지원과 태스크 분리','thread 시작·인자·결과','RAII 락과 읽기/쓰기 동기화','조건 변수 대기','값·예외의 태스크 통신'],sections,codes,
+      ['동시성은 처리량·반응성 목적에 맞춰 선택하며 순차 해법보다 항상 빠른 것은 아니다.','thread의 join은 실행 종료를 기다린다.','참조 전달 시 공유 데이터의 접근 규칙이 필요하다.','락은 RAII로 관리하고 여러 락 획득에는 데드락을 주의한다.','조건 변수 대기에는 조건 술어를 유지한다.','promise는 값·예외를 넣고 future는 get으로 받아들이며 packaged_task가 이 연결을 묶는다.'],comparisons,
+      ['분리된 태스크를 함수처럼 다루는 방식과 명시적인 공유 데이터 접근의 차이를 복습한다.','scoped_lock·unique_lock·shared_lock의 역할과 보호 데이터의 관계를 정리한다.','wait의 락 해제·재획득·조건 확인 순서를 설명한 원문 흐름을 재확인한다.','값 또는 예외가 promise에서 future로 전달되는 관계를 복습한다.','packaged_task의 이동과 async의 실행 자원·성능 가정에 관한 원문 조건을 정리한다.'],
+      [('동시성 / 메모리 모델','15.1'),('태스크 / thread / join','15.2'),('참조 인자 / ref','15.3'),('태스크 결과 반환','15.4'),('mutex / scoped_lock','15.5'),('데드락','15.5'),('shared_mutex / shared_lock','15.5'),('condition_variable / unique_lock','15.6'),('future / promise','15.7.1'),('packaged_task','15.7.2'),('async','15.7.3')],
+      ['[원문 확인 필요] 337쪽은 unique_lock이 복사 가능하다고 서술한다. 원문 표기를 보존하고 다른 규칙을 보충하지 않았다.',
+       '[원문 확인 필요] 메시지 큐 예제는 336쪽 선언에서 mmutex, 337~338쪽 사용에서 mutex로 표기한다. 코드를 조용히 수정하지 않았다.'])
+
+
 if __name__=='__main__':
     chapter11()
     chapter12()
     chapter13()
+    chapter14()
+    chapter15()

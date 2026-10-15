@@ -690,11 +690,13 @@
       "source": {
         "pdf": [
           214,
-          215
+          215,
+          216
         ],
         "printed": [
           217,
-          218
+          218,
+          219
         ]
       },
       "code": "struct Entry {\n    string name;\n    int number;\n};\n\nostream& operator<<(ostream& os, const Entry& e)\n{\n    return os << \"{\\\"\" << e.name << \"\\\", \" << e.number << \"}\";\n}\n\nistream& operator>>(istream& is, Entry& e)\n    // { \"이름\" ,번호 } 쌍 읽기. { \" \" , 와 } 로 형식화됨\n{\n    char c, c2;\n    if (is>>c && c=='{' && is>>c2 && c2=='\"') { // { \"로 시작\n        string name;                            // string의 기본 값은 빈 문자열: \"\"\n        while (is.get(c) && c!='\"')              // \" 이전의 모든 문자는 이름으로 저장\n            name+=c;\n\n        if (is>>c && c==',') {\n            int number = 0;\n            if (is>>number>>c && c=='}') {        // 번호와 } 읽기\n                e = {name, number};              // 항목에 대입\n                return is;\n            }\n        }\n    }\n    is.setstate(ios_base::failbit);              // 스트림에 실패를 기록함\n    return is;\n}",
@@ -705,7 +707,7 @@
         "이름 부분은 get으로 공백까지 보존한다.",
         "완성된 형식에 맞으면 e에 대입하고, 아니면 failbit를 기록한다."
       ],
-      "output": "[원문에 실행 결과 미제시]",
+      "output": "원문은 이어지는 입력·출력 반복문에 다음 결과를 제시한다:\n{\"John Marwood Cleese\", 123456}\n{\"Michael Edward Palin\", 987654}",
       "cautions": [],
       "excerpt": false,
       "excerpt_note": ""

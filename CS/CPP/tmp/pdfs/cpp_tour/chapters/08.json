@@ -222,15 +222,15 @@
           186
         ]
       },
-      "code": "std::string sheep {\"Four legs Good; two legs Baaad!\"};\nstd::list<std::string> slogans {\"War is Peace\", \"Freedom is Slavery\",\n    \"Ignorance is Strength\"};",
+      "code": "std::string sheep {\"Four legs Good; two legs Baaad!\"};",
       "meaning": "std 네임스페이스의 타입 이름을 명시적으로 사용하는 원문 예다.",
       "process": [
-        "std::string으로 문자열을, std::list<std::string>으로 문자열 목록을 선언한다."
+        "std::string으로 문자열을 선언한다."
       ],
       "output": "[원문에 실행 결과 미제시]",
       "cautions": [],
-      "excerpt": false,
-      "excerpt_note": ""
+      "excerpt": true,
+      "excerpt_note": "같은 원문 영역의 첫 선언을 발췌했다. 이어지는 slogans 목록 선언은 생략했다."
     }
   ],
   "key_points": [

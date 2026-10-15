@@ -247,6 +247,7 @@ class CodeBlock(Flowable):
         self.font_size, self.leading = font_size, leading
         self.pad, self.head = 10, 12
         self.spaceBefore, self.spaceAfter = 3, 9
+        self.keepWithNext = True
 
     def wrap(self, availWidth, availHeight):
         self.width = availWidth
@@ -345,7 +346,8 @@ class NoteDocument(BaseDocTemplate):
         canvas.line(LEFT, PAGE_H - 34, PAGE_W - RIGHT, PAGE_H - 34)
         canvas.setFont("Malgun", 7.4)
         canvas.setFillColor(MUTED)
-        canvas.drawString(LEFT, PAGE_H - 26, self.book_title)
+        running_title = "C++ 학습 노트" if self.book_title == "[원문에서 확인할 수 없음]" else self.book_title
+        canvas.drawString(LEFT, PAGE_H - 26, running_title)
         canvas.setFont("Malgun", 8)
         canvas.drawRightString(PAGE_W - RIGHT, 25, str(doc.page))
         canvas.restoreState()
@@ -404,7 +406,7 @@ class Book:
     def source(self, source, prefix="출처"):
         self.p(source_text(source, prefix), "source")
 
-    def table(self, headers, rows, widths=None, markup_columns=None, mono_columns=None):
+    def table(self, headers, rows, widths=None, markup_columns=None, mono_columns=None, compact=False):
         if not headers and not rows:
             return
         n = len(headers) if headers else max(len(r) for r in rows)
@@ -439,8 +441,8 @@ class Book:
             ("VALIGN", (0, 0), (-1, -1), "TOP"),
             ("LEFTPADDING", (0, 0), (-1, -1), 7),
             ("RIGHTPADDING", (0, 0), (-1, -1), 7),
-            ("TOPPADDING", (0, 0), (-1, -1), 6),
-            ("BOTTOMPADDING", (0, 0), (-1, -1), 6),
+            ("TOPPADDING", (0, 0), (-1, -1), 4 if compact else 6),
+            ("BOTTOMPADDING", (0, 0), (-1, -1), 4 if compact else 6),
             ("LINEBELOW", (0, 0), (-1, 0), .6, colors.HexColor("#AABDC8")),
             ("LINEBELOW", (0, 1), (-1, -1), .35, RULE),
             ("ROWBACKGROUNDS", (0, 1), (-1, -1), [colors.white, colors.HexColor("#FAFBFC")]),
@@ -619,7 +621,7 @@ class Book:
                     self.p(ch["title"], "label")
                     self.table(["코드", "출처", "학습 교재 쪽"], [[code.get("title", code["id"]),
                         source_text(code.get("source")), self.linked_page("code-" + code["id"])]
-                        for code in ch["codes"]], [TEXT_W * .44, TEXT_W * .40, TEXT_W * .16], markup_columns={2})
+                        for code in ch["codes"]], [TEXT_W * .44, TEXT_W * .40, TEXT_W * .16], markup_columns={2}, compact=True)
 
         self.start("주요 개념 복습", "book-review")
         for ch in self.chapters:

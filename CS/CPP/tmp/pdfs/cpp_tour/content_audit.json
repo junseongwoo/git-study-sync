@@ -1,6 +1,6 @@
 {
-  "chapter_count": 11,
-  "all_chapters_present": false,
+  "chapter_count": 16,
+  "all_chapters_present": true,
   "errors": [],
   "warnings": [],
   "summary": [
@@ -33,10 +33,17 @@
       "limitations": []
     },
     {
+      "chapter": "C05",
+      "sections": 16,
+      "codes": 9,
+      "prose_chars": 5252,
+      "limitations": []
+    },
+    {
       "chapter": "C06",
       "sections": 14,
       "codes": 7,
-      "prose_chars": 4235,
+      "prose_chars": 4369,
       "limitations": [
         "원문 Buffer의 T[N]; 및 복사 캡처 설명의 [=x]는 의심되는 원문 표기를 보존하고 확인 필요로 표시했다."
       ]
@@ -45,7 +52,7 @@
       "chapter": "C07",
       "sections": 14,
       "codes": 7,
-      "prose_chars": 4791,
+      "prose_chars": 4888,
       "limitations": [
         "컨셉의 표준·기술 명세 상태와 코드 표기는 원문 당시의 설명을 유지했다."
       ]
@@ -67,6 +74,15 @@
       ]
     },
     {
+      "chapter": "C10",
+      "sections": 11,
+      "codes": 8,
+      "prose_chars": 4529,
+      "limitations": [
+        "종료 표식 예제의 is/cin 혼용과 extension 설명은 원문 확인 필요로 표시했다. 책에서 다루지 않는 상세 열기 모드·인코딩·권한 오버로드는 보충하지 않았다."
+      ]
+    },
+    {
       "chapter": "C11",
       "sections": 9,
       "codes": 5,
@@ -83,10 +99,39 @@
       ]
     },
     {
+      "chapter": "C13",
+      "sections": 24,
+      "codes": 9,
+      "prose_chars": 7896,
+      "limitations": [
+        "책 288~289쪽이 제공되지 않아 13.4.1 array의 앞부분은 확인할 수 없다. 확인된 앞뒤 페이지·표·조언만 정리했다.",
+        "[원문 확인 필요] 책 300쪽의 any 예외 이름 bad_any_access를 원문대로 보존했다. 의심되는 표기를 외부 지식으로 수정하지 않았다."
+      ]
+    },
+    {
+      "chapter": "C14",
+      "sections": 9,
+      "codes": 5,
+      "prose_chars": 2300,
+      "limitations": [
+        "[원문 확인 필요] 318쪽 iota 표의 ++v 및 시작 값, accumulate 예제의 합 주석 자릿수는 원문 표기를 유지했다."
+      ]
+    },
+    {
+      "chapter": "C15",
+      "sections": 11,
+      "codes": 8,
+      "prose_chars": 4300,
+      "limitations": [
+        "[원문 확인 필요] 337쪽은 unique_lock이 복사 가능하다고 서술한다. 원문 표기를 보존하고 다른 규칙을 보충하지 않았다.",
+        "[원문 확인 필요] 메시지 큐 예제는 336쪽 선언에서 mmutex, 337~338쪽 사용에서 mutex로 표기한다. 코드를 조용히 수정하지 않았다."
+      ]
+    },
+    {
       "chapter": "C16",
       "sections": 22,
       "codes": 4,
-      "prose_chars": 6721,
+      "prose_chars": 6774,
       "limitations": [
         "인쇄 371쪽 이후의 참고 자료 나머지와 16.5 조언 본문은 제공되지 않았다. 16.5는 목차에서 존재와 시작 번호만 확인했다.",
         "제공 PDF의 1~12쪽에 놓인 인쇄 359~370쪽을 347~358쪽 뒤로 돌려 원문 장 순서로 편집했다.",

@@ -83,7 +83,7 @@ sec('16.2.6','C++17 표준 라이브러리 구성 요소',364,364,
             'string_view, any, variant, optional, invoke().',
             '기초 문자열 변환 to_chars/from_chars, 다형적 할당과 작은 확장.'))
 sec('16.2.7','제거되거나 지원 중단된 기능',364,365,
-    para('광범위한 기존 코드 때문에 기능 제거는 오랜 경고 뒤에 신중히 이뤄진다. 원문은 C++17에서 예외 명세와 그 지원 기능인 unexpected_handler·set_unexpected()·get_unexpected()·unexpected()가 제거됐다고 설명하고 noexcept 사용을 권한다.'),
+    para('광범위한 기존 코드 때문에 기능 제거는 오랜 경고 뒤에 신중히 이뤄진다. 원문은 C++17에서 예외 명세와 그 지원 기능인 unexcepted_handler·set_unexpected()·get_unexpected()·unexpected()가 제거됐다고 설명하고 noexcept 사용을 권한다. [원문 확인 필요] unexcepted_handler는 원문 365쪽의 표기를 그대로 옮겼다.'),
     {'type':'code_ref','id':'C16-E01'},
     bullets('문자 세 개의 예약어(trigraphs), 저장 영역 명시자 register, bool에 대한 ++가 제거되거나 허용되지 않는다.',
             'auto_ptr 대신 unique_ptr을 사용한다. C++98의 export 기능은 제거됐고, 원문은 모듈 키워드의 export를 따로 언급한다.',

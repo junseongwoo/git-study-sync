@@ -1,0 +1,563 @@
+{
+  "chapters": [
+    11,
+    12,
+    13,
+    14,
+    15
+  ],
+  "method": "OCR read in original printed order; each selected code manually compared with original page images; no code execution output invented.",
+  "source_pdf": "C:/Users/user/Desktop/책/A_Tour_Of_C++.pdf",
+  "ocr_pdf_ranges": [
+    [
+      230,
+      249
+    ],
+    [
+      250,
+      271
+    ],
+    [
+      272,
+      309
+    ],
+    [
+      310,
+      320
+    ],
+    [
+      321,
+      339
+    ]
+  ],
+  "manually_viewed_original_image_pdf_pages": [
+    232,
+    234,
+    236,
+    240,
+    242,
+    244,
+    252,
+    255,
+    259,
+    261,
+    264,
+    265,
+    266,
+    267,
+    268,
+    270,
+    275,
+    279,
+    286,
+    289,
+    294,
+    297,
+    299,
+    304,
+    306,
+    295,
+    313,
+    315,
+    317,
+    319,
+    323,
+    324,
+    325,
+    326,
+    327,
+    331,
+    332,
+    333,
+    335,
+    336,
+    330,
+    334
+  ],
+  "codes": [
+    {
+      "id": "C11-E01",
+      "source": {
+        "pdf": [
+          232
+        ],
+        "printed": [
+          235
+        ]
+      },
+      "sha256": "465b1db96adbcd26f1c2cac8ef185f8edc1a9f4d4f48e99e01cf02592277ed8f",
+      "image_comparison": "manually compared",
+      "source_omissions_disclosed": false
+    },
+    {
+      "id": "C11-E02",
+      "source": {
+        "pdf": [
+          234
+        ],
+        "printed": [
+          237
+        ]
+      },
+      "sha256": "96541e80ee9eaee6ad82d618bdbae175a1fc0bcfb7e52583a8abee1f2cd6eb22",
+      "image_comparison": "manually compared",
+      "source_omissions_disclosed": true
+    },
+    {
+      "id": "C11-E03",
+      "source": {
+        "pdf": [
+          236
+        ],
+        "printed": [
+          239
+        ]
+      },
+      "sha256": "de575e28852cca9ecc80d6d2b8192846c57307670b9c28a8d2d2bc4a256cb83d",
+      "image_comparison": "manually compared",
+      "source_omissions_disclosed": false
+    },
+    {
+      "id": "C11-E04",
+      "source": {
+        "pdf": [
+          240
+        ],
+        "printed": [
+          243
+        ]
+      },
+      "sha256": "351a98d4a38aa84cd329bb6173aed385523c7352a3108fe403330ec657334c93",
+      "image_comparison": "manually compared",
+      "source_omissions_disclosed": false
+    },
+    {
+      "id": "C11-E05",
+      "source": {
+        "pdf": [
+          242
+        ],
+        "printed": [
+          245
+        ]
+      },
+      "sha256": "41e2deb535fa442d206214d119e556ece80bb264588fb3aa0c6517033ab591bc",
+      "image_comparison": "manually compared",
+      "source_omissions_disclosed": true
+    },
+    {
+      "id": "C12-E01",
+      "source": {
+        "pdf": [
+          252
+        ],
+        "printed": [
+          255
+        ]
+      },
+      "sha256": "2a08cb5409bdbe20ed0ee8b9623a4e13bb3ff344b585f6ae63048f0f8bbc46c3",
+      "image_comparison": "manually compared",
+      "source_omissions_disclosed": false
+    },
+    {
+      "id": "C12-E02",
+      "source": {
+        "pdf": [
+          255
+        ],
+        "printed": [
+          258
+        ]
+      },
+      "sha256": "e42d0fed8910a6d5db13a902941655a406a0bdddc3d435789a869dfbdff20e70",
+      "image_comparison": "manually compared",
+      "source_omissions_disclosed": false
+    },
+    {
+      "id": "C12-E03",
+      "source": {
+        "pdf": [
+          259
+        ],
+        "printed": [
+          262
+        ]
+      },
+      "sha256": "068f7cc7907d32648688f0a82beded4aad657982c114b2f2330500898e0ebbc4",
+      "image_comparison": "manually compared",
+      "source_omissions_disclosed": false
+    },
+    {
+      "id": "C12-E04",
+      "source": {
+        "pdf": [
+          261
+        ],
+        "printed": [
+          264
+        ]
+      },
+      "sha256": "6b7e2874ea66c8a2a4a824471c7448506b40d506b5468e0e6ba28be729ab5da1",
+      "image_comparison": "manually compared",
+      "source_omissions_disclosed": true
+    },
+    {
+      "id": "C12-E05",
+      "source": {
+        "pdf": [
+          270
+        ],
+        "printed": [
+          273
+        ]
+      },
+      "sha256": "c95a008681656ae9e68258aa5b289e0a793f020a0366d88d3800639365423d8a",
+      "image_comparison": "manually compared",
+      "source_omissions_disclosed": false
+    },
+    {
+      "id": "C13-E01",
+      "source": {
+        "pdf": [
+          275
+        ],
+        "printed": [
+          278
+        ]
+      },
+      "sha256": "f50240249f3f7ffb3053f009864c287ea8e78d60be100131b988a2b68ff05922",
+      "image_comparison": "manually compared",
+      "source_omissions_disclosed": false
+    },
+    {
+      "id": "C13-E02",
+      "source": {
+        "pdf": [
+          279
+        ],
+        "printed": [
+          282
+        ]
+      },
+      "sha256": "5986839df18f16845ac62028be7706b9f722d97a8570d989c8daae97119874fe",
+      "image_comparison": "manually compared",
+      "source_omissions_disclosed": false
+    },
+    {
+      "id": "C13-E03",
+      "source": {
+        "pdf": [
+          286
+        ],
+        "printed": [
+          291
+        ]
+      },
+      "sha256": "297b190fe1d15bf15189b96eb2059226805a1dd2f63fb00920ba28c68f3dc96a",
+      "image_comparison": "manually compared",
+      "source_omissions_disclosed": false
+    },
+    {
+      "id": "C13-E04",
+      "source": {
+        "pdf": [
+          289
+        ],
+        "printed": [
+          294
+        ]
+      },
+      "sha256": "5597f64f732d8430188c305bf3038a2f60c5f5e2a58cb25ee348db093ec45c2a",
+      "image_comparison": "manually compared",
+      "source_omissions_disclosed": false
+    },
+    {
+      "id": "C13-E05",
+      "source": {
+        "pdf": [
+          294
+        ],
+        "printed": [
+          299
+        ]
+      },
+      "sha256": "cbe0124f547717ce6cde751eb0d9d38a6c2cf704879c5c9e29fa41e67aa9723f",
+      "image_comparison": "manually compared",
+      "source_omissions_disclosed": false
+    },
+    {
+      "id": "C13-E06",
+      "source": {
+        "pdf": [
+          297
+        ],
+        "printed": [
+          302
+        ]
+      },
+      "sha256": "9c4a6b5924fda7714c8bdc49ff5905d06003f33bb513acb5de420efe4fbdb9e2",
+      "image_comparison": "manually compared",
+      "source_omissions_disclosed": false
+    },
+    {
+      "id": "C13-E07",
+      "source": {
+        "pdf": [
+          299
+        ],
+        "printed": [
+          304
+        ]
+      },
+      "sha256": "2931d1d61e2ce3bd706a7ec7b1ad026d04d4221315c3d32a879a13ae4028b4f4",
+      "image_comparison": "manually compared",
+      "source_omissions_disclosed": false
+    },
+    {
+      "id": "C13-E08",
+      "source": {
+        "pdf": [
+          304
+        ],
+        "printed": [
+          309
+        ]
+      },
+      "sha256": "9d09885ad972d79fa099df136ae3bd96e0380d211e79628f847dd28126e900e5",
+      "image_comparison": "manually compared",
+      "source_omissions_disclosed": true
+    },
+    {
+      "id": "C13-E09",
+      "source": {
+        "pdf": [
+          306
+        ],
+        "printed": [
+          311
+        ]
+      },
+      "sha256": "cf47d694751b4c4b094178e00cdb5186a1b4062832d8a73e52d71e86fb2e207e",
+      "image_comparison": "manually compared",
+      "source_omissions_disclosed": false
+    },
+    {
+      "id": "C14-E01",
+      "source": {
+        "pdf": [
+          313
+        ],
+        "printed": [
+          318
+        ]
+      },
+      "sha256": "6182d0f7ac60a2d326053baa87e215e1e3f371d5665379359ecfb76f74e84287",
+      "image_comparison": "manually compared",
+      "source_omissions_disclosed": false
+    },
+    {
+      "id": "C14-E02",
+      "source": {
+        "pdf": [
+          315
+        ],
+        "printed": [
+          320
+        ]
+      },
+      "sha256": "920dfccd91989b9c2c1e531ebfb7f42ca6c34ef2703d5f7e8e1e77886e7c1917",
+      "image_comparison": "manually compared",
+      "source_omissions_disclosed": false
+    },
+    {
+      "id": "C14-E03",
+      "source": {
+        "pdf": [
+          317
+        ],
+        "printed": [
+          322
+        ]
+      },
+      "sha256": "90df7d805e61f25083c8594c42cd6a486b1110ec8207891684a812378391d143",
+      "image_comparison": "manually compared",
+      "source_omissions_disclosed": false
+    },
+    {
+      "id": "C14-E04",
+      "source": {
+        "pdf": [
+          319
+        ],
+        "printed": [
+          324
+        ]
+      },
+      "sha256": "56eb95f8486fafd1a47a9435faf950db1e2504755c0f70d399f1d883067b4991",
+      "image_comparison": "manually compared",
+      "source_omissions_disclosed": false
+    },
+    {
+      "id": "C14-E05",
+      "source": {
+        "pdf": [
+          319
+        ],
+        "printed": [
+          324
+        ]
+      },
+      "sha256": "c2f82fdf61e2b5e29cb1fac693bb824bfe79908833e688cb64a2cbe6b8775d2d",
+      "image_comparison": "manually compared",
+      "source_omissions_disclosed": false
+    },
+    {
+      "id": "C15-E01",
+      "source": {
+        "pdf": [
+          323
+        ],
+        "printed": [
+          329
+        ]
+      },
+      "sha256": "77673ee6f9026797f8e97d3cda2eed293971dcc3be685dca54823e42aaa33b73",
+      "image_comparison": "manually compared",
+      "source_omissions_disclosed": false
+    },
+    {
+      "id": "C15-E02",
+      "source": {
+        "pdf": [
+          324,
+          325
+        ],
+        "printed": [
+          330,
+          331
+        ]
+      },
+      "sha256": "085f04418aebf8bc8a960962fd71dabc1278e9c141893e383dc5cc38b3482ceb",
+      "image_comparison": "manually compared",
+      "source_omissions_disclosed": false
+    },
+    {
+      "id": "C15-E03",
+      "source": {
+        "pdf": [
+          326
+        ],
+        "printed": [
+          332
+        ]
+      },
+      "sha256": "865c9b63ee45d599d1f640f3f50960e0037d814998e7698610001285710067fe",
+      "image_comparison": "manually compared",
+      "source_omissions_disclosed": false
+    },
+    {
+      "id": "C15-E04",
+      "source": {
+        "pdf": [
+          327
+        ],
+        "printed": [
+          333
+        ]
+      },
+      "sha256": "6217cc7c0abbf3b6907daee6d1ed28b1ee60c42447759bffcc720798a60bee0c",
+      "image_comparison": "manually compared",
+      "source_omissions_disclosed": false
+    },
+    {
+      "id": "C15-E05",
+      "source": {
+        "pdf": [
+          331
+        ],
+        "printed": [
+          337
+        ]
+      },
+      "sha256": "71e1c615b6b99ecc10e3bf8b0e44897170f34b8738201885acacf38ea561e3ac",
+      "image_comparison": "manually compared",
+      "source_omissions_disclosed": true
+    },
+    {
+      "id": "C15-E06",
+      "source": {
+        "pdf": [
+          333,
+          334
+        ],
+        "printed": [
+          339,
+          340
+        ]
+      },
+      "sha256": "525c7a0161002703413e873a1b38109f8026791a41b9a134557c55473576022a",
+      "image_comparison": "manually compared",
+      "source_omissions_disclosed": false
+    },
+    {
+      "id": "C15-E07",
+      "source": {
+        "pdf": [
+          335
+        ],
+        "printed": [
+          341
+        ]
+      },
+      "sha256": "7a08b0bbe90c92106b6a466fbb8312636c3de9a5a68ae2ad4147495931afcb50",
+      "image_comparison": "manually compared",
+      "source_omissions_disclosed": false
+    },
+    {
+      "id": "C15-E08",
+      "source": {
+        "pdf": [
+          336
+        ],
+        "printed": [
+          342
+        ]
+      },
+      "sha256": "58e51a9a996e475bc83e02ed13b6c1d9af38feb23a04cff559234bcee3a76434",
+      "image_comparison": "manually compared",
+      "source_omissions_disclosed": false
+    }
+  ],
+  "limitations": [
+    {
+      "chapter": "C11",
+      "notes": []
+    },
+    {
+      "chapter": "C12",
+      "notes": [
+        "[원문 확인 필요] 책 270쪽 RandomAccessIterator 표의 일부 산술 기호는 제공 이미지에서 물음표 모양으로 보인다. 해당 기호를 임의로 복원하지 않고 연산 범주만 요약했다."
+      ]
+    },
+    {
+      "chapter": "C13",
+      "notes": [
+        "책 288~289쪽이 제공되지 않아 13.4.1 array의 앞부분은 확인할 수 없다. 확인된 앞뒤 페이지·표·조언만 정리했다.",
+        "[원문 확인 필요] 책 300쪽의 any 예외 이름 bad_any_access를 원문대로 보존했다. 의심되는 표기를 외부 지식으로 수정하지 않았다."
+      ]
+    },
+    {
+      "chapter": "C14",
+      "notes": [
+        "[원문 확인 필요] 318쪽 iota 표의 ++v 및 시작 값, accumulate 예제의 합 주석 자릿수는 원문 표기를 유지했다."
+      ]
+    },
+    {
+      "chapter": "C15",
+      "notes": [
+        "[원문 확인 필요] 337쪽은 unique_lock이 복사 가능하다고 서술한다. 원문 표기를 보존하고 다른 규칙을 보충하지 않았다.",
+        "[원문 확인 필요] 메시지 큐 예제는 336쪽 선언에서 mmutex, 337~338쪽 사용에서 mutex로 표기한다. 코드를 조용히 수정하지 않았다."
+      ]
+    }
+  ]
+}
