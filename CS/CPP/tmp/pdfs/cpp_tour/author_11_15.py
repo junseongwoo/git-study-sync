@@ -1,0 +1,150 @@
+"""Source-grounded manuscript for assigned chapters, using supplied-page map."""
+import json
+from pathlib import Path
+
+HERE = Path(__file__).resolve().parent
+MAP = json.loads((HERE / 'source_map.json').read_text(encoding='utf-8'))
+PAGES = {p['printed_page']: p['pdf_page'] for p in MAP['pages'] if p.get('printed_page')}
+
+def src(a, b=None):
+    ps = [p for p in range(a, (b or a)+1) if p in PAGES]
+    return {'pdf':[PAGES[p] for p in ps], 'printed':ps}
+
+def p(text, a=None, b=None):
+    d={'type':'p','text':text}
+    if a is not None: d['source']=src(a,b)
+    return d
+
+def ul(items, a=None,b=None):
+    d={'type':'bullets','items':items}
+    if a is not None:d['source']=src(a,b)
+    return d
+
+def table(headers, rows, a=None,b=None):
+    d={'type':'table','headers':headers,'rows':rows}
+    if a is not None:d['source']=src(a,b)
+    return d
+
+def ref(cid):return {'type':'code_ref','id':cid}
+
+def section(number,title,a,b,*blocks):
+    return {'number':number,'title':title,'source':src(a,b),'blocks':list(blocks)}
+
+def code(cid,title,a,b,text,meaning,process=None,output=None,cautions=None,excerpt=False,note=''):
+    return {'id':cid,'title':title,'source':src(a,b),'code':text,'meaning':meaning,
+      'process':process or [],'output':output or '[원문에 실행 결과 미제시]',
+      'cautions':cautions or [],'excerpt':excerpt,'excerpt_note':note}
+
+def finish(n,title,a,b,overview,flow,sections,codes,key,comparisons,review,index,limitations=None):
+    obj={'id':f'C{n:02d}','order':n,'title':f'제{n}장. {title}','source':src(a,b),
+      'overview':overview,'flow':flow,'sections':sections,'codes':codes,'key_points':key,
+      'comparisons':comparisons,'review':review,'index_terms':[{'term':t,'section':s} for t,s in index],
+      'coverage':[{'number':s['number'],'title':s['title'],'source':s['source'],
+         'topics':[bl.get('text','')[:130] for bl in s['blocks'] if bl['type']=='p']} for s in sections],
+      'limitations':limitations or []}
+    (HERE/'chapters').mkdir(exist_ok=True)
+    (HERE/'chapters'/f'{n:02d}.json').write_text(json.dumps(obj,ensure_ascii=False,indent=2),encoding='utf-8')
+
+
+def chapter11():
+    sections=[
+      section('11.1','소개',234,234,
+        p('**컨테이너**는 객체를 저장하는 일이 주목적인 클래스다. 작업에 적합한 컨테이너와 기본 연산을 선택하는 일은 프로그램 구성의 중요한 단계다. 이 장은 이름과 전화번호를 담는 Entry의 전화번호부로 표준 컨테이너를 비교한다. 예제에서는 불필요한 복잡성을 피하려고 전화번호를 int로 표현한다.')),
+      section('11.2','vector',234,238,
+        p('**vector<T>**는 T 타입 요소가 메모리에 연속적으로 저장되는 시퀀스다. 전형적인 구현은 첫 요소, 사용 중인 요소의 끝, 할당 공간의 끝을 가리키는 정보와 할당자로 구성된다. 기본 할당자는 new와 delete로 메모리를 관리한다.',234,235),
+        p('인덱스는 0에서 시작하며 size()는 실제 요소 수를 알려준다. 요소 목록을 주는 {} 초기화와 초기 크기를 지정하는 () 초기화를 구별한다. 크기만 지정하면 요소는 타입의 기본 값으로 초기화되고, 두 번째 인자로 별도의 초기 값을 지정할 수 있다. 구간 for는 vector가 제공하는 요소 구간 전체를 순회한다.',235,236),
+        ref('C11-E01'),
+        p('**size와 capacity**는 다르다. size는 실제 요소 수, capacity는 재할당 없이 저장할 수 있는 슬롯 수다. reserve()는 요소를 위한 공간을 확보하며, 새 공간을 할당하면 기존 요소를 그곳으로 이동시킨다. push_back()은 끝에 요소를 추가하고 size를 1 늘린다. 원문의 간략한 Vector 구현은 공간이 부족할 때 용량을 늘려 매번 재할당하는 일을 피한다.',236,237),
+        ref('C11-E02'),
+        p('성능 향상을 기대한다는 이유만으로 reserve()를 호출할 필요는 없다. 원문은 vector의 증가 전략을 신뢰하고, 요소 포인터나 반복자의 유효성을 위해 재할당을 막아야 할 때 명시적으로 reserve()를 사용하도록 권한다. 대입과 초기화로 vector를 복사하면 각 요소도 복사되어 독립된 복사본이 생긴다. 요소가 많으면 비용이 클 수 있으므로 복사가 바람직하지 않을 때 참조·포인터 또는 이동 연산을 사용한다.',237,238)),
+      section('11.2.1','요소',238,239,
+        p('표준 컨테이너에는 내장 타입, 사용자 정의 타입, 포인터 등 거의 모든 타입을 요소로 사용할 수 있다. 요소를 삽입하면 값이 컨테이너 안으로 복사된다. 정수 7을 넣으면 요소 자체가 7의 값을 가지며, 다른 곳의 7을 가리키는 참조나 포인터를 저장하는 것이 아니다. 이 방식은 간결하고 빠르게 접근할 수 있는 저장 구조를 만든다.'),
+        p('가상 함수에 의존하는 클래스 계층의 **다형적인 동작**을 유지하려면 객체 자체 대신 포인터나 스마트 포인터를 요소로 저장한다. 원문은 vector<Shape>로 Circle이나 Smiley를 저장하려는 방식을 피하고, vector<unique_ptr<Shape>>를 사용하는 형태를 제시한다.')),
+      section('11.2.2','구간 검사',239,241,
+        p('표준 vector의 operator[]는 구간 검사를 보장하지 않는다. book[book.size()]처럼 마지막 요소 다음을 참조하는 코드는 유효한 접근이 아니다. at()은 구간 밖 인덱스에 out_of_range를 던진다. 원문의 Vec는 vector의 생성자를 상속하고 operator[]를 at()에 연결한다.',239,240),
+        ref('C11-E03'),
+        p('Vec의 구간 밖 접근은 예외를 발생시켜 호출자가 잡을 수 있게 한다. 잡지 않은 예외가 있으면 프로그램은 잘 정의된 방식으로 종료된다. 원문은 main()의 try 블록과 기본 예외 핸들러에서 cerr로 진단을 출력하는 예도 제시한다. 구간 검사의 비용은 하드웨어·최적화·접근 방식에 따라 다르므로, 표준은 모든 인덱싱에 검사를 강제하지 않는다. 일부 구현은 디버그 검사 기능을 제공한다.',240,241),
+        p('구간 for나 begin()/end() 범위를 이용한 순회는 추가적인 구간 검사 비용 없이 구간 밖 접근을 피한다. 코드에서 at()을 직접 사용할 수 있다면 Vec를 따로 만들 필요가 없다.',241,241)),
+      section('11.3','list',241,244,
+        p('**list**는 이중 연결 리스트다. 다른 요소를 이동시키지 않고 시퀀스 중간에 삽입·삭제할 때 사용한다. vector처럼 인덱스로 접근하는 대신 처음부터 원하는 요소를 찾는다. begin()은 첫 요소를, end()는 마지막 요소 다음을 가리키는 반복자를 반환한다.',241,242),
+        ref('C11-E04'),
+        p('반복자 p에 대해 *p는 요소를 참조하고 ++p는 다음 요소로 진행한다. p->m은 (*p).m과 같다. insert(p,elem)은 elem을 복사한 요소를 p 앞에 넣으며, p가 end()여도 된다. erase(p)는 p의 요소를 제거하고 소멸시킨다. 원문의 전화번호부 예제는 vector로도 작성할 수 있고, 짧은 시퀀스에서는 삽입·삭제까지 vector 쪽이 더 효율적일 수 있으므로 직관만으로 list를 선택하지 않는다.',243,243),
+        p('**forward_list**는 순방향 순회만 제공하는 단일 연결 리스트다. 이전 요소 포인터가 없어 공간을 아끼며 빈 객체의 크기는 포인터 하나다. 요소 개수도 저장하지 않으므로 개수를 알려면 직접 세어야 한다. 원문은 이 특성이 필요할 때 선택하도록 한다.',243,244)),
+      section('11.4','map',244,245,
+        p('**map**은 키와 값의 쌍을 담고 조회에 최적화된 연관 컨테이너다. 원문은 일반적인 구현을 균형 이진 탐색 트리, 특히 레드-블랙 트리로 설명한다. 연관 배열 또는 딕셔너리라고도 한다. 키 타입의 값으로 인덱싱하면 대응하는 매핑된 타입의 값을 얻는다.'),
+        ref('C11-E05'),
+        p('**없는 키에 대한 []는 조회만 하는 연산이 아니다.** 키를 못 찾으면 값 타입의 기본 값을 가진 항목이 삽입된다. 전화번호부에서는 int의 기본 값 0이 유효하지 않은 번호를 나타낸다. 이런 항목이 들어가는 것을 원치 않으면 [] 대신 find()와 insert()를 사용한다.',245,245)),
+      section('11.5','unordered_map',245,248,
+        p('map의 조회 비용은 요소 수 n에 대해 O(log(n))이다. **unordered_map**은 해시 테이블을 이용하며 순서 비교 함수를 요구하지 않는다. map과 비슷하게 초기화하고 인덱싱할 수 있지만 요소 사이의 순서를 유지하지 않는다. 표준 라이브러리는 string·내장 타입·여러 라이브러리 타입의 기본 해시 함수를 제공한다.',245,246),
+        p('사용자 정의 타입에는 해시 함수 객체를 전달하거나 std::hash를 특수화할 수 있다. 원문의 Record 예제는 이름과 product_code의 표준 해시를 배타적 논리합(^)으로 결합한다. 좋은 해시 함수에는 데이터에 대한 지식과 실험이 필요할 수 있다. 좋은 함수를 쓸 때 큰 unordered_map은 map보다 훨씬 빠를 수 있지만, 잘못된 해시 함수에서는 최악의 경우가 map보다 훨씬 느릴 수 있다.',246,248)),
+      section('11.6','컨테이너 개요',248,250,
+        table(['표준 컨테이너','원문에서 정리한 역할'],[
+          ['vector<T> / list<T> / forward_list<T>','가변 크기 벡터 / 이중 연결 리스트 / 단일 연결 리스트'],
+          ['deque<T>','양방향 큐'],['set<T> / multiset<T>','값만 가진 집합 / 값의 중복을 허용하는 집합'],
+          ['map<K,V> / multimap<K,V>','키와 값의 연관 배열 / 키의 중복을 허용하는 map'],
+          ['unordered_map / unordered_multimap','해시 조회를 사용하는 map / multimap'],
+          ['unordered_set / unordered_multiset','해시 조회를 사용하는 set / multiset']],248,248),
+        p('컨테이너는 std에 정의되고 <vector>, <list>, <map> 등에서 제공된다. queue·stack·priority_queue는 컨테이너 어댑터이며 array와 bitset은 고정 크기 구조다. 여러 컨테이너는 일관된 표기와 의미를 갖도록 설계되어, 알고리즘을 개별 컨테이너 타입과 독립적으로 기술할 수 있다.',249,250),
+        table(['연산','의미와 주의'],[['value_type','요소 타입'],['begin()/end(), cbegin()/cend()','첫 요소 / 마지막 요소 다음; const 반복자도 제공'],['size()/empty()','요소 수 / 비어 있는지 검사'],['capacity()/reserve(k)','새 할당 없는 저장 용량 / 용량 확보'],['resize(k)','요소 수 변경; 추가 요소는 value_type{}'],['[k] / at(k)','구간 검사 없는 접근 / 구간 밖에서 예외'],['push_back(x) / emplace_back(a)','끝에 x 추가 / 인자로 새 요소를 직접 생성'],['insert(p,x) / erase(p)','p 앞에 삽입 / p 요소 제거'],['= / == / <','대입 / 요소의 상등성 / 사전 순 비교']],249,250),
+        p('각 컨테이너에 맞는 연산을 선택해야 한다. vector는 연속 저장에 따른 저렴한 인덱싱·순회를 제공하지만 중간 삽입·삭제 때 요소 이동이 필요하다. list는 그 반대의 성격을 갖는다. 빈 경우가 많다면 한 워드만 필요한 forward_list를 고려할 수 있다. 배치 연산은 객체를 먼저 만들어 복사하는 대신, 전달한 생성자 인자로 컨테이너의 새 저장 공간에 요소를 직접 만든다.',250,250)),
+      section('11.7','조언',251,252,
+        ul(['표준 컨테이너를 익히고 기본 선택으로 vector를 고려한다. 성능은 직관이 아니라 측정으로 확인한다.',
+          '순회에는 구간 for나 시작/끝 반복자를 사용한다. 구간 검사가 필요하면 at()을 사용하며 []가 검사한다고 가정하지 않는다.',
+          'vector의 크기 변경 후 반복자를 그대로 사용하지 않는다. 포인터·반복자 유효성을 위한 재할당 방지와 단순 성능 추측을 구별한다.',
+          '컨테이너 요소는 값이다. 다형적인 동작이 필요하면 포인터를 저장한다. 컨테이너 전달은 참조로, 반환은 값으로 한다.',
+          '많은 데이터의 빠른 조회에는 순서 없는 컨테이너, 순서 있는 순회에는 map·set 같은 순서 있는 연관 컨테이너를 고려한다.',
+          '크기로 생성할 때 ()와 요소 목록으로 생성할 때 {}를 구별한다. 해시 함수의 적절성은 실험으로 확인한다.']))
+    ]
+    codes=[
+      code('C11-E01','vector의 구간 for 순회',235,235,r'''void print_book(const vector<Entry>& book)
+{
+    for (const auto& x : book) // "auto"에 대해서는 1.4절 참고
+        cout << x << '\n';
+}''','각 Entry를 복사하지 않고 const 참조로 받아 순서대로 출력하는 원문 함수다. Entry의 << 연산이 정의되어 있다는 전제가 있다.',
+        ['book의 구간에서 각 요소 x를 참조한다.','각 요소를 cout으로 전달하고 줄바꿈 문자를 출력한다.']),
+      code('C11-E02','용량을 확보한 뒤 요소를 생성하는 push_back',237,237,r'''template<typename T>
+void Vector<T>::push_back(const T& t)
+{
+    if (capacity()<size()+1)        // t를 저장할 공간이 있는지 확인
+        reserve(size()==0?8:2*size()); // 용량을 2배로 증가
+    new(space) T{t}; // *space 를 t로 초기화
+    ++space;
+}''','원문의 간략한 Vector 클래스에서 공간 부족 시 reserve()를 호출하고 사용하지 않던 첫 슬롯에 T를 생성한다. 클래스 선언은 앞선 원문에 있으며 여기서는 함수 정의를 발췌했다.',
+        ['현재 용량이 새 요소 하나를 담기에 충분한지 검사한다.','필요하면 빈 경우 8, 그 외에는 size의 두 배를 요청한다.','space에 t로 요소를 생성한 후 space를 증가시킨다.'],excerpt=True,note='Vector 클래스 선언은 생략하고, 원문의 push_back 함수 정의 전체를 발췌했습니다.'),
+      code('C11-E03','at()에 연결하여 구간 검사하는 Vec',239,239,r'''template<typename T>
+class Vec : public std::vector<T> {
+public:
+    using vector<T>::vector; // (Vec라는 이름으로) vector의 생성자를 사용
+
+    T& operator[](int i) // 구간 검사
+        { return vector<T>::at(i); }
+
+    const T& operator[](int i) const // const 객체용 구간 검사; 4.2.1절
+        { return vector<T>::at(i); }
+};''','vector에서 다른 기능을 상속하고 const 여부에 맞춘 두 인덱싱 연산을 at() 호출로 재정의한다.',cautions=['at()은 인덱스가 구간을 벗어나면 out_of_range를 던진다.']),
+      code('C11-E04','반복자로 전화번호부 선형 탐색',243,243,r'''int get_number(const string& s)
+{
+    for (auto p = phone_book.begin(); p!=phone_book.end(); ++p)
+        if (p->name==s)
+            return p->number;
+    return 0; // 0 은 "수를 찾지 못함"을 의미
+}''','list의 begin()부터 end()까지 이름을 비교해 일치하는 항목의 number를 반환한다. 0은 찾지 못했음을 표시한다.',
+        ['p가 각 요소를 가리키게 이동한다.','name이 s와 같으면 number를 반환한다.','끝에 이르면 0을 반환한다.']),
+      code('C11-E05','map의 키로 전화번호 조회',245,245,r'''int get_number(const string& s)
+{
+    return phone_book[s];
+}''','원문의 map<string,int> 전화번호부에서 이름 s로 번호를 조회한다. 같은 페이지의 map 초기화 코드는 생략했다.',cautions=['s가 없으면 기본 값 0인 항목이 삽입된다. 삽입을 원치 않으면 find()와 insert()를 사용한다.'],excerpt=True,note='동일 페이지의 map 초기화는 생략하고 get_number 함수 정의 전체를 발췌했습니다.')
+    ]
+    comparison=[{'title':'map과 unordered_map','source':src(245,248),'headers':['비교 기준','map','unordered_map'],'rows':[
+      ['조회 구조','균형 이진 탐색 트리','해시 테이블'],['필요한 함수','순서 비교 함수; 기본적으로 <','해시 함수'],
+      ['요소 순서','순서 있는 시퀀스','순서 유지 안 함'],['성능 조건','조회 O(log(n))','좋은 해시는 큰 데이터에서 빠름; 나쁜 해시는 최악의 경우 훨씬 느림']]}]
+    finish(11,'컨테이너',233,252,
+      ['컨테이너는 객체를 저장하는 자원 핸들이며 시퀀스를 정의한다.','vector의 크기·용량·요소 값 의미와 구간 검사를 이해한다.','list·map·unordered_map을 저장 구조와 조회 조건으로 구분한다.'],
+      ['연속 저장 vector와 성장 방식','요소·다형성·구간 검사','연결 구조와 연관 컨테이너','공통 연산과 선택 기준'],sections,codes,
+      ['기본 컨테이너는 vector로 고려하되 성능은 측정한다.','size는 요소 수, capacity는 저장 가능한 슬롯 수다.','[]의 구간 검사와 없는 키 삽입 동작은 컨테이너에 따라 다르다.','컨테이너의 값 저장과 다형적인 객체 포인터 저장을 구분한다.'],comparison,
+      ['vector의 연속 저장·복사·성장·reserve와 반복자 유효성의 관계를 복습한다.','구간 밖 접근을 at()·구간 for·시작/끝 반복자로 다루는 방식을 정리한다.','list의 삽입·삭제와 vector의 짧은 시퀀스 효율을 함께 고려한다.','map의 []는 없는 키를 삽입하며 unordered_map은 해시 품질과 순서 유무를 고려해야 한다.'],
+      [('컨테이너','11.1'),('vector','11.2'),('capacity / reserve','11.2'),('컨테이너 요소','11.2.1'),('구간 검사 / at','11.2.2'),('list','11.3'),('forward_list','11.3'),('map','11.4'),('unordered_map','11.5'),('배치 연산 / emplace_back','11.6')])
+
+
+if __name__=='__main__':
+    chapter11()

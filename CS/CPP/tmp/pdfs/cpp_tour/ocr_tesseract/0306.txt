@@ -1,0 +1,40 @@
+template<typename Scalar>
+
+class complex {
+Scalar re, im;
+
+public:
+static_assert(Is_arithmetic<Scalar>(), "산술 타입을 이용한 복소수만 지원한다" ) ;
+IL ws
+
+};
+
+표준 라이브러리를 직접 사용할 때처럼 가독성을 높이기 위해 타입 함수를 다음과
+같이 정의했다.
+
+template<typename T>
+constexpr bool Is_arithmetic()
+{
+return std: :is_arithmetic<T>::value;
+
+}
+
+오래된 프로그램에서는 () 대신 valued 직접 사용하는데, 필자가 생각하기에 그런
+방식은 보기에 나쁘고 상세 구현을 노출시킨다.
+
+13.9.3 enable_if
+
+타입 술어의 사용 |Z static_asserto] 주어지는 조건이나 컴파일 시간 if, enable _if
+를 들 수 있다. 표준 Ho] enable if 선택적인 정의가 필요할 때 널리 사용하
+는 방법이다. 스마트 포인터를 예로 들어보자.
+
+template<typename T>
+
+class Smart_pointer {
+
+T& operator*();
+
+T& operator*>();  // T7t 클래스일 때만 동작함
+};
+
+유틸리티 IN

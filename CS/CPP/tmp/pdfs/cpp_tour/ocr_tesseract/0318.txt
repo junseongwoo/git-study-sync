@@ -1,0 +1,41 @@
+cout << i << "\t';
+for (int j=0; j!=histogram[i]; ++j) cout << '*';
+cout << endl;
+
+출력으로 (통계적 변동을 포함한) 단일 BEE 볼 수 있다.
+
+* kk 그 기 kk k x 기
+
+* kk kk k kk
+
+* kk kK kk kk kk
+
+* kk kk k k kx k kx
+
+* kk kk k kk
+
+kok ok ok kok kk kk k kx
+기 kk kk kk ok kk ok k kx
+* ok 을 을 을 kx
+
+* ok ok ok kK kk kk k x
+
+© ONO 내 WN
+
+* kk kk ok kk xk x x kx Kk
+
+<++에 표준 그래픽 라이브러리가 없는 BAZ ASCH 그래픽'을 사용했다. 시중에
+<++용 상용 그래픽 라이브러리와 GUI 라이브러리가 많지만, 이 책에서는 150 표준
+
+기능만을 다룬다.
+
+14.6 벡터 산술
+
+11.2절에서 설명한 vectors 값을 저장하기 위한 일반적인 메커니즘으로, 유연하며
+컨테이너, 반복자, 알고리즘의 아키텍처에 잘 융화되게 설계됐다. 그러나 수학적인
+벡터 연산은 제공하지 않는다. vectoro] 이러한 연산을 추가하는 것은 어렵지 않지만,
+그 유연성과 일반성으로 인해 수치 작업에서 필수적인 최적화가 어려울 수 있다. 결론
+적으로 표준 라이브러리 <<313「『3\>에서는 vector? 유사한 템플릿인 4313「「2\를
+제공하는데, 일반성은 좀 떨어지지만 수치 계산을 위한 최적화에는 더 적합하다.
+
+수치 323

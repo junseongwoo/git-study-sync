@@ -1,0 +1,32 @@
+표준 수학 함수
+
+sinh(x)             하이퍼볼릭 사인
+
+cosh(x)             하이퍼볼릭 코사인
+tanh(x)            하이퍼블릭 탄젠트
+exp(x)             밀수 el 지수 연산
+
+이 함수들의 000016(14.4절) HHL <00016%에서 찾을 수 있고, 반환 타입은 인자
+타입과 같다.
+
+<cerrno>9] erro 설정하는 방식으로 에러를 나타내는데, 6008이면 정의역 에러이
+고, ERANGEO|® 구간 에러다.
+
+void f()
+
+{
+errno = 0;      // 예전 에러 상태 지움
+sqrt(-1);
+
+if (errno=EDOM)
+cerr << "sqrt()of 음수 사용할 수 없음" ;
+
+errno = 0;      // 예전 에러 상태 지움
+pow( numeric_limits<double>::max(),2);
+if (errno = ERANGE)
+cerr << "pow()2| 결과가 000616로 표현할 수 없음 정도로 3°;
+
+몇 가지 더 많은 수학 함수를 <5*015>에서 찾을 수 있으며, 일종의 특수 수학 함수
+인 beta(), rieman_zeta(), sph_bessel() 등을 <38ㄷ에서 볼 수 있다.
+
+수치 317

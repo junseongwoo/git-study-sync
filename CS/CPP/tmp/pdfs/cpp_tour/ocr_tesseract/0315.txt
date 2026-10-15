@@ -1,0 +1,40 @@
+vector<double> v {1, 2, 3, 4, 5, 9999.99999};
+auto s = reduce(v.begin(),v.end());       // doubled 누적자로 사용해 합을 계산
+
+vector<double> large;
+// ... 많은 US large 채운다 . ..
+auto 52 = reduce(par_unseq, large.begin(),large.end()); // 가능한 병렬화 정도로 합을 계산
+
+병렬 알고리즘(예,669066())은 요소에 연산을 적용하는 순서가 정해지지 않는다는 점
+에서 순차 알고리즘(예, accumulate( ))과 다르다.
+
+14.4 복소수
+
+표준 라이브러리는 4.2.1절에서 설명한 complex 클래스를 이용해 일련의 복소수 타입
+을 지원한다. 실수부가 단정도 부동소수점 수(08『)이거나 배정도 부동소수점 수
+(double), 혹은 다른 어떤 타입이 될 수 있도록 표준 라이브러리 ㄷ90046×는 템플릿으로
+제공된다.
+
+template<typename Scalar>
+
+class complex {
+
+public:
+complex(const Scalar& re ={}, const Scalar& im={}); // 기본 함수 인자. 3.6.13 참고
+1 zen
+
+};
+
+일반적인 산술 연산과 수학 함수는 복소수를 지원한다.
+는 I
+
+void f(complex<float> fl, complex<double> db)
+{
+
+complex<long double> 1d {fl+sqrt(db)};
+
+db += f1%3;
+
+fl = pow(1/f1,2);
+
+320 14%

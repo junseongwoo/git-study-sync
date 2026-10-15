@@ -1,0 +1,34 @@
+이러한 반복자 특성과 이를 기반으로 한 기법들은 컨셉(7.2절)과 FREE 부분이 많
+다。컨셉을 이용하면 5아ㄴ() 예제를 다음과 같이 작성할 수 있다.
+
+template<RandomAccessIterator Iter>
+void sort(Iter p, Iter 0); // std::vector 를 비롯해 임의 접근을 허용하는 반복자에 사용
+
+template<ForwardIterator Iter>
+void sort(Iter p, Iter q)
+// std::listE 비롯해 순방향 순회만 가능한 타입에 사용
+{
+vector<Value_type<Iter>> v {p,q};
+sort(v);       // 임의 접근 정렬 사용
+copy(v.begin(),v.end(),p);
+}
+
+template<Range R>
+void sort(R& r)
+{
+sort(r.begin(),r.end()); // 적절한 정렬 함수 사용
+}
+
+이에 대한 표준의 AFL 현재 진행 중이다.
+
+13.9.2 타입 술어
+표준 라이브러리 <6/06_ㄴㄷ25>에서는 타입 gofvre predicatesal yy 하는 간단한 타입
+함수를 제공하는데, 이를 이용해 타입에 대한 기본적인 사항을 알 수 있다.
+
+bool bl = Is_arithmetic<int>();     // 4, inte 산술 타입이다.
+bool 62 = Is_arithmetic<string>(); // 아니요, 560::5109은 산술 타입이 아니다.
+
+다른 예로는 15_61355와 is_pod, is_literal_ type has_virtual destructor, is_
+base_of7} 있는데, 이들은 템플릿을 작성할 때 유용하다.
+
+310 13장

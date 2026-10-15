@@ -1,0 +1,39 @@
+14.3.1 병렬 알고리즘
+
+<0406「16>에서는 원래 버전과 약간 다른 병렬 버전(12.9절)의 수치 알고리즘을 제공
+한다.
+
+병렬 수치 알고리즘
+
+x=reduce(b,e,v)                                      순서가 없는 것을 제외하면 x=accumulate(b,e,v)
+와 동일
+
+x=reduce(b,e)                            V7} 6의 값 타입일 때 x=reduce(b,e,V{})
+
+x=reduce(pol,b,e,v)                      실행 정책이 polQ! x=reduce(b,e,v)
+
+x=reduce(pol,b,e)                             V7} bo Zt 타입일 때 x=reduce(pol,b,e,V{})
+
+p=exclusive_scan(pol,b,e,out)               001에 기반을 & p=partial_sum(b,e,out), {
+
+번째 합에서 \번째 입력 요소는 제외
+
+p=inclusive_scan(pol,b,e,out)               001에 기반을 & p=partial_sum(b,e,out). t
+번째 합에 (번째 입력 요소 포함
+
+p=transform_reduce(pol,b,e,f,v)             [5:6]에 속하는 ×에 1(×)를 취한 § reduce
+
+p=transform_exclusive_scan(pol,b,e,out,f,v) | [65:0]에 속하는 ×에 1(×)를 취한 후 exclusive
+
+scan
+p=transform_inclusive_scan(pol,b,e,out,f,v) | [5:0]에 속하는 ×에 1(×)를 취한 £ inclusive_
+
+5600
+
+편의상 +와 = 대신 사용할 연산을 인자로 받는 버전들은 생략했다. 『694<6( )만 제외
+하고는, 기본 정책(순차)과 기본 값을 사용한 버전도 생략했다.
+
+<2190「1\에 정의된 병렬 알고리즘(12.9절)과 마찬가지로, 실행 정책을 지정할 수
+있다.
+
+수치 319

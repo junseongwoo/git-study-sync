@@ -1,0 +1,32 @@
+template<typename T>
+class valarray {
+
+I wes
+};
+
+valarrayoll= 다음과 같은 산술 연산자와 일반적인 수학 함수를 사용할 수 있다.
+
+void f(valarray<double>& al, valarray<double>& a2)
+{
+valarray<double> a = al*3.14+a2/al;     // 수치 배열 연산자 *, +, /, =
+a2 += al*3.14;
+a = abs(a);
+double d = a2[7];
+1.
+
+이와 같은 산술 연산에 더불어 valarrayo As 다차원 계산을 구현하기 위한 건너
+띄기  7] stride access 9. 제공한다.
+
+14.7 수치 한계
+
+표준 라이브러리 <145>에서는 *4028+의 최대 지수와 into] 바이트 수를 포함한
+내장 타입의 속성(14.7절 참고)을 기술하는 클래스를 제공한다. 예를 들어 charo] 부호
+가 있는지 확인할 수 있다.
+
+static_assert(numeric_limits<char>::is_signed,"8£% 없는 문자!" ) ;
+static_assert(100000<numeric_limits<int>::max(),"22 int!");
+
+두 번째 어써션이 동작하는 0] numeric_limits<int>::max()7} constexpr 함수
+이기 때문이다(1.0절).
+
+324 14장

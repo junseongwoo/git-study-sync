@@ -1,0 +1,50 @@
+14.3 수치 알고리즘
+<0406「\<>에서 accumulate()& 비롯한 일반화된 수치 알고리즘 몇 가지를 볼 수
+있다.
+
+수치 알고리즘
+
+×는 [be]? 요소인 {의 합
+
+x=accumulate(b,e,1)
+
+x=accumulate(b,e,i,f)            + 대신 *를 사용한 accumulate
+
+x=inner_product(b,e,b2,1)       x [6:6)와 [b2:b2+(e*b))2| LHX(inner product). &,
+[6:6)에 속하는 01과 그에 상응하며, [62:62+(6*5))에 속
+하는 62에 대해 (+01)*(*02)의 총합에 {를 더한 값
+
+x=inner_product(b,e,b2,1,f,f2)     +와 + 대신에 f12} ?2를 이용한 inner_product
+
+p=partial_sum(b,e,out)           [out:p)Q] 번째 RAE [6:6ㄴ에 속하는 R49 합
+
+p=partial_sum(b,e,out,f)          + 대신 £8 AMRSE partial sum
+
+[out:p)2l {번째 (10) RAE *(b+i)* (b+i-1); 6-6>0이면
+
+*out 은 *b
+
+p=adjacent_difference(b,e,out)
+
+p=adjacent_difference(b,e,out,f) | - 대신 를 O|8} adjacent_difference
+
+[5:6)의 Zt QAO +vE 대입. 결과 AJBHAE v+1, v+2, .…
+×는 정수 0과 m2 최대공약수
+
+×는 정수 0과 0의 최소공배수
+
+iota(b,e ,v)
+
+x=gcd(n,m)
+
+x=lcm(n,m)
+
+이런 알고리즘들은 자주 사용하는 연산을 일반화하는데, 예를 들어 함을 계산하는
+일을 어떤 종류의 AfLolt 적용할 수 있다. 또한 APA] 요소에 적용되는 연산
+파라미터화할 수 있다. 각 알고리즘은 일반화된 버전과 더불어 해당 알고리즘에서
+가장 많이 사용되는 연산자를 적용하는 버전도 제공한다.
+
+list<double> lst {1, 2, 3, 4, 5, 9999.99999};
+auto 5 = accumulate(lst.begin(),lst.end(),0.0);    // 합 계산: 10014.9999
+
+318 14%

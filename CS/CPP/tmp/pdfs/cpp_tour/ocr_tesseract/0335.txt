@@ -1,0 +1,36 @@
+할 수 있다. packaged_taski= 반환 값이나 예외를 태스크에서 0000156에 집어넣는
+래퍼808아 코드(15.7.1절과 유사한 코드)를 제공한다. get_futureE 호출해 이를 요청
+하면 packaged_task= 0『00ㄴ56에 상응하는 14\『6를 돌려준다. 예를 들어 표준 라
+이브러리 360000143+6( )(14.3절)를 이용해 vector<double>2] 요소에서 각기 절반을
+더하는 두 태스크를 작성할 수 있다.
+
+double accum(double* beg, double* end, double init)
+// 2203 나부터 시작해 [669:600)를 모두 더함
+
+{
+return accumulate(beg,end, init);
+
+》
+
+double comp2(vector<double>& v)
+
+{
+using Task_type = double(double*,double*,double); // 태스크의 타입
+packaged_task<Task_type> 010 {accum}; // 태스크(즉, accum)E 패키징
+packaged_task<Task_type> ptl {36040};
+future<double> f@ {pt0.get_future()}; // 010의 futureg 저장
+future<double> f1 {ptl.get_future()}; // ptle futureg 저장
+doublex first = &v[0];
+thread t1 {move(pt0@),first,first+v.size()/2,0}; // 010를 위한 스레드 시작
+thread t2 {move(ptl),first+v.size()/2,first+v.size(),0}; // pt18 위한 스레드 시작
+7
+return f0.get()+fl.get(); // 결과 가져오기
+
+}
+
+packaged_task 템플릿은 태스크의 타입을 템플릿 ARKH] Task type double
+(004616*,004616*,004516)의 별칭)로 받아들이고 해당 태스크를 생성자의 인자(예제의
+360640)로 받는다. packaged_task: EAR} 수 없으므로 70\6()가 필요하다.
+packaged_taskE 복사하지 못하는 이유는 자원 핸들이기 때문이다. 030<3960_ㄷ35\
+
+동시성 341

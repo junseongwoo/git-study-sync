@@ -1,0 +1,455 @@
+
+
+===== 인쇄 315쪽 / PDF 310쪽 =====
+14
+
+수치
+
+HRY 목표는 숫자가 아니라 통찰이다.
+- 해밍(8. \, Hamming)
+
+... 그러나 학생들에게는 숫자가 통찰을 끌어내는 가장 좋은 방법일 수 있다,
+- WAE(A, Ralston)
+
+규
+무 그
+2
+
+[2
+닐
+
+리즘: 병렬 수치 알고리즘
+
+ㅜㅠ 포도 ㅠㅠ
+보호 오유 고
+oo
+Es
+
+In
+re
+
+수치 315
+
+
+===== 인쇄 316쪽 / PDF 311쪽 =====
+14.1 소개
+
+<++는 수치 계산을 특별히 고려해 설계되진 않았다. 그러나 일반적으로 데이터베이
+스 접근이나 네트워킹, 장비 제어, 그래픽스, 시뮬레이션, 금융 분석을 비롯한 다양한
+작업에서 수치 계산을 사용한다. 따라서 커다란 시스템의 AREA 수치 계산을 수행
+할 때 <++는 매력적인 도구일 수 있다. 계산 과정의 일부로 복잡한 자료 구조가 필요
+할 때는 0++의 장점이 빛을 발한다. 그런 이유로 과학과 공학, 금융을 비롯해 정교한
+수치 계산을 BRE 하는 영역에서 0++를 널리 사용한다. 결론적으로 그러한 계산을
+지원하는 기능과 기법들이 개발됐다. 14장에서는 수치 AYE 위한 표준 라이브러리
+기능을 살펴본다.
+
+14.2 수학 함수
+
+<008하>에서는 float} double, long double 타입의 인자에 사용할 수 있는 590『ㄴ( ),
+109( ), sin( )을 비롯한 표준 수학 8} standard mathematical functions =z 제공한다.
+
+표준 수학 함수
+
+abs(x)             절댓값
+
+ceil(x)             ×보다 크거나 같은 가장 작은 정수
+
+Floor(x)            ×보다 작거나 같은 가장 2 정수
+
+sqrt(x)            제곱근. x= 반드시 음이 아닌 수여야 함
+
+cos(x)             코사인
+
+sin(x)             사인
+
+tan(x)             탄젠트
+
+acos(x)           아크코사인(역코사인). 결과는 음이 아닌 수
+
+asin(x)            아크사인(역사인). 0에서 가장 가까운 결과 반환
+
+(이어짐)
+
+316 14장
+
+
+
+===== 인쇄 317쪽 / PDF 312쪽 =====
+표준 수학 함수
+
+sinh(x)             하이퍼볼릭 사인
+
+cosh(x)             하이퍼볼릭 코사인
+tanh(x)            하이퍼블릭 탄젠트
+exp(x)             밀수 el 지수 연산
+
+이 함수들의 000016(14.4절) HHL <00016%에서 찾을 수 있고, 반환 타입은 인자
+타입과 같다.
+
+<cerrno>9] erro 설정하는 방식으로 에러를 나타내는데, 6008이면 정의역 에러이
+고, ERANGEO|® 구간 에러다.
+
+void f()
+
+{
+errno = 0;      // 예전 에러 상태 지움
+sqrt(-1);
+
+if (errno=EDOM)
+cerr << "sqrt()of 음수 사용할 수 없음" ;
+
+errno = 0;      // 예전 에러 상태 지움
+pow( numeric_limits<double>::max(),2);
+if (errno = ERANGE)
+cerr << "pow()2| 결과가 000616로 표현할 수 없음 정도로 3°;
+
+몇 가지 더 많은 수학 함수를 <5*015>에서 찾을 수 있으며, 일종의 특수 수학 함수
+인 beta(), rieman_zeta(), sph_bessel() 등을 <38ㄷ에서 볼 수 있다.
+
+수치 317
+
+
+===== 인쇄 318쪽 / PDF 313쪽 =====
+14.3 수치 알고리즘
+<0406「\<>에서 accumulate()& 비롯한 일반화된 수치 알고리즘 몇 가지를 볼 수
+있다.
+
+수치 알고리즘
+
+×는 [be]? 요소인 {의 합
+
+x=accumulate(b,e,1)
+
+x=accumulate(b,e,i,f)            + 대신 *를 사용한 accumulate
+
+x=inner_product(b,e,b2,1)       x [6:6)와 [b2:b2+(e*b))2| LHX(inner product). &,
+[6:6)에 속하는 01과 그에 상응하며, [62:62+(6*5))에 속
+하는 62에 대해 (+01)*(*02)의 총합에 {를 더한 값
+
+x=inner_product(b,e,b2,1,f,f2)     +와 + 대신에 f12} ?2를 이용한 inner_product
+
+p=partial_sum(b,e,out)           [out:p)Q] 번째 RAE [6:6ㄴ에 속하는 R49 합
+
+p=partial_sum(b,e,out,f)          + 대신 £8 AMRSE partial sum
+
+[out:p)2l {번째 (10) RAE *(b+i)* (b+i-1); 6-6>0이면
+
+*out 은 *b
+
+p=adjacent_difference(b,e,out)
+
+p=adjacent_difference(b,e,out,f) | - 대신 를 O|8} adjacent_difference
+
+[5:6)의 Zt QAO +vE 대입. 결과 AJBHAE v+1, v+2, .…
+×는 정수 0과 m2 최대공약수
+
+×는 정수 0과 0의 최소공배수
+
+iota(b,e ,v)
+
+x=gcd(n,m)
+
+x=lcm(n,m)
+
+이런 알고리즘들은 자주 사용하는 연산을 일반화하는데, 예를 들어 함을 계산하는
+일을 어떤 종류의 AfLolt 적용할 수 있다. 또한 APA] 요소에 적용되는 연산
+파라미터화할 수 있다. 각 알고리즘은 일반화된 버전과 더불어 해당 알고리즘에서
+가장 많이 사용되는 연산자를 적용하는 버전도 제공한다.
+
+list<double> lst {1, 2, 3, 4, 5, 9999.99999};
+auto 5 = accumulate(lst.begin(),lst.end(),0.0);    // 합 계산: 10014.9999
+
+318 14%
+
+
+===== 인쇄 319쪽 / PDF 314쪽 =====
+14.3.1 병렬 알고리즘
+
+<0406「16>에서는 원래 버전과 약간 다른 병렬 버전(12.9절)의 수치 알고리즘을 제공
+한다.
+
+병렬 수치 알고리즘
+
+x=reduce(b,e,v)                                      순서가 없는 것을 제외하면 x=accumulate(b,e,v)
+와 동일
+
+x=reduce(b,e)                            V7} 6의 값 타입일 때 x=reduce(b,e,V{})
+
+x=reduce(pol,b,e,v)                      실행 정책이 polQ! x=reduce(b,e,v)
+
+x=reduce(pol,b,e)                             V7} bo Zt 타입일 때 x=reduce(pol,b,e,V{})
+
+p=exclusive_scan(pol,b,e,out)               001에 기반을 & p=partial_sum(b,e,out), {
+
+번째 합에서 \번째 입력 요소는 제외
+
+p=inclusive_scan(pol,b,e,out)               001에 기반을 & p=partial_sum(b,e,out). t
+번째 합에 (번째 입력 요소 포함
+
+p=transform_reduce(pol,b,e,f,v)             [5:6]에 속하는 ×에 1(×)를 취한 § reduce
+
+p=transform_exclusive_scan(pol,b,e,out,f,v) | [65:0]에 속하는 ×에 1(×)를 취한 후 exclusive
+
+scan
+p=transform_inclusive_scan(pol,b,e,out,f,v) | [5:0]에 속하는 ×에 1(×)를 취한 £ inclusive_
+
+5600
+
+편의상 +와 = 대신 사용할 연산을 인자로 받는 버전들은 생략했다. 『694<6( )만 제외
+하고는, 기본 정책(순차)과 기본 값을 사용한 버전도 생략했다.
+
+<2190「1\에 정의된 병렬 알고리즘(12.9절)과 마찬가지로, 실행 정책을 지정할 수
+있다.
+
+수치 319
+
+
+===== 인쇄 320쪽 / PDF 315쪽 =====
+vector<double> v {1, 2, 3, 4, 5, 9999.99999};
+auto s = reduce(v.begin(),v.end());       // doubled 누적자로 사용해 합을 계산
+
+vector<double> large;
+// ... 많은 US large 채운다 . ..
+auto 52 = reduce(par_unseq, large.begin(),large.end()); // 가능한 병렬화 정도로 합을 계산
+
+병렬 알고리즘(예,669066())은 요소에 연산을 적용하는 순서가 정해지지 않는다는 점
+에서 순차 알고리즘(예, accumulate( ))과 다르다.
+
+14.4 복소수
+
+표준 라이브러리는 4.2.1절에서 설명한 complex 클래스를 이용해 일련의 복소수 타입
+을 지원한다. 실수부가 단정도 부동소수점 수(08『)이거나 배정도 부동소수점 수
+(double), 혹은 다른 어떤 타입이 될 수 있도록 표준 라이브러리 ㄷ90046×는 템플릿으로
+제공된다.
+
+template<typename Scalar>
+
+class complex {
+
+public:
+complex(const Scalar& re ={}, const Scalar& im={}); // 기본 함수 인자. 3.6.13 참고
+1 zen
+
+};
+
+일반적인 산술 연산과 수학 함수는 복소수를 지원한다.
+는 I
+
+void f(complex<float> fl, complex<double> db)
+{
+
+complex<long double> 1d {fl+sqrt(db)};
+
+db += f1%3;
+
+fl = pow(1/f1,2);
+
+320 14%
+
+
+===== 인쇄 321쪽 / PDF 316쪽 =====
+//" ~
+
+509「*( )와 00#(( )(지수 연산)를 비롯한 함수를 <00016%>(14.2절)에서 찾아볼 수 있다.
+
+14.5 난수
+
+테스팅과 게임, 시뮬레이션, 보안 등 많은 곳에서 난수가 유용하게 쓰인다, 그만큼
+표준 라이브러리 20000=에서는 여러 가지 난수 생성기를 지원한다. 난수 생성기는
+크게 두 부분으로 구성된다.
+
+[1] Erg 난수 혹은 의사 난수 값의 AAAS 만들어낸다.
+[2] BEA da 값은 수학적 분포의 특정 구간으로 매핑한다.
+
+니010[0_ 16. 01566100+100(모든 정수를 같은 확률로 생성)과 normal_distribution
+(종형 곡선『86 vell cure) exponential _distribution(x|43o2 증가) 등의 분포가 있으
+며, 각 분포의 특정 구간을 사용한다.
+
+using my_engine = default_random_engine;             // 엔진 타입
+
+using my_distribution = uniform_int_distributiono; // 분포 타입
+
+my_engine re {}; // 기본 엔진
+my_distribution one_to_six {1,6};           // 정수 1. .6에 매핑되는 분포
+auto die = [](){ return one_to_six(re); }  // 난수 생성기 만들기
+
+int x =die(); ~~ // 주사위 굴리기: x 구간 [1:6]에 속하는 값
+일반성과 높은 성능 덕분에 한 전문가는 표준 라이브러리 난수 생성기를 일컬어 "모든 난수
+
+생성 라이브러리의 표상'이라고 했을 정도다. 그러나 결코 '초보자 친화적이라고 하긴 of
+렵다. 예제에서는 45409 구문과 람다를 이용해 무엇을 하고자하는지 좀 더 명확히 했다.
+
+수회 321
+
+
+===== 인쇄 322쪽 / PDF 317쪽 =====
+<갖고 있는 배경에 상관없이) 어떤 초보자에게도 완벽히 일반화된 인터페이스를 제공하
+난수 생생기 라이브러리를 익히기란 쉬운 일이 아니다. A 시작으로는 다음과 같이
+단한 난수 생성기로 충분할 수 있다.
+
+(이   에
+
+Rand_int rnd {1,10}; // 구간 [1:10]에서 난수를 만드는 생성기
+int x = rnd();        // xe [1:10]에 속하는 수
+
+이렇게 하려면 016( )에서 했던 것처럼 엔진과 분포를 Rand_intehs 클래스 안에서
+통합해야 한다.
+
+class Rand_int {
+public:
+
+Rand_int(int low, int high) :dist{low,high} { }
+
+int operator()() { return dist(re); } // int 생성
+
+void seed(int s) { re.seed(s); }        // 난수 엔진에 새로운 시드 선택
+private:
+
+default_random_engine re;
+
+uniform_int_distribution< dist;
+
+};
+
+이 클래스를 정의하는 일은 여전히 전문가 수준이지만, Rand_int()F 사용하는 일은
+C++ 초보자를 위한 과정의 A Fol 다룰 수 있을 정도다.
+
+int main()
+{
+constexpr int max = 9;
+Rand_int rnd {0,max};         // 단일 분포의 난수 생성기
+
+vector<int> histogram(max+1); // 적당한 크기의 벡터 생성
+for (int i=0; 닌=200; ++1)
+++histogram[rnd()];         // [0:max] 구간의 수에 대한 히스토그램 채우기
+
+for (int i = 0; i!=histogram.size(); ++i) { // 막대그래프 그리기
+
+322 14%
+
+
+===== 인쇄 323쪽 / PDF 318쪽 =====
+cout << i << "\t';
+for (int j=0; j!=histogram[i]; ++j) cout << '*';
+cout << endl;
+
+출력으로 (통계적 변동을 포함한) 단일 BEE 볼 수 있다.
+
+* kk 그 기 kk k x 기
+
+* kk kk k kk
+
+* kk kK kk kk kk
+
+* kk kk k k kx k kx
+
+* kk kk k kk
+
+kok ok ok kok kk kk k kx
+기 kk kk kk ok kk ok k kx
+* ok 을 을 을 kx
+
+* ok ok ok kK kk kk k x
+
+© ONO 내 WN
+
+* kk kk ok kk xk x x kx Kk
+
+<++에 표준 그래픽 라이브러리가 없는 BAZ ASCH 그래픽'을 사용했다. 시중에
+<++용 상용 그래픽 라이브러리와 GUI 라이브러리가 많지만, 이 책에서는 150 표준
+
+기능만을 다룬다.
+
+14.6 벡터 산술
+
+11.2절에서 설명한 vectors 값을 저장하기 위한 일반적인 메커니즘으로, 유연하며
+컨테이너, 반복자, 알고리즘의 아키텍처에 잘 융화되게 설계됐다. 그러나 수학적인
+벡터 연산은 제공하지 않는다. vectoro] 이러한 연산을 추가하는 것은 어렵지 않지만,
+그 유연성과 일반성으로 인해 수치 작업에서 필수적인 최적화가 어려울 수 있다. 결론
+적으로 표준 라이브러리 <<313「『3\>에서는 vector? 유사한 템플릿인 4313「「2\를
+제공하는데, 일반성은 좀 떨어지지만 수치 계산을 위한 최적화에는 더 적합하다.
+
+수치 323
+
+
+===== 인쇄 324쪽 / PDF 319쪽 =====
+template<typename T>
+class valarray {
+
+I wes
+};
+
+valarrayoll= 다음과 같은 산술 연산자와 일반적인 수학 함수를 사용할 수 있다.
+
+void f(valarray<double>& al, valarray<double>& a2)
+{
+valarray<double> a = al*3.14+a2/al;     // 수치 배열 연산자 *, +, /, =
+a2 += al*3.14;
+a = abs(a);
+double d = a2[7];
+1.
+
+이와 같은 산술 연산에 더불어 valarrayo As 다차원 계산을 구현하기 위한 건너
+띄기  7] stride access 9. 제공한다.
+
+14.7 수치 한계
+
+표준 라이브러리 <145>에서는 *4028+의 최대 지수와 into] 바이트 수를 포함한
+내장 타입의 속성(14.7절 참고)을 기술하는 클래스를 제공한다. 예를 들어 charo] 부호
+가 있는지 확인할 수 있다.
+
+static_assert(numeric_limits<char>::is_signed,"8£% 없는 문자!" ) ;
+static_assert(100000<numeric_limits<int>::max(),"22 int!");
+
+두 번째 어써션이 동작하는 0] numeric_limits<int>::max()7} constexpr 함수
+이기 때문이다(1.0절).
+
+324 14장
+
+
+===== 인쇄 325쪽 / PDF 320쪽 =====
+14.8 조언
+
+(1]
+
+(2
+
+3]
+
+[4]
+
+[5]
+
+[6]
+
+71
+
+[8
+
+이
+[10]
+
+미묘한 수치 문제가 있을 때 수학적 관점에서 100% 확실하지 않다면 전문적인
+조언을 구하거나 실험을 해보거나 둘 다 해보자. 14.1절
+
+언어의 기본적인 기능만 이용해서 수치 계산을 하기보다 라이브러리를 사용하
+자. 14.1절
+
+Al BARE 값을 계산하는 루프를 직접 작성하기 전에 accumulate( )와 700「_
+product(), par tial_sum(), adjacent_difference()& 먼저 고려하자. 14.3절
+복소수 산술에는 500: :000016×를 사용하자, 14.4절
+
+난수 생성기를 만들 때는 엔진과 분포를 결합한다. 14.5절
+
+난수 생성기가 충분히 랜덤한지 주의를 기울이자. 14,53
+
+C 표준 라이브러리의 300( )를 사용하지 말자. 실제로 사용하기엔 충분히 랜덤
+하지 않다. 14.5절
+
+연산과 요소 타입에 대한 유연성보다 실행 시간 효율성이 중요하다면 27
+를 이용해 수치 계산을 수행하라. 14.6절
+
+0406「16_115를 이용해서 수치 타입의 속성을 알 수 있다. 14.7절
+numeric_limits 이용해 수치 타입이 특정 용도에 맞는지 확인하자. 14.7절
+
+수처 325
