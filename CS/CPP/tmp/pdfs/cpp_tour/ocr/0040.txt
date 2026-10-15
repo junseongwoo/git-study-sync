@@ -1,0 +1,27 @@
+과 일치하지 않으면 아무 동작도 취하지 않는다.
+case十 벗어날 때 switch 구문을 포함하는 함수로부터 반한할 필요는 없다. switch
+구문 다음의 구문-을 실행하고 싶다면 break문을 사용한다. 다음과 같은 콘솔 비디오
+게임의 명령어 파서를 살펴보자.
+void actton( )
+(trtft) (
+cout << •어떻계 할까요:\n•; // 행동을 요구
+str€ng act;
+ctn >> act;
+// 문자열에 문자g 읽기
+Po€nt delta {0,0}•, // Po(ntm {x,y} 쌈을 처장
+for (char ch : act) {
+switch (ch) (
+case •『: // 위로
+case 'n•: // 책쪽으로
+++delta.y;
+break;
+case 누• : // 오른쪽으로
+case •e': // 동쪽으로
+++detta.x;
+break;
+defautt:
+cout (( “가만히 있겠습니다!\n•••
+mve( current+delta•scale ) ;
+update-d€splay( );
+for 구문1二설)과 마찬가지로 if 구문에서도 변수를 선언하고 테스트할 수 있다.
+기초 41

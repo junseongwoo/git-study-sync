@@ -1,0 +1,20 @@
+for each(v.begin( ),v.end( ),æm-fn(&Shagp: :draw));
+c++11에서 람다를 도입하기 전에는 객체지향 스타일의 호출과 함수 스타일의 호출을
+매핑할 때 주로 æn-fn( )이나 그와 유사한 방법을 시용했다.
+13.8.3 function()
+표준 라이브러리 function은 호출 연산자 ( )를 이용해 호출할 수 있는 무언가를 지상
+한다. 즉, function 타입의 객체는 함수 객체(632절)를 말한다.
+int fl(double);
+function<tnt(double)> fctl {fl};
+int f2(string);
+function fct2 {f2};
+// fl으로 초기화
+// fct2의 타입은 funct€on<€nt(str€ng)>
+function fct3 = [l(Shape* p) { )•, }•, // fct3의 타입은
+// function<votd(Shapet)>
+fct2에서 function의 타입은 초것값 int(string)으로부터 추론된다.
+당연한 말이지만 function은 콜백, 연산을 인자로 전달할 때 함수 객체를 전달하는
+경우 등에 유용하다. 그러나 직접적인 함수 호출에 비하면 실행 시간에 부하가 발생하
+며, function은 객체이므로 오버로팅을 적용할 수 없다. (람다를 포함해) 함수 객체를
+오버로딩하려면 ove「l예ded(13.5.1절)를 고려하자.
+유`리티 305

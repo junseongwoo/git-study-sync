@@ -1,0 +1,42 @@
+Matrix operator+(const Matrix& x, const 18116 y)
+
+{
+Matrix res;
+// ... 모든 (65[ㄴ,]]에 as, res({,§] = x[{,§)ey[4,]) ...
+return res;
+
+}
+
+Matrix ml, m2;
+MW eos
+Matrix m3 = mlem2; // 복사가 발생하치 않음
+
+Matrixi= 크기가 매우 커서 현대척인 컴퓨터에서조차 복사 비용이 높다, 따라서 복사
+대신 Matrixo] 이동 생성자 08885 2 2질)를 정의해 Matrix operator+() 밖
+으로 간단히 이동시킨다. 다음과 같은 예전 방식처럼 메모리를 직접 Bey 필요가
+없다.
+
+Matrix* add(const Matrixh x, const 71081061666 y) // 복잡하고 에러에 취약한 20세기 스타일
+{
+
+Matrix* p = new Matrix;
+
+// ... RE res[{,§]o0 as, res(i,)] = x[{,)]ey[L,]] ...
+
+return p;
+}
+
+Matrix ml, m2;
+
+" / es
+Matrix* m3 = add(ml,m2); // 단순한 포인터 복사
+1 «oe
+delete m3;               // 6A 잊을 수 UB
+
+불행히도 예전 코드에서 큰 객체의 포인터를 반환하는 경우가 많은데, 찾기 어려운
+에러의 주된 요인 중 하나다. 코드를 이렇게 작성하지 말자. operators()i= 효율성면
+에서 300( )와 동등하고, 정의하고 사용하기는 더 쉬우며, 에러에 덜 취약하다.
+
+함수가 요청받은 AYE 완수할 수 없을 때는 예외(3.5.1절)를 던지는데, 덕분에 '예외
+
+모듈화 85

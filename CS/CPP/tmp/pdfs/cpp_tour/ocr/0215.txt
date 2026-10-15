@@ -1,0 +1,26 @@
+is, Entry& e)
+char C, c2;
+if (iS>>C c=='{' iS>>C2 c2==
+string
+(is.get(c) c!= "|)
+tnt number = 0;
+if ( is>>number>>c C==
+e = number};
+「eturn 15 ;
+is. setstate( ios_base: : ) •,
+return iS,•
+// string의 기본 값은 빈 문자열:
+// •• 이전의 모든 문자는 이름으로 저장
+// 번호와 } 읽기
+// 항목에 대입
+// 스트림에 실패를 기록함
+입력 연산이 반환하는 istream의 참조를 이용하면 연산이 성공했는지를 확인할 수
+있다. 예를 들어 조건 절 안에서 iS>>C를 사우한다면 "char를 is로부터 c에 읽기가
+성공했는가?”라는 의미다.
+iS>>C는 기본적으로 공백 문자를 지나치지만, is.get(c)는 그렇지 않다. 따라서
+Entry 입력 연산자는 이름 문자열 밖에서는 공백 문지를 무시하지민(지나치지만), 이름
+안에서는 그렇지 않다. 다음 예를 보자.
+{ "John t•lar•ood CIeese" , 123456 }
+{"Mtchæl EÖward PaIin" , 987654}
+주어진 두 항목-을 다음과 같이 Entry에 읽을 수 있다.
+218 10장

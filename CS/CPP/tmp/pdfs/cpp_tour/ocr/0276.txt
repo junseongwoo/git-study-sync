@@ -1,0 +1,23 @@
+등을 확인. ...
+return unique-ptr<X>{new 제나};
+vector가 객체 시권스의 핸들인 것처럼 untque-ptr은 개별 객체(흐e은 배열)의 핸들이
+다. 두 경우 모두 마당으로) 객체의 생명주기를 관리하고, 간단하고 효율적인
+「eturn을 위해 이동 연산을 사용한다.
+shared-ptr은 이동보다는 복사된다는 점만 제외하면 untque-ptr과 유사하다. 객체
+의 소유권을 공유하는 객체에 shared-ptr을 사용하며, 마지막 shared-ptr이 소별될
+때 객체(자원)가 해제된다.
+void shared ptr<fstræp);
+void user( const naTe, ios-base: :0畔m函e
+shared—ptr<fstreao fp {new fstream(ndtp,mde)};
+tf (!*fp) // 파일을 제대로 열었는지 확인
+thro••/ N0_ftte{};
+f(fp);
+g(fp);
+(명시적으로나 암묵적으로) fp의 복사본을 소멸시기는 마지막 함수가 종료될 때 fp의
+생성자에서 열어놓은 파일이 닫힌다. f( )나 이 )는 fp의 또 다른 복사본을 시용하는
+작업을 유발시기거나, 여러 가지 방법으로 user( )가 종료된 후에도 fp의 복사본을
+남길 수 있다는 점을 주의하자. 따라서 shared-ptr은 소멸자를 바당으로 메모리상의
+객체를 관리하는 일종의 가비지 걸렉터를 제공한다고 할 수 있다. 이러한 방법은 추가
+적인 비용을 크게 수반하며, 공유된 객체의 생에주기를 예측하기도 어렵다. 따라서
+소유권을 꼭 공유해야 할 경우에만 shared-ptr을 사용하자.
+유일리티 279

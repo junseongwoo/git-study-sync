@@ -1,0 +1,39 @@
+else
+return error_number;    // int 반환
+
+varianto] 어떤 값을 대입하거나 그 값으로 초기화할 때 값의 타입을 기억하고 있다가
+나중에 사용자가 질의할 때 variant] 저장된 값의 타입을 알려주고 값을 추출한다.
+
+auto m = compose_message(cin));
+
+if (holds_alternative<string>(m)) {
+cout << m.get<string>();
+
+}
+
+else {
+int err = m.get<int>();
+71%: 에러 처리 wa
+
+}
+
+예외를 좋아하지 않는 사람에게는 이런 스타일이 매력적으로 보일 수 있지만(3.5.3절
+참고), 이보다 더 흥미로운 용례가 있다. 간단한 컴파일러를 예로 들면 각각 다른 방식
+으로 표현된 여러 종류의 노드를 구분할 필요가 있다.
+
+using Node = variant<Expression,Statement,Declaration, Type>;
+
+void check(Node* p)
+1
+
+if (holds_alternative<Expression>(*p)) {
+Expression& e = get<Expression>(*p);
+AT
+
+}
+
+else if (holds_alternative<Statement>(*p)) {
+Statement& 5 = get<Statement>(*p);
+2. 06
+
+296 13장

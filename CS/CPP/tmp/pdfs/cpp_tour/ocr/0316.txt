@@ -1,0 +1,23 @@
+sqrt( )와 pm•/( )(지수 연산)를 비롯한 함수를 <에鬱le沙(14.2절)에서 찾아볼 수 있다.
+14.5 난수
+테스팅과 게임, 시뮬레이션, 보안 등 많은 곳에서 난수가 유용하게 쓰인다. 그만큼
+표준 라이브러리 守and예>에서는 여러 가지 난수 생성기를 지원한다. 난수 생성기는
+그게 두 부분으로 구성된다.
+[회 엔진engine은 난수 혹은 의사 난수 값의 시권스를 만들어낸다.
+[기 분포d•str,but•oné 난수 값은 수학적 분포의 특정 구간으로 매핑한다.
+uniform int distribution(모든 정수를 같은 확률로 생성)과 normal-distribution
+(종형 곡선the curve), exponential distribution(지수적으로 증가) 등의 분포가 있으
+며, 각 분포의 특정 구간을 사용한다.
+using my—engine = default rand예l_engtne;
+// 엔진 타입
+using my_distribution = uniform_int distributiono; // 분포 타입
+my-engine re {}•, // 기본 엔진
+my_distribution one_to_stx {1,6}•,
+// 정수 1..6에 매평되는 분포
+auto die= [1(){ retu「n one-to-six(re);} // 난수 생성기 만들기
+// 주사위 굴리기: x 구간 [1:6]에 속하는 값
+int x=die();
+일반성과 높은 성능 덕분에 한 전문가는 표준 라이브러리 난수 생성기를 일걸어 '모든 난수
+생성 라이브러리의 표상이라고 했을 정도다. 그러나 결코 ,초보자 친화적'이라고 하긴 어
+렵다. 예제에서는 using 구문과 람다를 이용해 무엇을 하고자하는지 좀 더 명확히 했다
+수월 321

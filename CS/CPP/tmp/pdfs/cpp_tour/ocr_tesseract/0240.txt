@@ -1,0 +1,34 @@
+int get_number(const 5106 5)
+{
+for (auto p = phone_book.begin(); p!=phone_book.end(); ++p)
+if (p->name==s)
+return p->number;
+return 0; // 0 2 "수를 찾지 못함"을 의미
+}
+
+사실 컴파일러는 좀 더 간단하고 에러도 적은 구간 for 루프를 이런 식으로 구현한다.
+0가 반복자라면 spi 반복자가 가리키는 요소를 참조하고, wpe ?가 다음 요소를
+가리키게 진행시킨다. 그리고 prt 멤버 mE 포함하는 클래스를 tei pom
+(*0).ㅁ과 같다.
+
+listo] 요소를 추가하거나 Listed] 요소를 삭제하는 일은 쉽게 할 수 있다.
+
+void f(const Entry& ee, List<Entr y>::iterator p, list<Entry>::iterator 0)
+{
+phone_book. insert(p,ee); // p7t 가리키는 요소 앞에 eel 추가
+phone_book.erase(q);      // Qt 가리키는 요소를 삭제
+}
+
+115*에서 156『ㄴ(0,6ㄴ80)은 6160의 값을 복사한 요소를 p7} 가리키는 요소 앞에 삽
+입한다. 여기서 p= listo] 마지막 요소 다음을 가리키는 반복자일 수도 있다. 반대로
+erase(p)& p7t 가리키는 요소를 제거한 후 소멸시킨다,
+
+앞서 다룬 list AAES vectoret 똑같이 작성할 수 있고, 작은 115*보다 작은
+vectorofl Al 더 잘 동작한다(머신 아키텍처를 이해하지 못한다면 뜻밖일 수 있다). 요소를
+Alo] 담기만하면 되는 Boll vectors} List 사이에서 선택할 수 있다. 하지만
+특별한 이유가 없다면 /60아를 사용하라. vectors 순회(예, find()2} count()), 정렬
+과 검색(예, sort()9} equal_range(); 12.6절, 13.4.3절)을 더 잘 수행한다.
+
+표준 라이브러리는 단일 연결 리스트509000948@] 《0100『0_115+도 제공한다.
+
+컨테이너 243

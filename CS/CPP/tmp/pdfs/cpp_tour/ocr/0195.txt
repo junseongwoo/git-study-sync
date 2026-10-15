@@ -1,0 +1,26 @@
+regex-replace(): (임의의 길이의) 데이터 스트림에서 정규 표현식에 매칭되
+는 문자열을 찾아 교체한다.
+regex-tterator: 매치와 부분 매치submatch(9.4.3절)를 찾아 순회한다.
+regex-token-tterator: 매지되지 않는 부분을 순회한다.
+9.41 검색
+패턴을 사용하는 가장 간단한 예는 스트림에서 패턴을 찾는 것이다.
+int lineno = 0;
+for (string tine; getline(cin,line); ){ // 버퍼 tine에 읽기
+十十1 ineno ;
+smatch matches; // 매지된 문자열이 여기에 서장됨
+if ( regex—search( line,matches , ) )
+// line에서 pat 찾기
+cout << lineno <<
+regex-search(line,matches,pat)은 pat에 저장된 정규 표현식과 매칭되는 부분을
+line에서 찾아 matches에 저장한다. 매치가 없으면 regex-search(line,matches,
+pat)는 false를 반환한다. matches는 smatch 타입의 변수인데, 여기서 '로는 'sub 나
+stnng을 의미하며, smatch는 사실상 string 타입 부분 매치의 vector라고 할 수
+있다. 첫 번째 요소 matches[@]는 전체 매치complete match다 이처럼 「egex—search( )
+의 결과는 매치의 모음이며, 일반적으로 smatch로 표현된다.
+void use( )
+ifstream in( "file. txt" )•,
+cerr << “파일 없음\n"
+198 9장
+// 입력 파일
+// 파일이 열렸는지 확인
+// 미국 우편번호

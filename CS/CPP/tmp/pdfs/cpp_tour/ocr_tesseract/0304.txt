@@ -1,0 +1,39 @@
+이를 이용하면 어떤 정렬 알고리즘을 사용할지를 컴파일 시간에 정할 수 있다. 태그
+디스패치"9*%**'라고 불리는 이 기법은 표준 라이브러리를 포함한 많은 곳에서 유연
+성과 성능을 높이기 위해 사용된다.                                         |
+
+Iterator_typed 다음과 같이 정의할 수 있다.
+
+template<typename (>
+using Iterator_type = typename C::iterator; // (의 반복자 타입
+
+하지만 포인터를 직접 사용하는 경우를 포함해 멤버 타입이 없을 때는 이 기법을
+어떻게 적용해야 할까? 이런 경우에는 표준 라이브러리의 <16『340>에서는 제공하
+는 iterator_traits& 바탕으로 태그 디스패치를 클래스 템플릿 형태로 사용할 수
+있다.
+
+template<class T>
+struct iterator_traits<T* {
+
+using difference_type = ptrdiff_t;
+
+using value_type = T;
+
+using pointer = Tx;
+
+using reference = T&;
+
+using iterator_category = random_access_iterator_tag;
+수
+
+이제 다음과 같이 쓸 수 있다.
+
+template<typename Iter>
+using Iterator_category = typename
+std: :iterator_traits<Iter>::iterator_category; // Iter% 종류
+
+이제 멤버 타입 없이도 를 임의 접근 반복자로 사용할 수 있다. F Iterator
+
+category<int*>= random_access_iterator_tagtt.
+
+유틸라티 309

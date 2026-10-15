@@ -1,0 +1,31 @@
+이런 알고리즘들은 모든 표준 라이브러리 시권스에서 동작하며, 적용할 연산을 인자
+로 받을 수 있*14.3절).
+143.1 병렬 알고리즘
+<numeric>에서는 원래 버전과 약간 다른 병렬 버전(12질설)의 수치 알고리즘을 제공
+한다.
+병넓 수치 알고리좀
+x=reduce(b,e,v)
+x=reduce(b,e)
+p=exclusive scan(pol,b,e,out)
+p=transform reduce(pol,b,e,f,v)
+p=transform exclusive
+p=transfom inclusive
+순서가 없는 것을 제외하면 x•acctntate(b,e,v)
+와 동일
+v가 b의 값 타입일 때 x•reduce(b,e,V0)
+실행 정책이 卯l인 x•r«iuce(b,e,v)
+v가 b의 값 타입일 때 x=reduce(pol,b,e,V0)
+匹l에 기반을 둔 p-parttal-sm(b,e,out).
+번째 합에서 (번째 입력 요소는 제외
+匹1에 기반을 둔 p=parttal-sÄb,e,out).
+번째 합에 t번째 입력 요소 포함
+[b:el에 속하는 x에 f(x)ß 취한 후 reduce
+(b:el에 속하는 x에 f(x)ß 취한 후 exclusive-
+scan
+[b:el에 속하는 f(x)S 취한 후 i-rxtustve-
+SCan
+편의상 +와 = 대신 A卜우할 연산을 인자로 받는 버전들은 생략했다. reduce( )만 제외
+하고는, 기본 정책(순자)과 기본 값을 사우한 버전도 생략했다.
+<atgorithm>에 정의된 병렬 알고리쉬2.9절)과 마찬가지로, 실행 정책을 지정할 수
+있다.
+수치 319

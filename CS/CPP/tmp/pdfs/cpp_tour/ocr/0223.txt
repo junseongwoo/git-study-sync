@@ -1,0 +1,24 @@
+f << "Hello, file!"•
+path에 더해 <filesystem>은 디렉터리를 순회하고 파일의 속성을 조회하는 기능을
+제공한다.
+파일 시스템 타입(일부만 표시)
+path
+ftlesystem—error
+directory_ent「y
+directory_iterator
+recursive directory_iterator
+디렉터리 경로
+파일 시스템 예외
+디렉터리 항목
+디렉터리 순회
+디렉터리와 그 하위 디렉터리 순회
+현실적이진 않지만 간단한 예제를 살펴보자.
+VOid print_dtrectory(path p)
+if (is-directory(p)) {
+for (const directory_entry& x : directo「y_iterator{p})
+COlJt <<
+catch (const filesystem_error& ex) {
+cerr << ex.what( ) << l\n'
+문자열은 암묵적으로 path로 변환되므로 print-directory를 다음과 같이 사용할 수
+있다.
+226 10장

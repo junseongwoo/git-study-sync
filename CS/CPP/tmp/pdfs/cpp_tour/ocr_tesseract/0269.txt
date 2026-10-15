@@ -1,0 +1,29 @@
+[93090515]에서 몇 가지 컨셉을 더 toh 수 있지만, 이 정도만 알아도 초심자에게는
+충분하다.
+
+12.8 컨테이너 알고리즘
+83096를 마냥 기다릴 수 없다면 간단한 구간 알고리즘을 스스로 정의할 수 있다. 예를
+Eo] sort(v.begin(),v.end())& sort(v)& 쉽게 줄여서 쓸 수 있다,
+
+namespace 6510 {
+using namespace std;
+
+template<typename C>
+void sort(C& c)
+{
+sort(c.begin(),c.end());
+}
+
+template<typename C, typename Pred>
+void sort(C& c, Pred p)
+{
+sort(c.begin(),c.end(),p);
+}
+
+1 sus
+
+50「*( )의 컨테이너 버전(을 비롯한 다른 알고리즘들)을 별도의 네임스페이스 Estdeshy
+된*ㅎ8968 660')에 선언했는데, 이렇게 하면 다른 프로그래머가 std 네임스페이스를 사
+용할 때 충돌을 피하고, 향후에 83096로 쉽게 교체할 수 있다.
+
+272 12장

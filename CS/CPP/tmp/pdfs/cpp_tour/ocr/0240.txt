@@ -1,0 +1,23 @@
+int get—nurber(const 5)
+for (autO P = phone bmk.begtn( )•, p!=phone-book.end( )•, ++P)
+return p->nt.ner;
+return 0; // 0 은 “수를 찾지 못함”을 의미
+사실 컴파일러는 좀 더 간단하고 에러도 적은 구간 for 루프를 이런 식으로 구현한다.
+p가 반복자라면 *P는 반복자가 가리기는 요소를 참조하고, ++P는 p가 다음 요소를
+가리기게 진행시킨다. 그리고 p가 멤버 m올 포함하는 클래스를 가리킨다면 p->m은
+(*p).m과 같다.
+tist에 요소를 추가하거나 list에서 요소를 삭제하는 일은 쉽게 할 수 있다.
+void f(const Entry& ee, tist<Entr p::iterator p, Iist<Entrp::iterator q)
+phone 而ok. // p가 가리기는 요소 앞에 鏖를 추가
+phone book.erase(q);
+// q가 가리기는 요소를 삭제
+ltst에서 tnsert(p,elem)은 elan의 값을 복사한 요소를 p가 가리기는 요소 앞에 삼
+입한다. 여기서 p는 ltst의 마지막 요소 다음-을 가리기는 반복자일 수도 있다. 반대로
+erase(p)는 p가 가리기는 요소를 제거한 후 소멸시킨다.
+앞서 다룬 list 예제들은 vector와 똑같이 작성할 수 있고, 작은 ltst보다 작은
+vector에서 더 잘 동작한디(머신 아카텍처를 이해하지 못한다면 뜻밖일 수 있다). 요소를
+시권스에 담기만하면 되는 경우에는 vector와 list 사이에서 선택할 수 있다. 하지만
+특별한 이유가 없다면 vector를 사용하라. vector는 순회며, find( )와 count( )), 정렬
+과 검색(예, 5”t()와 equal-range(); 12.6절, 13.4.3절)을 더 잘 수행한다.
+표준 라이브러리는 단일 연결 리스트sjngly-l•nked “st인 forward-list도 제공한다.
+컨테이너 243

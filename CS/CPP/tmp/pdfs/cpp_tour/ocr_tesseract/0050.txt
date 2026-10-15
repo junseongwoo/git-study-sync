@@ -1,0 +1,39 @@
+Vector 타입의 변수는 다음과 같이 정의할 수 있다.
+
+Vector v;
+
+그러나 vol elem 포인터가 아무것도 가리키지 않으면 이 자체로는 쓸모가 없으므로,
+\가 가리킬 요소를 제공해야 한다, 다음과 같이 vectors 생성한다.
+
+void vector_init(Vector& v, int 5)
+
+{
+v.elem = new double(s];  // 5개의 double 이뤄진 배열 할당
+v.S2=5;
+
+}
+
+2, vol 멤버 elem new 연산자로 만들어낸 포인터 값을 갖게 되고, vel 멤버 52는
+요소의 개수를 갖게 된다, Vector&oll A &는 vi 6005*가 아닌 참조(1.7절)로 전달함을
+의미하며, 1024 vector_init()o] 인자로 Herel 벡터를 변경할 수 있다.
+
+new 연산자는 자유 저장 영역" sore ga) 메모리988069090 또는 힙"*)이라고 불리는
+영역에 메모리를 함당한다. 자유 저장 영역에 할당된 객체는 스스로가 PAE 스코프
+와 무관하게 06616《6 연산(+.2.2절)으로 AHH 때까지 유효하다.
+
+Vector] 간단한 사용법은 다음과 같다,
+
+double read_and_sum(int 5)
+// cinojM 5개의 정수를 읽고 그 UE 반환. 5는 양수로 가정
+
+{
+Vector v;
+vector_init(v,s);       // voll 5개의 요소 할당
+for (int i=0; i!=s; ++1)
+cim>v.elem[i];       // 2200 값 읽기
+
+double sum = 0;
+for (61=0; i!=s; ++1)
+sum=v.elem[i];       // 229 합 계산
+
+사용자 정의 타입 51

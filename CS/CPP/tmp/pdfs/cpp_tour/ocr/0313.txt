@@ -1,0 +1,37 @@
+14.3 수치 알고리즘
+<n내ne「ic>에서 accumulate( )를 비롯한 일반화된 수지 알고리즘 몇 가지를 볼 수
+있다.
+수치 알고리좀
+x=accumutate( b,e,O
+x—accurulate(b,e,i,f)
+x=inner—product(b,e,b2,i)
+x=inner_product(b,e,b2, i,f,f2)
+p=partial—sum( b,e, )
+b,e,out,f)
+p=adjacent_difference( b,e , )
+p=adjacent_difference( b,e,out,f)
+iota(b,e ,v)
+x=gcd(n,m)
+x=lcm(n,m)
+x는 (b:el의 요소인 (의 합
++ 대신 fß 사용한 accmulate
+x는 [b:e)와 (b2:b2+(e•b))의 내적(inner product). 즉.
+[b:e)에 속하는 pl과 그에 상용하며. (b2:b2+(e*b))에 속
+하는 p2에 대해 (*pl)*(*p2)의 총합에 더한 값
++와 * 대신에 fl과 f2를 이용한 inner-product
+[out:p)의 t번째 요소는 [b:b+tl에 속하는 요소의 합
++ 대신 f를 사용한 partiat-sum
+[out:p)의 i번째 (t>0) 요소는 *(b+O* (b+i-l); e-b>0이면
+*out = *b
+대신 f를 이용한 adjacent dtfference
+[b:e)의 각 요소에 ++V를 대입. 결과 시원스는 V+I, V+2.
+x는 정수 n과 m의 최대공약수
+x는 정수 n과 m의 최소공배수
+이런 알고리즘들은 자주 사용하는 연산을 일반화하는데, 예를 들어 합을 계산하는
+일을 어떤 종류의 시퀀스에나 적용할 수 있다. 또한 시퀀스의 요소에 적용되는 연산을
+파라미터화할 수 있다. 각 알고리즘은 일반화된 버전과 더불어 해당 알고리즘에서
+가장 많이 사용되는 연산자를 적용하는 버전도 제공한다.
+list<double> 15t {1, 2, 3, 4, 5, 9999.99999};
+autO 5 = lst.begin( ), .end( ) , 0.0);
+318 14장
+// 합 계산: 10014.9999

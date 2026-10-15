@@ -1,0 +1,34 @@
+string incantation;
+
+void respond(const string& answer)
+{
+if (answer == incantation) {
+// 마법 부리기
+}
+else if (answer = "yes") {
+VJ 노마
+}
+Hl ssi
+
+C 스타일 문자열(0으로 종료하는 char 배열)이 필요하다면 5ㄴ09에 포함된 문자들에
+읽기 전용으로 접근할 수 있다. 다음 예를 보자.
+
+void print(const string& 5)
+
+{
+printf(“printf8 선호한다면: %s\n",s.c_str());
+// s.c_str()2 sof 포함된 문자를 가리키는 포인터를 반환
+cout << "stream 선호한다면: " << 5 << '\n';
+
+}
+
+문자열 리터럴은 60005 charxth, 그 대신 std::string 타입의 리터럴이 필요하다면
+다음과 같이 접미사 5를 사용하자.
+
+auto 5 = "Cat"s; // std::str ing
+auto p = "009"; // ( 스타일 문자열: const char*
+
+접미사 5를 사용하려면 560: : literals: :string_literals(s 4.43) 네임스페이스가
+필요하다.
+
+192 9장

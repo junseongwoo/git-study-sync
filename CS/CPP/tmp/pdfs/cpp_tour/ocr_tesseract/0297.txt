@@ -1,0 +1,36 @@
+void producer()
+{
+for (int n = 0; n!=LOTS; ++n) {
+scoped_lock lk {m}; // m & mutex (15.5%)
+q.push_back(allocate_shared<Event,pmr: :polymorphic_allocator<Event>>
+
+{&pool});
+cv.notify_one();
+}
+}
+
+이렇게 변경한 후에는 프로듀서 16개와 컨슈머 47H 사이에서 이벤트 100,000개가 전
+달된 후에도 메모리가 MBE 적게 소모됐다. 무려 2,000배나 개선됐대! 물론 (단편
+화로 인해 낭비된 메모리에 반해) 실제로 사용한 메모리양이 변하지는 않는다. 이렇게
+단편화 문제를 해결한 후에 그 시스템은 수개월 동안 안정적으로 운영됐다.
+
+Cr+] 초기에도 이런 기법이 좋은 효과를 내며 적용되긴 했으나, BEL 특화된 컨테
+이너를 사용하도록 코드를 재작성해야 했다. 하지만 이젠 필요하다면 표준 컨테이너
+에 할당자를 인자로 지정할 수 있다. 할당자를 따로 지정하지 않으면 컨테이너는 기본
+적으로 06*와 0616*6를 사용한다.
+
+13.7 시간
+표준 라이브러리 <아(000>에서는 시간을 다루는 기능을 제공한다. 예를 들어 다음과
+같이 어떤 작업의 시간을 A 수 있다.
+
+using namespace std: :chrono;      // 하위 네임스페이스 560::아『000; 3.43 참고
+
+auto 10 = high_resolution_clock: :now( );
+
+do_work();
+
+auto t1 = high_resolution_clock: :now();
+
+cout << duration_cast<milliseconds>(t1-t@).count() << "msec\n";
+
+302 13%

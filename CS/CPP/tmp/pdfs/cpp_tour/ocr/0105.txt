@@ -1,0 +1,23 @@
+4.4 가상 함수
+Containerff 사용하는 고드름 다시 살펴보사.
+votd use(Contatner& ( )
+const tnt 57 • c.stze( )•,
+for (tnt (4; i!•sz; ++0
+use( )에서 (((1름 호출할 때 실세로 호수람 어떻게 찾을까? h( )에서
+use( )를 호출한c}t?i Ltst-contatner91 operator(l( )가 호출되|야 하고, )에서
+use( )를 호출하|편 vector-conta€ner의 0麟rat酊(1( )가 호출돼야 한다. 이를 해결
+하려면 Contatner 개세는 시생 시간에 적절한 함수를 호출하는 데 필요한 정보를
+포함해야만 한다. 이름 구현아는 일반적인 기법으로 컴파일러가 가상 함수의 이름올
+함수 포인터로 구성된 테이블의 인데스로 변한하는 방식을 사용하며. 이 테이블을
+가상 함수 테이젤~~ -•• 또는 간단히 vtbt이라고 한다. 가상 함수를 포함하는
+각 글래스는 각자의 가상 함수를 가리기는 vtbl# 갖는•다. 이를 그림으로 표현하면
+다음과 같다.
+Vector
+ld
+Vector C㉧n네″ :-靈啞Ⅸ)
+V쮀霹 ″驢|rwr : 삶1에)
+Vector container••-Vector cont•irwr()
+List- c예t하″
+니飜 ″t하″『 :삶터)
+List container• List ″t신*
+ㆍ래스 107

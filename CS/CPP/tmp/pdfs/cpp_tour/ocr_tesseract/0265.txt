@@ -1,0 +1,42 @@
+핵심적인 컨셉
+
+UE 에 대입할 수 있다.
+TE (와 맞바꿀 수 있다.
+
+Assignable<T,U>
+
+SwappableWith<T,U>
+
+Swappable<T>                              SwappableWith<T,T>
+
+Common 여러 관련된 타입에서 동작하면서도 수학적인 합리성을 유지해야 하는 알고
+리즘을 명시할 때 유용하다. 600000<!,ㄴ로 지칭되는 타입을 <라고 하면 19} 0를 모두
+C2 변환한 후에는 둘을 비교할 수 있어야 한다. 예를 Hof std::string < 스타일
+문자열(와*)과 비교하거나 intE doubled} 비교하고 싶을 수는 있지만, std::string
+과 intE 비교하진 않는다. Common] 정의에서 사용되는 common_type_t& 특수화하
+는 방법을 확실히 정하려면 다음과 같이 할 수 있다.
+
+using common_type_t<std::string,char*> = std::string;
+using common_type_t<double ,int> = double;
+
+Common®] 정의가 약간 낮설 수도 있지만, 이를 이용하면 근본적인 어려움을 해결할
+수 있다. 다행히도 라이브러리에서 아직 적당한 정의를 제공하지 않는 방식으로 여러
+타입에 대한 연산을 사용하지 않는 $F common_type_t 특수화를 정의할 필요가 없다.
+대부분의 컨섭과 서로 다른 타입의 값을 비교해야 하는 알고리즘에서는 0000ㅁ이나
+(<00000861+80「6006를 사용하는데, 이처럼 비교에 관련된 컨셉들은 [Stepanov,2009]9|
+서 큰 영향을 받았다.
+
+비교 컨셉
+
+Boolean<T>                       TE 불리언 값으로 사용할 수 있다.
+==와 !=를 이용해 +와 ue] 상등성을 비교할 수 있다.
+
+WeaklyEqualityComparableWith<T,T>
+
+WeaklyEqualityComparableWith<T,U>
+
+WeaklyEqualityComparable<T>
+
+(이어짐)
+
+268 12%

@@ -1,0 +1,35 @@
+requires Sequence<Seg> 66 Number<Num> 66 Arithmetic<Value_type<Seq>,Num>
+Num sum(Seq 5, Num n);
+
+두 방법의 절충안으로 다음과 같이 쓸 수도 있다.
+
+template<Sequence Seq, Arithmetic<Value_type<Segq>> Num>
+Num sum(Seq 5, Num n);
+
+컨셉을 아직 사용할 수 없다면 다음과 같이 명명 관례와 주석을 이용해야 한다.
+
+template<typename Sequence, typename Number>
+// requires Arithmetic<Value_type<Sequence>,Number>
+Numer sum(Sequence s, Number n);
+
+어떤 방법을 선택하든 템플릿 인자에 의미 있는 제약을 주도록 설계하자(7.2.4절).
+
+7.2.2 컨셉 기반 오버로딩
+
+템플릿에 적절한 인터페이스를 부여했다면 함수처럼 HERE 그 속성을 이용해서
+오버로딩할 수 있다. 반복자(12.3절)를 전진시키는 표준 라이브러리 함수 3209428066( )
+의 단순화된 버전을 살펴보자.
+
+template<Forward_iterator Iter>
+
+void advance(Iter p, int n)       // pg nif 2403 전진
+{
+for (*n)
+
++p;        // 순방향 반복자에 +는 있지만 +와 +=는 없음
+}
+template<Random_access_iterator Iter, int n>
+void advance(Iter p, int n)      // pE 『개 24012 전진
+{
+
+컨셉과 제네릭 프로그래밍 167

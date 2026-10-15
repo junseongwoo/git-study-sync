@@ -1,0 +1,34 @@
+6.3.1 함수 템플릿
+구간 for 구문으로 탐색 가능한 모든 AlfAo] 대해 모든 요소의 합을 구하는 함수는
+다음과 같다.
+
+template<typename Sequence, typename Value>
+Value sum(const Sequence& 5, Value v)
+
+{
+for (auto x : 5)
+VH+=X;
+return v;
+}
+템플릿 인자 valuest 함수 인자 "를 바탕을 호출자가 타입과 Sky |recmieenglo) 누
+적될 변수)의 초깃값을 지정할 수 있다.
+
+void user(Vector<int>& vi, list<double>& 1d, vector<complex<double>>& vc)
+
+{
+int x = sum(vi,0);                 // int 벡터의 (int 더하기 )
+double d = sum(vi,0.0);            // int 벡터의 8 (double 더하기 )
+double dd = sum(1d,0.0);            // double 리스트의 합
+
+auto 2 = sum(vc,complex{0.0,0.0}); // complex<double>2| 벡터의 합
+
+0904616에 10+를 더해나갈 때의 장점은 inte] 최댓값보다 큰 값을 처리할 수 있다는
+것이다. 함수 인자로부터 540<56946066 ,/3146>의 템플릿 인자를 추론하는 방법에
+주목하자. 다행히도 타입들을 명시적으로 지정할 필요가 없다. 여기서 만든 50( )은
+표준 라이브러리의 360000142*6()(14.3절)를 단순화한 것이다.
+
+함수 템플릿은 멤버가 될 수는 있지만, virtual 멤버가 될 수는 없다. 컴파일러가
+프로그램에 존재하는 모든 인스턴스화를 알 수는 없기 때문에 /61<4.4절)을 만들지
+못한다.
+
+150 6장

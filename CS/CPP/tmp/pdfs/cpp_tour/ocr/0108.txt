@@ -1,0 +1,25 @@
+X = to;
+void draw( ) const overrtde;
+void rotate( tnt) override {}
+private:
+Point x; // center
+int 「•, // radius
+// 제일 간단한 알고리즘
+여기까지는 container와 vector-container 예제에 비해 Shape와 c€rcte 예제에서
+새로운 것은 없지만, 좀 더 진행해보자.
+class Smiley : public Circle{ // 원을 얼굴의 기반 클래스로 사용
+public:
+SmiIey(Point p, int rad) : CircIe{p,r}, mouth{nutlptr} { }
+-Smiley( )
+detete muth;
+for (autO P : eyes)
+delete p;
+VOid move(Point tO) override;
+void draw( ) C005t override;
+votd rotate(int) override;
+void add_eye(Shape* 5)
+eyes.push back(s);
+void set muth(Shape* 5);
+vtrtual void wink( int i);
+110 4장
+// (번째 눈 윙크

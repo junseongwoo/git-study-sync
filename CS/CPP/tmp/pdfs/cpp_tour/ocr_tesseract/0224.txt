@@ -1,0 +1,50 @@
+void use()
+
+{
+print_directory(".");     // 현재 디렉터리
+print_directory("..");    // 부모 디렉터리
+print_directory("/");     // 유닉스 RE 디렉터리
+print_directory("c:"); // 윈도우 볼륨 (
+for (string 5; cin>>s; )
+
+print_directory(s);
+
+~~
+
+하위 디렉터리도 나열하고 Ach recursive_directory_iterator{p}& 사용할 수
+있다. 항목을 사전 순서에0900 0코 춤력하고 싶다면 03내를 vector2 복사한
+후 정렬해 출력하자.
+
+path 클래스는 일반적이고 유용한 연산을 많이 제공한다.
+
+경로 연산(일부만 표시)
+
+pe} 02는 path
+
+value_type                    파일 시스템의 기본 인코딩에 사용하는 문자 타입으로, POSIXOIAM
+는 (이고, YELUME wehar_tCh,
+
+string_type                          T std: :basic_string<value_type>
+
+comt_tterator | 폐내의 valve ue CHE cont 임방향 반복자다. 0
+
+iterator                  const_iterator2| 별칭이다.
+02를 pO 대입한다,
+
+0/=02                      파일 이름 구분자(기본적으로 /)를 이용해 pot 02를 연결한다.
+
+(구분자 없이) pt 02를 연결한다.
+0의 네이티브 형식이다.
+0의 네이티브 형식으로 구성된 pl string2 반환한다.
+제네릭 형식으로 표현된 0를 59으로 반환한다,
+pol 파일 이름 부분이다.
+
+p.native()
+
+p.string()
+
+p.g eneric_string()
+
+(이어잠)
+
+입력과 출력 227

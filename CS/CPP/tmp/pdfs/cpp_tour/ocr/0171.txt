@@ -1,0 +1,24 @@
+doubte sum( const vector<int>& v)
+doubte res = 0;
+for (auto X : v)
+res 十= X,•
+retu「n res;
+이 코드는 시권스에 포함된 수의 합을 구하는 많은 방법 중 하나일 뿐이다.
+무엇이 이 코드의 일반성을 떨어뜨리는가?
+왜 int인가?
+vector인71-?
+왜
+왜 double에 값을 더하는가?
+왜 0부터 시작하는가?
+왜 덧셈인가?
+앞 네 개의 질문에 대한 답으로 구체 타입을 템플릿 인자로 교체할 수 있다. 이렇게
+해서 표준 라이브러리 accumulate 알고리즘의 가장 간단한 형태를 얻을 수 있다.
+template<typename lter, typename VaI>
+Val accmulate(lter first, lter last, VaI res)
+for (autO P = first; p!=last; ++P)
+res 十= *한,
+return res;
+이 코그 얻을 수 있는 장점은 다음과 같다.
+• 시권스를 표현하는 한 쌍의 반복자를 이용해서 어떤 자료 구조를 탐색할지를
+추상화한메2.1절).
+174 7장

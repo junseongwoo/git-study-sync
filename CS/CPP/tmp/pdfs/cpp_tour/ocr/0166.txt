@@ -1,0 +1,24 @@
+72.3 유효한 코드
+주어진 템플릿 인자의 집합이 템플릿에서 그 템플릿 파라미터에 요구하는 바를 제공
+하는가 하는 물음은 궁극적으로 어떤 표현식이 유효한가하는 문제로 귀결된다.
+requires 표현식을 이용하면 주어진 표현식의 집합이 유효한지 확인할 수 있다.
+tenvlate•<Forward iterator lter>
+vo€d advance(lter p, int n)
+// pS n개 요소만금 전진
+for (*n)
+// 순방향 반복자에 “는 있지만 +와 “는 없음
+tenvtate<Forward-tterator lter, int n>
+requtres requires(lter P, int O { 해니; P+€; } //lter는 인엑싱과 더하기를 지원
+void advance(lter P, tnt n)
+// pS n개 요소만큼 전진
+P+=n; // 임의 접근 반복자는 +=를 포함
+여기서 requires requires는 오타가 아니다. 첫 번째 requires는 requirenents 절
+을 시작하고, 두 번째 requires는 requires 표현식을 시작한다.
+requtres(lter P, int O { p[il; P+i; }
+requires 표현식은 주어진 문장이 유효한 코드면 true, 그렇지 않으면 false로 평가
+되는 술어다.
+필자는 requires 표현식을 제네릭 프로그래밍에서의 어셈블리 코-드로 간주한다. 다른
+어셈블리 코드처럼 requires 표현식은 극단적으로 유연하고 프로그래밍 이론에 국한
+되지 않는다. 대부분의 홍미로운 코드의 밑바탕에 어셈블리 코드가 있듯이,대부분의
+홍미로운 제네릭 코드의 밑바탕에 존재한다. 어셈블리 코드가 그러하듯 requires 표
+컨셉과 제네리 프로그래밍 169

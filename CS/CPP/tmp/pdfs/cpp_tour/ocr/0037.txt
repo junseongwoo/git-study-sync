@@ -1,0 +1,23 @@
+double* 國 = nutlptr;
+Link<Reco「d>* lst = nullptr; // Record의 Link를 가리기는 포인터
+int x = nullptr;
+// 에러: nullptr은 정수가 아닌 포인터
+다음과 같이 포인터 인자가 실제로 무언가를 가리기는지를 확인하는 것이 현명하다.
+int count_x(const cha「* p, char x)
+// p[1에 존재하는 x와 동일한 값의 수를 센다.
+// p는 0으로 끝나는 char의 배열을 가리킨다고 가정(그렇지 않으면 아무것도 가리기지 않음)
+if (p=nullptr)
+return 0;
+int count = 0;
+十十count;
+return count •,
+++를 사용해 포인터가 다음 요소를 가리기게 값을 증가시킨 것과 필요하지 않다면
+for 구문에서 초기회를 생략할 수 있다는 점을 눈여겨보자.
+count-x( )에서는 char*가 c 스타일 문자열, 즉 0으로 끝나는 char의 배열이라고 가
+정한다. 문자열 리터럴에 포함된 문자는 변경 불가하므로 count-x( "Hetlo! •• )과 같이
+사용하려면 count-x( )의 인자를 const char*로 선언했다.
+예전 코드에서는 nullptr 대신 0이나 NULL을 사용하지만 nullptr을 久卜우하면 정수(0
+이나 MJLL)와 포인터(nullptr)를 혼동할 수 있는 잠재적 위험을 제거할 수 있다.
+count-x( ) 예제에서는 for 구문의 초기화 부분을 생략했는데, 더 간단히 while 구문
+을 사용할 수도 있다.
+38 1장

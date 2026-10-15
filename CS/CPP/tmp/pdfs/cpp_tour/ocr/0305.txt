@@ -1,0 +1,24 @@
+이러한 반복자 특성과 이를 기반으로 한 기법들은 컨셉(7.2절)과 중복되는 부분이 많
+다. 컨셉을 이용하면 sort() 예제를 다음과 같이 작성할 수 있다.
+lter>
+void sort(lte「 P, lter q); // std: :vector 를 비롯해 임의 접근을 허용하는 반복자에 사용
+tempIate<Forwa「dlte「atO「 lter>
+void sort(lter p, lter q)
+// std: :tist를 비롯해 순방향 순회만 가능한 타입에 사용
+vectO「<VaIue_type<Iter>> V {p,q};
+sort(v);
+// 임의 접근 정렬 사용
+copy(v.begin( ),v•end( ),p);
+tempIate<Range R>
+void so「t(R& 「)
+// 적절한 정렬 함수 사용
+이에 대한 표준의 제정은 현재 진행 중이다.
+13.92 타입 술어
+표준 라이브러리 <type-traits>에서는 타입 술어type predicatese}고 하는 간단한 타입
+함수를 제공하는데, 이를 이용해 타입에 대한 기본적인 사항을 알 수 있다.
+// 네, int는 산술 타입이다.
+而OI bl = Is_arithNEtic<int>( )•,
+b2 = ls arithmetic<string>( )•, // 아니요, std: :string은 산술 타입이 아니다.
+다른 예로는 is—class와 is POd is—literal—type has—virtual destructor
+base-of가 있는데, 이들은 템플릿을 작성할 때 유용하다.
+310 13장

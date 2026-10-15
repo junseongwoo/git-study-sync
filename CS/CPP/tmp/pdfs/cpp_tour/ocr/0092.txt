@@ -1,0 +1,30 @@
+만 접근 가능할 수도 있지만, 메모리에 실존한다. 따라서 어떤 식으로든 메모리 표현
+이 바뀌면 컴파일을 다시 해야 한다. 이는 구체 타입이 내장 타입과 비슷하게 작동하
+게 하는 데 대한 댓가지만, 변경이 찾지 않고 지역 변수가 명확성과 효율성을 제공한
+다면 받아들일 만하고 때에 따라서는 이상적이기도 하다. 유연성을 높이기 위해서
+구체 타입은 메모리 표현의 중요 부분을 자유 저장 영역(동적 메모리, 호])에 저장하고,
+클래스 자체에 저장된 부쁜을 통해 중요 부분에 접근하게 할 수 있다. vector와
+string이 이런 방식으로 구현되는데, 이런 이유로 이 두 클래스를 세심하게 만들어진
+인터페이스를 갖춘 자원 핸들로 생각할 수 있다.
+42.1 산술 타입
+대표적인 사용자 정의 산술 타입'의 예로 complex를 들 수 있다.
+class complex {
+double re, un; // 메모리 표현: double 두 개
+public:
+complex(double r, double i) :re{r}, im{t} {} // 두 스칼라를 이용해 complex 생성
+complex(double r) :re{r}, im{@} {}
+complex() :re{0}, im{@} {}
+double real( ) const { return 「일, }
+void real(double d) { re=d; }
+double ) const { return im; }
+void tflbg(double d) { 1圁•, }
+complex& operator+=( complex 2)
+// re와 Ⅷ에 더하기
+re十=z. re ;
+urt十=z . l-m •
+return *this;
+// 결과 반환
+complex& operator-=(complex 7)
+94 4장
+// 스칼라 하나를 이용해 complex 생성
+// 기본 complex: {0,0}

@@ -1,0 +1,34 @@
+vector<Shape> vs;                 // 이러지 말자. Circleo|L} Smiley§ 저장할 수 없다.
+vector<Shape*> vps;             // 좀 92 하지만, 4.5.3절을 참고하자.
+vector<unique_ptr<Shape>> vups; // 0K
+
+11.2.2 구간 검사
+표준 라이브러리 《@0+0는 구간 HARE 보장하지 않는다. 다음 예를 보자.
+
+void silly(vector<Entry>& book)
+
+{
+int i = book[book.size()].number;     // book.size()e 구간 밖에 있음
+Pl wus
+
+이 초기화는 에러를 유발하는 대신 to] 임의의 값을 대입하는데, 이는 원치 않는 결과
+다. 이러한 구간 밖 에러 문제는 일반적인 문제이며, 필자는 구간 검사를 수행하게
+간단한 vector ofElE 사용하곤 한다.
+
+template<typename T>
+class Vec : public std::vector<T> {
+
+public:
+using vector<T>::vector;         // (\60라는 이름으로) vectord| 생성자를 사용
+T& operator[](int 1)             // 구간 검사
+
+{ return vector<T>::at(1); }
+
+const T& operator[](int 1) const // const 2438 구간 검사; 4.2.13
+{ return vector<T>::at(i); }
+};
+
+Vec 인덱싱 연산을 제외한 모든 것을 vector HE 상속받으며, 인덱싱 연산이 구간
+검사를 수행하게 재정의한다, at) 연산은 주어진 인자가 vector] 구간(3.5.1절)을
+
+컨테이너 239

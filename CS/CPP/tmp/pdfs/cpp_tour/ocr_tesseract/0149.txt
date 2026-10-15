@@ -1,0 +1,38 @@
+template<typename C, typename P>
+
+// Sequence<C>2} Callable<P,Value_type<P>>7t 요구됨
+int count(const C& ¢, P pred)
+{
+
+int cnt = 0;
+
+for (const auto& x : c)
+
+if (pred(x))
++cnt;
+return cnt;
+
+}
+
+술어는 호출 가능하며, 그 결과로 true falsed 반환하는 무언가를 말한다.
+
+void f(const Vector<int>& vec, const list<string>& lst, int x, const string& 5)
+{
+
+cout << x << "보다 작은 값의 개수: " << count(vec,Less_than{x}) << '\n';
+
+cout << 5 << "보다 작은 값의 개수: " << count(1lst,Less_than{s}) << '\n';
+
+}
+
+7) A] Less_than{x}= Less_than<int> 타입의 객체를 생성하는데, int gk ×와 비
+교하는 연산자를 호출한다. [655_태0{5}는 string 값 5에 비교한다. 이러한 함수
+객체의 좋은 HL 비교 대상이 되는 값을 전달해준다는 것이다. 각 값(각 타입)마다
+다른 함수를 정의할 필요도 없고, 비교할 값을 저장하기 위해 전역 변수를 사용할
+필요도 없다. 게다가 655_+20처럼 단순한 함수 객체는 인라인으로 작성하기도 쉬워
+A] Less_than 호출이 간접적인 함수 호출보다 훨씬 효율적이다. 데이터를 전달할 수
+있는 능력과 효율성 덕분에 함수 객체는 특히 알고리즘의 인자로 유용하다.
+(count()of 4] Less_thang 사용한 것처럼) 일반적인 알고리즘에서 핵심 동작의 의미를
+지정하기 위해 사용하는 함수 객체를 정책 객체" 라고도 한다.
+
+152 6장

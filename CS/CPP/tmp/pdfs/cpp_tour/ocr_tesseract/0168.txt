@@ -1,0 +1,35 @@
+56『46ㅎ5 { int a; };
+static_assert(Equality_comparable<S>); // 구조체에 자동으로 ==와 !가 정의되지 않으므로 실패
+
+Equality_comparable 컨셉의 정의는 그 영어 이름과 정확히 일치한다. 6000660+의
+값은 항상 6001이다.
+
+60421+\/_60002『2016로 서로 다른 타입의 비교를 할 수 있게 만드는 방법은 간단
+하다.
+
+template<typename T, typename T2 =T>
+concept Equality comparable =
+requires (Ta, 12 6) {
+{a==Db} ?> bool; // ==로 [와 12를 비교
+{a!=b} ?> bool; // !=로 Te 12를 비교
+{b==a} ?> 6001; //==2T29 TH 비교
+{b!=a}?> bool; // !=로 12와 1를 비교
+};
+
+typename 12 =1는 두 번째 템플릿 인자를 지정하지 않으면 T2 To} 같다는 의미고,
+여기서 T= 기본 템플릿 O| xjdetault template argument]
+
+Equality comparable 다음과 같이 테스트할 수 있다.
+
+static_assert(Equality_comparable<int,double>); // 성공
+static_assert(Equality_comparable<int>);       // 성공(12 int 기본으로 AY)
+static_assert(Equality_comparable<int,string>); // 실패
+
+좀 더 복잡한 예로 AUAE 살펴보자.
+
+template<typename S>
+concept Sequence = requires(S a) {
+typename Value_type<S>;      // Se 값 타입
+typename Iterator_type<S>; // 5는 반복자 타입
+
+컨셉과 제네릭 프로그래밍 171

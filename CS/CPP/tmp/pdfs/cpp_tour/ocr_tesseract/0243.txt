@@ -1,0 +1,33 @@
+표준 라이브러리 해시 컨테이너는 순서 비교 함수가 필요하지 않으므로 '순서 없는
+nerseres oleh 수식어를 붙인다.
+
+unordered_map:
+
+해시 테이블:
+
+예를 Eo] <unordered_map>2] unordered_map2 이용해 전화번호부를 작성할 수
+있다.
+
+unordered_map<string, int> phone_book {
+{"David Hume" ,123456},
+{"Karl Popper" ,234567},
+{"Bertrand Arthur William Russell" ,345678}
+};
+
+map} 유사하게 00006『60_ㅁ3?의 인덱싱을 이용할 수 있다.
+
+int get_number(const 5ㄴ1ㄴ1096 s)
+{
+
+return phone_book[s];
+}
+
+표준 라이브러리는 string?) 다른 내장 타입, 표준 라이브러리 타입에 대해 기본 해시
+함수를 제공하며, 필요하다면 해시 함수를 직접 FAY 수도 있다(5.4.6절). 아마도
+맞춤형 해시 함수가 필요한 가장 흔한 경우는 사용자 정의 타입일 것이다. 해시 함수
+를 다음과 같이 함수 객체로 만들 수도 있다(6.3.2절).
+
+struct Record {
+string name;
+
+246 13

@@ -1,0 +1,25 @@
+Traffic_Itght& // 전치 증가: ++
+switch (t) (
+case Trafftc_light: :green: return t=Trafftc—Ught:
+case Traffic-Itght: return t-Trafftc_Ught: :red;
+case Trafftc ught: :red: return t•Trafftc-Ught::green;
+Trafftc-Iight next • ++light; // 다용 값은 Traffic_ltght: :green
+열거자의 이름을 정확히 명시하기 귀찮기나 (명시시으로 번한할 필요 없이) 열거자의
+값이 tnt가 되길 원한다면 ctass에서 ctass十 지우고 그냥 사용하자.
+그냥 enun의 열거자는 암묵적으로 enun의 이름과 같은 스코프를 가지며, 암북적으로
+정수 값으로 변환된다.
+CoIor { red, green, blue }•,
+€nt (이 green;
+여기서 (이의 값은 1이다. 기본적으로 열거자의 정수 값은 따서 시작하며, 열거자가 하
+나 추가될 때마다 1씩 중가한다. 그냥 그다지 잘 동작하진 않더라도 C++(과 C)의
+초기부터 존재했으므로 여전히 많은 코드에서 흔히 볼 수 있다.
+2.6 조언
+[기
+[31
+[41
+내장 타입이 너무 로우레벨이라고 느껴진다면 잘 정의된 사용자 정의 타입을
+사용하라. 2.1절
+연관된 데이터는 (struct나 (1”5로) 구조화하라. 2.2절; ICG. C.I)
+c념55를 이용해 인터페이스와 구현을 분리하라. 2.3절; [CG: C31
+struct는 그저 멤버가 기본적으로 pubtic인 (념55다. 2.3절
+사용자 정의 타입 59

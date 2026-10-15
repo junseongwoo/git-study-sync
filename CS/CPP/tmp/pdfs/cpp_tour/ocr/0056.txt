@@ -1,0 +1,21 @@
+의로만 접근할 수 있세 함으로써 주용네1빠 올바르게 A卜협하도록 강세호} 수 있다. 이렇
+케 우용 1충에서 대그된 구용책”””″&가 제공하는 추상화에 의존하는 방식은 일
+만적이고 우용한다. ,판1깐며 벌거벗은 unton9 그냥 A卜용8卜는 것은 최소화해야 한다.
+표준 라이브러리 타입인 vartant는 대부분의 상황에서 공용제를 대세람 수 있다.
+variant는 대안의인 여러 다임의 값 중 하나를 제공한다||3전원fl). 예를 들어
+var€ant<*xie•.int>는 ,″•나 intø 저장할 수 있다.
+vartantff A卜용혜 하정한 Entry 예團는 다음과 같다.
+struct Entry (
+strtnq
+var , tnt» v;
+vo(d f(Entry• 凶)
+(holds // •卿가 (ntn 표한하는가?(13.5.1셜 참고)
+cout (4 // tnt 가책오기
+많은 경우에 vartantff 사용 하는 것이 union9 사용하는 것보-다 간단하고 안진하다.
+2.5 열거형
+C++는 클래스 외에도 여러 값을 열거할 수 있는 간단한 세우자 정의 타입을 제공한다
+- class (010r { r«i, bll* , green )•,
+- (1쬬s Trafftc_light ( græn, red )•,
+(이or (이 = (이or: :red;
+Trafftc_ttght = Traffic-ught: :red;
+사용자 정의 타입 57

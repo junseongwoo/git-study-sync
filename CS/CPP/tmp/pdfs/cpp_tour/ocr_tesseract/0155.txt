@@ -1,0 +1,38 @@
+template <class T>
+constexpr space_vector<T> external_acceleration = { T{}, T{-9.8}, T{} };
+
+auto vis2 = 2*viscosity<double>;
+auto acc = external_acceleration<float>;
+
+o] 7] A space_vectori= 3차원 벡터다.
+
+이제 모든 가능한 타입의 표현식을 초깃값으로 사용할 수 있다.
+
+template<typename T, typename T2>
+constexpr bool Assignable = is_assignable<T&,T2>: value;
+// is_assignable 타입 £4J(trait)(13.9.1%)
+
+template<typename T>
+
+void testing()
+
+{
+static_assert(Assignable<T&,double>, "double 대입할 수 AS");
+static_assert(Assignable<T&,string>, "string 대입할 수 AS");
+
+}
+
+이 코드에서 사용한 아이디어를 크게 발전시키면 컨셉 정의(7.2절)의 핵심과도 일맥상
+통한다.
+
+6.4.2 별칭
+
+타입이나 템플릿의 동의어를 만들면 유용한 경우가 꽤 많다. 예를 들어 표준 헤더
+<cstddef>o Hi 별칭 size t& 정의하는데, 그 정의는 대략 다음과 같다.
+
+using size_t = unsigned int;
+
+5126_*라는 이름의 실제 타입은 구현마다 달라서 다른 구현체에서는 5ㄴ26_*가
+unsigned 1009일 수 있다. HA size +를 사용함으로써 프로그래머는 이식성 있는
+
+158 6장

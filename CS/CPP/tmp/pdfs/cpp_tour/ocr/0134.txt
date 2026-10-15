@@ -1,0 +1,30 @@
+더 자세한 설명과 더 많은 입출력 연산에 대해 알고 싶다면 10장을 참고하라.
+5.44 사용자 정의 리터럴
+클래스의 목적 중 하나는 프로그래머로 하여금 내장 타입과 동등한 타입을 설계하고
+구현할 수 있게 하는 것이다. 생성자는 내장 타입의 초기화 이상의 유연성과 효율성을
+제공하는데, 내장 타입의 경우에는 리터럴을 A卜&할 수 있다.
+123은 int
+@xFF@@u는 unsigned int
+123.456은 double
+"Su「prise!"는 const char[l@l
+사용자 정의 타입에서도 이러한 리터럴을 제공하면 유용할 때가 있는데, 리터럴에
+사용할 적당한 접미사의 의미를 정의하면 된다.
+"Surprise! '놀는 std: :string
+1235는 second
+12.7i는 ünagina「y. 따라서 12.7i+47은 complex(4 {47,12.7})
+표준 라이브러리에서 적절한 헤더와 네임스페이스를 사용하면 이런 코드처럼 A卜&할
+수 있다.
+표준 라이브러리의 리터털 접미사
+std: :literals: :chrono literals
+std: :ltterals: :string_literals
+std: : literals : :string_l iterals
+<Ch 「000>
+<string>
+<string_vtew>
+<-ærplex>
+136 5장
+std: •. literals : :complex-literals
+h, min, 5, ms, us, ns
+5
+SV
+tf

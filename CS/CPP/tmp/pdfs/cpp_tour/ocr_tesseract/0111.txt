@@ -1,0 +1,33 @@
+case Kind: :smiley:
+// 스마일리 데이터 {Point,int,Shape,Shape,Shape}& p, r, el, 62, moj 읽기
+Smiley* ps = new Smiley{p,r};
+ps->add_eye(el);
+ps->add_eye(e2);
+ps->set_mouth(m);
+return ps;
+
+도형 읽기 함수는 다음과 같이 사용한다.
+
+void user()
+
+{
+std: :vector<Shape*> v;
+while (cin)
+v.push_back(read_shape(cin));
+draw_all(v);          // 각 24° draw() 호출
+rotate_all(v,45);     // 각 249] rotate(45) 호출
+for (20600: v)      // 요소 삭제를 잊지 말 것
+delete p;
+}
+
+여러 측면, 특히 에러 처리 면에서 매우 단순화된 예제지만, 456(()에서 처리하는
+도형이 무엇인지 전혀 모른다는 점은 명백히 알 수 있다. 450「()의 코드는 한 번만
+컴파일하면 추후에 프로그램에 추가된 Shapeo] 대해서도 사용할 수 있다. user() 코
+드밖에 도형에 대한 포인터가 없다는 점에 유의하자. 따라서 모든 도형을 해제할 책임
+도 450「()에게 있다. 해제 작업은 06166 연산자와 Shape] 가상 소멸자에 의지한다.
+소멸자가 가상 Fol BE deletes 최하위 파생 클래스의 소멸자를 호출한다. 이렇
+Al 하는 이유는 파생 클래스가 획득한 자원(파일 핸들과 출력 스트림 등>을 반납해야하기
+때문이다. 예제에서는 Smiley7} 665와 mouth 객체를 해제한다. 그 후에는 0016의
+소멸자를 호출한다. 이와 같이 객체 생성 시에는 생성자를 이용해 (기반 클래스부터)
+
+클래스 113

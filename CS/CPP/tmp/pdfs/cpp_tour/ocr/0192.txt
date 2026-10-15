@@ -1,0 +1,33 @@
+st「*를 이용하면 연속적인 문자들의 시퀀스에 접근할 수 있다. 이때 문지들은
+string과 c 스타일 문자열을 비롯한 다양한 방법으로 저장될 수 있다. strtng-vte•v가
+가리기는 문자들을 직접 소유하지 않는다는 점에서는 포인터나 참조와 비슷하며, SII
+의 반복자12.3절)와도 유사하다.
+두 문자열을 연결하는 간단한 함수를 살펴보자.
+st「ing cat(string-view 5V1, string-view 5V2)
+string res( svl. length( )+5V2. length( ) )•,
+char* P = &res[@l;
+for (char : 5V1)
+copy( sv2. ),sv2.end( ),p);
+return res;
+이제 cat( )을 호출해보자.
+string king = "Har01d
+auto 51
+auto 55
+auto 56
+= cat( king, "WiIliam" )•,
+auto 52 = cat(king,king);
+auto 53 = cat( "Edward" , "Stephen"sv);
+aUtO 54 = cat( "Canute"sv,ktng);
+// 복사를 수행하는 한 가지 방법
+// 다른 방법
+// string과 const char*
+// strtng과 string
+// const char*와 string-vte••d
+= cat({&king[@l.2}, "Henry"sv); // HaHenry
+= cat({&king[@l ,2},{&king[기,4}); // Harold
+const string&9.2tl)을 인자로 받는 compose( )에 비해 cat( )에는 세 가지 장점이
+있다.
+다양한 방식으로 관리되는 문자의 시권스에 적용할 수 있다.
+c 스타일 문자열을 인자로 받을 때 임시적인 string 객체가 생성되지 않는다.
+부분 문자열을 쉽게 전달할 수 있다.
+문자열과 정규 표현식 195

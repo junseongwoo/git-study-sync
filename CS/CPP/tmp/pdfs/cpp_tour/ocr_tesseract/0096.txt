@@ -1,0 +1,40 @@
+해제됨을 보장하는 메커니즘이 필요한데, 소멸자가 바로 그런 역할을 한다.
+
+class Vector {
+
+public:
+Vector(int s) :elem{new double[s]}, sz{s} // 생성자: 자원 획득
+{
+for (int 1=0; i!=s; +1)     // 요소 초기화
+elem[1]=0;
+}
+
+“Vector() { delete[] elem; }  // 소멸자 : 자원 해제
+
+double& operator[](int 1);
+int size() const;
+private:
+double* elem;     // elem2 doubleR4 52개를 가리킴
+int sz;
+
+};
+
+소멸자의 이름은 클래스 이름 앞에 보수 연산자 。를 붙인 것으로, 생성자의 보완재라
+는 의미로 해석할 수 있다. Vectore] 생성자는 new 연산자를 이용해 자유 저장 영역
+(힙 또는 동적 저장 영역)에 메모리를 할당하고, 소멸자는 4616*6[] 연산자를 이용해
+메모리를 해제하는 정리 작업을 수행한다. 0616*6는 개별적인 객체를 해제하고.
+961616[]는 배열을 해제한다.
+
+이 모든 작업이 Vector 사용자의 개입 없이 수행되므로, Vector] 사용자는 마치 내
+장 타입을 만들고 사용하듯이 HEE 사용할 수 있다.
+
+void fct(int n)
+
+{
+Vector v(n);
+If sae VME is
+{
+
+Vector v2(2*n);
+
+98 4%

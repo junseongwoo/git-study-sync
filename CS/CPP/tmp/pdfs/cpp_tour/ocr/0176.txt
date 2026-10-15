@@ -1,0 +1,27 @@
+이처럼 접힘'馝은 매우 강력한 추상화뢰 각기 다른 언어와 커뮤니티에서 다양한 이름
+으로 불리며, 표준 라이브러리의 accnlate( )에서도 A卜&된다. 현재 C++의 접힘
+표현식은 가변 템플릿 구현을 단순화하는 용도로만 제한된다. 한편 수치 계산 이외의
+다른 곳에도 접힘을 사용할 수 있다. 다음과 같은 유명한 예를 살펴보자.
+temptate<typenare .. T>
+void prtnt(T".
+(std: :cout <<
+print( "Hetlo! “5,
+•args)
+"Wortd “,2017);
+; // 모든 인자 출력
+많은 경우에 주어진 값의 집합을 공통된 타입으로 변환할 수 있는데, 이런 경우에
+인자를 벡터나 필요한 타입으로 복사하면 나중에 쉽게 사용할 수 있다.
+Res, .. TS>
+vector«Res> to_vector(TsÆ
+vector<Res> •,
+(res.push back(ts) ...)•,
+return ;
+.ts)
+// 초것값 필요 없음
+to-vector를 다음과 같이 사용할 수 있다.
+auto x = tO vector<doubIe>(1,2,4.5, 넘• )•,
+tempIate<typenæTE .. TS>
+int fct(Tsß... ts)
+auto args = tO vector<String>(ts• • • )•,
+// args(tl는 i번째 인자
+컨씜과 제네력 프로그래밍 179

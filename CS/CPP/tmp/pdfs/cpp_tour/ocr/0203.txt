@@ -1,0 +1,19 @@
+Atways 1㈚k on the <b>bright</b> side Of <b>tife-</b>.
+첫 번째 -부-분 패턴을 욕심쟁이 매치하면 첫 <를 마지막 >와 매치할 것이다. 들린 동작
+은 아니지만, 프로그래머가 원했던 동작도 아니다.
+정규 표현식에 대해 더 자세한 내용이 궁금하다면 [Friedl.1997J를 참고하라.
+9.43 반복자
+문자 시권스에 패턴을 매칭해 가면서 시퀀스를 순회하고 싶다면 regex-iterator를
+정의할 수 있다. 예를 들어 sregex-iterator(reg ex-iterator<string>)를 이용해 주어
+진 string에서 공백 문자로 구분된 단어를 모두 출력할 수 있다.
+void test( )
+string input = "aa as; asd H•eAasdf asdfg";
+fO「 (sregex—ite「ator input. begin( ) , .end( ) ,pat ) ;
+p!=sregex—iterator{}; ++P)
+cout << (*p)[11 << •
+출력은 다음과 같다.
+asd
+asdfg
+맨 앞에 공백 문자가 없어서 첫 단어인 aa를 놓쳤다. 패턴을 R"((\`卄))"로 단순화한
+결과는 다음과 같다.
+206 9장

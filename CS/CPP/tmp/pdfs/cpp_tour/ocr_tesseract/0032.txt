@@ -1,0 +1,38 @@
+* const: “이 값을 바꾸지 않는다고 약속함”의 의미로, 함수에 포인터나 참조
+형태로 전달되는 데이터를 변경하지 않는다는 ARIE 인터페이스에 명시하고
+싶을 때 사용한다, 컴파일러는 6005+*로 명시된 약속을 지키도록 강제한다,
+하지만 const] 값은 실행 시간에 계산할 수 있다,
+
+* constexpr: "이 값을 컴파일 시간에 평가함”의 의미로, 주로 해당 데이터를
+상수로 지정해(파손을 방지하기 위해) 읽기 전용 메모리에 저장하거나 성능상의
+목적으로 사용한다. 6005*66×0『의 값은 반드시 컴파일 시간에 계산된다,
+
+다음 예를 보자.
+
+constexpr int dmv = 17;               // 00\는 명명된 상수
+
+int var = 17;                         // varg 상수가 아님
+
+const double sqv = sqrt(var);          // 59\는 명명된 상수로 실행 시간에 계산될 수 있음
+
+double sum(const vector<double>&);  // sum 인자를 변경하지 않음(1.7절)
+
+vector<double> v {1.2, 3.4, 4.5};     // \는 447} 아님
+const double 51 = sum(v);             // OK: 540(\)를 실행 시간에 평가
+constexpr double 52 = sum(Vv);         // 에러: sum(v)E 상수 표현식이 아님
+
+상수 표현식, 즉 컴파일러에 의해 평가되는 표현식 안에서 함수를 사용하려면 그 함수
+% constexpri 정의해야 한다.
+
+constexpr double square(double x) { return x*x; }
+
+constexpr double maxl = 1.4*square(17); // OK 1.4*square(17)& 상수 표현식
+constexpr double max2 = 1.4*square(var); // 에러; varg 상수 표현식이 아님
+const double max3 = 1.4*square(var);       // OK, 실행 시간에 평가할 수 있음
+
+constexpr 함수에 상수가 아닌 인자를 사용할 수도 있지만, 그럴 경우 그 결과는 상수
+
+표현식이 아니다. 즉, 상수 표현식이 요구되지 않는 곳에서는 6005565%0「 함수에 상수
+가 아닌 표현식을 인자로 사용하는 것을 허용한다. 이렇게 함으로써 같은 함수를 상수
+
+기초 33

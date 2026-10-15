@@ -1,0 +1,35 @@
+f << "Hello, file!";
+}
+
+patho] 더해 <filesystem=e 디렉터리를 순회하고 파일의 속성을 조회하는 기능을
+제공한다.
+
+path                                   디렉터리 경로
+
+filesystem_error                      파일 시스템 예외
+
+directory_entry                       디렉터리 항목
+
+directory_iterator                      디렉터리 순회
+recursive_directory_iterator             디렉터리와 그 하위 디렉터리 순회
+
+현실적이진 않지만 간단한 예제를 살펴보자.
+
+void print_directory(path p)
+try
+{
+if (is_directory(p)) {
+cout << p << ":\n";
+for (const directory_entry& x : directory_iterator{p})
+cout << " " << x.path() << '\n';
+}
+}
+catch (const filesystem_error& ex) {
+cerr << ex.what() << '\n';
+
+}
+
+문자열은 암묵적으로 pathg Heke] og print_directoryE 다음과 같이 사용할 수
+있다.
+
+226 10%

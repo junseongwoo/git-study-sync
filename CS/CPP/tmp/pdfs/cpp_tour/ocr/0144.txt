@@ -1,0 +1,22 @@
+,double> P • {1,5.2}•,
+이처럼 템플릿 인자의 타입을 일일이 지정하는 것이 귀찮다면 표준 라이브러리 함수
+make-pair( )를 이용하자. 이 함수는 반환할 patr의 템플릿 인자 타입을 함수에 주어
+진 인자로부터 유추한다.
+autO P • ffBke-patr(1,5.2); // P 는 pair<tnt,double>
+이쯤에서 “생성자의 인자로부터 템플릿 파라미터를 추론할 수는 없을까?”라는 의문이
+들 수 있다. 그래서 c++17에서는 다음과 같이 할 수 있다.
+pair P • {1,5.2}•, // P 는 palr<tnt,doubte>
+이러한 문제는 pair에서만 발생하는 것이 아니므로, make- 함수를 매우 일반적으로
+사용한다. 간단한 예를 보자.
+template<typendte T>
+class Vector (
+public:
+Vector( int )•,
+Vector( initializer Iist<T>);
+// 초것값 목록 생성자
+Vector vl {1,2,3}; // 초것값 목록의 요소 타입으로부터 vl의 요소 타입을 유추
+// vl의 요소 타입으로부터 v2의 요소 타입을 유추
+Vector v2 = vl;
+auto P = new V貳tor{1,2,3); // p는 Vector<tnt>를 가리킹
+Vector<tnt> v3(1); // 여기서는 요소 타입을 명시적으로 밝혀야 함(요소 타입이 언급되지 않음)
+행N것 147

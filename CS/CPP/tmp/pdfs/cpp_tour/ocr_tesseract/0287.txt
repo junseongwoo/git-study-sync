@@ -1,0 +1,37 @@
+void binary2(int i)
+
+{
+bitset<8*sizeof(int)>b = 1; // 8H|E 바이트를 가정(14.7절 참고 )
+cout << b << '\n';              // iB 비트로 출력
+
+}
+
+13.4.3 pair2} tuple
+
+가끔은 의미론적으로 잘 정의된 클래스와 값에 대한 불변 조건(3.5.2절)을 제공하는
+클래스의 객체 대신 순수한 데이터로서의 데이터, 즉 값의 모음 자체가 필요하다. 그
+런 경우에는 적당한 이름과 멤버를 갖는 간단한 struct”) 이상적인 경우가 있다. 다
+른 방법으로 표준 라이브러리가 제공하는 정의를 이용할 수 있다. 예를 들어 표준
+라이브러리 알고리즘인 69031 _『3096는 술어를 만족하는 A|lEAE 표현하는 두 반복
+자의 pairg 반환한다.
+
+emplate<typename Forward_iterator, typename T, typename Compare>
+pair<Forward_iterator,Forward_iterator>
+equal_range(Forward_iterator first, Forward_iterator last, const T& val,
+
+Compare cmp);
+
+주어진 정렬된 AJA [first:last)o] 대해 equal_range( )는 술어 000를 만족하는
+부분 AIEAE 나타내는 pairg 나타낸다. 이를 이용해 다음과 같이 정렬된 8600「0의
+ABLE 탐색할 수 있다.
+
+auto less = [](const Record& rl, const Record& r2) { return rl.name<r2.name;};
+// 이름 비교
+
+void f(const vector<Record>& v) // \가 "name" 필드로 정렬됐다고 가정
+
+{
+
+auto er = equal _range(v.begin(),v.end(),Record{"Reg"}, less);
+
+292 13%

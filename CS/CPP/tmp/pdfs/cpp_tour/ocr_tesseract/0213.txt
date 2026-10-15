@@ -1,0 +1,36 @@
+for (int i; 15>>나 )
+res.push_back(1);
+return res;
+
+}
+
+이 코드는 정수가 아닌 무언가를 만날 때까지 \5로부터 읽어 들이는데, 대표적으로
+입력의 끝에 다다랐을 때에 입력을 멈춘다. 이 코드에서는 15>>\ 연산이 iso] 참조를
+반환하고, 스트림이 다른 연산을 수행할 수 있는 상태인지를 확인하기 위해 iostream
+이 ㄴ06를 반환하는지 검사한다.
+
+일반적으로 입출력 상태에는 형식화 정보(10.6절)와 에러 상태(예, 입력의 끝인가), 버퍼
+링의 종류 52 비롯해 입출력 수행에 필요한 모든 정보가 포함된다. 특히 사용자는
+에러 발생을 알리기 위해 상태를 설정(10.5절)하거나 심각하지 않은 에러를 무시하기
+위해 상태를 설정할 수도 있다. 예를 들어 종료 FAS 사용하도록 6ㅋㅁ_ㄴㄴ5( )를
+다음과 같이 수정할 수 있다.
+
+vector<int> read_ints(istream& is, const string& terminator)
+{
+vector<int> res;
+for (int i; is >> 1; )
+res.push_back(1);
+
+if (is.eof())      // 파일의 2. 정상 종료
+return res;
+if (is.fall()) { // intB 읽는 데 실패; 종료 표식인지 확인
+is.clear();      // 상태를 9000( )으로 리셋
+is.unget();       // £217} 아닌 무언가를 스트림으로 되돌림
+string 5;
+if (cin>>s 66 s==terminator)
+return res;
+cin.setstate(ios_base::failbit); // cino| 상태에 fail()E 추가
+}
+return res;
+
+216 10%

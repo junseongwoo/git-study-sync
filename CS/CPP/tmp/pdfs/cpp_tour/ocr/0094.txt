@@ -1,0 +1,23 @@
+2 = CZ;
+CZ = 2;
+// OK: co”t가 아닌 변수에 대입
+// 에러: complex: :operator=( )는 const 멤버 함수가 아님
+double x = z.real(); // OK: complex::real( )은 const 멤버 함수임
+유용한 많은 연산이 comptex의 메모리 표현에 직접 접근하지 않아도 되는데, 이런
+연산은 클래스 정의 밖에서 따로 정의할 수 있다.
+cmplex operator+(complex a, complex b) { return a+=b; }
+complex operator-(complex a, complex b) { return a-=b; }
+complex operator-(complex a) { return {-a.real( ), -a. imag( )}•, } // 단항 음수 기호
+complex operator*(complex a, complex b) { return a*=b; }
+complex operato「/(complex a, complex b) { return a/=b; }
+위의 코드에서 값에 의해 전달된 인자는 복사된다는 사실을 바당으로 호출자에 영향
+을 주지 않고 인자를 수정하고 그 값을 결과로 반환했다.
+-와 !=의 정의는 직관적이다.
+bO이 operator=(complex a, complex b) // 같음
+return a. real( )=b. real( ) a. unag( )=b. tmag( );
+bool operator!=(complex a, complex b) // 같지 않음
+return !(a==b);
+cmplex sqrt( complex ) •,
+complex 클래스의 사용법은 다음과 같다.
+96 4장
+// 다른 어던가에서 정의

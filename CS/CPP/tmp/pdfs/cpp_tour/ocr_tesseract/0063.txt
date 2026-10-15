@@ -1,0 +1,36 @@
+// Vector .h:
+
+class Vector {
+public:
+Vector(int s);
+double& operator[](int i);
+int size();
+private:
+double* elem; // elem 52개의 doubled 포함하는 배열을 가리킴
+
+int sz;
+};
+
+위의 선언을 Vector. h 파일에 작성하고, 사용자는 이 헤더 파일"** "을 인클루드
+해 인터페이스에 접근한다.
+
+// user.cpp:
+
+#include "Vector.h" // Vector? 인터페이스 가져오기
+#include <cmath>     // sqrt()& 포함하는 표준 라이브러리 수학 함수 인터페이스 가쳐오기
+
+double sqrt_sum(Vector& v)
+{
+double sum = 0;
+for (int i=0; i!=v.size(); +1)
+sum=std::sqrt(v[i]); // 제곱근의 합
+return sum;
+
+}
+
+컴파일러가 일관성을 BAY 수 있도록 Vector? 정의를 제공하는 .cpp 파일에도
+hE 인클루드해 인터페이스를 가져온다.
+
+// 삐6610『.000:
+
+#include "Vector.h" // \/6610의 인터페이스 가져오기

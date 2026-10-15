@@ -1,0 +1,35 @@
+stringe] 끝에 더하는 앞의 두 방법은 의미적으로는 동일하지만 두 번째 방식을 권한
+다. 어떤 일을 하고자 하는지를 더 명시적으로 드러내며, 더 간결하고, 때에 따라 더
+효율적일 수 있다.
+
+string 변경 가능"9*0하다, =와 +=of 더불어 ([]를 이용한) 인덱싱과 부분 문자열
+연산도 제공한다. 다음 예를 보자.
+
+string name = "Niels Stroustrup";
+
+void m3()
+{
+string 5 = name.substr(6,10); // s = "Stroustrup"
+name. replace(0,5,"nicholas"); // name® "nicholas Stroustrup”
+name[0] = toupper(name[@]);    // name "Nicholas Stroustrup"
+}
+
+substr() 연산은 인자로 지정된 부분 문자열을 HARE string 반환한다. 첫 번째
+인자는 stringofl AQ] 인덱스(위치)이고, 두 번째 인자는 원하는 부분 문자열의 길이
+다. 인덱스는 0부터 시작하므로, 5의 gh Stroustrupo] 된다.
+
+replace() 연산은 부분 문자열을 주어진 값으로 교체한다. 이 경우에 0에서 시작하고
+길이가 5인 부분 문자열은 41615이며, 이 부분 문자열이 nicholasZ 대체된다. 마지
+막으로 A 글자를 대문자로 변경했으므로 named] 마지막 값은 Nicholas Stroustrup
+이다. 교체돼 들어갈 문자열의 길이와 교체될 부분 문자열의 길이가 같을 필요는 없다
+는 점을 기억하자.
+
+유용한 string 연산으로는 (=를 이용한) 대입과 (06다아처럼 []이나 at()& 이용한, 11.2.2절)
+인덱싱, (=와 !=를 이용한) 비교, (< <, > =& 이용한) 사전 순 순서 Fofoogaencal orden,
+
+(\66+0「처럼 반복자를 이용한; 12.2절) 반복, 입력(10.3절), 스트리밍(10.8절) Fo] 있다.
+
+5타내9은 다음과 같이 ThE string 객체나 C 스타일 문자열(1.7.1절), 문자열 리터럴
+과 비교할 수 있다.
+
+문자열과 정규 표현식 191

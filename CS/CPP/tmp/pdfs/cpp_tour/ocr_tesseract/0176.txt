@@ -1,0 +1,36 @@
+이처럼 MYL 매우 강력한 추상화로, 각기 다른 언어와 커뮤니티에서 다양한 이름
+으로 불리며, 표준 라이브러리의 200000136()에서도 사용된다, 현재 (++의 접힘
+표현식은 가변 템플릿 구현을 단순화하는 용도로만 제한된다. 한편 수치 계산 이외의
+다른 곳에도 접힘을 사용할 수 있다, 다음과 같은 유명한 예를 살펴보자.
+
+template<typename ...T>
+void print(T&&... args)
+{
+(std::cout << ... << args) << '\n'; // 모든 인자 출력
+}
+
+print("Hello!"s,' ',"World ",2017);
+// (((((std::cout << "Hello!"s) << ' ') << "Wor 1d ") << 2017) << '\n');
+
+많은 경우에 주어진 값의 집합을 공통된 타입으로 변환할 수 있는데, 이런 경우에
+인자를 벡터나 필요한 타입으로 복사하면 나중에 쉽게 사용할 수 있다.
+
+template<typename Res, typename... Ts>
+vector<Res> to_vector(Ts&&... ts)
+{
+vector<Res> res;
+(res.push_back(ts) ...);     // 20% 필요 없음
+return res;
+
+}
+
+to_vectorg 다음과 같이 사용할 수 있다.
+
+auto x = to_vector<double>(1,2,4.5,'a');
+
+template<typename ... Ts>
+int fct(Ts&&... ts)
+{
+auto args = to_vector<string>(ts...); // args[il& 번째 인자
+
+컨셉과 제네릭 프로그래밍 179

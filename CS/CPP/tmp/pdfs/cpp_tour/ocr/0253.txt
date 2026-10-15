@@ -1,0 +1,24 @@
+알고리즘 ftnd는 주어진 시권스에서 값올 찾고, 찾아낸 요소를 가리기는 만복가哥
+반환한다.
+bO이 has-c(const string& 5, char c)
+autO P= ftnd(s.begtn( ),s.end( ),c);
+if (p!=s.end( ))
+「eturn true•,
+else
+return fatse;
+// 문자 cß 포함하는가?
+다른 많은 표준 라이브러리 담색 알고리즘과 마찬가지로 ftnd는 •찾지 못함•을 나니내
+기 위해 end( )를 반환한다. 이를 이용해 동일한 동작을 하면서도 더 짧게 has-c( )큼
+정의할 수 있다.
+而이 has c(const st「tng& 5, char c)
+// 문자 (4 포함하는가?
+return find(s.begin( ),s.end( ),c)!=s .end( )•,
+더 홍미로운 예제로 문자열에서 주어진 문자가 발견된 모든 위치를 찾아보자. 이를
+위해 string의 반복자가 저장된 vector를 이용해서 발견된 위지의 집합을 반환할
+수 있다. vector는 이동 연산을 지원하므로 vector를 반환하는 작업도 효율적으로
+이뤄진*5.2.1절). 찾아낸 위치에서 무언가를 변경하길 원한다면 다음과 같이 const
+가 아닌 문자열을 전달하자.
+vector<strtng: : iterator> ftnd 5, char c) // s에서 (가 나타나는 곳을 모두 찾기
+: : iterator> res;
+fO「 (autO p = s.begin( )•, p!=s.end( )•, ++P)
+256 12장

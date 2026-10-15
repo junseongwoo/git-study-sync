@@ -1,0 +1,42 @@
+×가 양수가 아니면 누수가 일어난다. 이처럼 new 결과를 HARE ERIE of] 대입하
+면 EAE 유발한다.
+
+이런 문제에 대한 간단한 해답 중 하나로, 객체를 삭제할 필요가 있다면 벌거벗은
+포인터 대신 표준 라이브러리의 00ㄴ046_0ㅁ(13.2.1절)을 사용하는 것이다.
+
+class Smiley : public Circle {
+Vi ER
+
+private:
+vector<unique_ptr<Shape>> eyes;    //눈두개
+unique_ptr<Shape> mouth;
+
+};
+
+이 코드에서 간단하고 일반적이며 효율적인 자원 관리 기법(5.3절)의 예를 볼 수 있다.
+코드를 이렇게 변경하면 50ㄴ6>/의 소멸자를 정의할 필요도 없다. vectoro] 포함된
+unique_ptr& 해제하는 소멸자를 컴파일러가 암묵적으로 만들어내기 때문이다.
+unique_ptrd 사용하는 코드의 성능 효율성은 WAYS 포인터를 올바로 사용하는
+코드의 효율성과 완전히 동등하다.
+
+이제 630_51306( )를 사용하는 방법을 살펴보자.
+
+unique_ptr<Shape> read_shape(istream& is) // 입력 스트림 15에서 도형 읽기
+{
+// 15에서 도형의 헤더 정보를 읽고 그 종류 kE 찾음
+switch (k) {
+case Kind: :circle:
+// 원의 데이터 {Point,int}Z pt [에 읽기
+return unique_ptr<Shape>{new Circle{p,r}}; // 13.2.1절
+Il wes
+}
+
+void user()
+
+{
+
+vector<unique_ptr<Shape>> v;
+
+116 4%
+
+A

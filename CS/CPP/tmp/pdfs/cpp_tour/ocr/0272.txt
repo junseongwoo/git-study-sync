@@ -1,0 +1,15 @@
+13
+유틸리티
+시간 낭비가 졸겁다면 그건 시간 낭비가 아니다.
+- 버트랜드 러* Russell)
+소개
+자원 관리: unique-ptr과 shared-ptr, move( )와 forward( )
+구간 검사. span
+특수한 컨테이너: array, bitset, pair, tuple
+선택지: variant, optional, any
+시간
+함수 어댑션: 람다 어댑터, ), functton
+할당자
+타입 함수 iterator-traits, 타입 술어, enable-if
+조언
+유일리니 275

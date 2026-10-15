@@ -1,0 +1,40 @@
+6.3.2 함수 객체
+
+여러 종류의 템플릿 중 특히 유용한 한 가지로 함수 객체""““를 들 수 있는데, 함수처
+럼 호출할 수 있는 객체를 정의하는 데 사용할 수 있다,
+
+template<typename T>
+class Less_than {
+const T val;    // 비교 대상
+public:
+Less_than(const T& v) :val{v} { }
+bool operator( )(const T& x) const { return x<val; }        // 연산자 호출
+| H
+
+operator() 함수는 '함수 호출'이나 '호출', '적용' 연산 등으로 불리는 () 연산자를
+구현한다.
+
+임의의 인자 타입으로 .655_타80 타입의 HHH 변수를 정의할 수 있다.
+
+Less_than ti {42}; // 나\(ㄴ)는 <를 이용해 {를 42에 비교 <(1<42 )
+
+Less_than 15 {"Backus"s}; // 나5(5)는 <를 이용해 5를 "Backus"0j 비교(5<"83045" )
+
+Less_than<string> 152 {"Naur"}; // "Naur"& ( 스타일 문자열이므로 올바른 <를 얻으려면
+// <string> 필요
+
+이러한 ANE 그냥 함수처럼 호출할 수 있다.
+
+void fct(int n, const string 6 5)
+
+{
+bool bl = 1ti(n); // n<420|2 2
+bool 62 = 1ts(s); // s<"Backus"0|% 2
+oso
+
+}
+
+이러한 함수 객체는 알고리즘의 인자로 널리 사용된다. 예를 들어 특정 술어에 대해
+06인 요소의 개수를 알 수 있다.
+
+LEX 151

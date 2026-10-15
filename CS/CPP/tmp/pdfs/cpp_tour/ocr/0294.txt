@@ -1,0 +1,21 @@
+optional을 사용할 때 빈 객체 {}는 nullptr과 같은 의미로 사-추할 수 있다.
+int cat(optional<int> a, optional<int> b)
+int res = 0;
+if (a) res+=*a;
+return res;
+int x = cat(17,19);
+int Y = cat(17,{});
+저장된 값이 없는 optionat에 접근할 경우 어떤 일이 벌어질지는 예측할 수 없고
+예외도 던지지 않는다. 따라서 optional은 타입 안전성을 보장하지 않는다.
+13.5.3 any
+any는 임의의 타입을 저장할 수 있으며, (저장된 객체가 있다면) 그 타입을 알고 있다.
+기본적으로는 제약을 제거한 variant라고 볼 수 있다.
+any compose—npssage( 5)
+St「ing mess;
+. 로부터 읽어서 에시지 만들기 .
+if (no—problems)
+retu「n flPSS;
+return erro「
+// st「ing 반환
+// int 반환
+유*리티 299

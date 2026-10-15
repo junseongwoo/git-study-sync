@@ -1,0 +1,25 @@
+x가 양수가 아니면 누수가 일어난다. 이처럼 new 결과를 '벌거벗은 포인터'에 대입하
+면 문제를 유발한다.
+이런 문제에 대한 간단한 해답 중 하나로, 객체를 삭제할 필요가 있다면 벌거벗은
+포인터 대신 표준 라이브러리의 unique-ptr(13.2.1절)을 사용하는 것이c-b.
+class SmiIey : pubtic CircIe {
+private:
+vector<unique_ptr<hape>> •,
+unique_pt「<Shape> mouth;
+// 눈두 개
+이 코드에서 간단하고 일반적이며 효율적인 자원 관리 기법(5.3절)의 예를 볼 수 있다.
+코드를 이렇게 변경하면 smiley의 소멸지를 정의할 필요도 없다. vector에 포함된
+unique-ptr을 해제하는 소멸자를 컴파일러가 암묵적으로 만들어내기 때문이c十.
+unique-ptr을 사용하는 코드의 성능 효율성은 벌거벗은 포인터를 올바로 사용하는
+코드의 효율성과 완전히 동등하다.
+이제 read-shape( )를 시용하는 방법을 살펴보자.
+unique—ptr<Shape> read_shape(istream& is) // 입력 스트링 is에서 도형 읽기
+// is에서 도형의 헤더 정보를 읽고 그 종류 k를 찾음
+swttch (k) {
+case Kind: :circle:
+// 원의 데이터 {Point,int}를 p와 「에 읽기
+return unique—ptr<Shape>{new CircIe{p, 「}};
+void user( )
+vector<unique—ptr<hape>> v;
+116 4장
+// 13.2.1절

@@ -1,0 +1,21 @@
+. args를 여기서 사용 .
+int y= fct("foo", "bar", 5);
+7.42 인자 포워팅
+인터페이스를 바당으로 인자를 그대로 전달하는 것은 가변 템플릿의 주요 용도 중
+하나다. 실제 전송 방식을 파라미터로 받는 네트워크 입력 채널이라는 개님을 예로
+들어보자. 각 전송 방식마다 생성자의 파라미터가 다를 수 있다.
+template<typename Transport>
+requtres concepts : : InputTransport<Transport>
+class InputChannet {
+public:
+InputChannel(TransportA「鱗砥. . transportArgs)
+transpo「t( std: :forwa「d<TransportArgs>( transportArgs )... )
+Transpo「t _transport;
+표준 라이브러리 함수 forward( )(13.2.2절)를 이용해서 1nputChannet의 생성자에 주
+어진 인자를 Transport의 생성자에 그대로 전달했다.
+여기서 중요한 점은 1nputChannet을 작성하는 사람이 특정 Transport를 생성하는
+데 필요한 인자가 무엇인지 모른 채로 Transport 타입의 객체를 생성할 수 있다는
+점이다.
+일반성과 낮은 런타임 부하가 필수적이며, 매우 일반적인 인터페이스가 주로 쓰이는
+기본 라이브러리에서 인자 포워팅을 널리 사용한다.
+180 7장

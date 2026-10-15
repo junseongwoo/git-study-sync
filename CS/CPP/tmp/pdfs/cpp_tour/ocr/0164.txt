@@ -1,0 +1,23 @@
+requires Sequence<Seq> Nutr&r<Nl-Jfl>
+Num sum(Seq 5, n);
+두 방법의 절충안으로 다음과 같이 쓸 수도 있다.
+tempIate<Sequence Seq, Artthmetic<VaIue type<Seq>> Num>
+Num sum(Seq 5, n);
+컨셉을 아직 사용할 수 없다면 다음과 같이 명명 관례와 주석을 이용해야 한다.
+template<typenaæ Sequence, typenaflP Number>
+// requtres Arithmetic<Vatue tygSequence>,Number>
+Nume「 sum(Sequence 5, Nu&r n);
+어떤 방법을 선택하든 템플릿 인자에 의미 있는 제약을 주도록 설계하巫7.2.4절).
+7.22 컨셉 기반 오버로닝
+템플릿에 적절한 인터페이스를 부여했다면 함수처럼 템플릿도 그 속성을 이용해서
+오버로팅할 수 있다. 반복졔2.3절)를 전진시기는 표준 라이브러리 함수 advance( )
+의 단순화된 버전을 살펴보자.
+tempIate<Forwa「d_iterator lter>
+VOid advance(lter p, int n)
+// p를 n개 요소만큼 전진
+for (*n)
+// 순방향 반복자에 “는 있지만 +와 +=는 없음
+template<Random access—iterator lter, int n>
+// p를 n개 요소만큼 전진
+VOid advance(lter p, int n)
+컨셉과 제네력 프로그래밍 167

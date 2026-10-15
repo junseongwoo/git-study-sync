@@ -1,0 +1,37 @@
+7 4 (Te
+int size();      // 요소의 744 (space-elem)
+
+int capacity(); // 요소를 저장할 수 있는 슬롯의 #(last-elem)
+Ils
+void reserve(int newsz);     // capacity()§& 06\52까지 증가시킴
+7
+void push_back(const T& t); // Vector2 복사
+void push_back(T&& t);       // Vector 이동
+
+};
+
+표준 라이브러리 vectori= capacity()e} reserve(), push_back()& 멤버로 포함한
+다. 『65081/6()는 46ㄷ+0의 사용자나 /8<+0(의 다른 멤버에서 요소를 저장할 공간을
+추가로 확보하고자 사용한다. 메모리를 새로 할당하게 되면 기존 요소들을 새로 할당
+한 곳으로 이동시킨다.
+
+ㄷ2026\( )와 『656『6( )를 이용하면 push_back()& 쉽게 구현할 수 있다.
+
+template<typename T>
+void Vector<T>::push_back(const T& t)
+
+{
+if (capacity()<size()+1)             // 를 저장할 공간이 있는지 확인
+reserve(size( )=078:2*size());     // 838 2배로 증가
+new(space) T{t}; // *space 를 로 초기화
+++space;
+}
+
+이렇게 하면 요소의 할당과 재할당이 자주 일어나지 않는다. 성능을 향상시키고자
+『656「6( )를 사용하고 했는데, 굳이 그럴 필요가 없다. vector7t 사용하는 휴리스틱
+heuristco] 생각보다 뛰어나기 때문에 요소를 가리키는 포인터를 사용하기 위해 재할당
+을 반드시 막아야 하는 경우에만 reserve()E 명시적으로 사용한다,
+
+vector: 대입이나 초기화 시에 복사될 수 있다.
+
+컨테이너 237

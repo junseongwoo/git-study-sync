@@ -1,0 +1,28 @@
+struct { tnt a; }•,
+static assert(Equality-cmparabte<S>); // 구조체에 자동으로 -와 !가 정의되지 않으므로 실패
+Equatity-carparable 건셈의 정의는 그 영어 이름과 정확히 일지한다. concept의
+값은 항상 而ol이다.
+Equatity-comparable로 서로 다른 타입의 비교를 할 수 있게 만드는 방법은 간단
+하다.
+template<typenætp T, tyg:pnate T2 =T>
+concept EquaIity-c(YtvarabIe •
+requtres (T a, T2 b) (
+( a - b } 7> 如t;
+{ b - a } 7> bOOt;
+// -로 T와 T2를 비교
+// !•로 T와 T24 비교
+// -로 T2와 TS 비교
+// !=로 T2와 T5 비교
+typenane T2 =T는 두 번째 템플릿 인자를 지정하지 않으면 T2는 T와 같다는 의미고,
+여기서 T는 기본 템플릿 인자default argument다
+Equality-comparable은 다음과 같이 테스트할 수 있다.
+static_assert( EquaIity-cmparabIe<int,doubIe>); // 성공
+stat ( Equal ity-cmparable<int> ) •,
+// 성공(T2 tntS 기본으로 취함)
+static assert( Equality-comparabIe<int,string>); // 실패
+좀 더 복잡한 예로 시권스를 살펴보자.
+tempIate<typenaflE 5>
+concept Sequence = requires(S a) {
+VaIue—type十; // S는 값 타입
+typename lterator-type&; // 5는 반복자 타입
+건침과 제네력 프로그래일 171

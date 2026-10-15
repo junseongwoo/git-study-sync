@@ -1,0 +1,24 @@
+여기서 auto는 변수를 선언할 때와 마찬가지로 책값에 어떤 타입이든 허용한다는
+의미대인자는 함수 호출 시 형식 파라미터를 초기화하는 것으로 여겨진다). 卽to 파라미터
+를 이용하면 람다를 템플릿으로 만들 수 있고, 이를 일걸어 제네력 람다”,넓『,C -라고
+한다. 표준위원회의 정치적인 이유 때문인지 함수 인자에서 auto를 사용하는 것은
+아직 허용되지 않는다.
+이렇게 만들어진 rotate and-draw( )는 draw( )와 rotate( )를 호출할 수 있는 모든
+컨테이너에 다음과 같이 사용할 수 있다.
+VOid user4( )
+vector<unique-ptr<hape>> vl;
+vector<Shape*> v2;
+「otate and draw(v1,45);
+rotate and draw(v2,90);
+람다를 이용하면 어떤 구문이든 표현식으로 만들 수 있는데, 주로 인자 값을 바탕으로
+어떤 값을 계산하는 연산을 제공하는 데 주로 쓰이지만 그 용도는 광범위하다. 복잡한
+초기화를 예로 살펴보자.
+enum class lnit { 2旣0, seq, CPY, patrn }•, // 가능한 초것값들
+// 지저분한 코드:
+// int n, lnit m, vector<int>& arg, 반복자 p와 q는 어딘가에서 정의됨
+vector<int> v;
+switch (m) {
+case ze「o:
+v = vector<int>(n); // n개 요소를 0으로 초기화
+break;
+영鬱끗 155

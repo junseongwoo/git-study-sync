@@ -1,0 +1,26 @@
+6.3.1 함수 템플릿
+구간 for 구문으로 탐색 기능한 모든 시권스에 대해 모든 요소의 합을 구하는 함수는
+다음과 같다.
+template<typename Sequence, typename VaIue>
+Vatue sm( const Sequence& 5, Value v)
+fO「 (autO x : 5)
+V十ZX ;
+「eturn v;
+템플릿 인자 value와 함수 인자 v를 바탕을 호출자가 타입과 누산기accurnulator(#이 누
+적될 변수)의 초것값을 지정할 수 있다.
+VOid user(Vector<int>& vi, list<double>& ld, vector<cmplex<double>>& VC )
+int x = sum(vi,0);
+double d = sum(vi.@.@);
+double dd = sum(Id.O.@);
+// int 벡터의 합(int 더하기)
+// int 벡터의 합(double 더하기)
+// double 리스트의 합
+aut0 = sum(vc.com/lex{@.@.o.@}); // complex<double>의 벡터의 합
+double에 int를 더해나갈 때의 장점은 int의 최댓값보다 큰 값을 처리할 수 있다는
+것이다. 함수 인자로부터 sum<equence ,value>의 템플릿 인자를 추론하는 방법에
+주목하八b. 다행히도 타입뚍 명시적으로 지정할 필요가 없다. 여기서 만든 sum( )은
+표준 라이브러리의 accumulate( )(14.3절)를 단순화한 것이다.
+함수 템플릿은 멤버가 될 수는 있지만, virtual 멤버가 될 수는 없다. 컴파일러가
+프로그램에 존재하는 모든 인스턴스화를 알 수는 없기 때문에 vtbl(å.åtl)을 만들지
+못한다.
+150 6장

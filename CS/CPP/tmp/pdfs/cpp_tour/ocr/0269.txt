@@ -1,0 +1,19 @@
+(RangesTS]에서 몇 가지 컨셉을 더 찾아볼 수 있지만, 이 정도만 알아도 초심자에게는
+충분하다.
+12.8 컨테이너 알고리즘
+Pange-* 마냥 기다릴 수 없다면 간단한 구간 알고리즘을 쓰로 정의할 수 있다. 예를
+들어 sort(v.begin( ))를 sort(v)로 쉽게 줄여서 쓸 수 있다.
+namespace Estd {
+ustng namspace std;
+temptate<typename
+void 50「t(C& c)
+50「t(c.begin( ),c.end( ));
+C, typename Pred>
+void 50「t(C& C, Pred p)
+sort(c.begin( ),c.end( ),p);
+50杖( )의 컨테이너 버전(을 비롯한 다른 알고리즘들)을 별도의 네임스페이스 Estdcste
+stff)에 선언했는데, 이렇게 하면 다른 프로그래머가 std 네임스페이스를 사
+extended
+된
+용할 때 충돌을 피하고, 향후에 Range로 쉽게 교체할 수 있다.
+272 12장

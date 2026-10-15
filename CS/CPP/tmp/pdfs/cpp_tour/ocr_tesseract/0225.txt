@@ -1,0 +1,38 @@
+경로 연산(일부만 표시)
+
+0와 02는 path
+
+p.stem()                  0의 m2|(stem) 부분이다.
+
+p.extension()             0의 파일 확장자다(.을 제외한 확장자 - 옮긴이).
+
+p-begin()                0에서 요소 AIMAS| 시작이다.
+
+p.end()                  0에서 요소 AlEAS| 끝이다.
+
+p=p2, p!=p2              pet 02의 상등과 비상등이다.
+
+0902, p<=p2, p>p2, p>=p2    사전 순서로 비교한다.
+
+is>>p, 0s<<p              poll 스트림을 입출력한다.
+
+uBpath(s)               UTF-82 인코딩된 5로부터 03-를 생성한다.
+다음 예를 보자.
+
+void test(path p)
+{
+if (is_directory(p)) {
+cout << p << ":\n";
+for (const directory_entry& x : directory_iterator(p)) {
+const path& + = x; // 디렉터리 항목의 경로 부분
+if (f.extension() = ".exe")
+cout << f.stem() << " = 윈도우 실행파일 \n";
+else {
+string n = f.extension().string();
+if (n=".cpp" || n=".C" || n=".cxx")
+cout << f.stem() << " 는 C++ 소스 IA\n";
+
+pathE 문자열(예, *.660500)로 사용했고, path2 HE] 여러 가지 타입의 문자열을
+추출했다(예, f.extension().string()),
+
+228 10장

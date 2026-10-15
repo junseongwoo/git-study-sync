@@ -1,0 +1,18 @@
+string tncantatton;
+votd respond(const string& answer)
+if (answer - incantatton) {
+// 마법 부리기
+etse if (ansær - "yes") {
+c 스타일 문자열(()으로 종료하는 char 배열)이 필요하다면 string에 포후}된 문자-들에
+읽기 전용으로 접근할 수 있다. 다음 예를 보자.
+VOid print(const string& 5)
+printf( "printf를 선호한다면: 965\n•• ,s.c-str( ));
+// s.c-st「( )은 s에 포함된 문자를 가리키는 포인터를 반환
+cout << "stream을 선호한다면: " << 5 << '\n' ;
+문자열 리터럴은 const cha「*다. 그 대신 std: 타입의 리터럴이 필요하다면
+다음과 같이 접미사 5를 사용하자.
+autO 5 = "Cat"s; // std: :str ing
+autO P = "Dog"; // 스타일 문자열: const char*
+접미사 s를 사용하려면 std: :literals: :st「ing-literals(5.4.4å» 네임스페이스가
+필요하다.
+192 9장

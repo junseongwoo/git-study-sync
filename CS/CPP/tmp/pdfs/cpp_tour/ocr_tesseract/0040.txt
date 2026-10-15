@@ -1,0 +1,36 @@
+과 일치하지 않으면 아무 동작도 취하지 않는다.
+
+cased 벗어날 때 switch 구문을 포함하는 함수로부터 반환할 필요는 없다, switch
+구문 다음의 구문을 실행하고 싶다면 63(문을 사용한다, 다음과 같은 콘솔 비디오
+게임의 명령어 파서를 살펴보자.
+
+void action()
+{
+while (true) {
+cout << "어떻게 할까요:\0" ;     // 행동율 요구
+string act;
+cin >> act;         // 문자열에 문자를 읽기
+Point delta {0,0); // Pointof {x,y} 쌍을 저장
+for (char ch : act) {
+switch (ch) {
+case 'u': // 위로
+case 'n': // 북쪽으로
+++delta.y;
+break;
+case 'r': // 오른쪽으로
+case 'e': // 동쪽으로
+++delta.x;
+break;
+// ... 다른 행동 .
+default:
+cout << "가만히 YAGLCH\n";
+}
+move( current+delta*scale);
+update_display();
+}
+}
+}
+
+for 구문(1.7절)과 마찬가지로 나 구문에서도 변수를 선언하고 테스트할 수 있다.
+
+기초 41

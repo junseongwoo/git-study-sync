@@ -1,0 +1,23 @@
+<class T>
+constexpr space-vector<T> external acceleration = { T{}, T{-9.8}, T{} };
+autO vis2 = 2*viscositY<doubIe>;
+auto acc = externat_acceleration<float>;
+여기서 space-vector는 3차원 벡터다.
+이제 모든 가능한 타입의 표현식을 초것값으로 사용할 수 있다.
+tempIate<typenaflE T, typename T2>
+constexpr bOOI Assignable = is-assignabIe•<T&,T2>:
+// is-assignable은 타입 특성(trait)(13.9.1절)
+template<typename T>
+void testing( )
+:vatue;
+static assert(AssignabIe<T&,double>, "double을 대입할 수 없음");
+static—asse「t(Assignable<T&,string>, "string을 대입할 수 없음" );
+이 코드에서 시용한 아이디어를 크게 발전시기면 컨셉 정의(7.2절)의 핵심과도 일맥상
+통한다.
+6.42 별칭
+타입이나 템플릿의 동의어를 만들면 유용한 경우가 꽤 많다. 예를 들어 표준 헤더
+<cstddef>에서는 별칭 size-t를 정의하는데, 그 정의는 대략 다음과 같다.
+ustng size_t = unsigned int;
+size-t라는 이름의 실제 타입은 구현마다 달라서 다른 구현체에서는 size-t가
+unsigned long일 수 있다. 별칭 size-t를 사용함으로써 프로그래머는 이식성 있는
+158 6장

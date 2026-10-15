@@ -1,0 +1,22 @@
+virtuat void mve(Potnt to) 국;
+vtrtl.nt votd drw( ) const • 하
+// 현재 깐버스에 그리기
+v€rtuat void rotate( int anqle) • 하
+virtuat 9-( ) ()
+// 소일자
+이 인터페이스는 자연스럽새 추상 글래스로 성의된다. 메모리 표현 측|편에서 생각하
+면 €vtbt9 가리기는 포인터를 띠91하\바 모는 공통적으로 포함돼야 하는 것은
+없다. 이러한 클래스 정의를 마당으로 도성의 포인터로 구성된 베터름 조작하는 일,(과
+적인 함수를 만들 수 있다.
+void v, (nt // v91 요쇠 혜91e한콤 회전
+for (autOP : 하
+p->rotate(anqte);
+특정 도형을 성의하려면 그 도형이 달-의 일종임을 밝히고 (가상 흐卜수와 더불어) 구제
+적인 속성을 지정한다.
+ctass (남(le : 91″ (
+mJbttc:
+CircIe(Point 9, tnt // 생성자
+Potnt center( ) cmst override
+return x;
+void mve(Point to) override
+4래스 109

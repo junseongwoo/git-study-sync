@@ -1,0 +1,30 @@
+(갖고 있는 배경에 상관없이) 어떤 초보자에게도 완벽히 일반화된 인터페이스를 제공하
+는 난수 생생기 라이브러리를 익히기란 쉬운 일이 아니다. 첫 시작으로는 다음과 같이
+간단한 난수 생성기로 충분할 수 있다.
+Rand-int rnd {1,10}; // 구간 [1:10]에서 난수를 만드는 생성기
+int x = rnd( )•,
+// x는 [1:10]에 속하는 수
+이렇게 하려면 die( )에서 했던 것처럼 엔진과 분포를 Rand-int라는 클래스 안에서
+통합해야 한다.
+class Rand_int {
+public:
+Rand_int(int IOW, int high) :dist{low,high} { }
+int operator()() { return dist(re); } // int 생성
+void seed(int 5) { re.seed(s); }
+private:
+default_random engine 「만,
+unifo「m int_dist「ibution<> dist;
+// 난수 엔진에 새로운 시드 선택
+이 클래스를 정의하는 일은 여전히 전문가 수준이지만, Rand-int( )를 사용하는 일은
+C++ 초보자를 위한 과정의 첫 주에 다를 수 있을 정도다.
+€nt main( )
+constexpr int max = 9;
+Rand_int rnd {@.max};
+vector<int> histogram( frm+l ) •,
+for (tnt i=€; i!=200; ++i)
+++htstogram[ rnd( )] •,
+// 단일 분포의 난수 생성기
+// 적당한 크기의 벡터 생성
+// [0:max] 구간의 수에 대한 히스토그램 재우기
+for (tnt 0• t!=histogram.size( )•, ++i) { // 막대그래프 그리기
+322 14장

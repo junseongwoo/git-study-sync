@@ -1,0 +1,35 @@
+둘보다 많은?(혹은 적은) 요소가 필요하다면 (<uttlttp에 선언된) tupte을 사용하자.
+tupte은 서로 다른 타입의 요소로 구성된 시권스다.
+tupl«string, int,doubte> tl {"Sha「k",123,3.14}•, // 타입을 명시적으로 지정
+auto t2 = make-tupte(string{"Herring"}.1@.1.23); // 타입을
+tuple t3 {"COd"s,20,9.99}•,
+// tupte<string, int , doubte>로 추론
+// 타입을 int,doubte>로 추론
+생성자의 인자로부터 타입을 추론하는 것은 c++17부터 제공되므로, 더 오래된 코드에
+서는 make-tuple( )을 사용할 수 있다.
+tuple의 멤버에 접근할 때는 함수 템플릿 get을 시용한다.
+string = get<0>(t1) ;
+int x = get<l>(tl);
+double d = get<2>(t1);
+// 첫 번째 요소 가져오기: "Shark"
+// 두 번째 요소 가져오기: 123
+// 세 번째 요소 가져오기: 3.14
+tuple의 요소에는 (()부터 시작하는) 번호가 부여되고, 인덱스는 반드시 상수여야 한다.
+tupte의 멤버에 인덱스로 접근하는 경우가 많은데, 이는 보기에도 좋지 않고 에러의
+소지도 크다. tupte 안에서 유일한 타입을 갖는 요소는 타입의 이름으로 지정할 수
+있다.
+autO 5 = get<string>(tl);
+autO X = get<int>(tl);
+autO d = get<doubte>(tl);
+// 문자열 가져오기: "Shark
+// int 가져오기: 123
+// double 가져오기: 3.14
+쓰기에도 get<>을 사용할 수 있다.
+get<string>( tl )
+= "Tuna
+get<int>(tl) = 7;
+get<double>(tl) = 312;
+294 13장
+// 문자열에 쓰기
+// int에 쓰기
+// double에 쓰기

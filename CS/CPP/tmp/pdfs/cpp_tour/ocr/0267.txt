@@ -1,0 +1,40 @@
+호출 가능 컨셉
+Invocable<F ,A「gs>
+InvxableReguIa「<F ,A「gs>
+Pred icate<F , Args>
+ReIation<F ,T , 0>
+St rictWeakOrder<F , T , U>
+Args 타입의 인자 목록으로 F를 호출할 수 있다.
+1nvocabte<F,A「gs>를 만족하고 상등성을 보존한다
+Args 타입의 인자 목록으로 FS 호출할 수 있고 囟ol을 반환한다.
+Pred icate<F ,T , U>
+Relation<F,T,U>가 엄격하고 약한 순서(strict weak ordering)를
+제공한다.
+x=y이면 f(x)=f(y)일 때 함수 f( )는 상등성을 보존한다고 한다.
+표준 라이브러리에서는 일반적으로 <를 비롯한 비교를 수행할 때 엄격하고 약한 순서
+를 가정하는데, 내용이 궁금하다면 직접 찾아보자.
+Relation과 StrictWeakOrder는 의미론적으로만 다른데, (현재로서는) 이를 코드로 표
+현할 순 없고, 이러한 이름으로 의도를 드러내는 정도만 가능하다.
+반복자 컨셉
+lterator<l>
+Sent inel<S , 1>
+SizedSent inel<S , I>
+lnputl terator<l>
+OutputIterator<I>
+ForwardIterator<I>
+BtdirectionalIterator<I>
+lterator<l>
+~r彎曲노<11 , 12 ,R,O>
+270 12장
+1를 증가(++)시키고 역참조(*)할 수 있다.
+s는 lte「ator 타입의 보초 값이다. 즉. 5는 1의 값 타입에 대한 술어다.
+5는 - 연산자를 적용할 수 있는 1에 대한 보초 값이다.
+1는 입력 반복자이고, *는 읽기 전용으로만 사용할 수 있다.
+1는 출력 반복자이고, *는 쓰기 전용으로만 사용할 수 있다.
+1는 순방향 반복자이고, 여러 번 순회(multi pass)가 가능하다.
+l는 --를 지원하는 Forward1terator다.
+I는 +와 ?. +=. ?=, [1를 지원하는 BtdirectionalIterator다
+1는 요소의 이동과 뒤바꿈(swap)을 지원6는 Forvard1terator<1>다
+11과 12로 정의된 정릴된 시권스를 Re1atton<R>로 0로 병합할 수
+있다.
+(이어짐)

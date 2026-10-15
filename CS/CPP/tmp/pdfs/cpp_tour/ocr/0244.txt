@@ -1,0 +1,17 @@
+struct Rhash ( // Recordß 위한 해시 함수
+stze—t operator( )(const Record& r) const
+return hash<string>( )(r.nme) hash<tnt>( )(r.product code);
+unordered set<Record,Rhash> my-set; // 조회할 때 RhashS 사용하는 Records 집합
+좋은 해시 함수를 설계하는 일에는 요령이 필요하고, 적용할 데이터에 대한 지식이
+필효할 때도 있다. 이미 존재하는 해시 함수를 배타적 논리후,hA)으로 합치는 방식은
+간단하고 효율적인 경우가 많다.
+다음과 같이 표준 라이브러리 hash의 흭수화로 정의하면 hash 연산을 명시적으로 전
+달할 필요가 없다.
+na"kspace std ( // RecordS 위한 해시 함수
+temptate<> struct hash<Record> {
+ustng argunpnt—type = Record;
+using result—type = std: :size-t;
+stze—t 0鰐「ator( )(const Record& 「) const
+return hash<string>( )( ^ hash<tnt>(
+map과 unordered-map의 다음과 같은 차이점을 알아두자.
+컨테이너 247

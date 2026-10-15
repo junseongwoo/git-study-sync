@@ -1,0 +1,20 @@
+DecIaration and Type
+적절한 행동을 선택하기 위해 선택지 중의 하나를 확인하는 이러한 패턴은 흔하긴
+하지만, 비효율적으므로 다음과 같은 더 직접적인 지원이 필요하다.
+votd check(Node* p)
+overloaded {
+[l(Statenpnt& 5) { /*
+이는 기본적 0 로 가상 함수 호출과 같지법 더 빠를 수도 있다. 성능에 관한 모든 주장
+과 마찬가지로 “더 빠를 수도 있다는 말은 성능이 중요한 경우일수록 실제로 검중할
+필요가 있다. 대부분의 경우에는 큰 차이가 없다.
+불행히도 overloaded는 필요하지만 표준은 아니다. 이는 인자의 집麒일반적으로는
+람다)으로부터 오버로드된 집합을 만드는 일종의 미술과도 같다
+template<class... TS>
+st「uct ove「load댼 : TS.
+using Ts: :operator( ).
+templat«class.
+. TS>
+overIoaded(Ts... ) *> overIoaded<Ts.. 수; // 추론 가이드
+방문자Ⅵs|뇨,가 visit한 후에는 overload에 ( )를 적용하는데, 이때 오버로드 규칙에
+비취봐서 가장 적절한 람다를 호출한다.
+유 월리리 297

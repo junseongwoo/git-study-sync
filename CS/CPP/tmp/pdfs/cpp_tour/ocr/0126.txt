@@ -1,0 +1,22 @@
+thro.€ Vector stze_mismatch{};
+Vecto「 res(a.size( ))•,
+for (int i=O; ); ++t)
+res[il=a(il+b(il;
+return res;
++로부터 반환할 때 지역 변수 res를 호출자가 접근할 수 있는 어던가로 복사해야 한
+다. +를 사용하는 코드를 살펴보자.
+VOid f(const Vector& 지 const Vector& y, const Vector& z)
+Vector r;
+「 = X十Y十z;
+이 코드는 vector를 적어도 두 번 복사해야 한다(+를 시용할 때마다 한번씩). vecto「가
+크다면, 예를 들어 10,(XX)개의 double을 포함한다면 이는 바람직하지 않다. 가장 큰
+문제는 0鰐「ato사( ) 안에서 정의된 res를 복사 후에는 전혀 시용하지 않는다는 점이
+다. 결국 우리가 정말 원하는 것은 복사가 아니라 연산의 결과를 함수 밖으로 가져오
+는 것이다. 즉, vector를 복사하는 게 아니라 이동시켜야 한다. 다행히도 이러한 의도
+드러낼 방법이 있다.
+class Vector {
+Vector( const Vector& a) •,
+Vector& operator=( const Vector& a) •,
+128 5장
+// 복사 생성자
+// 복사 대입

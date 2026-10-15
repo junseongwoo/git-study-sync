@@ -1,0 +1,27 @@
+4.4 가상 함수
+(00+3ㄴ00「를 사용하는 코드를 다시 살펴보자,
+
+void 1156((00ㅜ81216 <)
+{
+const int sz = c.size();
+for (int 1=0; i!=s2; ++{)
+cout << ¢[1] << "\n";
+
+use( )에서 c[t]§ 호출할 때 실제로 8.2% operator (JOE 어떻게 찾을까? 『( )에서
+use( )를 호춤한다면 List _containero] operator(]()7} 호출돼야 하고, 0()에서
+456( )를 호출하면 Vector container?) operator(]()7} 호출돼야 한다, 이를 해결
+하려면 Contatner 객체는 시행 시간에 적절한 함수를 호출하는 ol 필요한 정보를
+포함해야만 한다. 이름 구현하는 일반적인 기법으로 컴파일러가 가상 함수의 이름을
+함수 포인터로 구성된 테이블의 인덱스로 변환하는 방식을 사용하며, 이 테이블을
+가상 함수 테이블"! een 98 또는 간단히 61이라고 한다, 가상 함수를 포함하는
+각 클래스는 각자의 가상 함수를 가리키는 61을 갖는다. 이를 그림으로 표현하면
+다음과 같다.
+
+Vector
+
+List [ust container:ioperatorly |
+ee
+
+[Uist container: List container) |
+
+클래스 107

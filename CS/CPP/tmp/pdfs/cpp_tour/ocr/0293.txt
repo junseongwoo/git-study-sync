@@ -1,0 +1,21 @@
+추론 가이드는 미묘한 모호성을 해결하기 위한 메커니즘으로, 주로 기초 라이브러리
+에서 클래스 템플릿의 생성자에 시용한다.
+variant에 저장된 타입과 다른 타입으로 접근을 시도하면 bad-variant-access를 던
+진다.
+13.52 optional
+optional<ß>는 variant의 특수한 경-?4variant<A,nothtng>)로 볼 수도 있고, A가 객체
+를 가리기거나 nullptr일 수 있다는 점을 표현한 것으로 볼 수도 있다.
+optionat은 객체를 반환하거나 아무것도 반환하지 않는 함수에 유용하다.
+optional<string> compose—message( )
+string 矺55 ;
+// ... 5로부터 읽어 에시지 만들기 .
+if (no-probl에15)
+return ;
+return {}; // 빈 optional
+이 함수를 다음과 같이 사용할 수 있다.
+if (autO m = )
+cout << *m; // 역참조(*)에 주의
+else {
+예외를 선호하지 않는 경우라면 홍미로운 방법일 수 있디(3.5.3절 참고). *를 시용한 것
+에 주목하자. 엘tt예al은 그 자체로 객체라기보다 객체를 가리기는 포인터로 취급된다.
+298 13장

@@ -1,0 +1,27 @@
+시간에 관련된 기능을 이용하면 다음과 같이 할 수 있다.
+// 13.7절 참고
+using Std: : chrono;
+auto t@ = high—resolution ctock: :now( )•,
+this—thread: :steep_for( ) ;
+auto tl = high—resolution ctock: :now( )•,
+cout << duration_cast<nanoseconds>(tl-t@).count( ) << •• 나노초 경과\n"•
+thread를 새로 시작할 필요도 없다. 기본적으로 this-thread는 현재 스레드를 가리
+킨다.
+시계의 단위를 나노초로 조정하고자 duration-cast를 시용했다.
+외부 이벤트를 이용한 통신을 위해 기본적인 지원은 <condition-variable>의
+condition—variable에서 제공된c十. condition-variable은 한 thread가 다른 thread
+를 기다리는 메커니즘을 제공한다. 특히 한 thread가 다른 thread에서 행위의 결과로
+벌어지는 어떤 조건cond,tionc*은 이벤트event)를 기다릴 수 있다.
+conditton-variable은 여러 형태의 우아하고 효율적인 공유를 가능케 하지만 주의
+해야 한다. 전형적인 예제로 queue를 이용해서 메시지를 주고받는 두 thread를 살펴
+보자. 예제를 단순히 하기 위해 queue와 queue에 대한 경합 상태를 방지하는 메커니
+즘을 모두 전역 변수로 정의했다.
+ctass t•Éssage {
+// 통신에 사용할 객체
+// 에시지 큐
+queue4€ssage> trqueue;
+condition-variable mcond; // 이벤트 통신을 위한 변수
+NJtex rrnutex •,
+// mcond에 대한 접근 동기화
+queue와 condttion-variable, mutex 타입은 표준 라이브러리에서 제공된다.
+336 15장

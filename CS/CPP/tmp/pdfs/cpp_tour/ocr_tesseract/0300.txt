@@ -1,0 +1,27 @@
+for_each(v.begin(),v.end(),mem_fn(&Shape::draw));
+}
+
+<++11에서 람다를 도입하기 전에는 객체지향 스타일의 호출과 함수 스타일의 호출을
+매핑할 때 주로 000_10()이나 그와 유사한 방법을 사용했다.
+
+13.8.3 function()
+
+표준 glolHee] function 호출 연산자 ()를 이용해 호출할 수 있는 무언가를 저장
+한다. 즉, function 타입의 객체는 함수 객체(6.3.2절)를 말한다,
+
+int fl(double);
+function<int(double)> fctl {fl}; // flog 초기화
+
+int f2(string);
+function fct2 {f2};                // fct29] Efe) function<int(string)>
+
+function fct3 = [](Shape* p) { p->draw(); }; // fct3ol 타입은
+// function<void(Shape*)>
+fct2o]| A function9] 타입은 초깃값 int(string) 24 El 추론된다.
+
+당연한 말이지만 function 콜백, 연산을 인자로 전달할 때 함수 객체를 전달하는
+경우 등에 유용하다. 그러나 직접적인 함수 호출에 비하면 실행 시간에 부하가 발생하
+며, function 객체이므로 오버로딩을 적용할 수 없다. (람다를 포함해) 함수 ANE
+오버로딩하려면 076『603060(13.5.1절)를 고려하자.
+
+유틸리티 305

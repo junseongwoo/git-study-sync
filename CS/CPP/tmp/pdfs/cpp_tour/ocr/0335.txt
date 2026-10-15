@@ -1,0 +1,28 @@
+할 수 있다. packaged-task는 반환 값이나 예외를 태스크에서 promise에 집어넣는
+래퍼wrapper 코드(15.7.1 절과 유사한 고드)를 제공한다. get-future를 호출해 이를 요청
+하면 packaged-task는 promise에 상응하는 future를 돌려준다. 예를 들어 표준 라
+이브러리 accumulate( )(14.3절)를 이용해 vector<double>의 요소에서 각기 절반을
+더하는 두 태스크를 작성할 수 있다.
+double accum(double* beg, double* end, double init)
+// 초것값 init부터 시작해 [beg:end)를 모두 더함
+return accumulate( beg, , init ) ;
+double comp2(vector<doubIe>& v)
+using Task—type = double(double*,double*,double); // 태스크의 타입
+packaged task<Task_type> pt@ {accum};
+packaged_task<Task_type> ptl {accum};
+future<double> f0 {pt@.get_future( )};
+future<double> fl {ptl.get-future( )}•,
+double* first = &v[Ol;
+// 태스크(즉, accum)를 패기징
+// pt0의 futu「e를 저장
+// ptl의 future를 저장
+thread tl {move(pt@).ftrst.first+v.size( )/2,0}; // pt@를 위한 스레드 시작
+thread t2 {mve(ptl ) ,first+v.size( )/2,first+v.size( ),0}; // ptl을 위한 스레드 시작
+「eturn f@.get( )+fl.get( )•,
+// 결과 가져오기
+packaged-task 템플릿은 태스크의 타입을 템플릿 인지(예제의 Task-type은 double
+(double*,double*,double)의 별칭)로 받아들이고 해당 태스크를 생성자의 인자(예제의
+accum)로 받는다. packaged-task는 복사할 수 없으므로 move( )가 필요하다.
+packaged-task를 복사하지 못하는 이유는 자원 핸들이기 때문이다. packaged-task
+동시성 341
+卜.

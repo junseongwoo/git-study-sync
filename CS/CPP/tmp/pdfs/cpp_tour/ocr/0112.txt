@@ -1,0 +1,23 @@
+아래에서 위로bottom ,JP, 생성하고, 객체가 소멸될 때는 소멸자를 이용해 (파생 클래스부
+터) ,위에서 아래로t。P down, 소멸된다.
+4.52 계층 구조 탐색
+read-shape( ) 함수는 Shape*를 반환하므로, 반환된 모든 Shape를 동-등하게 취급할
+수 있다. 그러나 smiley의 wtnk( )처럼 특정 파생 클래스에서만 제공하는 멤버 후}쯬를
+사용하고 싶다면 어떨까? ,지금 이 Shape가 smiley인지'를 확인하려면 dynamic-cast
+연산자를 활용한다.
+Shape* PS {read-shape(cin)};
+if (SmtIey* P = dynamic-cast<SmiIey*>(ps)) { // .
+// Smiley가 맞음. 적절히 사용.
+else {
+. Smiley가 아님. 다른 작업 시도 .
+. PS 가 Smiley를 가리기는가?
+dynamic-cast의 인지국여기서는 ps)가 실행 시간에 기대했던 타입이나 기대했던 타입
+으로부터 파생된 클래스를 가리키지 않는다면 dynamic-cast는 nullptr을 반환한다.
+이처럼 다른 파생 클래스를 가리길 수도 있는 포인터 타입에 dynamic-cast를 사용하
+고, 반환 값이 nutlptr인지 확인한다. 간편하게 조건문 안의 변수 초기화를 통해서
+확인하기도 한다.
+다른 타입이 올 수 없을 때는 참조 타입에 *를 A卜&할 수 있다. 이 경우에
+기대했던 타입의 객체가 아니면 dynamic-cast는 bad-cast 예외를 던진다.
+Shape* PS {read-shape(cin)};
+Smiley& r {dynamic-cast<Smtley&>(*ps)}; // 다른 어던가에서 std: :bad—cast를 잡아야 함
+114 4장

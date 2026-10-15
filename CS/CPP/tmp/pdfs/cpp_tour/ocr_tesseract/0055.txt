@@ -1,0 +1,33 @@
+void f(Entry* pe)
+{
+if (pe->t == num)
+cout << pe->i;
+7 «ss
+}
+
+여기서 멤버 pe} :가 동시에 사용되지 않으므로 메모리가 낭비되는 셈이다. 다음과
+같이 이 둘을 00ㄴ00의 멤버로 지정하면 메모리를 쉽게 절약할 수 있다.
+
+union Value {
+Node* p;
+int {;
+
+bs
+
+uniono] 어떤 종류의 값을 갖는지는 언어에서 확인하지 않으므로, 프로그래머가 이를
+관리해야 한다.
+struct Entry {
+string name;
+Type t;
+Value v;  // t==ptro|® v.pE, t==numo|® v.18 사용
+};
+
+void f(Entry* pe)
+{
+if (pe->t = num)
+cout << pe->v.1i;
+1 os
+}
+
+타입 필드(위의 0와 40100에 저장된 타입 간의 관계를 관리하는 방식은 에러의 소지
+가 크다. 이러한 에러를 피하려면 공용체의 해당 타입을 캡슬화하고 멤버 함수를 바탕

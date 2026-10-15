@@ -1,0 +1,30 @@
+클래스의 객체를 복사하는 일은 복사 생성자COPY constructor와 복사 대입COPY ass•gnment이라
+는 두 멤버로 정의할 수 있다.
+class Vector {
+private:
+double* etem;
+int 52;
+pubtic:
+Vector( int 5);
+// elem은 sz개의 doubte을 포함하는 배열을 가리킹
+// 생성자: 불변 조건을 조성하고, 자원 획득
+NVector() { delete[l elem; } // 소일자: 자원 해제
+Vector(const Vector& a) ;
+// 복사 생성자
+Vector& operator=( const Vector& a); // 복사 대입
+double& operator[ ]( int i);
+const double& operator[l( int i) const;
+int size( ) const;
+vector의 복사 생성지는 지정된 개수의 요소를 저장할 수 있는 공간을 할당하고, 주어
+진 요소를 그 공간에 복사해야 한다. 그렇게 하면 복사 연산 후에도 두 vector가 각자
+요소의 복사본을 갖게 된다.
+Vector: :Vector( const Vector& a)
+:elem{na•., double[a.sz]},
+sz{a.sz}
+for (int i=@; i!=sz; ++i)
+elem(i] = a.elem[il;
+// 복사 생성자
+// 요소를 저장할 공간 할당
+// 요소를 복사
+이제 v2=vl을 실행한 결과는 다음 그림과 같다.
+126 5장

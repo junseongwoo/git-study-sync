@@ -1,0 +1,25 @@
+코드가 훨씬 명확하다. sequence와 N내n曲「가 뜻하는 컨셉만 정의하고 나면 컴파일러
+가 sm( )의 구현이 아닌 인터페이스만 로교도 올바르지 않은 호출을 자단할 수 있다.
+따라서 더 나은 에러 보고가 가능하다.
+그러나 sum( )의 인터페이스 명세가 완벽하지 않다. sequence의 요소를 Number에 더
+할 수 있어야 한다는 점을 다음과 같이 명시하자.
+template&quence Seq, Number Num>
+requires Arithmetic<VaIue—type<Seq>,Num>
+Num sum(Seq 5, Num n);
+시퀀스의 value-type은 시권스에 포함되는 요소의 타입이며, Arithmetic<X,Y>는 수
+지 타입 x와 Y를 이용한 산술 연산이 기능함을 나타내는 컨셉이다. 덕분에 실수로
+vector«string>이나 vector<int?>에 sum( )을 사용하는 일을 방지하는 한편 vector
+<int>와 vector<complex<double>>에는 여전히 sum( )을 사용할 수 있다.
+이 예제에서는 +=만을 사용하지만 템플릿 인자를 너무 엄격하게 제한하면 단순성고l-
+유연성을 잃을 수도 있다. 특히 sum( )을 +=가 아닌 +와 =로 표현하도록 변경한다면
+요구 사항을 +=만으로 축소시기기보다 일반적인 컨셉(여기서는 Arithmetic)이 더 낫다.
+컨셉을 이용한 첫 번째 5내TI( )처럼 부분적인 명세도 매우 우우할 수 있다. 물론 명세가
+완벽하지 않으면 일부 에러는 인스턴스화 시간까지 발견되지 않지만, 부분적인 명세
+도 의도를 잘 드러내고 필요한 요구 사항이 파악되지 않은 사황에서 프로그램을 점진
+적으로 개발할 때 필수적이다. 컨셉이 잘 정립돼 가면서 초기의 명세도 완벽에 가까워
+질 것이다.
+requires ArithffEtic<Value—type<Seq>,Num>를 requirements 절이라고 하는데
+template&quence Seq>는 requires Sequence<Seq>를 짧게 쓴 것이다. 필자가 수
+다스러운 사람이라면 다음과 같이 썼을 수도 있다.
+template<typename Seq, typename Num>
+166 7장

@@ -1,0 +1,25 @@
+struct Event {
+vector<int> data = vector<int>(512);
+tist<shared_pt「<Event>> q;
+void producer( )
+fO「 (int n = 0; n!=LOTS; ++n) {
+tock—guard lk {하;
+// m은 mutex( 15.5결)
+q. push back( make-shared<Event>( ) ) ;
+cv.notify 0爬( )•,
+이 방법은 논리적인 관점에서는 잘 동작했다. 논리적으로 간단한 덕에 코드는 강건했
+고 유지 보수도 쉬웠다. 하지만 엄청난 메모리 단편화를 유발해했다.
+16개와 컨슈머consumer 4개 사이에서 이벤트 1따(XX)개가 전달된 후에는 메모리가 6GB
+소모됐다.
+단편화 문제에 대한 전통적 해법은 풀 할당ÄP001all"at4 이용해 코드를 재작성하는
+것인데, 풀 할당자는 공정된 단일 크기의 객체를 관리하며 매번 객체를 할당하기보다
+많은 객체를 한 번에 할당한다. 다행히도 c++17에서는 이를 직접적으로 지원하는데,
+std의 하위 네임스페이스인 卿「(다형성 메모리 자원P01yrn0tPh•cmet"0ryreSOU,W)OI서 풀 할당
+자를 정의한다.
+卿「: :synchronized pool_resource 喞1•,
+struct Event {
+// 생성
+vector<int> data = vector<int>{512,&pool}; // Event가 咿1을 사용하계 함
+list<shared ptr<Event>> q {駐1}•,
+// q가 喞l을 사용하게 함
+유일리E| 301

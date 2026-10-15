@@ -1,0 +1,20 @@
+void f(Entry* 畔)
+tf (pe->t - nm)
+cout << pe->i;
+여기서 멤버 p와 i가 동시에 사용되지 않으므로 메모리가 당비되는 셈이다. 다음과
+같이 이 둘을 union의 멤버로 지정하면 메모리를 쉽게 절약할 수 있다.
+union VaIue {
+Node* 한,
+int i;
+union이 어떤 종류의 값을 갖는지는 언어에서 확인하지 않으므로, 표구 그래머가 이를
+관리해야 한다.
+st「uct Ent「y {
+string name•
+Type t;
+VaIue v; // t=ptr이면 v.p를, t==num이면 v.i를 사용
+VOid f(Entry* pe)
+if (pe->t - num)
+cout << *. 1 ;
+타입 필드(위의 t)와 union에 저장된 타입 간의 관계를 관리하는 방식은 에러의 소지
+가 크다. 이러한 에러를 피하려면 공용체의 해당 타입을 캡슐화하고 멤버 함수를 바탕
+56 2장

@@ -1,0 +1,39 @@
+void test()
+{
+try {
+Vector v(-27);
+}
+catch (std: :length_errork err) {
+// 크기가 84 AE 처리
+}
+catch (std::bad_allock err) {
+// 매모리가 고길된 ARE 처리
+}
+}
+
+스스로 만든 클래스를 예외로 사용해 에러를 탐치한 2A HAM 에러를 처리할 지점까
+지 임의의 정보를 전달할 Asks saw,
+
+예외가 발생한 후에 함수의 동착을 마무리할 수 없는 경우도 있는데, 그럴 때의 예외
+처리란 최소한의 지역적인 정리 작업을 한 후에 예외를 다시 던지는 것이다.
+
+void test()
+{
+try {
+Vector v(-27);
+
+}
+catch (std::length_error&) { // 무언가를 한 후에 예와 다시 1
+
+cerr << "테스트 실패 : 길이 에러\0";
+throw; // 다시 던짐
+
+}
+catch (std::bad_allock) { // 이 프로그램은 메모리 고갈을 처리할 수 없음
+
+std::terminate( ); // 므로그램 종료
+
+잘 설계된 코드에서는 try 블록을 드물게 사용한다. RA 기법을 체계적으로 사용해
+try 블록의 과도한 사용을 방지하자(4.2.2절, 5.3절),
+
+모듈화 75

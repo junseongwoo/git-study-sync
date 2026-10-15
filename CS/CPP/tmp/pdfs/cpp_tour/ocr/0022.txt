@@ -1,0 +1,25 @@
+#include <tostreav
+using rurespace std;
+// 입출력 스트림 라이브러리의 선언을 포함(불러음)
+// std::g 지정하지 않고도 std의 이름을 불 수 있게 함(3.4결)
+doubte square(double x) // 배정도 부동소수정 수를 체급
+return x*x;
+votd print-square(double x)
+cout << "the square Of “ << X << •• (5 “ << square(x) << "\n
+int main( )
+prtnt-square( 1.234 );
+// 'the square Of 1.234 (5 1.52276'를 출력
+반환 타입 void는 해당 함수가 아무 값도 반환하지 않는다는 의미다.
+1.3 함수
+C++ 프로그램에서 무언가를 수행할 때는 주로 함수를 호출함으로써 정해진 작업을
+수행한다. 이때 함수 정의를 바당으로 그 작업을 어떻게 수행하는지를 명시한다. 함수
+를 호출하려면 그 전에 함수를 선언해야 한다.
+함수 선언에서는 함수의 이름과 (반환 값이 존재한다면) 반환할 값의 타입, 호출 시 주어
+지는 인자의 개수와 타입을 명시한다. 다음 예를 보자.
+타에,* next elem( )•,
+void exit( int);
+double sqrt(double) ;
+// 인자는 없고, EI에1을 가리기는 포인터(EI예*)를 반환
+// int를 인자로 받고, 반환 값은 없음
+// double을 인자로 받고, double을 반환
+기초 23

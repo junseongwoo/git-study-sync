@@ -1,0 +1,41 @@
+export class Vector {
+public:
+Vector(int s);
+double& operator[](int 1);
+int size();
+private:
+double* elem; // elem 52개의 000616을 포함하는 배열을 가리킴
+int sz;
+
+)
+
+Vector: :Vector(int s)
+
+:elem{new double(s]}, sz{s} // 멤버 초기화
+{
+}
+
+double& Vector: :operator([](int {)
+{
+return elem(1];
+
+}
+
+int Vector::size()
+{
+return sz;
+
+}
+
+export int size(const Vector& v) { return v.size(); }
+
+이 코드는 Vectoreh= module 정의하는데, 클래스 Vector} 그에 포함된 모든 멤버
+함수, 그리고 비멤버 함수인 5ㄴ26()를 노출시킨다.
+
+000416을 사용할 때는 다음과 같이 필요한 곳에서 import,
+// user.cpp 파일:
+
+Import Vector;  // Vector? 인터페이스 가져오기
+#include <cmath> // sqrt()& 포함하는 표준 라이브러리 수학 함수 인터페이스 가져오기
+
+모듈화 67

@@ -1,0 +1,50 @@
+선별된 표준 라이브러리 헤더
+<regex>
+«string>
+«set>
+<stdexcept>
+<thread>
+<unordered—map>
+<uttIitY>
+<variant>
+다ectO「》
+regex, smatch
+st「ing, basic strtng
+set, muttiset
+istringstream, ostrtngstream
+length error, out of—rang e, runtime
+error
+thread
+uno rdered_map ,
+move( ), swap( ),
+variant
+vector
+uno「dered multimap
+patr
+9.4절
+9.2절
+11.6절
+1이8절
+3.5.1절
+15.2절
+11.5절
+13장
+13.5.1절
+11.2절
+이 목록은 일부분일 뿐이다.
+<stdltb.h>를 비롯한 c 표준 라이브러리의 헤더도 제공된다. 그런 헤더 각각마다
+이름 앞에 c가 붙고, 뒤의 .h를 없앤 버전을 제공한다. <cstdlib>를 비롯한 이러한
+버전의 헤더는 모든 이름을 std 네임스페이스 안에서 선언한다.
+8.4 조언
+[1]
+[기
+[31
+[4]
+188
+바퀴를 재발명하지 말고, 라이브러리를 활용하라. 8.1절; [CG: 표고.]
+선택권이 있다면 다른 라이브러리 보다 표준 라이브러리를 시용하라. 8.1절,
+ICG: SL.기
+표준 라이브러리가 만병통치약은 아니다. 8.1절
+사용하고 싶은 기능을 제공하는 헤더를 #include해야 한다. 8.3절
+표준 라이브러리의 기능은 std 네임스페이스 안에 정의된다. 8.3절; [CG: 뚀.3]
+8장

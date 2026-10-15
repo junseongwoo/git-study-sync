@@ -1,0 +1,35 @@
+으로만 접근할 수 있계 함으로써 공용체를 올바르게 사용하도록 강제할 수 있다. 이렇
+A 옹용 계층에서 태그된 FRA eo) 제공하는 추상화에 의존하는 방식은 일
+반적이고 유용한다. 반면에 벌거벗은 40100을 그냥 사용하는 것은 최소화해야 한다,
+표준 라이브러리 타입인 #11301는 대부분의 상황에서 공용체를 대체할 수 있다,
+
+varianty= -대안적인 여러 타입의 값 중 하나를 제공한다(13.5.1침). 예를 들어
+varlant<Node*, int>{= 4000*나 를 저장함 수 있다.
+
+variant § 사용해 작성한 Entry 예제는 다음과 같다.
+
+struct Entry (
+string name;
+variant<Node*, int» v;
+);
+void f(Entry* pe)
+
+{
+{f (holds alternative<int>(pe->v)) // *pe’} 101를 푸함하는가?(13.5,1절 참고)
+
+cout << get<int>(pe->v); // int 가져모기
+F{ op
+}
+
+많은 749 variant} 사용하는 것이 40100을 사용하는 것보다 간단하고 안전하다,
+
+2.5 열거형
+Coots 클래스 외에도 여러 값을 열거할 수 있는 간단한 사용자 정의 타입을 제공한다,
+
+enum class Color { red, blue , green };
+enum class Traffic_light { green, yellow, red };
+Color col = Color: :red;
+
+Traffic_light light = Traffic_light::red;
+
+사용자 정의 타입 57

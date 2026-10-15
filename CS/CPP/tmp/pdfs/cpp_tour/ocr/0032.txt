@@ -1,0 +1,33 @@
+(0”t: “이 값을 바꾸지 않는다고 약속함”의 의미로, 함수에 포인터나 참조
+형대로 전달되는 데이터를 변경하지 않는다는 사실을 인터페이스에 명시하고
+싶을 때 사용한다. 컴파일러는 const로 명시된 약속을 지기도록 강제한다.
+하지만 (0”t의 값은 실행 시간에 계산할 수 있다.
+constexpr: “이 값을 컴파일 시간에 평가호#•의 의미로, 주로 해당 데이터를
+상수로 지정하파년:-을 방지하기 위해) 읽기 전용 메모리에 저장하거나 성능상의
+목적으로 A卜우한다. constexpr의 값은 반드시 컴파일 시간에 계산된다.
+다음 예를 보자.
+constexpr tnt 曲`7 17;
+int var • 17;
+(0碼t double sqv • sqrt(var )•,
+double 5面( const vector<double*) ;
+vector<double> v {1.2, 3.4, 4.5};
+(0觸t double 51 S1.n(V);
+constexpr doubte s2 = 5쀄(v);
+// 曲v는 명명된 상수
+// var는 상수가 아님
+// sqv는 명명된 상수로 실행 시간에 계산원 수 있음
+// 5뼤은 인자를 변경하지 않음(1.7절)
+// v는 상수가 아님
+// 啄: sm(v)S 실행 시간에 평가
+// 에러: 5내n(v)는 상수 표현식이 아님
+상수 표현식, 즉 컴파일러에 의해 평가되는 표현식 안에서 함수를 A卜우하려면 그 함수
+도 constexpr로 정의해야 한다.
+constexpr double square(doubte x) { return x*x; }
+constexpr double maxl = 1.4*square( 17); // 啄 1.4*square( 17)는 상수 표현식
+constexpr double nnx2 = 1.4*square(var); // 에러: var은 상수 표현식이 아님
+// 啄, 실행 시간에 평가할 수 있음
+const double max3 = 1.4*square(var);
+constexpr 함수에 상수가 아닌 인지를 A卜&할 수도 있지만, 그럴 경우 그 결과는 상수
+표현식이 아니다. 즉, 상수 표현식이 요구되지 않는 곳에서는 constexpr 함수에 상수
+가 아닌 표현식을 인자로 A卜우하•는 것을 허용한다. 이렇게 함으로써 같은 함수를 상수
+기초 33

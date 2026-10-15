@@ -1,0 +1,18 @@
+있다. 예를 들어 map에서 42보다 큰 첫 번째 값을 찾을 수 있다. map을 이용하면
+(key.value) 쌍의 시권스에 접근할 수 있으므로, map«string,int>에 저장된 pa€r
+<const string,int>의 시권스에서 42보다 큰 int를 찾아보자.
+void f(map«string, int>& m)
+auto P = find—if(m.begtn( ),m.end( ),Greater than{42});
+여기서 Greate「-than은 비교할 값(42)를 저장하고 있는 함수 객체(6.3.2절)다.
+struct Greater than {
+int val;
+Greater_than( int v) : val{v} { }
+bOOl 0匹「atO「( )(const pairgtring,int>& r) const { return r.second>vat; }
+람다 표현식(6.3.2절)을 대신 사용할 수도 있다.
+auto p = find_if(m.begin( ), m.end( ), [](const pair<string, tnt>& 「) {
+return 「 . second>42 ,•
+참고로 술어는 적용 대상 요소를 변경하면 안 된다.
+12.6 알고리즘 요약
+알고리즘의 일반적 정의는 “특정 문제의 집합을 해결하기 위한 일련의 연산을 규정하
+는 규칙의 유한한 집한으로 유한성, 명료성, 입력, 출력, 효과성의 다섯 가지 중요한
+264 12장

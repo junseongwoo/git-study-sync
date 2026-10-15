@@ -1,0 +1,26 @@
+vector<Shape> vs;
+vector<Shape*> vps;
+// 이러지 알자. Ctrcle이나 Smiley를 저장할 수 없다.
+// 종 낫긴 하지만, 4.5.3절을 참고하자.
+vector<unique_ptr<Shape>> vups; // OK
+112.2 구간 검사
+표준 라이브러리 vector는 구간 검사를 보장하지 않는다. 다음 예를 보자.
+void sitty(vector<Entrp& b00k)
+int = book[book.size( )1 .nmber;
+// book.size( )는 구간 밖에 있음
+이 초기회는 에러를 유발하는 대신 i에 임의의 값을 대입하는데, 이는 원지 않는 결과
+다. 이러한 구간 밖 에러 문제는 일반적인 문제이며, 필자는 구간 검시를 수행하게
+간단한 vector 어댑터를 사용하곤 한다.
+template<typenanp T>
+class Vec : public std: :vector<T> {
+public:
+ustng vector<T>: •.vector;
+T& operator[ 1( int i)
+// (Vec라는 이름으로) vector의 생성자를 사용
+// 구간 검사
+{ 「eturn vector<T>::at(i); }
+const T& operator[l(int i) (0舫t // const 객체용 구간 검사; 4.2.1결
+{ retu「n vector<T>: :at(i); }
+vec 인데성 연산을 제외한 모든 것을 vector로부터 상속받으며, 인덱싱 연산이 구간
+검사를 수행하게 재정의한다. at( ) 연산은 주어진 인자가 vector의 구전3.5.1절)을
+컨테이너 239

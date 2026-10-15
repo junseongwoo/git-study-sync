@@ -1,0 +1,33 @@
+경로 연산(일부만 표시)
+p와 p2는 path
+p.stem( )
+p.extension( )
+p.end( )
+匠P2, p!=p2
+p텔2, P예2, P>P2,
+15>型, 05<텔
+u8path( 5)
+다음 예를 보자.
+void test(path p)
+P>=p2
+p의 꼬리(stem) 부분이다.
+p의 파일 확장자다(.을 제외한 확장자 - 옮긴이).
+p에서 요소 시원스의 시작이다.
+p에서 요소 시권스의 끝이다.
+p와 p2의 상등과 비상등이다.
+사전 순서로 비교한다.
+p에 스트림을 입출력한다.
+UTF-8로 인코닝된 5로부터 path를 생성한다.
+if (is-directory(p)) {
+for (const directory_entry& x : directory_iterator(p) ) {
+const path& f = 자 // 디렉터리 항목의 경로 부분
+if (f.extension( )
+cout << f.stem( ) << “ 는 윈도우 실행파일 \n"
+else {
+string n = f.extension( ).string( );
+if (n
+"•CPP" lln
+cout << f.stem( ) << " 는 C++ 소스 파일\n"
+path를 문자열(예, f.extension)로 시용했고, path로부터 여러 가지 타입의 문자열을
+추출했다(예, f.extension( ).string( )).
+228 10장

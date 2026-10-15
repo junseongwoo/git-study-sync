@@ -1,0 +1,39 @@
+optionald 사용할 때 빈 객체 {}는 nullptrit 같은 의미로 사용할 수 있다.
+
+int cat(optional<int> a, optional<int> 6)
+{
+
+int res = 0;
+
+if (a) res+=*a;
+
+if (b) res+=*b;
+
+return res;
+
+}
+
+int x = cat(17,19);
+int y = cat(17,{});
+int z = cat({},{});
+
+저장된 값이 fl optionale] 접근할 경우 어떤 일이 벌어질지는 예측할 수 없고
+예외도 던지지 않는다, 따라서 00\\0031은 타입 안전성을 보장하지 않는다.
+
+13.5.3 any
+
+any= 임의의 타입을 저장할 수 있으며, (저장된 객체가 있다면) 그 타입을 알고 있다.
+기본적으로는 제약을 AAR variantztn 볼 수 있다.
+
+any compose_message( istream& 5)
+
+{
+string mess;
+// ... 5 로부터 읽어서 메시지 만들기 . . .
+if (no_problems)
+return mess;           // string 반환
+else
+return error_number; // int 반환
+}
+
+유틸리티 299

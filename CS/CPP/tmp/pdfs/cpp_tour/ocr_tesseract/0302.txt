@@ -1,0 +1,36 @@
+즉, 반복자가 임의 접근 반복자여야 한다, 그러나 *0『02『0_ㄴ5*를 비롯한 일부 컨테
+이너는 임의 접근 반복자를 제공하지 않는다. forward liste 단일 연결 리스트이므
+2 인데싱 연산의 비용이 크고 이전 요소를 참조할 방법이 없다. 한편으로는
+forward_list= 다른 컨테이너와 마찬가지로, 다른 알고리즘이나 for 구문(6.2절)에
+A AREAS 순회하는 데 필요한 순방향 반복자는 제공한다,
+
+표준 라이브러리는 어떤 종류의 반복자를 지원하는지 확인할 수 있는 메커니즘으
+iterator_traitsE 제공한다. 이를 이용하면 12.8절에서 AHHE sort()7} vector}
+《0『4\3「9_115+를 모두 받아들이도록 개선할 수 있다.
+
+void test(vector<string>& v, forward_list<int>& lst)
+{
+
+sort(v);     // vector 정렬
+
+sort(lst); // 단일 연결 리스트 정렬
+}
+
+이 코드가 동작하는 데 필요한 기법들은 일반적으로 유용하게 쓸 수 있다.
+
+우선 임의 접근 반복자와 순방향 반복자 각각에 사용할 헬퍼 함수 두 개를 정의한다.
+임의 접근 반복자 버전은 간단한다.
+
+template<typename Ran> // 임의 접근 반복자용
+void sort_helper(Ran beg, Ran end, random_access_iterator_tag) // [beg:end)
+// 구간에서 인덱싱 가능
+{
+sort(beg,end);      // 그냥 정렬 수행
+}
+
+순방향 반복자 버전은 단순히 리스트를 vector 복사해 정렬한 후 리스트로 다시
+복사한다.
+
+template<typename For> // 순방향 반복자용
+
+유틸리티 307

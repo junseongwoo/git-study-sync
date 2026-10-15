@@ -1,0 +1,35 @@
+둘보다 많은(혹은 적은) 요소가 필요하다면 (wtility>o] 선언된) tuple 사용하자.
+tuple 서로 다른 타입의 요소로 구성된 Alda
+
+tuple<string,int,double> t1 {"Shark",123,3.14}; // 타입을 명시적으로 지정
+
+auto t2 = make_tuple(string{"Herring"},10,1.23); // 타입을
+
+// tuple<string, int,double>2 추론
+tuple t3 {"Cod"s,20,9.99};     // EYE tuple<string,int,double>2 추론
+
+생성자의 인자로부터 타입을 추론하는 것은 C++17HE 제공되므로, 더 오래된 코드에
+서는 make_tuple()S 사용할 수 있다.
+
+tuple] 멤버에 접근할 때는 함수 템플릿 96+을 사용한다.
+
+string s = get<@>(tl);     // 첫 번째 요소 가져오기: "Shark"
+int x = get<1>(tl);        // 두 번째 요소 가져오기: 123
+double d = get<2>(tl);     // 세 번째 요소 가져오기: 3.14
+
+tuples] 요소에는 (0부터 시작하는) 번호가 부여되고, 인덱스는 반드시 상수여야 한다.
+*4016의 멤버에 인덱스로 접근하는 경우가 많은데, 이는 보기에도 좋지 않고 에러의
+소지도 크다. tuple 안에서 유일한 타입을 갖는 요소는 타입의 이름으로 지정할 수
+있다.
+
+auto 5 = get<string>(tl);    // 문자열 가져오기: "Shark"
+auto x = get<int>(tl);       // int 가져오기: 123
+auto d = get<double>(t1);    // double 가져오기; 3.14
+
+쓰기에도 90*ㅇ을 사용할 수 있다.
+
+get<string>(tl) = "Tuna";  // 문자열에 쓰기
+get<int>(tl) = 7;            // 에 쓰기
+get<double>(tl1) = 312;       // 004616에 쓰기
+
+294 13장

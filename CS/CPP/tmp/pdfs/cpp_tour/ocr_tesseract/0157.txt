@@ -1,0 +1,34 @@
+template<typename Value>
+using String_map = Map<string,Value>;
+
+String_map<int> m;       // m9] 타입은 Map<string,int>
+
+6.4.3 컴파일 시간 if
+
+slow_and_safe(T)$} simple_and_fast(T) 둘 중 하나를 사용하는 연산을 작성한다
+고 생각해보자. 일반성과 선택적인 성능 최적화가 필수적인 기반 코드에서는 이런
+Uo] 흔하다. 이에 대한 전통적인 해법은 함수를 오버로드하거나 표준 라이브러리
+15_000처럼 특성 클래스(13.9.1절)를 사용하는 것이다. 클래스 계층 구조에서는 기반
+클래스가 느리지만 안전한 일반적인 연산을 제공하고, 파생 클래스에서 간단하고 빠
+른 구현으로 오버라이드할 수 있다.
+
++17에서는 그 대신 컴파일 시간 나를 사용할 수 있다.
+
+template<typename T>
+void update(T& target)
+{
+2070
+if constexpr(is_pod<T>::value)
+simple_and_fast(target);     // 단순한 데이터용
+
+else
+slow_and_safe(target);
+// ..…
+}
+{5_000<1>는 타입이 간단히(별도의 변환 없이) 복사 가능한지를 알려주는 타입 특성
+
+(13.9.1절)이다.
+if constexproll A] 선택된 경우만이 인스턴스화되므로 최적의 성능을 얻을 수 있으며,
+지역적인 최적화가 가능하다.
+
+160 6장

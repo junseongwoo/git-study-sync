@@ -1,0 +1,28 @@
+int size( )•,
+// 요소의 개수(space-elem)
+int capacity(); // 요소를 저장할 수 있는 슬롯의 수(last-elem)
+void reserve( int newsz);
+void push—back(const T& t);
+void push_back(T" t);
+// capactty( )를 newszl)l지 중가시김
+// Vector로 복사
+// Vector로 이동
+표준 라이브러리 vector는 capacity( )와 reserve( ), push-back( )을 멤버로 포함한
+다. reserve( )는 vector의 사용자나 vector의 다른 멤버에서 요소를 저장할 공간을
+추가로 확보하고자 A卜우한다. 메모리를 새로 할당하게 되면 기존 요소들을 새로 할당
+한 곳으로 이동시킨다.
+capacity( )와 reserve( )를 이용하면 push-back( )을 쉽게 구현할 수 있다.
+template<typenane T>
+votd Vector<T>: :push_back( const T& t)
+if (capacity( )<size( )+1)
+reserve( size( )==0?8:2*size( ) )•,
+// t를 저장할 공간이 있는지 확인
+// 용량을 2배로 증가
+new(space) T{t}; // *space 를 t로 초기화
+十十5 ;
+이렇게 하면 요소의 할당과 재할당이 자주 일어나지 않는다. 성능을 향상시기고자
+reserve( )를 사용하고 했는데, 굳이 그럴 필요가 없다. vector가 사용하는 휴리스틱
+heunst,C이 생각보다 뛰어나기 때문에 요소를 가리카는 포인터를 사용하기 위해 재할당
+을 반드시 막아야 하는 경우에만 reserve( )를 명시적으로 사용한다.
+vector는 대입이나 초기화 시에 복사될 수 있다.
+컨테이너 237

@@ -1,0 +1,32 @@
+비교 컨셉
+Equal th<T , l>
+St tctTotat IyOrdereNith<T , |>
+StrtctTotaltyOrdered<T>
+-롤 이용해 T와 (의 상등성을 비교할 수 있다.
+<와 •. > ”를 이용해 T와 U 사이의 완전한 순서(total
+order)ß 알 수 있다.
+StrtctTotattyOrdereNith<T ,T>
+WeaktyEquatityConvarableWith와 WeaktyEqualttyComparabte을 혼용하면 오버로
+드를 활용할 기회가 현저하게 줄어들 수 있다.
+객체 컨셉
+Destructtbte•:T>
+Construct , Args>
+DefaultConstruct
+tble<T>
+CopyConstruct tble-<T>
+Copyable•<T>
+Semiregular<T>
+Regular<T>
+Tß 소일할 수 있으며. 단항 연산자 &를 이용해 그 주소를 알 수 있다.
+Args 타입의 인자 목록으로부터 TS 생성할 수 있다.
+기본 생성자로 Tß 생성할 수 있다.
+이동 생성할 수 있다.
+T의 복사 생성과 이동 생성이 모두 가능하다.
+t•%veConstructable<T>와 Assignabl«T&,T>, Swapable<T>
+CopyConstructable«T>와 AssignabIe<T, const T&>
+Copyable<T>와
+Sem€Regular«T>와
+Reguta「는 이상적인 타입이라고 할 수 있다. Regu1ar 타입은 tnt와 비슷하게 동작하
+며, 타입의 사용법을 훨씬 간단하게 해준다(7.2절). 대부분의 클래스가 Regular일 수
+있고 또 그래야 하지만, -가 없는 기본적인 클래스는 santRegular다.
+탈고리출 269

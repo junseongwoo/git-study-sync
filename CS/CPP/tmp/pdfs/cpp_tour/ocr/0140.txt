@@ -1,0 +1,20 @@
+SZ • 51
+const T& Vector<T>: •.%*rator( 1( tnt t) const
+tf ((4 || size( )OO
+out Of :o$*rator( 1”)•,
+return elgn( (1 •,
+이 정의를 마당으로 다음과 같이 vector% 정의할 수 있다.
+Vector«char> vc( 2% )•,
+Vector<string> vs( 17) ;
+// 문자 2%개4 포함하는 벡터
+// 문자열 17개ß 포함하는 쬐터
+Vector<ttst<tnt>> vli(45); // 경수의 리스트 45개를 포함하는 벡터
+vector<ttst<tnt>>에서 >>는 실수로 잘못 쓴 입력 연산자가 아니라 중점된 템플릿
+인자를 종료하는 것이다,
+이제 다음과 같이 vector十 사용할 수 있다.
+votd wrtte( const Vector«strtng>& vs) // 문자열의 Vector
+for (tnt • 0; i!zvs.stze( )•, ++O
+cout << vs[tl << • \n••
+우리가 정의한 vectorol 구간 for 루프를 적용하려면 begtn( )과 end( ) 함수를 적당
+히 정의해야 한다.
+빔를릿 143

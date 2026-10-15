@@ -1,0 +1,23 @@
+template<typename C, typename Oper>
+void for all(C& c, Ope「 op) // C는 포인터를 포함하는 컨테이너로 가정
+// requires Sequence<C> CallabIe<Oper,VaIue—type<C>>( 7.2.1절 참고)
+fo「 (auto& x : c)
+OP(X);
+// 각 요소가 가리기는 참조를 op( )에 전달
+이제 일련의 ) 함수를 사용하지 않고도 4.5절에서 정의한 user( )를 재작성할
+수 있다.
+VOid user2( )
+vector<umque_ptr<hape>> v;
+while (cin)
+v.push back( read—shape( cin) )•,
+for-all(v, [ l(unique-pt「<ShapeÆ ps){ ps->d「aw( ); })•,
+// draw—all( )
+for_alt(v,[](unique—pt「<Shape>& ps){ 匹-가otate(45); });// rotate—att(45)
+람다에 unique-ptr<hape>&* 전달해 for-all( )이 객체가 저장된 방식에 상관없이
+작동하게 했다. 특히 for-all( ) 호출이 인자로 전달된 Shape의 생애 주기에 영향을
+주지 않으며, 람다 몸체에서는 주어진 인자를 그냥 포인터처럼 사용한다. 다음과 같이
+람다도 함수처럼 제네릭할 수 있다.
+templat«class 5>
+void rotate_and draw(vector<S>& V, int 「)
+fo「 alt(v,(l(auto& 5){ s->rotate(r); s->draw( ); })•,
+154 6'강

@@ -1,0 +1,36 @@
+virtual void move(Point to) =8;
+
+virtual void draw( ) const = 8;      /7/ 현재 캔버스에 그리기
+virtual void rotate( int angle) = 8;
+
+virtual “Shape() {}              // 소멸자
+I ois
+»
+
+이 인터페이스는 자연스럽게 추상 클래스로 정의된다, 메모리 표현 측면에서 생각하
+면 (61을 가리키는 포인터를 제외하면) 모든 55800@에 공통적으로 포함돼야 하는 것은
+없다. 이러한 클래스 정의를 바탕으로 도형의 포인터로 구성된 벡터를 조작하는 일반
+척인 함수를 만들 수 있다.
+
+void rotate_all(vector<Shape*>& v, int angle) // 의 요소를 80010만큼 회전
+{
+for (auto p : v)
+p->rotate(angle);
+
+특정 도형을 정의하려면 그 도형이 Shape] 일종임을 밝히고 (가상 함수와 더불어) 구체
+적인 속성을 지정한다.
+
+class Circle : public Shape {
+public:
+Circle(Point p, int rad);    // 생성자
+
+Point center() const override
+{
+return x;
+
+}
+
+void move(Point to) override
+{
+
+클래스 109

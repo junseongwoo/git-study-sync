@@ -1,0 +1,36 @@
+void f(int i, int j) // X* vs. unique_ptr<X>
+
+{
+Xx p =newX; // 새로운 X 할당
+unique_ptr<X> sp {new X}; // 새로운 》를 할당하고, 그 포인터를 unique_ptrol HE
+7 (A.
+
+if (1<99) throw Z{};       // 여기서 예외를 던지거나
+나 (j<77) return;         // "일찍" 반환될 수 있음
+// ... ㅠㅁ와 50 사용
+delete p; // *p 소멸
+
+1<99이거나 ]<77이면 0를 061616하지 않는다. 이와 달리 unique ptr (returno]i},
+함수의 끝에 다다르거나, 예외를 던짐 등) 어떤 방식으로 +( )가 종료되는 객체를 올바로
+해제함을 보장한다. 아이러니하게도 단지 포인터와 news 사용하지 않으면 문제가
+해결된다.
+
+void f(int 1, int j) // 지역 변수 사용
+{
+
+X x;
+
+bl anes
+}
+
+불행히도 news} 포인터, 참조)의 남용으로 인한 BAL 증가하는 추세다. 그러나 꼭
+포인터를 사용해야 하는 경우라면 unique ptr 사용하는 것이 내장 포인터를 제대
+로 사용하는 것에 비해 시간이나 공간적으로 부담이 없는 매우 경량화된 해법이다.
+unique_ptro] 또 다른 용도로는 자유 저장소에 할당된 ANE 함수의 인자로 전달하
+거나 반환하는 경우를 들 수 있다.
+
+unique_ptr<X> make_X(int 1)
+// 생성된 XE 즉시 unique_ptrz GHz
+{
+
+278 13%

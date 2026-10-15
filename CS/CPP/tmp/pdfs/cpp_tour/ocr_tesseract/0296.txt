@@ -1,0 +1,36 @@
+struct Event {
+vector<int> data = vector<int>(512);
+};
+
+list<shared_ptr<Event>> q;
+
+void producer()
+
+{
+for (int n= 0; n!=LOTS; ++n) {
+lock_guard 1k {m};              // m2 mutex(15.5%)
+q.push_back(make_shared<Event>());
+cv.notify_one();
+}
+}
+
+이 방법은 논리적인 관점에서는 잘 동작했다. 논리적으로 간단한 덕에 코드는 강건했
+고 유지 보수도 쉬웠다. 하지만 엄청난 메모리 단편화를 유발해했다, 프로듀서"
+16개와 컨슈머<9508아 4개 사이에서 이벤트 100,000개가 HEH 후에는 메모리가 668
+소모됐다.
+
+단편화 문제에 대한 전통적 해법은 풀 Papo *0'를 이용해 코드를 재작성하는
+것인데, 풀 할당자는 공정된 단일 크기의 객체를 관리하며 매번 객체를 할당하기보다
+많은 객체를 한 번에 할당한다. 다행히도 0++17에서는 이를 직접적으로 지원하는데,
+5*0의 하위 네임스페이스인 00「(다형성 메모리 xjgipohmorshe memory resource)of| A] 풀 할당
+자를 정의한다.
+
+pmr: :synchronized_pool_resource pool;          // 풀 생성
+
+struct Event {
+vector<int> data = vector<int>{512,&pool}; // Event’} 0001을 사용하게 &
+};
+
+list<shared_ptr<Event>> q {&pool};             // 가 0001을 사용하게 함
+
+유틸리티 301

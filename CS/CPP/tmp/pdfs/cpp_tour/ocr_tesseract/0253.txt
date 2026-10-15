@@ -1,0 +1,35 @@
+알고리즘 finds 주어진 시퀸스에서 값을 찾고, 찾아낸 요소를 가리키는 반복자를
+반환한다.
+
+bool has_c(const strings 5, char <)     // 문자 <를 포항하는가?
+{
+auto p = find(s.begin(),s.end(),c);
+if (p!=s.end())
+return true;
+else
+return false;
+
+다른 많은 표준 라이브러리 탐색 알고리즘과 마찬가지로 finds '찾지 못함'을 나타내
+기 위해 end() 반환한다. 이를 이용해 동일한 동작을 하면서도 더 짧게 435_<( )를
+정의할 수 있다.
+
+bool has_c(const string& 5, char c)     // 문자 (를 포함하는가?
+
+{
+return find(s.begin(),s.end(),c)!=s.end();
+
+}
+
+더 홍미로운 예제로 문자열에서 주어진 문자가 발견된 모든 위치를 찾아보자. 이를
+As stringe] 반복자가 저장된 vector§ 이용해서 WE 위치의 집합을 반환할
+수 있다. vectors 이동 연산을 지원하므로 4《&ㄷ*0「를 반환하는 작업도 효율척으로
+이뤄진다(5.2.1절). 찾아낸 위치에서 무언가를 변경하길 원한다면 다음과 같이 const
+가 아닌 문자열을 전달하자.
+
+vector<string::iterator> find_all(string&s, char ㄷ) // 5에서 가 나타나는 28 모두 찾기
+{
+vector<string::iterator> res;
+for (auto p = s.begin(); p!=s.end(); +p)
+if (*xp==c)
+
+256 12%

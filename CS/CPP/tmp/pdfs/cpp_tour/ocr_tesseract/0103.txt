@@ -1,0 +1,38 @@
+잘못 쓰거나 virtual 함수와 이를 오버라이드하는 함수의 타입을 약간 다르게 작성하
+는 실수를 컴파일러가 잡아낼 수 있다. 특히 규모가 큰 클래스 계층 구조에서 어떤
+함수가 어떤 함수를 오버라이드하는지 알기 어려울 때 overridedt 명시적으로 사용
+하면 도움이 된다.
+
+Aw 2K Vector_contatner() R= 기반 클래스의 소멸자^(006366『())를 오버라이드하
+며, 클래스의 소멸자(^/06006_00063ㅁ6(())에서 멤버의 소멸자(/0<《0「())를 암묵적으
+로 호출하는 것에 주목하자.
+
+use(Containers) 같은 함수에서 0006306『의 구현을 전혀 모른 채로 사용하려면 다
+른 함수의 어디에선가는 사용할 수 있는 객체를 만들어야 한다.
+
+void g()
+
+{
+Vector_container vc(10); // 10개의 요소를 포함하는 벡터
+// ... vec HRY...
+use(vc);
+
+}
+
+use( )는 Container] 인터페이스를 알뿐 Vector_containero] 대해서는 알지 못하
+Og, Containerd 구현하는 다른 클래스에 대해 모두 동일하게 작동해야 한다. 다음
+예를 보자.
+
+class List_container : public Container { // List_container?} Container 구현
+public:
+List_container() { }    // 9 List
+List_container(initializer_list<double> il) : 1d{il} { }
+“List_container() {}
+
+double& operator[](int 1) override;
+int size() const override { return ld.size(); }
+
+private:
+std: :list<double> 10; // double 포함하는 (표준 라이브러리) 리스트(11.3절)
+
+클래스 105

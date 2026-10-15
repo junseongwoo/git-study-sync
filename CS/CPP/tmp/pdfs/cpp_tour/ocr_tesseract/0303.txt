@@ -1,0 +1,32 @@
+void sort_helper(For beg, For end, forward_iterator_tag) // [beg:end) 구간
+
+// 순회 가능
+vector<Value_type<For>> \ {beg,end}; // [beg:end)2 벡터 초기화
+sort(v.begin(),v.end());              // 임의 접근 버전의 정렬 사용
+copy(v.begin(),v.end(),beg);           // RAF 다시 복사
+
+}
+
+Value_type<For>i= Foro] 요소 타입으로, 값 타입이라고 한다. 모든 표준 라이브러리
+반복자는 value_typeolehs WME 포함하는데, 다음과 같이 타입 별칭(6.4.2절)을
+정의함으로써 《3146_/06아> 표기법을 사용할 수 있다.
+
+template<typename (>
+using Value_type = typename C::value_type;     // (의 값 타입
+
+따라서 vector<X>2] Value_type<X>i= Xt}
+진짜 '타입의 마술'이라고 할 만한 부분은 헬퍼 함수를 선택하는 부분이다.
+
+template<typename (>
+void sort(C& c)
+{i
+using Iter = Iterator_type<C>;
+sort_helper(c.begin(),c.end(),Iterator_category<Iter>{});
+¥
+
+여기서는 두 가지 타입 함수를 사용했다. Iterator_type<C>i= (의 반복자 타입(즉,
+ㄷ::나아짜아>을 반환하고, 116『3+0『_ㄷ8160901「\/<1+6『>{}는 주어진 반복자의 종류를 나
+타내는 다음과 같은 "ars 생성한다.
+
+* (의 반복자가 임의 접근을 AYIA std::random_access_iterator_tag
+* (의 반복자가 순방향 순회를 지원하면 560: :forward_iterator_tag

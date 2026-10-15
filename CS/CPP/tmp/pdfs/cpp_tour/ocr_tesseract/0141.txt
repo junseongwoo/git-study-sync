@@ -1,0 +1,34 @@
+template<typename T>
+T* begin(Vector<T>& x)
+{
+return x.size() - &[0] : nullptr; // 첫 R48 가리키는 포인터나 nullptr
+}
+
+template<typename T>
+T* end(Vector<T>& x)
+{
+return x.size() - &[0]+x.size() : nullptr; // 마지막 요소 다음을 가리키는 포인터
+}
+
+이제 다음과 같이 쓸 수 있다.
+
+void f2(Vector<string>& vs)      // 문자열의 Vector
+{
+for (auto& 5 : vs)
+cout << 5 << '\n';
+
+이와 마찬가지로 리스트와 벡터, 맵"『*(혹은 연관형 배염8889다8498 44071 배 순서 없는 맵
+unordered 1야(해시 테이블) 등을 템플릿으로 만들 수 있다(11장).
+
+템플릿은 컴파일 시간에 적용되는 메커니즘이므로 손으로 직접 작성한 코드에 비해
+실행 시간에 추가적인 성능 부담이 없다. AMY Vector<double>oflA] 생성된 코드는
+4장에서 정의한 Vectore} 동일하다. 더 나아가 표준 라이브러리 48660『<904616>에
+A 생성된 코드는 여러분이 작성한 코드보다 더 나을 것이다(구현에 더 많은 노력을
+들였기 때문에).
+
+템플릿과 템플릿 인자의 집합을 일컬어 인스턴스화"88" 혹은 EL gpspecatzatonal 고
+한다. 컴파일 과정의 후반부에, 즉 인스턴스화 Ajgprstantaton tmeo]) 프로그램에서 사용
+하는 각 인스턴스화마다 코드가 생성된다(7.5절 생성된 코드에 대해서도 타입 검사가
+수행되므로, 손으로 작성한 코드와 마찬가지로 타입 안전성을 보장한다. 불행히도 이
+
+144 6%

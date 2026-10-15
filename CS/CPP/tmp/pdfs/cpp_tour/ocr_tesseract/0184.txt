@@ -1,0 +1,34 @@
+#include<string>      // 표준 string 기능을 사용할 수 있게 함
+using namespace std; // std:: 접두사 없이도 5《0의 이름에 접근할 수 있게 함
+
+string 5 {"C++ is a general?purpose programming language"};
+// OK: 0{7|M string? std::string
+
+특정 네임스페이스의 BE 이름을 전역 네임스페이스로 쏟아 봇는 것은 일반적으로
+좋지 않지만, 이 책에서는 표준 라이브러리를 광범위하게 사용하며 그 기능을 알아가
+는 것이 중요하다.
+
+std 네임스페이스에서 선언하는 이름을 제공해주는 표준 라이브러리 헤더를 몇 가지
+선별해서 살펴보면 다음과 같다,
+
+선별된 표준 라이브러리 헤더
+
+<algorithm>       copy(), find(), sort()                     12%
+<array>           array                                    13.41%
+<chrono>         duration, time_point                      13.74
+<complex>        complex, sqrt(), pow()                     14.4%
+<filesystem>                path                                                                                            10.10%
+<forward_list>    forward_list                              11.63
+<fstream>        fstream, ifstream, ofstream                10.7%
+<future>          future, promise                           15.78
+
+<i0s>             hex, dec, scientific, fixed, defaultfloat     10.63%
+
+<iostream>        istream, ostream, cin, cout                 10%
+<map>               map, multimap                                 1.5%
+<memory>          unique_ptr, shared_ptr, allocator            13.213
+<random>           default_random_engine, normal_distribution    145%
+
+(이어짐)
+
+라이브러리의 개요 187

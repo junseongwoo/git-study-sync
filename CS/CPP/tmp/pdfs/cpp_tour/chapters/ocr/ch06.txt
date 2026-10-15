@@ -1,0 +1,546 @@
+
+
+===== 인쇄 141쪽 / PDF 138쪽 =====
+6
+템플릿
+하고 싶은 말을 여기에 넣으세요.
+- 비이네 스드弓스nn(B. StroustruP)
+파라미터화된 다임 세한된 인자, 값 템플릿 인자, 템플랫 인자 추론
+마라미터화된 인한 함수 템품랫, 함수 객세. 람다 표현식
+템플릿 에거니1수 가변 템플릿. 별칭. 김마일 시간 if
+조언
+6.1 소개
+벡터를 원하는 사림이 항상 타입의 벡터만올 원하지는 않는다. 벡터는 특,-:\소수
+점 수라는 개님과는 독립된 일반적인 개님이기 때문이다. 결과적으로 베터의 요-소 타입
+은 독립 적으로 표현해야 한다. 램을릿t•"OZ'•은 타입이나 값의 집합-을 고빠미터화한 클래
+스나 함수다. vector의 요소 타입 礪」ble로 지정하듯이 인자를 지정함으로써 특정 타
+입이나 함수를 만들어 낼 수 있는 일반적인 개념을 표현할 때 템플릿을 사용한다.
+•t!물릿 141
+
+===== 인쇄 142쪽 / PDF 139쪽 =====
+6.2 파라미터화된 타입
+우리가 만든 double의 벡터에 template을 적용하고 double을 타입 파라미터로 치환
+하면 모든 타입에 대한 벡터로 일반화할 수 있다. 다음 예를 보자.
+template<typename T>
+class Vector {
+p「ivate:
+T* elem; // elem은 T 타입 요소 sz개를 포함하는 배열을 가리김
+int sz;
+public:
+// 생성자: 불변 조건을 조성하고, 자원을 획득
+explicit Vector( int 5);
+NVector() { delete[] elem; } // 소열자: 자원 해제
+// ... 복사와 이동 연산 ...
+T& 0鰐「ator[](int i);
+const T& 0鰐「ator[1( int i) const;
+int size( ) const { return 요; }
+// const가 아닌 Vector를 위한 연산자
+// const Vector를 위한 연산자(4.2.1절 )
+접두사 template<ypename T>는 T를 앞으로 선언할 클래스의 파라미터로 만든다.
+수학에서 ,모든 T에 대해' 더 정확히 말하자면 ,모든 타입 T에 대하라는 말을 C++로
+표현한 것이다. 수학에서 ,P(T)를 만족하는 모든 T에 대하라는 컨셉이 필요하다면
+C++의 컨셉(6.2.1절, 7.2절)을 사용해야 한다. 타입 파라미터를 지정할 때 typename
+대신 cl쬬5를 사용해도 동일지만, 오래된 코드에서는 접두사 template<class T>를
+볼 수 있다.
+멤버 함수도 비슷하게 정의한다.
+template<typename T>
+Vector<T>: :Vector( int 5 )
+if (5<0)
+142 6장
+
+===== 인쇄 143쪽 / PDF 140쪽 =====
+SZ • 51
+const T& Vector<T>: •.%*rator( 1( tnt t) const
+tf ((4 || size( )OO
+out Of :o$*rator( 1”)•,
+return elgn( (1 •,
+이 정의를 마당으로 다음과 같이 vector% 정의할 수 있다.
+Vector«char> vc( 2% )•,
+Vector<string> vs( 17) ;
+// 문자 2%개4 포함하는 벡터
+// 문자열 17개ß 포함하는 쬐터
+Vector<ttst<tnt>> vli(45); // 경수의 리스트 45개를 포함하는 벡터
+vector<ttst<tnt>>에서 >>는 실수로 잘못 쓴 입력 연산자가 아니라 중점된 템플릿
+인자를 종료하는 것이다,
+이제 다음과 같이 vector十 사용할 수 있다.
+votd wrtte( const Vector«strtng>& vs) // 문자열의 Vector
+for (tnt • 0; i!zvs.stze( )•, ++O
+cout << vs[tl << • \n••
+우리가 정의한 vectorol 구간 for 루프를 적용하려면 begtn( )과 end( ) 함수를 적당
+히 정의해야 한다.
+빔를릿 143
+
+===== 인쇄 144쪽 / PDF 141쪽 =====
+temptate•<typenatTE T>
+T* tpgin(Vector<T>& x)
+「eturn x.size() - &x[OI : nutlptr; // 첫 요소를 가리기는 포인터나 nuttptr
+T* end(Vector<T>& x)
+return x.size( ) - &x[0J+x.stze() : nullptr; // 마지막 요소 다음을 가리기는 포인터
+이제 다음과 같이 쓸 수 있다.
+void f2(Vector<string>& VS )
+fO「 (autcß S : vs)
+// 문자열의 Vector
+이와 마찬가지로 리스트와 벡터, tgmaP(혹은 연관형 a「r매하, 순서 없는 맵
+unordered maP(4시 테이블) 등을 템플릿으로 만들 수 있디(11장).
+템플릿은 컴파일 시간에 적용되는 메커니즘이므로 손으로 직접 작성한 코드에 비해
+실행 시간에 추가적인 성능 부담이 없다. 사실 vector<double>에서 생성된 코드는
+4장에서 정의한 vector와 동일하다. 더 나아가 표준 라이브러리 vector<double->에
+서 생성된 코드는 여러분이 작성한 코드보다 더 나을 것이다(구현에 더 많은 노력을
+들였기 때문에).
+템플릿과 템플릿 인자의 집합을 일걸어 휴은 특수화special•zatton라고
+한다. 컴파일 과정의 후반부에, 즉 인스턴스화 time에 프로그램에서 사용
+하는 각 인스턴스화마다 코드가 생성된*7.5절 생성된 코드에 대해서도 타입 검사가
+수행되므로, 손으로 작성한 코드와 마찬가지로 타입 안전성을 보장한다. 불행히도 이
+144 6장
+
+===== 인쇄 145쪽 / PDF 142쪽 =====
+러한 타입 검사는 컴파일 과정의 후반부에, 즉 인스턴스화 시Z!뻬 수행된다.
+62.1 제한된 템를릿 인자(C++20)
+많은 경우에 특정 조건을 만족하는 템플릿 인자에 대해서는 템플릿이 의미를 갖는다.
+예를 들어 vector는 일반적으로 복사 연산을 제공하는데, 이렇게 하려면 그 요소도
+복사가 가\한 타입이어야 한다. 즉,vector의 템플릿 인지는 그냥 typenme이 아니
+라 요소가 될 수 있는 타입이라는 의미에서 EI에℃nt여야 한다.
+template<Elenent T>
+class Vector {
+private:
+T* elem; // elem은 T 타입 요소 sz개를 포함하는 배열을 가리김
+521
+접두사 template<latent T>는 수학적으로 •Eerrent(T)를 만족히는 모든 T에 대하라
+는 개념을 C++로 표현한 것이다. 즉, Element는 vector에서 요구하는 성질을 T가
+만족하는지를 확인하는 술어predote다 이러한 술어를 컨셉c。n따수.2절)이라고 하며, 건
+셈이 적용된 템플릿 인자를 제한된 인자constra•ned 컨셉이 적용된 인자를 제한된
+템플릿constrajned tempiate이라고 한다
+다음과 같이 조건에 맞지 않는 타입으로 템플릿을 인스턴스화하면 컴파일 에러가 발
+생한다.
+// Ⅸ: int 는 복사할 수 없음
+Vector<int> vl;
+Vector<thread> v2; // 에러: 표준적인 스레드는 복사 불가(15.2절)
+c++20 이전에는 컨셉을 지원하지 않으므로, 예전 코드에서는 제한되지 않은 템플릿
+인자를 A卜&하는 대신 필요한 조건을 문서화한다.
+145
+
+===== 인쇄 146쪽 / PDF 143쪽 =====
+62.2 값 템플릿 인자
+템플릿은 타입 인자에 더불어 값 인자yaluearguments도 받아들일 수 있다. 예를 들면 다
+음과 같다.
+template<typename T, int N>
+struct Buffer {
+ustng value—type = T;
+constexpr int size( ) { return N; }
+T[NI;
+별칭(value-type)과 constexpr 함수를 이용해 사&자가 템플릿 인자에 (읽기 전용으로)
+접근하게 했다.
+값 인자는 많은 경우에 유용하다. 예를 들어 Buffer를 이용하면 자유 저장 영역(동적
+메모리)을 사용하지 않고도 임의의 크기를 갖는 버퍼를 만들 수 있다.
+Buffer<char.I@24> glob; // (정적으로 할당된) 문자를 서장할 전역 버퍼
+void fct( )
+Buffer<int , 10> buf ;
+// (스택에 생성된) 정수를 저장할 지역 버퍼
+템플릿의 값 인자는 반드시 상수 표현식이어야 한다.
+62.3 템플릿 인자 추론
+표준 라이브러리의 템플릿인 pair를 살펴보자.
+146 6장
+
+===== 인쇄 147쪽 / PDF 144쪽 =====
+,double> P • {1,5.2}•,
+이처럼 템플릿 인자의 타입을 일일이 지정하는 것이 귀찮다면 표준 라이브러리 함수
+make-pair( )를 이용하자. 이 함수는 반환할 patr의 템플릿 인자 타입을 함수에 주어
+진 인자로부터 유추한다.
+autO P • ffBke-patr(1,5.2); // P 는 pair<tnt,double>
+이쯤에서 “생성자의 인자로부터 템플릿 파라미터를 추론할 수는 없을까?”라는 의문이
+들 수 있다. 그래서 c++17에서는 다음과 같이 할 수 있다.
+pair P • {1,5.2}•, // P 는 palr<tnt,doubte>
+이러한 문제는 pair에서만 발생하는 것이 아니므로, make- 함수를 매우 일반적으로
+사용한다. 간단한 예를 보자.
+template<typendte T>
+class Vector (
+public:
+Vector( int )•,
+Vector( initializer Iist<T>);
+// 초것값 목록 생성자
+Vector vl {1,2,3}; // 초것값 목록의 요소 타입으로부터 vl의 요소 타입을 유추
+// vl의 요소 타입으로부터 v2의 요소 타입을 유추
+Vector v2 = vl;
+auto P = new V貳tor{1,2,3); // p는 Vector<tnt>를 가리킹
+Vector<tnt> v3(1); // 여기서는 요소 타입을 명시적으로 밝혀야 함(요소 타입이 언급되지 않음)
+행N것 147
+
+===== 인쇄 148쪽 / PDF 145쪽 =====
+이렇게 하면 코드가 단순해지고 중복된 템플릿 인지를 잘못 작성하는 실수를 방지할
+^`- 있다. 그러나 템플릿 타입 추론이 만병통치약은 아니며, (make- 함수와 생성자 모두
+에서) 실수를 유발할 수 있다.
+vector<string> vsl {“He110", "WorId"}; // VectO「<string>
+Vector vs {"Hello", "World"}; // Vectoxconst char*>로 추론( 실수일까? )
+Vector vs2 {"HeIIo"s, “崗rld"화•, // Vector<string>으로 추론
+Vector vs3 {"Hello"s, "누』町ld"}•, // 에러: 초것값 목록의 요소 타입이 일치하지 않음
+c 스타일 문자열 리터럴의 타입은 const cha「**1.7.1절). 의도한 바가 이게 아니라
+면 접미사 5를 사-우해 string으로 만들巫9.2절). 초것값 목록의 요소들 사이에 타입
+이 일치하지 않으면 유일한 요소 타입을 유추할 수 없으므로 에러가 발생한다.
+생성자의 인자로부터 템플릿 인자를 추론할 수 없다면 다음과 같이 추론 가이드
+gulde를 제공할 수 있다.
+template<typename T>
+class Vector2 {
+public:
+ustng value—type = T;
+Vector2( list<T>);
+tenplate<tygpname lter>
+Vector2(Ite「 b, lter 이;
+Vector2 vl {1,2,3,4,5}•,
+// 초것값 목록 생성자
+// [b:e) 구간 생성자
+// 요소 타입은 int
+Vector2 v2(v1.begin( ),vl.begin( )+2) ;
+v2가 당연히 Vector2<int>가 돼야 하겠지만, 컴파일러는 따로 도와주지 않으면 이를
+추론할 수 없다. 코드에서 알 수 있는 것은 그저 생성자가 같은 타입의 값 한 쌍을
+148 6장
+
+===== 인쇄 149쪽 / PDF 146쪽 =====
+인자로 받는다는 사실이다. 컨셉(72절)을 지원하지 않는 언어라면 컴파일러는 그 다
+입에 대해 아무것도 가정할 수 없다. 이럴 때 추론을 가-능하게 하기 위해 vector 선언
+다음에 추론 가이드를 지정할 수 있다.
+tempIate<typen,dTE lter>
+Vector2( lter,lter) *> Vector2<typenatTE lter: :value-type>;
+즉, 한 쌍의 반복자를 이용해 vector2를 초기화할 때는 vector2::value-type을 반복
+자의 값 타입으로 유추해야 한다.
+추론 가이드의 효과에 미묘한 면이 있0 구, 추론 가이드를 사용할 필요가 없게 클래
+스 템플릿을 설계하는 것이 가장 좋다. 그러나 표준 라이브러리에 (아직은) concept
+(7.2절을 A卜우하지 않는 클래스가 많괴 이에 의한 모호함 때문에 적지 않은 추론 기이
+드를 사-용한다.
+6.3 파라미터화된 연산
+단순히 컨테이너의 요소 타입을 파라미터화하는 것 외에도 템플릿은 다양한 용도로
+사용된다. 특히 표준 라이브러리에서 타입과 알고리즘을 모두 파라미터화할 때 많이
+사용된cHII.6절, 12.6절).
+타입이나 값이 파라미터화된 연산을 표현하는 방법에는 다음과 같은 세 가지가 있다.
+함수 템플릿
+함수 객체: 데이터를 포함하면서도 함수처럼 호출 가능한 객체
+람다 표현식恤bda 함수 객체를 간단하게 표기하는 방법
+V4,Q 149
+
+===== 인쇄 150쪽 / PDF 147쪽 =====
+6.3.1 함수 템플릿
+구간 for 구문으로 탐색 기능한 모든 시권스에 대해 모든 요소의 합을 구하는 함수는
+다음과 같다.
+template<typename Sequence, typename VaIue>
+Vatue sm( const Sequence& 5, Value v)
+fO「 (autO x : 5)
+V十ZX ;
+「eturn v;
+템플릿 인자 value와 함수 인자 v를 바탕을 호출자가 타입과 누산기accurnulator(#이 누
+적될 변수)의 초것값을 지정할 수 있다.
+VOid user(Vector<int>& vi, list<double>& ld, vector<cmplex<double>>& VC )
+int x = sum(vi,0);
+double d = sum(vi.@.@);
+double dd = sum(Id.O.@);
+// int 벡터의 합(int 더하기)
+// int 벡터의 합(double 더하기)
+// double 리스트의 합
+aut0 = sum(vc.com/lex{@.@.o.@}); // complex<double>의 벡터의 합
+double에 int를 더해나갈 때의 장점은 int의 최댓값보다 큰 값을 처리할 수 있다는
+것이다. 함수 인자로부터 sum<equence ,value>의 템플릿 인자를 추론하는 방법에
+주목하八b. 다행히도 타입뚍 명시적으로 지정할 필요가 없다. 여기서 만든 sum( )은
+표준 라이브러리의 accumulate( )(14.3절)를 단순화한 것이다.
+함수 템플릿은 멤버가 될 수는 있지만, virtual 멤버가 될 수는 없다. 컴파일러가
+프로그램에 존재하는 모든 인스턴스화를 알 수는 없기 때문에 vtbl(å.åtl)을 만들지
+못한다.
+150 6장
+
+===== 인쇄 151쪽 / PDF 148쪽 =====
+6.32 함수 객체
+여러 종류의 템플릿 중 특히 유용한 한 가지로 함수 객체'unc厘를 들 수 있는데, 함수처
+럼 호출할 수 있는 객체를 정의하는 데 사용할 수 있다.
+template<typename T>
+ctass Less—than {
+const T val; // 비교 대상
+public:
+Less-than(const T& v) :val{v} { }
+囟이 0畔「ator( )(const T& x) (0觸t { return x«val; }
+// 연산자 호출
+operator( ) 함수는 ,함수 호출이나 •호출1 ,적용 연산 등으로 불리는 () 연산자를
+구현한다.
+임의의 인자 타입으로 Less-than 타입의 명명된 변수를 정의할 수 있다.
+Less-than ltt {42}; // lti(i)는 <를 이용해 i를 42에 비교 <(t<42)
+Less than lts {"Backus"s}; // lts(s)는 <를 이용해 5를 "Backus"에 비교(S<"Backus")
+Less-than«string> Its2 {"Naur"}; // "Naur"는 ( 스타일 문자열이므로 올바른 <를 얻으려면
+// <strtng> 필요
+이러한 객체를 그냥 함수처럼 호출할 수 있다.
+VOid fct( int n, const string & 5)
+bool bl = lti(n);
+bOOI b2 = lts(s);
+// n리2이면 참
+// s<"Backus"이면 참
+이러한 함수 객체는 알고리즘의 인자로 널리 사용된다. 예를 들어 특정 술어에 대해
+true인 요소의 개수를 알 수 있다.
+,콤를릿 151
+
+===== 인쇄 152쪽 / PDF 149쪽 =====
+tetplate<typenanp (, typenme P>
+// Sequence<C>와 CaIIabte<P,Value—type•<P>>가 요구됨
+int count(const (& C, P pred)
+int cnt = 0;
+for (const autO& x : c)
+if (pred(x))
+++cnt;
+return cnt;
+술어는 호출 가능하며, 그 결과로 true나 false를 반환하는 무언가를 말한다.
+void f(const Vector<int>& vec, const list<string>& lst, int X, const string& 5)
+cout << << "보다 작은 값의 개수: " << count(vec,Less than{x}) << • \n' ;
+cout << 5<< "보다 작은 값의 개수: " << count(Ist,Less than{s}) << '\n' ;
+여기서 Less-than{x}는 Less-than<int> 타입의 객체를 생성하는데, int 값 x와 비
+교하는 연산자를 호출한다. Less-than{s}는 string 값 s에 비교한다. 이러한 함수
+객체의 좋은 점은 비교 대상이 되는 값을 전달해준다는 것이다. 각 값(각 타입)마다
+다른 함수를 정의할 필요도 없고, 비교할 값을 저장하기 위해 전역 변수를 사용할
+필요도 없다. 게다가 Less-than처럼 단순한 함수 객체는 인라인으로 작성하기도 쉬워
+서 Less-than 호출이 간접적인 함수 호출보다 훨씬 효율적이다. 데이터를 전달할 수
+있는 능력과 효율성 덕분에 함수 객체는 특히 알고리즘의 인자로 유용하다.
+((예nt()에서 Less-than을 사용한 것처럼) 일반적인 알고리즘에서 핵심 동작의 의미를
+지정하기 위해 사용하는 함수 객체를 정책 객체- 。b)e龜라고도 한다.
+152 6장
+
+===== 인쇄 153쪽 / PDF 150쪽 =====
+6.3.3 람다 표현식
+6.3.2절에서는 Less-than9 A卜&하는 코드와 별개로 Less-than-& 정의했는데. 이런
+방식이 불편할 수 있다. 대신 다음과 같이 함수 객체를 암묵적으로 생성할 수 있다.
+votd f(const Vector<int>& vec, (0脂t ttst<string>& lst, int x, (0觸t strtng& 5)
+cout << X
+<< “보다 작은 값의 개수
+cout << 5
+“ << count(vec, (&l(tnt a){ return a«x; })
+<< “보다 작은 값의 개수: “ << count(lst, [&1(co”t a){ return a«s; })
+[&1( a){ return }와 같은 표기법을 람다 표현식이라고 하며, Less-than
+<int>{x}와 매우 유사한 함수 객체를 만들어낸다. [티는 갭처 리스트capturelßt라고 하
+는데, 람다의 몸체 안에서 사용하는 (하 같은) 모든 지역 이름이 참조로 접근됨을 명시
+한다. x만을 컵처하고 싶다면 [&x]라고 쓴다. x를 복사한 객체를 만들고 싶다면 [해]
+라고 작성한다. [ ]처럼 아무것도 컵처하지 않는 것은 참조로 A卜&되는 지역 이름에서
+는 [이와 같고, 값으로 사용되는 지역 이름에서는 [리와 같다.
+람다의 사용이 간편할 수도 있지만, 모호함을 유발할 수도 있다. (간단한 표현식을 뛰어
+넘는) 간단하지 않은 동작이라면 해당 연산에 이름을 부여해 그 목적을 명확히 하고
+프로그램의 여러 곳에서 사용할 수도 있게 한다.
+4.5.3절에서 봤듯이 draw-all( )과 rotate-all( )처럼 포인터나 unique-ptr을 포함
+하는 vector의 요소마다 어떤 연산을 적용하는 함수를 여러 벌 만들기란 귀찮은 일이
+다. 이럴 때 함수 객체(특히 람다를 서용하면 컨테이너를 순회하는 일과 각 요소로
+어떤 일을 할지 지정하는 일을 분리할 수 있다.
+먼저 포인터를 포함하는 컨테이너의 각 요소가 가리기는 객체에 특정 연산을 적용하
+는 함수가 필요하다.
+템鬱릿 153
+
+===== 인쇄 154쪽 / PDF 151쪽 =====
+template<typename C, typename Oper>
+void for all(C& c, Ope「 op) // C는 포인터를 포함하는 컨테이너로 가정
+// requires Sequence<C> CallabIe<Oper,VaIue—type<C>>( 7.2.1절 참고)
+fo「 (auto& x : c)
+OP(X);
+// 각 요소가 가리기는 참조를 op( )에 전달
+이제 일련의 ) 함수를 사용하지 않고도 4.5절에서 정의한 user( )를 재작성할
+수 있다.
+VOid user2( )
+vector<umque_ptr<hape>> v;
+while (cin)
+v.push back( read—shape( cin) )•,
+for-all(v, [ l(unique-pt「<ShapeÆ ps){ ps->d「aw( ); })•,
+// draw—all( )
+for_alt(v,[](unique—pt「<Shape>& ps){ 匹-가otate(45); });// rotate—att(45)
+람다에 unique-ptr<hape>&* 전달해 for-all( )이 객체가 저장된 방식에 상관없이
+작동하게 했다. 특히 for-all( ) 호출이 인자로 전달된 Shape의 생애 주기에 영향을
+주지 않으며, 람다 몸체에서는 주어진 인자를 그냥 포인터처럼 사용한다. 다음과 같이
+람다도 함수처럼 제네릭할 수 있다.
+templat«class 5>
+void rotate_and draw(vector<S>& V, int 「)
+fo「 alt(v,(l(auto& 5){ s->rotate(r); s->draw( ); })•,
+154 6'강
+
+===== 인쇄 155쪽 / PDF 152쪽 =====
+여기서 auto는 변수를 선언할 때와 마찬가지로 책값에 어떤 타입이든 허용한다는
+의미대인자는 함수 호출 시 형식 파라미터를 초기화하는 것으로 여겨진다). 卽to 파라미터
+를 이용하면 람다를 템플릿으로 만들 수 있고, 이를 일걸어 제네력 람다”,넓『,C -라고
+한다. 표준위원회의 정치적인 이유 때문인지 함수 인자에서 auto를 사용하는 것은
+아직 허용되지 않는다.
+이렇게 만들어진 rotate and-draw( )는 draw( )와 rotate( )를 호출할 수 있는 모든
+컨테이너에 다음과 같이 사용할 수 있다.
+VOid user4( )
+vector<unique-ptr<hape>> vl;
+vector<Shape*> v2;
+「otate and draw(v1,45);
+rotate and draw(v2,90);
+람다를 이용하면 어떤 구문이든 표현식으로 만들 수 있는데, 주로 인자 값을 바탕으로
+어떤 값을 계산하는 연산을 제공하는 데 주로 쓰이지만 그 용도는 광범위하다. 복잡한
+초기화를 예로 살펴보자.
+enum class lnit { 2旣0, seq, CPY, patrn }•, // 가능한 초것값들
+// 지저분한 코드:
+// int n, lnit m, vector<int>& arg, 반복자 p와 q는 어딘가에서 정의됨
+vector<int> v;
+switch (m) {
+case ze「o:
+v = vector<int>(n); // n개 요소를 0으로 초기화
+break;
+영鬱끗 155
+
+===== 인쇄 156쪽 / PDF 153쪽 =====
+case CPY:
+V = arg;
+break;
+if (m - seq)
+v.assign(p,q); // 시퀀스 [p:q)로부터 복사
+들여쓰기만 됐을 뿐 모범적이진 않다. 자료 구조(v)를 초기화하기 위해 여러 대요! 중
+하나를 선택해야 하괴 각 대안마다 다른 연산을 해야 한다. 이러한 코드는 ,효율성•이
+라는 미명하에 지저분한 코드와 버그의 원인을 만들어낸다.
+의도된 값을 얻기 전에 변수가 A卜&될 수 있다.
+초기화 코드가 다른 코드와 섞이면 이해하기 어렵다.
+초기화 코드가 다른 코드와 섞이면 각 대안에 대한 case를 잊어버리기 쉽다.
+초기화가 아닌 대입에 가깝다.
+대신 초것값으로 람다를 이용할 수 있다.
+// tnt n, lnit mode m, vector<int>& arg, 반복자 P와 q는 어던가에서 정의됨
+vector<int> V = [&] {
+switch (m) {
+case zero:
+return vector<int>( n ) •,
+case seq:
+return vector<int>{p,q};
+case CPY:
+return arg;
+156 6,강
+// n개 요소를 0으로 초기화
+// 시퀀스 [p:q)에서 복사
+
+===== 인쇄 157쪽 / PDF 154쪽 =====
+여전히 case 하나가 빠셨지만. 그 사실을 싑게 알 수 있다.
+6.4 램晉랏 메커니줍
+좋은 템플릿올 정의하려면 및 가지 언어 기능이 필요하다.
+• 타입에 의존적인 값. 가변 •1.1설)
+templates
+타입과 행를것의 별칭: 템들릿
+(6.12신)
+경파일 시간 선택 메커니좀. (f constexprcori.AiA/)
+타입과 표현식의 속성을 질의할 수 있는 경파일 시간 메커니좀: requtres 표현
+쇄” 2.3 일)
+이와 더불어 constexpr 함쉬3)일)와 stat€c asserts(4.S5$)도 템플릿 설계와 활
+용에 종종 쓰인다.
+이러한 기본 메거니1수들은 주로 일반적이고 기본쯰인 추상화를 구성하는 도구로 사용
+된다.
+6.4.1 가변 템쫄릿
+어떤 타입을 사용할 때 그 타입의 상수나 변수가 필요하듯이 템플릿도 마찬가지다.
+C<T>를 정의할 때는 T 타입의 상수나 변수, 그리고 바탕으로 한 다른 타입이 필요
+한 것이다. 유체 역학 시뮬레이션[Garcia.2015]에서 발췌한 다음 코드를 보자.
+template <(1655 T>
+constexpr T viscosity = 0.4;
+행물렛 157
+
+===== 인쇄 158쪽 / PDF 155쪽 =====
+<class T>
+constexpr space-vector<T> external acceleration = { T{}, T{-9.8}, T{} };
+autO vis2 = 2*viscositY<doubIe>;
+auto acc = externat_acceleration<float>;
+여기서 space-vector는 3차원 벡터다.
+이제 모든 가능한 타입의 표현식을 초것값으로 사용할 수 있다.
+tempIate<typenaflE T, typename T2>
+constexpr bOOI Assignable = is-assignabIe•<T&,T2>:
+// is-assignable은 타입 특성(trait)(13.9.1절)
+template<typename T>
+void testing( )
+:vatue;
+static assert(AssignabIe<T&,double>, "double을 대입할 수 없음");
+static—asse「t(Assignable<T&,string>, "string을 대입할 수 없음" );
+이 코드에서 시용한 아이디어를 크게 발전시기면 컨셉 정의(7.2절)의 핵심과도 일맥상
+통한다.
+6.42 별칭
+타입이나 템플릿의 동의어를 만들면 유용한 경우가 꽤 많다. 예를 들어 표준 헤더
+<cstddef>에서는 별칭 size-t를 정의하는데, 그 정의는 대략 다음과 같다.
+ustng size_t = unsigned int;
+size-t라는 이름의 실제 타입은 구현마다 달라서 다른 구현체에서는 size-t가
+unsigned long일 수 있다. 별칭 size-t를 사용함으로써 프로그래머는 이식성 있는
+158 6장
+
+===== 인쇄 159쪽 / PDF 156쪽 =====
+코드를 작성할 수 있다.
+타입을 파라미터화할 때 템플릿 인자와 관련된 타입에 별칭을 부여하는 것은 매우
+일반적이다.
+te«olate•<tygpnate T>
+class Vector {
+pubt€c:
+us€ng vatue-type • T;
+사실 모든 표준 라이브러리 컨테이너는 포함하는 값의 타입을 value-type으로 제공
+한대 "상). 덕분에 그 관례를 따르기만 하면 모든 컨테이너에서 동작하는 코드를 작
+성할 수 있다.
+using Value-type = typenme C: :value-type;
+template<typenane Container>
+votd al四( Container& ( )
+Vector<Value_type<Container>> vec;
+// (의 요소 타입
+// 결과를 여기에 저장
+이러한 별칭 메커니즘을 이용하면 템플릿 인자의 일부나 전부를 지정함으로써 새로운
+템플릿을 정의할 수 있다.
+template<typename Key, typenarre VaIue>
+class Map {
+'콤를릿 159
+
+===== 인쇄 160쪽 / PDF 157쪽 =====
+temptate•<typenanp Value>
+using String—map = Map<string,VaIuæ;
+String_map•<int> m;
+6.43 컴파일 시간 if
+// m의 타입은 Map«string, int>
+slow-and-safe(T)와 simple-and-fast(T) 둘 중 하나를 시용하는 연산을 작성흐}다
+고 생각해보자. 일반성과 선택적인 성능 최적화가 필수적인 기반 코드에서는 이런
+일이 흔하다. 이에 대한 전통적인 해법은 함수를 오버로드하거나 표준 라이브러리
+is-pod처럼 특성 클래스(13.9.1절)를 A卜&하는 것이다. 클래스 계층 구조에서는 기녚步
+클래스가 느리지만 안전한 일반적인 연산을 제공하고, 파생 클래스에서 간단하고 빠
+른 구현으로 오버라이드할 수 있다.
+c++17에서는 그 대신 컴파일 시간 if를 사용할 수 있다.
+tenplate<typename T>
+VOid update(T& ta「get)
+if constexpr( is—pod<T>: :value )
+sunple_and fast(target);
+// 단순한 데이터용
+else
+slow—and_safe( target ) ;
+iS-pod<T>는 타입이 간단히(별도의 변환 없이) 복사 가능한지를 알려주는 타입 특성
+(13.9.1절)이다.
+if constexpr에서 선택된 경우만이 인스턴스화되므로 최적의 성능을 얻을 수 있으며,
+지역적인 최적화가 가능하다.
+160 6장
+
+===== 인쇄 161쪽 / PDF 158쪽 =====
+중요한 점은 if constexpr이 단순한 텍스트 조작 메커니즘이 아니며, 일반적인 문법
+과 타입, 스코프 규칙을 벗어나서 A卜용할 수 없다는 점이다.
+template<typenare T>
+void bad(T arg)
+if :value)
+try {
+g(arg);
+// 문법 에러
+if constexpr(Somethtng<T>: :value)
+그러한 텍스트 조작을 허용하면 코드의 가독성을 심각하게 훼손할 뿐 아니라 현대적
+인 프로그램 표현 기법(추상 구문 트리abstract 수에 의존하는 도구에서 문제를
+유발한다.
+6.5 조언
+[11
+[기
+[3]
+[41
+[5]
+[6]
+[기
+[8]
+다양한 인자 타입에 적용 가능한 알고리즘은 템플릿으로 표현하라. 6.1절; CG
+뙤기
+템플릿을 이용해 컨테이너를 표현하라. 6.2절, [CG. T.3J
+템플릿을 이용해 코드의 추상화 정도를 높여라. 6.2절; [CG: T.II
+템플릿은 타입 안전성을 보장하지만, 타입 확인이 매우 늦게 이뤄진다. 6.2절
+생성자나 함수 템플릿이 클래스 템플릿 인자 타입을 추론하게 하라. 6.2.3절
+알고리즘의 인자로 함수 객체를 사우하라. 6.3.2절; [CG. T.4이
+간단한 함수 객체를 한 곳에서만 사용한다면 람다를 이용하라. 6.3.2절
+가상 함수 멤버는 템플릿 멤버 함수가 될 수 없다. 6.3.1절
+템를혓 161
+
+===== 인쇄 162쪽 / PDF 159쪽 =====
+[91
+[1이
+[11]
+[1기
+표기 방식은 간단히 하고 상세 구현을 숨기기 위해 템플릿 별칭을 사용하라:
+6.4.2절
+템플릿을 사용하려면 템플릿의 (선언뿐만이 아니라) 정의가 스코프에 있는지 확
+인하라. 7.5절
+템플릿은 컴파일 시간 타입 확인을 제공한다. 7.5절
+템플릿에서는 컴파일만 독립적으로 수행하지 않으므로, 템플릿을 사용하는 모
+든 변환 단위에서 템플릿 정의를 #include하라.
+162 6장

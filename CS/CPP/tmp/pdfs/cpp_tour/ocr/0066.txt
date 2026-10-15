@@ -1,0 +1,22 @@
+ctass Vector (
+mjblic:
+Vector( int 5);
+d예bl酪 ocprator( 1( int O;
+€nt size( )•,
+prtvate:
+double• etem; // et~은 52기94 doubleS 포합하는 배열을 가리김
+int 코;
+Vector: :Vector( €nt 5)
+:elem{ned double(sl}, 57(5} // 초기화
+d예bl飇 Vector: :operator( 1( tnt t)
+return elem( 니•,
+tnt Vector: :stze( )
+return 521
+€nt stze(const Vector& 하 { return v.stze( )•, }
+이 교-드는 vector라는 *을 정의하는데, 클래스 vector와 그에 포함된 모든 멤버
+함수, 그리고 비몜버 함수인 size()를 노출시킨다.
+*을 A卜우할 때는 다음과 같이 필요한 곳에서 i•rt한다.
+// user.cpp 파일:
+lmport Vector; // Vector의 인터페이스 가져오기
+#tnclude <cmath> // sqrt( )를 포함하는 표준 라이브러리 수학 함수 인터페이스 가져오기
+모ㆍ하 67

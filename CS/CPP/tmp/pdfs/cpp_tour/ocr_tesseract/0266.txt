@@ -1,0 +1,47 @@
+비교 컨셉
+
+EqualityComparableWith<T,U>        ==를 이용해 T vo] 상등성을 비교할 수 있다.
+EqualityComparableWith<T,T>
+
+<9} <=, > >=를 이용해 [와 U 사이의 완전한 2 A(total
+order) 알 수 있다.
+
+StrictTotallyOrderedwith<T,T>
+
+EqualityComparable<T>
+
+StrictTotallyOrderedWith<T,U>
+
+StrictTotallyOrdered<T>
+
+WeaklyEqualityComparableWith} WeaklyEqualityComparabled 혼용하면 QHZ
+드를 활용할 기회가 현저하게 줄어들 수 있다.
+
+객체 컨셉
+
+Destructible<T>             TH 소멸할 수 있으며, 단항 연산자 6를 이용해 그 FAR 알 수 있다.
+Args 타입의 인자 목록으로부터 TH 생성할 수 있다.
+기본 생성자로 TR 생성할 수 있다.
+TH 이동 생성할 수 있다.
+
+7의 복사 생성과 이동 생성이 모두 가능하다.
+
+Constructible<T,Args>
+
+DefaultConstructible<T>
+
+MoveConstructible<T>
+
+CopyConstructible<T>
+
+Movable<T>                MoveConstructable<T>2} Assignable<T&,T> Swapable<T>
+Copyable<T>               CopyConstructable<T>2} Moveable<T>, Assignable<T, const T&>
+Semiregular<T>              Copyable<T>2} DefaultConstructable<T>
+
+Regular<T>                        SemiRegular<T>2} EqualityComparable<T>
+
+Regulart 이상적인 타입이라고 할 수 있다. Regular 타입은 와 비슷하게 동작하
+며, 타입의 사용법을 훨씬 간단하게 해준다(7.2절). 대부분의 클래스가 Regular 수
+있고 또 그래야 하지만, =가 없는 기본적인 클래스는 SemiRegularth,
+
+알고리즉 269

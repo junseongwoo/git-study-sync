@@ -1,0 +1,25 @@
+votd sort heIper(For 땨, For end, forward-tterator-tag) // [beg:end) 구간
+vector<VaIue-type<For>> v {beg,end};
+copy(v.begin( ),v.end( ),beg);
+// 순회 가능
+// [beg:end)로 벡터 초기화
+// 임의 접근 버전의 정렬 사용
+// 요소를 다시 복사
+value ty쨔<Fo鬱는 For의 요소 타입 0 로, 값 타입이라고 한다. 모든 표준 라이브러리
+반복자는 value-type이라는 멤버를 포함하는데, 다음과 같이 타입 별칭(6.4.2절)을
+정의함으로써 value-type<For> 표기법을 사용할 수 있다.
+template<typename C>
+ustng Value—type = typename C: :value—type;
+따라서 vectord>의 value-typed>는 X다.
+// C의 값 타입
+진짜 '타입의 마수이라고 할 만한 부분은 헬퍼 함수를 선택하는 부분이다.
+template<typename C>
+VOid sort(C& c)
+using lter = Iterator_type<C>;
+sort—helper(c begin( ) end( ) , lte「ator_category<lter>{} ) •,
+여기서는 두 가지 타입 함수를 사용했다. lte「ator-type<C>는 c의 반복자 타입(즉,
+c::tterator)을 반환하고, lterator-category<lter>{}는 주어진 반복자의 종류를 나
+타내는 다음과 같은 ,태그t四'를 생성한다.
+C의 반복자가 임의 접근을 지원하면 std: :random access-iterator-tag
+c의 반복자가 순방향 순회를 지원하면 std: :forward-iterator-tag
+308 13장

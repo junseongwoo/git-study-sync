@@ -1,0 +1,35 @@
+istream& operator>>(istream& is, Entry& 6)
+
+7/ { "이름" ,번호 } 쌍 읽기. {"", 와 } 로 형식화됨
+{
+char c, 62;
+Uf (15>>ㄷ66 c="{"' 66 15>>0ㄷ2 66 c2==""") {    // { "로 시작
+string name;                     // string? 기본 값은 빈 문자열: ""
+while (is.get(c) & c!='"")        // " 이전의 모든 문자는 이름으로 저장
+name+=c ;
+if (is>>c && c=",") {
+int number = 0;
+if (is>>number>>c 66 c=='}"') { // 번호와 } 읽기
+e = {name, number};           // 항목에 대입
+return is;
+}
+}
+}
+is.setstate(ios_base::failbit);      // 스트림에 실패를 기록함
+return is;
+}
+
+입력 연산이 반환하는 .56630의 참조를 이용하면 연산이 성공했는지를 확인할 수
+있다. 예를 들어 조건 절 안에서 15>>를 사용한다면 “charg <5로부터 coll 읽기가
+성공했는가?"라는 의미다.
+
+15>>6는 기본적으로 공백 문자를 지나치지만, is.get(c)s 그렇지 않다. 따라서
+Entry 입력 연산자는 이름 문자열 밖에서는 공백 문자를 무시하지만(지나치지만>, 이름
+안에서는 그렇지 않다. 다음 예를 보자.
+
+{ “John Marwood Cleese", 123456    }
+{“Michael Edward Palin", 987654}
+
+주어진 두 항목을 다음과 같이 Entryo] 읽을 수 있다.
+
+218 10장

@@ -1,0 +1,33 @@
+case cpy:
+v = arg;
+break;
+};
+VR
+if (m= seq)
+
+v.assign(p,q); // AMMA [p:q)25E 복사
+Hl sss
+
+들여쓰기만 됐을 뿐 모범적이진 않다. 자료 FRE 초기화하기 위해 여러 대안 중
+하나를 선택해야 하고, 각 대안마다 다른 연산을 해야 한다. 이러한 코드는 '효율성'이
+라는 미명하에 지저분한 코드와 버그의 원인을 만들어낸다.
+
+* 의도된 값을 얻기 전에 변수가 사용될 수 있다,
+
+* 초기화 코드가 다른 코드와 섞이면 이해하기 어렵다.
+
+* 초기화 코드가 다른 코드와 섞이면 각 대안에 대한 cased 잊어버리기 쉽다.
+* 초기화가 아닌 대입에 가깝다.
+
+대신 초깃값으로 람다를 이용할 수 있다.
+
+// int n, Init_mode m, vector<int>& arg, 반복자 pe} qi= 어딘가에서 정의됨
+
+vector<int> = [6] {
+switch (m) {
+case zero:
+return vector<int>(n);     // nf 248 022 초기화
+case seq:
+return vector<int>{p,q}; // AEA [0:0)에서 복사
+case cpy:
+return arg;

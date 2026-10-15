@@ -1,0 +1,40 @@
+1 sos Ｌ등을 확인, <.
+return unique_ptr<X>{new X{i}};
+}
+
+vector7} 객체 A|@Ae] 핸들인 HAY unique_ptr 개별 객체(혹은 배열)의 핸들이
+다. 두 경우 모두 rang 바탕으로) 객체의 생명주기를 관리하고, 간단하고 효율적인
+return 위해 이동 연산을 사용한다,
+
+shared_ptr& 이동보다는 복사된다는 점만 제외하면 404906_?(과 유사하다. 객체
+의 소유권을 공유하는 객체에 shared ptr 사용하며, 마지막 shared ptro| 소멸될
+때 객체(자원)가 해제된다,
+
+void f(shared_ptr<fstream>);
+void g(shared_ptr<fstream>);
+
+void user(const string& name, 10s_base: :openmode mode)
+{
+
+shared_ptr<fstream> fp {new fstream(name,mode)};
+
+if (!*+0) // 파일을 제대로 열었는지 확인
+
+throw No_file{};
+
+f(fp);
+
+g(fp);
+
+Vi
+}
+
+(명시적으로나 암묵적으로) fpo] 복사본을 소멸시키는 마지막 함수가 종료될 때 fpol
+생성자에서 열어놓은 파일이 닫힌다. *()나 0( )는 fp] 또 다른 복사본을 사용하는
+작업을 유발시키거나, 여러 가지 방법으로 490『()가 FRE 후에도 fp] 복사본을
+남길 수 있다는 점을 주의하자. wkd shared ptr 소멸자를 바탕으로 메모리상의
+객체를 관리하는 일종의 가비지 컬렉터를 제공한다고 할 수 있다. 이러한 방법은 추가
+적인 비용을 크게 수반하며, 공유된 객체의 생애주기를 예측하기도 어렵다. 따라서
+소유권을 꼭 공유해야 할 경우에만 shared ptr& 사용하자.
+
+유틸리티 279

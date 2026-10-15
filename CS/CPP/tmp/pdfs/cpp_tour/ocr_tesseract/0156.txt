@@ -1,0 +1,39 @@
+코드를 작성할 수 있다.
+
+타입을 파라미터화할 때 템플릿 인자와 관련된 타입에 ANE 부여하는 것은 매우
+일반적이다.
+
+template<typename T>
+class Vector {
+public:
+using value_type = T;
+76,
+J
+
+사실 모든 표준 라이브러리 컨테이너는 포함하는 값의 타입을 43146_6/06으로 제공
+한다(11장). 덕분에 그 관례를 따르기만 하면 모든 컨테이너에서 동작하는 코드를 작
+성할 수 있다.
+
+template<typename (>
+using Value_type = typename C::value_type; // (의 요소 타입
+
+template<typename Container>
+
+void algo(Container& c)
+
+{
+Vector<Value_type<Container>> vec;          // 결과를 여기에 저장
+ff sas
+
+}
+
+이러한 별칭 o]AUEE 이용하면 템플릿 인자의 일부나 전부를 지정함으로써 새로운
+템플릿을 정의할 수 있다.
+
+template<typename Key, typename Value>
+class Map {
+
+vas
+b
+
+템플릿 159

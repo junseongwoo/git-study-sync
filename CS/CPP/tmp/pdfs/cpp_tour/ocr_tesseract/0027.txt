@@ -1,0 +1,46 @@
+x+y // 덧셈
++X     // 단항 Sd(unary plus)
+
+x-y //'®4
+
+-X     // 단항 wd(unary minus)
+Xxy // 곱셈
+
+xX/y  // rd
+
+Xey  // 정수 나머지 연산
+비교 연산도 마찬가지로 사용할 수 있다.
+
+x=y // 같음
+
+xl=y // 같지 않음
+
+x<y // ~보다 작음
+
+xy 、 // ~보다 큼
+
+x<=y  // ~보다 작거나 같음
+x>=y ^ // ~보다 크거나 같음
+
+논리 연산도 제공한다.
+
+x&y  // 비트별 FZ(bitwise and)
+
+x|y // BEY g(bitwise or)
+
+X'y  // HEY 배타적 BH(exclusive or)
+
+x     // 비트별 24 (bitwise complement)
+x&&y // =2|3(logical and)
+
+x||ly // =2|g(logical or)
+
+Ix    // 논리 £4 (logical not (negation))
+
+비트별 논리 연산은 비트별로 행해지며, 그 결과의 타입은 연산 항의 타입과 같다.
+논리 연산 66과 ||는 연산 항의 값에 따라 (46나 false 반환한다.
+
+대입과 산술 연산 시에 <++가 기본 타입 간의 모든 유효한 변환을 수행하므로, 여러
+타입을 자유롭게 섞어 사용할 수 있다.
+
+28 1장

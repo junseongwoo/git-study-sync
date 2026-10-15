@@ -1,0 +1,31 @@
+);
+
+이 클래스는 나중에 정의할 특정 컨테이너의 인터페이스만을 포함한다, virtual
+“나중에 이 클래스로부터 파생되는 클래스에서 재정의할 수 있다"는 uct, 이렇게
+virtual@ 선언한 함수를 가상 함수" 9에라고 한다. 6(00580(로부터 파생된
+ge Ao A= Container] 대한 구현을 제공한다. =0으로 표기한 문법은 해당 함수
+가 순수 가상 vl 함수, 즉 00053406(로부터 파생된 클래스는 반드시 이 함수를
+구현해야 함을 의미한다. 따라서 다음과 같이 EfQlo] Container? 객체는 생성할 수
+없다.
+
+Contatner c;                            // 에러: 추상 를래스의 객체는 만들 수 없음
+Container* p = new Vector_contatner(10); // OK: Container{ 인터페이스임
+
+Container{= 그 안에 포함된 operator(]()9} size() 함수를 구현하는 파생 클래스
+에 대한 인터페이스 역할만 할 수 있다. 이처럼 순수 가상 함수를 포함하는 클래스를
+추상 Fel Asvstract 라고 한다,
+
+Containers 다음과 같이 사용할 수 있다,
+
+void use(Containers& c)
+{
+const int sz = c.size();
+for (int i=0; i!=sz; +1)
+cout << c[i] << '\n';
+
+456( )에서 상세 구현을 전혀 모른 FZ Container 인터페이스를 사용하고 있다는
+점에 주목하자. 5126( )와 [ ]의 구현을 제공하는 타입을 정확히 알지 못하지만 두
+함수를 사용할 수 있다. 이처럼 다른 여러 클래스에 대한 인터페이스를 제공하는 클래
+AZ 다형 gprotmershic 이라고 한다,
+
+클래스 103

@@ -1,0 +1,52 @@
+#includ«string>
+us€ng narespace std;
+// 표준 string 기능을 사용할 수 있게 함
+// std:: 접두사 없이도 std의 이름에 접근할 수 있게 함
+string s {“(++ a general?purpose programing language"};
+// 啄: 여기서 string은 std: :string
+특정 네임스페이스의 모든 이름을 전역 네임스페이스로 쏟아 붓는 것은 일반적으로
+좋지 않지만, 이 책에서는 표준 라이브러리를 광범위하게 시용하며 그 기능을 알아가
+는 것이 중요하吐
+std 네임스페이스에서 선언하는 이름을 제공해주는 표준 라이브러리 헤더를 몇 가지
+선별해서 살펴보면 다음과 같다.
+선넓된 표준 라이브러리 헤더
+<arrap
+<Ch 「000>
+<cmath>
+<COßVtex>
+<filesysteo
+<forward_list>
+<fstrearn>
+<future>
+<tOS>
+<iostræn>
+copy(), ftnd(), sort( )
+array
+duratton, ti-me—point
+sqrt( ), 삐)
+sqrt( ), 喞( )
+path
+forward_ltst
+fstrem, ifstream, ofstrem
+future,
+hex, dec, scientiftc, ftxed, defaultfloat
+ostrean, cout
+map, nulttmap
+unique—ptr, sha「ed—ptr, altocator
+default_randm—engtne, normal_dtstributton
+12장
+13.4.1절
+13.7절
+14.2절
+14.4절
+10.10절
+11 6절
+1이7절
+15.7절
+10.6절
+10장
+11.5절
+13.2.1절
+14.5절
+(이어짐)
+라이브러리의 개요 187

@@ -1,0 +1,33 @@
+EE 표준 라이브러리 헤더
+
+<regex>          regex, smatch                           9.4%
+<string>         string, basic_string                       9.2%
+<set>             set, multiset                              1.634
+<sstream>       | X5tringserem, ostringstream                10.84
+<stdexcept>       length_error, out_of_rang e, runtime_error    3.5.18
+<thread>         thread                                  15.274
+<unordered_map>   unordered_map, unordered_multimap            1.5%
+<utility>        move(), swap(), pair                       13%
+<variant>        variant                                  13.5.1
+<vector>         vector                                  1.23
+
+이 목록은 일부분일 뿐이다.
+
+<5*0115.1>를 비롯한 C 표준 라이브러리의 헤더도 제공된다. 그런 헤더 각각마다
+이름 앞에 6가 붙고, 뒤의 .『를 없앤 버전을 제공한다. <5*0\ㄴ6>를 비롯한 이러한
+버전의 헤더는 모든 이름을 510 네임스페이스 안에서 선언한다.
+
+8.4 조언
+
+1] 바퀴를 재발명하지 말고, 라이브러리를 활용하라. 8.14; CG: SL.1.]
+
+(2) 선택권이 있다면 다른 라이브러리 보다 표준 라이브러리를 사용하라. 8.1절;
+[CG: SL.2)
+
+[3] 표준 라이브러리가 만병통치약은 아니다. 8.13
+
+[4] 사용하고 싶은 기능을 제공하는 헤더를 #40ㄴ406해야 한다. 8.3절
+
+[5) 표준 라이브러리의 기능은 std 네임스페이스 안에 정의된다. 8.3절; [CG: SL.3]
+
+188 8장

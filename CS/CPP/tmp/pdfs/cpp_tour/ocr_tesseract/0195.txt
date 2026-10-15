@@ -1,0 +1,34 @@
+« regex_replace(): (임의의 길이의) 데이터 스트림에서 정규 표현식에 매칭되
+는 문자열을 찾아 교체한다.
+
+ㅎ regex_iterator: 매치와 부분 pjx|sebmatchig 4 33) E 찾아 순회한다.
+
+ㅎㅇ regex_token_iterator: 매치되지 않는 부분을 순회한다.
+
+9.4.1 검색
+패턴을 사용하는 가장 간단한 예는 스트림에서 패턴을 찾는 것이다.
+
+int lineno = 0;
+for (string line; getline(cin,line); ) {    // 버퍼 1106에 읽기
+++11ㄴ600;
+smatch matches; // 매치된 문자열이 여기에 저장됨
+if (regex_search(line,matches,pat))      // 1106에서 pat 찾기
+cout << lineno << ": " << matches[0] << '\n';
+
+regex_search(line,matches,pat) pato]] 저장된 정규 표현식과 매칭되는 RES
+1106에서 찾아 matcheso] 저장한다. 매치가 glow regex_search(line,matches,
+pat): *3156를 반환한다. matchesi= smatch 타입의 변수인데, 여기서 는 '546'나
+'508'을 의미하며, smatchi= 사실상 string 타입 부분 매치의 4《6ㄷ(0『라고 할 수
+있다. A 번째 24 matches[0]= 전체 ul x|complete match} 0] 2H regex_search( )
+의 결과는 매치의 모음이며, 일반적으로 smatchz 표현된다.
+
+void use()
+{
+ifstream in("file.txt");    // 입력 파일
+if (!0)                  // 파일이 열렸는지 확인
+
+cerr << "파일 A\n";
+
+regex pat {R"(\w{2N\s*\d{5}(-\d{4})*)"};  // 미국 우편번호 코드
+
+198 9장

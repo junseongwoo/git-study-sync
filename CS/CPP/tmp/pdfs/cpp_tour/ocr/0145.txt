@@ -1,0 +1,27 @@
+이렇게 하면 코드가 단순해지고 중복된 템플릿 인지를 잘못 작성하는 실수를 방지할
+^`- 있다. 그러나 템플릿 타입 추론이 만병통치약은 아니며, (make- 함수와 생성자 모두
+에서) 실수를 유발할 수 있다.
+vector<string> vsl {“He110", "WorId"}; // VectO「<string>
+Vector vs {"Hello", "World"}; // Vectoxconst char*>로 추론( 실수일까? )
+Vector vs2 {"HeIIo"s, “崗rld"화•, // Vector<string>으로 추론
+Vector vs3 {"Hello"s, "누』町ld"}•, // 에러: 초것값 목록의 요소 타입이 일치하지 않음
+c 스타일 문자열 리터럴의 타입은 const cha「**1.7.1절). 의도한 바가 이게 아니라
+면 접미사 5를 사-우해 string으로 만들巫9.2절). 초것값 목록의 요소들 사이에 타입
+이 일치하지 않으면 유일한 요소 타입을 유추할 수 없으므로 에러가 발생한다.
+생성자의 인자로부터 템플릿 인자를 추론할 수 없다면 다음과 같이 추론 가이드
+gulde를 제공할 수 있다.
+template<typename T>
+class Vector2 {
+public:
+ustng value—type = T;
+Vector2( list<T>);
+tenplate<tygpname lter>
+Vector2(Ite「 b, lter 이;
+Vector2 vl {1,2,3,4,5}•,
+// 초것값 목록 생성자
+// [b:e) 구간 생성자
+// 요소 타입은 int
+Vector2 v2(v1.begin( ),vl.begin( )+2) ;
+v2가 당연히 Vector2<int>가 돼야 하겠지만, 컴파일러는 따로 도와주지 않으면 이를
+추론할 수 없다. 코드에서 알 수 있는 것은 그저 생성자가 같은 타입의 값 한 쌍을
+148 6장

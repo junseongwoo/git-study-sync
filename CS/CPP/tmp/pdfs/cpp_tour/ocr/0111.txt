@@ -1,0 +1,29 @@
+case Ktnd: :smiley.
+// 스마일리 데이터 {Point,tnt,Shape,StV,9VYß P, r, el, e2, m에 읽기
+PS • 9tley{p,r};
+eye(ei);
+ps->add eye(e2);
+ps->set muth(m);
+return ps;
+도형 읽기 함수는 다음과 같이 A卜우한다.
+void user( )
+std: :vector<hape*> v;
+while (cin)
+v.push back(rui shape(ctn));
+dr&d-all(v);
+rotate-aIl(v,45);
+for (autO P : v)
+delete 아,
+// 각 요소의 ) 호출
+// 각 요소의 rotate(45) 호출
+// 요소 삭제를 잊지 말 것
+여러 측면, 특히 에러 처리 면에서 매우 단순화된 예제지만, user()에서 처리하는
+도형이 무엇인지 전혀 모른다는 점은 명백히 알 수 있다. user( )의 코드는 한 번만
+컴파일하면 추후에 프로그램에 추가된 Sha畔에 대해서도 A卜&할 수 있다. user( ) 고
+드밖에 도형에 대한 포인터가 없다는 점에 유의하자. 따라서 모든 도형을 해제할 책임
+도 user( )에게 있다. 해제 작업은 delete 연산자와 Sha鰐의 가상 소멸자에 의지한다.
+소멸자가 가상 함수이므로 delete는 최하위 파생 클래스의 소멸자를 호출한다. 이렇
+게 하는 이유는 파생 클래스가 획득한 자원(파일 핸들과 출력 스트림 등을 반납해야하기
+때문이다. 예제에서는 smiley가 eyes와 muth 객체를 해제한다. 그 후에는 Circle의
+소멸자를 호출한다. 이와 같이 객체 생성 시에는 생성자를 이용해 (기반 클래스부터)
+글래스 113

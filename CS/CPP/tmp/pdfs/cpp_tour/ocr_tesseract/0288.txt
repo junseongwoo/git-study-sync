@@ -1,0 +1,32 @@
+for (auto p = er.first; 0!=6「.560000; +p) // 동일한 레코드 모두 출력
+cout << *p;                             // Record <<를 정의했다고 가정
+
+032「의 첫 번째 wut first, 두 번째 멤버는 560000다, 언뜻 보기에는 이런 이름이
+창의적이지 않고 이상해 보이지만, 제네릭한 코드를 작성할 떼는 이렇게 일관된 명명
+법이 필요하다. firste} 135+라는 이름으로도 일반성이 유지된다면 구조화된 바인딩
+을 사용할 수 있다(3.6.3절).
+
+void f2(const vector<Record>& v)  // \가 "name" 필드로 정렬됐다고 가정
+{
+auto [first,last] = equal_range(v.begin(),v.end(),Record{"Reg"},less);
+
+for (auto p = er.first; p!=er.last; +p) // 동일한 레코드 모두 출력
+cout << *p;                            // Recordoj <<를 정의했다고 가정
+
+(<utility>of 선언된) 표준 라이브러리 pairs 표준 라이브러리를 비롯한 여러 곳에서
+자주 쓰인다. 포함되는 요소가 =와 =, < 등을 비롯한 연산자를 제공한다면 63ㄴ에서
+도 그 연산자를 사용할 수 있다. 타입 FES 이용하면 타입을 쉽게 명시하지 않고도
+쉽게 03ㄴ를 생성할 수 있다.
+
+void f(vector<string>& v)
+
+{
+pair pl {v.begin(),2};             // 한 가지 방법
+auto 02 = make_pair(v.begin(),2); // 다른 방법
+// sss
+
+}
+
+pli} p2 모두 pair<vector<string>::iterator,int> 타입이다.
+
+유틸리티 293

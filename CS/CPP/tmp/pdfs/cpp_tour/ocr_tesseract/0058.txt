@@ -1,0 +1,35 @@
+Traffic_light& operator++(Traffic_light& t) // 전치 즘가: +
+{
+switch (t) {
+case Traffic_light::green: return t=Traffic_light::yellow;
+case Traffic_light::yellow: return t=Traffic_light::red;
+case Traffic_light::red: return t=Traffic_light::green;
+}
+}
+
+Traffic_light next = ++light; // 다음 UE Traffic_light::green
+
+열거자의 이름을 정확히 명시하기 귀찮거나 (명시적으로 변환할 필요 없이) 열거자의
+값이 int7} 되길 원한다면 enum classofl A] 61355를 지우고 그냥 00내을 사용하자.
+그냥 6000의 열거자는 암묵적으로 0000의 이름과 같은 스코프를 가지며, 암묵적으로
+정수 값으로 변환된다.
+
+enum Color { red, green, blue };
+int col = green;
+
+여기서 cole] 값은 1이다. 기본적으로 열거자의 정수 값은 0에서 시작하며, 열거자가 하
+나 추가될 때마다 1씩 증가한다, 그냥 enumo] 그다지 잘 동작하진 않더라도 Creat ("의
+초기부터 존재했으므로 여전히 많은 코드에서 흔히 볼 수 있다.
+
+2.6 조언
+
+[1] 내장 타입이 너무 로우레벨이라고 느껴진다면 잘 정의된 사용자 정의 타입을
+사용하라. 2.1절
+
+[2] 연관된 log (structi} classz) 구조화하라, 2.2절; CG: <.1]
+
+[3] ㅇㄴ255를 이용해 인터페이스와 구현을 분리하라. 2.3절, ICG: C.3)
+
+[4] structs 그저 멤버가 기본적으로 006110인 01855다,. 2.3절
+
+사용자 정의 타입 50

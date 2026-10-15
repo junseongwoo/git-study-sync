@@ -1,0 +1,26 @@
+consumer( )는 Message를 읽고 처리한다.
+VOid consunpr( )
+while(true) {
+unique_lock lck {mutex}; // mutex 획득
+mcond.wait(lck,[l { return !rqueue.empty( )•, })•, // lck을 해제하고 대기;
+autO m = mueue.front( )•,
+mqueue .pop( );
+lck.unlock( )•,
+// 깨어날 때 lckS 다시 획득
+// mqueue가 비어있는 동안 깨어나지 않음
+// 에시지 가져오기
+// lck 해제
+mutex에 unique-lock을 호출함으로써 queue와 condition-variable에 대한 연산을
+명시적으로 보호했다. condition-variable에 대기하면 대기가 끝날 때까지 인자로
+전달된 락을 해제하고 있다가 (큐에 무언가 들어오면) 락을 다시 획득한다. !mueue.
+gnpty( )를 명시적으로 확인하는 이유는 다른 태스크가 ,먼저 이 지점에 도달했는지를
+알기 위해 깨어난 경우에 조건이 성립하지 않을 수 있기 때문이다.
+scoped-lock 대신 unique-lock을 사용한 이유는 다음과 같은 두 가지다.
+락을 condition-variable의 wait( )에 전달해야 하는데, “0* 10(k은 복
+사할 수 없는 반면 unique-lock은 복사가 가능하다.
+메시지를 처리하기 전에 조건 변수를 보호하기 위해 mutex의 락을 해제해야
+한다. unique-lock은 로우레벨에서 동기화를 제어할 수 있는 lock()과
+unlock( ) 같은 연산을 제공한다.
+반면에 unique-lock은 딱 한 개의 mutex만을 다를 수 있다.
+앞의 코드에 상응하는 producer는 다음과 같다.
+동시상 337

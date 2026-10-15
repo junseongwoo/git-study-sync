@@ -1,0 +1,24 @@
+void producer( )
+for (int n = 0; n!=LOTS; ++n) {
+“0*-lock lk {하; // m 은 mutex (15.5결)
+q.push back(allocate shared<Event,pmr: :polymorphic—aIlocator<Event>>
+{㈄00t})•,
+CV. notify_one( )•,
+이렇게 변경한 후에는 프로듀서 16개와 컨슈머 4개 사이에서 이벤트 1따000개가 전
+달된 후에도 메모리가 3MB보다 적게 소모됐다. 무려 2,(XX)배나 개선됐다! 물론 (단편
+화로 인해 낭비된 메모리에 반해) 실제로 수우한 메모리양이 변하지는 않는다. 이렇게
+단편화 문제를 해결한 후에 그 시스템은 수개월 동안 안정적으로 운영됐다.
+C++의 초기에도 이런 기법이 좋은 효과를 내며 적용되긴 했으나, 보통은 특화된 컨테
+이너를 사용하도록 코드를 재작성해야 했다. 하지만 이젠 필요하다면 표준 컨테이너
+에 할당자를 인자로 지정할 수 있다. 할당지를 따로 지정하지 않으면 컨테이너는 기본
+적으로 ne,•,와 delete를 사용한다.
+13.7 시간
+표준 라이브러리 <hr예0>에서는 시간을 다루는 기능을 제공한다. 예를 들어 다음과
+같이 어떤 작업의 시간을 잴 수 있다.
+// 하위 네임스페이스 std: :chrono; 3.4절 참고
+using ndTespace std: :chrono;
+auto t0 = high—resolutton clock: :now( )•,
+do-work( );
+auto tl = high-resolution clock: :now( )•,
+CJt << duration castqilliseconds>(tl-t@).count( ) << "msec\n" •,
+302 13장

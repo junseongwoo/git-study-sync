@@ -1,0 +1,25 @@
+하는 것이다. 이를 위한 첫 단계는 각 구성 요소의 인터페이스와 구현을 분리하는
+것이며, c++에서는 선언을 바탕으로 인터페이스를 표현한다. 이처럼 선언은 함수나
+타입을 A卜&하는 데 필요한 모든 사항을 명시한다. 다음 예를 보자.
+double sq「t(double); // double을 인자로 받고 doubte을 반환하는 제곱근 함수
+ctass Vector {
+pubtic:
+Vector(int 5);
+doubte& 0鰐「at0「[ ]( int i);
+int size( )•,
+private:
+double* elem;
+int sz;
+// elem은 sz개의 doubte을 포함하는 배열을 가리김
+여기서의 핵심은 '어던가에' 존재하는 함수 몸체, 즉 함수 정의다. 이 예제에서 vector
+자체의 정의도 어던가 다른 곳에 둘 수 있지만, 이에 대해서는 뒤(추상 다입; 기3설)에서
+다룬다. sqrt( )의 정의는 다음과 같다.
+double sqrt(double d) // sqrt( ) 의 정의
+// ... 수학 교과서에 나오는 알고리즘 ...
+다음으로 vector의 멤버 함수 세 개를 모두 정의하자.
+Vector: :Vector( int 5)
+// 생성자 정의
+:elem{ne••/ double[sl}, sz{s} // 멤버 초기화
+double& Vector: :operator[ ]( int i)
+62 3장
+// 인덱싱 연산 정의

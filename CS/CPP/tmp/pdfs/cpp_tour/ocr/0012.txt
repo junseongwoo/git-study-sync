@@ -1,0 +1,24 @@
+두 언어 모두에서 maltoc( )의 결괴를 적절한 타입으로 개스트해야 한다. C++만 사용
+한다면 ma110(( )을 사용하지 말자.
+16.3.2.3 링크
+c와 C++는 서로 다른 방식의 링크 방식으로 구현될 수 있다. 가장 기본적인 이유는
+C++가 타입 검사에 좀 더 중점을 두기 때문이다. 실용적인 이유로는 C++가 오버로팅
+을 지원하는 이유로, 호출 가능한 전역 함수 open( )이 두 개이기 때문이다. 링거가
+동작하려면 이런 점이 반영돼야 한다.
+C++ 함수를 (C 프로그램 조z빠서 호출할 수 있게) C에 링크하거나 C 함수를 C++ 가
+램 조각에서 호출할 수 있게 하려면 다음과 같이 extern "C"로 선언해야 한다.
+extern "C" double sqrt(double);
+이렇게 하면 c나 C++ 구:t= 조각에서 sqrt(double)를 호출할 수 있다. sq「t(doubte)
+의 정의도 c 함수나 C++ 함수로 컴파일될 수 있다.
+한 人구.교에서 특정 이름으로 c에 링그할 수 있는 함수는 하나뿐이cHc에서는 함수
+오버로팅을 지원하지 않기 때문). 링크 명세는 타입 검시에는 영힝h을 주지 않으므뢰 C++
+의 함수 호출과 인자 검사 규칙은 extern "C"로 선언된 함수에도 동일하게 적용된다.
+16.4 참고 자료
+[Boost]
+[이199이
+370 16장
+The Boost L1branes: free peer—reviewed 壓)fiable C++ source
+libranes. www boost.org
+X3 Secretariat: Standard - The C Language. X3J11/兜-013. ISO
+Standard ISO/IEC 9899-19%. Computer Busrness
+Equipment Manufacturers Assocration. Washrngton, DC

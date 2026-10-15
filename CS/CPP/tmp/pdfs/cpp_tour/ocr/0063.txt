@@ -1,0 +1,27 @@
+// Vector.h.
+ctass Vector {
+pubttc:
+Vector( tnt 5);
+double& 0畔「atO「[ ( int i);
+int size( )•,
+private:
+double* etem; // elem은 sz개의 doubte을 포함하는 배열을 가리김
+int sz;
+위의 선언을 파일에 작성하고, 사용자는 이 헤더 파일header f,le을 인를루드
+,nclude해 인터페이스에 접근한다.
+// user.cpp•
+#tnclude "Vector.h"
+#tnclude <cmath>
+// Vector의 인터페이스 가져오기
+// sqrt( )를 포함하는 표준 라이브러리 수학 함수 인터페이스 가져오기
+double sqrt—sum(Vector& v)
+double sum = 0;
+for (int i=O; i!=v.size( ); ++i)
+sum+=std::sqrt(v[il); // 제곱근의 합
+return sum;
+컴파일러가 일관성을 보장할 수 있도록 vector의 정의를 제공하는 .CPP 파일에도
+.h를 인클루드해 인터페이스를 가져온다.
+// Vector.cpp
+#include "Vector.h"
+64 3장
+// Vector의 인터페이스 가져오기

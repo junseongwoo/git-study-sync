@@ -1,0 +1,22 @@
+tetplate<typenanp (, typenme P>
+// Sequence<C>와 CaIIabte<P,Value—type•<P>>가 요구됨
+int count(const (& C, P pred)
+int cnt = 0;
+for (const autO& x : c)
+if (pred(x))
+++cnt;
+return cnt;
+술어는 호출 가능하며, 그 결과로 true나 false를 반환하는 무언가를 말한다.
+void f(const Vector<int>& vec, const list<string>& lst, int X, const string& 5)
+cout << << "보다 작은 값의 개수: " << count(vec,Less than{x}) << • \n' ;
+cout << 5<< "보다 작은 값의 개수: " << count(Ist,Less than{s}) << '\n' ;
+여기서 Less-than{x}는 Less-than<int> 타입의 객체를 생성하는데, int 값 x와 비
+교하는 연산자를 호출한다. Less-than{s}는 string 값 s에 비교한다. 이러한 함수
+객체의 좋은 점은 비교 대상이 되는 값을 전달해준다는 것이다. 각 값(각 타입)마다
+다른 함수를 정의할 필요도 없고, 비교할 값을 저장하기 위해 전역 변수를 사용할
+필요도 없다. 게다가 Less-than처럼 단순한 함수 객체는 인라인으로 작성하기도 쉬워
+서 Less-than 호출이 간접적인 함수 호출보다 훨씬 효율적이다. 데이터를 전달할 수
+있는 능력과 효율성 덕분에 함수 객체는 특히 알고리즘의 인자로 유용하다.
+((예nt()에서 Less-than을 사용한 것처럼) 일반적인 알고리즘에서 핵심 동작의 의미를
+지정하기 위해 사용하는 함수 객체를 정책 객체- 。b)e龜라고도 한다.
+152 6장

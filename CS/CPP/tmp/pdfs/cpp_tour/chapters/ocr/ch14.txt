@@ -1,0 +1,317 @@
+
+
+===== 인쇄 315쪽 / PDF 310쪽 =====
+14
+수치
+컴퓨팅의 목표는 숫자가 아니라 통참이다.
+- 해밍(R. W. Hamming)
+. 그러나 학생들에게는 숫자가 통찰을 꿀어내는 가장 좋은 방법일 수 있다.
+- 탭스턴(A. Ralston)
+소개
+수학 함수
+수치 알고리즘. 병렬 수치 알고리즘
+복소수
+벡터 산술
+수치 한계
+조언
+수치 315
+
+===== 인쇄 316쪽 / PDF 311쪽 =====
+14.1 소개
+C++는 수치 계산을 특별히 고려해 설계되진 않았다. 그러나 일반적으로 데이터베이
+스 접근이나 네트워킹, 장비 제어, 그래픽스, 시뮬레이션, 금융 분석을 비롯한 다양한
+작업에서 수치 계산을 사용한다. 따라서 커다란 시스템의 일부로서 수치 계산을 수행
+할 때 C++는 매력적인 도구일 수 있다. 계산 과정의 일부로 복잡한 자료 구조가 필요
+할 때는 C++의 장점이 빛을 발한다. 그런 이유로 과학과 공학, 금융을 비롯해 정교한
+수치 계산을 필요로 하는 영역에서 C++를 널리 사용한다. 결론적으로 그러한 계산을
+지원하는 기능과 기법들이 개발됐다. 14장에서는 수치 지원을 위한 표준 라이브러리
+기능을 살펴본다.
+14.2 수학 함수
+貳math>에서는 float과 double, long double 타입의 인자에 사용할 수 있는 sqrt( ),
+109( ), stn( )을 비롯한 표준 수학 함수standard functions를 제공한다
+표준 수학 함수
+abs(x)
+ceil(x)
+sqrt(x)
+cos(x)
+si-n(x)
+tan(x)
+acos(x)
+asi-n(x)
+316 14장
+절댓값
+x보다 크거나 같은 가장 작은 정수
+x보다 작거나 같은 가장 큰 정수
+제곱근. x는 반드시 음이 아닌 수여야 함
+코사인
+사인
+탄젠트
+아크코사인(역코사인). 결과는 음이 아닌 수
+아크사인(역사인). 0에서 가장 가까운 결과 반환
+(이어짐)
+
+===== 인쇄 317쪽 / PDF 312쪽 =====
+표준 수학 함수
+atan(x)
+sinh(x)
+cosh(x)
+tanh(x)
+exp(x)
+tog(x)
+10910(x)
+아크탄센트(역탄센트)
+하이퍼를리 사인
+하이퍼를리 코사인
+하이퍼를리 탄센트
+일수 e인 지수 연산
+일수 e인 자연 로그. x는 반드시 양수여야 함
+일수 10인 로그
+이 함수들의 c예plex(14.4절) 버전은 <마le沙에서 찾을 수 있괴 반환 타입은 인자
+타입과 같다.
+<ce「「no>의 errno를 설정하는 방식으로 에러를 나타내는데, 끄이면 정의역 에러이
+고, ERANGE이면 구간 에러다.
+void f()
+e「「no = 0;
+// 예전 에러 상태 지움
+if (errno==Etn•1)
+cerr << "sqrt( )에 음수 사용할 수 없음";
+e「「no = 0;
+// 예전 에러 상태 지움
+POW( numeric—lunits<double>: :max( ) ,2)•,
+if (errno - ERAWE)
+cerr << "피 )의 결과가 double로 표현할 수 없음 정도로 금•;
+몇 가지 더 많은 수학 함수를 式stdltb>에서 찾을 수 있으며, 일종의 특수 수학 함수
+인 beta( ), rieman-zeta( ), sph-bessel() 등을 貳~th>에서 볼 수 있다.
+수시 317
+
+===== 인쇄 318쪽 / PDF 313쪽 =====
+14.3 수치 알고리즘
+<n내ne「ic>에서 accumulate( )를 비롯한 일반화된 수지 알고리즘 몇 가지를 볼 수
+있다.
+수치 알고리좀
+x=accumutate( b,e,O
+x—accurulate(b,e,i,f)
+x=inner—product(b,e,b2,i)
+x=inner_product(b,e,b2, i,f,f2)
+p=partial—sum( b,e, )
+b,e,out,f)
+p=adjacent_difference( b,e , )
+p=adjacent_difference( b,e,out,f)
+iota(b,e ,v)
+x=gcd(n,m)
+x=lcm(n,m)
+x는 (b:el의 요소인 (의 합
++ 대신 fß 사용한 accmulate
+x는 [b:e)와 (b2:b2+(e•b))의 내적(inner product). 즉.
+[b:e)에 속하는 pl과 그에 상용하며. (b2:b2+(e*b))에 속
+하는 p2에 대해 (*pl)*(*p2)의 총합에 더한 값
++와 * 대신에 fl과 f2를 이용한 inner-product
+[out:p)의 t번째 요소는 [b:b+tl에 속하는 요소의 합
++ 대신 f를 사용한 partiat-sum
+[out:p)의 i번째 (t>0) 요소는 *(b+O* (b+i-l); e-b>0이면
+*out = *b
+대신 f를 이용한 adjacent dtfference
+[b:e)의 각 요소에 ++V를 대입. 결과 시원스는 V+I, V+2.
+x는 정수 n과 m의 최대공약수
+x는 정수 n과 m의 최소공배수
+이런 알고리즘들은 자주 사용하는 연산을 일반화하는데, 예를 들어 합을 계산하는
+일을 어떤 종류의 시퀀스에나 적용할 수 있다. 또한 시퀀스의 요소에 적용되는 연산을
+파라미터화할 수 있다. 각 알고리즘은 일반화된 버전과 더불어 해당 알고리즘에서
+가장 많이 사용되는 연산자를 적용하는 버전도 제공한다.
+list<double> 15t {1, 2, 3, 4, 5, 9999.99999};
+autO 5 = lst.begin( ), .end( ) , 0.0);
+318 14장
+// 합 계산: 10014.9999
+
+===== 인쇄 319쪽 / PDF 314쪽 =====
+이런 알고리즘들은 모든 표준 라이브러리 시권스에서 동작하며, 적용할 연산을 인자
+로 받을 수 있*14.3절).
+143.1 병렬 알고리즘
+<numeric>에서는 원래 버전과 약간 다른 병렬 버전(12질설)의 수치 알고리즘을 제공
+한다.
+병넓 수치 알고리좀
+x=reduce(b,e,v)
+x=reduce(b,e)
+p=exclusive scan(pol,b,e,out)
+p=transform reduce(pol,b,e,f,v)
+p=transform exclusive
+p=transfom inclusive
+순서가 없는 것을 제외하면 x•acctntate(b,e,v)
+와 동일
+v가 b의 값 타입일 때 x•reduce(b,e,V0)
+실행 정책이 卯l인 x•r«iuce(b,e,v)
+v가 b의 값 타입일 때 x=reduce(pol,b,e,V0)
+匹l에 기반을 둔 p-parttal-sm(b,e,out).
+번째 합에서 (번째 입력 요소는 제외
+匹1에 기반을 둔 p=parttal-sÄb,e,out).
+번째 합에 t번째 입력 요소 포함
+[b:el에 속하는 x에 f(x)ß 취한 후 reduce
+(b:el에 속하는 x에 f(x)ß 취한 후 exclusive-
+scan
+[b:el에 속하는 f(x)S 취한 후 i-rxtustve-
+SCan
+편의상 +와 = 대신 A卜우할 연산을 인자로 받는 버전들은 생략했다. reduce( )만 제외
+하고는, 기본 정책(순자)과 기본 값을 사우한 버전도 생략했다.
+<atgorithm>에 정의된 병렬 알고리쉬2.9절)과 마찬가지로, 실행 정책을 지정할 수
+있다.
+수치 319
+
+===== 인쇄 320쪽 / PDF 315쪽 =====
+vector<double> v {1, 2, 3, 4, 5, 9999.99999};
+auto = reduce(v.begin( ),v.end( ))•,
+vector<double> large;
+// ... 많은 값들로 la「ge를 재운다 .
+// double을 누적자로 사용해 합을 계산
+auto 52 = 「educe(par-unseq, large.begin( ) , large.end( ) )•, // 가능한 병렬화 정도로 합을 계산
+병렬 알고리수예, reduce( ))은 요소에 연소卜을 적용하는 순서가 정해지지 않는다는 점
+에서 순차 알고리수예, accumulate( ))과 다르다.
+14.4 복소수
+표준 라이브러리는 4.2.1절에서 설명한 complex 클래스를 이용해 일련의 복소수 타입
+을 지원한다. 실수부가 단정도 부동소수점 十(float)이거나 배정도 부동소수점 수
+(double), 혹은 다른 어떤 타입이 될 수 있도록 표준 라이브러리 comptex는 템플릿으로
+제공된다.
+template<typenare ScaIa「〉
+class cmplex {
+public:
+cnrplex(const Scalar& re 해}, const Scalar& 테}); // 기본 함수 인자. 3.6.1절 참고
+일반적인 산술 연산과 수학 함수는 복소수를 지원한다.
+void f(cmplex<float> fl, cmplex<double> db)
+comptex<long double> 년 {ft+sqrt(db)};
+db += fl*3•,
+ft = 函1/fl,2)•,
+320 14장
+
+===== 인쇄 321쪽 / PDF 316쪽 =====
+sqrt( )와 pm•/( )(지수 연산)를 비롯한 함수를 <에鬱le沙(14.2절)에서 찾아볼 수 있다.
+14.5 난수
+테스팅과 게임, 시뮬레이션, 보안 등 많은 곳에서 난수가 유용하게 쓰인다. 그만큼
+표준 라이브러리 守and예>에서는 여러 가지 난수 생성기를 지원한다. 난수 생성기는
+그게 두 부분으로 구성된다.
+[회 엔진engine은 난수 혹은 의사 난수 값의 시권스를 만들어낸다.
+[기 분포d•str,but•oné 난수 값은 수학적 분포의 특정 구간으로 매핑한다.
+uniform int distribution(모든 정수를 같은 확률로 생성)과 normal-distribution
+(종형 곡선the curve), exponential distribution(지수적으로 증가) 등의 분포가 있으
+며, 각 분포의 특정 구간을 사용한다.
+using my—engine = default rand예l_engtne;
+// 엔진 타입
+using my_distribution = uniform_int distributiono; // 분포 타입
+my-engine re {}•, // 기본 엔진
+my_distribution one_to_stx {1,6}•,
+// 정수 1..6에 매평되는 분포
+auto die= [1(){ retu「n one-to-six(re);} // 난수 생성기 만들기
+// 주사위 굴리기: x 구간 [1:6]에 속하는 값
+int x=die();
+일반성과 높은 성능 덕분에 한 전문가는 표준 라이브러리 난수 생성기를 일걸어 '모든 난수
+생성 라이브러리의 표상이라고 했을 정도다. 그러나 결코 ,초보자 친화적'이라고 하긴 어
+렵다. 예제에서는 using 구문과 람다를 이용해 무엇을 하고자하는지 좀 더 명확히 했다
+수월 321
+
+===== 인쇄 322쪽 / PDF 317쪽 =====
+(갖고 있는 배경에 상관없이) 어떤 초보자에게도 완벽히 일반화된 인터페이스를 제공하
+는 난수 생생기 라이브러리를 익히기란 쉬운 일이 아니다. 첫 시작으로는 다음과 같이
+간단한 난수 생성기로 충분할 수 있다.
+Rand-int rnd {1,10}; // 구간 [1:10]에서 난수를 만드는 생성기
+int x = rnd( )•,
+// x는 [1:10]에 속하는 수
+이렇게 하려면 die( )에서 했던 것처럼 엔진과 분포를 Rand-int라는 클래스 안에서
+통합해야 한다.
+class Rand_int {
+public:
+Rand_int(int IOW, int high) :dist{low,high} { }
+int operator()() { return dist(re); } // int 생성
+void seed(int 5) { re.seed(s); }
+private:
+default_random engine 「만,
+unifo「m int_dist「ibution<> dist;
+// 난수 엔진에 새로운 시드 선택
+이 클래스를 정의하는 일은 여전히 전문가 수준이지만, Rand-int( )를 사용하는 일은
+C++ 초보자를 위한 과정의 첫 주에 다를 수 있을 정도다.
+€nt main( )
+constexpr int max = 9;
+Rand_int rnd {@.max};
+vector<int> histogram( frm+l ) •,
+for (tnt i=€; i!=200; ++i)
+++htstogram[ rnd( )] •,
+// 단일 분포의 난수 생성기
+// 적당한 크기의 벡터 생성
+// [0:max] 구간의 수에 대한 히스토그램 재우기
+for (tnt 0• t!=histogram.size( )•, ++i) { // 막대그래프 그리기
+322 14장
+
+===== 인쇄 323쪽 / PDF 318쪽 =====
+fo「 (int j=0; j!=histogram[il; ++j) cout << '*' •
+cout << endl;
+출력으로 (통계적 변동-을 포함한) 단일 분포를 볼 수 있다.
+0
+1
+2
+3
+4
+5
+6
+7
+8
+9
+C++에
+표준 그래픽 라이브러리가 없는 관계로 ASCII 그래픽을 A卜우했다. 시중에
+C++용 상용 그래픽 라이브러리와 GUI 라이브러리가 많지만, 이 책에서는 ISO 표준
+기능만을 다룬다.
+14.6 벡터 산술
+11.2절에서 설명한 vector는 값을 저장하기 위한 일반적인 메커니즘0 로, 유연하며
+컨테이너, 반복자, 알고리즘의 아기텍처에 잘 융화되게 설계됐다. 그러나 수학적인
+벡터 연산은 제공하지 않는다. vector에 이러한 연산을 추가하는 것은 어렵지 않지만,
+그 유연성과 일반성으로 인해 수치 작업에서 필수적인 최적화가 어려울 수 있다. 결론
+적으로 표준 라이브러리 다ala「rap에서는 vector와 유사한 템플릿인 valarray를
+제공하는데, 일반성은 좀 떨어지지만 수치 계산을 위한 최적화에는 더 적합하다.
+수지 323
+
+===== 인쇄 324쪽 / PDF 319쪽 =====
+tgnplate<typenarre T>
+ctass valarray {
+valarray에는 다음과 같은 산술 연산자와 일반적인 수학 함수를 사용할 수 있다.
+void f(vala「ray<double>& al, valarray<double>& a2)
+valarray<double> a = al*3.14+a2/al•,
+a2 += al*3.14;
+a = abs(a);
+double d = a2[7] ;
+// 수치 배열 연산자 *, +, / ,
+이와 같은 산술 연산에 더불어 valarray에서는 다차원 계산을 구현하기 위한 건너
+띄기 접근stride access을 제공한다.
+14.7 수치 한계
+표준 라이브러리 <limits>에서는 float의 최대 지수와 int의 바이트 수를 포함한
+내장 타입의 속성(14.7절 참고)을 기술하는 클래스를 제공한다. 예를 들어 char에 부호
+가 있는지 확인할 수 있다.
+static assert(nl.neric lünits<char>: : is_signed, "부호 없는 문자! •• );
+static assert( 10Ø0@@<nurreric_Itmits<int>: :max( ) , "작은 tnt! " ) •,
+두 번째 어써션이 동작하는 이유는 numeric-limits<tnt>: :max( )가 constexpr 함수
+이기 때문이t*1.6절).
+324 14장
+
+===== 인쇄 325쪽 / PDF 320쪽 =====
+14.8 조언
+[1]
+[기
+[3]
+[4]
+[5]
+[6]
+[기
+[8]
+[9]
+[1이
+미묘한 수지 문제가 있을 때 수학적 관점에서 1(尠% 확실하지 않다면 전문적인
+조언을 구하거나 실험을 해보거나 둘 다 해보자. 14.1절
+언어의 기본적인 기능만 이용해서 수치 계산을 하기보다 라이브러리를 사용하
+자. 14.1절
+시권스로부터 값을 계산하는 루프를 직접 작성하기 전에 accnlate( )와
+product( ), par tial-sm( ), adjacent-difference( )를 먼저 고려하자. 14.3절
+복소수 산술에는 std::complex를 사용하자. 14.4절
+난수 생성기를 만들 때는 엔진과 분포를 결합한다. 14.5절
+난수 생성기가 충분히 랜덤한지 주의를 기울이자. 14.5절
+c 표준 라이브러리의 rand( )를 A卜&하지 말자. 실제로 사용하기엔 충분히 랜덤
+하지 않다. 14.5절
+연산과 요소 타입에 대한 유연성보다 실행 시간 효율성이 중요하다면 valarray
+를 이용해 수치 계산을 수행하라. 14.6절
+numeric-limits를 이용해서 수치 타입의 속성을 알 수 있다. 14.7절
+numeric-li-mits를 이용해 수치 타입이 특정 용도에 맞는지 확인하자. 14.7절
+수시

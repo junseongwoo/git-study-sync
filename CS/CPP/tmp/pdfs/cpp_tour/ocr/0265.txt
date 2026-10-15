@@ -1,0 +1,26 @@
+핵심적인 컨셉
+ASS ignable<T , 나
+SwappabIeWith<T , U>
+IJS T에 대입할 수 있다.
+T를 U와 맞바꿀 수 있다.
+SwappableWith<T , T>
+camon은 여러 관련된 타입에서 동작하면서도 수학적인 합리성을 유지해야 하는 알고
+리수을 명시할 때 우우하다. Comnon<T,U>로 지칭되는 타입을 c라고 하면 T와 U를 모두
+c로 변환한 후에는 비교할 수 있어야 한다. 예를 들어 std: :string을 c 스타일
+문자열(cha「*)과 비교하거나 int를 double과 비교하고 싶을 수는 있지만, std: :string
+과 int를 비교하진 않는다. c예mon의 정의에서 시용되는 comon-type-t를 특수화하
+는 방법을 확실히 정하려면 다음과 같이 할 수 있다.
+using ccmrm_type_t<std: :string,char*> = std: :string;
+using cormm_type—t<double , int> = double;
+convnon의 정의가 약간 낯설 수도 있지만, 이를 이용하면 근본적인 어려움-을 해결할
+수 있다. 다행히도 라이브러리에서 아직 적당한 정의를 제공하지 않는 방식으로 여러
+타입에 대한 연산을 시용하지 않는 한 comon-type-t 특수회를 정의할 필요가 없다.
+대부분의 컨섭과 서로 다른 타입의 값을 비교해야 하는 알고리즘에서는 comon이나
+ComnonReference를 사용하는데, 이처럼 비교에 관련된 컨셉들은 [Stepanov,2009J에
+서 큰 영향을 받았다.
+비교 컨셉
+268 12장
+T를 불리언 값으로 사용할 수 있다.
+-와 !=를 이용해 T와 U의 상등성을 비교할 수 있다.
+WeakIyEqual ityComparabIeWith<T , T>
+(이어짐)

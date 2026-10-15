@@ -1,0 +1,33 @@
+int product_code;
+IF ses
+};
+
+struct Rhash {  // Record 위한 해시 함수
+size_t operator()(const Record& r) const
+{
+return hash<string>( )(r.name) ^ hash<int>( )(r.product_code);
+}
+};
+
+unordered_set<Record,Rhash> my_set; // 조회할 때 Rhash# At8st= Records 집합
+
+좋은 해시 함수를 설계하는 일에는 요령이 필요하고, 적용할 데이터에 대한 지식이
+필요할 때도 있다. 이미 존재하는 해시 함수를 배타적 논리합(*)으로 합치는 방식은
+간단하고 효윤적인 경우가 많다.
+
+다음과 같이 표준 라이브러리 hashe] 특수화로 정의하면 hash 연산을 명시적으로 전
+달할 필요가 없다.
+
+namespace std { // 860010를 위한 해시 함수
+
+template< struct hash<Record> {
+using argument_type = Record;
+using result_type = std::size_t;
+
+size_t operator()(const Record& r) const
+{
+return hash<string>()(r.name) ^ hash<int>( )(r.product_code);
+
+map¥} unordered_map9| 다음과 같은 차이점을 알아두자.
+
+건테이너 247

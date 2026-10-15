@@ -1,0 +1,32 @@
+표준 수학 함수
+atan(x)
+sinh(x)
+cosh(x)
+tanh(x)
+exp(x)
+tog(x)
+10910(x)
+아크탄센트(역탄센트)
+하이퍼를리 사인
+하이퍼를리 코사인
+하이퍼를리 탄센트
+일수 e인 지수 연산
+일수 e인 자연 로그. x는 반드시 양수여야 함
+일수 10인 로그
+이 함수들의 c예plex(14.4절) 버전은 <마le沙에서 찾을 수 있괴 반환 타입은 인자
+타입과 같다.
+<ce「「no>의 errno를 설정하는 방식으로 에러를 나타내는데, 끄이면 정의역 에러이
+고, ERANGE이면 구간 에러다.
+void f()
+e「「no = 0;
+// 예전 에러 상태 지움
+if (errno==Etn•1)
+cerr << "sqrt( )에 음수 사용할 수 없음";
+e「「no = 0;
+// 예전 에러 상태 지움
+POW( numeric—lunits<double>: :max( ) ,2)•,
+if (errno - ERAWE)
+cerr << "피 )의 결과가 double로 표현할 수 없음 정도로 금•;
+몇 가지 더 많은 수학 함수를 式stdltb>에서 찾을 수 있으며, 일종의 특수 수학 함수
+인 beta( ), rieman-zeta( ), sph-bessel() 등을 貳~th>에서 볼 수 있다.
+수시 317

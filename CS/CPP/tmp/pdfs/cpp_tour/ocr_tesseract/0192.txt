@@ -1,0 +1,38 @@
+string views 이용하면 연속적인 문자들의 AAA] 접근할 수 있다. 이때 문자들은
+5나09과 C 스타일 문자열을 비롯한 다양한 방법으로 저장될 수 있다, string_view}
+가리키는 문자들을 직접 소유하지 않는다는 점에서는 포인터나 참조와 비슷하며, STL
+의 반복자(12.3절)와도 유사하다.
+
+두 문자열을 연결하는 간단한 함수를 살펴보자.
+
+string cat(string_view svl, string_view sv2)
+
+{
+string res(svl.length()+sv2.length());
+char* p = &res[0];
+for (char c : svl)              // BALE 수행하는 한 가지 방법
++ =C;
+copy(sv2.begin(),sv2.end(),p); // 다른 방법
+return res;
+}
+
+이제 cat()& 호출해보자.
+
+string king = "Harold";
+
+auto sl = cat(king,"William");            // string} const char*
+auto 52 = cat(king,king);                // string} string
+auto 53 = cat( "Edward", "Stephen"sv);      // const char*g} string_view
+
+auto 54 = cat("Canute"sv,king);
+auto 55 = cat({&king[0],2},"Henry"sv);    // HaHenry
+auto 56 = cat({&king[0],2},{&king[2],4}); // Harold
+
+const string&9.22) 인자로 받는 compose( )oll 비해 63*()에는 세 가지 장점이
+있다.
+
+* 다양한 방식으로 관리되는 문자의 Nase 적용할 수 있다.
+* ㅇ스타일 문자열을 인자로 받을 때 임시적인 509 객체가 생성되지 않는다.
+* 부분 문자열을 쉽게 전달할 수 있다.
+
+문자열과 정규 듀천식 195
