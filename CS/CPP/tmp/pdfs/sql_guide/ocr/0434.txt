@@ -1,0 +1,22 @@
+臼장 퓌 구문
+- RENAME COLUMN
+다음은 테이블을 생성하면서 만들었던 칼럼명을 어떤 이유로 불가피하게 변경해야 하는 경우에 유용하게 쓸
+수 있는 RENAME COLUMN 구문이다.
+Oracle
+ALTER TABLE 테이불명 REN,& COLI.* 기존 칼럼명 T0 새로운 칼럼명:
+RENAME COLUMN으로 칼럼명이 변경되면, 해당 칼럼과 관계된 제약조건에 대해서도 자동으로 변경되는
+장점이 있다. 하지만 ADD/DROP COLUMN 기능처럼 ANSI/IS(Pil 명시돼 있는 기능이 아니고 Oracle 등 일부
+DBMS에서만 지원한다.
+[예제l OracIe
+ALTER TABLE PLAYER 能N贓 (仳U해 PLAYER_ID TO TEP_ID;
+테이불이 변경웠습니다.
+[예제} Oracle
+ALTER TABLE PLAYER 能N襞 (예l씌 TE顰-10 TO RAYER_ID,•
+테이를이 변경됐습니다.
+SQL 던rve새서는 sp-rename 저장 프로시저를 이용해 칼럼 이름을 변경할 수 있다.
+SQL Server
+sp-renæ •기존 칼럼영•, '새로운 칼럼명•, '(OL로
+l예제J SQL Server
+PLAYER.PLAYER_ID'. 'TEP 10• •(예l태
+주의: 개제 이름 부분을 변경하면 스크립트 및 저장 프로시저를 손상시길 수 있습니다
+전문가 ,lol드 441

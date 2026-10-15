@@ -1,0 +1,45 @@
+과목 III * 고급 활용 및 튜닝
+다. 조인 조건
+'조인 조건00in Predicate) *은 말 그대로 조인 조건절을 뷰 쿼리 블록 안으로 밀어 넣는 것으로서,
+NL 조인 수행 중에 드라이빙 테이블에서 읽은 조인 칼럼 값을 lnner 쪽(=fight side) 뷰 쿼리 블록 내에서 참조할
+수 있도록 하는 기능이다.
+이래 실행계획에서 group by3을 포함한 부를 액세스하는 단계에서 'view pushed predicate' 오퍼레이션
+(id=3)이 나타났다. 그 아래쪽에 emp-deptno-idx 인덱스가 사용된 것을 볼 수 있다. 이는 dept 테이블로부터
+넘겨진 deptno에 대해서만 group by를 수행함을 의미한다.
+select d d.&iæ, e.avg-sal
+fræ
+ld
+,(select /*+ */ deptno, avg(sal) avg-sal frm group 바 deptno) e
+vt••ere e.±ptm(+) = d.&ptno
+: fLECT STATEUENT
+N혜邕
+1 DEPT
+1 EP
+EP FTNO_IDX
+| ROWS
+Bytes |
+1*
+0
+1
+2
+3
+4
+5
+tESTED LOS WTER
+TABLE ACCESS FULL
+VIEI PUSHED REDICATE
+FILTER
+AGGREGATE
+TABLE ACCESS II&X OID
+SCAN
+5
+51
+Predicate (identified operation id):
+4 - fi1ter(O-NT(*)X)
+7 - "FTt0")
+여기서는 no-merge와 push-pred 힌트를 명시했지만, 힌트가 없어도 옵티마이저에 의해 같은 실행계획이 선택
+될 수 있다. 이 기능은 부분범외처리가 필요한 상황에서 특히 우우한데, Oracle 11g에 이르러서야 구현횄다. 만약
+위 SQL을 Oracle 10g 이하 버전에서 실행한다면, 조인 조건 Pushdown이 작동하지 않아 다음과 같이 emp 쪽
+인덱스를 Full 뇨an하는 실행계획이 나타난다. dept 테이블에서 읽히는 deptno마다 emp 테이블 전체를 group
+바하므로 성능상 불리한 것은 당연하다.
+磻01 전문가 ,까드

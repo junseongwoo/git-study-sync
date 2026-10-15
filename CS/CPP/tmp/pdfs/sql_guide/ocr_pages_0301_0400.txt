@@ -1,0 +1,4101 @@
+
+
+===== PDF PAGE 0301 =====
+
+과목 11 기본과 활용
+제3 절 그룹 함수
+1. 데이터 분석 개요
+ANSIASO SQL 표준은 데이터 분석을 위해서 다음의 세 가지 함수를 정의하고 있다.
+- AGGREGATE FUNCTION
+- GROUP FUNCTION
+WTINIX)W FUNCTION
+FUFCTION
+GROUP AGGREGATE FUN예10N이라고도 부르며, GROUP FUNCTION의 한 부분으로 분-부할 수 있다.
+1장 5절에서 설명한 COUNT, SUM, AVG, MAX, MIN 외 각종 집계 함수들이 포함돼 있다.
+GRO.JP RJtCTlON
+결산 개념의 업무를 가지는 원가나 판매 시스템의 경우는 소계, 중계, 합계, 총합계 등 여러 레벨의 결산 보교서를
+만드는 것이 중요 업무 중 하나이다. 개발자들이 이런 보고서를 작성하기 위해서는 SQL이 포함된 3GL로 배치
+프로그램을 작성하거나, 레벨별 집계를 위한 여러 단계의 SQL을 UNION과 UNION ALL로 뭄은 후 하나의 테이블을
+여러 번 읽어 다시 재정렬하는 복잡한 단계를 거쳐야 했다. 그러나 그룹 함수를 사용하면 하나의 SQL로 테이블을
+한 번만 읽어서 빠르게 원하는 리포트를 작성할 수 있다. 추가로 소계•합계를 표시하기 위해 GROUPING 함수와
+CASE 함수를 이용하면 쉽게 원하는 포맷의 보고서 작성도 기능하다.
+그를 함수로는 집계함수를 제외하괴 간의 소계를 계산하는 ROLLUP 함수, GROUP BY 항목 간 다차원 적인
+소계를 계산할 수 있는 CUBE 함수, 특정 항목에 대한 소계를 계산하는 GROUPING SETS 함수가 있다.
+ROLLUP은 GROUP BY의 확장된 형태로 사용하기가 쉬우며 병렬로 수행할 수 있어 매우 효과적일 뿐 아니라
+시간 및 지역처럼 계층적 분류를 포함하고 있는 데이터의 집계에 적합하다.
+CUBE는 결합 가능한 모든 값에 대해 다차원적인 집계를 생성하게 되므로 ROLLUP에 비해 다양한 데이터를
+얻는 장점이 있는 반면, 시스템에 부하를 많이 주는 단점이 있다.
+GROUPING SETS는 원하는 부분의 소계만 손쉽게 추출할 수 있는 장점이 있다.
+ROLLUP, CUBE, GROUPING SE*IS 결괴에 대한 정렬이 필요한 경우는 ORDER BY 절에 정렬 칼럼을 명시해아
+Fl-JtCTIO•I
+부석 함수(ANALYTIC FUNCTION)나 순위 함수(RANK FUNCI*ION)로도 알려진 원도우 함수는 데이터 웨어
+하우스에서 발전한 기능이며, 자세한 내용은 다음 절에서 설명한다.
+%8 전문가 ,리드
+
+
+===== PDF PAGE 0302 =====
+
+R2장 활용
+2. ROLLUP 함수
+ROLLUP에 지정된 Grouping Columns의 List는 Subtotal을 생성하기 위해 사용되며, Grouping Columns의
+수를 N이라고 했을 때 +1 Level의 Subtotal이 생성된다. 중요한 것은, ROLLUP의 인수는 계층 구조이므로
+인수 순서가 바뀌면 수행 결과도 바뀌게 되므로 인수의 순서에도 주의해야 한다.
+ROLLUP과 CUBE의 효과를 알아보기 위해 단계별로 데이터를 출력해보자.
+STEP 1. 일반적인 GROUP 절 사용
+[예삐
+SELECT 8.~, A.Jæ, (0.酊 (삐 AS EP_CNT, 91 (A.SAL) AS SAL-SI-N
+FO EP 시 FT B
+B.DEPTW = A.FTIO
+6懕.2 BY B.NAE, A.JOB;
+[실행 결과]
+RESEAR대
+ACCO-NTI%
+RESEAR대
+SALES
+ACCu.R•{Tr6
+RESEAR대
+SAIFS
+ACQNTI%
+SALES
+m,ALYST
+CLERK
+CLERK
+CLERK
+UANAGER
+EP_CNT
+2
+1
+2
+1
+1
+1
+1
+1
+4
+SAL-SI-N
+1堈
+24%
+刃75
+9 행이 선택왰습니다.
+Oracle을 포함한 일부 DBMS의 과거 버전에서는 GROUP BY 절 사용 시 자동으로 정렬을 수행했으나, 요즘
+대부분의 DBMS 버전은 집계 기능만 지원한다. 정렬이 필요한 경우는 ORDER BY 절에 명시적으로 정렬 칼럼을
+표시해야 한다.
+전문가 ,柯드 309
+
+
+===== PDF PAGE 0303 =====
+
+과목 II 기본과 활용
+STEP 1-2 ~ BY 절 + BY 절 사용
+[예제 부서명과 업무명을 기준으로 집계한 일반적인 GROUP BY SQL 竪+에 ORDER BY 절을 사용함으로써 부서 • 업무별로
+정열이 이루어진다.
+:예제1
+SELECT 8 -, (啞 (삐 AS EP-CNT, SIN (A.SAL) AS SAL—SIN
+~ EP 시
+8 呼T題 =
+- BY 8
+EP CNT
+[실행 즐과]
+ACCO-NTI%
+ACCO.NTI%
+ACq,NTItE
+SAIFS
+CLERK
+CLERK
+CLERK
+1
+1
+1
+2
+2
+1
+1
+1
+4
+SAL-SI-N
+1弼
+2450
+1嚼
+2975
+9 형이 선택왰습니다.
+STEP 2 ROLLUP 함수 사용
+[예제] 부서명과 업무명을 기준으로 집계한 일반적인 GROUP BY SQL 문장에 ROLLUP 함수를 사용한다.
+[예제]
+SELECT ~, A.n, (啞 (하 AS EP_CNT, SI.N (A.SAL) AS SAL—SIN
+FO EP 시 FT
+~ BY 皿L呼 (8 ~, A.JW);
+결행 결과]
+EP_CNT
+310 전문가 가이드
+
+
+===== PDF PAGE 0304 =====
+
+R2장 활용
+SALES
+SALES
+氈뚀AR대
+RESEAR대
+ACCUTI%
+ACCWNTI%
+ACCWNTI%
+CLERK
+SALESW
+ANALYST
+CLERK
+CLERK
+1
+1
+4
+2
+2
+1
+1
+1
+1
+2975
+1丑
+24%
+13 행이 선택됐습니다.
+실행 결고}oll서 2개의 GROUPING COLUMNS(DNAME, JOB)에 대해 다음과 같은 추가 LE가진.의 집계가 생성
+된 것을 볼 수 있다.
+LI - GROUP BY 수행 시 생성되는 표준 집계(9건)
+L2 - DNAME 별 모든 JOB의 SUBTOTAL(3건)
+L3 - GRAND TOTAL(마지막 행, 년)
+추가로 ROLLUP의 경우 계층 간 집계에 대해서는 LEVEL별 순서(LI기2기3)를 정렬하지만, 계층 내 GROUP
+BY 수행 시 생성되는 표준 집계에는 별도의 정렬을 지원하지 않는다.
+LI, L2, L3 계층 내 정렬을 위해서는 별도의 ORDER BY 절을 사용해야 한다.
+STEP 2-2. WLLUP 함수 + BY 절 시용
+[예제] 부서명과 업무명을 기준으로 집계한 일반적인 GROUP BY SQL 문장에 ROLLUP 함수를 사용한다. 추가로
+BY 절을 사용해서 부서•업무넓로 정열한다.
+[예제]
+SELECT A.n, CO,NT (하 AS EP_CNT, 91 (A.SAL) AS SAL-SI.N
+FO EP A,
+해E氈 B.FTW =
+6″ BY mLLl-P (8.~,
+0霖R BY
+전문가 &l드 311
+
+
+===== PDF PAGE 0305 =====
+
+과목 ll 기본과 활용
+I실월 결과1
+A((嚼1柘
+AMLYST
+(계 FS
+SALESUAN
+13 행이 선택쾼습니다.
+STEP 3. 함수 사용
+EP_CNT
+1
+1
+1
+2
+2
+1
+1
+1
+4
+SAL-SI-N
+1饗
+24%
+1嚼
+2975
+7
+ROLLUP, CUBE, GROUPING SEIS 등 새로운 그름 함수를 지원하기 위해 GROUPING 함수가 추가됐다.
+- ROLLUP이나 CUBE에 의한 소계가 계산된 결과에는 GROUPING(EXPR) = 1이 표시된다.
+- 그 외의 결과에는 GROUPING(EXPR) = 0이 표시된다.
+GROUPING 함수와 CASF,/DECODE를 이용해, 소계를 나타내는 필드에 원하는 문자열을 지정할 수 있어서
+보고서 작성 시 유용하게 사용할 수 있다.
+[예제] 함수를 추가한 집계 보고서에서 집계 레코드를 구분할 수 있는 GROUPING 함수가 추가된 SQL 문장이다.
+[예제]
+SELECT ~, ″1% (8 매贓) AS QP
+, A.n , ″1飇 (A.Jæ ) AS GF
+(伋酊 (하 AS EP-CNT, 91 (A SAL) AS SAL-SUU
+~ BY %L니2 (8.~ A.JØ
+BY 8.~ A.n;
+312 전문가 가이드
+
+
+===== PDF PAGE 0306 =====
+
+[실행 결과l
+ACCWNTI%
+ACCO..NTI%
+ACCWNTI%
+RESEAR대
+RESEAR대
+RESEAR대
+RE
+SALES
+SALES
+13 행이 선택됐습니다.
+0
+0
+0
+0
+0
+0
+0
+0
+CLERK
+백鱉R
+ANALYST
+CLERK
+SALESW
+0
+0
+0
+0
+0
+0
+0
+0
+0
+EP_CNT
+1
+1
+1
+2
+2
+1
+1
+1
+4
+1
+SAL-SI-N
+IE
+24%
+IÆ
+乃75
+廠장 활용
+3
+부서별땝무별과 전체 집계를 표시한 레프에서는 GROUPING 함수가 1을 반ee 것을 획인할 수 있다. 그리고
+전체 합계를 나타내는 결과 라인에서는 부서별 GROUPING 함수와 업무별 GROUPING 함수가 둘 다 1인 것을
+알 수 있다.
+STEP 4. GROUPING 함수 + CASE 사용
+[예제] ROLLUP 함수를 추가한 집계 보고서에서 집계 레코드를 구분할 수 있는 GROJPING 함수와 C싀뚀 함수를 함께 사용한
+SQL 문장을 작성한다
+[예제]
+SELECT CASE ÄPING (8 ″) M€N 1 'A11 ELSE ~ EtO AS ~
+, CASE ) 1 •샌1
+, (Ⅷ (하 AS EP_CNT, SIN (A.SAL) AS SAL-SI-N
+FO EP 시 FT B
+WHERE 8 FTt0 = A.FTIO
+6″ BY ROLLIP (B.NE, A.J@
+ORIYR BY 8.~, A.Jæ;
+ELSE A.n AS 〕%
+전문가 가이드 313
+
+
+===== PDF PAGE 0307 =====
+
+과목 ll QL 기본과 활용
+Oracle의 경우는 DECODE 함수를 사용해서 좀 더 간결하게 표현할 수 있다.
+[예제]
+SELECT DEOE (″1蘭 (8 Nk), 1, 'A11 , B.DNAME) AS 아{A드
+贊(啞 (″I蘭 (A.Jæ), 1, 'A11 JObs'
+(啞 (하 AS EP-CNT, 9.1 (A.SAL) AS SAL-SUM
+~ EP 시 FT 8
+8 喞T江 =
+BY OLLI-P (8 ~, A.Jæ)
+BY 8 隧襞 A.JBt
+, A.Jæ ) AS
+[실행 출과1
+AC(0협TI飇
+A((0..께TI蘭
+ACCOMI%
+13 행이 선택묐습니다.
+CLERK
+ANALYST
+CLERK
+EMP_CNT
+1
+1
+1
+2
+2
+1
+1
+1
+4
+14
+SAL—SW
+1彌
+24%
+87%
+1嚼
+2975
+7
+28%
+부서별과 전체 집계를 표시한 레코드에서 '세 l)epartments'와 '세 jobs'eb는 사용자 정의 텍스트를 확인할
+수 있다. 일부 DBMS는 GROUPING-ID라는 비슷한 용도의 함수를 추가로 사용할 수도 있다.
+314
+전문가 ,버드
+
+
+===== PDF PAGE 0308 =====
+
+m장 활용
+STEP 4-2. ROLLUP 함수 일부 사용
+[예제] GROUP BY ROLLUP (DNAME, 」예) 조건에서 GROUP BY DNAME, ROLLUP(」에 조건으로 변경한 경우다
+[예제]
+SELECT CASE GRQPING (BNÄ *EN 1 T}CN 'A11 ELSE B.NE EtO AS ~
+CASE 獸이.PI沰 (A.Jæ ) HN 1 TÆN •섀1 JObs'
+, (Ⅷ (하 AS EP-CMT, SW (A.SAL) AS SAL-SI-N
+FO EP A, FT B
+WHERE = A.FTIO
+6″ BY 8.~, QLIP (A.n)
+ÄR BY B.(NAÆ An;
+ELSE A.Jæ EW AS Jæ
+[실행 결과)
+A((嚼1馬
+ACCO.JNTII"
+ACQMI%
+Jæ
+CLERX
+WLYST
+CLERK
+uN%ER
+EP_CNT
+1
+1
+1
+2
+2
+1
+1
+1
+4
+SAL-SIN
+24%
+1嚼
+刃75
+12 행이 선택왰습니다.
+결과는 마지막 A11 Departments & A11 Jo懿 줄만 계산이 되지 않았다 ROLLUP이 JOB 칼럼에만 사용돼
+DNAME에 대한 집계는 필요하지 않기 때문이다.
+(삭제된 레코드)
+A11 A11 J0bs
+14
+2%25
+전문가 가이드 315
+
+
+===== PDF PAGE 0309 =====
+
+과목 ll * 기본과 활용
+STEP 4로 WLLUP 함수 결합 칼럼 사용
+[예제] JOB과 MGR은 하나의 집합으로 간주하고 부서하 JOB & MGR에 대한 ROLLUP 결과를 출력한다.
+!예제1
+SELECT 8 A.Jæ, A.&
+(″ (와 AS EP-CNT, SI.N (A.SAL) AS SAL-SUU
+~ EP 시 FT
+靨E뚀 喞T齡 = A.FTtO
+~ BY OLLLP (B.NAE, (A.J8, A.%R))
+BY A.JOB, A.R;
+[실행 끌과]
+A((0驪TI柘
+ACCU-NTI%
+ACCOJNTI%
+Jæ
+CLERK
+백u뚀R
+RESIDENT
+ANALYST
+CLERK
+7『粥
+EP CNT
+1
+1
+1
+2
+1
+1
+1
+1
+1
+4
+1
+SAL—SIN
+1丑
+24%
+7
+11%
+2975
+14 행이 선택묐습니다.
+ROLLUP 함수 사용 시 괄호로 묶은 JOB과 MGR의 경우 하나의 집합(JOB+MGR) 칼럼으로 간주해 괄호 내
+칼럼별 집계를 구하지 않는다.
+316 전문가 가이드
+
+
+===== PDF PAGE 0310 =====
+
+활용
+3. CUBE 함수
+ROLLUP에서는 단지 가능한 Subtotal만을 생성하지만, CUBE는 결합 가능한 모든 값에 대해 다차원 집계를
+생성한다. CUBE를 사용할 때는 내부적으로는 Grouping Columns의 순서를 바꾸어서 또 한 번의 쿼리를 추가
+수행해야 한다. 그뿐만 아니라 Grand Total은 양쪽의 쿼리에서 모두 생성되므로 한 번의 쿼리에서는 제거돼0빤
+하므로 ROLLUPII 비해 시스템의 연산 대상이 많다.
+이처럼 GROUPING 칼럼이 가질 수 있는 모든 경우에 대해 Subtotal을 생성해야 하는 때는 CUBE를 사용하는
+것이 바람직하나, ROLLUPII 비해 시스템에 많은 부담을 주므로 사용에 주의해야 한다.
+CUBE 함수의 경우 표시된 인수들에 대한 계층별 집계를 구할 수 있으며, 이때 표시된 인수 간에는 계층 구조인
+ROLLUP과는 달리 평등한 관계이므로 인수의 순서가 바뀌는 경우 행간에 정렬 순서는 바뀔 수 있어도 데이터
+결과는 같다.
+그리고 CUBE도 결과에 대한 정렬이 필요한 경우는 ORDER BY 절에 명시적으로 정렬 칼럼이 표시돼야 한다.
+STEP 5. CUBE 함수 이용
+[예제] GROUP BY ROLLUP (DNAME, JOB) 조건에서 GROUP BY CUBE (DNAME, JOB) 조건으로 변경혜 수행한다
+[예제]
+SELECT CASE 6″1N6 (8 ~) MfN 1 가해 'A11 Departments' ELSE 8.~ AS ~
+CASE 鰍이PI馮 (A.n ) MCN 1 TÆN •慰1 1弼•
+, (이.酊 (와 AS E顰-(酊, SIN (A SAL) AS SAL-SI.N
+FO EW) 시 B
+WFERE FTIO = A.FTt0
+6″ BY CUBE (B ~, A.JØ
+0皬R BY B.NAk A.JOB;
+[실행 결과]
+ACCWNTIW
+ACCWNTIW
+ACCO.JNTI%
+ACCWNTIt•6
+RESEAR대
+RESEAR대
+RESEAR대
+RESEAR대
+SALES
+CLERK
+A11 J±s
+N{ALYST
+CLERK
+A11 J固5
+CLERK
+EP-CNT
+1
+1
+1
+3
+2
+2
+1
+5
+1
+ELSE A.aæ EIO AS Jæ
+SAL-SI-N
+24%
+刃75
+1%75
+전문가 ,미드 317
+
+
+===== PDF PAGE 0311 =====
+
+과목 ll 기본과 활용
+A11
+18 행이 선택됐습니다.
+SALESW
+A11 J±s
+A11 J±s
+1
+4
+6
+4
+14
+2850
+7
+2%25
+CUBE는 GROUPING 칼럼이 가질 수 있는 모든 경우의 수에 대해 Subtotal을 생성하므로 GROUPING
+COLUNNS의 수가 N이라고 가정하면, 2의 N승 LEVEL의 Subtotal을 생성하게 된다.
+실행 결과에서 CUBE 함수 사용으로 ROLLUP 함수의 결과에다 업무별 집계까지 추가해서 출력할 수 있는데,
+ROLLUP 함수와 비교하면 업무별 집계를 표시한 5건의 레코드가 추가된 것을 확인할 수 있디(AⅡ Depaftments-
+CLERK, ANALYST, NLANAGER, SALESMAN, PRFSIDENT별 집계가 5건 추가됐다).
+STEP 52 ALL 사용 *
+UNION ALL은 뇨 Operation 내용으로, 여러 SQL 문장을 연결하는 역할을 할 수 있다. 위 SQL은 첫 번째
+SQL 모듈부터 차례대로 결과가 나으므로 위 CUBE SQL과 결과 데이터는 같으나 행들의 정렬은 다를 수 있다.
+[예제]
+SELECT ~ Jæ
+(0.鼈 (하 AS EP-CNT, 511 (SAL) AS SAL SI-N
+FO EP 시 FT
+B.FTtO = A.tkPTtO
+″ BY ~ Jæ
+I-NIm ALL
+SELECT ~ • A11 J±s• AS Jæ
+(啞 (하 AS EP-CNT, 91 (SAL) AS SAL-SI-U
+FO EP 시 FT B
+= A.FTPO
+~ BY 까4襞
+1A1圖 ALL
+SELECT • A11 • AS - ,
+CO-NT (하 AS EP-CNT, 91 (SAL) AS SAL-SIN
+318 전문가 ,까드
+
+
+===== PDF PAGE 0312 =====
+
+駁장 활용
+FRW EW) A, DEPT
+W}fRE B.DEPTIO = A DEPTt0
+6″ BY JOB
+배I盥 ALL
+SELECT 'ALL DEPARTUENTS' AS ~ 'ALL JÜ AS
+, (이凴T (와 AS EMP_CNT, 91 (SAL) AS SAL-SI.N
+FROM EP A, FT
+HERE B.FTt0 = A DEPTt0;
+CUBE 함수를 사용하면서 가장 크게 개선되는 부분은 CUBE 사용 전 따L에서 Dv{P, DEPI' 테이불을 네 번이나
+반복 액세스하는 부분을 CUBE 사용 SQL에서는 한 번으로 줄일 수 있는 부분이다. 기존에 같은 테이를을 네 번
+액세스하는 이유가 됐던 부서와 업무별 소계와 총계 부분을 CUBE 함수를 사용함으로써 한 번의 액세스만으로
+구현한다.
+결과적으로 수행속도 및 자원 사용를을 개선할 수 있으며, SQL 문장도 더 짧아졌으므로 가독성도 높아졌다.
+실행 결과는 STEP5의 결과와 같다. ROLLUP 함수도 같은 개선 효과를 얻을 수 있다.
+4. GROUPING SEIS 함수
+GROUPING SEIS를 이용해 더욱 다0뵤卜 소계 집합을 만들 수 있는데, GROUP BY 문장을 여러 번 반복하지
+않아도 원하는 결과를 쉽게 얻을 수 있게 됐다.
+GROUPING SEIS에 표시된 인수들에 대한 개별 집계를 구할 수 있으며, 이때 표시된 인수 간에는 계층 구조인
+ROLLUP과 달리 평등한 관계이므로 인수의 순서가 바뀌어도 결과는 같다.
+그리고 GROUPING SE*IS 함수도 결과에 대한 정렬이 필요한 경우는 ORDER BY 절에 명시적으로 정렬 칼럼이
+표시돼야 한다.
+일반 그를 함수를 이용한 SQL
+[예제] 일반 그를 함수를 이용해 부서하 JOBV 인원수와 급여 합을 구하라.
+[예제]
+SELECT DNAE •섒1 J±s' AS
+, (여.께T (삐 AS EP_CNT, 호國 (SAL) AS SAL-SI-N
+FO EW) 시
+WHERE B.DEPTIO = A.匿PT測
+6″ BY 아4埏
+전문가 319
+
+
+===== PDF PAGE 0313 =====
+
+과목 II QL 기본과 활용
+(NI團 ALL
+SELECT • A11 • AS DNAME, Jæ
+(Ⅷ (하 AS EP_CNT, SI-N (SAL) AS SAL-SI-N
+~ B.FTPO = A.FTW
+EP CNT
+~ BY
+[실행 콜과]
+ACCUNTI%
+A11
+A11
+A11 kpartænts
+A11
+A11
+8 행이 선택욌습니다.
+A11 Jobs
+A11 J±s
+A11 1固s
+ANALYST
+CLERK
+UANAGER
+RESIDENT
+SALESUAN
+3
+5
+6
+2
+4
+3
+1
+4
+SAL-SIN
+87%
+1%75
+41%
+8275
+실행 결과는 별도의 ORDER BY 조건을 명시하지 ?땄기 때문에 DNAME이나 JOB에 대해 정렬돼 있지 않다.
+GROIJPING SETS 사용 SQL
+[예제] 일반 그를 함수를 GROUPING SETS 함수로 변경해 부서래 JOBW 인원수와 급여 합을 구하라.
+[예삐 OracIe
+SELECT CASE ″I劂 (B ″) *fEN 1 TÆN |A11 Departments' ELSE B.DNAME END AS DNAME
+CASE ″I馮 ) MfN 1 1氈N 'A11 JObs'
+cu-NT (하 AS EP-CNT, 91 (A.SAL) AS SAL SIJM
+FO EP 시 FT 8
+″ BY ″I蘭 SETS (8 DNA%, A.JØ
+BY 8.~ A.JW
+ELSE EIO AS 3%
+
+
+===== PDF PAGE 0314 =====
+
+[실행 결과]
+ACCUTII"
+RESEAR대
+SALES
+A11 DepartNnts
+A11
+A11
+A11
+A11
+8 행이 선택됐습니다.
+JOB
+A11 1固s
+A11 1固s
+A11 hs
+ANALYST
+CLERK
+SALESW
+EP_CNT
+3
+5
+6
+2
+4
+3
+1
+4
+R2장 활용
+SAI SIN
+87%
+1%75
+41%
+8275
+GROUPING SETS 함수 사용 시 UNION ALL을 사용한 일반 그룹 함수를 사용한 SQL과 같은 결과를 얻을
+수 있으며, 괄호로 묶은 집합 별로(괄호 내는 계층 구조가 아닌 하나의 데이터로 간주함) 집계를 구할 수 있다
+GROUPING SEIS의 경우 일반 그룹 함수를 이용한 따L과 결과 데이터는 같으나 행들의 정렬 순서는 다를
+수 있다.
+ㆍ GROJPING 표죠 사용 * • 순서 변경
+[예제] 일반 그를 함수를 GROUPING 표죠 함수로 변경해 부서하 JOBV 인원수와 급여 합을 구할 때 GRO.-JP1t•G SETS의
+인수 순서를 바꾸어 본다.
+[예제] Oracle
+SELECT CASE GOPING (8.~) MEN 1 가대 'A11 Departments• ELSE EtO AS ~
+CASE 애이PI馮 (A.n ) *EN 1 T}•EN 'A11 J0bs•
+ELSE A.Jæ EtO AS
+, QNT (하 AS EP_CNT, 91 (A.SAL) AS SAL-SI-N
+FO EF 시 WYT B
+W}fRE = A.FTW
+GRO..P BY 鰍0.PI馮 SETS (A.n, 8.″)
+ORDER BY 8.~, A.JOB;
+321
+
+
+===== PDF PAGE 0315 =====
+
+과목 II 기본과 활용
+!실형 끌과l
+ACCUTI%
+A11
+A11
+A11
+A11
+A11
+8 행이 선택웠습니다.
+EP_CNT
+A11 »s
+A11 JOs
+A11 üs
+ANALYST
+CLERK
+SALESLAN
+SAL—SIN
+87%
+1%75
+41駟
+8275
+GROUPING SEIS 인수들•은 평등한 관계이므로 인수의 순서가 바뀌어도 결과는 같다(JOB과 DNAMEA 순서가
+바뀌었지만 결과는 같다).
+화의 인수를 이용한 GROJPING 표죠 이용
+[예제] 부서-」OB-매니저별 집계, 부서•JOB별 집계, JOB-매니저별 집계를 GROUPING SETS 함수를 이용하여 구해본다.
+GROlJPlt-G 표죠 함수 사용 시 괄호로 묶은 집합별로(칼호 내는 계층 구조가 아닌 하나의 데이터로 간주함) 집계를
+구할 수 있다.
+우제]
+SELECT A.Jæ, A
+(이.酊 (하 AS EP_CNT, SI國 (A.SAL) AS SAL-SUU
+FO A, FT
+= A.FTtO
+{실형 결과]
+ACCO-NTI%
+貳(嚼1飇
+v-.(嚼1飇
+322 전문가 ,까드
+CLERK
+CLERK
+EP_CNT
+7782
+78剪
+SAL-SIN
+24%
+24%
+
+
+===== PDF PAGE 0316 =====
+
+ACC(INTIW
+RESERCH
+RESEBR대
+RESEARCH
+RESEAR대
+RESEARCH
+RESEAR대
+SALES
+SALES
+SAIFS
+RESIM
+N{ALYST
+ÆIALYST
+CLERK
+CLERK
+CLERK
+넓사{A佂R
+LANAGER
+CLERK
+CLERX
+LANAGER
+SALESW
+ANALYST
+CLERX
+CLERK
+飇배A뚀R
+7苅
+76%
+76%
+7粥
+76%
+7%2
+78剪
+76%
+廠장 활용
+11%
+刃75
+2975
+11%
+8275
+27 행이 선택쾼습니다.
+실행 결과에서 첫 번째 10건의 데이터는 (DNAME+JOB+MGR) 기준의 집계이며, 두 번째 9건의 데이터는
+(DNAME+JOB) 기준의 집계이다. 세 번째 8건의 데이터는 (JOB+MGR) 기준의 집계이다.
+전문가 가이드 323
+
+
+===== PDF PAGE 0317 =====
+
+과목 II 기본과 활용
+제4절 윈도우 함수
+1. 원도우 함수 개요
+기존 관계형 데이터베이스는 칼럼과 칼럼 간의 연산• 비교 • 연결이나 집합에 대한 집계는 쉬운 반면, 행과 행간의
+관계를 정의하거나 행과 행간을 비교 • 연산하는 것을 하나의 SQL 문으로 처리하는 것은 매우 어려운 문제였다.
+PLSQL, SQL,PL, T-SQL PRO*C 같은 절차형 프로그램을 작성하거나, IN니NE VIEW를 이용해 복잡한 SQL
+문을 작성해야 하던 것을 부분적이나마 행과 행간의 관계를 쉽게 정의하기 위해 만든 함수가 바로 WINDOW
+FUNCTION이다. 윈도우 함수를 활용하면 복잡한 프로그램을 하나의 SQL 문장으로 쉽게 해결할 수 있다.
+분석 함수(ANALYIIC FVNC긔ON)나 순위 함수(RANK FUNCMON)ÆÆ 알려진 원도우 함수(ANSI/ISO SQL
+표준은 FUNCI'ION이란 용어를 사용함)는 데이터 웨어하우스에서 발전한 기능이다. SQL 사용자로서는
+Ⅸ니NE VIEW 이후 바L의 중요한 기능이 추가됐다고 할 수 있으며, 많은 프로그램이나 튜닝 팁을 대체할 수
+있을 것이다
+복잡하거나 자원을 많이 사용하는 튜닝 기법들을 대체할 수 있는 DBMS의 새로운 기능은 튜닝 관점에서도 최적화된
+방법이므로 적극적으로 활용할 필요가 있다. 같은 결과가 나오는 변형된 튜닝 문장보다는 DBMS 벤더에서 최적화한
+자원을 사용하도록 만들어진 새로운 기능을 사용하는 것이 일반적으로 더욱 효과가 좋기 때문이다.
+윈도우 함수(WINIX)W 氈JN臼10N0는 기존에 사용하던 집계함수도 있괵 새로이 윈도우 함수 전용으로 만들어진
+기능도 있다. 그리고 윈도우 함수는 다른 함수와는 달리 중N(NEST)해서 사용하지는 못하지만, 서브 쿼리에서는
+사용할 수 있다.
+윈도우 함수 종류
+윈도우 함수의 종류는 크게 다섯 개의 그름으로 분류할 수 있는데 벤더별로 지원하는 함수에는 차이가 있다.
+첫 번째, 그를 내 순위(RANK) 관련 함수는 RANK, DENSE-RANK, ROW-NUMBER가 있다. ANSI/ISO SQL
+표준과 oracle, SQL server 등 대부분의 DBMS에서 지원한다.
+두 번지 그룹 내 집계(AG죠R恥AI匂 관련 함수는 일반적으로 많이 사우는 SUM, MAX, MIN, AVG, COUN'I가
+있다. ANSI/IY) 표준과 oracle, SQL 등 대부분의 DBMS에서 지원하고 있는데, SQL Server의 경우
+집계함수는 뒤에서 설명할 OVER 절 내의 ORDER BY 구문을 지원하지 않는다.
+세 번지 그를 내 행 순서 관련 함수는 FIRST-VALUE, LAST-VALUE, LAG, LEAD가 있다. OracIe에서만
+지원하는 함수이기는 하지만, FIRSr-VALUE, LAST-VALUE 함수는 MAX, MIN 함수와 비슷한 결과를 얻을
+수 있다. LAG, LFAD 함수는 DW에서 유용하게 사용되는 기능이므로 같이 설명하도록 한다.
+네 번째, 그를 내 비율 관련 함수는 CUME-DM, PERCENT-RANK, NTILE, RATIO-TO-REPORT가 있다.
+CUME-DIST, PERCENr-RANK 함수는 ANSI/ISO SQL 표준과 OracIe DBMS에서 지원한다. NTILE 함수는
+ANSIflSO SQL 표준에는 없지만, Orade과 SQL 던끠에서 지원한다. 마지막으로 RATIO-TO-REX)RT 함수는
+(云acle에서만 지원하지만, 현업에서 우용한 기능을 구현하는 데 참조하기 위해 설명하도록 한다.
+꾜41擧전문가,PI드
+
+
+===== PDF PAGE 0318 =====
+
+駁장 활용
+다섯 번째, 선형 분석을 포함한 통계 분석 관련 함수가 있다. 통계에 특화한 기능이므로 본 가이드에서는 설명을
+생략한다. 다음은 Oracle의 통계 관련 함수를 참조로 표시한 것이다
+CORR, COVAR—POP, COVAR-SAMP STI)DEV, STDDEV-POP, SIDDEV-SAMP, VARIANCE,
+VAR-POP, VAR-SAMP, REGR-(니NEAR REGRESSION), REGR-SLOPE, REGR-INTERCET,
+REGR-COUNT, REGR-R2, REGR-AVGX, REGR-AVGY, REGR-SXX, REGR-SYY, REGR-SXY
+ㆍ Fl-JtCTlO••l SYNTAX
+• 원도우 함수에는 OVER 문구가 기워드로 필수 포함된다.
+SELECT (ARGNENTS) OVER ([PARTITWI BY 칼럼] @DER BY 절1 [飜괴NG 절1)
+FROM 테이블 명;
+- WINLX)W-FUNCTION : 기존에 사용하던 함수도 있고, 새롭게 WINDOW 함수&으로 추가된 함수도 있다
+- ARGUMENTS (인수) : 함수에 따라 0 ~ N개의 인수가 지정될 수 있다.
+- PARTITION BY 절 : 전체 집합을 기준에 의해 소그룹으로 나눌 수 있다.
+- ORDER BY 절 : 어떤 항목에 대해 순위를 지정할지 ORDER BY 절을 기술한다.
+• WNDOWING 절 : WINmWING 절은 함수의 대상이 되는 행 기준의 범위를 강력하게 지정할 수 있다
+ROI죠는 물리적인 결과 행의 수를, RANGE는 논리적인 값에 의한 범위를 나타낸다. 둘 중 하나를 선택해서
+사용할 수 있다. 다만 WTNDOWING 절은 SQL 뇨rve뗴서는 지원하지 않는다.
+[BEMEN 사용 타입]
+R(XS : R.AWE BETWEEN I}QNDED PRECEDIW CIRENT 1 VALIJE EXR RECEDIW/FOLLMNG
+FOLOII" | CIRENT | VALIÆ EXR RECEDIWFOLLMNG
+IBEMEN 미사용 타입1
+RM 1 PA%E PRECEDIt6 | CURENT | VALLE_EXPR
+전문가 가이드 325
+
+
+===== PDF PAGE 0319 =====
+
+과목 II QL 기본과 활용
+2. 그룹 내 순위 함수
+가. RANK 함수
+RANK는 ORDER BY를 포함한 QUERY 문에서 특정 항목(킬럼)에 대한 순위를 구하는 함수다. 이때 특정 범위
+(PARIITOO 내에서 순위를 구할 수도 있괴 전체 데이터에 대한 순위를 구할 수도 있다. 또한 동일한 값에 대해서는
+동일한 순위를 부여한다.
+[예제] 사원 데이터에서 급여가 높은 순서와 JOB별로 급여가 높은 순서를 같이 출력한다.
+!예제1
+SELECT ~ SAL
+″ () 에飜 (″ BY SAL EC) AS ALL-RK
+″ () WER (P枳TITI애 BY Jß BY SAL DESC) AS JOB_RK
+{실행 결과]
+Jæ
+KIt"
+SCOTT
+TI.RÆR
+UIIIFR
+WRTIN
+JAES
+SYITH
+14 행이 선택굈습니다.
+2975
+2450
+1圄
+12%
+12%
+11%
+ALL-RK
+10
+13
+14
+Jæ—RK
+업무 구분이 없는 ALL-RK 칼럼에서 FORD와 SC(JIT, WARD와 MARTIN은 동일한 SALARY이므로 같은
+순위를 부여한다. 그리고 업무를 PARTITION으로 구분한 JOB-RK는 같은 업무 내 범위에서만 순위를 부여한다.
+326
+전문가 7h1드
+
+
+===== PDF PAGE 0320 =====
+
+駁장 활용
+하나의 SQL 문,쳔 ORDER BY SAL DESC 조건과 PARMION BY JOB 조건이 충들났기 때문에 JOB별로는
+정릴되지 않고 ORDER BY SAL DFSC 조건으로 정릴됐다.
+[예제] 앞 SQL 문의 결과는 JOB과 SALARY 기준으로 정열대 있지 않다. 새로운 SQL에서는 전체 SALARY 순위를 구하는
+시 1 RK 칼럼은 제외하고, 업무별로 SALARY 순서를 구하는 」馹-RK만 알아보도록 한다.
+[예제]
+SELECT 1%, SAL
+RÆK () WER BY 1% MR BY SAL DESC) AS JOB-RK
+FO EP;
+[실행 결과1
+JCB
+AkALYST
+ARALYST
+CLERK
+CLERK
+CLERK
+SALESUAN
+SALESW
+LRK
+SCOTT
+UILLER
+JA*S
+ALLEN
+TWÆR
+11%
+凶75
+1槦
+1羈
+12%
+12%
+14 행이 선택묐습니다.
+업무별로 SAIARY 순서를 구하는 JOB-RANK만 사용한 경우 파티션의 기준이 된 JOB과 SALARY별로 정렬이
+돼 있는 것을 알 수 있다.
+전문가 ,버드 327
+
+
+===== PDF PAGE 0321 =====
+
+과목 II 기본과 활용
+나. 匯瓲-R團K 함수
+DENSE-RANK 함수는 RANK와 유사하나 동일한 순위를 하나의 건수로 취급하는 점이 다르다.
+[예제] 사원 데이터에서 급여가 높은 순서와, 동일한 순위를 하나의 등수로 간주한 결과도 같이 출력한다.
+[예제1
+SELECT ~ SAL
+″ () 0•,鰍 BY SAL DESC) AS RK
+~-″ () WER (″ BY SAL DESC) AS 咏
+결행
+KI%
+TIRÆR
+UILLER
+LARTIN
+SMITH
+14 행이 선택묐습니다.
+24%
+1圄
+15%
+1甓
+12%
+1250
+13
+14
+FORD와 SCOTT, WARD와 MARI'IN은 동일한 SALARY이므로 RANK와 DENSE-RANK 칼럼에서 모두 같은
+순위를 부여한다.
+그러나 溫K와 DENSE-RANK의 차이를 알 수 있는 데이터는 FORD와 SCO'IT의 다음 순위인 JON조의
+경우 RANK는 4등으로, DENSE-RANK는 3등으로 표시돼 있다. 마찬가지로 WARD와 MARTIN의 다음 순위인
+ADAMS의 경우 RANK는 12등으로 DENSE-RANK는 10등으로 표시돼 있다.
+꾜8
+
+
+===== PDF PAGE 0322 =====
+
+활용
+다. RO/I NINÆR 함수
+ROW-NUMBER 함수는 RANK나 DENSE-RANK 함수가 동일한 값에 대해서는 동일한 순위를 부여하는 데
+반해, 동일한 값이라도 고유한 순위를 부여한다.
+[예제] 사원 데이터에서 급여가 높은 순서와, 동일한 순위를 인정하지 않는 등수도 같이 출력한다.
+[예삐
+SELECT 0%, ENAE SAL
+RAM () OVER ÄR BY SAL tkSC) AS RK
+() WER (ÆR BY SAL AS RN
+!실행 결과!
+ANALYST
+LANAGER
+UANAGER
+LANAGER
+SALESUAN
+SALESLAN
+SALESUN
+CLERK
+CLERK
+CLERK
+KI%
+JOÆS
+CLRK
+TIRÆR
+UILLER
+JAÆS
+SMITH
+刃75
+24%
+1圄
+1聳
+12%
+11%
+10
+12
+13
+14
+14 행이 선택했습니다.
+FORD와 SC(JIT, WARD와 MARTIN은 동일한 SALARY이므로 RANK는 같은 순위를 부여했지만,
+ROW-NUMBER의 경우 동일한 순위를 배제하기 위해 유니크한 순위를 정한다. 위 경우는 같은 SALARY에서는
+어떤 순서가 정해질지 알 수 없다(Oracle의 경우 romd가 적은 행이 먼저 출력된다).
+이 부분은 데이터베이스별로 다른 결과가 나을 수 있0 oe, 만일 동일 값에 대한 순서까지 관리하고 싶으면
+ROW-NUMBER( ) OVER (ORDER BY SAL DFSC, ENAME) 같이 ORDER BY 절을 이용해 추가적인 정렬
+기준을 정의해야 한다.
+전문가 710|드 329
+
+
+===== PDF PAGE 0323 =====
+
+과목 II QL 기본과 활용
+3. 일반 집계함수
+가. S-JM 함수
+SUM 함수를 이용해 파티션별 원도우의 합을 구할 수 있다.
+[匧 사원들의 급四 같은 매니저를 두고 있는 사원들의 91A聾 합을 구한다 PARTITION BY tGR 구문을 통해 매니저별로
+데이터를 파티션화 한다.
+(예제1
+SELECT 衄, EPÆ, SAL
+(SAL) WER (PARTITWI BY %R) AS SAL-SIN
+FO EP;
+[실행 결과]
+7圄
+7圄
+*411ㆍ
+JAES
+URTJN
+MILLER
+SEITH
+SAL
+1圄
+12%
+1弼
+12%
+1*
+11%
+2975
+2450
+SAL-SIN
+6550
+6550
+6550
+6550
+6550
+1%0
+11㈉
+8275
+8275
+8275
+14 행이 선택묐습니다.
+3%
+전문가 ,까드
+
+
+===== PDF PAGE 0324 =====
+
+q22 활용
+[예제] OVER 절 내에 BY 절을 추가에 파티션 내 데이터를 정렬하고 이전 데이터까지의 누적값을 출력한다
+PANGE UNBOIJNDED PRECEDING은 현재 행을 기준으로 파티션 내의 첫 번패 행까지의 범위를 지정한다(S한
+Server의 집계함수인 경우 OÆR 절 내의 ORDER BY 절을 지원하지 않는다).
+[예제]
+SELECT Ⅷ, 04襞, SAL
+SI.N (SAL) OVER (PRTITWI BY %R BY SAL 歷(EDI沰) AS SAL—SI-N
+FO EP;
+[실행 결과l
+SCOTT
+WTIN
+TÆR
+ALLEN
+UILLER
+CLRK
+JOÆS
+의11H
+KIt"
+14 행이 선택묐습니다.
+1250
+12%
+1槦
+11%
+24%
+4嚼
+65%
+11%
+24%
+*로 표시한 WAR며7698)와 MARTIN(76%)의 급여가 같으으로, 같은 ORDER로 취급해 9쀄+ 12뚀+
+12#34훼의 값이 됐다. TURNER(7698)의 경우 9과+1250+12쀄+1孵49刊의 누적 합을 가진다.
+나. 함수
+MAX 함수를 이용해 파티션별 윈도우의 최댓값을 구할 수 있다
+전문가 ,미드 331
+
+
+===== PDF PAGE 0325 =====
+
+과목 ll 기본과 활용
+(예제 사원들의 aq와 같은 매니저를 두고 있는 사원들의 SALARY 중 최댓값을 함께 구한다. 실행 결과를 확인하면 파티션
+내의 최헛값을 파티션 내 모든 행에서 MAX-SAL라는 칼럼 값으로 가질 수 있다.
+{예제)
+SELECT 衄. ~, SAL
+~ (SAL) WER BY %R) AS LAX-SAL
+결행 출과]
+TI-RÆR
+kTIN
+UILLER
+SYITH
+KI%
+14 행이 선택묐습니다.
+SAL
+1聳
+12馹
+1聳
+12%
+1甓
+11%
+28%
+2975
+24%
+MAX-SAL
+甓0
+1碼0
+1碼0
+1碼0
+1碼0
+1碼0
+1蜀0
+1100
+2975
+2975
+2975
+[예제] 추가퇴 INLINE VIEWS 이용해 파티션별 최멋값을 가진 행만 추출할 수도 있다. 실행 결과를 보면 MGR이 7%6인
+SCOTT, FORD는 같은 최멋값을 가지므로, WHERE SAL = MAX SAL 조건에 의해 2건이 추출퇬다.
+4
+우제]
+SELECT 驢, E,Æ SAL
+FO (SELECT ″, EV&, SAL
+MX (SAL) WER (PARTITIm BY 驢) AS LAX-SAL
+FO 隧)
+~ SAL = MX—SAL;
+盈2 전문가 가이드
+
+
+===== PDF PAGE 0326 =====
+
+廠장 활용
+[실행 결과]
+76%
+7%2
+SCOTT
+ALLEN
+UILLER
+SMITH
+KIW
+1圄
+1剃
+11%
+2975
+8 행이 선택쾼습니다.
+[예제] 이전 예제는 귀리의 성능이 저하일 수 있다. 파티션별 최밋값을 가진 행만 추출할 때는 아래처럼 순위 함수를 사용하는
+것이 바람직하다.
+[예제]
+SELECT 衄, SAL
+FRN (SELECT 驢, ENAE, SAL
+RANK () OVER (PARTITm BY 0霖R BY SAL EC) AS SAL-RK
+FO EP)
+M4ERE SAL_RK = 1 :
+다. MIN 함수
+MIN 함수를 이용해 파티션별 원도우의 최솟값을 구할 수 있다.
+[예제] 사원들의 급여와 같은 매니저를 두고 있는 사원들을 입사일자를 기준으로 정열하고, SALARY 최솟값을 함께 구한다.
+[예제]
+SELECT 驢, ENAE HIREDATE, SAL
+(SAL) OVER BY 飇』R BY HIRENTE) AS UIN_SAL
+믈IN
+FO EP,
+전문가 ,PI드 333
+
+
+===== PDF PAGE 0327 =====
+
+과목 ll 기본과 활용
+1실행 글과!
+SCOTT
+TIRCR
+UARTIN
+〕襞S
+MILLER
+SMITH
+KIW
+14 행이 선택믰습니다.
+라. AIÆE수
+HIREDATE
+1%1-12새3
+1%7구-19
+1%1새2-꼬
+1%1훼2-22
+1%1毬-%
+1%1翌-羽
+1%1-12碧3
+1%2噩1-23
+1%7새5-23
+1%1구훼2
+1%1훼5-01
+1%1酈-鬱
+1″12-17
+1%1-11-17
+SAL
+1圄
+12%
+12%
+1甓
+11%
+2975
+28%
+24%
+5鸞
+UIN-SAL
+1圄
+12%
+12%
+12駟
+9%
+IE
+11%
+2975
+24%
+5圄
+AVG 함수와 파티션별 ROWS 윈도우를 이용해 원하는 조건에 맞는 데이터에 대한 통곗값을 구할 수 있다.
+[예제] EMP 테이를에서 같은 매니저를 두고 있는 사원들의 평균 SALARY를 구하는데, 조건은 같은 매니저 내에서 자기 바로
+앞의 사번과 바로 위의 사번인 직원만을 대상으로 한다. ROWS BETVÆEN 1 PRECEDING AND 1 FOLLOWING은
+현재 행을 기준으로 파티션 l-n서 앞의 한 건, 현재 행, 뒤의 한 건을 범위로 지정한다(ROWS는 현재 행의 앞뒤 건수를
+[예제1
+SELECT 衄, ~ HIRENTE, SAL
+(AVG (90 WER (PRTITm BY 0皬R BY HIREDATE
+RM BETÆEN 1 사{D 1 FOLIÄNG)) AS AVG—SAL
+334 전문가 ,기드
+
+
+===== PDF PAGE 0328 =====
+
+l실행 결과1
+7粥
+7粥
+76%
+76%
+76%
+76%
+7839
+ENAÆ
+SCOTT
+ALLEN
+1뚀R
+LARTIN
+JANES
+UILLER
+CLRK
+SYITH
+KI跖
+HIREDATE
+1%1-12새3
+1%7*-19
+1%1새2-20
+1%1새2-22
+1%1결-%
+1%1″羽
+1%1-12-03
+1%2-01-23
+1%7酈-23
+1%1꿈田2
+1%1새5새1
+1%1*毬
+1″12-17
+1%1-11-17
+SAL
+3圄
+1圄
+12%
+1弼
+12%
+11%
+2975
+28%
+24%
+AVG_SAL
+1425
+14%
+1333
+1233
+11%
+11%
+2913
+27%
+26%
+駁장 활용
+1
+4
+14 행이 선택왰습니다.
+실행 결과에서 ALLEN의 경우 파티션 내에서 첫 번째 데이터이므로 앞의 한 건은 평균값 집계 대상이 없다.
+결과적으로 평균값 집계 대상은 본인의 데이터와 뒤의 한 건으로 평균값을 구한다(1匍 + 12삐 / 2 = 1425의
+값을 가진다.
+WRNER의 경우 앞의 한 건, 본인의 데이터, 뒤의 한 건으로 평균값을 구한다. (12% + 1弛 + 12%) / 3
+= 1333의 값을 가진다.
+JAMES는 파티션 I-FI서 마지막 데이터이므로 뒤의 한 건을 제외한, 앞의 한 건과 본인의 데이터를 갖고 평균값을
+구한다. (12% + 950) / 2 = 11%의 값을 가진다.
+전문가 ,PI드 335
+
+
+===== PDF PAGE 0329 =====
+
+과목 11 SQL 기본과 활용
+마. CO.JNT 함수
+COIJNT 함수와 파티선별 ROWS 윈도우를 이용해 원하는 조건에 맞는 데이터에 대한 통곗값을 구할 수 있다.
+[匧 사원들을 급여 기준으로 정열하괴 본인의 급여보다 이하가 적거나 1% 이하로 많은 급여를 받는 인원수를 출력하라.
+&MEEN P能드D|馮 사•ID 1% FOLLOWNG은 현재 행의 급여값을 기준으로 급여가 -5@1서 +1%의
+범위 인바 포함된 모든 행이 대상이 된다(ⅦGE는 현재 행의 데이터 값을 기준으로 앞뒤 데이터 값의 범위를 표시하는
+것임).
+[예제]
+SELECT EN•Ö& , SAL
+CÜT (*) OVER BY SAL RAt6E BETWEEN % PRECEDING AtO 1% AS EP_CNT
+[실행 즐과]
+kTIN
+UILLER
+3匱S
+KI%
+12%
+12%
+1饗
+1聳
+1圄
+24%
+凶75
+EF_CNT
+2
+2
+~ 11%
+3
+10% - 1250
+3
+12% ~ 14%
+3
+12% ~ 1400
+12% ~ 1450
+3
+14覓 ~ 1650
+2
+15% ~ 1750
+1
+24% - 2碼0
+1
+4 - 2Ü ~
+2925 ~ 3125
+3
+3 - 29% ~ 3150
+3 - 29% ~ 3150
+49% ~ 5150
+1
+14 행이 선택묐습니다.
+위 SQL 문장은 파티션이 지정되지 입았으므로 모든 건수를 대상으로 -% ~ +1% 기준에 맞는지 검사하게 된다.
+ORDER BY SAL로 정렬이 돼 있으으로 비교 연산이 쉬우4진다.
+*로 표시한 ADAMS의 경우 자신이 갖고 있는 SALARY 11%을 기준으로 -교서 +1叨까지 값을 가진 10교서,
+12%까지의 값을 가진 ADAMS(IIW), WARD(1250), MARTIN(12ff))라는 3명의 데이터 건수를 구할 수 있다.
+전문가 ,PI드
+
+
+===== PDF PAGE 0330 =====
+
+활용
+4. 그룹 내 행 순서 함수
+가. FIRST_VALUE 함수
+FIRST-VALUE 함수를 이용해 파니선별 윈도우에서 가장 먼저 나은 값을 구한다. SQL 노rve려서는 지원하지
+않는 함수다. MIN 함수를 활용해 같은 결과를 얻을 수도 있다.
+[예제] 부서별 직원들을 연통이 높은 순서부터 정열하괴 파티션 내에서 가장 먼저 나은 갔을 출력한다 RANGE
+PRECEDING은 현재 행을 기준으로 파티션 내 첫 번째 행까지의 범위를 지정한다.
+[예제]
+SELECT SAL
+FIRST_VALIÆ (EWE) WER (PARTITIm BY FTt0 BY SAL
+RM I•.EED RECEDI%) AS EWE-FV
+FO EP,
+[실행 결과]
+2Ø
+20
+2€
+KI%
+CLßRK
+UILLER
+SCOTT
+SYITH
+TIRÆR
+UQTIN
+JAES
+SAL
+24%
+2975
+11%
+12%
+12%
+EV&-FV
+KIW
+KIt"
+KI沰
+SCOTT - •
+SCOTT - •
+SCOTT
+SCOTT
+BLAKE
+BLAKE
+BLAKE
+BLAKE
+BLAKE
+BLAKE
+14 행이 선택묐습니다.
+실행 결과를 보면 같은 부서 내에 최고 급여를 받는 사람 둘이 있을 경우, 즉 *로 표시한 부서번호 20의 S田I그과
+FORD 중에서 어느 사람이 최고 급여자로 선택될지는 위의 SQL 문만 갖고는 판단할 수 없다.
+FIRST-VALUE는 다른 함수와 달리 공동 등수를 인정하지 않고 처음 나은 행만 처리한다. 위처럼 구두 등수가
+전문가 ,}o|드 337
+
+
+===== PDF PAGE 0331 =====
+
+과목 Ⅱ * 기본과 활용
+있을 때 의도적0 e 세부 항목을 정렬하고 싶다면, 별도의 정렬 조건을 가진 IN니NE VIEW를 사용하거나 OVER
+0 내의 ORDER BY 절에 칼럼을 추가해야 한다.
+[예제] 앞의 * 문장에서 같은 값을 가진 FIRST VALUEß 처리하기 위해 ORDER BY 정렬 조건을 추가한다.
+결제]
+SELECT 呼1嚮 SAL
+F貯-V飇匽 (EWE) OVER BY DEPTt0 啄匿R BY SAL tEC, ENAk
+RM RECEDING) AS ENAME_FV
+[실행 결과]
+10
+KI%
+CLRK
+UILLER
+SCOTT
+SUITH
+그襞S
+SAL
+24%
+3欄
+2975
+11%
+28%
+1欄
+1弼
+1250
+1250
+ENAME_FV
+KING
+KING
+KING
+Fn
+FRD
+BLAKE
+BLAKE
+BLAKE
+BLAKE
+BLAKE
+BLAKE
+14 행이 선택왰습니다.
+뙤L에서 같은 부서 *1 최고 급여를 받는 시람 둘이 있는 경유를 대비해 이름을 두 번째 정렬 조건으로 추가한다.
+실행 결과를 확인하면 부서번호 20의 최고 급여자가 이전의 SCOTr 7테koil서 ASCII 코드가 적은 값인 FORD로
+변경된 것을 확인할 수 있다.
+338 가결쐴쬐(번된
+
+
+===== PDF PAGE 0332 =====
+
+駁장 활용
+나. LAST VALUE 함수
+IAST-VALUE 함수를 이용해 파티션별 원도우에서 가장 나중에 나은 값을 구한다. SQL 던ß?l에서는 지원하지
+않는 함수다. MAX 함수를 활용해 같은 결과를 얻을 수도 있다.
+[예제] 부서넓 직원É* 연봉이 높은 순서부터 정열하괴 파티션 L"서 가장 마지gt% 나은 값을 출력한다. RWtS
+a」RRENT RON AND F靆L아훫馮은 현재 행을 포~ 파티션 내의 마지막 행까지의 범우屬 지정畢I.
+[예제l
+SELECT EN,AE SAL
+LAST-VALIÆ 0正R (PARTITWI BY FTNO BY SAL
+O'S QRENT AbO F(mmI%) AS
+FO EP;
+[실행 결과]
+10
+4
+ENAE
+KIW
+CLRK
+UILLER
+SCOTT
+JOÆS
+ALLEN
+TI.mÆR
+kTIN
+JAES
+24%
+2975
+11%
+1聳
+12%
+12%
+EU&_LV
+UILLER
+UILLER
+UILLER
+511TH
+SMITH
+SMITH
+SMITH
+〕贓S
+JA&S
+JA&S
+! 14 행이 선택묐습니다.
+실행 결괴에서 LASr-VALUE는 다른 함수와 달리 공동 등수를 인정하지 않고 가장 나은 행만을 처리한다.
+만일 공동 등수가 있괴 결과를 의도적으로 정렬하고 싶다면 별도의 정렬 조건을 가진 INLINE VIEW를 A卜우하거나
+0표R 0 내의 ORDER BY 조건에 칼럼을 추가해야 한다.
+전문가 ,삐드 339
+
+
+===== PDF PAGE 0333 =====
+
+과목 II SQL 기본과 활용
+다. 함수
+LAG 함수를 이용해 파티션별 윈도우에서 이전 몇 번째 행의 값을 가져올 수 있다. SQL ServerOll서는 지원하지
+않는 함수다
+[예제] 직원들을 입사일자가 빠른 기준으로 정열하고, 본인보다 입사일자가 한 명 앞선 사원의 급여를 본인의 급여와 함께
+출력한다.
+[예제!
+SELECT HIREDATE, SAL
+LÆ (SAL) WER (″ BY HIREDATE) AS LAG_SAL
+FO EP
+~ 그% = 'SALESAN'
+[실행 결과]
+kTIN
+HIREDATE
+1%1훼2-20
+1%1새2-22
+1%1″28
+1圄
+12%
+1聳
+12%
+LAG_SAL
+1圄
+12%
+15%
+4 행이 선택굈습니다.
+[예제] LAG 함수는 3개의 ARGUMENTS까지 사용할 수 있다. 두 번째 인자는 몇 번째 앞의 행을 가져을지 결정하는 것이고
+(DEFAULT 1), 세 번째 인자는 예를 들어 파티션의 첫 번째 행의 경우 가지올 데이터가 없어 NULL 값이 들어온다.
+이 경우 다른 값으로 바꿔 줄 수 있다. 결과적으로 NVL이나 ISNULL 기능과 같다. LAG(SAL, 2, 이의 기능은 두 행
+앞의 SALARYS 가져오고, 가져올 값이 없으면 0으로 처리한다.
+[예제]
+SELECT ~ HIRENTE, SAL
+LÆ (SAL, 2, 0) OVER BY HIREDATE) AS LAG-SAL
+FO EP
+~ 3% = 'SALESUN
+340 전문가 ,삐드
+
+
+===== PDF PAGE 0334 =====
+
+[실행 결미
+ALLEN
+MRTIN
+HIREDATE
+1%1-02-20
+1%1새2-22
+1%1-
+1%1″羽
+1圄
+12『覓
+1弼
+12%
+廠장 활용
+LAG-SAL
+0
+0
+1圄
+12%
+4 행이 선택왰습니다.
+라. LEAD 함수
+I FAD 함수를 이용해 파티션별 원도우에서 이후 몇 번째 행의 값을 가져올 수 있다. 참고로 SQL 노re℃1에서는
+지원하지 않는 함수다.
+[예제] 직원들을 입사일자가 빠른 기준으로 정열을 하고, 바로 다음에 입사한 인력의 입사일자를 함께 출력한다.
+l예제1
+SELECT ENk HIREDATE
+LE.O 대IREDATE, 1) OVER (ÆR BY HIREDATE) AS LED-HIRENTE
+FO EP
+~ = 'SALESUAN
+[실행 결과]
+ALLEN
+MARTIN
+HIRENTE
+1%1훼2-20
+1%1새2-22
+1%1-
+1%1諪28
+LEÆ_HIREDATE
+1%1훼2-22
+1%1毬-羽
+4 행이 선택했습니다.
+LFAD 함수는 과의 ARGUMFNIY,Y지 사용할 수 있는데, 두 번째 인자는 몇 번째 후의 행을 가져올지 결정하는
+것이Q(DEFAULT 1). 세 번째 인자는, 예를 들어 파티션의 마지막 행은 가져올 데이터가 없어 NULL 값이 들어오는
+데 이 경우 다른 값으로 바꿀 수 있다. 결과적으로 NⅦ이나 ISNULL 기능과 같다.
+전문가 &l드 341
+
+
+===== PDF PAGE 0335 =====
+
+과목 II 기본과 활용
+5. 그룹 내 비율 함수
+가. 함수
+RATO-TO-REÄ)RT 함수를 이용해 파티션 내 전체 SUM(칼럼) 값에 대한 행별 칼럼 값의 백분율을 소수점으로
+구할 수 있다. 결과 값은 > 0 & 〈= 1의 범위를 가진다. 개별 RATIO의 합을 구하면 1이 된다. SQL Server에서는
+지원하지 않는 함수다.
+[예제] 」~ SALESMAN인 사원들을 대상으로 전체 급여에서 본인이 차지하는 비율을 출력한다.
+1예제] OracIe
+SELECT SAL
+巚.℃ (SAL) OVER (), 2) AS SAL-RR
+FO EP
+= • SALESUAN
+[실행 출과]
+1圄
+12%
+12%
+1弼
+4 행이 선택굈습니다.
+SAL-RR
+1쑈0 / 56æ
+0.29
+0.22 - 1250 /
+0.22 - 1250 /
+0.27 - 1%0 /
+실행 결과에서 전체 값은 1650 + 1250 + 12% + 1弛 = 5600이 되고, RATIO-TO-REPORT 함수 연산의
+분모로 사용된다.
+그리고 개별 RATIO의 전체 합을 구하면 1이 되는 것을 확인할 수 있다.
+0.刃+ 이끄 + 0.끄 + 0.27 = 1
+나. PERCENT-RANK 함수
+PERCENT-RANK 함수를 이용해 파티션별 윈도우에서 제일 먼저 나오는 것을 0으로, 제일 늦게 나오는 것을
+1로 해, 값이 아닌 행의 순서별 백분율을 구한다. 결과 값은 >= 0 & 수 1 의 범위를 가진다. 참고로 SQL 뉴이에서는
+지원하지 않는 함수다.
+전문가 ,버드
+
+
+===== PDF PAGE 0336 =====
+
+廠장 활용
+[예제] 같은 부서 소속 사원들의 집합에서 본인의 급여가 순서상 몇 번째 위치에 있는지 0과 1 사이의 값으로 출력한다
+!예제I OracIe
+SELECT FTL EtÆ SAL
+PERCENT-RANK () OVER (PARTITm BY DEPTO BY SAL tEC) AS 厭
+FO EP,
+[실행 결과1
+10
+10
+10
+KI%
+UILLER
+SCOTT
+SMITH
+kTIN
+JÅ&S
+24%
+2975
+11%
+1圄
+12%
+12%
+이%
+이%
+이%
+이%
+0.40
+0.圈
+0.碼
+14 행이 선택했습니다.
+DEVINO 10의 경우 3건이므로 구간은 까다.
+0과 1 사이를 2개의 구간으로 나누면 0, 0.5, 1이다.
+DEVI'NO 20의 경우 권이므로 구간은 이다.
+0과 1 사이를 이의 구간으로 나누면 0, 0.25, 0.5, 0.75, 1이다
+DEVINO 匍의 경우 6건이므로 구간은 피다.
+0과 1 사이를 피의 구간으로 나누면 0, 0.2, 0.4, 0.6, 0.8, 1이다.
+S(IJIT, FI)RD, WARD, MARIIN의 경우 ORDER BY SAL DBC 구문에 의해 급여가 같으므로 같은 ORD교로
+취급한다.
+전문가 ,IOI드 343
+
+
+===== PDF PAGE 0337 =====
+
+과목 II 기본과 활용
+다. QNE—DIST 함수
+함수를 이용해 파티션별 원도우의 전체 건쳔서 현재 행보다 작거나 같은 건수에 대한 누적백분을을
+구한다. 결과 값은 > 0 & <= 1 의 범위를 가진다. 참고로 SQL ServeroIl서는 지원하지 않는 함수다.
+같은 부서 소속 사원들의 집합에서 본인의 급여가 누적 순서상 몇 번째 위치酗 있는지 0과 1 사이의 값으로 출력한다
+l예제] Oracle
+SELECT 呼T嚮 SAL
+CRDIST () Ov'ER (PARTITION BY FTNO nDER BY SAL EC) AS CD
+결행 촐과]
+10
+10
+KI%
+CLRK
+UILLER
+SUITH
+WTIN
+그艇S
+2450
+1弗
+2975
+11%
+1圄
+1弼
+12%
+12%
+(0
+0.33
+이67
+0.惢
+0.17
+0.33
+0.83 -
+0.83
+14 행이 선택굈습니다.
+DEPINO가 10인 경우 윈도우가 전체 3건이므로 0.3333 단위의 간격을 가진다.
+즉 0.333, 0.弼7, 1의 값이다.
+DEVINO가 20인 경우 윈도우가 전체 퀸이므로 0.20% 단위의 간격을 가진다.
+즉 0.20, 0.40, 0.6(X)0, 0.00, 1의 값이다.
+DEPINO가 훼인 경우 윈도우가 전체 6건이므로 0.1667 단위의 간격을 가진다.
+즉 0.1%7, 0.회33, 0.5(", 0.弼7, 0.8333, 1의 값이다.
+344
+전문가 ,까드
+
+
+===== PDF PAGE 0338 =====
+
+駁장 활용
+* 표시가 있는 SC(JIT, FORD와 ** 표시가 있는 WARD, MARTIN의 경우 ORDER BY SAL에 의해 SAL
+이 같으므로 같은 ORDER로 취급한다. 다른 WINIX)W 함수의 경우 동일 순서이면, 앞 행의 함수 결과 값을 따른다.
+CUME-DIST의 경우는 동일 순서면 뒤 행의 함수 결과 값을 기준으로 한다.
+라. NTILE 함수
+NNLE 함수를 이용해 파티션별 전체 건수를 ARGUMENT 값으로 N 등분한 결과를 구할 수 있다.
+[예제] 전체 사원을 급여가 높은 순서로 정열하고, 급여를 기준으로 4개의 그를으로 분류한다.
+[예제]
+SELECT ENAE, SAL
+NTILE (4) OVER (mR BY SAL DESC) AS MT
+FO EP;
+[실행 결과]
+ENAk
+KI%
+SCOTT
+BLAKE
+CLARK
+ALLEN
+UILLER
+WAR)
+UARTIN
+S믈11H
+2975
+24%
+1요
+1*
+12%
+12%
+11%
+14 행이 선택굈습니다.
+위 예제에서 NTILE(4)는 14명의 팀원을 4개 조로 나눈다는 의미다. 전체 14명을 이의 집합으로 나누면 몫이
+꽤, 나머지가 2명이다. 나머지 두 명은 앞의 조부터 할당한다 즉 4명 + 4명 + 3명 + 3명으로 조를 나누게 된다.
+전문가 가이드 345
+
+
+===== PDF PAGE 0339 =====
+
+과목 II 기본과 활용
+제5절 Top N 쿼리
+1. 슈도 칼럼
+OracIe의 *은 칼럼과 비슷한 성격의 Pseudo CoIumn으로서 SQL 처리 결과 집합의 각 행에 대해
+임시로 부여되는 일련번호다. 테이블이나 집합에서 원하는 만큼의 행만 가져오고 싶을 때 WHERE 절에서 행의
+개수를 제한하는 목적으로 사용한다.
+한 건의 행만 가져오고 싶을 때는
+SELECT PLAYER—NAME FROM PLAYER WHERE ROWNUM <= 1;이나
+SELECT PI.AYER-NAME FROM PLAYER WHERE ROWNUM < 각처럼 사용할 수 있다.
+두 건 이상의 N 행을 가져오고 싶을 때는 ROWNUM = N;처럼 사용할 수 없으며
+SELECT PLAYER—NAME FROM PLAYER WHERE ROWNUM <= 지이나
+- SELECT PLAYER-NAME FROM PLAYER WHERE ROWNUM < N+1;처럼 출력되는 행의 한계를 지
+정할 수 있다.
+OracIe에서 순위가 높은 N개의 로우를 추출하기 위해 ORDER BY 절과 WHERE 절의 ROWNUM 조건을
+같이 사용하는 경우가 있다. 이 두 조건으로는 원하는 결과를 얻을 수 없다. Oracle의 경우 정렬이 완료된 후
+데이터의 일부가 출력되는 것이 아니라, 데이터의 일부가 먼저 추출된 후(ORDER BY 절은 결과 집합을 결정하는
+데 관여하지 않음) 데이터에 대한 정렬 작업이 일어나므로 주의해야 한다.
+[예제] 사원 테이불에서 급여가 높은 3명만 내림차순으로 출력하고자 하는데, 잘못 사용된 SQL의 사례다.
+{예제1 Oracle
+SEL.ECT SAL
+BY SAL 廳乂;
+{실행 결과}
+346
+1圄
+1250
+전문가 ,새드
+
+
+===== PDF PAGE 0340 =====
+
+R2장 활용
+1
+SUITH
+3 행이 선택됐습니다.
+실행 결과의 3명은 급여가 상위인 3명을 출력한 것이 아니라, 급여 순서에 상관없이 무작위로 추출된 3명에
+한해 급여를 내림文卜순으로 정렬한 결과이다. 따라서 원하는 결괴를 출력한 것이 아니다.
+[예제] ORDER BY 절이 없으면 ORACLE의 조건과 SQL Server의 TOP 절은 같은 결과를 보인다. 그렇지만
+ORDER BY 절이 사용되는 경우 ORACLE은 RO*NIJM 조건을 ORDER 절보다 먼저 처리되는 WHERE 절에서
+처리하므로, 정열 후 원하는 데이터를 얻기 위해서는 인라인 류에서 먼저 데이터를 정일한 후 메인 귀리에서
+조건을 사용해야 한다.
+[예제] Oracle
+SELECT SAL
+FO (SELECT SAL
+FO EP
+nDER BY SAL E)
+釐氈 - 수 3;
+[실행 촐과]
+KI飇
+SCOTT
+3 행이 선택묐습니다.
+위 사례에서는 인라인 부를 사용해 추출하고자 하는 접합을 정렬한 후 ROWNUM을 적용시김으로써 결과에
+참여하는 순서와 추출되는 로우 순서를 일치시켜 Top N 쿼리의 결과를 만째냈다. 실행 결과를 보면 테이불의
+데이터를 급여가 많은 순서부터 정렬한 후 상위 3건의 데이터를 출력한 것을 알 수 있다.
+전문가 가이드 347
+
+
+===== PDF PAGE 0341 =====
+
+과목 II 기본과 활용
+2. IOP 절
+SQL 뇨N℃r는 절을 사용해 결과 집합으로 출력되는 행의 수를 제한할 수 있다. TOP 절의 표현식은 다음과
+IPERCENTI IWITH TIESI
+E.xpresson 반환할 행 수를 지 정하는 숫자이다.
+- PERCENT . 쿼리 결과 집eoll서 처음 Expression%의 행만 반환됨을 나타낸다.
+- TIFS • ORDER BY 절이 지정된 경우에만 사용할 수 있으며, TOP N(PERCENT)의 마지막 행과 같은
+값이 있는 경우 추가 행이 출력되도록 지정할 수 있다.
+한 건의 행만 가져오고 싶을 때는
+- SELECT TOP(I) PLAYER-NAME FROM PLAYER;처럼 사용할 수 있다.
+두 건 이상의 N 행을 가져오고 싶을 때는
+- SELECr TOP(N) PLAYER-NAME FROM PLAYER;처럼 출력되는 행의 개수를 지정할 수 있다.
+[예제] 사원 테이를에서 급여가 높은 2영을 내림차순으로 출력하고자 한다.
+[예제] SQL Server
+SELECT T뗴2)
+EV& SAL
+BY SAL
+결행 촐과]
+(2개 행 적용됨)
+348
+가이드
+
+
+===== PDF PAGE 0342 =====
+
+駁장 활용
+[예제] 사원 테이불에서 羽가 높은 2영올 내림차순으로 출력하는데 같은 급여를 받는 사원이 있으면 201 출력한다. T에기
+WITH TIES 옵션은 동일 수치의 데이터를 추가로 더 추출하는 것으로, 표OTT과 FORD의 급여가 공동 2위이므로
+TOP(기 WITH TIES의 실행 결과는 3건의 데이터가 출력된다.
+l예제] SQL Server
+SELECT T隧(2) WITH TIES
+ENk SAL
+FO EP
+BY SAL EC;
+결행 끌기
+(3개 행 적용됨)
+3. ROW 니NIITING 절
+Oracle은 12.1 버전, SQL *는 2012 버전부터 ROW LIMITING 절로 Top N 쿼리를 작성할 수 있다.
+ROW LIMITING 절은 ANSI 표준 SQL 문법이다.
+아래는 ROW 니MITING 절의 구문이다. ROW LIMITING 절은 ORDER BY 절 다음에 기술하며, ORDER
+BY 절과 함께 수행된다. ROW와 ROWS는 구분하지 않아도 된다.
+(TFSET offset 1 찌1
+IFET대 {FIET 삐 1 嚀(예t PERCENT}I {ONLY | TIES}J
+- OFFSET offset : 건너월 행의 개수를 지정한다
+- FETCH : 반환할 행의 개수나 백분율을 지정한다.
+- ONLY : 지정된 행의 개수나 백분율만큼 행을 반환한다.
+WITH TIES 마지막 행에 대한 동순위를 포함해서 반환한다.
+전문가 ,까드 349
+
+
+===== PDF PAGE 0343 =====
+
+과못 II SQL 기본과 활용
+[예제 0圖는 UMITING 젊을 사용한 Top N 귀리다.
+월세]
+SELECT - SAL FO EP BY SAL, EW)tO FETCH FIRST 5 OS
+{실행 결과]
+11%
+12%
+12%
+5 행이 선택됐습니다.
+[예제] 아래와 같이 OFFSET만 기술하면 건너뛴 행 이후의 전체 행이 반환된다.
+[예제]
+SELECT - SAL FO EP BY SAL, OFFSET 5 OS,
+[실행 촐과1
+74%
+ln
+1聳
+1圄
+9 행이 선택묐습니다.
+350
+전문가 ,버드
+
+
+===== PDF PAGE 0344 =====
+
+駁장 활용
+제 6 절 계층형 질의와 셀프 조인
+1. 개요
+테이블에 계층형 데이터가 존재하는 경우 데이터를 과하기 위해서 계층형 질의대ierarchcal Query)를 사용
+한다. 계층형 데이터란 동일 테이블에 계층적으로 상위와 하위 데이터가 포함된 데이터를 말한다 예를 들어 사원
+테이블에서는 사원들 사이에 상위 사원(관리자)과 하위 사원 관계가 존재하고, 조직 테이블에서는 조직들 사이에
+상위 조직과 하위 조직 관계가 있다. 엔터EI를 순환 관계 데이터 모텔로 설계할 경우 계층형 데이터가 발생한다.
+순환 관계 데이터 모텔의 예로는 조직, 사원, 메뉴 등이 있다.
+관리자로서
+B
+사원
+D
+관리자
+사원
+曰=
+C
+E
+C
+(3) 생폴 데이터
+A
+(1) 순환 관계 데이터 모일
+(기 계충형 구조
+[그림 Ⅱ•2丕] 계충형 데이터
+[그림 Ⅱ-2丕]은 사원에 대한 순환 관계 데이터 모텔을 표현한 것이다. (2)계층형 구조에서 A의 하위 사원은
+B, C이고 B 밑에는 하위 사원이 없고 하위 사원은 D, E가 있다. 계층형 구조를 데이터로 표현한 것이 (3)생풀
+데이터다. 순환 관계 데이터 모일은 셀프 조인이나 계층형 질의로 조회할 수 있다.
+2. 셀프 조인
+셀프 조인(뇨If Join)이란 동일 테이블 사이의 조인을 말한다 따라서 FROM 절에 동일 테이블이 두 번 이상
+나타난다 동일 테이블 사이의 조인을 수행하면 테이블과 칼럼 이름이 모두 동일하므로 식별을 위해 반드시 테이불
+별uAlias)을 사용해야 한다. 그리고 칼럼에도 모두 테이블 별칭을 사용해서 어느 테이블의 칼럼인지 식별해취야
+한다. 이외 사항은 조인과 동일하다.
+셀프 조인에 대한 기본적인 사용법은 다음과 같다
+전문가 351
+
+
+===== PDF PAGE 0345 =====
+
+과목 II QL 기본과 활용
+SELECT A니AS명1.칼럼영, A니AS명2.칼럼영,
+~ 테이불1 ALIASEI, 테이불2 ALIAS82
+ALIAS영2.칼럼명 = A니AS명1.칼럼명;
+SELECT ″ER.曰0 AS 사원번호, ORKER.ENANE AS 사원명, UANAGER.ENAME AS 관리자영
+FO ~ QKER EP
+曁氈 LAKAGER EMR•O = QKER 驢;
+순환 관계로 설계된 사원 테이블은 사원과 관리자가 모두 하나의 사원이라는 개념으로 동일시해 같이 입력돼
+있다. 이것을 이용해서 다음 문제를 셀프 조인으로 해결해 보면 다음과 같다. '자신과 상위, 차상위 관리자를 같은
+줄에 표시하라.' 이 문제를 해결하기 위해서는 FROM 절에 사원 테이블을 두 번 사용해야 한다.
+사원 테이를(EI)
+사원
+C
+관리자 테이를(E기
+사원 관리자
+관리자
+A
+[그림 Ⅱ-2•기 셀프 조인 개념
+셀프 조인은 동일한 테이블(사원)이지만 [그림 Ⅱ-2-기과 같이 개님적으로는 두 개의 서로 다른 테이블(사원,
+관리자)을 사용하는 것과 동일하다. 동일 테이블을 다른 테이블인 것처럼 처리하기 위해 테이블 별칭을 사용해야
+한다. 여기서는 EI(사원), 미관리자) 테이블 별칭을 사용했다. 차상위 관리자를 구하기 위해서 E2.사원 = EI.관리자
+조인 조건을 사용해야 한다.
+아래는 JON조의 자식 노-드를 조회하는 쿼리다. mgr가 JONFS의 empno인 행을 조회하면 된다.
+!예제]
+SELECT 8 - - B.n
+~ = 'J04ES'
+35% 전문가 ,까드
+
+
+===== PDF PAGE 0346 =====
+
+R2장 활용
+!실행 결과]
+SCOTT
+7%2
+2 행이 선택됐습니다.
+아래는 JON조의 자식 “이 자식 노드를 조회하는 귀리다. mgr이 JON죠의 자식 노드인 뚀01T과 FORD의
+empno인 행을 조회하면 된다. 이런 계층 전개 방식을 순방향 전개라고 한다.
+[예제]
+SELECT ( E"O, ( E,Æ, (
+FO EP A, EP B, EW) (
+MÆRE A.ENAME = 'JmES'
+AhO B.n = A.E"O
+AW (.Ⅷ =
+[실행 결과]
+ENA&
+SMITH
+7%9
+7876
+7%2
+2 행이 선택쾼습니다.
+아래는 SMITH의 부모 노드를 조회하는 귀리다. empno가 SMITH의 mgr인 행을 조회하면 된다.
+[예삐
+SELECT B.E"0 8 EV&, B.Y(R
+FROM EP 시 EP
+M{ERE = •및I퍼•
+AtO B.E"O = A.n,
+전문가 ,柯드 353
+1
+
+
+===== PDF PAGE 0347 =====
+
+과목 ll 기본과 활용
+!실형 출과1
+1개의 행이 선택됐습니다.
+이래는 SWIY의 부모 누 이 부모 노-드를 조회하는 쿼리다. empno가 SMITH의 부모 노드인 FORD의 mgr인
+행을 조회하면 된다. 이런 계층 전개 방식을 역방향 전개라고 한다.
+!예제]
+SELECT ( - ( (.
+FÜ ~ A. ~ 하 EP (
+8.E″ = A.R
+결행 출고니
+1개의 행이 선택묐습니다.
+지금까지 살펴본 것처럼 깊은 레벨의 노드를 조회하기 위해서는 셀프 조인을 반복해야 한다. Oracle과 SQL
+Server는 순환 관계를 가진 데이터를 조회할 수 있는 계층 질의 기능-을 제공한다.
+354 전문가 /져드
+
+
+===== PDF PAGE 0348 =====
+
+활용
+3. 계층형 질의
+계층형 데이터 조회는 DBMS 벤더와 버전에 따라 다른 방법으로 지원한다. 여기서는 Oracle과 SQL Server
+기준으로 설명한다
+가. Oracle 계충형 질의
+Oracle은 계층형 질의를 지원하기 위해서 [그림 Ⅱ-2최과 같은 계층형 질의 구문을 제공한다.
+SELECT
+FRu 테이불
+*ERE cmditim
+A*O c"iitim
+STRT WITH cwxiitim
+(예년iti이1
+COMÆCT BY
+Uditim
+[ÆR SIB니NGS BY (01m, (01m, •••1
+[그림 Ⅱ•2田] 계충형 질의 구문
+- START WI'IH절은 계층 구조 전개의 시작 위치를 지정하는 구문이다. 즉 루트 데이터를 지정한다(액세스).
+- CONNECT BY절은 다음에 전개될 자식 데이터를 지정하는 구문이다. 자식 데이터는 CONNECr BY 절에
+주어진 조건을 만족해야 한다.(조인)
+- PRIOR : CONNECT BY절에 사용되며, 현재 읽은 칼럼을 지정한다. (F}O = PRIOR (P}O 형태를 사용하면
+부모 데이터에서 자식 데이터(부모 자식) 방향으로 전개하는 순방향 전개를 한다. 그리고 (PK) = PRIOR
+(FK) 형태를 사용하면 반대로 자식 데이터에서 부모 데이터(자식 -+ 부모) 방향으로 전개하는 역방향 전개를
+- NXYCI F : 데이터를 전개하면서 이미 나타났던 동일한 데이터가 전개 중에 다시 나타난다면, 이것을 가리켜
+사이클(Cycle)이 발생했다고 한다. 사이클이 발생한 데이터는 런타임 오류가 발생한다. NXYCLE를 추가하면
+오류를 발생시기지 않고 사이클이 발생한 이후의 데이터를 전개하지 않는다.
+• ORDER SIB니NGS BY : 형제 노드(동일 LEVEL) 사이에서 정렬을 수행한다.
+WHERE : 모든 전개를 수행한 후에 지정된 조건을 만족하는 데이터만 추출한다(필터랑).
+OracIe은 계층형 질의를 사용할 때 다음과 같은 가상 칼럼(Pseudo Column)을 제공한다
+전말 ,뻐드 355
+
+
+===== PDF PAGE 0349 =====
+
+과목 II QL 기본과 활용
+가상 칼럼
+CONNECT- BY- ISLEAF
+CONNECT-BY-ISCYCI E
+[표 Ⅱ•2丕] 계충형 질의에서 사용되는 가상 칼럼
+설명
+루트 데이터이면 1, 그 하위 데이터이면 2다. 리프(l.eaf) 데이터까지 1씩 증가한다
+전개 과정에서 해당 데이터가 리프 데이터이면 1, 그렇지 않으면 0이다.
+전개 과정에서 자식을 갖는데, 해당 데이터가 조상으로서 존재하면 1, 그렇지 않으면
+0이다. 여기서 조상이란 자신으로부터 루트까지의 경로에 존재하는 데이터를 말한다.
+CYCLE 옵션을 사용했을 때만 사용할 수 있다.
+다음은 emp 테이를을 계층형 질의 구문을 이용해서 조회한 것이다. PK인 empno 앞쪽에 PRIOR 연산자를
+기술했다. 여기서는 결과 데이터를 들여쓰기하기 위해 LPAD 함수를 사용했다.
+!예제|
+SELECT LEVEL AS LV, LPAD (' • , (LEVEL - 1) * 2) E"O AS
+, BY ISLEAF AS ISLEAF
+FO EP
+STRT WITH IS MIL
+BY = 厭1鰍 -;
+{실행 결과]
+7『粥
+7%9
+76%
+74%
+7521
+76%
+79%
+14 행이 선택묐습니다.
+ISLEAF
+7蜘
+77%
+7粥
+76%
+76%
+3%
+전문가 ,까드
+
+
+===== PDF PAGE 0350 =====
+
+R22 활용
+7839는 루트 데이터이기 때문에 레벨이 1이다. 7839의 하위 데이터인 7%6, %%, 7782는 레벨이 2다. 그리고
+7弼의 하위 데이터인 77%, 7%2는 레벨이 3이다. 리프 데이터는 7876, 7%9, 74뙤 7521, 7654, 7844, 79W
+7934다. 관리자 -, 사원 방향을 전개하기 때문에 순방향 전개다. [그립 Ⅱ•2-9]은 계층형 질의에 대한 논리적인
+실행 모습이다.
+7839
+7%6
+7788
+7876
+7%2
+순방향전개
+7%9
+[그림 11-2-91 순방향 계충형 질의 결과의 논리적인 모습
+다음 예제는 사원 월로부터 자신의 상위관리자를 찾는 역방향 전개의 예다. FK인 앞쪽에 PRIOR 연산자를
+기술했다.
+!예제I
+SELECT LEVEL AS LV, LPO (• • , (LEVEL - 1) * 2) 11 E"O AS E"O,
+, AS ISLEAF
+FO EP
+STRT WITH - = 7876
+BY - • 厭I啄 齟:
+[실행 결과]
+1
+2
+3
+4
+7『粥
+ISLEAF
+0
+0
+0
+1
+4 행이 선택묐습니다.
+1
+-들-니
+전문가 ,미드 357
+
+
+===== PDF PAGE 0351 =====
+
+과목 ll 기본과 활용
+본 예제는 역방향 전개이기 때문에 하위 데이터에서 상위 데이터로 전개된다. 결과를 보면 내용을 제외하고
+표시 형태는 순방향 전개와 동일하다. 7876는 루트 데이터이기 때문에 레벨이 1이다.7876의 상위 데이터인 77%은
+레벨이 2다.77죠의 상위 데이터인 7″ 레벨이 3이다. 리프 데이터는 78+이다. 루트 및 레벨은 전개되는 방WI
+따라 반대가 됨을 알 수 있다.
+[그림 11-2-1이는 역방향 전개에 대한 계층형 질의에 대한 논리적인 실행 모습이다.
+7876
+7788
+7%6
+7839
+역방향전개
+[그림 Ⅱ-2-1이 역방향 계층형 질의 결과의 논리적인 모습
+Orcle은 계층형 질의를 사용할 때 사용자 편의성을 제공하기 위해서 [표 II-2-기과 같은 함수를 제공한다.
+[표 Ⅱ-2-기 계충형 질의에서 사용되는 함수
+설명
+루트 데이터부터 현재 전개할 데이터까지의 경로를 표시한다.
+SYS-CONNECLBY-PATH
+사용법 : SYS-CONNECT-BY-PATH(칼럼, 경로분리자)
+현재 전개할 데이터의 루트 데이터를 표시한다. 단항 연산자이다.
+CONNECT-BY-R(M
+사용법 : CONNECr-BY-R(X)T 칼럼
+SYS-CONNECT-BY-PATH, CONNECT-BY-ROOT를 사용한 예는 다음과 같다. START WITH를 통해 추출
+된 루트 데이터가 년이기 때문에 루트사원은 모두 A이다. 경로는 루트로부터 현재 데이터까지의 경로를 표시한다.
+예를 들어 7876의 경로는 7839 7%6 7788 7876이다.
+[예제]
+SELECT
+(E國℃) AS OT-EPNO
+, (E"O , ') AS PATH
+FO EP
+358 Y?L 전문가 가이드
+
+
+===== PDF PAGE 0352 =====
+
+R22 활용
+START WITH IS WLL
+O十ÆCT BY = 恥I僛 EPt0,•
+[실행 결과]
+RWT_E"O
+78剪
+7839
+78剪
+78刃
+78剪
+78剪
+78剪
+78剪
+PATH
+,78剪
+,7839,漑
+,7839,7粥,77%
+7839, 7粥, 77%, 7876
+, 78剪,7郭,馮2
+,78剪,7螂,7%2,7%9
+78剪,76%
+78刃, 76%, 74%
+78剪,76%, 7521
+78剪, 76%, 76%
+78刃, 76%,
+78剪,76%,7堪
+78剪,7782
+78剪,7782,79꿔
+E뙈0
+7839
+77%
+7876
+7369
+76%
+74%
+7521
+76%
+7934
+7『螂
+76%
+14 행이 선택왰습니다.
+나. SQL Server 계충형 질의
+SQL 2圄 버전까지는 계층형 질의를 작성할 수 있는 문법을 지원하지 않았다 조직도처럼 계층적 구조를
+가진 데이터는 저장 프로시저를 재귀 호출하거나 루프 문에서 임시 테이블을 사용하는 등 (수수한 쿼리가
+아닌) 프로그램 방식으로 전개해야만 했다. 그러나 SQL Server 2005 버전부터는 하나의 질의로 원하는 결과를
+얻을 수 있게 됐다.
+먼저 NORTHWIND 데이터베이스에 접속해 EMPLOYEES 테이를의 데이터를 조회해 보자. 총 9개 로우가
+있다. ReponsTo 칼럼이 상위 사원에 해당하며, EmployeeID 칼럼과 재귀적 관계를 맺고 있다. EmployeeID가
+2인 Fuller 사원을 살펴보면, RepoflsTo 칼럼 값이 NULL이므로 계층 구조의 최상위에 있음을 알 수 있다.
+USE 縣T灣I刪
+SELECT EPLOYEEID, LASTXW
+FO EPLOYEES
+전문가 ,터드 359
+
+
+===== PDF PAGE 0353 =====
+
+과목 ll * 기본과 활용
+1
+2
+3
+4
+5
+6
+7
+8
+9
+(9개 행 적용됨)
+LastNæ
+%V01i0
+Fulle
+LeverIing
+Suyæa
+Kirg
+(allah결1
+FirstNæ
+3월발t
+uargaret
+Stev«*l
+Uichae1
+ReßN)rtsTo
+2
+NULL
+2
+2
+2
+5
+5
+2
+5
+CIT,(Cornmn Table Expresson)를 재귀 호출함으로써 Fmployees 데이터의 최상위부터 시작해 하위 방향으로
+계층 구조를 전개하도록 작성한 쿼리와 결과는 다음과 같다.
+VITH EPLOYEES_ANCO AS (
+SELECT EPLOYEEID, LASTV•E FIRSTNAYE
+~ EPLOYEES
+IS NI.ÆL /* 재귀 호출의 시작점 */
+배1애 ALL
+0 AS LEVEL
+SELECT R EPLOYEEID, R.LASTNAE R.FIRSTNAME, R.REPffRTST0, A.LEVEL + 1
+FO EPLOYEES 사c卜源 A
+EPLOYEES R
+曁氈 = A.EROYEEID)
+SELECT LEVEL, EPLOYEEID, LASTNAE, FIPSTNAME
+FO æLOYEES
+1
+0
+1
+1
+1
+1
+1
+2
+En10yæID
+2
+1
+3
+4
+5
+8
+6
+LastNaæ
+Fuller
+%V01i0
+Leverling
+Peacock
+(a11″
+Suyna
+FirstNæ
+NUICY
+Janet
+uargaret
+Steven
+Laura
+Uichæl
+2
+2
+2
+2
+2
+5
+4
+4
+%O 전문가 ,까드
+
+
+===== PDF PAGE 0354 =====
+
+駁장 * 활용
+5
+5
+2
+2
+(9개 행 적용됨)
+7
+9
+WITH 절의 CTE 쿼리를 보면, UNION ALL 연산자로 귀리 두 개를 결합했다. 둘 중 위에 있는 쿼리를 '영커
+CVJBi'(Anchor Member)라고 하괴 아래에 있는 쿼리를 '재귀 t3ul'(Recursive Memlrr)라고 한다. 아래는 재귀적
+쿼리의 처리 과정이다.
+1. CTE 식을 앵커 멤버와 재귀 멤버로 분할한다.
+2. 앵커 멤버를 실행해 첫 번째 호출 또는 기본 결과 집합(TO)을 생성한다.
+3. Ti는 입력으로 사용하고 Ti+1은 출력으로 사용해 재귀 멤버를 실행한다
+4. 빈 집합이 반환될 때까지 3단계를 반복한다.
+5. 결과 집합을 반환한다 이것은 1뗘서 Tn까지의 UNION ALL이다.
+정리하자면 다음과 같다. 먼저 앵커 멤버가 시작점이자 Outer 집합이 돼 lnner 집합인 재귀 멤버와 조인을
+시작한다. 이어서 앞서 조인한 결과가 다시 Outer 집합이 돼 재귀 멤버와 조인을 반복하다가 조인 결과가 비어
+있으면, 즉 더 조인할 수 없으면 지금까지 만들어진 결과 집합을 모두 합해 리던한다.
+[그림 Ⅱ-2-111에 있는 조직도를 쿼리로 출력했을 때, 대부분 사용자는 아래와 같은 결과를 기대할 것이다(보기
+편하도록 각 로우 앞쪽에 자신의 레벨만큼 빈칸을 삽입했다).
+10예
+1100
+1200
+노 「날亡
+[그림 Ⅱ-2-11] 조직도 예제
+爻1300
+1
+,히드 361
+
+
+===== PDF PAGE 0355 =====
+
+과목 II 기본과 활용
+Enloyee1D
+1圄
+11%
+1110
+11N
+1121
+1122
+1210
+1211
+1212
+1220
+1221
+1222
+1圄
+11%
+11%
+1120
+11꼬
+1聳
+1210
+1210
+12%
+12m
+1220
+1圄
+*거에 T-EMP 데이터의 최상위부터 시작해 하위 방향으로 계층 구조를 전개하도록 작성한 쿼리와 그 결과다.
+보다시피, 계층 구조를 단순히 하위 방향으로 전개했을 뿐 [그림 Ⅱ-2-111에 있는 조직도와는 많이 다른 모습이다.
+앞서 보았듯이 CTE 재귀 호출로 만들어낸 계층 구조는 실제와 다른 모습으로 출력된다. 따라서 조직도와 같은
+모습으로 출력하려면 ORDER BY 절을 추가해 원하는 순서대로 결과를 정릴해야 한다.
+WITH T_EF-ANOG AS (
+SELECT æLOYEEID, ″뚀RID, 0 AS LEVEL
+T-EP
+WUÆRID IS NULL /* 재귀 호출의 시작점 */
+l巋1애 ALL
+SELECT R.EPLOYEEID, A.LEVEL + 1
+FO T_EP_ANC}G A
+, T_EP R
+~ = A.EROYEEID)
+SELECT LEVEL, REPLICATE (• • , LEVEL * 2) + EW)LOYEEID AS EPLOYEEID, MANACRID
+FO
+Level
+0
+1
+%2 전문가 /끼드
+1圄
+11%
+YanaßID
+1嚼
+
+
+===== PDF PAGE 0356 =====
+
+1
+1
+2
+2
+3
+3
+3
+3
+2
+2
+3
+3
+(14개 행 적용됨)
+14m
+ln
+1210
+12羽
+1221
+1222
+1211
+1212
+1110
+11N
+1121
+1122
+駁장 활용
+1圄
+1圄
+12%
+1溜
+1220
+1220
+1210
+1210
+11%
+11%
+1120
+1120
+실제 조직도와 같은 모습의 결과를 출력하도록, 예E에 던11라는 정렬용 칼럼을 추가하고 쿼리 마지막에 ORDER
+BY 조건을 추가해보지(단 앵커 멤버와 재귀 멤버 양쪽에서 convert 함수 등으로 데이터 형식을 일치시켜야 한다).
+WITH T_EP ANC}•m AS (
+SELECT EPLOYEEID, LANACRID, 0 AS LEVEL, CMRT(VAR대枳(1亞), EPLOYEEID) AS snT
+FO T_EP
+*ERE uNAGERlD IS MJLL /* 재귀 호출의 시작점 */
+lJNIm ALL
+SELECT R.EPLOYEEID, R.UNÆRID, A.LEVEL + 1
+, (에`正RT(V枳대枳(1표), A ßT + • ,• + R.EPLOYEEID) AS ßT
+FO T_EF_ÆK}G A, T_EP R
+MfRE R.LANAGERID = A.EPLOYEEID)
+SELECT LEVEL, REPLICATE(' • LEVEL * 2) + EPLOYEEID AS EPLOYEEID, UANAGERID,
+T-EP ANCO
+0皬R BY
+CI'E 안에서 sort 칼럼에 사번(=EmployeeID)을 재귀적으로 더해 나가면 정렬 기준으로 삼을 수 있는 값이
+만들어진다. 다음은 S011 칼럼으로 정릴해 출력한 결과인데, [그림 Ⅱ•2•11]에 있는 조직도의 모습과 일치한다.
+가상의 %11 칼럼을 추가해 정렬하는 게 아쉽기는 하지만, SQL 던rve뗴서 계층 구조를 실제 모습대로 출력하려면
+현재(2예5, 2Ⅸ)8 버전 기준)로서는 감수해야 할 수밖에 없다.
+전문가 ,뻐드 363
+
+
+===== PDF PAGE 0357 =====
+
+과목 11 SQL 기본과 활용
+10%,1100
+10%,11%,1120,1121
+10%,11%,1120,1122
+1圄,12%
+10%,12%,1210,1211
+1圄,12%,1210,1212
+12%, 1220, 1221
+1圄,12%,1220,1222
+1圄,1彌
+Level
+0
+1
+2
+2
+3
+3
+1
+2
+3
+3
+2
+3
+3
+1
+(14개 행 적용됨)
+EnloyeeID
+1鸞
+11%
+1110
+11m
+1122
+12%
+1210
+1211
+1212
+1220
+1221
+1222
+1표
+UanaßID
+WLL
+1甓
+11%
+11%
+1120
+1120
+1甓
+1溷
+1210
+1210
+12%
+1220
+1220
+1嚼
+Sort
+IÆ
+1圄,11%,1110
+10%,1100,1120
+1圄,12%,1210
+1圄,12%,1220
+%4
+전문가 가이드
+
+
+===== PDF PAGE 0358 =====
+
+駁장 활용
+제 7 절 PIVOT 절과 UNPIVOT 절
+1. 개요
+PIVOT은 회전시킨다는 의미를 갖고 있다. PIVOT 절은 행을 열로 회전시기괴 UNPIVOT 절은 일을 행으로
+회전시킨다.
+2. PIVOT 절
+PIVT 절은 행을 열로 전환한다. PIVT 절의 구문은 아래와 같다.
+1
+PIVOT [피
+(expr) I(ASJ aliasl
+[, (expr) I[ASJ aliasll
+Fm {(01” | ((01圓 L (01”1”기
+1 sl.m.jery
+- aggregate-fum•uon은 집계할 열을 지정한다.
+• FOR 절은 PIVON 열을 지정한다.
+• IN 절은 PIV(Jr할 열 값을 지정한다.
+다음은 PIVT 절을 사용한 쿼리다. PIV(T 절은 집계함수와 FOR 절에 지정되지 않은 열을 기준으로 집계되기
+때문에 인라인 부를 통해 사용할 열을 지정해야 한다.
+|예제1
+SELECT *
+FO (SELECT SAL FO EP)
+PIWT (SI-N (SAL) Fm 끄T測 IN (10, 제 %))
+mR BY 1:
+전문가 365
+
+
+===== PDF PAGE 0359 =====
+
+과룭 II 기본과 활용
+!실형 끌과]
+10
+1鸞
+24%
+5 형이 선택퇬습니다.
+2975
+28%
+다음 쿼리는 인라인 부에 표현식을 추가한 것이다. 행 그룹에 hYY 표현식이 추가된 것을 확인할 수 있다.
+[예제]
+SELECT *
+FO (ELECT TO (緦 대IæDATE, 'YYYY') AS YYYY, J8, DEPTt0, SAL FRCN EP)
+PIWT (오믈 (SAL) Fm 匿P가•℃ IN (10, 20, 30))
+BY 1, 2;
+[실행 결과]
+1%
+1%1
+1%1
+1%1
+ANALYST
+24%
+20
+2975
+950
+2850
+9 행이 선택됐습니다.
+다음 쿼리는 집계함수와 IN 절에 별칭을 지정했다. 별칭을 지정하면 결과 집합의 열 명이 변경된다.
+[예제]
+SELECT *
+~ (SELECT J%, SAL FO EP)
+PIWT (91 (霓) AS SAL IN (10 AS D10, 20 AS D20, 30 AS D30))
+″ BY 1;
+粥 전국거 가이드
+
+
+===== PDF PAGE 0360 =====
+
+I실행 결과]
+Jæ
+ANALYST
+CLERK
+MANAGER
+SALESUAN
+DIO_SAL
+1蜘
+24%
+D2CSAL
+2975
+廠장 활용
+28%
+5 행이 선택쾼습니다.
+집계함수와 IN 절에 지정한 별칭에 따라 아래와 같은 규칙으로 열 명이 부여된다. 집계함수와 IN 절 모두 별칭을
+지정하는 편이 바람직하다.
+! SUM (예)
+; SUM (에 AS
+10
+IO_SAL
+SELECT 절에 부여된 열 명을 지정하면 필요한 열만 조회할 수 있다.
+[예제]
+SELECT Jæ, D2€-SAL
+FO (SELECT JOB, FTL SAL FO EP)
+PIVOT (SIN (SAL) AS SAL Fn FTt0 IN (10 AS 010, 20 AS DN, AS 0%))
+WHERE 020 SAI 〉 2弼
+ÆR BY 1,•
+[실행 결과]
+ANALYST
+D20_SAL
+刃75
+2 행이 선택왰습니다.
+10 丕 d10
+D10
+DIO_SAL
+전문가 ,빠드 367
+
+
+===== PDF PAGE 0361 =====
+
+과목 II 기본과 활용
+PIVOT 절은 다수의 집계함수를 지원한다. 다음 쿼리는 SUM 함수와 COUNT 함수를 함께 사용했다.
+[예제1
+SELECT *
+~ (SELECT FTL SAL Fu EP)
+PIWT (호믈 (SAL) AS SAL, (啞 (삐 AS CNT IN (10 AS D10, 20 AS D20))
+BY 1:
+[실행 결과]
+ANALYST
+DI@_SAL
+IE
+24%
+010-(NT
+0
+1
+1
+1
+0
+D20-SAL
+1堪
+2975
+D2€_CNT
+2
+2
+1
+0
+0
+5 행이 선택욌습니다.
+FOR 절에도 다수의 열을 기술할 수 있다. 다음과 같이 IN 절에 다중 열을 사용해야 한다.
+[예제!
+SELECT *
+~ (SELECT 10-(十鸚 대IæDATE, 'YYYY') AS YYYY, Jæ, SAL FRæ EP)
+PIWT (뫼 (SAL) AS SAL, (이.鼈 (하 AS CNT
+Fm (-, 1%) IN ((10, 'MALYST') AS 01%, (10, 'CLERK') AS
+(20, 'AMLYST') AS D20A, (20, 'CLERK') AS D2€C))
+″ BY 1:
+!실행 결과!
+YYYY DIOA-SAL
+DIU-CNT
+0
+0
+1%1
+0
+0
+4 행이 선력왔습니다.
+%8 전문가 가이드
+DIOCSAL
+1甓
+DIK_CMT
+0
+0
+1
+0
+D2€A-SAL
+D2€A-CNT
+0
+1
+0
+1
+D2€C-SAL
+11%
+D2K-CNT
+1
+0
+0
+1
+
+
+===== PDF PAGE 0362 =====
+
+PIVOT 절을 사용할 수 없는 경우 집계함수와 CASE 표현식으로 PIVOT을 수행할 수 있다.
+[예지니
+SELECT
+SUM (CASE MfN 10 THEN SAL EO AS DIO—SAL
+(CASE DEPTIO THEN SAL EO AS D&-SAL
+SIN (CASE DEPTtO MfN % THEN SAL OO) AS DN—SAL
+駁장 활용
+1
+FO EP
+6″ BY JOB
+0啞R BY JOB;
+[실행 결과]
+ANALYST
+CLERK
+SALESLAN
+DIO_SAL
+24%
+D2€_SAL
+2975
+mSAL
+5 행이 선택묐습니다.
+2. UNPIVOT 절
+UNPIVOT 절은 PIVOT 절과 반대로 동작한다. 열이 행으로 전환된다. UNPIVOT 절의 구문은 아래와 같다.
+INIVOT | MJLLSI
+IN ({(01” | ((01圓 [, (011”기 (AS {literal (literal [, literall•••)}l
+[, {(01”) | ((01圓 [, (011-0} [AS (literal (literal L literall•••))ll••
+UNPIVOT column 절은 UNPIVOT된 값이 들어갈 열을 지정한다.
+- FOR 절은 UNPIV(YI'된 값을 설명할 값이 들어갈 열을 지정한다.
+- IN 절은 UNPIV(YN 열과 설명할 값의 리터럴 값을 지정한다.
+전문가 ,柯드 369
+
+
+===== PDF PAGE 0363 =====
+
+과목 ll 기본과 활용
+예제를 위해 다음과 같이 테이불을 생성하자.
+(뚀A正 AS
+SELECT DI@_SAL. D2@_SAL, 010-(NT, 020-(NT
+~ Jæ, FTIO, SAL FO EP HERE Jæ IN ('ANALYST', 'CLERK'))
+PIWT (오믈 (SAL) AS SAL, CINT (와 AS CNT FOR DEPTNO IN (10 AS D10, 20 AS D20)):
+아래는 tl 테이블을 조회한 결과다.
+DI@_CNT
+D2Ø_CNT
+[예제!
+SELECT * FO TI BY Jæ;
+!실행 출과]
+DIO_SAL
+1甓
+2 행이 선택왰습니다.
+D2€_SAL
+1甓
+0
+1
+2
+2
+아래는 UNPIVOT 절을 사용한 쿼리다. d10-sal, d20-sal 열이 행으로 전환된다.
+l예제1
+SELECT 』圈, -, SAL
+~ TI
+WIVOT (SR IN (DI€-SAL, D2€-SAL))
+1
+BY 1, 2;
+(실행 결미
+DZ-SAL
+DIØ—SAL
+DN-SAL
+370 전문가 가이드
+lß
+
+
+===== PDF PAGE 0364 =====
+
+R22 활용
+3 행이 선택묐습니다.
+IN 절에 별칭을 지정하면 FOR 절에 지정한 열의 값을 변경할 수 있다. 다음 쿼리는 10, 20으로 값을 변경했다.
+[예제|
+SELECT Jæ, DEPTPO, SAL
+FO TI
+I&IVOT (SAL FTIO IN (DIO_SAL AS 10, D20-SAL AS 20))
+0皬R BY 1, 기
+[실행 결과]
+1 ANALYST
+CLERK
+CLERK
+2Ø
+3 행이 선택됐습니다.
+다음과 같이 INCLUDE NU니S 기위드를 기술하면 UNPIVOT된 열의 값이 널인 행도 결과에 포함된다.
+[예제]
+SELECT Jæ, DEPTPO SAL
+FO TI
+I}PIVOT INCLIÆ M.JLLS (SAL Fm MNO IN (DIO-SAL AS 10, D2€_SAL AS 꼬))
+ORDER BY 1, 2;
+-3
+전문가 ,iol드 371
+
+
+===== PDF PAGE 0365 =====
+
+과목 II 기본과 활용
+!실공 골과]
+1甓
+1甓
+! 4 형이 선택욌습니다.
+FOR 절에 다수의 열, Ⅸ 절에 다수의 별칭을 지정할 수도 있다.
+i예제1
+SELECT *
+FÜ TI
+1″I甛T ((SAL. CNT)
+- IN ((DI€_SAL, 010-(NT) AS 10, (D2@_SAL, D2@_CNT) AS 20))
+BY 1, 2:
+[실행 결과]
+CNT
+1甓
+1嚼
+4 행이 선택욌습니다.
+FOR 절에 다수의 열, IN 절에 다수의 별칭을 지정할 수도 있다.
+~ TI
+((霓, 傭)
+꾸건문가 ,끼드
+
+
+===== PDF PAGE 0366 =====
+
+R2장 활용
+(FTNO, 盥釐) IN ((DIO_SAL, DIO_CNT) AS (10, 'ACQWTI%')
+, (DN-SAL, 020-(MT) AS (羽, •能SE欻어• )))
+BY 1, 2;
+[실행 결과]
+Jæ
+ANALYST
+ANALYST
+CLERK
+CLERK
+4 행이 선택왰습니다.
+20
+20
+ACCUTIt6
+RESE.R대
+ACCO-NTII"
+RESEÅR대
+1嚼
+0
+2
+1
+2
+UNPIVOT 절을 사용할 수 없는 경우 카디션 곱을 사용해 UNPIVOT을 수행할 수 있다. UNPIVOT할 열의
+개수만큼 행을 복제하고, CASE 표현식으로 UNPIVOT할 열을 선택8는 방식이다.
+[예삐
+SELECT
+A.Jæ
+CASE B.LV *EN 1 THEN 10
+*EN 2 THEN
+END AS
+CASE B.LV *EN 1 TÆN A.DIO_SAL MfN 2 THEN A.D2€_SAL AS SAL
+CASE B.LV HEN 1 TÆN A.DI€_CNT M4EN 2 n•EN A.D2€_CNT E,O AS CNT
+FO TI A
+, (SELECT LEVEL AS LV FO DJAL CONNECT BY LEVEL 수 2) B
+BY 1, 2;
+[실행 결과]
+ANALYST
+ANALYST
+CLERK
+CLERK
+4 행이 선택했습니다.
+10
+20
+CNT
+0
+2
+1
+2
+전문가 가이드 373
+
+
+===== PDF PAGE 0367 =====
+
+과목 Ⅱ 기본과 활용
+다음 실행 결과에서 강조한 부분이 CASE 표현식으로 선택한 값이다.
+결체]
+SELECT A.L B.LV, A.DIO_SAL, A.D2@—SAL, A.DI@_CNT, A.D2@_CNT
+~ TI A
+. (SELECT LEVEL AS LV FO WAL COM{ECT BY LEVEL 수 2) B
+- BY A.D. B.LV;
+결행 결과]
+AULYST
+ANALYST
+CLERK
+CLERK
+4 행이 선택왰습니다.
+DIO_SAL
+1%0
+D20-SAL
+1嚼
+1″
+010-(NT
+D2@_CNT
+4
+전문가 ,PI드
+
+
+===== PDF PAGE 0368 =====
+
+駁장 활용
+제 8 절 정규 표현식
+1. 개요
+정규 표현식(regular expression)은 문자열의 규칙을 표현하는 검색 패턴으로 주로 문자열 검색과 치환에
+사용된다.
+2. 기본 문법
+가. POSIX 연산자
+정규 표현식의 POSIX 연산자(POSⅨ operator)를 살펴보자.
+다음은 정규 표현식의 기본 연산자다.
+연산자
+영문
+dot
+or
+backslash
+셜명
+모든 문자와 일il(newline 제외)
+대체 문자를 구분
+다음 문자를 일반 문자로 취급
+다음은 dot 연산자를 사용한 쿼리다. REGEXP-SUBSrR 함수는 문자열에서 일치하는 패턴을 반환한다. 조금
+후에 자세히 살펴보자. cl, c2, c3, 열의 dot 연산자는 각각 a, b, c, d 문자와 일치한다. 열은 세 번째
+문자인 c가 패턴의 세 번째 문자인 b와 일치하지 않기 때문에 널을 반환한다
+[예제]
+SELECT REGEXP_SI-BSTR ('獨•, •a.b') AS (1
+REGEXP-SI.BSTR (누固•, 'a.b') AS (2
+REGEXP-SIÆSTR ('acb', 'a.b') AS (3
+REæXP SI.BSTR ('獄•, •a b') AS (4
+FO WAL;
+전문가 가이드 375
+
+
+===== PDF PAGE 0369 =====
+
+과목 II 기본과 활용
+|실공 끌과I
+(1
+1
+(3
+1계의 형이 선택묐습니다.
+다음은 or 연산자를 사용한 쿼리다. c3 열의 a 또는 b와 일치하지 않괴 열의 反는 ab 또는 cd와 일치하지
+않기 때문에 널을 반환한다. or 연산자는 기술 순서에 따라 패턴을 일치시킨다. c7 열은 a, c8 열은 aa가 일치한다.
+!예제1
+SELECT 種~ 93SIR (
+ÆCP-SIBSTR ('('
+표~ SI-BSTR ('cd'
+ææv-q.BSTR ('교 ,
+Caa , 'aa:a• ) AS (8
+'a}b' ) ASCI
+a\b' ) AS (2
+•a\b' ) AS (3
+뚀~ SI.BSTR ('曲•, '±{cd') AS (4 - 또는 cd
+) AS (7 - a 또는 aa
+a 또는 b
+결행 결과]
+(2
+(3
+(4
+ab
+(7
+(8
+cd
+1개의 행이 선택굈습니다.
+아래는 backslash 연산자를 사용한 쿼리다. cl 열은 문자가 or 연산자로 동작해 a 문자가 일치하지만, c2
+열은 1 문자가 일반 문자로 처리돼 alb 문자열이 일치한다.
+f예제1
+SELECT 뚀뚀″-9月STR ('a{b', 'a}b' ) AS (1
+″″-9月STR ('alb', 'a\lb') AS (2
+FO D-AL;
+376 프矍간츠드-
+
+
+===== PDF PAGE 0370 =====
+
+(1
+R2장 활용
+[실행 결과l
+RECXP-SI.BSTR ('ab' ll (10) 11 건•
+(2
+alb
+1개의 행이 선택했습니다.
+十(anchor)는 검색 패턴의 시작과 끝을 지정한다.
+연산자
+영문
+carrot
+dollar
+셜명
+문자열의 시작
+문자열의 끝
+다음은 carrot 연산자와 dollar 연산자를 사용한 쿼리다. CHR (10) 표현식은 개행0ine feed) 문자를 반환한다
+cl 열은 전체 문자열의 시작 문자인 a를, c2 열은 전체 문자열의 두 번째 시작 문자가 존재하지 않으므로 널을
+반환한다 c3 열은 전체 문자열의 끝 문자인 d를, c4 열은 전체 문자열의 두 번째 끝 문자가 존재하지 않기 때문에
+널을 반환한다.
+[예제l
+SELECT REGEXP-SI-BSTR ('紵 || (豚 (10) || '선',
+RECP-SI.BSTR ('ab' || (豚 (10)
+FO D.ÅL;
+결행 결과]
+, 1, I)ASCI
+1, 2) ASQ
+9, 1, 2)ASC4
+(1
+Q
+(3
+(4
+1개의 행이 선택쾼습니다.
+수량사(quantifier)는 선행 표현식의 일치 횟수를 지정한다 패턴을 최다로 일치시기는 탐욕적(포한dy) 방식으로
+동작한다
+전문가 ,삐드 377
+
+
+===== PDF PAGE 0371 =====
+
+과목 II QL 기본과 활용
+연산자
+十
+{예
+{파}
+{m,n}
+설명
+또는 1회 일치
+또는 그 이상의 횟수로 일치
+1회 또는 그 이상의 횟수로 일치
+m회 일치
+최소 m회 일치
+최대 m회 일치
+최소 m회, 최대 n회 일치
+다음은 2, *, + 연산자를 사용한 쿼리다 주석에 일치할 수 있는 문자열을 기술했다 c3 열은 b가 0회 또는
+1회 일치해야 하기 때문에 널을 반환한다.
+[예제]
+SELECT 뚀~ SIBSTR ( • ac'
+SLBSTR ('aw , •豳?(|) AS (2
+REæXP-SIBSTR •勌?(|) AS (3
+氈~ SIBSTR ( •氈•
+REæp-9.BSTR ('atx' , •曲*(|) AS (5
+ÆGEXP-SI.-BSTR (•고, •豳*(') AS (6
+죠~ SI-BSTR ('貳•
+R&XP-SLBSTR ('aw , •劂+(|) AS C8
+ÆGEP—SIBSTR ('at«, •뇌) AS (9
+'ab?c') AS (1 - ac, abc
+ab+c') AS (7
+貳, abbc, abbbc
+atx, abtk, abbbc a固凝
+9쑈L,•
+[실행 결과]
+(2
+(3
+(4
+(5
+(7
+(9
+abtx
+1개의 행이 선택묐습니다.
+다음은 {m}, {파}, {m,n} 연산자를 사용한 쿼리다. c5 열은 a가 최소 4회, 최대 5회 일치해야 하기 때문에
+널을 반환한다
+378
+전문가 가이드
+
+
+===== PDF PAGE 0372 =====
+
+[예제]
+SELECT RECXP_SI-BSTR ( • 曲•
+RECXP SI-BSTR (
+RECXP SI-BSTR ( • 獨•
+REGEXP SI.BSTR ('aæb' , 'a{3,}' ) AS (4
+RECXP SI-BSTR ('aaab' , •a{4,5}') AS (5 -
+SIBSTR (•aaa±', •a(4,5}') AS (6
+駁장 활용
+aaa, aaaa,
+FROM m.IAL;
+[실행 결과]
+(2
+(3
+'a{기• )ASCI—
+기기• )ASQ
+(4
+1개의 행이 선택쾼습니다.
+앵커(anchor)는 검색 패턴의 시작과 끝을 지정한다.
+연산자
+(expr)
+셜명
+괄호 안의 표현식을 하나의 단위로 취급
+다음은 서브 표현식을 사용한 쿼리다. cl 열은 ab, c2 열은 b가 1회 이상 반복된다. c3 열은 b 또는 c,
+열은 ab 또는 cd가 대체된다.
+[예제]
+SELECT REGEXP SI-BSTR , '(ab)+c• ) AS (1 - 듔, ~
+REGEXP-SIBSTR ( • , •ⅸ• ) AS Q - atx,
+REGEXP SI.BSTR , 'a(blc)d') AS (3 - 郊,
+, 'ab\cd' ) AS (4 - 豳, cd
+FÜ WAL;
+!실행 결과]
+(2
+(3
+(4
+聖가 가이드 379
+
+
+===== PDF PAGE 0373 =====
+
+1
+과목 II * 기본과 활용
+1계의 행이 선택쾼습니다.
+역 참조(back rference)를 사용하면 일치한 서브 표현식을 다시 참조할 수 있다. 반복되는 패턴을 검색하거나
+서브 표현식의 위치를 변경하는 용도로 사용할 수 있다.
+연산자
+\n
+설명
+n번째 서브 표현식과 일치, n은 1에서 9 사이의 정수
+다음은 역 참조를 사용한 쿼리다. cl, c2, c3 열의 패턴은 abxab, cdxcd 문자열과 일치한다. c4, c5, c6 열은
+동일한 문자열이 1회 이상 반복되는 패턴을 검색한다
+[예제1
+'(±lcd)x\l') AS (1
+SELECT ææXP-Sl-BSTR (•-
+표~ S.BSTR ('cdxcd' , '(±\cd)x\l') AS (2
+ÆCXP-SIBSTR ('abxef' , '(±lcd)x\l') AS (3
+ÆGEP-S-BSTR ( , '(.*)\1+| ) AS (6
+FO m-AL;
+[실행 결과]
+abxab, cdxcd
+(1
+Q
+(3
+(5
+- cdxcd
+하의 행이 선택됐습니다.
+문자 리스트(character list)는 문자를 대괄호로 묶은 표현식이다. 문자 리스트 중 한 문자만 일치하면 패턴이
+일치한 것으로 처리된다. 문자 리스트에서 하이픈(-)은 범위 연산자로 동작한다.
+[char• •1
+~ 전문가 ,까드
+설명
+문자 리스트 중 한 문자와 일치
+문자 리스트에 포함되지 않은 한 문자와 일지
+
+
+===== PDF PAGE 0374 =====
+
+廠장 활용
+다음은 문자 리스트를 사용한 쿼리다. 라, c2, c3 열의 패턴은 ac, 문자열과 일치한다. c4, 6, 열의
+패턴은 ac, bc가 아닌 문자열과 일치한다.
+[예제!
+SELECT REGEXP_SI.BSTR (•貳 , '[囿](' ) AS (1 - ac, bc
+, REGEXP SIBSTR ('文•, •[豳1(| ) AS (2
+RECXP-SI-BSTR (|((|, ) AS (3
+REGEXP SIBSTR (님(|, • [^豳](|) AS (4 - *가 아닌 문자열
+, REGEXP-SIBSTR (•曩•, '[%lc') AS (5
+REGEXP_SIBSTR ( • (( •
+FROM mAL;
+[실행 결미
+REGEXP-SIBSTR C9z', '[0-9Ⅱ”기• ) ASQ
+(1
+(2
+(3
+(5
+1개의 행이 선택됐습니다.
+다음은 문자 리스트의 범위 연산자를 사용한 쿼리다. c4 열은 첫 번째 문자는 숫자가 아닌 문자, 두 번째 문자는
+소문자가 아닌 문자와 일치해야 하므로 널을 반환한다.
+[예제]
+SELECT ( • la'
+10-91[”기• )ASCI
+, REGEP-SI.BSTR CaA', '[十91[Aa-zl') AS (3
+氈佂XP SIBSTR CAa
+FO u.AL;
+[실행 결과!
+9z
+1개의 행이 선택왰습니다.
+|[n-9][+누zl') AS (4
+(4
+전문가 ,하드 381
+
+
+===== PDF PAGE 0375 =====
+
+1
+과목 n * 기본과 활용
+문자 리스트(character list)는 문자를 대괄호로 묶은 표현식이다. 문자 리스트 중 한 문자만 일치하면 패턴이
+일치한 것으로 처리된다. 문자 리스트에서 하이픈(-)은 범위 연산자로 동작한다.
+연산자
+l:digitl
+[•」ower:l
+l:alpha:)
+[:alnum:l
+[:xdigitl
+[:punctl
+[:blank:]
+설명
+동일
+숫자
+소문자
+대문자
+영문자
+영문자와 숫자
+16진수
+구두점 기호
+공백 문자
+공7간 문자 (space, enter, tab)
+[0-9]
+[a-zl
+[A-ZJ
+[a-zA-Zl
+[0-9a-zA-기
+[0-9a-fA-F]
+t[:alnum:l[:cntrl:ll
+다음은 POSIX 문자 클래스를 사용한 쿼리다. c7 열은 [:punct:] 클래스를 사용해 특수 문자를 검색한다.
+[예제]
+'[l:digit:ll
+• )ASCI
+SELECT REGEXP—SLBSTR (•牙1, •
+•[[:al啣IJ• ) C2
+RECXP-SIBSTR ('gF1,'
+) AS (3
+표표孵-9쬬TR (놓FI, •
+瓩~-9쬬TR ('gF1,•, '[[:ugpr:ll'
+) AS (4
+• )ASC5
+ææP-Sl-BSTR ('9F1,•
+•[[:xdigit:ll
+• ) AS (6
+ææP-Sl.BSTR (놓FI, •
+--935TR C斫1,•, '[[:punct:ll'
+) AS (7
+FO m.AL;
+결행 결과1
+1
+(2
+9
+(3
+9
+9
+1개의 행이 선택쾼습니다.
+나. 정규 표현식 연산자
+정규 표현식의 PERL 정규 표현식 연산자(PERL regular exprßion operator)를 살펴보자.
+다음의 PERL 정규 표현식 연산자는 POSIX 문자 클래스와 유사하게 동작한다.
+圈2
+전문가 ,버드
+
+
+===== PDF PAGE 0376 =====
+
+연산자
+\d
+\D
+\s
+5
+셜명
+숫자
+숫자가 아닌 모든 문자
+숫자와 영문자(underbar 포함)
+숫자와 영문자가 아닌 모든 문자(underbar 제외)
+공백 문자
+공백 문자가 아닌 모든 문자
+駁장 활용
+동일
+[(:digit:Jl
+[A(:digit:ll
+[[:alnum:l」
+[A(:alnum:l」
+[(:svnce:ll
+[A[:space:lJ
+다음은 \d 연산자와 \D 연산자를 사용한 쿼리다. cl, c2열의 패턴은 '(숫자3자리) 숫자3자리-숫자4자리' 패턴의
+전화번호를 검색한다. 6 열은 세 번째 문자인 2가 숫자이므로 널을 반환한다.
+[예제]
+SELECT REGEXP-SI.BSTR (|(6%) 555풰嚮•, 'A\(\d{3}\) \d(3}-\d{4}9) AS (1
+, SIBSTR ('6수555풰嚮• , 'A\(\d{3}\) \d{3}-\d{4}9) AS (2
+SIBSTR ('b2b', '\w\d\D') AS (3
+REGEXP SIBSTR Cb2-', '\w\d\D') AS (4
+REGEXP_SIBSTR ('b22', i\w\d\D') AS (5
+FO DJAL;
+[실행 결과)
+(1
+(6%) 555-01%
+Q
+(3
+b2b
+1
+(5
+b2-
+1개의 행이 선택왰습니다.
+다음은 \w 연산자와 \W 연산자를 사용한 쿼리다 라, c2 열의 패턴은 '숫재문지@숫자문자' 다음에 '.숫자문자가
+1회 이상 반복되는 패턴의 이메일 주소를 검색한다. 열은 \W에 해당하는 문자가 문자열에 존재하지 않기 ~
+널을 반환한다.
+[예제]
+SELECT RECXP SIBSTR '\*€\w+(\.\*+)+') AS (1
+REGEXP SIBSTR (
+REGEXP SI.BSTR Cto: bill', '\v+\W\s\F+') AS (3
+('to bill' , |\•+\넓\s\교) AS (4
+FO WAL;
+전문가 가이드 383
+
+
+===== PDF PAGE 0377 =====
+
+과목 ll SQL 기본과 활용
+결행 글과1
+(1
+(0.冰
+1계의 행이 선택묐습니다.
+(2
+(4
+to: bill
+다음은 \s 연산자와 5 연산자를 사용한 쿼리다. cl 열은 \s 연산자가 공백 문자, c4 열은 5 연산자가 공백이
+아닌 문자(.)와 일치한다.
+[예제]
+SELECT 氈~ SIBSTR C(a b )'
+~ DÅL;
+[실행
+(1
+(ab)
+1개의 행이 선택됐습니다.
+(3
+(a,b.)
+다음의 PERL 정규 표현식 연산자는 수량사와 유사하게 동작한다. 패턴을 최소로 일치시기는 비탐욕적
+(nongreedy) 방식으로 동작한다.
+설명
+%4
+연산자
+*7
+十?
+전문가 ,까드
+0회 또는 1회 일치
+0회 또는 그 이상의 횟수로 일치
+1회 또는 그 이상의 횟수로 일치
+m회 일기
+최소 m회 일치
+최대 m회 일치
+최소 m회, 최대 n회 일치
+
+
+===== PDF PAGE 0378 =====
+
+R2장 활용
+이래는 간, 한, +? 연산자를 사용한 쿼리다. cl 열은 패턴을 최소로 일기시기는 nongreedy 방식을 사용했기
+때문에 aa까지만 일치한다. 패턴을 최대로 일치시기는 greedy 방식을 사용한 c2 열은 aaa까지 일치한다.
+[예지니
+•a??aa' ) AS (1
+SELECT REGEXP_SI.BSTR (| -
+'a?aa' ) AS (2
+REGEXP SI-BSTR ( •
+RECXP_SI.BSTR ( •
+REGEXP SIBSTR ('xaxbxc•, '\w*x\v• ) AS (4
+REGEXP-SI.BSTR ('abxcxd' , |\믈+?x남) AS (5
+REGEXP SI.BSTR ( •abxcxd'
+FROM WAL;
+[실행 결과]
+(1
+(2
+(3
+(4
+xaxbxc
+(5
+±xc
+- ruvreedy 방식
+- greedy 방식
+±xcxd
+1개의 행이 선택됐습니다.
+다음은 {m}?, {m,}?, {따마? 연산자를 사용한 쿼리다. cl, c2 열은 m회 일치를 사용했기 때문에 포테년y 방식과
+관계없이 결과가 동일하다. c3 열은 최소 일치므로 aa와, c4 열은 최대 일치이므로 aaaaa와 일치한다. 열은
+최소로 aa, c6 열은 최대로 aaaa와 일치한다.
+[예제1
+SELECT REffXP_Sl.BSTR ( ,
+REGEP-SI.BSTR ('aaaa• , 기가•
+SI.BSTR ('aæaa • ,
+REGEXP-SIÆSTR ('aua • ,
+REGEXP-SI.BSTR ( • -
+REGEXP SIÆSTR ('aaaaa • ,
+FROM m.lAL;
+[실행 결미
+(2
+(3
+(4
+- 방식
+)AS (1
+) AS (2 - greedy 방식
+) AS (3
+) AS (4
+) AS (5
+) AS (6
+(5
+전문가 가이드 385
+
+
+===== PDF PAGE 0379 =====
+
+과목 11 기본과 활용
+1개의 행이 선택웠습니다.
+다음은 dot 연산자를 사용한 쿼리다. REGEXP-SUBSTR 함수는 문자열에서 일치하는 패턴을 반환한다. 조금
+후에 자세히 살펴보자. cl, c3, c4 열의 dot 연산자는 각각 a, b, c, d 문자와 일치한다. c4 열은 세 번째
+문자인 c가 패턴의 세 번째 문자인 b와 일치하지 않기 때문에 널을 반환한다.
+(예제]
+SELECT SLBSTR (•獨•, •a.b') AS (1
+죠~ Sl..8STR ('ü', •a.b') AS (2
+氈~ SIBSTR (•臧•, •a.b') AS (4
+FO m.AL;
+[실행 결과]
+(2
+(3
+(4
+1개의 행이 선택왰습니다.
+3. 정규 표현식 조건과 함수
+가. 니뚀 조건
+REGEXP-LIKE 조건은 source-char가 pattern과 일치하면 TRUE를, 일치하지 않으면 FALSE를 반환한다.
+뚀″ 니뚀 (swrce-char, pattem [, match-parml)
+*는 검색 문자열을 지정한다.
+• *은 검색 패턴을 지정한다.
+- match-param은 일치 옵션을 지정한다(i: 대소문자 무시, c: 대소문자 구분, n: dot(.)를 개행 문자와 일치,
+m: 다중 행 모드, x: 검색 패턴의 공백 문자를 무시, 기본값은 c다. icnmx 형식으로 다수의 옵션을 함께
+지정할 수도 있다).
+%6 전문가 가이드
+
+
+===== PDF PAGE 0380 =====
+
+駁장 활용
+다음은 REGEXP-LIKE 조건을 사용한 쿼리다. fißt-name 값이 Ste로 시작하고 v나 ph 다음에 en으로 푸는
+행을 검색한다.
+[예제!
+SELECT FIRST-Nk, LAST-V&
+FRON 巚. EPLOYEES
+覉正能 R&XP LIKE (FIRST-V&. '$te(vW1)en$');
+[실행 결과]
+FIRST-Nß&
+Stec*m
+Steven
+Steven
+LAST-V&
+Stiles
+Uarkle
+3 행이 선택굈습니다.
+나. 能″ REPI.ACE 함수
+REGEXP-REPLACE 함수는 source-charoll서 일치한 pattem을 replace-stnng으로 변경한 문자 값을 반환
+한다.
+REGEXP-REPLACE (source-char, pattern [, replace-string (, [, occurrence [, ætch»rællll)
+replace-stnng은 변경 문자열을 지정한다.
+psition은 검색 시작 위치를 지정한디(기본값은 1).
+occurrence는 패던 일치 횟수를 지정한어기본값은 1).
+다음은 REGEXP-REPLACE 함수를 사용한 쿼리다. '숫자3자래숫자3자리.숫자4자리' 패턴을 '(첫 번째 일치)
+두 번째 일치쎄 번째 일치' 형식으로 변경한다. 일치한 패턴이 없으면 원본 값을 반환한다
+(예제]
+SELECT 하廬-넓皺R
+REGEXP-REPLACE (P尠正-쯔R
+전문가 가이드 387
+
+
+===== PDF PAGE 0381 =====
+
+과목 Ⅱ QL 기본과 활용
+`(\1) \2-\3') AS (1
+FO 巚. EPLOYEES
+~ EPLOYEE_ID IN (144, 145);
+[실행 결과]
+6%.121
+011.國.1聖.4刃羽
+2 행이 선택왰습니다.
+다. æGEXP_SUBSTR 함수
+(1
+(650) 121-2斟
+011.44.1344.4292穗
+REGAT-SUBSTR 함수는 source-cha뻬서 일치한 pattern을 반환한다.
+REGEP SI-BSTR (swrce-char, pattern [, cnsition [, occurrence [, match-paran [, sutpxpr]lll)
+subexpr은 서브 표현식을 지정한다(0은 전체 패턴, 1 이상은 서브 표현식, 기본값은 0).
+다음 쿼리는 URL 패턴과 일치한 문자열을 반환한다.
+새가]
+SELECT REGEXP-SIBSTR
+FO 까.墮L;
+[실행 결과]
+1개의 행이 선택했습니다.
+전문가 7Pl드
+
+
+===== PDF PAGE 0382 =====
+
+활용
+다음 쿼리는 일치한 서브 표현식을 반환한다. 강조한 부분이 일치한 서브 표현식이다. 서브 표현식의 순서는
+좌측 괄호의 순서와 동일하다.
+[예제l
+SELECT RECÆXP-SI.BSTR ('12%%78%', '(123)(4(56)(78))', 1, 1, 'i'. 1) AS (1
+REæp-S1.BSTR C12뀌%7彎, •(123)(4(%)(78)기, 1, 1, 'i', 4) AS (1
+[실행 결과l
+1
+123
+(2
+78
+1개의 행이 선택쾼습니다.
+라 REGEXP INSTR 함수
+REGEXP-INSTR 함수는 souræ-charoll서 일치한 pattem의 시작 위치를 정수로 반환한다.
+氈″-1죠TR (so.arce-char. pattern [, [, xcurrexe 0 renarnnt [, mtch-parm [, -11111)
+• retum-opt은 반환 옵션을 지정한다(0은 시작 위치, 1은 다음 위치, 기본값은 0).
+다음 귀리는 서브 표현식의 시작 위치를 반환한다. 강조한 부분이 일치한 서브 표현식이다.
+l예제1
+SELECT INSTR ('12%%7彎, '(123)(4(%)(78)기, 1, 1, 0, 1) AS (1
+|(123)(4(%)(78)기, 1, 1, 0, 'i', 기 ASC2
+( • 12괼%78%|
+FO D.AL;
+전문가 ,}o|드 389
+
+
+===== PDF PAGE 0383 =====
+
+1
+과목 II 기본과 활용
+결행 결과1
+(1
+1
+Q
+4
+(3
+7
+1개의 행이 선택쾼습니다.
+마. COJNT 함수
+REGEXP-COUNT 함수는 source-charoll서 일치한 pattern의 횟수를 반환한다.
+뚀~-(夤酊 (sarce-char. Cbttern [, position [, match-parm]])
+다음은 REGEXP-COUNT 함수를 사용한 쿼리다. 강조한 부분이 일치한 문자열이다. cl 열은 5회, c2 열은
+일치한다.
+우제]
+SELECT - CO-NT ('123123123123123' , '123' 1) AS (1
+'123|, 3) AS (2
+뚀~ (0-鼈 ('123123123123•
+[실행 촐과]
+3
+1개의 행이 선택욌습니다.
+전문가 ,까드
+
+
+===== PDF PAGE 0384 =====
+
+駁장 활용
+장 요약
+제1절 서브 쿼리
+서브 쿼리란 하나의 에인 귀리 인에 포함된 종속적인 SQL 문장을 말하는 것으국 위치나 기능에 따라 NSÆI)
+SUBQUERY, INLINE VIEW, SCALAR SUBQUERY로 구분할 수 있다.
+제2절 집합 연산자
+집합 연산자는 결과 집합 간의 연산을 통해 결합하는 방식을 사용한다. UNION 연산자와 UNION ALL 연산자는
+개별 SQL 문의 결과에 대해 합집합 연산을, INIERSECr 연산자는 교집합 연산을, EXCEPVWNUS 연산자는 차집합을
+수행한다. UNION ALL 연산자를 제외한 모든 집합 연산자는 최종 결과에서 중복된 행은 제외하고 출력한다.
+제3현 그를 함수
+데이터 분석을 위한 GROUP FUN臼10N으로는 끄를 간의 소계를 계산하는 ROLLUP 함수, GROUP BY 항목•들
+간의 다차원적인 소계를 계산할 수 있는 CUBE 함수, 특정 항목에 대한 소계를 계산하는 GROUPING SEIS 함수가
+있다.
+제4절 원도우 함수
+데이터 분석을 위한 WINIM/ FUNCrION은 부분적이나마 행과 행간의 관계를 쉽게 정의하기 위해 만든 함수다.
+WINIX)W ⅣN다10N을 이용한 순위(RANK) 관련 함수는 RANK, DENSE-RANK, ROW-NUMBER가 있으며, 그
+외 그를 내 집A(AGGREGATE) 관련 함수, 그를 내 비율 관련 함수 등이 있다.
+제5결 Tq) N 취리
+Top-N 쿼리는 말 그대로 상위(T叩) N개의 행을 책하는 쿼리다. Oracle은 ROWNUM 슈도 칼럼, SQL Server는
+II)P 절을 사용할 수 있다. Orade은 12.1 버전, SQL *는 2012 버전부터 ROW LIMI*IING 절로 Top N 쿼리를
+작성할 수 있다.
+전문가 ,}ol드 391
+
+
+===== PDF PAGE 0385 =====
+
+과목 11 기본과 활용
+제6절 계충형 질의와 젤프 조인
+테이블에 계층형 데이터가 존재하는 경우 데이터를 조회하기 위해서 계층형 질의대IERARCHICAL QUERY)를 사용
+한다. 셀프 조인6빈』F J이N)이란 동일 테이블 사이의 조인을 말하며, ROM 절에 동일 테이블이 두 번 이상 나타난다
+제7절 PIVOT 절과 UNPIVOT 절
+PIVOT은 회전시킨다는 의미다. PIVOT 절은 행을 열로 회전시카고, UNPIVT 절은 열을 행으로 회전시킨다. PIVOT
+절은 CASE 표현식과 GROUP BY 절, UNPIVOT 절은 행 복제를 사용해 수행할 수도 있다.
+제8절 정규 표현식
+정규 표현식(regular expression)은 문자열의 규칙을 표현하는 검색 패턴으로 주로 문자열 검색과 치환에 사용된다.
+-」.끄正 조건과 함수, RECAP-SUBSIR 함수, P,mm-INSI'R 함수, RFGEXP-COUNr
+함수를 사용할 수 있다.
+392
+전문가 ,버드
+
+
+===== PDF PAGE 0386 =====
+
+駁장 활용
+연습문제
+문제 1. 일반적으로 FROM 절에 정의완 후 먼저 수행돼, SQL 문장 내에서 절차성을 주는 효과를 불 수 있는 것은
+어떤 유형의 서브 귀리 문장인가?
+㉦ SCALAR SUBQUERY
+(9 CORRELATED SUBQUERY
+문제 2. 다음 서브 귀리에 대한 설명 중 롤린 것을 고르시오.
+㉣ NESTED SUBQUERY
+㉦ Ⅸ니NE VIEW
+(0 다중 행 연산자는 IN, ANY, ALL이 있으며, 서브 쿼리의 결과로 하나 이상의 데이터가 RETURN되는
+서브 쿼리다.
+@ Top N 서브 쿼리는 IN니NE VIEW의 정릴된 데이터를 ROWNUM을 이용해 결과 행수를 제한하거나,
+TOP (비 조건을 사용하는 서브 쿼리다.
+IN니NE VIEW는 FROM 절에 사용되는 서브 쿼리로서 실질적인 OBJECT는 아니지만, SQL 문쳔서
+마치 VIEW나 테이블처럼 사용되는 서브 쿼리다.
+상호연관 서브 쿼리는 처리 속도가 가장 빠르므로 최대한 활용하는 것이 좋다.
+문제 3. 다음 SET 연산자에 대한 설명 중 를린 것은 무엇인가?
+㉦ UNION 연산자는 조회 결과에 대한 합집합을 나타내며 자동으로 정렬해준다.
+@ UNION ALL 연산자는 조회 결과를 정렬하고 중복되는 데이터를 한 번만 표현한다.
+㉦ INTERSECr 연산자는 조회 결괴에 대한 교집합을 의미한다.
+EXCEvr 연산자는 조회 결과에 대한 차집합을 의미한다.
+문제 4. 소계, 중계, 합계처럼 계층적 분류를 포함하고 있는 데이터의 집계에 적합한 GROJP 함수 두 가지는 무엇인가?
+(0 ROLLUP, SUM
+㉦ GROUPING, SUM
+(㉦ ROLLUP, CUBE
+CUBE, SUM
+문제 5. 그를 내 순위 관련 WINDOW 함수의 특징이 를린 것은 무엇인가?
+㉦ RANK 함수는 동일한 값에 대해서는 동일한 순위를 부여한다(같은 등수에 여럿이 존재하는 경우 등수가
+SKIP 될 수 있음).
+㉣ DENSE-RANK 함수는 RANK 함수와 흡사하나, 동일한 순위를 하나의 건수로 취급하는 것이 를린
+점이다(같은 등수에 여럿이 한해도 등수가 S糧P되지 않음).
+CUMM-RANK 함수는 누적된 순위를 부여할 수 있다(등수를 누적 순위로 표현함).
+(9 RANK 함수가 동일한 값에 대해서는 동일한 순위를 부여하는데 만해, ROW-NUMBER 함수는 고유한
+순위를 부여한다(같은 등수가 존재할 수 없음).
+전문가 ,버드 393
+
+
+===== PDF PAGE 0387 =====
+
+과목 11 기본과 활용
+문제 6. 다음 SQL 문장은 몇 행의 결과를 반환하는가?
+VR V_R MSER = 5;
+VR V - = 2;
+SELECT SAL, 합4
+~ (SELECT EPt0 SAL, R예뾰 AS RN
+FO (SELECT E"O, SAL FO EP 0甌R BY SAL, EMPNO)
+㉦ 0행
+㉣ 2행
+5행
+㉦ 10행
+문제 7. 다음 중 SELF 」이N을 수행해야 할 때는 어떤 경우인가?
+㉦ 두 테이블에 공통 칼럼이 존재하고 두 테이블이 연관 관계가 있다.
+두 테이블에 연관된 칼럼은 없으나 조인해야 한다.
+㉦ 한 테이블 내에서 두 칼럼이 연관 관계가 있다.
+㉦ 한 테이블 내에서 연관된 칼럼은 없으나 조인해야 한다.
+문제 & 다음 SQL 문장의 결과에서 ename이 뚀OTT인 pt 값은 무엇인가?
+SELECT enæ, SYS_COWECT_BY_PATH (enæ, • , • ) AS pt
+FO
+STRT WITH 15 WLL
+CO&CT BY = 厭I僛
+㉦ KNG
+㉦ ,KING,JONFS,SCOTT
+@ ,KING,JONFS
+(㉦ ,KING,JONES,SCOTT,ADAMS
+문제 9. 다음 QL 문장에서 값은 어떤 열로 집계되는가?
+SELECT *
+FO (SELECT TO,-0獸 (hiredate, 'YYYY') AS YYYY, 50b, deptno, sal FRW ㈈)
+PIWT (91 (%1) Fm ㈄恤0 IN (10, 20, %))
+″ BY 1, 2;
+㉦ 전체
+전문가 가이드
+(기 YYYY
+㉦ YYYY. job
+㉧ YYYY. job, deptno
+394
+
+
+===== PDF PAGE 0388 =====
+
+문제 10. 다음 SQL 문장의 결과로서 출력되는 데이터는 무엇인가?
+SELECT 匿뚀孵-(UT ('123123123123123• , '123' , 1) AS (1
+FO 여]飇:
+㉦ 3
+4
+5
+m장 활용
+6
+전문가 가이드 395
+
+
+===== PDF PAGE 0389 =====
+
+SQ鳧
+ProfessionaI DeveRöer
+학습목표
+•DML 문의 이해
+•TCL 문의 이해
+• DDL 문의 이해
+IEL 문의 이해
+
+
+===== PDF PAGE 0390 =====
+
+제3장
+관리 구문
+장 소개
+데이터를 관리하기 위한 SQL 구문인 DML, TCL, DDL, 1兀L의 기능과 종류를 이해한다.
+장 구성
+DML 문을 사용해 데이터를 입력수정각제하괴 TCL 문을 통해 변경된 데이터를 반영하거4국`소전다. DDL
+문을 사용하면 테이블 구조를 수 있다. IEL 문을 통해 데이터에 대한 권한을 부여하거나 회수한다
+제1절 DML
+제2절 TCL
+제3절 DDL
+제4절 DCL
+
+
+===== PDF PAGE 0391 =====
+
+과목 Ⅱ 기본과 활용
+제1절 DML
+본 절에서는 관리할 자료들을 테이블에 입력, 수정, 삭제하는 DW(Data Manipulation lmguage) 문의 사용
+방법을 알아본다. 1절의 예제들은 실제 테이블에 저장된 데이터를 변경하므로, 각 예제 SQL 문-들을 실행한 후
+앞 장에서 배웠던 SELECT 문을 통해 테이블의 데이터가 어떻게 변경됐는지 확인해본다. 데이터의 변경 사항을
+확인했으면 ROLLBACK 명령어를 통해 변경 내펑을 취소하고, 다음 예제를 실행한다. ROLLBACK 명령어는 2절
+1℃L에서 자세히 다룬다.
+1. INSERT
+가. 행 lt•SERT 문
+단일 행 INSERT 문은 VALUES 절을 포함하며, 한 번에 한 행만 입력된다.
+INSERT INTO 테이불명 [(칼럼1, 칼럼2, ...기 VALUES (값1, 값2, ...);
+INTO 절의 칼럼명과 VALIÆS 절의 값(해당 칼럼에 입력할 값)을 서로 1:1로 매핑해 기술한다. 이때 칼럼명의
+기술 순서는 테이블이 정의된 칼럼 순서와 동일할 필요는 없으며, INro 절에 기술하지 않은 칼럼은 Default로
+NULL 값이 입력된다. 단 Primary Key 제약 또는 Not NULL 제약이 지정된 칼럼은 NULL 값 입력을 허용하지
+않으므로 오류가 발생한다.
+해당 칼럼의 데이터 유형이 CHAR나 VARCHAR2 등 문자 유형일 경우 ' ' '(SINGLE QUOTATION)과 함께
+값을 입력한다. 숫자 유형일 경우엔 ' ' '(SINGLE QUOTATION) 없이 숫자만 입력한다.
+[예제] 선수 테이를에 박지성 선수의 데이터를 일부 칼럼만 입력한다.
+I예제]
+1丕亟T
+INTO 咀Y鰍 (PLAYER_ID, m-AYER_tÆ, TEN_ID, HEIGHT, WEIGHT, BACK 刪)
+VALLES (•2%薦7', •박지성•, 'K@7', 讐•, 178, 73, 7);
+1 개의 행이 만들어졌습니다.
+[표 Ⅱ-+1]은 데이터베이스 내의 PLAYER 테이블에 박지성 선수 데이터가 입력된 것을 나타낸 것이다. INSERr
+문장에서 BACK-NO가 마지막에 정의됐더라도 테이블에는 칼럼 순서대로 데이터가 입력됐다. 칼럼명이 정의되지
+않은 경우 NULL 값이 입력됐다
+398
+전문가 ,까드
+
+
+===== PDF PAGE 0392 =====
+
+[표 11-3-1] 박지성 선수 자료가 들어가 있는 테이불
+TEAM—ID E-PLAYER-NAME NICKNAME
+PLAYER_ID
+2예2예7
+POSTION
+PLAYER-NAME
+박지성
+BACK-NO
+7
+K07
+NATION
+BIRTH-DATE
+*장 관리 구문
+ÆN_my
+HEIGHT WEJGHT
+178
+73
+INII) 절의 칼럼명은 생략할 수 있다. 단 IMII) 절에 칼럼명을 지정하지 않는 경우, 테이블에 정의된 칼럼 순서대로
+VALUES 절에 모든 값들을 빠짐없이 기술해야 한다. 테이블에 새로운 칼럼이 추가되거나 기존 칼럼이 삭제되는
+경우, VALUFS 절의 값의 개수와 테이블의 칼럼 개수가 일치하지 않아 오류가 발생할 수 있다 따라서 INTO
+절에 칼럼명을 지정하는 편이 쿼리의 안정성 측면에서 바람직하다.
+[예제] 해당 테이불에 이청용 선수의 데이터를 입력해본다
+[예제]
+INSERT
+INTO PLAYER
+VALIÆS (|2%201이, •이청용•, *07•
+• Bll.RDraW1'
+|17', üL, WLL, |1', 1%, 69);
+1 개의 행이 만들어졌습니다.
+[표 Ⅱ-3•기 이청용 선수 자료가 째가 있는 테이불
+PLAYER-NAME TEAM-ID E-PLAYER-NAME NICKMME
+PLAYER-ID
+2%2010
+POSTION
+이청용
+17
+K07
+NATION
+BIueDragon
+BIRTH-MTE SOLAR
+1
+JOlN-my
+HEIGHT
+데이터를 입력하는 경우 정의되지 않은 미지의 값인 E-PLAYER-NAME은 두 개의 ' " 홀따오#(SINGLE
+QUOTATION)을 붙여서 표현하거나, NATION이나 BIRTH-DATE의 경우처럼 NULL이라고 명시적으로 표현할
+수 있다.
+[예제] PLAYER 테이를에 '홍길동'이라는 선수를 삽입하고자 한다. 이때 PLAYER-ID의 값을 현재 사용중인
+1을 더한 값으로 넣고자 한대 다음과 같이 VALUES 젊에 서브 귀리를 사용해 SQL 문을 작성할 수 있다.
+전문가 ,}ol드 399
+
+
+===== PDF PAGE 0393 =====
+
+과목 Ⅱ * 기본과 활용
+i예제1
+INTO PUYER (R.AYER-ID. PL.AYER-NAE. TEAU-ID)
+V齪虧 ((SELECT TO.-0獻 (W•X (TO 楔靈R (PLAYER-ID)) + 1) FO PLAYER), '홍길동•
+나. 서브 쿼리를 이용한 다중 행 INSERT 문
+INSERT 문에 서브 쿼리를 사용하면 서브 쿼리의 결과를 테이블에 입력할 수 있다. 서브 쿼리의 결과가 다중
+행이면, 한 번에 여러 건이 입력된다. 단 I酊0 절의 칼럼명 개수와 서브 쿼리의 SELECr 절 칼럼 개수가 일文1해야
+1″T 1酊0 테이불명 [(칼럼1, 칼럼2, ...)1
+서브 워리,
+[예제] 서브 쿼리를 사용해 TEAM 테이불에 데이터를 입력한다.
+[예제]
+INSERT
+INTO TEAM (TEU_ID, REGIm_NAME, TEAN_NA*E, RIG_YYYY, STADIIN_ID)
+SELECT REPLACE(TEAU_ID, 'K' , 'A') AS TEAM_ID
+REGIT{ REGIm_NUE || • 올스타• AS TEAM NNE
+, 羽19 AS STnIW_ID
+FO TEAM
+REGICN_NAUE IN (|성남•, •인천');
+2 개의 행이 만들어졌습니다.
+[예제 서브 귀리를 사용해 PLAYER 테이블에 데이터를 입력한다.
+[예제]
+INSERT
+INTO m-AYER (PLAYER-ID, PLAYER-tUE,
+SELECT 11 SUBSTR(PLAYER-ID, 2) AS PLAYER-ID, PLAYER-NANE
+VLACE(TEN_ID, 'K', '살) AS TEN_ID, mSITIOl
+FO RAYER
+TEÆ-ID IN ('K04', 'KC');
+4圃 전문가 가이드
+
+
+===== PDF PAGE 0394 =====
+
+臼장 관리 구문
+91 개의 행이 만들어졌습니다.
+2. UPDATE
+입력한 데이터 중에 잘못 입력되거나 변경이 발생해 데이터를 수정해야 하는 경우가 발생할 수 있다 다음은
+UPDATE 문장의 기본 형태다. UPDATE 다음에 데이터를 수정할 대상 테이블명을 입력한다. SEr 절에는 수정할
+칼럼명과 해당 칼럼에 수정될 값을 기술하고, WHERE 절에는 수정 대상이 될 행을 식별할 수 있도록 조건식을
+기술한다. 단 WHERE 절을 사용하지 않는다면 테이블의 전체 데이터가 수정된다.
+IJPDATE 테이불명
+SET 수정할 칼럼* = 수정될 새로운 값1
+[ , 수정할 칼럼명2 = 수정될 새로운 값2 1
+1
+[ *ERE 수정 대상 식별 조건식 1 :
+[예제] 선수 테이불의 백넘버를 일칼적으로 %로 수정한다.
+[예제]
+IJFOATE PLAYER
+SET BACK—W = %,•
+4% 행이 경신됐습니다.
+[예제] 선수 테이를에서 포지션이 NULL인 선수들의 포지션을 'MF'로 수정한다.
+!예제l
+l.mATE PLAYER
+SET 凶SITI團 =
+IS WLL;
+3 행이 경신묐습니다.
+전문가 ,}ol드 401
+
+
+===== PDF PAGE 0395 =====
+
+과목 II SQL 기본과 활용
+UPDATE 문의 SET 절에 서브 쿼리를 사용하면, 서브 쿼리의 결과로 값이 수정된다. 서브 쿼리를 사용한 변경
+직업을 할 때, 서브 쿼리의 결과가 NULL을 반환할 경우 해당 칼럼의 결과가 NULL이 될 수 있기 때문에 주의해야
+[예제] 팀 테이를에서 창단년도가 2咖년 이후인 팀의 주소를 홍팀 경기장의 주소로 수정한다.
+[예제1
+TEA* A
+SET = (SELECT X
+FO STADILN X
+WHERE X OETEAN_ID = A.TEAN_ID)
+A.nIG-YYYY 〉 ″
+4 행이 갱신했습니다.
+[예제] 모든 경기장의 지역번호와 전화번호를 홈팀의 지역번호와 전화번호로 수정한다.
+SET (A.D, A.TEL) = (SELECT X.n, X.TEL
+[예제]
+uuTE STÅDILN A
+20 행이 경신왰습니다.
+FO TEAM X
+HERE X TEAU_ID = A.OETEAM_ID);
+UPDATE 문의 WHERE 절에 서브 쿼리를 사용해, 수정될 행을 식별할 수도 있다. 수정될 행을 식별함으로써
+불필요한 수정을 방지할 수 있다.
+[예제] 홍팀의 정보가 존재하는 경기장의 지역번호와 전화번호를 홀림의 지역번호와 전화번호로 수정한다.
+[예제]
+IBTE STDIIN A
+SET (A.D, A.TEL) = (SELECT X.DT, X.TEL
+FO TEN X
+HERE X.TEU_ID =
+釐氈 EXISTS (SELECT 1
+402
+FO TEAM X
+釐氈 X.TEU-ID A.OETEAN-ID);
+전문가 가이드
+
+
+===== PDF PAGE 0396 =====
+
+R32 구문
+15 행이 경신묐습니다.
+앞 UPDATE 문은 TEAM 테이블을 2번 조회하는 비효율이 있다. 다음 MERGE 문을 사용하면 TFAM 테이블을
+1번만 조회하여 데이터를 수정할 수 있다. MERGE 문은 조금 후에 살펴보도록 하자.
+[예제]
+INTO STDII.N T
+lJSIt" TEAN S
+애 (T.TEAN_ID =
+W,•EN MATCÆD TÆN
+l-mATE
+SET =
+, T.TEL = S.TEL;
+15 행이 병합됐습니다.
+3. DELETE
+1
+테이블에 처장된 데이터가 더이상 필요 없게 됐을 경우 데이터 삭제를 수행한다 다음은 DFLETE 문장의 기본적
+인 형태이다. DELETE FROM 다음에 삭제를 원하는 자료가 저장된 테이불명을 입력하고 실행한다. 이때 FROM은
+생략이 가능한 기위드이며, WHERE 절에는 삭제 대상이 될 행을 식별할 수 있도록 조건식을 기술한다. 단 VWERE
+절을 사용하지 않는다면 테이블의 전체 데이터가 삭제된다.
+DELETE [FOI 테이불영
+[釐氈 삭제 대상 식별 조건식1 ;
+[예제] 선수 테이를의 데이터를 전부 삭제한다.
+[예제]
+DELETE FO PLAYER;
+전문가 ,卜|드 403
+
+
+===== PDF PAGE 0397 =====
+
+과목 ll 기본과 활용
+~ 행이 삭제묐습니다.
+[예제 선수 테이불에서 포지션이 'DF'이고, 입단년도가 2010년 이전인 선수의 데이터를 삭제한다.
+결제]
+RAYER
+潞1T1애 = •矗•
+nIN_YYYY 〈 꼬10;
+3 행이 삭제됐습니다.
+DELEE 문의 MMERE 절에 서브 쿼리를 사용하면, 다른 테이블을 참조해 삭제할 행을 식별할 수 있다.
+[예제] 선수 테이불에서 창단년도가 1980년 이전인 팀에 소속된 선수의 데이터를 삭제한다.
+[예제]
+DELETE R-.AYER A
+EXISTS (SELECT 1
+FO TEAM X
+X.TEAY_ID = A TEAN 10
+AIO 〈 1嚼);
+49 행이 삭자왰습니다.
+[예제] 선수 테이블에서 소속 선수가 10명 이하인 팀에 소속된 선수의 데이터를 삭제한다.
+[예제)
+m-AYER
+TEU_ID IN (SELECT TE"_ID
+FO m-AYER
+BY TE"_ID
+HAVIW (이.월T (하 수 10);
+13 행이 삭자욌습니다.
+嚮4
+전문가 7P|드
+
+
+===== PDF PAGE 0398 =====
+
+관리 구문
+4. rvfERGE
+MERGE 문을 사용하면 새로운 행을 입력하거나, 기존 행을 수정하는 직업을 한 번에 할 수 있다. 다음은 MERGE
+문장의 기본 형태이다. MERGE 다음에 입력수정돼야 할 타겟 테이불명을 입력하고, USING 절에 입력•수정에
+사용할 소스 테이블을 입력한다. ON 절에는 타것 테이블과 소스 테이블 간의 조인 조건식을 기술해, 입력 또는
+수정할 대상을 결정한다. ON 절의 조인 조건에 따라 조인에 성공한 행들에 대해서는 WHFN MATCHED THEN
+아래 UPDATE 구문을 수행하고, 조인에 실패한 행들에 대해서는 WHEN N(JI' MAT℃HED THEN 아래 INSERT
+구문을 수행한다.
+MERGE
+INTO 타것 테이불명
+USI% 소스 테이불명
+애 (조인 조건식)
+*EN "T대ED THEN
+I-mATE
+SET 수정할 칼럼명1 = 수정될 새로운 값1
+[ , 수정할 칼럼명2 = 수정월 새로운 값2,
+M{EN WT LATCÆD MN
+INSERT [(칼럼1, 칼럼2, ...)1
+VALIÆS (값1, 값2, ….)
+[예제] MERGE 문을 자세히 설명하기 위해 TEAM TMP 테이불을 임시로 만든다.
+[예제] Oracle
+CREATE TABLE TEN_TP AS
+SELECT WL(B TEAM_ID, 'K' ||
+MEER() OVER BY B.TEN-ID, A.STADIIN_ID)) AS TEAM_ID
+1, 2) AS REGWI WE
+SI.BSTR(A.STADIIN_NAE, 1, 2)
+WL2(B.TEN-WE, 'FC', •시E|즨) AS TEN-UAk
+A.STADIIN_ID, A.n, A.TEL
+FO STADII.N 시 TEAN
+釐氈 B.STADIW-ID(+) = A.STADIUU-ID;
+테이불이 생성왰습니다.
+전문가 가이드 405
+
+
+===== PDF PAGE 0399 =====
+
+과목 ll SQL 기본과 활용
+|예제1 SQL Server
+SELECT ISWLL(B.TEu—ID, 'K' + CONVERT(VARCHAR(2),
+O_N&ER() OVER BY ISWLL(B TEAM_ID, )
+, A.STADIW_ID))) AS TEAM_ID
+Sl.BSTRI%(A.STADIIN-NAk, 1, 2) AS REGm_NAME
+SLBSTRI%(A.STADIIN-N.W 1, 2)
++ CASE HEN IS t0T WLL THEN 'FC' ELSE •시티즌• EtO AS TE,å* NAME
+A.SWIW_ID, A.D, A.TEL
+INTO TEAY-TP
+FO STADILN A LEFT J이N TEAM
+B.STDIIN_ID = A.SWIUU_ID;
+(꼬개 행이 영향을 받음)
+!예제]
+SELECT *
+FO TEAM-TE
+[실행 결과]
+TEA 10
+K02
+K03
+K10
+K11
+K12
+K13
+K14
+K15
+K16
+(17
+(18
+4%
+REGIm_NAME
+울산
+수원
+포항
+인천
+저주
+광양
+성남
+서울
+대전
+창원
+광주
+강통
+자주
+대구
+대구
+부산
+일산
+전문가 가이드
+TEAN NAME
+을산F(
+수원F(
+포항F(
+인천F(
+전주F(
+부산FC
+광양F(
+성남F(
+서을F(
+대전F(
+창원F(
+광주F(
+강통F(
+제주F(
+대구F(
+대구시티즌
+부산시티즌
+일산시티즌
+STADIIN_ID
+(04
+B04
+B01
+%3
+(02
+D01
+B02
+B05
+%2
+(05
+A02
+A03
+F01
+F02
+F03
+031
+031
+%3
+051
+%1
+031
+02
+예2
+055
+033
+053
+054
+051
+031
+TEL
+220-24圈
+259-21
+282-2002
+273-1763
+247-5771
+792-%%
+753-3%
+2128-2973
+252-2002
+圈4-84圈
+24圈-鵝2
+459-%31
+%31-2460
+602-2011
+
+
+===== PDF PAGE 0400 =====
+
+*장 관리 구문
+K19
+마산
+안양
+마산시티즌
+안양시티즌
+Fß
+F05
+055
+031
+20 개의 행이 선택했습니다.
+[예제] TEAM_TMP 테이불을 이용해 TEAM 테이를에 데이터를 입력•수정한다.
+[예제]
+INTO TEAN T
+USI% TEAN TP S
+애 (T.TEN_ID = S.TEN_ID)
+HEN LAT대ED THEN
+l.mATE
+SET T .REGW{_NUE = S.뚀61애-뺻E
+, T.TEU_NANE = TEN_UE
+T.n = 5.咖
+T.TEL = S.TEL
+*fN WT LATCYED TÆN
+INSERT (T.TEAM_ID, T.REGIm NAE, T TEN_NANE, T.STÆ)IW_ID, T.n, T.TEL)
+VALIÆS (S TEN_ID, S.REGIm S TEN WE, S.STOIIN_ID, 5 n, S TEL);
+20 행이 병합됐습니다.
+MERGE 문의 USING 절에 소스 테이블 대신 서브 귀리를 사용해 입력•수정할 수도 있다.
+[예제] 서브 쿼리를 이용해 TEAM 테이를에 데이터를 입력•수정한다.
+[예제1
+INTO TEAN T
+IJSII" (SELECT * FO TEAN_TP *ERE REGIm IN ('성남•
+애 (T.TEÆ_ID = S.TEN_ID)
+HN LAT대ED THEN
+lfOATE
+SET T.REGmWE = S.氈GI혜-뺻E
+, T.TEU-WE = S TEAY
+T.n = S.n
+, T.TEL = S.TEL
+'부산•
+•대구•
+전문가 ,PI드 407

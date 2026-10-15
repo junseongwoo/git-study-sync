@@ -1,0 +1,36 @@
+Pos wi alll Led coi i  제: ia ass be 1
+{© | SELECT STATEMENT     |        Brae bv k J ad |
+1 1 | TABLE ACCESS BY INDEX ROWID | EMP       |G 3514273 Pasa
+1* 2 | INDEX RANGE SCAN      | EMP_DEPTNO_IDX    PRE I   1 [8101
+
+Predicate Information (identified by operation id):
+
+2 - access("EMP"."DEPTNO"=20) — 문자형 상수 '20'이 숫자형 2022 변환됨
+
+다행히 문자형과 숫자형이 만나면 옵티마이저가 문자형을 숫자형으로 변환한다. 위 Predicate InformationoilA
+그런 사실을 발견할 수 있다. 덕분에 인덱스도 정상적으로 사용할 수 있게 된 것이다.
+이번에는 ‘cdeptno’@h 문자형 칼럼을 추가하고 인덱스까지 생성한 다음에 다음과 같이 테스트해 보자.
+
+select * from emp where cdeptno = 20
+
+] Id | Operation           | Name         | Rows | Bytes | Cost |
+} 0 | SELECT STATEMENT      |          |  39 273i]  2)
+]* 1 | TABLE ACCESS FULL     | EMP        |  3. ea 273:1  2 |
+
+Predicate Information (identified by operation id):
+
+1 - filter(TO_NUMBER(“EMP"."(DEPTNO")=20) — 문자형 0060700 칼럼이 숫자형으로 변환됨
+
+문자형 04670000 칼럼이 숫자형으로 변환된 것을 볼 수 있고, 이 때문에 emp 테이블을 Full Scansh= 실행계획이
+수립됐다.
+
+묵시적 형변환은 사용자가 코딩을 쉽게 하도록 도울 목적으로 대부분 28&45가 제공하는 기능이다. 위와 같은
+부작용을 피하려면 가급적 명시적으로 변환함수를 사용하는 것이 좋다. 문자형과 숫자형이 만나면 숫자형으로,
+문자형과 날짜형이 만나면 날짜형으로 변환하는 등 데이터 타입 간 우선순위 규칙이 존재한다. 하지만 이를 굳이
+외우려고 노력할 필요는 없다. 성능을 위해서라면 인덱스 칼럼과 비교되는 반대쪽을 인덱스 칼럼 데이터 타입에
+맞춰주면 되기 때문이다.
+
+묵시적 형변환은 주로 성능 측면에서 언급되곤 하지만, 올바른 결과 집합을 얻기 위해서라도 변환함수를 명시하는
+것이 바람직하다. 묵시적 형변환은 쿼리 수행 도중 에러를 발생시키거나 결과 집합을 틀리게 만드는 요인이 될
+수 있기 때문이다.
+

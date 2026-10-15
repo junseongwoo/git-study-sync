@@ -1,0 +1,49 @@
+과목 [ SQL 기본과 활용
+
+문제 6. 다음 SQL 문장은 몇 행의 결과를 반환하는가?
+
+VAR V_PR NUMBER = 5;
+VAR V_PN NUMBER = 2;
+
+SELECT EMPNO, SAL, RN
+FROM (SELECT EMPNO, SAL, ROWNUM AS RN
+FROM (SELECT EMPNO, SAL FROM EMP ORDER BY SAL, EMPNO)
+WHERE ROWNUM <= :V_PR * :V_PN)
+WHERE RN >= (:V_PR * (:VPN -1)) +1;
+
+D0                2행             ® 5행              @ 10행
+
+®
+
+두 테이블에 공통 칼럼이 존재하고 두 테이블이 연관 관계가 있다.
+두 테이블에 연관된 칼럼은 없으나 조인해야 한다.
+
+) 한 테이블 내에서 두 칼럼이 연관 관계가 있다,
+
+한 테이블 내에서 연관된 칼럼은 없으나 조인해야 한다.
+
+® ©
+
+(6) (0)
+
+문제 8. 다음 SQL 문장의 결과에서 ename0| SCOTTY! pt 값은 무엇인가?
+
+SELECT    ename, SYS_CONNECT_BY_PATH (ename, ',') AS pt
+FROM emp
+
+START WITH mgr IS NULL
+
+CONNECT BY mgr = PRIOR empno;
+
+TD KING                            @ ,KING,JONES
+3 ,KING,JONES,SCOTT                   @ ,KING,JONES,SCOTT,ADAMS
+
+문제 9. 다음 SQL 문장에서 sal 값은 어떤 열로 집계되는가?
+
+SELECT +
+FROM (SELECT TO_CHAR (hiredate, 'YYYY') AS yyyy, job, deptno, sal FROM emp)
+PIVOT (SUM (sal) FOR deptno IN (10, 20, 30))
+
+ORDER BY 1, 2;
+
+2) 전체            @ yyyy           3 yyyy. job        @ yyyy. job, deptno

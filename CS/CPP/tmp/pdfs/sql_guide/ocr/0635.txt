@@ -1,0 +1,51 @@
+과목 III 고급 활용 및 튜닝
+酗( INSERT
+// * 수행
+酗( m.ACLE (RFI CASF Ct.RSn=YES);
+이래는 애플리케이션에서 커서를 개심한 상태에서 같은 SQL을 *번 반복 수행했을 때의 SQL 트레이스 결과다.
+(괴
+total
+cmnt
+1
+1圄1
+0.18
+0.17
+0.5
+0.14
+023
+0.37
+disk
+0
+0
+0
+0
+query
+0
+0
+1끄
+1″
+current
+0
+0
+0
+0
+0
+0
+5%0
+Uisses in library (忒層 dffing parse: 1
+일반적인 방식으로 같은 SQL을 반복 수행할 때는 Parse Call 횟수가 Execute Call 횟수와 같게 나타난다고
+앞서 설명했다 반면 위 트레이스 결고FI선 Parse 에1이 한 번만 발생했고, 이후 49叨번 수행할 때는 Parse Call이
+전혀 발상하지 %%.t음을 알 수 있다. 최초 Pa1se Call이 발생한 시점에 하드 파심을 수행한 사실도 아래쪽 라이브러리
+캐시 Miss 항목을 보-고 알 수 있다.
+자비에서 이 기능을 구현하려면 다음과 같이 묵시적 개ål(lmplicit Caching) 옵션을 사용하면 된다.
+礪li( static void CursorCæhim(Cmrpction conn, int co-jnt) throws Exception{
+// 개시 사이즈를 1로 지정
+((fraclecmrection)cn). setstatæntcacheSize( 1 ) :
+// 욱시적 개심 기능을 활성화
+( (oraclecmnection.com/.set1•1icitCachingEnab1ed(true) :
+for (int i = 1,• i 수 ca-nt; i++) {
+// PreparedStateænt를 루프문 안쪽에 선언
+•SELECT ?,?,?,a.* FO a M4ERE a.enæ LIKE •劂|“);
+stnt.gtlnt(l,i);
+sm.setInt(2,i);
+644 전문가 가이드

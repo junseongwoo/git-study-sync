@@ -1,0 +1,36 @@
+제1장 기본
+[실행 결과]
+ENAME
+ADAMS
+ADAMS
+ALLEN
+ALLEN
+ALLEN
+ALLEN
+BLAKE
+BLAKE
+ACCO.NTI%
+RESER대
+SALES
+0ÆRATW6
+ACCO.NTI%
+RESER대
+0ÆRATW6
+ACCO„NTI%
+RESEAR대
+56 개의 행이 선택됐습니다.
+실행 결과에서 모든 사원 각각은 DEVF의 모든 부서명과 연결이 돼서 4번의 조합이 출력됐음을 알 수 있다.
+[예제] NATURAL 」대N의 경우 WHERE 절에서 조인 조건을 추가활 수 없지만, CROSS 」이N의 경우 WHERE 절에 조인
+조건을 추가할 수 있다. 그러나, 이 경우는 CROSS 」이N이 아니라 INNER 」이N과 같은 결과를 얻기 때문에 CROS
+」이N을 사용하는 의미가 없어지므로 권고하지 않는다.
+[예제]
+SELECT A.ENAME, 8 咏襞
+FO EP A cmSS 3이N FT B
+MCRE B.FTt0 = A.DEPTW
+위 SQL과 아래 SQL은 같은 결과를 얻을 수 있다.
+[예제]
+SELECT A.ENAk
+FÜ EP A IVCR JOIN FT B
+애 B = A.DEPTL
+1
+전문가 가이드 265

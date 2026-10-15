@@ -1,0 +1,35 @@
+제2장 SQL 활용
+
+다섯 번째, 선형 분석을 포함한 통계 분석 관련 함수가 있다. 통계에 특화한 기능이므로 본 가이드에서는 설명을
+생략한다. 다음은 0720!6의 통계 관련 함수를 참조로 표시한 것이다.
+
+CORR, COVAR_POP, COVAR_SAMP, STDDEV, STDDEV_POP, STDDEV_SAMP, VARIANCE,
+VAR_POP, VAR_SAMP, REGR_(LINEAR REGRESSION), REGR_SLOPE, REGR_INTERCEPT,
+REGR_COUNT, REGR_R2, REGR_AVGX, REGR_AVGY, REGR_SXX, REGR_SYY, REGR_SXY
+
+Hl WINDOW FUNCTION SYNTAX
+- 윈도우 함수에는 OVER 문구가 키워드로 필수 포함된다,
+
+SELECT WINDOW_FUNCTION (ARGUMENTS) OVER ([PARTITION BY 칼럼] [ORDER BY 절] [WINDOWING 절])
+FROM 테이블 명;
+
+- WINDOW_FUNCTION : 기존에 사용하던 함수도 있고, 새롭게 WINDOW 함수용으로 추가된 함수도 있다.
+- ARGUMENTS (인수) : 함수에 따라 0 ~ 개의 인수가 지정될 수 있다.
+
+- PARTITION BY 절 : 전체 집합을 기준에 의해 소그룹으로 나눌 수 있다.
+
+- ORDER BY 절 : 어떤 항목에 대해 순위를 지정할지 ORDER BY 절을 기술한다.
+
+- WINDOWING 절 : WINDOWING 절은 함수의 digo] 되는 행 기준의 범위를 강력하게 지정할 수 있다.
+
+ROWSE 물리적인 결과 행의 수를, RANGE: 논리적인 값에 의한 범위를 나타낸다. 둘 중 하나를 선택해서
+사용할 수 있다, 다만 WINDOWING 절은 50Ｌ 560/6[에서는 지원하지 않는다.
+
+[BETWEEN 사용 타입]
+| RANGE BETWEEN UNBOUNDED PRECEDING | CURRENT ROW | VALUE_EXPR PRECEDING/FOLLOWING
+AND UNBOUNDED FOLLOWING | CURRENT ROW | VALUE_EXPR PRECEDING/FOLLOWING
+
+[BETWEEN 미사용 타입]
+ROWS | RANGE UNBOUNDED PRECEDING | CURRENT ROW | VALUE_EXPR PRECEDING
+
+SQL 전문가 가이드 |325

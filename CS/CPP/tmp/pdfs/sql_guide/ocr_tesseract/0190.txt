@@ -1,0 +1,40 @@
+제1장 SQL 기본
+
+I BETWEEN a AND 6 연산자
+[예제] 세 번째로 키가 170 센티미터 이상 180 센티미터 이하인 선수들의 정보를 BETWEEN a AND b 연산자를 사용해
+WHERE 절을 완성한다.
+
+SELECT PLAYER NAME AS 선수명, POSITION AS 포지션, BACK_NO AS 백넘버, HEIGHT AS 키
+FROM PLAYER
+WHERE HEIGHT BETWEEN 170 AND 180;
+
+BETWEEN a AND bt 범위에서 '2와 '0'의 값을 포함하는 범위를 말한다.
+
+[실행 결과]
+
+선수                포지션            백넘버              키
+유동우              DF                     40             177
+정호곤              DF                                    172
+정동훈              DF                                    180
+정남표               DF                                        180
+EA               DF                                        180
+권혁준              DF                                    173
+ogy              DF                                    178
+하재훈             DF                                    174
+임기한             OF                                    177
+셀라하틴           대                     11             180
+
+259 개의 행이 선택됐습니다.
+
+Hl IS NULL 연산자
+
+NULL(ASCII 00)은 값이 존재하지 않는 것으로, 확정되지 않은 값을 표현할 때 사용한다. 따라서 어떤 값보다
+크거나 작지도 않고 ' (공백, ASCH 32)이나 0(Zero, ASCII 48)과 달리 비교 자체가 불가능한 값이다. 연산 관련
+NULLS] 특성은 다음과 같다.
+
+- NULL 값과의 수치연산은 NULL 값을 리턴한다.
+
+- NULL 값과의 비교연산은 AZ|(FALSE)E 리턴한다,
+- 어떤 값과 비교할 수도 없으며, 특정 값보다 크다/작다고 표현할 수 없다.
+
+ 50 전문가 ele [195

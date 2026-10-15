@@ -1,0 +1,50 @@
+제5장 SOL 옵티마이저           |
+
+from     emp a, dept b
+where      a.deptno = b.deptno
+and       a.job = 'SALESMAN'
+and       b.loc = ‘CHICAGO’
+
+따라서 위에서 본 <쿼리1>의 뷰 쿼리 블록은 액세스 쿼리 블록(뷰를 참조하는 쿼리 블록)과의 머지(06086)
+과정을 거쳐 <쿼리2>와 같은 형태로 변환되는데, 이를 '뷰 4650108'이라고 한다. 뷰를 14608108해야 옵티마이저가
+더 다양한 액세스 경로를 조사 대상으로 삼을 수 있게 된다.
+
+다음과 같이 조건절 하나만을 가진 단순한 0000-58169002ㅁ 뷰가 있다.
+
+create or replace view emp_salesman
+
+as
+
+select  empno, ename, job, mgr, hiredate, sal, comm, deptno
+from     enp
+
+where    job = 'SALESMAN' ;
+
+fs
+
+위 emp_salesman 뷰와 조인하는 간단한 조인문을 작성해 보자.
+
+select ~~ e.empno, e.ename, e.job, e.mgr, e.sal, d.dname
+from     enp_salesman e, dept d
+
+where     d.deptno = e.deptno
+
+and      e.sal >= 1500 ;
+
+위 쿼리를 뷰 Mergingdtx] 않고 그대로 최적화한다면 다음과 같은 실행계획이 만들어진다.
+
+Execution Plan
+
+0      SELECT STATEMENT Optimizer=ALL_ROWS (Cost=3 Card=2 Bytes=156)
+
+1 © NESTED LOOPS (Cost=3 Card=2 Bytes=156)
+
+28501    VIEW OF 'EMP_SALESMAN' (VIEW) (Cost=2 Card=2 Bytes=130)
+
+~ 글      TABLE ACCESS (BY INDEX ROWID) OF 'EMP' (TABLE) (Cost=2 Card=2 )
+483       INDEX (RANGE SCAN) OF 'EMP_SAL_IDX' (INDEX) (Cost=1 Card=7)
+
+ㅣ 이사    TABLE ACCESS (BY INDEX ROWID) OF 'DEPT' (TABLE) (Cost=1 Card=1 Bytes=13)
+(Fat      INDEX (UNIQUE SCAN) OF 'DEPT_PK' (INDEX (UNIQUE)) (Cost=0 Card=1)
+
+KL 387 가이드 [655

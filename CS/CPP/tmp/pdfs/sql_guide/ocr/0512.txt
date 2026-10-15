@@ -1,0 +1,28 @@
+廠장 분석 도구
+제 2 절 SQL 트레이스
+예상 실행계획을 획인하는 것만으로도 사전에 많은 문제점을 찾아낼 수 있다. 그러나 엑스레이 사진만으로 환자의
+모든 병증을 진단할 수 없듯이, 예상 실행계획만으로는 SQL에 숨겨진 문제점을 정확히 파악할 수 없다. 이때는
+트레이스를 통해 SQL의 실제 수행 과정을 분석해야 한다. 의사가 엑스레이로 병증을 찾지 못했을 때 초음파, cr,
+MRI 촬영을 실시하는 것처럼 말이다.
+1. Oracle
+가. QL 트레이스 수집
+Oracle에서 SQL 트레이스를 수집하는 방법은 매우 다R斜다 하지만 대부분 관리자를 위한 것이므로 여기서는
+개발자에게 필요한 기능만 소개하고자 한다.
+아래는 현재 자신이 접속해 있는 세션에만 트레이스를 설정하는 방법이다.
+5한〉 alter session set sql—trace = trtæ;
+다
+S엔〉 select * frm = 7E;
+5한〉 select * fran 鹵al,•
+S한〉 alter session set sql-trace = false;
+위와 같이 트레이스를 설정하고 SQL을 수행한 후에는 user-dump-dest 파라미터로 지정된 서버 디렉터리
+밑에 트레이스 파일(.trc)이 생성된다 가장 최근에 생성되거나 수정된 파일을 찾아 분석하면 되는데, 파일 찾기에
+어려움을 느끼는 독재는 아래 쿼리를 잘 활용하기 바란다 스크립트로 저장해 두었다가 실행하면 편리하다.
+SQL> select r.value 1| 7' || lo•er(t.instance-næ) || •-0“-•
+ltrim(to-char(p.spid)) || '.trc• trace-file
+2
+3 fræ vSprocess P, v$session S, r, v$instmce t
+5 r.næ = 'user ±st•
+6 s.sid = (select sid v$mystat where = 1) :
+TRACE-FILE
+/usr/1Ⅸal/舡*/*in/鰍AI囟/恥/酊al囟꼬ra-22827. trc
+전문가 가이드 521

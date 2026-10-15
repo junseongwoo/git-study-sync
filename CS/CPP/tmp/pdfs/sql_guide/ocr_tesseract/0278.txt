@@ -1,0 +1,36 @@
+제2장 SQL 활용
+
+[예제]
+SELECT  REGION_NAME AS 연고지명, TEAM NAME AS 팀명, E_TEAN_NAME AS 영문팅명
+FROM TEAM
+WHERE TEAM_ID = (SELECT TEAM_ID
+
+FROM PLAYER
+WHERE PLAYER NAME = '정현수')
+ORDER BY TEAM_NAME;
+
+3행에 오류:
+ORA-01427: 단일 행 하위 질의에 2개 이상의 행이 리턴됐습니다.
+
+위의 SQL 문은 서브 쿼리의 결과로 2개 이상의 행이 반환돼 단일 행 비교 연산자인 '=로는 처리가 불가능하기
+때문에 에러가 반환됐다. 따라서 다중 of 비교 연산자로 바꾸어서 SQL 문을 작성하면 다음과 같다.
+
+SELECT 66104 4486 AS 연고지명, TEAM NAME AS 팀명, E_TEAM NAME AS 영문팀명
+FROM TEAM
+WHERE TEAM_ID IN (SELECT TEA_ID
+FROM PLAYER
+WHERE PLAYER NAME = '정현수' )
+ORDER BY 시 삐;
+
+연고지명        팀명            영문팀명
+전남            드래곤즈       CHUNNAM DRAGONS FC
+성남             일화천마        SEONGNAM ILHWA CHUMMA FC
+
+2 개의 행이 선택됐습니다.
+
+실행 결과를 보면 '정현수'란 이름을 가진 선수가 두 명이 존재한다. 소속팀은 각각 전남 드래곤즈 팀(07)과
+성남 일화천마 팀(&08)이다. 본 예제에서는 동명이인에 대한 내용을 예로 들었지만, 서브 쿼리의 실행 결과가 2건
+이상이 나오는 모든 경우에 다중 행 비교 연산자를 사용해야 한다.
+
+SQL 전문가 가이드 |285.
+

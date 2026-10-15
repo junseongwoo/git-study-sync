@@ -1,0 +1,67 @@
+[실행 결과l
+ACCWNTI%
+ACCO..NTI%
+ACCWNTI%
+RESEAR대
+RESEAR대
+RESEAR대
+RE
+SALES
+SALES
+13 행이 선택됐습니다.
+0
+0
+0
+0
+0
+0
+0
+0
+CLERK
+백鱉R
+ANALYST
+CLERK
+SALESW
+0
+0
+0
+0
+0
+0
+0
+0
+0
+EP_CNT
+1
+1
+1
+2
+2
+1
+1
+1
+4
+1
+SAL-SI-N
+IE
+24%
+IÆ
+乃75
+廠장 활용
+3
+부서별땝무별과 전체 집계를 표시한 레프에서는 GROUPING 함수가 1을 반ee 것을 획인할 수 있다. 그리고
+전체 합계를 나타내는 결과 라인에서는 부서별 GROUPING 함수와 업무별 GROUPING 함수가 둘 다 1인 것을
+알 수 있다.
+STEP 4. GROUPING 함수 + CASE 사용
+[예제] ROLLUP 함수를 추가한 집계 보고서에서 집계 레코드를 구분할 수 있는 GROJPING 함수와 C싀뚀 함수를 함께 사용한
+SQL 문장을 작성한다
+[예제]
+SELECT CASE ÄPING (8 ″) M€N 1 'A11 ELSE ~ EtO AS ~
+, CASE ) 1 •샌1
+, (Ⅷ (하 AS EP_CNT, SIN (A.SAL) AS SAL-SI-N
+FO EP 시 FT B
+WHERE 8 FTt0 = A.FTIO
+6″ BY ROLLIP (B.NE, A.J@
+ORIYR BY 8.~, A.Jæ;
+ELSE A.n AS 〕%
+전문가 가이드 313

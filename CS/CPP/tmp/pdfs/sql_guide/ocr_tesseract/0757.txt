@@ -1,0 +1,72 @@
+세6장 고급 SOL 튜닝          |
+
+and 고객.고객번호 = 카드발급.고객번호 )
+
+select v.*
+from (
+select 3.카드번호
+500(3.거래금액)
+null
+    null
+from 카드거래내역 a
+, 、 위험고객카드 b
+where 조건
+grow by 3.카드번호
+union all
+select 3.카드번호
+null
+sum(amt)
+기    null
+frm (
+select 3.카드번호
+540(3.거래금액)
+from 현금거래내역 a
+위험고객카드 b
+where 조건
+group by 3.카드번호
+union all
+select 38.카드번호
+50(3,결재금액) * -1
+from 현금결재내역 a
+위험고객카드 b
+where 조건
+grow by 3.카드번호
+)a
+group by 3.카드번호
+union all
+select 3.카드번호
+"    null
+null
+540(3.거래금액)
+from 해외거래내역 3
+위험고객카드 b
+where 조건
+group by 3.카드번호
+)\
+Execution Plan
+
+as 카드번호
+
+35 거래금액
+
+35 현금서비스잔액
+as 해외거래금액
+
+35 카드번호
+
+as 현금서비스잔액
+as 현금서비스금'
+35 해외거래금액
+
+as 카드번호
+as amt
+
+as 카드번호
+as amt
+
+as 카드번호
+
+35 현금서비스잔액
+35 현금서비스금액
+35 해외거래금액
+

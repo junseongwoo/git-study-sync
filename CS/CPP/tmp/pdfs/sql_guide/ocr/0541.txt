@@ -1,0 +1,33 @@
+과목 lll 고급 활용 및 튜닝
+[표 111-3-11 lndex FuIl Scan과 Fast Full Scan 비교
+lndex Full
+인덱스 구조를 띠라 스킨
+2 결과 집합 순서 보장
+로 Single Block 1/0
+4. 병렬스권 불가(파티션 돼 있지 않다면)
+도 인덱스에 포함되지 않은 칼럼 조회 시에도 사용 가능
+바. |釅 Scan Descending
+lndex Fast Full Scan
+1. 세그먼트 전체를 스캔
+2. 결과 집합 순서 보장 안 됨
+3. MuItibIock 1/0
+4. 병릴스캔 가능
+5. 인덱스에 포함된 칼럼으로만 조회할 때 사용 가능
+lndex Range 노과 기본적으로 동일한 스캔 방식이다. [그림 Ⅲ-3-8〕처럼 인덱스를 뒤에서부터 앞쪽으로 스캔
+하기 때문에 내림차순으로 정렬된 결과 집합을 얻는다는 점만 다르다.
+- Range Scan
+Descending
+[그림 Ⅲ-3-8] lndex Range Scan Descending
+*원처럼 테畔 테이블을 기준으로 내림차순 정렬하고자 할 때 empno 칼럼에 인덱스가 있으면 옵티미ol저가
+알아서 인덱스를 거꾸로 읽는 실행계획을 수립한다.
+SQ.> select * fræ
+2 -•℃ is r•ot 젠11
+Ex«utim PI결,
+1
+0
+1
+2
+%LECT STATEENT
+0 TÆLE KCESS (BY IüX 血ID) 'EP' (TABLE)
+1 (~ 『丈AN ⅨS(E尠1蜀 OF 'PK-EPi (1뚀X (I.NIQJE))
+550 Y)L 전문가 ,삐드

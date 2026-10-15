@@ -1,0 +1,66 @@
+과목 II 기본과 활용
+PIVOT 절은 다수의 집계함수를 지원한다. 다음 쿼리는 SUM 함수와 COUNT 함수를 함께 사용했다.
+[예제1
+SELECT *
+~ (SELECT FTL SAL Fu EP)
+PIWT (호믈 (SAL) AS SAL, (啞 (삐 AS CNT IN (10 AS D10, 20 AS D20))
+BY 1:
+[실행 결과]
+ANALYST
+DI@_SAL
+IE
+24%
+010-(NT
+0
+1
+1
+1
+0
+D20-SAL
+1堪
+2975
+D2€_CNT
+2
+2
+1
+0
+0
+5 행이 선택욌습니다.
+FOR 절에도 다수의 열을 기술할 수 있다. 다음과 같이 IN 절에 다중 열을 사용해야 한다.
+[예제!
+SELECT *
+~ (SELECT 10-(十鸚 대IæDATE, 'YYYY') AS YYYY, Jæ, SAL FRæ EP)
+PIWT (뫼 (SAL) AS SAL, (이.鼈 (하 AS CNT
+Fm (-, 1%) IN ((10, 'MALYST') AS 01%, (10, 'CLERK') AS
+(20, 'AMLYST') AS D20A, (20, 'CLERK') AS D2€C))
+″ BY 1:
+!실행 결과!
+YYYY DIOA-SAL
+DIU-CNT
+0
+0
+1%1
+0
+0
+4 행이 선력왔습니다.
+%8 전문가 가이드
+DIOCSAL
+1甓
+DIK_CMT
+0
+0
+1
+0
+D2€A-SAL
+D2€A-CNT
+0
+1
+0
+1
+D2€C-SAL
+11%
+D2K-CNT
+1
+0
+0
+1

@@ -1,0 +1,60 @@
+과목 11 SQL 기본과 활용
+FAX
+VAR대枳2(10)
+V枳(RAR2(50)
+V枳(HAR2(10)
+CmSTRAINT TEAM_PK PRIUARY KEY (TEAM—ID)
+테이블이 생성왰습니다.
+[예제] SQL Server
+Cæ.ATE TABLE TE.AY (
+TE,u ID
+표飄-N襞
+, E TEN_NAE
+, ZIPßE
+, ZIP-(匶2
+, FAX
+(훼3)
+VARCHAR(8)
+v猷대枳(40)
+V枳대AR(50)
+대AR(4)
+대쎼3)
+(甌3)
+(甌3)
+V欻대枳(圈)
+VARCHAR(3)
+V枳어鰍(10)
+V猷어承(10)
+VARCHAR(50)
+VARO獻(10)
+MJLL
+t0T WLL
+WT WLL
+NOT WLL
+CT6TRAINT TE"_PK PRIUARY KEY (TEAM_ID)
+영령이 완료됐습니다.
+[예제] 다음 조건의 형태로 선4(PLAYER) 테이블을 생성한다.
+테이를명
+PLAYER
+테이블 설명 •. 케이리그 선수들의 경보를 갖고 있는 테이블
+칼럼명
+. PLAYER-ID (선쉬D)
+PLAYER-UE (선수명 )
+(팅ID)
+TEAM-ID
+E-PLAYER-NÅ-E (영문선수명)
+문자 고정 자릿수 7자리,
+문자 가변 자릿수 20자리,
+문자 고정 자릿수 3자리,
+문자 가변 자릿수 40자리,
+문자 가변 자릿수 %자리,
+문자 고경 자릿수 4자리,
+문자 가변 자릿수 10자리,
+숫자 2자리,
+)이N_YYYY
+耶ITI애
+428 전문가 가이드
+(선수별명)
+(입단년도)
+(포지션)
+(등번호)

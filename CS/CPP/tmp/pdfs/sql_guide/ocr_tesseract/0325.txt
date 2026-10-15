@@ -1,0 +1,38 @@
+과목 | QU 기본과 활용
+
+[예제] 사원들의 급여와 같은 매니저를 두고 있는 사원들의 SALARY 중 최댓값을 함께 구한다. 실행 결과를 확인하면 파티션
+내의 최댓값을 파티션 내 모든 행에서 MAX_SALK:= 칼럼 값으로 가질 수 있다.
+
+SELECT MGR, 8006, SAL
+, WAX (SAL) OVER (PARTITION BY MGR) AS MAX_SAL
+FROM EWP;
+
+SAL                           MAX_SAL
+3000                              3000
+3000                              3000
+950                              1600
+1600                          1600
+1250                          1600
+1500                          1600
+1250                          1600
+1390                          1300
+1100                                     1100
+2850                              2975
+2975                              2975
+2450                              2975
+
+800                                   800
+KING                              5000                              5000
+
+14 행이 선택됐습니다.
+
+[예제] 추가로, INLINE VIEWE 이용해 파티션별 최댓값을 가진 행만 추출할 수도 있다. 실행 결과를 보면 MGRO| 7566인
+SCOTT, FORDE 같은 최댓값을 가지므로, WHERE SAL = MAX_SAL 조건에 의해 2건이 추출됐다.
+
+SELECT MGR, ENAME, SAL
+FROM (SELECT MGR, ENAME, SAL
+, WAX (SAL) OVER (PARTITION BY MGR) AS MAX SAL
+FROM EMP)
+WHERE SAL = MAX_SAL;
+
+332 90. 전문가 가이드

@@ -1,0 +1,20 @@
+R3장 관리 구문
+3. RENANIE TABLE
+RENAME 명령어를 사용해 테이블의 이름을 변경할 수 있다.
+RENAME 기존 테이불명 TO 새로운 테이불명,
+SQL Server0il서는 sp-rename을 이용해 테이블 이름을 변경할 수 있다.
+sp-renare •기존 테이를명•, '새로운 테이불명•,
+[예제] RENAME 문장을 이용애 TEAM 테이를 이통을 다른 것으로 변경하고, 다시 TEAM 테이를로 변경한다.
+주의: 개체 이름 부분을 변경하면 스크립트 및 저장 프로시저를 손상시길 수 있습니다.
+|예제] Oracle
+RENAE TEÆ TO TEN_BACKIP,
+테이를 이름이 변경됐습니다.
+RENAE TEU-BACKIP TO TE嚮
+테이불 이름이 변경됐습니다.
+[예제l SQL Server
+SP—rmæ •弼 TEAW 'TEUNKLP
+sp—renaæ • TEAU-BKKIP' TEA&
+주의: 개제 이름 부분을 변경하면 스크립트 및 저장 프로시저를 손상시길 수 있습니다.
+1
+1
+산문가 ,삐드 445

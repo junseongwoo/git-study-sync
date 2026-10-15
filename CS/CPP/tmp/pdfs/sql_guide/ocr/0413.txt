@@ -1,0 +1,25 @@
+과못 II QL 기본과 활용
+üLBACK S槪3,•
+를백이 완료묐습니다.
+!예제1 SQL Server
+SAVE SVTR3;
+명령이 완료묐습니다.
+~ PLAYER;
+(4C개 행이 영향을 받음)
+QLBACK TRAN SWR3,•
+명령이 완료됐습니다.
+[그림 Ⅱ-十1]은 여러 개의 SAVEP이NT 설정 후 롤백이 이루어지는 범위에 대해 표현한 것이다.
+트랜책션 시작
+INSRT
+SAVEPOINT A
+UPDATE
+SAVEPOINT B
+현재 위치
+ROLLBACK
+ROLLBACK TO A
+ROLLBACK TO B
+[그림 Ⅱ-年1] ROLLBACK 원리(Oracle 기준)
+{그림 Ⅱ을1]에서 보듯이 저장점 A로 되돌리고 나서 다시 B와 같이 미래 방향으로 되돌릴 수는 없다. 일단
+특정 저장점까지 롤백하면 그 서장점 이후에 설정한 저장점이 무효가 되기 때문이다. 즉 'ROLLBACK TO A'를
+실행한 시점에서 저장점 A 이후에 정의한 저장점 B는 존재하지 않는다.
+420 전문가 가이드

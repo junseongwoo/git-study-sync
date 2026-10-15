@@ -1,0 +1,47 @@
+제6장 고급 50. 튜닝
+
+연습문제
+
+문제 1. 5개 근무지역에 각각 2만 명의 사원이 배속되서 일하는 회사가 있다. 아래 쿼리에 대한 튜닝 방안으로 올바른 것은?
+
+select 직급, 담당업무 +:00 사원 where 근무지역 = 10
+union
+select 직급, 담당업무 from 사원 where 222% = 20
+
+Execution Plan
+0      SELECT STATEMENT Optimizer=ALL_ROWS (Cost=8 Card=8 Bytes=120)
+1 0 SORT (UNIQUE) (Cost=8 Card=8 Bytes=120)
+2 1 UNION-ALL
+30050      TABLE ACCESS (FULL) OF '사원' (Cost=2 Card=4 Bytes=60)
+A452      TABLE ACCESS (FULL) OF '사원' (Cost=2 Card=4 Bytes=60)
+
+® union 대신 union all 사용한다,
+(2) 쿼리를 다음과 같이 변경한다.
+select 직급, 담당업무 from 사원 where 2849 in (10, 20)
+(3) 쿼리를 다음과 같이 변경한다.
+select 직급, 담당업무 601 사원 where 근무지역 in (10, 20) group by 직급, 담당업무
+(9) 근무지역을 선두로 갖는 인덱스를 생성한다.
+
+문제 2. 부분범위처리에 대한 설명으로 틀린 것은?
+® 부분범위처리는 Oraclette] 독특한 메커니즘이다.
+@ 부분범위처리는 대량의 결과 집합 중 일부만 Fetchdhl 멈추는 업무 화면에서 유용하다.
+(3) 결과 집합 HAE Fetchsfol 한다면 부분범위처리가 성능 개선에 전혀 도움이 되지 않는다
+(8) ArraySize§ 작게 설정하면 부분범위처리에 의한 옹답속도가 빨라진다.
+
+문제 3. 다음 SQLE 부분범위처리가 가능한 형태로 수정하시오. 2010년 3월 4일에 판매됐지만 3월 3일에는 판매되지
+않은 아이템을 추출하려는 것이며, SALES 테이블 PK 인덱스는 [ord_date + item_no] 순으로 구성됐다.
+
+select item_no
+
+from sales
+
+where ord_date = '20100304"
+minus
+
+select item_no
+
+from sales
+
+where ord_date = ‘20100303
+
+Sou 전문가 가이드 [77]

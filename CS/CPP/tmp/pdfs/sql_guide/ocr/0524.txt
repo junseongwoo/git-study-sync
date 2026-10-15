@@ -1,0 +1,60 @@
+Q장 분석 도구
+1) 부하 프로필
+Profile
+size:
+810(k
+hysical
+Physical writes:
+User calls:
+Parses:
+Hard parses:
+Ex«utes :
+tims:
+Per ⅸ0馝
+140,839.碼
+47,7圈.26
+711
+7%.69
+%.69
+2,401.63
+412.%
+1.49
+1圈.%
+1,187.18
+26.5
+Per
+5,새5.24
+1,812.93
+27.%
+27.%
+3.21
+91.15
+15.磻
+5.27
+45.%
+Per *는 각 측정 지표 값들을 측정 시간(Snapshot lntenral, 초)으로 나는 것이다. 따라서 초당 부하(뫄
+발생람을 의미한다. Per Transacüon은 각 측정 지표 값들을 트랜잭션 개수로 나는 것이다. 한 트랜책선 내에서
+평균적으로 얼만큼의 부하(Load)가 발생하는지를 보여주는데, 트랜책션 개수(Transactions)는 commit 또는
+rollback 수행 횟수를 단순히 더한 값이다.
+2) 인스턴스 효율성
+InsWKe Efficiency 1鸞)
+Buffer t&ait 홀:
+Buffer Hit 4:
+L1brary Hit 4:
+Execute to Parse *:
+Parse (어」 to Parse EI″ 4:
+%.71
+%.67
+65.24
+0.5
+RÖ NoWait 통:
+Sort 4:
+Parse 4:
+Latch Hit 4:
+* tb)-Parse (멘:
+1%.惢
+97.%
+인스턴스 효율성 항목-들은 Execute to Parse % 항목을 제외하면 모두 1%%에 가까운 수치를 보여야 정상이다.
+참고로 위에서 Parse CPU to Parse Elapsd % 항목이 0.85%로 비정상적으로 낮은 수치를 보인 것은 ,Act1tæ
+프로세스가 동시에 폭증하면서 과도한 Parse 예1이 발생한 장애 상횡에서 측정했기 때문이다
+전문가 가이드 533

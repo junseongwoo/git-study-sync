@@ -1,0 +1,37 @@
+제3장 인덱스 튜닝
+
+StmtText
+
+|—Nested Loops(Inner Join, OUTER REFERENCES: ([Bmk1000]))
+{—Index Seek(0BJECT:([..].[dbo].[emp].[emp_deptno_idx]), SEEK:([deptno]=26) ORDERED FORWARD)
+1—RID Lookup(0BJECT:([..].[dbo].[emp]), SEEK: ([Bmk1000]=[Bmk1660]) LOOKUP ORDERED FORWARD)
+
+참고로 2000 이전 버전의 실행계획에는 다음과 같이 표시된다.
+
+StmtText
+
+|—Bookmark Lookup(BOOKMARK: ( [Bmk1000]), 0BJECT:([..].[dbo].[emp]))
+{—Index Seek(0BJECT:([..]. [dbo]. [emp]. emp_deptno_idx]), SEEK:([deptno] = 20) ORDERED FORWARD)
+
+인덱스를 수직적으로 탐색한 후에 리프 블록에서 '필요한 범위'만 스캔한다고 했다. 이는 범위 스캔(83086 Scan)°]
+의미하는 바를 잘 설명해 주고 있다. 데이터베이스 프로그래밍에 경험이 많지 않은 초급 개발자는 대개 인덱스가
+사용되는 실행계획을 보면 자신이 작성한 SQL 문에 문제가 없다고 판단하고 일단 안심한다. 하지만 실행계획 Aol
+Index Range Scano] 나타난다고 해서 항상 빠른 속도를 보장하는 것은 아니다.
+
+인덱스를 스캔하는 범위(83080)를 얼마만큼 줄일 수 있느냐, 테이블로 액세스하는 횟수를 얼마만큼 줄일 수
+있느냐가 관건이다. 이는 인덱스 설계와 SQL 튜닝의 핵심 원리 중 하나이다.
+
+Index Range 502ㅁ이 가능하게 하려면 인덱스를 구성하는 선두 칼럼이 조건절에 사용돼야 한다. 그렇지 못한
+상황에서 인덱스를 사용하도록 힌트로 강제한다면 바로 이어서 설명할 Index Full Scan 방식으로 처리된다.
+
+Index Range Scan 과정을 거쳐 생성된 결과 집합은 인덱스 칼럼 순으로 정렬된 상태가 되기 때문에 이런
+특징을 잘 이용하면 50 order by 연산을 생략하거나 min/max 값을 빠르게 추출할 수 있다.
+
+나. Index Full Scan
+
+Index Full Scan® 수직적 탐색없이 인덱스 리프 블록을 처음부터 끝까지 수평적으로 탐색하는 방식으로서,
+대개는 데이터 검색을 위한 최적의 인덱스가 없을 때 차선으로 Heed
+
+[그림 1-3-3] Index Full Scan
+
+SQL 전문가 가이드 [543

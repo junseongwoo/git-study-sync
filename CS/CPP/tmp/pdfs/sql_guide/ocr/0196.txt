@@ -1,0 +1,41 @@
+제1장 기본
+BACK-NO AS 백넘버, AS 기
+FO PLAYER
+HERE TEAY ID IN ('K02', •噩7')
+AIO mSITIm = •譬
+AtO HEIG4T BETWEEN 170 A*0 1%;
+앞서 살펴본 SQL 연산자인 'IN'과 논리 연산자인 '애는 결과도 같고 내부적으로 처리하는 방법도 같다. 즉
+소속팀이 삼성불루윔즈이거나 전남드래곤즈인 선수들을 조회할 때 WHERE 절에 TFAM-ID = 'KC OR TFAM-ID
+= 'K07라는 논리 연산자 조건과 TEAM-ID IN CK02', 'K07)라는 SQL 연산자 조건은 같다.
+"HEIGHT 〉= 170 AND HEIGHT <= 180"인 비교 연산자 조건과 "HEIGHT BE*IWEEN 170 AND 10"인
+SQL 연산자 조건도 결과도 같고 내부적으로 처리되는 방법도 같다.
+6. 부정 연산자
+비교 연산자, SQL 연산자에 대한 부정 표현을 부정 논리 연산자, 부정 SQL 연산자로 구-분할 수 있다.
+[표 Ⅱ•1•291 부정 연산자의 종류
+부정 논리 연산자
+부정 SQL 연산자
+연산자
+NOT 칼럼명 -
+NOT 칼럼명 >
+NOT BEm€VE.EN a AND b
+NOT IN (list)
+IS NOT NULL
+연산자의 의미
+같지 않다.
+같지 않다.
+같지 않다(ANIS/ISO 표준, 모든 OS에서 사용 가능).
+~와 같지 않다.
+~보다 크지 않다.
+a와 b의 값 사이에 있지 않다(a, b 값을 포함하지 않음).
+list 값과 일치하지 않다.
+NULL 값을 갖지 않다.
+[예제] 상성를루윔즈 소속인 선수들 중에서 포지션이 미드월더(MF)가 아니고, 카가 175센티미터 이상 185센티미터 이하가
+아닌 선수들의 자료를 찾아본다.
+[예제]
+SELECT PLAYER-NAk AS 선수영, POSITW{ AS 포지션, BACK-W AS 백넘버, ÆIGHT AS 기
+F-u PLAYER
+M*ERE TEAN 10 = *02'
+AIO t0T 郞ITI혜 = 'MF
+AIO IOT 柾1애T 175 AtO 185;
+心•력
+전문가 710t드 201

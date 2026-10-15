@@ -1,0 +1,37 @@
+제5장 SOL 옵티마이저
+
+8. 기타 쿼리 변환
+
+가. 집합 연산을 조인으로 변환
+
+1016156아나 Minus 같은 집합(560) 연산을 조인 형태로 변환하는 것을 말한다.
+아래는 deptno = 10에 속한 사원들의 job, mgr 제외시키고 나머지 job, mgr 집합만을 찾는 쿼리이다, 각각
+Sort Unique 연산을 수행한 후에 Minus 연산을 수행하는 것을 볼 수 있다.
+
+SQL> select job, mgr from emp
+2 minus
+
+3 select job, mgr from emp
+4 where deptno = 10 ;
+
+| 1d | Operation             | Name | Rows | Bytes | Cost (%CPU) | Time     |
+ㅣ 0 | SELECT STATEMENT      |    ㅣ 14] 362 | 8 (63) | 00:00:01 |
+11 5         |   |   |    |       ㅣ     |
+| 2 | SORT UNIQUE       |    ㅣ 14] 26 ㅣ 4 (25) | ee:ee:01 |
+ㅣ 3 | TABLE ACCESS FULL    jew | 14} 26 ㅣ 3 (0) | 00:00001 |
+| 4 | SORT UNIQUE       |    ㅣ 31 9%] 4 (25) | 00:00:01 |
+I* 5 | TABLE ACCESS FULL    ew | 오님 9 |   3 (0) | 00:00:01 |
+
+Predicate Information (identified by operation id):
+
+5 - filter("DEPTNO"=10)
+
+다음은 옵티마이저가 Minus 연산을 조인 형태로 변환했을 때의 실행계획이다.
+
+| 11 | Operation             | Name | Rows | Bytes | Cost (%CPU) | Time     |
+| 0 | SELECT STATBENT         |     |   13] 663 |    8 (25) | 00:00:01 |
+11 | HASH UNIQUE              |       |    13] 663 |     8 (25) | ee:00:01 |
+1* 2 | HASH JOIN ANTI           |       |    131 663 |     7 (15) | 00:00:01 |
+lata)    TABLE ACCESS FULL      | Ew |    14] 266 |     3 (0) | 00:00:01 |
+1* 4 | TABLE ACCESS FULL      | 880 |    31 9% |    3 (0) | ee:00:01 |
+

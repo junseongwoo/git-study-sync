@@ -1,0 +1,29 @@
+~ 고급 활용 및 튜닝
+~ TABLE TR`NSF″TI한4 - 임시테이불 생성
+AS SELECT
+VIEW (Cost*K Car&5K Bytes=345K)
+snT (″ BY) (Cost=57K Car&1 Bytes=120)
+~ JOIN (Cost=57K (a祚1 Byte류120)
+PRTITIm RA%E (SIWLE)
+PRTITIm WSH (ALL)
+TABLE ACCESS (FIXL) '카드거래내역•
+VIEE ((ost=50 (ar圁3鰍 Bytes=1Y)
+TABLE ACCESS (FULL) 'SYS.SYS_TENP_0FD9%B4E—4CC42BA'
+(QV BY) (Cost=%K (ar乍746 Bytes=20K)
+VI& ((05t=纛 (ar수7馬 Bytes=20K)
+lNIm-ALL
+(″ BY) (Cost=34K Card=1 Bytes=74)
+HASH J이N (Cost=34K Car#1 Bytes=74)
+PRTITIm RAI"E (ITERATR)
+PARTITIOI (ALL)
+임시 테이블 사용
+TABLE ACCESS (FULL) OF •현금거래내역• (Cost=34K Car&-1 Bytes=58)
+VI& (Cost=5€ Bytes=1Y)
+TABLE ACCESS (FIJLL) 'SYS.SYS-TENP-0FD9E4E-4COC42BA' - 임시 테이블 사용
+(″ BY) ((05t=2K (ar乍745 Bytes=m)
+}•ASH 〕이N (Cost=2K (ar乍746 Bytes=Ä)
+고객 테이블은 2圄만 건이 넘괴 카드 테이블은 1억 건이 넘지만 위험고객여부 = 'Y 조건을 만족하는 위험고객
+카드는 그리 큰 집합이 아니다. 만약 materialize 방식의 With절을 이용할 수 없다면, 아래쪽 메인 쿼리에서
+위험고객카드 집합을 얻기 위해 매번 고객과 카드 테이블을 반복해서 읽어야 한다. 그것이 성능상 문제가 된다면
+임시 테이블을 물리적으로 미리 생성해 두는 수밖에 없다.
+768 전문가 ,까드

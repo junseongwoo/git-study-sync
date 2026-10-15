@@ -1,0 +1,54 @@
+활용
+3. CUBE 함수
+ROLLUP에서는 단지 가능한 Subtotal만을 생성하지만, CUBE는 결합 가능한 모든 값에 대해 다차원 집계를
+생성한다. CUBE를 사용할 때는 내부적으로는 Grouping Columns의 순서를 바꾸어서 또 한 번의 쿼리를 추가
+수행해야 한다. 그뿐만 아니라 Grand Total은 양쪽의 쿼리에서 모두 생성되므로 한 번의 쿼리에서는 제거돼0빤
+하므로 ROLLUPII 비해 시스템의 연산 대상이 많다.
+이처럼 GROUPING 칼럼이 가질 수 있는 모든 경우에 대해 Subtotal을 생성해야 하는 때는 CUBE를 사용하는
+것이 바람직하나, ROLLUPII 비해 시스템에 많은 부담을 주므로 사용에 주의해야 한다.
+CUBE 함수의 경우 표시된 인수들에 대한 계층별 집계를 구할 수 있으며, 이때 표시된 인수 간에는 계층 구조인
+ROLLUP과는 달리 평등한 관계이므로 인수의 순서가 바뀌는 경우 행간에 정렬 순서는 바뀔 수 있어도 데이터
+결과는 같다.
+그리고 CUBE도 결과에 대한 정렬이 필요한 경우는 ORDER BY 절에 명시적으로 정렬 칼럼이 표시돼야 한다.
+STEP 5. CUBE 함수 이용
+[예제] GROUP BY ROLLUP (DNAME, JOB) 조건에서 GROUP BY CUBE (DNAME, JOB) 조건으로 변경혜 수행한다
+[예제]
+SELECT CASE 6″1N6 (8 ~) MfN 1 가해 'A11 Departments' ELSE 8.~ AS ~
+CASE 鰍이PI馮 (A.n ) MCN 1 TÆN •慰1 1弼•
+, (이.酊 (와 AS E顰-(酊, SIN (A SAL) AS SAL-SI.N
+FO EW) 시 B
+WFERE FTIO = A.FTt0
+6″ BY CUBE (B ~, A.JØ
+0皬R BY B.NAk A.JOB;
+[실행 결과]
+ACCWNTIW
+ACCWNTIW
+ACCO.JNTI%
+ACCWNTIt•6
+RESEAR대
+RESEAR대
+RESEAR대
+RESEAR대
+SALES
+CLERK
+A11 J±s
+N{ALYST
+CLERK
+A11 J固5
+CLERK
+EP-CNT
+1
+1
+1
+3
+2
+2
+1
+5
+1
+ELSE A.aæ EIO AS Jæ
+SAL-SI-N
+24%
+刃75
+1%75
+전문가 ,미드 317

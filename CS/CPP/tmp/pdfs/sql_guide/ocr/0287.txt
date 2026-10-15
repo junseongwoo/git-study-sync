@@ -1,0 +1,39 @@
+과목 II 기본과 활용
+[예까1
+SELECT PLAYER—ME, 郞ITI애. BACK-tO, TEAN-ID, TEAN-NAME
+~ V-PLAYER-TEU
+m-AYER-WE LIKE • 황부
+{실행 결과]
+PL.AYER-VE
+황승주
+황연석
+황철인
+虧ITI盥
+FW
+BACK—W
+35
+TEAM ID
+K05
+K06
+TEAM NAME
+현대모터스
+일화천마
+아이파크
+3 개의 행이 선택됐습니다.
+이것은 V-PLAYER-TFAM 부에서 성이 '황인 선수만을 추출하는 SQL 문이다. 결과로서 3건이 추출됐다.
+뷰를 사용하는 경우에는 DBMS가 내부적으로 SQL 문을 다음과 같이 재작성한다.
+SELECT PLAYER_NAE nSITIm, BACK_NO, TEAM_ID, TEAM NANE
+FO (SELECT A.PLAYER_WE, AmSITWd, A.BACK_tO
+, TEAM_ID, B.TEAM NAME
+FO PLAYER A, TEAY B
+8 TEN_ID = A.TEAM ID)
+~뚀 PL.AYER LIKE • 황욈•
+이것은 앞에서 설명했던 인라인 뷰와 유사한 모습임을 알 수 있다. 이와 같은 형대로 사용되기 때문에 부는
+데이터를 저7å빠지 않고도 데이터를 조회할 수 있다.
+부를 제거하기 위해서는 DROP VIEW 문을 사용한다.
+|예제]
+″ VIEE V_RAYER_TEÆ;
+[예제]
+″ VIEW V—PLAYER TEN—FILTER;
+294
+전문가 ,까드

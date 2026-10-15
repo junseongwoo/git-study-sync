@@ -1,0 +1,34 @@
+과목 11 SOL 기본과 활용
+
+[그림 1-1-18]을 보면 이름이 5001"[인 사원의 급여는 3,000달러($)이고, 3,000달러는 급여등급 테이블에서
+2,001 ~ 3,000달러 사이에 속하므로 급여등급이 4등급임을 알 수 있다.
+
+[예제] 사원 14명 모두에 대해 아래 SQLE 급여와 급여등급을 알아본다.
+
+SELECT AENANE AS 사원명, &.54( AS 급여, B.GRADE AS 급여등급
+
+FROM ENP A, SALGRADE B
+WHERE A.SAL BETWEEN B.LOSAL AND B.HISAL;
+
+사원명                  급여               급여등급
+SMITH                    800                        1
+ALLEN                   1600                        3
+WARD                    1250                        2
+JONES                  2975                        4
+MARTIN                   1250                          2
+BLAKE                   2850                        4
+CLARK                  2450                        4
+SCOTT                  3000                        4
+KING                   5000                        5
+TURNER                 1500                        3
+ADANS                   1100                        1
+INES                   950                        1
+FORD                        3000                             4
+MILLER                 1300                        2
+
+14 개의 행이 선택됐습니다.
+
+앞에서도 언급했지만 BETWEEN a AND be} 같은 SQL 연산자뿐 아니라 “=” 연산자가 아닌 “>”나 “<”와 같은
+다른 연산자를 사용했을 경우에도 모두 Non EQUI JOIN] 해당한다. 단지 BETWEEN SQL 연산자가 Non EQUI
+]01\을 설명하기 쉽기 때문에 예를 들어 설명한 것에 불과하며, 데이터 모델에 따라서 Non EQUI JOINO| 불가능한
+경우도 있다.

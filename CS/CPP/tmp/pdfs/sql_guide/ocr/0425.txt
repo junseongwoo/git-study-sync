@@ -1,0 +1,73 @@
+과목 II SQL 기본과 활용
+(예제] 선수(PLAYER) 테이불의 구조를 확인한다.
+결행 출과1 Oracle
+WT MftL
+ECRIBE PLAYER;
+이름
+PLAYER-ID
+PLAYER-V&
+TEN-ID
+E-PLAYER-NAE
+NICOÆ
+JOIN_YYYY
+寫ITI盥
+BACK-W
+BIRT•LDATE
+柾I亞
+氈1해T
+POT WLL
+tOT MJLL
+[실행 결과] SQL Server
+exec sp—yelp &.PLAYER'
+유형
+대AR(7)
+VAR대AR2(20)
+(十鳳(3)
+VAR대AR2(40)
+V枳대枳2(%)
+대AR(4)
+VAR대AR2(10)
+NlBER(2)
+VARCHAR2(20)
+DATE
+대씨1)
+NlBER(3)
+NlBER(3)
+Length
+7
+20
+3
+40
+4
+1
+20
+3
+1
+2
+2
+Nu11able
+PLAYER_ID
+PLAYER-V&E
+E-PLAYER-N•b&
+NICKWE
+JOIN_YYYY
+耶ITI애
+NATIm
+BIRTH_DATE
+柾1애T
+氈1衄
+432 전문가 ,삐드
+Type
+char
+varchar
+char
+varchar
+varchar
+char
+varchar
+tinyint
+varchar
+date
+char
+sællint
+snallint

@@ -1,0 +1,84 @@
+ARM QL 고급 활용 및 튜닝
+
+EMP_X01 인덱스                                           EMP 테이블
+
+| wolamx |
+
+   ame | noo]
+
+io [ace]     [ave | 0 [presivent | somo]
+
+     ECCT ET) LT [| .2850|
+
+[aw]  2 [Manager| 2075
+|. CT
+3
+
+g
+
+oi] sAL |
+A 봄은  50
+75
+
+950
+
+ㅣ _ 끼
+
+=]          ooo]
+
+[시내 |. 30|          돌이
+a]
+
+ee | sofa | 100]
+
+[ar | so[sauesvan | 1as0]
+
+ANALYST          3
+
+55        ale 올농
+
+[foro | [avast | soo]
+
+aro | so [sauewan | 1250]
+
+[omer | so] saeswan | 1500]
+
+[그림 m-3-20] 인덱스 칼럼 추가 전
+
+인덱스 구성을 [deptno + sal] 순으로 바꿔주면 좋겠지만 A 운영 환경에서는 인덱스 구성을 함부로 바꾸기가
+쉽지 않다. 기존 인덱스를 사용하는 다음과 같은 SQLl 있을 수 있기 때문이다.
+
+select ename, job, sal from emp where deptno = 30 and job = 'CLERK'
+
+할 수 없이 인덱스를 새로 WSolopIA 이런 식으로 인덱스를 추가하다 보면 테이블마다 인덱스가 수십 개씩
+달려 배보다 배꼽이 더 커진다.
+
+이럴 때 [그림 11.3.21]처럼 기존 인덱스에 sal 칼럼을 추가하는 것만으로 큰 효과를 거둘 수 있다. 인덱스 스캔량은
+줄지 않지만, 테이블 랜덤 액세스 횟수를 줄여주기 때문이다.
+
+EMP_X01 인멕스                                  EMP 테이블
+
+Tos [a]            ww | BEG | jo | AL |
+| _ 20]cLerk          1100
+[| 10] presiDEnT      5000
+
+1 30] manacer [2850]
+
+ones | ao wanacen | 2975|
+
+Gv | sola soo]
+IT
+
+SALESMAN
+
+SALESMAN
+[corr | ao [aaurst | som]
+Dawes | ocx | sso]
+CE | _  20[새시어. | 2000]
+[wars | _ so saueswan | 1250|
+[기매태| so [sauswan | 1500]
+
+[그림 m-3-21) 인덱스 칼럼 추가 후
+
+572 Sq #87 Tele
+

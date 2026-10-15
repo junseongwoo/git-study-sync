@@ -1,0 +1,25 @@
+과목 11 기본과 활용
+EA e•EN 1}正N RETIRN_EXR
+[예제] 부서 정보에서 부서 위치를 미국의 동부, 중부, 서부로 구분하라.
+[예제]
+SELECT LX
+CASE LX
+HN •뚀ㆍ YÄ THEN 'EAST
+TÆN 'EAST
+EN |대1(A예•
+THEN 'CENTER'
+TÆN • CENTER
+HN 'NLLAS'
+ELSE 'ETC'
+AS REA
+FO FT;
+{실행 결과]
+대I끄
+CENTER
+4 개의 행이 선택굈습니다.
+두 번째 SFARCHED-CASE-ÆPRESION은 CASE 다음에는 칼럼이나 표현식을 표시하지 않고, 다음 WHEN
+절에서 EQUI(=) 조건 포함 여러 조건이 〉=, <, <=)을 이용한 좌절을 사용할 수 있으므로 SIMPLE-CASE-
+ÆPRESSION보다 훨씬 다양한 조건을 적용할 수 있는 장점이 있다.
+- (圓ITI애 가또N RETIÆ—EXR
+ELSE WNJLT-EPR
+170 전문가 가이드

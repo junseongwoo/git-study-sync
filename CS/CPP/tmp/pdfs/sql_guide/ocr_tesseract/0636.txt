@@ -1,0 +1,39 @@
+제장 SOL 옵티마이저
+er a  —————E———
+
+stmt. setString(3, "test”);
+ResultSet rs=stmt,executeQuery();
+
+rs.close();
+
+// HME 닫더라도 묵시적 캐싱 기능을 활성화 했으므로 닫지 않고 캐시에 보관하게 됨
+stmt. close();
+
+또는 아래처럼 9[3[601611[를 닫지 않고 재사용해도 같은 효과를 얻을 수 있다.
+
+public static void CursorHolding(Connection conn, int count) throws Exception{
+
+// PreparedStatenent® 루프문 바깥에 선언
+PreparedStatement stat = conn. prepareStatement(
+
+"SELECT ?2,2,7,a.* FROM emp a WHERE a.ename LIKE 'W§'");
+ResultSet rs;
+
+for (int i =1; i <= count; i++) {
+stmt. setnt(1,1);
+stmt. setInt(2,1);
+stmt. setString(3, “test");
+rs=stmt.executeQuery();
+rs.close();
+
+}
+
+/ 루프를 빠져 나왔을 때 커서를 닫는다.
+stat. close():
+}
+
+미,/501에서는 위와 같은 옵션을 별도로 적용하지 않더라도 자동적으로 커서를 캐싱한다. & Static SQLE
+사용할 때만 그렇다, Dynamic SQLE 사용하거나 Cursor Variable(=Ref (1501)을 사용할 때는 커서를 자동으로
+캐싱하는 효과가 사라진다는 사실을 명심하기 바란다.
+
+SOL 전문가 가이드 [645

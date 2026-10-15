@@ -1,0 +1,34 @@
+제3장 인덱스 튜닝
+
+다. Index Unique Scan
+
+Index Unique Scan [그림 [-3-6]처럼 수직적 탐색만으로 데이터를 찾는 스캔 방식으로서, Unique 인덱스를
+= 조건으로 탐색하는 경우에 작동한다.
+
+[그림 I1-3-6] Index Unique Scan
+
+아래는 Oracle] Index Unique Scan®t 때의 실행계획이다.
+
+SQL> create unique index pk_emp on emp(empno);
+SQL> alter table emp add
+2 constraint pk_emp primary key(empno) using index pk_emp;
+
+SQL> set autotrace traceonly explain
+SQL> select empno, ename from emp where empno = 7788;
+
+Execution Plan
+
+© SELECT STATEMENT Optimizer=ALL_ROWS
+1 0 TABLE ACCESS (BY INDEX ROWID) OF ‘EMP’
+241     INDEX (UNIQUE SCAN) OF 'PK_EMP' (UNIQUE)
+
+SQL Server 실행계획에는 Oracle®] Range Scan} Unique 5020)을 구분하지 않고 똑같이 Index 566\라고
+표시한다.
+
+StmtText
+|—Nested Loops(Inner Join, OUTER REFERENCES: (|Bmk1000]))
+
+|—Index Seek(0BJECT:([..]. [dbo]. [emp]. (pk 에이), SEEK: ([empno]=7788) ORDERED FORWARD)
+|—RID Lookup(OBJECT:([..].[dbo].[emp]), SEEK: ([Bmk1000)=[Bmk1060]) LOOKUP ORDERED FORWARD)
+
+SQL 전문가 가이드 [547

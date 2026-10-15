@@ -1,0 +1,35 @@
+제2장 SQL 활용
+
+2. ROLLUP 함수
+
+8011.07에 지정된 Grouping 00100005의 11는 5따(0(2을 생성하기 위해 사용되며, Grouping Columns?
+수를 시이라고 했을 때 N+1 Level?) Subtotalo] 생성된다. 중요한 것은, 8011,07?의 인수는 계층 구조이므로
+인수 순서가 바뀌면 수행 결과도 바뀌게 되므로 인수의 순서에도 주의해야 한다.
+
+8011007과 0[088의 효과를 알아보기 위해 단계별로 데이터를 출력해보자.
+
+STEP 1. 일반적인 GROUP BY 절 사용
+
+SELECT . 8.06, A.J0B, COUNT (*) AS EMP_CNT, SUM (A.SAL) AS SAL_SLM
+FROM EMP A, DEPT B
+WHERE B.DEPTNO = A.DEPTNO
+GROUP BY B.DNAME, A.J0B;
+
+208                  EMP_CNT           SAL_SUM
+RESEARCH          ANALYST                    2               6000
+ACCOUNTING       CLERK                      1               1300
+RESEARCH          CLERK                      2               1900
+SALES              CLERK                      1                950
+ACCOUNTING       MANAGER                    1               2450
+RESEARCH          MANAGER                    1               2975
+SALES              MANAGER                    1               2850
+ACCOUNTING       PRESIDENT                  1               5000
+SALES              SALESMAN                   4               5600
+
+9 행이 선택됐습니다.
+Oracle® 포함한 일부 28%05의 과거 버전에서는 GROUP BY 절 사용 시 자동으로 정렬을 수행했으나, 요즘
+
+대부분의 DBMS 버전은 집계 기능만 지원한다. 정렬이 필요한 경우는 ORDER BY Holl 명시적으로 정렬 칼럼을
+표시해야 한다.
+
+전문가 가이드 [309

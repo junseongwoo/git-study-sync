@@ -1,0 +1,47 @@
+酈장 옵티0삐저
+나. 조건절 Pullup
+조건3(Preåcate)을 쿼리 블록 안으로 밀어 넣을 뿐만 아니라 안쪽에 있는 조건들을 바깥쪽으로 끄집어 내기도
+하는데, 이를 '조건절 Pullup'이라고 한다 그리고 그것을 다시 다른 쿼리 블록에 Pushdowm 하는 데 사용한다
+다음 실행계획을 보Rh
+select * fræ
+(select -, wg(sal) frm ~ deptno = 10 ~ &ptm) ,(select 巚n(91), -(91)
+fran ero group bY deptno) e2
+vtpre .deptno = e2.&ptno
+1*
+1*
+0
+1
+2
+3
+4
+5
+6
+7
+8
+9
+SELECT STATEVENT
+HASH J이N
+VIEW
+十罎9| 애靆P BY
+TABLE ACCESS BY 1荻X OID
+1荻X SCAN
+VIEW
+HASH 似이P BY
+TABLE ACCESS BY II&X OID
+1荻X RANGE SCAN
+| EP-DEPTIO-IDX
+1 EPÆPTIO_IDX
+5|
+5|
+1
+lnfomation (i±ntified 바 id):
+1 - access("E1" •FTW=•E2" 'FTIO")
+5 - 貳(ess( •袋PT刪•=10)
+9 - 貳(6회•표PT뾰=10)
+인라인 한에는 deptno = 10 조건이 없지만 Pred1cate 정보를 보면 양쪽 모두 이 조건이 emp-deptno-ldx
+인덱스의 액세스 조건으로 사용된 것을 볼 수 있다. 다음과 같은 형대로 귀리 변환이 일어난 것이다
+sel«t * frm
+(select a삐(“1) •tpre ±ptno = 10 9血牟 ±ptm) el
+,(select deptro, nin(sal). 圊x(뇨1) deptno = 10 gro-jp by ㈍t厠)
+el .deptm = e2 &ptno
+전문가 ,까드 659

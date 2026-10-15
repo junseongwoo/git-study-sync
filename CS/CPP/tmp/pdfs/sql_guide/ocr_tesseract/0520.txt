@@ -1,0 +1,44 @@
+5                                          제2장 SQL 분석 도구
+
+SQL*Net message from client 이벤트는 사실 데이터베이스 경합과는 관련이 없다. 클라이언트로부터 다음
+명령이 올 때까지 Idle 상태로 기다릴 때 발생하기 때문이다.
+
+반면 나머지 세 개의 대기 이벤트는 실제 네트워크 부하가 원인일 수 있다. SQL*Net message to cliente
+SQL*Net more data to client 이벤트는 클라이언트에게 메시지를 보냈는데 메시지를 잘 받았다는 신호가 정해진
+시간보다 늦게 도착하는 경우에 나타나며, 클라이언트가 너무 바쁜 경우일 수도 있다. SQL*Net more data from
+client 이벤트는 클라이언트로부터 더 받을 데이터가 있는데 지연이 발생하는 경우다.
+
+이들 대기 이벤트를 해소하는 방안에 대해서는 6장 3절에서 다룬다.
+
+다. 디스크 |/0 부하
+아래는 모두 디스크 1/0가 발성할 때마다 나타나는 대기 이벤트이다.
+
+«db file sequential read
+«db file scattered read
+« direct path read
+
+« direct path write
+
+* direct path write temp
+« direct path read temp
+«db file parallel read
+
+이들 중 특히 주목할 대기 이벤트는 0) file sequential read} db file scattered reado|ct. 전자는 50916
+Block 1/0를 수행할 때 나타나는 대기 이벤트다. Single Block 1/0는 말 그대로 한 번의 I/O 031|에 하나의 데이터
+블록만 읽는 것을 말한다. 인덱스 블록을 읽을 때, 인덱스를 거쳐 테이블 블록을 액세스할 때 이 방식을 사용한다.
+
+후자는 Multiblock 1/0를 수행할 때 나타나는 대기 이벤트다. Multiblock 1/0는 1/0 Calle] 필요한 시점에
+인접한 블록들을 같이 읽어 메모리에 적재하는 것을 말한다. Table Full Scan 또는 Index Fast Full Scan 시
+나타난다.
+
+이들 대기 이벤트를 해소하는 방안은 1장 3절에서 간략히 다루었고, 3~4장과 6장에서 더 자세히 다룬다.
+
+라. 버퍼 캐시 경합
+아래는 버퍼 캐시에서 블록을 읽는 과정에 경합이 발생했음을 나타나는 대기 이벤트이다.
+« latch: cache buffers chains
+« latch: cache buffers Iru chain
+
+« buffer busy waits
+« free buffer waits
+
+_SQL 전문가 가이드 [529

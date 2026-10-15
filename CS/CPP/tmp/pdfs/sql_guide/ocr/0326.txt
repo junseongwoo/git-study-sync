@@ -1,0 +1,31 @@
+廠장 활용
+[실행 결과]
+76%
+7%2
+SCOTT
+ALLEN
+UILLER
+SMITH
+KIW
+1圄
+1剃
+11%
+2975
+8 행이 선택쾼습니다.
+[예제] 이전 예제는 귀리의 성능이 저하일 수 있다. 파티션별 최밋값을 가진 행만 추출할 때는 아래처럼 순위 함수를 사용하는
+것이 바람직하다.
+[예제]
+SELECT 衄, SAL
+FRN (SELECT 驢, ENAE, SAL
+RANK () OVER (PARTITm BY 0霖R BY SAL EC) AS SAL-RK
+FO EP)
+M4ERE SAL_RK = 1 :
+다. MIN 함수
+MIN 함수를 이용해 파티션별 원도우의 최솟값을 구할 수 있다.
+[예제] 사원들의 급여와 같은 매니저를 두고 있는 사원들을 입사일자를 기준으로 정열하고, SALARY 최솟값을 함께 구한다.
+[예제]
+SELECT 驢, ENAE HIREDATE, SAL
+(SAL) OVER BY 飇』R BY HIRENTE) AS UIN_SAL
+믈IN
+FO EP,
+전문가 ,PI드 333

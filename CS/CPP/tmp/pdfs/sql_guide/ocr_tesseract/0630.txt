@@ -1,0 +1,39 @@
+제5장 SOL 옵티마이저
+
+(3) F4{(Comment)
+
+SELECT * FROM CUSTOMER;
+SELECT /* 주석문 */ * FROM CUSTOMER;
+
+@® 테이블 Owner 명시
+
+SELECT * FROM CUSTOMER;
+| SELECT * FROM HR. CUSTOMER;
+
+(5) 옵티마이져 힌트 사용
+
+| SELECT + FROM CUSTOMER;
+ SELECT /차 all rows */ * FROM CUSTOMER;
+
+imi 비교 gt
+* FROM CUSTOMER WHERE LOGIN_ID = tomy";
+BE Ch oor oe np Karajan’;
+SELECT + FRON CUSTOMER WHERE LOGIN_ID = *javaking
+1 SELECT * FROM CUSTOMER WHERE LOGIN_ID = ‘oraking';
+
+Oe 실행계획을 다르게 할 의도로 JES 사용했으므로 논외다. O-GHL 실행계획이 다를 아무런 이유가
+없고, GE 서로 같은 테이블이면 실행계획은 같아야 마땅하다, 그럼에도 문자열을 조금 다르게 기술하는 바람에
+서로 다른 SQLE 인식돼 각각 하드파싱을 일으키고 서로 다른 메모리 공간을 차지하게 된다. 이런 비효율을 줄이고
+공유 가능한 형태로 SQLS 작성하려면, 개발 초기에 SQL 작성 BEES 정해 이를 준수하도록 해야 한다.
+
+하지만 〉)번처럼 SQLS 작성한다고 해서 라이브러리 캐시 효율이 우려할 만큼 나빠지지는 않는다. 100%
+같은 내용의 50[.을 두 명의 개발자가 각각 다르게 작성할 가능성은 매우 낮기 때문이다. 쿼리 툴에서 수행되는
+임의질의(&4-00 Query) 수행빈도가 낮아 문제 될 것이 없다.
+
+결론적으로 라이브러리 캐시 효율과 직접 관련 있는 패턴은 (6)번뿐이다. 즉 사용자가 입력한 값을 조건절에
+문자열로 붙여가며 매번 다른 SQLE 실행하는 경우다. 이런 패턴의 SQLE '리터럴(11661) SQL 부르기로
+하자. 만약 하루 1000만 번 로그인이 발생하는 애플리케이션에서 사용자 로그인을 (6/번처럼 리터럴 50)[.로 개발했다
+면 어떤 일이 발생할까. 시스템이 한가한 시간대에 개별 쿼리 성능으로 보면 잘 느끼지 못할 수 있지만 사용자가
+동시에 몰리는 피크 시간대에 시스템을 장애 상황으로 몰고 갈 수도 있다.
+
+SQL 전문가 가이드 [639°

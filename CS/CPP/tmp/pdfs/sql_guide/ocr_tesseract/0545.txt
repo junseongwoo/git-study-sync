@@ -1,0 +1,36 @@
+과목 IM SQL 고급 활용 및 튜닝
+
+3) Index Sparse
+Index Sparse [그림 11-3-11]처럼 인덱스 블록 전반에 걸쳐 밀도(460510/)가 떨어지는 현상을 말한다.
+
+[ERS]          =]
+
+|
+empty  |—  XXX)
+
+[그림 피-3-11] Index Sparse
+
+예를 들어 다음과 같은 형태로 delete 작업을 수행하고 나면 [10 블록의 밀도는 50%% 정도밖에 되지 않는다.
+100만 건 중 50만 건을 지우고 나서도 스캔한 인덱스 블록 수가 똑같이 2001개인 것을 확인하기 바란다.
+
+나 시은
+
+SQL> create table t as select rownum no from big_table where rownum <= 1000000 ;
+SQL> create index t_idx on t(no) ;
+SQL> select /*+ index(t) */ count(*) from t where no > 0;
+
+COUNT(*)
+
+1606000
+Statistics
+8 recursive calls
+
+© db block gets
+2001 consistent gets
+
+SQL) delete from t where mod(no, 10) < 5 ;                     ar pe Baie
+ha CRE af
+
+500000 행이 삭제됐습니다.
+
+554 sou 전문가 가이드.

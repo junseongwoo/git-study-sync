@@ -1,0 +1,22 @@
+과목 III 고급 활용 및 튜닝
+사실 @번이 끝은 아니다. [그림 III우11 인덱스가 Umque 인덱스가 아닌 한, 값이 53인 레코드가 더 있을 수
+있기 때문이다. 따라서 9번 불록에서 레코드 하나를 더 읽어 53인 레코드가 더 있는지 확인한다. 53인 레코드가
+더 이상 나오지 않을 때까지 스캔하면서 (㉦번 테이불 액세스 단계를 반복한다. 만약 9번 블록을 다 읽었는데도
+계속 53이 나오면 10번 블록으로 넘어가서 스캔을 계속한다.
+2. 디Q。빤 인덱스 스캔 방식
+가. |釅 %an
+lndex Range 던an은 [그림 III-3-기처럼 인덱스 루트 블록에서 리프 블록까지 수직적으로 담색한 후에 리프
+블록을 필요한 *만 스캔하는 방식이다.
+Range Scan
+[그림 III-3-기 lndex Range Scan
+B*Tree 인덱스의 가장 일반적이고 정상적인 형태의 액세스 방식이라고 할 수 있고, Oracle에서의 실행계획은
+다음과 같다.
+SÜ create ir&x •-deptno-idx 예 emp(deptno);
+窪〉 set tracemly explain
+S예〉 sel«t * *ere ±ptno = 20;
+Ex«utim PI결1
+e SELECT STATEMENT Optinizer=ALL-RM
+1 0 TmE ACCESS (BY 1뚀X OID) 'EP' (TABLE)
+lux (~ SCÆ) EP-DEPTIO-IDX' (lux)
+호2L 던rve새서는 lndex 뇨k라고 표현하며 실행계획은 다음과 같다.
+542 전문가 가이드

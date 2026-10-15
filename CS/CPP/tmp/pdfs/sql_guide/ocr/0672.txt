@@ -1,0 +1,27 @@
+과목 III 고급 활용 및 튜닝
+6) Window `)11 : 원도우 함수를 수행할 때 나타난다.
+select -℃, 현-, j±, mgr, “1, over (order by hiredate)
+Oracle
+Executim PI혜
+e SELECT STATEENT (Cost:4 Card=13 Bytes=364)
+1 e (SNT) (Cost=4 Card=13 Bytes=364)
+2 1 TÆLE ACCESS (FULL) 'EP' (Cost=2 Car&13 Bytes=364)
+1
+SQL Server
+StntText
+Project(FItÆ:([Expr1æ41=row-mntpr) )
+卜(-」te Scalar(FItc:(IExpr1%]=(1)))
+:—Sort(0RF BY:([SQLPROI. [삐 . lerrvl. [hiredate] ASC))
+:—Table ([SQLPROI. ldbol. [예하))
+다. 튜닝 요약
+소트 오퍼레이션은 메모리 집약적(Memoy-intensive)일 뿐만 아니라 CPU 집약적(CPU-intensive)이기도
+하다. 소트할 데이터 양이 많을 때는 디스크 I/0도 발생하므로 쿼리 성능이 니파진다. 특히 부분범위처리를 할
+수 없게 만들어 OLT 환경에서 성능을 떨어뜨리는 주요인이 되곤 한다. 될 수 있으면 소트가 발생하지 않게 SQL을
+작성하괵 소트를 피할 수 없다면 메모리에서 수행을 완료할 수 있도록 해야 한다.
+앞으로 설명할 소트 튜닝 방안을 요약하면 다음과 같다.
+데이터 모델 측면에서의 검토
+쇼트가 발생하지 않도록 SQL 작성
+인덱스를 이용한 소트 연산 대체
+ㆍ 스트 영역을 적게 사용하도록 SQL 작성
+소트 영역 크기 조정
+芻2 전문가 가이드

@@ -1,0 +1,42 @@
+과목 ll QL 기본과 활용
+Oracle의 경우는 DECODE 함수를 사용해서 좀 더 간결하게 표현할 수 있다.
+[예제]
+SELECT DEOE (″1蘭 (8 Nk), 1, 'A11 , B.DNAME) AS 아{A드
+贊(啞 (″I蘭 (A.Jæ), 1, 'A11 JObs'
+(啞 (하 AS EP-CNT, 9.1 (A.SAL) AS SAL-SUM
+~ EP 시 FT 8
+8 喞T江 =
+BY OLLI-P (8 ~, A.Jæ)
+BY 8 隧襞 A.JBt
+, A.Jæ ) AS
+[실행 출과1
+AC(0협TI飇
+A((0..께TI蘭
+ACCOMI%
+13 행이 선택묐습니다.
+CLERK
+ANALYST
+CLERK
+EMP_CNT
+1
+1
+1
+2
+2
+1
+1
+1
+4
+14
+SAL—SW
+1彌
+24%
+87%
+1嚼
+2975
+7
+28%
+부서별과 전체 집계를 표시한 레코드에서 '세 l)epartments'와 '세 jobs'eb는 사용자 정의 텍스트를 확인할
+수 있다. 일부 DBMS는 GROUPING-ID라는 비슷한 용도의 함수를 추가로 사용할 수도 있다.
+314
+전문가 ,버드

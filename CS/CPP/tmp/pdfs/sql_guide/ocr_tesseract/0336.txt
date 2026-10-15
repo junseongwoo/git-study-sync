@@ -1,0 +1,42 @@
+제2장 SQL 활용
+
+[예제] 같은 부서 소속 사원들의 집합에서 본인의 급여가 순서상 몇 번째 위치에 있는지 0과 1 사이의 값으로 출력한다.
+
+SELECT DEPTNO, ENAME, SAL
+, PERCENT_RANK () OVER (PARTITION BY DEPTNO ORDER BY SAL DESC) AS PR
+
+FROM ENP;
+
+DEPTNO             ENAME            SAL             PR
+10               KING               5000             0.00
+10             CLARK            2450            0.50
+10          MILLER         1300          1.00
+20             SCOTT            3000            0.00
+20             FORD             3000            0.00
+20            JONES           2975           0.50
+20             ADAMS            1100            0.75
+
+nami. 고고 ge
+30             BLAKE            2850            0.00
+30             ALLEN            1600            0.20
+30             TURNER           1500            6.40
+30             MARTIN           1250            0.60
+30             WARD             1250            0.60
+30             JANES             950            1.60
+
+14 행이 선택됐습니다.
+
+DEPTNO 10의 경우 3건이므로 구간은 2개다.
+
+0과 1 사이를 2개의 구간으로 나누면 0, 0.5, 1이다.
+
+DEPTNO 20의 경우 5건이므로 구간은 4개다.
+
+0과 1 사이를 4개의 구간으로 나누면 0, 0.25, 0.5, 0.75, 1이다.
+
+DEPTNO 309] 경우 6건이므로 구간은 5개다.
+
+0과 1 사이를 5개의 구간으로 나누면 0, 0.2, 0.4, 0.6, 0.8, 1이다.
+
+SCOTT, FORD, WARD, MARTINS) 경우 ORDER BY SAL DESC 구문에 의해 급여가 같으므로 같은 ORDERZ
+취급한다.

@@ -1,0 +1,46 @@
+R2장 활용
+2. ROLLUP 함수
+ROLLUP에 지정된 Grouping Columns의 List는 Subtotal을 생성하기 위해 사용되며, Grouping Columns의
+수를 N이라고 했을 때 +1 Level의 Subtotal이 생성된다. 중요한 것은, ROLLUP의 인수는 계층 구조이므로
+인수 순서가 바뀌면 수행 결과도 바뀌게 되므로 인수의 순서에도 주의해야 한다.
+ROLLUP과 CUBE의 효과를 알아보기 위해 단계별로 데이터를 출력해보자.
+STEP 1. 일반적인 GROUP 절 사용
+[예삐
+SELECT 8.~, A.Jæ, (0.酊 (삐 AS EP_CNT, 91 (A.SAL) AS SAL-SI-N
+FO EP 시 FT B
+B.DEPTW = A.FTIO
+6懕.2 BY B.NAE, A.JOB;
+[실행 결과]
+RESEAR대
+ACCO-NTI%
+RESEAR대
+SALES
+ACCu.R•{Tr6
+RESEAR대
+SAIFS
+ACQNTI%
+SALES
+m,ALYST
+CLERK
+CLERK
+CLERK
+UANAGER
+EP_CNT
+2
+1
+2
+1
+1
+1
+1
+1
+4
+SAL-SI-N
+1堈
+24%
+刃75
+9 행이 선택왰습니다.
+Oracle을 포함한 일부 DBMS의 과거 버전에서는 GROUP BY 절 사용 시 자동으로 정렬을 수행했으나, 요즘
+대부분의 DBMS 버전은 집계 기능만 지원한다. 정렬이 필요한 경우는 ORDER BY 절에 명시적으로 정렬 칼럼을
+표시해야 한다.
+전문가 ,柯드 309

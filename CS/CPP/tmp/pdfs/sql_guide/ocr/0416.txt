@@ -1,0 +1,21 @@
+*장 관리 구문
+[예제] 2. SAVEPOINT A 저장정까지 "(ROLLBACK)* 수행하고 를력 전후 데이터를 확인해본다.
+[예제 및 실행 결과! OracIe
+SELECT (啞 (하 AS CNT FO PLAYER ERE ÆIGHT = 1%;
+(甑
+1개의 행이 선택했습니다.
+TO SVPT_A;
+를백이 완료굈습니다.
+4 SELECT (啞 (아 AS CNT FO PLAYER 釐氈 KIQ{T = 1%,•
+0
+1개의 행이 선택왰습니다.
+[예제] 3. 트련책션 최초 시점까지 를백을 수행하고 를력 전후 데이터를 확인해본다.
+별세 및 실행 결과l Oracle
+SELECT (啞 (하 AS CNT FRæ PLAYER;
+1개의 행이 선택됐습니다.
+를빅이 완료됐습니다.
+SELECT ″ (하 AS CNT FO PLAYER;
+CNT
+1개의 행이 선택했습니다.
+1
+전문가 가이드 423

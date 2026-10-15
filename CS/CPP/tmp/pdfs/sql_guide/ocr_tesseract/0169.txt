@@ -1,0 +1,17 @@
+과목 [1 QL 기본과 활용
+
+SELECT WL ("Not-Null®, 'WL-0K') NVL_TEST
+FROM DUAL;
+
+1 개의 행이 선택됐습니다.
+
+SQL Server®] 경우 ISNULL 함수를 사용한다.
+
+1504 (NOLL 판단 대상, “NULLY of 대체값” )
+
+(1개 행 적용됨)
+
+SELECT ISMULL(‘Not-Mull’, ‘NVL-OK') AS ISNULL_TEST;
+
+174 | su 전문가 가이드
+

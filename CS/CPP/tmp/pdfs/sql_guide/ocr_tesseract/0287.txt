@@ -1,0 +1,36 @@
+과목 ] SQL 기본과 활용
+
+SELECT PLAYER NAME, POSITION, BACK_NO, TEAM_ID, TEAM_NAME
+FROM V_PLAYER TEAM
+WHERE PLAYER NAME LIKE '황웅'
+
+POSITION           BACK_NO           TEAM_ID          TEAM_NAME
+DF            98     105        현대모터스
+
+황연석                 [15                        16           08                일화천마
+
+황철민                 WF                         35           106                아이파크
+
+3 개의 행이 선택됐습니다.
+
+이것은 V_PLAYER TEAM 뷰에서 Ao] '황'인 선수만을 추출하는 SQL 문이다. 결과로서 3건이 추출됐다.
+HE 사용하는 경우에는 28\05가 내부적으로 SQL 문을 다음과 같이 재작성한다.
+
+SELECT PLAYER NAME, POSITION, BACK_NO, TEAM_ID, TEAM_NAME
+FROM (SELECT A_PLAYER NAME, A.POSITION, A.BACK_NO
+, B.TEAM_ID, B.TEAM_NAME
+FROM PLAYER A, TEAM B
+WHERE B.TEAM_ID = A.TEAM_ID)
+WHERE PLAYER NAME LIKE '®%';
+
+이것은 앞에서 설명했던 인라인 뷰와 유사한 모습임을 알 수 있다. 이와 같은 형태로 사용되기 때문에 뷰는
+데이터를 저장하지 않고도 데이터를 조회할 수 있다.
+뷰를 제거하기 위해서는 DROP VIEW 문을 사용한다.
+
+DROP VIEW V_PLAYER TEAM;
+
+1 4
+
+DROP VIEW V_PLAYER TEAM_FILTER;
+
+294 | su 전문가 가이드

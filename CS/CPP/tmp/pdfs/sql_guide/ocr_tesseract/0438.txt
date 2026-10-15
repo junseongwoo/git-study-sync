@@ -1,0 +1,28 @@
+3. RENAME TABLE
+
+RENAME 명령어를 사용해 테이블의 이름을 변경할 수 있다.
+
+RENAME 기존 테이블명 10 새로운 테이블명;
+
+SQL Server sp_renameg 이용해 테이블 이름을 변경할 수 있다.
+sp_rename '기존 테이블명', '새로운 테이블명';
+
+[예제] RENAME 문장을 이용해 TEAM 테이블 이름을 다른 것으로 변경하고, 다시 TEAM 테이블로 변경한다.
+
+RENAME TEAM TO TEAM_BACKUP;
+
+테이블 이름이 변경됐습니다.
+
+RENAME TEAM_BACKUP TO TEAM;
+
+테이블 이름이 변경됐습니다.
+
+sp_rename ‘dbo, TEAM', "TEAM_BACKIP';
+
+주의: 개체 이름 부분을 변경하면 스크립트 및 저장 프로시저를 손상시킬 수 있습니다.
+
+sp_rename ‘dbo, TEAM_BACKUP', "TEAM";
+
+주의: 개체 이름 부분을 변경하면 스크립트 및 저장 프로시저를 손상시킬 수 있습니다.
+
+전문가 가이드 [445

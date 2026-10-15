@@ -1,0 +1,34 @@
+과목 ｌ SQL 기본과 활용
+
+1) AUTO COMMIT
+
+SQL Server®] 기본 방식이며, DML} DDLE 수행할 때마다 DBMS7 트랜잭션을 컨트롤하는 방식이다.
+명령어가 성공적으로 수행되면 자동으로 COMMITS 수행하고, 오류가 발생하면 자동으로 ROLLBACKS 수행
+한다.
+
+2) 암시적 트랜잭션
+
+Oracles} 같은 방식으로 처리된다. 즉 트랜잭션의 시작은 28\45가 처리하고 트랜잭션의 끝은 사용자가 명시적으
+로 COMMIT 또는 8011.8&0(으로 처리한다. 인스턴스 단위 또는 세션 단위로 설정할 수 있다. 인스턴스 단위로
+설정하려면 서버 속성 창의 연결화면에서 기본연결 옵션 중 암시적 트랜잭션에 체크해 주면 된다. 세션 단위로
+설정하기 위해서는 세션 옵션 중 SET IMPLICIT TRANSACTION ONS 사용하면 된다.
+
+3) 명시적 트랜잭션
+
+트랜잭션의 시작과 끝을 모두 사용자가 명시적으로 지정하는 방식이다. BEGIN TRANSACTION(BEGIN TRAN
+FET 가능)으로 트랜잭션을 시작하고, COMMIT TRANSACTION(TRANSACTIONS 생략 가능) 또는
+ROLLBACK TRANSACTION(TRANSACTIONS 생략 가능)으로 트랜잭션을 종료한다. ROLLBACK 구문을 만나
+면 최초의 BEGIN TRANSACTION 시점까지 모두 ROLLBACK®| 수행된다.
+
+3. ROLLBACK
+
+테이블 내 입력한 데이터나 수정한 데이터, 삭제한 데이터에 대해 COMMIT 이전에는 변경 사항을 취소할 수
+있다. 데이터베이스에서는 롤백(8011.80) 기능을 사용한다. 롤백은 데이터 변경 사항이 취소돼 데이터가 이전
+상태로 복구되며, 관련된 행에 대한 HS(LOCKING)o| 풀리고 다른 사용자들이 데이터 변경을 할 수 있게 된다.
+
+[예제] PLAYER 테이블에 데이터를 입력하고 ROLLBACKE 실행한다.
+
+INTO PLAYER (PLAYER_ID, TEAM_ID, PLAYER NAME, POSITION, HEIGHT, WEIGHT, BACK_NO)
+VALUES ('1997035', 'K@2', '이운재', '', 182, 82, 1);
+
+1 개의 행이 만들어졌습니다.

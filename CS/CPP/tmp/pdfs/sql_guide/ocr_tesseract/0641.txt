@@ -1,0 +1,40 @@
+과목 mM QL 고급 활용 및 튜닝
+
+제한적인 범위 내에서만 이뤄진다.
+실제 서브쿼리 Unnestingo] 어떤 식으로 작동하는지 살펴보자. 아래처럼 IN 서브쿼리를 포함하는 SQL 문이
+있다.
+
+select * from emp
+where deptno in (select deptno from dept)
+
+이 SQL 문을 0005008하지 않고 그대로 최적화한다면 옵티마이저는 다음과 같이 필터 방식의 실행계획을
+수립한다.
+
+| Id | Operation         | Name | Rows | Bytes | Cost (%CPU) |
+ㅣ © | SELECT STATEMENT |     {   33 134599 341   3 (0)
+1* 1 | FILTR      |    |    ㅣ    |      |
+ㅣ 21 TABLEACCESSFULL (Ew | 10 | 33 |   3 (0) }
+1* 3 | INDEX UNIQUE SCAN | DEPT_PK!  158]  25   0 (0) |
+
+Predicate Information (identified by operation id):
+
+1 - filter( EXISTS (SELECT © FROM "DEPT" "DEPT" WHERE "DEPTNO"=:B1))
+3 - access("DEPTNO"=:B1)
+
+Predicate 정보를 보면 필터 방식으로 수행된 서브쿼리의 조건절이 바인드 변수로 처리된 부분(06010 =
+:81)이 눈에 Hct. 이것을 통해 옵티마이저가 서브쿼리를 별도의 서브플랜(050180)으로 최적화한다는 사실을
+알 수 있다. 메인 쿼리도 하나의 쿼리 블록이므로 서브쿼리를 제외한 상태에서 별도로 최적화가 이뤄졌다(아무
+조건절이 없으므로 Full Table Scano] 최적이다).
+
+이처럼 Unnestingdt#| 않은 서브쿼리를 수행할 때는 메인 쿼리에서 읽히는 레코드마다 값을 넘기면서 서브쿼리를
+반복 수행한다(내부적으로 IN 서브쿼리를 Exists 서브쿼리로 변환한다는 AME Predicate 정보를 통해 알 수
+있다).
+
+위 서브쿼리가 Unnesting 되면, 변환된 쿼리는 다음과 같은 조인문 형태가 된다.
+
+select *
+from (select deptno from dept) a, emp b
+where b.deptno = a.deptno
+
+650 sou 전가 ele
+

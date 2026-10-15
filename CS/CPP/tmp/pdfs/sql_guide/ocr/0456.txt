@@ -1,0 +1,22 @@
+臼장 관리 구문
+l예제l OracIe
+CREATE OLE
+를이 생성묐습니다.
+[예제] Oracle
+GRANT CREATE SESSWI, CREATE TÆLE TO mN_TABLE;
+권한이 부여왰습니다.
+[예제} OracIe
+GRANT TO SQLD;
+권한이 부여됐습니다.
+[예제] Oracle
+연결됐습니다.
+[예제 및 실행 출고니 Oracle
+CREATE TABLE 뚀넓」 (EMJ—SEQ 넓皺R WT WLL, TITLE VARCHQ(IO));
+테이불이 생성묐습니다.
+이와 같이 ROLE을 만들어 사용하는 것이 권한을 직접 부여하는 것보다 빠르고 안전하게 유저를 관리할 수
+있는 방법이다. 0•쬬1려서는 기본적으로 몇 가지 R이£을 제공한다 그중 가장 많이 사우는 ROLE은
+RESOURCE다 참조를 위해 [표 Ⅱ우1이은 CDNNECm RBOURCE ROLE0il 부여된 권한 목록을 정리한 것이다.
+CONNECr는 CRFATE S曰ON과 같은 로그인 권한이 포함돼 있괴 RBOURCE는 CREAIE TABLE과 같은
+오브젝트의 생성 권한이 포함돼 있다. 일반적으로 유저를 생성할 때 CONNECI'와 RFSOURCE ROLE을 사용해
+기본 권한을 부여한다.
+전문가,卜|드 463

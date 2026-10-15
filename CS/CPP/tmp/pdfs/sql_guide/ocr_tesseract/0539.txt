@@ -1,0 +1,32 @@
+과목 mM QL 고급 활용 및 튜닝
+
+참고로 2000 이전 버전의 실행계획에는 다음과 같이 표시된다.
+
+StmtText
+
+1—Bookmark Lookup(BOOKMARK : ( [Bmk1000]), OBIECT:([..].[dbo].[emp]))
+|—Index Seek(0BIECT:([..].[dbo].[emp].[pk_emp1]), SEEK:([empno] = 7788) ORDERED FORWARD)
+
+2}. Index Skip Scan
+
+인덱스 선두 칼럼이 조건절로 사용되지 않으면 옵티마이저는 기본적으로 Table Full Scan 선택한다. 또는
+Table Full 5030보다 1/0를 줄일 수 있거나 정렬된 결과를 쉽게 얻을 수 있다면 Index Full Scan 방식을 사용한다고
+했다.
+
+Oracle 인덱스 선두 칼럼이 조건절에 빠졌어도 인덱스를 활용하는 새로운 스캔방식을 9i 버전에서 선보였는데,
+바로 Index Skip Scano| 그것이다([그림 1-3-7] 참조).
+
+[그림 피-3-7] Index Skip Scan
+
+예를 들어 성별과 연봉 두 칼럼으로 구성된 결합 인덱스에서 선두 칼럼인 성별 조건이 빠진 SQL 문이 Index
+Skip Scan 방식으로 수행될 때의 실행계획은 다음과 같다.
+SQL> select * from 사원 where 318 between 2000 and 4000;
+Execution Plan
+SELECT STATEMENT Optimizer=ALL_ROWS
+
+0
+1 © TABLE ACCESS (BY INDEX ROWID) OF '사원' (TABLE)
+2:9    INDEX (SKIP SCAN) OF '사원 _.10(' (INDEX)
+
+548 | SQL #7} 가이드
+

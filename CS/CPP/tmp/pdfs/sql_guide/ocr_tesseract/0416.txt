@@ -1,0 +1,40 @@
+제3장 관리 구문
+
+EE = ET a
+
+[예제] CASE 2. SAVEPOINT A 저장점까지 EH(ROLLBACK)E 수행하고 룰백 전후 데이터를 확인해본다.
+
+[예제 및 실행 결과] Oracle
+
+SELECT COUNT (*) AS CNT FROM PLAYER WHERE WEIGHT = 100;
+
+1개의 행이 선택됐습니다.
+ROLLBACK TO SVPT_A;
+
+롤백이 완료됐습니다.
+SELECT COUNT (*) AS CNT FROM PLAYER WHERE WEIGHT = 100;
+
+ONT
+
+0
+
+1개의 행이 선택됐습니다.
+
+[예제] CASE 3. 트랜잭션 최초 시점까지 롤백을 수행하고 롤백 전후 데이터를 확인해본다.
+
+예제 및 실행 결과] Oracle
+
+SELECT COUNT (*) AS CNT FROM PLAYER;
+
+1개의 행이 선택됐습니다.
+
+ROLLBACK:
+
+롤백이 완료됐습니다.
+
+SELECT COUNT (*) AS CNT FROM PLAYER;
+ONT
+
+1개의 행이 선택됐습니다.
+
+SQL 전문가 가이드 |423

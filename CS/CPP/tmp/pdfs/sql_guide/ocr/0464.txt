@@ -1,0 +1,6 @@
+SQL
+ProfessionaI • DeveIoper
+학습목표
+•개괄적인 데이터베이스 아키텍처 이해
+• DBMS가 SQL을 처리하는 과정 이해
+• 데이터베이스 1/0 메커니즘 이해

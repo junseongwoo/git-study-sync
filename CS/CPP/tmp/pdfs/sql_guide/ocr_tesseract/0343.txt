@@ -1,0 +1,25 @@
+과목 | SQL 기본과 활용
+
+[예제] 아래는 ROW LIMITING 절을 사용한 Top N 쿼리다.
+
+SELECT EMPNO, SAL FROM EMP ORDER BY SAL, EMPNO FETCH FIRST 5 ROWS ONLY;
+
+ENPNO         SAL
+7369          800
+7960          950
+7876           1100
+7654          1250
+7521          1250
+
+5 행이 선택됐습니다.
+
+[예제] 아래와 같이 OFFSET! 기술하면 LE 행 이후의 전체 행이 반환된다.
+
+SELECT EMPNO, SAL FROM EMP ORDER BY SAL, EMPNO OFFSET 5 ROWS;
+
+EMPNO                    SAL
+7934                     1300
+7844                     1500
+7499                     1600
+
+9 행이 선택됐습니다.

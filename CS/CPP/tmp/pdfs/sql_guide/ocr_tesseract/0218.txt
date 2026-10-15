@@ -1,0 +1,35 @@
+제1장 SQL 기본
+
+[실행 결과]
+DNAME                Loc               DEPTNO
+ACCOUNTING        NEW YORK           10
+OPERATIONS          BOSTON                4
+RESEARCH            DALLAS                »
+SALES                CHICAGO               30
+
+4 개의 행이 선택됐습니다.
+
+Case 2. 칼럼명 + ALIAS 명 사용 00068 BY 절 사용
+
+[예제]
+SELECT  DNAME AS DEPT, LOC AS AREA, DEPTNO
+
+FROM DEPT
+ORDER BY DNAME, AREA, DEPTNO DESC:
+
+[실행 결과]
+DEPT              AREA           DEPTNO                                                                :
+ACCOUNTING        NEW YORK           10                                                               나
+OPERATIONS        BOSTON             40                                                               3
+RESEARCH          DALLAS             20                                                               &
+SALES             CHICAGO            30                                                               꽃
+
+4 개의 행이 선택됐습니다.
+
+Case 3. 칼럼 순서번호 + ALIAS 명 사용 00068 BY 절 사용
+
+SELECT  DNAME, LOC AS AREA, DEPTNO
+FROM DEPT
+ORDER BY 1, AREA, 3 DESC;
+
+_SQL 전문가 sole [223

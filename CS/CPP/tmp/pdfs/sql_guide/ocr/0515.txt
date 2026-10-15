@@ -1,0 +1,30 @@
+과목 III SQL 고급 활용 및 튜닝
+* cmsistmt *tS
+* ro-rdtrips client =
+disk
+fetch (0혜t
+fetch
+Call 통계 아래쪽 Row Source Operation에 표시된 항목에 대해서도 간단히 살펴보자.
+1 TABLE ACCESS BY It&X 血ID EP (CF2 ~ tiflFO us)
+1 LNIWE SCAN EP_PK ((1•=1 pr=€ ~ tirne=44 us)(object id 5278)
+왼쪽에 보이는 Ro``5는 각 수행 단계에서 출력(FIow-Out)된 로우 수를 의미한다. 수행 단계별로 우측 괄호
+인에 보이는 표, pr, pw, 등은 각각 Cmsistent 모드 블록 읽기, 디스크 블록 읽기, 디스크 블록 쓰기, 소일시간
+(us=mcrosecond)을 의미한다. 9i에서는 pr, pw 대신 r, w로 표시했었다.
+그리고 꼭 기억해야 할 중요한 사실은, 부모는 자식 노드의 값을 누적한 값을 갖는다는 점이다. 예를 들어 위에서
+EMP 테이블 액세스 단계는 CI=2이고, 그 자식 노드인 EMP-PK 인덱스 액세스 단계는 다리이므로 인덱스를 읽고
+난 후 테이블을 액세스하는 단계에서 순수하게 일어난 cr 개수는 1이다.
+라 IHQS XPLAN 패키지
+dbms-xplan 패기지를 이용해 예상 실행계획을 확인하는 방법을 앞에서 살펴봤다. 이 패기지를 이용해 SQL
+트레이스 정보를 확인하는 방법을 살펴보자.
+고와미터를 변경해서 SQL 트레이스를 수집하면 트레이스 파일이 DBMS 서버에 저장된다. 서버 접속
+보안이 강화된 최근 환경에서는 DBA를 포함한 특정 사용자 그룹 외에는 사용하기 힘든 방식이다. 이에 Oracle은
+트레이스 정보를 서버 파일로 남기지 않고 SGA 메모리에 남기는 방식을 10g부터 제공하기 시작했다.
+사용방법은 간단하다. 세션 레벨에서 statisücs-level 파라미터를 all로 설정하거나, 분석 대상 SQL 문에
+gather-plan-staustics 힌트를 사용하면 된다. 그러면 Oracle은 SQL을 수행하는 동안 오퍼레이션 단계별 수행
+통계를 수집한다.
+수집된 정보는 다음과 같이 dbms-xplamdisplay-cursor 함수로 확인할 수 있다.
+select * frcn table&s-xplan.display-cursor( '7f5y19ywtkwgt' , 0, 'IOSTATS'));
+select * fræ t±le&s-xplan.display-cursor( '7f5y19ywtkwgt• , 0, 'MEMSTATS' ));
+sel«t * fræ '7f5y19ywtkwgt' , 0, 'ALLSTATS'));
+sel«t * fræ t±le&s-xplm.display-cursor(rwll, 刷11, 'ALLSTATS' )):
+524 전문가 가이드

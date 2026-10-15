@@ -1,0 +1,49 @@
+R2장 활용
+(FTNO, 盥釐) IN ((DIO_SAL, DIO_CNT) AS (10, 'ACQWTI%')
+, (DN-SAL, 020-(MT) AS (羽, •能SE欻어• )))
+BY 1, 2;
+[실행 결과]
+Jæ
+ANALYST
+ANALYST
+CLERK
+CLERK
+4 행이 선택왰습니다.
+20
+20
+ACCUTIt6
+RESE.R대
+ACCO-NTII"
+RESEÅR대
+1嚼
+0
+2
+1
+2
+UNPIVOT 절을 사용할 수 없는 경우 카디션 곱을 사용해 UNPIVOT을 수행할 수 있다. UNPIVOT할 열의
+개수만큼 행을 복제하고, CASE 표현식으로 UNPIVOT할 열을 선택8는 방식이다.
+[예삐
+SELECT
+A.Jæ
+CASE B.LV *EN 1 THEN 10
+*EN 2 THEN
+END AS
+CASE B.LV *EN 1 TÆN A.DIO_SAL MfN 2 THEN A.D2€_SAL AS SAL
+CASE B.LV HEN 1 TÆN A.DI€_CNT M4EN 2 n•EN A.D2€_CNT E,O AS CNT
+FO TI A
+, (SELECT LEVEL AS LV FO DJAL CONNECT BY LEVEL 수 2) B
+BY 1, 2;
+[실행 결과]
+ANALYST
+ANALYST
+CLERK
+CLERK
+4 행이 선택했습니다.
+10
+20
+CNT
+0
+2
+1
+2
+전문가 가이드 373

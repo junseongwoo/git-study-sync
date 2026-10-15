@@ -1,0 +1,39 @@
+제1장 SQL 기본
+
+7839 KING PRESIDENT        1981-11-17 5600           10     108 ACCOUNTING NEW YORK
+7844 TURNER SALESMAN ~~ 7698 1981-09-68 1500       0       30             SALES       CHICAGO
+7876 ADAMS (나마                  7788 1987-85-23 1100                                   20                20 RESEARCH DALLAS
+7900 JAMES CLERK        7698 1981-12-63 950               30             SALES       CHICAGD
+7962 FORD ANALYST             7566 1981-12-83 3000                                  20                20 RESEARCH DALLAS
+7934 MILLER CLERK       7782 1982-01-23 1300               10       10 ACCOUNTING NEW YORK
+
+14 개의 행이 선택됐습니다.
+
+[예제] NATURAL 이과 INNER JOINS| 차이를 자세히 설명하기 위하여 DEPT_TEMP 테이블을 임시로 만든다.
+
+[예제] Oracle
+
+CREATE TABLE DEPT_TEMP AS SELECT * FROM DEPT;
+
+테이블이 생성됐습니다.
+
+예제] SQL Server
+
+SELECT * INTO DEPT_TEMP FROM DEPT;
+
+<4개 행이 영향을 받음) _ ㆍ               RR SG
+
+UPDATE DEPT_TEMP
+SET DNAME = ‘CONSULTING’
+WHERE DNAME = 'RESEARCH';
+
+UPDATE DEPT_TEWP
+SET DNAME = 'MARKETING'
+WHERE DNAME = 'SALES';
+
+예제]
+
+SELECT ＊
+FROM DEPT_TEMP;
+
+QL Wg} 가이드 |251

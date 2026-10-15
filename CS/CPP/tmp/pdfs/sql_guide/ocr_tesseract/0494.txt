@@ -1,0 +1,49 @@
+과목 II SQL 고급 활용 및 튜닝
+
+인덱스 스캔 시에는 Single Block 1/0 방식이 효율적이다. 인덱스 블록간 논리적 순서(이중 연결 리스트 구조로
+연결된 순서)는 데이터 파일에 저장된 물리적인 순서와 다르기 때문이다. 물리적으로 한 익스텐트에 속한 블록들을
+1/0 Call 시점에 같이 메모리에 올렸는데, 그 블록들이 논리적 순서로는 한참 뒤쪽에 위치할 수 있다. 그러면 그
+블록들은 실제 사용되지 못한 채 버퍼 상에서 밀려나는 do] 발생한다. 하나의 블록을 캐싱하려면 다른 블록을
+밀어내야 하는데, 이런 현상이 자주 발생한다면 앞에서 소개한 버퍼 캐시 효율만 떨어뜨리게 된다.
+
+대량의 데이터를 MultiBlock 1/0 방식으로 읽을 df Single Block 1/0 보다 성능상 유리한 이유는 I/O Call
+발생 횟수를 줄여주기 때문이다.
+
+아래 예제를 통해 50816 Block 1/0 방식과 MultiBlock 1/0 방식의 차이점을 설명해 보자.
+
+create table t
+as
+select * from all objects;
+
+alter table t add
+constraint t_pk primary key(object_id);
+
+select /*+ index(t) */ count(*)
+from t where object_id > 0
+
+call         count        cpu        elapsed        disk query       current        rows
+
+Parse        1     0.00       0.00       0         0           0        0
+Execute       1     0.00       0.00       0         0           0        0
+Fetch        2     0.26       0.25      64        65           0        1
+total        4     0.26       0.25      64       65           0        1
+
+Rows         Row Source Operation
+
+1    SORT AGGREGATE (cr=65 r=64 w=0 time=256400 us)
+31192     INDEX RANGE SCAN T_PK (cr=65 r=64 w=0 time=134613 us)
+
+Elapsed times include waiting on following events:
+
+Event waited on                           Times     Max. Wait     Total Waited
+——————a fgited | sme | em———    ——
+
+SQL*Net message to client                     2          0.00            0.00
+db file sequential read                      64         0.00            0.00
+SQL*Net message from client                   2          0.05            0.05
+
+위 실행 결과를 보면 64개 인덱스 블록을 디스크에서 읽으면서 64번의 I/O Call(db file sequential read 대기
+이벤트)이 발생했다.
+
+502 | SQL 전문가 가이드
+

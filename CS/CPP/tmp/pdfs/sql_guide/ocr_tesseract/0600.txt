@@ -1,0 +1,42 @@
+Ag 조인 튜닝
+
+=-===========> =                               |
+
+3. 스칼라 서브 Fg] Unnesting
+
+오라클 126부터 스칼라 서브 쿼리도 00065008이 가능해졌다. 옵티마이저가 사용자 대신 자동으로 쿼리를 변환
+해 주는 것이다. 다음은 스칼라 서브 쿼리를 Unnesting 할 때의 실행계획이다. 스칼라 서브 쿼리인데도 NL 조인이
+아닌 해시 조인으로 실행될 수 있는 이유는 00005008됐기 때문이다.
+
+select <.고객번호, <.고객명
+,(56106* /#+ unnest */ 10000(39(거래금액), 2) 평균거래금액
+from 거래
+where 거래일시 > trunc(sysdate, 'mm')
+and DAMS = DAYS)
+from 고객 <
+where <.가입일시 >= trunc(add_months(sysdate, -1), '0')
+
+Execution Plan
+
+0      SELECT STATEMENT Optimizer=ALL_ROWS (Cost=7 Card=4 Bytes=184)
+
+1 0 HASH JOIN (OUTER) (Cost=7 Card=4 Bytes=184)
+
+2 1 TABLE ACCESS (FULL) OF '고객' (TABLE) (Cost=3 Card=4 Bytes=80)
+
+3 1 VIEW OF 'SYS.VW_SSQ1' (VIEW) (Cost=4 Card=3 Bytes=78)
+
+4 43       HASH (GROUP BY) (Cost=4 Card=3 Bytes=21)
+
+Cis       TABLE ACCESS (FULL) OF '거래' (TABLE) (Cost=3 Card=14 Bytes=98)
+
+아래는 unnestet merge 힌트를 같이 사용했을 때의 실행계획이다.
+
+Execution Plan
+0     SELECT STATEMENT Optimizer=ALL_ROWS (Cost=7 Card=15 Bytes=485)
+1 0 HASH (GROUP BY) (Cost=7 Card=15 Bytes=405)
+25     HASH JOIN (OUTER) (Cost=6 Card=15 Bytes=405)
+34:2      TABLE ACCESS (FULL) OF '고객' (TABLE) (Cost=3 Card=4 Bytes=80)
+41102     TABLE ACCESS (FULL) OF '거래' (TABLE) (Cost=3 Card=14 Bytes=98)
+
+SQL 전문가 가이드 |609.

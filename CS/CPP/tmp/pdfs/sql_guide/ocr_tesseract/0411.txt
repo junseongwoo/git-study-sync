@@ -1,0 +1,30 @@
+과목 11 SQL 기본과 활용
+
+ROLLBACK TRANSACTION SVTR1;
+
+[예제] SAVEPOINTE 지정하고, PLAYER 테이블에 데이터를 입력한 다음 롤백을 이전에 설정한 저장점까지 실행한다.
+SAVEPOINT SVPT1;
+저장점이 생성됐습니다.
+INSERT
+INTO PLAYER (PLAYER ID, TEAM_ID, PLAYER NAME, POSITION, HEIGHT, WEIGHT, BACK_NO)
+VALUES ('1997035', 'Ke2', '이운재', '6K', 182, 82, 1);
+1 개의 행이 만들어졌습니다.
+
+ROLLBACK TO SVPT1;
+
+롤백이 완료됐습니다.
+
+예제] SQL Server
+
+BEGIN TRAN
+SAVE TRAN SVTR1;
+명령이 완료됐습니다.
+INSERT
+INTO PLAYER (PLAYER_ID, TEAM_ID, PLAYER NAME, POSITION, HEIGHT, WEIGHT, BACK NO)
+VALUES (*1997635', 'k@2', '이운재', 'GK', 182, 82, 1);
+(1개 행이 영향을 받음)
+ROLLBACK TRAN SVTR1;
+
+명령이 완료됐습니다.
+
+418 | SQL 전문가 가이드

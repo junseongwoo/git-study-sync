@@ -1,0 +1,48 @@
+2. SQL Server
+
+SQL Server% 프로파일러(808161)라는 툴을 통해 인스턴스 레벨에서 트레이스를 수집할 수 있지만, DB 관리자를
+위한 것이므로 여기서 따로 설명하지는 않겠다.
+
+SQL 56ㅁ하에서 SQL 트레이스를 설정하려면 988305005 profile, statistics io, statistics time 세 가지 옵션을
+ono 설정하면 된다. 만약 showplan_text 또는 showplan_all 옵션을 00으로 설정한 상태라면, 이 옵션을
+먼저 off2 설정해야 한다.
+
+use Northwind
+
+90
+
+set statistics profile on
+set statistics io on
+
+set statistics time on
+90
+
+* set statistics profile on : 각 쿼리가 일반 결과 집합을 반환하고 그 뒤에는 쿼리 실행 프로필을 보여주는
+추가 결과 집합을 반환한다. 출력에는 다양한 연산자에서 처리한 행 수 및 연산자의 실행 횟수에 대한 HEE
+포함된다.
+
++ set statistics 10 on : Transact-SQL 문이 실행되고 나서 해당 문에서 만들어진 디스크 동작 양에 대한 정보를
+표시한다.
+
+«set statistics time on : 각 Transact-SQL 문을 구문 분석, 컴파일 및 실행하는 데 사용한 시간을 밀리초
+(=0.001초) 단위로 표시한다
+
+위와 같이 설정한 상태에서 SQLE 실행하면 결과 집합 다음에 트레이스 결과가 출력된다.
+
+count (*)
+dbo. Orders a, dbo. [Order Details] b                                               5
+2.0rderID = b.OrderID                                                                   -           LAN Fw 객
+
+syig
+
+To Fedde 오도
+
+SA
+
+아래는 결과 창에 출력된 트레이스 결과다.
+
+SQL Server 구문 분석 및 컴파일 시간:
+CPU 시간 = ems, 경과 시간 = 105.
+
+526 50) 전문가 가이드
+

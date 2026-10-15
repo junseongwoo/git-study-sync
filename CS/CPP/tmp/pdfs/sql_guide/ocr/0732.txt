@@ -1,0 +1,68 @@
+과목 III 고급 활용 및 튜닝
+select 7*+ lse-hash(d) full(d) full(e) noparallel(d) parallel(e 4) */
+ca.nt(*), nin(sal), max(sal), avg(sal), 요”(sal)
+d.lx = '에(A㈜
+31
+1
+1
+e.&ptrn = d.&ptno
+1 ld 1 @*ration
+! SELECT STATEMENT
+1
+1
+1
+2
+1
+4
+5
+1
+6
+1 10
+1
+PX CEIUTn
+PX SffO
+그이N
+BJFFER
+PX ÆCEIVE
+PX
+TABLE ACCESS FIIL
+PX RECEIVE
+PX SEPO YASH
+PX BLXK
+TABLE ACCESS FULL
+IIN-OJT
+P->S
+PCP
+PCP
+PCWC
+PCP
+S—>P
+PCP
+1 PCWC
+國 Distrib
+QC (RAND)
+HASH
+HASH
+1
+:TQI柵2
+:TQ1ææ
+DEPT
+:TQI%01
+EP
+TQ
+1Q1,02
+1Q1,02
+|QI,02
+|QI,02
+1Q1,02
+| QI,02
+IQI,
+01
+QI,01
+병렬 처리에서 실제 역할을 담당하는 프로세스는 SQL 문을 발행한 사용자 세션 자신이다.
+나. Parallelism과 Inter-OF*•ratim ParalleIism
+select 7” full(고객) 些a11e1(고객 4) */ *
+뉴” 고객
+~ 고객명
+[그림 III죠14]는 order 바를 포함하는 위 병렬 쿼리의 수행과정을 도식화한 것이다.
+결4云 전문가/져드

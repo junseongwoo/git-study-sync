@@ -1,0 +1,44 @@
+과목 I SQL 기본과 활용
+
+네 번째 질문인 삼성블루윙즈 팀인 집합과 포지션이 미드필더(\00)인 선수들의 차집합에 대한 SQL 문을 작성하고
+결과를 확인해 보자.
+
+4) 케이리그 소속 선
+아닌 선수들의 정
+
+속이 삼성블루윙즈 팀인 선수들의 집합과
+|션이 DISH (WH) 선수들 집합의 차집합
+
+4) 케이리그 소
+케이리그 소
+
+Ib Ib
+rx
+벼>
+>
+
+SELECT TEAM_ID AS 팀코드, PLAYER NAME AS 선수명, POSITION AS 포지션
+, BACK_NO AS 백넘버, HEIGHT AS 7|
+FROM PLAYER
+WHERE TEAM_ID = 'K@2'
+MINUS
+SELECT  TEAM_ID AS 팀코드, PLAYER NAME AS 선수명, POSITION AS 포지션
+, BACK_NO AS 백넘버, HEIGHT AS 7|
+FROM PLAYER
+WHERE POSITION = 'MF'
+ORDER BY 1, 2, 3, 4, 5;
+
+SQL 560706[에서는 MINUSth4! EXCEPTE 사용할 수 있다.
+
+팀코드             선수명               포지션             백넘버              키
+192               김강진             OF                     43           181
+1002                   김관회                대                         39              180
+102               김만근             FW                     34           177
+102                 김병국              DF                        2             183
+192               김병근             DF                      3           175
+1092                        김선우                     대                                33                  174
+“92               김성환             마                      5           183
+“92                 김용우              [2]                       27             175                                                1;
+192               김운재             6K                      1            182                                        a
+
+304] sou net 가이드

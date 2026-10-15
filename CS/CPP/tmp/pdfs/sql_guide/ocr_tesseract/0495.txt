@@ -1,0 +1,51 @@
+아래는 같은 양의 인덱스 블록을 MultiBlock 1/0 방식으로 수행한 결과다,
+
+- 디스크 1/0가 발생하도록 버퍼 캐시 Flushing
+alter system flush buffer_cache;
+
+-- Multiblock 1/0 방식으로 인덱스 스캔
+select /*+ index_ffs(t) */ count(+)
+from t where object _id > 0
+
+call         count        cu elapsed disk query current
+
+Parse                1         0.00           0.68           0           0                  0
+
+Execute       1     0.00       0.00      0      0          0
+
+Fetch               2         0.26           0.26         64         69                 0
+
+total               4        0.26           0.26         64         69                 0
+Row Source Operation
+
+| §
+
+1     SORT AGGREGATE (cr=69 r=64 we@ time=267453 us)
+
+le. 11
+
+제1장 SQL 수행 구조
+
+31192      INDEX FAST FULL SCAN T_PX (cr=69 164 w=9 time=143781 us)
+
+Elapsed times include waiting on following events:
+
+Event waited on                             Times      Max, Wait
+Srna Uh] td                 —
+
+SQL*Net message to client                        2          0.00
+db file scattered read                            9           0.00
+SQL*Met message from client                        2           0.35
+
+똑같이 64개 블록을 디스크에서 읽었는데, 1/O Calle] 9¥(db file scattered read 대기 이벤트)에 그쳤다,
+참고로 위 테스트는 07400 9'에서 수행한 것이다. Oracle 100부터는 Index Range Scan 또는 Index Full
+Scan® 때도 Multiblock 1/0 방식으로 읽는 경우가 있다, 위처럼 테이블 액세스 없이 인덱스만 읽고 처리할 때가
+그렇다. 인덱스를 스캔하면서 테이블을 랜덤 액세스할 때는 9 이전과 동일하게 테이블과 인덱스 블록을 DF Single
+
+Block 1/0 방식으로 읽는다.
+
+Single Block 1/0 방식으로 읽은 블록들은 LRU 리스트 상 MRU 쪽(600)으로 위치하므로 한 번 적재되면
+버퍼 캐시에 비교적 오래 머문다. 반대로 MultiBlock 1/0 방식으로 읽은 블록들은 LRU 리스트 상 LRU 쪽(600)으로
+
+연결되므로 적재된 지 얼마 지나지 않아 1순위로 버퍼캐시에서 밀려난다.
+

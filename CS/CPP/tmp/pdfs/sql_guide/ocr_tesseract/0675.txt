@@ -1,0 +1,51 @@
+Execution Plan
+
+0     SELECT STATEMENT Optimizer=CHOOSE (Cost=8 Card=8 Bytes=120)
+1 @ SORT (UNIQUE) (Cost=8 Card=8 Bytes=120)
+
+2 1 UNION-ALL
+
+3s       TABLE ACCESS (BY INDEX ROWID) OF 'EMP' (Cost=2 Card=4 Bytes=60)
+4503       INDEX (RANGE SCAN) OF 'EMP_DEPTNO_IDX' (NON-UNIQUE) (Cost=1 Card=4)
+5500      TABLE ACCESS (BY INDEX ROWID) OF 'EMP' (Cost=2 Card=4 Bytes=68)
+[esl       INDEX (RANGE SCAN) OF 'EMP_DEPTNO_IDX' (NON-UNIQUE) (Cost=1 Card=4)
+
+StmtText
+|—Sort(DISTINCT ORDER BY: ([Union1068] ASC, [Union109] ASC, [Union1010] ASC))
+|—Concatenation
+
+|—Nested Loops(Inner Join, OUTER REFERENCES: ([Bmk1000]))
+
+ㅣ |—Index Seek(0BJECT: ([SQLPRO]. [dbo]. [emp]. [emp_dept_idx]), SEEK:([deptno=(16.)))
+
+ㅣ |—RID Lookup(0BJECT: ([SQLPRO]. [dbo]. [emp]), SEEK: ([Bmk1000]=[Bmk1660]))
+
+|—Nested Loops(Inner Join, OUTER REFERENCES: ([Bmk1064]))
+|—Index Seek(0BJECT: ([SQLPRO]. [dbo]. [emp]. [emp_dept_idx]), SEEK: ( deptno]=(29.)))
+{—RID Lookup(OBJECT: ([SQLPRO]. [dbo]. [emp]), SEEK:([Bak1064]=[Bmk1864]))
+
+위 쿼리에선 PK 칼럼인 empno?} select-listoll A282 두 집합 간에는 중복 가능성이 전혀 없다. union
+사용하든 union alg 사용하든 결과 집합이 같으므로 union 31|을 사용하는 것이 마땅하다. 다옴은 00001 대신
+union 31]을 사용했을 때의 실행계획이다.
+
+Execution Plan
+
+SELECT STATEMENT Optimizer=CHOOSE (Cost=4 Card=8 Bytes=120)
+UNION-ALL
+TABLE ACCESS (BY INDEX ROWID) OF 'EMP' (Cost=2 Card=4 Bytes=60)
+INDEX (RANGE SCAN) OF 'EMP_DEPTNO_IDX' (NON-UNIQUE) (Cost=1 Card=4)
+TABLE ACCESS (BY INDEX ROWID) OF 'EMP' (Cost=2 (ard=4 Bytes=60)
+INDEX (RANGE SCAN) OF 'EMP_DEPTNO_IDX' (NON-UNIQUE) (Cost=1 Card=4)
+
+스 =
+
+0
+1
+2
+3
+4
+5
+
+StmtText
+
+SQL 전문가 가이드 [685

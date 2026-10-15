@@ -1,0 +1,59 @@
+劇장 고급 튜닝
+월별로 과금이 발생했는지만 확인하면 되므로 쿼리를 아래처럼 바꿀 수 있다.
+select 연월
+fræ 연월테이불 a
+•tpre 연월 수 :yyyym
+arxi exists (
+select 'x'
+과금
+hre 과금연월 = a.연월
+지역 like :reg || •부
+(쟶1
+Parse
+Execute
+Fetch
+total
+3
+3
+5
+(이谿t
+1
+1
+4
+6
+Swrce
+(卿
+el꾸,댼
+이이
+0.01
+disk
+0
+0
+0
+0
+0
+0
+82
+82
+current
+0
+0
+0
+0
+0
+0
+3
+IÆSTED LWPS SEMI ((廠 - ti로9粥 (5)
+TABLE ACCESS FULL 연월테이불 ((酈 ti登57 5)
+P枳TITI애 ~ ITERATm P獸TITI얘: KEY KEY ((r=76 이해 us)
+1蘿X SO•L/ 과금-NI ((r=76 ~ 3)
+연월테이를을 먼저 읽고 과금 테이블을 ensts 서브구4리로 필터랑하는 방식이다. exists 서브쿼리의 가장 큰
+특징은, 메인 쿼리로부터 건건이 입력 받은 값에 대한 조건을 만족히는 첫 번째 라쬬드를 *는 순간 tn빤를 반환하고
+서브쿼리 수행을 마친다는 점이다. 따라서 과금 테이블에 [과금연월 + 지역] 순으로 인덱스를 구성해 주기만 하면
+가장 최적으로 수행될 수 있다. 그 결과 소트가 발생하지 입았으며, 일개 블록만 읽고 0.01초 만에 작업이 끝났다
+다. 불필요한 Count 연산 제거
+아래는 데이터 존재 여부만 확인하면 되는데도 불필요하게 전체 건수를 Count&l는 경우다.
+declare
+Lcnt
+select co.nt(*) into Lcnt
+전문가 ,버드 687

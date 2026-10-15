@@ -1,0 +1,39 @@
+과목 ] SQL 기본과 활용
+
+SELECT ISNULL(B.TEAM_ID, 'K' + CONVERT(VARCHAR(2),
+ROW_NUMBER() OVER (ORDER BY ISNULL(B.TEAM_ID, 'Z7Z')
+, A.STADIUM_ID))) AS TEAM_ID
+, SUBSTRING(A.STADIUM_NAME, 1, 2) AS REGION_NAME
+, SUBSTRING(A.STADIUM_NAME, 1, 2)
++ CASE WHEN B.TEAM_NAME IS NOT NULL THEN 'FC' ELSE '시티즌' END AS TEAM_NAME
+
+, A.STADIUM_ID, A.DDD, A.TEL
+INTO TEAM_TWP
+FROM STADIUM A LEFT JOIN TEAM B
+
+ON B.STADIUM_ID = A STADIUM_ID;
+
+(207) 행이 영향을 받음)
+
+TEAM_ID         REGION_NAME           TEAM_NAME            STADIUM_ID           000           TEL
+
+ke             울산                  울산((              (04                  052          220-2468
+kez             수                    수원((              804                  031           259-2150
+“03              포항                   포항((                (06                    054           282-2002
+“84       인천         인천((       801         031     666-0496
+Kes             전주                  전주(              003                  063          273-1763
+Kee              부산                   SAFC               62                    051            247-5171
+“07              광양                    광양               001                    061            792-5600
+Kes              성남                   AHFC               802                   031           753-3956
+LC]              서울                    MEFC               BOS                    02             2128-2973
+10               대전                    CHMFC               002                    042           252-2002
+Kn               창원                    HFC               05                    055           6644-8468
+K12               광주                    광주(               402                    062           2468-8642
+K13             강릉                  강릉((              403                  033          459-3631
+14               제주                    제주((               404                    064           3631-2460
+K15                     대구                            대귀<                      ABS                            053                602-2011
+K16               대구                    대구시티즌          Fol                    054
+
+K17                부산                      부산시티즌           『02                      051
+
+K18               일산                    일산시티즌          『03                   031

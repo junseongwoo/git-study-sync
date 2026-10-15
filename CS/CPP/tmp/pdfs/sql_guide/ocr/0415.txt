@@ -1,0 +1,21 @@
+과목 ll QL 기본과 활용
+SAVEmINT SVPT_A;
+저장점이 생성쾼습니다.
+PLAYER SET ÆIGHT = 1%;
+嚮1 행이 경신했습니다.
+SAVEmINT SVPT-B;
+저장점이 생성됐습니다.
+FO PL.AYER;
+행이 삭제쾼습니다.
+현재 위치에서 {예제] 1, 2, 3을 순서대로 수행해본다.
+[예제] CASE 1. SAVEPOINT B 저장점까지 를백을 수행하고 를백 전후 데이터를 획인해본다.
+[예제 및 실행 결과] Oracle
+SELECT (0.酊 (하 AS CNT FRæ PLAYER;
+0
+1개의 행이 선택왰습니다.
+QINCK TO SFT—B;
+를력이 완료쾼습니다.
+SELECT (嚼 (하 AS CNT FO PLAYER;
+1개의 행이 선택묐습니다.
+422
+전문가 ,끼드

@@ -1,0 +1,35 @@
+虧장 옵EIO삐저
+Bytes |
+0 | SELECT STATEENT
+tÆSTED LOS WTER
+1
+2
+TABLE ACCESS FIIL
+3
+VIEW
+BY
+4
+TABLE ACCESS BY 1뚀X ROWID
+5
+1荻X FIJLL SCAN
+6
+lnfomation (i±ntifi«i id):
+3 - filter(t• •贊PT測“(+)=•『 •FT,O")
+DEPT
+E믈P-氈PT測-1얘
+14|
+위 귀리는 다행히 집계함수가 하나뿐이으로 1(눵 이하 버전이더라도 아래처럼 스칼라 서브 귀리로 변환함으로써
+부-분범위처리가 가능하게 할 수 있다.
+select d.±ptro, d.&iæ
+, (select 쮀9(%1) frm •t•ere &ptno = d.&ptm)
+frm ckpt d
+집계함수가 여러 개일 때가 문제이다. 만약 다음과 김이 귀리하면 emp에서 같은 범위를 반복적으로 액세스하는
+비효율이 생긴다.
+select d &ptm, d
+.(select avg(sal) fræ •here deptno = d.ckptno) "9-“1
+,(select nin(sal) fræ ~ •here deptm = min-sal
+,(select “1(s고) iere deptm = d &ptm)
+이럴 때는 다음과 길이 구하려는 값들을 모두 결합하고서 바깥쪽 액세스 귀리에서 substr 함수로 분리하는 방법을
+활용할 수 있다. Oracle은 11g 이후로 이렇게 *구하게 구현할 이유가 없어졌지만, 조인 조건 Pushdown 기능을
+제공하지 않는 DBMS를 사용하고 있다면 이런 튜닝 기법이 우용할 수 있다.
+우 전문가 가이드 66f

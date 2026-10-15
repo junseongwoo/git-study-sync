@@ -1,0 +1,33 @@
+과목 11 SQL 기본과 활용
+
+`2200000000000000000000000000000000000000000000000066666696666999929909999저29992 초나 조어
+
+라. 기타 NULL 관련 COALESCE)
+
+COALESCE 함수는 인수의 숫자가 한정돼 있지 않으며, 임의의 개수 EXPROIA 4011.이 아닌 최초의 EXPR&
+나타낸다. 만일 모든 EXPRO| 4011.이라면 NULLE 리턴한다.
+
+COALESCE (EXPR1, 6082, …)
+
+[예제] 사원 테이블에서 커미션을 1차 선택 값으로, 급여를 2차 선택 값으로 선택하되, 두 칼럼 모두 NULLY! 경우는 \444로
+표시한다.
+
+계제
+
+SELECT ENAME, COMM, SAL, COALESCE (COMM, SAL) AS COAL
+FROM ENP;
+
+COALESCE 함수는 두 개의 중첩된 CASE 문장으로 표현할 수 있다.
+
+SELECT ENAME, COMM, SAL
+, CASE
+WHEN COMM IS NOT NULL THEN COMM
+ELSE (CASE
+WHEN SAL IS NOT NULL THEN SAL
+ELSE NULL
+
+JONES                                2975            2975
+MARTIN             400 1258 1460]
+BLAKE                                2850            2850
+
+182 | sQu 전문가 가이드

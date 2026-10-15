@@ -1,0 +1,49 @@
+R2장 활용
+이래는 간, 한, +? 연산자를 사용한 쿼리다. cl 열은 패턴을 최소로 일기시기는 nongreedy 방식을 사용했기
+때문에 aa까지만 일치한다. 패턴을 최대로 일치시기는 greedy 방식을 사용한 c2 열은 aaa까지 일치한다.
+[예지니
+•a??aa' ) AS (1
+SELECT REGEXP_SI.BSTR (| -
+'a?aa' ) AS (2
+REGEXP SI-BSTR ( •
+RECXP_SI.BSTR ( •
+REGEXP SIBSTR ('xaxbxc•, '\w*x\v• ) AS (4
+REGEXP-SI.BSTR ('abxcxd' , |\믈+?x남) AS (5
+REGEXP SI.BSTR ( •abxcxd'
+FROM WAL;
+[실행 결과]
+(1
+(2
+(3
+(4
+xaxbxc
+(5
+±xc
+- ruvreedy 방식
+- greedy 방식
+±xcxd
+1개의 행이 선택됐습니다.
+다음은 {m}?, {m,}?, {따마? 연산자를 사용한 쿼리다. cl, c2 열은 m회 일치를 사용했기 때문에 포테년y 방식과
+관계없이 결과가 동일하다. c3 열은 최소 일치므로 aa와, c4 열은 최대 일치이므로 aaaaa와 일치한다. 열은
+최소로 aa, c6 열은 최대로 aaaa와 일치한다.
+[예제1
+SELECT REffXP_Sl.BSTR ( ,
+REGEP-SI.BSTR ('aaaa• , 기가•
+SI.BSTR ('aæaa • ,
+REGEXP-SIÆSTR ('aua • ,
+REGEXP-SI.BSTR ( • -
+REGEXP SIÆSTR ('aaaaa • ,
+FROM m.lAL;
+[실행 결미
+(2
+(3
+(4
+- 방식
+)AS (1
+) AS (2 - greedy 방식
+) AS (3
+) AS (4
+) AS (5
+) AS (6
+(5
+전문가 가이드 385

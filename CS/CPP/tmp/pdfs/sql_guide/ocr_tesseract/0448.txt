@@ -1,0 +1,39 @@
+제3장 관리 구문
+
+SQLD 유저는 로그인 권한만 부여됐기 때문에 테이블을 생성하려면 테이블 생성 ¥IHCREATE [481.8)이 불충
+분하다는 오류가 발생한다(01316, SQL Server).
+
+[예제] SYSTEM 유저를 통해 SQLD 유저에게 00616 TABLE 권한을 부여한 후 다시 테이블을 생성한다.
+
+AH] Oracle
+
+CONN SYSTEM/MANAGER;
+
+연결됐습니다
+
+계제| Oracle
+
+GRANT CREATE TABLE TO SQLD;
+
+권한이 부여됐습니다.
+
+CONN SQLD/DB2019;
+
+연결됐습니다.
+
+계제 및 실행 결과] Oracle
+
+CREATE TABLE MENU (MENU_SEQ NUMBER NOT MULL, TITLE VARCHAR2(10)):
+
+테이블이 생성됐습니다,
+
+[예제] 53로 로그인해 SQLD 유저에게 (06416 TABLE 권한을 부여한 후 다시 테이블을 생성한다.
+
+USE ADVENTUREWORKS ;
+60
+GRANT CREATE TABLE TO SQLD;
+
+명령이 완료됐습니다.
+
+SQL 전문가 가이드 [455
+

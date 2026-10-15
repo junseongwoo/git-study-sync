@@ -1,0 +1,39 @@
+駁장 활용
+[예제J
+REGWLNAME AS 연고지명, AS 팅명, E-TEAN-NAE AS 영문팅영
+SELECT
+FRu TEAN
+WHERE TEAM 10 = (SELECT TEAY_ID
+FRN PLAYER
+WHERE PLAYER = '정현수')
+0啞R BY TEAN NA*E;
+[실행 결과]
+3행에 오류:
+ORA-014끄: 단일 행 하위 질의에 2개 이상의 행이 리던굈습니다.
+위의 SQL 문은 서브 귀리의 결과로 2개 이상의 행이 반환돼 단일 행 비교 연산자인 느로는 처리가 불가능하기
+때문에 에러가 반환됐다. 따라서 다중 행 비교 연산자로 바꾸어서 SQL 문을 작성하면 다음과 같다.
+[예제]
+SELECT REGWLNAk AS 연고지 명, TE.AM_NAE AS 팀 명,
+4
+E-TEAU-NUE AS 영문팀명
+FO TEAM
+WHERE TEAM_ID IN (SELECT TEU_ID
+FRN PLAYER
+MfRE PLAYER_WE
+BY TEAY NANE;
+[실행 결과]
+=•정현쉬)
+연고지명
+전남
+성남
+팅명
+드래곤즈
+일화천마
+영문팀명
+隧2.A礪6 FC
+IL糧 (~ FC
+2 개의 행이 선택왰습니다.
+실행 결과를 보면 '정현수란 이름을 가진 선수가 두 명이 존재한다 소속팀은 각각 전남 드래곤즈 팀(K07)과
+성남 일화천마 팀(K%)이다. 본 예제에서는 동명이인에 대한 내용을 예로 들었지만, 서브 귀리의 실행 결과가 2건
+이상이 나오는 모든 경우에 다중 행 비교 연산자를 사용해야 한다.
+전斟 ,까드 285

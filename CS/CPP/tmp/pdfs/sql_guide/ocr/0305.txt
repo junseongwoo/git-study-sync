@@ -1,0 +1,37 @@
+과목 ll 기본과 활용
+I실월 결과1
+A((嚼1柘
+AMLYST
+(계 FS
+SALESUAN
+13 행이 선택쾼습니다.
+STEP 3. 함수 사용
+EP_CNT
+1
+1
+1
+2
+2
+1
+1
+1
+4
+SAL-SI-N
+1饗
+24%
+1嚼
+2975
+7
+ROLLUP, CUBE, GROUPING SEIS 등 새로운 그름 함수를 지원하기 위해 GROUPING 함수가 추가됐다.
+- ROLLUP이나 CUBE에 의한 소계가 계산된 결과에는 GROUPING(EXPR) = 1이 표시된다.
+- 그 외의 결과에는 GROUPING(EXPR) = 0이 표시된다.
+GROUPING 함수와 CASF,/DECODE를 이용해, 소계를 나타내는 필드에 원하는 문자열을 지정할 수 있어서
+보고서 작성 시 유용하게 사용할 수 있다.
+[예제] 함수를 추가한 집계 보고서에서 집계 레코드를 구분할 수 있는 GROUPING 함수가 추가된 SQL 문장이다.
+[예제]
+SELECT ~, ″1% (8 매贓) AS QP
+, A.n , ″1飇 (A.Jæ ) AS GF
+(伋酊 (하 AS EP-CNT, 91 (A SAL) AS SAL-SUU
+~ BY %L니2 (8.~ A.JØ
+BY 8.~ A.n;
+312 전문가 가이드

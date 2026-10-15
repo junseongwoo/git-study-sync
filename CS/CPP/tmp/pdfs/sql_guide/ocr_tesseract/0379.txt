@@ -1,0 +1,38 @@
+과목 | 50 기본과 활용 00 0505053/012 —
+
+1개의 행이 선택됐습니다.
+
+다음은 001 연산자를 사용한 쿼리다. REGEXP_SUBSTR 함수는 문자열에서 일치하는 패턴을 반환한다. 조금
+후에 자세히 살펴보자. cl, 62, 3, c4 열의 dot 연산자는 각각 a, 6, <, d 문자와 일치한다. 604 열은 세 번째
+문자인 <가 패턴의 세 번째 문자인 와 일치하지 않기 때문에 널을 반환한다.
+
+SELECT REGEXP_SUBSTR (‘aab’, '3.6' ) AS (1
+
+, REGEXP_SUBSTR (‘abb', ‘a.b') AS (2
+
+, REGEXP_SUBSTR (‘acb’, ‘a.b') AS (3
+
+, REGEXP_SUBSTR (‘adc', ‘a.b') AS (4
+FROM DUAL;
+
+a                Q                a               4
+aab             abb              20
+
+1개의 행이 선택됐습니다.
+
+3. 정규 표현식 조건과 함수
+
+가. REGEXP_LIKE 조건
+REGEXP_LIKE 2712 source_char?} 23612과 일치하면 TRUES, 일치하지 않으면 FALSEE 반환한다.
+
+REGEXP_LIKE (source char, pattern [, match_param])
+
+- source_chart= 검색 문자열을 지정한다.
+
+- pattern 검색 패턴을 지정한다.
+
+- match_param® 일치 옵션을 지정한다(;: 대소문자 무시, <: 대소문자 구분, nt 00{(.)를 개행 문자와 일치,
+m 다중 행 모드, x: 검색 패턴의 공백 문자를 무시, 기본값은 0다. 100 형식으로 다수의 옵션을 함께
+지정할 수도 있다).
+
+386 |. 7 ele

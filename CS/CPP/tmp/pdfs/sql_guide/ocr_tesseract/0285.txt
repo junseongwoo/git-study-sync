@@ -1,0 +1,56 @@
+과목 | QL 기본과 활용
+
+SELECT
+
+ATEAM_ID AS 팀코드, B.TEAM NAME AS 팀명
+
+, ROUND (AVG (A HEIGHT), 3) AS 평균키
+FROM PLAYER A, TEAM B
+WHERE B.TEAM_ID = A.TEAN_ID
+GROUP BY A.TEAM_ID, B.TEAM_NAME
+HAVING AVG (A.HEIGHT) < (SELECT AVG (X.HEIGHT)
+FROM PLAYER X
+WHERE X_TEAM_ID IN (SELECT TEAM_ID
+
+팀명
+
+드래곤즈
+일화천마
+시티즌
+
+Frc
+
+FAR
+
+강원(
+제주유나이티다((
+대구((
+
+8 개의 행이 선택됐습니다.
+
+6. 뷰
+
+테이블은 실제로 데이터를 갖고 있
+
+FROM TEAM
+WHERE TEAM_NAME = '삼성블루윙즈' ));
+
+평균키
+
+178.391
+178.854
+177.485
+176.333
+173.500
+173.667
+169.500
+
+75.333
+
+는 반면, 뷰(@16\)는 실제 데이터를 갖고 있지 않다. 뷰는 단지 뷰 정의(016\
+
+12681016010)만을 갖고 있다. 질의에서 뷰가 사용되면 뷰 정의를 참조해서 DBMS 내부적으로 질의를 재작성
+(86\016)해 질의를 수행한다.
+He [표 Ｌ-2-4]와 같은 장점을 갖는다.
+
+292 99 #87 Zils

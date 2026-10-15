@@ -1,0 +1,40 @@
+4. 인덱스를 이용한 소트 연산 대체
+인덱스는 항상 키 칼럼 순으로 정렬된 상태를 유지하므로 이를 og) 소트 오퍼레이션을 생략할 수 있다.
+
+가. Sort Order By 대체
+
+아래 쿼리를 수행할 때 [region + custid] 순으로 구성된 인덱스를 사용한다면 50ㅠㅇㄷ06ㅜ by 연산을 대체할
+수 있다.
+
+select custid, name, resno, status, tell
+
+from customer
+
+where region = 'A’
+
+order by custid
+
+ㅣ Id | Operation            | Name      | Rows | Bytes | Cost (%CPU) |
+] 0 | SELECT STATEMENT       |       | 40000 | 3515 ㅣ 1372 (1) |
+ㅣ 1 | TABLE ACCESS BY INDEX ROWID    | CUSTOMER   | 40000 | 3515K |  1372 (1) |
+i 2 ㅣ INDEX RANGE SCAN      | CUSTOMER_X62  | 40000 |    |  258 (1) |
+
+order by 절을 사용했음에도 실행계획에 sort order by 오퍼레이션이 나타나지 않았다. 이 방식으로 수행되면
+region = ‘A’ 조건을 만족하는 전체 로우를 읽지 않고도 정렬된 결과 집합을 얻을 수 있어 OLTP 환경에서 극적인
+성능 개선 효과를 가져다 준다.
+
+물론 소트해야 할 대상 레코드가 무수히 많고 그중 일부만 읽고 멈출 수 있을 때만 유용하다. 만약 인덱스를
+스캔하면서 결과 집합을 끝까지 Fetched 오히려 1/0 및 리소스 사용 측면에서 손해다. 대상 레코드가 소량일
+때는 소트가 발생하더라도 부하가 크지 않아 개선 효과도 미미하다.
+
+나. Sort Group By 대체
+
+방금 £ customer 테이블 ojAlolA regiono] 선두 칼럼인 인덱스를 사용하면 아래 쿼리에 필요한 sort group
+by 연산을 대체할 수 있다. 실행계획에 ‘SORT GROUP BY 405081"라고 표시되는 부분을 확인하기 바란다.
+
+select region, avg(age), count()
+from customer
+group by region
+
+690 sou 자가드 …_
+

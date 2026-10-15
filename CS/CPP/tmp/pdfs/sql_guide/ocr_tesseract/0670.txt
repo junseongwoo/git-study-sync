@@ -1,0 +1,38 @@
+과목 M SQL 고급 활용 및 튜닝
+
+Execution Plan
+
+8     SELECT STATEMENT Optimizer=ALL_ROWS (Cost=4 Card=11 Bytes=165)
+1 © SORT (GROUP BY) (Cost=4 Card=11 Bytes=165)
+ 22521    TABLE ACCESS (FULL) OF 'SCOTT.EMP' (TABLE) (Cost=3 Card=14 Bytes=210)
+
+StmtText
+
+{—Compute Scalar(DEFINE: (| Expr1084]=CASE WHEN [Expr1014]=(6) THEN NULL ELSE [Expr1015] END))
+{—Stream Aggregate(GROUP BY: )
+{—Sort (ORDER BY:([SQLPRO]. [dbo]. [emp]. [deptno] ASC, [SQLPRO]. [dbo]. [emp]. [job] ASC))
+{—Table Scan(OBIECT:([SQLPRO]. [dbo]. [emp]))
+
+Oracle® Hashing 알고리즘으로 그룹별 집계를 수행하기도 하는데, 그때는 실행계획에 다음과 같이 표시된다.
+
+Execution Plan
+
+0     SELECT STATEMENT Optimizer=ALL_ROWS (Cost=4 Card=11 Bytes=165)
+
+1 © HASH (GROUP BY) (Cost=4 Card=11 Bytes=165)
+231.1    TABLE ACCESS (FULL) OF 'SCOTT.EMP' (TABLE) (Cost=3 Card=14 Bytes=210)
+
+4) Sort Unique : 결과 집합에서 중복 레코드를 제거할 때 나타난다. Union 연산자나 다음과 같이 Distinct
+연산자를 사용할 때가 대표적이다.
+
+select distinct deptno from emp order by deptno
+
+Oracle
+
+Execution Plan
+
+0      SELECT STATEMENT Optimizer=CHOOSE (Cost=5 Card=3 Bytes=6)
+1 0 SORT (UNIQUE) (Cost=4 (Card=3 Bytes=6)
+251    TABLE ACCESS (FULL) OF ‘EMP’ (Cost=2 Card=13 Bytes=26)
+
+680 soL #87 가이드

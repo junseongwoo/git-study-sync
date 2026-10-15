@@ -1,0 +1,34 @@
+과목 ll 기본과 활용
+예제를 위해 다음과 같이 테이불을 생성하자.
+(뚀A正 AS
+SELECT DI@_SAL. D2@_SAL, 010-(NT, 020-(NT
+~ Jæ, FTIO, SAL FO EP HERE Jæ IN ('ANALYST', 'CLERK'))
+PIWT (오믈 (SAL) AS SAL, CINT (와 AS CNT FOR DEPTNO IN (10 AS D10, 20 AS D20)):
+아래는 tl 테이블을 조회한 결과다.
+DI@_CNT
+D2Ø_CNT
+[예제!
+SELECT * FO TI BY Jæ;
+!실행 출과]
+DIO_SAL
+1甓
+2 행이 선택왰습니다.
+D2€_SAL
+1甓
+0
+1
+2
+2
+아래는 UNPIVOT 절을 사용한 쿼리다. d10-sal, d20-sal 열이 행으로 전환된다.
+l예제1
+SELECT 』圈, -, SAL
+~ TI
+WIVOT (SR IN (DI€-SAL, D2€-SAL))
+1
+BY 1, 2;
+(실행 결미
+DZ-SAL
+DIØ—SAL
+DN-SAL
+370 전문가 가이드
+lß

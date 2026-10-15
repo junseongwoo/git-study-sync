@@ -1,0 +1,25 @@
+제1장 수행 구조
+- 테스트용 데이를 데이터 건수 : 49,9%
+SQL> select cmnt(*) fran t;
+CWNT(*)
+4″
+T 테이블에는 49,9%건의 레코드가 저장돼 있다.
+select comt(*) fræ t
+where mer like 'SYSV
+Swrce (Wation
+1 AGEGATE ((爾1 pr=0 ~ ti-蜀37 us)
+2蜀13 TABLE ACCESS FULL T ((同91 ~ ti″73 us)
+위 SQL은 24,613개 레코드를 선택하려고 49,%개 레프를 읽었으므로 49%가 선택됐다 Table Full 뇨n에서
+이 정도면 나쁘지 않다. 읽은 블록 수는 691개였다.
+select cmnt(*) frm t
+wFere mer like 'SYSV
+and ±ject-næ = • ALL_WJECTS •
+1 『軹T AßE6ATE ((糊1 ~ ti″7191 us)
+1 TABLE ACCESS FULL T ((r해91 ti″71% us)
+위 바L은 49,%개 레프를 스캔하고 1개 레코드를 선택했다. 선택 비중이 0.%2%빆에 되지 않으므로 Table
+Full Scan 비효율이 높다 여기서도 읽은 블록 수는 똑같이 691개다. 이처럼 테이블을 스캔하면서 읽은 레코드
+중 대부분 필터렁되고 일부만 선택된다면 이래처럼 인덱스를 이용하는 게 효과적이다.
+create t—idx 예 t(M1er, obJKt-næ);
+select /*+ ir&x(t t-idx) */ cmnt(*) frm t
+4
+전문가 ,눝|드 499

@@ -1,0 +1,42 @@
+과못 III SQL 고급 활용 및 튜닝
+다음과 같이 SQL을 작성하고 실행계획을 확인해 보자(실행계획 확인하는 방법은 2징에서 설명한다).
+春〉 set exp;
+select * fræ t
+2 *ere deptno = 10
+3 = 1 ;
+| Næ
+IT
+Bytes
+(05t
+1
+1
+0 STATEENT
+11
+TZE KCSS OID
+21
+옵티미이저가 T.그01 인덱스를 선택했다. T-X02 인덱스를 선택할 수 있고, 테이불을 Full Scan할 수도 있다.
+T.그01 인덱스를 선택한 근거는 무엇일까?
+위 실행계획에서 맨 우측에 c께가 표시된 것을 획인하기 바란다. T그02 인덱스를 사용하도록 index 힌트를
+지정하고 실행계획을 확인해 보면, Cost가 다음과 같이 19로 표시된다.
+寒〉 select /*+ ir&x(t t-xQ) */ * frun t
+2 deptro = 10
+3 = 1 •.
+Næ
+Pms Bytes
+5| 21이
+(05t (%C앤기
+1
+0 %LECT STATEENT
+1 TRE KCESS ″ OID 劂0㉮ T
+2 | IüX ~ SCÆI
+19
+19
+18
+(0)1
+(0기
+(0기
+Table Full 뇨an하도록 full 한트를 지정하고 실행계획을 확인해 보면, cost가 다음과 같이 29로 표시된다.
+亟〉 select /*+ full(t) */ * fræ t
+2 = 10
+3 = 1 •
+4% 전문가 가이드

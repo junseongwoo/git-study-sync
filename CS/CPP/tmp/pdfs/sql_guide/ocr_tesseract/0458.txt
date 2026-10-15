@@ -1,0 +1,35 @@
+제3장 관리 구문
+
+GRANT CONNECT, RESOURCE TO SQLD:
+
+권한이 부여됐습니다.
+
+CREATE TABLE MENU (MENU_SEQ NUMBER NOT MULL, TITLE VARCHAR2(10));
+
+테이블이 생성됐습니다.
+
+SQL 5606[에서는 위와 같이 ROLES 생성해 사용하기보다는 기본적으로 제공되는 ROLES] 멤버로 참여하는
+방식으로 사용한다. 특정 로그인이 멤버로 참여할 수 있는 서버 수준 역할(801.은 [표 -3-11]과 같다.
+
+[표 1-3-1] 서버 수준 USO Server A
+
+모든 SQL Server 로그인은 PUBLIC C 서비 coh 속한다, 서버 보안 주채에게 보안 TA
+대한 특정 사용 권한이 부여되지 않았거나 거부된 경우 사용자는 해당 개체에 대해 PUBLIC
+으로 부여된 사용 권한을 상속 받는다. 모든 사용자가 개체를 사용할 수 있도록 하려는 경우에만
+'    개체에 PUBLIC 권한을 할당해야 한다,
+bulkadmin | BULK INSERT 문을 수행할 수 있다.
+dbcreator | 데이터베이스를 생성, 변경, 삭제, 복원할 수 있다,
+diskadmin | 디스크 파일을 관리하는 of ABE.
+processadmin    | sou Severe] 인스턴스에서 '실행중인 프로세스를 종료할 수 있다.
+| 로그인 및 해당 속성을 관리한다, 서버 및 데이터베이스 수준의 사용 권한을 부여(08441),
+| 거부0640), 취소6484018할 수   수 있다. 또한 로그인 암호를 다시 설정할 수 있다.
+serveradmin | 서버 AIS) 구성 옵션을 WNL AVE FRU + 있다.
+setupadmin       연결된 서버를 추가하거나 제거할 수 수 ' 있다.
+
+public
+
+securityadmin
+
+ 서버에서 모든 작업을 수행할 수 있다. 기본적으로 Windows BUILTIN \Administrators
+
+sysadmin 」 gol 멤버인 로컬 관리자 28 sysamdin 고정 서버 역할의 멤버이다.

@@ -1,0 +1,29 @@
+과목 1 SQU 기본과 활용
+
+[예제] DEPT 테이블과 DEPT_TEMP 테이블의 FULL OUTER JOIN 사례를 만들기 위해 DEPT_TEMPS| 0607740를 수정한다.
+결과적으로 DEPT_TEMP 테이블의 새로운 06740 칼럼 값은 0677 테이블의 7|= DEPTNO 칼럼 값과 MZ 2건은
+동일하고 2건은 다르다.
+
+000                                                       Loc
+30                 ACCOUNTING                   NEW YORK
+40                 CONSULTING                   DALLAS
+50                 MARKETING                     CHICAGO
+68                 OPERATIONS                    BOSTON
+
+4 개의 행이 선택됐습니다.
+
+[예제] DEPTNO 기준으로 마민와 DEPT_TEMP 데이터를 FULL OUTER .014으로 출력한다.
+
+예저
+
+SELECT =
+FROM DEPT A FULL OUTER JOIN DEPT_TEMP B
+ON B.DEPTNO = A.DEPTNO;
+
+OUTER: 생략 가능한 키워드이므로 아래 SQLS 같은 결과를 얻을 수 있다.
+
+SELECT =
+FROM DEPT A FULL JOIN DEPT TEMP B
+ON B_DEPTNO = A.DEPTNO;
+
+270 su 17 ls

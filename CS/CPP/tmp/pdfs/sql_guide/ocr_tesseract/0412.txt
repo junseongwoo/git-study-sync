@@ -1,0 +1,41 @@
+제3장 관리 구문
+
+[예제] 먼저 54\/60041를 지정하고 PLAYER 테이블에 있는 데이터를 수정한 다음 룰백을 이전에 설정한 저장점까지 실행한다.
+
+[예제] Oracle
+
+SAVEPOINT SVPT2;
+
+저장점이 생성됐습니다.
+
+UPDATE PLAYER SET HEIGHT = 100;
+480 행이 갱신됐습니다.
+ROLLBACK TO SVPT2;
+
+룰백이 완료됐습니다.
+
+예제] SQL Server
+
+BEGIN TRAN
+SAVE TRAN 90182;
+
+명령이 완료됐습니다.
+
+UPDATE PLAYER SET HEIGHT = 100;
+(480개 행이 영향을 받음)
+ROLLBACK TRAN SVTR2;
+
+명령이 완료됐습니다,
+
+[예제] SAVEPOINT® 지정하고, PLAYER 테이블에 있는 데이터를 삭제한 다음 롤백을 이전에 설정한 저장점까지 실행한다.
+
+예제] Oracle
+
+SAVEPOINT SVPT3;
+저장점이 생성됐습니다.
+DELETE FROM PLAYER;
+
+488 행이 삭제됐습니다.
+
+SQL 전문가 가이드 [419
+

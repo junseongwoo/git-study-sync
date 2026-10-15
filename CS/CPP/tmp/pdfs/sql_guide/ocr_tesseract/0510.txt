@@ -1,0 +1,47 @@
+제2장 SQL 분석 도구
+
+2. SQL Server
+
+SQL ServeroilA 예상 실행계획을 출력하는 방법은 간단하다. 아래처럼 56[ showplan_text on 명령문을 먼저
+실행하고서 50[.을 실행하면 예상 실행계획을 텍스트로 보여준다, 쿼리를 실제로 실행하지는 않는다.
+
+use pubs
+
+go
+
+set showplan_text on
+go
+
+select a.*, b.*
+
+from  dbo.employee a, dbo.jobs b
+where a.job_id = b.job_id
+
+90
+
+아래는 결과 창에 출력된 예상 실행계획이다.
+
+StmtText
+|—Nested Loops(Inner Join, OUTER REFERENCES:([a].[job_id]))
+
+|—Clustered Index Scan(OBJECT:([pubs]. [dbo]. [employee]. [employee_ind] AS
+|—Clustered Index Seek(0BIECT: ([pubs]. [dbo]. [jobs]. [PK_jobs__117F9094]
+
+(370 행 적용됨)
+
+set showplan_all on 명령문을 실행하면, PhysicalOp(E2] 연산자), LogicalOp(i=2] 연산자), EstimateRows
+(예상 로우 수) 등을 포함해 좀 더 자세한 예상 실행계획을 보여 준다.
+
+set showplan_all on
+90
+
+select a.*, b.*
+
+from  dbo.employee a, dbo.jobs b
+where a. job_id = b.job_id
+
+90
+
+Re RS ee ey
+
+전문가 가이드 [519

@@ -1,0 +1,36 @@
+제1장 SQL 기본
+
+[예제]
+
+SELECT ㅅ.태써6, A MGR, A.DEPTNO, B.DNAME
+FROM EMP A JOIN DEPT B
+ON B.DEPTNO = A.DEPTNO
+WHERE A.MGR = 7698;
+
+[2Y Za)
+ENAME                   MGR                    DEPTNO                 DNAME
+ALLEN                    7698                       30                 SALES
+WARD                      7698                       30                 SALES
+MARTIN                  7698                       30                 SALES
+TURNER                  7698                       30                 SALES
+JAMES                    7698                       30                 SALES
+
+5 개의 행이 선택됐습니다.
+
+다. ON 조건절 예제
+[예제] 팀과 경기장 테이블을 경기장10로 조인해 팀이름, 경기장10, 경기장명을 찾아본다.
+
+SELECT ./ㅅ.6써 삐6, A, STADIUM_ID, B.STADIUM_NAME
+FROM TEAM A JOIN STADIWM B
+ON B.STADIUM_ID = A.STADIUM_ID
+ORDER BY A.STADIUM_ID;
+
+위 SQL STADIUM_ID2h= 공통된 칼럼이 있기 때문에 아래처럼 USING 조건절로 구현할 수도 있다.
+
+SELECT ~~ A.TEAM_NAME, STADIUM_ID, B.STADIUM_NAME
+FROM TEAM A JOIN STADIUM B
+USING (STADIUM_ID)
+
+ORDER BY STADIUM_ID;
+
+_SQL 전문가 Zoe [259

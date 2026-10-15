@@ -1,0 +1,40 @@
+제3장 관리 구문
+
+K19               마산                   마산시티즌          Fo4                   055
+K20               안양                   안양시티즌          『05                   031
+
+20 개의 행이 선택됐습니다.
+
+[예제] TEAM_TMP 테이블을 이용해 TEAM 테이블에 데이터를 입력ㆍ수정한다,
+
+MERGE
+INTO TEAM T
+USING TEAM_TWP S
+ON (T.TEAM_ID = S.TEAM_ID)
+WHEN MATCHED THEN
+UPDATE
+SET T.REGION_NAME = S.REGION_NAME
+, T.TEAM_NAME = S TEAM_NAME
+, 1.000 = 5.000
+, T.TEL = S.TEL
+WHEN NOT MATCHED THEN                                                                           |
+INSERT (T.TEAM_ID, T.REGION_NAME, T TEAM_NAME, T.STADIUM_ID, 1.000, T.TEL)                   5
+VALUES (S.TEAM_ID, S.REGION_NAME, S.TEAM_NAME, S.STADIUM_ID, S.DDD, S.TEL):
+
+20 행이 병합됐습니다.                                                                        |
+
+MERGE 문의 USING 절에 소스 테이블 대신 서브 쿼리를 사용해 입력-수정할 수도 있다.
+
+[예제] 서브 쿼리를 이용해 TEAM 테이블에 데이터를 입력ㆍ수정한다.
+
+MERGE
+INTO TEAM T                                                                SARA
+USING (SELECT * FROM TEA TWP WHERE REGIONNAME IN ('성남', '부산', '대구', "전주')) s
+ON (T.TEAM_ID = 5.16 10)                                                 HK hw
+WHEN MATCHED THEN                                            Sl SHOR, nies
+UPDATE                                                    BE
+SET T.REGION_NAME = S.REGION_NAME
+, T.TEAMNAME = S. TEAM_NAME
+, T.DOD = 5.000
+, T.TEL = S.TEL
+

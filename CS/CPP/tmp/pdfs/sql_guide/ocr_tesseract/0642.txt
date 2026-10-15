@@ -1,0 +1,40 @@
+세5장 50. 옵티마이저
+
+그리고 이것은 바로 이어서 설명할 뷰 Merging 과정을 거쳐 최종적으로 다음과 같은 형태가 된다.
+
+select emp.* from dept, emp
+where emp.deptno = dept.deptno
+
+아래가 서브쿼리 Unnesting®| 일어났을 때의 실행계획이다. 서브쿼리인데도 일반적인 Nested Loop 조인 방식
+으로 수행된 것을 볼 수 있다. 위 조인문을 수행할 때와 정확히 같은 실행계획이다.
+
+select * from emp where 08010 in (select 08010 from dept)
+
+| 11 | Operation             | Name        | Rows | Bytes    | Cost (%CPU)!
+
+| 0 | SELECT STATEMEN       |        | 19 | 3%   a 5a (3
+| 1 | TABLE ACCESS BY INDEX ROWID| EMP      [#553 del 99   IHRE (0)
+ㅣ 2 | NESTED LOOPS       |        1-0 | 3   12 (0)
+ㅣ 3 | INDEX FULL SCAN     | DEPT_PK    6 td Eel)    P11 (@ |
+1* 4 | INDEX RANGE SCAN     | EMP_DEPTNO_IDX | 3 |      ㅣ 0 (0)!
+
+Predicate Information (identified by operation id):
+
+4 - access("DEPTNO"="DEPTNO")
+
+주의할 점은 서브쿼리를 Unnesting® 결과가 항상 더 나은 성능을 보장하지 않는다는 사실이다. 따라서 최근
+옵티마이저는 서브쿼리를 Unnesting 했을 때 쿼리 수행 비용이 더 낮은지를 비교해 보고 적용 여부를 판단하는
+쪽으로 발전하고 있다.
+
+기본적으로 옵티마이저에게 맡기는 것이 바람직하지만, 앞서 얘기했듯이 옵티마이저가 항상 완벽할 순 없으므로
+사용자가 직접 이 기능을 제어할 필요성이 생긴다. 이를 위해 Oracle 아래 두 가지 힌트를 제공하고 있다.
+
+@ unnest : 서브쿼리를 Unnesting 함으로써 조인방식으로 최적화하도록 유도한다.
+@no_unnest : 서브쿼리를 그대로 둔 상태에서 필터 방식으로 최적화하도록 유도한다,
+
+를 서브쿼리가 MZ 집합이거나 Nonunique 인덱스일 때
+
+지금까지 본 예제는 메인 쿼리의 emp 테이블과 서브쿼리의 dept 테이블이 M:1 관계이기 때문에 일반 조인문으로
+바꾸더라도 쿼리 결과가 보장된다. 옵티마이저는 dept 테이블 deptno 칼럼에 PK 제약이 설정된 것을 통해 dept
+
+SQL 전문가 가이드 [651

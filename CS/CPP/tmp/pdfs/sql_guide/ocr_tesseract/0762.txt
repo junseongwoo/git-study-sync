@@ -1,0 +1,57 @@
+과목 mM QU 고급 활용 및 튜닝
+
+——————————————————————————————————————————
+
+문제 4. PKL [주문일자 + 주문순번]으로 구성된 '주문' 테이블이 있다. 이 테이블에서 특정 일자(:아0_0*)의 가장
+첫 번째와 마지막 주문 레코드를 추출하는 최적의 SQLE 작성하시오(단 Oracle 데이터베이스를 사용 중이며,
+해당 일자에 주문 레코드가 한 건도 없으면 0을 리턴해야 함).
+
+문제 5. 다음 중 03016에서 대량의 데이터를 빠르게 Insertdhs 방안으로 잘못된 것은(단 온라인 트랜잭션이 없는
+야간 배치 프로그램에서 수행).
+1) 10561를 수행하기 전에 인덱스를 00453016 상태로 바꾼다.
+
+2) 병렬 모드로 1056한다.
+
+insert select 문장에 /*+ append */ JES 사용한다.
+
+insert 문장에 다음과 같이 nologging 옵션을 지정한다.
+
+insert into target nologging
+
+1.  ) ©  09
+
+select * from source;
+
+문제 6. 아래 update} insert 문장을 merge 문장으로 바꾸시오.
+
+update emp e
+set (ename, deptno, sal) = (select ename, deptno, sal
+from emp_copy
+where empno = e.empno)
+where exists (select '×' from emp_copy where empno = e.empno) ;
+
+insert into emp
+select * from emp_copy (
+where not exists (select 'x' from emp where empno = c.empno) :
+
+문제 7. 사용자 정의 함수에 대한 설명 중 틀린 것은?
+
+사용자 정의 함수는 항상 성능 문제를 야기하므로 사용하지 않는 것이 좋다.
+
+쿼리를 포함하는 사용자 정의 함수를 반복 호출하면 Recursive Call 때문에 성능이 크게 나빠진다.
+사용자 정의 함수를 사용할 때 성능이 나빠지는 22 Context Switching 때문이기도 하다.
+
+사용자 정의 함수를 사용하면 문장수준 읽기 일관성이 BREA 않을 수 있다. 즉 쿼리 결과 집합을
+Fetch3lHA 함수를 반복 호출하다 보면 중간부터 다른 값이 반환될 수도 있다.
+
+© 6) 0)
+
+®
+
+문제 8. 배치 프로그램 튜닝 방안 중 잘못된 것은?
+© 자원 사용량이 적절히 배분되도록 타임 윈도우를 조정한다.
+@ 부분범위처리 기법을 활용해 프로그램 응답 속도를 향상시킨다.
+(3) 반복적으로 사용할 공통 집합을 정의하고 이를 임시 테이블로 생성한다.
+@ 파티션과 병렬처리를 활용한다.
+
+772 ! sou 전문가 가이드.

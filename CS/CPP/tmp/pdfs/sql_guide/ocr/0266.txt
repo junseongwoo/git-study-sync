@@ -1,0 +1,47 @@
+과목 II 기본과 활용
+8. INNER vs. OUIER vs. CROSS J이N 비교
+TABI
+bbb 123 B
+ddd 222 C
+eee 233 D
+1|| 143 E
+INNER JOIN
+0-0
+0-0
+O——X
+TAB2
+A 10 囟
+10 cd
+C 10 de
+SELECT XKEYI Y.KEY2
+FROM TABI X INNER JOIN TAB2 Y
+애 (XKEYI = Y.KEY2)
+CARTESIAN PRODUCT
+SELECT XKEYI Y.KEY2
+FROM TABI X CROSS JOIN TAB2 Y
+LEFT OUTER JOIN
+SELECT KKEYI, Y.KEY2
+FROM TABI X LEFT OUTER J이N TAB2 Y
+ON (X.KEYI = Y.KEY기
+RIGHT OUTER JOIN
+SELECT X.KEYI Y.KEY2
+FROM TABI X RIGHT OUTER JOIN TAB2 Y
+ON (X.KEYI = Y.KEY기
+FULL OUTER JOIN
+SELECT X.KEYI, Y.KEY2
+FROM TABI X FULL OUTER JOIN TAB2 Y
+ON (X.KEYI = Y.KEY2)
+[그림 Ⅱ-1-2이 INNER vs. OUTER vs. CROSS 」이N 문장 비교
+첫 번째, INNER J이N의 결과는 다음과 같다.
+양쪽 테이블에 모두 존재하는 기 값이 B-B, C℃인 2건이 출력된다
+두 번째, LEFT OUTER J이N의 결과는 다음과 같다.
+TABI을 기준으로 키 값 조합이 B-B, C-C, D-NULL, E-NULL인 4건이 출력된다.
+세 번째, RIGHT OUTER J이N의 결과는 다음과 같다.
+TAB2를 기준으로 기 값 조합이 NULL-A, B-B, C-C인 3건이 출력된다.
+네 번째, FULL OIJIER J이N의 결과는 다음과 같다.
+양쪽 테이를을 기준으로 기 값 조힘이 NULL-A, B-B, C-C, D-NULL, E-NULL인 5건이 출력된다.
+다섯 번째, CROSS J이N의 결과는 다음과 같다.
+조인 가능한 모든 경우의 수를 표시하지만, 단 OUTER J이N은 제외한다
+양쪽 테이블 TABI과 TAB2의 데이터를 곱한 개수인 4 * 3 = 12건이 추출된다.
+기 값 조eol B-A, B-B, B-C, CA, C-B, C-C, D-A, D-B, DC, E-A, E-B, E℃인 12건이 출력된다.
+272 전문가 ,까드

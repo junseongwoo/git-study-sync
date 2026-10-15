@@ -1,0 +1,31 @@
+제3장 관리 구문
+
+저장점 지정 없이 롤백을 실행할 경우, 반영되지 않은 모든 변경 사항을 취소하고 트랜잭션을 종료한다.
+
+[예제] 새로운 트랜잭션을 시작하기 전에 PLAYER 테이블의 데이터 건수와 몸무게가 100인 선수의 데이터 건수를 확인한다.
+
+SELECT COUNT (*) AS CNT FROM PLAYER;
+
+CNT
+480
+
+1개의 행이 선택됐습니다.
+
+SELECT COUNT (*) AS CNT FROM PLAYER WHERE WEIGHT = 106;
+
+1개의 행이 선택됐습니다.
+
+[예제] [그림 11-3-1)8 확인하기 위해 새로운 트랜잭션을 시작하고 SAVEPOINT ^와 SAVEPOINT BE 지정한다(툴에 AUTO
+COMMIT 옵션이 적용된 경우 해제함).
+
+예제 및 실행 결과] Oracle
+
+/* 새로운 트랜잭션 시작 */
+
+INSERT
+INTO PLAYER (PLAYER_ID, TEAM_ID, PLAYER NAME, POSITION, HEIGHT, WEIGHT, BACK_NO)
+VALUES ('1999035', 'K@2', '이운재', ‘6K’, 182, 82, 1);
+
+1 개의 행이 만들어졌습니다.
+
+SQL 전문가 가이드 |421

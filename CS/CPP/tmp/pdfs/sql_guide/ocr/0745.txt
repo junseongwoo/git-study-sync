@@ -1,0 +1,24 @@
+圊장 고급 류님
+참고로 SQL 던n℃r는 2%5 버전부터 Pivot 구문을 지원하고, Oracle도 11g부터 지원하기 시작했으므로 앞으론
+이것을 쓰면 된다 그렇지만 위와 같이 CASE문이나 DECODE 함수를 활용하는 기법은 IFELSE 같은 분기조건을
+포함한 복잡한 처리절文卜를 ()는따I로 구현하는 데 꼭 필요하괴 다른 비슷한 업무에도 용용할 수 있으므로 반드시
+숙지하기 바란다.
+2. 데이터 복제 기법 활용
+SQL을 작성하다 보면 데이터 복제 기법을 활용해야 할 때가 많다. 예전부터 많이 쓰던 방식은 다음과 같은
+복제용 테이블(c叩y-t)을 미리 만들어두고 이를 활용하는 것이다.
+create t±le ( 『尠 mntpr, n02 varchar2(2) );
+insert intO
+select lpad(rowrnn, 2, •일) big-table rovrun 수 31:
+alter table ß)Y-t 獨 constraint prinry key(m);
+create 내li엘e irdex copy-t-n02-idx 예 cØY-t(n02);
+이 테이블과 다음과 같이 조인절 없이 조인(Cross J01하하면 카티션 #(Cartesan Prcxluct)이 발생해 데이터가
+2배로 복제된다. 3배로 복제하려면 no 3 조건으로 바꾸4주면 된다.
+select * fræ 하 ß)Y-t b
+•tpre b.no 2;
+Oracle 어부터는 dual 테이부을 사용하면 편하다. 다음과 같이 dual 테이블에 start 없는 connect
+구문을 사용하면 두 레프를 가진 집합이 자동으로 만들어진다(어에서는 버그가 있어 아래 귀리를 인라인 뷰에
+담을 때만 데이터 복제가 일어난다).
+SQD select no frm 鹵al (예”貳t level 수 기
+1
+2
+전문가 가이드 755

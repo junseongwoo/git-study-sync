@@ -1,0 +1,36 @@
+제3장 관리 구문
+
+ALTER TABLE 테이블명 ALTER COLUMN 칼럼명 데이터유형 [NOT NULL];
+
+칼럼을 변경할 때는 몇 가지 사항을 고려해 변경해야 한다.
+
+- 해당 칼럼의 크기를 늘릴 수는 있지만, 테이블에 데이터가 존재한다면 칼럼의 크기를 줄이는 데는 제약이 있다.
+기존의 데이터가 훼손될 수 있기 때문이다.
+
+- 해당 칼럼이 NULL 값만 갖고 있거나 테이블에 아무 행도 없으면 칼럼의 크기를 줄일 수 있다.
+
+- 해당 칼럼이 NULL 값만을 갖고 있으면 데이터 유형을 변경할 수 있다.
+
+- 해당 칼럼의 DEFAULT 값을 바꾸면 변경 작업 이후 발생하는 행 삽입에만 영향을 미치게 된다.
+
+- 해당 칼럼에 NULL 값이 없을 경우에만 NOT NULL 제약조건을 추가할 수 있다.
+
+[예제] TEAM 테이블의 ORIG_YYYY 칼럼의 데이터 유형을 CHAR(4)-VARCHAR2(8)2 변경하고, 향후 입력되는 데이터의
+DEFAULT 값으로 '20020129'를 적용하고, 모든 행의 ORIG_YYYY 칼럼에 NULLO| 없으므로 제약조건을 NULL —
+NOT NULLE 변경한다,
+
+ALTER TABLE TEAM_TEMP MODIFY (ORIG_YYYY VARCHAR2(8) DEFAULT '20020129' NOT NULL);
+
+테이블이 변경됐습니다.
+
+ALTER TABLE TEAM_TEMP ALTER COLUMN ORIG_YYYY VARCHAR(8) NOT NULL;
+
+명령이 완료됐습니다.
+
+ALTER TABLE TEAM_TEMP ADD CONSTRAINT DF_ORIG_YYYY DEFAULT '20020129' FOR 0016. 1111;
+
+명령이 완료됐습니다.
+
+실행 결과에서 테이블 구조의 변경 사항을 확인할 수 있다.
+
+SQL 전문가 가이드 [439

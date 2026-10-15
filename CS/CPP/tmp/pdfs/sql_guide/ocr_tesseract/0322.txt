@@ -1,0 +1,22 @@
+제2장 50! 활용
+
+다. ROW_NUMBER 함수
+ROW_NUMBER #4 RANKL} DENSE_RANK 함수가 동일한 값에 대해서는 동일한 순위를 부여하는 데
+반해, 동일한 값이라도 고유한 순위를 부여한다.
+
+[예제] 사원 데이터에서 급여가 높은 순서와, 동일한 순위를 인정하지 않는 등수도 같이 출력한다.
+
+SELECT JOB, ENAME, SAL
+, RANK () OVER (ORDER BY SAL DESC) AS RK
+, ROW_NUMBER () OVER (ORDER BY SAL DESC) AS RN
+FROM ENP;
+
+14 행이 선택됐습니다.
+
+FORD2 SCOTT, \200와 \48114은 동일한 561.48이므로 RANK: 같은 순위를 부여했지만,
+80\_4080888의 경우 동일한 순위를 배제하기 위해 유니크한 순위를 정한다. 위 경우는 같은 541.&8에서는
+어떤 순서가 정해질지 알 수 없다(012!6의 경우 .0010가 적은 행이 먼저 출력된다).
+
+이 부분은 데이터베이스별로 다른 결과가 나올 수 있으므로, 만일 동일 값에 대한 순서까지 관리하고 싶으면
+ROW_NUMBER( ) OVER (ORDER BY SAL DESC, ENAME) 같이 ORDER BY 절을 이용해 추가적인 정렬
+기준을 정의해야 한다.

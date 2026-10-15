@@ -1,0 +1,26 @@
+제1장 수행 구조
+제 2 절 SQL 처리 과정
+1. 구조적, 집합적, 선언적 질의 언어
+바L은 'Stmctured Query language'의 줄임말이다. 말 그대로 구조적 질의 언어다. 위기피디0H&ⅵki耐a)
+에서 검색해 보면, 다음과 같은 정의도 발견할 수 있다.
+SQL is designed for a purpose: t0 query data contained in a relational database
+- SQL is a set-based, declarative query language, not an imperative language such as C or BASIC.
+Oracle P니SQL, SQL Server T•바L처럼 절차적(procedural) 프로그래밍 기능을 구현할 수 있는 확장 언어도
+제공하지만, SQL은 기본적으로 구조적(stmctured)이고 집합적(*t-ba예)이고 선언적(declaratitæ)인 질의 언어
+이다.
+원하는 결과 집합을 구조적 • 집합적으로 선언하지만, 그 결과 집합을 만드는 과정은 절차적일 수밖에 없다. 즉
+프로시저가 필요한데, 그런 프로시저를 만들어 내는 DBMS 내부 엔진이 바로 SQL 옵티마이저다. 옵티마이저가
+프로그래밍을 대신해 주는 셈이다.
+2. SQL 처리 과정
+SQL 처리 과정을 Oracle 기준으로 종 더 자세히 표현하면 [그림 III-1-9]과 같다
+Parser
+Row-Source
+SQL Engine
+Generator
+:트=三
+1. QIXY Transformer
+2. Estmabr
+3. Pbn Generator
+[그림 III•1•9] SQL 처리 과정
+[표 Ⅲ•1-기는 [그림 III-1•9]에 표현된 각 서브엔진의 역할을 요약한 것이다.
+전문가 가이드 487

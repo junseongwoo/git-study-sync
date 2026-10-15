@@ -1,0 +1,37 @@
+제1장 SQL 수행 구조
+
+제2절 SQL 처리 과정
+
+1. 구조적, 집합적, 선언적 질의 언어
+
+SQL ‘Structured Query Language's] 줄임말이다. 말 그대로 구조적 질의 언어다. 위키피디아(\/100608)
+에서 검색해 보면, 다음과 같은 정의도 발견할 수 있다.
+
+빼 SQL is designed for a specific purpose: to query data contained in a relational database.
+HM SQL is a set-based, declarative query language, not an imperative language such as C or BASIC.
+
+Oracle PL/SQL, SQL Server T-SQLA% A}3|(procedural) 프로그래밍 기능을 구현할 수 있는 확장 언어도
+제공하지만, SQL 기본적으로 구조적(6001000160)이고 집합적(66653560)이고 A212 (declarative)?! 질의 언어
+이다.
+
+원하는 결과 집합을 구조적ㆍ집합적으로 선언하지만, 그 결과 집합을 만드는 과정은 절차적일 수밖에 없다. 즉
+프로시저가 필요한데, 그런 프로시저를 만들어 내는 DBMS 내부 엔진이 바로 SQL 옵티마이저다. 옵티마이저가
+프로그래밍을 대신해 주는 셈이다.
+
+2. SQL 처리 과정
+
+SQL 처리 HE Oracle 기준으로 좀 더 자세히 표현하면 [그림 M-1-9]2 같다.
+
+Parser  Paseg  OPHMIZOr ooo Fow-Sousos Row- SQL Engine
+SQL
+om | 2 EES
+
+1. Query Transformer
+2. Estimator
+3. Plan Generator
+
+[그림 m-1-9] SQL 처리 과정
+
+[표 1-1-2]는 [그림 11-1-9|에 표현된 각 서브엔진의 역할을 요약한 것이다.
+
+SQL 전문가 가이드 |487

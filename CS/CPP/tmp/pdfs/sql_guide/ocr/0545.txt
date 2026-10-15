@@ -1,0 +1,18 @@
+과목 III 고급 활용 및 튜닝
+3) lndex
+lndex Sparse는 [그림 III-3•111처럼 인덱스 볼록 전반에 걸기 밀Æ(density)가 떨어지는 현상을 말한다.
+empv
+[그림 Ⅲ-十11] lndex Sparse
+예를 들어 다음과 같은 형태로 delete 작업을 수행하고 나면 t-idx 블록의 밀도는 50% 정도밖에 되지 않는다.
+1%만 건 중 훼만 건을 지우고 나서도 스캔한 인덱스 블록 수가 똑같이 2001개인 것을 확인하기 바란다.
+嘷〉 create t±le t as select no frcn big-table å,ere rownm 수 1-
+*) create ir&x t-idx 예 t(no) •.
+SQ-> select /*+ ir&x(t) */ cmnt(*) t where no 〉 0;
+(嚼*)
+1-
+Statistics
+0 recursive (쟶ls
+2%1 cmsistent PtS
+뗜〉 &lete fræ t åpre 10) 〈 5 ;
+- 행이 작자됐습니다.
+554 전문가 ,까드

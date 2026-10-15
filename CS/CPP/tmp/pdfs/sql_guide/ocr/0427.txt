@@ -1,0 +1,37 @@
+과목 II QL 기본과 활용
+!예제! SQL Server
+SELECT * INTO 표새-TE麴 FO TEAM;
+(0개 행이 영향을 받음)
+l실행 결과] SQL Server
+exec SP—tpIp •如 TE,u TEP
+(01圓-n~
+TE"_ID
+REGITd
+TE,U_KAE
+E-TE,U-V-NE
+SWILN_ID
+ZIP_CDEI
+기P-(끄
+FAX
+Length
+varchar
+varchar
+varchar
+char
+char
+char
+char
+varchar
+varchar
+varchar
+varchar
+varchar
+varchar
+Nu11ab1e
+yes
+2. ALTER TABLE
+한 번 생성된 테이블은 특별히 사용자가 구조를 변경하기 전까지 생성 당시의 구조를 유지하게 된다. 처음의
+테이블 구조를 그대로 유지하는 것이 최선이지만, 업무적인 요구 사형이나 시스템 운영상 테이블을 사용하는 도중에
+변경해야 할 일들이 발생할 수도 있다. 이 경우 주로 칼럼을 추가/삭제하거나 제약조건을 추가/삭제하는 작업을
+진행하게 된다.
+후 전문가 7끼드

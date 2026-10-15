@@ -1,0 +1,29 @@
+StmtText
+
+—
+
+{-Nested Loop
+{—Cluste …
+i—Cluste …
+
+(4개 행 적용됨)
+
+520| sy #87 ls
+
+PhysicalOp
+
+Nested Loops
+Clustered Index
+Clustered Index
+
+LogicalOp
+
+Inner Join       255
+
+Clustered Index
+Clustered Index
+
+EstimateRows
+41,33333
+43
+1

@@ -1,0 +1,41 @@
+제1장 SQL 기본
+
+5. ON 조건절
+
+조인 서술부(04 조건절)와 비 조인 서술부(1606 조건절)를 분리해 이해가 쉬우며, 칼럼명이 다르더라도
+조인 조건을 사용할 수 있는 장점이 있다.
+
+[예제] 사원 테이블과 부서 테이블에서 사원 번호와 사원 이름, 소속부서 코드, 소속부서 이름을 출력한다.
+
+SELECT A.EMPNO, A ENAME, B.DEPTNO, B.DNAME
+FROM EMP A JOIN DEPT B
+ON (B.DEPTNO = A.DEPTNO);
+
+| [실행 결과| |
+EMPNO             ENAME             DEPTNO           DNAME
+7369             SMITH                  20           RESEARCH
+7499             ALLEN                  3           SALES
+7521             WARD                   30           SALES
+7566                   JONES                         20               RESEARCH
+7654             MARTIN                 »           SALES
+7698             BLAKE                  30           SALES
+7782             CLARK                  10           ACCOUNTING
+7788             SCOTT                  20           RESEARCH
+7839             KING                   10           ACCOUNTING
+7844             TURNER                 30           SALES
+7876             ADAMS                  20           RESEARCH
+7900             JAMES                  30           SALES
+7902             FORD                   20           RESEARCH
+7934             MILLER                 10           ACCOUNTING
+
+14 개의 행이 선택됐습니다.
+
+NATURAL JOINS] 조인 조건은 기본적으로 같은 이름을 가진 모든 칼럼들에 대한 동등 조건이다. 하지만 임의의
+조인 조건을 지정하고, 이름이 다른 칼럼명을 조인 조건으로 사용하고, 조인 칼럼을 명시하기 위해서는 ON 조건절을
+사용한다. ON 조건절에 사용된 괄호는 옵션 사항이다.
+
+USING 조건절을 이용한 조인에서는 조인 칼럼에 대해서 ALIASY 테이블 명과 같은 접두사를 사용하면
+SYNTAX 에러가 발생하지만, 반대로 ON 조건절을 사용한 조인의 경우는 이름이 같은 칼럼들에 대해 ALIASY
+테이블 명과 같은 접두사를 명확하게 지정해주어야 한다(0807140 — E.DEPTNO).
+
+SQL 전문가 가여드|257.

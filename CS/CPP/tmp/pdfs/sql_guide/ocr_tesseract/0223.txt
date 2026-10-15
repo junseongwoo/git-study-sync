@@ -1,0 +1,23 @@
+과목 I QU 기본과 활용
+
+[예제] GROUP BY 절 사용시 ORDER BY 절에 일반 칼럼을 사용해 본다.
+
+5행에 오류:
+ORA-98979: GROUP BY 표현식이 아닙니다.
+
+[예제] GROUP BY 절 사용시 ORDER BY 절에 집계 칼럼을 사용해 본다.
+
+예제
+
+SELECT JOB, SUM(SAL) AS SALARY_SUM
+FROM EWP
+GROUP BY J0B
+HAVING SUM (SAL) > 5008
+ORDER BY SUM (SAL):
+
+3 개의 행이 선택됐습니다.
+
+위의 예제를 통해 SELECT 501Ｌ에서 GROUP BY 절이 사용됐기 때문에 SELECT Hol 정의하지 않은 MAX,
+SUM, COUNT 집계함수도 ORDER BY 절에서 사용할 수 있음을 확인할 수 있다.
+
+228 gp #87 가이드

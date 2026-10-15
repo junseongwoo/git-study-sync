@@ -1,0 +1,43 @@
+과목 Ⅱ * 기본과 활용
+있을 때 의도적0 e 세부 항목을 정렬하고 싶다면, 별도의 정렬 조건을 가진 IN니NE VIEW를 사용하거나 OVER
+0 내의 ORDER BY 절에 칼럼을 추가해야 한다.
+[예제] 앞의 * 문장에서 같은 값을 가진 FIRST VALUEß 처리하기 위해 ORDER BY 정렬 조건을 추가한다.
+결제]
+SELECT 呼1嚮 SAL
+F貯-V飇匽 (EWE) OVER BY DEPTt0 啄匿R BY SAL tEC, ENAk
+RM RECEDING) AS ENAME_FV
+[실행 결과]
+10
+KI%
+CLRK
+UILLER
+SCOTT
+SUITH
+그襞S
+SAL
+24%
+3欄
+2975
+11%
+28%
+1欄
+1弼
+1250
+1250
+ENAME_FV
+KING
+KING
+KING
+Fn
+FRD
+BLAKE
+BLAKE
+BLAKE
+BLAKE
+BLAKE
+BLAKE
+14 행이 선택왰습니다.
+뙤L에서 같은 부서 *1 최고 급여를 받는 시람 둘이 있는 경유를 대비해 이름을 두 번째 정렬 조건으로 추가한다.
+실행 결과를 확인하면 부서번호 20의 최고 급여자가 이전의 SCOTr 7테koil서 ASCII 코드가 적은 값인 FORD로
+변경된 것을 확인할 수 있다.
+338 가결쐴쬐(번된

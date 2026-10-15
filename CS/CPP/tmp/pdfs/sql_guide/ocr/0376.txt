@@ -1,0 +1,49 @@
+연산자
+\d
+\D
+\s
+5
+셜명
+숫자
+숫자가 아닌 모든 문자
+숫자와 영문자(underbar 포함)
+숫자와 영문자가 아닌 모든 문자(underbar 제외)
+공백 문자
+공백 문자가 아닌 모든 문자
+駁장 활용
+동일
+[(:digit:Jl
+[A(:digit:ll
+[[:alnum:l」
+[A(:alnum:l」
+[(:svnce:ll
+[A[:space:lJ
+다음은 \d 연산자와 \D 연산자를 사용한 쿼리다. cl, c2열의 패턴은 '(숫자3자리) 숫자3자리-숫자4자리' 패턴의
+전화번호를 검색한다. 6 열은 세 번째 문자인 2가 숫자이므로 널을 반환한다.
+[예제]
+SELECT REGEXP-SI.BSTR (|(6%) 555풰嚮•, 'A\(\d{3}\) \d(3}-\d{4}9) AS (1
+, SIBSTR ('6수555풰嚮• , 'A\(\d{3}\) \d{3}-\d{4}9) AS (2
+SIBSTR ('b2b', '\w\d\D') AS (3
+REGEXP SIBSTR Cb2-', '\w\d\D') AS (4
+REGEXP_SIBSTR ('b22', i\w\d\D') AS (5
+FO DJAL;
+[실행 결과)
+(1
+(6%) 555-01%
+Q
+(3
+b2b
+1
+(5
+b2-
+1개의 행이 선택왰습니다.
+다음은 \w 연산자와 \W 연산자를 사용한 쿼리다 라, c2 열의 패턴은 '숫재문지@숫자문자' 다음에 '.숫자문자가
+1회 이상 반복되는 패턴의 이메일 주소를 검색한다. 열은 \W에 해당하는 문자가 문자열에 존재하지 않기 ~
+널을 반환한다.
+[예제]
+SELECT RECXP SIBSTR '\*€\w+(\.\*+)+') AS (1
+REGEXP SIBSTR (
+REGEXP SI.BSTR Cto: bill', '\v+\W\s\F+') AS (3
+('to bill' , |\•+\넓\s\교) AS (4
+FO WAL;
+전문가 가이드 383

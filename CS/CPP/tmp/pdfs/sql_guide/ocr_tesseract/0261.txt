@@ -1,0 +1,49 @@
+제1장 SQL 기본
+000 ======ㅋ= >. =
+
+가. LEFT OUTER JOIN
+
+조인 수행 시 먼저 표기된 좌측 테이블에 해당하는 데이터를 먼저 읽은 후, 나중 표기된 우측 테이블에서 조인
+대상 데이터를 읽어 온다. 즉 Table A% 8가 있을 때(13516 'A7} 기준이 됨), A2 BE 비교해서 Bo) 조인 칼럼에
+조인 조건을 만족하는 값이 있으면 해당 로우의 데이터를 가져오고, 조인 조건을 만족하는 값이 없는 경우에는
+8 테이블에서 가져오는 칼럼들은 NULL 값으로 채운다. 그리고 LEFT ]01&으로 OUTER 키워드를 생략해서 사용할
+수 있다.
+
+[예제] STADIUMO| 등록된 경기장 중에는 홈팀이 없는 경기장도 있다. STADIUME} TEAME 조인 하되 홈팀이 없는 경기장의
+정보도 같이 출력하도록 한다.
+
+SELECT ~~ A.STADIUM_NAME, A.STADIUM_ID, A.SEAT_COUNT, A.HOMETEAM_ID
+, B.TEAM_NAME
+FROM STADIUM A LEFT OUTER JOIN TEAM 8
+ON B.TEAM_ID = A HOMETEAM_ID
+ORDER BY A.HOMETEAM_ID;
+
+uj
+ne
+jo
+>
+£0
+(<
+
+OUTER: 생략 가능한 키워드이므로 아래 SQLS 같은 결과를
+
+SELECT ~~ A.STADIUM_NAME, A.STADIUM_ID, A.SEAT_COUNT, A.HOMETEAM_ID
+, B.TEAM_NAME
+FROM STADIUM A LEFT JOIN TEAM B
+ON B.TEAM_ID = A_HOMETEAM_ID
+ORDER BY A. HOMETEAM_ID;
+
+STADIUM_NAME            STADIW_ID  SEAT_COUNT  HOMETEAM_ID  TEAM_NAME
+
+울산문수경기장         (4                  46102 Ko               울산현대
+
+수원월드컵경기장       804                  50000 102              삼성블루윙즈
+포항스틸야드            (06                  25000 03              스틸러스
+
+인천월드컵경기장       801                   35000 104              유나이티드
+전주월드컵경기장       003                  28000 1005              현대모터스
+부산아시아드경기장 _ (02                   30000 106              아이파크
+
+광양전용경기장             001                           20009 Ko?                    드래곤즈
+
+_SQL 전문가 가이드|267.

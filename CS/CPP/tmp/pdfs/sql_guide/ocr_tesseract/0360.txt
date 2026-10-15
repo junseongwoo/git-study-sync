@@ -1,0 +1,32 @@
+제2장 50Ｌ 활용
+
+D16_SAL             D26_SAL           D30_SAL
+ANALYST                                       6000
+CLERK              1300           1900           950
+MANAGER                  2450                 2975              2850
+PRESIDENT               5000
+SALESMAN                                                         5600
+
+5 행이 선택됐습니다.
+
+집계함수와 IN 절에 지정한 별칭에 따라 아래와 같은 규칙으로 열 명이 부여된다. 집계함수와 IN 절 모두 별칭을
+지정하는 편이 바람직하다.
+
+SUM (sal)                                                     10                      |                     DIO
+
+SUM (sal) AS sal               10.SAL       © DI0SAL       )
+
+SELECT 절에 부여된 열 명을 지정하면 필요한 열만 조회할 수 있다.
+
+SELECT . 208, D26_SAL
+FROM (SELECT 208, DEPTNO, SAL FROM EWP)
+PIVOT (SUM (SAL) AS SAL FOR DEPTNO IN (10 AS 010, 20 AS 020, 30 AS D38))
+WHERE D20_SAL > 2500
+
+ORDER BY 1;
+
+020 54
+ANALYST                            6000
+MANAGER                            2975
+
+2 행이 선택됐습니다.

@@ -1,0 +1,41 @@
+과옥 III SQL 고급 활용 및 튜닝
+select 41-
+. to 1, 7)) avg-sal
+to 8, 7)) min-sal
+, 15)) max-sal
+select /*+ */ d &ptro, d
+.(select l*avg(sal), 7) 7) 11 max(sal)
+fræ em vhere ±ptno = d.deptno) “1
+5. 조건절 이행
+'조건절 이행(Transitive Predicate Generation, Transitive Closure)'을 한마디로 요약하면, '(A = 파이고
+(B = C)이면 (A = C)이다과는 추론을 통해 새로운 조건절을 내부적으로 생성해 주는 쿼리 변환이다. '(A > 파이고
+(B > C)이면 (A > C)이다'와 같은 추론도 기능하다.
+예를 들어 A 테이블에 사용된 필터 조건이 조인 조건절을 다고, 반대편 B 테이블에 대한 필터 조건으로 이행될
+수 있다. 한 테이블 내에서도 두 칼럼 간 관계정보(예를 들어, coll >= c012)를 이용해 좌절이 이행된다.
+select * fræ &pt 비 e
+e.j± = •뻄裴R
+e.*한” = 10
+d.&ptno = e.deptno
+위 쿼리에서 deptno = 10은 emp 테이블에 대한 필터 조건이다. 하지만 아래 실행계획에 나타나는 Predicate
+정보를 확인해 보면, dept 테이블에도 같은 필터 조건이 추가된 것을 볼 수 있다.
+| Naæ
+1 Rows
+| Bytes |
+(05t (%CRJ) |
+1
+1
+1
+1*
+0
+1
+2
+3
+4
+1
+1
+SELECT STATEENT
+IÆSTED LOS
+TZL.E ACCESS BY II&X OID
+1粧X t.NIQÆ SCAN
+TBLE ACCESS BY lux OID
+%2 ; 전문가 가이드

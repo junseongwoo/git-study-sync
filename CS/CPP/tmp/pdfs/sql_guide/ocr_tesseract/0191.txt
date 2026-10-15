@@ -1,0 +1,32 @@
+과목 I QL 기본과 활용
+
+따라서 NULL 값의 비교는 비교 연산자인 =) '>', 9'=, <), '<='를 통해 비교할 수도 없고, 만일 비교 연산을
+하게 되면 결과는 거짓(641.58)을 리턴한다. 수치 연산자(+, ~, *, / 등)를 통해 NULL 값과 연산을 하게 되면 NULL
+값을 리턴한다. NULL 값의 비교 연산은 15 NULL, IS NOT )011.이라는 정해진 문구를 사용해야 제대로 된
+결과를 얻을 수 있다.
+
+SELECT PLAYER NAME AS 선수명, POSITION AS 포지션, 84 \0 AS 백넘버, HEIGHT AS 키
+FROM PLAYER
+WHERE POSITION = NULL;
+
+선택된 레코드가 없습니다.
+
+[예제]의 실행 결과로 '선택된 레코드가 없습니다.`는 메시지가 출력됐다. 앞에서 살펴본 대로 WHERE 절에서
+POSITION = NULLZ 사용했는데 문법 에러가 나지는 않았지만 WHERE 절의 조건이 AZ(FALSE)°| 돼 WHERE
+절의 조건을 만족하는 데이터를 한 건도 얻지 못하게 된 것으로 의미 없는 SQLo| 되고 말았다.
+
+[예제] POSITION 칼럼 값이 NULLRIXIE 판단하기 위해서는 IS [을 사용해 다음과 같이 SQL 문장을 수정해 실행한다.
+
+SELECT PLAYER NAME AS 선수명, POSITION AS 포지션, TEAM_ID AS EID
+FROM PLAYER
+WHERE POSITION IS NULL
+
+선수명             포지션           팀10
+정학범                               Kes
+
+수                               108
+차상광                               198
+
+3 개의 행이 선택됐습니다.
+
+196 이 #97 ols

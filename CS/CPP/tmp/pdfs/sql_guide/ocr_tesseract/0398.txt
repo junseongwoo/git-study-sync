@@ -1,0 +1,44 @@
+제3장 관리 구문
+
+4. MERGE
+
+MERGE 28 사용하면 새로운 행을 입력하거나, 기존 행을 수정하는 작업을 한 번에 할 수 있다. the MERGE
+문장의 기본 형태이다. MERGE 다음에 입력-수정돼야 할 eb 테이블명을 입력하고, USING Holl 입력-수정에
+사용할 소스 테이블을 입력한다. ON 절에는 타깃 테이블과 소스 테이블 간의 조인 조건식을 기술해, 입력 또는
+수정할 대상을 결정한다. ON 절의 조인 조건에 따라 조인에 성공한 행들에 대해서는 WHEN MATCHED THEN
+아래 UPDATE 구문을 수행하고, 조인에 실패한 행들에 대해서는 WHEN NOT MATCHED THEN 아래 INSERT
+구문을 수행한다.
+
+MERGE
+INTO EF! 테이블명
+USING 소스 테이블명
+ON (조인 조건식)
+WHEN MATCHED THEN
+UPDATE
+
+SET 수정할 칼럼명1 = 수정될 새로운 값1
+
+[ , 수정할 칼럼명2 = 수정될 새로운 값2, ... |
+WHEN NOT MATCHED THEN
+
+INSERT [(칼럼1, 칼럼2, ...)]
+VALUES (값1, 값2, ...)
+
+[예제] MERGE 문을 자세히 설명하기 위해 TEAM_TMP 테이블을 임시로 만든다.
+
+[예제] Oracle
+
+CREATE TABLE TEAM_TWP AS
+SELECT NVL(B.TEAM_ID, 'K' |}
+ROW_NUMBER() OVER (ORDER BY B.TEAM_ID, A.STADIUM_ID)) AS TEAM_ID
+, SUBSTR(A.STADIUM_NAME, 1, 2) AS REGION_NAME
+, SUBSTR(A.STADIUM_NAME, 1, 2)
+{1 NVL2(B. TEAM NAME, 'FC', '시티즌') AS TEAM_NAME
+, A.STADIUM_ID, A.DDD, A.TEL
+FROM STADIUM A, TEAM B
+WHERE B.STADIUM_ID(+) = A. STADIUM_ID;
+
+테이블이 생성됐습니다.
+
+SQL 전문가 가이드 |4()5
+

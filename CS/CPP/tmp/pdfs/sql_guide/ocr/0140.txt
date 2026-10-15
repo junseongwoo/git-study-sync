@@ -1,0 +1,22 @@
+제1장 기본
+DISTINCT 옵션
+[예제] 선수 테이불의 포지션 정보를 ALL과 DISTINCT 옵션으로 확인해 본다.
+[예제]
+SELECT ALL
+mSITW4
+FO PLAYER;
+ALL은 생략 가능한 키워드이므로 아래 SQL 문장도 위 예제와 같은 결과를 출력한다.
+[예제]
+SELECT 耶ITI애
+FO PLAYER;
+[실행 결과]
+GK
+MF
+4% 개의 행이 선택했습니다.
+[예제]
+SELECT DISTIKT
+郞ITI애
+FO RAYER;
+[실행 결과]
+耶1T1혜
+전문가 7}01드 145

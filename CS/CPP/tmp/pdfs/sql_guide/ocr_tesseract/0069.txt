@@ -1,0 +1,43 @@
+제1장 데이터 모델링의 이해
+
+SELECT  A.EVENT_ID,
+
+A. TRANS_TIME,
+
+A.HST_DEL_FLAG,
+
+A. STATUS_PROMPT,
+
+A.STATUS_OLD,
+
+A. STATUS_NEW
+FROM EQPEVTSTSHST A, EQP_ITEM B, EQP_WORKER C
+WHERE . A.PLANT             = B.PLANT
+AND       A.EQUIPMENT_ID      = B.EQUIPMENT_ID
+AND       A. STATUS_SEQ        = 8.514105 560
+AND       A.EVENT_ID          = B.EVENT_ID
+AND       A. TRANS_TIME        = B.TRANS_TIME
+AND      B.ITEM_CD         = "A001
+AND       A.PLANT             = C.PLANT
+AND       A.EQUIPMENT_ID      = C.EQUIPMENT_ID
+AND       A. STATUS_SEQ        = (.STATUS_SEQ
+AND       A.EVENT_ID          = C.EVENT_ID
+AND       A. TRANS_TIME        = C.TRANS_TIME
+AND     C.WORKER_SID      = 'A012008001"
+
+고작 3개 정도의 엔터티를 조인했을 뿐인데 SQL 구문의 WHERE 절이 매우 길어진 것을 확인할 수 있다. 실제로
+프로젝트에서는 개발자가 당연히 데이터 모델을 참조하면서 엔터티와 관계를 이용해 개발해야 하는데도 생성된
+엔터티 스키마 정보만을 보고 개발하는 경우가 많다. 그런데 위와 같이 조인에 참여하는 주식별자속성의 수가 많을
+경우 정확하게 조인관계를 설정하지 않고, 누락하여 개발하는 경우가 간혹 발견되기도 한다.
+
+정리하면 식별자 관계만으로 연결된 데이터 모델의 특징은 주식별자 속성이 지속적으로 증가할 수밖에 없는
+구조로서 개발 복잡성과 오류를 유발하는 요인이 될 수 있다는 사실을 기억해야 한다.
+
+마. 비식별자관계로만 설정할 경우의 문제점
+
+일반적으로 각각의 엔터티에는 중요한 기준 속성이 있다. 이 기준속성은 부모엔터티에 있는 2속성으로부터
+상속되어 자식엔터티에 존재하는 경우가 많다. 이러한 속성의 예로 '주민등록번호;, AUNT, '주문번호', '목록번호"
+등을 들 수 있다. 이런 속성은 부모엔터티를 조회할 때도 당연히 쓰이지만, 자식엔터티의 데이터를 조회할 때도
+해당 조건이 조회의 조건으로 걸리는 경우가 다수다. 그런데 데이터 모델링을 전개할 때 각 엔터티 간의 관계를
+비식별자관계로 설정하면 이런 유형의 속성이 자식엔터티로 상속되지 않아 자식엔터티에서 데이터를 처리할 때
+쓸데없이 부모엔터티까지 찾아가야 하는 경우가 발성한다.

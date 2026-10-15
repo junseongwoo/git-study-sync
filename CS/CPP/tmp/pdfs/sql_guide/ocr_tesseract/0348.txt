@@ -1,0 +1,41 @@
+제2장 SQL 활용
+
+3. 계층형 질의
+
+계층형 데이터 조회는 DBMS 벤더와 버전에 따라 다른 방법으로 지원한다. 여기서는 Oracle SQL Server
+기준으로 설명한다.
+
+가. Oracle 계층형 질의
+Oracle 계층형 질의를 지원하기 위해서 [그림 1-2-8]과 같은 계층형 질의 구문을 제공한다.
+
+SELECT     205
+FROM 테이블
+WHERE condition
+AND condition
+START WITH condition
+AND condition -
+CONNECT BY [NOCYCLE] condition
+AND condition …
+[ORDER SIBLINGS BY column, colum, *]
+
+[그림 1-28] 계층형 질의 구문
+
+- START WITHA 계층 구조 전개의 시작 위치를 지정하는 구문이다. 즉 루트 데이터를 지정한다(액세스).
+
+- CONNECT 8절은 다음에 전개될 자식 데이터를 지정하는 구문이다. 자식 데이터는 CONNECT BY 절에
+주어진 조건을 만족해야 한다.(조인)
+
+- PRIOR : CONNECT 8절에 사용되며, 현재 읽은 칼럼을 지정한다. (FK) = PRIOR (PK) 형태를 사용하면
+부모 데이터에서 자식 데이터(부모 — 자식) 방향으로 전개하는 순방향 전개를 한다. 그리고 (PK) = PRIOR
+(FK) 형태를 사용하면 반대로 자식 데이터에서 부모 데이터(자식 — 부모) 방향으로 전개하는 역방향 전개를
+한다.
+
+- NOCYCLE : 데이터를 전개하면서 이미 나타났던 동일한 데이터가 전개 중에 다시 나타난다면, 이것을 가리켜
+Ato] Z{Cycle)o] 발생했다고 한다. 사이클이 발생한 데이터는 런타임 오류가 발생한다. NOCYCLEE 추가하면
+오류를 발생시키지 않고 사이클이 발생한 이후의 데이터를 전개하지 않는다.
+
+- ORDER SIBLINGS BY : 형제 노드(동일 LEVEL) 사이에서 정렬을 수행한다.
+
+- WHERE : 모든 전개를 수행한 후에 지정된 조건을 만족하는 데이터만 추출한다(필터링).
+
+Oracle 계층형 질의를 사용할 때 다음과 같은 가상 칼럼(86000 0010000))을 제공한다.

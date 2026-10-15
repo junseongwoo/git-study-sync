@@ -1,0 +1,552 @@
+{
+  "output": "C:\\Users\\user\\Desktop\\Obsidian\\git-study-sync\\CS\\CPP\\output\\pdf\\SQL_전문가_가이드_요약.pdf",
+  "pages": 171,
+  "chapter_count": 12,
+  "chapters": [
+    {
+      "id": "I-1",
+      "title": "제1장 데이터 모델링의 이해",
+      "source_range": "원문 PDF 9-76쪽",
+      "sections": 5,
+      "codes": 1,
+      "comparisons": 2
+    },
+    {
+      "id": "I-2",
+      "title": "제2장 데이터 모델과 SQL",
+      "source_range": "원문 PDF 78-118쪽",
+      "sections": 5,
+      "codes": 6,
+      "comparisons": 3
+    },
+    {
+      "id": "II-1",
+      "title": "제1장 SQL 기본",
+      "source_range": "원문 PDF 122-270쪽",
+      "sections": 8,
+      "codes": 12,
+      "comparisons": 3
+    },
+    {
+      "id": "II-2",
+      "title": "제2장 SQL 활용",
+      "source_range": "원문 PDF 272-388쪽",
+      "sections": 8,
+      "codes": 17,
+      "comparisons": 3
+    },
+    {
+      "id": "II-3",
+      "title": "제3장 관리 구문",
+      "source_range": "원문 PDF 390-461쪽",
+      "sections": 4,
+      "codes": 10,
+      "comparisons": 3
+    },
+    {
+      "id": "III-1",
+      "title": "제1장 SQL 수행 구조",
+      "source_range": "원문 PDF 465-503쪽",
+      "sections": 3,
+      "codes": 4,
+      "comparisons": 2
+    },
+    {
+      "id": "III-2",
+      "title": "제2장 SQL 분석 도구",
+      "source_range": "원문 PDF 504-529쪽",
+      "sections": 3,
+      "codes": 4,
+      "comparisons": 1
+    },
+    {
+      "id": "III-3",
+      "title": "제3장 인덱스 튜닝",
+      "source_range": "원문 PDF 530-579쪽",
+      "sections": 4,
+      "codes": 6,
+      "comparisons": 2
+    },
+    {
+      "id": "III-4",
+      "title": "제4장 조인 튜닝",
+      "source_range": "원문 PDF 580-617쪽",
+      "sections": 5,
+      "codes": 7,
+      "comparisons": 2
+    },
+    {
+      "id": "III-5",
+      "title": "제5장 SQL 옵티마이저",
+      "source_range": "원문 PDF 618-665쪽",
+      "sections": 3,
+      "codes": 8,
+      "comparisons": 3
+    },
+    {
+      "id": "III-6",
+      "title": "제6장 고급 SQL 튜닝",
+      "source_range": "원문 PDF 667-762쪽",
+      "sections": 6,
+      "codes": 10,
+      "comparisons": 4
+    },
+    {
+      "id": "III-7",
+      "title": "제7장 Lock과 트랜잭션 동시성 제어",
+      "source_range": "원문 PDF 764-786쪽",
+      "sections": 3,
+      "codes": 4,
+      "comparisons": 5
+    }
+  ],
+  "headings": [
+    {
+      "level": 0,
+      "title": "1. 챕터별 핵심 내용 요약",
+      "key": "sec-overview",
+      "page": 4
+    },
+    {
+      "level": 1,
+      "title": "제1장 데이터 모델링의 이해",
+      "key": "overview-I-1",
+      "page": 4
+    },
+    {
+      "level": 1,
+      "title": "제2장 데이터 모델과 SQL",
+      "key": "overview-I-2",
+      "page": 4
+    },
+    {
+      "level": 1,
+      "title": "제1장 SQL 기본",
+      "key": "overview-II-1",
+      "page": 5
+    },
+    {
+      "level": 1,
+      "title": "제2장 SQL 활용",
+      "key": "overview-II-2",
+      "page": 5
+    },
+    {
+      "level": 1,
+      "title": "제3장 관리 구문",
+      "key": "overview-II-3",
+      "page": 6
+    },
+    {
+      "level": 1,
+      "title": "제1장 SQL 수행 구조",
+      "key": "overview-III-1",
+      "page": 6
+    },
+    {
+      "level": 1,
+      "title": "제2장 SQL 분석 도구",
+      "key": "overview-III-2",
+      "page": 6
+    },
+    {
+      "level": 1,
+      "title": "제3장 인덱스 튜닝",
+      "key": "overview-III-3",
+      "page": 7
+    },
+    {
+      "level": 1,
+      "title": "제4장 조인 튜닝",
+      "key": "overview-III-4",
+      "page": 7
+    },
+    {
+      "level": 1,
+      "title": "제5장 SQL 옵티마이저",
+      "key": "overview-III-5",
+      "page": 8
+    },
+    {
+      "level": 1,
+      "title": "제6장 고급 SQL 튜닝",
+      "key": "overview-III-6",
+      "page": 8
+    },
+    {
+      "level": 1,
+      "title": "제7장 Lock과 트랜잭션 동시성 제어",
+      "key": "overview-III-7",
+      "page": 9
+    },
+    {
+      "level": 0,
+      "title": "2. 챕터별 상세 학습 노트",
+      "key": "sec-notes",
+      "page": 10
+    },
+    {
+      "level": 1,
+      "title": "제1장 데이터 모델링의 이해",
+      "key": "notes-I-1",
+      "page": 10
+    },
+    {
+      "level": 1,
+      "title": "제2장 데이터 모델과 SQL",
+      "key": "notes-I-2",
+      "page": 17
+    },
+    {
+      "level": 1,
+      "title": "제1장 SQL 기본",
+      "key": "notes-II-1",
+      "page": 21
+    },
+    {
+      "level": 1,
+      "title": "제2장 SQL 활용",
+      "key": "notes-II-2",
+      "page": 32
+    },
+    {
+      "level": 1,
+      "title": "제3장 관리 구문",
+      "key": "notes-II-3",
+      "page": 38
+    },
+    {
+      "level": 1,
+      "title": "제1장 SQL 수행 구조",
+      "key": "notes-III-1",
+      "page": 42
+    },
+    {
+      "level": 1,
+      "title": "제2장 SQL 분석 도구",
+      "key": "notes-III-2",
+      "page": 46
+    },
+    {
+      "level": 1,
+      "title": "제3장 인덱스 튜닝",
+      "key": "notes-III-3",
+      "page": 50
+    },
+    {
+      "level": 1,
+      "title": "제4장 조인 튜닝",
+      "key": "notes-III-4",
+      "page": 54
+    },
+    {
+      "level": 1,
+      "title": "제5장 SQL 옵티마이저",
+      "key": "notes-III-5",
+      "page": 58
+    },
+    {
+      "level": 1,
+      "title": "제6장 고급 SQL 튜닝",
+      "key": "notes-III-6",
+      "page": 63
+    },
+    {
+      "level": 1,
+      "title": "제7장 Lock과 트랜잭션 동시성 제어",
+      "key": "notes-III-7",
+      "page": 71
+    },
+    {
+      "level": 0,
+      "title": "3. SQL 문법과 원문 코드 해설",
+      "key": "sec-sql",
+      "page": 75
+    },
+    {
+      "level": 1,
+      "title": "제1장 데이터 모델링의 이해",
+      "key": "sql-I-1",
+      "page": 75
+    },
+    {
+      "level": 1,
+      "title": "제2장 데이터 모델과 SQL",
+      "key": "sql-I-2",
+      "page": 76
+    },
+    {
+      "level": 1,
+      "title": "제1장 SQL 기본",
+      "key": "sql-II-1",
+      "page": 80
+    },
+    {
+      "level": 1,
+      "title": "제2장 SQL 활용",
+      "key": "sql-II-2",
+      "page": 88
+    },
+    {
+      "level": 1,
+      "title": "제3장 관리 구문",
+      "key": "sql-II-3",
+      "page": 99
+    },
+    {
+      "level": 1,
+      "title": "제1장 SQL 수행 구조",
+      "key": "sql-III-1",
+      "page": 105
+    },
+    {
+      "level": 1,
+      "title": "제2장 SQL 분석 도구",
+      "key": "sql-III-2",
+      "page": 108
+    },
+    {
+      "level": 1,
+      "title": "제3장 인덱스 튜닝",
+      "key": "sql-III-3",
+      "page": 111
+    },
+    {
+      "level": 1,
+      "title": "제4장 조인 튜닝",
+      "key": "sql-III-4",
+      "page": 114
+    },
+    {
+      "level": 1,
+      "title": "제5장 SQL 옵티마이저",
+      "key": "sql-III-5",
+      "page": 119
+    },
+    {
+      "level": 1,
+      "title": "제6장 고급 SQL 튜닝",
+      "key": "sql-III-6",
+      "page": 124
+    },
+    {
+      "level": 1,
+      "title": "제7장 Lock과 트랜잭션 동시성 제어",
+      "key": "sql-III-7",
+      "page": 131
+    },
+    {
+      "level": 0,
+      "title": "4. 핵심 개념 비교 및 구조화 자료",
+      "key": "sec-comparisons",
+      "page": 135
+    },
+    {
+      "level": 1,
+      "title": "제1장 데이터 모델링의 이해",
+      "key": "compare-I-1",
+      "page": 135
+    },
+    {
+      "level": 1,
+      "title": "제2장 데이터 모델과 SQL",
+      "key": "compare-I-2",
+      "page": 135
+    },
+    {
+      "level": 1,
+      "title": "제1장 SQL 기본",
+      "key": "compare-II-1",
+      "page": 136
+    },
+    {
+      "level": 1,
+      "title": "제2장 SQL 활용",
+      "key": "compare-II-2",
+      "page": 137
+    },
+    {
+      "level": 1,
+      "title": "제3장 관리 구문",
+      "key": "compare-II-3",
+      "page": 138
+    },
+    {
+      "level": 1,
+      "title": "제1장 SQL 수행 구조",
+      "key": "compare-III-1",
+      "page": 139
+    },
+    {
+      "level": 1,
+      "title": "제2장 SQL 분석 도구",
+      "key": "compare-III-2",
+      "page": 140
+    },
+    {
+      "level": 1,
+      "title": "제3장 인덱스 튜닝",
+      "key": "compare-III-3",
+      "page": 140
+    },
+    {
+      "level": 1,
+      "title": "제4장 조인 튜닝",
+      "key": "compare-III-4",
+      "page": 141
+    },
+    {
+      "level": 1,
+      "title": "제5장 SQL 옵티마이저",
+      "key": "compare-III-5",
+      "page": 141
+    },
+    {
+      "level": 1,
+      "title": "제6장 고급 SQL 튜닝",
+      "key": "compare-III-6",
+      "page": 142
+    },
+    {
+      "level": 1,
+      "title": "제7장 Lock과 트랜잭션 동시성 제어",
+      "key": "compare-III-7",
+      "page": 143
+    },
+    {
+      "level": 0,
+      "title": "5. 전체 핵심 내용 복습 자료",
+      "key": "sec-review",
+      "page": 145
+    },
+    {
+      "level": 1,
+      "title": "전체 핵심 요약",
+      "key": "review-core",
+      "page": 145
+    },
+    {
+      "level": 1,
+      "title": "SQL 문법 요약표",
+      "key": "review-syntax",
+      "page": 148
+    },
+    {
+      "level": 1,
+      "title": "주요 개념 비교표",
+      "key": "review-comparisons",
+      "page": 156
+    },
+    {
+      "level": 1,
+      "title": "주요 코드 모음",
+      "key": "review-codes",
+      "page": 159
+    },
+    {
+      "level": 1,
+      "title": "핵심 내용 체크리스트",
+      "key": "review-checklist",
+      "page": 167
+    }
+  ],
+  "code_ids": [
+    "I1-C01",
+    "I2-C01",
+    "I2-C02",
+    "I2-C03",
+    "I2-C04",
+    "I2-C05",
+    "I2-C06",
+    "II1-C01",
+    "II1-C02",
+    "II1-C03",
+    "II1-C04",
+    "II1-C05",
+    "II1-C06",
+    "II1-C07",
+    "II1-C08",
+    "II1-C09",
+    "II1-C10",
+    "II1-C11",
+    "II1-C12",
+    "II2-C01",
+    "II2-C02",
+    "II2-C03",
+    "II2-C04",
+    "II2-C05",
+    "II2-C06",
+    "II2-C07",
+    "II2-C14",
+    "II2-C15",
+    "II2-C08",
+    "II2-C16",
+    "II2-C17",
+    "II2-C09",
+    "II2-C10",
+    "II2-C11",
+    "II2-C12",
+    "II2-C13",
+    "II3-C01",
+    "II3-C02",
+    "II3-C03",
+    "II3-C04",
+    "II3-C05",
+    "II3-C06",
+    "II3-C07",
+    "II3-C08",
+    "II3-C09",
+    "II3-C10",
+    "III1-C03",
+    "III1-C04",
+    "III1-C01",
+    "III1-C02",
+    "III2-C01",
+    "III2-C02",
+    "III2-C03",
+    "III2-C04",
+    "III3-C01",
+    "III3-C02",
+    "III3-C03",
+    "III3-C04",
+    "III3-C05",
+    "III3-C06",
+    "III4-C01",
+    "III4-C02",
+    "III4-C03",
+    "III4-C04",
+    "III4-C05",
+    "III4-C06",
+    "III4-C07",
+    "III5-C01",
+    "III5-C02",
+    "III5-C03",
+    "III5-C04",
+    "III5-C05",
+    "III5-C06",
+    "III5-C07",
+    "III5-C08",
+    "III6-C01",
+    "III6-C02",
+    "III6-C03",
+    "III6-C04",
+    "III6-C05",
+    "III6-C06",
+    "III6-C07",
+    "III6-C08",
+    "III6-C09",
+    "III6-C10",
+    "III7-C01",
+    "III7-C02",
+    "III7-C04",
+    "III7-C03"
+  ],
+  "unknown_glyphs": {},
+  "wrapped_sql_lines_across_build_passes": 0,
+  "embedded_fonts": [
+    "Malgun",
+    "Malgun-Bold",
+    "Consolas",
+    "Consolas-Bold"
+  ]
+}

@@ -1,0 +1,24 @@
+*장 구문
+[예제] PLAYER 테이불에 있는 데이터를 수정하고 ROLLBACK* 실행한다.
+결제] OracIe
+I-FOATE PL.AYER SET ÆIGHT = 1%:
+4惢 행이 갱신묐습니다.
+ROLLBACK;
+를백이 완료됐습니다.
+[예제] PLAYER 테이블에 있는 데이터를 삭제하고 ROLLBACK* 실행한다.
+[예제] Oracle
+DELETE FO PLAYER;
+4% 행이 삭제했습니다.
+RmLBACK;
+를백이 완료됐습니다.
+ㆍ SQL 덭~예의 ROLLBACK
+SQL Server는 위에서 언급한 바와 같이 AUII) COMMIT이 기본 방식이므로 임의적으로 ROLLBACK을 수행
+하려면 명시적으로 트랜책션을 선언해야 한다. 위의 예제는 다음과 같이 변경된다.
+[예제] PLAYER 테이를에 데이터를 입력하고 ROLLBACK* 실행한다.
+[예제] SQL Server
+BEGIN TRAN
+INSERT
+1酊0 PLAYER (PLAYER—ID, TEÆ-ID, PLAYER_NAE, 郞1T1애, HEIG{T, ÆIGHT, BACKN)
+VALIÆS ('1%70표, •이운재•, 'GK', 182, 82, 1):
+(1개 행이 영향을 받음)
+전문가 가이드 415

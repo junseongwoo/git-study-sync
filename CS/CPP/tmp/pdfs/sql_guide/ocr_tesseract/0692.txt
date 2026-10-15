@@ -1,0 +1,43 @@
+과목 [| QL 고급 활용 및 튜닝
+
+«insert select 문장에 /*+ append */ 힌트 사용
+
+병렬 모드로 1056
+
+«direct 옵션을 지정하고 SQL*Loader(sqlldr)2 데이터를 로드
++ CTAS(create table … as select) 문장을 수행
+
+를 nologging 모드 1056ㅁ
+
+<306에서 다음과 같이 테이블 속성을 001088108으로 바꾸면, Redo 로그까지 최소화(데이터 딕셔너리 변경사
+항만 로깅)되므로 더 빠르게 insert 수 있다. 이 기능은 Direct Path Insert 때만 작동하며, 일반 insert 문을
+로깅하지 않는 방법은 없다.
+
+alter table t NOLOGGING:
+
+Direct Path Insert 방식으로 데이터를 입력하면 Exclusive 모드 테이블 100※이 걸려 Insert 작업을 하는
+동안 다른 트랜잭션은 해당 테이블에 DML 수행하지 못하는 것에 주의해야 한다. 따라서 트랜잭션이 빈번한
+주간에 이 옵션을 사용하는 것은 절대 금물이다.
+
+nologging 상태에서 입력한 데이터는 장애가 발생했을 때 복구가 불가능하다는 AME 반드시 기억하기 바란다.
+이 옵션을 사용해 데이터를 1056한 후에는 곧바로 백업해야 한다. 또는 언제든 재생 가능한 데이터를 1756다할
+때만 사용해야 한다.
+
+를 들면 배치 프로그램에서 중간 단계의 임시 테이블을 만들거나 DW 시스템에 읽기 전용 데이터를 적재할
+때 유용하다. 이들 프로그램은 Redo 로그가 없더라도 언제든 데이터를 재현할 수 있다는 특징이 있다. 물론 가용성
+요건과 운영 환경이 시스템마다 다르므로 상황에 맞게 적용하기 바란다.
+
+나. SQL Server Insert 튜닝
+
+를 최소 27(minimal nologging)
+
+SQL Serverol4 최소 로깅 기능을 사용하려면, 우선 해당 데이터베이스의 복구 Rel(Recovery model)©|
+‘Bulk-logged’ 또는 ‘Simple'2 설정돼 있어야 한다.
+
+alter database SQLPRO set recovery SINPLE
+
+첫 번째로, 다음과 같이 파일 데이터를 읽어 DBZ 로딩하는 Bulk Insert 구문을 사용할 때, With 옵션에
+TABLOCK 힌트를 추가하면 최소 로깅 모드로 작동한다.
+
+702| sg. #871 Ale
+

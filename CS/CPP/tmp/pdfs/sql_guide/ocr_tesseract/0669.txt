@@ -1,0 +1,43 @@
+제6장 고급 SOL 튜닝
+
+select sum(sal), max(sal), min(sal) from emp
+
+Execution Plan
+
+0      SELECT STATEMENT Optimizer=ALL_ROWS (Cost=3 Card=1 Bytes=4)
+1 0 SORT (AGGREGATE) (Card=1 Bytes=4)
+2 ㅣ TABLE ACCESS (FULL) OF 'EMP' (TABLE) (Cost=3 Card=14 Bytes=56)
+
+SQL Server
+
+StmtText
+
+|—Compute Scalar(DEFINE: ([Expr1004]=CASE WHEN [Expr1614]=(0) THEN MULL ELSE [Expr115] END)
+|—Stream Aggregate(DEFINE: )
+|—Table Scan(0BJECT: ([SQLPRO]. [dbo] . [emp] ))
+
+2) Sort Order By : 정렬된 결과 집합을 얻고자 할 때 나타난다.
+
+| select * from emp order by sal desc
+
+Oracle
+
+f  Execution Plan
+
+0      SELECT STATEMENT Optimizer=ALL_ROWS (Cost=4 Card=14 Bytes=518)
+1 0 SORT (ORDER BY) (Cost=4 Card=14 Bytes=518)
+dics]    TABLE ACCESS (FULL) OF 'EMP' (TABLE) (Cost=3 Card=14 Bytes=518)
+
+StmtText
+
+|—Sort(ORDER BY: ([SQLPRO] . [dbo]. [emp] . [sal] DESC))
+|—Table Scan(OBIECT: ([SQLPRO]. [dbo]. [emp]))
+
+3) Sort Group By : Sorting 알고리즘을 사용해 그룹별 집계를 수행할 of 나타난다.
+
+select deptno, job, sum(sal), max(sal), min(sal)
+from    enp
+group by deptno, job
+
+SQL 전문가 가이드 |679
+

@@ -1,0 +1,34 @@
+圊장 고급 류님
+Fetch Count
+Blo& VO
+3이000
+25.0예
+20.000
+1i0예
+10.예0
+i000
+0
+25 10 20 50 1예 200 500 1.OOO
+[그림 Ⅲ舟기 ArraySize, Fetch Count, 불특 l/0관계
+[그림 Ⅲ丘기에서 눈에 띄는 것은, AraySize를 기운다고 해서 Fetch Count와 불룩 1/0가 같은 비율로 줄지
+않는다는 점이다. 따라서 무작정 크게 설정한다고 좋은 것은 아니며, 일정 크기 이상이면 오히려 리소스만 당비하게
+된다. 데이터 크기에 따라 다르다. 위 데이터 상황에서는 1% 정도로 설정하는 게 적당해 보인다.
+SQL*Plus 이외의 프로그램 언어에서 Amay 단위 Fetch 기능을 활용하는 방법을 살펴보자. Oracle p니바L에서
+커서를 열고 레코드를 Fetch하면, (3항 Array processing에서 보았던 Bulk Collect 구문을 사용하지 않는 한)
+엿까지는 한 번에 한 건씩 처리(Smgle-Row Fetch)했었다. 1영부터는 자동으로 1%개씩 Array Fetch가 일어난다
+다만 아래처럼 커서의 0外파 Fetch, Clse가 내부적으로 이뤄지는 Curyr FOR lmp 구문을 이용할 때만 작동한
+다는 사실을 기억하기 바란다.
+for it& in cursor
+1喞
+자바에서는 어떻게 ArraySiæ를 조정하는지 살펴보세
+Strirg 피1 = •select custid, from :
+stmt = cmn.prepareStatænt(sql);
+stnt.setFetchSize(IE);
+- Statænt에서 조정
+ResultSet = stmt.executQæry();
+// rs.setFetchSxze(1W); - ResuItSet에서 조정할 수도 있다.
+•hile( rs.rpxt() ) {
+int = rs*tlnt(l);
+Stnng = 5 *tStnng(2);
+System.wt 十 •:• 十 ~),•
+전문가 ,버드 721

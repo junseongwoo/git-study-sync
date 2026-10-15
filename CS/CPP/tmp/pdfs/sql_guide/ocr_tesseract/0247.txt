@@ -1,0 +1,30 @@
+과목 ] QL 기본과 활용
+
+DEPTNO                  DNAME                             Loc
+10            ACCOUNTING              NEW YORK
+20                  CONSULTING                    DALLAS
+3»                  MARKETING                      CHICAGO
+9                  OPERATIONS                    BOSTON
+
+4 개의 행이 선택됐습니다.
+
+부서번호 20과 30의 DNAMEC| '0085017071840과 'MARKETING' C2 변경된 것을 확인할 수 있다.
+[예제] 세 개의 칼럼명이 모두 같은 DEPTS DEPT_TEMP 테이블을 NATURAL [INNER] JOIN2Z 수행한다.
+
+SELECT *
+FROM DEPT A NATURAL INNER JOIN DEPT_TEMP B;
+
+INNERE DEFAULT 옵션으로 아래와 같이 생략 가능하므로 위 SQLE} 아래 SQL 같은 결과를 얻을 수 있다.
+
+SELECT *
+FROM DEPT A NATURAL JOIN DEPT_TEMP B;
+
+DEPTNO                  DNAME                              Loc
+10                  ACCOUNTING                    NEW YORK
+48                  OPERATIONS                    BOSTON
+
+2 개의 행이 선택됐습니다,
+
+위 SQLS 경우 DNAME®] 내용이 ul 부서번호 20, 30의 데이터는 실행 결과에서 제외된 것을 알 수 있다.
+
+252 901. 젠가 가이드

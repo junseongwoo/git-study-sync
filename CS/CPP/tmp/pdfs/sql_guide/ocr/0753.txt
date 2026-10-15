@@ -1,0 +1,36 @@
+囹장 고급 류님
+Executim Plan
+0
+1
+2
+SELECT STATEENT ((05t=1 Car&1 Bytes=49)
+0 ßT ÄR BY) (Cost=1 Car#1 ByteN9)
+1 CMJNT (STOPKEY)
+VIEW ((05t=5 Car#I ByteN9)
+FILTER
+TABLE ACCESS (BY II&X OID) •시간별종목거래• (TBLE) (Car&1 Bytes=%)
+1荻X SCAN DESCæI%) % •시간별종목거래-獻• (ICX (鼎叫) ((″)
+여기서는 'SORT (ORDER BY)'가 나타났지만, 'COUNT (STOPKEY)' 바깥 쪽에 위치했으-므로 조건절에 의해
+선택된 11건에 대해서만 소-트 연산을 수행한다. 인덱스를 거꾸로 읽었지만, 화면에는 오름차순으로 출력되게 하려고
+ORDER BY를 한 번 더 사용한 것이다.
+옵디마이저 힌트를 사용하면 SQL을 더 간단하게 구사할 수 있지만, 인덱스 구성이 변경될 때 결과가 달라질
+위험성이 있다. 될 수 있으면 힌트를 이용하지 않고도 같은 방식으로 처리되도록 바L을 조정하는 것이 바람직하다.
+SQL ServerOil선 Top N 구문을 이용해 다음과 같이 작성하면 된다.
+〈 첫 화면이거나, •다음(>기 비문을 클릭했을 때 〉
+SELECT TP 11 거래일시, 체결건수, 체결수량, 거래대금
+시간별종목거래 A
+WÆRE :페이지이동 = 'NEXT'
+AtO 종목코드= :isu-cd
+거래일시 :trd-tiæ
+ÄR BY 거래일시 ,
+〈 •이전(쇠• 버른을 클릭했을 때〉
+SELECT 거래일시, 체결건수, 처결수량, 거래대금
+SELECT TP 11 거래일시, 체결건수. 제결수량, 거래대금
+FO 시간별종목거래 A
+HRE :페이지이동 = 'PREV'
+A*O 종목코드 = :isu-cd
+AIO 거래일시 수 :trd-tiæ
+EER BY 거래일시
+BY 거래일시 ;
+1
+전문가 ,너드 763

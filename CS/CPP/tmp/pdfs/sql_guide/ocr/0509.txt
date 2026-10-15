@@ -1,0 +1,42 @@
+과목 III SQI 고급 활용 및 튜닝
+sel«t * fræ t±Ie&s-xplm.diSPlayCPLAN-TABLE', •빛LI', 'TYPICAL'));
+select * 뉴” table(±ms-XPlan.diSPlayCPLAN-TABLEi, •빛LI|, 'SERIAL'));
+옵션을 사용하면 ID, 0凶ra而n, Name 칼럼만 보인다 format 인자를 이래처럼 구사하면 Rows, Bytes,
+C,ost 칼럼까지 출력해 준다.
+select * fræ table(öms-xplm.display( 'PLAN_TABLE', •災LI'
+BASIC OS BYTES COST'));
+Rows | Bytes (05t (%CPU) |
+1
+0
+1
+2
+3
+4
+5
+1 SELECT STATEENT
+TABLE KCESS BY OID DEPT
+NESTED LOS
+TABLE ACCESS BY 1粧X OID} EP
+12
+12
+12
+6碼 |
+6碼 |
+3
+1
+3
+(0)
+(0)
+IuX SCAN
+It&X RÆ"E SCAN
+EP_SAL_IDX 1
+ROWS, BEES, COST 이외에 추가로 사용할 수 있는 옵션으로는 다음과 같은 것들이 있다.
+• PARTITION
+• PARALLEL
+• PREDICATE
+• PROJEC긔ON
+• REMOTE
+•NOTE
+위 모든 항목•들을 다 출력해 보이려면 일일이 나열할 필요없이 a11 옵션을 사용하면 된다.
+518
+전문가 ,까드

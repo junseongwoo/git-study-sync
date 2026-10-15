@@ -1,0 +1,51 @@
+{
+  "pages": 171,
+  "file_bytes": 883886,
+  "chapters": 12,
+  "sections": 57,
+  "source_sql_examples": 89,
+  "syntax_entries": 81,
+  "a4_all": true,
+  "cover_title_exact": true,
+  "text_characters": 222560,
+  "blank_pages": [],
+  "folio_errors": [],
+  "text_outside_safe_area": [],
+  "unknown_glyphs": {},
+  "missing_prose": [],
+  "missing_sql": [],
+  "heading_destination_errors": [],
+  "bookmarks": 58,
+  "link_count": 116,
+  "link_destinations_valid": true,
+  "embedded_fonts": [
+    [
+      "/AAAAAA+Consolas",
+      true
+    ],
+    [
+      "/AAAAAA+MalgunGothic",
+      true
+    ],
+    [
+      "/AAAAAA+MalgunGothicBold",
+      true
+    ],
+    [
+      "/AAAAAB+MalgunGothic",
+      true
+    ],
+    [
+      "/AAAAAB+MalgunGothicBold",
+      true
+    ],
+    [
+      "/AAAAAC+MalgunGothic",
+      true
+    ],
+    [
+      "/AAAAAD+MalgunGothic",
+      true
+    ]
+  ]
+}

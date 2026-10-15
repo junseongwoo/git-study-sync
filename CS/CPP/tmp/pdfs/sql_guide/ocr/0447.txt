@@ -1,0 +1,23 @@
+과목 II 기본과 활용
+[예제] SYSTEM 유저로 집속해 SQLD 유저가 로그인할 수 있도록 CREATE SESSION 권한을 부여四.
+!예제] OracIe
+연결웠습니다.
+[예제] Oracle
+- 聳A正 ÆSSIm TO *야•
+권한이 부여됐습니다.
+!예제] OracIe
+; (唱 叩/%羽19:
+연결묐습니다.
+[예제] SQLD 유저로 테이불을 생성한다.
+[예제] OracIe
+SELECT * FRW USER_TABLES;
+선택된 레코드가 없습니다.
+[예제 및 실행 출과] Oracle
+CÆATE TÆLE (EMJ-SEQ t&ER t0T WLL, TITLE VAR대枳가10)),•
+1행에 오류:
+*-010회: 권한이 불충분합니다
+f예제 및 실행 결과] SQL Server
+CEATE TÆLE ″] (EMJ-SEQ INT WT MIL, TITLE V枳대枳(10));
+매시지 爹2, 수준 14, 상태 1, 졸 1
+더이터베이스 CREATE TABLE 사용 권한이 거부쾼습니다.
+454 전문가 ,끼드

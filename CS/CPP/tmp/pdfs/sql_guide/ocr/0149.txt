@@ -1,0 +1,50 @@
+과목 n * 기본과 활용
+문자형 함수
+함수 설명
+문자열의 첫 문자부터 확인해서 지정 문자가 나타나면 해당 문자를 제거한다(지정
+LTRIM (문자열 [,지정문자Ⅳ
+문자가 생략되면 공백 값이 디폴트).
+LTRIM (문자열)
+SQL 던rve새서는 LTRIM 함수에 지정문자 사용 불가. 공백만 제거할 수 있다.
+문자열의 마지막 문자부터 획인해서 지정 문자가 나타나는 동안 해당 문자를 제거한다
+RTRIM (문자열 0지정문자Ⅳ
+(지정 문자가 생략되면 공백 값이 디폴트).
+RIRIM (문자열)
+SQL 뇨1卍e하서는 LTRIM 함수에 지정문자를 사용할 수 없다. 즉 공백만 제거할
+수 있다.
+TRIM (fleadingttrailinglbothl 문자열에서 머리말, 꼬리말 또는 양쪽에 있는 지정 문자를 제거한다(leading | trailing
+지정문자 FROM 문자열)
+| *가 생략되면 IX)th가 디폴트).
+SQL 뇨1卍e새서는 TRIM 함수에 leading, trailing, both를 사용할 수 없다.
+/ TRIM
+즉 양쪽에 있는 지정 문자만 제거할 수 있다.
+(지정문자 FROM 문자열)
+※ 주: Oracle 함수/SQL 함수 표시, 7' 없는 것은 공통 함수
+ㆍ 문자형 함수들이 적용왰을 때 리던되는 값을 예를 들어 설명한다.
+[표 Ⅱ-1-11] 단일행 문자형 함수 사례
+문자형 함수 사용
+LOMÆRCSQL ⅸ凶11)
+UPPERCSQL ExpeN)
+ASCIICA)
+CHR(65) / CHAR(65)
+CONCATCRDBNLS','
+FDBMS || ' SQL' / QDBMS' + ' SQL'
+SUBSTRCSQL 取彎rt', 5, 3)
+SLBTRINGCSQL 5, 3)
+/ LENCSQL Exped)
+LTRIMCxnymxVY)
+RTRIM(nYYzXYzz,'z')
+RTRIM(XXhüXYZ 0
+TRIMC* FROM
+결과 값 및 설명
+'sql expere
+'SQL EXPERT
+&5
+'RDBMS SQL'
+10
+'YYZZxYZ
+XXYYzzXY'
+tYYZZxYZ
+함수 RTRIM은 공백 제거 및 CHAR와 VARCHAR 데이터 유형을 비교할 때 유용하게 사용된다.
+154
+전문가 7P|드

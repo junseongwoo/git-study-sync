@@ -1,0 +1,39 @@
+|-ㅡ25609 Loops(Inner Join, OUTER REFERENCES: ([Bmk1063]))
+{—Nested Loops(Inner Join, OUTER REFERENCES: ([d].[deptno]))
+{=—Filter(WHERE: ([dept]. [gb] as [d].[gb]="2"))
+{—Nested Loops(Inner Join, OUTER REFERENCES: ([Bmk1000]))
+{—Index Seek(0BJECT:([dept). [dept_loc_idx] AS [d]), SEEK:([loc]='CHICAGD') )
+{—RID Lookup(OBJECT:([dept] AS [d]), SEEK:([Bmk1000]=[Bmk1000]) )
+—Index Seek(0BJECT:([emp].[emp_deptno_idx]), SEEK:([e].[deptno]=[dept].[deptno]))
+—RID Lookup(0BJECT: ([emp] AS [e]), SEEK: ([Buk1083]=[Buk1063]) LOOKUP ORDERED FORWARD)
+
+SQL 5606[에서 제공하는 그래픽 모드 실행계획은 [그림 11-4-2]와 같다.
+
+a 3 @ @ m= @ 4
+
+Sort  Pilrer — Nested Loops 그 Nested Loops + pij.e, Nested Loops a      Taden See
+         .      (Irmmer Join)    (Imer Join)    Cost: 0%    (Inner Join)   [dept]. [dept_loc_idx]
+= 노들   Cost: 05     Cost: 0%               Cost: 0 5       Cost: 13 &
+|                   3                         그
+|                                     RID Lookup
+Index Seek                   [dept] [d]
+바리    10] . [enp_deptno_idx]         Cost: 13             |
+Cost: 13 %                                                |
+~ 0 Lookup                                                                   |
+[emp] [e]
+Cost: 15 %
+
+[그림 14-2] SQL Servere| 그래픽 모드 실행계획
+
+[그림 M4318 보면 지금까지 설명한 NL 조인의 수행 절차를 좀 더 명확히 이해할 수 있다.
+
+eng
+
+depl_joz_idx  ㅣ         dent   |       cnp_ceolro_dx
+
+lec = "SCOLL"       gr="2           edepinc  dceptio sal >= 1500
+
+[그림 m4-3] NL 조인 수행 과정
+
+594 | 96 전가 가이드
+

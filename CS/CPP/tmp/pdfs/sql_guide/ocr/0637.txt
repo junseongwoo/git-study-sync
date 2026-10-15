@@ -1,0 +1,28 @@
+과목 III 고급 활용 및 튜닝
+4. static SQL l)ymamic SQL
+가.
+static 따L이란 Süing형 변수에 담지 않고 코드 사이에 직접 기술한 SQL 문을 말한다. 다른 말로 'Embedded
+바L'이라고도 한다. 아래는 Pro*C 구문으로 Static SQL을 작성한 예시다.
+int æin()
+printf("사번을 입력하십시오 : •);
+EXEC *EWER FWO ㉹TO notfound :
+EXEC ~ INTO :
+FO EP
+printfC사원명 : *s.\n•, enzæ);
+printf(•u는 존재하지 않는 사번입니다. \nø, envno);
+SQL 문을 StHng 변수에 담지 않고 마치 예약된 키워드처럼 C/C++ 코드 사이에 섞어서 기술한 것을 볼 수
+있다.
+Pro*C, SQLJ와 같은 PreCompile 언어를 잘 모르는 독자를 위해 간단히 설명하면, Pro*C에서 소스 고 로 그 램
+(.麟)을 작성해서 Prümpiler로 PreCompile하면 순수 G/C++ 코드가 만들어진다. 이를 다시 C/C++ Compiler로
+컴파일해 실행파일이 만들어지면 그것을 실행한다.
+PreComp11er가 PreCompile 과정에서 Static(=Embedded) SQL을 발견하면 이를 SQL 런타임 라이브러리에
+포함된 함수를 호출하는 코드로 변환한다 이 과정에서 결국은 Stnng형 변수에 담긴다. Static SQL이든 l)ynamlc
+바L이든 PreCompile 단계를 거치고 나면 String 변수에 담기기는 마찬가지지만 Static SQL은 런타임 시에 절대
+변하지 않으므로 PreCompile 단계에서 구문 분석, 유효 오브젝트 여부, 요-브젝트 액세스 권한 등-을 체크하는
+것이 가능하다
+나. 아•『넓rric *
+SQL이란 String% 변수에 담아서 기술하는 SQL 문을 말한다. String 변수를 사용하므로 조건에
+따라 SQL 문을 동적으로 바글 수 있고, 또는 런타임 시에 사용자로부터 SQL 문의 일부 또는 전부를 입력 받아서
+실행할 수도 있다. 따라서 PrÖmpile 시 Syntax, Semantics 체크가 불가능하므로 Dynamic SQL에 대해선
+PreCompiler는 내용을 획왼하지 않고 그대로 DBMS에 전달한다
+646 전문가 ,까드

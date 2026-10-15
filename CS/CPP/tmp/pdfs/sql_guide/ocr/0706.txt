@@ -1,0 +1,56 @@
+과목 III 고급 활용 및 튜닝
+3
+37
+42
+44
+46
+50
+52
+53
+55
+57
+62
+63
+64
+65
+67
+69
+72
+73
+75
+76
+77
+78
+Strirv 고객번호 = rs.*tStrirv(1);
+납입월 = rs.*tStrirp(2);
+1呻 지로 = 3.爨tL呵(3):
+1呵 자동이세 = 3.爨tL呵(4);
+1마 신용카드 = 죠.爨tL呵(5);
+1따 현드폰 = 13.爨tL삐6);
+1呵 인터넷 = 죠.%tL呵(7);
+if(지로 〉 아
+insertData ((예, stmt2, 고객번호, 납입월,
+if(자동이제 〉 0)
+stmt2, 고객번호, 납입월,
+insertData ((예,
+if(신용카드 〉 0)
+insertData ((혜, stmt2, 고객번호, 납입월,
+if(현드폰 〉 0)
+inser&ta ((이1, stmt2,
+고객번호, 납입월,
+if(인터넷 〉 0)
+irærtData ((예, stmt2, 고객번호, 납입월,
+if(퓨”,5&1鸞 = 0) sut2.executeBatch();
+st•t2.executeBatch();
+cm.c•it( );
+지로);
+, 자동이제);
+(“, 신용카드);
+핸드폰);
+인터넷);
+static Ccrrectim throws Exception ( }
+static void re1ease&rectim(Coræctim (예) 亟(印ti에
+蝕li( static void args) throws Exceptim{
+Crrectim (예 = ;
+ex«ute(cm, •″로);
+716 전문가 가이드

@@ -1,0 +1,41 @@
+제1장 기본
+[예제] 사원 정보에서 급여가 이상이면 상등급으로, 1亞 이상이면 중등급으로, 1咖 미만이면 하등급으로 분류하라
+[예제]
+SELECT ENAE
+CASE
+HEN SAL TÆN 'HIG4'
+HEN SAL 1圄 가대 'MID'
+ELSE 'LOW'
+EtO AS
+FO EP,
+[실행 결과]
+ENAE
+SMITH
+ALLEN
+UARTIN
+BLAKE
+CLRK
+SCOTT
+KIt•6
+JAkS
+UILLER
+SALARY GR.ADE
+MID
+믈ID
+MID
+MID
+MID
+MID
+HIGH
+HIQ{
+MID
+MID
+HIGH
+MID
+14 개의 행이 선택했습니다.
+CASE 표현은 함수의 성질을 갖고 있으므로 다른 함수처럼 중첩해 사용할 수 있다
+[예제] 사원 정보에서 급여가 2咖 이상이면 보너스를 1咖으로, 1咖 이상이면 苅으로, 1勵 미만이면 0으로 계산한다
+[예지니
+SELECT Etk SAL
+HEN SAL 2圄 가대 1圄
+전문가 가이드 171

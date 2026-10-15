@@ -1,0 +1,32 @@
+廠장 활용
+다음은 문자 리스트를 사용한 쿼리다. 라, c2, c3 열의 패턴은 ac, 문자열과 일치한다. c4, 6, 열의
+패턴은 ac, bc가 아닌 문자열과 일치한다.
+[예제!
+SELECT REGEXP_SI.BSTR (•貳 , '[囿](' ) AS (1 - ac, bc
+, REGEXP SIBSTR ('文•, •[豳1(| ) AS (2
+RECXP-SI-BSTR (|((|, ) AS (3
+REGEXP SIBSTR (님(|, • [^豳](|) AS (4 - *가 아닌 문자열
+, REGEXP-SIBSTR (•曩•, '[%lc') AS (5
+REGEXP_SIBSTR ( • (( •
+FROM mAL;
+[실행 결미
+REGEXP-SIBSTR C9z', '[0-9Ⅱ”기• ) ASQ
+(1
+(2
+(3
+(5
+1개의 행이 선택됐습니다.
+다음은 문자 리스트의 범위 연산자를 사용한 쿼리다. c4 열은 첫 번째 문자는 숫자가 아닌 문자, 두 번째 문자는
+소문자가 아닌 문자와 일치해야 하므로 널을 반환한다.
+[예제]
+SELECT ( • la'
+10-91[”기• )ASCI
+, REGEP-SI.BSTR CaA', '[十91[Aa-zl') AS (3
+氈佂XP SIBSTR CAa
+FO u.AL;
+[실행 결과!
+9z
+1개의 행이 선택왰습니다.
+|[n-9][+누zl') AS (4
+(4
+전문가 ,하드 381

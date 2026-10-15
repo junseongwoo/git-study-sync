@@ -1,0 +1,46 @@
+제1장 기본
+[예제] 이번에는 [그림 ||•1•161에 나와 있는 ß(TEAM) 테이를과 경기장(STADIUM) 테이불의 관계를 이용해 소속팀이 갖고
+있는 전용구장의 정보를 팀 정보와 함께 출력하는 SQL 문을 작성한다.
+[예제]
+SELECT TEAM.REGW/ NAk, TEN.TEN_N.% TEAN.STADIUU 10
+STADIIN. STADIIN_NAE STADIt.N .SEAT_CuT
+FROM TEAM, STADIIN
+M*ERE STADIW.STADIIN_ID = 표飄.ST觚I膿-I야
+위 SQL 문과 A니AS를 사용한 아래 SQL 문은 같은 결과를 얻을 수 있다.
+[예제}
+SELECT A.REGIm_NAE A.TE.U_NA&, A.STADIIN_ID
+, B.STADIIN NAk, B.SEAT_QNT
+FO TEAM 시 STADIIN 8
+HERE B.STADILN_ID = A.STA이IN_ID;
+FROM 절에 기술된 테이블 간에 중복되지 않는 칼럼의 경우 아래와 같이 ALIAS를 사용하지 않아도 오류가
+발생하지는 않는다. 하지만 가독성 및 일관성 측면에서 SELECT 절에 기술된 모든 칼럼에 대해 A니쑈를 사용하는
+것이 바람직하다.
+[예제1
+SELECT REGION NAÆ TEAU_NA&, A.STADIIN_ID
+STADIIN Nk, SEAT-QNT
+FO TEAM 시 STÅDIIN B
+= A.STADIIN-ID;
+[실행 결과]
+광주
+강원
+제주
+대구
+인천
+TE.AN_NAE
+광주상무
+강원F(
+제주유나이티드FC
+대구F(
+유나이티드
+STmlN_ID
+閔1
+7
+광주월드럽경기장
+강통종합경기장
+제주월드겸경기장
+대구월드럽경기장
+인천월드겁경기장
+SEAT_QNT
+嚮245
+422%
+전문가 ,PI드 237

@@ -1,0 +1,28 @@
+세6장 고급 50. 튜닝
+
+| Id | Operation                   | Name        | Rows    | Bytes | Cost ($CPU)!
+ㅣ 0 | SELECT STATEMENT         ㅣ        I 5 | 51 wae (I
+| 1 | SORT GROUP BY NOSORT     |       sl 72 | 30020
+ㅣ 2 | TABLE ACCESS BY INDEX ROWID   | CUSTOMER   | 100 | 27 ㅣ 30142 (1)]
+| 31 INDEX FULL SCN       | CUSTOMER XO1 | 1000K |   ㅣ 2337 _(2)|
+
+[그림 M6312 보면, 위 실행계획이 어떻게 수행되는지 쉽게 이해할 수 있다.
+
+인덱스              CUSTOMER 테이블
+
+[23 [0-6-3] SORT GROUP BY NOSORT
+
+다. 인덱스를 활용한 Min, Max 구하기
+
+인덱스가 항상 정렬 상태를 유지한다는 특징을 이용하면 대상 레코드 전체를 읽지 않고도 Min, Max 값을 빠르게
+추출할 수 있다. 예를 들어 주문 테이블에서 일자별 주문번호를 관리한다고 하자. 그러면 PK 인덱스를 [주문일자
++ 주문번호] 순으로 구성하는 것만으로 마지막 주문번호를 아주 빠르게 찾을 수 있다. 아래 실행계획에서 FIRST
+ROWS} MIN/MAX 오퍼레이션이 나타난 것을 확인하기 바란다. 지금부터 이 기능을 ‘First Row 5600660 알고리즘
+이라고 부르기로 하자.
+
+select nvl(max(FRYE), 0) +1
+frm 주문
+where FEY = FRY
+
+SQL 전문가 가이드 [691
+

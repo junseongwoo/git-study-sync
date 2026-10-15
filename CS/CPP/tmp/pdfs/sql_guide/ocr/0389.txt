@@ -1,0 +1,7 @@
+SQ鳧
+ProfessionaI DeveRöer
+학습목표
+•DML 문의 이해
+•TCL 문의 이해
+• DDL 문의 이해
+IEL 문의 이해

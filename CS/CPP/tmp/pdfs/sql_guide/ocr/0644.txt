@@ -1,0 +1,40 @@
+唵장 옵EJ0十이저
+아래는 Sort Umque 오퍼레이션 방식으로 수행할 때의 실행계획이다.
+alter t±le &pt primary key;
+create ir&x dept-deptno-idx 예 dept(±ptno);
+select * frm
+•tpre ㈍t『尠 in (select deptno fr,ül ±pt);
+1 ld
+1*
+0 | SELECT STATEkNT
+TABLE ACCESS BY ItOEX OID
+1
+2
+tCSTED LOS
+3
+(國1던茗
+4
+1粧X FIIL SCAN
+5
+1荻X SCAN
+| FT-DEPTNO-IDX
+EP 袋P가℃-IDX
+41
+51
+12 |
+Predicate InforNtion (i±ntified 바 id):
+5 - access("FTW="FTt0")
+실제로 dept 테이블은 Umque한 집합이지만 옵티마이저는 이를 확신할 수 없어 sort umque 오퍼레이션을
+수행했다. 다음과 같은 형대로 쿼리 변환이 일어난 것이다.
+select 비*
+(select /夤+ */ distinct ±ptm ±pt 바 &ptm) 하 ~ b
+b.&ptro = a.deptm
+아래는 세미 조인 방식으로 수행할 때의 실행계획이다.
+select * frtn
+•tere &ptno in (*l«t frm &pt)
+ld @pratim
+Bytes
+| Cost (″
+1
+4
+전문가 가이드 653

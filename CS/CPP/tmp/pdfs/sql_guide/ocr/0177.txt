@@ -1,0 +1,28 @@
+과목 11 * 기본과 활용
+라. MJLL 관련 함쉬c얘LE虹)
+COALBCE 함수는 인수의 숫자가 한정돼 있지 않으며, 임의의 개수 獸PR에서 NULL이 아닌 최초의 EXPR을
+나타낸다. 만일 모든 E,\TR이 NULL이라면 NULL을 리던한다.
+(匱E虹 (″, E爐2 •••)
+{예제] 사원 테이불에서 커미션을 1차 선택 값으로, 급여를 2차 선택 값으로 선택하되, 두 칼럼 모두 NULL인 경우는 NIJLL로
+FRN EP,
+[실행 결과]
+표시한다.
+[예제]
+SELECT 飜襞
+, SAL. COALESCE (OM, SAL) AS COAL
+COALBCE 함수는 두 개의 중첩된 CASE 문장으로 표현할 수 있다.
+[예제]
+SELECT (끄, SAL
+MfN
+IS tOT MJLL THEN
+ELSE (CASE
+WÆN SAL IS 『℃T WLL THEN SAL
+ELSE WLL
+EtO AS COAL
+COAL
+SUITH
+그匱S
+URTIN
+18% 전문가 가이드
+刃75
+2975

@@ -1,0 +1,25 @@
+과못 III 고급 활용 및 튜닝
+제 1 절 예상 실행계획
+실행계획이란 사용자가 요청한 SQL을 최적으로 수행하고자 DBMS 내부적으로 수립한 일련의 처리 절차다.
+따라서 실행계획을 정확히 해석할 수 있어야 그 안에서 문제점을 찾아내 성능을 개선할 수 있다.
+데이터베이스용 에플리케이션 개발자라면 자신이 작성한 SQL을 실행하기 전에 반드시 예상 실행계획을 확인하는
+습관이 필요한데, 어떤 방법들이 있는지 지금부터 살펴보자.
+1. Oracle
+가. Explain man
+바L을 수행하기 전에 실행계획을 확인하고자 할 때, explain plan 명령어를 사용한다. 이 명령어를 사용하려면
+먼저 plan-table을 생성해야 하며, 아래 스크립트를 실행하면 된다. 참고로 '기는 $ORACLE-HOME 디렉터리를
+대제하는 기호다.
+SQ-> *. 5디1
+Oracle 10g부터는 설치 시 기본적으로 s».plan-table$ 테이블이 만들어진다. 그리고 이를 가리기는 public
+symonym을 기본적으로 생성해 두기 때문에 사용자가 별도로 plan-table을 만드는 수고를 하지 않아도 된다.
+이제부터 explain plan for 명령을 수행하고 나면 해당 SQL에 대한 실행계획이 plan-table에 저장된다. 아래
+예시에서 '년 statement-id='은 생략 기능하다.
+嘷〉 explain pl囿 set statænt-id * • for
+2 *lect * fræ = 7雌
+해석묐습니다.
+예전에는 plan-table에 저장된 정보를 보기 좋게 출력하려고 미리 작성해 둔 SQL을 사용했지만, Oracle
+이부터는 아래처럼 Oracle이 제공해 주는 utlxpls.sql 또는 utlxplp.sql 스크립트를 이용하면 편리하다.
+S예〉 O?/r&ns/bin/ut1xpls
+PLA-TAQE-WTBJT
+Pl.m va1J-e: 402%聳꿔
+514 Y?L 전문가 ,까드

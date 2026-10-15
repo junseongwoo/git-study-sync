@@ -1,0 +1,21 @@
+과목 III 고급 활용 및 튜닝
+참고로 2圄 이전 버전의 실행계획에는 다음과 같이 표시된다.
+S&tText
+1-lr毳x ~圁E(T:([…1.[삐.[네.[pk-e畔11), SE獸:([에삐01
+라 |釅 SklP
+= 77圈) ORDERED
+인덱스 선두 칼럼이 조건절로 사용되지 않으면 옵티마이저는 기본적으로 Table Full Scan을 선택한다. 또는
+Table 남1보다 &,0를 줄일 수 있거나 정렬된 결과를 쉽게 얻을 수 있다면 lndex Full 방식을 사용한다고
+했다
+Oracle은 인덱스 선두 칼럼이 좌절에 빠졌어도 인덱스를 활용하는 새로운 스갠방식을 어 버전에서 선보였는데,
+바로 lndex Skp Scan이 그것이다([그림 Ⅲ-年기 참조).
+Ski can
+[그림 Ⅲ-3-7] lndex Skip Scan
+예를 들어 성별과 연봉 두 칼럼으로 구성된 결합 인덱스에서 선두 칼럼인 성별 조건이 빠진 SQL 문이 lndex
+Skp Scan 방식으로 수행될 때의 실행계획은 다음과 같다.
+S일〉 select * 사원 연봉 betveen 4圄:
+Eæcutim
+0 SELECT STATEENT
+1 0 TÆLE KCESS (BY 1荻X OID) •사원• (TABLE)
+IWEX (SKIP SCÆ) 儛 '사원 IDX' (1荻X)
+548 넣多 전문가 /끼드

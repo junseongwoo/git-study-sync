@@ -1,0 +1,73 @@
+璃장 조인 류님
+[예제l SQL Server
+select d.&ptm, d ~ e•no, e.enæ
+fran ±pt e
+wtpre d.&ptm = e.deptm
+option (force order. 50ⅱ)
+StmtText
+|-飇r堡 Join(Inrer Join. WY-TO-LANY 雙禮([dl.(鹵pt司)=([el. [deptnol))
+l—Sort((RDER By:([dl.[deptnol ASC))
+| 1-T曲le Scan(BJEa:([SQÄ.[ül.[deptl AS [리))
+BY:([el.[㈍恤0] ASC))
+:—Table AS [이))
+소트 머지 조인의 수행 과정을 그립으로 도식화하면 [그림 Ⅲ44]와 같다
+Sort Area에 정일된 emp 데이를
+10
+20
+30
+40
+Sort Area0i 정글된
+dept 테이를
+ACCOUNTING
+RESEARCH
+SALES
+OPERATIONS
+10
+10
+10
+20
+20
+20
+20
+30
+30
+30
+30
+30
+30
+7782
+7839
+7934
+7566
+7%2
+7876
+7369
+7788
+7521
+7844
+74%
+7蜘
+7698
+7654
+CLARK
+KING
+MILLER
+JONES
+FORD
+ADAMS
+SMITH
+SCOTT
+WARD
+TURNER
+ALLEN
+JAMES
+BLAKE
+MARTIN
+[그림 Ⅲ44] 소트 머지 조인 수행 과정
+[그림 III수4]에서 주목할 점은, lnner 집합인 emp 테이블이 정렬돼 있기 때문에 조인에 실패하는 레코드를
+만나는 순간 멈출 수 있다는 사실이다. 예를 들어 deptno=10인 레코드를 찾기 위해 ㉦번 신전을 진행하다가 꼬을
+만나는 순간 멈춘다.
+또 한 가지는 정릴된 emp에서 스캔 시작점을 찾으려고 매번 탐색하지 않아도 된다는 점이다. 예를 들어
+deptno=2(R! 레코드를 찾는 (희번 스캔은 (0번에서 스킨하다가 멈춘 지점을 기억했다가 거기서부터 시작하면 된다.
+Outer 집합인 dept 테이블도 같은 순서로 정렬돼 있으므로 가능한 일이다.
+전문가 ,까드 599

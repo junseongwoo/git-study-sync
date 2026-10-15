@@ -1,0 +1,39 @@
+제1장 SQL 기본
+
+ISNULL_TEST
+
+Not-Null
+
+(1개 행 적용됨)
+
+[예제] 선수 테이블에서 성남 일화천마《08) 소속 선수의 이름과 포지션을 출력하는데, 포지션이 없는 경우는 “없음`으로 표시한다.
+
+[예제] Oracle
+
+SELECT PLAYER NAME AS 선수명, POSITION AS 포지션, NVL (POSITION, '없음') AS [포지션
+FROM PLAYER
+WHERE TEAM_ID = '(08';
+
+[예제] SQL Server
+
+SELECT PLAYER NAME AS 선수명, POSITION AS 포지션, ISNULL (POSITION, '없음') AS NLEZ|M
+FROM PLAYER
+WHERE TEAM_ID = 'Keg';
+
+[예제] NVL 함수와 ISNULL 함수를 사용한 SQL 문장은 벤더 공통적으로 CASE 문장으로 표현할 수 있다.
+
+[예제]
+SELECT PLAYER NAME 선수명, POSITION AS 포지션
+, CASE
+WHEN POSITION IS NULL THEN '없음'
+ELSE POSITION
+END AS [포지션
+FROM PLAYER
+
+WHERE TEAM_ID = '108';
+
+선수명                   포지션          [포지션
+차경복                   OF                OF
+정학범                                      없음
+
+전문가 가이드 |175

@@ -1,0 +1,48 @@
+과목 M QL 고급 활용 및 튜닝
+EE SA Ss
+
+하지만 DBMSeH 버전에 따라 Full Outer Joing 다음과 같이 비효율적으로 처리하기도 한다. 한 테이블을
+두 번씩 액세스하는 것을 확인하기 바란다.
+
+Execution Plan
+8     SELECT STATEMENT Optimizer=CHOOSE (Cost=14 Card=8 Bytes=352)
+1     6 VIEW (Cost=14 (30058 Bytes=352)
+~ 16066     UNION-ALL
+x HE      HASH JOIN (OUTER) (Cost=8 Card=7 Bytes=308)
+4553         VIEW (Cost=4 (ard=7 Bytes=154)
+a!           SORT (GROUP BY) (Cost=4 Card=7 Bytes=98)
+Fe           TABLE ACCESS (FULL) OF '부서별판매계획' (Cost=2 Card=7 Bytes=98)
+Vins          VIEW (Cost=4 Card=6 Bytes=132)
+8. 수고          SORT (GROUP BY) (Cost=4 Card=6 Bytes=84)
+938           TABLE ACCESS (FULL) OF '채널별판매실적' (Cost=2 Card=6 Bytes=84)
+® ~고     SORT (GROUP BY) (Cost=4 Card=1 Bytes=14)
+11 1        FILTER
+4241543         TABLE ACCESS (FULL) OF '채널별판매실적' (Cost=2 Card=1 Bytes=14)
+13:11          SORT (GROUP BY NOSORT) (Cost=2 Card=1 Bytes=14)
+1“ 13           FILTER
+15 1           TABLE ACCESS (FULL) OF '부서별판매계획' (Cost=2 Card=1 Bytes=14)
+
+좀 더 효과적인 방법을 찾기 위해 우선 두 테이블을 이어서 출력해 보자.
+
+select '계획' as 구분, 상품, 계획연월 as 연월, 판매부서, null as 판매채널
+, 계획수량, to_number(null) as 실적수량
+
+from 부서별판매계획
+
+where 계획연월 between '200901' and '200903'
+
+union all
+
+select '실적', 상품, 판매연월 35 연월, null as 판매부서, 판매채널
+, to_number(null) as 계획수량, 판매수량
+
+from 채널별판매실적
+
+where 판매연월 66내060 '200901' and '200903'
+
+구분             상품             연월             판매부서 ㆍ 판매채널         계획수량 _ 실적수량
+계획            상품4           200901         10                                    10000
+계획            상품4           200902         20                                     5000
+계획            HEA           260963         10                                   20000
+계획            상품8           200901         10                                   20000
+계획            상품8           200902         30                                    15000

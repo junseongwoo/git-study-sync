@@ -1,0 +1,77 @@
+과목 III * 고급 활용 및 튜닝
+병렬 쿼리는 '분할 & 정*(Divide & Conquer) 원래에 기초한다. 그 중에서도 병렬 조인을 위해서는 '분배
+& 조인(Distnbute & Join) 원리가 작동함을 이해하는 것이 매우 중요하다. 이때 pq-distfibute 힌트는 조인에
+앞서 데이터를 분배(distnbute) 과정에만 관여하는 힌트임을 반드시 기억할 필요가 있다.
+예를 들어 이래 실행계획을 보면 테이블은 양쪽 모두 Hash 방식으로 분배했지만 조인은 소트 머지 조인 방식으로
+수행했다. 즉 데이터를 재분배하기 위해 해시 함수를 사용하는 것일 뿐 조인 방식(method)과는 무관하다.
+sel«t /*+ or&red parallel(d 4) parallel(e 4)
+QdistribJte(e hash hash) */ *
+fræ
+31
+QI,02
+41
+QI,02
+QI,E
+Q1,æ
+Q1,æ
+QI,02
+QI,02
+QI,01
+QI,01
+•tere e ±ptro = d.deptm
+0 1 ±LECT STATEENT
+PX
+PX SE尠 (-)
+~ NIN
+그이N
+PX RECEIVE
+PX RASH
+PX BLXK
+TE.E KCESS FIIL
+JOIN
+Nare
+:TQIÆ2}
+:TQIÆI
+DEPT |
+:TQIEI 1
+EMP 1
+TQ
+1
+1
+1
+1
+1
+2
+5
+이,
+02
+1
+1 10
+PX æCEIVE
+PX MSH
+PX BLXK
+TA8LE ACCESS FULL
+}IN-WT
+P->S
+PCP
+PCF
+PCWC
+PCWP
+PCWP
+PCWP
+1 P->P
+PCWP
+Distrib
+QC (RAND)
+HASH
+HASH
+2) m-distribute 사용법
+힌트의 사용법은 다음과 같다.
+/*+ PQ_DISTRIBUTE( ta le, outer distribution, inner-distnbution ) */
+inner 테이불명
+또는 alias
+748 ,까드
+outer 테이블의
+distributioin 방식
+inner 테이블의
+distributioin 방식

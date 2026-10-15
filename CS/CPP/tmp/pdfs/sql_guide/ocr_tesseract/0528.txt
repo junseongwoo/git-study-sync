@@ -1,0 +1,53 @@
+제2장 SQL 분석 도구
+
+연습문제
+
+문제 1.
+
+문제 2.
+
+문제 3.
+
+문제 4.
+
+오라클 SQL 분석 도구 중 실제 |/0 발생량을 확인할 수 없는 것은?
+2) Explain Plan
+@ AutoTrace
+
+® SQL Trace
+@® DBMS_XPLAN.DISPLAY_CURSOR 함수
+
+MS SQL Server0ilA] SQL 트레이스를 수집하려고 한다. 아래 괄호 안에 들어갈 키워드는?
+set (         ) profile on
+set (        ) io on
+set (         ) time on
+90
+
+select * from emp where ename like :ename || '§'
+90
+
+2) sql_trace
+
+@ show_plan
+
+9) show_plan_all
+@ statistics
+
+보기 중 08 버퍼 캐시 경합과 관련이 없는 것은?
+2) latch: shared pool
+
+@ latch: cache buffers chains
+
+@ buffer busy waits
+
+@ free buffer waits
+
+아래 괄호 안에 들어갈 적당한 용어를 적으시오.
+
+‘Response Time Analysis 성능관리 방법론'은 세션 또는 시스템 전체에 발생하는 병목 현상과 그 원인을 찾아
+문제를 해결하는 방법과 과정을 다루며, 데이터베이스 서버의 응답 시간(80500056 1076!을 다음과 같이 정의
+하고 있다.
+
+Response Time = Service Time + (                 ) Time
+
+SQL 전문가 7le [537

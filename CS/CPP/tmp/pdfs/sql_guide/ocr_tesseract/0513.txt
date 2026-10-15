@@ -1,0 +1,46 @@
+과목 1 SQL 고급 활용 및 튜닝
+
+나. SQL 트레이스 maw
+
+트레이스 파일을 직접 열어 본 독자는 이미 알고 있겠지만 이 파일을 그대로 분석하기는 쉽지 않다. 물론 숙련된
+전문가라면 아래 내용을 직접 해석하고 필요한 정보들을 얻어낼 수 있다. 하지만 일반적인 상황에서는 좀 더 보기
+쉬운 형태로 TAGs 작업이 필요하다.
+
+[ 을 옹-용-용-울-웅-울-옹-울-웅-웅-융-훌-웅-웅-웅-훌-융-웅-율-객
+
+PARSING IN CURSOR #3 len=42 060=0 uid=61 oct=3 lid=61 tim=108148061384 hv=3037064640 ad='27dd4dec’
+select * from emp where empno = 7900
+
+END OF 50
+
+PARSE #3:c=0,e=1739,p=0, cr=0, cu=0,mis=1,r=0,dep=0,0g=1, tim=108148061375
+
+EXEC #3:¢=0,e=64,p=0,cr=0,cu=0,mis=0,r=0,dep=0,00=1, tim=108148073957
+
+FETCH #3:c=9,e=85,p=0,(r=2,cu=0,mis=0, r=1,dep=0, 0g=1, t im=108148076537
+
+FETCH #3:c=9,e=3,p=9,cr=0,cu=0,mis=0,r=0,dep=0,00=0, tim=108148079624
+
+TKProf 유틸리티를 사용하면 트레이스 파일을 보기 쉽게 Xopgs) 준다. 아래처럼 유닉스 A(Shell)olut 도스
+프롬프트 상에서 thprof 치면 사용법을 확인할 수 있다.
+
+$ tkprof
+Usage: tkprof tracefile outputfile [explain= | [table= ]
+[print=] [insert=] [sys= ] [sort= ]
+
+아래는 TKProf 유틸리티의 가장 일반적인 사용법이다. sys=no 옵션은 SQLE 파싱하는 과정에서 내부적으로
+수행되는 SQL 문장을 제외해준다.
+
+$ tkprof oral8g_ora_14376_oraking.trc report.prf 5/5ㅋ0
+
+이제 TKProfE 통해 생성된 report.prf 파일을 vi 에디터나 윈도우 노트패드로 열면, 다음과 같이 자세한 SQL
+수행정보를 확인할 수 있다.
+
+$ vi report. prf
+
+Sedcirdeioiedcdoioirioio doiooiodokorinkoiok doko dorioioiooioioiokodoioiniokiokoiokiok doko deirieiokok dobookokeokeok
+
+select *
+from emp where empno = 7900
+
+522 [90 전가 pole

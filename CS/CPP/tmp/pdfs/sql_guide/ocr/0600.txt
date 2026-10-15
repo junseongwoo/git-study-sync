@@ -1,0 +1,33 @@
+璃장 조인 류님
+3. 스칼라 서브 쿼리 Unnesting
+오라클 12c부터 스칼라 서브 귀리도 Unnesung이 가능해졌다. 옵디미이저가 사용자 대신 자동으로 쿼리를 변환
+해 주는 것이다. 다음은 스칼라 서브 귀리를 tJnnesüng 할 때의 실행계획이다. 스칼라 서브 귀리인데도 NL 조인이
+아닌 해시 조인으로 실행될 수 있는 이유는 Unnestingq기 때문이다
+select (.고객번호, (.고객명
+,(select /*+ ("발효 */ rUd(a四(거래금액), 2) 평균거래금액
+fran 거래
+åere 거래일시 tnnc(sysdate, 뉴•)
+고객번호 = (.고객번호)
+frm 고객 (
+•t•ere (.가입일시 tnnc(add-rmths(sysdate, -1), 뉴•)
+Executim PI혜
+0
+1
+2
+SELECT STATEENT (Cost=7 Car&4 Bytes=184)
+0 }•nSH J이N (OJTER) (Cost=7 CarcÉ4 Bytes=184)
+1 TABLE ACCESS (FULL) '고객• (TABLE) ((05t=3 Card=4 Bytes=O)
+VIEW 'SYS.W-SSQ-I' (VIEW) (Cost=4 Card=3 Bytes=78)
+HASH (″ BY) (Cost=4 Car&3 Bytes=21)
+TA8LE ACCESS (FILL) '거래• (TABLE) (Cost=3 (a祚14 Bytes=*)
+아래는 unnest와 merge 힌트를 같이 사용했을 때의 실행계획이다
+Execution Plan
+0
+1
+2
+SELECT STATEUENT Cbtxmizer=ALL—OS (Cost=7 Car&15 Bytes=405)
+0 RASH (″ BY) (Cost=7 Car&15 Byt쑈킈05)
+1 ~ 3이N (WTER) ((05t% (ar鬱15 Byteß05)
+TABLE ACCESS (FULL) '고객• (TABLE) (Cost=3 Cart4 Bytes*)
+TABLE ACCESS (FULL) 嘗 '거래• (TABLE) (Cost=3 Car&14 Bytes=%)
+전문가 ,삐드 609

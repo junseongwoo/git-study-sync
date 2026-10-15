@@ -1,0 +1,22 @@
+과목 Ⅱ 기본과 활용
+다음 실행 결과에서 강조한 부분이 CASE 표현식으로 선택한 값이다.
+결체]
+SELECT A.L B.LV, A.DIO_SAL, A.D2@—SAL, A.DI@_CNT, A.D2@_CNT
+~ TI A
+. (SELECT LEVEL AS LV FO WAL COM{ECT BY LEVEL 수 2) B
+- BY A.D. B.LV;
+결행 결과]
+AULYST
+ANALYST
+CLERK
+CLERK
+4 행이 선택왰습니다.
+DIO_SAL
+1%0
+D20-SAL
+1嚼
+1″
+010-(NT
+D2@_CNT
+4
+전문가 ,PI드

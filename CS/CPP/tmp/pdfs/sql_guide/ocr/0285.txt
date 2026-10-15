@@ -1,0 +1,46 @@
+과목 II 기본과 활용
+[예제1
+SELECT A.TEN-ID AS 팅코드, B.TEAM-WE AS 팀 명
+ROJO (AVG (A.}fIGHT), 3) AS 평균커
+FO PLAYER 치 TEu 8
+~氈 B.TEAN_ID = A.TEU_ID
+~ BY A.TEÆ_ID. B.TEAU_NBE
+HAVI% AVG (A.뚀1애T) 〈 (SELECT AVG (X.HEIGHT)
+FO PLAYER X
+HERE X.TEAM IN (SELECT TEAM_ID
+FROM TEAM
+WHERE TEAM-NAÆ = •삼성불루윙쯔));
+결행 결과]
+팀코드
+K07
+KC
+K10
+K11
+K12
+K13
+K14
+K15
+팀명
+드래곤즈
+일화천마
+시티즌
+경남F(
+광주상무
+강원F(
+제주유나이티드F(
+대구F(
+평균키
+178.391
+178.854
+177.485
+176.333
+173.5%
+173.菂7
+169.5%
+75.333
+8 개의 행이 선택했습니다.
+테이블은 실제로 데이터를 갖고 있는 반면, k}(lvhew)는 실제 데이터를 갖고 있지 않다. 부는 단지 뷰 정의(View
+l)efimtion)만을 갖고 있다. 질의에서 부가 사용되면 뷰 정의를 참조해서 DBMS 내부적으로 질의를 재작성
+(Rewrite)해 질의를 수행한다.
+뷰는 [표 Ⅱ-24]와 같은 장점을 갖는다.
+292 전문가 ,까드

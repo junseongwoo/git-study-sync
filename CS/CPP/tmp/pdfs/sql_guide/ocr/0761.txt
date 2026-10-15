@@ -1,0 +1,35 @@
+i를장 고급 류닝
+연습문제
+문제 1.5개 근무지역에 각각 2만 명의 사원이 배속돼서 일하는 회사가 있다. 이래 구4己까 대한 류닝 올바른 것은?
+select 직급, 담당업무 fræ 사원 구밭re 근무지역 = 10
+l.nim
+select 직급, 담당업무 frun 사원 where 근무지역 = 20
+Executim PI혜
+0
+1
+2
+SELECT STATEENT (Cost4 Card=8 Byt堡=120)
+0 snT (배I여正) (Cost=8 Car&:8 Bytes=12€)
+1 lAWå-ALL
+TABLE ACCESS (FULL) OF •사원• (Cost=2 Car&4 Bytes=€)
+TABLE ACCESS (FULL) 嘗 •사원• (Cost=2 Card=4 Bytes=C)
+㉦ umon 대신 union a11을 사용한다.
+㉣ 쿼리를 다음과 같이 변경한다.
+select 직급, 담당업무 from 사원 where 근무지역 in (10, 20)
+㉦ 쿼리를 다음과 같이 변경한다.
+select 직급, 담당업무 from 사원 where 근무지역 in (10, 20) group 직급, 담당업무
+㉭ 근무지역을 선두로 갖는 인덱스를 생성한다
+문제 2. 부분범위처리에 대한 셜명으로 를린 것은?
+㉦ 부분범위처리는 Oracle만의 독특한 메커니즘이다.
+@ 부분범위처리는 대량의 결과 집합 중 일부만 Fetch하고 멈추는 업무 화면에서 유용하다.
+㉦ 결과 집합 전체를 Fetch해야 한다면 부분범위처리가 성능 개선에 전혀 도용의 되지 않는다
+㉦ ArraySize를 작게 설정하면 부분범위처리에 의한 응답속도가 할라진다.
+문제 3. 다음 曳L을 부분범위처리가 가능한 형대로 수정하시외 2010년 3월 4일에 판매웠지만 3월 3일에는 판매되지
+않은 아이템을 추출하려는 것이며, SALES 테이를 PK 인역스는 (ord-date + item-no] 순으로 구성했다.
+select it&—no
+sales
+ord—date = • 201%″
+飜劇s
+916
+ord_date = • 201%凴3|
+전문가 가이드 771

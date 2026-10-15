@@ -1,0 +1,44 @@
+세6장 고급 50 튜닝
+J a ad
+
+StmtText
+
+|—Sort(DISTINCT ORDER BY: ([SQLPRO]. [dbo]. [emp]. [deptno] ASC))
+|—Table Scan(0BJECT: ([SQLPRO]. [dbo]. [emp]))
+
+5) Sort Join : 소트 머지 조인을 수행할 때 나타난다.
+
+select /*+ ordered use_merge(e) */ *
+from emp e, dept d
+where d.deptno = e.deptno
+
+Execution Plan
+0     SELECT STATEMENT Optimizer=CHOOSE (Cost=11 Card=3K Bytes=177K)
+1 08 MERGE JOIN (Cost=11 Card=3K Bytes=177K)
+255]     SORT (JOIN) (Cost=4 Card=13 Bytes=442)
+352      TABLE ACCESS (FULL) OF 'EMP' (Cost=2 Card=13 Bytes=442)
+A=     SORT (J0IN) (Cost=7 Card=654 Bytes=19K)
+5 4      TABLE ACCESS (FULL) OF 'DEPT' (Cost=2 Card=654 Bytes=19K)
+
+SQL Server
+
+select *
+
+from emp e, dept d
+
+where d.deptno = e.deptno
+option (force order, merge join)
+
+StmtText
+
+|—Merge Join(Inner Join, MANY-TO-MANY MERGE: )
+
+|—Sort(ORDER BY: ([e]. [deptno] ASC))                                                               B®
+
+ㅣ |-=Table Scan(0BJECT:([SQLPRO]. [dbo]. [emp] AS [e]))
+|—Sort(ORDER BY: ([d]. [deptno] ASC))
+
+|Table Scan(0BJECT:([SQLPRO). [dbo]. [dept] AS [d]))
+
+SOL 전문가 가이드 [68T
+

@@ -1,0 +1,37 @@
+1                                1200                           1000
+1                                1300                           1000
+2                                1210                           1200
+2                                1220                           1200
+3                               1221                            1220
+3                               1222                           1220
+3                               1211                            1210
+3                               1212                           1210
+2                      1110                   1100
+2                      1120                   1100
+3                      1121                   1120
+3                      1122                   1120
+
+(14개 행 적용됨)
+
+실제 조직도와 같은 모습의 결과를 출력하도록, CTE! 501라는 정렬용 칼럼을 추가하고 쿼리 마지막에 ORDER
+BY 조건을 추가해보자(단 앵커 멤버와 재귀 멤버 FFA convert 함수 등으로 데이터 형식을 일치시켜야 한다).
+
+WITH T_EMP_ANCHOR AS (
+SELECT EMPLOYEEID, MANAGERID, © AS LEVEL, CONVERT(VARCHAR(1000), EMPLOYEEID) AS SORT
+FROM T_ENP
+WHERE MANAGERID IS NULL /* 재귀 호출의 시작점 */
+UNION ALL
+SELECT R.EMPLOYEEID, R.MANAGERID, A.LEVEL + 1
+, CONVERT(VARCHAR(1000), A.SORT + ',' + R.EMPLOYEEID) AS SORT
+FROM T_EMP_ANCHOR A, T_EWP R
+WHERE R.MANAGERID = A.EMPLOYEEID)
+SELECT LEVEL, REPLICATE(' ', LEVEL * 2) + EMPLOYEEID AS EMPLOYEEID, MANAGERID, SORT
+FROM T_EMP_ANCHOR
+ORDER BY SORT
+60
+
+CTE 안에서 50 칼럼에 사번(=80001076011))을 재귀적으로 더해 나가면 정렬 기준으로 삼을 수 있는 값이
+만들어진다. 다음은 501 칼럼으로 정렬해 출력한 결과인데, [그림 Ｌ-2-11]에 있는 조직도의 모습과 일치한다.
+가상의 Sort 칼럼을 추가해 정렬하는 Al 아쉽기는 하지만, SQL ServerolM 계층 구조를 실제 모습대로 출력하려면
+현재(2005, 2008 버전 기준)로서는 감수해야 할 수밖에 없다.
+

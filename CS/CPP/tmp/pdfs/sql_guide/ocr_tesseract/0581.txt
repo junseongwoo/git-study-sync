@@ -1,0 +1,38 @@
+과목 mM SQL 고급 활용 및 튜닝                     i
+
+제1절 NL 조인
+
+1. 기본 메커니즘
+
+프로그래밍을 해 본 독자라면 누구나 아래 중첩 FE (Nested 10070)의 수행 구조를 이해할 것이고, 그렇다면
+NL 조인도 어렵지 않게 이해할 수 있다.
+
+<C, JAVA >
+for(i=8; i100; i+){ — outer loop
+for(j=8; 3<100; j+){ — inner loop
+// Do Anything ...
+
+위 중첩 루프문과 같은 수행 구조를 사용하는 NL 조인이 실제 어떤 순서로 데이터를 액세스하는지 아래 PL/SQL
+문이 잘 설명해 준다.
+
+begin
+for outer in (select deptno, empno, rpad(ename, 10) ename from emp)
+loop — outer 루프
+
+for inner in (select dname from dept where deptno = outer.deptno)
+loop — inner 루프
+dbms_output.put_line(outer.empnol|' : '|louter.ename}}' : '|linner.dname);
+end loop;
+end loop;
+end;
+
+위 PL/SQL £2 아래 쿼리와 100% 같은 순서로 데이터를 액세스하고 데이터 출력 순서도 같다. 내부적으로
+(=86001510@하게) 쿼리를 반복 수행하지 않는다는 점만 다르다.
+
+select /*+ ordered use_nl(d) */ e.empno, e.ename, d.dname
+from emp e, dept d
+where d.deptno = e.deptno
+
+select /*+ leading(e) use_nl(d) */ e.empno, e.ename, d.dname
+
+590 | SOL 전문가 가이드

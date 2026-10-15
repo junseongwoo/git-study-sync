@@ -1,0 +1,38 @@
+제4장 조인 튜닝
+
+_======-==============00=>======>ㅅ>
+
+select 12.상품명, t1. M044, {1.판매금액
+
+from (select 상품코드, 500(판매수량) 판매수량, 50(판매금액) 판매금액
+fron 일별상품판매
+where 판매일자 between '20090101' and '20091231'
+group by 상품코드) 1, 상품 ©2
+
+where ㄴ1.상품코드 = 12.상품코드
+
+Call       Count     (PU Time Elapsed Time     Disk     Query Current      Rows
+Parse                1            0.000                 0.000              0              0              0              0
+Execute           1           0.000              0.000            0             0             0            0
+Fetch             101             1.422                 5.540 51339        54259              0         1000
+Total             103            1.422                 5.540 51339 54259              0         1000
+
+Rows Row Source Operation
+
+1000 NESTED LOOPS (cr=54259 pr=51339 pw=0 time=5540320 us)
+1000 VIEW (cr=52158 pr=51339 pw=0 time=5531294 us)
+1000 5001 GROUP BY (cr=52158 pr=51339 pw=0 time=5530293 us)
+365000 TABLE ACCESS FULL 일별상품판매 (cr=52158 pr=51339 pw=0 time=2920041 us)
+1000 TABLE ACCESS BY INDEX ROWID 상품 (cr=2101 pr=0 pw=0 time=8337 us)
+1000 INDEX UNIQUE SCAN 상품 ( (cr=1101 pr=0 pw=0 time=3747 us)
+
+상품코드별로 먼저 집계한 결과건수가 1000건이므로 상품 테이블과 조인도 1000번만 발생했다. 조인 과정에서
+발생한 블록 ]/0는 2101개에 불과하고 수행시간도 5.5초밖에 걸리지 않았다.
+
+2. 배타적 관계의 조인
+어떤 엔터티가 두 개 이상의 다른 엔터티의 합집합과 ¥Al(Relationship) & 갖는 것을 ‘AF Ele (Exclusive
+
+OR) 관계'라고 한다. [그림 띠4-6]에서 작업지시 테이블과 개통신청 및 장애접수 테이블과의 관계가 여기에
+해당하며, 관계선에 표시된 아크(를 확인하기 바란다.
+
+ 99 전문가 가이드 |611.

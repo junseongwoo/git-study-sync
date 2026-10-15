@@ -1,0 +1,52 @@
+과목  50Ｌ 기본과 활용
+
+, FAX             VARCHAR2(10)
+, HOMEPAGE        VARCHAR2(50)
+OWNER           VARCHAR2(10)
+
+, CONSTRAINT TEAM_PK PRIMARY KEY (TEAM_ID)
+iN
+
+테이블이 생성됐습니다.
+
+[예제] SQL Server
+
+CREATE TABLE TEAM (
+
+TEAM_ID         CHAR(3)         NOT NULL
+, REGION_NAME    VARCHAR(8)     NOT NULL
+, TEAM_NAME     VARCHAR(40)    NOT NULL
+, E_TEAM_NAME    VARCHAR (50)
+, ORIG_YYYY     CHAR(4)
+, STADIUM_ID     CHAR(3)        NOT NULL
+, ZIP_CODE1     CHAR(3)
+, ZIP_CODE2      CHAR(3)
+, ADDRESS       VARCHAR(80)
+, DDD          VARCHAR(3)
+, TEL         VARCHAR(10)
+, FAX         VARCHAR(10)
+, HOMEPAGE      VARCHAR(50)
+
+OWNER        VARCHAR(10)
+
+, CONSTRAINT TEAM_PK PRIMARY KEY (TEAM_ID)
+|
+
+명령이 완료됐습니다.
+
+[예제] 다음 조건의 형태로 M4(PLAYER) 테이블을 생성한다.
+
+테이블명 _ :민서태
+테이블 설명 : 케이리그 선수들의 정보를 갖고 있는 테이블
+
+칼럼명     : PLAYER ID  (M£ID)       문자 고정 자릿수 7자리,
+PLAYER NAME - (선수명)         문자 가변 자릿수 20자리,
+TEAM_ID      (210)          문자 고정 자릿수 3212],
+
+E_PLAYER NAME (영문선수명) _ 문자 가변 자릿수 40자리,
+NICKNAME      (선수별명)      문자 가변 자릿수 30자리,
+JOIN_YYYY     (입단년도)      문자 고정 자릿수 4자리,
+POSITION      (포지션)        문자 가변 자릿수 10자리,
+BACK_NO        (등번호)          숫자 2자리,
+
+428 SOL 건문가 가이드

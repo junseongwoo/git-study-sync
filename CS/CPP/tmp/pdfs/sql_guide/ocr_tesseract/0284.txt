@@ -1,0 +1,45 @@
+제2장 SQL 활용
+
+[예제] Oracle
+
+SELECT PLAYER NAME AS 선수명, POSITION AS 포지션
+, 840 \0 AS 백넘버, HEIGHT AS 7|
+FROM (SELECT ~ PLAYER_NAME, POSITION, BACK_NO, HEIGHT
+FROM PLAYER
+WHERE HEIGHT IS NOT NULL
+ORDER BY HEIGHT DESC)
+WHERE ROWNUM <= 5;
+
+[예제] SQL Server
+
+SELECT TOP (5) PLAYER NAME AS 선수명, POSITION AS 포지션
+, BACK_NO AS 백넘버, HEIGHT AS 7|
+FROM PLAYER
+WHERE HEIGHT IS NOT NULL
+ORDER BY HEIGHT DESC;
+
+백넘버        키
+21      196
+
+1       195
+
+20      194
+
+41      194
+
+31      192
+
+5 개의 행이 선택됐습니다.
+
+인라인 뷰 내에서 선수들의 키를 기준으로 내림차순 정렬한 후, 메인 쿼리에서 ROWNUME 사용해 5명의 선수
+정보만을 추출했다. 이것은 모든 선수들 중에서 키가 큰 순서로 5명의 선수를 출력한 것이다. 만약 다른 선수 중에서
+717} 192인 선수가 더 존재하더라도 해당 SQL 문에서는 데이터가 출력되지 않는다. 이런 데이터까지 추출하고자
+한다면 RANK 관련 분석함수를 사용해야 한다.
+
+다. HAVING 절에서 서브 쿼리 사용하기
+
+HAVING 절은 집계함수와 함께 사용될 때 그롭핑 된 결과에 대해 부가적인 조건을 주기 위해 사용한다. 평균키가
+삼성 블루윙즈 팀의 평균키보다 작은 팀에 대해 © 이름과 팀 소속 선수들의 평균키를 구하는 SQL 문을 작성하면
+다음과 같다.
+
+SQL 전문가 가이드 [291

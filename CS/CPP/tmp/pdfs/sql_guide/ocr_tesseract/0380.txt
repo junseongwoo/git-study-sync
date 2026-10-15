@@ -1,0 +1,34 @@
+제2장 SQL 활용      |
+
+다음은 REGEXP_LIKE 조건을 사용한 쿼리다. first_name 값이 Ste2 시작하고 vit ph 다음에 60으로 끝나는
+행을 검색한다.
+
+SELECT FIRST_NAME, LAST_NAME
+FROM HR. EMPLOYEES
+WHERE REGEXP_LIKE (FIRST_NAME, ‘“Ste(viph)en$');
+
+FIRST_NAME                 LAST_NAME
+
+Stephen                   Stiles
+Steven                     King
+Steven                    Markle
+
+3 행이 선택됐습니다.
+
+나. REGEXP_REPLACE 함수
+REGEXP_REPLACE 함수는 50006_아13『에서 일치한 pattern& replace_string® 2 변경한 문자 값을 반환
+한다.
+
+REGEXP_REPLACE (source_char, pattern [, replace string [, position [, occurrence [, match_param]]]])
+
+- replace_string& 변경 문자열을 지정한다,
+- position 검색 시작 위치를 지정한다(기본값은 1).
+- occurrence 패턴 일치 횟수를 지정한다(기본값은 1).
+
+다음은 86080 _80801.408 함수를 사용한 쿼리다. '숫자3자리.숫자3자리.숫자4자리' 패턴을 “(첫 번째 일치)
+두 번째 일치-세 번째 일치' 형식으로 변경한다. 일치한 패턴이 없으면 원본 값을 반환한다.
+
+SELECT PHONE_NUMBER
+, REGEXP_REPLACE (PHONE_NUMBER
+
+SL ¥ sole [387

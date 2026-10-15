@@ -1,0 +1,28 @@
+과목 II 기본과 활용
+[표 11-3-1이 CONNECT ROLE과 RESOURCE ROLE에 포함된 권한 목록(Oracle 사례)
+Q十4ECT
+CREATE SISION
+RESOURCE
+CREATE CLUSTER
+CREATE INDEXTYPE
+CREATE OPERATOR
+CREATE PROCEDURE
+CREATE SEQUENCE
+CREATE TABLE
+CREATE TRIGGER
+CREATE TYPE
+유저를 삭제하는 명령어는 DROP USER이고, CASCADE 옵션을 주면 해당 유저가 생성한 오브젝트를 먼저
+삭제한 후 유저를 삭제한다.
+[예제] 앞에서 MENU라는 테이불을 생성했기 때문에 CASCADE 옵션을 사용해 SQLD 유저를 삭제한 후, 유저 재생성 및
+기본적인 ROLE* 부여한다.
+결제] Oracle
+연결묐습니다.
+[예제] OracIe
+″ USER S,m.D
+사용자가 삭제쾼습니다.
+SQLD 유저를 삭제되면서 SQLD 유저가 만든 MENU 테이블도 같이 삭제됐다.
+[예제] OracIe
+CÆATE 5亟 nD BY ″9,•
+사용자가 생성했습니다.
+%4
+전문가 l}ol드

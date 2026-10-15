@@ -1,0 +1,39 @@
+과목 [I SQL 기본과 활용
+= > > > 2 = = = > = > ===0= = ㅡㅡ=ㅡ22222
+
+UNION ALL
+SELECT "All Departments’ AS DNAME, 208
+, COUNT (*) AS EMP_CNT, SUM (SAL) AS SAL_SUM
+FROM EMP A, DEPT B
+WHERE B.DEPTNO = A.DEPTNO
+GROUP BY JOB:
+
+Jos              EMP_CNT       SAL_SUM
+ACCOUNTING           All Jobs              3         8750
+RESEARCH              All Jobs               5         16875
+SALES                 All Jobs               6          9400
+All Departments       ANALYST                2          6000
+All Departments        CLERK                   4           4150
+All Departments       MANAGER                3          8275
+All Departments       PRESIDENT              1           5000
+All Departments        SALESMAN                4           5600
+
+8 행이 선택됐습니다.
+
+실행 결과는 별도의 ORDER BY 조건을 명시하지 않았기 때문에 72444148이나 ]08에 대해 정렬돼 있지 않다.
+
+를 GROUPING SETS 사용 SQL
+[예제] 일반 그룹 함수를 GROUPING SETS 함수로 변경해 부서별, JOBY 인원수와 급여 합을 구하라.
+
+예제| Oracle
+
+SELECT CASE GROUPING (B.DNAME) WHEN 1 THEN ‘All Departments’ ELSE B.DNAME END AS DNAME
+, CASE GROUPING (A.J0B ) WHEN 1 THEN 'All Jobs'       ELSE A.J0B END AS 008
+, COUNT (*) AS EMP_CNT, SUM (A.SAL) AS SAL_SUM
+FROM EMP A, DEPT B
+WHERE B.DEPTNO = A.DEPTNO
+GROUP BY GROUPING SETS (B.DNAME, A.JOB)
+ORDER BY B.DNAME, A.JOB;
+
+320 | 50. 건문가 pele
+

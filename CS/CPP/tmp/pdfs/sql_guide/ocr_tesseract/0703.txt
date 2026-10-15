@@ -1,0 +1,42 @@
+HE 고급 50. 튜닝
+
+<31만 발성하므로 제법 빠르게 수행된다. 하지만 위와 같이 자바나 C, 비주얼 베이직, 델파이 등으로 개발한 애플리
+케이션에선 수행 성능에 심각한 문제가 나타난다.
+
+실제 수행해 보면 수 분이 소요되지만, 트레이스를 걸어 분석해 보면 서버 내에서의 일량은 아주 미미한 것으로
+나타난다. 이것은 수행 시간 중 대부분을 네트워크 구간에서 소비(그 중 일부는 애플리케이션 단에서 소비한 시간일
+것임)하거나 데이터베이스 031]이 발생할 때마다 0)5로부터 CPUS 메모리 리소스를 할당받으려고 기다리는 df
+소비하기 때문이다.
+
+앞 프로그램을 다음과 같이 One SQLE 통합하면 1~2초 내에 수행되는 것을 확인할 수 있다. 수행 시간이 이렇게
+대폭 줄어든 이유는 최대 110만 번 발생할 수 있는 데이터베이스 04]]을 단 2회(83656 Call 1회, Execute Call
+1회)로 줄인 데에 있다.
+
+public class JavaOneSQL{
+public static void execute(Connection con, String input_month) throws Exception {
+String SQLStmt = “INSERT INTO 납입방법별 월요금집계"
++ "(납입월,고객번호,납입방법코드,납입금액) "
++ "SELECT x. RIE, 〉.고객번호, 08(64 + Y.N0) 납입방법코드 "
+내이       , DECODE(Y.NO, 1, 지로, 2, 자동이체, 3, 신용카드, 4, 핸드폰, 5, 인터넷) "
++ "FROM 월요금납부실적 ×, (SELECT LEVEL NO FROM DUAL CONNECT BY LEVEL <= 5) 7"
++ "WHERE x. YH = ? "
++ "AD y.NO IN ( DECODE(Z|2, 0, NULL, 1), DECODE(ZKSOIA, 0, NULL, 2) "
++"                 , (006(신용카드, 0, NLL, 3) , 06(006(핸드폰, 0, MULL, 4) "
+is                , 06(006(인터넷, 0, NULL, 5) )" ;
+
+PreparedStatenent stmt = con. prepareStatenent(SQLStmt);
+stmt. setString(1, input_month);
+stmt. executeQuery();
+stmt. close();
+}
+static Connection getConnection() throws Exception { … }
+static void releaseConnection(Connection con) throws Exception { … }
+
+public static void main(String(] args) throws Exception
+Connection con = getConnection();
+execute(con, “200903");
+releaseConnection(con);
+}
+}
+
+SQL #824 7pols [713

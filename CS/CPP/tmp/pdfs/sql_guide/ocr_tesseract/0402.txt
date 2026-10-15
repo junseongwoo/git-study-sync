@@ -1,0 +1,22 @@
+제3장 관리 구문
+수 = >>=0>=== > 이
+
+참고로 데이터베이스는 3절에서 다룰 DDL 명령어와 DML 명령어를 처리하는 방식에 있어서 차이를 보인다.
+DDL(CREATE, ALTER, RENAME, DROP) 명령어의 경우, 데이터 구조의 변경이 DDL 명령어 수행이 완료됨과
+동시에 즉시 반영된다.
+
+하지만 DML(INSERT, UPDATE, DELETE, SELECT) 명령어 사용 시 데이터의 변경 사항을 테이블에 영구적으
+로 저장하기 위해서는 COMMIT HE 수행해 TRANSACTIONS 종료해야 한다. © SQL Servers 기본적으로
+DML 명령어를 AUTO COMMIT 방식으로 처리하기 때문에 데이터의 변경 사항이 즉시 테이블에 반영된다.
+
+테이블의 전체 데이터를 삭제하는 경우, 시스템 활용 측면에서는 삭제된 데이터를 로그로 저장하는 DELETE
+TABLEECH= 시스템 부하가 적은 TRUNCATE TABLES 권고한다.
+
+단 TRUNCATE TABLES] 경우 삭제된 데이터의 로그가 없어 ROLLBACK®| 불가능하므로 주의해야 한다.
+그러나 SQL Server®] 경우 사용자가 임의적으로 트랜잭션을 시작한 TRUNCATE TABLES 이용해 데이터를
+삭제한 이후 오류가 발견돼, 다시 복구를 원할 경우 ROLLBACK 문을 이용해 테이블 데이터를 원 상태로 되돌릴
+수 있다.
+
+트랜잭션과 COMMIT, ROLLBACK] 대해서는 다음 절에서 설명한다.
+
+전문가 가이드 1409

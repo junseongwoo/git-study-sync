@@ -1,0 +1,31 @@
+제2장 SQL 활용
+
+2 행이 선택됐습니다.
+
+아래는 ]0465의 자식 노드의 자식 노드를 조회하는 쿼리다. mgro] ]0485의 자식 노드인 SCOTT FORDE)
+empno?! 행을 조회하면 된다, 이런 계층 전개 방식을 순방향 전개라고 한다.
+
+SELECT C.EMPNO, C.ENAME, C.MGR
+FROM ENP A, EMP 8, EMP C
+WHERE A ENAME = 'JONES'
+AND B.MGR = A EMPNO
+AND C.MGR = B.EMPNO;
+
+MGR
+7369         SMITH         7962
+7788
+
+2 행이 선택됐습니다.
+
+PRESS TE a
+
+아래는 5\1111의 부모 노드를 조회하는 쿼리다. empno7t SMITHS) mgr! 행을 조회하면 된다.
+
+[예제]
+
+SELECT B.EMPNO, B.ENAME, B.MGR
+FROM EMP A, EWP B
+WHERE A ENAME = 'SMITH'
+AND B.EMPNO = A MGR;
+
+전문가 가이드 [353

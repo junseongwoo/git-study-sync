@@ -1,0 +1,41 @@
+다음과 같은 형태의 조인 뷰는 고객 테이블 고객번호 컬럼에 Unique 인덱스가 있으면 버전에 상관없이 실행
+가능하다.
+
+(select 1.주문연락처, +.배송지주소, <.고객연락처, +.고객주소
+from 거래 1, 고객 <
+where <.고객번호 = +.고객번호
+and .거래일시 > trunc(sysdate)
+and ㅠ.거래검증코드 = 'INLD')
+set 、 주문연락처 = 고객연락처
+
+, 배송지주소 = 고객주소
+
+HB Oracle Merge 문 활용
+
+merge into £2 이용하면 하나의 SQL 안에서 insert, update, delete 작업을 한 번에 처리할 수 있다. 이
+7}6-2 Oracle 9%i%€ 제공되기 시작했고, delete 작업까지 처리할 수 있게 된 것은 108부터다. SQL Server™
+2008 버전부터 이 문장을 지원하기 시작했다.
+
+merge into= 기간계 시스템에서 읽어온 신규 및 변경분 데이터를 DW 시스템에 반영할 때 사용하면 효과적이다.
+아래는 merge22 이용해 insert, updates 동시에 처리하는 예시다.
+
+merge into 고객 t using 고객변경분 5 on (\.고객번호 = 5.고객번호)
+
+when matched then update
+set +.고객번호 = 5.고객번호, +.고객명 = 5 DAY +.이메일 = 5.이메일,
+
+when not matched then insert
+(고객번호, DAY, 이메일, 전화번호, 거주지역, 주소, 등록일시) values
+(5.고객번호, 5.고객명, 5.이메일, 5.전화번호, 5.거주지역, 5.주소, 5.등록일시 );
+
+Oracle 108부터는 다음과 같이 update? inserts 선택적으로 처리할 수 있다.
+
+merge into 고객 + using 고객변경분 5 on (+.고객번호 = 5.고객번호)
+when matched then update
+set +.고객번호 = 5,고객번호, +,고객명 = 5s DAY +*.이메일 = 5.이메일, ，;
+
+serge into 27 t using 고객변경분 5 on (+.고객번호 = 5.고객번호)
+when not matched then insert
+(고객번호, 고객명, 이메일, 전화번호, 거주지역, 주소, 등록일시) values
+(5.고객번호, 5,고객명, 5.이메일, 5.전화번호, 5,거주지역, 5.72, 5. BRUM);          Gi Aisi
+

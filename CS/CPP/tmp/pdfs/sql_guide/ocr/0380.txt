@@ -1,0 +1,29 @@
+駁장 활용
+다음은 REGEXP-LIKE 조건을 사용한 쿼리다. fißt-name 값이 Ste로 시작하고 v나 ph 다음에 en으로 푸는
+행을 검색한다.
+[예제!
+SELECT FIRST-Nk, LAST-V&
+FRON 巚. EPLOYEES
+覉正能 R&XP LIKE (FIRST-V&. '$te(vW1)en$');
+[실행 결과]
+FIRST-Nß&
+Stec*m
+Steven
+Steven
+LAST-V&
+Stiles
+Uarkle
+3 행이 선택굈습니다.
+나. 能″ REPI.ACE 함수
+REGEXP-REPLACE 함수는 source-charoll서 일치한 pattem을 replace-stnng으로 변경한 문자 값을 반환
+한다.
+REGEXP-REPLACE (source-char, pattern [, replace-string (, [, occurrence [, ætch»rællll)
+replace-stnng은 변경 문자열을 지정한다.
+psition은 검색 시작 위치를 지정한디(기본값은 1).
+occurrence는 패던 일치 횟수를 지정한어기본값은 1).
+다음은 REGEXP-REPLACE 함수를 사용한 쿼리다. '숫자3자래숫자3자리.숫자4자리' 패턴을 '(첫 번째 일치)
+두 번째 일치쎄 번째 일치' 형식으로 변경한다. 일치한 패턴이 없으면 원본 값을 반환한다
+(예제]
+SELECT 하廬-넓皺R
+REGEXP-REPLACE (P尠正-쯔R
+전문가 가이드 387

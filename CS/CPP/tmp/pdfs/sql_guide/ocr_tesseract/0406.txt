@@ -1,0 +1,39 @@
+제3장 관리 구문
+
+빼 SQL Server? COMMIT
+
+Oracle DMLE 실행하는 경우 DBMS7F 트랜잭션을 내부적으로 실행하며, DML 문장 수행 후 사용자가 임의로
+COMMIT 혹은 ROLLBACK 수행해 주어야 트랜잭션이 종료된다(일부 툴에서는 AUTO COMMITS 옵션으로
+선택할 수 있다).
+
+하지만 SQL Server 기본적으로 AUTO COMMIT 모드이기 때문에 DML 수행 후 사용자가 00\007이나
+ROLLBACKE 처리할 필요가 없다. DML 구문이 성공이면 자동으로 COMMITO| 되고, 오류가 발생할 경우
+자동으로 ROLLBACK 처리된다. 위 예제를 SQL 56ㅁ6[용으로 변경하면 다음과 같다.
+
+[예제] PLAYER 테이블에 데이터를 입력한다.
+
+[예제] SQL Server
+INSERT
+
+INTO PLAYER (PLAYER_ID, TEAN_ID, PLAYER NAME, POSITION, HEIGHT, WEIGHT, BACK_NO)
+VALUES ('1997635', 'Ke2', '이운재', ‘eK’, 182, 82, 1);
+
+(174 행이 영향을 받음)
+
+[예제] PLAYER 테이블에 있는 데이터를 수정한다.
+
+예제] SQL Server
+
+UPDATE PLAYER SET HEIGHT = 100;
+
+(48171 행이 FYE 받음)
+
+[예제] PLAYER 테이블에 있는 데이터를 삭제한다.
+
+DELETE FROM PLAYER;
+
+(48174 행이 영향을 받음)
+
+SQL 56ㅁ6[에서의 트랜잭션은 기본적으로 3가지 방식으로 이뤄진다.
+
+전문가 가이드 |41.3

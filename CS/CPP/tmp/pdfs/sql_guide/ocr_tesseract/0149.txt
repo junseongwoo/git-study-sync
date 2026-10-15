@@ -1,0 +1,46 @@
+과목 1 SOL 기본과 활용
+
+문자열의 첫 문자부터 확인해서 지정 문자가 나타나면
+문자가 생략되면 공백 값이 디폴트).
+| SQL 5606에서는 LTRIM 함수에 지정문자 사용 불가. 공백만 제거할 수 있다.
+| 문자열의 마지막 문자부터 확인해서 지정 문자가 나타나는 동안 해당 문자를 제거한다
+RTRIM (문자열 [,지정문자])// ㅣ (지정 문자가 생략되면 공백 값이 디폴트).
+RTRIM (문자열)       SQL 56706[에서는 LTRIM 함수에 지정문자를 사용할 수 없다. 즉 공백만 제거할
+
+수 있다.
+TRIM ([leadingjtrailing|both]| 문자열에서 머리말, 꼬리말 또는 양쪽에 있는 지정 문자를 제거한다([6301078 | trailing
+
+지정문자 FROM 문자열) | | both7} 생략되면 both7} 디폴트).
+
+/ TRIM          SQL 5676[에서는 TRIM 함수에 1630108, trailing, both& 사용할 수 없다.
+(지정문자 FROM 문자열) | 즉 양쪽에 있는 지정 문자만 제거할 수 있다.
+
+※ 주: Oracle 함수/501Ｌ Server 함수 표시, '/' 없는 것은 공통 함수
+
+LTRIM (문자열 [,지정문자])/
+LTRIM (문자열)
+
+를 문자형 함수들이 적용됐을 때 리턴되는 값을 예를 들어 설명한다.
+
+[표 Ｌ-1-11] 단일행 문자형 함수 사례
+
+"  LOWER(SQL Expert’)           |                  'sql expert’
+UPPER(SQL Expert)              |                 'SQL EXPERT"
+ASCII(A)                                              65
+CHR(65) / CHAR(65)                                        x
+CONCAT(RDBMS',' SQL                                 ,            i
+RDBMS || ' i] il? SQL                             MARSA
+SUBSTR(SQL Expert, 5, 3)                                      Exp
+SUBSTRING(SQL Expert, 5, 3)
+
+LENGTH(SQL Expert) / LEN(SQL Expert)                               10
+LTRIM(0YYZZXYZ', x’)                                  YYZZXYZ!
+RTRIM(XXYYzzXYZZ''Z)                                  XXYYzzXY'
+
+RTRIM(XXYYZZXYZ ~~)                               "XXYYZZXYZ
+
+TRIM('X FROM 'xxYYZZxYZxx)
+
+함수 RTRIMZ 공백 제거 및 CHAR®} VARCHAR 데이터 유형을 비교할 때 유용하게 사용된다.
+
+154 | SL 전문가 가이드

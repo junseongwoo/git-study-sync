@@ -1,0 +1,37 @@
+臼장 관리 구문
+[예제l OracIe
+C(NÆCT, 氈驢(E TO
+권한이 부여굈습니다.
+|예제| Oracle
+연결쾼습니다.
+(예제 및 실행 결과] OracIe
+CREATE TABLE EM.J (EMJ-SEQ MÆR tOT WLL, TITLE VARO獸기10)):
+테이불이 생성됐습니다.
+SQL 던rv이이서는 위와 같이 ROLE을 생성해 사용하기보다는 기본적으로 제공되는 R이上에 멤버로 참여하는
+방식으로 사용한다. 특정 로그인이 *로 참여할 수 있는 서버 수준 역할(ROLE)은 [표 II•年11]과 같다.
+서버 수준 역할명
+public
+bulkadmin
+dbcreator
+diskadmin
+prcressadmin
+securityadmm
+setupadnun
+sysadmin
+[표 Ⅱ•3•11] 서버 수준 역ZSQL Server 사례)
+셜명
+모든 SQL Setver 로그인은 PUBLIC 서버 역할에 속한다. 서버 보안 주체에게 보안 ,기제에
+대한 특정 사용 권한이 부여되지 않았거나 거부된 경우 사용자는 해당 개체에 대해 PUBLIC
+으로 부여된 A卜용 권한을 상속 받는다. 모든 사용자가 개체를 A卜용할 수 있도록 하려는 경우에만
+개체에 PUBLIC 권한을 할당해야 한다.
+BULK INSERT 문을 수행할 수 있다
+데이터베이스를 생성, 변경, 삭제, 복원할 수 있다.
+디스크 파일을 관리하는 데 사용된다.
+SQL *의 인스턴스에서 실행중인 표e세스를 종료할 수 있다.
+로그인 및 해당 속성을 관리한다. 서버 및 데이터베이스 수준의 사용 권한을 부여(GRAMD
+거부(DENY), 취소(RETOKE)할 수 있다. 또한 로그인 암호를 다시 설정할 수 있다.
+서버 차원의 구성 옵션을 변경하고 서버를 종료할 수 있다.
+연결된 서버를 추가하거나 세거할 수 있다.
+서버에서 모든 작업을 수행할 수 있다. 기본적으로 Wrndows BUILTIN \Adnunistrators
+그를의 영버인 로걸 관리자 그름은 sysamdin 고정 서버 역할의 옝버이다.
+전문가 ,柯드 465

@@ -1,0 +1,29 @@
+과목 II 기본과 활용
+나. 匯瓲-R團K 함수
+DENSE-RANK 함수는 RANK와 유사하나 동일한 순위를 하나의 건수로 취급하는 점이 다르다.
+[예제] 사원 데이터에서 급여가 높은 순서와, 동일한 순위를 하나의 등수로 간주한 결과도 같이 출력한다.
+[예제1
+SELECT ~ SAL
+″ () 0•,鰍 BY SAL DESC) AS RK
+~-″ () WER (″ BY SAL DESC) AS 咏
+결행
+KI%
+TIRÆR
+UILLER
+LARTIN
+SMITH
+14 행이 선택묐습니다.
+24%
+1圄
+15%
+1甓
+12%
+1250
+13
+14
+FORD와 SCOTT, WARD와 MARI'IN은 동일한 SALARY이므로 RANK와 DENSE-RANK 칼럼에서 모두 같은
+순위를 부여한다.
+그러나 溫K와 DENSE-RANK의 차이를 알 수 있는 데이터는 FORD와 SCO'IT의 다음 순위인 JON조의
+경우 RANK는 4등으로, DENSE-RANK는 3등으로 표시돼 있다. 마찬가지로 WARD와 MARTIN의 다음 순위인
+ADAMS의 경우 RANK는 12등으로 DENSE-RANK는 10등으로 표시돼 있다.
+꾜8

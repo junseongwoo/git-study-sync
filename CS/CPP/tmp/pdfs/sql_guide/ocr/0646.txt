@@ -1,0 +1,37 @@
+石장 血 옵티아이저
+<귀리2>
+select *
+frm
+하 &pt b
+wtpre a deptno = b.&ptm
+a.j± = 'SALESW'
+b.1乂 = '대I(″
+따라서 위에서 본 <쿼리1>의 뷰 귀리 블록은 액세스 쿼리 불록(뷰를 참조하는 쿼리 블록)과의 머지(merge)
+과정을 거쳐 <쿼리2>와 같은 형대로 변환되는데, 이를 '뷰 Merging'이라고 한다. 부를 Merging해야 옵티미이저가
+더 다양한 액세스 경로를 조사 대상으로 삼을 수 있게 된다.
+다음과 같이 조건절 하나만을 가진 단순한 emp-salesman 뷰가 있다
+create or replace view 啣-%le뙤an
+select
+frm
+啣r尠, j0b, V, hiredate, sal, (圓,
+job = 'SALESUAN'
+위 emp-salesman 뷰와 조인하는 간단한 조인문을 작성해 보자
+sel«t
+frm
+vtpre
+e.enaæ, e.j±, e.V, e.sal, d ~
+e叩-驪les” e, ±pt d
+d.deptno = e.deptno
+e.sal 1親 ,
+위 쿼리를 뷰 Merglng하지 않고 그대로 최적화한다면 다음과 같은 실행계획이 만들어진다.
+Executim Plan
+0
+1
+SELECT STATEENT (Cost=3 Car&2 Bytes=156)
+0 IÆSTED LOS (Cost=3 Card=2 Bytes=156)
+VIEI 嘗 'EP-SALESNAN' (VIEI) (Cost=2 (•r礪2 Bytes=1")
+TABLE ACCESS (BY 1荻X OID) 'EP' (TABLE) ((05t=2 (a祚2 )
+1荻X (RA%E SCM) 'EP-SAL-IDX' (INDEX) (Cost=1 Car&7)
+TA8LE ACCESS (BY 1鞭X OID) 'DEPT' (TABLE) (Cost=I Card=I Bytes=13)
+IWEX (|JN패集 S(산0 'FT-PK' (1荻X (IRIQIÆ)) (Cost=O Car&1)
+전문가 가이드 655

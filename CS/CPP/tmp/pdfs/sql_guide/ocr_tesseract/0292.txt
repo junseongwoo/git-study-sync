@@ -1,0 +1,37 @@
+제2장 SQL 활용
+
+팀코드             선수명              포지션            백넘버              키
+1092                      가비                     WF                            10                177
+1102                 강대희             NF                     26            174
+1102                 고종수             "3                     2            176
+1102                      고창현                 [3                             8                170
+102                      김강진                 DF                           43                181
+1102                 김관희             2]                     39            180
+102                 김동욱             w                     40            176
+102                 김만근             0                     34            7
+102                 김반코비           NF                     4            185
+102                 김병국             DF                       2            183
+
+100 개의 행이 선택됐습니다.
+
+두 집합의 조건이 모두 동일 테이블에 있다면, 아래와 같이 논리 연산자를 이용한 간단한 SQL 문으로도 변경
+가능하다. 단 UNION 연산은 SELECT 절 칼럼에 대해 중복 건을 제외하므로 아래와 같이 SELECT 절에 DISTINCT
+키워드를 기술해야 한다.
+
+                         :    |
+SELECT DISTINCT                                                          =          |
+TEAM_ID AS 팀코드, PLAYER NAME AS 선수명, POSITION AS 포지션                              3
+, BACKNO AS 백넘버, HEIGHT AS 7|
+FROM PLAYER
+WHERE TEAN_ID = '102'
+OR TEAM_ID = 'K07';
+
+[예제] (비교)                                                     격
+
+SELECT DISTINCT
+7610 AS 팀코드, PLAYER NAME AS 선수명, POSITION AS 포지션
+, BACK_NO AS 백넘버, HEIGHT AS 키
+FROM PLAYER
+WHERE TEAM_ID IN ('Ke2', 'K07');
+
+전문가 가이드 [299

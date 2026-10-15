@@ -1,0 +1,45 @@
+세5장 SOL 옵티마이져
+—————— ee ————————
+
+4. 2734 Pushing
+
+옵티마이저가 뷰를 처리함에 있어 1차적으로 뷰 Merging 고려하지만, £713 (Predicate) Pushing® 시도할
+수도 있다. 이는 뷰를 참조하는 쿼리 블록의 조건절을 뷰 쿼리 블록 안으로 밀어 넣는 기능을 말한다.
+
+조건절이 가능한 빨리 처리되도록 뷰 안으로 밀어 넣는다면, 뷰 안에서의 처리 일량을 최소화하게 됨은 물론
+리턴되는 결과 건수를 줄임으로써 다음 단계에서 처리해야 할 일량을 줄일 수 있다.
+
+조건절 8051108과 관련해 2845가 사용하는 기술로는 다음 3가지가 있다.
+
+를 22478 (Predicate) Pushdown : 쿼리 블록 밖에 있는 조건절을 쿼리 블록 안쪽으로 밀어 넣는 것을 말함
+
+를 271% (Predicate) Pullup : 쿼리 블록 안에 있는 조건절을 쿼리 블록 밖으로 내오는 것을 말하며, 그것을
+다시 다른 쿼리 블록에 Pushdown 하는 df 사용
+
+를 조인 조건00ㅁ Predicate) Pushdown : NL 조인 수행 중에 드라이빙 테이블에서 읽은 값을 건건이 Inner
+Z(=right side) 뷰 쿼리 블록 안으로 밀어 넣는 것을 말함
+
+가. =21%(Predicate) Pushdown
+
+group 0절을 포함한 아래 HE 처리할 때, 쿼리 블록 밖에 있는 조건절을 쿼리 블록 안쪽에 밀어 넣을 수
+있다면, group by 해야 할 데이터 양을 줄일 수 있다. 인덱스 상황에 띠라서는 더 효과적인 인덱스 Melo] 가능해지기도
+한다.
+
+select deptno, avg_sal
+from (select deptno, avg(sal) avg_sal from emp group by deptno) a
+
+where deptno = 30
+
+| Id | Operation          | Name     | Rows | Bytes |
+| 0 | SELECT STATEMENT        |       |  (7 알로 기!
+ㅣ 1 | view |           |       |  11 2%)
+ㅣ 2 | SORT GROUP BY NOSORT      |       ㅣ  Rad |  71
+| 3 ㅣ TABLE ACCESS BY INDEX ROWID | EWP |        lee | 42
+1* 4 ㅣ INDEX RANGE SCAN       | ENPDEPTNOIDX | 6 |   |
+
+Predicate Information (identified by operation id):
+
+4 - access("DEPTNO"=30)
+위 쿼리에 정의한 뷰 내부에는 조건절이 하나도 없다. 만약 쿼리 변환이 작동하지 않는다면, emp 테이블을
+
+SQL 전문가 가이드 |657

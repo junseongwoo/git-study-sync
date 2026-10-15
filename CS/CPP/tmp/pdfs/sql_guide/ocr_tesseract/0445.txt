@@ -1,0 +1,29 @@
+과목 | SQL 기본과 활용
+
+[예제] SCOTT 유저로 접속한 다음 SQLD 유저(패스워드: 082019)를 생성해 본다.
+CONN SCOTT/TIGER
+
+연결됐습니다.
+
+예제] Oracle
+
+CREATE USER SQLD IDENTIFIED BY DB2019;
+
+1행에 오류:
+ORA-01031: 권한이 불충분합니다
+
+현재 SCOTT 유저는 유저를 생성할 권한을 부여받지 못했기 때문에 권한이 불충분하다는 오류가 발생한다.
+Oracle®] DBA 권한을 갖고 있는 SYSTEM 유저로 접속하면 유저 생성 권한(08641 USER) 다른 유저에게
+부여할 수 있다.
+
+[예제] SCOTT 유저에게 유저생성 HFHCREATE 4560)을 부여한 후 다시 SQLD 유저를 생성한다.
+
+GRANT CREATE USER TO SCOTT;
+
+권한이 부여됐습니다.
+
+CREATE USER SQLD IDENTIFIED BY 082019; ㆍ.
+
+사용자가 생성됐습니다,
+
+452s Ben Tele

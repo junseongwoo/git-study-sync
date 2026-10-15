@@ -1,0 +1,37 @@
+제2장 SQL 활용
+
+PIVOT 절을 사용할 수 없는 경우 집계함수와 CASE 표현식으로 PIVOTS 수행할 수 있다.
+
+SELECT . 208
+, SUM (CASE DEPTNO WHEN 10 THEN SAL END) AS D16_SAL
+, SUM (CASE DEPTNO WHEN 20 THEN SAL END) AS 020 59
+, SUM (CASE DEPTNO WHEN 30 THEN SAL END) AS D38_SAL
+FROM EMP
+GROUP BY 208
+ORDER BY JOB;
+
+D10_SAL         020 9       0305
+6000
+1300                       1900                     950
+2450                         2975                     2850
+5000
+5600
+
+5 행이 선택됐습니다.
+
+2. UNPIVOT 절
+
+UNPIVOT 절은 PIVOT 절과 반대로 동작한다, 열이 행으로 전환된다. UNPIVOT He) 구문은 아래와 같다.
+
+UNPIVOT [{INCLUDE | EXCLUDE} MULLS]
+( {column | (colum [, col]-)}
+FOR {column | (colum [, col]-)}
+IN ({colum | (colum [, col]--)} [AS {literal | (literal [, literal]-)}]
+[, {colum | (colum [, col]~)} [AS {literal | (literal [, literal]-)}]]--
+)
+
+- UNPIVOT column #2 UNPIVOTH 값이 들어갈 열을 지정한다.
+- FOR 절은 UNPIVOTH 값을 설명할 값이 들어갈 열을 지정한다,
+- IN 절은 UNPIVOTY 열과 설명할 값의 리터럴 값을 지정한다.
+
+SQL 전문가 가이드|369.

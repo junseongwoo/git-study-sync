@@ -1,0 +1,34 @@
+虧장 고급 류님
+80 )
+INSERT9 데이터를 계속 Arrayoq 담기만 하다가(12번 라인) 1끄 쌓일 때마다 한 번씩 executeBatch를
+수행하는 부분(58번 라인)을 주의 깊게 살펴보기 비란다. SELECr 결과 집합을 Fetch할 때도 1勵개 단위로 Fetch
+하도록 조정(31번 라인)했다.
+외 프로그램을 수행해 보면 One SQL로 구현할 때와 거의 비슷한 속도를 보인다. One SQL로 통합했을 때
+나타나는 극적인 성능 개선 효과가 데이터베이스 CaII 횟수를 줄이는 데 있음-을 여기서도 알 수 있다.
+대용량 데이터를 처리하는 데 있어 Array Processing은 필수적이다. 그 효과를 극대화하려면 연속된 일련의
+기리 과정이 모두 Amay 단위로 진행돼야 한다 이를테면 Army 단위로 수천 건씩 아무리 빠르게 Fetch 하더라도
+다음 단계에서 수행할 INSERT가 건건이 처리된다면 그 효과가 크게 반감도』며, 반대의 경우도 마찬가지다
+이해를 돕기 위해 P니바L을 이용해 데이터를 BuIk로 1Ⅸ尠7d뻐 Fetch해서 Bulk-æ INSERI%I-& 예제를 보이면
+다음과 같다
+Lfetch-size NÆER FAULT 1彎 - 1,憫건씩 Array 처리
+CLRß ( IS
+SELECT enæ, jOb, %1, ±ptno,
+BEGIN
+0匪N (;
+LØP
+FETCH ( BIIK COLLECT
+INTO p-e•no. p-enae p」固. p-sal. p-deptno, p-hiredate
+LINIT Lfetch-size,
+FNALL i IN p—evø.first. last
+INSERT IKTO
+VALIÆS ( p—eVO
+p-enane
+. p-åob
+p-sal
+. p-deptno
+(0
+(9
+(9
+(9
+(0
+전문가 가이드 717

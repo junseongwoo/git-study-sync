@@ -1,0 +1,40 @@
+과목 | QL 기본과 활용                               =
+
+| [실행 결과] |
+
+76비 NAME                        STADIUN_ID              STADIUM_NAME
+
+광주상무                         202                       광주월드컵경기장
+RFC                         203                     강릉종합경기장
+제주유나이티다               204                       제주월드컵경기장
+대귀(                            205                       대구월드컵경기장
+유나이티드           801            인천월드컵경기장
+일화천마                            802                          성남종합운동장
+삼성블루윙즈                    804                       수원월드컵경기장
+『(서울                            805                       서물월드컵경기장
+아이파크                         (02                       부산아시아드경기장
+울산현대                         (04                       울산문수경기장
+경남『(                            ces                       창원종합운동장
+스틸러스                         606                       포항스틸야드
+드래곤즈                  001                 광양전용경기장
+시티즌              002            대전월드컵경기장
+현대모터스                    003                     전주월드컵경기장
+
+15 개의 행이 선택됐습니다.
+
+[예제] 팀과 경기장 테이블을 팀10로 조인해 팀이름, BID, 경기장명을 찾아본다. 경기장(512미냐/)에는 팀10가 HOMETEAM_ID
+라는 칼럼으로 표시돼 있다.
+
+SELECT  A.TEAM_NAME, A.TEAM_ID, B.STADIUM_NAME
+FROM TEAM A JOIN STADIUM B
+ON B.HOMETEAM_ID = A. TEAM_ID
+ORDER BY A.TEAM_ID;
+
+위 SQL TEAM_ID2H HOMETEAM_ID2H= 다른 이름의 칼럼을 사용하기 때문에 USING 조건절을 사용할
+수는 없다.
+
+| [실형 결과] |
+TEAM NAME                      TEA_ID                STADIUM_NAME
+gud                       Ket                     울산문수경기장
+
+ 260 | soL 전문가 가이드

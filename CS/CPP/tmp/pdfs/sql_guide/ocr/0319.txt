@@ -1,0 +1,36 @@
+과목 II QL 기본과 활용
+2. 그룹 내 순위 함수
+가. RANK 함수
+RANK는 ORDER BY를 포함한 QUERY 문에서 특정 항목(킬럼)에 대한 순위를 구하는 함수다. 이때 특정 범위
+(PARIITOO 내에서 순위를 구할 수도 있괴 전체 데이터에 대한 순위를 구할 수도 있다. 또한 동일한 값에 대해서는
+동일한 순위를 부여한다.
+[예제] 사원 데이터에서 급여가 높은 순서와 JOB별로 급여가 높은 순서를 같이 출력한다.
+!예제1
+SELECT ~ SAL
+″ () 에飜 (″ BY SAL EC) AS ALL-RK
+″ () WER (P枳TITI애 BY Jß BY SAL DESC) AS JOB_RK
+{실행 결과]
+Jæ
+KIt"
+SCOTT
+TI.RÆR
+UIIIFR
+WRTIN
+JAES
+SYITH
+14 행이 선택굈습니다.
+2975
+2450
+1圄
+12%
+12%
+11%
+ALL-RK
+10
+13
+14
+Jæ—RK
+업무 구분이 없는 ALL-RK 칼럼에서 FORD와 SC(JIT, WARD와 MARTIN은 동일한 SALARY이므로 같은
+순위를 부여한다. 그리고 업무를 PARTITION으로 구분한 JOB-RK는 같은 업무 내 범위에서만 순위를 부여한다.
+326
+전문가 7h1드

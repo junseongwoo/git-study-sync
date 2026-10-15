@@ -1,0 +1,74 @@
+NATW-I
+BIRTH_DATE
+柾1애T
+氈1애T
+(국적)
+(생년월일)
+(양/음)
+(신장)
+(음우게)
+臼장 관리 구문
+문자 가변 자릿수 20자리,
+날짜,
+문자 고정 자릿수 1자리,
+숫자 3자리,
+숫자 3자리
+제약조건
+: PRIURY KEY (제약조건명은 PUYER-ID-PK) - PLAYER-ID
+KEY (제약조건명은 PLAYER-FK)
+M-LL (제약조건명은 미적용)
+[예제] OracIe
+CREATE TABLE PLAYER (
+- TEAM-ID (참조 : TEÆ.TE.U-ID)
+- PLAYER_V&, TEU_ID
+PLAYER_ID
+PLAYER_NAE
+TEN_ID
+, E-PLAYER-WE
+, NICKNAUE
+, JOIN_YYYY
+, BACK-NO
+NATIOI
+, BIRTH_DATE
+飜1해T
+(훼7)
+V恕(꾜(20)
+(Ⅷ3)
+V枳대AR2(40)
+VAR대*
+(훼4)
+V欻(RAR2(10)
+쯔R(2)
+V皿}uR2(20)
+DATE
+(훼1)
+MSER(3)
+MEER(3)
+WT WLL
+NOT WLL
+WT üL
+, CmSTRAIMT PLAYER_PK RILARY KEY (PLAYER-ID)
+, PLAYER_FK KEY (TEAU_ID) REFERENCES TEAN (TEAU_ID)
+테이불이 생성왰습니다.
+[예삐 SQL Server
+CREATE TÆLE PLAYER (
+PLAYER_ID
+PLAYER-N•J&
+TEN 10
+, E_PLAYER_NAYE
+, NICKV&
+, J이N_YYYY
+mSITIm
+BACK-NO
+(十獻(7)
+VARCHAR(20)
+(Ⅶ(3)
+V欻대枳(40)
+VRChAR(N)
+(훼4)
+VARCHAR(IO)
+TINYINT
+WT MIL
+t0T WLL
+WT WLL
+전문가 7}01드 429

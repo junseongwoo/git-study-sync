@@ -1,0 +1,31 @@
+제3장 인덱스 튜닝
+
+SQL 56ㅁ6[에서의 실행계획은 다음과 같다.
+
+StmtText
+
+|—Nested Loops(Inner Join, OUTER REFERENCES: ([Bmk1000]))
+{—1Index Scan(0BJECT:([..]. [dbo]. [emp]. [pk_emp]), ORDERED BACKWARD)
+{—RID Lookup(0BJECT:([..].[dbo].[emp]), SEEK: ([Bmk1000]=[Bnk1600]) LOOKUP ORDERED FORWARD)
+
+아래처럼 max 값을 구하고자 할 때도 해당 칼럼에 인덱스가 있으면 인덱스를 뒤에서부터 한 건만 읽고 멈추는
+실행계획이 자동으로 수립된다.
+
+SQL> create index emp_x02 on emp(deptno, sal);
+
+SQL> select deptno, dname, loc
+2        , (select max(sal) from emp where deptno = d.deptno)
+3 from deptd
+
+Execution Plan
+
+0       SELECT STATEMENT Optimizer=ALL_ROWS
+
+1 © SORT (AGGREGATE)
+
+Zens]      FIRST ROW
+
+Sie)     INDEX (RANGE SCAN (MIN/MAX)) OF 'EMP_X02' (INDEX)
+4 © TABLE ACCESS (FULL) OF 'DEPT' (TABLE)
+
+SQL 전문가 가이드 |551

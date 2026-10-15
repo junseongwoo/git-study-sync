@@ -1,0 +1,30 @@
+과목 II SQL 기본과 활용
+
+결과] Oracle
+
+UPDATE SQLD. MENU
+SET TITLE = '코리아'
+WHERE MENU_SEQ = 1;
+
+1행에 오류:
+08\01031: 권한이 불충분합니다
+
+50017'으로 로그인한다.
+
+1         파이팅
+
+1개의 행이 선택됐습니다.
+
+# 결과] SQL Server
+
+UPDATE DBO. MENU
+SET TITLE = '코리아'
+WHERE 161 560 = 1;
+
+메시지 229, 수준 14, 상태 5, 줄 1
+개체 ‘wen’, 데이터베이스 'ADVENTUREWORKS', 스키마 '060'에 대한 UPDATE 권한이 거부됐습니다.
+
+권한이 부족해 UPDATER 수 없다는 오류가 나타난다. SQLD 유저에게 UPDATE 권한을 부여한 후 다시 시도하면
+업데이트가 가능하다.
+
+460 | SL 전문가 가이드

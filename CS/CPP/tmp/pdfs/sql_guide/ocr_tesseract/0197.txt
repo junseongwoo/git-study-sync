@@ -1,0 +1,34 @@
+과목 II NU 기본과 활용
+
+앞의 SQL} 아래 501.은 같은 내용을 나타내는 50[.이다.
+
+SELECT PLAYER NAME AS 선수명, POSITION AS 포지션, 84 \0 AS 백넘버, HEIGHT AS 키
+FROM PLAYER
+WHERE TEAN_ID = 'K&2'
+ND POSITION O “WF*
+ND HEIGHT NOT BETWEEN 175 AND 185;
+
+| [실행 결과] |
+
+선수명             포지션            백넘버              키
+서정원             3]                     14             173
+최호진             6K                     31             190
+손승준           DF                  32           186
+손대호              DF                       17              186
+이성용             DF                    20              173
+김선우             대                    33              174
+정유진             DF                    37              188
+미트로             대                    19              192
+
+8 개의 행이 선택됐습니다.
+
+[예제] 국적(41101) 칼럼의 경우 내국인들은 별도 데이터를 입력하지 않았다. 국적 칼럼이 NULLO| 아닌 선수와 국적을
+표시하라.
+
+SELECT PLAYER NAME AS 선수명, NATION AS 국적
+FROM PLAYER
+WHERE NATION IS NOT MULL;
+
+선수명           국적
+빅토르           나이지리아
+를란            리투아니아

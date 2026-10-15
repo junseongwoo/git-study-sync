@@ -1,0 +1,45 @@
+과목 Ｌ SQL 기본과 활용
+
+omar J Cy ree ee mes emmy
+
+문제 6. SQL 문장에서 집합별로 집계된 데이터에 대한 조회 조건을 제한하기 위해서 사용하는 절은 어느 것인가?
+2) WHERE 절
+@ GROUP BY 절
+3) HAVING 절
+
+) FROM 절
+
+)
+
+rN
+
+p>
+
+문제 7. 다음과 같은 SQL 문장이 있다. 예제의 ORDER BY 절과 같은 결과를 갖는 구문은 어떤 것인가?
+
+SELECT PLAYER NAME 선수명, POSITION 포지션, BACK NO 백넘버
+FROM PLAYER
+
+ORDER BY PLAYER NAME, POSITION, BACK_NO DESC;
+
+@ ORDER BY 1 DESC, 2, 백넘버
+
+@ ORDER BY 선수명, 2, DESC 백넘버
+
+3) ORDER BY PLAYER NAME ASC, 2, 3
+@ ORDER BY 선수명 ASC, 포지션, 3 DESC
+
+문제 8. 다음 SQL 문장에서 틀린 부분은 어디인가?
+22 SELECT  PLAYER.PLAYER NAME 선수명, TEAM.TEAM_NAME 팀명
+@ FROM     PLAYER P, TEAM T
+3 WHERE T.TEAM_ID = P.TEAM_ID
+@ ORDER BY 선수명;
+문제 9. 다음 조인의 종류에 대한 설명 중 틀린 것은 무엇인가?
+@ EQUI 1014은 반드시 PK, FK 관계에 의해서만 성립된다.
+(2) NON-EQUI JOIN 등가 조건이 성립되지 않은 테이블에 조인을 걸어주는 방법이다.
+(3) OUTER ]014은 조인 조건을 만족하지 않는 데이터도 볼 수 있는 조인 방법이다.
+@ SELF JOIN 한 테이블을 논리적으로 분리시켜 EQUI JOINS 이용하는 방법이다.
+
+문제 10. 4개의 테이블로부터 필요한 칼럼을 조회하려고 한다. 최소 몇 개의 조인 조건이 필요한가?
+02) 2개                              @ 3개
+3) 4개                               @ 5개

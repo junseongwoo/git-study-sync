@@ -1,0 +1,35 @@
+제2장 SQL 활용
+
+= - ~ - > ---거며~ 여  11예겨재개깨대대027리애=~=ㅡㅡㅡ====ㅡ=애==ㅡㅡ2내22래
+
+다음은 문자 리스트를 사용한 쿼리다, 01, 2, 03 열의 패턴은 ac, be 문자열과 일치한다. 04, 05, 06 열의
+패턴은 ac, bert 아닌 문자열과 일치한다,
+
+SELECT REGEXP_SUBSTR ('ac', '[2](' ) AS (1 — ac, bc
+, REGEXP_SUBSTR ('bc', '[ab]c’ ) AS 02
+, REGEXP_SUBSTR ('cc', '[ablc’ ) AS (3
+, REGEXP_SUBSTR (‘ac’, '[^36]<') AS (4 — ac, 가 아닌 문자열
+, REGEXP_SUBSTR ('bc’, '[%ablc') AS C5
+, REGEXP_SUBSTR ('cc', '[%ab]c') AS (6
+FROM DUAL;
+
+a             Q            a            (<3           65            6
+ac              bc                                                              cc
+
+1개의 행이 선택됐습니다.
+
+다음은 문자 리스트의 범위 연산자를 사용한 쿼리다. 04 열은 A 번째 문자는 숫자가 아닌 문자, 두 번째 문자는
+소문자가 아닌 문자와 일치해야 하므로 널을 반환한다.
+
+SELECT REGEXP_SUBSTR ('18', '[e-9](a-z]' ) AS C1
+, REGEXP_SUBSTR ('9z', '[e-9][a-z]' ) AS (2
+, REGEXP_SUBSTR (‘aA’, '[%0-9][%a-z]') AS 3
+, REGEXP_SUBSTR ('Aa’, '[%0-9][%a-z]") AS (4
+
+FROM DUAL;
+a                 Q                a               6
+1a              92              aA
+
+1개의 행이 선택됐습니다.
+
+SQL 전문가 가이드 |381

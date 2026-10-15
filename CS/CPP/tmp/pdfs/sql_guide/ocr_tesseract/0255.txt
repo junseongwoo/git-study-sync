@@ -1,0 +1,36 @@
+제1장 SQL 기본
+
+삼성블루윙즈                  102                    수원월드컵경기장
+스틸러스                         103                      포항스틸야드
+유나이티드                    104                    인천월드컵경기장
+현대모터스                    105                    전주월드컵경기장
+아이파크                       1096                    부산아시아드경기장
+드래곤즈                       Ke?                    광양전용경기장
+일화천마                         Kes                      성남종합운동장
+『(서울                            199                      서울월드컵경기장
+시티즌                         100                    대전월드컵경기장
+경남『(                          K11                    창원종합운동장
+BEAL                         K12                      광주월드컵경기장
+ZFC                          K13                    강릉종합경기장
+제주유나이티다(               K14                      제주월드컵경기장
+대과(                          15                    대구월드컵경기장
+
+15 개의 행이 선택됐습니다.
+
+라. 다중 테이블 조인
+[예제] 사원과 DEPT 테이블의 소속 부서명, DEPT_TEMP 테이블의 BHM 부서명 정보를 출력한다.
+
+SELECT A.EMPNO, A.DEPTNO, B.DNAME, C.DNAME AS NEW_DNAME
+FROM EMP A JOIN DEPT B
+ON B.DEPTNO = A.DEPTNO
+JOIN DEPT_TEMP C
+ON C.DEPTNO = B.DEPTNO;
+
+위 SQL 전통적인 방식인 WHERE 절의 INNER )014으로 구현할 수도 있다.
+
+SELECT A.EMPNO, A.DEPTNO, B.DNAME, C.DNAME AS NEW_DNAME
+FROM EMP A, DEPT B, DEPT_TEMP C
+WHERE B.DEPTNO = A.DEPTNO
+AND C.DEPTNO = B.DEPTNO;
+
+전문가 가이드 |261

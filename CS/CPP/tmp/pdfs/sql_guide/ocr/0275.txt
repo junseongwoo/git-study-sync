@@ -1,0 +1,46 @@
+과목 II 기본과 활용
+5.
+7. (Natural) JOIN
+6. Proiect
+al 비
+a3 b2
+bl cl
+b2 c2
+b3 c3
+al
+a2
+a3
+bl
+bl
+b2
+cl
+cl
+c2
+8. Divide
+2
+[그림 Ⅱ-2-기 단일 행 서브 쿼리의 예제1
+[그림 Ⅱ-2-기은2개의 SQL 문으로 구성돼 있다. 정남일 선수의 소속팀을 알아내는 SQL 문(서브 쿼리 부분)과
+이 결과를 이용해 해당 팀에 소속된 선수들의 정보를 출력하는 SQL 문(메인 쿼리 부분)으로 구성된다.
+정남일 선수가 소속된 팀의 선수들의1 대한 정보를 표시하는 문제를 서브 쿼리 방식의 SQL 문으로 작성하면
+다음과 같다.
+[예제!
+SELECT PLAYER-V•E AS 선수명, FOSITIM{ AS 포지션, BACK-NO AS 백넘버
+~ PLAYER
+TEÆ-ID = (SELECT TEAU-ID
+FO RAYER
+PLAYER ~ = '경남일|)
+BY PLAYR-N.Z•
+[실행 결과]
+선수명
+강철
+김반
+김영수
+김경래
+刎2
+포지션
+GK
+전문가 ,까드
+백넘버
+3
+14
+33

@@ -1,0 +1,24 @@
+xo장 관리 구문
+SQL Server
+1 ALTER TABLE 테이불명 ALTER ,2럼명 데이터유형 齟LI;
+칼럼을 변경할 때는 및 가지 사항을 고려해 변경해야 한다.
+• 해당 칼럼의 그기를 늘릴 수는 있지만, 테이블에 데이터가 존재한다면 칼럼의 크기를 줄이는 데는 제으柯 있다.
+기존의 데이터가 훼손될 수 있기 때문이다.
+- 해당 칼럼이 NULL 값만 갖고 있거나 테이블에 아무 행도 없으면 칼럼의 그기를 줄일 수 있다.
+- 해당 칼럼이 NULL 값만을 갖고 있으면 데이터 유형을 변경할 수 있다.
+- 해당 칼럼의 DEFAULT 값을 바꾸면 변경 작업 이후 발생하는 행 삽입에만 영향을 미치게 된다.
+• 해당 칼럼에 NULL 값이 없을 경우에만 NOT NULL 제약조건을 추가할 수 있다.
+[예제] TEAM 테이를의 ORIG-"Y 칼럼의 데이터 유형을 CHAR(4HVARCHAR2(8)로 변경하고, 향후 입력되는 데이터의
+DEFAULT 값으로 '2예201乃'를 적용하고, 모돈 행의 ORIG YYYY 칼럼에 NULL이 없으므로 제약조건을 NULL -+
+NOT NULL로 변경한다.
+|예제] OracIe
+ALTER TABLE TEÆ_TEP OIFY •2C꼬1咿 WT M±L);
+테이불이 변경묐습니다.
+[예제l SQL Server
+ALTER TEAU_TEP ALTER (OL(씌 ORIG_YYYY VARChQ(8) M.m;
+명령이 완료했습니다.
+|예제| SQL Server
+ALTER TmE TEU—TEP DFÄG_YYYY •2C羽129'
+영령이 완료웠습니다.
+실행 결과에서 테이블 구조의 변경 사항을 확인할 수 있다
+전문가 &l드 439

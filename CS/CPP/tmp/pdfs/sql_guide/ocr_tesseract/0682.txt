@@ -1,0 +1,35 @@
+Execution Plan
+
+SELECT STATEMENT Optimizer=ALL_ROWS
+6 500 (AGGREGATE)
+1      FIRST ROW
+2      INDEX (RANGE SCAN (MIN/MAX)) OF '주문 PK' (INDEX (UNIQUE))
+
+wn —-
+
+아래는 SQL Server] 실행계획이다,
+
+StmtText
+{—Stream Aggregate(DEFINE: ([Expr1084]=MAX([SQLPRO]. [dbo]. [emp]. [empno])))
+
+{—Top(TOP EXPRESSION: ((1)))
+{—Index Seek(OBJECT:([SQLPRO]. [dbo] .[F+-&].[F&_PK]), SEEK: (:--) ORDERED BACKWARD)
+
+주의할 점은, 다음과 같이 max 함수 내에서 인덱스 칼럼을 가공하면 인덱스를 사용하지 못하게 될 수 있다는
+사실이다. 조건절에서 인덱스 칼럼을 가공하면 정상적으로 인덱스를 사용하지 못하는 것과 같은 이유다.
+
+select 001(03×(주문번호 + 1), 1)
+
+0      SELECT STATEMENT Optimizer=ALL_ROWS
+1 0 SORT (AGGREGATE)
+"소자 |    INDEX (RANGE SCAN) OF '주문 PK' (INDEX (UNIQUE))
+
+사실 max 함수 내에서 상숫값을 더해도 인덱스 정렬 순서와 일치함에도 Oracle First Row Stopkey 알고리즘을
+사용하지 않는다. 반면에 SQL Server: 사용한다.
+
+5. 소트 영역을 적게 사용하도록 SQL 작성
+
+소트 연산이 불가피하다면 메모리 내에서 처리하려고 노력해야 한다. 소트 영역 크기를 늘리는 방법도 있지만
+그전에 소트 영역을 적게 사용할 방법부터 찾는 것이 순서다.
+
+692 SL #87 가이드

@@ -1,0 +1,48 @@
+제4장 조인 튜닝
+ee ee mt.
+
+|
+
+—
+Sort Order By ) Order by emp.sal desc
+
+~  bid
+Nested Loops
+Dig Ny -ㅡ^,
+“
+ther (deptgb =2)     /                  fier (emp sal >= 1500)
+(  Table Access By           Table Access BY
+Index Rowid DEFT          nex Row EMP
+
+access (deplloc=SEOUL) access (emp.depino=dept depino)
+
+[그림 [1-4-1] S42 NL 조인 실행계획
+
+[그림 [4-112 해석할 때는 형제 노드 간에는 좌에서 우로 읽고, 부모-자식 노드 간에는 아래에서 위쪽으로,
+즉 자식 노드부터 읽는다.
+
+1. deptloc = ‘SEOUL’ 조건을 만족하는 레코드를 찾으려고 dept loc idx 인덱스를 범위 스캔한다.
+
+2. dept_loc_idx 인덱스에서 읽은 20\00를 가지고 dept 테이블을 액세스해 00006 = 2 필터 조건을 만족하는
+레코드를 찾는다.
+
+3. dept 테이블에서 읽은 46000 값을 가지고 조인 조건을 만족하는 emp 쪽 레코드를 찾으려고 emp_deptno_idx
+인덱스를 범위 스캔한다.
+
+4. emp. deptno_idx 인덱스에서 읽은 rowid§ 가지고 emp 테이블을 액세스해 sal >= 1500 필터 조건을 만족하는
+레코드를 찾는다.
+
+5. 1~4 과정을 통과한 레코드들을 sal 칼럼 기준 내림차순(4650)으로 정렬한 후 결과를 리턴한다.
+
+여기서 기억할 것은 각 단계를 완료하고 나서 다음 단계로 넘어가는 게 아니라 한 레코드씩 순차적으로 진행한다는
+사실이다. © order bys 전체 집합을 대상으로 정렬해야 하므로 작업을 모두 완료하고서 다음 오퍼레이션올
+진행한다.
+
+아래는 SQL 56ㅁ/2[에서의 실행계획이다.
+
+StmtText
+
+|—Sort (ORDER BY: ([e].[sal] DESC))
+| —Filter(WHERE: [emp]. [sal] as [e].[sal]>=(1500)))
+
+전문가 가이드 |593

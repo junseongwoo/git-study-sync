@@ -1,0 +1,47 @@
+제4장 조인 튜닝
+
+[예제] SQL Server
+
+select d.deptno, d.dname, e.empno, e.ename
+from dept d, emp e
+
+where d.deptno = e.deptno
+
+option (force order, merge join)
+
+StmtText
+
+|—Merge Join(Inner Join, MANY-TO-MANY MERGE: ([d].[deptno])=([e].[deptno]))
+|—Sort (ORDER BY: ([d]. [deptno] ASC))
+ㅣ |--Table Scan(0BJECT:([SQLPRO]. [dbo]. [dept] AS [d]))
+|—Sort (ORDER BY: ([e]. [deptno] ASC))
+|—Table Scan(0BJECT:([SQLPRO]. [dbo]. [emp] AS [e]))
+
+AE 머지 조인의 수행 과정을 그림으로 도식화하면 [그림 M449 같다.
+
+Sort Area0f 정렬된 emp 테이블
+
+Sort AreaOf 정렬된                          10        7782     CLARK
+dept 테이블                         10       7839 KING
+10       7934 MILLER
+20       7566 JONES
+10      ACCOUNTING                     2       7902 FORD
+20      RESEARCH                         20       7876 ADAMS
+40      OPERATIONS
+
+20            7788         SCOTT
+
+I
+
+[그림 M44] AE 머지 조인 수행 과정
+
+[그림 1-+4|에서 주목할 HE, Inner 집합인 emp 테이블이 정렬돼 있기 때문에 조인에 실패하는 레코드를
+만나는 순간 멈출 수 있다는 사실이다. 예를 들어 deptno=10%) 레코드를 찾기 위해 OH 스캔을 진행하다가 20을
+만나는 순간 멈춘다.
+
+또 한 가지는 정렬된 6000에서 스캔 시작점을 찾으려고 매번 탐색하지 않아도 된다는 점이다. 예를 들어
+06000=20인 레코드를 찾는 OF 스캔은 ()번에서 스캔하다가 멈춘 지점을 기억했다가 거기서부터 시작하면 된다.
+Outer YR! dept 테이블도 같은 순서로 정렬돼 있으므로 가능한 일이다.
+
+전문가 가이드 (599
+

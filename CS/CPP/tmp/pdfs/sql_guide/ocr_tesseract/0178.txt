@@ -1,0 +1,14 @@
+제1장 SQL 기본
+
+CLARK                                2450             2450
+SCOTT                                3000             3000
+KING                                  5000             5000
+TURNER            [Ce 1508          _ 0]
+ADAMS                                 1100             1100
+JANES                                 950              950
+FORD                              3000            ui
+MILLER                               1300             1300
+
+14 개의 행이 선택됐습니다.
+
+SQL 전문가 가이드 | 183.

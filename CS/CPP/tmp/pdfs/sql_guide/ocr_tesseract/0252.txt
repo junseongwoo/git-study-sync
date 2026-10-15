@@ -1,0 +1,39 @@
+lB dL 테더데데티테테테터터테터티:-000000000000000000000000000
+
+ON 조건절은 WHERE 절의 조인 조건과 같은 기능을 하면서도, 명시적으로 조인의 조건을 구분할 수 있다.
+다만 FROM 절에 테이블이 많이 사용될 경우 다소 복잡하게 보여 가독성이 떨어지는 단점이 있다.
+
+가. WHERE 절과의 혼용
+
+[예제] ON 조건절과 \+60『 검색 조건은 충돌 없이 사용할 수 있다. 부서번호 30인 부서의 소속 사원 이름 및 소속 부서번호,
+부서번호, 부서 이름을 찾아본다.
+
+SELECT A_ENAME, A_DEPTNO, B.DEPTNO, B.DNAME
+FROM EMP A JOIN DEPT B
+ON B.DEPTNO = A.DEPTNO
+WHERE B.DEPTNO = 38;
+
+ENAME             DEPTNO             DEPTNO            DNAME
+ALLEN                  30                  30            SALES
+WARD                    30                  30            SALES
+NARTIN                 30                  30            SALES
+BLAKE                  30                  30            SALES
+TURNER                             30                              30                    SALES
+JAMES                   30                  30            SALES
+
+6 개의 행이 선택됐습니다.
+
+나. 044 조건절 + 데이터 검증 조건 추가
+
+ON 조건절에 JOIN 조건 외에도 데이터 검색 조건을 추가할 수는 있으나, 검색 조건 목적인 경우는 WHERE
+절을 사용할 것을 권고한다(다만, 아우터 조인에서 조인의 대상을 제한하기 위한 목적으로 사용되는 추가 조건의
+경우는 ON 절에 표기돼야 한다).
+
+[예제] 매니저 사원번호가 7698번인 사원들의 이름, 매니저 사원번호, 소속 부서번호, 부서 이름을 찾아본다.
+
+SELECT ㅅ.태삐, A MGR, A.DEPTNO, B.DNAME
+FROM EWP A JOIN DEPT 68
+ON B.DEPTNO = A_DEPTNO
+AND A. MGR = 7698;
+
+258 su 전문가 기드

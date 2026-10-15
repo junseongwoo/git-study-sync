@@ -1,0 +1,29 @@
+과목 III SQL 고급 활용 및 튜닝
+.(sel«t avg(sal) en *ere deptno = d.&ptno) avg-sal
+,(sel«t nin(sal) frT em iere deptno = d.deptno) min-sal
+.(sel«t “491) frun iere deptro = d.deptno) max-sal
+d.loc = 'CHICAØ'
+이럴 때 다음과 같이 구하고자 하는 값들을 모두 결합하고, 바깥쪽 액세스 쿼리에서 substr 함수로 분리하는
+방법이 유용하게 쓰인다. Oracle 사용자라면 이 기법과 관련해 5장 3절 4항의 '다. 조인 조간LA(-Join Predicate)
+Pushdmm'을 반드시 확인하기 바란다
+t예제] OracIe
+, 1, 7)) avg-sal
+, to-runpr(substr(sal, 8, 7)) min-sal
+, 15)) max-sal
+select d.&ptno, d.chaæ
+,(select 7) W(min(sal), 7) || max(sal)
+fræ vhere deptno = d &ptno) 91
+뉴” ±pt d
+d.lx = •대1(꼬
+[예제] SQL Server
+select *|*
+cast(scbstrirg(sal, 1, 7) as float) avg-sal
+cast(st.bstrirv(sal, 8, 7) as int) min-sal
+cast(sl-bstrim(sal, 15, 7) ” int) max-sal
+fræ (
+select d 十1*
+,(select str(avg(sal), 7, 2) + str(min(sal), 7) + str(max(sal), 7)
+deptno = d ±ptno) %1
+들” dept d
+iere d.loc = '대ICAC
+碼8 전문가 가이드

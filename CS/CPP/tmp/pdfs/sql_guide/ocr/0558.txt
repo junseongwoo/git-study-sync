@@ -1,0 +1,25 @@
+제3장 인력스 류님
+제 2 절 테이블 액세스 최소화
+1. 인덱스 ROWID에 의한 테이블 랜덤 액세스
+쿼리에서 참조되는 칼럼이 인덱스에 모두 포함되는 경우가 아니라면, '테이블 랜덤 액세스가 일어난다. 다음
+실행계획에서 'Table Access By lndex ROWID'라고 표시된 부분을 말한다
+SQL> select * frm 고객 지역 = •서을•;
+Executim Plan
+4
+0 SELECT STATEkNT O)timizer=ALL-OS
+1 0 TÆLE ACCESS (BY 1荻X OID) '고객• (TABLE)
+ItOEX (″ SCÆ) 0F •고객-지역-1咏• (1Ⅵ)
+SQL Server는 'RID Lmkup'이래는 표현을 사용한다. 아래 실행계획에서 알 수 있듯이 인덱스로부터 테이블을
+NL 조인하는 것처럼 처리경로를 표현하고 있다
+StmtText
+!5 l—kst«i Join, WTER REFERENCES:([*I*J))
+l—ln&x 뉴k(%표CT:([..1.[삐.[고객].[고객-지역-idx]), SEEK:([지역1 = •서월)
+I—RID L~㈆뗘:([..].[쇠.[고객J), mRED
+참고로 20 이하 버전에서는 이래처럼 %okmark Lmkup'이라고 표현했다. 이것이 오히려 Oracle 실행계획과
+같은 모습이다.
+StntText
+l—mmark LØ如(B예愬恥•([*혜), %뚀CT:([..1.[쬐.[고객1))
+|-1釅 뇨k(㈆E(T:([..1.I쇠.[고객1.[고객-지역-i삐), SE鰍:([지역1 = •서월))
+지금부터 Table Acæss By lndex RovGd' 또는 'RID(=ih)kmark) lmkup'으로 표현되는 데이를 랜덤 액서l:스의
+내부 메커니즘을 자세히 살펴보자.
+전문가 가이드 567

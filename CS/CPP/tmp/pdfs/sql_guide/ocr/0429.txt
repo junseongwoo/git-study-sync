@@ -1,0 +1,66 @@
+과독 II 기본과 활용
+NATIm
+BIRTH-DATE
+柾1어T
+죠1어T
+결제] SQL Server
+ALTER TE-E PLAYER QESS VARCHAR(O) ;
+영령이 완료왰습니다.
+결행 출하 SQL Server
+exec sp—tplp • PLAYER'
+PLAYER-ID
+PLAYER ~
+TE." 10
+E—PLAYER NAYE
+NICKN.uE
+J이N_YYYY
+BIRTH—DATE
+HEIQ4T
+氈10臂
+나. ~ CWJMN
+Ty卿
+char
+varchar
+char
+varchar
+varchar
+char
+varchar
+tinyint
+varchar
+date
+char
+sællint
+smallint
+varchar
+N&ER(2)
+V枳대AR2(20)
+DATE
+대AR(I)
+N&ER(3)
+NEER(3)
+VAR대AR2(80)
+Length
+7
+20
+3
+40
+4
+10
+1
+20
+3
+1
+2
+2
+Nu11而le
+yes
+yes
+yes
+yes
+yes
+DROP COLUMN은 테이블에서 필요 없는 칼럼을 삭제할 수 있으며, 데이터가 있거나 없거나 모두 삭제 가능하다.
+단 칼럼 삭제 후 최소 하나 이상의 칼럼이 테이블에 존재해아 하며, 한 번 삭제된 칼럼은 뿌구할 수 없다.
+다음은 테이블의 불필요한 칼럼을 삭제하는 명령이다.
+4霄
+전문가 가이드

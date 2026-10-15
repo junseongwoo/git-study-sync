@@ -1,0 +1,23 @@
+駁장 활용
+[예제] 사원 테이불에서 羽가 높은 2영올 내림차순으로 출력하는데 같은 급여를 받는 사원이 있으면 201 출력한다. T에기
+WITH TIES 옵션은 동일 수치의 데이터를 추가로 더 추출하는 것으로, 표OTT과 FORD의 급여가 공동 2위이므로
+TOP(기 WITH TIES의 실행 결과는 3건의 데이터가 출력된다.
+l예제] SQL Server
+SELECT T隧(2) WITH TIES
+ENk SAL
+FO EP
+BY SAL EC;
+결행 끌기
+(3개 행 적용됨)
+3. ROW 니NIITING 절
+Oracle은 12.1 버전, SQL *는 2012 버전부터 ROW LIMITING 절로 Top N 쿼리를 작성할 수 있다.
+ROW LIMITING 절은 ANSI 표준 SQL 문법이다.
+아래는 ROW 니MITING 절의 구문이다. ROW LIMITING 절은 ORDER BY 절 다음에 기술하며, ORDER
+BY 절과 함께 수행된다. ROW와 ROWS는 구분하지 않아도 된다.
+(TFSET offset 1 찌1
+IFET대 {FIET 삐 1 嚀(예t PERCENT}I {ONLY | TIES}J
+- OFFSET offset : 건너월 행의 개수를 지정한다
+- FETCH : 반환할 행의 개수나 백분율을 지정한다.
+- ONLY : 지정된 행의 개수나 백분율만큼 행을 반환한다.
+WITH TIES 마지막 행에 대한 동순위를 포함해서 반환한다.
+전문가 ,까드 349

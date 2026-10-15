@@ -1,0 +1,39 @@
+과옥 tl * 기본과 활용
+결과1
+10
+鶯
+ACCUTI%
+″TI에S
+LOC
+DALLAS
+대ICAØ
+ACCÜTI%
+CnjLT116
+LOC
+NEW ynK
+DALLAS
+대ICAØ
+BOSTON
+4 개의 행이 선택했습니다.
+위 SQL의 '구 에스터리스크처럼 별도의 칼럼 순서를 지정하지 않으면 USING 조건절의 기준이 되는 칼럼이
+다른 칼럼보다 먼저 출력된다(예, DEVINO가 첫 번째 칼럼이 된다). 이때 USING J이N은 조인에 사용된 같은
+이름의 칼럼을 하나로 처리한다.
+[예제] USlt•G 조건절을 이용한 EQUI 」대N에서도 NATURAL 」이N과 마찬가지로 조인 칼럼에 대해서는 ALIAS나 테이블
+이름과 같은 접두사를 불일 수 없다(ADEPTNO “ DEPTN이.
+[예제]
+SELECT A.EPTØ A ~ A.LX, B.NNE, B.LX
+~ FT A J이N ″ TEP
+LSI% (呼T嚮);
+촐과1
+1행에 오류:
+″즈1雩 절의 열 부분은 식별자를 가질 수 없음
+[예제!
+SELECT - A.LX, 8.LO(
+~ ″ A JOIN ″ TEP B
+151% (FTW;
+[실형 결과]
+ACCO..NTI"J
+254 전문가 ,결드
+NEW O.K
+ACCO.NTIW
+NEW YH

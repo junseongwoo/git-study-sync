@@ -1,0 +1,21 @@
+과목 ㅣ SQL 기본과 활용
+
+CASE
+EXPR WHEN COMPARISON_EXPR THEN RETURN_EXPR
+ELSE DEFAULT_EXPR
+
+0
+
+[예제] 부서 정보에서 부서 위치를 미국의 동부, 중부, 서부로 구분하라.
+
+WHEN "NEW YORK' THEN '6457'
+WHEN "BOSTON' THEN 'EAST'
+WHEN 'CHICAGD' THEN ‘CENTER’
+WHEN 'DALLAS' THEN ‘CENTER’
+ELSE
+
+4 개의 행이 선택됐습니다.
+
+두 번째 SEARCHED_CASE_EXPRESSION- CASE 다음에는 칼럼이나 표현식을 표시하지 않고, 다음 WHEN
+절에서 EQUI(=) 조건 포함 여러 조건(>, >=, <, <=)을 이용한 조건절을 사용할 수 있으므로 SIMPLE CASE.
+EXPRESSIONECH 훨씬 다양한 조건을 적용할 수 있는 장점이 있다.

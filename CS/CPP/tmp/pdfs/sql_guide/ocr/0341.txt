@@ -1,0 +1,21 @@
+과목 II 기본과 활용
+2. IOP 절
+SQL 뇨N℃r는 절을 사용해 결과 집합으로 출력되는 행의 수를 제한할 수 있다. TOP 절의 표현식은 다음과
+IPERCENTI IWITH TIESI
+E.xpresson 반환할 행 수를 지 정하는 숫자이다.
+- PERCENT . 쿼리 결과 집eoll서 처음 Expression%의 행만 반환됨을 나타낸다.
+- TIFS • ORDER BY 절이 지정된 경우에만 사용할 수 있으며, TOP N(PERCENT)의 마지막 행과 같은
+값이 있는 경우 추가 행이 출력되도록 지정할 수 있다.
+한 건의 행만 가져오고 싶을 때는
+- SELECT TOP(I) PLAYER-NAME FROM PLAYER;처럼 사용할 수 있다.
+두 건 이상의 N 행을 가져오고 싶을 때는
+- SELECr TOP(N) PLAYER-NAME FROM PLAYER;처럼 출력되는 행의 개수를 지정할 수 있다.
+[예제] 사원 테이를에서 급여가 높은 2영을 내림차순으로 출력하고자 한다.
+[예제] SQL Server
+SELECT T뗴2)
+EV& SAL
+BY SAL
+결행 촐과]
+(2개 행 적용됨)
+348
+가이드

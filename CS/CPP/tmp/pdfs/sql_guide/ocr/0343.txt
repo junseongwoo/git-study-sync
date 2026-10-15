@@ -1,0 +1,20 @@
+과못 II SQL 기본과 활용
+[예제 0圖는 UMITING 젊을 사용한 Top N 귀리다.
+월세]
+SELECT - SAL FO EP BY SAL, EW)tO FETCH FIRST 5 OS
+{실행 결과]
+11%
+12%
+12%
+5 행이 선택됐습니다.
+[예제] 아래와 같이 OFFSET만 기술하면 건너뛴 행 이후의 전체 행이 반환된다.
+[예제]
+SELECT - SAL FO EP BY SAL, OFFSET 5 OS,
+[실행 촐과1
+74%
+ln
+1聳
+1圄
+9 행이 선택묐습니다.
+350
+전문가 ,버드

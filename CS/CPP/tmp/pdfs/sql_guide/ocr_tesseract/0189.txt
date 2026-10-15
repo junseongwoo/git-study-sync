@@ -1,0 +1,33 @@
+과목 ] QU 기본과 활용
+
+[예제] ‘FM 성을 가진 선수들의 정보를 조회하는 WHERE 절을 작성한다.
+
+SELECT PLAYER NAME AS 선수명, POSITION AS 포지션, BACK_NO AS 백넘버, HEIGHT AS 키
+FROM PLAYER
+WHERE PLAYER NAME LIKE '3%';
+
+선수명             포지션          . 백넘버              키
+장형석             DF                      36             181
+장철민             [3                      24             179
+장철우               DF                          7              172
+장대일             DF                       7             184
+장재우             대                      12             172
+장기봉             대                      12             180
+장성철               WE                        27               176
+장윤정             DF                      17             173
+장서연              대                       7             180
+장동현              FW                      39             178
+장경호             바                      39             174
+장성욱             [la                      19             174
+33d              DF                      34             184
+
+13 개의 행이 선택됐습니다.
+
+[예제] 세 글자 이름을 가진 선수 중 WM 성을 갖고 끝 글자가 ‘Tel 선수들의 HEE 조회하는 WHERE HE 작성한다.
+
+SELECT PLAYER NAME AS 선수명, POSITION AS 포지션, BACK_NO AS 백넘버, HEIGHT AS 키
+FROM PLAYER
+WHERE PLAYER NAME LIKE '장 3°;
+
+194 sq #87 가이드
+

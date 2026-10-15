@@ -1,0 +1,38 @@
+과목 ll 기본과 활용
+A11
+18 행이 선택됐습니다.
+SALESW
+A11 J±s
+A11 J±s
+1
+4
+6
+4
+14
+2850
+7
+2%25
+CUBE는 GROUPING 칼럼이 가질 수 있는 모든 경우의 수에 대해 Subtotal을 생성하므로 GROUPING
+COLUNNS의 수가 N이라고 가정하면, 2의 N승 LEVEL의 Subtotal을 생성하게 된다.
+실행 결과에서 CUBE 함수 사용으로 ROLLUP 함수의 결과에다 업무별 집계까지 추가해서 출력할 수 있는데,
+ROLLUP 함수와 비교하면 업무별 집계를 표시한 5건의 레코드가 추가된 것을 확인할 수 있디(AⅡ Depaftments-
+CLERK, ANALYST, NLANAGER, SALESMAN, PRFSIDENT별 집계가 5건 추가됐다).
+STEP 52 ALL 사용 *
+UNION ALL은 뇨 Operation 내용으로, 여러 SQL 문장을 연결하는 역할을 할 수 있다. 위 SQL은 첫 번째
+SQL 모듈부터 차례대로 결과가 나으므로 위 CUBE SQL과 결과 데이터는 같으나 행들의 정렬은 다를 수 있다.
+[예제]
+SELECT ~ Jæ
+(0.鼈 (하 AS EP-CNT, 511 (SAL) AS SAL SI-N
+FO EP 시 FT
+B.FTtO = A.tkPTtO
+″ BY ~ Jæ
+I-NIm ALL
+SELECT ~ • A11 J±s• AS Jæ
+(啞 (하 AS EP-CNT, 91 (SAL) AS SAL-SI-U
+FO EP 시 FT B
+= A.FTPO
+~ BY 까4襞
+1A1圖 ALL
+SELECT • A11 • AS - ,
+CO-NT (하 AS EP-CNT, 91 (SAL) AS SAL-SIN
+318 전문가 ,까드

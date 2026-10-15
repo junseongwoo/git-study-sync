@@ -1,0 +1,38 @@
+과목 II QL 기본과 활용
+리포트 출력 때 NULL이 아닌 0을 표시하고 싶은 경유에는 NVL (SUM (SAL),0)이나, ISNULL (SUM( SAL),O)처럼
+전제 SUM의 결과가 NULL인 경위대상 건수가 모두 NULL인 경원에만 한 번 NWISNULL 함수를 사용하면 된다.
+[예제 팅넓 포지션넓 FW, MF, DF, GK 포지션의 인원수와 팅별 전체 인원수를 구하는 SQL 문장을 작성한다. 데이터가
+없는 경우는 0으로 표시한다
+j예제1 SIMPLE_CASE_EXPRESSION 조건
+Oracle
+SELECT TEN-ID
+WL (91 (CASE "•EN 'FW' THEN 1 ELSE 0 EtO), 0) AS FW
+WL (91 (CASE nSITIm HEN •飇• THEN 1 ELSE 0 EM)), 0) AS MF
+WL (호國 (CASE MEN •匿• THEN 1 ELSE 0 EtO), 0) AS DF
+WL (호國 (CASE HEN 'GK' 가正N 1 ELSE 0 EtO), 0) AS GK
+(″*) AS SIN
+FO PLAYER
+BY TEU_ID;
+CASE 표현의 HSE 0, EISE NULL 문구는 생략 가능하므로 다음과 같이 조금 더 짧게 SQL 문장을 작성할
+수 있다. DefauIt 값으로 NULL이 적용된다.
+|예제] SIMPLE_CASE_EXPRESSION 조건 - Oracle
+TEU_ID
+WL (91 (CASE nSITIOd *EN 'FW' THEN 1 EtO), 0) AS FW
+WL (오國 (CASE nSITIm HEN 'MF' THEN 1 EtO), 0) AS
+WL (91 (CASE mSITITd HEN 'DF' THEN 1 EtO), 0) AS DF
+WL (91 (CASE mSITIm HEN 'GK' THEN 1 E"O), 0) AS GK
+(0.鼈卜) AS 9.1
+FO R-AYR
+BY TEÆ-ID;
+Oracle
+우제! SEARCHED_CASE_EXPRESSION 조건
+SELECT TEA-ID
+WL (91 (CASE NEN mSITITå = 'FW' 1 EM)), 0) AS FW
+WL (91 (CASE *EN 耶ITI애 = THEN 1 EPO), 0) AS MF
+WL (91 (CA% - POSITIm = •阡• TÆN 1 EPO), 0) AS DF
+EtO), 0) AS GK
+WL (9.믈 (CASE EN mSITIm = •蘇• TI-EN 1
+(0.鼈十) AS 91
+~ PLAYER
+~ BY TEA—ID;
+216 전문가 가이드

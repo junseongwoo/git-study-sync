@@ -1,0 +1,17 @@
+제1장 SQL 기본
+
+HM DISTINCT 옵션
+[예제] 선수 테이블의 포지션 HEE ALT DISTINCT 옵션으로 확인해 본다.
+
+SELECT ALL ©
+POSITION
+FROM PLAYER;
+
+ALLS 생략 가능한 키워드이므로 아래 SQL 문장도 위 예제와 같은 결과를 출력한다.
+
+DF
+
+…
+
+480 개의 행이
+

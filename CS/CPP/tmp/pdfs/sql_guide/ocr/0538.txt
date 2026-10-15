@@ -1,0 +1,22 @@
+R3장 인역스 류님
+다. lrriex Unique Scan
+1.
+lndex Unique 뇨n은 [그림 III-후61처럼 수직적 담색만으로 데이터를 찾는 스캔 방식으로서, Unique 인덱스를
+조건으로 탐색하는 경우에 작동한다
+Unique Scan
+[그림 Ⅲ•十6] lndex Unique Scan
+아래는 Oracle에서 lndex Unique Scan할 때의 실행계획이다.
+S한〉 create irdex 예
+5尊〉 alter table
+2 cmstraint pk-env key(erono) using
+窪〉 set a.Jtotrn traceonly explain
+S한〉 select ~℃, 예~ fræ = 77圈•,
+Executim Plan
+0 SELECT STATEENT
+1 0 TABLE ACCESS (BY II&X 血ID) 'EW)
+2 1 IüX (IAIWE ″) 嘗 'PK-EP' (UNIQÆ)
+SQL Server 실행계획에는 Oracle의 Range Scan과 Unique Scan을 구분하지 않고 똑같이 lndex 뇨k라고
+표시한다.
+StmtText
+1-虧t댼 Join. WTER
+I—RID L예如(嚼E(T:(I…1.[쇠.[“]), SE鰍:([~圄1해~圄1) LmKIP 끄艇D

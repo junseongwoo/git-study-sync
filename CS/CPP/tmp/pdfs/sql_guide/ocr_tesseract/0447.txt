@@ -1,0 +1,40 @@
+과목 ｌ SQL 기본과 활용
+
+[예제] SYSTEM 유저로 접속해 SQLD 유저가 로그인할 수 ATH CREATE SESSION 권한을 부여한다.
+CONN SYSTEM/MANAGER;
+
+연결됐습니다.
+
+GRANT CREATE SESSION TO SQLD;
+
+권한이 부여됐습니다.
+
+예제] Oracle
+
+CONN SQLD/DB2019;
+
+연결됐습니다.
+
+[예제] SQLD 유저로 테이블을 생성한다.
+
+예제] Oracle
+
+SELECT * FROM USER_TABLES;
+
+선택된 레코드가 없습니다.
+
+3 실행 결과] Oracle
+
+CREATE TABLE MENU (MENU_SEQ NUMBER NOT NULL, TITLE VARCHAR2(10));
+
+1행에 오류:
+084-01031: 권한이 불충분합니다
+
+210 SQL Server
+
+CREATE TABLE MENU (MENU_SEQ INT NOT NULL, TITLE VARCHAR(10)):
+
+메시지 262, 수준 14, 상태 1, B11
+데이터베이스 '40/60406000(5'에서 CREATE TABLE 사용 권한이 거부됐습니다.
+
+454 | 50). 건문가 가이드

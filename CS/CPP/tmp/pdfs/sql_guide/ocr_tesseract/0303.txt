@@ -1,0 +1,39 @@
+과목 | SQL 기본과 활용                  —————————————————————————————
+
+STEP 1-2. GROUP BY & + ORDER BY 절 사용
+
+[예제] 부서명과 업무명을 기준으로 집계한 일반적인 GROUP BY SQL 문장에 ORDER BY 절을 사용함으로써 부서ㆍ업무별로
+정렬이 이루어진다.
+
+SELECT  B.DNAME, A.J0B, COUNT (*) AS EMP_CNT, SUM (A.SAL) AS SAL_SUM
+FROM EWP A, DEPT B
+WHERE B.DEPTNO = A.DEPTNO
+
+GROUP BY B.DNAME, A.JOB
+
+ORDER BY B.DNAME, A.JOB;
+
+eh rh 대소. 누나. 10토. 노우 니차
+더
+
+SALES
+SALES        MANAGER
+SALES
+9 행이
+
+| 선택됐습니다.
+
+STEP 2. ROLLUP 함수 사용
+[예제] 부서명과 업무명을 기준으로 집계한 일반적인 GROUP BY SQL 문장에 ROLLUP 함수를 사용한다.
+
+oi A
+
+SELECT B.DNAME, A.JOB, COUNT (*) AS EMP_CNT, SUM (A.SAL) AS SAL_SUM
+FROM EMP A, DEPT B
+WHERE B.DEPTNO = A.DEPTNO
+
+GROUP BY ROLLUP (B.DNAME, ㅅ.208);
+
+DAME                   308                            EMP_CNT                 SAL_SUM
+
+310 OL #7} 가이

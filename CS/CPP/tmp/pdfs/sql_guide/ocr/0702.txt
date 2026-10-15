@@ -1,0 +1,45 @@
+과윳 III SQL 고급 활용 및 튜닝
+st.execute();
+st.cloæ();
+mblic static void execute(Cmrpction (예, String iWJt—month) Exception {
+String RStmt = "SELECT 고객번호, 납입월, 지로, 자동이제, 신용카드, 핸드폰, 인터넷 “
++ 월요금납부실적 •
++ •釐뚀 납입월 = 걸;
+Stmt =
+s&t.setStrirv(1, irut-mnth);
+뚀lt녖t 5 = stmt.executOery();
+*lile(rs.rpxt()){
+Stri「國 고객번호 = rs*tString(1);
+= rs*tStnng(2);
+Strirg 납입월
+= 5.%tL0凶(3);
+1呵 지로
+= rs.getLong(4);
+1呵 자동이체
+= rs.getLmg(5);
+1呵 신용카드
+= 5.爨tL혜g(6);
+1呵 한드폰
+1呵 인터넷
+if(지로 〉 0) insertData ((에, 고객 번호, 납입월, "A"
+if(자동이체 〉 0) insertData ((예, 고객번호, 납입월,
+i十(신용카드 〉 0) insertData ((0叫 고객번호, 납입월,
+if(핸드폰 〉 0) insertData ((%, 고객번호, 납입월,
+if(인터넷 〉 0) insertData ((예, 고객번호, 납입월,
+stnt.close();
+static getCcræctim() throws Exception {
+지로);
+, 자동이제);
+신용카드);
+핸드폰);
+인터넷);
+static void (예) throws Exception {
+蝕li( static void zin(Strim[l args) throws Exception{
+Carectim (예 = *tCmrection( ) ;
+execute(cm, •″로) ;
+releas<w«tim(cm) •,
+띈뺙 처리해야 할 월요금남부실적이 10만 건이면, 이 테이블에 대한 Fetch CAII이 10만 번(뒤에서 설명할 Array
+단위 Fetch 기능을 이용하지 않을 때), 납입방법별-월요금집계 테이블에 INSERT하기 위한 Parse Call과 Execute
+예이 각각 최대 %만 번, 따라서 최대 110만 번의 데이터베이스 Call이 발생할 수 있다.
+위 프로그램을 DBMS 내에서 수행되는 사용자 정의 프로시저로 개발하면 네트워크 트래픽 없는 Recursive
+712 전문가 ,삐드

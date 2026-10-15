@@ -1,0 +1,55 @@
+과목 11 SQL 기본과 활용
+[실행 끌과] Oracle
+TEÆ-ID
+匿GI애-~
+E-TEAU-N,Ö&
+僛1틴YYW
+21P-(匿1
+ZIP-(匿2
+FAX
+馝11?
+WT MJLL
+tOT WLL
+WT MJLL
+WT WLL
+tOT WLL
+[실행 결과] SQL Server
+exec SP-t•e1P TEAY TEP'
+TYCP
+대씨3)
+VARCHAR2(8)
+VAR대AR2(40)
+VAR대AR2(9)
+VAR대AR2(8)
+대AR 3
+대AR(3)
+대AR(3)
+VARCHAR2(C)
+VAR대AR2(3)
+VAR대AR2(10)
+VAR대枳2(10)
+VAR대AR2(50)
+VAR대AR2(10)
+Length
+棚llable
+TEX_ID
+RIG-YYYY
+STADIW_ID
+21P-(廳1
+끄P,-(叨
+FAX
+4判 새가 ,버드
+TYCR
+char
+varchar
+varchar
+varchar
+char
+char
+ct•er
+varchar
+varchar
+varchar
+varctur
+varctur
+varchu

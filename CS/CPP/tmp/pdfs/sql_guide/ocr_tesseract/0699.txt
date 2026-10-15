@@ -1,0 +1,14 @@
+제6장 고급 50. 튜닝
+
+Be = = 이이
+
+이 확장 기능을 통해 Updatable Join View 기능을 대체할 수 있다. 앞에서 bypass_ujve 힌트를 사용했던
+update 문장을 예로 들면, 다음과 같이 merge 문으로 처리할 수 있다.
+
+merge into 고객 <
+using (select AWE, 03×(거래일시) 거래일시, 50(거래금액) 거래금액
+from 거래
+where  H2YA| > trunc(add_months(sysdate,-1))
+group by 고객번호) t
+on (<.고객번호 = +.고객번호)
+when matched then update set <.최종거래일시 = +,거래일시, <.최근거래금액 = .거래금액

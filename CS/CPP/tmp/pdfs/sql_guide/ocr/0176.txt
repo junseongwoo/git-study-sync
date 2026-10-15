@@ -1,0 +1,36 @@
+제1장 기본
+[예제] 사원 테이불에서 MGR와 7698이 같으면 NULL* 표시하고, 같지 않으면 MGRß 표시한다.
+l예제l
+SELECT ENAME, EPt0, 衄, WLLIF (Ⅷ, 76%) AS WIF
+F刷믈 EP;
+NULLIF 함수를 CASE 문장으로 표현할 수 있다.
+[예제]
+SELECT ENAk E顰嚮, MGR
+CASE
+HEN = 76% TÆN WLL
+ELSE
+EtO AS WIF
+[실행 결과]
+ENÅÆ
+SMITH
+BLAKE
+CLARK
+SCOTT
+KI%
+UILLER
+EPt0
+7%9
+76%
+7876
+79새
+7%2
+78剪
+7839
+75固
+7粥
+WIF
+7『粥
+14 개의 행이 선택됐습니다.
+실행 결과를 보면 MGR의 값이 7698이란 상수가 같은 경우 NUIF 칼럼에 NULL이 표시됐다. KING이 속한
+행의 NUIF 칼럼에 NULL이 표시된 것은 원래 MGR 데이터가 NULL이었기 때문이다.
+전문가 가이드 181

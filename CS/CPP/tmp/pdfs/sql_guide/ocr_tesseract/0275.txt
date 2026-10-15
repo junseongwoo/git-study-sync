@@ -1,0 +1,21 @@
+과목 ｌ SQL 기본과 활용
+
+[그림 Ｌ-2-2] 단일 행 서브 쿼리의 예제1
+
+[그림 12212 2개의 SQL 문으로 구성돼 있다. 정남일 선수의 소속팀을 알아내는 801 문(서브 쿼리 부분)과
+이 결과를 이용해 해당 팀에 소속된 선수들의 정보를 출력하는 SQL 문(메인 쿼리 부분)으로 구성된다.
+
+정남일 선수가 소속된 팀의 선수들에 대한 정보를 표시하는 문제를 서브 쿼리 방식의 SOL 문으로 작성하면
+다음과 같다.
+
+SELECT PLAYER NAME AS 선수명, POSITION AS 포지션, 8\( \0 AS 백넘버
+FROM PLAYER
+WHERE TEAM_ID = (SELECT TEAM_ID
+FROM PLAYER
+WHERE PLAYER NAME = '정남일')
+
+|:
+JE
+;
+
+선수명              포지션              백넘버

@@ -1,0 +1,57 @@
+1
+1
+2
+2
+3
+3
+3
+3
+2
+2
+3
+3
+(14개 행 적용됨)
+14m
+ln
+1210
+12羽
+1221
+1222
+1211
+1212
+1110
+11N
+1121
+1122
+駁장 활용
+1圄
+1圄
+12%
+1溜
+1220
+1220
+1210
+1210
+11%
+11%
+1120
+1120
+실제 조직도와 같은 모습의 결과를 출력하도록, 예E에 던11라는 정렬용 칼럼을 추가하고 쿼리 마지막에 ORDER
+BY 조건을 추가해보지(단 앵커 멤버와 재귀 멤버 양쪽에서 convert 함수 등으로 데이터 형식을 일치시켜야 한다).
+WITH T_EP ANC}•m AS (
+SELECT EPLOYEEID, LANACRID, 0 AS LEVEL, CMRT(VAR대枳(1亞), EPLOYEEID) AS snT
+FO T_EP
+*ERE uNAGERlD IS MJLL /* 재귀 호출의 시작점 */
+lJNIm ALL
+SELECT R.EPLOYEEID, R.UNÆRID, A.LEVEL + 1
+, (에`正RT(V枳대枳(1표), A ßT + • ,• + R.EPLOYEEID) AS ßT
+FO T_EF_ÆK}G A, T_EP R
+MfRE R.LANAGERID = A.EPLOYEEID)
+SELECT LEVEL, REPLICATE(' • LEVEL * 2) + EPLOYEEID AS EPLOYEEID, UANAGERID,
+T-EP ANCO
+0皬R BY
+CI'E 안에서 sort 칼럼에 사번(=EmployeeID)을 재귀적으로 더해 나가면 정렬 기준으로 삼을 수 있는 값이
+만들어진다. 다음은 S011 칼럼으로 정릴해 출력한 결과인데, [그림 Ⅱ•2•11]에 있는 조직도의 모습과 일치한다.
+가상의 %11 칼럼을 추가해 정렬하는 게 아쉽기는 하지만, SQL 던rve뗴서 계층 구조를 실제 모습대로 출력하려면
+현재(2예5, 2Ⅸ)8 버전 기준)로서는 감수해야 할 수밖에 없다.
+전문가 ,뻐드 363

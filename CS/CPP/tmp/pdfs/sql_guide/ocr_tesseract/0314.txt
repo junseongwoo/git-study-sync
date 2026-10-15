@@ -1,0 +1,38 @@
+제2장 SQL 활용
+
+| [실행 결과] |
+
+DNAME                208            EMP_CNT      SAL_SUM
+ACCOUNTING            ALL Jobs              3         8750
+RESEARCH              All Jobs              5         16875
+SALES                   All Jobs               6          9460
+All Departments      ANALYST             2         6000
+All Departments      CLERK               4         4150
+All Departments      MANAGER             3         8275
+All Departments      PRESIDENT            1         5000
+All Departments       SALESMAN            4        5600
+
+8 행이 선택됐습니다.
+
+GROUPING SETS 함수 사용 시 UNION ALLE 사용한 일반 그룹 함수를 사용한 501.과 같은 결과를 얻을
+수 있으며, 괄호로 묶은 집합 별로(괄호 내는 계층 구조가 아닌 하나의 데이터로 간주함) 집계를 구할 수 있다.
+
+GROUPING 8815의 경우 일반 그룹 함수를 이용한 50[과 결과 데이터는 같으나 행들의 정렬 순서는 다를
+수 있다.
+
+뿔 GROUPING SETS Ag SQL - 순서 변경
+
+[예제] 일반 그룹 함수를 GROUPING SETS 함수로 변경해 부서별, JOBE 인원수와 급여 합을 구할 때 GROUPING 5615의
+인수 순서를 바꾸어 본다.
+
+SELECT CASE GROUPING (B.DNAME) WHEN 1 THEN '시1 Departments’ ELSE B.DNAME END AS DNAME
+, CASE GROUPING (A.J0B ) WHEN 1 THEN ‘All Jobs'       ELSE A.JOB END AS 208
+
+, COUNT (*) AS EMP_CNT, SUM (A.SAL) AS SAL_SUM
+FROM EMP A, DEPT B
+WHERE B.DEPTNO = A.DEPTNO
+GROUP BY GROUPING SETS (A.J0B, B.DNAME)
+ORDER BY B.DNAME, A.J0B;
+
+SQL 전문가 가이드 [32]
+

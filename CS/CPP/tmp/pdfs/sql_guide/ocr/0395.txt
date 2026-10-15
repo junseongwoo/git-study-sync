@@ -1,0 +1,31 @@
+과목 II SQL 기본과 활용
+UPDATE 문의 SET 절에 서브 쿼리를 사용하면, 서브 쿼리의 결과로 값이 수정된다. 서브 쿼리를 사용한 변경
+직업을 할 때, 서브 쿼리의 결과가 NULL을 반환할 경우 해당 칼럼의 결과가 NULL이 될 수 있기 때문에 주의해야
+[예제] 팀 테이를에서 창단년도가 2咖년 이후인 팀의 주소를 홍팀 경기장의 주소로 수정한다.
+[예제1
+TEA* A
+SET = (SELECT X
+FO STADILN X
+WHERE X OETEAN_ID = A.TEAN_ID)
+A.nIG-YYYY 〉 ″
+4 행이 갱신했습니다.
+[예제] 모든 경기장의 지역번호와 전화번호를 홈팀의 지역번호와 전화번호로 수정한다.
+SET (A.D, A.TEL) = (SELECT X.n, X.TEL
+[예제]
+uuTE STÅDILN A
+20 행이 경신왰습니다.
+FO TEAM X
+HERE X TEAU_ID = A.OETEAM_ID);
+UPDATE 문의 WHERE 절에 서브 쿼리를 사용해, 수정될 행을 식별할 수도 있다. 수정될 행을 식별함으로써
+불필요한 수정을 방지할 수 있다.
+[예제] 홍팀의 정보가 존재하는 경기장의 지역번호와 전화번호를 홀림의 지역번호와 전화번호로 수정한다.
+[예제]
+IBTE STDIIN A
+SET (A.D, A.TEL) = (SELECT X.DT, X.TEL
+FO TEN X
+HERE X.TEU_ID =
+釐氈 EXISTS (SELECT 1
+402
+FO TEAM X
+釐氈 X.TEU-ID A.OETEAN-ID);
+전문가 가이드

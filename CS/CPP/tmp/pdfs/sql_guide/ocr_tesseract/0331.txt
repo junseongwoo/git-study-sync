@@ -1,0 +1,37 @@
+과목 1 SOL 기본과 활용
+
+았을 때 의도적으로 세부 항목을 정렴하고 싶다면, 별도의 정렬 조건을 가진 INLINE VIEWS 사용하거나 OVER
+() 내의 ORDER BY 절에 칼럼을 추가해야 한다.
+
+[예제] 앞의 SQL 문장에서 같은 UR 가진 FIRST_VALUER 처리하기 위해 ORDER BY 정렬 조건을 추가한다.
+
+SELECT DEPTNO, ENAME, SAL
+, FIRST_VALUE (ENAME) OVER (PARTITION BY DEPTNO ORDER BY SAL DESC, ENAME
+ROWS UNBOUNDED PRECEDING) AS ENAME_FV
+FROM ENP;
+
+DEPTNO               ENAME                  SAL                 ENAME_FV
+10               KING                   5000                KING
+10               CLARK                 2450               KING
+10                      MILLER                       1300                      KING
+20               FORD                   3000               FORD
+20               500                  3000               FORD
+20               JONES                  2975                FORD
+
+| 20               ADAMS                  1100               FORD
+
+|      20               SMITH                   800                FORD
+30               BLAKE                  2850                BLAKE
+3               ALLEN                  1600               BLAKE
+30                     TURNER                       1500                      BLAKE
+30               MARTIN                1250               BLAKE
+30               WARD                   1250               BLAKE
+30               JAMES                   950               BLAKE
+
+14 행이 선택됐습니다.
+
+50[.에서 같은 부서 내에 최고 급여를 받는 사람 둘이 있는 경우를 대비해 이름을 두 번째 정렬 조건으로 추가한다.
+실행 결과를 확인하면 부서번호 20의 최고 급여자가 이전의 SCOTT 값에서 ASCII 코드가 적은 값인 FORDE
+변경된 것을 확인할 수 있다.
+
+338 | SOL 전문가 가이드

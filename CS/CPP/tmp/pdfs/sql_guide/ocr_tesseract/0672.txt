@@ -1,0 +1,40 @@
+과목 11 QL 고급 활용 및 튜닝
+
+6) Window Sort : 윈도우 함수를 수행할 때 나타난다.
+
+select 00000, ename, job, mgr, sal, row_number() over (order by hiredate)
+from em
+
+Execution Plan
+
+0     SELECT STATEMENT Optimizer=CHOOSE (Cost=4 Card=13 Bytes=364)
+1 © WINDOW (SORT) (Cost=4 (ard=13 Bytes=364)
+“504 |     TABLE ACCESS (FULL) OF 'EMP' (Cost=2 (31613 Bytes=364)
+
+StmtText
+
+1—Sequence Project (DEFINE: ([Expr1064]=row_number))
+{—Compute Scalar(DEFINE: ([Expr1006}=(1)))
+{—Segment
+1—Sort(ORDER BY: ([SQLPRO] . [dbo]. [emp] .[hiredate] ASC))
+|-ㅡ13616 Scan(0BIECT:([SQLPRO]. [dbo]. [emp]))
+
+다. 소트 튜닝 요약
+
+소트 오퍼레이션은 메모리 집약적(8160001-101605106)일 뿐만 아니라 CPU 집약적(080-1066ㅁ5106)이기도
+하다. 소트할 데이터 양이 많을 때는 디스크 1/0도 발생하므로 쿼리 성능이 나빠진다. 특히 부분범위처리를 할
+수 없게 만들어 01717 환경에서 성능을 떨어뜨리는 주요인이 되곤 한다. 될 수 있으면 소트가 발생하지 않게 SQLS
+작성하고, 소트를 피할 수 없다면 메모리에서 수행을 완료할 수 있도록 해야 한다.
+
+앞으로 설명할 소트 튜닝 방안을 요약하면 다음과 같다.
+
+를 데이터 모델 측면에서의 검토
+
+를 소트가 발생하지 않도록 SQL 작성
+EAGLE 이용한 소트 연산 대체
+
+글 소트 영역을 적게 사용하도록 SQL 작성
+BLE 영역 크기 조정
+
+682 50! 건문가 가이드
+

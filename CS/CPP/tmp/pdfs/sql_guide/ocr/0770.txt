@@ -1,0 +1,43 @@
+제7장 Læk과 트랜새션 동시성
+다. 호환성
+'호환된다'는 말은 한 리소스에 두 개 이상의 Læk을 동시에 설정할 수 있음을 뜻한다 앞서 설명한 1心 종류별로
+호환성을 요약하면 [표 ⅡI-7-기와 같다('0'는 두 모드 간에 호환성이 있음을 의미).
+[표 Ⅲ•7-기 SQL Server Lock 호환성
+lntent Shared(IS)
+Shared(S)
+Update(U)
+lntent exclusive(IX)
+Shared with intent exclusive(SIX)
+Exclusive(X)
+스키마 Lock의 호환성은 다음과 같다.
+6
+0
+0
+0
+0
+0
+S
+0
+0
+0
+U
+0
+0
+Ⅸ
+0
+0
+0
+Sch-s는 Sch-M을 제외한 모든 1幻ck과 호환된다.
+년1-M은 어떤 I忒k과도 호환되지 않는다.
+3. Oracle lmk
+Oracle은 공유 리소스와 사용자 데이터를 보-호할 목적으로 DML lmk, DDL lmk, 래iI(Latch), 버퍼 L(Xk,
+라이브러리 개시 1忒k,협n 등 다R뵤卜 종류의 L«k을 사용한다. 이들 중 애플리케이션 개발 측면에서 가장 중요하게
+다뤄야 할 Lock은 무엇보다 DML Lock이다
+DML L(Xk은, 다중 사용자에 의해 동시에 액세스되는 사용자 데이터의 무결성을 보-호해 준다 DML Lcck에는
+로우 L«k과 테이블 Lmk이 있다.
+가. 로우 Lxk
+Oracle에서 로우 Lcxk은 항상 배타적이다. insert, update, delete 문이나 select...for update 문을 수행한
+트랜색선에 의해 설정된다. 이 트랜책선이 커밋 또는 를백할 때까지 다른 트랜책션은 해당 로우를 변경할 수 없다
+()「쬬le에서 일반 문에 의해 읽힌 레코드에는 어떤 설정되지 않는다 다른 DBMSN럼 읽기 작업에
+대한 공유 Lock을 사용하지 않기 때문에 OracIe에서 읽기와 갱신 작업은 서로 방해하지 않는다
+전문가 ,}0|드 781

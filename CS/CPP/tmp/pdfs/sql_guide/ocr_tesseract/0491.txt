@@ -1,0 +1,40 @@
+제1장 SQL 수행 구조
+
+-- 테스트용 테이블 데이터 건수 : 49,906
+SQL> select count(*) from t;
+
+COUNT(*)
+
+49906
+
+T 테이블에는 49,906건의 레코드가 저장돼 있다.
+
+select count(*) from t
+where owner like 'SYS¥'
+
+Rows Row Source Operation
+
+1 SORT AGGREGATE (cr=691 pr=0 pw=0 time=13037 us)
+24613 TABLE ACCESS FULL T (cr=691 pr=0 pw=0 time=98473 us)
+
+위 SQLS 24,613개 레코드를 선택하려고 49,9067) 레코드를 읽었으므로 4996가 선택됐다. Table Full ScancilAf
+이 정도면 나쁘지 않다. 읽은 블록 수는 691개였다.
+
+select count(*) from t
+where owner like 'SYS¥'
+and  object_name = "ALL_OBJECTS'
+
+Rows Row Source Operation
+
+1 SORT AGGREGATE (cr=691 pr=0 060 time=7191 us)
+1 TABLE ACCESS FULL T (cr=691 pr=0 pw=0 time=7150 us)
+
+위 SQL 49,9067} 레코드를 스캔하고 1개 레코드를 선택했다. 선택 비중이 0.002%밖에 되지 않으므로 Table
+Full Scan 비효율이 높다. 여기서도 읽은 블록 수는 똑같이 691개다. 이처럼 테이블을 스캔하면서 읽은 레코드
+중 대부분 필터링되고 일부만 선택된다면 아래처럼 인덱스를 이용하는 게 효과적이다.
+
+create index t_idx on t(owner, object_name);
+
+select /*+ index(t t_idx) */ count(*) from t
+
+전문가 가이드 [399

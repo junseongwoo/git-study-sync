@@ -1,0 +1,63 @@
+제5장 SOL 옵티마이저
+
+나. 조건절 8?
+
+조건절(69102310)을 쿼리 블록 안으로 밀어 넣을 뿐만 아니라 안쪽에 있는 조건들을 바깥쪽으로 끄집어 내기도
+하는데, 이를 '조건절 80]107?'이라고 한다. 그리고 그것을 다시 다른 쿼리 블록에 Pushdown 하는 of 사용한다.
+다음 실행계획을 보자.
+
+select * from
+
+(select deptro, avg(sal) from enp where deptno = 10 group by deptno) 1 , (select deptno, min(sal),  wi
+from emp group by deptno) e2
+where e1.deptno = e2.deptno
+
+ㅣ 1d | Operation          | Name     | Rows
+
+| SELECT STATEMENT                  |                 |
+ㅣ HASH JOIN                          |                   |
+ㅣ VIEW                             |                   |
+ㅣ HASH GROUP BY                       |                      |
+ㅣ TABLE ACCESS BY INDEX ROWID          |                       |
+|      INDEX RANGE SCAN               | EWP_DEPTNO_IDX |
+ㅣ VIEW                              |                   |
+|                                    |                   |
+|                                    |                   |
+|                                    |                   |
+
+HASH GROUP BY
+TABLE ACCESS BY INDEX ROWID
+INDEX RANGE SCAN
+
+내 내 = - 내내 “= a
+
+ㅣ 0
+1401
+602
+153
+| 4
+I* 5
+| 6
+hed
+| 8
+1* 9
+
+_DEPTNO_IDX
+
+Predicate Information (identified by operation id):
+
+1 - access("E1". "DEPTNO"="E2"  "DEPTNO")
+5 - access("DEPTNO"=10)
+9 - access( "DEPTNO"=10)                                                                             i
+
+인라인 뷰 62에는 deptno = 10 조건이 없지만 Predicate 정보를 보면 양쪽 모두 이 £710] emp_deptno_idx
+인덱스의 액세스 조건으로 사용된 것을 볼 수 있다. 다음과 같은 형태로 쿼리 변환이 일어난 것이다.
+
+select * from
+
+(select deptno, avg(sal) from emp where deptno = 10 group by deptno) el
+
+, (select deptno, min(sal), max(sal) from emp where deptno = 10 group by deptno) e2
+where e1.deptno = e2.deptno
+
+전문가 가이드 [659

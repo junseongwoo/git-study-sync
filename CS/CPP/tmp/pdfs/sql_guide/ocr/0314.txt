@@ -1,0 +1,49 @@
+[실행 결과]
+ACCUTII"
+RESEAR대
+SALES
+A11 DepartNnts
+A11
+A11
+A11
+A11
+8 행이 선택됐습니다.
+JOB
+A11 1固s
+A11 1固s
+A11 hs
+ANALYST
+CLERK
+SALESW
+EP_CNT
+3
+5
+6
+2
+4
+3
+1
+4
+R2장 활용
+SAI SIN
+87%
+1%75
+41%
+8275
+GROUPING SETS 함수 사용 시 UNION ALL을 사용한 일반 그룹 함수를 사용한 SQL과 같은 결과를 얻을
+수 있으며, 괄호로 묶은 집합 별로(괄호 내는 계층 구조가 아닌 하나의 데이터로 간주함) 집계를 구할 수 있다
+GROUPING SEIS의 경우 일반 그룹 함수를 이용한 따L과 결과 데이터는 같으나 행들의 정렬 순서는 다를
+수 있다.
+ㆍ GROJPING 표죠 사용 * • 순서 변경
+[예제] 일반 그를 함수를 GROUPING 표죠 함수로 변경해 부서하 JOBV 인원수와 급여 합을 구할 때 GRO.-JP1t•G SETS의
+인수 순서를 바꾸어 본다.
+[예제] Oracle
+SELECT CASE GOPING (8.~) MEN 1 가대 'A11 Departments• ELSE EtO AS ~
+CASE 애이PI馮 (A.n ) *EN 1 T}•EN 'A11 J0bs•
+ELSE A.Jæ EtO AS
+, QNT (하 AS EP_CNT, 91 (A.SAL) AS SAL-SI-N
+FO EF 시 WYT B
+W}fRE = A.FTW
+GRO..P BY 鰍0.PI馮 SETS (A.n, 8.″)
+ORDER BY 8.~, A.JOB;
+321

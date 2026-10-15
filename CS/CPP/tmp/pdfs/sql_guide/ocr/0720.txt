@@ -1,0 +1,36 @@
+과목 III QL 고급 활용 및 튜닝
+曲cle에서 Range 파티셔닝히는 방법([그림 III丕최 참조)을 간단히 예시하면 다음과 같다.
+create t±le 주문 ( 주문번호 mntpr, 주문일자 varchar2(8), 고객id varchar2(5), )
+partitim 하 『•nge(주문일자) (
+p&9—q1 valæs 16S ( •″01 • )
+valæs 16S (|2㈜%701 • )
+p2B—q3 valæs 16S than ( '2%91%1 • )
+--學 vall-es 16S than ('201%101 • )
+partitim 卹10-ql valæs 15S than ( •꼬1″1 • )
+~-酗 valæs 165 than ( UAXVALIÆ )
+p2예9-ql
+p2예9-책2
+p2예9-q3
+p2예9-q4
+P2010-책1
+p9999-mx
+주문일자 |201*01'
+'20090401 '
+'20090701'
+,20091001 ,
+' 20100101 '
+' 20100401 '
+'20100401'
+[그림 Ⅲ丕-8] Range 파티션
+Oracle에서 [Range + Hashl로 파티셔닝하는 방법([그림 111-6-9] 참조)을 간단히 예시하면 다음과 같다
+create t±le 주문 ( 주문번호 mntpr 주문일자 varchar2(8), 고객id varchar2(5), )
+partition by r飇”(주문일자)
+subpartition by huh(고객id) sü»artitions 8
+( partitim p2B-q1 vall-ps 155 than( •″401 ')
+p2嚮-q2 vall.ps 165 thm( '2″701 • )
+partitim values 1堡s than( '2%91%1 • )
+vall.ps 165 膾('201%101 • )
+, 必10-ql 15S thm( ㆍ201″1 • )
+″-” vall.ps 165 ~ UAXVALUE ) ) •
+730 전문가 가이드
+4

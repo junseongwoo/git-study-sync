@@ -1,0 +1,38 @@
+제5장 SOL 옵티마0|저
+>  ———————
+
+아래는 50 Unique 오퍼레이션 방식으로 수행할 때의 실행계획이다.
+
+alter table dept drop primary key;
+create index dept_deptno_idx on dept(deptno);
+
+select * from emp
+where deptno in (select deptno from dept);
+
+| Id | Operation         | Name     | Rows | Bytes |
+| 0| SELECT STATEMENT       |       | 1 se |
+ㅣ 1| TABLE ACCESS BY INDEX ROWID   | 80      hi 1 et
+ㅣ 2] NESTED LOOPS       |       I 1] ae |
+ㅣ 3| 500 UNIQUE       |       TES be aap
+| 4| INDEX FULL SCAN      | DEPT_DEPTNO_IDX  IER Raha
+|1* 51 INDEX RANGE SCAN      | EMP_DEPTNO_IDX  [ferecsi]   |
+
+Predicate Information (identified by operation id):
+
+5 - access( "DEPTNO"="DEPTNO")
+
+실제로 dept 테이블은 Uniquedt 집합이지만 옵티마이저는 이를 확신할 수 없어 sort unique 오퍼레이션을
+수행했다. 다음과 같은 형태로 쿼리 변환이 일어난 것이다.
+
+select 6.*
+from (select /*+ no_merge */ distinct deptno from dept order by deptno) a, emp b
+where b.deptno = a.deptno
+
+아래는 세미 조인 방식으로 수행할 때의 실행계획이다.
+
+select * from emp
+where 06000 in (select deptno from dept)
+
+| 1d | Operation      | Name   | Rows | Bytes | Cost (00) |     i
+
+전문가 가이드 [653

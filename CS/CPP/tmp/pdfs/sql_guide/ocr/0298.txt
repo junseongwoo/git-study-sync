@@ -1,0 +1,32 @@
+K02
+김태권
+廠장 활용
+1%
+31 개의 행이 선택했습니다.
+차집합은 앞의 집합의 결과에서 뒤의 집합의 결과를 빠는 것이다. 위 SQL 문은 삼성불루윔즈 팀의 선수들 중에서
+포지션이 미드필더(MF)인 선수들의 정보를 빠는 것이다.
+MINUS/EXCET 연산자는 NOT F.XISTS 또는 NOT IN 서브 귀리를 이용한 SQL 문으로도 변경할 수 있다.
+[예제]
+SELECT DISTIKT
+A.TEU-ID AS 팀코드, A.PtAYER-NA& AS 선수영, A.께TI애 AS 포지션
+, A.BACK-W AS 력넣버, A.ÆIQ{T AS 카
+FO PLAYER A
+WYERE A TEN 10 = *02•
+A*O WT EXISTS (SELECT 1
+FO PLAYER X
+X.PLAYER-ID = A.PLAYER—ID
+ÆR BY 1, 2, 3, 4, 5:
+[예제]
+SELECT
+DISTIKT
+TFN-ID AS 팀코드, Pt.AYERM AS 선수영, 而1T1애 AS 포지션
+, BACK-tO AS 력님버. HEIQ{T 카
+FO RAYER
+TEA 10 = •籾2'
+PLAYER-ID WT IN (SELECT PLAYER-ID
+FO PLAYER
+郞1T1翎
+ÄR BY 1, 2. 3. 4, 5:
+두 집합의 조건이 모두 동일 테이블에 있다면, 다음과 같이 논리 연산자를 이용한 간단한 SQL 문으로도 변경
+가능하다.
+전문가 ,柯드 305

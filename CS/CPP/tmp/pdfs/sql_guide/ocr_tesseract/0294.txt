@@ -1,0 +1,38 @@
+제2장 SQL 활용
+
+SELECT DISTINCT
+TEAM_ID AS 팀코드, PLAYER NAME AS 선수명, POSITION AS 포지션
+, BACK NO AS 백넘버, HEIGHT AS 7|
+
+FROM PLAYER
+WHERE TEAM_ID = 'K@2'
+OR POSITION = 'GK';
+
+만약 = 번째 질문에 대한 SQL 문에서 04104이라는 집합 연산자 대신에 UNION ^11.이라는 집합 연산자를
+사용하면 어떻게 될지 한번 수행해 보자.
+
+[예제]
+
+SELECT TEAN_ID AS 팀코드, PLAYER NAME AS 선수명, POSITION AS 포지션
+, BACK_NO AS 백넘버, HEIGHT AS 7|
+FROM PLAYER
+WHERE TEAM_ID = 'K02'
+UNION ALL
+SELECT TEAM_ID AS 팀코드, PLAYER NAME AS 선수명, POSITION AS 포지션
+, BACKNO AS 백넘버, HEIGHT AS 키
+FROM PLAYER
+WHERE POSITION = 'GK';
+
+팀코드             선수명              포지션            백넘버              키
+102                 김성환             OF                        5            183
+02                 가비                [3                      10            177
+102                 강대희              "3                      26            174
+1102                 고종수              ¥                      2            176
+Ke2                      고창현                  w                              8                170
+102               정기범            wr                    28           173
+102                 정동현              [3                      25             175
+102                 정두현              Ww                       4             175
+002                 정준                w                      “             170
+Ke2                 정진우             DF                        7             179
+
+92 개의 행이 선택됐습니다.

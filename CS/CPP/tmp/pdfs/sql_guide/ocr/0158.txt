@@ -1,0 +1,25 @@
+제1장 기본
+[예제] Or편e의 SYSDATE 함수와 SQL Server의 GETDATE( ) 함수를 사용해 데이터베이스에서 사용하는 현재의 날짜
+데이터를 확인한다. 날짜 데이터는 시스템 구성에 따라 다양하게 표현될 수 있으므로 사용자마다 다른 결과가 나을
+수 있다.
+(예제1 OracIe
+SELECT SYSDATE
+FROM m-AL;
+[실행 결과]
+SYSDATE
+2019-㈜-Z 14:17117
+1 개의 행이 선택묐습니다.
+[예제] SQL Server
+SELECT GETDATE() AS CIRENTTIE,
+[실행 결미
+2019-鬱-28 14:17:17.E
+(1개 행 적용됨)
+[예제] 사원(EMP) 테이를의 입사일자에서 년, 월, 일 데이터를 각각 출력한다. 아래 4개의 SQL 문장은 같은 기능을 하는
+문장이다.
+[예제] Oracle
+SELECT EV& AS 사원명, HIREDATE AS 입사일자
+EXTRACT (YEAR FRu HIREDATE) AS 입사년도
+EXTRACT (nNTH FO HIREDATE) AS 입사월
+EXTRACT (DAY FO HIREDATE) AS 입사일
+Fmu EP;
+전문가 가이드 163

@@ -1,0 +1,39 @@
+과목 11 QL 기본과 활용
+
+128. oi)
+ELSE (CASE                                                                    )
+WHEN SAL >= 1000 THEN 500
+ELSE 0
+END)
+END AS BONUS
+FROM EWP
+ENAME            SAL            BONUS
+SMITH            800                0
+ALLEN           1600              500
+WARD            1250              500
+JONES           2975             1900
+MARTIN          1250              500
+BLAKE           2858             1000
+CLARK           2450             1000
+500           3900             1000
+KING            5000             1000
+TURNER          1500              500
+ADANS           1100              500
+2065            958                0
+FORD            3000             1000
+MILLER          1300              500
+14 개의 행이 선택됐습니다.
+7. NULL 관련 함수
+가, NVL/ISNULL 함수
+
+다시 한 번 \01.에 대한 특성을 정리한다.
+
+- 널 값은 아직 정의되지 않은 값으로 0 또는 공백과 다르다. 02 숫자고, 공백은 하나의 문자다.
+
+- 테이블을 생성할 때 NOT NULL 또는 PRIMARY KEYZ 정의되지 않은 모든 데이터 유형은 NULL 값을
+포함할 수 있다.
+
+- NULL 같을 포함하는 연산의 경우 결과 값도 NULL 값이다. 모르는 데이터에 숫자를 더하거나 빼도 Zaks
+마찬가지로 모르는 데이터인 것과 같다.
+
+172 su 2 ole

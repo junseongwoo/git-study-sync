@@ -1,0 +1,25 @@
+*장 관리 구문
+SQLD로 로그인한다.
+[예제 및 실행 결과] SQL Server
+INSERT INTO %MJ VALIÆS (1, •화이팅');
+(1개 행이 영향을 받음)
+[예제 및 실행 결과] SQL Server
+SELECT 애 EMJ TO 丈0孖:
+명령이 완료굈습니다.
+다시 한 번 뚀01T 유저로 접속해 SQLI).MDOJ 테이블을 조회한Q. 이제 SQLDMENU 테이블을 SELECI%}면
+테이블 자료를 볼 수 있다.
+S(IJIT 유저는 SQLD.MNJ 테이블을 SELECI하는 권한만 부여 받았기 때문에 U肋AI쪅 INSERr,
+같은 다른 작업을 할 수 없다. 오브책트 권한은 SELECT, INSERT, DELETE, UPDATE 등의 권한을 따로따로
+관리한다.
+[예제] SQLD.MENU 테이불에 UPDATEß 시도한다.
+[예제 및 실행 결미 Oracle
+(唱 SCOTT/TIGR;
+연결욌습니다.
+[예제 및 실행 결과] Oracte
+SELECT * FO 災LD.飇測:
+EMJ-SEQ
+1
+TITLE
+화이팅
+1개의 행이 선택묐습니다.
+전문가 ,柯드 459

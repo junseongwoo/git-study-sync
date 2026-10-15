@@ -1,0 +1,44 @@
+과목 | SQL 기본과 활용
+
+ EE ——————— Ee,
+
+문자 SAE (character list) 문자를 대괄호로 묶은 표현식이다. 문자 리스트 중 한 문자만 일치하면 패턴이
+일치한 것으로 처리된다. 문자 리스트에서 하이픈(-)은 범위 연산자로 동작한다.
+
+[:digit:]          숫자                                          [0-9]
+
+[lower:]         소문자                                        [az]
+
+[-upper:]         대문자                                        (AZ)                Rat
+[alpha]          영문자                                        [3-26-2]
+
+[-alnum:]           영문자와 숫자                                        [0-9a-zA-Z)
+
+[:xdigit:]         16진수                                        [0-9a-fA-F]
+
+[:punct:]        구두점 기호                               [~[:alnum:][:cntrl:]]
+
+[:blank]         공백 문자                                    |
+
+[:space:]        ㅣ 공간 문자 (50806, enter, tab)
+
+다음은 POSIX 문자 클래스를 사용한 쿼리다. 67 F [punct] SHAE 사용해 특수 문자를 검색한다.
+
+SELECT REGEXP_SUBSTR ('gF1,', ‘[[:digit:]]" ) AS 01
+, REGEXP_SUBSTR ('gF1,', '[[:alpha:]]* ) AS (2
+, REGEXP_SUBSTR ('gF1,', '[[:lower:]]' ) AS (3
+, REGEXP_SUBSTR ('gF1,", '[[:upper:]]* ) AS C4
+, REGEXP_SUBSTR ('gF1,", '[[:alnum:]]" ) AS C5
+, REGEXP_SUBSTR ('gF1,", ‘[[:xdigit:]]") AS (6
+, REGEXP_SUBSTR (‘gF1,", '[[:punct:]]" ) AS C7
+
+FROM DUAL;
+a          Q         a
+1           9           9
+
+1개의 행이 선택됐습니다.
+
+나. PERL Hr} 표현식 연산자
+
+정규 표현식의 PERL 정규 표현식 연산자(0081, regular expression 0.7618101)를 살펴보자,
+다음의 PERL 정규 표현식 연산자는 POSIX 문자 클래스와 유사하게 동작한다.

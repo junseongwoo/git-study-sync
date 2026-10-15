@@ -1,0 +1,36 @@
+제1장 SQL 기본
+
+다음은 EQUI JOINS] 대략적인 형태다.
+
+SELECT 테이블1.칼럼명, 테이블2.칼럼명, ...
+FROM 테이블1, 테이블2
+WHERE 테이블2.칼럼명 = 테이블1.칼럼명 — WHERE 절에 JOIN 조건을 기술한다.
+
+같은 내용을 ANSI/ISO SQL 표준 방식으로 표현하면 아래와 같다. ANSI/ISO SQL 표준 방식의 조인 문법은
+8절에서 자세히 다룬다.
+
+SELECT 테이블1.칼럼명, 테이블2.칼럼명, ...
+FROM 테이블1 INNER JOIN 테이블2
+ON 테이블2.칼럼명 = 테이블1.칼럼명 -- 04 절에 7014 조건을 기술한다.
+
+[예제] 선수 테이블과 팀 테이블에서 선수 이름과 소속된 팀의 이름을 출력하시오.
+
+[예제]
+
+SELECT PLAYER.PLAYER NAME AS 선수명, TEAM. TEAM_NAME AS 소속팀명
+FROM PLAYER, TEAM
+WHERE TEAM, TEAM_ID = PLAYER, TEAM_ID;
+
+또는 INNER JOINS 명시해 사용할 수도 UCHANSI/ISO SQL 표준 방식의 JOIN 문법).
+
+SELECT PLAYER, PLAYER NAME AS 선수명, TEAM. TEAM NAME AS 소속팀명
+FROM PLAYER INNER JOIN TEAM
+ON TEAM. TEAW_ID = PLAYER, TEAW_ID;
+
+위 SQL& 보면 SELECT 구문에 단순히 칼럼명이 오지 않고 '테이블명,칼럼명'처럼 테이블명과 칼럼명을 함께
+기술했다. 이렇게 특정 칼럼에 접근하기 위해 그 칼럼이 어느 테이블에 존재하는 칼럼인지를 명시하는 것은 두
+
+가지 이유가 있다.
+먼저 조인에 사용되는 여러 개의 테이블에 같은 칼럼명이 존재하는 경우, DBMSE 어떤 칼럼을 사용해야 할지
+
+모르기 때문에 파싱 단계에서 오류가 난다.

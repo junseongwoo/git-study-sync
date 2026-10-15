@@ -1,0 +1,27 @@
+*장 관리 구문
+테이블이 변경됐습니다.
+[예제l SQL Server
+ALTER TABLE PLAYER 06TRAINT PLAYER_FK FmEIGN KEY (TEU_ID) REFEREKES TEÆ(TEÆ-ID);
+명령이 완료됐습니다.
+[예제] PLAYER 테이불이 참조하는 TEAM 테이를을 제거해본다.
+|예제l Oracle
+TABLE TE.u;
+1
+1행에 오류:
+″02449: 외래 기에 의해 참조되는 고유/기본 카가 테이불에 있습니다
+[예제! SQL Server
+″ TABLE TE.u;
+에시지 3726, 수준 16, 상태 1, 졸 1
+개체 •뚀"'은(는) FmEIGN KEY 제약조건에서 참조하므로 스t제할 수 없습니다.
+※ 위 예제에선 오류가 발생했으으로 테이블은 삭제되지 않는다.
+[예제] TEAM 테이를과 PLAYER 테이불에 각각 데이터를 1건씩 입력한다.
+[예제]
+INSERT
+INTO TEAM (TE"_ID, 氈GI애 WE, TEN WE, SWII.N 10)
+VALIÆS (*10•, •대전•, '시티란 |%2|):
+1 개의 행이 만들어졌습니다.
+INSERT
+들.
+INTO PLAYER (PLAYER-ID, TEN-ID, PLAYER-Nk, 郞1T1애, HEIG{T, E16HT. BACK-O
+VALIÆS (2″3|, 'KI이, '유동우•, •嘗•, 177. 70. 飇);
+,삐드 443

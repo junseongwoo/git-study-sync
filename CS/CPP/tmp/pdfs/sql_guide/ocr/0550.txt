@@ -1,0 +1,76 @@
+인의스 류님
+3101011끄1끄
+0101011″102
+1101011籤102
+2101011″102
+KING
+4101011″102
+5101011″102
+[그림 Ⅲ•十141 리버스 키 인액스
+하지만 리버스 기 인덱스는 데이터를 거꾸로 입력하기 때문에 '=' 조건으로만 검색할 수 있다. 즉 부등호나
+like 같은 범위검색 조건에는 사용할 수 없다.
+마. 클러스터 인덱스
+Oracle에는 클러스터 테이B-(CIustered Table)이라는 오브젝트가 있다. 클러스터 테이블에는 인덱스 클러스터와
+해시 클러스터 두 가지가 있는데, 지금 설명하려는 클러스터 인덱스는 인덱스 클러스터와 관련이 있다.
+인덱스 클러스터 테이블은 [그립 ⅡI-年151처럼 클러스터 카(여기서는 deptno) 값이 같은 레코드가 한 볼록에
+모이도록 저장하는 구조를 사용한다 한 블록에 모두 담을 수 없을 때는 새로운 블록을 할당해 클러스터 체인으로
+연결한다.
+DEPTNO
+10
+CLUSTER KEY
+• DEPTNO
+CLUSTER
+HEADER
+DEPTNO
+10
+20
+TABLE
+COLUMNS
+EMPNO
+ENAME
+7782 CLARK
+7%4 MILLER
+77% SCOTT
+7Q FORD
+~ JONES
+%76 AOAMS
+7'丑 SMITH
+7圄 BL*KE
+74% A-LEN
+•歷41 TURNER
+WARD
+7QI
+~ MARTIN
+~ JAX4ES
+JOB
+PRESIOENT
+MANAGER
+CLERK
+ANALYST
+ANALYST
+MANAGER
+CLERK
+CLERK
+MANAGER
+SALESMAN
+SALESMAN
+SALESMAN
+SALESMAN
+CLERK
+MGR
+7旺
+77Q
+7嚼
+7圄
+SAL
+24%
+즈石
+11%
+CLUSTER
+CLUSTER
+[그림 III-3•151 글러스터 인덱스
+1
+CLUSTER
+1 ~
+1 ~
+전문가 가이드 559

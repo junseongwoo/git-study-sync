@@ -1,0 +1,41 @@
+제6장 고급 SOL 튜닝
+
+~ㅡㅡ…<_ㄷ|ｌㅡㅣ」”…~~ㅡㅡㅋㅡㅡ=ㅋ_ㅡ_~ㅡ---ㅡ->-~ㅋ~ ㅡㅡ>~ㅡㅡㅡㅡ~ㅡㅡ~~ㅡㅡ-ㄱㅡㅡㅡㅡ= 000000000==>== >
+
+pqdistribute REZ 지정할 수 있는 데이터 분배 방식과 특징을 요약하면 다음과 같다.
+
+BW pq_distribute(inner, none, none)
+Full-Partition Wise )010으로 유도할 때 사용한다. 당연히 양쪽 테이블 모두 조인 칼럼에 대해 같은 기준으로
+파티셔닝(090-0300000108)돼 있을 때만 작동한다.
+
+Partition Wise Join2 조인에 참여하는 두 테이블을 조인 칼럼(060070|에 대해 같은 기준으로 파티셔닝(09나030000008)
+하고서 각 파티션 (Partition 031)끼리 독립적으로(-+ Intra-operation parallelism) E218 수행한다. 파티션 짝을
+구성하고 나면 병렬 프로세스끼리 서로 데이터를 주고받으며 통신(-* Inter-operation parallelism)® 필요가 전혀 없으므로
+
+병렬 조인 성능을 크게 높일 수 있다,
+
+양쪽 테이블이 사전에 파티셔닝돼 있어 But Partition Wise Join 하는 228 ‘Full Partition Wise .007'이라고 하고,
+한 쪽만 파티셔닝 돼 있어 나머지 한쪽을 실행 시점에 동적으로 파티셔닝하고서 063[0000 Wise Joindhe 2 ‘Partial
+Partition Wise .2010'이라고 한다,
+
+B pq_distribute(inner, partition, none)
+Partial-Partition Wise ]010으로 유도할 때 사용하며, outer 테이블을 inner 테이블 파티션 기준에 따라 파티셔
+닝하라는 뜻이다. 당연히 inner 테이블이 조인 키 칼럼에 대해 파티셔닝돼 있을 때만 작동한다.
+
+BW pq_distribute(inner, none, partition)
+Partial-Partition Wise ]010으로 유도할 때 사용하며, inner 테이블을 006: 테이블 파티션 기준에 따라 파티셔
+닝하라는 뜻이다. 당연히 outer 테이블이 조인 키 칼럼에 대해 파티셔닝돼 있을 때만 작동한다.
+
+를 pq_distribute(inner, hash, hash)
+
+조인 7) 칼럼을 해시 함수에 적용하고 거기서 반환된 값을 기준으로 양쪽 테이블을 동적으로 파티셔닝하라는
+뜻이다, 조인되는 테이블을 둘 다 파티셔닝해서 파티션 (Partition Pair)& 구성하고서 2308800 Wise ]010을
+수행한다.
+
+로 00_015016416(1000[, broadcast, none)
+outer 테이블을 86030035!하라는 뜻이다.
+
+8 pq_distribute(inner, none, broadcast)
+inner 테이블을 80030035!하라는 뜻이다.
+
+SQL 전문가 가이드 | 749

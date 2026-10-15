@@ -1,0 +1,27 @@
+과목 ll 기본과 활용
+[匧 叩|를과 ~ 테이불의 FJLL OJTER OIN 사례를 만들기 위해 TEMP의 *를 수정한다.
+결과적으로 TEMP 테이불의 새로운 DEPTNO 칼럼 값은 DETP 테이불의 기존 DEPTNO 칼럼 값과 서로 2건은
+동일하고 2건은 다르다.
+[예제!
+lmTE FT ~
+SET = 呼T測 + 20;
+SELECT *
+[실형 출과1
+ACQNTI%
+(조瓦TI馮
+URKETI%
+PERATIT6
+4 개의 행이 선택쾼습니다.
+NEW
+DALLAS
+CHICAØ
+[예제] DEPTNO 기준으로 DEPT와 DEPT_TEMP 데이터를 FULL OUTER J이N으로 출력한다.
+t예제|
+SELECT *
+FO FT A FIIL OJTER J이N FT TE顰 B
+靆 - = A.FTW
+OtJ汀ER는 생략 가능한 키워드이므로 아래 SQL은 같은 결과를 얻을 수 있다
+i예제}
+SELECT *
+FO ″ A RI.L 叨IN ″ TEP 8
+270 전문가 ,까드

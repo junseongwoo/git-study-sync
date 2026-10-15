@@ -1,0 +1,25 @@
+瑙장 옵티0十이저
+1* 5 1 It&X SCAN
+EMP_IDX
+11
+lnformatim 바 id):
+3 - 貳(ess(•『 •氈PM•=10)
+5 - 貳(ess(•돈• •匪P闡•=10 사0 •E" •」囹•=•뽸A표R')
+'e.deptm = 10이고 'e.deptno = dde삐0'이므로 'd.deptno = 10'으로 추론-됐다 이런 조건절 이행(transitive)을
+통해 쿼리가 다음과 같은 형태로 변환된 것이다.
+select * fræ &pt d, e
+•tpre e.j± = 'LANAGER'
+e.deptno 10
+•『d • 10
+위와 같이 변환한다면, 해시 조인 또는 소트 머지 조인을 수행하기 전에 emp와 dept 테이블에 각각 필터림을
+적용함으로써 조인되는 데이터람을 줄일 수 있다. 그리고 dept 테이블 액세스를 위한 인덱스 사용을 추가로 고려할
+수 있게 돼 더 나은 실행계획을 수립할 가\성이 커진다
+6. 불필요한 조인 제거
+I:M 관계인 두 테이블을 조인하는 구4리문에서 조인문을 제외한 어디에서도 1쪽 테이블을 참조하지 않는다면,
+쿼리 수행 시 1쪽 테이블은 읽지 않아도 된다 결과 집힘에 영향을 미치지 않기 때문이다. 옵티마이저는 이 특성을
+이용해 M쪽 테이블만 읽도록 귀리를 변환한다. 이를 '조인 제거(Join Ehmrnation)' 또는 '테이블 제거(TabIe
+Ehmmation)'라고 한다
+select e e deptm, e.sal.
+•tpre d.&Dtm = e.deptm
+14 TABLE ACCESS FULL EP ((圓 ~ us)
+전문가 663

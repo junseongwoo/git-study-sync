@@ -1,0 +1,44 @@
+최적화 목표
+액세스 경로
+쿼리 변환
+조인 순서
+조인 방식
+병렬 처리
+기다
+제1장 * 惢 구조
+[표 Ⅲ-1-31 OracIe 현트
+현트
+all-rows
+first-rows(n)
+full
+cluster
+hash
+index, no-mdex
+index—asc, index—desc
+index-combine
+index-J0in
+index-ffs, no-index-ffs
+index—ss, no—tndex—ss
+index-ss-asc, index-ss-desc
+use—concat
+no-exlnnd
+rewrite, no-rewrite
+star transformahon, no—star-transformauon
+fact, no-fact
+unnest, no-unnest
+ordered
+leading
+no-use-nl
+use—merge, no—use—merge
+no-use-hash
+pamllel, no-parallel
+N-distHbute
+parallel-index, no-parallel-index
+cache, ncmche
+push-pred, no-push-pred
+PUSh-SUlX1, no-push-sukll
+qb-name
+cursor-shanng-exact
+dfimg-site
+dynamic-samphng
+전문가 가이드 493

@@ -1,0 +1,28 @@
+R2장 활용
+!실행 결과]
+SCOTT
+7%2
+2 행이 선택됐습니다.
+아래는 JON조의 자식 “이 자식 노드를 조회하는 귀리다. mgr이 JON죠의 자식 노드인 뚀01T과 FORD의
+empno인 행을 조회하면 된다. 이런 계층 전개 방식을 순방향 전개라고 한다.
+[예제]
+SELECT ( E"O, ( E,Æ, (
+FO EP A, EP B, EW) (
+MÆRE A.ENAME = 'JmES'
+AhO B.n = A.E"O
+AW (.Ⅷ =
+[실행 결과]
+ENA&
+SMITH
+7%9
+7876
+7%2
+2 행이 선택쾼습니다.
+아래는 SMITH의 부모 노드를 조회하는 귀리다. empno가 SMITH의 mgr인 행을 조회하면 된다.
+[예삐
+SELECT B.E"0 8 EV&, B.Y(R
+FROM EP 시 EP
+M{ERE = •및I퍼•
+AtO B.E"O = A.n,
+전문가 ,柯드 353
+1

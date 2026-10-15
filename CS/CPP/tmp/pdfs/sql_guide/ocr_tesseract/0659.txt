@@ -1,0 +1,45 @@
+Predicate Information (identified by operation id):
+
+2 - access(SYS_OP_MAP_NONNULL ( "JOB" )=SYS_OP_MAP_NONNULL("JOB") AND
+SYS_OP_MAP_NONNULL( "MGR" )=SYS_OP_MAP_NONNULL( "MGR" ) )
+4 - filter("DEPTNO"=10)
+
+해시 Anti 조인을 수행하고 나서 중복 값을 제거하기 위한 Hash Unique 연산을 수행하는 것을 볼 수 있다.
+다음과 같은 형태로 쿼리 변환이 일어난 것이다.
+
+SQL> select distinct job, mgr from emp e
+2 where not exists (
+select '×' from emp
+where deptno = 10
+and  sys_op_map_nonnull(job) = sys_op_map_nonnull(e.job)
+and sys_op_map_nonnull(mgr) = sys_op_map_nonnull(e.mgr)
+) 7
+
+Nov ose Ww
+
+Oracle®] sys_ p_map_nonnull 함수는 비공식적인 함수지만 가끔 유용하게 사용할 수 있다. 2011 값끼리 =
+비교(ㅁ띠1 = null)5H 53156이지만 06가 되도록 처리해야 하는 경우가 있고, 그럴 때 이 함수를 사용하면 된다.
+위에서는 ]05과 mgrol null 허용 칼럼이기 때문에 위와 같은 처리가 일어났다.
+
+나. 조인 칼럼에 IS NOT NULL 조건 추가
+
+select count(e.empno), count(d.dname)
+from emp e, dept d
+
+where d.deptno = e.deptno
+
+and sal = 2900
+
+위와 같은 조인문을 처리할 때 조인 칼럼 46000가 null?! 데이터는 조인 액세스가 불필요하다. 어차피 조인에
+실패하기 때문이다. 따라서 다음과 같이 필터 조건을 추가해 주면 불필요한 테이블 액세스 및 조인 시도를 줄일
+수 있어 쿼리 성능 향상에 도움이 된다.
+
+select count(e.empno), count(d.dname)
+from emp e, dept d
+
+where d.deptno = e.deptno
+
+and sal <= 2900
+
+668 50 #27 710):
+

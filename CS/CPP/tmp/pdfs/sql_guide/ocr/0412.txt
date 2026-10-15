@@ -1,0 +1,25 @@
+臼장 관리 구문
+[鸚1 먼저 SAV,EPOINTS 지정하고 RAYER 테이酗 있는 데이터를 수정한 다음 를백을 이진뻬 셜정한 저장정까지 실행한다.
+|예제] OracIe
+SAVEmINT SVPT2;
+저장점이 생성묐습니다.
+tmATE PLAYER SET ÆIGHT = 1%.•
+4% 행이 경신됐습니다.
+ROLLBACK TO SWT2;
+를백이 완료됐습니다.
+[예제] SQL Server
+BEGIN TRAN
+SAVE TRAN SVTR2;
+명령이 완료됐습니다.
+tmATE PLAYER SET 涎1애T = 1%;
+(4%개 행이 영향을 받음)
+nLBACK TRAN SVTR2;
+명령이 완료됐습니다.
+[예제] SAVEPOINTß 지정하고, PLAYER 테이불에 있는 데이터를 삭제한 다음 를력을 이전에 설정한 저장점까지 실행한다
+l예제l OracIe
+SAVEmINT SVPT3;
+저장점이 생성웠습니다.
+1 FO PLAYER,•
+4& 행이 삭제굈습니다.
+1
+전문가 ,까드 419

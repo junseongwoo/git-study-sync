@@ -1,0 +1,44 @@
+R2장 활용
+SALES
+SALES
+氈뚀AR대
+RESEAR대
+ACCUTI%
+ACCWNTI%
+ACCWNTI%
+CLERK
+SALESW
+ANALYST
+CLERK
+CLERK
+1
+1
+4
+2
+2
+1
+1
+1
+1
+2975
+1丑
+24%
+13 행이 선택됐습니다.
+실행 결고}oll서 2개의 GROUPING COLUMNS(DNAME, JOB)에 대해 다음과 같은 추가 LE가진.의 집계가 생성
+된 것을 볼 수 있다.
+LI - GROUP BY 수행 시 생성되는 표준 집계(9건)
+L2 - DNAME 별 모든 JOB의 SUBTOTAL(3건)
+L3 - GRAND TOTAL(마지막 행, 년)
+추가로 ROLLUP의 경우 계층 간 집계에 대해서는 LEVEL별 순서(LI기2기3)를 정렬하지만, 계층 내 GROUP
+BY 수행 시 생성되는 표준 집계에는 별도의 정렬을 지원하지 않는다.
+LI, L2, L3 계층 내 정렬을 위해서는 별도의 ORDER BY 절을 사용해야 한다.
+STEP 2-2. WLLUP 함수 + BY 절 시용
+[예제] 부서명과 업무명을 기준으로 집계한 일반적인 GROUP BY SQL 문장에 ROLLUP 함수를 사용한다. 추가로
+BY 절을 사용해서 부서•업무넓로 정열한다.
+[예제]
+SELECT A.n, CO,NT (하 AS EP_CNT, 91 (A.SAL) AS SAL-SI.N
+FO EP A,
+해E氈 B.FTW =
+6″ BY mLLl-P (8.~,
+0霖R BY
+전문가 &l드 311

@@ -1,0 +1,19 @@
+과목 ] SQL 기본과 활용
+
+3. 일반 집계함수
+
+가. SUM 함수
+SUM 함수를 이용해 파티션별 윈도우의 합을 구할 수 있다.
+
+[예제] 사원들의 급여와 같은 매니저를 두고 있는 사원들의 SALARY 합을 구한다. PARTITION BY MGR 구문을 통해 매니저별로
+데이터를 파티션화 한다.
+
+예져
+
+SELECT MGR, ENAME, SAL
+, SUM (SAL) OVER (PARTITION BY MGR) AS SAL_SUM
+FROM EWP;
+
+14 행이 선택됐습니다.
+
+330 | SL Bet ole

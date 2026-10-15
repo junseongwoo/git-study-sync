@@ -1,0 +1,40 @@
+제2장 SQL 활용
+
+[[-digit:]]
+\D              숫자가 아닌 모든 문자                                  [~[:digit:]]
+\w             숫자와 42H underbar 포함)                      : [[:alnum:]_]
+\W             숫자와 영문자가 아닌 모든 EaKunderbar 제외)        [~[:alnum:]_]
+\s            공백 문자                                     [[:50806:]]
+
+공백 문자가 아닌 모든 문자                         [~[:space:]]
+
+다음은 \d 연산자와 \1) 연산자를 사용한 쿼리다. cl, 02열의 패턴은 '(숫자3자리) 숫자3자리-숫자4자리' 패턴의
+전화번호를 검색한다. 65 열은 세 번째 문자인 2가 숫자이므로 널을 반환한다.
+
+SELECT REGEXP_SUBSTR ('(650) 555-8100', 'A\(\d{3}\) \d{3}-\d{4}$") AS (1
+, REGEXP_SUBSTR ('650-555-8100' , 'A\(\d{3N\) \d{3}-\d{4}$') As (2
+, REGEXP_SUBSTR ('b2b’, "\w\d\D') AS (3
+, REGEXP_SUBSTR ('b2_', "\w\d\D') AS C4
+, REGEXP_SUBSTR ('b22', "\w\d\D') AS (5
+FROM DUAL;
+
+a                                     Q                                                    65
+
+분 | 9
+2 | 8
+
+(650) 555-0100
+1개의 행이 선택됐습니다.
+Theo \w 연산자와 10 연산자를 사용한 쿼리다. 01, 02 열의 패턴은 '숫자문자@@숫자문자' 다음에 '.숫자문자가
+
+1회 이상 반복되는 패턴의 이메일 주소를 검색한다. 04 열은 \Woll 해당하는 문자가 문자열에 존재하지 않기 때문에
+널을 반환한다.
+
+SELECT REGEXP_SUBSTR ('jdoe@company.co.uk', ‘\wh@\wt(\ \wt)+') AS (1
+, REGEXP_SUBSTR ('jdoe@company"      〉, \w\wt(\ \t) +) AS (2
+
+, REGEXP_SUBSTR ('to: bill’, "\wW\s\w+') AS (3
+, REGEXP_SUBSTR (to bill’ , “\wH\W\s\wt') AS C4
+FROM DUAL;
+
+SQL 전문가 가이드 [383

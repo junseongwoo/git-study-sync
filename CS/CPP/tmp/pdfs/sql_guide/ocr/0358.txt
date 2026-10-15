@@ -1,0 +1,24 @@
+駁장 활용
+제 7 절 PIVOT 절과 UNPIVOT 절
+1. 개요
+PIVOT은 회전시킨다는 의미를 갖고 있다. PIVOT 절은 행을 열로 회전시기괴 UNPIVOT 절은 일을 행으로
+회전시킨다.
+2. PIVOT 절
+PIVT 절은 행을 열로 전환한다. PIVT 절의 구문은 아래와 같다.
+1
+PIVOT [피
+(expr) I(ASJ aliasl
+[, (expr) I[ASJ aliasll
+Fm {(01” | ((01圓 L (01”1”기
+1 sl.m.jery
+- aggregate-fum•uon은 집계할 열을 지정한다.
+• FOR 절은 PIVON 열을 지정한다.
+• IN 절은 PIV(Jr할 열 값을 지정한다.
+다음은 PIVT 절을 사용한 쿼리다. PIV(T 절은 집계함수와 FOR 절에 지정되지 않은 열을 기준으로 집계되기
+때문에 인라인 부를 통해 사용할 열을 지정해야 한다.
+|예제1
+SELECT *
+FO (SELECT SAL FO EP)
+PIWT (SI-N (SAL) Fm 끄T測 IN (10, 제 %))
+mR BY 1:
+전문가 365

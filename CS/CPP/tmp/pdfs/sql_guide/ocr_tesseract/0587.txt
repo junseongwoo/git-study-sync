@@ -1,0 +1,37 @@
+과목 mM SQL 고급 활용 및 튜닝
+
+4. NL 조인 확장 메커니즘
+
+버전이 올라가면서 오라클은 NL 조인 성능을 높이기 위해 테이블 Prefetch, 배치 1/0 기능을 도입했다. '테이블
+마타하아는 인덱스를 이용해 테이블을 액세스하다가 디스크 1/0가 필요해지면, 이어서 곧 읽게 될 블록까지 미리
+읽어서 버퍼캐시에 적재하는 기능이다. '배치 1/0'는 디스크 10 Call DICH} 읽을 블록이 일정량 쌓이면 한꺼번에
+처리하는 기능이다. 두 기능 모두 읽는 블록마다 건건이 10 Callg 발생시키는 비효율을 줄이기 위해 고안됐다.
+
+내부 원리까지 자세히 알 필요는 없지만, 튜닝하는 과정에 이들 기능을 표현한 실행계획을 자주 보게 되므로
+표현 방식은 익혀둘 필요가 있다.
+
+가. 전통적인 실행계획
+오라클이 NL 조인을 표현하기 위해 전통적으로 사용해 온 방식은 다음과 같다.
+
+Rows Row Source Operation
+5 NESTED LOOPS
+3 TABLE ACCESS BY INDEX ROWID OF 사원
+5        INDEX RANGE SCAN OF 사원 X1
+5 TABLE ACCESS BY INDEX ROWID OF 고객
+8       INDEX RANGE SCAN OF 고객 X1
+
+나. 테이블 Prefetch 실행계획
+오라클 giv 다음과 같은 표현방식도 같이 나타나기 시작했다.
+
+Rows Row Source Operation
+5 TABLE ACCESS BY INDEX ROWID OF 고객
+12    NESTED LOOPS
+
+3     TABLE ACCESS BY INDEX ROWID OF 사원
+3      INDEX RANGE SCAN OF 사원 _X1
+8     INDEX RANGE SCAN OF 고객 ×1
+
+이는 Inner 쪽 테이블에 대한 디스크 1/0 과정에 테이블 Prefetch 기능이 작동할 수 있음을 표시하기 위함이다.
+nlj_prefetch, no_nlj_prefetch 힌트를 이용해 이 실행계획이 나오게 할 수도 있고, 안 나오게 할 수도 있다.
+
+ 596 | SL 전문가 가이드

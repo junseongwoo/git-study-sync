@@ -1,0 +1,24 @@
+과목 Ⅱ 기본과 활용
+[예제 SCOTT 유저로 접속한 다음 SQLD 유저(패스워드: DB2019)를 생성해 본다.
+[예제1 OracIe
+(囂 SCOTT,tTIæR
+연결묐습니다.
+I예제1 Oracle
+CÆATE lß鰍 BY DB2019,•
+1행에 오류:
+*-010회: 권한이 불충분합니다
+현재 뚀01T 유저는 유저를 생성할 권한을 부여받지 못했기 때문에 권한이 불충분하다는 오류가 발생한다.
+OracIe의 DBA 권한을 갖고 있는 SYSTEM 유저로 접속하면 유저 생성 권한(CREATE USER)을 다른 유저에게
+부여할 수 있다.
+[예제] 표0打 유저에게 유저생성 권한(CREATE USER)을 부여한 후 다시 SQLD 유저를 생성한다.
+우제] Oracle
+~ |″ TO SCOTT;
+권한이 부여묐습니다.
+!예제] Oracle
+(圈 SCOTT/TICR
+연결묐습니다.
+돈
+!예제] Oracle
+CÆATE sm.D IBTIFIED BY %羽19•,
+사용자가 생성묐습니다.
+452 전囫 7P厚

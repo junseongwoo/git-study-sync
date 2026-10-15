@@ -1,0 +1,35 @@
+과목 11 SQL 기본과 활용
+
+18 행이 선택됐습니다.
+
+0088는 GROUPING 칼럼이 가질 수 있는 모든 경우의 수에 대해 Subtotald 생성하므로 GROUPING
+COLUMNS®] 수가 치이라고 가정하면, 2의 N4 LEVELS] Subtotal 생성하게 된다.
+
+실행 결과에서 CUBE 함수 사용으로 ROLLUP 함수의 결과에다 업무별 집계까지 추가해서 출력할 수 있는데,
+ROLLUP 함수와 비교하면 업무별 집계를 표시한 5건의 레코드가 추가된 것을 확인할 수 있다(시 Departments-
+CLERK, ANALYST, MANAGER, SALESMAN, PRESIDENT 집계가 5건 추가됐다).
+
+STEP 5-2. UNION ALL 사용 SQL
+
+UNION ALLE Set Operation 내용으로, 여러 SQL 문장을 연결하는 역할을 할 수 있다. 위 SQLS 첫 번째
+SQL 모듈부터 차례대로 결과가 나오므로 위 CUBE SQL 결과 데이터는 같으나 행들의 정렬은 다를 수 있다.
+
+56860  DNAME, 208
+, COUNT (*) AS EMP_CNT, SUM (SAL) AS SAL_SUM
+FROM EMP A, DEPT 8
+WHERE B.DEPTNO = A.DEPTNO
+GROUP BY DNAME, 208
+UNION ALL
+SELECT . DNAME, ‘All Jobs' AS J0B
+, COUNT (*) AS EMP_CNT, SUM (SAL) AS SAL_SUM
+
+FROM EMP A, DEPT B
+WHERE B.DEPTNO = A.DEPTNO
+GROUP BY DNAME
+UNION ALL
+
+SELECT “All Departments’ AS DNAME, 208
+, COUNT (*) AS EMP_CNT, SUM (SAL) AS SAL_SUM
+
+318 | sp 전문가 가이드
+

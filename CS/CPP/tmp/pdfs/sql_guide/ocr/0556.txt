@@ -1,0 +1,64 @@
+인역스 류님
+나. 인덱스 칼럼의 가공
+인덱스 칼럼을 가공하면 정상적인 lndex Range Scan이 불가능해진다고 했다. 가장 혼한 인덱스 칼럼 가공
+사례는 [표 111-3-기와 같고, 오른쪽 칼럼은 각 사례에 대한 튜닝 방안이다.
+[표 Ⅲ-3-기 인덱스 칼럼 가공 사례별 튜닝 방안
+substr(업체명,1,기 = '대한•
+where 월급여 = ″/12
+인역스 칼럼 가공 사례
+류님 방안
+select *
+업체
+fra•n
+where
+select *
+사원
+fran
+월급여 * 12 =
+where
+select *
+주문
+fran
+to-char(일시, 'yyyyrrrdd') = :dt
+where
+select *
+frm 고객
+where 연령 Ⅱ 직업= •蜀공무원•
+select *
+frm 회원사지점
+select *
+from 업체
+where 업제명 like •대한욈•
+select *
+from 사원
+select *
+주문
+from
+일시 to-date(:dt, )
+where
+일시 〈 + 1
+and
+select *
+고객
+from
+연령
+where
+직업 = •공무원•
+and
+select
+from
+where
+회원번호 지정번호=
+다. 묵시적 형변환
+:str
+ard
+회원사지점
+회원번호 = substr(:str, 1, 2)
+지점번호 = substr(:str, 3, 4)
+인덱스 칼럼을 사용자가 명시적으로 가공하지 않더라도 조건절에서 비교되는 두 값의 데이터 타입이 다르면
+내부적으로 형변환이 일어난다.
+예를 들어 emp 테이블 deptno 칼럼은 number 형이다. 이 칼럼에 대한 검색조건으로는 숫자형이 옳지만,
+자칫 실수로 다음과 같이 문자형으로 과하는 경우가 종종 생긴다.
+select * fræ deptro = •羽•
+Ro•s | Bytes | Cost |
+전문가 ,}O|드 565

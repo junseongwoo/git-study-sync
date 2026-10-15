@@ -1,0 +1,49 @@
+과목 II 기본과 활용
+Enloyee1D
+1圄
+11%
+1110
+11N
+1121
+1122
+1210
+1211
+1212
+1220
+1221
+1222
+1圄
+11%
+11%
+1120
+11꼬
+1聳
+1210
+1210
+12%
+12m
+1220
+1圄
+*거에 T-EMP 데이터의 최상위부터 시작해 하위 방향으로 계층 구조를 전개하도록 작성한 쿼리와 그 결과다.
+보다시피, 계층 구조를 단순히 하위 방향으로 전개했을 뿐 [그림 Ⅱ-2-111에 있는 조직도와는 많이 다른 모습이다.
+앞서 보았듯이 CTE 재귀 호출로 만들어낸 계층 구조는 실제와 다른 모습으로 출력된다. 따라서 조직도와 같은
+모습으로 출력하려면 ORDER BY 절을 추가해 원하는 순서대로 결과를 정릴해야 한다.
+WITH T_EF-ANOG AS (
+SELECT æLOYEEID, ″뚀RID, 0 AS LEVEL
+T-EP
+WUÆRID IS NULL /* 재귀 호출의 시작점 */
+l巋1애 ALL
+SELECT R.EPLOYEEID, A.LEVEL + 1
+FO T_EP_ANC}G A
+, T_EP R
+~ = A.EROYEEID)
+SELECT LEVEL, REPLICATE (• • , LEVEL * 2) + EW)LOYEEID AS EPLOYEEID, MANACRID
+FO
+Level
+0
+1
+%2 전문가 /끼드
+1圄
+11%
+YanaßID
+1嚼

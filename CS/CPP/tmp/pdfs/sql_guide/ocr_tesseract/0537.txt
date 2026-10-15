@@ -1,0 +1,32 @@
+과목 IM QL 고급 활용 및 튜닝
+
+를 인덱스를 이용한 소트 연산 대체
+
+Index Full Scan Index Range 5021과 마찬가지로 그 결과 집합이 인덱스 칼럼 순으로 정렬되므로 50ㄴㅁ
+Order By 연산을 생략할 목적으로 사용될 수도 있다. 이는 차선책으로 선택됐다기보다 옵티마이저가 전략적으로
+선택한 경우에 해당한다.
+
+SQL> select /차 first_rows */ * from emp
+2 where sal > 1000
+3 order by ename;
+
+Execution Plan
+
+© SELECT STATEMENT Optimizer=HINT: FIRST_ROWS
+1 © TABLE ACCESS (BY INDEX ROWID) OF 'EMP' (TABLE)
+2°    INDEX (FULL SCAN) OF 'EMP_IDX' (INDEX)
+
+IO
+O
+[그림 1-3-5] 인덱스를 이용한 소트 연산 대체
+
+[그림 m-3-5)olM 대부분 사원의 연봉이 1000을 초과하므로 1706× Full Scan 하면 거의 모든 레코드에 대해
+테이블 액세스가 발생해 Table Full 5020보다 오히려 불리하다. 만약 SALO| 인덱스 선두 칼럼이어서 Index Range
+Scant 마찬가지다. 그럼에도 여기서 인덱스가 사용된 것은 사용자가 018(_ㅜ0\5 힌트(50Ｌㅎ561ㅠ6:에서는
+fastfirstrow 힌트)를 이용해 옵티마이저 모드를 바꾸었기 때문이다. 즉 옵티마이저는 소트 연산을 생략함으로써
+전체 집합 중 처음 일부만을 빠르게 리턴할 2402 Index Full Scan 방식을 선택한 것이다.
+
+사용자가 그러나 처음 의도와 다르게 데이터 읽기를 멈추지 않고 끝까지 {6(아)한다면 Full Table 503ㅁ한 것보다
+훨씬 더 많은 1/0를 일으키면서 서버 자원을 낭비할 텐데, 이는 옵티마이저의 잘못이 결코 아니며 815ㄴㄷㄷ\5 힌트를
+사용한 사용자에게 책임이 있다.
+

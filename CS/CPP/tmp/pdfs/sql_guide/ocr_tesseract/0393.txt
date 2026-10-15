@@ -1,0 +1,40 @@
+과목 ㅠ SQL 기본과 활용
+
+INSERT
+INTO PLAYER (PLAYER_ID, PLAYER NAME, TEAM_ID)
+VALUES ((SELECT TO_CHAR (MAX (TO_NUMBER (PLAYER_ID)) + 1) FROM PLAYER), '홍길동', 'K06');
+
+나. 서브 쿼리를 이용한 다중 & INSERT 2
+
+INSERT 문에 서브 쿼리를 사용하면 서브 쿼리의 결과를 테이블에 입력할 수 있다. 서브 쿼리의 결과가 다중
+행이면, 한 번에 여러 건이 입력된다. © INTO 절의 칼럼명 개수와 서브 쿼리의 SELECT 절 칼럼 개수가 일치해야
+한다.
+
+INSERT INTO 테이블명 [(칼럼1, 칼럼2, ...)]
+서브 쿼리;
+
+[예제] 서브 쿼리를 사용해 TEAM 테이블에 데이터를 입력한다.
+
+INSERT
+INTO TEAM (TEAM_ID, REGION_NAME, TEAM_NAME, ORIG_YYYY, STADIUM_ID)
+SELECT REPLACE(TEAM_ID, 'K', 'A') AS TEAM_ID
+, REGION_NAME, REGION NAME |} ' SAE} AS TEAM_NAME
+, 2819 AS ORIG_YYYY, STADIUM_ID
+FROM TEAM
+WHERE REGION_NAME IN ('성남', 'QIA');
+
+2 개의 행이 만들어졌습니다.
+
+[예제] 서브 쿼리를 사용해 0ㄴ&%\6 테이블에 데이터를 입력한다.
+
+예저
+
+INSERT
+INTO PLAYER (PLAYER_ID, PLAYER NAME, TEAM_ID, POSITION)
+SELECT ‘A’ |} SUBSTR(PLAYER_ID, 2) AS PLAYER ID, PLAYER NAME
+, REPLACE(TEAM_ID, ‘K', 'A') AS TEAM_ID, POSITION
+FROM PLAYER
+WHERE TEAM_ID IN ('Ke4’, 'Kes');
+
+400 | 501. 전문가 가이드
+

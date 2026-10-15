@@ -1,0 +1,43 @@
+과목 ll * 기본과 활용
+STEP 4로 WLLUP 함수 결합 칼럼 사용
+[예제] JOB과 MGR은 하나의 집합으로 간주하고 부서하 JOB & MGR에 대한 ROLLUP 결과를 출력한다.
+!예제1
+SELECT 8 A.Jæ, A.&
+(″ (와 AS EP-CNT, SI.N (A.SAL) AS SAL-SUU
+~ EP 시 FT
+靨E뚀 喞T齡 = A.FTtO
+~ BY OLLLP (B.NAE, (A.J8, A.%R))
+BY A.JOB, A.R;
+[실행 끌과]
+A((0驪TI柘
+ACCU-NTI%
+ACCOJNTI%
+Jæ
+CLERK
+백u뚀R
+RESIDENT
+ANALYST
+CLERK
+7『粥
+EP CNT
+1
+1
+1
+2
+1
+1
+1
+1
+1
+4
+1
+SAL—SIN
+1丑
+24%
+7
+11%
+2975
+14 행이 선택묐습니다.
+ROLLUP 함수 사용 시 괄호로 묶은 JOB과 MGR의 경우 하나의 집합(JOB+MGR) 칼럼으로 간주해 괄호 내
+칼럼별 집계를 구하지 않는다.
+316 전문가 가이드

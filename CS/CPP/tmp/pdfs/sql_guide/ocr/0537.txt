@@ -1,0 +1,22 @@
+과목 III SQL 고급 활용 및 튜닝
+인덱스를 이용한 소트 연산 대제
+lndex Full Scan은 lndex Range Scan과 마찬가지로 그 결과 집합이 인덱스 칼럼 순으로 정렬되므로 Sort
+Order Bv 연산을 생략할 목적으로 사용될 수도 있다. 이는 차선책으로 선택됐다기보다 옵티마이저가 전략적으로
+선택한 경우에 해당한다.
+5원〉 select /*+ first-rM *7 *
+2 éere 91 〉 1圄
+Executim PI혜
+0 SELECT STATEENT FIRST_OS
+1 0 TABLE ACCESS (BY IbOEX OID) 'EP' (TABLE)
+1 2 1 IWEX (FIIL SCAN) 'EP IDX' (INDEX)
+[그림 Ⅲ-3•5] 인덱스를 이용한 소트 연산 대체
+[그림 Ⅲ-年5]에서 대부분 사원의 연봉이 1刪을 초과하므로 lndex Full *을 하면 거의 모든 레코드에 대해
+테이블 액세스가 발생해 Table Full 뇨n보다 오히려 불리하다. 만약 SAL이 인덱스 선두 칼럼이어서 lndex Range
+뇨n하더라도 마찬가지다. 그럼에도 여기서 인덱스가 사용된 것은 사용자가 first-rows 힌트(SQL Server에서는
+fastfirstrow 힌트)를 이용해 옵티마이저 모드를 바꾸었기 때문이다. 즉 옵티마이저는 소트 연산을 생략함으로써
+전체 집합 중 처음 일부만을 빠르게 리던할 목적으로 lndex Full Scan 방식을 선택한 것이다.
+사용자가 그러나 처음 의도와 다르게 데이터 읽기를 멈추지 않고 끝까지 fetch한다면 Full Table 뇨n한 것보다
+훨씬 더 많은 &,0를 일으키면서 서버 자원을 남비할 텐데, 이는 옵티미이저의 잘못이 결코 아니며 first-rows 힌트를
+사용한 사용자에게 책임이 있다.
+546
+전문가 ,까드

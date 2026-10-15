@@ -1,0 +1,48 @@
+과목 1 SQL 고급 활용 및 튜닝
+
+st.execute();
+st.close():;
+}
+
+public static void execute(Connection con, String input_month) throws Exception {
+String SQLStmt = "SELECT 고객번호, 납입월, 지로, 자동이체, 신용카드, HEE, 인터넷 "
++ "FROM 월요금납부실적 "
++ "WHERE 납입월 = ?";
+PreparedStatement stmt = con.prepareStatement(SQLStmt);
+stat. setString(1, input_month);
+ResultSet rs = stmt. executeQuery();
+while(rs.next()){
+String 고객번호 = rs. getString(1);
+String 납입월 = rs.getString(2);
+1009 지로      = rs.getlong(3);
+long 자동이체 = rs.getlong(4);
+long 신용카드 = rs.getlong(5);
+long 핸드폰     = rs.getlong(6);
+long 인터넷 = rs.getlong(7);
+if(A2 > 0)    insertData (con, 고객번호, 납입월, "A", 지로);
+1+(자동이체 > 0) insertData (con, 고객번호, 납입월, "8", 자동이체);
+1+(신용카드 > 0) insertData (con, 고객번호, 납입월, "(", 신용카드);
+파(핸드폰 > 0) insertData (con, 고객번호, 납입월, "0", 핸드폰);
+(인터넷 > 0) insertData (con, 고객번호, 납입월, "6", 인터넷);
+
+}
+rs.close();
+stmt. close():
+}
+static Connection getConnection() throws Exception { …… }
+static void releaseConnection(Connection con) throws Exception { ……}
+
+public static void main(String[] args) throws Exception{
+Connection con = getConnection();
+execute(con, "200903");
+releaseConnection(con);
+}
+}
+
+만약 처리해야 할 월요금납부실적이 10만 건이면, 이 테이블에 대한 Fetch Callo] 10만 번(뒤에서 HE Array
+단위 Fetch 기능을 이용하지 않을 때), 납입방법별_월요금집계 테이블에 INSERTS}7] 위한 Parse <0311과 Execute
+Calle] 각각 최대 50만 번, 따라서 최대 110만 번의 데이터베이스 Callo] 발생할 수 있다.
+
+위 프로그램을 DBMS 내에서 수행되는 사용자 정의 프로시저로 개발하면 네트워크 트래픽 없는 Recursive
+
+ 712 9 27k ele

@@ -1,0 +1,57 @@
+Äf장 고급 류님
+애(印ti예
+hn ttpn
+&S-0JtPJt PJt-1i「e('not exists');
+Cal
+Parse
+Execute
+Fetch
+Total
+0
+1
+1
+1
+Ca.nt
+1
+1
+2
+4
+STATEkNT
+(맨 Tiæ
+EIaps«i Tiæ
+Disk
+0
+0
+0
+0
+Qæry
+0
+0
+3
+3
+Curr«1t
+0
+0
+0
+0
+0
+0
+1
+1
+CMJNT STPKEY (cr=3 ti즈% us)
+TABLE ACCESS BY lux OID %BER (CF3 us)
+1蘿X RA*6E SCAN 襞鞭R-1DX01 (CF2 ti″26 (6)
+SQL 던n℃1에선 대신 Top N 구문을 사용하면 되괴 다음과 김이 ensts 절을 사용하는 방법도 있다.
+declare knt int
+select rnt = (0혜t(*)
+wtpre exists
+sel«t 'x•
+frm
+- cls = 너•
+ard birth-yyyy 수 • 19% •
+if rnt 〉 0
+print 'exists'
+print •rot exists'
+1
+1
+전문가 689

@@ -1,0 +1,35 @@
+[예제]
+SELECT RECXP_SI-BSTR ( • 曲•
+RECXP SI-BSTR (
+RECXP SI-BSTR ( • 獨•
+REGEXP SI.BSTR ('aæb' , 'a{3,}' ) AS (4
+RECXP SI-BSTR ('aaab' , •a{4,5}') AS (5 -
+SIBSTR (•aaa±', •a(4,5}') AS (6
+駁장 활용
+aaa, aaaa,
+FROM m.IAL;
+[실행 결과]
+(2
+(3
+'a{기• )ASCI—
+기기• )ASQ
+(4
+1개의 행이 선택쾼습니다.
+앵커(anchor)는 검색 패턴의 시작과 끝을 지정한다.
+연산자
+(expr)
+셜명
+괄호 안의 표현식을 하나의 단위로 취급
+다음은 서브 표현식을 사용한 쿼리다. cl 열은 ab, c2 열은 b가 1회 이상 반복된다. c3 열은 b 또는 c,
+열은 ab 또는 cd가 대체된다.
+[예제]
+SELECT REGEXP SI-BSTR , '(ab)+c• ) AS (1 - 듔, ~
+REGEXP-SIBSTR ( • , •ⅸ• ) AS Q - atx,
+REGEXP SI.BSTR , 'a(blc)d') AS (3 - 郊,
+, 'ab\cd' ) AS (4 - 豳, cd
+FÜ WAL;
+!실행 결과]
+(2
+(3
+(4
+聖가 가이드 379

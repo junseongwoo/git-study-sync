@@ -1,0 +1,62 @@
+1
+과목 n * 기본과 활용
+문자 리스트(character list)는 문자를 대괄호로 묶은 표현식이다. 문자 리스트 중 한 문자만 일치하면 패턴이
+일치한 것으로 처리된다. 문자 리스트에서 하이픈(-)은 범위 연산자로 동작한다.
+연산자
+l:digitl
+[•」ower:l
+l:alpha:)
+[:alnum:l
+[:xdigitl
+[:punctl
+[:blank:]
+설명
+동일
+숫자
+소문자
+대문자
+영문자
+영문자와 숫자
+16진수
+구두점 기호
+공백 문자
+공7간 문자 (space, enter, tab)
+[0-9]
+[a-zl
+[A-ZJ
+[a-zA-Zl
+[0-9a-zA-기
+[0-9a-fA-F]
+t[:alnum:l[:cntrl:ll
+다음은 POSIX 문자 클래스를 사용한 쿼리다. c7 열은 [:punct:] 클래스를 사용해 특수 문자를 검색한다.
+[예제]
+'[l:digit:ll
+• )ASCI
+SELECT REGEXP—SLBSTR (•牙1, •
+•[[:al啣IJ• ) C2
+RECXP-SIBSTR ('gF1,'
+) AS (3
+표표孵-9쬬TR (놓FI, •
+瓩~-9쬬TR ('gF1,•, '[[:ugpr:ll'
+) AS (4
+• )ASC5
+ææP-Sl-BSTR ('9F1,•
+•[[:xdigit:ll
+• ) AS (6
+ææP-Sl.BSTR (놓FI, •
+--935TR C斫1,•, '[[:punct:ll'
+) AS (7
+FO m.AL;
+결행 결과1
+1
+(2
+9
+(3
+9
+9
+1개의 행이 선택쾼습니다.
+나. 정규 표현식 연산자
+정규 표현식의 PERL 정규 표현식 연산자(PERL regular exprßion operator)를 살펴보자.
+다음의 PERL 정규 표현식 연산자는 POSIX 문자 클래스와 유사하게 동작한다.
+圈2
+전문가 ,버드

@@ -1,0 +1,45 @@
+제2장 SQL 활용
+
+FROM EMP A, DEPT B
+
+WHERE B.DEPTNO = A.DEPTNO
+
+GROUP BY J0B
+
+UNION ALL
+
+SELECT 'ALL DEPARTMENTS' AS DNAME, "ALL J0BS' AS 108
+
+, COUNT (*) AS EMP_CNT, SUM (SAL) AS SAL_SUM
+FROM EMP A, DEPT B
+WHERE B.DEPTNO = A.DEPTNO;
+
+CUBE 함수를 사용하면서 가장 크게 개선되는 부분은 CUBE 사용 전 SQLOIA EMP, DEPT 테이블을 네 번이나
+반복 액세스하는 부분을 CUBE 사용 80[에서는 한 번으로 줄일 수 있는 부분이다. 기존에 같은 테이블을 네 번
+액세스하는 이유가 됐던 부서와 업무별 소계와 총계 부분을 0088 함수를 사용함으로써 한 번의 액세스만으로
+구현한다.
+
+결과적으로 수행속도 및 자원 사용률을 개선할 수 있으며, SQL 문장도 더 짧아졌으므로 가독성도 높아졌다.
+실행 결과는 STEPS] 결과와 같다. 8011.07 함수도 같은 개선 효과를 얻을 수 있다.
+
+4. GROUPING SETS 함수
+
+GROUPING SETSE 이용해 더욱 다양한 소계 집합을 만들 수 있는데, GROUP BY SQL 문장을 여러 번 반복하지
+않아도 원하는 결과를 쉽게 얻을 수 있게 됐다.
+
+GROUPING 5615에 표시된 인수들에 대한 개별 집계를 구할 수 있으며, 이때 표시된 인수 간에는 계층 구조인
+801107과 달리 평등한 관계이므로 인수의 순서가 바뀌어도 결과는 같다.
+
+그리고 GROUPING SETS 함수도 결과에 대한 정렬이 필요한 경우는 ORDER BY 절에 명시적으로 정렬 칼럼이
+표시돼야 한다.
+
+를 일반 그룹 함수를 이용한 50Ｌ
+[예제] 일반 그룹 함수를 이용해 부서별, 08별 인원수와 급여 UE 구하라.
+
+SELECT  DNAME, ‘All Jobs' AS JOB
+, COUNT (*) AS EMP_CNT, SUM (SAL) AS SAL_SUM
+FROM EMP A, DEPT B
+WHERE B.DEPTNO = A.DEPTNO
+GROUP BY DNAME
+
+SQL 전무 ole [319

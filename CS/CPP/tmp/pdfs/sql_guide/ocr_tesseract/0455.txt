@@ -1,0 +1,40 @@
+과목 ㅣ SQL 기본과 활용
+
+예제] Oracle
+
+REVOKE CREATE SESSION, CREATE TABLE FROM 50107
+
+권한이 취소됐습니다.
+
+예제 및 실행 결과] Oracle
+
+CONN SQLD/DB2019;
+ERROR:
+ORA-91045: user SQLD lacks CREATE SESSION privilege; logon denied
+
+sag 로그인한다.
+
+예제] SQL Server
+
+USE ADVENTUREWORKS ;
+60
+REVOKE CREATE TABLE FROM SQLD;
+
+명령이 완료됐습니다.
+
+SQLDZ 로그인한다.
+
+실행 결과
+
+SQL Server
+
+CREATE TABLE MENU (MENU_SEQ INT NOT NULL, TITLE VARCHAR(10));
+메시지 262, 수준 14, 상태 1, 줄 1
+데이터베이스 *ADVENTUREWORKS'OlA{ CREATE TABLE 사용 권한이 거부됐습니다.
+
+[예제] 이제 LOGIN_TABLEO|2H= ROLES 만들고, 이 ROLEE 이용해 SQLD 유저에게 권한을 부여한다.
+
+CONN SYSTEM/MANAGER;
+연결됐습니다.
+
+462 | SQL 전문가 가이드

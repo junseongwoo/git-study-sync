@@ -1,0 +1,47 @@
+제6장 고급 SOL 튜닝
+——————————————————— EE —————————
+
+® Loop 쿼리를 해소하고 집합적 사고를 통해 One SQLE 구현
+
+@ Array Processing : Array 단위 Fetch, Bulk Insert/ Update/ Delete
+3 부분범위처리 원리 활용
+
+@ 효과적인 화면 페이지 처리
+
+(5) 사용자 정의 함수, 프로시저, 트리거의 적절한 활용
+
+2) Recursive Call
+
+DBMS 내부에서 발생하는 Call 말한다. SQL 파싱과 최적화 과정에서 발생하는 데이터 딕셔너리 조회, 사용자
+정의 함수-프로시저 내에서의 SQL 수행이 여기에 해당한다. Recursive Call& 줄이려면, 바인드 변수를 적극적으로
+사용해 하드파싱 횟수를 줄여야 한다. 그리고 사용자 정의 함수와 프로시저가 어떤 특징을 가지며 내부적으로 어떻게
+수행되는지를 잘 이해하고 시의적절하게 사용해야만 한다. 무조건 사용하지 못하게 제약하거나 무분별하게 사용하지
+말아야 한다는 뜻이다.
+
+2. 데이터베이스 Callzt 성능
+
+가. One SQL 구현의 중요성
+
+루프를 돌면서 여러 작업을 반복 수행하는 프로그램을 006 SQLE 구현했을 때 얼마나 놀라운 성능 개선 효과가
+나타나는지 경험해 본 적이 있는가? 있다면 그 원리가 무엇이라고 생각하는가? 그것은 방금 설명한 데이터베이스
+Call 횟수를 줄인 데에 있다. 1번과 10번, 10번과 100번의 차이는 크지 않지만 1번과 10만 번, 1번과 100만 번의
+차이는 실로 엄청나다.
+
+아래 자바 소스를 예제로 살펴보자,
+
+public class JavaloopQuery{
+public static void insertData( Connection con
+, String param
+, String param2
+, String param3
+, long param) throws Exception{
+String SQLStmt = "INSERT INTO 납입방법별 월요금집계 "
++ "(고객번호, 납입월, 납입방법코드, 납입금액) "
++ "VALUES(?, ?, ?, ?)";
+PreparedStatement st = con.prepareStatement(SQLStmt);
+st.setString(1, param);
+st.setString(2, param2);
+st.setString(3, param3);
+st.setlong(4, paramd);
+
+SOL 전문가 가이드 [711

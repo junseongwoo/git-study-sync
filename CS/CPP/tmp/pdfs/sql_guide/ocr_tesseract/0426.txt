@@ -1,0 +1,42 @@
+제3장 관리 구문
+
+Of. SELECT 문장으로 테이블 생성 사례
+
+SELECT 문장을 활용해서 테이블을 생성할 수 있는 방법(045, Create Table ~ As Select ~)이 있다. 기존
+테이블을 이용한 CTAS 방법을 사용하면 칼럼별로 데이터 유형을 다시 정의하지 않아도 되는 장점이 있다.
+
+그러나 CTAS 기법 사용 시 주의할 점은 기존 테이블의 제약조건 중에 NOT NULL 제약만 새로 생성되는 테이블에
+적용되고, 기본키-고유키-외래키아180#( 등의 다른 제약조건은 없어진다는 점이다. 이와 같은 제약조건을 새로
+생성한 테이블에 적용하기 위해서는 뒤에 나오는 ALTER TABLE 기능을 사용해야 한다.
+
+SQL 56006[에서는 Select ~ Into ~ 문장을 사용해 위와 같은 결과를 얻을 수 있다. © 칼럼 속성에 Identity E
+사용했다면 14600 속성까지 같이 적용된다.
+
+[예제] 선수(0[&\60) 테이블과 같은 내용으로 1644 _1614?라는 복사 테이블을 만들어 본다.
+
+계제] Oracle
+
+CREATE TABLE TEAM_TEMP AS SELECT * FROM TEAM;
+
+테이블이 생성됐습니다.
+
+결과] Oracle
+
+이름                   널?                유형
+TEAM_ID                NOT NULL           CHAR(3)
+REGION_NAME           NOT MULL          VARCHAR2(8)
+TEAM_NANE              NOT NULL           VARCHAR2(40)
+E_TEAM_NAME                              VARCHAR2(50)
+ORIG_YYYY                                CHAR(4)
+STADIUM_ID              NOT NULL            CHAR(3)
+ZIP_CODE1                                CHAR(3)
+Z1P_CODE2                                CHAR(3)
+ADDRESS                                  VARCHAR2(88)
+DDD                                      VARCHAR2(3)
+TEL                                      VARCHAR2(10)
+FAX                                      VARCHAR2(10)
+HOMEPAGE                                 VARCHAR2(50)
+OWNER                                    VARCHAR2(10)
+
+SQL 전문가 가이드 |433
+

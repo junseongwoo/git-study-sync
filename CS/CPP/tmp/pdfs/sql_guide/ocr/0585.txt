@@ -1,0 +1,45 @@
+과옥 III QL 고급 활용 및 튜닝
+Join. a.JTER
+Join. OJTER REFERENCES:([dl.[deptnol))
+: I—Filter(HRE•([deptJ.(gbl as [dJ.[gbl='2'))
+1 1-는st댼 Join, OJTER *이))
+1 1 Seek(ßJECT:(Ideptl.(±pt-loc-idxl AS [리), SEEK:([locl='CHICAC) )
+1 :—RID Lcnk»(8JECT:([deptl AS [비), )
+卜1釅 *k龜.正CT:(I코[~㈍恤0-idxl), SEEK:(lel.[&ptnol=[deptl.[deptml))
+:—RID L纛叩(圁ECT:([예1 AS [비), S때:([뉴kl%3]=[>kl%31) LÜIP 鰍匿喞 F0mARD)
+SQL SenrerOIl서 제공하는 그래픽 모드 실행계획은 [그림 Ⅲ年기와 같다.
+包
+- EeEed 齡呼s
+Sort
+PiIter
+(lrmer 7이n)
+COSt 45 ` COR. 0 `
+Coæ: 0 `
+匍
+LOOPS
+(lmer 701m
+Cost: 0 `
+Lookup
+Cost: 15 `
+Fi1ter
+Cost: 0
+1回
+•- Nested Loops
+( Joxn)
+Cost: 0 `
+ln&x Seek
+. t—p 1삐
+Cosc: 13 `
+lndex Seü
+[亟彎1 . 1亟1
+Cost: 13 `
+LO&up
+ldl
+Cost• 13 `
+[그림 Ⅲ4기 SQL *의 그래픽 모드 실행계획
+{그림 Ⅲ431을 보면 지금까지 설명한 NL 조인의 수행 절차를 좀 더 명확히 이해할 수 있다.
+(齡
+(다
+Ⅸ)
+[그림 III훂3] NL 조인 수행 과정
+594|후전문가/끼드

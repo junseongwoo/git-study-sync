@@ -1,0 +1,67 @@
+과목 II SQL 기본과 활용
+BIRTH-DATE
+框1어T
+氈1어T
+!실행 결과] SQL Server
+&.PLAYER'
+PLAYER_ID
+PLAYER-V&
+TEÆ-ID
+E_PLAYER_NA&
+NICKWE
+그이N_YYYY
+mSITION
+BACK-W
+NATIm
+BIRTH_DATE
+柾1어T
+WEIQ{T
+다. b•mFY COLUMN
+Type
+char
+varchar
+char
+varchar
+varchar
+char
+varchar
+tinyint
+varchar
+date
+char
+smallint
+smallint
+DATE
+대AR(I)
+N&ER(3)
+厭劇鰍(3)
+Length
+7
+20
+3
+40
+4
+10
+1
+20
+3
+1
+2
+2
+ti」11曲le
+yes
+테이블에 존재하는 칼럼에 대해 ALTER TABLE 명령을 이용해 칼럼의 데이터 유형, 디폴트(DEFAULT) 값,
+NOT NULL 제약조건에 대한 변경을 포함할 수 있다.
+다음은 테이블의 칼럼 정의를 변경하는 명령이다.
+Oracle
+ALTER TBLE 테이불명
+DIFY ( 칼럼명1
+데이터유형
+데이터유형
+[기본 값]
+[기본 값]
+OOT MJLLI
+齟니
+438
+(. 칼럼영2
+전문가 ,까드

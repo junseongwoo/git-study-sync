@@ -1,0 +1,37 @@
+과목 II SQL 기본과 활용
+
+SELECT DISTINCT
+TEAN_ID AS 팀코드, PLAYER NAME AS 선수명, POSITION AS 포지션
+, 880 0 AS 백넘버, HEIGHT AS 키
+FROM PLAYER
+WHERE TEAN_ID = '182'
+AND POSITION O '바'
+ORDER BY 1, 2, 3, 4, 5;
+
+이제 마지막으로 삼성블루윙즈 팀이면서 포지션이 골키퍼인 선수들인 교집합을 얻기 위한 SQL 문을 작성해 보자.
+
+MN 소속이 삼성블루윙즈 팀이면서 포지션이 골키퍼(0()인
+
+5) 케이리그 소속 선수 중 소속이 삼성블루윙즈 팀인 선수들의 집합과
+케이리그 소속 선수 중 포지션이 골키퍼(0()인 선수들의 집합의 교집합
+
+SELECT TEAM_ID AS 팀코드, PLAYER NAME AS 선수명, POSITION AS 포지션
+, BACKNO AS 백넘버, HEIGHT AS 7|
+FROM PLAYER A
+WHERE TEAM_ID = '102'
+INTERSECT
+SELECT TEAM_ID AS 팀코드, PLAYER NAME AS 선수명, POSITION AS 포지션
+, BACK NO AS 백넘버, HEIGHT AS 7|
+FROM PLAYER A
+WHERE POSITION = ‘6K’
+ORDER BY 1, 2, 3, 4, 5;
+
+팀코드            선수               포지션            백넘버             키
+“92                깅운재             GK                      1            182
+“02                정광수             GK                     4            182
+“02               조범철             6K                     21            185
+“92                   최호진                6K                          31               190
+
+4 개의 행이 선택됐습니다.
+
+306 | su #87 가이드

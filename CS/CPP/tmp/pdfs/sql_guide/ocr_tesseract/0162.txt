@@ -1,0 +1,40 @@
+제1장 SQL 기본
+
+환율반영달러 원화
+$102,880.66  ¥123,456,789
+
+1 개의 행이 선택됐습니다.
+
+[예제] 팀(164/) 테이블의 710코드1과 217코드2를 숫자로 변환한 후 두 항목을 더한 숫자를 출력한다.
+
+[예제] Oracle
+
+SELECT TEAM_ID AS 팀10
+, TO_NUMBER (ZIP_CODE1, '999') + TO_NUMBER (ZIP_CODE2, '999') AS 우편번호합
+FROM TEAM;
+
+[예제] SQL Server
+
+SELECT TEAM_ID AS 팀10
+, CAST (ZIP_CODE1 AS INT) + CAST (ZIP_CODE2 AS INT) AS 우편번호합
+FROM TEAM;
+
+Ke1                                   742
+Ke2                                  660
+Ke3                                  840
+Ke4                                  838
+Kes                                  750
+196                                  620
+Ke?                                  554                                                                                       2
+Kes                                  592
+Ke9                                  359
+K1@               331
+K1                                         333
+K12               869
+K13               777
+K14              1221
+K15              1665
+
+15 개의 행이 선택됐습니다.
+
+_SQL 전문가 가이드|167

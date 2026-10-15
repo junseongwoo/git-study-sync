@@ -1,0 +1,39 @@
+제1장 SQL 기본
+
+BLAKE
+
+56 개의 행이 선택됐습니다.
+
+DNAME
+ACCOUNTING
+RESEARCH
+SALES
+OPERATIONS
+ACCOUNTING
+RESEARCH
+SALES
+OPERATIONS
+ACCOUNTING
+RESEARCH
+
+실행 결과에서 모든 사원 224 DEPTS] 모든 부서명과 연결이 돼서 4번의 조합이 출력됐음을 알 수 있다.
+
+[예제] NATURAL 」01의 경우 WHERE 절에서 조인 조건을 추가할 수 없지만, CROSS JOINS] 경우 WHERE 절에 조인
+조건을 추가할 수 있다. 그러나, 이 경우는 00055 JOINO| 아니라 INNER JOINZ 같은 결과를 얻기 때문에 CROSS
+JOINE 사용하는 의미가 없어지므로 권고하지 않는다.
+
+SELECT A.ENAME, B.DNAME
+FROM EMP A CROSS JOIN DEPT B
+
+WHERE B.DEPTNO = A.DEPTNO;
+
+위 SQL} 아래 SQLS 같은
+
+SELECT A.ENAME, B.DNAME
+FROM EMP A INNER JOIN DEPT B
+
+ON B.DEPTNO = A.DEPTNO;
+
+결과를 얻을 수 있다.
+
+_SQL 전문가 가이드 |265.

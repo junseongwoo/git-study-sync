@@ -1,0 +1,28 @@
+囹장 고급 류닝
+create t±le 주문-임시 as select * fran 주문;
+Server
+select * into #주문-임시 fran 주문;
+alter t±le 주문 cmstraint 주문죄;
+- [] •• server
+irdex [주문.]주문-idxl;
+tn-ncate 弋豳le 주문:
+insert into 주문(고객번호, 주문일시, , 상태코드)
+select 고객번호, 주문일시,
+,(case ~ 주문일시 to-奄teC″101넣 ttm •″ 해* status 상태코드
+fræ 주문-임시:
+alter t±le 주문 獨 cmstraint 주e-pk primary key(고객번호, 주문일시);
+create ir•dex 주문-i亟1 예 주문(주문일시, 상태코드);
+인덱스가 하나도 없는 상대에서 테스트해 봐도 대략 20% 수준에서 손익분기점이 결정되는 것을 알 수 있다.
+만약 인덱스까지 여러 개 있다면 손익분기점은 더 낮아진다.
+Orade의 경우 위 CTAS 문中|l noloæing 옵션을 사용하고 ln*11 문장에 aplmd 힌트까지 사용하면 손익분기
+점은 더 낮아진다.
+아래는 1999년 12월 31일 이전 주문 데이터의 상대코드를 모두 지우는 Ⅸlete문이다.
+delete frm 주문 éere 주문일시 〈 to-date('2Æ191',
+대량의 데이터를 lklete할 때도 다음과 같이 처리하는 것이 빠를 수 있다
+create t±le 주문-임시
+select * 뉴” 주문
+•here 주문일시 to-date('2Æ191',
+alter t±le cmstraint 주문-pk;
+drop ir&x 주문-i亟1:
+tnncate t±le 주문:
+전문가 가이드 705

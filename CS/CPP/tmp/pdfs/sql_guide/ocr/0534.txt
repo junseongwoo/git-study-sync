@@ -1,0 +1,25 @@
+제3장 인역스 류닝
+StmtText
+l—tkst«i Join, WTER REFERENCES:([NIEI))
+1-lrd" Seek(BJECT:([…l.[ül.[enl.l«ro-deptno-idxl), SEEK:([deptnol=20) ÆRED
+:—RID L예如(%표CT:([..].[삐.[훼), SE獸:([~삐=[纛1삐) LÜI.P 끄氈D
+참고로 2mo 이전 버전의 실행계획에는 다음과 같이 표시된다.
+StmtText
+:—Bookmark Look呼(″』Ⅷ:([촤1삐), æJECT:([..l.Iül.[•l))
+1-*" SeekOJECT:((…l.lül.[enl.(en-deptm-idxl), SEEK:([deptnoJ = 20) -
+인덱스를 수직적으로 탐색한 후에 리프 블록에서 '필요한 범위모卜 스캔한다고 했다. 이는 범위 스7蟹Ran空 뇨1)이
+의미하는 B卜를 잘 설명해 주고 있다. 데이터베이스 프로그래밍에 경험이 많지 않은 초급 개발자는 대개 인덱스가
+사용되는 실행계획을 보면 자신이 작성한 SQL 문에 문제가 없다고 판단하고 일단 안심한다. 하지만 실행계획 상에
+lndex Range Scan이 나타난다고 해서 항상 빠른 속도를 보장하는 것은 아니다.
+인덱스를 스캔하는 범위(Range)를 얼마만큼 줄일 수 있느냐, 테이블로 액세스하는 횟수를 얼마만큼 줄일 수
+있느냐가 관건이다. 이는 인덱스 설계와 SQL 튜닝의 핵심 원리 중 하나이다.
+lndex Range Scan이 가능하게 하려면 인덱스를 구성하는 선두 칼럼이 조건절에 사용돼야 한다. 그렇지 못한
+상횡에서 인덱스를 사용하도록 힌트로 강제한다면 바로 이어서 설명할 lndex Full Scan 방식으로 처리된다.
+lndex Range Scan 과정을 거쳐 생성된 결과 집합은 인덱스 칼럼 순으로 정릴된 상대가 되기 때문에 이런
+특징을 잘 이용하면 sort order 연산을 생략하거나 mn/max 값을 빠르게 추출할 수 있다.
+나. lrxiex FuIl %an
+lndex Full 뇨n은 수직적 람책없이 인덱스 리프 블록을 처음부터 끝까지 수평적으로 탐색하는 방식으로서,
+대개는 데이터 검색을 위한 최적의 인덱스가 없을 때 차선으로 선택된다.
+Full Scan
+[그림 III•3•3] lndex FuII Scan
+포석르E간우트函S

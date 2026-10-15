@@ -1,0 +1,45 @@
+과목 II SQL 고급 활용 및 튜닝
+= > > 데여~=며여가예예 매여
+
+from member
+where memb_cls = "1°
+and birth yyyy <= "1950";
+
+if 1.cnt > © then
+dbms_output .put_line( ‘exists');
+else
+dbms_output .put_line('not exists’);
+end if;
+end;
+
+Call  Count   CPU Time  Elapsed Time  Disk Query Current   Rows
+
+Parse      1        6.000         0.000      0      0        0        0
+Execute     1        0.000         0.000      0      0        0       0
+Fetch        2         0.172          17.561     4742 26112          0         1
+Total        4         0.172          17.561     4742 26112          0         1
+
+Rows Row Source Operation
+
+© STATEMENT
+
+1 SORT AGGREGATE (cr=26112 pr=4742 pw=0 time=17561372 us)
+29184    TABLE ACCESS BY INDEX ROWID MEMBER (cr=26112 pr=4742 pw=0 time=30885229 us)
+33952     INDEX RANGE SCAN MEMBER_IDX01 (cr=105 pr=105 pw=0 time=2042777 us)
+
+위 쿼리는 26,112개 블록 1/07} 발생하면서 17.56초나 소요됐다. 총 26,112개 중 디스크 1/@가 4742704 되는
+것이 성능을 저하시킨 주요인이다. 쿼리를 다음과 같이 바꾸면 블록 1/0를 © 3개로 출일 수 있어 디스크 I/O
+발생 여부와 상관없이 항상 빠른 성능을 보장한다.
+
+declare
+1_cnt number;
+begin
+select 1 into 1_cnt
+from member
+where memb_cls = '1'
+and  birth_yyyy <= "1950'
+and rownum {= 1
+
+dbms_output.put_line( ‘exists');
+
+688 50 건문가 가이드

@@ -1,0 +1,44 @@
+세6장 고급 SOL 튜닝
+
+Execution Plan
+
+8 SELECT STATEMENT Optimizer=ALL ROWS (Cost=1 Card=1 Bytes=49)
+ㅣ © SORT (ORDER BY) (Cost=1 Card=1 Bytes=49)
+2 1 COUNT (STOPKEY)
+3%      VIEW (Cost=5 Card=1 Bytes=49)
+4 3        FILTER
+57.24        TABLE ACCESS (BY INDEX ROWID) OF '시간별종목거래' (TABLE) (Card=1 Bytes=56)
+6 5          INDEX (RANGE SCAN DESCENDING) OF '시간별종목거래 Px’ (INDEX (UNIQUE) (Card=1)
+여기서는 ‘SORT (ORDER BY)'7} 나타났지만, ‘COUNT (STOPKEY)' 바깥 쪽에 위치했으므로 조건절에 의해
+선택된 ]1건에 대해서만 AE 연산을 수행한다. 인덱스를 거꾸로 읽었지만, 화면에는 오름차순으로 출력되게 하려고
+
+ORDER BYE 한 번 더 사용한 것이다.
+옵티마이저 힌트를 사용하면 50)[.을 더 간단하게 구사할 수 있지만, 인덱스 구성이 변경될 때 결과가 달라질
+위험성이 있다. 될 수 있으면 힌트를 이용하지 않고도 같은 방식으로 처리되도록 SQLE 조정하는 것이 바람직하다.
+SQL 5616[에선 Top N 구문을 이용해 다음과 같이 작성하면 된다.
+
+< 첫 화면이거나, '다음(\ )' HES 클릭했을 때 >
+SELECT TOP 11 거래일시, 체결건수, 체결수량, 거래대금
+FROM      시간별종목거래 A
+
+WHERE  :：페이지이동 = '\6'
+
+AND        종목코드 = :154 09
+
+AND       거래일시 d= :trd_time
+
+ORDER BY 거래일시 ;
+
+< '이전(#)' HES 클릭했을 때 >
+SELECT 거래일시, 체결건수, 체결수량, 거래대금
+FROM (
+SELECT TOP 11 거래일시, 체결건수, 체결수량, 거래대금
+FROM … 시간별종목거래 A
+WHERE  ：페이지이동 = ‘PREV’
+AND     종목코드 = isucd
+AND 、 거래일시 < :0_{6
+ORDER BY 거래일시 )6(
+)
+ORDER BY 거래일시 ;
+
+전문가 가이드 [763

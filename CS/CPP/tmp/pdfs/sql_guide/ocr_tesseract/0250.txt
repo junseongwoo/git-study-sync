@@ -1,0 +1,30 @@
+과목 1 SQL 기본과 활용
+
+oe             0370        DNAME              DNAME
+NEW YORK           10        ACCOUNTING        ACCOUNTING
+DALLAS                 20          RESEARCH             CONSULTING
+CHICAGO                30          SALES                MARKETING
+BOSTON                 40          OPERATIONS          OPERATIONS
+
+4 개의 행이 선택됐습니다.
+
+USINGell 사용된 100와 DEPTNOZ A 번째, 두 번째 칼럼으로 출력, 조인 조건에 참여하지 않은 DNAME
+칼럼은 2개의 칼럼으로 표시된 것을 알 수 있다.
+
+[예제] 이번에는 DEPTNO, DNAME 2개의 칼럼을 이용한 [INNER] JOINS| USING 조건절로 수행한다.
+
+SELECT =
+FROM DEPT A JOIN DEPT_TEMP B
+USING (DEPTNO, DNAME);
+
+DEPTNO           DNAME                  LOC                  Loc
+
+10            ACCOUNTING            NEW YORK           NEW YORK
+
+2 개의 행이 선택됐습니다.
+
+위 SQLS] 경우 DNAME®] 내용이 HH 부서번호 20, 30의 경우는 결과에서 제외된 것을 알 수 있다. 그리고
+051465에 사용된 DEPTNO, DNAME©| 첫 번째와 두 번째 칼럼으로 출력된 것과 함께, 조인 조건에 참여하지
+않은 10(가 2개의 칼럼으로 표시된 것을 알 수 있다
+
+256 | SQL 전문가 가이드

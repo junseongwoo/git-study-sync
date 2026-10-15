@@ -1,0 +1,34 @@
+제3장 관리 구문
+
+[    개   . 제펼매Ｌ     .    Ten
+
+DML (Data Manipulation Language) 문을 사용하면 테이블에 데이터를 입력, 수정, 삭제할 수 있다. INSERT 문을
+
+| 사용해 데이터를 입력할 수 있으며, UPDATE 문으로 데이터를 다른 값으로 수정할 수 있다. DELETE 문은 테이블에
+저장된 데이터를 삭제할 때 사용한다. 또한 MERGE 문을 사용하면 새로운 행을 입력하거나 기존 행을 수정하는 작업을
+한 번에 할 수 있다.
+
+[
+
+       ;   “   maT B  해        ;
+
+|
+TCL(Transaction Control Language) 문을 사용하면 데이터베이스의 논리적 연산 단위인 트랜잭션을 제어할 수
+| 있다. 올바르게 반영된 데이터를 데이터베이스에 반영시키는 AIUCOMMIT) 명령어, 데이터를 트랜잭션 시작 이전의
+상태로 되돌리는 롤백(8011.84 명령어, 트랜잭션의 일부만 취소할 수 있게 만드는 저장점(8480014) 명령어가
+| 있다.
+
+제3절 DDL                            |
+
+| DDL(Data Definition Language) 문을 사용하면 테이블을 포함한 데이터베이스 객체의 구조를 정의할 수 있다.
+CREATE TABLE, ALTER TABLE, DROP TABLE 등의 명령어를 통해 테이블 구조를 생성하거나 수정, 삭제한다.
+또한 PRIMARY KEY, UNIQUE, NOT NULL, CHECK, FOREIGN KEY 제약조건을 정의해 칼럼의 데이터 무결성을
+유지할 수 있다.
+
+Ea      ET
+
+DCL(Data Control Language) 문을 사용하면 유저를 생성하거나 데이터베이스 권한을 제어할 수 있다. CREATE
+| USER 문을 통해 새로운 사용자를 생성하고, DROP USER 문을 사용해 기존 사용자를 삭제한다. GRANT 문은 사용자에
+게 시스템 권한 및 객체 권한을 부여할 때 사용하며, REVOKE 문은 사용자로부터 부여된 권한을 회수할 때 사용한다.
+
+ 98 전문가 가이드 1467

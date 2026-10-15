@@ -1,0 +1,44 @@
+제2장 QL 활용
+
+[예제] 사원 테이블에서 급여가 놓은 2명을 내림차순으로 출력하는데 같은 급여를 받는 사원이 있으면 같이 출력한다.
+
+TOP(2)
+
+WITH TIES 842 동일 수치의 데이터를 추가로 더 추출하는 것으로, SCOTT FORD 급여가 공동 2위이므로
+
+TOP(2) WITH 1165의 실행 결과는 3건의 데이터가 출력된다.
+
+예제] SQL Server
+
+SELECT  TOP(2) WITH TIES
+
+SAL
+KING              5000
+SCOTT            3000
+FORD              3000
+(3개 행 적용됨)
+
+3. ROW LIMITING 절
+
+Oracle 12.1 버전, SQL Serveri= 2012 버전부터 ROW LIMITING 절로 Top N 쿼리를 작성할 수 있다.
+
+ROW LIMITING 절은 ANSI 표준 SQL 문법이다.
+
+아래는 ROW LIMITING 절의 구문이다. ROW LIMITING 절은 ORDER BY 절 다음에 기술하며, ORDER
+
+BY 절과 함께 수행된다. ROWS ROWSE 구분하지 않아도 된다.
+
+[OFFSET offset {ROW | ROWS}]
+[FETCH {FIRST | NEXT} [{rowcount | percent PERCENT}] {ROW | ROWS} {ONLY | WITH TIES}]
+
+- OFFSET offset : 건너펄 행의 개수를 지정한다.
+
+- FETCH : 반환할 행의 개수나 백분율을 지정한다.
+
+- ONLY : 지정된 행의 개수나 백분율만큼 행을 반환한다.
+
+- WITH TIES : 마지막 행에 대한 동순위를 포함해서 반환한다.
+
+SQL 전문가 가이드
+
+349

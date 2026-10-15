@@ -1,0 +1,56 @@
+과목 ll 기본과 활용
+SELECT 8.ST嚮1별-ID, A.SQE-DATE
+, ( D.TEAM-WE
+. A.AEAY_SQE
+~ 시 8, TEAN (, TEAM
+8. = A.STADIW_ID
+C.TEN_ID =
+0.″-10 = A.WYTEÆ_ID;
+OE_SCCRE
+결행 출과]
+성남종합운동장
+서울월드컵경기장
+장원종합운동장
+을산문수경기장
+STADII-N_ID
+(05
+SCHE-DATE
+꼬120317
+꼬1꼬714
+20120427
+201″3
+201羽727
+TEAM_NANE
+일화천마
+F(서을
+경남FC
+을산현대
+아이파크
+TEN-NAUE
+유나이티드
+삼성불루윙즈
+아이파크
+스틸러스
+시티즌
+6
+3
+5
+3
+3
+AWAY_SQE
+0
+0
+2
+0
+0
+부산아시아드경기장 (02
+5 개의 행이 선택욌습니다.
+6. (ROSS J이N
+대조S J이N은 LF.CODD 박사가 언급한 일반 집합 연산자의 PRODUCr의 개념으로 테이블 간 조인 조건이
+없는 경우 생길 수 있는 모든 데이터의 조합을 말한다.
+두 개의 테이블에 대한 CARIBIAN PRODIJCr 또는 CROSS PROI)UCm 같은 표현으~력 결과는 양쪽 집합의
+M*N 건의 데이터 조합이 발생한머아래 %건의 데이터는 EMP 14건 * DF.yr 4건의 데이터 조합 건수이다).
+[예제] 사원, 부서 테이불을 CROSS 」이N 해 사원 이통 및 소속 부서 이름을 조회해본다
+f예제1
+~ ~ A CÜS nIN FT B
+전문가 ,까드

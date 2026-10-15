@@ -1,0 +1,48 @@
+과목 ] SQL 기본과 활용
+
+=======>>= > >->>->~ㅡ02220
+
+800                                             NUMBER (2)
+NATION                                              VARCHAR2(20)
+BIRTH_DATE                                         DATE
+
+SOLAR                      CHAR(1)
+HEIGHT                     NUMBER (3)
+WEIGHT                                              NUMBER (3)
+ADDRESS                                             VARCHAR2(80)
+
+SQL Server
+
+ALTER TABLE PLAYER ADD ADDRESS VARCHAR(80);
+
+명령이 완료됐습니다.
+
+과] SQL Server
+
+exec sp_help ‘dbo PLAYER’
+
+90
+
+Column_name                      Type                              Length                     Nullable
+PLAYER_ID                          char                                       7                     no
+PLAYER _NAME                       varchar                               20                     no
+TEAM_ID                              char                                       3                     no
+E_PLAYER_NAME               varchar                        40                yes
+NICKNAME                            varchar                               30                     yes
+JOIN_YYYY                       char                                 4                  yes
+POSITION                            varchar                               10                     yes
+BACK_NO                                                     tinyint                                                         1                                     yes
+NATION                            varchar                           20                  yes
+BIRTH_DATE                   date                             3                yes
+SOLAR                                 char                                      1                     yes
+HEIGHT                           smallint                           2                   yes
+WEIGHT                           smallint                           2                  yes
+ADDRESS                             varchar                               80                     yes
+
+나. DROP COLUMN
+
+DROP COLUMN 테이블에서 필요 없는 칼럼을 삭제할 수 있으며, 데이터가 있거나 없거나 모두 삭제 가능하다.
+단 칼럼 삭제 후 최소 하나 이상의 칼럼이 테이블에 존재해야 하며, 한 번 삭제된 칼럼은 복구할 수 없다.
+다음은 테이블의 불필요한 칼럼을 삭제하는 명령이다.
+
+436 WNL 건문가 가이5

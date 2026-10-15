@@ -1,0 +1,42 @@
+과목 III SQL 고급 활용 및 튜닝
+sel«t nn(qmtity—sold) amtity—cold
+十1•• 이由r a, 91e뢰k-sales b
+~ a.or&r_date 는弋~n :1 :2
+ard b.or&r = |℃
+charæl-id
+RÄS
+5
+1圄1
+1圄1
+~ 뇨」貳e
+~ BY
+REETE
+TÆLE ACCESS BY IWEX OID RDER
+SCAN
+위 SQL과 Row Source *을 분석해 보면, 원격(Remote)에 있는 sales 테이블을 전송빋아 order
+테이블과 방식으로 조인하고 있다. 훼만 건이나 되는 sales 데이터를 네트워크를 통해 전송받으니 쿼리 성능이
+나쁜 것은 당연하다.
+order 테이블도 작은 테이블은 아니지만 order-date 필터 조건이 있다. 이 조건에 해당하는 데이터만 원격으로
+보내서 조인과 group 파를 거친 결과 집합을 전송받는다면 어떨까? 위 수행결과에서 알 수 있듯이 group by한
+결과 집합은 5건에 불과하므로 큰 성능 개선을 기대할 수 있다.
+다음은 원격 서버가 쿼리를 처리하도록 dnving-site 힌트를 지정하고서 다시 수행한 결과다.
+select /*+ drivirvite(b) */ chamel id, sun(quantity—sold) auantity—cold
+fræ order 하 %le彎lk-%16 b
+*ere a.or±r_date :1 ard :2
+ard b or±r_ro = a.order rn
+하 chææl—id
+5
+1圄1
+9爹
+9爹
+191
+Ro• Swrce Oceration
+ßT BY
+LOS
+TmE ACCESS (BY It&.X RMD) 1 ÆR
+1표X (R.한聳 SCAN) • (WH.JNIQJE)
+æETE
+인덱스를 이용해 939건의 order 데이터를 읽어 원격으로 보냈고, 거기서 처리가 완료된 5건만 전송받은 것을
+확즨할 수 있다.
+분간 쿼리의 성능을 높이는 핵심 원리는 네트워크를 통한 데이터 전송량을 줄이는 데에 있다.
+724 /꾸가 ,까드

@@ -1,0 +1,37 @@
+과목 ｌ SQL 기본과 활용
+
+[표 [1-3-10] CONNECT ROLEZ} RESOURCE ROLEO| 포함된 권한 목록(030! 사례)
+
+CREATE CLUSTER
+CREATE INDEXTYPE
+| CREATE OPERATOR
+CREATE PROCEDURE
+THEATE SESSION                 CREATE SEQUENCE                      .
+| CREATE TABLE
+
+CREATE TRIGGER
+CREATE TYPE
+
+유저를 삭제하는 명령어는 2800 0588이고, CASCADE 옵션을 주면 해당 유저가 생성한 오브젝트를 먼저
+삭제한 후 유저를 삭제한다.
+
+[예제] 앞에서 MENUZH= 테이블을 생성했기 때문에 CASCADE 옵션을 사용해 SQLD 유저를 삭제한 후, 유저 재생성 및
+기본적인 80ㄴ『을 부여한다.
+
+예제] Oracle
+
+CONN SYSTEM/MANAGER;
+
+연결됐습니다.
+
+DROP USER 5010 CASCADE;
+
+사용자가 삭제됐습니다.
+
+5011) 유저를 삭제되면서 5011) 유저가 만든 MENU 테이블도 같이 삭제됐다.
+
+CREATE USER 5010 IDENTIFIED BY DB2019;
+
+사용자가 생성됐습니다.
+
+464 | QL 전가 가이드

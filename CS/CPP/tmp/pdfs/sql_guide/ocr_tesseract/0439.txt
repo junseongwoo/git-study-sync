@@ -1,0 +1,36 @@
+과목 [ SQL 기본과 활용
+
+EC ——— RS
+
+4. DROP TABLE
+
+테이블을 잘못 만들었거나 테이블이 더이상 필요 없을 경우 해당 테이블을 삭제해야 한다. 다음은 불필요한
+테이블을 삭제하는 명령이다.
+
+DROP TABLE 테이블명 [CASCADE CONSTRAINT];
+
+DROP 명령어를 사용하면 테이블의 모든 데이터 및 구조를 삭제한다. CASCADE CONSTRAINT 옵션은 해당
+테이블과 관계가 있었던 참조되는 제약조건에 대해서도 삭제함을 의미한다.
+
+SQL 56006[에서는 CASCADE 옵션이 존재하지 않으며 테이블을 삭제하기 전에 참조하는 FOREIGN KEY 제약
+조건 또는 참조하는 테이블을 먼저 삭제해야 한다.
+
+[예제] PLAYER 테이블을 제거한다.
+
+DROP TABLE PLAYER;
+
+테이블이 삭제됐습니다.
+
+DESC PLAYER;
+
+ORA-04843: PLAYER 객체는 존재하지 않습니다.
+
+DROP TABLE PLAYER;
+
+명령이 완료됐습니다.
+
+exec sp_help '00.01.씨태';
+
+메시지 15009, 수준 16, 상태 1, 프로시저 50 help, 줄 79
+데이터베이스 “northwind’ Of 개체 “dbo. PLAYER'O|(7}) 없거나 이 작업에 적합하지 않습니다.
+

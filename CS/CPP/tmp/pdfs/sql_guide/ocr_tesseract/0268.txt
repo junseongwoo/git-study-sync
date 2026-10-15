@@ -1,0 +1,24 @@
+과목 I QL 기본과 활용
+
+Fn -
+
+제6절 ORDER BY 절
+ORDER BY 절은 조회된 자료를 원하는 칼럼 순으로 정렬하는 기능을 수행하고, SELECT £42] 제일 마지막에
+위치한다. SELECT 문장은 FROM 절, WHERE 절, GROUP BY A, HAVING 절, SELECT 7, ORDER BY 절
+순서로 실행된다.
+
+제7절 조인
+
+두 개 이상의 테이블들을 연결해 데이터를 출력하는 것을 조인014()이라고 하며, 전통적인 방식의 조인 문법에서는
+WHERE 절에 조인 조건과 데이터 제한 조건을 함께 기술한다.
+
+제8절 표준 조인                                                 ㅣ
+
+ANSI/ISO 50에서 규정한 조인은 INNER JOIN, NATURAL JOIN, CROSS JOIN, OUTER JOIN] 조인 joey
+분류할 수 있다. ANSI/ISO 표준 방식의 조인 문법에서 가장 두드러진 E42 ON 조건 절 및 USING 조건 절을 사용해
+
+|
+
+조인 조건을 WHERE 절의 데이터 제한 조건으로부터 분리해 기술한다는 것이다.
+
+274 | sy 전문가 가이드

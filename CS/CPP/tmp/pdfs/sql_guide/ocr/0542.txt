@@ -1,0 +1,25 @@
+제랑 인역스 류님
+SQL Serveroil서의 실행계획은 다음과 같다
+StmtText
+I—Nested Join, WTER REFERENCES:([Næ01))
+:—lr&x nDERED BACKURD)
+:—RID L예k尠(圁E(T:([..1.[쬐.[훼), SEEK:((Bmk1m=&k1ÆJ) LØKIP nDERED
+아래처럼 max 값을 구하고자 할 때도 해당 칼럼에 인덱스가 있으면 인덱스를 뒤에서부터 한 건만 읽고 멈추는
+실행계획이 재동으로 수립된다.
+S엔〉 create index 啣-x02 예 啣(㈍恤0, %1),•
+SQL> select &ptno, 囿~, loc
+2
+,(select nax(sal) ±ptno = d.&ptno)
+3 fran dept d
+Executim 기결)
+0
+1
+4
+0
+0
+SELECT STATEkMT
+(AGCÆGATE)
+FIRST RW
+1荻X (~ SCAN (뱼N/國)) % 'E顰-X02| (1鞭X)
+TABLE ACCESS (FULL) (TABLE)
+전문가 &l드 551

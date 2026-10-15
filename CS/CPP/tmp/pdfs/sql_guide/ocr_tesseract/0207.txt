@@ -1,0 +1,38 @@
+과목 ] SQU 기본과 활용
+
+4. CASE 표현을 활용한 월별 데이터 집계
+
+`집계함수(0456 )~GROUP 8" 기능은 모델링의 제1정규화로 인해 반복되는 칼럼의 경우 구분 칼럼을 두고
+여러 개의 레코드로 만들어진 집합을 정해진 칼럼 수만큼 확장해 집계 보고서를 만드는 유용한 기법이다.
+
+부서별로 월별 입사자의 평균 급여를 알고 싶다는 고객의 요구 사항이 있다. 입사 후 1년마다 급여 인상이나
+보너스 지급과 같은 일정이 정기적으로 잡힌다면 업무적으로 중요한 정보가 될 수 있다.
+
+STEP 1. 개별 데이터 확인
+[예제] 먼저 개별 입사정보에서 월별 데이터를 추출하는 작업을 진행한다. 이 단계는 월별 정보가 있다면 생략 가능하다.
+SELECT ENAME AS 사원명, DEPTNO AS 부서번호
+
+, EXTRACT (MONTH FROM HIREDATE) AS 입사월, SAL AS 급여
+FROM EWP;
+
+SELECT ENAME AS 사원명, DEPTNO AS 부서번호
+, DATEPART (MONTH, HIREDATE) AS 입사월, SAL AS 급여
+FROM BWP;
+
+SELECT ENAME AS 사원명, DEPTNO AS 부서번호
+, MONTH (HIREDATE) AS 입사월, SAL AS 급여
+FROM EWP;
+
+사원명             부서번호               입사월                급여
+SMITH                          20                12                 800
+ALLEN                              30                    2                  1600
+WARD                                    30                       2                    1250
+JONES                                  20                      4                    2975
+MARTIN                                30                      9                    1250
+BLAKE                           30                  5               2850
+CLARK                              10                    6                 2450
+SCOTT                              20                    4                  3000
+KiNG                            10                11                5000
+
+212 sp #87 가이드
+

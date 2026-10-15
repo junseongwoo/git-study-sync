@@ -1,0 +1,46 @@
+제4장 조인 튜닝
+
+from dept d, emp e
+where d.deptno = e.deptno
+
+[예제] SQL Server
+select e.empno, e.ename, d.dname
+from emp e inner loop join dept d on d.deptno = e.deptno
+option (force order)
+
+select e.empno, e.ename, d.dname
+from emp e, dept d
+
+where d.deptno = e.deptno
+option (force order, loop join)
+
+CE TEEN
+
+사실 뒤에서 설명할 소트 머지 조인과 해시 조인도 각각 AE 영역(50ㅠ Area)? 해시 영역(8350 Area)ol
+가공해 둔 데이터를 이용한다는 점만 다를 뿐 기본적인 조인 프로세싱은 다르지 않다.
+
+2. NL 조인 수행 과정 분석
+
+이제 NL 조인의 기본 메커니즘을 이해했으므로 아래 조인문에서 조건절 비교 순서가 어떻게 되는지 분석해
+보자.
+
+select /차 ordered use_nl(e) */                             wz
+e.empno, e.ename, d.dname, e job, e.sal
+
+from dept d, emp e
+
+where e.deptno = d.deptno
+
+and d.loc = "SEOUL
+
+and d.gb = '2'
+and e.sal >= 1500
+order by sal desc
+
+인덱스 상황은 다음과 같다.
+
+* pk_dept       : dept.deptno
+* dept_loc_idx  : dept.loc
+* pk_emp        : emp.empno
+
+SQL ¥#9t pole [591

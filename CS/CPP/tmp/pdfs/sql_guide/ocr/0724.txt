@@ -1,0 +1,24 @@
+과목 III SQL 고급 활용 및 튜닝
+[그림 III훂11] GlobaI 파티션 인덱스
+나. Prefixed 파티션 인및 `6. 파티션 인덱스
+인덱스 파티션 키 칼럼이 인덱스 구성상 왼쪽 선두 칼럼에 위치하는지에 따른 구분이다.
+EPrefixed : 파티션 인덱스를 생성할 때, 파티션 기 칼럼을 인덱스 기 칼럼 왼쪽 선두에 두는 것을 말한다
+Nonprefixed : 파티션 인덱스를 생성할 때, 파티션 기 칼럼을 인덱스 카 칼럼 왼쪽 선두에 두지 않는 것을
+말한다. 파티션 기가 인덱스 칼럼에 이여 속하지 않을 때도 여기에 속한다.
+1~1과 Global, Prefixed와 Nonprefixed를 조합하면 아래 4가지 구성이 나온다.
+lmal
+Global
+Prefixed
+1
+3
+t•qmprefixed
+2
+4
+비파티션까지 포함에 인덱스를 총 5가지 유형으로 구분할 수 있다.
+Local Prefixed 파티션 인덱스
+Local NonPrefixed 파티션 인덱스
+ㆍ Global Prefixed 파티션 인덱스
+Global NonPrefixed 파티션 인덱스 (좌 Oracle Not Support)
+비파티션(NonPartitioned) 인덱스
+Oracle은 이 중에서 GI& NonPrefixed 파티션 인덱스를 허용하지 않는다
+734 전문가 가이드

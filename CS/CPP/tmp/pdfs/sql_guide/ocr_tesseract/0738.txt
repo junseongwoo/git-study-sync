@@ -1,0 +1,45 @@
+ARM SQL 고급 활용 및 튜닝                      69999
+
+병렬 쿼리는 '분할 & ¥%(Divide & Conquer) 원리'에 기초한다. 그 중에서도 병렬 조인을 위해서는 “분배
+& 조인(01901606 & Join) 원리'가 작동함을 이해하는 것이 매우 중요하다. 이때 00_-015016416 힌트는 조인에
+앞서 데이터를 분배(01501646) 과정에만 관여하는 힌트임을 반드시 기억할 Wart 있다.
+
+예를 들어 아래 실행계획을 보면 테이블은 양쪽 모두 Hash 방식으로 분배했지만 조인은 소트 머지 조인 방식으로
+수행했다. 즉 데이터를 재분배하기 위해 해시 함수를 사용하는 것일 뿐 조인 방식(160109)과는 무관하다.
+
+select /*+ ordered use_merge(e) parallel(d 4) parallel(e 4)
+pa distribute(e hash hash) */ *
+
+from dept d, emp e
+
+where e.deptno = d.deptno
+
+ㅣ] Id | Operation             {Name | TQ |IN-OUT | PQ Distrib |
+ㅣ © | SELECT STATEMENT        ㅣ      |      |      |         |
+ㅣ 1| PX COORDINATOR      |    |    |     |       i
+1 2] PX SEND QC (RANDOM)     | :1010002| Q1,62 | P->S | QC (RAND) |
+! 31 MERGE JOIN      |    i Qe {Pw |      i
+! 41  SORT JOIN       |    ㅣ Q,02 | Paw |       |
+1 5%   PX RECEIVE      |    ㅣ 0,02 |r |       |
+1 61    PX SEND HASH       ㅣ :TQ10000} Q1,00 | P-)P | HASH      |
+ga 즐)   PX BLOCK ITERATOR |    1 Qe | Pm |      |
+] 8}     TABLE ACCESS FULL | DEPT | Q1,00 | PCWP |         |
+i 9 |  SORT JOIN       |    ㅣ Q,02 | Paw |       |
+1 10 |    PX RECEIVE         |      ㅣ Q,02 | Pw |          |
+들 | 를    PX SEND HASH      ㅣ :1010001| Q1,01 | P-P | HASH      |
+112 1     PX BLOCK ITERATOR   |      ㅣ Q,0 | POC   |         |
+1131      TABLE ACCESS FULL | EMP    ㅣ Qe | Paw |          |
+
+2) pq_distribute 사용법
+pq-distribute 힌트의 사용법은 다음과 같다.
+
+inner 테이블명
+또는 3435
+
+outer 테이블의
+distributioin 방식
+
+inner 테이블의
+distributioin 방식
+
+748 su 287 Hole

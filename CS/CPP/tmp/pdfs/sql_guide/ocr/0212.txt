@@ -1,0 +1,41 @@
+!예제1 SEARCHED_CASE_EXPRESSION 조건 • SQL Server
+SELECT TEAN_ID
+ISMIL (91 (CASE HN mSITIm = 'FW' TÆN 1 EtO), 0) AS FW
+ISWLL (91 (CASE *EN 而ITI애 = 1柾N 1 EtO), 0) AS
+ISMJLL (91 (CASE *EN = •匿• TÆN 1 EW), 0) AS
+ISM.JLL (91 (CASE MfN 務1T1애 = •蘇• TÆN 1 타기, 0) AS GK
+FO RAYER
+~ BY TEß-N 10:
+I실행 결과]
+TEN 10
+K01
+K02
+K03
+K34
+K05
+K07
+K9
+K10
+K11
+K12
+K13
+K14
+K15
+18
+19
+15
+18
+17
+16
+15
+13
+제1장 기본
+51
+51
+12
+15 개의 행이 선택됐습니다.
+이의 예제 SQL 문장은 같은 실행 결과를 출력한다. ORDER BY 절이 적용되지 않았으므로 TEAM-ID별로
+정렬돼 있지 않다. TEAM-ID 'K彎의 경우 쬬I*IION이 NULL인 3건이 포지션별 분류0는 빠져 있지만 SUM에는
+추가돼 있다. 이는 TEAM-ID 'K(B'의 각 POSITION의 합계(N+MF+DF+GK)가 42건이고 SUM 값이 45건인
+것으로 계산할 수 있다(4542=3).
+전문가 7101드 217

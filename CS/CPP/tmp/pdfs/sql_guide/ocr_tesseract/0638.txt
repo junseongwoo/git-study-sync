@@ -1,0 +1,44 @@
+세5장 SOL 옵티마이저
+
+아래는 00*에서 Dynamic SQL 작성한 사례다. SQL 56108형 변수에 담아 실행하는 것에 주목하기
+바란다. 바로 아래 주석 처리한 부분은 SQLE 런타임 시 입력 받는 방법의 예시다.
+
+int main()
+
+{
+char select_stmt[50] = "SELECT ENAME FROM EMP WHERE ENPNO = :empno”;
+// scanf("%c", &select_stat); — SQL 28 동적으로 입력 받을 수도 있음
+
+EXEC SQL PREPARE sql_stmt FROM :select stmt;
+EXEC SQU DECLARE emp_cursor CURSOR FOR sql_stmt;
+EXEC SQL OPEN emp_cursor USING :empno;
+
+EXEC SQL FETCH emp_cursor INTO :ename;
+
+EXEC SQL CLOSE emp_cursor;
+
+_ printf("AI¥Y : %s.\n", ename);
+24)
+
+Static(=Embedded) SQL& 지원하는 개발 언어는 많지 않으며, PowerBuilder, PL/SQL, Pro*C, SQL] 정도가
+있다. 그 외 개발 언어에선 SQLS 모두 56108 변수에 담아서 실행한다. 따라서 이들 언어에서 작성된 SQL
+모두 Dynamic 50[.이다.
+
+또한 Toad, Orange, SQL*Plus, SQL Server®] 쿼리 분석기 같은 Ad-hoc 쿼리 툴에서 작성하는 50[.도 모두
+Dynamic 50[.이다. 이들 툴은 앞으로 어떤 SQLo| 실행될지 모르는 상태에서 빌드(8010)되며, 런타임 시에 사용자
+로부터 입력받은 50Ｌ을 그대로 DBMS 던지는 역할만 할 뿐이다.
+
+다. 바인드 변수의 중요성 재강조
+
+지금까지 설명한 Static, Dynamic SQLE 애플리케이션 개발 측면에서의 구분일 뿐이며, 데이터베이스 입장에선
+차이가 git. Static SQLE 사용하든 Dynamic SQLE 사용하든 옵티마이저는 SQL 문장 자체만 인식할 뿐이므로
+성능에도 영향을 주지 Yeh, Static SQLY 때만 애플리케이션 커서 캐싱 기능이 작동하는 개발 언어도 있으므로
+그때는 성능에 영향을 줄 수 있다).
+
+따라서 라이브러리 캐시 효율을 논할 때 Statico|u} 2030010이냐의 차이보다는 바인드 변수 사용 여부에 초점을
+맞춰야 한다. 2002000으로 개발하더라도 바인드 변수만 잘 사용했다면 라이브러리 캐시 효율을 떨어뜨리지 않는다는
+뜻이다. 바인드 변수를 사용하지 않고 Literal 값을 SQL 문자열에 결합하는 방식으로 개발했을 때, 반복적인
+하드파싱으로 성능이 얼마나 저하되는지, 그리고 그 때문에 라이브러리 캐시에 얼마나 심한 경합이 발생하는지는
+앞에서 충분히 설명했다.
+
+ 99 전가 hls [647

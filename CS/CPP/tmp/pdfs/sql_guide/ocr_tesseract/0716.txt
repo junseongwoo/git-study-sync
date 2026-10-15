@@ -1,0 +1,47 @@
+과목 | QL 고급 활용 및 튜닝            ————————————————————————
+
+create or replace function YAH AHp_date varchar) return varchar2
+as
+1_date varchar2(8);
+begin
+1 date := to_char(to_date(p_date, 'yyyymndd'), 'yyyymmdd'); — 일자 오류 Al, Exception 발생
+if 1 date > to_char(trunc(sysdate), 'yyyymmdd') then
+return xooooox'; — 미래 일자로 입력된 주문 데이터
+
+end if;
+for i in (select 휴무일자 00 휴무일 where FLY} = 1_date)
+1000
+return '20000000('; - 휴무일에 입력된 주문 데이터
+end loop;
+return 1 date; — 정상적인 주문 데이터
+exception
+when others then return '08000000'; — 오류 데이터
+end;
+
+이 함수를 이용해 10009 개 주문 레코드를 다음과 같이 검사하면 1000만 번의 콘텍스트 스위칭이 발생함은
+물론 Execute 031과 Fetch Callo] 각각 1000만 번씩 발생한다. 이렇게 많은 일을 수행하도록 개발하고서 좋은
+성능을 기대할 수 있겠는가.
+
+select * from 주문
+where 일자검사(주문일자) in ( '00000000°, 'xxxxxxxx' ) ;
+
+대용량 조회 쿼리에서 함수를 사용하면 읽는 레코드 수만큼 함수 B37} Recursive Callo] 반복돼 성능이 극도로
+냐빠진다. 따라서 사용자 정의 함수는 소량의 데이터를 조회할 때, 또는 부분범위처리가 가능한 상황에서 제한적으로
+사용해야 한다. 성능을 위해서라면 될 수 있으면 사용자 정의 함수를 사용하지 말고 조인이나 스칼라 서브 쿼리를
+사용해야 한다.
+
+사용자 정의 함수를 사용하지 않고 위 프로그램을 One SQLE 구현하려면 어떻게 해야 할까? 이 회사가 창립
+50주년을 맞이했다고 간주하고 다음과 같이 50년치 일자 테이블을 만들어 보자. 일자 테이블이 이미 만들어져
+있다면 그것을 이용해도 된다.
+
+create table 일자
+
+as
+
+select trunc(sysdate-rownum+1) d_date, to_char(trunc(sysdate-rownum+1), 'yyyymmdd') c_date
+from big_table
+
+where rownum <= (trunc(sysdate)-trunc(add_months(sysdate, - (12%50)), 'yy')+1);
+
+726 SL At 가이드
+

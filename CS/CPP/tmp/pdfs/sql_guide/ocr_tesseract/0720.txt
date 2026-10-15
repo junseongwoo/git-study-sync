@@ -1,0 +1,48 @@
+과목 I SQL 고급 활용 및 튜닝
+
+= = ee ME eas
+OracleolA] Range 파티셔닝하는 방법([그림 11-6-8] 참조)을 간단히 예시하면 다음과 같다.
+
+Create table 주문 ( FRYE number, 주문일자 varchar2(8), 고객10 varchar2(5), )
+partition by range(F2Y2}) (
+partition p2089_q1 values less than ('20090401')
+, partition p2089_q2 values less than ('20090701')
+, partition p2089_qg3 values less than ('20091001')
+, partition p2089_g4 values less than ('20100101')
+, partition p2818_q! values less than ('20100401')
+, partition p9999_mx values less than ( MAXVALUE ) — 주문일자 > '20100401'
+07
+
+< *120090401'
+< '20090701'
+< '20091001°
+'20100101"
+
+< '20100401°
+
+000040
+
+>= '20100401"
+
+[그림 1-6-8] Range 파티션
+
+OracleolA| [Range + Hash] 파티셔닝하는 방법([그림 11-6-9] 참조)을 간단히 예시하면 다음과 같다.
+
+create table 주문 ( 주문번호 number, 주문일자 varchar2(8), 고객10 varchar2(5), )
+partition by range(FE2t)
+
+subpartition by hash(1174id) subpartitions 8
+
+( partition p2069_q1 values less than(‘20090401')
+
+, partition p2089_q2 values less than('20090701')
+
+, partition 02009 03 values less than('20091001')
+
+, partition p2089_q4 values less than('20100101")
+
+, partition p2016_q1 values less than('20100401')
+
+, partition p9999_mx values less than( MAXVALUE ) ) ;
+
+730 | soL 건문가 가이드

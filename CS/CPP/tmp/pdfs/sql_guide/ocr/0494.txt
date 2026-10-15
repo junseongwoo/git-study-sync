@@ -1,0 +1,71 @@
+과목 III 고급 활용 및 튜닝
+인덱스 스킨 시에는 Single Block I/O 방식이 효율적이다. 인덱스 불록간 논리적 순서(이중 연결 리스트 구조로
+연결된 순서)는 데이터 파일에 저장된 물리적인 순서와 다르기 때문이다. 물리적으로 한 의스텐트에 속한 불록•들을
+1/0 Call 시점에 같이 메모리에 올렸는데, 그 불록들이 논리적 순서로는 한참 뒤쪽에 위치할 수 있다. 그러면 그
+불록들은 실제 사용되지 못한 채 버퍼 상에서 밀려나는 일이 발생한다. 하나의 불록을 개심하려면 다른 블록을
+밀어내야 하는데, 이런 현상이 자주 발생한다면 앞에서 소개한 버퍼 개시 효율만 떨어뜨리게 된다.
+대량의 데이터를 MultiBlock 1/0 방식으로 읽을 때 Single Block 1/0 보다 성능상 유리한 이유는 1/0 Call
+발생 횟수를 줄여주기 때문이다.
+아래 예제를 통해 Single Blcrk 1/0 방식과 MultiBlock 1/0 방식의 차이점을 설명해 보자.
+create table t
+select * fr• all—objects;
+alter t±le t
+constraint t—pk primary key(object—id);
+select /*+ index(t) */ count(*)
+뉴” t ghere object-id 〉 0
+call
+Parse
+Execute
+Fetch
+total
+cwnt
+1
+1
+2
+4
+1
+31192
+(卿 elapsed
+disk
+0
+0
+64
+64
+query
+0
+0
+65
+이26
+0.26
+이25
+0.25
+current
+0
+0
+0
+0
+rOWS
+0
+0
+1
+1
+Rov Source Operation
+SORT AQEGATE ((丙5 r=64 鬱0 time=256400 us)
+INDEX RANGE SCAN T_PK ((廥65 r=64 •하 ti″1꿔613 us)
+times include waiting 예 十0110믈ing events:
+Event vaited 에
+Waited
+SQL*Net tO client
+file sequential
+SQL*Net client
+Times
+2
+64
+2
+uax. Wait
+0.05
+Total Waited
+0.05
+위 실행 결과를 보면 64개 인렉스 볼록을 디스크에서 읽으면서 64번의 I/O Call(db file sequential 대기
+이벤트)이 발생했다.
+훼2 전문가 7柯드

@@ -1,0 +1,17 @@
+과목 1 SQL 기본과 활용
+
+[예제] GROUP BY 절 없이 전체 선수들의 포지션별 평균키 및 전체 평군키를 출력할 수도 있다.
+
+SELECT ROUND (AVG (CASE WHEN POSITION = 'MF' THEN HEIGHT END), 2) AS 미드필더
+, ROUND (AVG (CASE WHEN POSITION = 'FW' THEN HEIGHT END), 2) AS 포워드
+, ROUND (AVG (CASE WHEN POSITION = 'DF' THEN HEIGHT END), 2) AS 디펜더
+
+, ROUND (AVG (CASE WHEN POSITION = 'GK' THEN HEIGHT END), 2) AS 골키퍼
+
+포워드             디펜더             골키퍼             전체평균키
+
+176.31         179.91         180.21         186.26             179.31
+
+1 개의 행이 선택됐습니다.
+
+218 | 50). 전문가 가이드

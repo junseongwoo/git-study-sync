@@ -1,0 +1,37 @@
+과목 1 SQL 기본과 활용
+
+488 행이 삭제됐습니다.
+
+[예제] 선수 테이블에서 포지션이 '마”이고, 입단년도가 2010년 이전인 선수의 데이터를 삭제한다.
+
+DELETE PLAYER
+WHERE POSITION = ‘DF’
+AND JOIN_YYYY < 2010;
+
+35 행이 삭제됐습니다.
+
+DELETE 문의 WHERE 절에 서브 쿼리를 사용하면, 다른 테이블을 참조해 삭제할 행을 식별할 수 있다.
+[예제] 선수 테이블에서 창단년도가 1980년 이전인 팀에 소속된 선수의 데이터를 삭제한다.
+
+DELETE PLAYER A
+WHERE EXISTS (SELECT 1
+FROM TEAM X
+WHERE X.TEAM_ID = A.TEAM_ID
+AND X.ORIG_YYYY < 1980);
+
+49 행이 삭제됐습니다.
+
+[예제] 선수 테이블에서 소속 선수가 10명 이하인 팀에 소속된 선수의 데이터를 삭제한다.
+
+예저
+
+DELETE PLAYER
+WHERE TEAM_ID IN (SELECT  TEAM_ID
+FROM PLAYER
+GROUP BY TEAM_ID
+
+HAVING COUNT (*) <= 10);
+
+13 행이 삭제됐습니다.
+
+"404 | 50). 전문가 가이드

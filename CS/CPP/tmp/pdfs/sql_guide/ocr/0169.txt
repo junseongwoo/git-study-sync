@@ -1,0 +1,18 @@
+과옥 ll 기본과 활용
+!실형 출과1
+1 계의 형이 선틱웠습니다.
+1츅제] Oracle
+•嚮L우) WL-TEST
+{실행 촐과1
+1 개의 행이 선택묐습니다.
+SQL Server의 경우 ISNULL 함수를 사용한다.
+1일그 (u-L 판단 대상, 'MJLL일 때 대제값' )
+[예제] SQL Server
+~ 1蹴L(꾜L, 'WLO') AS ISM-U—TEST;
+결행 결과1
+1일.u그EST
+(1계 형 적용됨)
+우세] SQL Server
+•罷L꾸) AS ISUL—TEST;
+174
+전문가 ,버드

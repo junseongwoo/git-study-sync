@@ -1,0 +1,45 @@
+과목 ll 기본과 활용
+(예제 사원들의 aq와 같은 매니저를 두고 있는 사원들의 SALARY 중 최댓값을 함께 구한다. 실행 결과를 확인하면 파티션
+내의 최헛값을 파티션 내 모든 행에서 MAX-SAL라는 칼럼 값으로 가질 수 있다.
+{예제)
+SELECT 衄. ~, SAL
+~ (SAL) WER BY %R) AS LAX-SAL
+결행 출과]
+TI-RÆR
+kTIN
+UILLER
+SYITH
+KI%
+14 행이 선택묐습니다.
+SAL
+1聳
+12馹
+1聳
+12%
+1甓
+11%
+28%
+2975
+24%
+MAX-SAL
+甓0
+1碼0
+1碼0
+1碼0
+1碼0
+1碼0
+1蜀0
+1100
+2975
+2975
+2975
+[예제] 추가퇴 INLINE VIEWS 이용해 파티션별 최멋값을 가진 행만 추출할 수도 있다. 실행 결과를 보면 MGR이 7%6인
+SCOTT, FORD는 같은 최멋값을 가지므로, WHERE SAL = MAX SAL 조건에 의해 2건이 추출퇬다.
+4
+우제]
+SELECT 驢, E,Æ SAL
+FO (SELECT ″, EV&, SAL
+MX (SAL) WER (PARTITIm BY 驢) AS LAX-SAL
+FO 隧)
+~ SAL = MX—SAL;
+盈2 전문가 가이드

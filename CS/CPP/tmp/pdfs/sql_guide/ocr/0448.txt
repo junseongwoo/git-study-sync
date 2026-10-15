@@ -1,0 +1,21 @@
+臼장 구문
+Y)LD 유저는 로그인 권한만 부여됐기 때문에 테이블을 생성하려면 테이블 생성 권한(CRFATE TABLE)이 불충
+분하다는 오류가 발생한다(Oracle, SQL Server).
+[예제] SYSTEM 유저를 통해 SQLD 유저에게 CREATE TABLE 권한을 부여한 후 다시 테이,i 생성한다
+|예제l OracIe
+연결됐습니다
+|예제| OracIe
+CEATE TÆLE TO *0,
+권한이 부여묐습니다.
+|예제1 OracIe
+3
+연결웠습니다.
+|예제 및 실행 결고IJ Oracle
+CÆATE TABLE EMJ (표劇-표Q 楔簟R WT MXL, TITLE v贓l團加0)),•
+테이를이 생성웠습니다.
+1.
+[예제 “로 로그인에 SQLD 유저에게 CREATE TABLE 권한을 부여한 후 다시 테이젤을 생성한다
+[예제) SQL Server
+~ CREATE TBLE TO *야
+영령이 완료했습니다.
+전문가 가이드 455

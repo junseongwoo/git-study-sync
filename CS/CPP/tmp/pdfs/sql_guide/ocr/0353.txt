@@ -1,0 +1,86 @@
+과목 ll * 기본과 활용
+1
+2
+3
+4
+5
+6
+7
+8
+9
+(9개 행 적용됨)
+LastNæ
+%V01i0
+Fulle
+LeverIing
+Suyæa
+Kirg
+(allah결1
+FirstNæ
+3월발t
+uargaret
+Stev«*l
+Uichae1
+ReßN)rtsTo
+2
+NULL
+2
+2
+2
+5
+5
+2
+5
+CIT,(Cornmn Table Expresson)를 재귀 호출함으로써 Fmployees 데이터의 최상위부터 시작해 하위 방향으로
+계층 구조를 전개하도록 작성한 쿼리와 결과는 다음과 같다.
+VITH EPLOYEES_ANCO AS (
+SELECT EPLOYEEID, LASTV•E FIRSTNAYE
+~ EPLOYEES
+IS NI.ÆL /* 재귀 호출의 시작점 */
+배1애 ALL
+0 AS LEVEL
+SELECT R EPLOYEEID, R.LASTNAE R.FIRSTNAME, R.REPffRTST0, A.LEVEL + 1
+FO EPLOYEES 사c卜源 A
+EPLOYEES R
+曁氈 = A.EROYEEID)
+SELECT LEVEL, EPLOYEEID, LASTNAE, FIPSTNAME
+FO æLOYEES
+1
+0
+1
+1
+1
+1
+1
+2
+En10yæID
+2
+1
+3
+4
+5
+8
+6
+LastNaæ
+Fuller
+%V01i0
+Leverling
+Peacock
+(a11″
+Suyna
+FirstNæ
+NUICY
+Janet
+uargaret
+Steven
+Laura
+Uichæl
+2
+2
+2
+2
+2
+5
+4
+4
+%O 전문가 ,까드

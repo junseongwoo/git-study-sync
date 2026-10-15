@@ -1,0 +1,30 @@
+PIVOT 절을 사용할 수 없는 경우 집계함수와 CASE 표현식으로 PIVOT을 수행할 수 있다.
+[예지니
+SELECT
+SUM (CASE MfN 10 THEN SAL EO AS DIO—SAL
+(CASE DEPTIO THEN SAL EO AS D&-SAL
+SIN (CASE DEPTtO MfN % THEN SAL OO) AS DN—SAL
+駁장 활용
+1
+FO EP
+6″ BY JOB
+0啞R BY JOB;
+[실행 결과]
+ANALYST
+CLERK
+SALESLAN
+DIO_SAL
+24%
+D2€_SAL
+2975
+mSAL
+5 행이 선택묐습니다.
+2. UNPIVOT 절
+UNPIVOT 절은 PIVOT 절과 반대로 동작한다. 열이 행으로 전환된다. UNPIVOT 절의 구문은 아래와 같다.
+INIVOT | MJLLSI
+IN ({(01” | ((01圓 [, (011”기 (AS {literal (literal [, literall•••)}l
+[, {(01”) | ((01圓 [, (011-0} [AS (literal (literal L literall•••))ll••
+UNPIVOT column 절은 UNPIVOT된 값이 들어갈 열을 지정한다.
+- FOR 절은 UNPIV(YI'된 값을 설명할 값이 들어갈 열을 지정한다.
+- IN 절은 UNPIV(YN 열과 설명할 값의 리터럴 값을 지정한다.
+전문가 ,柯드 369

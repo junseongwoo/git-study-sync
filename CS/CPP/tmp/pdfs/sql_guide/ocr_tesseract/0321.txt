@@ -1,0 +1,21 @@
+과목 ] SQL 기본과 활용
+
+나. DENSE_RANK 함수
+DENSE_RANK #4 RANKS} 유사하나 동일한 순위를 하나의 건수로 취급하는 점이 다르다.
+
+[예제] 사원 데이터에서 급여가 놓은 순서와, 동일한 순위를 하나의 등수로 간주한 결과도 같이 출력한다.
+
+SELECT 308, ENAME, SAL
+, RANK () OVER (ORDER BY SAL DESC) AS RK
+, DENSE_RANK () OVER (ORDER BY SAL DESC) AS DR
+
+FROM EWP;
+
+14 행이 선택됐습니다.
+
+8080와 SCOTT, WARD2H MARTINS 동일한 56148이므로 RANKS} DENSE_RANK 칼럼에서 모두 같은
+순위를 부여한다.
+
+그러나 RANKS} DENSE_RANKS] 차이를 알 수 있는 데이터는 FORDE} 5007'['의 다음 순위인 70485의
+경우 RANKE 4등으로, DENSE_RANKE 3등으로 표시돼 있다. 마찬가지로 WARDS MARTINS] 다음 순위인
+ADAMS®] 경우 RANK: 12등으로 DENSE_RANKE 10등으로 표시돼 있다.

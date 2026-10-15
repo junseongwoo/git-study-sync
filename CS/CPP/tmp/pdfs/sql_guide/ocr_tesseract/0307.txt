@@ -1,0 +1,28 @@
+과목 ] SQL 기본과 활용
+
+Oracle®] 경우는 DECODE 함수를 사용해서 좀 더 간결하게 표현할 수 있다.
+
+SELECT  DECODE (GROUPING (B.DNAME), 1, 'All Departments’, B.DNAME) AS DNAME
+, DECODE (GROUPING (A.J0B), 1, ‘All Jobs’      , A.JOB ) AS 008
+, COUNT (*) AS EMP_CNT, SUM (A.SAL) AS SAL_SUM
+FROM EMP A, DEPT B
+WHERE B.DEPTNO = A.DEPTNO
+GROUP BY ROLLUP (B.DNAME, A.J0B)
+ORDER BY B.DNAME, A.JOB;
+
+EMP_CNT              SAL_SUM
+
+1300
+
+I= NNW ==
+109
+¥
+
+CLERK
+
+1:
+
+13 행이 선택됐습니다.
+
+부서별과 전체 집계를 표시한 레코드에서 ‘All Departments’? ‘All jobs'eh= 사용자 정의 텍스트를 확인할
+수 있다. 일부 DBMSE 0800070140_11)라는 비슷한 용도의 함수를 추가로 사용할 수도 있다.

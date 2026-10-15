@@ -1,0 +1,41 @@
+제1장 sQL 기본
+
+GROUP BY 절에서 그룹 단위를 표시해 주어야 SELECT 절에서 그룹 단위의 칼럼과 집계함수를 사용할 수
+있다. 그렇지 않으면 예제와 같이 에러를 발생하게 된다,
+
+[예제] SELECT 절에서 사용된 포지션이라는 한글 ALIASE GROUP BY 절의 기준으로 사용해 본다.
+
+SELECT POSITION AS 포지션, AVG (HEIGHT) AS 평균키
+FROM PLAYER
+GROUP BY 포지션;
+
+GROUP BY 포지션
+
+*
+
+3행에 오류:
+ORA-00904: "포지션": 부적합한 식별자
+
+실행 결과를 살펴보면 GROUP BY 절에 '포지션'이라고 표시된 부분에 에러가 발생했음을 알 수 있다. 칼럼에
+대한 ALIAS SELECT 절에서 정의하고 ORDER BY 절에서는 재활용할 수 있지만, GROUP BY 절에서는 ALIAS
+명을 사용할 수 없다는 것을 보여 주는 사례다.
+
+[예제] 포지션별 최대키, 최소키, 평균키를 출력한다{포지션별이란 소그룹의 조건을 제시했기 때문에 GROUP BY 절을 사용한다).
+
+[예제
+
+SELECT POSITION AS 포지션, COUNT (*) AS 인원수, COUNT (HEIGHT) AS 키대상
+, MAX (HEIGHT) AS 최대키, MIN (HEIGHT) AS 최소키
+, ROUND (AVG (HEIGHT), 2) AS 평균키
+FROM PLAYER
+GROUP BY POSITION;
+
+인원수          키대상          최대키           최소키          평균키
+
+3                0
+6K                     43               43             196              174          186.26
+OF                    172              142              190              170          180.21
+FW                    100              100             194              168          179.91
+NF                    162              162             189              165          176.31
+
+SQL 전문가 sole [207

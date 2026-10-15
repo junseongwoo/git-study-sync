@@ -1,0 +1,71 @@
+과목 III 고급 활용 및 튜닝
+하지만 DBMS와 버전에 따라 FuII Outer Join을 다음과 같이 비효율적으로 처리하기도 한다. 한 테이블을
+두 번역 액세스하는 것을 확인하기 바란다.
+Ex«utim Pld*l
+e
+1
+2
+12
+13
+14
+15
+1
+11
+11
+13
+14
+SELECT STATEENT O)timizeFQOSE ((05t=14 Card=8 Bytes=352)
+VIEW ((丕t=14 Car&8 Bytes=352)
+I.NION—ALL
+KASH J이N (WTER) (Cost=8 Car&7 Bytes=B)
+Ⅵ田 (Cost=4 Car&7 Bytes=154)
+(6″ BY) (Cost=4 Card=7 Bytes=%)
+TABLE ACCESS (FULL) OF •부서별판매계획• (Cost=2 Car&7 Bytes=98)
+VIEW (Cost=4 Card=6 Bytes=132)
+nT •-P BY) ((05t킈 Card:$ Bytes44)
+TABLE ACCESS (FULL) OF •재널별판매실적• (Cost=2 Car&=6 Bytes44)
+(″ BY) (Cost=4 Car#1 Bytes=14)
+FILTER
+TABLE ACCESS (FULL) •재널별판매실적• (Cost=2 Card=1 Bytes=14)
+(~ BY WS•nT) (Cost=2 Car&1 Bytes=14)
+FILTER
+TABLE ACCESS (FULL) OF •부서별판매계획• (Cost=2 card=l Bytes=14)
+좀 더 효과적인 방법을 찾기 위해 우선 두 테이블을 이어서 출력해 보자.
+select •계획' 구분, 상품, 계획연월 as 연월, 판매부서, null as 판매재널
+, 계획수량, to-mnpr(rull) as 실적수량
+들” 부서별판매계획
+*ere 계획연월 •″1' and '2″3'
+혜i예 a11
+select '실적•. 상품, 판매연월 as 연월, null as 판매부서, 판매지|널
+, as 계획수량, 판매수량
+fræ 재널별판매실적
+vtere 판매연월 '2″1' '2″3|
+구분
+계획
+계획
+계획
+계획
+계획
+상품
+상품A
+상품A
+상품A
+상풍B
+상품B
+연월
+2″1
+2″3
+2″1
+2″2
+판매부서
+20
+판매재널
+계획수량
+1″
+15圄
+실적수량
+1
+1
+1
+4
+후58 우격문가 /끼드

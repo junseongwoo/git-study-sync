@@ -1,0 +1,37 @@
+제1장 SQL 기본
+
+, 8406 \0 AS 백넘버, HEIGHT AS 키
+FROM PLAYER
+WHERE TEAM_ID IN ('K62', 'Ke7')
+AND POSITION = 'MF'
+AND HEIGHT BETWEEN 170 AND 180;
+
+앞서 살펴본 SQL 연산자인 '1{'과 논리 연산자인 ‘ORE 결과도 같고 내부적으로 처리하는 방법도 같다. 즉
+소속팀이 삼성블루윙즈이거나 전남드래곤즈인 선수들을 조회할 때 WHERE 절에 TEAM_ID = 'K02 OR TEAM_ID
+= '#07'라는 논리 연산자 조건과 TEAM_ID IN (K02, '07'라는 SQL 연산자 조건은 같다.
+
+"HEIGHT >= 170 AND HEIGHT <= 180"인 비교 연산자 조건과 "HEIGHT BETWEEN 170 AND 180"인
+SQL 연산자 조건도 결과도 같고 내부적으로 처리되는 방법도 같다.
+
+=              같지 않다.
+부정 논리 연산자             >              같지 않다(4057.50 표준, 모든 05에서 사용 가능).
+NOTZHY = ㅣ ~와 같지 않다.                              고
+
+NOT 칼럼명 >       | ~보다 크지 않다.
+NOT BETWEEN a AND b | as} be] Zt 사이에 있지 않다(3, b 값을 포함하지 않음).
+부정 SQL 연산자ㅣ NOTIN (is) | list 값과 일치하지 않다.
+IS NOT NULL          NULL 값을 갖지 않다.
+
+[예제] 삼성블루윙즈 소속인 선수들 중에서 포지션이 미드필더(『)가 아니고, 키가 175센티미터 이상 185센티미터 이하가
+아닌 선수들의 자료를 찾아본다.
+
+[예제
+
+SELECT PLAYER 46 AS 선수명, POSITION AS 포지션, 840 0 AS 백넘버, HEIGHT AS 키
+FROM PLAYER
+WHERE TEAM_ID = '102'
+AND NOT POSITION = ‘NF’
+AND NOT HEIGHT BETWEEN 175 AND 185;
+
+_SQL 전문가 sels [201
+

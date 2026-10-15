@@ -1,0 +1,58 @@
+과목 [ NL 기본과 활용
+
+140 sou 전문가 가이드
+
+PLAYER(S 749)
+
+PLAYER_ID
+
+PLAVER_NAME
+
+TEAM_ID(FK) 0.
+E_PLAYER_NAME
+NICKNAME ~~
+
+16(정보공학) 표기법         <480권)
+
+실선 : 식별관계
+
+점선 : 비식별관계         SCHEDULE
+(일정 및 스코어)
+
+STADIUM_ID (FK)
+SCHE_DATE
+
+GUBUN
++                                      ㅡ< HOMETEAM_ID
+
+AWAYTEAM_ID
+HOME_SCORE
+AWAY_SCORE
+
+(180%)
+
+[그림 1-1-9] 케이리그 600(16 표기법)
+
+민^/68(측구선수)
+# PLAYER_ID
+PLAYER_NAME
+TEAM_ID (FK)
+E_PLAYER_NAME
+NICKNAME
+
+바커 표기법
+수직바 : 식별관계
+
+SCHEDULE (33 및 스코어)
+# STADIUM_ID (FK)
+# SCHE_DATE
+GUBUN
+
+------------- 1 00864
+AWAYTEAM_ID
+HOME_SCORE
+AWAY_SCORE
+
+(180%)
+[그림 Ｌ-1-10] 케이리그 ERD(HEH 표기법)
+

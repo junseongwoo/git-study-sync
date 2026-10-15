@@ -1,0 +1,64 @@
+[실행 결과1
+팀코드
+K02
+K02
+K02
+K02
+K02
+K02
+K02
+K02
+K02
+K02
+선수명
+가비
+강대회
+고종수
+고창현
+김강진
+김관회
+김동욱
+김만근
+김반코비
+김병국
+포지션
+FW
+FW
+백넘버
+26
+22
+8
+43
+2
+177
+174
+176
+170
+181
+1%
+176
+177
+15
+183
+廠장 활용
+1
+1% 개의 행이 선택됐습니다.
+두 집합의 조건이 모두 동일 테이블에 있다면, 아래와 같이 논리 연산자를 이용한 간단한 SQL 문으로도 변경
+가능하다. 단 UNION 연산은 SELECT 절 칼럼에 대해 중봑 건을 제외하므로 이래와 김이 SELECr 절에 DI쾨NCT
+기우4드를 기술해야 한다.
+[예제] (비교)
+SELECT DISTINCT
+TEN_ID AS 팀코드, PLAYER-WE AS 선수명, AS 포지션
+, BACK-NO AS 백넘버,
+ÆIG{T AS 기
+FROM PLAYER
+MERE TEA* ID = 'K02'
+鰍 TEN ID = •馹기:
+[예제] (비교)
+SELECT DISTIKT
+TEN-ID AS 팅코드, PLAYER-WE AS 선수명, 郞1T1혜 AS 포지션
+, BACK-NO AS 백넘버, HEIGHT AS 기
+FO PLAYER
+MERE TEA& 10 IN ('KQ', •龜7');
+1
+~ ,미드

@@ -1,0 +1,15 @@
+과목 11 QL 고급 활용 및 튜닝
+
+WB Sort Area
+
+데이터 정렬을 위해 AMEE Sort Area 소트 오퍼레이션이 진행되는 동안 공간이 부족해질 때마다 청크
+(Chunk) 단위로 조금씩 할당된다. 세션마다 사용할 수 있는 최대 크기를 예전에는 sort_area_size 파라미터로
+설정했으나, 부터는 새로 생긴 workarea_size_policy 파라미터를 auto(7] 같)로 설정하면 Oraclec] 내부적으로
+결정한다. PGA 내에서 Sort Area’ 할당되는 위치는 SQL 문 종류와 소트 수행 단계에 따라 다르다. DML 문장은
+하나의 Execute Call 내에서 모든 데이터 처리를 완료하므로 50 Area’t 00&에 할당된다. SELECT 문장의
+경우 수행 중간 단계에 RF Sort Area CGA 할당되고, 최종 결과 집합을 출력하기 직전 단계에 필요한
+Sort Area: UGA°| 할당된다.
+
+앞에서 이미 설명한 것처럼, 쓰레드(630) 기반 아키텍처를 사용하는 SQL Servers 프로세스 전용 메모리
+영역을 갖지 않는다. 대신 데이터 AAS Memory Pool 안에 있는 버퍼 캐시에서 수행하며, 세션 관련 정보는
+Memory Pool 안에 있는 000060001 Context 영역에 저장한다.

@@ -1,0 +1,46 @@
+과목 ㅣ QL 기본과 활용
+
+DNAME                          AREA                       DEPTNO
+ACCOUNTING           NEW YORK                10
+OPERATIONS                BOSTON                          49
+RESEARCH                    DALLAS                           20
+SALES                          CHICAGO                         30
+
+4 개의 행이 선택됐습니다.
+
+2. SELECT 문장 실행 순서
+
+GROUP BY 절과 ORDER 8가 같이 사용될 때 SELECT 문장은 6개의 절로 구성되고, SELECT 문장의 수행
+단계는 아래와 같다.
+
+5. SELECT 칼럼명 [4175명]
+
+1. FROM 테이블명
+
+2. WHERE 조건식
+
+3. GROUP BY 칼럼((01000)이나 표현식
+4. HAVING 그룹조건식
+
+6. ORDER BY 칼럼(001000)이나 표현식;
+
+1. 23 대상 테이블을 참조한다(68014).
+
+2. 발 대상 데이터가 아닌 것은 제거한다(0180).
+
+3. 행들을 소그룹화한다(98007? BY).
+
+4. 그룹핑된 값의 조건에 맞는 것만을 출력한다(4ㅅ\140).
+5. 데이터 값을 출력-계산한다(58801).
+
+6. 데이터를 정렬한다(00088 BY).
+
+위 순서는 옵티마이저가 SQL 문장의 SYNTAX, SEMANTIC 에러를 점검하는 순서이기도 하다. 예를 들면
+FROM 절에 정의되지 않은 테이블의 칼럼을 \8680 절, GROUP BY 절, HAVING 절, SELECT 절, ORDER
+BY 절에서 사용하면 에러가 발생한다.
+
+그러나 ORDER BY 절에는 SELECT 목록에 나타나지 않은 문자형 항목이 포함될 수 있다. © SELECT
+DISTINCTE 지정하거나 SQL 문장에 GROUP BY 절이 있거나, SELECT 문에 UNION 연산자가 있으면 열 정의가
+
+224 SL 전문가 ele _
+

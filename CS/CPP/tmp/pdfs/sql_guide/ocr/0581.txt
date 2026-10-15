@@ -1,0 +1,23 @@
+과목 III * 고급 활용 및 튜닝
+제 1 절 NL 조인
+1. 기본 메커니즘
+프로그래밍을 해 본 독지라면 누구나 아래 중첩 루프문(Nested lmp)의 수행 구조를 이해할 것이고, 그렇다면
+NL 조인도 어렵지 않게 이해할 수 있다.
+〈 (. JAVA 〉
+// Anything
+- Wter 1喞
+- 1喞
+위 중첩 루프문과 같은 수행 구조를 사용하는 NL 조인이 실제 어떤 순서로 데이터를 액세스하는지 이래 PISQL
+문이 잘 설명해 준다
+for 0Jter in (select deptno, -, rpad(enane, 10) enanp frm gnp)
+1喞 - 0Jter 루프
+for irær in (sel«t from dept where ±ptno = outer.deptno)
+1㈒ - irær 루프
+~ 0JtDJt.put-1ine(a』ter•m::• : : 'flinner.dnmp);
+1喞;
+위 PLtSQL 문은 아래 쿼리와 1(1)96 같은 순서로 데이터를 액세스하고 데이터 출력 순서도 같다. 내부적으로
+(=Recursive하게) 쿼리를 반복 수행하지 않는다는 점만 다르다.
+!예제] Oracle
+select /젤+ «dered use-nl(d) •/ e.evo, e.enaæ, d.dnæ
+*ere d.&ptrn = e.d@tro
+select /++ 1편i”(•) use-nl(d) 일 e.enæ, d.dnare

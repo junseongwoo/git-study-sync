@@ -1,0 +1,28 @@
+과목 | NL 고급 활용 및 튜닝
+
+[그림 피-6-11] Global 파티션 인덱스
+
+나. Prefixed 파티션 인덱스 vs, NonPrefixed 파티션 인덱스
+인덱스 파티션 키 칼럼이 인덱스 구성상 왼쪽 선두 칼럼에 위치하는지에 따른 구분이다.
+Wm preined : 파티션 인덱스    내나 때, 파티션 키 칼럼을 인덱스 키 칼럼 왼쪽 선두에 두는 것을 말한다.
+
+를 Nonprefixed : 파티션        를 생성할 때, 파티션 키 칼럼을 인덱스 키 칼럼 왼쪽 선두에 두지 않는 것을
+말한다. 파티션 키가 ae 갈럼에 아예 속하지 않을 때도 여기에 속한다.
+
+1ㄴ003!과 Global, Prefixed?} 히000168※60를 조합하면 아래 4가지 구성이 나온다.
+
+비파티션까지 포함에 인덱스를 총 5가지 유형으로 구분할 수 있다.
+
+뿔1.0031 Prefixed 파티션 인덱스
+
+BM Local NonPrefixed 파티션 인덱스
+
+BW Global Prefixed 파티션 인덱스
+
+B Global NonPrefixed 파티션 인덱스 (— Oracle Not Support)
+를 비파티션(400031000069) 인덱스
+
+Oracle 이 중에서 Global NonPrefixed 파티션 인덱스를 허용하지 않는다.
+
+734 SL 전8가 Tele
+

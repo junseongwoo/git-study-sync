@@ -1,0 +1,32 @@
+薯장 조인 류닝
+frm &pt d, e
+wtpre d.deptm = e.deptno
+l예제] SQL Server
+select e.eg)no, e.enæ, d.dnæ
+frm e inner 1따 j0in ±pt d 예 d &ptm = e &ptm
+option (force order)
+select e.emno, e.enæ. d dnæ
+frm e, ±pt d
+d.&ptm = e.deptno
+option (force order, 1봐 join)
+사실 뒤에서 설명할 소트 머지 조인과 해시 조인도 각각 소트 영역(%11 Area)과 해시 영역대ash Area)에
+가공해 둔 데이터를 이용한다는 점만 다를 뿐 기본적인 조인 프로세싱은 다르지 않다.
+2. NL 조인 수행 과정 분석
+이제 NL 조인의 기본 메커니즘을 이해했으-므로 아래 조인문에서 조건절 비교 순서가 어떻게 되는지 분석해
+보자.
+select /*+ ort±red LÆ-nI(e) */
+e.enæ, d e.j±, e.sal
+1
+frun
+where
+a『년
+&pt 바 e
+d.1乂 = •茪皿•
+e.sal 1羈
+0
+or&r sal *5(
+인덱스 상황은 다음과 같다
+* pk-dept
+* 知t-1Ⅸ-i亟
+抑.~℃
+전문가 ,버드 591

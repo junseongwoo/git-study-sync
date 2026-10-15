@@ -1,0 +1,11 @@
+囹장 고급 류님
+이 확장 기능을 통해 Updatable Join 기능을 대체할 수 있다. 앞에서 bypass-ujvc 힌트를 사용했던
+update 문장을 예로 들면, 다음과 같이 merge 문으로 처리할 수 있다.
+into 고객 (
+(select 고객번호, ~x(거래일시) 거래일시, 되,(거래금액) 거래금액
+frm 거래
+&re 거래일시 tnnc@"fths(sysdate.-l))
+gro-o 고객번호) t
+예 ((.고객번호 = t.고객번호)
+wtm matctpd set (.최종거래일시 = t.거래일시, (.최근거래금액 = t.거래금역
+豊가 ,PI드 7

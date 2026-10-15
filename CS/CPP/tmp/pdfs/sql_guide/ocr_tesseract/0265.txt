@@ -1,0 +1,15 @@
+제1장 SQL 기본
+
+DEPTNO       DNAME          Loc          DEPTNO      DNAME          Loc
+30       SALES           CHICAGO           30       ACCOUNTING      NEW YORK
+40      OPERATIONS      BOSTON          40     _ CONSULTING    i DALLAS ~
+50       MARKETING       CHICAGO            |
+60      OPERATIONS      BOSTON
+
+6 개의 행이 선택됐습니다.
+
+INNER ]014|이라면 부서번호가 동일한 30, 40 부서의 2개 정보만 출력됐을 것이다. 하지만 FULL OUTER
+JOINS 사용했으므로 DEPT 테이블에만 있는 부서번호 10, 20의 부서 정보와 DEPT_TEMP 테이블에만 있는
+부서번호 50, 60의 부서 정보까지 동시에 출력됐다.
+
+_SQL 전문가 7pole [271

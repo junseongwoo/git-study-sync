@@ -1,0 +1,38 @@
+제1장 수행 구조
+to-char(last-day(di-mmths(sysdate,-l )) , )
+wt•ere
+카드번호
+, ( - 연중거래실적
+select 카드번호, sa.n(거래금액) 거래금액
+일별카드거래내역
+where 거래일자 t*t•een to-char(d-mnths(sysdate,-12), )
+to-char(sysdate-l, )
+grmjp 카드번호
+b.카드번호 (+) = a.카드번호
+(.카드번호 (+) = a.카드번호
+d.카드번호 (+) = a.카드번호
+위 SQL은 어제 거래가 있었던 카드에 대한 전일, 주간, 전월, 연중 거래 실적을 집계하고 있다 논리적인 전체
+집합은 과거 1년치인데, 전일 • 주간• 전월 데이터를 각각 액세스한 후 조인한 것을 볼 수 있다. 전일 데이터는 총
+4번을 액세스한 셈이다.
+바L을 다음과 같이 작성하면 과거 1년치 데이터를 한 번만 읽고 전일, 주간, 전월 결과를 구할 수 있다. 즉
+논리적인 집합 재구성을 통해 액세스해야 할 데이터 양을 최소화할 수 있다.
+sel«t
+카드번호
+5|”( case 거래일자 = to-char(sysdate-l, )
+ttm 거래금액
+) 전일-거래금액
+, st•n( case 거래일자 t0-char(sysdate-7, 'yyyyr«ki')
+거래금액
+) 주간-거래금액
+case 거래일자 to 1| •이•
+•년 to-char(last-day@nlths(sysdate.-l )), )
+거래금액
+“년 ) 전월-거래금액
+, 9.•( 거래금액 )연중-거래금역
+일별카드거래내역
+거래월자 to-ctur@mnths(sysdate.-l기, •yyyy•id' )
+am to-char(sysdate-l, )
+바 카드번호
+havirv Sl-n( (飜 거래일자 to char(sysdate-l. 'YYYÄd')
+tten 거래금액
+전문가 &i드 505

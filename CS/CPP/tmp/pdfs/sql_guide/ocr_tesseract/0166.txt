@@ -1,0 +1,54 @@
+제1장 SQL 기본
+
+[예제] 사원 정보에서 급여가 3000 이상이면 상등급으로, 1000 이상이면 중등급으로, 1000 미만이면 하등급으로 분류하라.
+
+CED
+SELECT ENAME
+, CASE
+WHEN SAL >= 3000 THEN "HIGH"
+WHEN SAL >= 1000 THEN ‘MID’
+ELSE ‘LOW’
+END AS SALARY_GRADE
+FROM EWP;
+[실행 결과]
+
+ENAME            SALARY_GRADE
+
+SMITH            Low
+
+ALLEN            MID
+
+WARD            uID
+
+JONES            MID
+
+MARTIN           uID
+
+BLAKE            MID
+
+CLARK            MID
+
+50011           HIGH
+
+KING            HIGH
+
+TURNER           MID
+
+ADAMS           MID
+
+765           Low
+
+FORD            HIGH
+
+MILLER          MID
+
+14 개의 행이 선택됐습니다.
+
+CASE 표현은 함수의 성질을 갖고 있으므로 다른 함수처럼 중첩해 사용할 수 있다
+
+[예제] 사원 정보에서 급여가 2000 이상이면 보너스를 100022, 1000 이상이면 500으로, 1000 미만이면 0으로 계산한다.
+
+SELECT ENAME, SAL                                                     x
+WHEN SAL >= 2000 THEN 1900                              freee
+
+전문가 가이드 [T71

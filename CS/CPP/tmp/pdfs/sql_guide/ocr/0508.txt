@@ -1,0 +1,30 @@
+駁장 * 분석 도구
+AutoTraæ 기능을 실행계획 확인 용도로만 사용한다면 plan-table만 생성돼 있으면 된다. 하지만 실행통계까지
+함께 확인하려면 v-Ssesstat, v-Sstatname, v-$mystat 뷰에 대한 읽기 권한이 필요하다. 따라서 dln, select-
+catalog-role 등의 *(Role)을 부여받지 않은 일반사용자들에게는 별도의 권한 설정이 필요하다. 이들 뷰에 대한
+읽기 권한을 일일이 부여해도 되지만, plustrace 를(role)을 생성하고 필요한 사용자들에게 이 롤을 부여하는 것이
+관리상 편리하다. 아래처럼 하면 된다.
+한/뙤1p1凶/龜in/pl碼trce.피1
+S한〉 grmt plustwæ tO scott;
+다. DBMS XPLAN 패키지
+Oracle 9.2 버전에 소개된 dbms-xplan 매기지를 통해 plan-table에 저장된 실행계획을 좀 더 쉽게 출력해
+볼 수 있게 됐다. Oracle은 어부터 plan-table에 더 많은 정보들을 담기 시작했고, 이 매기지를 이용하지 않더라도
+직접 쿼리해 보면 과거보다 더 많은 유용한 정보를 얻어낼 수 있다.
+잎에서 @?/rdbms/admn/utlxpls 스크립트를 사용해 실행계획을 출력하는 방법을 이미 보았는데, 그 스크립트를
+열어 보면 내부적으로 dbms-xplan 매기지를 호출하고 있는 것을 볼 수 있다.
+select pl혜-t豳le.-예t옐t
+frun table(dtz-xplan.display( •pl혜-t卨le• , 劇11, •serial'));
+1
+첫 번째 인자에는 실행계획이 저장된 plan table명을 입력하고, 두 번째 인자에는 statement-ld를 입력하면
+된다. 두 번째 옵션이 NULL일 때는 가장 마지막 explam plan 명령에 사용했던 쿼리의 실행계회을 보여준다.
+병렬 쿼리에 대한 실행계획을 수집했다면 @?/rdbms/admrn/utlxplp 스크립트를 수행함으로써 병렬 항목에 대한
+정보까지 볼 수 있다.
+그 외에도 dbms-xplan•dlsplay 함수를 직접 쿼리하면 다음과 같이 세 번째 인재를 통해 다양한 포맷 옵션을
+선택할 수 있다. 직접 해 보면 어떻게 다른지 쉽게 알 수 있으므로 일일이 설명하지는 않겠다.
+explain set staterent-id = •피LI' for
+select *
+리 &pt d
+öere d &ptno = e.deotm
+기년 e.sal 1襴
+select * table&s xpIan.dispIay('PLA-TABLE', •窪1', 'MSIC'));
+~ 가이드 517

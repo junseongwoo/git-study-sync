@@ -1,0 +1,45 @@
+과목 1] SQL 고급 활용 및 튜닝
+
+제2절 소트 머지 조인
+
+NL 조인은 조인 칼럼을 선두로 갖는 인덱스가 있는지가 매우 중요하다. 만약 조인 칼럼을 선두로 갖는 인덱스가
+없으면 06: 테이블에서 읽히는 건마다 Inner 테이블 HAE 스캔하기 때문이다. 그럴 때 옵티마이저는 소트
+머지 조인이나 다음 절에서 설명할 해시 조인을 고려한다.
+
+소트 머지 조인(50 Merge Join) 이름이 의미하는 것처럼 두 테이블을 각각 정렬한 다음에 두 집합을 머지
+(46086)하면서 조인을 수행한다. 소트 머지 조인은 아래 두 단계로 진행된다.
+
+@ 소트 단계 : 양쪽 집합을 조인 칼럼 기준으로 정렬한다.
+(2) 머지 단계 : 정렬된 양쪽 집합을 서로 머지(2706180)한다.
+
+만약 조인 칼럼에 인덱스가 LOR Oracles] 경우 Outer 테이블에만 해당), (1)번 소트 단계를 거치지 않고 곧바로
+조인할 수도 있다.
+
+Oracle® 조인 연산자가 부등호이거나 아예 조인 조건이 없어도 소트 머지 조인으로 처리할 수 있지만, SQL
+Server 조인 연산자가 '=일 때만 소트 머지 조인을 수행한다는 사실도 유념하기 바란다.
+
+1. 기본 메커니즘
+
+아래 50Ｌ은 dept 테이블을 기준으로 6000 테이블과 조인할 때 소트 머지 조인 방식을 사용하라고 FIER
+지시하고 있다.
+
+AH] Oracle
+
+select /*+ ordered use_merge(e) */ d.deptno, d.dname, e.empno, e.ename
+from dept d, emp 6
+where d.deptno = e.deptno
+
+Execution Plan
+
+0     SELECT STATEMENT Optimizer=CHOOSE (Cost=11 Card=654 Bytes=35K)
+
+1 © MERGE JOIN (Cost=11 Card=654 Bytes=35K)
+
+> 은 다.     SORT (JOIN) (Cost=6 Card=654 Bytes=14K)
+
+Bai?       TABLE ACCESS (FULL) OF 'DEPT' (Cost=2 Card=654 Bytes=14K)
+TE     SORT (JOIN) (Cost=5 Card=327 Bytes=11K)
+
+- Felivi /      TABLE ACCESS (FULL) OF ‘EMP’ (Cost=2 Card=327 Bytes=11K)
+
+598 | 50 전문가 가이드

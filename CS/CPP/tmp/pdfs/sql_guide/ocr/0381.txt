@@ -1,0 +1,22 @@
+과목 Ⅱ QL 기본과 활용
+`(\1) \2-\3') AS (1
+FO 巚. EPLOYEES
+~ EPLOYEE_ID IN (144, 145);
+[실행 결과]
+6%.121
+011.國.1聖.4刃羽
+2 행이 선택왰습니다.
+다. æGEXP_SUBSTR 함수
+(1
+(650) 121-2斟
+011.44.1344.4292穗
+REGAT-SUBSTR 함수는 source-cha뻬서 일치한 pattern을 반환한다.
+REGEP SI-BSTR (swrce-char, pattern [, cnsition [, occurrence [, match-paran [, sutpxpr]lll)
+subexpr은 서브 표현식을 지정한다(0은 전체 패턴, 1 이상은 서브 표현식, 기본값은 0).
+다음 쿼리는 URL 패턴과 일치한 문자열을 반환한다.
+새가]
+SELECT REGEXP-SIBSTR
+FO 까.墮L;
+[실행 결과]
+1개의 행이 선택했습니다.
+전문가 7Pl드

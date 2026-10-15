@@ -1,0 +1,32 @@
+고혹 III 고급 활용 및 튜닝
+제 1 절 데이터베이스 아키텍처
+1. 데이터베이스 구조
+가. 會편e 구조
+DBMS마다 데이터베이스에 대한 정의가 조금씩 다르다. Oracle에서는 디스크에 저장된 데이터 집합(Datafile,
+Redo Log File, Control File 등)을 데이터베이스(IYatab쑈e)라고 부른다. 그리고 SGA 공유 메모리 영역과 이를
+액세스하는 프로세스 집합을 합쳐서 인스턴스(lnstance)라고 부른다(그림 III-1-1 참고).
+System Global Area(SGA)
+Wrrter
+(DBWn)
+(CKPT)
+주•
+(LGWR)
+System
+Mon1tor
+(SMON)
+Momtor
+(PMON)
+(RECO)
+Archrver
+(ARCn)
+Lmfi
+[그림 IⅡ-1-1] Oracle 아키텍처
+기본적으로 하나의 인스턴스가 하나의 데이터베이스만 액세스하지만, RAC(Real Application Cluster) 환경
+에서는 여러 인스턴스가 하나의 데이터베이스를 액세스할 수 있다. 하나의 인스턴스가 여러 데이터베이스를 액세스
+할 수는 없다.
+나. 느~예 구조
+[그림 Ⅲ-1기과 대비해 SQL Server 아키텍처를 간단히 표현하면 [그림 ⅡI그-기와 같다.
+SQL *는 하나의 인스던스당 최고 3만 2767개의 데이터베이스를 정의해 사용할 수 있다. 기본적으로
+master, rüel, msdb, 등의 시스템 데이터베이스가 만들어지며, 여기에 사용자 데이터베이스를 추가로
+생성하는 구조다.
+474 전문가 ,삐드

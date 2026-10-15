@@ -1,0 +1,42 @@
+select /*+ ordered use_hash(e) full(d) noparallel(d) full(e) parallel(e 2)
+pa_distribute(e broadcast none) */ *
+
+from dept d, emp e
+
+where d.deptno = e.deptno
+
+order by e.ename
+
+Parallel From Serial        Parallel To Parallel         Parallel To Serial
+
+소비자              생산자
+
+소비자
+
+:TQ10001                   :TQ10002
+—                =
+병렬 서버 집합 1            병렬 서버 집합 2
+SELECT _          SELECT .               SELECT
+FROM DEPT           FROM :TQ10000, EMP       FROM :TQ10001
+WHERE ...                   ORDER BY ENAME
+
+[그림 1I-6-15] 테이블 7
+
+[그림 띠ㅡ615]를 보면, 쿼리 서버 집합 ZHP-P) Inter-Operation Parallelism] 발생할 때는 사용자가 지정한
+병렬도(=2)의 배수(4개)만큼 서버 프로세스가 필요한 것을 알 수 있다. 또한 테이블 큐(:010001)에는 병렬도의
+제곱(22=4)만큼 파이프 라인이 필요하다는 사실도 알 수 있다. 참고로 [그림 11-6-14]를 보면, 병렬도가 4이므로
+8(=4×2)개 서버 프로세스를 위해 16(=42)개의 파이프 라인이 형성됐다.
+
+를 생산자-소비자 모델
+
+테이블 큐에는 항상 생산자(8[004061)와 소비자(0005410061)가 존재한다. [그림 띠-6-15]를 보면, 처음 dept
+테이블을 읽어 분배하는 :[()10000에서는 ()(7가 생산자이고 서버 집합 1이 소비자다. 이어지는 두 번째 테이블
+큐 :1010001에서는 서버 집합 1이 생산자가 되고, 서버 집합 2가 소비자가 된다. 마지막으로 정렬된 최종 결과
+집합을 전송하는 :1010002에서는 서버 집합 2가 생산자가 되고 )0가 소비자가 된다. 56160! 문장에서의 최종
+소비자는 항상 QCY 것이다.
+
+[그림 피-6-15]에서 25% Inter-Operation Parallelismo] 나타날 때, 소비자 서버 집합은 『0ㅁ절에 테이블
+FE 참조하는 서브(500) SQLE 가지고 작업을 수행한다.
+
+744 | sp 2 Tole
+

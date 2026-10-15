@@ -1,0 +1,25 @@
+臼장 관리 구문
+ㆍ SQL Server의 COMMIT
+(Yacle은 DML을 실행하는 경우 DBMS가 트랜책션을 내부적으로 실행하며 DML 문장 수행 후 사용자가 임의로
+COMMIT 혹은 ROLLBACK을 수행해 주어야 트랜책션이 종료된다(일부 물에서는 Atno COMMIT을 옵션으로
+선택할 수 있다).
+하지만 SQL Server는 기본적으로 At.rro COMMIT 모드이기 때문에 DML 수행 후 사용자가 COMMIT이나
+ROLLBACK을 처리할 필요가 없다. DML 구문이 성공이면 자동으로 COMMIT이 되고, 오류가 발생할 경우
+자동으로 ROLLBACK 처리된다. 위 예제를 SQL 던Ⅳer용으로 변경하면 다음과 같다.
+[예제] PLAYER 테이불에 데이터를 입력한다.
+I예제] SQL Server
+INSERT
+INTO PLAYER (PLAYER-ID, TEN_ID, PLAYER-N% 耶ITI애, HEIQff, ÆIGHT, BACK—IO)
+VALIÆS ('1%70雰, *021 '이운재• , •蘇•, 182, 82, 1):
+(1개 행이 영향을 받음)
+[예제] PLAYER 테이불에 있는 데이터를 수정한다.
+[예삐 SQL Server
+UDATE PLAYER SET ÆIGHT = 1圈
+(481개 행이 영향을 받음)
+[예제] PLAYER 테이불에 있는 데이터를 삭제한다
+[예제! SQL Server
+DELETE FO PLAYER;
+(481개 행이 영향을 받음)
+SQL 뇨rve러서의 트랜잭션은 기본적으로 꿰지 방식으로 이뤄진다.
+1
+전문가 7h1드 413

@@ -1,0 +1,45 @@
+활용
+다. RO/I NINÆR 함수
+ROW-NUMBER 함수는 RANK나 DENSE-RANK 함수가 동일한 값에 대해서는 동일한 순위를 부여하는 데
+반해, 동일한 값이라도 고유한 순위를 부여한다.
+[예제] 사원 데이터에서 급여가 높은 순서와, 동일한 순위를 인정하지 않는 등수도 같이 출력한다.
+[예삐
+SELECT 0%, ENAE SAL
+RAM () OVER ÄR BY SAL tkSC) AS RK
+() WER (ÆR BY SAL AS RN
+!실행 결과!
+ANALYST
+LANAGER
+UANAGER
+LANAGER
+SALESUAN
+SALESLAN
+SALESUN
+CLERK
+CLERK
+CLERK
+KI%
+JOÆS
+CLRK
+TIRÆR
+UILLER
+JAÆS
+SMITH
+刃75
+24%
+1圄
+1聳
+12%
+11%
+10
+12
+13
+14
+14 행이 선택했습니다.
+FORD와 SC(JIT, WARD와 MARTIN은 동일한 SALARY이므로 RANK는 같은 순위를 부여했지만,
+ROW-NUMBER의 경우 동일한 순위를 배제하기 위해 유니크한 순위를 정한다. 위 경우는 같은 SALARY에서는
+어떤 순서가 정해질지 알 수 없다(Oracle의 경우 romd가 적은 행이 먼저 출력된다).
+이 부분은 데이터베이스별로 다른 결과가 나을 수 있0 oe, 만일 동일 값에 대한 순서까지 관리하고 싶으면
+ROW-NUMBER( ) OVER (ORDER BY SAL DFSC, ENAME) 같이 ORDER BY 절을 이용해 추가적인 정렬
+기준을 정의해야 한다.
+전문가 710|드 329

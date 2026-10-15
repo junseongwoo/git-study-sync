@@ -1,0 +1,35 @@
+과목 1 SQU 기본과 활용
+
+SELECT B.STADIUM_NAME, B.STADIUM_ID, A.SCHE_DATE
+, C.TEAM_NAME, D.TEAM_NAME
+, ^. 10866 500 , A. AWAY_SCORE
+FROM SCHEDULE A, STADIUM 8, TEAM C, TEAM D
+WHERE A_HOME_SCORE >= A AWAY_SCORE + 3
+AND B_STADIUM_ID = A STADIUM_ID
+AND C.TEAM_ID = A HOMETEAM_ID
+AND 0.16 10 = A AWAYTEAM_ID;
+
+STADIUM_NAME   STADIUN_ID  SCHE_DATE TEAM_NAME TEAM_NAME  HOME_SCORE . AWAY_SCORE
+성남종합운동장   802    20120317 일화천마 _ 유나이티드      6     0
+서울월드컵경기장 _ 805    20120714 (서울  삼성블루윙즈     3     이
+창원종합운동장   605    20120427 、 경남*(  아이파크      5     2
+울산문수경기장   4    20120803 SARL] AHA      3     0
+부산아시아드경기장 02    20120727 、 아이파크_ 시티즌       3     이
+
+5 개의 행이 선택됐습니다.
+
+6. CROSS JOIN
+
+CROSS JOIN EF.CODD 박사가 언급한 일반 집합 연산자의 PRODUCTS] 개념으로 테이블 간 조인 조건이
+없는 경우 생길 수 있는 모든 데이터의 조합을 말한다.
+
+두 개의 테이블에 대한 CARTESIAN PRODUCT 또는 CROSS PRODUCTS} 같은 표현으로, 결과는 양쪽 집합의
+M*N 건의 데이터 조합이 발생한다(아래 56건의 데이터는 EMP 14건 * DEPT 4건의 데이터 조합 건수이다).
+
+[예제] 사원, 부서 테이블을 CROSS JOIN 해 사원 이름 및 소속 부서 이름을 조회해본다.
+
+SELECT  A_ENAME, B.DNAME
+FROM EMP A CROSS JOIN DEPT B
+ORDER BY A.ENAME;
+
+264 sy #87 Tels

@@ -1,0 +1,36 @@
+제3장 관리 구문
+
+가. ADD COLUMN
+다음은 기존 테이블에 필요한 칼럼을 추가하는 명령이다.
+
+ALTER TABLE 테이블명
+ADD (_ 추가할 칼럼명1 데이터유형 [기본 3] [\40「 ㄴㄴ]
+[, 추가할 칼럼명2 데이터유형 [기본 값] [Not ㄴㄴ]
+매틴 움섭
+
+ALTER TABLE 테이블명
+ADD 추가할 칼럼명1 데이터유형 [기본 값] [NOT NLL]
+[, 추가할 칼럼명2 데이터유형 [기본 값] [NOT MULL]
+ed
+
+주의할 것은 새롭게 추가된 칼럼은 테이블의 마지막 칼럼이 되며 칼럼의 위치를 지정할 수는 없다.
+[예제] PLAYER 테이블에 /000655(데이터 유형은 가변 문자로 자릿수 80자리로 설정한다) 칼럼을 추가한다.
+
+예제] Oracle
+
+ALTER TABLE PLAYER ADD (ADDRESS VARCHAR2(80));
+
+테이블이 변경됐습니다.
+
+DESC PLAYER;
+
+이름                 널?               유형
+PLAYER_ID              NOT NULL            CHAR(7)
+PLAYER_NAME           NOT NULL           VARCHAR2(20)
+TEAM_ID               NOT NULL           CHAR(3)
+E_PLAYER_NAME                           VARCHAR2(40)
+NICKNAME                               VARCHAR2(30)
+JOIN_YYYY                              CHAR(4)
+POSITION                               VARCHAR2(10)
+
+SQL 전문가 ole [435

@@ -1,0 +1,78 @@
+과목 ]| SQL 고급 활용 및 튜닝
+
+Full Scan 하고서 group by 이후에 deptno = 30 조건을 필터링했을 것이다. 하지만 조건절 Pushing] 작동함으로
+써 emp_deptno_idx 인덱스를 사용한 것을 실행계획에서 볼 수 있다.
+이번에는 조인문으로 테스트해 보자.
+
+select b.deptno, b.dname, a.avg_sal
+
+from (select deptno, avg(sal) avg_sal from emp group by deptno) a
+, dept b
+
+where a.deptno = b.deptno
+
+and  b.deptno = 30
+
+ㅣ Id | Operation                    | Name           | Rows | Bytes |
+
+0 | SELECT STATEMENT                  |
+
+ㅣ NESTED LOOPS                          |
+
+ㅣ TABLE ACCESS BY INDEX 80010          | DEPT
+
+ㅣ INDEX UNIQUE SCAN                 | DEPT_PK
+ㅣ 비테                                ㅣ
+
+ㅣ SORT GROUP BY                         |
+
+ㅣ TABLE ACCESS BY INDEX ROWID         {|
+
+1      INDEX RANGE SCAN                   |
+
+EMP
+
+1
+2
+3
+4
+5
+6
+7                                                                                             EMP_DEPTNO_IDX
+
+|
+i
+|
+i
+'
+1
+1*
+|
+1
+1
+i
+1
+i
+1
+1
+
+OV FON 제츠. cakyoaah! 세은 : wibby ad)
+
+Predicate Information (identified by operation id):
+
+3 - access("B"."DEPTNO"=30)
+7 - access("DEPTNO"=30)
+
+위 실행계획과 Predicate Information 보면, 인라인 뷰에 deptno = 30 조건절을 적용해 데이터량을 줄이고서
+group byob 조인연산을 수행한 것을 알 수 있다. 46600 = 30 조건이 인라인 Holl pushdown 될 수 있었던
+이유는, 뒤에서 설명할 '조건절 이행' 쿼리 변환이 먼저 일어났기 때문이다. b.deptno = 30 조건이 조인 조건을
+타고 3쪽에 전이됨으로써 다음과 같이 adeptno = 30 조건절이 내부적으로 생성된 것이다. 이 상태에서 a.deptno
+= 30 조건절이 인라인 뷰 안쪽으로 Pushing® 것이다.
+
+select b.deptno, b.dname, a.avg_sal
+from (select deptno, avg(sal) avg_sal from emp group by deptno) a
+
+, dept b
+where a.deptno = b.deptno
+and b.deptno = 30
+and  a.deptno = 30

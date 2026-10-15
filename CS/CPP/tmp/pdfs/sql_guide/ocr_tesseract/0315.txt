@@ -1,0 +1,39 @@
+과목 [1 QL 기본과 활용
+
+DNANE                  08               ENP_CNT        SAL_SUM
+ACCOUNTING             All Jobs                3           8750
+RESEARCH               All Jobs                5          10875
+SALES                  All Jobs                6           9400
+All Departments        ANALYST                  2            6000
+All Departments        CLERK                     4            4150
+All Departments        MANAGER                  3            8275
+All Departments        PRESIDENT                1            5000
+All Departments        SALESMAN                4           5600
+
+8 행이 선택됐습니다.
+
+GROUPING SETS 인수들은 평등한 관계이므로 인수의 순서가 바뀌어도 결과는 같다008과 DNAMES] 순서가
+바뀌었지만 결과는 같다).
+
+를 3개의 인수를 이용한 GROUPING SETS 이용
+
+[예제] 부서-08-매니저별 집계, 부서-)08별 집계, .)08-매니저별 THE GROUPING SETS 함수를 이용하여 구해본다.
+GROUPING SETS 함수 사용 시 괄호로 묶은 집합별로(괄호 내는 계층 구조가 아닌 하나의 데이터로 간주함) 집계를
+구할 수 있다.
+
+예제
+
+SELECT B.DNAME, ㅅ.208, A.MGR
+, COUNT (%) AS EMP_CNT, SUM (A.SAL) AS SAL_SUM
+FROM EWP A, DEPT B
+WHERE B.DEPTNO = A.DEPTNO
+GROUP BY GROUPING SETS ((B.DNAME, A.JOB, A.MGR), (B.DNAME, A.J0B), (A.J0B, A.MGR));
+
+208                   MGR             EMP_CNT           SAL_SUM
+ACCOUNT ING           CLERK                 7782                   1               1300
+ACCOUNT ING           CLERK                                         1               1300
+ACCOUNTING           MANAGER              7839                   1               2450
+ACCOUNTING           MANAGER                                      1               2450
+ACCOUNTING           PRESIDENT                                    1               5000
+
+322 | SL 전문가 가이드

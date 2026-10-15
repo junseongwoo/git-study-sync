@@ -1,0 +1,22 @@
+과목 Ⅱ SQL 기본과 활용
+l예제) Oracle
+æATE CREATE TABLE FO SQLD;
+권한이 취소묐습니다.
+!예제 및 실행 끌과] OracIe
+(囂 S한D/%꼬19i
+*-01045: user SQLD lacks CREATE SESSm pnvilege; &nied
+sae 로그인한다.
+[예제] SQL Server
+USE DVENTI-REnKS
+CÆATE TÆLE FO SQLD;
+명령이 완료됐습니다.
+SQLD로 로그인한다.
+[예제 및 실행 결과] SQL Server
+CÆATE TmE ″ (EMJ_SEQ INT WT MJLL, TITLE V枳대AR(10)):
+1
+에시지 %2, 수준 14, 상태 1, 출 1
+데이터베이스 'DVENTIREnKS'에서 CREATE TABLE 사용 권한이 거부했습니다.
+[예제] 이제 LWN-TABLE이라는 ROLE* 만들고, 이 ROLE* 이용해 SQLD 유저에게 권한을 부여한다.
+!예제] Oracle
+연결묐습니다.
+%2 4 전문가 ,까드

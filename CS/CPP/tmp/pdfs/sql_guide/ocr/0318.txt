@@ -1,0 +1,23 @@
+駁장 활용
+다섯 번째, 선형 분석을 포함한 통계 분석 관련 함수가 있다. 통계에 특화한 기능이므로 본 가이드에서는 설명을
+생략한다. 다음은 Oracle의 통계 관련 함수를 참조로 표시한 것이다
+CORR, COVAR—POP, COVAR-SAMP STI)DEV, STDDEV-POP, SIDDEV-SAMP, VARIANCE,
+VAR-POP, VAR-SAMP, REGR-(니NEAR REGRESSION), REGR-SLOPE, REGR-INTERCET,
+REGR-COUNT, REGR-R2, REGR-AVGX, REGR-AVGY, REGR-SXX, REGR-SYY, REGR-SXY
+ㆍ Fl-JtCTlO••l SYNTAX
+• 원도우 함수에는 OVER 문구가 기워드로 필수 포함된다.
+SELECT (ARGNENTS) OVER ([PARTITWI BY 칼럼] @DER BY 절1 [飜괴NG 절1)
+FROM 테이블 명;
+- WINLX)W-FUNCTION : 기존에 사용하던 함수도 있고, 새롭게 WINDOW 함수&으로 추가된 함수도 있다
+- ARGUMENTS (인수) : 함수에 따라 0 ~ N개의 인수가 지정될 수 있다.
+- PARTITION BY 절 : 전체 집합을 기준에 의해 소그룹으로 나눌 수 있다.
+- ORDER BY 절 : 어떤 항목에 대해 순위를 지정할지 ORDER BY 절을 기술한다.
+• WNDOWING 절 : WINmWING 절은 함수의 대상이 되는 행 기준의 범위를 강력하게 지정할 수 있다
+ROI죠는 물리적인 결과 행의 수를, RANGE는 논리적인 값에 의한 범위를 나타낸다. 둘 중 하나를 선택해서
+사용할 수 있다. 다만 WTNDOWING 절은 SQL 뇨rve뗴서는 지원하지 않는다.
+[BEMEN 사용 타입]
+R(XS : R.AWE BETWEEN I}QNDED PRECEDIW CIRENT 1 VALIJE EXR RECEDIW/FOLLMNG
+FOLOII" | CIRENT | VALIÆ EXR RECEDIWFOLLMNG
+IBEMEN 미사용 타입1
+RM 1 PA%E PRECEDIt6 | CURENT | VALLE_EXPR
+전문가 가이드 325

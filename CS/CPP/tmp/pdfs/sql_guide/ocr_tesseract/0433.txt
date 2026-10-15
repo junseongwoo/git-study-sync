@@ -1,0 +1,40 @@
+과목 ｌ SQL 기본과 활용
+
+ee em
+
+실행 결과] Oracle
+
+Name                 Null?              Type
+TEAN_ID              NOT NULL           CHAR(3)
+REGION_NAME           NOT NULL            VARCHAR2(8)
+TEAM_NAME            NOT NULL           VARCHAR2(40)
+E_TEAM_NAME                             VARCHAR2(50)
+[ome vy        NOT NULL            VARCHAR2(8)                                               ]
+STADIUM_ID            NOT NULL            CHAR(3)
+ZIP_CODE1                               CHAR(3)
+ZIP_CODE2                               CHAR(3)
+ADDRESS                                 VARCHAR2(80)
+000                                    VARCHAR2(3)
+TEL                                    VARCHAR2(10)
+FAX                                    VARCHAR2(10)
+HOMEPAGE                                VARCHAR2(50)
+OWNER                                   VARCHAR2(16)
+exec sp_help ‘dbo. TEAM_TEWP'                                                                3
+90                                                                                              )
+Column_name          Type               Length             Nullable
+TEAM_ID              char                    3             no                              가
+REGION_NAME          varchar                 8             no                             if
+TEAN_NAME            varchar                40             no
+50             yes
+4             yes
+3             no
+ZIP_CODE1            char                    3             yes                  5
+2IP_CO0E2            char                    3            yes                  ve
+ADDRESS              varchar                80             yes
+00                 varchar                 3            yes
+TEL                 varchar                10             yes
+FAX                 varchar                10             yes                 3
+HOMEPAGE             varchar                50             yes                =
+OWNER               varchar                10             yes
+
+440 90 At 가이드

@@ -1,0 +1,26 @@
+과목 III 고급 활용 및 튜닝
+제3절 해시 조인
+1. 기본 메커니즘
+해시 조인대ash Join)은 조인이나 소-트 머지 조인이 효과적이지 못한 상황을 해결하고자 나은 방식이다.
+이래는 Oracle과 SQL Server 각각에서 해시 조인으로 유도했을 때의 실행계획이다.
+[예제] OracIe
+select /젤+ r±red use-hash(e) 일 d ±ptno, e.enare
+fræ &pt e
+~ d.&ptno = e.deptro
+ExQJtim P1m
+1
+SELECT STATEENT (Cost=5 (ar圊54 Bytes=35K)
+0 HASH JOIN (Cost=5 (ar圊54 Bytes=35K)
+TBLE ACCESS (FULL) 'DEPT' (Cost=2 (ar蒟54 Bytes=14K)
+TABLE ACCESS (FULL) 'EP' (Cost=2 Card=327 Bytes=11K)
+[예제] SQL Server
+select d.chæ, e.ermo,
+•t•ere d.±ptm = e.deptno
+optim (force order hash join)
+StntText
+1-~ uatch(lnrer Join, WH:([dl.[deptnol)=([el.[deptno]))
+{—Tab1e s예(%JE(T:([″01.[弼1.[血ptl AS [리))
+!—Table ScmOJECT:((SQLR01.I±oI.(«npl AS [이))
+해시 조인은 둘 중 작은 집ffBuild lnput)을 읽어 해시 영역(Hash Area)에 해시 테이블(= 해시 맵)을 생성하고,
+반대쪽 큰 집V(Probe lnput)을 읽어 해시 테이블을 담색하면서 조인하는 방식이다([그림 1Ⅱ45] 참조).
+匐21 전문가 ,까드

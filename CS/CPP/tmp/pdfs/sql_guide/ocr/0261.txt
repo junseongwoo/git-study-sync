@@ -1,0 +1,54 @@
+제1장 기본
+가. LEFT OUTER 」이N
+조인 수행 시 먼저 표기된 좌측 테이블에 해당하는 데이터를 먼저 읽은 후, 나중 표기된 유축 테이블에서 조인
+대상 데이터를 읽어 온다. 즉 Table A와 B가 있을 때(Table 'A'가 기준이 됨), A와 B를 비교해서 B의 조인 칼럼에
+조인 조건을 만족하는 값이 있으면 해당 로우의 데이터를 가져오고, 조인 조건을 만족하는 값이 없는 경우에는
+B 테이블에서 가져오는 칼럼들은 NULL 값으로 채운다. 그리고 LEFT J이N으로 0町麒 기위드를 생쬐서 사용할
+수 있다.
+[예제] STADIUM에 등록•된 경기장 酗는 홍팀이 없는 경기장도 있다. STADIUM과 TE.AN* 조인 하되 홀림이 없는 경기장의
+정보도 같이 출력하도록 한다.
+[예제]
+SELECT A.STADIIN_WE, A.STADIIN_ID, A.SEAT_QNT,
+, B.TEAU NAME
+FRW STADIIN A LEFT WTER J이N TEAN B
+애 B.TEU_ID = ID
+RDER BY
+0町ER는 생략 가능한 카위드이므로 아래 SQL은 같은 결과를 얻을 수 있다.
+[예제]
+SELECT A.STADIIN_WE, A.STADILN_ID, A.SEAT_QNT,
+FO STADIIN A LEFT JOIN TEN
+애 B TEAM_ID = A 10
+BY 10:
+[실행 결과]
+STADII-N NAME
+을산문수경기장
+수원월드컵경기장
+포항스쉃야드
+인천월드컵경기장
+전주월드겁경기장
+부산아시아드경기장
+광양전용경기장
+STÆ)IIN_ID
+閔1
+%3
+(02
+%1
+SEAT_COJNT
+46102
+3″
+}OETEN ID
+K01
+K02
+K03
+K04
+K05
+K07
+TEAN NAk
+을산현대
+삼성불루웡즈
+스털러스
+유나이티드
+현대모터스
+아이파크
+드래곤즈
+전문가 가이드 267

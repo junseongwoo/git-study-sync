@@ -1,0 +1,52 @@
+과목 mM QL 고급 활용 및 튜닝
+
+라. 14041 오퍼레이션
+
+10 | Operation                | Name         | Rows | Bytes |TempSpc|    | Pstart| Pstop |   TQ |IN-OUTI PQ Distr
+ㅣ 0 | SELECT STATEMENT           [|             ㅣ1 13
+ㅣ 1ㅣ| PX COORDINATOR        |         |
+| 2] PX SEND QC (RANDOM)        | :TQ10003       |    13M]
+I+ 31 view              |           |   134]
+I+ 4]   WINDOW SORT PUSHED RANK   |           ㅣ 1
+1 51    PX RECEIVE            |             |   13]
+1 61      PX SEND HASH            | :TQ10002        ㅣ 1
+I= 71     WINDOW CHILD PUSHED RANK |             |   13]
+I+ 81       HASH JOIN           |              |    138]
+ㅣ 91     PX RECE IVE       [|          ㅣ 27181
+ㅣ 10|       PX SEND BROADCAST   | :7Q10001      ㅣ 27181
+1111        HASH JOIN        |            ㅣ 27181
+| 121       BUFFER SORT     |          |
+| 131          PX RECEIVE       |             | 6105 |
+| 14|        PX SEND BROADCAST | :TQ10000     | 6105
+Is 15 |           TABLE ACCESS FULL| 조직         | 6105 |
+| 181          PX BLOCK ITERATOR |              |    12
+I= 171           TABLE ACCESS FULL | 계약마스터      |    12M
+ㅣ 8]        PX BLOCK | TERATOR     |               ㅣ 100M]
++18 |         TABLE ACCESS FULL | 계약변경이력 | 100M
+
+CSERIALGank)           | 시리얼하게 실행          ㄱ           고
+SP -PARALLEL_FROM_SERIAL           06가 처리한 결과를 병렬 서버 프로세스에게 전달
+PS : PARALLEL_TO_SERIAL           | 병렬 서버 프로세스가 처리한 결과를 ool 전달
+
+| 두 개의 병렬 서버 프로세스 집합이 처리. 지정한 병렬도의 2배
+
+그 : PARALLEL TO_PARALLEL         만큼의 병렬 프로세스 생성
+
+PCWP :
+
+PARALLEL COMBINED, WITH PARENT | 8 A 프로세스 집합이 현재 £50 그 부모 스템을 모두 처리
+PCWC :
+
+병렬 서버 프로세스 집합이 현재 A502 그 자식 ARE 모두 처리
+
+PARALLEL _COMBINED_WITH_CHILD
+
+HM S—P, PS, PoP 프로세스 간 통신이 발생한다.
+
+BW PCWP2 PCWCE 프로세스 ZH 통신이 발생하지 않으며, 각 병렬 서버가 독립적으로 여러 ARE 처리할
+때 나타난다. 하위 259] 출력 값이 상위 259) 입력 값으로 사용된다.
+
+BPP, 2076, PCWP, PCWCE 병렬 오퍼레이션인 반면 5-*?는 직렬(56121) 오퍼레이션이다.
+
+746 | 50 BA ele
+

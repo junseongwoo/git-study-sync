@@ -1,0 +1,26 @@
+과목 ㅣ QL 기본과 활용
+제5 절 Top N 쿼리
+
+1. ROWNUM 슈도 칼럼
+
+Oracle®] ROWNUME 칼럼과 비슷한 성격의 256080 Columno2A SQL 처리 결과 집합의 zt 행에 대해
+임시로 부여되는 일련번호다. 테이블이나 집합에서 원하는 만큼의 행만 가져오고 싶을 때 WHERE 절에서 행의
+개수를 제한하는 목적으로 사용한다.
+
+한 건의 행만 가져오고 싶을 때는
+- SELECT PLAYER_NAME FROM PLAYER WHERE ROWNUM <= 1;이나
+- SELECT PLAYER NAME FROM PLAYER WHERE ROWNUM < 2;처럼 사용할 수 있다.
+
+두 건 이상의 N 행을 가져오고 싶을 때는 ROWNUM = NAY 사용할 수 없으며
+
+- SELECT PLAYER_NAME FROM PLAYER WHERE ROWNUM <= 피;이나
+
+- SELECT PLAYER NAME FROM PLAYER WHERE ROWNUM <필+1;처럼 출력되는 행의 한계를 지
+정할 수 있다.
+
+030[6에서 순위가 높은 N7He] 로우를 추출하기 위해 ORDER BY 절과 WHERE 절의 ROWNUM 조건을
+같이 사용하는 경우가 있다. 이 두 조건으로는 원하는 결과를 얻을 수 없다. Oracle? 경우 정렬이 완료된 후
+데이터의 일부가 출력되는 것이 아니라, 데이터의 일부가 먼저 추출된 F(ORDER BY 절은 결과 집합을 결정하는
+데 관여하지 않음) 데이터에 대한 정렬 작업이 일어나므로 주의해야 한다.
+
+[예제] 사원 테이블에서 급여가 높은 3명만 내림차순으로 출력하고자 하는데, 잘못 사용된 50(의 사례다.

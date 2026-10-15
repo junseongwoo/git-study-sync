@@ -1,0 +1,39 @@
+과목 | SOL 기본과 활용
+
+2. 그룹 내 순위 함수
+
+가. RANK 함수
+
+RANK ORDER BYE 포함한 QUERY 문에서 특정 항목(칼럼)에 대한 순위를 구하는 함수다. 이때 특정 범위
+(PARTITION) 내에서 순위를 구할 수도 있고, 전체 데이터에 대한 순위를 구할 수도 있다. 또한 동일한 값에 대해서는
+동일한 순위를 부여한다.
+
+[예제] 사원 데이터에서 급여가 높은 순서와 JOBEZ 급여가 높은 순서를 같이 출력한다.
+
+SELECT 208, ENAME, SAL
+, RANK () OVER (ORDER BY SAL DESC) AS ALL_RK
+, RANK () OVER (PARTITION BY JOB ORDER BY SAL DESC) AS JOB_RK
+FROM EWP;
+
+208                  ENAME            SAL              ALL_RK           J0B_RK
+PRESIDENT           KING              5000                   1                  1
+ANALYST             FORD             3000                  2                  1
+ANALYST             SCOTT            3000                  2                  1
+MANAGER             JONES            2975                  4                  1
+MANAGER             BLAKE            2850                  5                  2
+MANAGER             CLARK            2450                  6                  3
+SALESMAN             ALLEN              1600                    7                    1
+SALESMAN            TURNER           1500                  8                  2
+CLERK                 MILLER            1300                    9                   1
+SALESMAN             WARD               1250                   10                   3
+SALESMAN            MARTIN           1250                 10                  3
+CLERK               ADAMS             1100                 12                  2
+CLERK               JAMES             950                 13                  3
+CLERK               SMITH             800                 14                 4
+
+14 행이 선택됐습니다.
+
+업무 구분이 없는 ALL_RK 칼럼에서 FORDSH SCOTT, WARDS MARTINS 동일한 8641.487이므로 같은
+순위를 부여한다, 그리고 업무를 PARTITIONOE 74 JOB_RKE 같은 업무 내 범위에서만 순위를 부여한다.
+
+326 | 90 전가 ole

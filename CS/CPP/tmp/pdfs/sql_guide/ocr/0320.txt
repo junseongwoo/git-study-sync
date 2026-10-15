@@ -1,0 +1,34 @@
+駁장 활용
+하나의 SQL 문,쳔 ORDER BY SAL DESC 조건과 PARMION BY JOB 조건이 충들났기 때문에 JOB별로는
+정릴되지 않고 ORDER BY SAL DFSC 조건으로 정릴됐다.
+[예제] 앞 SQL 문의 결과는 JOB과 SALARY 기준으로 정열대 있지 않다. 새로운 SQL에서는 전체 SALARY 순위를 구하는
+시 1 RK 칼럼은 제외하고, 업무별로 SALARY 순서를 구하는 」馹-RK만 알아보도록 한다.
+[예제]
+SELECT 1%, SAL
+RÆK () WER BY 1% MR BY SAL DESC) AS JOB-RK
+FO EP;
+[실행 결과1
+JCB
+AkALYST
+ARALYST
+CLERK
+CLERK
+CLERK
+SALESUAN
+SALESW
+LRK
+SCOTT
+UILLER
+JA*S
+ALLEN
+TWÆR
+11%
+凶75
+1槦
+1羈
+12%
+12%
+14 행이 선택묐습니다.
+업무별로 SAIARY 순서를 구하는 JOB-RANK만 사용한 경우 파티션의 기준이 된 JOB과 SALARY별로 정렬이
+돼 있는 것을 알 수 있다.
+전문가 ,버드 327

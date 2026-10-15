@@ -1,0 +1,31 @@
+제3장 인덱스 튜닝
+
+MW Index Full Scan®] 효용성
+
+위 501처럼 인덱스 선두 칼럼(608106)이 조건절에 없으면 옵티마이저는 우선적으로 73616 Full Scan&
+고려한다. 그런데 대용량 테이블이어서 13516 Full 5620의 부담이 크다면 옵티마이저는 인덱스를 활용하는 방법을
+다시 생각해 보지 않을 수 없다.
+
+데이터 저장공간은 '가로×세로' 즉 '칼럼길이×레코드수'에 의해 결정되므로 대개 인덱스가 차지하는 면적은
+테이블보다 훨씬 적게 마련이다. 만약 인덱스 스캔 단계에서 대부분 레코드를 필터링하고 일부에 대해서만 테이블
+액세스가 발생하는 경우라면 테이블 전체를 스캔하는 것보다 낮다. 이럴 때 옵티마이저는 1706※ Full Scan 방식을
+선택할 수 있다.
+
+아래는 Index Full 5620이 효과를 발휘하는 전형적인 케이스다.
+
+SQL> select * from emp where sal > 5000 order by ename;
+Execution Plan
+SELECT STATEMENT Optimizer=ALL_RONS
+
+0
+1 © TABLE ACCESS (BY INDEX 0110) OF 'EMP' (TABLE)
+231     INDEX (FULL SCAN) OF 'EMP_IDX' (INDEX)
+
+[그림 11-34] Index Full Scan®| 효용성
+
+[그림 11-3-4]처럼 연봉이 50008 초과하는 사원이 전체 중 극히 일부라면 Table Full 5020)보다는 Index Full
+562ㅁ을 통한 필터링이 큰 효과를 가져다준다. 하지만 이런 WA 적절한 인덱스가 없어 Index Range 50237의
+차선책으로 선택된 것이므로 할 수 있다면 인덱스 구성을 조정해 주는 것이 좋다.
+
+QL 전문가 가이드 [545
+

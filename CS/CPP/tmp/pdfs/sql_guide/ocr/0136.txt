@@ -1,0 +1,39 @@
+젠장 기본
+[그림 Ⅱ-1-11]과 [그림 II•1-1기는 앞으로 사용하게 될 부서사원 테이블 간의 관계를 IE 표기법과 표기법
+0 구 표현한 ERD다.
+DEPT(부서)
+DEPTNO
+DNAME
+(4건)
+|E(정보공학) 표기법
+점선 : 비식별관계
+EMP(사원)
+EMPNO
+- ENAME
+CJOB
+MGR
+HIREDATE
+! COMM
+DEPTNOgm
+(14건)
+[그림 II-1-11] 사원뿌서 ERD(IE 표기법)
+사원뀨서 테이블 간의 양방향 관계는 다음과 같다.
+• 하나의 부서는 여러 명의 사원을 보유할 수 있다.
+- 한 명의 사원은 하나의 부서에 꼭 소속된다.
+DEPT(부서)
+# DEPTNO
+DNAME
+(4건)
+바커 표기법
+EMP(사원)
+# EMPNO
+ENAME
+』OB
+MGR
+HIREDATE
+COMM
+DEPTNO (FK)
+(14건)
+[그림 Ⅱ-1-1기 사원-부서 ERD(바커 표기법)
+1
+전문가 ,}OI드 141

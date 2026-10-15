@@ -1,0 +1,49 @@
+제6장 고급 SOL 튜닝
+
+> = >>=>>>>ㅅ                            |
+
+create table 주문 임시 35 select * from 주문;
+
+-- SQL Server
+select * into #주문_임시 from 주문;
+
+alter table 주문 0000 constraint 주문 pk;
+drop index [주문.]주문 101;  — [] : SQL Server
+
+truncate table 주문;
+
+insert into 주문(고객번호, 주문일시, , 상태코드)
+select 고객번호, 주문일시,
+
+,(<356 when 주문일시 > to_date('20000101', ')///0000' ) then '9999" else status end) 상태코드
+from 주문 임시;
+
+alter table 주문 300 constraint F& pk primary *@>/(고객번호, 주문일시);
+create index 주문 101 on 주문(주문일시, HERE);
+
+인덱스가 하나도 없는 상태에서 테스트해 봐도 대략 200 수준에서 손익분기점이 결정되는 것을 알 수 있다.
+만약 인덱스까지 여러 개 있다면 손익분기점은 더 낮아진다.
+
+Oracle®] 경우 위 CTAS 문장에 201088108 음션을 사용하고 Insert 문장에 00600 힌트까지 사용하면 손익분기
+점은 더 낮아진다.
+
+아래는 1999년 12월 31일 이전 주문 데이터의 상태코드를 모두 지우는 0616(0문이다.
+
+delete fron 주문 where 주문일시 to_date('20000101", 'yyyynndd')                                              |
+
+대량의 데이터를 Deleted 때도 다음과 같이 처리하는 것이 빠를 수 있다.
+
+Create table 주문 임시
+
+25
+
+select * from 주문
+
+where 주문일시 > to_date('20000101", 'yyyymndd');
+
+alter table emp drop constraint 주문 pk;
+drop index F&_idx1;
+
+truncate table 주문;
+
+SQL 전문가 가이드 | 705

@@ -1,0 +1,36 @@
+과목 0 SQL 기본과 활용
+
+다. LAG 함수
+LAG 함수를 이용해 파티션별 윈도우에서 이전 몇 번째 행의 갔을 가져올 수 있다. 850ㄴ5000@:에서는 지원하지
+않는 함수다.
+
+[예제] 직원들을 입사일자가 빠른 기준으로 정렬하고, 본인보다 입사일자가 한 명 앞선 사원의 급여를 본인의 급여와 함께
+출력한다.
+
+SELECT ENAME, HIREDATE, SAL
+, LAG (SAL) OVER (ORDER BY HIREDATE) AS LAG_SAL
+FROM EMP
+WHERE 208 = "SALESMAN';
+
+HIREDATE                         SAL                      LAG_SAL
+1981-62-20                    1600
+
+1981-62-22                    1250                           1600
+1981-09-68                    1500                           1250
+1981-69-28                    1250                           1500
+
+4 행이 선택됐습니다.
+
+[예제] LAG 함수는 3개의 ARGUMENTSTIX| 사용할 수 있다. 두 번째 인자는 몇 번째 앞의 행을 가져올지 결정하는 것이고
+(DEFAULT 1), 세 번째 인자는 예를 들어 파티션의 첫 번째 행의 경우 가져올 데이터가 없어 NULL 값이 들어온다.
+이 경우 다른 값으로 바꿔 줄 수 있다. 결과적으로 \\/[이나 ISNULL 기능과 같다. LAG(SAL, 2, 0)의 기능은 두 행
+앞의 SALARYE 가져오고, 가져올 값이 없으면 0으로 처리한다.
+
+예제
+
+SELECT ENAME, HIREDATE, SAL
+, LAG (SAL, 2, ©) OVER (ORDER BY HIREDATE) AS LAG_SAL
+FROM EMP
+WHERE 208 = SALESMAN’;
+
+340 SOL B@7t 가이드

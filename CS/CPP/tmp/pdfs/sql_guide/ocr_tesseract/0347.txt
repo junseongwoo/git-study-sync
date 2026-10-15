@@ -1,0 +1,24 @@
+과목 ｌ QL 기본과 활용
+
+| [실행 경과] |
+ENPNO
+7982 FORD 7566
+
+1개의 행이 선택됐습니다.
+
+아래는 SMITHS) 부모 노드의 부모 노드를 조회하는 쿼리다. empnoZ} SMITHS) 부모 노드인 FORD] mgr!
+행을 조회하면 된다. 이런 계층 전개 방식을 역방향 전개라고 한다.
+
+SELECT (.8600, C.ENAME, C.MGR
+FROM EMP A, ENP B, EWP C
+WHERE A_ENAME = ‘SMITH’
+AND B_EMPNO = A MGR
+AND C.ENPNO = B.MGR;
+
+1개의 행이 선택됐습니다.
+
+지금까지 살펴본 것처럼 깊은 레벨의 노드를 조회하기 위해서는 셀프 조인을 반복해야 한다. Oracles SQL
+
+Servers 순환 관계를 가진 데이터를 조회할 수 있는 계층 질의 기능을 제공한다.
+
+354 | SOL 전문가 가이드

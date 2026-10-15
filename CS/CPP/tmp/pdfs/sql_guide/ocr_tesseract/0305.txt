@@ -1,0 +1,24 @@
+과목 [1 SQL 기본과 활용                 —————————————
+
+13 행이 선택됐습니다.
+
+STEP 3. GROUPING 함수 사용
+ROLLUP, CUBE, GROUPING SETS 등 새로운 그룹 함수를 지원하기 위해 GROUPING 함수가 추가됐다.
+
+- 8011.00이나 0088에 의한 소계가 계산된 결과에는 GROUPING(EXPR) = 1이 표시된다.
+- 그 외의 결과에는 GROUPING(EXPR) = 0이 표시된다.
+
+GROUPING 함수와 CASE/DECODEE 이용해, 소계를 나타내는 필드에 원하는 문자열을 지정할 수 있어서
+보고서 작성 시 유용하게 사용할 수 있다.
+
+[예제] ROLLUP 함수를 추가한 집계 보고서에서 집계 레코드를 구분할 수 있는 GROUPING 함수가 추가된 SQL 문장이다.
+
+SELECT  B.DNAME, GROUPING (B.DNAME) AS DNAME_GRP
+, A.J0B , GROUPING (A.JOB ) AS J0B_GRP
+, COUNT (*) AS EMP_CNT, SUM (A.SAL) AS SAL_SUM
+FROM EWP A, DEPT B
+WHERE B.DEPTNO = A.DEPTNO
+GROUP BY ROLLUP (B.DNAME, A.J0B)
+ORDER BY B.DNAME, A.JOB;
+
+312 sou 전문가 가이드

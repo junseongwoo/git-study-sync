@@ -1,0 +1,22 @@
+계제| SQL Server
+
+DROP TABLE TEAM;
+
+명령이 완료됐습니다.
+
+exec sp_help "dbo. TEM";
+
+메시지 15009, 수준 16, 상태 1, TRAX sp help, & 79
+데이터베이스 “northwind' 에 개체 “dbo. TEAN'OI(7H) 없거나 이 작업에 적합하지 않습니다.
+
+DROP TABLES] 경우는 테이블 자체가 없어지기 때문에 테이블 구조를 확인할 수 없다. 반면 TRUNCATE
+TABLES] 경우는 테이블 구조는 그대로 유지한 채 데이터만 전부 삭제하는 기능이다. TRUNCATE 데이터 구조의
+변경 없이 테이블의 데이터를 일괄 삭제하는 명령어로 DMLE 분류할 수도 있지만 내부 처리 방식이나 Auto
+Commit 특성 등으로 인해 DDLE 분류했다.
+
+테이블에 있는 데이터를 삭제하는 명령어는 TRUNCATE TABLE 명령어 이외에도 DELETE 명령어가 있다.
+그러나 DELETES} TRUNCATES 처리하는 방식 자체가 다르다, 테이블의 전체 데이터를 삭제하는 경우, 시스템
+활용 측면에서는 201.070보다는 시스템 부하가 적은 TRUNCATE 7[2.81.8을 권고한다. © TRUNCATE TABLES]
+경우 정상적인 복구가 불가능하므로 주의해야 한다.
+
+SQL 건문가 hole [449

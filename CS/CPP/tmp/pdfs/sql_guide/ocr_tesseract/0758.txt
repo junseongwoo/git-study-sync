@@ -1,0 +1,30 @@
+TEWP TABLE TRANSFORMATION — 임시테이블 생성
+LOAD AS SELECT
+VIEW (Cost=94K Card=5K Bytes=345K)
+UNION-ALL
+SORT (GROUP BY) (Cost=S7K Card=1 Bytes=120)
+HASH JOIN (Cost=57K Card=1 Bytes=120)
+PARTITION RANGE (SINGLE)
+PARTITION HASH (ALL)
+TABLE ACCESS (FULL) OF '카드거래내역'
+VIEW (Cost=50 Card=833K Bytes=13M)
+TABLE ACCESS (FULL) OF 'SYS.SYS_TEMP_OFDID6B4E_4C0C42BA' — 임시 테이블 사용
+SORT (GROUP BY) (Cost=36K Card=746 Bytes=20K)
+VIEW (Cost=36K (ard=746 Bytes=20K)
+UNION-ALL
+SORT (GROUP BY) (Cost=34K Card=1 Bytes=74)
+HASH JOIN (Cost=34K Card=1 Bytes=74)
+PARTITION RANGE (ITERATOR)
+PARTITION HASH (ALL)
+TABLE ACCESS (FULL) OF '현금거래내역' (Cost=34K Card=1 Bytes=58)
+VIEW (Cost=50 (ard=833K Bytes=13M)
+TABLE ACCESS (FULL) OF 'SYS.SYS_TEMP_OFDID6B4E_4CBC42BA" — 임시 테이블 사용
+SORT (GROUP BY) (Cost=2K (ard=745 Bytes=38K)
+HASH JOIN (Cost=2K Card=746 Bytes=38K)
+
+고객 테이블은 20009 건이 넘고, 카드 테이블은 1억 건이 넘지만 위험고객여부 = '" 조건을 만족하는 위험고객
+카드는 그리 2 집합이 아니다. 만약 materialize 방식의 With dg 이용할 수 없다면, 아래쪽 메인 쿼리에서
+위험고객카드 집합을 얻기 위해 매번 고객과 카드 테이블을 반복해서 읽어야 한다. 그것이 성능상 문제가 된다면
+임시 테이블을 물리적으로 미리 생성해 두는 수밖에 없다.
+
+768 SL #87 이드

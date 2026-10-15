@@ -1,0 +1,49 @@
+활용
+4. 그룹 내 행 순서 함수
+가. FIRST_VALUE 함수
+FIRST-VALUE 함수를 이용해 파니선별 윈도우에서 가장 먼저 나은 값을 구한다. SQL 노rve려서는 지원하지
+않는 함수다. MIN 함수를 활용해 같은 결과를 얻을 수도 있다.
+[예제] 부서별 직원들을 연통이 높은 순서부터 정열하괴 파티션 내에서 가장 먼저 나은 갔을 출력한다 RANGE
+PRECEDING은 현재 행을 기준으로 파티션 내 첫 번째 행까지의 범위를 지정한다.
+[예제]
+SELECT SAL
+FIRST_VALIÆ (EWE) WER (PARTITIm BY FTt0 BY SAL
+RM I•.EED RECEDI%) AS EWE-FV
+FO EP,
+[실행 결과]
+2Ø
+20
+2€
+KI%
+CLßRK
+UILLER
+SCOTT
+SYITH
+TIRÆR
+UQTIN
+JAES
+SAL
+24%
+2975
+11%
+12%
+12%
+EV&-FV
+KIW
+KIt"
+KI沰
+SCOTT - •
+SCOTT - •
+SCOTT
+SCOTT
+BLAKE
+BLAKE
+BLAKE
+BLAKE
+BLAKE
+BLAKE
+14 행이 선택묐습니다.
+실행 결과를 보면 같은 부서 내에 최고 급여를 받는 사람 둘이 있을 경우, 즉 *로 표시한 부서번호 20의 S田I그과
+FORD 중에서 어느 사람이 최고 급여자로 선택될지는 위의 SQL 문만 갖고는 판단할 수 없다.
+FIRST-VALUE는 다른 함수와 달리 공동 등수를 인정하지 않고 처음 나은 행만 처리한다. 위처럼 구두 등수가
+전문가 ,}o|드 337

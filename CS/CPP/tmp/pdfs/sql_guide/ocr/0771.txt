@@ -1,0 +1,27 @@
+과목 III 고급 활용 및 튜닝
+읽으려는 데이터를 다른 트랜책선이 갱신중이더라도 기다리지 않는다.
+갱신하려는 데이터를 다른 트랜잭션이 읽는중이더라도 기다리지 않는다(select .. for update 구문으로
+읽는 경우는 제외).
+ㆍ 갱신하려는 데이터를 다른 트랜책션이 갱신중이면 기다린다.
+(hcle이 공우 1忒k을 사용하지 않고도 일관성을 유지할 수 있는 것은 Undo 데이터를 이용한 다중버전 동시성
+제어 메커니즘(3절에서 설명함)을 사용하기 때문이다. 또한 별도의 Lock 매니저 없이 레코드의 속성으로서 로우
+1忒k을 구현했기 때문에 아무리 많은 레코드를 갱신하더라도 절대 Lock Escalation은 발생하지 않는다.
+나. 테이블 Lock
+한 트랜책션이 로우 Lock을 얻을 때 해당 테이블의 테이블 Lock도 동시에 얻는다. 이렇게 하는 것은 현재
+트랜잭션이 갱신중인 테이블의 구조를 변경(DDL 오퍼레이션)하지 못하게 막기 위해서다.
+테이블 LDCk 종류는 아래 5가지가 있다.
+Row Share(RS)
+Row
+Share(S)
+Share Row Exclusive(SRX)
+ㆍ Fxclusive(X")
+대표적으로 select … for update 문을 수행할 때 RS 모드 테이블 Lock을 얻고, insert•update•delete 문을
+수행할 때 RX 모드 테이블 Lcrk을 얻는다.
+DML 로우 Lcrk을 처음 얻는 순간 묵시적으로 테이블 L(Yk을 얻지만, 아래처럼 lmk Table 명령어를 이용해
+명시적으로 테이블 Lock을 얻을 수도 있다.
+l«k t±le in share
+lxk t±le ~ in exclusive -,
+t±le in share 彘;
+l«k t±le in share exclusive 彘:
+lxk t±le in exclusive 彘;
+782 전문가 /셔드

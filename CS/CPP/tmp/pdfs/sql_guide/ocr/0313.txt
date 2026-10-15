@@ -1,0 +1,47 @@
+과목 II QL 기본과 활용
+(NI團 ALL
+SELECT • A11 • AS DNAME, Jæ
+(Ⅷ (하 AS EP_CNT, SI-N (SAL) AS SAL-SI-N
+~ B.FTPO = A.FTW
+EP CNT
+~ BY
+[실행 콜과]
+ACCUNTI%
+A11
+A11
+A11 kpartænts
+A11
+A11
+8 행이 선택욌습니다.
+A11 Jobs
+A11 J±s
+A11 1固s
+ANALYST
+CLERK
+UANAGER
+RESIDENT
+SALESUAN
+3
+5
+6
+2
+4
+3
+1
+4
+SAL-SIN
+87%
+1%75
+41%
+8275
+실행 결과는 별도의 ORDER BY 조건을 명시하지 ?땄기 때문에 DNAME이나 JOB에 대해 정렬돼 있지 않다.
+GROIJPING SETS 사용 SQL
+[예제] 일반 그를 함수를 GROUPING SETS 함수로 변경해 부서래 JOBW 인원수와 급여 합을 구하라.
+[예삐 OracIe
+SELECT CASE ″I劂 (B ″) *fEN 1 TÆN |A11 Departments' ELSE B.DNAME END AS DNAME
+CASE ″I馮 ) MfN 1 1氈N 'A11 JObs'
+cu-NT (하 AS EP-CNT, 91 (A.SAL) AS SAL SIJM
+FO EP 시 FT 8
+″ BY ″I蘭 SETS (8 DNA%, A.JØ
+BY 8.~ A.JW
+ELSE EIO AS 3%

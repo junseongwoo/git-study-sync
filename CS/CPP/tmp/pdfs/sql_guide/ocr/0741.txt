@@ -1,0 +1,48 @@
+圊장 고급
+m-distfibute 힌트를 이용해 데이터 분배 방식을 조정하고 나서 다시 수행해 본 결과, 다음과 같이 2분 29초
+만에 작업을 완료했다.
+S翬〉 INSERT /*+ APEPO*/ INTO 상품기본이력 ( .… )
+2 SELECT /*+ MRED PARALLEL(A,16) PARALLEL(B,16) P9ALLEL(C,16) PARALLEL(D,16)
+| Pstart | PstØ
+3
+4
+5
+6
+7
+8 ALO
+PO—DISTRI&JTE(B, N(Æ, PARTITTO
+PQ-DISTRIBJTE(C, WC, m.AXAST)
+PQ_DISTRIWTE(D, HASH, IuSH) */ .
+상품기본이력임시 a, 상품 b, 코드상세 (, 상품상세 d
+a. 상품번호= b.상품번호
+87%%2 개의 행이 만들어졌습니다.
+경 과: %℃2:29.%
+1 INSERT STATEENT
+| AS SELECT
+11+에T
+JOIN
+RASH JOIN WTER
+}ASH 1이N
+PÅRTITIOI }ASH ALL
+TABLE ACCESS FI.IL
+TABLE ACCESS FIIL
+TABLE KCESS FIIL
+TABLE ACCESS FIXL
+사. 병렬 처리 시 주의사항
+| 상품기본이력임시
+상품
+| 코드상세
+1 상품상세
+52巫
+1
+1
+: Distrib
+1 (뚀)
+| PRT (繡)
+병릴 귀리를 과도하게 사용하면 시스템을 마비시길 수도 있다. 적절한 사용 기준이 필요하다는 에기인데, 그럼
+언제 병릴 처리 기법을 사용하는 것이 바람직할까?
+ㆍ 동시 사용자 수가 적은 애플리케이션 환경(아간 배치 프로그램, DW, OLAP 뉘에서 직렬로 처리할 때보다
+성능 개선 효과가 확실할 때(놔 이 기준에 따르면 작은 테이블은 병렬 처리 대상에서 제외됨)
+ㆍ OIflP성 시스템 환경이더라도 직업을 할리 완료함으로쎄 직렬로 처리할 때보다 오히려 전체적인 시스템 리소스
+(CPU, 메모리 등) 사용률을 감소시길 수 있을 때(놔 수행 빈도가 높지 않음을 전제로)
+전문가 ,삐드 751

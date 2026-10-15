@@ -1,0 +1,34 @@
+제2장 SQL 활용
+
+아래는 22, *?, +? 연산자를 사용한 쿼리다. 01 열은 패턴을 최소로 일치시키는 2008.6605 방식을 사용했기
+때문에 323까지만 일치한다. 패턴을 최대로 일치시키는 greedy WAS 사용한 62 BE 322까지 일치한다.
+
+[예제]
+
+SELECT REGEXP_SUBSTR ('aaaa’ , '27?30' ) AS (1 — nongreedy 방식
+, REGEXP_SUBSTR ('aaaa’ , 'a?aa’ ) AS (2 — greedy 방식
+, REGEXP_SUBSTR ('xaxbxc', “\w*?x\w') AS (3
+, REGEXP_SUBSTR ('xaxbxc', "\wix\w' ) AS (4
+, REGEXP_SUBSTR (‘abxexd', "\w?x\w') AS (5
+, REGEXP_SUBSTR (‘abxcxd’, "\wix\w' ) AS (6
+FROM DUAL;
+
+aa              aaa            xa             xaxbxc             206            abxexd
+
+1개의 행이 선택됐습니다.
+
+다음은 (mp, (mp, {mnp 연산자를 사용한 쿼리다. cl, 2 열은 m3] 일치를 사용했기 때문에 greedy 방식과
+관계없이 결과가 동일하다. 03 열은 최소 일치므로 33와, 64 열은 최대 일치이므로 33333와 일치한다. 65 열은
+최소로 aa, 06 열은 최대로 aaaa®t 일치한다.
+
+[예제
+
+SELECT REGEXP_SUBSTR ('2000' , '리가?'    ) AS (1 — nongreedy 방식
+, REGEXP_SUBSTR ('aaaa’ , ‘af2}'     ) AS (2 — greedy 방식
+, REGEXP_SUBSTR (‘asada ', ‘af2,}?' ) 45 (3
+, REGEXP_SUBSTR (‘aaaaa ', 'af2,}'    ) AS C4
+, REGEXP_SUBSTR ('aaaaa ', 'a{2,4)?' ) AS (5
+, REGEXP_SUBSTR ('aaaaa ', 'a{2,4)' ) AS (6
+FROM DUAL;
+
+SQL 전문가 ol [385

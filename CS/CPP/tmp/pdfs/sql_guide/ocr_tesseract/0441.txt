@@ -1,0 +1,44 @@
+과목 11 SQL 기본과 활용
+
+예제] SQL Server
+
+TRUNCATE TABLE TEAM;
+
+명령이 완료됐습니다.
+
+실행 결과] SQL Server
+
+exec sp_help '00.16써'
+
+90
+
+Column_name                    Type                           Length                      Nullable
+TEAM_ID               char                     3             no
+REGION_NAME                      varchar                                  8                         no
+TEAM_NAME                       varchar                            40                      no
+E_TEAM_NAME                    varchar                            50                      yes
+ORIG_YYYY                       char                                  4                      yes
+STADIUM_ID                     char                                  3                      no
+ZIP_CODE1                       char                                  3                      yes
+ZIP_CODE2                       char                                  3                      yes
+ADDRESS                          varchar                            80                      yes
+DDD                          varchar                        3                 yes
+TEL                                varchar                            10                      yes
+FAX                              varchar                          10                    yes
+HOMEPAGE                        varchar                            50                      yes
+OWNER                           varchar                           10                    yes
+
+[예제] DROP TABLEE 사용해 해당 테이블을 제거하고 테이블 구조를 확인한다.
+
+iH] Oracle
+
+DROP TABLE TEAM:
+
+테이블이 삭제됐습니다.
+
+DESC TEAM;
+
+ORA-04043: TEAM 객체는 존재하지 않습니다.
+
+448 | 50 전문가 가이드 _
+

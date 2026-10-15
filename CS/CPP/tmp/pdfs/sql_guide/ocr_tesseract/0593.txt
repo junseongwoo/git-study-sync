@@ -1,0 +1,36 @@
+과목 mM QL 고급 활용 및 튜닝
+
+제3절 해시 조인
+
+1. 기본 메커니즘
+
+해시 조인(48351 Join) NL 조인이나 소트 머지 조인이 효과적이지 못한 상황을 해결하고자 나온 방식이다.
+oli Oracle SQL Server 각각에서 해시 조인으로 유도했을 때의 실행계획이다.
+
+select /*+ ordered use_hash(e) */ d.deptno, d.dname, e.empno, e.ename
+from dept d, emp e
+where d.deptno = e.deptno
+
+Execution Plan
+0      SELECT STATEMENT Optimizer=CHOOSE (Cost=5 Card=654 Bytes=35K)
+1 © HASH JOIN (Cost=5 Card=654 Bytes=35K)
+2   1    TABLE ACCESS (FULL) OF 'DEPT' (Cost=2 Card=654 Bytes=14K)
+3   1    TABLE ACCESS (FULL) OF 'EMP’' (Cost=2 Card=327 Bytes=11K)
+
+select d.deptno, d.dname, e.empno, e.ename
+from dept d, emp e
+
+where d.deptno = e.deptno
+
+option (force order, hash join)
+
+StmtText
+
+{—Hash Match( Inner Join, HASH:([d].[deptno])=([e].[deptno]))
+{—Table Scan(0BJECT: ([SQLPRO]. [dbo]. [dept] AS [d]))
+{—Table Scan(0BIECT: ([SQLPRO]. [dbo]. [emp] AS [e]))
+
+해시 조인은 둘 중 작은 집합(8004 Input) 읽어 해시 영역(821 Area)oll 해시 테이블(= 해시 맵)을 생성하고,
+반대쪽 2 집합(00056 Input) 읽어 해시 테이블을 탐색하면서 조인하는 방식이다([그림 1-4-5] 참조).
+
+602 | su 2874 가드

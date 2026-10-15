@@ -1,0 +1,25 @@
+과목 Ｌ SQL 기본과 활용
+
+1                Q               a
+1                     4                  7
+
+1개의 행이 선택됐습니다.
+
+Of. REGEXP_COUNT 함수
+REGEXP_COUNT 함수는 500006_아)3[에서 일치한 pattern?] 314-8 반환한다.
+
+REGEXP_COUNT (source_char, pattern [, position [, match_param]])
+
+다음은 REGEXP_COUNT 함수를 사용한 쿼리다. 강조한 부분이 일치한 문자열이다. 01 열은 5회, 62 열은
+3회 일치한다.
+
+SELECT REGEXP_COUNT ('123123123123123', '123', 1) AS (1
+, REGEP_COUNT ('123123123123' , '123', 3) AS (2
+FROM DUAL;
+
+죠
+wl BR
+
+1개의 행이 선택됐습니다.
+
+ 390 | sgu 전가 가이드

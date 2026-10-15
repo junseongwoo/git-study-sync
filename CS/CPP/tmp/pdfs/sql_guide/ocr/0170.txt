@@ -1,0 +1,31 @@
+제1장 기본
+[실행 결과l
+ISMJLL-TEST
+Not-Ⅳ11
+(1개 행 적용됨)
+[예제] 선수 테이블에서 성남 일화전0KK㈅ 소속 선수의 이름과 포지션을 코하는따 포지션이 없는 경우는 '彎으로
+{예제] Oracle
+SELECT PLAYER-NAUE AS 선수명, mSITW4 AS 포지션, WL (mSITW4, •없음•) AS NL포지션
+FROM PLAYER
+HERE TEAM 10 =
+[예제] SQL Server
+SELECT PLAYER-KAME AS 선수명, 酈ITI애 AS 포지션, 19칩LL (POSITION, '없음•) AS NL포지션
+FO PLAYER
+MÆRE TEAN ID = 'KW
+[예제] WL 함수와 ISNULL 함수를 사용한 SQL 문장은 벤더 공통적으로 CASE 문장으로 표현할 수 있다.
+[예제]
+SELECT PLAYER-NANE 선수영, mSITIm AS 포지션
+MfN 而ITI협4 IS NULL • 없음•
+ELSE
+EtO AS NL포지션
+FO PLAYER
+M{ERE TEN_ID = ,
+[실행 결과l
+선수명
+자경복
+정학범
+포지션
+NL포지션
+DF
+없음
+~ 가이드 175

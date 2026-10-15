@@ -1,0 +1,35 @@
+제3장 인덱스 튜닝
+제2절 테이블 액세스 최소화
+
+1. 인덱스 ROWIDO] 의한 테이블 랜덤 액세스
+
+쿼리에서 참조되는 칼럼이 인덱스에 모두 포함되는 경우가 아니라면, '테이블 랜덤 액세스'가 일어난다. 다음
+실행계획에서 ‘Table Access By Index 80\]1)'라고 표시된 부분을 말한다.
+
+SQL> select * from 고객 where 지역 = 'ME';
+Execution Plan
+SELECT STATEMENT Optimizer=ALL_ROWS
+
+0
+1 0 TABLE ACCESS (BY INDEX ROWID) OF '고객' (TABLE)
+2:1     INDEX (RANGE SCAN) OF '고객 지역.100' (INDEX)
+
+SQL Server ‘RID 10064)이라는 표현을 사용한다. 아래 실행계획에서 알 수 있듯이 인덱스로부터 테이블을
+NL 조인하는 것처럼 처리경로를 표현하고 있다.
+
+{ StmtText
+|—Nested Loops(Inner Join, OUTER REFERENCES: ([Bmk1000]))
+
+{—Index Seek(0BJECT:([..].[dbo].[ 222]. [24_2|_idx]), SEEK:([ZI%] = '서울' )
+|—RID Lookup(0BIECT:([..].[dbo].[22]), SEEK: ([Bnk1000]=[Bnk160]) LOOKUP ORDERED FORWARD)
+
+참고로 2000 이하 버전에서는 아래처럼 ‘Bookmark Lookup'o]2k 표현했다. 이것이 2512] Oracle 실행계획과
+같은 모습이다.
+
+StmtText
+
+|—Bookmark Lookup(BOOKMARK:  [Bmk1660]), 0BJECT:([..].[dbo].[224]))
+{—Index Seek(0BJECT:([..].[dbo]. [124]. [22 Z| idx]), 566(:([지역] = '서울' ))
+
+자금부터 “Table Access By Index 80400) 또는 ‘RID(-Bookmark) Lookup'©.2 표현되는 테이블 랜덤 액세스의
+내부 메커니즘을 자세히 살펴보자.

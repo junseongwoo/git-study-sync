@@ -1,0 +1,37 @@
+1) 부하 프로필
+Load Profile
+ym                               Per Second               Per Transaction
+Redo size:            140,839.60             5,345.24
+Logical reads:           47,768.26            1,812.93
+Block changes:                711.34                27.00
+Physical reads:                736.69                27.9%
+Physical writes:                 84.69                 3.21
+User calls:               2,401.63                  91.15
+Parses:                412.66                15.66
+Hard parses:                  1.49                 0.06
+Sorts:                138.94                 5.27
+Logons:                  0.79                 0.03
+Executes:              1,187.18                45.06
+Transactions:                 26.35
+
+Per Second 각 측정 지표 값들을 측정 AlZKSnapshot Interval, 초)으로 나눈 것이다. 따라서 초당 ¥5HLoad)
+발생량을 의미한다. Per Transaction 각 측정 지표 값들을 트랜잭션 개수로 나눈 것이다. 한 트랜잭션 내에서
+평균적으로 얼만큼의 부하([080)가 발생하는지를 보여주는데, 트랜잭션 개수(11205800025)는 commit 또는
+rollback 수행 횟수를 단순히 더한 같이다.
+
+2) 인스턴스 효율성
+
+Instance Efficiency Percentages (Target 106%)
+
+Buffer Nowait %: 99.99       Redo NoWait %: 100.00
+Buffer Hit %: 98.71     In-memory Sort %: 100.00
+Library Hit %: 99.67        Soft Parse §: 99.64
+Execute to Parse %: 65.24         Latch Hit §: 99.89
+
+Parse (PU to Parse Elapsd §: 0.85      $ Non-Parse (PU: 97.9%
+
+인스턴스 효율성 항목들은 Execute to Parse % 항목을 제외하면 모두 100%에 가까운 수치를 보여야 정상이다.
+참고로 위에서 Parse CPU to Parse Elapsd % 항목이 0.8590로 비정상적으로 낮은 수치를 보인 것은 Active
+프로세스가 동시에 폭증하면서 과도한 Parse Calle] 발생한 장애 상황에서 측정했기 때문이다.
+
+SQL 전문가 가이드 |533.

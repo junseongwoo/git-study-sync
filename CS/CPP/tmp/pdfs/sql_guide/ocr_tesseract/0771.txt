@@ -1,0 +1,42 @@
+과목 I QL 고급 활용 및 튜닝
+
+를 읽으려는 데이터를 다른 트랜잭션이 갱신중이더라도 기다리지 않는다.
+를 갱신하려는 데이터를 다른 트랜잭션이 읽는중이더라도 기다리지 않는다(56161 ... for update 구문으로
+읽는 경우는 제외).
+
+| | 갱신하려는 데이터를 다른 트랜잭션이 갱신중이면 기다린다.
+
+Oracieo] 공유 Lockg 사용하지 않고도 일관성을 유지할 수 있는 것은 Undo 데이터를 이용한 다중버전 동시성
+제어 메커니즘(3절에서 설명함)을 아해 때문이다. 또한 별도의 Lock 매니저 없이 레코드의 속성으로서 로우
+Locke 구현했기 때문에 아무리 많은 레코드를 갱신하더라도 절대 Lock Escalation 발생하지 않는다.
+
+나. 테이블 6000<
+트랜잭션이 로우 100\을 얻을 때 해당 테이블의 테이블 100『(도 동시에 얻는다. 이렇게 하는 것은 현재
+데레   Ho] 갱신중인 테이블의 구조를 변경(01)[, 오퍼레이션)하지 못하게 막기 위해서다.
+테이블 Lock 종류는 아래 5가지가 있다.
+
+HB Row Share(RS)
+
+Bl Row Exclusive(RX)
+
+Hl Share(S)
+
+BM Share Row Exclusive(SRX)
+를 Exclusive(X)
+
+EH 02 select ... for update 문을 수행할 때 RS 모드 테이블 Lock 얻고, insert-update-delete 문을
+수행할 때 RX 모드 테이블 100\을 얻는다.
+
+DML 로우 Lock2 처음 얻는 순간 묵시적으로 테이블 Locke 얻지만, 아래처럼 Lock Table 명령어를 이용해
+명시적으로 테이블 100을 얻을 수도 있다.
+
+lock table emp in row share mode;
+
+lock table emp in row exclusive mode;
+
+lock table emp in share mode;
+
+lock table emp in share row exclusive mode;
+lock table emp in exclusive mode;
+
+782 501. #87} 가이드

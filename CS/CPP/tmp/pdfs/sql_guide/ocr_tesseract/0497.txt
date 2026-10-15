@@ -1,0 +1,51 @@
+where
+and
+and
+
+제1장 SQL 수행 구조
+
+and to_char(last_day(add_months(sysdate,=1)), 'yyyymmdd')
+group by 카드번호
+)<
+
+, ( - 연중거래실적
+
+select 카드번호, 540(거래금액) 거래금액
+from 일별카드거래내역
+where 、 거래일자 between to_char(add_months(sysdate,=12), 'yyyymmdd')
+and to_char(sysdate-1, "yyyymmdd' )
+group by 카드번호
+)d
+6.카드번호 (+) = 3.카드번호
+<.카드번호 (+) = 3.카드번호
+9.카드번호 (+) = 3.카드번호
+
+위 SQL 어제 거래가 있었던 카드에 대한 전일, 주간, 전월, 연중 거래 실적을 집계하고 있다. 논리적인 전체
+집합은 과거 1년치인데, 전일ㆍ주간ㆍ전월 데이터를 각각 액세스한 후 조인한 것을 볼 수 있다. 전일 데이터는 총
+4번을 액세스한 셈이다.
+
+SQLE 다음과 같이 작성하면 과거 1년치 데이터를 한 번만 읽고 전일, 주간, 전월 결과를 구할 수 있다. 즉
+논리적인 집합 재구성을 통해 액세스해야 할 데이터 양을 최소화할 수 있다,
+
+select 카드번호
+, sum(case when 거래일자 = to_char(sysdate-1,"yyyynmdd")
+then 거래금액
+end ) 전일_거래금액
+, 5배( case when 거래일자 between to_char(sysdate-7, '////0000' )
+and    to_char(sysdate-1, 'yyyymmdd' )
+then 거래금액
+ed ) _ 주간 거래금액
+, sum( case when 거래일자 between to_char(add_months(sysdate,=1),'yyyymn') || '01'
+and to_char(last_day(add_months(sysdate,=1)),"yyyymmdd')
+then 거래금액
+ed ) HY 거래금액
+, sun 거래금액 )연중 거래금액
+from 일별카드거래내역
+where 、 거래일자 between to_char(add_months(sysdate, 12), 'yyyymmdd' )
+and to_char(sysdate-1, "yyyymndd')
+group by 카드번호
+10009. 5내( case when 거래일자 = to_char(sysdate-1,'yyyymndd")
+then 거래금액
+ed )>0
+
+SQL 전문가 가이드 (505

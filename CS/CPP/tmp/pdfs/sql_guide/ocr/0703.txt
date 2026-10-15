@@ -1,0 +1,32 @@
+圊장 고급 류닝
+에1만 발생하므로 제법 빠르게 수행된다. 하지만 위와 길이 자바나 C, 비주얼 베이직, 델파이 등으로 개발한 에플리
+커미션에선 수행 성능에 심각한 문제가 나타난다.
+실제 수행해 보면 수 분이 소요되지만, 트레이스를 걸어 분석해 보면 서버 내에서의 일량은 아주 미미한 것으로
+나타난다. 이것은 수행 시간 중 대부분을 네트워크 구간에서 소비다 중 일부는 애플리케이션 「난에서 소비한 시간일
+것임)하거나 데이터베이스 에1이 발생할 때마다 OS로부터 CPU와 메모리 리소스를 할당받으려고 기다리는 데
+소비하기 때문이다.
+앞 프로그램을 다음과 같이 (he 따I로 통합하면 1~2초 내에 수행되는 것을 획읜|할 수 있다. 수행 시간이 이렇게
+대폭 줄어든 이유는 최대 110만 번 발생할 수 있는 데이터베이스 CaIl을 단 2회(Parse 1회, Execute Call
+1회)로 줄인 데에 있다.
+國li( (1쬬s
+蝕li( static VOid execute(Cmr«tion (예, Strirv irut—month) Exceptim {
+String 9LStmt = •INSERT 1酊0 납입방법별-월요금집계•
++ 첫납입월,고객번호,납입방법코드,납입금액) •
++ "SELECT x.납입월, x.고객번호, (粼64 + Y.W) 납입방법코드 •
+1, 지로, 2, 자동이제, 3, 신용카드, 4, 현드폰, 5, 인터넷) •
++ 'FRW 월요금납부실적 지 (SELECT LEVEL (야蟹(T BY LEVEL 수 5) Y •
++ "*ERE x.납입월 =7•
++ "NO y.tO ( %(呱지로, 0, uL, 1), 叭뗴자동이체, 0, 기 •
+寘呱신용카드, 0, MIL, 3) , 貳예현드폰, 0, 4) •
+十
+, 寘噫인터넷, 0, MJLL, 5) )•
+stmt = cm.prepareStatænt(SQLStmt);
+stmt.setString(I,
+stmt.executQKY();
+static Connection thrms Exceptim { •••••• }
+static void releaseCwrctim(Ccmection (예) Excepti(Y1 {
+여秀li( static void args) Exception{
+Cmt*,ction (예 =
+execute(cm, •2″로);
+releaseCn«tim(cm) ;
+전문가 가이드 713

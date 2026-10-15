@@ -1,0 +1,40 @@
+제6장 고급 50 튜닝
+
+I SS SL PUSS VE 5 5 128)
+TNT —i--sedio
+[NF Te ey
+(TS ea ae
+
+2 5 10 20 50 100 200 500 1,000 2000 5000
+[그림 [1-6-7] ArraySize, Fetch Count, 블록 !/0관계
+
+[그림 -6-7|에서 눈에 띄는 것은, &ㅠ3075126를 키운다고 해서 Fetch Count} 블록 1/07} 같은 비율로 줄지
+않는다는 점이다. 따라서 무작정 크게 설정한다고 좋은 것은 아니며, 일정 크기 이상이면 오히려 리소스만 낭비하게
+된다. 데이터 크기에 따라 다르다. 위 데이터 상황에서는 100 정도로 설정하는 Al 적당해 보인다.
+
+SQL*Plus 이외의 프로그램 언어에서 Array 단위 Fetch 기능을 활용하는 방법을 살펴보자. Oracle PL/SQLAA
+커서를 열고 레코드를 Fetchdd, (3항 Array 000655108에서 보았던 Bulk Collect 구문을 사용하지 않는 한)
+91까지는 한 번에 한 건씩 처리(51081680\ 『6(아))했었다. 108부터는 자동으로 100개씩 Array Fetch?t 일어난다.
+다만 아래처럼 커서의 Open, Fetch, 이066가 내부적으로 이뤄지는 Cursor FOR Loop 구문을 이용할 때만 작동한
+다는 사실을 기억하기 바란다.
+
+for item in cursor
+1000
+
+자바에서는 어떻게 411375120를 조정하는지 살펴보자.
+
+String sql = “select custid, name from customer”;
+PreparedStatement stmt = conn.prepareStatement(sql);
+stat, setFetchSize(100);  — StatementOA 조정
+
+ResultSet rs = stmt.executeQuery();
+// rs. setFetchSize(100); . -- ResultSetOfA 조정할 수도 ACH
+
+while( rs.next() ) {
+int empno = rs. getInt(1);
+String ename = rs.getString(2);
+System, out. println(empno + ":" + ename);
+}
+
+전문가 가이드 | 721
+

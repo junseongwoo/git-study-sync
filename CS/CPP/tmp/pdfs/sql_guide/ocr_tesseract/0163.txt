@@ -1,0 +1,16 @@
+과목 1 SQL 기본과 활용
+
+6. CASE 표현
+
+CASE 표현은 IF-THEN-ELSE 논리와 유사한 방식으로 표현식을 작성해 50Ｌ의 비교 연산 715-8 보완하는
+역할을 한다. ANSI/ISO SQL 표준에는 CASE 6000659101이라고 표시돼 있는데, 함수와 같은 성격을 갖고 있으며
+Oracle® Decode 함수와 같은 기능을 하므로 단일행 내장 함수에서 같이 설명한다.
+
+일반 프로그램 및 PL/SQLY IF-THEN-ELSE-END 로직은 다음과 같다.
+
+ENAME             REVISED_SALARY
+
+88898838865|
+11733 EH
+
+168 SQL 전문가 가이드

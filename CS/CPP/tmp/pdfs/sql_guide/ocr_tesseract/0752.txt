@@ -1,0 +1,46 @@
+과목 I QL 고급 활용 및 튜닝
+
+SELECT 거래일시, 체결건수, 체결수량, 거래대금
+FROM (
+SELECT 거래일시, 체결건수, 체결수량, 거래대금
+에 시간별종목거래 A
+WHERE ：페이지이동 = "NEXT'
+AD . 종목코드 = :154_ 00
+AD 거래일시 d= :trd_time
+ORDER BY 거래일시
+)
+WHERE ROWNUM <= 11
+
+Execution Plan
+SELECT STATEMENT Optimizer=ALL_ROWS (Cost=5 Card=1 Bytes=49)
+© COUNT (STOPKEY)
+1    VIEW (Cost=5 Card=1 Bytes=49)
+2     FILTER
+3      TABLE ACCESS (BY INDEX ROWID) OF '시간별종목거래' (TABLE) (Card=1 Bytes=56)
+4       INDEX (RANGE SCAN) OF '시간별종목거래 PK' (INDEX (UNIQUE)) (Card=1)
+
+we WN <
+
+첫 화면에서는 :trd_time 변수에 사용자가 입력한 거래일자 또는 거래일시를 바인딩한다. 사용자가 ‘THS(B)
+버튼을 눌렀을 때는 '이전' 페이지에서 출력한 마지막 거래일시를 입력한다.
+
+ORDER BY 절이 사용됐음에도 실행계획에 소트 연산이 전혀 발생하지 않음을 확인하기 바란다.
+COUNT(STOPKEY)= [종목코드 + 거래일시] 순으로 정렬된 인덱스를 스캔하다가 11번째 레코드    드에서 멈추게 됨을
+의미한다.
+
+사용자가 '이전(책)' 버튼을 클릭했을 때는 아래 SQLE 사용하며, :4_006 변수에는 이전 페이지에서 출력한
+첫 번째 거래일시를 바인딩하면 된다.
+
+SELECT 거래일시, 체결건수, 체결수량, HAUS
+FROM (
+SELECT 거래일시, 체결건수, 체결수량, 거래대금
+에 시간별종목거래 A
+WERE :페이지이동 = PREV’
+MD 종목코드 = :194.<0
+MD 거래일시 <= :0_ time
+ORDER BY 거래일시 065(
+)
+WHERE ROM <= 11
+ORDER BY 거래일시
+
+762 50 #87 가이드

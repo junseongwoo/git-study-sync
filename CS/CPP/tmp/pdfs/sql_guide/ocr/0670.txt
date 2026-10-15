@@ -1,0 +1,30 @@
+과목 III * 고급 활용 및 튜닝
+Oracle
+SELECT STATEENT (Cost=4 Car&11 Bytes=165)
+1 0 (- BY) (Cost=4 (a祚11 Bytes=165)
+2 1 TAQE ACCESS (FULL) 'S(0뚀E顰• (TABLE) (Cost=3 Card=14 Bytes=210)
+SQL Server
+SÜtText
+1三~e 호al표(呼*:([E尠rl*1<A뚀 *EN [Expr1@14]=(0) THEN WLL ELSE IExpr1€15) 타이)
+{—streæ AW•뿌te(猷예才 BY: )
+1-s예t(″ BY•([aml.[ül.[enJ.[deptm] ASC, ASC))
+l—T±le Scan(ßJECT:([SQLPR01. [뻬 . [에히))
+Orade은 Hashing 알고리즘으로 그룹별 집계를 수행하기도 하는데, 그때는 실행계획에 다음과 같이 표시된다.
+P1m
+SELECT STATEENT (Cost=4 Car&11 Bytes=165)
+1 0 ″ (~ 삐 (Cost=4 Car&11 Bytes=165)
+ACCESS (HJLL) 'SCOTT.EP' (TABLE) (Cost=3 (ar乍14 Bytes=210)
+4) Sort Unique : 결과 집힘에서 중복 레코드를 제거할 때 나타난다. Union 연산자나 다음과 같이
+연산자를 사용할 때가 대표적이다.
+select distixt deptrn fræ or±r 바 deptm
+Oracle
+Plm
+SELECT STATEENT (Cost=5 Ca&3 Bytes=6)
+0
+0 (lAIu) ((05t=4 Card=3 Bytes=$)
+1
+1 Tm.E ACCESS (FULL) 'EP' (Cost=2 (ar수13 Bytes=26)
+2
+SQL Server
+전문가 가이드
+Disunct

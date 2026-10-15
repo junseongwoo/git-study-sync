@@ -1,0 +1,42 @@
+* consistent gets                   = query
+* physical reads                    = disk
+* SQL*Net roundtrips to/from client = fetch count
+* rows processed                    = fetch rows
+
+Call 통계 아래쪽 Row Source Operationo| 표시된 항목에 대해서도 간단히 살펴보자.
+
+Rows Row Source Operation
+
+1 TABLE ACCESS BY INDEX ROWID EMP (cr=2 pr=0 pw=0 time=80 us)
+1 INDEX UNIQUE SCAN EMP_PK (cr=1 pr=0 pw=0 time=44 us) (object id 5278)
+
+왼쪽에 보이는 Rows: 각 수행 단계에서 28 (Flow-Out) 로우 수를 의미한다. 수행 단계별로 우측 괄호
+안에 보이는 ㅇ@, pr, pw, time 등은 각각 Consistent 모드 블록 읽기, 디스크 블록 읽기, 디스크 블록 쓰기, 소요시간
+(05=010105600010)을 의미한다. 91에서는 2, 00 대신 r, 로 표시했었다.
+
+그리고 꼭 기억해야 할 중요한 사실은, 부모는 자식 노드의 값을 누적한 값을 갖는다는 점이다. 예를 들어 위에서
+EMP 테이블 액세스 단계는 @-2이고, 그 자식 노드인 EMP_PK QlElA 액세스 단계는 ㅠ-1이므로 인덱스를 읽고
+난 후 테이블을 액세스하는 단계에서 순수하게 일어난 cr 개수는 1이다.
+
+라. DBMS_XPLAN 패키지
+
+dbms_xplan 패키지를 이용해 예상 실행계획을 확인하는 방법을 앞에서 살펴봤다. 이 패키지를 이용해 SQL
+트레이스 정보를 확인하는 방법을 살펴보자.
+
+sql_trace 파라미터를 변경해서 SQL 트레이스를 수집하면 트레이스 파일이 DBMS 서버에 저장된다. 서버 접속
+보안이 강화된 최근 환경에서는 DBAS 포함한 특정 사용자 그룹 외에는 사용하기 힘든 방식이다. 이에 Oracle
+SQL 트레이스 정보를 서버 파일로 남기지 않고 SGA 메모리에 남기는 WAS 108부터 제공하기 시작했다.
+
+사용방법은 간단하다. 세션 MoM statistics_level 파라미터를 3]]로 설정하거나, 분석 대상 SQL 문에
+gather_plan_statistics 힌트를 사용하면 된다. 그러면 Oracle SQLS 수행하는 동안 오퍼레이션 단계별 수행
+통계를 수집한다.
+
+수집된 정보는 다음과 같이 dbms_xplan.display_cursor 함수로 확인할 수 있다.
+
+select * from table(dbms_xplan.display_cursor('7fSy19ywtkwgt', 0, '10512415') );
+
+select * from table(dbms_xplan.display_cursor('7f5y19ywtkwgt’, ©, 'MEMSTATS'));
+select * from table(dbms_xplan.display_cursor('7fSy19ywtkwgt', 0, 'ALLSTATS'));
+select * from table(dbms_xplan.display_cursor(null, null, ‘ALLSTATS'));
+
+524 | sqL 전문가 가이드

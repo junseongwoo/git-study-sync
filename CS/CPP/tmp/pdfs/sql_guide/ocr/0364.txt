@@ -1,0 +1,22 @@
+R22 활용
+3 행이 선택묐습니다.
+IN 절에 별칭을 지정하면 FOR 절에 지정한 열의 값을 변경할 수 있다. 다음 쿼리는 10, 20으로 값을 변경했다.
+[예제|
+SELECT Jæ, DEPTPO, SAL
+FO TI
+I&IVOT (SAL FTIO IN (DIO_SAL AS 10, D20-SAL AS 20))
+0皬R BY 1, 기
+[실행 결과]
+1 ANALYST
+CLERK
+CLERK
+2Ø
+3 행이 선택됐습니다.
+다음과 같이 INCLUDE NU니S 기위드를 기술하면 UNPIVOT된 열의 값이 널인 행도 결과에 포함된다.
+[예제]
+SELECT Jæ, DEPTPO SAL
+FO TI
+I}PIVOT INCLIÆ M.JLLS (SAL Fm MNO IN (DIO-SAL AS 10, D2€_SAL AS 꼬))
+ORDER BY 1, 2;
+-3
+전문가 ,iol드 371

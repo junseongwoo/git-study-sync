@@ -1,0 +1,41 @@
+과목 IT SQL 기본과 활용
+
+Ee = CA
+
+ojo ojo
+
+o¥
+
+(이
+
+4
+EIS ERS
+EdS ESF
+
+45 개의 행이 선택됐습니다.
+
+[예제] 급여와 커미션을 포함한 연봉을 계산하면서 NVL 함수의 필요성을 알아본다.
+
+SELECT ENAME AS 사원명, SAL AS 월급, COMM AS 커미션
+, (SAL * 12) + COMM AS 연봉&, (SAL * 12) + NVL (COMM, 0) AS 연봉8
+FROM EWP;
+
+사원명             월급              커미션             HEA             연봉8
+SMITH                 800                                                            9600
+ALLEN                1600                   300               19500               19500
+WARD                    1250                     500                15500                15500
+JONES                  2975                                                                35700
+MARTIN                 1250                    1400                16400                16400
+BLAKE                 2850                                                          34200
+CLARK                  2450                                                                29400
+500                  3000                                                                36000
+KING                    5000                                                                60000
+TURNER                 1500                        0                18000                 18000
+ADAMS                   1100                                                                 13200
+JAMES               950                                                  11400
+FORD                    3000                                                                36000
+MILLER             1300                                                  15600
+
+14 개의 행이 선택됐습니다.
+
+176 50. #문가 가이드

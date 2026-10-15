@@ -1,0 +1,113 @@
+과목 ll SQL 기본과 활용
+|예제1 SQL Server
+SELECT ISWLL(B.TEu—ID, 'K' + CONVERT(VARCHAR(2),
+O_N&ER() OVER BY ISWLL(B TEAM_ID, )
+, A.STADIW_ID))) AS TEAM_ID
+Sl.BSTRI%(A.STADIIN-NAk, 1, 2) AS REGm_NAME
+SLBSTRI%(A.STADIIN-N.W 1, 2)
++ CASE HEN IS t0T WLL THEN 'FC' ELSE •시티즌• EtO AS TE,å* NAME
+A.SWIW_ID, A.D, A.TEL
+INTO TEAY-TP
+FO STADILN A LEFT J이N TEAM
+B.STDIIN_ID = A.SWIUU_ID;
+(꼬개 행이 영향을 받음)
+!예제]
+SELECT *
+FO TEAM-TE
+[실행 결과]
+TEA 10
+K02
+K03
+K10
+K11
+K12
+K13
+K14
+K15
+K16
+(17
+(18
+4%
+REGIm_NAME
+울산
+수원
+포항
+인천
+저주
+광양
+성남
+서울
+대전
+창원
+광주
+강통
+자주
+대구
+대구
+부산
+일산
+전문가 가이드
+TEAN NAME
+을산F(
+수원F(
+포항F(
+인천F(
+전주F(
+부산FC
+광양F(
+성남F(
+서을F(
+대전F(
+창원F(
+광주F(
+강통F(
+제주F(
+대구F(
+대구시티즌
+부산시티즌
+일산시티즌
+STADIIN_ID
+(04
+B04
+B01
+%3
+(02
+D01
+B02
+B05
+%2
+(05
+A02
+A03
+F01
+F02
+F03
+031
+031
+%3
+051
+%1
+031
+02
+예2
+055
+033
+053
+054
+051
+031
+TEL
+220-24圈
+259-21
+282-2002
+273-1763
+247-5771
+792-%%
+753-3%
+2128-2973
+252-2002
+圈4-84圈
+24圈-鵝2
+459-%31
+%31-2460
+602-2011

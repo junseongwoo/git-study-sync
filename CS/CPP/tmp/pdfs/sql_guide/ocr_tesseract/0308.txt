@@ -1,0 +1,22 @@
+제2장 SQL 활용
+
+STEP 4-2. ROLLUP 함수 일부 사용
+[예제] GROUP BY ROLLUP (DNAME, JOB) 조건에서 GROUP BY DNAME, ROLLUP(JOB) 조건으로 변경한 경우다.
+
+SELECT CASE GROUPING (B.DNAME) WHEN 1 THEN ‘All Departments’ ELSE B.DNAME END AS DNAME
+, CASE GROUPING (A.JOB ) WHEN 1 THEN ‘All Jobs’       ELSE A.J0B END AS 208
+
+, COUNT (*) AS EMP_CNT, SUM (A.SAL) AS SAL_SUM
+FROM EMP A, DEPT B
+WHERE B.DEPTNO = A,DEPTNO
+GROUP BY B.DNAME, ROLLUP (A.J0B)
+ORDER BY B.DNAME, A.J0B;
+
+| 12 행이 선택됐습니다.
+
+결과는 마지막 All Departments & All Jobs 줄만 계산이 되지 않았다. 8011)07이 JOB 칼럼에만 사용돼
+DNAMEQ|| 대한 집계는 필요하지 않기 때문이다.
+
+(삭제된 레코드)
+All Departments All Jobs      14 29025
+

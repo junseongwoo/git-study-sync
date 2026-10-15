@@ -1,0 +1,56 @@
+駁장 분석 도구
+아래는 출력된 결과 샘플이다 SQL 트레이스에서 본 실행계획 통계(Plan Statistics)와 같은 정보를 보여준다.
+TABLE A | 1
+TOEX 1 EP-SAL |
+Næ | Starts
+| E-Rows A-Tiæ 1 Mfers 1
+1 TABLE ACC 1
+NESTED L 1
+2
+3
+4
+1荻X R |
+5
+DEPT |
+PK-FT 1
+1
+1
+1
+1
+12
+1
+12
+12
+12
+1
+12 | 꾀 181
+25 1 惢:%.93 1
+12 | %:%.04 1
+12 | %:%.02 |
+12 %:惢.01
+Predicate Inf01Ntion (i&ntified 바 Ø•eration id) :
+4 - access("E" "SAL">=IE)
+5 - access( "D". "DEPTW=•E". "FTIO")
+Starts 항욕은 각 오퍼레이션 단계를 몇 번 실행했는지를 나타낸다. 예를 들어 PK-DEPT 인덱스를 액세스하는
+단계(I房5) starts 항목에 적한 12는 이 단계를 열두 번 실행했음을 의미한다. 이는 EW 테이블 액세스 단계(I房3)
+에서 얻는 결과건수 12와 관련 있다. NL 조인은 드라이빙 집합에서 얻은 결과건수만큼 반대쪽 집합을 액세스하기
+때문이다.
+E-Rows는 SQL 트레이스에 없는 정보다. SQL을 수행하기 전 옵티마이저가 실행단계별로 예상했던 로우 수를
+의미하며, 예상 실행계획에서 보여주는 로우 수(Rows 또는 Card)와 일치한다.
+e뻐지 항목은 이름만 다를 뿐, SQL 트레이스 실행계획 통계와 같다. 일치하는 항목을 매핑해 보면 다음과 같다.
+DBMS-XPLAN
+A-Rows
+A-Ti1TP
+Buffers
+Reads
+트레이스
+rows
+time
+각 단계에서 읽거나 갱신한 건수
+각 단계별 소요시간
+개시에서 읽은 버퍼 불록 수
+디스크로부터 읽은 볼록 수
+각 항목은 기본적으로 누적값을 보여주며, 이래처럼 fonnat 옵션에 last를 추가하면 마지막 수행했을 때의 일람을
+보여준다.
+select * fræ table(åms-xplm.dxsplay-cursor(rull, 'ALLSTATS LAST'));
+전문가 가이드 525

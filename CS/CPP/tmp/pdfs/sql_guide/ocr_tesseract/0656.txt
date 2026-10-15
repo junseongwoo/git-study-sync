@@ -1,0 +1,42 @@
+제5장 SOL 옵티마이저
+
+'600' 테이블. 스캔 수 1, 논리적 읽기 수 2, 물리적 읽기 수 0, 미리 읽기 수 0.
+SQL Server 실행 시간 : (Py 시간 = 005, 경과 시간 = 005.
+
+Rows Executes StmtText
+
+14       1 select e.empno, e.ename, e.sal, e. hiredate
+14       1 |—Clustered Index Scan(0BJECT: ([MyDB]. [dbo]. [Emp]. [PK Esp] AS [e]))
+
+다음은 50Ｌ Serverolld 테스트한 것인데, 마찬가지로 Inner % 테이블이 제거된 것을 & 수 있다.
+
+select e.empno, e.ename, e sal, e. hiredate
+from emp e, dept d
+where d.deptno(+) = e.deptno — Outer 조인
+
+Rows Row Source Operation
+
+14 TABLE ACCESS FULL EMP (cr=8 pr=0 pw=0 time=d us cost=3 size=770 card=14)
+
+7. OR 조건을 Unione g 변환
+
+아래 쿼리가 그대로 수행된다면 08 조건이므로 Full Table 5027으로 처리될 것이다(아니면 job 칼럼 인덱스와
+deptno 칼럼 인덱스를 결합하고 비트맵 연산을 통해 테이블 액세스 대상을 Welsh Index Combineo] 작동할
+수도 있다).
+
+select * from emp
+where job = 'CLERK' or deptno = 20
+
+만약 ]05과 060000에 각각 생성된 인덱스를 사용하고 싶다면 다음과 같이 union all 형태로 바꿔주면 된다.
+
+select * from emp
+
+where job = ‘CLERK’
+union all
+
+select * from emp
+
+where deptno = 20
+
+and LNNVL(job='CLERK')
+

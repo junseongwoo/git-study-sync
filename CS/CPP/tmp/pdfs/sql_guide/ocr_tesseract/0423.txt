@@ -1,0 +1,41 @@
+과목 11 SQL 기본과 활용
+
+, NATION         VARCHAR(20)                                                            i
+. BIRTH_DATE     DATE
+
+, SOLAR        CHAR(1)
+
+. HEIGHT        SMALLINT
+
+. WEIGHT         SMALLINT
+
+, CONSTRAINT PLAYER PK PRIMARY KEY (PLAYER_ID)
+, CONSTRAINT PLAYER FK FOREIGN KEY (TEAM_ID) REFERENCES TEAM (TEAM_ID)
+IH
+
+명령이 완료됐습니다.
+
+테이블 생성 예제에서 추가적인 주의 사항 몇 가지를 확인하면 다음과 같다.
+
+- 테이블 생성시 대소문자 구분은 하지 않는다.
+기본적으로 테이블이나 칼럼명은 대문자로 만들어진다.
+- DATETIME 데이터 유형에는 별도로 크기를 지정하지 않는다.
+- 문자 데이터 유형은 반드시 가질 수 있는 최대 길이를 표시해야 한다.
+- 칼럼과 칼럼의 구분은 콤마로 하되, 마지막 칼럼은 콤마를 찍지 않는다.
+- 칼럼에 대한 제약조건이 있으면 CONSTRAINTS 이용해 추가할 수 있다.
+
+테이블 생성문에서 제약조건은 각 칼럼의 데이터 유형 뒤에 기술하는 칼럼 LEVEL 정의 방식(예, PLAYER NAME
+VARCHAR(20) NOT 치011)과, 테이블 정의 마지막에 모든 제약조건을 기술하는 테이블 LEVEL 정의 방식(예,
+CONSTRAINT PLAYER_PK PRIMARY KEY (PLAYER_ID))o| 있다. 하나의 SQL 문장 내에서 두 가지 방식은
+혼용해서 사용할 수 있으며, 같은 기능을 갖고 있다.
+
+다. 제약조건
+
+제약조건(0088518218])이란 사용자가 원하는 조건의 데이터만 유지하기 위한, 즉 데이터의 무결성을 유지하기
+위한 데이터베이스의 보편적인 방법으로, 테이블의 특정 칼럼에 설정하는 제약이다.
+
+테이블을 생성할 때 제약조건을 반드시 기술할 필요는 없지만, 이후에 ALTER TABLES 이용해 추가-수정하는
+경우 데이터가 이미 입력된 경우라면 처리 과정이 쉽지 않으므로 초기 테이블 생성 시점부터 적합한 제약조건에
+대한 충분한 검토가 있어야 한다.
+
+430 sp 287 가드

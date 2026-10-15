@@ -1,0 +1,40 @@
+과목 [| QL 고급 활용 및 튜닝
+
+냐. 데이터베이스 631!과 시스템 확장성
+
+데이터베이스 Calle 개별 프로그램의 수행 속도에 큰 영향을 미칠 뿐만 아니라 궁극적으로 시스템 전체의 확장성에
+영향을 미친다.
+
+인터넷 쇼핑몰에서 조회한 상품 중 일부를 선택한 후 위시리스트(0/18111150)에 등록하는 프로그램을 예로 들어
+보자. '위시리스트` 버튼을 클릭할 때 수행되는 프로그램을 아래처럼 구현했다면, 선택한 상품이 5개일 때 메소드
+(method) 5번 호출해야 3122 Parse Calli Execute Callo] 각각 5번씩 발생한다.
+
+void insertWishList ( String p_custid , String p_goods_no ) {
+SQLStmt = "insert into wishlist ^
++ "select custid, goods_no *
++ “from cart "
++ “where custid =? *
++ "and goods_no =? * ;
+stmt = con. preparedStatement(SQLStmt) ;
+stmt. setString(1, p_custid);
+stmt. setString(2, p_goods_no);
+stmt. execute();
+
+반면 다음과 같이 구현했다면 메소드를 1번만 호출하기 때문에 22756 Call? Execute Call'= 각각 한 번씩만
+발생한다. 4시간 내내 이 프로그램만 수행된다면 시스템이 5배의 확장성을 갖는 것이다. AP 설계가 DBMS 성능을
+좌우하는 중요한 요인임을 보여주는 사례다.
+
+void insertiishlist ( String p_custid , String[] p_goods_no ) {
+SQLStmt = “insert into wishlist ^
++ "select custid, goods_no "
++ "from cart *
++ "where custid = ? *
++ "and goods no in ( ?, ?, ?, ?, ? )" ，;
+stmt = con.preparedStatement(SQLStmt) ;
+stmt. setString(1, p_custid);
+for(int i=0; i < 5; i+){
+stmt. setString(i+2, p_goods_no[i]);
+}
+stot .execute();
+
+714 | 50. 전문가 가이드

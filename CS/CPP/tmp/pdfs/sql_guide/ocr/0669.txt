@@ -1,0 +1,27 @@
+select 5네sal), max(sal), min(sal) from
+Oracle
+Executim Plan
+0 SELECT STATEENT (Cost=3 Car&1
+1 0 SM (WEGATE) (Car#1 Bytes=4)
+2 1 TABLE ACCESS (FULL) 'EP' (TABLE) ((05t=3 (ar乍14 Bytes=%)
+SQL Server
+StmtText
+l—Äte HN [Expr1€14]=(0) TÆN ELSE [Ewr1015] &))
+l—Strea Wegate(DEFINE: )
+1-T豳le ScanOJECT: ([SQÄ. [서 . [에pl ))
+2) Sort Order : 정렬된 결과 집합을 얻고자 할 때 나타난다
+select * fræ order 91 &5(
+Oracle
+Executim PI혜
+0 SELECT STATEENT 0)timizer=ALL-OS (Cost=4 (ar뉴14 Bytes=518)
+1 0 SRT (ÆR 삐 (Cost=4 Car#14 Bytes=518)
+2 1 TABLE ACCESS (FIIL) 'EP' (TABLE) (Cost=3 Car&14 Bytes=518)
+SQL Server
+StntText
+l—Sort(ÆR BY.([S한ml.[쇠.[“1.[“1] DESC))
+3) Sort Group BY : Sorüng 알고리즘을 사용해 그름별 집계를 수행할 때 나타난다.
+select deptno. 5”(“1), mx(sal), min(sal)
+gra.o &ptno,
+虧장 고급 류님
+1
+전문가 7P|드 679

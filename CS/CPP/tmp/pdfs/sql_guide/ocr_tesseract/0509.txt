@@ -1,0 +1,37 @@
+select * from table(dbms_xplan.display('PLAN_TABLE', 'SQL1', 'TYPICAL'));
+
+select * from table(dbms_xplan.display('PLAN_TABLE', 'SQL1‘, 'SERIAL'));
+
+basic 옵션을 사용하면 ID, Operation, Name 칼럼만 보인다. format 인자를 아래처럼 구사하면 Rows, Bytes,
+Cost 칼럼까지 출력해 준다.
+
+select * from table(dbms_xplan.display('PLAN_TABLE', 'SQL1’
+, "BASIC ROWS BYTES (051' ));
+
+{ Id | Operation            | Name     | Rows | Bytes | Cost (%CPU) |
+ㅣ 0 | SELECT STATEMENT         ㅣ         SE PR .06068아    3 (0)!
+ㅣ 1 | TABLE ACCESS BY INDEX ROWID | DEPT      |    9:79 18s)    12200) 1
+ㅣ 2 | NESTED LOOPS          |         ㅣ 12 | 660|    3 (0) |
+ㅣ 3 ㅣ TABLE ACCESS BY INDEX ROWID| EMP       ㅣ 12|ㅣ| 444|    2 (0) |
+BE    INDEX RANGE SCAN       | EWPSALIDX | 12 |     |    1 (|
+ㅣ 51 INDEX RANGE SCAN     | DEPT_PK  |  1   |  0 (0) |
+
+ROWS, BYTES, COST 이외에 추가로 사용할 수 있는 옵션으로는 다음과 같은 것들이 있다.
+
++ PARTITION
+
++ PARALLEL
+
++ PREDICATE
++ PROJECTION
+* ALIAS
+
+* REMOTE
+
++ NOTE
+
+위 모든 항목들을 다 출력해 보이려면 일일이 나열할 필요없이 all 옵션을 사용하면 된다.
+
+} select * from table(dbms_xplan.display('PLAN_TABLE', '5011', 'ALL'));
+
+518s AA ole

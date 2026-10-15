@@ -1,0 +1,22 @@
+과목 Ⅱ 기본과 활용
+결제! SQL Server
+일-- •知 R.AYER.TEP 10• 'PLAYER—ID' , • (OL혜•
+주의: 개체 이름 부분을 변경하면 스크립트 및 저장 프로시저를 손상시길 수 있습니다.
+테이를 생성 시 부여했던 제약조건을 삭제하는 명령어 형태는 다음과 같다.
+ALTa TBLE 테이불명 ~ OdSTRAINT 제약조건명;
+[예제] PLAYER 테이불의 외래키 제약조건을 삭제한다.
+[예제] Oracle
+ALTR TÆLE PLAYER ~ OISTRAINT PLAYER_FK;
+테이블이 변경됐습니다.
+{예제] SQL Server
+ALTER TBLE PLAYER ″ CmSTRAINT PLAYER_FK;
+명령이 완료묐습니다.
+마. CO••dSTRAlNT
+테이블 생성 시 제약조건을 적용하지 않았다면, 생성 이후에 필요에 의해 제약조건을 추가할 수 있다. 다음-은
+특정 칼럼에 제약조건을 추가하는 명령어 형태다.
+ALTER Tß8LE 테이불명 06TRAINT 제약조건명 제약조건 (칼럼명);
+[匧 PLAYER 테이불에 TEÆ•4 테이불과의 외래키 제약조건을 추가한다. 제약조건명은 PLAYER-FK로 하고, PLAYER 테이불의
+TE"—ID 칼럼이 TEAM 테이불의 TEAM-IDS 참조하는 조건이다.
+[예제1 Oracle
+ALTER TZE R-AYER C06TRAINT PLAYER_FK FnEIGN KEY (TEAM—ID) REFERENCES TEN(TEAM—ID);
+위21!步흐문가 ,뻐드

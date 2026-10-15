@@ -1,0 +1,43 @@
+m장 활용
+STEP 4-2. ROLLUP 함수 일부 사용
+[예제] GROUP BY ROLLUP (DNAME, 」예) 조건에서 GROUP BY DNAME, ROLLUP(」에 조건으로 변경한 경우다
+[예제]
+SELECT CASE GRQPING (BNÄ *EN 1 T}CN 'A11 ELSE B.NE EtO AS ~
+CASE 獸이.PI沰 (A.Jæ ) HN 1 TÆN •섀1 JObs'
+, (Ⅷ (하 AS EP-CMT, SW (A.SAL) AS SAL-SI-N
+FO EP A, FT B
+WHERE = A.FTIO
+6″ BY 8.~, QLIP (A.n)
+ÄR BY B.(NAÆ An;
+ELSE A.Jæ EW AS Jæ
+[실행 결과)
+A((嚼1馬
+ACCO.JNTII"
+ACQMI%
+Jæ
+CLERX
+WLYST
+CLERK
+uN%ER
+EP_CNT
+1
+1
+1
+2
+2
+1
+1
+1
+4
+SAL-SIN
+24%
+1嚼
+刃75
+12 행이 선택왰습니다.
+결과는 마지막 A11 Departments & A11 Jo懿 줄만 계산이 되지 않았다 ROLLUP이 JOB 칼럼에만 사용돼
+DNAME에 대한 집계는 필요하지 않기 때문이다.
+(삭제된 레코드)
+A11 A11 J0bs
+14
+2%25
+전문가 가이드 315

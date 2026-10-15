@@ -1,0 +1,38 @@
+과목 I QL 고급 활용 및 튜닝
+
+다음과 같이 SQLS 작성하고 실행계획을 확인해 보자(실행계획 확인하는 방법은 2장에서 설명한다).
+
+SQL set autotrace traceonly exp;
+
+SQL> select * from t
+2 where deptno = 10
+
+3 ad n=1;
+ㅣ] Id | Operation         | Name | Rows | Bytes | Cost (%CPU) |
+| 0| SELECT STATEMENT            |       |    51 210 |    2 (0)
+ㅣ 1] TABLE ACCESS BY INDEX ROWID BATCHED | T   |  5 | 218]  2 (0)|
+ㅣ 21 INDEX RANGE SCAN     | x01 |  51  |  1 (0)
+
+옵티마이저가 T_X01 인덱스를 선택했다. T_X02 인덱스를 선택할 수 있고, 테이블을 Full Scan® 수도 있다.
+T_X01 인덱스를 선택한 근거는 무엇일까?
+
+위 실행계획에서 맨 우측에 005[가 2로 표시된 것을 확인하기 바란다. T_X02 인덱스를 사용하도록 206× 힌트를
+지정하고 실행계획을 확인해 보면, Cost7} 다음과 같이 192 표시된다.
+
+SQL> select /차 1006(ㅠㅠ×82) */ * from t
+2 where 00000 = 10
+
+3 ad m=1;
+ㅣ 1d | Operation                | Name | Rows | Bytes | Cost (%CPU)}
+| © | SELECT STATEMENT             |       |     5{ 210 |     19 (0)!
+ㅣ 1| TABLE ACCESS BY INDEX ROWID BATCHED | T     |    5| 210}    19 (0)}
+ㅣ 2| INDEX RANGE SCAN            | T x02 |     51      |     18 (0)}
+
+Table Full Scandt=% full 힌트를 지정하고 실행계획을 확인해 보면, Cost7} 다음과 같이 292 표시된다.
+
+SQL> select /자 full(t) */ * from t
+2 where deptno = 10
+3 ad no=1;
+
+490 su 전문가 hele
+

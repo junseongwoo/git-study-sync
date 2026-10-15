@@ -1,0 +1,46 @@
+과목 III SQL 고급 활용 및 튜닝
+가. 징역 파티션 Pruning
+액세스할 파티션을 컴파일 시3(Compile-Time)에 미리 결정하며, 파티션 카 칼럼을 상수 조건으로 조회하는
+경우에 정적(Static) Pruning이 작동한다.
+fræ
+1* 2 1
+916-ra鸚
+916-也te •″%1 •
+916 &te 수 '2″1 •
+SELECT STATEENT
+PRTITIm
+TABLE ACCESS FIJLL
+1 Pstart
+3
+| Pstop 1
+4
+4
+SALES_R%E
+바 ospration id):
+2 - filter(ÜSALES AhD "SALES DA표•〈=|2″이 ')
+나. 동적 準l션 Pruning
+액세스할 파티션을 실행 시점(Run-T1me)에 결정하며, 파티션 키 칼럼을 바인드 변수로 조회하는 경우가 대표적
+이다 조인할 때도 lnner 테이블이 조인 칼럼 기준으로 파티셔닝돼 있으면 동적(Dynamic) Pruning이 작동한다.
+*ere
+ard
+1
+1*
+1
+1*
+11
+21
+31
+91즈-曲te :a
+91堡-也te 수 :b
+1 SELECT STATEENT
+FILTER
+PRTITIm
+TBL.E KCESS FIJLL
+SALES-RAt6E
+Pstart
+KEY
+KEY
+1 Pst0P
+KEY
+KEY
+732 전문가/끼드

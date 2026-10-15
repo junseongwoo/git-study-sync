@@ -1,0 +1,43 @@
+과목 11 기본과 활용
+74鱗
+조76
+그匶S
+URTIN
+BLAKE
+SCOTT
+KI%
+UILLER
+20
+20
+20
+10
+SALES
+SALES
+RESEAR대
+SALES
+SALES
+ACQNTI%
+RESEAR대
+ACQNTI%
+RESEARCH
+SALES
+RESEARCH
+ACCu-NTIt6
+14 개의 행이 선택묐습니다.
+위에서 사용한 ON 조건절에 대해서는 뒤에서 추가 설명하도록 한다.
+3. NATURAL J이N
+NATURAL J이N은 두 테이블 간에 동일한 이름-을 갖는 모든 칼럼들에 대해 EQUI(=) J이N을 수행한다.
+NATVRALJ이N이 명시되면 추가로 USING 조건절, ON 조건절, WHERE 절에서 조인 조건을 정의할 수 없다.
+그리고 SQL 던rve하서는 지원하지 않는 기능이다.
+[예제] 사원 번호와 사원 이름, 소속부서 번호와 소속부서 이름을 찾아본다.
+[예제1
+SELECT A - 喞T測, W&E
+FO ~ A NATI-RAL 그이N 8;
+{실행 결과]
+749
+3寬S
+248 전문가 가이드
+20
+RESEAR대
+SALES
+RESER대

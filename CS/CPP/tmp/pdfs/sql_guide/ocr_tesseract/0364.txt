@@ -1,0 +1,30 @@
+제2장 QL 활용
+
+3 행이 선택됐습니다,
+
+IN 절에 별칭을 지정하면 FOR 절에 지정한 열의 값을 변경할 수 있다. 다음 쿼리는 10, 20으로 값을 변경했다.
+
+SELECT 208, DEPTNO, SAL
+
+FROM T1
+UNPIVOT (SAL FOR DEPTNO IN (010 5시 AS 10, D20_SAL AS 20))
+ORDER BY 1, 2;
+
+DEPTNO             SAL
+ANALYST                  20             6000
+CLERK                    10             1300
+CLERK                    20             1900
+
+SEEN -
+
+3 행이 선택됐습니다.
+
+다음과 같이 INCLUDE NULLS 키워드를 기술하면 UNPIVOTE 열의 to] dQ! 행도 결과에 포함된다.
+
+SELECT 208, DEPTNO, SAL
+
+FROM T1
+UNPIVOT INCLUDE NULLS (SAL FOR DEPTNO IN (010 54 AS 10, D20_SAL AS 20))
+ORDER BY 1, 2;
+
+SQL 전문가 가이드 [371

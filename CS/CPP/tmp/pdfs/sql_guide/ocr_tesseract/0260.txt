@@ -1,0 +1,39 @@
+과목 501 기본과 활용
+
+                          a
+ENANE                    DNAME
+SMITH                    RESEARCH
+ALLEN                    SALES
+WARD                      SALES
+JONES                    RESEARCH
+MARTIN                  SALES
+BLAKE                    SALES
+CLARK                    ACCOUNTING
+5001                    RESEARCH
+KING                      ACCOUNTING
+TURNER                  SALES
+ADANS                    RESEARCH
+JAMES                    SALES
+FORD                      RESEARCH
+MILLER                  ACCOUNTING
+
+14 개의 행이 선택됐습니다.
+
+정상적인 데이터 모델이라면 CROSS PRODUCTZH 필요한 경우는 많지 않지만, 간혹 튜닝이나 리포트를 작성하기
+위해 고의적으로 사용하는 경우가 있을 수 있다. 그리고 데이터 웨어하우스의 개별 01\(8\445108(차원)을 FACT
+(사실) 칼럼과 조인하기 전에 모든 DIMENSIONS] CROSS PRODUCTS 먼저 구할 때 유용하게 사용할 수 있다.
+
+7. OUTER JOIN
+
+전통적인 방식의 조인 문법에서 Oracle 조인 칼럼 뒤에 '(+)'를 표시했고, Sybase 비교 연산자의 앞이나
+뒤에 “(+)'를 표시했었다. 조인 조건과 WHERE 절 검색 조건의 구분이 불명확하다는 단점, 14이나 OR 연산자
+사용 시 에러 발생, (+) 표시가 누락된 조인 및 검색 조건 존재 시 OUTER JOIN®| 아닌 INNER JOINS. 2 수행,
+FULL OUTER JOIN 미지원 등 불편함이 많았다.
+
+ANSI/ISO SQL 표준 방식의 OUTER JOIN 문법을 사용하면 위에서 언급한 문제점들을 해결할 수 있다. 또 대부분의
+관계형 12845에서 지원하므로 높은 호환성을 가지는 장점이 있다.
+
+OUTER JOIN 역시 조인 조건을 FROM 절에서 정의하겠다는 표시이므로 USING 조건절이나 ON 조건절을
+필수적으로 사용해야 한다.
+
+266 | sq 287 가드 _.

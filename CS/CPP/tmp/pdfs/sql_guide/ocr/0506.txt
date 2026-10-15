@@ -1,0 +1,39 @@
+駁장 분석 도구
+Rows | Bytes 1 (05t (飜기
+| ld
+| 0 1 SELECT STATEkNT
+| 1 TABLE ACCESS BY 血ID
+1* 2 : 1뚀X I,NI이兀 『丈觥
+Predicate lnformation id):
+2 - access("EPt0"=7Æ)
+나. AutoTrace
+11
+32| 1(0기
+AutoTrace를 이용하면 실행계획뿐만 아니라 여러 가지 우용한 실행통계를 확인할 수 있다.
+SQL> set 예
+SQL> select * frm where = ″
+E"OENAME Jæ
+7B JANES
+CLERK
+1 개의 행이 선택됐습니다.
+Execution Plan
+P1an hash value: 40246『甓새
+(圓
+76%
+HIREDATE
+81/12/03 嚮:%:%
+쿼리 수행혇과
+9%
+ld
+1 0
+1* 2
+1 Næ
+| SELECT STATEUENT
+| TA8LE ACCESS BY 1糠X RMD
+1鞭X I.NIQUE SCAN
+Pr«iicate lnforætion (ickntifi«i 바 id):
+2 - 貳(菴s聳~•=澶)
+예상 실행계획
+| Bytes | (05t ßCRJ) |
+1 (0기
+전문가 가이드 515

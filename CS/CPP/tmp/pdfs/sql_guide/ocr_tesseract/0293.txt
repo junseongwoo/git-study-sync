@@ -1,0 +1,46 @@
+과목 ] SQL 기본과 활용
+
+두 번째 질문에 대해 SQL 문을 작성하고 결과를 확인해 보자.
+
+2) 케이리그 소속 선수들 중에서 소속이 삼성블루윙즈 팀인 선수들과
+포지션이 골키퍼(6()인 선수들을 모두 보고 싶다.
+
+속이 삼성블루윙즈 팀인 선수들의 집합과
+
+2) 케이리그 소속 선수 중 소
+수 중 포지션이 골키퍼(0)인 선수들 YB BUY
+
+케이리그 소속 선
+
+SELECT TEAM_ID AS 팀코드, PLAYER NAME AS 선수명, POSITION AS 포지션
+, BACK_NO AS 백넘버, HEIGHT AS 7|
+FROM PLAYER
+WHERE TEAM_ID = 'Ke2'
+UNION
+SELECT TEAM_ID AS 팀코드, PLAYER NAME AS 선수명, POSITION AS 포지션
+, BACK_NO AS 백넘버, HEIGHT AS 7|
+FROM PLAYER
+WHERE POSITION = 6K’;
+
+팀코드             선수                 포지션             백넘버              키
+“01                 권정혁               6K                         1             195
+“01                 HEY               6K                       21             196
+Ke1                 양지원               6K                       45            181
+“81                     이무림                  6K                             31                185
+Ke1                 최창주              6K                       40            187
+“02                 가비                 [3                       10            177
+Kez                 강대희               MF                       26            174
+Ke2                   고종수                MF                          2              176
+1092               고창현             WF                      8           170
+
+DF                       43            181
+
+Ke2                김강진
+
+88 개의 행이 선택됐습니다.
+
+두 집합의 조건이 모두 동일 테이블에 있다면, 다음과 같이 논리 연산자를 이용한 간단한 SQL 문으로도 변경
+가능하다.
+
+300 | SQL 전문가 가이드
+

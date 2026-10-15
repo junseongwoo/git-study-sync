@@ -1,0 +1,51 @@
+제/장 .00(과 트랜잭션 동시성 제어
+
+다. Lock 호환성
+
+'호환된다'는 말은 한 리소스에 두 개 이상의 100(을 동시에 설정할 수 있음을 뜻한다. 앞서 설명한 Lock 종류별로
+
+호환성을 요약하면 [표 [11-7-2)9 같다((0'는 두 모드 간에 후환성이 있음을 의미).
+[표 따-7-2] SQL Server Lock 호환성
+
+Intent Shared(IS)
+Shared(S)
+
+0
+
+0       |
+Update(V)   이 | 9 | |. JES [xt
+
+0
+
+0
+
+Intent exclusive(IX)
+
+Shared with intent exclusive(SIX)
+Exclusive(X)
+
+|        il                       {
+
+스키마 Locke] 호환성은 다음과 같다.
+
+BW Sch-St= Sch-M& 제외한 모든 100과 호환된다.
+BE Sch-M2 어떤 Lockets 호환되지 않는다,
+
+3. Oracle Lock
+
+Oracle 공유 리소스와 사용자 데이터를 보호할 2202 DML Lock, DDL Lock, 2f2|(Latch), 버퍼 Lock,
+라이브러리 캐시 Lock/Pin 등 다양한 종류의 Locke 사용한다. 이들 중 애플리케이션 개발 측면에서 가장 중요하게
+다뤄야 할 Locke 무엇보다 DML Lockolch
+
+DML Lock, 다중 사용자에 의해 동시에 액세스되는 사용자 데이터의 무결성을 보호해 준다. DML 100(에는
+로우 Lock? 테이블 Locke] 있다.
+
+가. 2% Lock
+
+OracleolX] 로우 Locke 항상 배타적이다. insert, update, delete 문이나 56160(...(0 update 문을 수행한
+트랜잭션에 의해 설정된다. 이 트랜잭션이 커 또는 롤백할 때까지 다른 트랜잭션은 해당 로우를 변경할 수 없다.
+
+ㅇ306에서 일반 select 문에 의해 읽힌 레코드에는 어떤 100\도 설정되지 않는다. 다른 DBMSHY 읽기 작업에
+대한 공유 10을 사용하지 않기 때문에 0[20!6에서 읽기와 갱신 작업은 서로 방해하지 않는다.
+
+SQL 전문가 가이드 | 781.

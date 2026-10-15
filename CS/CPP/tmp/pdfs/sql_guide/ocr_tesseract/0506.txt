@@ -1,0 +1,45 @@
+제2장 SQL 분석 도구
+= = = 샌> ㅅㅅㅠㅅㅅ
+
+a ave”
+| Id | Operation                 | Name | Rows | Bytes | Cost (3CPU)|
+| 0| SELECT STATEMENT            |       |    11    21 1 01
+ㅣ 1 | TABLE ACCESS BY INDEX ROWID | EWP |    loa Tes (0)
+a       11      ㅣ 0 (8)!
+
+]1* 2ㅣ INDEX UNIQUE SCAN     | 6 |
+
+Predicate Information (identified by operation id):
+
+2 - access ( "EMPNO"=7900)
+
+나. AutoTrace
+AutoTraceE 이용하면 실행계획뿐만 아니라 여러 가지 유용한 실행통계를 확인할 수 있다.
+
+SQL> set autotrace on
+SQL> select * from emp where empno = 7900;
+
+EMPNO  ENAME    J08     MGR     HIREDATE        SAL     COMM DEPTNO
+7990 JAMES CLERK 7698    81/12/63 00:00:00 950     30
+i =U
+1 개의 행이 선택됐습니다.             = 쿼리 수행결과
+Execution Plan
+Plan hash value: 4024650034                           예상 실행계획
+,
+ㅣ Id | Operation               | Name | Rows | Bytes | Cost (%CPU) |
+| 0 | SELECT STATEMENT          |       {ihe (Rela 12 © 1    1 (0)
+| 1 | TABLE ACCESS BY INDEX ROWID | 680 | 1 | 32 |    1 (0)
+I* 2 | INDEX UNIQUE SCAN        | Be | 1 |     |    0 (0)
+
+Predicate Information (identified by operation id):
+
+2 - access( "EMPNO"=7900)
+
+[3
+
+ㅣ
+!
+그
+1
+
+SQL 전문가 가이드 [515

@@ -1,0 +1,65 @@
+제1장 SQL 수행 구조
+EE —————
+
+[표 1-1-3] Oracle 힌트
+분류                                     힌트                              i
+all_rows
+| first_rows(n)
+
+| full
+
+cluster
+
+hash
+
+index, no_index
+
+index_asc, index_desc
+index_combine
+
+index_join
+
+index_ffs, no_index_ffs
+index_ss, no_index_ss
+index_ss_asc, index_ss_desc
+
+액세스 경로
+
+no_query_transformation
+use_concat
+no_expand
+쿼리 변환         rewrite, no_rewrite
+merge, no_merge
+star_transformation, no_star_transformation
+fact, no_fact
+unnest, no_unnest
+
+ordered
+
+조인 순서                 leading
+
+use_nl, no_use_nl
+
+조인 방식        use_nl_with_index
+use_merge, no_use_merge
+| use_hash, no_use_hash
+
+parallel, no_parallel
+병렬 처리        pq_distribute
+|   parallel_index, no_parallel_index
+
+|   append, noappend
+| cache, nocache
+push_pred, no_push_pred
+
+|   push_subq, no_push_subq
+기타        |   gb_name
+
+| cursor_sharing_exact
+
+|   driving site
+
+| dynamic_sampling
+model_min_analysis
+
+_SQL 전문가 가이드 1493

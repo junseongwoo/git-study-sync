@@ -1,0 +1,50 @@
+제2장 SQL 활용
+
+FOR (DEPTNO, DNAME) IN ((D16_SAL, D10_CNT) AS (10, "ACCOUNTING')
+, (D20_SAL, D26_CNT) AS (20, ‘RESEARCH’ )))
+
+ORDER BY 1, 2;
+
+[실행 결과]
+308             DEPTNO         DNAVE
+ANALYST             10         ACCOUNTING
+ANALYST             20         RESEARCH
+CLERK               10         ACCOUNTING
+CLERK              20         RESEARCH
+
+4 행이 선택됐습니다.
+
+SAL           ONT
+
+0
+6000            2
+1300                1
+1900            2
+
+ㅁ4401\01 절을 사용할 수 없는 경우 카티션 곱을 사용해 UNPIVOTS 수행할 수 있다. UNPIVOTE 열의
+개수만큼 행을 복제하고, CASE 표현식으로 0401\01할 열을 선택하는 방식이다.
+
+SELECT  A.J0B
+
+, CASE B.LV WHEN 1 THEN 10   WHEN 2 THEN 20    END AS DEPTNO
+, CASE B.LV WHEN 1 THEN A.D10_SAL WHEN 2 THEN A.D26_SAL END AS SAL
+, CASE B.LV WHEN 1 THEN A.D16_CNT WHEN 2 THEN A.D20_CNT END AS CNT
+
+FROM T1 A
+
+, (SELECT LEVEL AS LV FROM DUAL CONNECT BY LEVEL <= 2) B
+
+ORDER BY 1, 2;
+
+Jog                              DEPTNO                       SAL
+ANALYST              10
+
+ANALYST                              20                      6000
+CLERK                10          1300
+CLERK               20          1900
+
+4 행이 선택됐습니다.
+
+a
+= 2
+

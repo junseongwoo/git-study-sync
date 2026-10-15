@@ -1,0 +1,44 @@
+가물 III 고급 활용 및 튜닝
+sel«t 7” or&red use-höh(e) full(d) full(e) parallel(e 2)
+Qdistri&1te(e bræ&ast ,羽塗) *7 *
+*ere d.&ptro = e.deptm
+Parallel From Serial
+소비자
+Parallel To Parallel
+생산자
+생산자
+QC
+:TQI예예
+SELECT
+FROM DEPT
+沌1
+소비자
+剛2
+剛3
+Parallel To Serial
+생산자
+소비자
+:TQ10002
+TQ10001
+병일 서버 집합 1
+SELECT
+FROM TQ10000, EMP
+WHERE
+병일 서버 집합 2
+SELECT
+FROM .TQ10001
+ORDER BY ENAME
+[그림 Ⅲ丕-15] 테이블 큐
+[그림 Ⅲ亐15]를 보면, 쿼리 서버 집합 간(P+P) lnteroperation Parallelism이 발생할 때는 사용자가 지정한
+병렬도(=2)의 배수(4개)만큼 서버 프로세스가 필요한 것을 알 수 있다. 또한 데이를 큐(:TQI刪1)에는 병 별도의
+제곱(끄=4)만큼 파이프 라인이 필요하다는 사실도 알 수 있다. 참고로 [그림 III-수14]를 보면, 병렬도가 4이므로
+8(킈x2)개 서버 프로세스를 위해 16(=42)개의 파이프 라인이 형성됐다.
+생산자소비자 모델
+테이블 큐에는 항상 생산자(Producer)와 소비자(Consumer)가 존재한다. [그림 Ⅲ丕-15]를 보면, 처음 dept
+테이블을 읽어 분배하는 :TQI″쩌는 QC가 생산자이고 서버 집합 1이 소비자다. 이어지는 두 번째 테이블
+큐 :TQI圄1에서는 서버 집합 1이 생산자가 되고, 서버 집합 2가 소비자가 된다. 마지막으로 정릴된 최종 결과
+집합을 전송하는 玎QI刪2에서는 서버 집합 2가 생산자가 되고 QC가 소비자가 된다. select 문장에서의 최종
+소비자는 항상 %일 것이다.
+[그림 Ⅲ舟15]에서 보듯 Parallelism이 나타날 때, 소비자 서버 집합은 from절에 테이블
+큐를 참조하는 서Y-(Sub) SQL을 가지고 작업을 수행한다.
+744 전문가 ,까드

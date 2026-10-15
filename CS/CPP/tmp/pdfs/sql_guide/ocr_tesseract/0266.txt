@@ -1,0 +1,57 @@
+과목 11 SQL 기본과 활용
+
+8. INNER vs. OUTER vs. CROSS JOIN 비교
+
+LEFT OUTER JOIN
+
+SELECT XKEY1, Y.KEY2
+FROM TAB1 X LEFT OUTER JOIN TAB2 Y
+ON (X.KEY1 = Y.KEY2)
+
+RIGHT OUTER JOIN
+
+SELECT XKEY1, Y.KEY2
+FROM 1481 X RIGHT OUTER JOIN TAB2 >
+ON (X.KEY1 = Y.KEY2)
+
+  0—X
+INNER JOIN
+
+SELECT XKEY1, Y.KEY2
+FROM TAB1 X INNER JOIN TAB2 Y
+ON (XKEY1 = YKEY2)
+
+FULL OUTER JOIN
+
+CARTESIAN PRODUCT
+SELECT X.KEY1, Y.KEY2
+SELECT XKEY1, Y.KEY2                     FROM TAB! X FULL OUTER JOIN TAB2 Y
+FROM 7481 X CROSS JOIN TAB2 Y          ON (XKEY1 = Y.KEY2)
+
+[그림 1-1-20] INNER vs. OUTER vs. CROSS JOIN 문장 비교
+
+3 번째, INNER JOIN] 결과는 다음과 같다.
+
+양쪽 테이블에 모두 존재하는 키 값이 B-B, 인 2건이 출력된다.
+
+두 번째, LEFT OUTER JOINS] 결과는 다음과 같다.
+
+TAB1S 기준으로 키 값 조합이 B-B, CC, D-NULL, &\ㅁ1.인 4건이 출력된다.
+
+세 번째, RIGHT OUTER JOINS] 결과는 다음과 같다.
+
+TAB2E 기준으로 키 값 조합이 NULL-A, B-B, 인 3건이 출력된다.
+
+네 번째, FULL OUTER JOINS] 결과는 다음과 같다.
+
+양쪽 테이블을 기준으로 키 값 조합이 NULL-A, B-B, C-C, D-NULL, E-NULLQ! 5건이 출력된다.
+다섯 번째, CROSS JOINS] 결과는 다음과 같다.
+
+조인 가능한 모든 경우의 수를 표시하지만, © OUTER JOIN 제외한다.
+
+양쪽 테이블 7481과 TAB29| 데이터를 곱한 개수인 4 * 3 = 12건이 추출된다.
+
+키 값 조합이 B-A, BB, BC, CA, CB, ㅇㅇ, D-A, D-B, D-C, E-A, E-B, 86인 12건이 출력된다.
+
+ 272 [906 BRA Ale _
+

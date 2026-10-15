@@ -1,0 +1,33 @@
+제1장 SQL 기본
+
+[예제] 다음과 같은 선수들의 출력 형태를 만들어 본다.
+
+출력 형태) 선수명 선수, 키 on, 몸무게 ko
+예) 박지성 선수, 176 cn, 70 kg
+
+예제] Oracle
+
+SELECT PLAYER NAME |} ' 선수, ' || HEIGHT || ‘cm, ' || WEIGHT |] ' kg' AS 체격정보
+FROM PLAYER;
+
+예제] SQL Server
+
+SELECT PLAYER NAME + ' 선수, ' + HEIGHT + ' cm, ' + WEIGHT + ' kg’ AS 체격정보
+FROM PLAYER;                1      보타 다, SB
+
+체격정
+
+유동우 선수, 177 cm, 70 kg
+정호곤 선수, 172 <, 77 kg
+정동훈 선수, 180 cm, 88 ko
+정남표 선수, 1809 cm, 77 kg
+정광재 선수, 180 cm, 75 kg
+권혁준 선수, 173 cm, 82 19
+박상남 선수, 188 cm, 80 kg
+빅토르 선수, 183 cm, 79 kg
+이윤겸 선수, 178 cm, 80 kg
+하재훈 선수, 174 cm, 67 kg
+
+489 개의 행이 선택됐습니다.
+
+SQL 전문가 가이드 1151.

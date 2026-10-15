@@ -1,0 +1,24 @@
+과목 II QL 기본과 활용
+SQL Server
+uLBACK TRA로TI애 SVTRI ,•
+[예제] SAVEPOINTS 지정하고, PLAYER 테이불에 데이터를 입력한 다음 를백을 이전에 설정한 저장점까지 실행한다.
+l예제1 Oracle
+SAVEmINT 5,.,하1 ;
+저장점이 생성퇬습니다.
+1駟T
+INTO PLAYER (PLAYER—ID, TEN_ID, PLAYER_NAME, HEIGHT, 넓EI애T, BACK_NO)
+VALIÆS ('1劈70표, *02', '이운재• '얘•. 182, 82, 1);
+1 개의 행이 만들어졌습니다.
+nLuCK TO SVPTI ;
+를백이 완료됐습니다.
+[예제] SQL Server
+BEGIN
+SAVE TR* 5Ⅷ1:
+명령이 완료됐습니다.
+INTO PLAYER (PLAYER_ID, TEN_ID, PLAYER_NNE, 凶SITI애, HEIGHT, WE16HT, BACK—t0)
+VAUÆS ('1%7035|, *02', '이운재• •蘇•, 182, 82, 1);
+(1개 행이 영향을 받음)
+魃끄K TRAN SVTRI;
+명령이 완료묐습니다.
+418
+전문가 ,까드

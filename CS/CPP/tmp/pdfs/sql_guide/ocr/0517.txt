@@ -1,0 +1,25 @@
+과목 III SQL 고급 활용 및 튜닝
+2. SQL Server
+던11℃r도 프로파일러(PI圃er)라는 물을 통해 인스턴스 레벨에서 트레이스를 수집할 수 있지만, DB 관리자를
+위한 것이므로 여기서 따로 설명하지는 않겠다.
+SQL 던11℃1에서 SQL 트레이스를 설정하려면 statisåcs profile, statistics io, statisücs time 세 가지 옵션을
+on으로 설정하면 된다. 띈뺙 shoy)lan-text 또는 sho바lan-a11 옵션을 on으로 설정한 상태라면, 이 옵션을
+먼저 off로 설정해야 한다.
+set statistics profile 예
+set statistics iO 예
+set statistics tl爨 예
+•set staüsücs profile 예 : 각 쿼리가 일반 결과 집합을 반환하고 그 뒤에는 쿼리 실행 프로필을 보여주는
+추가 결과 집합을 반환한다. 출력에는 다양한 연산자에서 처리한 행 수 및 연산자의 실행 횟수에 대한 정보도
+포함된다.
+• stafi회cs io on Transact-SQL 문이 실행되고 나서 해당 문에서 만들어진 디스크 동작 OFII 대한 정보를
+표시한다.
+•set statisücs time on : 각 Transact-SQL 문을 구문 분석, 컴파일 및 실행하는 데 사용한 시간을 밀리초
+(=0.%1초) 단위로 표시한다
+위와 같이 설정한 상태에서 SQL을 실행하면 결과 집합 다음에 트레이스 결과가 출력된다.
+sel«t co.nt(*)
+fræ &.Orders 하 如.[惢*r b
+iere a Or&rID = b.Or&rID
+아래는 결과 창에 출력된 트레이스 결과다.
+9rver 구문 분석 및 컴파일 시간:
+대) 시간 = ~, 경과 시간 = 1”.
+526 전문가 가이드

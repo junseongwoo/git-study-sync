@@ -1,0 +1,32 @@
+제1장 SQL 기본
+
+2. INNER JOIN
+
+INNER JOIN OUTER(SJ%) 조인과 대비해 내부 조인이라고 하며 조인 조건을 만족하는 행들만 반환한다.
+INNER JOIN 표시는 전통적인 방식의 조인 문법에서는 WHERE 절에 기술하던 조인 조건을 FROM 절에서
+정의하겠다는 표시이므로 USING 조건절이나 ON 조건절을 필수적으로 사용해야 한다.
+
+[예제] 사원 번호와 사원 이름, 소속부서 번호와 소속부서 이름을 찾아본다.
+
+[예제]
+WHERE 절 조인 조건
+
+SELECT A.EMPNO, A.ENAME, B.DEPTNO, B.DNAME
+FROM EMP A, DEPT B
+WHERE B.DEPTNO = A.DEPTNO;
+
+위 SQL} 아래 SQL 같은 결과를 얻을 수 있다.
+
+FROM 절 조인 조건
+SELECT A.EMPNO, A.ENAME, B.DEPTNO, B.DNAME
+
+FROM EMP A INNER JOIN DEPT B
+ON B.DEPTNO = A.DEPTNO;
+
+INNERE JOINS 디폴트 옵션으로 아래 SQL 문과 같이 생략할 수 있다.
+
+SELECT A.EMPNO, A.ENAME, B.DEPTNO, B.DNANE
+FROM EMP A JOIN DEPT B
+ON B.DEPTNO = A.DEPTNO;
+
+SQL 전문가 가이드 |247

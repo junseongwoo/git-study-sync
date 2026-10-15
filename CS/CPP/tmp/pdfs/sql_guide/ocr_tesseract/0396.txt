@@ -1,0 +1,31 @@
+15 행이 갱신됐습니다.
+
+앞 UPDATE 문은 TEAM 테이블을 2번 조회하는 비효율이 있다. 다음 MERGE 문을 사용하면 TEAM 테이블을
+1번만 조회하여 데이터를 수정할 수 있다. MERGE 문은 조금 후에 살펴보도록 하자.
+
+MERGE
+INTO STADIUM T
+USING TEAM 5
+ON (T.TEAM_ID = S.HOMETEAM_ID)
+WHEN MATCHED THEN
+UPDATE
+SET T.DDD = 5.000
+, T.TEL = S. TEL;
+
+15 행이 병합됐습니다.
+
+3. DELETE
+테이블에 저장된 데이터가 더이상 필요 없게 됐을 경우 데이터 삭제를 수행한다. 다음은 DELETE 문장의 기본적
+인 형태이다. DELETE FROM 다음에 삭제를 원하는 자료가 저장된 테이블명을 입력하고 실행한다. 이때 FROME
+
+생략이 가능한 키워드이며, WHERE 절에는 삭제 대상이 될 행을 식별할 수 있도록 조건식을 기술한다. 단 WHERE
+절을 사용하지 않는다면 테이블의 전체 데이터가 삭제된다.
+
+DELETE [FROM] 테이블명
+[WHERE 삭제 대상 식별 조건식] ;
+
+[예제] 선수 테이블의 데이터를 전부 삭제한다.
+
+DELETE FROM PLAYER;
+
+전문가 가이드 [403

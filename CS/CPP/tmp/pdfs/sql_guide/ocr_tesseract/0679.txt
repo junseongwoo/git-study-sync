@@ -1,0 +1,50 @@
+exception
+when no_data_found then
+
+doms_output .put_line( ‘not exists’);
+
+end;
+
+Cal      Count       (PU Time Elapsed Time
+Parse             1               0.000                 6.000
+Execute          1               0.000                  0.000
+Fetch                  2                     0.000                         0.000
+Total                  4                     0.000                         0.000
+
+STATEMENT
+
+COUNT STOPKEY (cr=3 pr=0 pw=0 time=54 us)
+
+TABLE ACCESS BY INDEX ROWID MEMBER (cr=3 pr=9 pw=0 time=46 us)
+
+Rows Row Source Operation
+0
+1
+1
+1
+
+INDEX RANGE SCAN MEMBER_IDXO1 (cr=2 pr=0 pw=0 time=26 us)
+
+X63 고급 50. 튜닝
+
+lel
+
+SQL 56006[에선 rownum 대신 Top N 구문을 사용하면 되고, 다음과 같이 60555 절을 사용하는 방법도 있다.
+
+declare @cnt int
+
+select cnt = count(*)
+where exists
+(
+select ‘x’
+from member
+where memb_cls = '1'
+and birth_yyyy <= '1950'
+)
+
+if 6cnt > 0
+
+print ‘exists’
+else
+
+print ‘not exists’

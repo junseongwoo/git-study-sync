@@ -1,0 +1,29 @@
+제2장 SQL 활용
+
+하나의 SQL 문장에 ORDER BY SAL DESC 조건과 PARTITION BY JOB 조건이 충돌났기 때문에 ]08별로는
+정렬되지 않고 ORDER BY SAL DESC 조건으로 정렬됐다.
+
+[예제] 앞 SQL 문의 결과는 JOB SALARY 기준으로 정렬돼 있지 않다. 새로운 50[에서는 전체 SALARY 순위를 구하는
+ALL RK 칼럼은 제외하고, ATER SALARY 순서를 구하는 )08_만(만 알아보도록 한다.
+
+SELECT 208, ENAME, SAL
+, RANK () OVER (PARTITION BY JOB ORDER BY SAL DESC) AS JOB_RK
+FROM EMP;
+
+JONES
+
+BLAKE
+
+CLARK
+PRESIDENT _          KING 5000           1
+SALESMAN            ALLEN            1600                 1
+SALESMAN            TURNER           1500                2
+SALESMAN            WARTIN           1250                3
+SALESMAN            WARD             1250                3
+
+14 행이 선택됐습니다.
+
+업무별로 SALARY 순서를 구하는 JOB_RANKR} 사용한 경우 파티션의 기준이 된 ]08과 SALARYHE 정렬이
+돼 있는 것을 알 수 있다.
+
+SQL 전문가 가이드 |327

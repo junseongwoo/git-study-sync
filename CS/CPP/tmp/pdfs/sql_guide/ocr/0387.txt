@@ -1,0 +1,36 @@
+과목 11 기본과 활용
+문제 6. 다음 SQL 문장은 몇 행의 결과를 반환하는가?
+VR V_R MSER = 5;
+VR V - = 2;
+SELECT SAL, 합4
+~ (SELECT EPt0 SAL, R예뾰 AS RN
+FO (SELECT E"O, SAL FO EP 0甌R BY SAL, EMPNO)
+㉦ 0행
+㉣ 2행
+5행
+㉦ 10행
+문제 7. 다음 중 SELF 」이N을 수행해야 할 때는 어떤 경우인가?
+㉦ 두 테이블에 공통 칼럼이 존재하고 두 테이블이 연관 관계가 있다.
+두 테이블에 연관된 칼럼은 없으나 조인해야 한다.
+㉦ 한 테이블 내에서 두 칼럼이 연관 관계가 있다.
+㉦ 한 테이블 내에서 연관된 칼럼은 없으나 조인해야 한다.
+문제 & 다음 SQL 문장의 결과에서 ename이 뚀OTT인 pt 값은 무엇인가?
+SELECT enæ, SYS_COWECT_BY_PATH (enæ, • , • ) AS pt
+FO
+STRT WITH 15 WLL
+CO&CT BY = 厭I僛
+㉦ KNG
+㉦ ,KING,JONFS,SCOTT
+@ ,KING,JONFS
+(㉦ ,KING,JONES,SCOTT,ADAMS
+문제 9. 다음 QL 문장에서 값은 어떤 열로 집계되는가?
+SELECT *
+FO (SELECT TO,-0獸 (hiredate, 'YYYY') AS YYYY, 50b, deptno, sal FRW ㈈)
+PIWT (91 (%1) Fm ㈄恤0 IN (10, 20, %))
+″ BY 1, 2;
+㉦ 전체
+전문가 가이드
+(기 YYYY
+㉦ YYYY. job
+㉧ YYYY. job, deptno
+394

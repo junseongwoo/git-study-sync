@@ -1,0 +1,23 @@
+과목 III 고급 활용 및 튜닝
+아라는 OracleOl서 lndex Full 뇨an할 때의 실행계획이다.
+SQ.> create ir&x 예 (예~, sal);
+隊〉 set tracemly exp
+*.) select * fræ
+2 91 〉 2圄
+Executim Plm
+0 SELECT STATEENT
+1 TZLE ACCESS (BY lux OID) 'EP' (TABLE)
+2 1 (FLLL SCA) 'EP_IDX' (INDEX)
+SQL Serverol서는 lndex 뇨an이라고 표현하며 실행계획은 다음과 같다.
+StntText
+lMps(Irær J0in, WTER REFERENCES:([BmkIW@I))
+ORDERED F(RWARD)
+}—RID L예k叩(%뚀CT:([..].[쬐.[네), ORDERED F僛넓A刷)
+참고로 2喇 이전 버전의 실행계획에는 다음과 같이 표시된다.
+St•tText
+|-1蕆x Scan(WJECT:(I,.).[Öo).Iemp).[emp-idx11), WHERE:([sa11 〉 20%) ORDERED
+수직적 당색없이 인덱스 리프 블록을 처우부터 끝까지 수평적으로만 담색한다고 했는데, 이는 개념적으로 설명
+하기 위한 것일 뿐 실제로는 [그림 III-3-3]처럼 수직적 담색이 먼저 일어난다. 루트 블록과 브랜치 볼록을 거치지
+않고는 가장 왼쪽에 위치한 첫 번째 리프 볼록으로 찾아갈 방법이 없기 때문이다. 그래서 이 과정을 [그림 111-3-31에
+점선으로 표시했다
+544 넣4 천문!y쬐)드

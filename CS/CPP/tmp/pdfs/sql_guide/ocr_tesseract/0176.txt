@@ -1,0 +1,45 @@
+제1장 SQL 기본
+
+[예제] 사원 테이블에서 168와 7698이 같으면 44[Ｌ을 표시하고, 같지 않으면 MGRE 표시한다.
+
+SELECT ENAME, EMPNO, MGR, NULLIF (MGR, 7698) AS NUIF
+FROM EMP;
+
+NULLIF 함수를 CASE 문장으로 표현할 수 있다.
+
+10.080 |
+SELECT ENAME, EMPNO, MGR
+, (6456
+WHEN MGR = 7698 THEN NULL
+ELSE MGR
+END AS NUIF
+FROM EMP;
+(As 21)
+
+ENAME           EMPNO             MGR             NUIF
+SMITH            7369            7902             7962
+[ALLEN           7499           | Rr Te]
+[WARD           도, + BEER | ERE |
+JONES            7566            7839            7839
+[MARTIN         7654            7698 4406 가
+BLAKE            7698            7839            7839
+CLARK           7782            7839            7839
+SCOTT           7788            7566            7566
+
+KING            7839
+[TURNER          TE TT 608 es ae
+ADAMS            7876            7788            7788
+[ames         7900          T= PGR FL he |
+FORD            7902            7566            7566
+MILLER           7934            7782            7782
+
+14 개의 행이 선택됐습니다,
+
+실행 결과를 보면 \(08의 값이 7698이란 상수가 같은 경우 NUIF 칼럼에 011,이 표시됐다. KINGo] 속한
+행의 NUIF 칼럼에 NULL] 표시된 것은 원래 MGR 데이터가 401.[.이었기 때문이다.
+
+|
+
+기
+
+전문가 가이드

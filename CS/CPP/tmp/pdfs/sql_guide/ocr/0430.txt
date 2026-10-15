@@ -1,0 +1,37 @@
+Oracle
+ALTER TABLE 테이불명 ″ ( 삭제할 칼럼* [, 삭제할 칼럼명2,
+SQL Server
+ALTER TABLE 테이불영 ″ (예빼 스t서할 칼럼명1 [, 삭제할 칼럼명2,
+[예제] 잎에서 PLAYER 테이넓에 새를게 추가한 ADDRESS 칼럼을 삭제한다.
+[예제] OracIe
+ALTER TABLE PLAYER ″ (″SS):
+! 테이를이 변경했습니다.
+[예제1 SQL Server
+ALTER TABLE R.AYER ″ (예I,배
+명령이 완료됐습니다.
+실행 결과에서 삭제된 칼럼 ADDRFS가 존재하지 않는 것을 확인할 수 있다.
+결행 결과I OracIe
+EC PLAYER;
+이름
+PLAYER-ID
+PLAYER-V&
+TE"-ID
+E_PLAYER_NA&
+NICKWE
+J이N_YYYY
+寫ITI아1
+BACK-IO
+NATW{
+tOT MJLL
+tOT M.JLL
+유형
+(훼7)
+V膩緦2(20)
+(훼3)
+V蠍聽2(40)
+V膩聰기%)
+(Ⅷ4)
+쯔R(2)
+V枳(聽2(20)
+臼장 관리 구문
+전문가 가이드 437

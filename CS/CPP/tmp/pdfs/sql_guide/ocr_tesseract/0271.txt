@@ -1,0 +1,18 @@
+학습목표
+
+= 서브 쿼리의 이해
+
+브브
+그룹 함수와 윈도우 함수의 이해
+= Top N 쿼리의 이해
+= 계층형 질의와 셀프 조인의 이해
+= PIVOT Zz} UNPIVOT #9] 이해
+
+= 정규 표현식의 이해
+
+Professional iDe
+
+Pod
+
+veloper
+

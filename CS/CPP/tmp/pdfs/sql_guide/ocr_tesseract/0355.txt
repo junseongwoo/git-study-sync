@@ -1,0 +1,41 @@
+과목 ] SQL 기본과 활용
+
+EmployeelD           Manager ID
+1000                 NULL
+1100                  1000
+1110                 1100
+1120                 1100
+1121                  1120
+1122                  1120
+1200                  1000
+1210                  1200
+1211                  1210
+1212                  1210
+1220                 1200
+1221                  1220
+1222                  1220
+1300                  1000
+
+아래에 T_EMP 데이터의 최상위부터 시작해 하위 방향으로 계층 구조를 전개하도록 작성한 쿼리와 그 결과다.
+보다시피, 계층 구조를 단순히 하위 방향으로 전개했을 뿐 [그림 1-2-11]에 있는 조직도와는 많이 다른 모습이다.
+앞서 보았듯이 CTE 재귀 호출로 만들어낸 계층 구조는 실제와 다른 모습으로 출력된다. 따라서 조직도와 같은
+모습으로 출력하려면 ORDER BY 절을 추가해 원하는 순서대로 결과를 정렬해야 한다.
+
+WITH T_EMP_ANCHOR AS (
+SELECT EWPLOYEEID, MANAGERID, 0 AS LEVEL
+FROM T_EWP
+WHERE MANAGERID IS NULL /* 재귀 호출의 시작점 */
+UNION ALL
+SELECT R.EMPLOYEEID, R.MANAGERID, A.LEVEL + 1
+FROM T_EMP_ANCHOR A
+, 180
+WHERE R_MANAGERID = A.EMPLOYEEID)
+SELECT LEVEL, REPLICATE (' ', LEVEL * 2) + EMPLOYEEID AS EMPLOYEEID, MANAGERID
+FROM T_EMP_ANCHOR
+60
+
+Level                    EmployeelD                 Manager 1D
+0                                 1000                            NULL
+1                                      1100                                1000
+
+362  92 전문가 가이드

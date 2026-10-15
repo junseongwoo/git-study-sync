@@ -1,0 +1,45 @@
+과목 m SQL 고급 활용 및 튜닝
+
+는 >
+
+가. 정적 파티션 Pruning
+
+액세스할 파티션을 컴파일 A]H(Compile-Time)oll 미리 결정하며, 파티션 키 칼럼을 상수 조건으로 조회하는
+경우에 정적(58380) Pruningo] 작동한다.
+
+52165 _ 0316 >= '20068301"
+
+select
+가메 sales_range
+where
+and     sales_date <= '20060401'
+
+ㅣ 1d | Operation             | Name       | Pstart | Pstop |
+ㅣ 0 | SELECT STATEMENT      |       ㅣ       |
+| 1 | PARTITION RANGE ITERATOR   |        ㅣ  3:4   4
+1* 2 | TABLE ACCESS FULL     | SALES_RANGE  |  3   4
+
+Predicate Information (identified by operation id):
+
+2 - filter("SALES_DATE")='20066301' AND "SALES_DATE"{='20060401")
+
+나. 동적 파티션 Pruning
+
+액세스할 파티션을 실행 시점(810-1100)에 결정하며, 파티션 키 칼럼을 바인드 변수로 조회하는 경우가 대표적
+이다. NL 조인할 때도 Inner Holo] 조인 칼럼 기준으로 파티셔닝돼 있으면 $3 (Dynamic) 8040008이 작동한다.
+
+select *
+
+from  sales_range
+
+where 52105 date >= :a
+
+and sales _date <= :b
+
+] Id | Operation         | Name     | Pstart | Pstop |
+ㅣ 0| SELECT STATEMENT             |              |       |       |
+i* 1] FILTER            |         |    |    |
+§ 2| PARTITION RANGE ITERATOR   |        | | Key | Key |i
+j* 3| TABLE ACCESS FULL      | SALES_RANGE   | LKEY | KEY |
+
+732 9p 2#7 가이드

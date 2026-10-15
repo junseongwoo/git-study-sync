@@ -1,0 +1,25 @@
+駁장 분석 도구
+2. SQL Server
+SQL 뇨rve뗴서 예상 실행계획을 출력하는 방법은 간단하다. 아래처럼 showplan-text 예 명령문을 먼저
+실행하고서 SQL을 실행하면 예상 실행계획을 텍스트로 보여준다. 쿼리를 실제로 실행하지는 않는다.
+use m.JbS
+90
+set shovplan-text "
+90
+select a.*, 비*
+fræ d뇨町1애ee 하 dtn.j±s b
+a.j±-id = b.j±-id
+아래는 결과 창에 출력된 예상 실행계획이다.
+StmtText
+l—Nested Lmps(Inrpr Join, WTER REFERENCEs:([al.(job-idl))
+I—Clustered lrdex 文an(咄E(T:([뼤.[쬐.[啣1에eel.[훼애ee-i쫴 AS
+l—C1ustered lrdex
+(3개 행 적용됨)
+sho``爭lan-a11 on 명령문을 실행하면, PhysicalOp(물리 연산자), L뾯calOp(논리 연산자), FsumateRows
+(예상 로우 수) 등을 포함해 종 더 자세한 예상 실행계획을 보여 준다.
+set shmlan-all 예
+select
+frm
+a.j±-id = b.j±-id
+1
+전문가 가이드 519

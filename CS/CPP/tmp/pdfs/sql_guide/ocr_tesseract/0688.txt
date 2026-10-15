@@ -1,0 +1,42 @@
+SELECT 장비번호, 장비명
+, (SELECT /하 INDEX_DESC(X AEN 0|2_PK) */
+변경일자 || 1600(변경순번, 4) || 상태코드
+
+FROM 상태변경이력 ×
+
+WHERE 장비번호 = ?.장비번호
+
+세0 ROWNUN <= 1) 최종이력
+FROM 장비?
+WHERE 장비구분코드 = ‘acer’
+
+{ Id | Operation                 | Name     | Starts
+ㅣ © | SELECT STATEMENT             |          |     1
+{11 COUNT STOPKEY            |        |    10
+ㅣ] 2] TABLE ACCESS BY INDEX ROWID ㅣ 상태변경이 |    10
+ㅣ 3| INDEX RANGE SCAN DESCENDING | 상태변경이 |    10
+ㅣ] 4] TABLE ACCESS BY INDEX 80010     ㅣ 장비       |      1
+ㅣ] 5] INDEX RANGE SCAN           | 장비뻐 _ ㅣ     1
+
+A
+
+위 쿼리는 아래 쿼리가 작동하지 않기 때문에 궁여지책으로 사용해 온 측면이 있다. 11g 이하 버전에서 실행해
+보면, ORA-00904 오류가 발생한다. 메인 쿼리 칼럼을 서브쿼리 내 인라인 뷰에서 참조해서 발생하는 파싱 오류다.
+하지만 오라클 120 버전부터 아래 쿼리는 오류 없이 잘 작동하며, 인덱스만 잘 구성해 주면 성능도 우수하다.
+
+SELECT 장비번호, 장비명
+, 5085(최종이력, 1, 8) 최종변경일자
+, 10 \0088688\(508510(최종이력, 9, 4)) 최종변경순번
+, 508510(최종이력, 13) 최종상태코드
+FROM (
+SELECT 장비번호, 장비명
+,(SELECT 변경일자 || 00(변경순번, 4) || 상태코드
+FROM (SELECT 변경일자, 변경순번, 상태코드
+FROM 상태변경이력
+WHERE 장비번호 = 『.장비번호
+ORDER BY 변경일자 DESC, 변경순번 DESC)
+WHERE ROMNUM <= 1) 최종이력
+FROM 장비?
+WERE 장비구분코드 = '4001'
+
+698 OL 문가 가이드

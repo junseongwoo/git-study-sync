@@ -1,0 +1,42 @@
+과목 II 기본과 활용
+STEP 1-2 ~ BY 절 + BY 절 사용
+[예제 부서명과 업무명을 기준으로 집계한 일반적인 GROUP BY SQL 竪+에 ORDER BY 절을 사용함으로써 부서 • 업무별로
+정열이 이루어진다.
+:예제1
+SELECT 8 -, (啞 (삐 AS EP-CNT, SIN (A.SAL) AS SAL—SIN
+~ EP 시
+8 呼T題 =
+- BY 8
+EP CNT
+[실행 즐과]
+ACCO-NTI%
+ACCO.NTI%
+ACq,NTItE
+SAIFS
+CLERK
+CLERK
+CLERK
+1
+1
+1
+2
+2
+1
+1
+1
+4
+SAL-SI-N
+1弼
+2450
+1嚼
+2975
+9 형이 선택왰습니다.
+STEP 2 ROLLUP 함수 사용
+[예제] 부서명과 업무명을 기준으로 집계한 일반적인 GROUP BY SQL 문장에 ROLLUP 함수를 사용한다.
+[예제]
+SELECT ~, A.n, (啞 (하 AS EP_CNT, SI.N (A.SAL) AS SAL—SIN
+FO EP 시 FT
+~ BY 皿L呼 (8 ~, A.JW);
+결행 결과]
+EP_CNT
+310 전문가 가이드

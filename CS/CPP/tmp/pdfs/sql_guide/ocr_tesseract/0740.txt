@@ -1,0 +1,57 @@
+3) pq_distribute 힌트를 이용한 튜닝 사례
+통계 정보가 없거나 잘못된 상태에서 병렬 조인을 수행하면 옵티마이저가 아주 큰 테이블을 860309ㅇ35+하는
+
+=
+
+경우가 FF 생긴다. 임시 테이블을 많이 사용하는 야간 배치나 데이터 ola (Migration) 프로그램에서 그런 문제가
+자주 나타나는데, 다음은 데이터 이행 도중 실제 문제가 발생했던 사례다.
+
+SQL> INSERT /++ APPEND */ INTO 상품기본이력 ( ... )                                             ot
+2 SELECT /*+ PARALLEL(A,32) PARALLEL(B,32) PARALLEL(C,32) PARALLEL(D,32) */ ......            WE go
+SFRON 상품기본이력임시 3, 상품 6, 코드상세 <, 상품상세 0                                   :
+
+4 WHERE 3.상품번호= 6.상품번호
+5 AD
+6/
+
+INSERT /+ append */ INTO 상품기본이력 (
+
+*
+
+180] 오류:
+
+ORA-12801: 병렬 질의 서버 8013에 오류신호가 발생했습니다
+
+ORA-91652: 256(으)로 테이블 공간 160?에서 임시 세그먼트를 확장할 수 없습니다
+
+경 과: 01:39:56.08
+
+고플 시
+
+ㅣ Operation        ㅣ Name     | Rows | Pstart | Pstop |IN-OUT | 10 Distrib |
+ㅣ INSERT STATEMENT     |       ㅣ 528 |   |    |    |         고
+| LOAD AS SELECT     |       |   |   |    |    ㅣ
+
+] HASH JOIN       |       | 5248 |   |    | PS  |
+
+{HASH JOIN OUTER    |       | 5248 |   |    ㅣ PP  |
+
+ㅣ] HASH JOIN      |       | 5248 |   |    | Pow |
+
+ㅣ  PARTITION HASH ALL  ㅣ       ㅣ   oes Rao a 2  ㅣ
+
+1   TABLE ACCESS FULL   | 상품기본이력임시 ㅣ 5248 |  11 18 | PP  ㅣ
+
+H  TABLE ACCESS FULL   | 상품     | 7595 |   |    | Pow |
+
+| TABLE ACCESS FULL   ㅣ 코드상세    J 5261]   |    {2P=-DPTREE
+
+ㅣ TABLE ACCESS FULL    | 상품상세    | 7772 ㅣ    |    {POP |
+
+1시간 40분간 수행되던 SQLo| 임시 세그먼트를 확장할 수 없다는 오류 메시지를 던지면서 멈춰 버렸고, 분석해
+보니 상품기본이력임시 테이블에 통계 정보가 없던 것이 원인이었다. 실제 천만 건에 이르는 큰 테이블이었는데,
+통계 정보가 없어 옵티마이저가 5248건의 작은 테이블로 판단한 것을 볼 수 있다.
+
+이 2 테이블을 32개 병렬 서버에게 85030035[하는 동안 과도한 프로세스 간 통신이 발생했고, 결국 Temp
+테이블스폐이스를 모두 소진하고서 AH)
+

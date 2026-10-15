@@ -1,0 +1,39 @@
+ole} Oracle] Index Full Scan® 때의 실행계획이다.
+
+SQL> create index emp_idx on emp (ename, sal);
+
+SQL> set autotrace traceonly exp
+SQL select * from emp
+
+2 where sal > 2608
+
+3 order by ename;
+
+Execution Plan
+
+8 SELECT STATEMENT Optimizer=ALL_ROWS
+1 0 TABLE ACCESS (BY INDEX ROWID) OF 'EMP' (TABLE)
+21    INDEX (FULL SCAN) OF 'EMP_IDX' (INDEX)
+
+SQL 5606[에서는 Index 503이라고 표현하며 실행계획은 다음과 같다.
+
+StmtText
+
+{—Filter(WHERE: ([..] [dbo]. [emp] .[sal]>(2000.)))
+}—Nested Loops(Inner Join, OUTER REFERENCES: ([Bmk1000]))
+{—Index Scan(0BJECT:([..].[dbo].[emp].[emp_idx]), ORDERED FORWARD)
+{—RID Lookup(0BJECT:([..].[dbo).[emp]), SEEK: ([Bmk1000)=[Bmk100@]) LOOKUP ORDERED FORWARD)
+
+참고로 2000 이전 버전의 실행계획에는 다음과 같이 표시된다.
+
+StatText
+
+{—Bookmark Lookup (BOOKMARK: ( [Bmk1000]), OBJECT: ([..].[dbo].[emp]))
+}—Index Scan(OBIECT:([..).[dbo]. emp). emp_idx1]), WHERE: ([sal] > 2000) ORDERED FORWARD)
+
+수직적 탐색없이 인덱스 리프 블록을 처음부터 끝까지 수평적으로만 탐색한다고 했는데, 이는 개념적으로 설명
+하기 위한 것일 뿐 실제로는 [그림 11-3-3]처럼 수직적 탐색이 먼저 일어난다. 루트 블록과 브랜치 블록을 거치지
+않고는 가장 왼쪽에 위치한 첫 번째 리프 블록으로 찾아갈 방법이 없기 때문이다. 그래서 이 과정을 [그림 11-3-3]에
+점선으로 표시했다.
+
+544 su #97) 가이5

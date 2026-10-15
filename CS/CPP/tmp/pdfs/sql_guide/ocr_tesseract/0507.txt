@@ -1,0 +1,41 @@
+실행통계
+Statistics
+
+1        recursive calls
+0        db block gets
+2       consistent gets
+0      physical reads
+0       redo size
+743       bytes sent via SQL*Net to client
+374       bytes received via SQL*Net from client
+1       SQL*Net roundtrips to/from client
+0      sorts (memory)
+0      sorts (disk)
+1        rows processed
+
+다음과 같은 옵션 조합을 통해 필요한 부분만 출력해 볼 수 있다.
+
+@ set autotrace on
+
+SQLS 실제 수행하고 그 결과와 함께 실행계획 및 실행통계를 출력한다.
+
+(2) 50 autotrace on explain
+SQLE 실제 수행하고 그 결과와 함께 실행계획을 출력한다.
+
+(3 set autotrace on statistics
+SQLS 실제 수행하고 그 결과와 함께 실행통계를 출력한다.
+
+@ set autotrace traceonly
+SQLS 실제 수행하지만 그 결과는 출력하지 않고 실행계획과 통계만을 출력한다.
+
+© set autotrace traceonly explain
+SQLE 실제 수행하지 않고 실행계획만을 출력한다.
+
+® set autotrace traceonly statistics
+SQLE 실제 수행하지만 그 결과는 출력하지 않고 실행통계만을 출력한다.
+
+Be 수행결과를 출력해야 하므로 쿼리를 실제 수행한다. @ (6>은 실행통계를 보여줘야 하므로 쿼리를
+실제 수행한다. Gr 실행계획만 출력하면 되므로 쿼리를 실제 수행하지 않는다. 521*?105에서 실행계획을 가장
+쉽고 빠르게 확인해 볼 수 있는 방법이다.
+
+516 |sQL 전문가 가이드 _

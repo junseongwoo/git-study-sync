@@ -1,0 +1,77 @@
+제1장 기본
+FRN PLAYER 시 TEN 8, ST觚1(國 (
+WÆRE A.mSITITl = •蘇•
+AIO B.TEAN_ID = A.TEAN ID
+AtO C.STADIIN-ID = B.STADIIN_ID
+0皬R BY 선수명;
+[실행 결과]
+선수명
+강성일
+권경혁
+권찬수
+김대회
+김승준
+김용발
+김운재
+김정래
+김준호
+김창민
+포지션
+GK
+GK
+GK
+GK
+GK
+GK
+6K
+GK
+GK
+GK
+연고지명
+대전
+물산
+성남
+포항
+대전
+전북
+수원
+전남
+포항
+전북
+팀명
+시티즌
+을산현대
+일화천마
+스틿러스
+시E|즌
+현대모터스
+상성불루윙즈
+드래곤즈
+스일러스
+현대모터스
+구장명
+대전훯드컵경기장
+을산문수경기장
+성남종합운동장
+포항스틿야드
+대전월드컵경기장
+전주월드컵경기장
+수원월드컵경기장
+광양전용경기장
+포항스일야드
+전주월드컵경기장
+43 개의 행이 선택됐습니다.
+[예제] 홈팀이 3점 이상 차이로 승리한 경기의 경기장 이름, 경기 일정, 홍림 이통과 원정팀 이름 정보를 출력한다.
+[예제]
+SELECT B.STADIIN_NAÆ, B.STDIIN_ID, A.S대E_DATE
+, ( TEAN NAE, D TEN WE
+, A.AWAY_SCRE
+FRON S대EDJLE A JOIN STADII.* B
+04 B.STADIIN_ID = A.STADIIN-ID
+JOIN TEN (
+( TEAN 10 = A.OETEU-ID
+JOIN TEN 0
+애 D.TEN_ID = A.AWAYTEN 10
+*ERE A.}OESCORE A.AWAY_SCORE + 3;
+위 SQL은 전통적인 방식인 I&YERE 절의 INNER J이N으로 구현할 수도 있다.
+전문가 ,}•0|드 263

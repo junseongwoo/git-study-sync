@@ -1,0 +1,36 @@
+| Id | Operation    | Name | Rows | Bytes | Cost (%CPU)!
+ㅣ 0 | SELECT STATEMENT     |       joss a2 E29 sXe)
+ㅣ 1 | TABLEACCESSFUL |   Fe Sal 2 ae ase)
+
+Pind Snatbocing $275 i BA wi 2a
+
+옵티마이저가 7_※01 인덱스를 선택한 277} 비용임을 알 수 있다. 비용(0050은 쿼리를 수행하는 동안 발생할
+것으로 예상하는 1/0 횟수 또는 예상 소요시간을 표현한 값이다. 실행경로를 선택하기 위해 옵티마이저가 여러
+통계정보를 활용해서 계산해 낸 값이다. 실측치가 아니므로 실제 수행할 때 발생하는 1/0 또는 시간과 많은 차이가
+
+수 있다. 비용(0050에 대한 더 정확한 의미는 5장 1절에서 설명한다.
+
+5. 옵티마이저 힌트
+
+통계정보가 정확하지 않거나 기타 다른 이유로 옵티마이저가 잘못된 판단을 할 수 있다. 그럴 때 프로그램이나
+데이터 특성 정보를 정확히 알고 있는 개발자가 직접 인덱스를 지정하거나 조인 방식을 변경함으로써 더 좋은
+실행계획으로 유도하는 메커니즘이 필요한데, 옵티마이저 힌트가 바로 그것이다.
+
+힌트 종류와 구체적인 사용법은 18145마다 천차만별이다. 지면 관계상 모두 다룰 수 9202 Oracle® SQL
+Serverol 대해서만 설명하기로 한다.
+
+가. 아306 힌트
+1) 힌트 기술 방법
+Oracle EE 기술하는 방법은 다음과 같다.
+
+SELECT /#+ LEADING(e2 e1) USE_NL(e1) INDEX(e1 emp_emp_id_pk)
+USE_MERGE (3) FULL(j) */
+el.first_name, e1.last_name, j. job_id, sum(e2 salary) total sal
+FROM employees el, employees e2, job_history j
+WHERE e1.employee_id = e2.manager_id
+AND e1.employee_id = j.employee_id
+AND e1.hire_date = j.start date
+GROUP BY el.first_name, el last _name, j.job_id
+ORDER BY total sal;
+
+전문가 가이드 [49]

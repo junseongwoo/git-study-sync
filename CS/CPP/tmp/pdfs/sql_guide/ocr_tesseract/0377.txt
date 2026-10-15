@@ -1,0 +1,36 @@
+과목 11 SQL 기본과 활용
+
+a                                       Q              a                      4
+Jdoe@company . co.uk                        to: bill
+
+1개의 행이 선택됐습니다.
+
+다음은 \s 연산자와 \56 연산자를 사용한 쿼리다. cl 열은 \s 연산자가 공백 문자, 64 열은 \S 연산자가 공백이
+아닌 문자(.)와 일치한다.
+
+SELECT REGEXP_SUBSTR (‘(a b )*, "\(\w\s\w\s\)') AS C1
+
+, REGEXP_SUBSTR ('(a b )', "\(\w\S\w\S\)") AS (2
+
+, REGEXP_SUBSTR ('(a,b.)’, "\(\w\s\w\s\)') AS C3
+
+, REGEXP_SUBSTR ('(a,b.)', "\(\w\S\w\S\)') AS C4
+FROM DUAL;
+
+a                         Q                    a                    64
+
+(ab)                                   (a,b.)
+
+1개의 행이 선택됐습니다.
+
+다음의 PERL 정규 표현식 연산자는 수량사와 유사하게 동작한다. 패턴을 최소로 일치시키는 비탐욕적
+(nongreedy) 방식으로 동작한다.
+
+22      | 0희 또는 1회 일치
+”           08) 또는 그 이상의 횟수로 일치
++?          118) 또는 그 이상의 횟수로 일치
+{mp          ms) 일치
+mp         | 최소 me) 일치
+gmp | 최대 10회 일치
+pg          최소 ms], 최대 ㅁ회 일치
+

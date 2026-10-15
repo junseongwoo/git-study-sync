@@ -1,0 +1,67 @@
+제1장 기본
+11%
+JAMES
+MILLER
+CASE WåTH HEN 11 TÆN SAL END AS M11, CASE O{TH HEN 12 THEN SAL EtO AS 믈12
+20
+30
+20
+9
+5
+1
+14 개의 행이 선택됐습니다.
+STEP 2. 월별 데이터 구분
+[예제] 추출된 MONTH 데이터를 Simple Case Expression* 이용해 12개의 월별 발럼으로 구분한다. 실행 결과에서 보여
+주는 사원%(ENAME)은 최종 리포트에서 요구되는 데이터는 아니지만, 정보의 호통을 이해하기 위해 부가적으로 보여
+주는 임시 정보이다. FROM 절에서 사용된 인라인 뷰는 2장 1절에서 실명한다.
+[예제] OracIe
+SELECT ENANE AS 사원명, DEPTIO AS 부서번호
+CASE O•ITH HEN
+1 가대 SAL Et0 AS 顰1, CASE n{TH M4EN
+CASE 駟紐| HEN
+3 THEN SAL EIO AS 飇3, CASE O{TH M4EN
+CASE O{TH NEN
+5 가대 SAL AS 飇5, CASE W{TH M{EN
+CASE *EN
+7 THEN SAL EbO AS %7, CASE M{EN
+CASE n{TH HEN
+2 THEN SAL EW AS 顰2
+4 THEN SAL E}O AS 馹4
+6 THEN SAL EM) AS
+8 TÆN SAL EM) AS
+9 THEN SAL EtO AS 駟, CASE O{TH HEN 10 THEN SAL EW AS 믈10
+FROM (SELECT ENAE DEPTW, EXTRACT (W••ITH HIREDATE) AS SAL
+FO EP);
+[실행 결과]
+사원명 부서번호
+%1
+馹2
+1欄
+12%
+顰3
+馹4
+2975
+飇5
+24%
+11%
+鸚7
+믈10
+믈11
+SMITH
+ALLEN
+믈A紛
+UARTIN
+BLAKE
+CLARK
+SCOTT
+KI跖
+20
+20
+30
+20
+30
+20
+1250
+1鸞
+넓12
+전문가 ,히드 213

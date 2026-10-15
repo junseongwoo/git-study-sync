@@ -1,0 +1,704 @@
+{
+  "id": "II-3",
+  "order": 5,
+  "part": "과목 II. SQL 기본과 활용",
+  "title": "제3장 관리 구문",
+  "source_range": "원문 PDF 390-461쪽",
+  "overview": {
+    "topics": [
+      "DML로 행을 입력·수정·삭제하고 MERGE로 입력과 수정을 분기한다.",
+      "TCL로 연관 작업의 확정·취소 범위를 관리한다.",
+      "DDL로 테이블·칼럼·제약조건을 정의하고 DCL로 사용자·권한·ROLE을 관리한다."
+    ],
+    "flow": [
+      "행의 변경 → 논리적 작업 단위의 확정·취소 → 저장 구조와 무결성 제약 정의 → 접근 권한 관리"
+    ],
+    "focus": [
+      "WHERE 없는 UPDATE·DELETE의 전체 행 적용, 서브쿼리 UPDATE의 NULL 대입을 확인한다.",
+      "DBMS별 자동 커밋과 명시적 트랜잭션 차이를 구분한다.",
+      "DELETE·TRUNCATE·DROP, 시스템 권한·객체 권한, 로그인·사용자·스키마를 구별한다."
+    ]
+  },
+  "sections": [
+    {
+      "title": "제1절 DML",
+      "source_pages": "원문 PDF 391-402쪽",
+      "blocks": [
+        {
+          "type": "p",
+          "text": "DML은 테이블의 데이터를 조작한다. INSERT는 입력, UPDATE는 수정, DELETE는 삭제이며 MERGE는 소스와 타깃을 비교해 입력·수정을 한 문장에 표현한다. 원문은 각 예제 뒤에 SELECT로 변경 내용을 확인하고 ROLLBACK으로 취소한 다음 다음 예제를 실행하는 흐름으로 설명한다. 따라서 서로 다른 예제의 행 수를 하나의 연속 실행 상태로 섞지 않는다."
+        },
+        {
+          "type": "p",
+          "text": "단일 행 INSERT는 INTO의 칼럼과 VALUES의 값을 1:1로 대응시킨다. 칼럼을 나열하는 순서는 테이블 정의 순서와 달라도 되지만 값은 나열한 칼럼의 순서와 맞아야 한다. 문자 값은 작은따옴표로 감싸고 수치는 수치로 기술한다. 생략된 칼럼은 DEFAULT가 있으면 그 값, 그렇지 않으면 NULL이 적용되며 필수 칼럼에 값이 없으면 제약조건 오류가 생긴다."
+        },
+        {
+          "type": "p",
+          "text": "INTO의 칼럼 목록을 생략하면 정의된 모든 칼럼의 순서와 개수에 맞춰 값을 제공해야 한다. 이후 칼럼 추가·삭제 시 값 개수 불일치가 발생할 수 있어 원문은 명시적인 칼럼 목록을 권한다. VALUES 안에 서브쿼리를 둘 수도 있고, INSERT INTO ... SELECT ...는 조회된 여러 행을 한 번에 입력한다. 이때 대상 칼럼 수와 SELECT의 칼럼 수가 같아야 한다. 원문은 TEAM_ID의 K를 A로 바꾸고 지역명에 올스타를 붙인 팀 자료를 입력하는 예를 제시한다."
+        },
+        {
+          "type": "p",
+          "text": "UPDATE의 SET은 바꿀 칼럼과 새 값을, WHERE는 수정할 행을 정한다. WHERE가 없으면 전체 행이 수정된다. SET의 서브쿼리가 값을 반환하지 않아 NULL이 되면 대상 칼럼에 NULL이 들어갈 수 있다. 원문은 경기장의 홈팀 정보가 존재하는 행만 EXISTS로 골라 수정하는 방식과, 같은 소스를 두 번 조회하는 비효율을 MERGE로 줄이는 방식을 연결해 설명한다. 여러 칼럼을 함께 대입하는 예도 있다."
+        },
+        {
+          "type": "p",
+          "text": "DELETE는 WHERE에 맞는 행을 제거하며 FROM은 원문의 기본 구문에서 생략 가능하다. 조건이 없으면 모든 행을 삭제하지만 테이블 구조는 남는다. 다른 테이블을 EXISTS로 참조하거나 GROUP BY·HAVING 서브쿼리를 이용해 삭제 대상을 정할 수 있다. 원문의 팀별 인원 10명 이하 조건은 해당 팀의 모든 선수 행을 삭제하는 조건이지 각 팀에서 10명만 지우는 제한이 아니다."
+        },
+        {
+          "type": "p",
+          "text": "MERGE의 INTO는 타깃, USING은 소스, ON은 두 집합을 대응시키는 조건이다. 일치한 행에는 WHEN MATCHED THEN UPDATE를, 일치하지 않은 소스 행에는 WHEN NOT MATCHED THEN INSERT를 수행한다. 소스는 테이블뿐 아니라 서브쿼리일 수 있고, 원문은 수정 부분만 또는 입력 부분만 사용하는 예도 제시한다. ON의 일치 판단과 UPDATE·INSERT의 실제 칼럼 대응을 나누어 읽으면 긴 문장이 분명해진다."
+        },
+        {
+          "type": "p",
+          "text": "DML 변경의 확정은 트랜잭션 처리 방식과 연결된다. Oracle 예는 COMMIT 또는 ROLLBACK으로 종료하며 SQL Server는 기본 AUTO COMMIT을 설명한다. 전체 행 제거에서 TRUNCATE가 DELETE보다 부하가 적다는 원문의 설명은 DDL·트랜잭션 차이와 함께 읽어야 한다. 원문은 SQL Server에서 명시적으로 시작한 트랜잭션 안의 TRUNCATE를 롤백할 수 있다는 예외도 별도로 밝힌다."
+        }
+      ]
+    },
+    {
+      "title": "제2절 TCL",
+      "source_pages": "원문 PDF 403-417쪽",
+      "blocks": [
+        {
+          "type": "p",
+          "text": "트랜잭션은 서로 분리할 수 없는 한 개 이상의 데이터베이스 연산으로 이루어진 논리적 작업 단위다. 계좌이체의 출금과 입금처럼 전부 적용하거나 전부 취소해야 한다. 데이터 변경 DML이 주된 대상이고 SELECT FOR UPDATE처럼 배타적 잠금을 요구하는 조회도 대상이 될 수 있다. COMMIT은 확정, ROLLBACK은 취소, SAVEPOINT는 부분 취소의 기준을 정한다."
+        },
+        {
+          "type": "table",
+          "headers": [
+            "특성",
+            "원문의 의미"
+          ],
+          "rows": [
+            [
+              "원자성",
+              "모든 연산이 성공하거나 전혀 수행되지 않은 상태로 남아야 한다."
+            ],
+            [
+              "일관성",
+              "수행 전 데이터가 올바르면 수행 후에도 모순된 상태가 없어야 한다."
+            ],
+            [
+              "고립성·격리성",
+              "수행 중 다른 트랜잭션의 영향으로 잘못된 결과를 만들지 않아야 한다."
+            ],
+            [
+              "지속성·영속성",
+              "성공한 변경 내용은 영구적으로 저장된다."
+            ]
+          ]
+        },
+        {
+          "type": "p",
+          "text": "COMMIT 전에는 자신의 변경을 조회하고 취소할 수 있다. 다른 사용자는 아직 확정되지 않은 변경을 보지 못하며, 변경 행에는 잠금이 걸려 다른 변경이 제한된다. COMMIT하면 변경이 반영되고 다른 사용자가 결과를 볼 수 있으며 관련 잠금이 해제된다. ROLLBACK은 반영되지 않은 변경을 취소하여 시작 이전 상태로 돌리고 잠금을 해제한다. 이로써 영구 확정 전에 내용을 확인하고 논리적으로 관련된 작업을 묶어 무결성을 보장한다."
+        },
+        {
+          "type": "p",
+          "text": "원문의 SQL Server 트랜잭션 방식은 세 가지다. AUTO COMMIT은 각 명령의 성공·오류에 따라 DBMS가 확정·취소한다. 암시적 트랜잭션은 시작을 DBMS가 처리하고 종료는 사용자가 명시한다. 명시적 트랜잭션은 BEGIN TRANSACTION 또는 BEGIN TRAN으로 시작하고 COMMIT·ROLLBACK으로 끝낸다. 전체 ROLLBACK은 최초 BEGIN TRANSACTION까지 되돌아간다는 설명이다. 자동 커밋된 변경을 뒤늦게 ROLLBACK하는 것으로 생각하지 않는다."
+        },
+        {
+          "type": "p",
+          "text": "SAVEPOINT는 트랜잭션 안의 특정 시점을 이름으로 저장한다. Oracle은 SAVEPOINT 이름, ROLLBACK TO 이름을 사용하고 SQL Server는 SAVE TRANSACTION 이름, ROLLBACK TRANSACTION 이름을 사용한다. 같은 이름을 다시 정하면 마지막 저장점이 유효하다. A 이후 B를 만든 뒤 A까지 롤백하면 B는 무효가 되므로 미래의 B로 다시 돌아갈 수 없다. 저장점 없이 ROLLBACK하면 모든 미확정 변경을 취소하고 트랜잭션을 종료한다."
+        },
+        {
+          "type": "p",
+          "text": "원문의 단계 예시는 INSERT 후 A 저장점, UPDATE 후 B 저장점, DELETE의 순서다. B로 되돌리면 DELETE만 취소되고 UPDATE와 INSERT는 남는다. A로 되돌리면 UPDATE도 취소되고 INSERT는 남는다. 전체 ROLLBACK하면 INSERT까지 취소된다. 부분 롤백은 그 이전의 작업을 자동으로 커밋한다는 뜻이 아니다."
+        },
+        {
+          "type": "p",
+          "text": "Oracle 설명에서는 대상 SQL 수행 시 트랜잭션이 시작되고 COMMIT·ROLLBACK으로 종료한다. DDL 전후의 자동 커밋, 정상 접속 종료 시 커밋, 비정상 단절 시 롤백도 설명한다. SQL Server는 기본 AUTO COMMIT과 비정상 접속 단절 시 롤백을 구분한다. 접속 종료·지원 범위에 대한 기술은 원문의 설명 기준으로 정리한 것이다."
+        }
+      ]
+    },
+    {
+      "title": "제3절 DDL",
+      "source_pages": "원문 PDF 418-442쪽",
+      "blocks": [
+        {
+          "type": "p",
+          "text": "DDL은 테이블 등의 객체 구조를 정의한다. 테이블 생성 전 저장할 칼럼, 데이터 유형, 후보키 중 기본키, 다른 테이블을 참조할 외래키를 정한다. 팀 이름을 선수마다 반복 저장하면 팀명 변경이나 팀 삭제 때 수정·삭제 이상이 생길 수 있으므로 팀을 분리하고 TEAM_ID로 참조하는 관계가 모델링·정규화와 DDL을 이어 준다."
+        },
+        {
+          "type": "p",
+          "text": "CREATE TABLE은 테이블 이름 다음 괄호 안에 칼럼명과 유형을 쉼표로 구분한다. 마지막 항목 뒤에는 쉼표를 두지 않는다. 같은 테이블에서 칼럼명이 중복되지 않아야 하고 이름·예약어·길이 제한을 따른다. 원문은 문자로 시작하는 식별자와 허용 문자, CHAR·VARCHAR 계열의 길이 지정, DATE 유형의 크기 미지정 등을 설명한다. 다른 테이블에 같은 칼럼 이름이 있는 것은 허용되며 조인 관계의 연결고리가 된다."
+        },
+        {
+          "type": "p",
+          "text": "제약조건은 허용되는 데이터만 유지해 무결성을 보장한다. 칼럼 정의 뒤에 쓰는 칼럼 수준 방식과 마지막에 CONSTRAINT로 쓰는 테이블 수준 방식을 혼합할 수 있다. 뒤늦게 제약을 추가하면 이미 저장된 자료 때문에 처리하기 어려울 수 있어 생성 시 검토해야 한다. PK는 단일 또는 복합 칼럼이고 한 테이블에 한 기본키 제약을 둔다."
+        },
+        {
+          "type": "table",
+          "headers": [
+            "제약·기본값",
+            "역할",
+            "원문에서 구분할 점"
+          ],
+          "rows": [
+            [
+              "PRIMARY KEY",
+              "행을 고유하게 식별",
+              "고유성+NOT NULL. 자동 UNIQUE 인덱스 생성으로 설명한다."
+            ],
+            [
+              "UNIQUE",
+              "고유 값 유지",
+              "원문은 NULL을 고유키 제약 대상에서 제외한다고 설명한다."
+            ],
+            [
+              "NOT NULL",
+              "필수 입력",
+              "NULL 값 입력을 금지한다."
+            ],
+            [
+              "CHECK",
+              "값의 범위·조건 제한",
+              "조건식으로 허용 데이터 제한"
+            ],
+            [
+              "FOREIGN KEY",
+              "다른 테이블의 키 참조",
+              "참조 무결성 옵션과 연결"
+            ],
+            [
+              "DEFAULT",
+              "값 생략 시 기본값 제공",
+              "NULL·공백·숫자 0·공집합을 혼동하지 않는다."
+            ]
+          ]
+        },
+        {
+          "type": "p",
+          "text": "생성 후 Oracle DESCRIBE/DESC, SQL Server sp_help로 구조를 확인한다. CREATE TABLE ... AS SELECT(CTAS)는 SELECT 결과로 테이블을 만들고 SQL Server는 SELECT ... INTO ...를 사용한다. 원문은 CTAS에서 NOT NULL 외 기본키·고유키·외래키·CHECK 제약은 사라지므로 필요한 제약을 다시 추가해야 한다고 강조한다. SQL Server의 Identity 속성 관련 복사 차이도 함께 언급한다."
+        },
+        {
+          "type": "p",
+          "text": "ALTER TABLE ADD는 칼럼을 추가하며 원문 기준 새 칼럼은 마지막에 위치한다. DROP COLUMN은 데이터 유무와 관계없이 칼럼을 제거하되 적어도 하나의 칼럼은 남아야 하고 삭제한 칼럼은 복구할 수 없다는 설명이다. Oracle은 MODIFY, SQL Server는 ALTER COLUMN으로 유형·크기·NOT NULL 등을 바꾼다. 데이터가 있으면 크기 축소에 제한이 있고, NULL만 있거나 빈 테이블인 경우의 변경 가능 조건을 별도로 설명한다."
+        },
+        {
+          "type": "p",
+          "text": "DEFAULT 변경은 이후 입력에 영향을 주며 기존 행 전체를 바꾸는 UPDATE가 아니다. NOT NULL 추가는 기존 NULL이 없어야 한다. 칼럼 이름은 Oracle RENAME COLUMN, SQL Server sp_rename으로 바꾼다. 원문은 관련 제약의 반영과 이름 변경으로 기존 스크립트·저장 프로시저가 영향받을 수 있다는 점을 함께 제시한다. ADD CONSTRAINT·DROP CONSTRAINT로 외래키 등의 제약을 추가·제거한다."
+        },
+        {
+          "type": "p",
+          "text": "외래키가 참조하는 부모 테이블 또는 부모 행은 참조 조건에 의해 삭제가 제한될 수 있다. 원문에서 TEAM을 DROP하거나 선수가 속한 팀 행을 DELETE하면 참조 제약 오류가 발생하고 제거되지 않는다. 이것은 실수로 필요한 데이터를 지우지 않게 하는 참조 무결성의 실제 효과다. 테이블 이름은 Oracle RENAME ... TO, SQL Server sp_rename으로 바꾼다."
+        },
+        {
+          "type": "p",
+          "text": "DROP TABLE은 구조와 데이터를 모두 제거한다. Oracle의 CASCADE CONSTRAINTS는 참조 제약까지 제거하는 옵션이며 SQL Server에는 해당 옵션이 없어 참조 외래키 또는 참조 테이블을 먼저 처리하는 설명이다. TRUNCATE TABLE은 구조를 유지하며 모든 행을 제거하고 저장 공간을 재사용 가능하게 한다. 원문은 내부 처리와 자동 커밋 특성으로 DDL로 분류한다. DELETE와 TRUNCATE를 단지 결과 행 수가 0이라는 이유로 같은 작업으로 보지 않는다. TRUNCATE의 복구 관련 일반 설명은 앞 절의 SQL Server 명시적 트랜잭션 예외와 함께 읽는다."
+        }
+      ]
+    },
+    {
+      "title": "제4절 DCL",
+      "source_pages": "원문 PDF 443-459쪽",
+      "blocks": [
+        {
+          "type": "p",
+          "text": "사용자를 생성하고 필요한 권한을 부여하면 운영 계정을 공유하지 않고 특정 데이터만 공개할 수 있다. 사용자 생성, 로그인, 테이블 생성, 다른 사용자의 객체 조회는 각각 별도 권한의 문제다. 접속에 성공했다고 모든 DDL·DML이 허용되는 것은 아니다. 원문은 Oracle의 SYS·SYSTEM·SCOTT 계정을 각각 관리용·관리용·샘플용 역할로 소개한다."
+        },
+        {
+          "type": "p",
+          "text": "Oracle은 사용자로 인스턴스에 접속하고 대응 스키마에 객체를 생성하는 형태다. SQL Server는 인스턴스에 접속할 로그인과 데이터베이스별 사용자를 만들고 둘을 매핑한다. 사용자는 스키마에 대한 권한을 가지며 객체는 스키마에 속한다. 따라서 로그인 → 인스턴스 → 데이터베이스 사용자 → 스키마 → 테이블의 계층을 구별해야 한다."
+        },
+        {
+          "type": "p",
+          "text": "SQL Server는 Windows 인증과 혼합 모드를 설명한다. Windows 인증은 운영체제가 확인한 보안 토큰을 신뢰하는 연결이다. 혼합 모드에서는 Windows 인증과 SQL 인증을 사용할 수 있다. 원문은 Windows 인증의 정책·계정 잠금·만료 지원과 SQL 인증의 강력한 암호 사용을 설명한다. SQL Server는 로그인을 먼저 만든 뒤 대상 데이터베이스로 이동하여 사용자를 생성하는 흐름이다."
+        },
+        {
+          "type": "p",
+          "text": "시스템 권한은 CREATE USER·CREATE SESSION·CREATE TABLE처럼 특정 종류의 작업을 할 수 있는 권한이다. 원문의 SQLD 사용자는 생성 후에도 CREATE SESSION이 없어 접속하지 못하고, 접속 권한을 받은 후에도 CREATE TABLE이 없어 테이블 생성에 실패한다. 각각 GRANT로 필요한 권한을 받아야 다음 작업이 가능하다. SQL Server 사례는 스키마 권한도 별도로 부여한다."
+        },
+        {
+          "type": "p",
+          "text": "객체 권한은 특정 테이블·뷰 등의 SELECT·INSERT·UPDATE·DELETE 같은 작업 권한이다. 다른 사용자의 객체는 소유자/스키마 이름을 한정하고 적절한 권한을 받아야 한다. MENU에 SELECT만 부여받은 SCOTT은 조회할 수 있지만 UPDATE는 권한 부족 오류가 난다. 객체별·작업별로 권한을 따로 관리한다는 의미다. GRANT는 부여, REVOKE는 회수다."
+        },
+        {
+          "type": "p",
+          "text": "ROLE은 사용자와 여러 권한 사이의 중개 단위다. ROLE을 만들고 시스템·객체 권한을 넣은 다음 사용자나 다른 ROLE에 부여하면 사용자마다 권한을 일일이 반복 설정하는 부담을 줄인다. 원문의 LOGIN_TABLE은 CREATE SESSION·CREATE TABLE을 묶는다. CONNECT·RESOURCE의 권한 목록과 DROP USER ... CASCADE로 사용자 객체를 함께 삭제하는 사례도 제시한다."
+        },
+        {
+          "type": "p",
+          "text": "SQL Server는 원문에서 제공 역할의 멤버로 참여하는 방식을 설명한다. 서버 수준 역할은 인스턴스 작업용 로그인에, 데이터베이스 수준 역할은 개별 데이터베이스 작업용 사용자에 대응한다. 서버 수준의 public·bulkadmin·dbcreator·diskadmin·processadmin·securityadmin·serveradmin·setupadmin·sysadmin은 기본 권한 상속, 대량 입력, 데이터베이스·파일·프로세스·보안·서버 구성·연결 서버·전체 작업 등 역할을 나눈다. 데이터베이스 역할은 액세스·백업·읽기·쓰기·DDL·읽기/쓰기 거부·소유자·보안 관리로 나뉜다. 원문이 제시한 역할별 범위를 필요한 작업 수준과 연결해 복습한다."
+        }
+      ]
+    }
+  ],
+  "codes": [
+    {
+      "id": "II3-C01",
+      "title": "INSERT SELECT로 여러 팀 자료 입력",
+      "source_pdf_pages": [
+        393
+      ],
+      "sql": "INSERT\nINTO TEAM (TEAM_ID, REGION_NAME, TEAM_NAME, ORIG_YYYY, STADIUM_ID)\nSELECT REPLACE(TEAM_ID, 'K', 'A') AS TEAM_ID,\n       REGION_NAME, REGION_NAME || ' 올스타' AS TEAM_NAME,\n       2019 AS ORIG_YYYY, STADIUM_ID\nFROM TEAM\nWHERE REGION_NAME IN ('성남', '인천');",
+      "purpose": "두 지역의 팀을 조회하여 변환된 자료를 입력한다.",
+      "keywords": [
+        {
+          "term": "INSERT INTO",
+          "role": "입력 대상 칼럼"
+        },
+        {
+          "term": "SELECT",
+          "role": "값을 공급할 다중 행 조회"
+        }
+      ],
+      "process": [
+        "지역 조건으로 원본 행을 고른다.",
+        "팀 ID·이름·연도를 원문 표현식으로 변환해 대상 칼럼 순서대로 입력한다."
+      ],
+      "result": "원문은 2행 입력을 표시한다.",
+      "learn": [
+        "칼럼 개수·순서 대응을 확인한다."
+      ]
+    },
+    {
+      "id": "II3-C02",
+      "title": "NULL인 포지션만 수정",
+      "source_pdf_pages": [
+        394
+      ],
+      "sql": "UPDATE PLAYER\nSET POSITION = 'MF'\nWHERE POSITION IS NULL;",
+      "purpose": "포지션이 정의되지 않은 선수만 MF로 수정한다.",
+      "keywords": [
+        {
+          "term": "SET",
+          "role": "새 값 대입"
+        },
+        {
+          "term": "IS NULL",
+          "role": "수정할 행 제한"
+        }
+      ],
+      "process": [
+        "NULL 조건에 맞는 행을 식별한다.",
+        "선택된 행의 POSITION을 수정한다."
+      ],
+      "result": "원문은 3행 갱신을 표시한다.",
+      "learn": [
+        "WHERE가 없으면 전체 행을 바꾼다."
+      ]
+    },
+    {
+      "id": "II3-C03",
+      "title": "다른 테이블 조건으로 삭제 대상 선정",
+      "source_pdf_pages": [
+        397
+      ],
+      "sql": "DELETE PLAYER A\nWHERE EXISTS (SELECT 1\n              FROM TEAM X\n              WHERE X.TEAM_ID = A.TEAM_ID\n                AND X.ORIG_YYYY < 1980);",
+      "purpose": "1980년 이전에 창단한 팀의 선수 행을 삭제한다.",
+      "keywords": [
+        {
+          "term": "DELETE",
+          "role": "PLAYER 행 제거"
+        },
+        {
+          "term": "EXISTS",
+          "role": "같은 팀의 창단 조건 존재 확인"
+        }
+      ],
+      "process": [
+        "각 선수의 TEAM_ID와 TEAM을 연관시킨다.",
+        "조건에 맞는 팀이 있으면 해당 선수 행을 삭제한다."
+      ],
+      "result": "원문은 49행 삭제를 표시한다.",
+      "learn": [
+        "팀 행을 지우는 코드가 아니라 선수 행을 지우는 코드다."
+      ]
+    },
+    {
+      "id": "II3-C04",
+      "title": "MERGE의 일치·불일치 분기",
+      "source_pdf_pages": [
+        400
+      ],
+      "sql": "MERGE\nINTO TEAM T\nUSING TEAM_TMP S\nON (T.TEAM_ID = S.TEAM_ID)\nWHEN MATCHED THEN\n    UPDATE\n    SET T.REGION_NAME = S.REGION_NAME,\n        T.TEAM_NAME = S.TEAM_NAME,\n        T.DDD = S.DDD,\n        T.TEL = S.TEL\nWHEN NOT MATCHED THEN\n    INSERT (T.TEAM_ID, T.REGION_NAME, T.TEAM_NAME, T.STADIUM_ID, T.DDD, T.TEL)\n    VALUES (S.TEAM_ID, S.REGION_NAME, S.TEAM_NAME, S.STADIUM_ID, S.DDD, S.TEL);",
+      "purpose": "원문의 임시 소스 TEAM_TMP로 TEAM 자료를 입력·수정한다.",
+      "keywords": [
+        {
+          "term": "USING",
+          "role": "소스 집합"
+        },
+        {
+          "term": "ON",
+          "role": "팀 ID 일치 판단"
+        },
+        {
+          "term": "MATCHED / NOT MATCHED",
+          "role": "수정·입력 분기"
+        }
+      ],
+      "process": [
+        "팀 ID로 타깃과 소스를 대응시킨다.",
+        "이미 있으면 지정 칼럼을 수정하고 없으면 소스 값으로 삽입한다."
+      ],
+      "result": "원문은 20행 병합을 표시한다. TEAM_TMP는 원문 PDF398-399쪽에서 준비한 테이블이다.",
+      "learn": [
+        "일치 판단 조건과 실제 변경 칼럼을 분리해 읽는다."
+      ]
+    },
+    {
+      "id": "II3-C05",
+      "title": "Oracle 저장점까지 부분 롤백",
+      "source_pdf_pages": [
+        412
+      ],
+      "sql": "SAVEPOINT SVPT2;\nUPDATE PLAYER SET HEIGHT = 100;\nROLLBACK TO SVPT2;",
+      "purpose": "키 전체 수정 작업을 저장점 이후 범위에서 취소한다.",
+      "keywords": [
+        {
+          "term": "SAVEPOINT",
+          "role": "복귀 기준 지정"
+        },
+        {
+          "term": "ROLLBACK TO",
+          "role": "해당 저장점 이후 변경 취소"
+        }
+      ],
+      "process": [
+        "저장점을 정한다.",
+        "480행을 수정한 뒤 저장점까지 되돌린다."
+      ],
+      "result": "원문은 480행 갱신과 롤백 완료 메시지를 표시한다.",
+      "learn": [
+        "부분 롤백과 전체 트랜잭션 종료는 구별한다."
+      ]
+    },
+    {
+      "id": "II3-C06",
+      "title": "SQL Server 저장점과 부분 롤백",
+      "source_pdf_pages": [
+        412
+      ],
+      "sql": "BEGIN TRAN\nSAVE TRAN SVTR2;\nUPDATE PLAYER SET HEIGHT = 100;\nROLLBACK TRAN SVTR2;",
+      "purpose": "명시적 트랜잭션 안에서 저장점 이후 수정을 취소한다.",
+      "keywords": [
+        {
+          "term": "BEGIN TRAN",
+          "role": "명시적 트랜잭션 시작"
+        },
+        {
+          "term": "SAVE TRAN",
+          "role": "저장점 정의"
+        },
+        {
+          "term": "ROLLBACK TRAN 이름",
+          "role": "저장점까지 취소"
+        }
+      ],
+      "process": [
+        "기본 AUTO COMMIT과 구별하여 트랜잭션을 명시한다.",
+        "저장점 이후 UPDATE를 수행하고 부분 취소한다."
+      ],
+      "result": "원문은 480행 영향과 명령 완료 메시지를 표시한다.",
+      "learn": [
+        "자동 커밋된 문장을 나중에 되돌리는 방식이 아니다."
+      ]
+    },
+    {
+      "id": "II3-C07",
+      "title": "Oracle 테이블 정의와 기본키·외래키",
+      "source_pdf_pages": [
+        422
+      ],
+      "sql": "CREATE TABLE PLAYER (\n    PLAYER_ID CHAR(7) NOT NULL,\n    PLAYER_NAME VARCHAR2(20) NOT NULL,\n    TEAM_ID CHAR(3) NOT NULL,\n    E_PLAYER_NAME VARCHAR2(40),\n    NICKNAME VARCHAR2(30),\n    JOIN_YYYY CHAR(4),\n    POSITION VARCHAR2(10),\n    BACK_NO NUMBER(2),\n    NATION VARCHAR2(20),\n    BIRTH_DATE DATE,\n    SOLAR CHAR(1),\n    HEIGHT NUMBER(3),\n    WEIGHT NUMBER(3),\n    CONSTRAINT PLAYER_PK PRIMARY KEY (PLAYER_ID),\n    CONSTRAINT PLAYER_FK FOREIGN KEY (TEAM_ID) REFERENCES TEAM (TEAM_ID)\n);",
+      "purpose": "선수 속성과 필수값·키·참조 관계를 정의한다.",
+      "keywords": [
+        {
+          "term": "유형과 NOT NULL",
+          "role": "값의 저장 형태·필수 여부"
+        },
+        {
+          "term": "PRIMARY KEY",
+          "role": "선수 ID 유일 식별"
+        },
+        {
+          "term": "REFERENCES",
+          "role": "TEAM의 팀 ID 참조"
+        }
+      ],
+      "process": [
+        "칼럼과 유형을 정의한다.",
+        "테이블 수준에서 기본키와 외래키를 추가한다."
+      ],
+      "result": "원문은 테이블 생성 완료를 표시한다. TEAM은 앞서 정의된 부모 테이블이다.",
+      "learn": [
+        "칼럼 수준 NOT NULL과 테이블 수준 키 정의가 함께 쓰인다."
+      ]
+    },
+    {
+      "id": "II3-C08",
+      "title": "생성 뒤 외래키 추가",
+      "source_pdf_pages": [
+        435,
+        436
+      ],
+      "sql": "ALTER TABLE PLAYER\nADD CONSTRAINT PLAYER_FK\nFOREIGN KEY (TEAM_ID) REFERENCES TEAM (TEAM_ID);",
+      "purpose": "선수의 팀 ID가 팀 테이블을 참조하도록 제약한다.",
+      "keywords": [
+        {
+          "term": "ADD CONSTRAINT",
+          "role": "제약조건 추가"
+        },
+        {
+          "term": "FOREIGN KEY / REFERENCES",
+          "role": "자식·부모 키 지정"
+        }
+      ],
+      "process": [
+        "기존 PLAYER 테이블에 참조 제약을 더한다."
+      ],
+      "result": "원문은 변경 완료를 표시하고 이후 부모 테이블·부모 행 삭제 시 참조 제약 오류 사례를 설명한다.",
+      "learn": [
+        "이미 저장된 자료와 제약이 양립해야 한다."
+      ]
+    },
+    {
+      "id": "II3-C09",
+      "title": "입력 후 확정과 객체 조회 권한 부여",
+      "source_pdf_pages": [
+        451
+      ],
+      "sql": "INSERT INTO MENU VALUES (1, '화이팅');\nCOMMIT;\nGRANT SELECT ON MENU TO SCOTT;",
+      "purpose": "SQLD 소유 MENU에 값을 넣고 SCOTT에 조회만 허용한다.",
+      "keywords": [
+        {
+          "term": "COMMIT",
+          "role": "입력 확정"
+        },
+        {
+          "term": "GRANT SELECT ON",
+          "role": "특정 객체의 조회 권한 부여"
+        }
+      ],
+      "process": [
+        "원문은 SQLD로 접속한 상태에서 실행한다.",
+        "자료를 확정하고 조회 권한을 준다."
+      ],
+      "result": "원문은 입력 1행·커밋·권한 부여 완료를 표시한다. 이후 SCOTT의 SELECT는 가능하지만 UPDATE는 권한 부족으로 실패한다.",
+      "learn": [
+        "사용자 생성·접속 권한과 객체별 작업 권한은 다르다."
+      ]
+    },
+    {
+      "id": "II3-C10",
+      "title": "ROLE로 권한을 묶어 부여",
+      "source_pdf_pages": [
+        456
+      ],
+      "sql": "CREATE ROLE LOGIN_TABLE;\nGRANT CREATE SESSION, CREATE TABLE TO LOGIN_TABLE;\nGRANT LOGIN_TABLE TO SQLD;",
+      "purpose": "접속·테이블 생성 권한을 ROLE에 묶어 SQLD에 전달한다.",
+      "keywords": [
+        {
+          "term": "CREATE ROLE",
+          "role": "권한 묶음 생성"
+        },
+        {
+          "term": "GRANT ... TO ROLE",
+          "role": "권한을 ROLE에 포함"
+        },
+        {
+          "term": "GRANT ROLE TO USER",
+          "role": "사용자에 묶음 부여"
+        }
+      ],
+      "process": [
+        "LOGIN_TABLE을 만든다.",
+        "두 시스템 권한을 넣고 ROLE을 SQLD에 준다."
+      ],
+      "result": "원문은 각 작업 완료 뒤 SQLD의 접속과 MENU 생성 성공을 보여 준다.",
+      "learn": [
+        "권한 → ROLE → 사용자라는 중개 관계를 이해한다."
+      ]
+    }
+  ],
+  "comparisons": [
+    {
+      "title": "관리 언어 분류",
+      "headers": [
+        "분류",
+        "대상",
+        "대표 명령"
+      ],
+      "rows": [
+        [
+          "DML",
+          "테이블의 행",
+          "INSERT, UPDATE, DELETE, MERGE"
+        ],
+        [
+          "TCL",
+          "트랜잭션",
+          "COMMIT, ROLLBACK, SAVEPOINT"
+        ],
+        [
+          "DDL",
+          "객체 구조",
+          "CREATE, ALTER, RENAME, DROP, TRUNCATE"
+        ],
+        [
+          "DCL",
+          "사용자·권한",
+          "CREATE USER, GRANT, REVOKE, DROP USER"
+        ]
+      ]
+    },
+    {
+      "title": "DELETE·TRUNCATE·DROP",
+      "headers": [
+        "기준",
+        "DELETE",
+        "TRUNCATE TABLE",
+        "DROP TABLE"
+      ],
+      "rows": [
+        [
+          "대상",
+          "조건에 맞는 행 또는 전체 행",
+          "전체 행",
+          "구조와 모든 자료"
+        ],
+        [
+          "구조 유지",
+          "유지",
+          "유지",
+          "제거"
+        ],
+        [
+          "WHERE",
+          "사용 가능",
+          "없음",
+          "없음"
+        ],
+        [
+          "분류",
+          "DML",
+          "원문은 DDL로 분류",
+          "DDL"
+        ],
+        [
+          "취소 문맥",
+          "미커밋 변경은 롤백",
+          "원문 일반 설명과 SQL Server 명시적 트랜잭션 예외를 함께 확인",
+          "원문은 객체 제거로 설명"
+        ]
+      ]
+    },
+    {
+      "title": "권한의 구분",
+      "headers": [
+        "구분",
+        "예",
+        "역할"
+      ],
+      "rows": [
+        [
+          "시스템 권한",
+          "CREATE SESSION, CREATE TABLE",
+          "접속·종류별 작업 허용"
+        ],
+        [
+          "객체 권한",
+          "SELECT ON MENU",
+          "특정 객체의 특정 작업 허용"
+        ],
+        [
+          "ROLE",
+          "LOGIN_TABLE",
+          "여러 권한을 묶어 전달"
+        ],
+        [
+          "SQL Server 서버 역할",
+          "로그인의 인스턴스 작업",
+          "데이터베이스 역할과 범위 구별"
+        ],
+        [
+          "SQL Server 데이터베이스 역할",
+          "사용자의 DB 내부 작업",
+          "스키마·객체 권한과 연결"
+        ]
+      ]
+    }
+  ],
+  "key_points": [
+    "DML의 대상은 행, DDL의 대상은 구조, TCL의 대상은 변경의 확정·취소 단위, DCL의 대상은 사용자·권한이다.",
+    "UPDATE·DELETE에서 WHERE를 생략하면 전체 행에 적용된다.",
+    "MERGE의 ON 결과가 MATCHED·NOT MATCHED 분기의 기준이다.",
+    "저장점 A로 되돌리면 A 이후 저장점은 무효다. 부분 롤백을 커밋으로 오해하지 않는다.",
+    "DEFAULT 변경은 이후 입력에 영향을 주고 기존 자료를 일괄 수정하지 않는다.",
+    "참조 무결성은 부모 삭제를 제한할 수 있다. CTAS가 모든 제약을 복사하지 않는다.",
+    "Oracle과 SQL Server의 자동 커밋·로그인·스키마 구조를 원문 기준으로 구분한다."
+  ],
+  "final_summary": [
+    "INSERT·UPDATE·DELETE·MERGE로 행을 바꾸고, COMMIT·ROLLBACK·SAVEPOINT로 논리적 작업 단위의 무결성을 유지한다.",
+    "구조는 CREATE·ALTER·RENAME·DROP·TRUNCATE로 관리한다. 제약조건과 데이터 유형이 허용되는 값과 테이블 간 참조를 정한다.",
+    "권한은 접속, 종류별 작업, 특정 객체 작업으로 구분하고 ROLE로 묶는다. SQL Server의 로그인·사용자·스키마와 Oracle 사용자 체계를 구별한다.",
+    "전체 행 삭제, 구조 삭제, 변경 취소 가능성은 명령 이름만으로 일반화하지 않고 DBMS·트랜잭션 문맥까지 함께 확인한다."
+  ],
+  "checklist": [
+    "INSERT의 칼럼·값 대응과 생략 시 DEFAULT·NULL을 이해한다.",
+    "UPDATE 서브쿼리의 NULL 반환 위험과 대상 제한을 이해한다.",
+    "DELETE와 MERGE의 대상 식별을 설명할 수 있다.",
+    "트랜잭션의 네 특성과 COMMIT·ROLLBACK 효과를 구분한다.",
+    "저장점의 범위와 이후 저장점 무효화를 이해한다.",
+    "SQL Server 세 트랜잭션 모드를 구분한다.",
+    "PK·UNIQUE·NOT NULL·CHECK·FK를 구분한다.",
+    "CTAS의 제약 복사 제한을 기억한다.",
+    "칼럼 추가·삭제·변경 조건과 DEFAULT의 적용 시점을 이해한다.",
+    "DELETE·TRUNCATE·DROP의 범위를 구별한다.",
+    "로그인·사용자·스키마 및 시스템·객체 권한을 구별한다.",
+    "ROLE과 서버·데이터베이스 역할의 범위를 이해한다."
+  ],
+  "coverage": [
+    {
+      "section": "제1절 DML",
+      "source_pdf_pages": "원문 PDF 391-402쪽",
+      "covered_topics": [
+        "DML은 테이블의 데이터를 조작한다. INSERT는 입력, UPDATE는 수정, DELETE는 삭제이며 MERGE는 소스와 타",
+        "단일 행 INSERT는 INTO의 칼럼과 VALUES의 값을 1:1로 대응시킨다. 칼럼을 나열하는 순서는 테이블 정의 순서와 ",
+        "INTO의 칼럼 목록을 생략하면 정의된 모든 칼럼의 순서와 개수에 맞춰 값을 제공해야 한다. 이후 칼럼 추가·삭제 시 값 개수",
+        "UPDATE의 SET은 바꿀 칼럼과 새 값을, WHERE는 수정할 행을 정한다. WHERE가 없으면 전체 행이 수정된다. SE",
+        "DELETE는 WHERE에 맞는 행을 제거하며 FROM은 원문의 기본 구문에서 생략 가능하다. 조건이 없으면 모든 행을 삭제하",
+        "MERGE의 INTO는 타깃, USING은 소스, ON은 두 집합을 대응시키는 조건이다. 일치한 행에는 WHEN MATCHED",
+        "DML 변경의 확정은 트랜잭션 처리 방식과 연결된다. Oracle 예는 COMMIT 또는 ROLLBACK으로 종료하며 SQL "
+      ]
+    },
+    {
+      "section": "제2절 TCL",
+      "source_pdf_pages": "원문 PDF 403-417쪽",
+      "covered_topics": [
+        "트랜잭션은 서로 분리할 수 없는 한 개 이상의 데이터베이스 연산으로 이루어진 논리적 작업 단위다. 계좌이체의 출금과 입금처럼 ",
+        "COMMIT 전에는 자신의 변경을 조회하고 취소할 수 있다. 다른 사용자는 아직 확정되지 않은 변경을 보지 못하며, 변경 행에",
+        "원문의 SQL Server 트랜잭션 방식은 세 가지다. AUTO COMMIT은 각 명령의 성공·오류에 따라 DBMS가 확정·취",
+        "SAVEPOINT는 트랜잭션 안의 특정 시점을 이름으로 저장한다. Oracle은 SAVEPOINT 이름, ROLLBACK TO",
+        "원문의 단계 예시는 INSERT 후 A 저장점, UPDATE 후 B 저장점, DELETE의 순서다. B로 되돌리면 DELETE",
+        "Oracle 설명에서는 대상 SQL 수행 시 트랜잭션이 시작되고 COMMIT·ROLLBACK으로 종료한다. DDL 전후의 자동"
+      ]
+    },
+    {
+      "section": "제3절 DDL",
+      "source_pdf_pages": "원문 PDF 418-442쪽",
+      "covered_topics": [
+        "DDL은 테이블 등의 객체 구조를 정의한다. 테이블 생성 전 저장할 칼럼, 데이터 유형, 후보키 중 기본키, 다른 테이블을 참",
+        "CREATE TABLE은 테이블 이름 다음 괄호 안에 칼럼명과 유형을 쉼표로 구분한다. 마지막 항목 뒤에는 쉼표를 두지 않는다",
+        "제약조건은 허용되는 데이터만 유지해 무결성을 보장한다. 칼럼 정의 뒤에 쓰는 칼럼 수준 방식과 마지막에 CONSTRAINT로 ",
+        "생성 후 Oracle DESCRIBE/DESC, SQL Server sp_help로 구조를 확인한다. CREATE TABLE ",
+        "ALTER TABLE ADD는 칼럼을 추가하며 원문 기준 새 칼럼은 마지막에 위치한다. DROP COLUMN은 데이터 유무와 ",
+        "DEFAULT 변경은 이후 입력에 영향을 주며 기존 행 전체를 바꾸는 UPDATE가 아니다. NOT NULL 추가는 기존 NU",
+        "외래키가 참조하는 부모 테이블 또는 부모 행은 참조 조건에 의해 삭제가 제한될 수 있다. 원문에서 TEAM을 DROP하거나 선",
+        "DROP TABLE은 구조와 데이터를 모두 제거한다. Oracle의 CASCADE CONSTRAINTS는 참조 제약까지 제거하"
+      ]
+    },
+    {
+      "section": "제4절 DCL",
+      "source_pdf_pages": "원문 PDF 443-459쪽",
+      "covered_topics": [
+        "사용자를 생성하고 필요한 권한을 부여하면 운영 계정을 공유하지 않고 특정 데이터만 공개할 수 있다. 사용자 생성, 로그인, 테",
+        "Oracle은 사용자로 인스턴스에 접속하고 대응 스키마에 객체를 생성하는 형태다. SQL Server는 인스턴스에 접속할 로그",
+        "SQL Server는 Windows 인증과 혼합 모드를 설명한다. Windows 인증은 운영체제가 확인한 보안 토큰을 신뢰하는",
+        "시스템 권한은 CREATE USER·CREATE SESSION·CREATE TABLE처럼 특정 종류의 작업을 할 수 있는 권한",
+        "객체 권한은 특정 테이블·뷰 등의 SELECT·INSERT·UPDATE·DELETE 같은 작업 권한이다. 다른 사용자의 객체는",
+        "ROLE은 사용자와 여러 권한 사이의 중개 단위다. ROLE을 만들고 시스템·객체 권한을 넣은 다음 사용자나 다른 ROLE에 ",
+        "SQL Server는 원문에서 제공 역할의 멤버로 참여하는 방식을 설명한다. 서버 수준 역할은 인스턴스 작업용 로그인에, 데이"
+      ]
+    }
+  ]
+}

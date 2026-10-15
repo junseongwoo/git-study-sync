@@ -1,0 +1,36 @@
+과목 III QL 고급 활용 및 튜닝
+뷰 Mergng이 작동한다면 변환된 쿼리는 다음과 같은 모습일 것이다.
+sel«t e.enæ, e.j±, e e.요1, d.dnare
+fræ
+•tpre
+- e, &pt d
+d.±ptno = e.&ptm
+e.j± = 'SALESUAN
+e.요1 누 1聳
+그리고 이때의 실행계획은 다음과 같이 일반 조인문을 처리하는 것과 똑같은 형태가 된다.
+Executim PI결1
+0
+1
+2
+SELECT STATEENT (Cost=3 Card=2 Bytes44)
+0 tESTED LOS (Cost=3 Car#2 Bytes=84)
+1 TABLE ACCESS (BY (TABLE) (Cost=2 Car&2 Bytes=58)
+II&X (RA%E SCAN) 'EP SAL-IDX' (IM)EX) (Cost=1 Car&7)
+TABLE ACCESS (BY RMD) 'DEPT' (TABLE) (Cost=1 Card=1 Bytes=13)
+It&X (대I이正 SCAN) OF 'DEPT-PK' (It0EX (UNIQJE)) ((05t훼 Card=1)
+위와 같이 단순한 부는 Merpng하더라도 성능이 나빠지지 않는다. 하지만 다음과 같이 복잡한 연산을 포함하는
+부를 Merging하면 오히려 성능이 더 나빠질 수도 있다.
+group by 절
+select-list에 disunct 연산자 포함
+따라서 뷰를 Merging했을 때 쿼리 수행 비용이 더 낮아지는지를 조사한 후에 적용 여부를 판단하는 쪽으~로
+옵티마이저가 발전하고 있다.
+거급적 옵티마이저의 판단과 기능에 의존하는 것이 좋지만, 필요하다면 개발자가 이를 직접 조정할 줄도 일이O누
+한다. Oracle의 경우 이 기능을 제어할 수 있도록 merge와 no-merge 힌트를 제공한다. 이를 사용하기에 앞서
+실행계획을 통해 뷰 Merpng이 발생했는지, 그것이 적정한지를 판단하는 능력이 더 중요하다.
+아래는 뷰 Merging이 불가능한 경우인데, 힌트가 제공되지 않을 땐 이런 제약을 활용해 튜닝을 실시하기도
+집V(set) 연산자(umon, umon 궤, intersect, mmus)
+예nn테1 by절
+ROWNUM pseudo 칼럼
+ㆍ select-list에 집계 함수(avg, count, max, min, sum) 사용
+ㆍ 분석 함수(Analyüc Function)
+656 전문가 ,까드

@@ -1,0 +1,40 @@
+과목 | QL 기본과 활용
+
+INNER 101시이라면 홈팀이 배정된 15개의 경기장만 출력됐겠지만, OUTER JOINS 사용했기 때문에 홈팀이
+없는 안양경기장, 마산경기장, 일산경기장, 부산시민경기장, 대구시민경기장의 정보까지 추가로 출력됐다.
+
+[예제] 0671에 SRE 부서 중에는 사원이 없는 부서도 있다. DEPTS EMPE 조인하되 사원이 없는 부서 FRE 같이 출력하도
+록 한다.
+
+SELECT A.ENAME, A.DEPTNO, B.DNAME, B.LOC
+FROM EWP A, DEPT B
+WHERE B.DEPTNO = A.DEPTNO(+);
+
+ENANE                 DEPTNO                  DNAME                     LOC
+SMITH                     20                  RESEARCH                 DALLAS
+ALLEN                     30                  SALES                     CHICAGO
+WARD                      30                  SALES                     CHICAGO
+JONES                     20                  RESEARCH                  DALLAS
+WARTIN                    30                  SALES                     CHICAGO
+BLAKE                     30                  54165                     CHICAGO
+CLARK                     10                  ACCOUNTING               NEW YORK
+SCOTT                     20                  RESEARCH                  DALLAS
+KING                      10                  ACCOUNTING               NEW YORK
+TURNER                 ㆍ 30                  SALES                     CHICAGO
+ADAMS                     20                  RESEARCH                 DALLAS
+INNES                     30                  SALES                     CHICAGO
+FORD                     20                  RESEARCH                 DALLAS
+NILLER                   10                  ACCOUNTING               NEW YORK
+OPERATIONS               BOSTON                             ㅣ
+
+15 개의 행이 선택됐습니다.
+
+INNER ]014이라면 사원 정보와 함께 사원이 배정된 3개의 부서 정보와 14명의 사원 정보만 출력됐을 것이다.
+하지만 OUTER JOINS 사용했으므로 사원이 배정되지 않은 부서번호 402] OPERATIONS 부서의 LOC 정보까지
+출력됐다.
+
+지금까지 조인에 대한 기본적인 사용법을 확인해 보았다. 조인이 필요한 기본적인 이유는 과목1에서 배운 정규화
+에서부터 출발한다. 정규화란 불필요한 데이터의 정합성을 확보하고 이상현상(00001) 발생을 피하기 위해 테이
+블을 분할해 생성한다.
+
+244 90. #87 가이드

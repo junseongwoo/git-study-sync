@@ -1,0 +1,43 @@
+제6장 고금 SOL 튜닝
+
+월별로 과금이 발생했는지만 확인하면 되므로 쿼리를 아래처럼 바꿀 수 있다.
+
+select 연월
+from 연월테이블 a
+where 연월 <= iyyyym
+and exists (
+select ‘x’
+from 과금
+where 43H = 3.연월
+and 지역 1106 reg || '§'
+
+call          count           cpu        elapsed          disk         query current        7005
+Parse               1           0.00              0.60                0                0                0              0
+Execute            1           0.00              0.00                0                0                0              0
+Fetch             4         0.60            0.01              0             8              0           35
+total              6         0.00            0.01              0             [:익              0           35
+
+Row Source Operation
+
+TABLE ACCESS FULL 연월테이블 (cr=6 pr=0 pw=0 time=557 us)
+PARTITION RANGE ITERATOR PARTITION: KEY KEY (cr=76 pr=0 pw=0 time=853 us)
+
+Rows
+35 NESTED LOOPS SEMI (cr=82 pr=9 pw=0 time=19568 us)
+36
+35
+35 INDEX RANGE SCAN 과금 1 (cr=76 pr=0 pw=0 time=683 us)
+
+연월테이블을 먼저 읽고 과금 테이블을 exists 서브쿼리로 필터링하는 방식이다. exists 서브쿼리의 가장 2
+특징은, 메인 쿼리로부터 건건이 입력 받은 값에 대한 조건을 만족하는 첫 번째 레코드를 만나는 순간 true 반환하고
+서브쿼리 수행을 마친다는 점이다. 따라서 과금 테이블에 [과금연월 + 지역] 순으로 인덱스를 구성해 주기만 하면
+가장 최적으로 수행될 수 있다. 그 결과 소트가 발생하지 않았으며, 82개 블록만 읽고 0.01초 만에 작업이 끝났다.
+
+다. 불필요한 Count 연산 제거
+아래는 데이터 존재 여부만 확인하면 되는데도 불필요하게 전체 건수를 0000[하는 경우다.
+
+declare
+1_cnt number;
+
+begin
+select count(*) into 1_cnt

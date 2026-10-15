@@ -1,0 +1,34 @@
+과목 ｌ SQL 기본과 활용
+
+HH] SQL Server
+
+sp_rename ‘dbo. PLAYER. TEMP_ID', 'PLAYER_ID', "COLUMN';
+
+주의: 개체 이름 부분을 변경하면 스크립트 및 저장 프로시저를 손상시킬 수 있습니다.
+
+라. DROP CONSTRAINT
+테이블 생성 시 부여했던 제약조건을 삭제하는 명령어 형태는 다음과 같다.
+
+ALTER TABLE 테이블명 DROP CONSTRAINT 제약조건명;
+
+[예제] PLAYER 테이블의 외래키 제약조건을 삭제한다.
+
+‘ALTER TABLE PLAYER DROP CONSTRAINT PLAYER_FK;
+테이블이 변경됐습니다.
+ALTER TABLE PLAYER DROP CONSTRAINT PLAYER_FK;
+
+명령이 완료됐습니다.
+마. ADD CONSTRAINT
+
+테이블 생성 시 제약쪼건을 적용하지 않았다면, 생성 이후에 필요에 의해 제약조건을 추가할 수 있다. 다음은
+특정 칼럼에 제약조건을 추가하는 명령어 형태다.
+
+ALTER TABLE 테이블명 400 CONSTRAINT 제약조건명 제약조건 (칼럼명);
+
+[예제] PLAYER 테이블에 TEAM 테이블과의 외래키 제약조건을 추가한다. 제약조건명은 PLAYER 로 하고, PLAYER 테이블의
+TEAM_ID 칼럼이 TEAM 테이블의 TEAM_IDE 참조하는 조건이다.
+
+ALTER TABLE PLAYER ADD CONSTRAINT PLAYER FK FOREIGN KEY (TEAM_ID) REFERENCES TEAM(TEAM_ID);
+
+442 su 전문가 가이드
+

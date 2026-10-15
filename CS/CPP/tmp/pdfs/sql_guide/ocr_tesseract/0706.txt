@@ -1,0 +1,67 @@
+과목 [| 50Ｌ 고급 활용 및 튜닝
+
+EE ————————— Ee
+
+String DAMS = rs_getString(1);     Sod YETYA CL
+String 납입월 = rs.getString(2);
+
+1009 지로 = rs.getlong(3);
+
+1009 자동이체 = rs.getlong(4);
+
+long 신용카드 = rs.getlong(5);
+
+long 핸드폰 = rs. getlong(6);
+
+long 인터넷 = rs. getlong(7);
+
+Geass btEoLEBUBYRY
+
+if(2 ) 0)
+insertData (con, stmt2, 고객번호, 납입월, "A", 지로);
+
+파(자동이체 > 0)
+insertData (con, stmt2, 고객번호, 납입월, "8", 자동이체);
+
+파(신용카드 > 0)
+
+insertData (con, stmt2, 고객번호, UY, "(", 신용카드);
+
+`
+
+하(핸드폰 > 0)
+insertData (con, stmt2
+
+고객번호, 납입월, "0", 핸드폰);
+
+N
+
+하(인터넷 > 0)
+insertData (con, stmt2, 고객번호, 납입월, "6", 인터넷);
+
+2”
+、
+
+£57
+는 58        if(+rows%1000 = 0) stmt2.executeBatch();
+}
+a
+=      rs.close();
+- 8 stat1.close();
+64
+8      stat2_executeBatch():
+66      stwt2.close();
+발기
+. 68 . con.comit();
+69      con, setAutoCommit (true);
+7% }
+n
+72 static Connection getConnection() throws Exception { }
+73 static void releaseConnection(Connection con) throws Exception (5
+74
+75 public static void main(String] args) throws Exception{
+76 Connection con = getConnection();                            A
+7m    execute(con, “200963°);
+78      releaseComection(con);
+
+716 50 건가 가이드

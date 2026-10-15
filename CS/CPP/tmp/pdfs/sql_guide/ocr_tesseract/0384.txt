@@ -1,0 +1,36 @@
+제2장 SQL 활용
+
+. 제1절 서브 쿼리
+
+—            —  =      래이
+
+——    |
+
+서브 쿼리란 하나의 메인 쿼리 안에 포함된 F442 SQL 문장을 말하는 것으로, 위치나 기능에 따라 85190
+SUBQUERY, INLINE VIEW, SCALAR SUBQUERYZ 구분할 수 있다.                                   ㅣ
+
+제2절 집합 연산자              ]
+
+집합 연산자는 결과 집합 간의 연산을 통해 결합하는 방식을 사용한다. UNION 연산자와 UNION ALL 연산자는
+개별 SQL 문의 결과에 대해 합집합 연산을, INTERSECT 연산자는 교집합 연산을, EXCEPT/MINUS 연산자는 차집합을
+수행한다. UNION ALL 연산자를 제외한 모든 집합 연산자는 최종 결과에서 중복된 행은 제외하고 출력한다.
+
+테 i 나철     LAITY 대한 성연       제3절 그룹 함수                    수 PERF He |
+
+| 데이터 분석을 위한 GROUP FUNCTIONS 소그룹 간의 소계를 계산하는 ROLLUP 함수, GROUP BY 항목들
+간의 다차원적인 소계를 계산할 수 있는 CUBE 함수, 특정 항목에 대한 £418 계산하는 GROUPING SETS 함수가
+있다.
+
+제4절 윈도우 함수
+
+| 데이터 분석을 위한 WINDOW FUNCTIONS 부분적이나마 행과 행간의 AE 쉽게 정의하기 위해 만든 함수다.
+| WINDOW FUNCTION 이용한 순위(84040) 관련 함수는 RANK, DENSE_RANK, ROW_NUMBER7} 있으며, 그
+외 그룹 내 집계(46688661'8) 관련 함수, 그룹 내 비율 관련 함수 Fol 있다.
+
+제5절 Top N 쿼리                    |
+
+TopN 쿼리는 말 그대로 상위(100) 개의 행을 조회하는 쿼리다. Oracle® ROWNUM 슈도 칼럼, SQL Servers
+TOP 절을 사용할 수 있다. Oracle 12.1 버전, SQL 56ㅁ하는 2012 버전부터 ROW LIMITING 절로 Top N 쿼리를
+작성할 수 있다.
+
+SQL 전문가 가이드 |391.

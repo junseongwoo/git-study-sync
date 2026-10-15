@@ -1,0 +1,23 @@
+과목 기본과 활용
+[顰1 GROJP BY 현 사용시 ORDER BY 절에 일반 칼럼을 사용해 본다.
+{출까1
+SELRT 1%
+(啞 (하 〉 e
+- SAL;
+{실형 촐과]
+- BY SAL
+5행에 오류:
+~ BY 표현식이 아닙니다.
+[예제] GROUP 절 사용시 ORDER 절에 집계 칼럼을 사용해 본다.
+{예제]
+SELECT Jæ, SIJ(SAL) AS SALRY_SW
+FO EP
+ÄP BY 3%
+*•AVI% 91 (SAL) 〉
+91 (SAL);
+[실행 결과]
+SALÅRY SIN
+3 계의 행이 선택묐습니다.
+위의 예제를 통해 SELECr SQL에서 GROUP BY 절이 사용됐기 때문에 SELECT 절에 정의하지 않은 MAX,
+SIN, COUNT 집계함수도 ORDER BY 절에서 사용할 수 있음을 확인할 수 있다.
+가이드

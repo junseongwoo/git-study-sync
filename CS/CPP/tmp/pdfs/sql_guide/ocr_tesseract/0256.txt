@@ -1,0 +1,39 @@
+과목 | SQL 기본과 활용                                 90000080000빼
+
+| [실행 경과] |
+
+BPN                    DEPTNO                    DNAME                             NEW_DNAME
+7369                            20                    RESEARCH                        CONSULTING
+7499                            30                    SALES                             MARKETING
+7521                            30                    SALES                             MARKETING
+7566                           20                    RESEARCH                        CONSULTING
+7654                            38                    SALES                             MARKETING
+7698                            30                    SALES                             MARKETING
+7782                            10                    ACCOUNTING                   ACCOUNTING
+7788                           20                    RESEARCH                       CONSULTING
+7839                            10                    ACCOUNTING                    ACCOUNTING
+7844                           30                    SALES                             MARKETING
+7876                           20                    RESEARCH                        CONSULTING
+7980                           30                    SALES                             MARKETING
+7982                           20                    RESEARCH                        CONSULTING
+7934                           10                    ACCOUNTING                    ACCOUNTING
+
+14 개의 행이 선택됐습니다.
+
+SELECT  A.PLAYER NAME AS 선수명, 4.8051110 AS 포지션
+, B.REGION_NAME AS 연고지명, B.TEAM NAME AS 팀명
+, C.STADIUM_NAME AS 구장명
+FROM PLAYER A JOIN TEAM B
+ON B.TEAN_ID = ㅅ. 10
+JOIN STADIUM C
+ON C.STADIUM_ID = B.STADIUM_ID
+WHERE A_ POSITION = ‘GK’
+ORDER BY 선수명;                                                                     “yl
+
+위 SQL 전통적인 방식인 WHERE 절의 INNER JOINS E 구현할 수도 있다,
+
+SELECT  A.PLAYER_NAME AS 선수명, APOSITION AS 포지션
+, B.REGION_NAME AS 연고지명, B. TEAM NAME AS 팀명
+, C.STADIUM_NAME AS 구장명
+
+262 | SL 전문가 가이드

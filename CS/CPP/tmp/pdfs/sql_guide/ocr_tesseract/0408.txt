@@ -1,0 +1,31 @@
+제3장 관리 구문
+
+[예제] PLAYER 테이블에 있는 데이터를 수정하고 ROLLBACKE 실행한다.
+UPDATE PLAYER SET HEIGHT = 100;
+480 행이 갱신됐습니다.
+ROLLBACK;
+
+롤백이 완료됐습니다.
+
+[예제] PLAYER 테이블에 있는 데이터를 삭제하고 ROLLBACKE 실행한다.
+DELETE FROM PLAYER;
+480 행이 삭제됐습니다.
+ROLLBACK;
+
+롤백이 완료됐습니다.
+
+HW SQL Server] ROLLBACK
+
+SQL Servers 위에서 언급한 바와 같이 AUTO COMMITO] 기본 방식이므로 임의적으로 ROLLBACKE 수행
+하려면 명시적으로 트랜잭션을 선언해야 한다. 위의 예제는 다음과 같이 변경된다.
+
+[예제] PLAYER 테이블에 데이터를 입력하고 ROLLBACK 실행한다.
+BEGIN TRAN
+INSERT
+INTO PLAYER (PLAYER_ID, TEAM_ID, PLAYER NAME, POSITION, HEIGHT, WEIGHT, BACK_NO)
+VALUES ('1997035', 'Ke2', '이운재', '6K', 182, 82, 1);
+(174 행이 영향을 받음)
+
+ROLLBACK;
+
+SQL 전문가 가이드 |415

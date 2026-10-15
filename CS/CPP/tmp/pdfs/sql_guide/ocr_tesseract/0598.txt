@@ -1,0 +1,42 @@
+제4장 조인 튜닝
+
+where d.deptno = e.empno   -- YAU: 6.0000
+)
+from emp 6
+where sal >= 2000
+
+스칼라 서브 쿼리를 수행할 때, 입력 값과 출력 값을 빠르게 저장하고 찾기 위해 일반적으로 해싱 알고리즘이
+사용된다. 따라서 입력 값의 종류가 소수여서 해시 충돌 가능성이 적은 때라야 캐싱 효과를 얻을 수 있다. 반대의
+경우라면 캐시를 확인하는 비용 때문에 오히려 성능은 저하되고 CPU 사용률만 높게 만든다.
+
+SQL Server 2000 버전까지 이 기능을 제공하다가, 2005 버전부터 기능을 없애 버렸다. 자세한 내용은 SQL
+Server 2005 온라인 설명서에서 ‘Cache 연산자'를 검색해 보기 바란다.
+
+2. 두 개 이상의 값을 리턴하고 싶을 때
+
+다음 쿼리는 위치가 ‘CHICAGO'Y! 부서(4600만 대상으로 급여 수준을 집계하려는 것이다. 사원(600) 테이블
+전체를 다 읽어야 하는 비효율이 UcKOracle 118 이후로 5장 3절 쿼리 변환에서 다루는 “조인 조건 Pushdown’
+기능이 작동한다면, loc = ‘CHICAGO 조건에 해당하는 부서와 관련된 사원 데이터만 읽도록 처리할 수 있다).
+
+select d.deptno, d.dname, avg_sal, min_sal, max_sal
+
+from dept d right outer join
+(select deptno, avg(sal) avg_sal, min(sal) min_sal, max(sal) max_sal
+from emp group by deptno) e
+
+on      .deptno = d.deptno
+
+where d.loc = "CHICAGO
+
+다음과 같이 바꿀 수 있으면 좋겠지만 스칼라 서브 쿼리는 한 레코드당 하나의 값만 리턴한다는 특징 때문에
+그럴 수가 없다.
+
+select d.deptno, d.dname
+
+,(select avg(sal), min(sal), max(sal) from emp where deptno = d.deptno)
+from dept d
+where d.loc = 'CHICAGD'
+
+그렇다고 다음과 같이 쿼리한다면 6000에서 같은 범위를 반복적으로 액세스하는 비효율이 따른다.
+
+SQL 전문가 가이드 [607

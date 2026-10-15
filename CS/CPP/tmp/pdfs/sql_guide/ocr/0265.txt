@@ -1,0 +1,28 @@
+[실행 결과]
+DEPTtO
+40
+20
+SALES
+TERATIONS
+RESER대
+ACCU-NTI%
+LX
+대I(羈
+NEW
+40
+碼
+ACCa-NTn"
+C06ULTIt"
+LARKETI%
+TER.ATImS
+제1장 기본
+LX
+NEW
+DALLAS
+대I(刷
+弼T團
+6 개의 행이 선택퇬습니다.
+INNER J이N이라면 부서번호가 동일한 40 부서의 2개 정보만 출력됐을 것이다. 하지만 FULL OtJTER
+JOIN을 사용했으므로 DF.vr 테이블에만 있는 부서번호 10, 20의 부서 정보와 DEVT-TEMP 테이블에만 있는
+부서번호 60의 부서 정보까지 동시에 출력뢨다.
+전문가 ,101드 271

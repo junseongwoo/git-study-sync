@@ -1,0 +1,88 @@
+제5장 血 옵E!0十이저
+8. 기타 쿼리 변환
+가. 집합 연산을 조인으로 변환
+lntersect나 Mmus 같은 집합(뇨t) 연산을 조인 형대로 변환하는 것을 말한다.
+아래는 deptno = 1따 속한 사원들의 job, mgr을 제외시기고 나머지 job, mg 집합만을 찾는 쿼리이다. 각각
+Sort Unique 연산을 수행한 후에 Mmus 연산을 수행하는 것을 볼 수 있다.
+5엔〉 select j±, frm ~
+2 mirus
+3 select j0b,
+4 ±ptm = 10 :
+| Ro•s 1 Bytes | Cost (篆劗)
+11d
+1*
+Næ
+EP
+Ro•s
+14
+14
+14
+3
+3
+Bytes | Cost ßCRJ)
+0
+2
+3
+4
+5
+1 SELECT STATE%NT
+SORT INIQÆ
+TABLE ACCESS FULL
+배I이集
+TABLE ACCESS FIIL
+%2
+2固
+2菂
+8
+4
+3
+4
+3
+(63)
+(3)
+(0)
+(25)
+(0)
+Predicate lnforrøtion (i&ntified 바 id):
+5 - filter("MN0"=19)
+다음은 옵티마이저가 Minus 연산을 조인 형태로 변환했을 때의 실행계획이다.
+lld
+1*
+1*
+0
+1
+2
+3
+4
+SELECT STATWT
+HASH I-NIQ.Æ
+}•LSH JOIN MTI
+TABLE ACCESS FILL
+TABLE ACCESS FI.LL
+13|
+131
+13|
+141
+3|
+磻3
+%3
+固3
+2固
+8
+8
+7
+3
+3
+(25)
+(25)
+(15)
+(0)
+(0)
+| 嚮:惢℃1
+| æ:圈:01
+| æ.•嚮℃1
+嚮:%:01
+電%℃1
+æ:惢.℃1
+1 %:惢:이
+한문가 ,PI드 667

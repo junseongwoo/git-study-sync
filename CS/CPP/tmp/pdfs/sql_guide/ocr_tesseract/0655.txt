@@ -1,0 +1,42 @@
+과목 I SQL 고급 활용 및 튜닝
+
+위 쿼리에서 조인 조건식을 제외하면 1쪽 집합인 dept] 대한 참조가 전혀 없다. 따라서 emp 테이블만 액세스한
+것을 볼 수 있다. 이러한 쿼리 변환이 Oracle®] 경우 108부터 작동하기 시작했지만 SQL Server 등에서는 이미
+오래전부터 적용돼 온 기능이다.
+
+조인 제거 기능이 작동하려면 다음과 같이 PKet FK 제약이 설정돼 있어야만 한다. 이는 옵티마이저가 쿼리
+변환을 수행하기 위한 지극히 당연한 조건이다. 만약 (가 없으면 두 테이블 간 조인 카디널리티를 파악할 수
+없고, 5가 없으면 조인에 실패하는 레코드가 존재할 수도 있어 옵티마이저가 함부로 쿼리 변환을 수행할 수가
+없다.
+
+SQL> alter table dept add
+2 constraint deptno_pk primary key(deptno);
+
+SQL> alter table emp add
+2 constraint fk_deptno foreign key(deptno)
+3 references dept(deptno);
+
+FK7} 설정돼 있더라도 emp2] deptno 칼럼이 Null 허용 칼럼이면 결과가 다를 수 있다. 조인 칼럼 값이 Null!
+레코드는 조인에 실패해야 정상이다. 옵티마이저가 조인문을 함부로 제거하면 그 레코드들이 결과 집합에 포함되기
+때문이다. 이런 오류를 방지하기 위해 옵티마이저가 내부적으로 6.0600ㅇ is not null 조건을 추가해 준다.
+
+Outer 조인일 df= not null 제약이나 15 not null 조건은 물론, FK 제약이 없어도 논리적으로 조인 제거가
+가능하다. 하지만 Oracle 108까지는 아래에서 보듯 조인 제거가 일어나지 않았다.
+
+select 6.00000, e.ename, e.sal, e hiredate
+from emp 6, dept d
+where d.deptno(+) = e.deptno — Outer 조인
+
+Rows Row Source Operation
+
+15 NESTED LOOPS OUTER (cr=10 pr=0 pw=0 time=119 us)
+15 TABLE ACCESS FULL EMP (cr=8 pr=0 pw=0 time=255 us)
+14 INDEX UNIQUE SCAN DEPT PK (cr=2 pr=0 pw=0 time=265 us)(Object ID 58557)
+
+118에서는 다음과 같이 불필요한 Inner Z 테이블 제거 기능이 구현된 것을 볼 수 있다.
+
+select e.empno, e.ename, e.sal, e.hiredate
+from dbo.emp e left outer join dbo.dept 0
+on d.deptno = e.deptno
+
+664 50! 전문가 가이드

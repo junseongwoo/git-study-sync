@@ -1,0 +1,41 @@
+제1장 SQL 기본
+
+FROM PLAYER A, TEAM 8, STADIUM C
+WHERE A.POSITION = 'GK'
+AND B.TEAM_ID = A. TEAM_ID
+AND C.STADIUM_ID = B.STADIUM_ID
+ORDER BY AQ;
+
+포지션                연고지명               팀명                           구장명
+
+강성일            6K                 대전                시티즌                   대전월드컵경기장
+권정혁            6K                 BU                울산현대                울산문수경기장
+권찬수            6K                 성남                일화천마                성남종합운동장
+김대희            6K                 포항                스틸러스                포항스틸야드
+김승준            6K                 대전                시티즌                   대전월드컵경기장
+김용발               6K                      전북                    현대모터스                  전주월드컵경기장
+김운재            6K                 수                  삼성블루윙즈            수원월드컵경기장
+김정래            6K                 전남                드래곤즈                광양전용경기장
+김준호                 GK                        포항                       스틸러스                       포항스틸야드
+
+김창민            6K                 전북                현대모터스              전주월드컵경기장
+
+43 개의 행이 선택됐습니다.
+
+[예제] 흠팀이 3점 이상 차이로 승리한 경기의 경기장 이름, 경기 일정, 홈팀 이름과 원정팀 이름 정보를 출력한다.
+
+SELECT B.STADIUM_NAME, B.STADIUM_ID, A.SCHE_DATE
+, C.TEAM_NAME, D.TEAM_NAME
+, A.HOME_SCORE, A.AWAY_SCORE
+FROM SCHEDULE A JOIN STADIUM B
+ON B.STADIUM_ID = A,STADIUM_ID
+JOIN TEAM C
+ON C.TEAM_ID = A.HOMETEAM_ID
+JOIN TEAM D
+ON D.TEAM_ID = A AWAYTEAM_ID
+WHERE A_HOME_SCORE >= A.AWAY_SCORE + 3;
+
+위 SQL 전통적인 방식인 WHERE 절의 INNER ]014으로 구현할 수도 있다.
+
+SOL 전문가 가이드 [263
+

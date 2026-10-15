@@ -1,0 +1,41 @@
+*장 관리 구문
+K19
+마산
+안양
+마산시티즌
+안양시티즌
+Fß
+F05
+055
+031
+20 개의 행이 선택했습니다.
+[예제] TEAM_TMP 테이불을 이용해 TEAM 테이를에 데이터를 입력•수정한다.
+[예제]
+INTO TEAN T
+USI% TEAN TP S
+애 (T.TEN_ID = S.TEN_ID)
+HEN LAT대ED THEN
+l.mATE
+SET T .REGW{_NUE = S.뚀61애-뺻E
+, T.TEU_NANE = TEN_UE
+T.n = 5.咖
+T.TEL = S.TEL
+*fN WT LATCYED TÆN
+INSERT (T.TEAM_ID, T.REGIm NAE, T TEN_NANE, T.STÆ)IW_ID, T.n, T.TEL)
+VALIÆS (S TEN_ID, S.REGIm S TEN WE, S.STOIIN_ID, 5 n, S TEL);
+20 행이 병합됐습니다.
+MERGE 문의 USING 절에 소스 테이블 대신 서브 귀리를 사용해 입력•수정할 수도 있다.
+[예제] 서브 쿼리를 이용해 TEAM 테이를에 데이터를 입력•수정한다.
+[예제1
+INTO TEAN T
+IJSII" (SELECT * FO TEAN_TP *ERE REGIm IN ('성남•
+애 (T.TEÆ_ID = S.TEN_ID)
+HN LAT대ED THEN
+lfOATE
+SET T.REGmWE = S.氈GI혜-뺻E
+, T.TEU-WE = S TEAY
+T.n = S.n
+, T.TEL = S.TEL
+'부산•
+•대구•
+전문가 ,PI드 407

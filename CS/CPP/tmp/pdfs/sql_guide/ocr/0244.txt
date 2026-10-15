@@ -1,0 +1,45 @@
+7654
+76%
+7876
+7%2
+7934
+MARTIN
+BLAKE
+CLARK
+SCOTT
+KI酩』
+JAÆS
+UILLER
+20
+20
+20
+제1장 기본
+SALES
+SALES
+ACQ.NTI%
+RESERCH
+ACCO..NTIW
+SALES
+RESEAR대
+RESER대
+A((때TI蘭
+14 개의 행이 선택했습니다.
+외 SQL은 별도의 조인 칼럼을 지정하지 않았지만, 두 개의 테이블에서 DEVTNO라는 공통된 칼럼을 자동으로
+인식해 조인을 처리한 것이다. 조인에 사용된 칼럼들은 같은 데이터 유형이어야 하며, A니AS나 테이블 명과 같은
+접두사를 붙일 수 없다.
+[예제]
+SELECT A.E"O, A.ENk, B.DEPTW, BDÆ
+FROM EP A NATI.RAL JOIN FT B;
+[실행 결과]
+1행에 오류:
+ORA-25155: NATLRAL 조인에 사용된 열은 식별자를 가질 수 없음
+NATURAL J이N은 조인이 되는 테이블의 데이터 성격(도메인)과 칼럼명 등이 동일해야 하는 제약조건이 있다.
+간혹 모델링 상의 부주의로 인해 동일한 칼럼명이더라도 다른 용도의 데이터를 저장하는 경우도 있으므로 주의해서
+사용해야 한다.
+[예제] 이래 •• 매스터리A제처럼 별도의 칼럼 순세 지정하지 않으면 MTI.RAL 」이N의 기준이 되는 칼럼 들이 다른
+먼저 출력된다(예, DEPTNO가 첫 번째 칼럼이 된다). 이때 NATURAL 」이N은 조인에 사용된 같은 이晷의 칼럼을
+하나로 처리한다.
+[예제]
+SELECT *
+FROM EW A NATIRAL JOIN B;
+전문가 ,}ol드 249

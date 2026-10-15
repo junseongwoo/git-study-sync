@@ -1,0 +1,37 @@
+과목 11 SQL 기본과 활용
+
+7099                   ALLEN                            30                  SALES
+
+7521                    WARD                              30                  SALES
+7566                    JONES                            20                  RESEARCH
+7654                    MARTIN                          30                  SALES
+7638                    BLAKE                            30                  SALES
+7782                    CLARK                            10                  ACCOUNTING
+7788                    50011                           20                  RESEARCH
+7839                  KING                          10                ACCOUNTING
+7844                    TURNER                          30                  SALES
+7876                    ADAMS                           20                  RESEARCH
+7908                    JAMES                           30                  SALES
+7982                    FORD                             20                  RESEARCH
+7934                    MILLER                          10                  ACCOUNTING
+
+14 개의 행이 선택됐습니다.
+
+위에서 사용한 ON 조건절에 대해서는 뒤에서 추가 설명하도록 한다.
+
+3. NATURAL JOIN
+
+NATURAL JOINZ 두 테이블 간에 동일한 이름을 갖는 모든 칼럼들에 대해 EQUI(=) JOINS 수행한다.
+NATURAL JOIN©| 명시되면 추가로 USING 조건절, ON 조건절, WHERE 절에서 조인 조건을 정의할 수 없다.
+그리고 50Ｌ 56ㅁ6[에서는 지원하지 않는 기능이다.
+
+[예제] 사원 번호와 사원 이름, 소속부서 번호와 소속부서 이름을 찾아본다.
+
+SELECT A_EMPNO, A.ENAME, DEPTNO, B.DNAME
+FROM EMP A NATURAL JOIN DEPT 8;
+
+ENPNO                     ENAME                    DEPTNO                  DNAME
+7369                     SMITH                            20                 RESEARCH
+7499                    ALLEN                            30                  SALES
+B21                     WARD                              30                  SALES
+7566                    JONES                            20                  RESEARCH

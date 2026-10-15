@@ -1,0 +1,63 @@
+R22 활용
+l예제1 (비교)
+SELECT DISTINCT
+TEN-ID AS 팀코드, PLAYER-WE AS 선수명, POSITIm AS 포지션
+BACK-NO AS 백넘버, ÆIGHT AS 기
+FO PLAYER
+M4ERE TEAY = *02•
+POSITION = •猷•:
+만약 두 번째 질문에 대한 SQL 문에서 UNION이라는 집합 연산자 대신에 UNION ALL이라는 집합 연산자를
+사용하면 어떻게 될지 한번 수행해 보자.
+[예제]
+SELECT TEAN-ID AS 팀코드, PLAYER-WE AS 선수명, AS 포지션
+BACK-NO AS 백넘버, AS 기
+FROM PLAYER
+MfRE TEN_ID = •K02ㆍ
+IJNW4 ALL
+SELECT TEAU_ID AS 팀코드, PLAYER-WE AS 선수명, nSITWd AS 포지션
+BACK-NO AS 백넘버, ÆIG4T AS 카
+FO PLAYER
+HRE mSITIm = •蘇• ;
+[실행 결과]
+팀코드
+K02
+K02
+K02
+K02
+K02
+K02
+K02
+K02
+K02
+선수명
+김성환
+가비
+강대회
+고종수
+고장현
+경기병
+정동현
+정두현
+정준
+경진우
+포지션
+백넘버
+5
+26
+22
+8
+25
+4
+7
+183
+177
+174
+176
+173
+175
+175
+170
+179
+92 개의 행이 선택묐습니다.
+4
+전문가 301

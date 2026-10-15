@@ -1,0 +1,39 @@
+과목 | SQL 기본과 활용
+
+J08                                      10                         20                          30
+ANALYST                                       6000
+
+CLERK                           1300                   1900                     950
+MANAGER                       2450                   2975                   2850
+PRESIDENT              5000
+
+SALESMAN                                                     5600
+5 행이 선택됐습니다.
+
+다음 쿼리는 인라인 뷰에 yyy 표현식을 추가한 것이다. 행 그룹에 yyy 표현식이 추가된 것을 확인할 수 있다.
+
+SHEET +
+FROM (SELECT TO_CHAR (HIREDATE, 'YYYY') AS YYYY, 208, DEPTNO, SAL FROM EMP)
+PIVOT (SUM (SAL) FOR DEPTNO IN (10, 20, 36))
+
+ORDER BY 1, 2;
+
+208                      10                 20                 30
+
+CLERK                                     800
+
+ANALYST                                 3000
+1981                  CLERK                                                        950
+1981                  MANAGER              2450              2975              2850
+9 행이 선택됐습니다.
+
+다음 쿼리는 집계함수와 IN Holl 별칭을 지정했다. 별칭을 지정하면 결과 집합의 열 명이 WHE
+
+SELECT +=
+
+FROM (SELECT 908, DEPTNO, SAL FROM EMP)
+
+PIVOT (SUM (SAL) AS SAL FOR DEPTNO IN (10 AS 010, 20 AS 020, 30 AS D30))
+ORDER BY 1;
+
+366 50! 전문가 가이5

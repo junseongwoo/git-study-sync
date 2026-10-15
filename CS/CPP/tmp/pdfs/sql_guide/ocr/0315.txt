@@ -1,0 +1,45 @@
+과목 II 기본과 활용
+!실형 끌과l
+ACCUTI%
+A11
+A11
+A11
+A11
+A11
+8 행이 선택웠습니다.
+EP_CNT
+A11 »s
+A11 JOs
+A11 üs
+ANALYST
+CLERK
+SALESLAN
+SAL—SIN
+87%
+1%75
+41駟
+8275
+GROUPING SEIS 인수들•은 평등한 관계이므로 인수의 순서가 바뀌어도 결과는 같다(JOB과 DNAMEA 순서가
+바뀌었지만 결과는 같다).
+화의 인수를 이용한 GROJPING 표죠 이용
+[예제] 부서-」OB-매니저별 집계, 부서•JOB별 집계, JOB-매니저별 집계를 GROUPING SETS 함수를 이용하여 구해본다.
+GROlJPlt-G 표죠 함수 사용 시 괄호로 묶은 집합별로(칼호 내는 계층 구조가 아닌 하나의 데이터로 간주함) 집계를
+구할 수 있다.
+우제]
+SELECT A.Jæ, A
+(이.酊 (하 AS EP_CNT, SI國 (A.SAL) AS SAL-SUU
+FO A, FT
+= A.FTtO
+{실형 결과]
+ACCO-NTI%
+貳(嚼1飇
+v-.(嚼1飇
+322 전문가 ,까드
+CLERK
+CLERK
+EP_CNT
+7782
+78剪
+SAL-SIN
+24%
+24%

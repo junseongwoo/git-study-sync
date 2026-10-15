@@ -1,0 +1,66 @@
+과목 ] SQL 기본과 활용
+
+능선 인 안아아게폐에재래래래래00000022222222
+
+EmployeelD       LastName        FirstName       ReportsTo
+1               Davolio        Nancy          2
+
+2               Fulle          Andrew         NULL
+3               Leverling       Janet
+
+4               Peacock        Margaret        2
+
+5               Buchanan        Steven          2
+
+6               Suyama         Michael         5
+
+7               King           Robert          5
+
+8               Callahan        Laura          2
+
+9               Dodsworth       Anne           5
+(9개 행 적용됨)
+
+CTE(Common Table 6020255100)를 재귀 호출함으로써 Employees 데이터의 최상위부터 시작해 하위 방향으로
+계층 구조를 전개하도록 작성한 쿼리와 결과는 다음과 같다.
+
+WITH EMPLOYEES_ANCHOR AS (
+
+SELECT EWPLOYEEID, LASTNAME, FIRSTNAME, REPORTSTO, 0 AS LEVEL
+FROM EMPLOYEES
+
+WHERE REPORTSTO IS NULL /* 재귀 호출의 시작점 */
+
+UNION ALL
+
+SELECT R.EMPLOYEEID, R.LASTNAME, R_FIRSTNAME, R.REPORTSTO, A.LEVEL + 1
+FROM EMPLOYEES_ANCHOR A
+
+, EWPLOYEES R
+
+WHERE R.REPORTSTO = A.EMPLOYEEID)
+
+SELECT LEVEL, EMPLOYEEID, LASTNAME, FIRSTNAME, REPORTSTO
+FROM EMPLOYEES_ANCHOR
+
+60                                                                                                                                                                          2
+Fetesrioiick foi iekoook iooioiokooiooio dooce ok ooo doko okokokekokodokdokokokook dokokokokok ok.                                      tal | "시
+H      "할
+
+LEVEL            EmployeelD              LastName               FirstName             ReportsTo
+
+0                           2              Fuller                  Andrew                  NULL                                                        :
+
+1                            1              Davolio                Nancy                    2                                                             % 옥
+
+1                           3              Leverling             Janet                    2                                                              is
+
+1                           4              Peacock                Margaret               2                                               ¢
+
+1                           5              Buchanan               Steven                  2
+
+1                           8              Callahan               Laura                    2
+
+2                           6              Suyama                  Michael                 5
+
+360 SQL 전문가 가이드

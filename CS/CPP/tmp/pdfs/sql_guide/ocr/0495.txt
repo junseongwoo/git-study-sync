@@ -1,0 +1,53 @@
+넨장 수행 구조
+아래는 같은 양의 인덱스 블록을 MultiBl(Xk 1/0 방식으로 수행한 결과다
+- 디스크 1/0가 발생하도록 버퍼 개시
+alter SYSte flush bJffer (Ⅸ層:
+- •.Jltibl«k 1/0 방식으로 인역스 스깐
+select /” co.nt(•)
+(괴
+Ex«ute
+tOtal
+ca.nt
+1
+1
+1
+31192
+(여』 해尠s선
+O.X
+disk
+0
+64
+0
+0
+69
+currmt
+0
+0
+0
+0
+rÄS
+0
+0
+1
+~ Særce ~飜1예
+『翦T ((劇 r* ~ ti-N7453 us)
+IüX FAST FUtL 『丈새 (《~ ti-囮3제 (3)
+ti—s 1Ⅸ1僉 •aitirq 예 h11”in國
+Eveot 예
+10 (11예t
+fi.ie red
+*55* fræ climt
+~. gait
+Total
+2
+9
+2
+똑같이 6471 불룩을 디스크에서 읽었는데, 1,0 C계1이 9id(db 『ile scattered read 대기 이벤트)에 그쳤다.
+참고로 위 테스트는 Orade 91에서 수행한 것이다. Oracle 10g부터는 lr&x Range Scan 또는 lndex Full
+뇨n일 때도 Multiblcxk 1/0 방식으로 읽는 경우가 있다. 위처럼 데이를 액세스 없이 인덱스만 읽고 처리할 때가
+그렇다. 인력스를 스킨하면서 E|이불을 현럼 액세스할 때는 이전과 동일하게 테이불과 인렉스 불특을 모두 Single
+Bm 1/0 방식으로 읽는다.
+Single Bm 1.0 방식으로 읽은 불•빠들은 LRU 리스트 상 MRU 쪽〈end)으로 위기하므로 한 번 적재되면
+버퍼 개시에 비교적 오래 머문다 빈때로 40 방식으로 읽은 불록•듬은 1承U 리스트 상 LRU 폭(end)으로
+연결되므로 적재된 지 얼마 지나지 않아 1순위로 버퍼,|시에서 밀려난다.
+ee가 503

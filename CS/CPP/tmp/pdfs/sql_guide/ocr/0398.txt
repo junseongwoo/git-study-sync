@@ -1,0 +1,32 @@
+관리 구문
+4. rvfERGE
+MERGE 문을 사용하면 새로운 행을 입력하거나, 기존 행을 수정하는 직업을 한 번에 할 수 있다. 다음은 MERGE
+문장의 기본 형태이다. MERGE 다음에 입력수정돼야 할 타겟 테이불명을 입력하고, USING 절에 입력•수정에
+사용할 소스 테이블을 입력한다. ON 절에는 타것 테이블과 소스 테이블 간의 조인 조건식을 기술해, 입력 또는
+수정할 대상을 결정한다. ON 절의 조인 조건에 따라 조인에 성공한 행들에 대해서는 WHFN MATCHED THEN
+아래 UPDATE 구문을 수행하고, 조인에 실패한 행들에 대해서는 WHEN N(JI' MAT℃HED THEN 아래 INSERT
+구문을 수행한다.
+MERGE
+INTO 타것 테이불명
+USI% 소스 테이불명
+애 (조인 조건식)
+*EN "T대ED THEN
+I-mATE
+SET 수정할 칼럼명1 = 수정될 새로운 값1
+[ , 수정할 칼럼명2 = 수정월 새로운 값2,
+M{EN WT LATCÆD MN
+INSERT [(칼럼1, 칼럼2, ...)1
+VALIÆS (값1, 값2, ….)
+[예제] MERGE 문을 자세히 설명하기 위해 TEAM TMP 테이불을 임시로 만든다.
+[예제] Oracle
+CREATE TABLE TEN_TP AS
+SELECT WL(B TEAM_ID, 'K' ||
+MEER() OVER BY B.TEN-ID, A.STADIIN_ID)) AS TEAM_ID
+1, 2) AS REGWI WE
+SI.BSTR(A.STADIIN_NAE, 1, 2)
+WL2(B.TEN-WE, 'FC', •시E|즨) AS TEN-UAk
+A.STADIIN_ID, A.n, A.TEL
+FO STADII.N 시 TEAN
+釐氈 B.STADIW-ID(+) = A.STADIUU-ID;
+테이불이 생성왰습니다.
+전문가 가이드 405

@@ -1,0 +1,41 @@
+과목 III 고급 활용 및 튜닝
+5. ROWID 활용
+선분이력과 대비해, 데이터 변경이 발생할 때마다 변경일자와 함께 새로운 이력 레코드를 쌓는 방식을 '점이다
+이라고 흔히 말한다.
+고객
+고객번호
+• 고객명
+• 가입회사
+• 거주지역
+• 주소
+• 연락처
+• 서비스만료일
+고객넓연체이력
+변경
+• 연체개월수
+• 연체금액
+[그림 Ⅲ413] 고객별연체이력
+점이력 모델에선 일반적으로 서브쿼리를 이용해 다음과 같이 조회한다. 즉 찾고자 하는 시점(서비스만료일)보다
+앞선 변경일자 중 가장 마지막 레코드를 찾는 것이다.
+select a.고객명, a.거주지역, a.주소, a.연락처, b.연제금액, b.연체개월수
+고객 a, 고객별연제이력 b
+•tere a.가입회사 = '(7일
+b.고객번호 = a.고객번호
+ard b.변경일자 = (select ~(변경일자)
+frm 고객별연체이력
+vhere 고객번호 = a.고객번호
+and 변경일자 수 a.서비스만료일)
+Executim PI혜
+0
+1
+2
+SELECT STATEENT ((ost내45 Card=1@ Bytes=$O
+0 TABLE ACCESS (BY OID) '고객별연제이력• (Cost=2 Card=1 Bytes=19)
+1 tÆSTED LOS ((ost쿀5 Card=10 Bytes=60@)
+TABLE ACCESS (BY 1荻X OID) OF • 고객• ((ost대25 (ar수10 Bytes=410)
+1뚀X (RAWE SCNO '고객-IDXOI' (WHAIQJE) ((ost=25 Card=10)
+1荻X (R살聳 SCA) •고객별연체이력-I얘01| (Ⅶ배I이疋) (Cost=1 Car&1)
+ßT (A"REGATE) (Car&1 Bytes=13)
+FIRST (Cost=2 Card=5K Bytes=63K)
+lux (RWÆ (NIN/MX)) 嘗 '고객별연제이력-I얘91' (WHNIQJE) (-• )
+622 전문가 가이드

@@ -1,0 +1,57 @@
+제3장 인덱스 튜닝
+
+나. 인덱스 칼럼의 가공
+
+인덱스 칼럼을 가공하면 정상적인 Index Range Scano| 불가능해진다고 했다. 가장 흔한 인덱스 칼럼 가공
+사례는 [표 -3-2]와 같고, 오른쪽 칼럼은 각 사례에 대한 튜닝 방안이다.
+
+[표 파-3-2] 인덱스 칼럼 가공 사례별 튜닝 방안
+
+r             인덱스 칼럼 가공 사례               |                     튜닝 방안
+select *                                    |  select *
+from 업체                             | from 업체
+where 5465(업체명,1,2) = '대한'           | where 업체명 like '대한%'
+select *                                   |  select *
+from 사원                               fron 사원
+
+where 월급여 * 12 = 36000000
+
+from 주문
+where 일시 >= to_date(:dt, "yyyymmdd")
+and    일시 < to_date(:dt, 'yyyymmdd') + 1
+
+from 주문
+where to_char(2Al, 'yyyymmdd') = :dt
+
+Tacks                               select ＊
+select                     from 고객
+from 고객                       |
+where 연령 || 직업 = ‘HIS          | where 연령 = 30
+
+re 연령 || 직업 =    우현            | and 직업 = '공무원'
+
+--ㅜ        B   _
+| select =
+
+select *                  |
+
+from 회원사지점
+where SIRT = substr(:str, 1, 2)
+| and 지점번호 = substr(:str, 3, 4)
+
+from 회원사지점
+where 회원번호 || 지점번호 = str
+
+다. 묵시적 형변환
+
+인덱스 칼럼을 사용자가 명시적으로 가공하지 않더라도 조건절에서 비교되는 두 값의 데이터 타입이 다르면
+내부적으로 형변환이 일어난다.
+
+예를 들어 emp 테이블 deptno 칼럼은 number 형이다. 이 칼럼에 대한 검색조건으로는 숫자형이 옮지만,
+3 실수로 다음과 같이 문자형으로 코딩하는 경우가 종종 생긴다.
+
+select * from emp where deptno = '20'
+
+ㅣ 1d | Operation       ㅣ Name     | Rows | Bytes | Cost |
+
+_SQL 전문가 가이드 [565

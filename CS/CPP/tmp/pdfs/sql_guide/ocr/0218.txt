@@ -1,0 +1,37 @@
+4 개의 행이 선택왰습니다.
+Case 2. 칼럼명 + ALIAS 명 사용 ORDER 절 사용
+[예제]
+SELECT
+DNAE AS CFT, LX AS AREA, FTIO
+nDER BY AREA, DEPTNO DESC;
+l실행 결과]
+ACCÜTIt6
+0PERATW6
+RESEAR대
+SALES
+FRæ FT
+弼T애
+DALLAS
+대I(刪
+20
+{실행 결과]
+ACCO.-.NTI%
+OPERATW{S
+RESEAR대
+SALES
+NEW
+邸T에
+대ICAØ
+10
+40
+20
+4 개의 행이 선택했습니다.
+Case 3. 칼럼 순서번호 + ALIAS 명 사용 ORDER BY 절 사용
+[예제1
+SELECT DNAÆ AS AREA, DEPTtO
+FO FT
+BY 1, AREA, 3
+젠장 기본
+1
+4
+전문가 가이드 223

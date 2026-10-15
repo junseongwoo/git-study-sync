@@ -1,0 +1,36 @@
+세5장 So. 옵티마이저
+
+ㅣ 1d | Operation           | Name     | Rows | Bytes |
+ㅣ 0| SELECT STATEMENT         |        I 4) es
+ㅣ 1| NESTED LOOPS OUTER        |       |  4] 148 |
+ㅣ 2| TABLE ACCESS FULL        | DEPT      | 4] a)
+I* 3] VIEW            |       |  11 졸다
+ㅣ 4] SORT GROUP BY         |        |  31060 가
+ㅣ 51 TABLE ACCESS BY INDEX ROWID    | ENP      | 1] ®|
+| 6!  INDEX FULL SCAN        | EMP_DEPTNO_IDX | 14]   |
+
+Predicate Information (identified by operation id):
+
+3 - filter("E"."DEPTNO" (+)="D". "DEPTNO")
+
+위 쿼리는 다행히 집계함수가 하나뿐이므로 10g 이하 버전이더라도 아래처럼 스칼라 서브 쿼리로 변환함으로써
+부분범위처리가 가능하게 할 수 있다.
+
+select d.deptno, d.dname
+, (select avg(sal) from emp where deptno = d.deptno)
+from dept d
+
+집계함수가 여러 개일 때가 문제이다. 만약 다음과 같이 쿼리하면 empl 같은 범위를 반복적으로 액세스하는
+비효율이 생긴다.
+
+select d.deptno, d.dname
+,(select avg(sal) from emp where deptno = d.deptno) avg_sal
+,(select min(sal) from emp where deptno = d.deptno) min_sal
+,(select max(sal) from emp where deptno = d.deptno) max_sal
+from dept d
+
+이럴 때는 다음과 같이 구하려는 값들을 모두 결합하고서 바깥쪽 액세스 쿼리에서 9060 함수로 분리하는 방법을
+활용할 수 있다. Oracle? 118 이후로 이렇게 복잡하게 구현할 이유가 없어졌지만, 조인 조건 Pushdown 기능을
+제공하지 않는 DBMSE 사용하고 있다면 이런 튜닝 기법이 유용할 수 있다.
+
+_SQL 전모 가이드 1661.

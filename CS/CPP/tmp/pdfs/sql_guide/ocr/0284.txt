@@ -1,0 +1,49 @@
+廠장 활용
+[예제) Oracle
+SELECT PLAYER-N,UE AS 선수명, AS 포지션
+BACK-NO AS 백넘버, ÆIQ{T AS 기
+FROM (SELECT PLAYER_NAE, 耶ITI애, BACK_L lfIGHT
+FO PLAYER
+MfRE HEIG{T IS IOT WLL
+BY ÆIGHT EC)
+HERE FÄI..N 수 5;
+[예제] SQL Server
+SELECT TT (5) PLAYER-V& AS 선수영, nSITIO{ AS 포지션
+BACK-W AS 백넘버, HEIGHT AS 기
+FO PLAYER
+WHERE HEIQ{T IS WT MJLL
+0皬R BY HEIQ{T EC;
+[실행 결과]
+선수명
+서동명
+권경혁
+김석
+정경두
+김대희
+포지션
+GK
+GK
+FW
+GK
+GK
+백넘버
+21
+1
+20
+41
+31
+1%
+195
+1%
+1%
+192
+5 개의 행이 선택됐습니다.
+인라인 내에서 선수들의 키를 기준으로 내림차순 정렬한 후, 메인 쿼리에서 ROWNUM을 사용해 궤의 선수
+정보만을 추출했다. 이것은 모든 선수들 중에서 기가 큰 순서로 5명의 선수를 출력한 것이다. 만약 다른 선수 중에서
+카가 192인 선수가 더 존재하더라도 해당 SQL 문에서는 데이터가 출력되지 않는다. 이런 데이터까지 추출하고자
+한다면 RANK 관련 분석함수를 사용해야 한다.
+다. HAVING 절에서 서브 귀리 사용하기
+HAVING 절은 집계함수와 함께 사용될 때 그릅핑 된 결고柯l 대해 부가적인 조건을 주기 위해 사용한다. 평균키가
+삼성 불루윔즈 팀의 평균기보다 작은 팀에 대해 팀 이름과 팀 소속 선수들의 평균거를 구하는 SQL 문을 작성하면
+다음과 같다.
+전문가 가이드 291

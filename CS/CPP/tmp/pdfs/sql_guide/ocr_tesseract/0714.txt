@@ -1,0 +1,48 @@
+select channel_id, sum(quantity_sold) auantity_cold
+from order a, sales@lk_sales b
+
+where 3.order_date between :1 and :2
+
+and  b.order_no = a.order no
+
+group by channel_id
+
+Rows Row Source Operation
+
+5 SORT GROUP BY
+18981 NESTED LOOPS
+580000 REMOTE
+10981    TABLE ACCESS BY INDEX ROWID ORDER
+580000     INDEX UNIQUE SCAN (ORDER_PK)
+
+위 SQL Row Source Operation 분석해 보면, 원격(8620{6)에 있는 53165 테이블을 전송받아 order
+glo} NL 방식으로 조인하고 있다. 50만 건이나 되는 sales 데이터를 네트워크를 통해 전송받으니 쿼리 성능이
+나쁜 것은 당연하다.
+
+order 테이블도 작은 테이블은 ohjz|gt order_date 필터 조건이 있다. 이 조건에 해당하는 데이터만 원격으로
+보내서 조인과 group byE 거친 결과 집합을 전송받는다면 어떨까? 위 수행결과에서 알 수 있듯이 group by$t
+결과 집합은 5건에 불과하므로 큰 성능 개선을 기대할 수 있다.
+
+다음은 원격 서버가 쿼리를 처리하도록 driving site 힌트를 지정하고서 다시 수행한 결과다.
+
+select /*+ driving_site(b) */ channel 10, sum(quantity_sold) auantity_cold
+from order a, 52165011 52105 b
+
+where a.order_date between :1 and :2
+
+and  b.order_no = a.order no
+
+group by channel _id
+
+Rows Row Source Operation
+
+939 TABLE ACCESS (BY INDEX ROWID) OF ‘ ORDER ’
+939     INDEX (RANGE SCAN) OF ‘ORDER_IDX2 ' (NON-UNIQUE)
+10981    REMOTE
+
+인덱스를 이용해 939719 order 데이터를 읽어 원격으로 보냈고, 거기서 처리가 완료된 5건만 전송받은 것을
+
+확인할 수 있다.
+분산 쿼리의 성능을 높이는 핵심 원리는 네트워크를 통한 데이터 전송량을 줄이는 dell 있다.
+
+724 SL #7 가이드

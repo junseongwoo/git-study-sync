@@ -1,0 +1,32 @@
+과웇 III SQL 고급 활용 및 튜닝
+cQ-ate “ r한1쬬e finctim 일자검사(p-date varchar2) retum varchar2
+i-date v해한닌r2(8);
+l-date := to-char(to-date(p-date, 'YYYÄd'), 'yyyymdd');
+if l-date 〉 to-char(trmc(sysdate). then
+return • XXXXXXXX •
+- 미래 일자로 입력된 주문 데이터
+if;
+일자 오류 시, Exception 발생
+for i in (select 휴무일자 휴무일 vhere 휴무일자 = l-date)
+1喞
+return •xxxxxxxx•; - 휴무일에 입력된 주문 데이터
+龜 1喞:
+rett-cn l-date; - 정상적인 주문 데이터
+~ 0毬 ttpn retl.nn •-; - 오류 데이터
+이 함수를 이용해 1刪만 개 주문 레코드를 다음과 같이 검사하면 10%만 번의 콘텍스트 스위칭이 발생함은
+물론 Fxecute 민과 Fetch 한이 각각 1刪만 번씩 발생한다. 이렇게 많은 일을 수행하도록 개발하고서 좋은
+성능-을 기대할 수 있겠는가.
+* fræ 주문
+- 일자검사(주문일자) in ( •-, •xxxxxxxx' ) ;
+대용량 조회 쿼리에서 함수를 사용하면 읽는 레코드 수만큼 함수 호출과 Recursive Call이 반복돼 성능이 극도로
+나빠진다 따라서 사용자 정의 함수는 소량의 데이터를 조회할 때, 또는 부분범위처리가 가능한 상횡에서 제한적으~로
+사용해야 한다. 성능을 위해서라면 될 수 있으면 사용자 정의 함수를 사용하지 말고 조인이나 스칼라 서브 쿼리를
+사용해야 한다.
+사용자 정의 함수를 사용하지 않고 위 프로그램을 One SQI로 구현하려면 어떻게 해야 할까? 이 회사가 창립
+훼주년을 맞이했다고 간주하고 다음과 같이 %년文1 일자 테이블을 만들어 보자. 일자 테이블이 이미 만들어져
+있다면 그것을 이용해도 된다.
+create t±le 일자
+sel«t tnmsysdate-rovmn+l) d-date, t0 char(trunc(sysdate-rowmm+l), ) c-date
+fræ big-t±le
+iere 수 (trurr(sysote)-tnnc(d-mnths(sysdate, - (12*%)), )+1);
+726 전문가 가이드

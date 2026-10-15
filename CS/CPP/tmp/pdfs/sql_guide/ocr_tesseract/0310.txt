@@ -1,0 +1,40 @@
+제2장 SQL 활용
+
+3. CUBE 함수
+
+01[102에서는 단지 7H5% Subtotal He 생성하지만, CUBE: 결합 가능한 모든 값에 대해 다차원 집계를
+생성한다. CUBES 사용할 때는 내부적으로는 Grouping Columns] 순서를 바꾸어서 또 한 번의 쿼리를 추가
+수행해야 한다. 그뿐만 아니라 Grand 10(31은 양쪽의 쿼리에서 모두 생성되므로 한 번의 쿼리에서는 제거돼야만
+하므로 01102에 비해 시스템의 연산 대상이 많다.
+
+이처럼 GROUPING 칼럼이 가질 수 있는 모든 경우에 대해 Subtotal & 생성해야 하는 때는 CUBES 사용하는
+것이 바람직하나, 8011.07에 비해 시스템에 많은 부담을 주므로 사용에 주의해야 한다.
+
+CUBE 함수의 경우 표시된 인수들에 대한 계층별 집계를 구할 수 있으며, 이때 표시된 인수 간에는 계층 구조인
+801107과는 달리 평등한 관계이므로 인수의 순서가 바뀌는 경우 행간에 정렬 순서는 uh 수 있어도 데이터
+결과는 같다.
+
+그리고 CUBE: 결과에 대한 정렬이 필요한 경우는 ORDER BY Holl 명시적으로 정렬 칼럼이 표시돼야 한다.
+
+5160 5. 0486 함수 이용
+[예제] GROUP BY ROLLUP (DNAME, JOB) 조건에서 GROUP BY CUBE (DNAME, JOB) 조건으로 변경해 수행한다.
+
+SELECT . 0456 GROUPING (B.DNAME) WHEN 1 THEN ‘All Departments’ ELSE B,DNAME END AS DNAME
+, CASE GROUPING (A.J0B ) WHEN 1 THEN ‘All Jobs’       ELSE A.J0B END AS JOB
+
+, COUNT (*) AS EMP_CNT, SUM (A.SAL) AS SAL_SUM
+FROM EMP A, DEPT B
+WHERE B.DEPTNO = A.DEPTNO
+GROUP BY CUBE (B.DNAME, A.J0B)
+ORDER BY B.DNAME, A.JOB;
+
+708                BPO 54 5배
+ACCOUNTING               CLERK                    1            1300
+ACCOUNTING               MANAGER                  1            2450
+ACCOUNTING               PRESIDENT                1            5000
+ACCOUNTING           ALL Jobs            3        8750
+RESEARCH                 ANALYST                  2            6000
+RESEARCH                 CLERK                    2            1900
+RESEARCH                 MANAGER                  1            2975
+RESEARCH            ALL Jobs            5       10875 .
+SALES                     CLERK                    1             950            4               |

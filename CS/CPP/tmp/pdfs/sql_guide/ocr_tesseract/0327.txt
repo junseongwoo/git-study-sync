@@ -1,0 +1,37 @@
+과목 11 SQL 기본과 활용
+
+실행 결과
+
+MGR                  ENAME                 HIREDATE          SAL MIN_SAL
+7566                  FORD                   1981-12-63       3000         3000
+7566                  SCOTT                 1987-04-19       3000         3000
+| 7638                ALLEN                1081-02-20 1600        1600
+| 7698                WARD                 1981-62-22 1250        1250
+17698                TURNER              1981-69-08 1500 1250
+| 7638                  MARTIN                1981-69-28       1250         1250
+
+| 7698                  JAMES                 1981-12-63        950         950
+7782                  MILLER                1982-01-23       1300         1300
+7788                         ADAMS                         1987-05-23          1100             1100
+7839                  JONES                 1981-04-62       2975         2975
+7839                  BLAKE                 1981-85-01       2850         2850
+7839                  CLARK                 1981-06-09       2450         2450
+7982                  SMITH                 1980-12-17        800          800
+KING                  1981-11-17       5000         5000
+
+14 행이 선택됐습니다.
+
+라. AVG 함수
+AVG 함수와 파티션별 80005 윈도우를 이용해 원하는 조건에 맞는 데이터에 대한 $2%ke 구할 수 있다.
+
+[예제] EMP 테이블에서 같은 매니저를 두고 있는 사원들의 평균 SALARYE 구하는데, 조건은 같은 매니저 내에서 자기 바로
+앞의 사번과 바로 뒤의 사번인 직원만을 대상으로 한다. ROWS BETWEEN 1 PRECEDING AND 1 FOLLOWING
+현재 행을 기준으로 파티션 내에서 앞의 한 건, 현재 행, 뒤의 한 건을 범위로 지정한다(#0\/5는 현재 행의 앞뒤 건수를
+말함).
+
+SELECT MGR, ENAME, HIREDATE, SAL
+, ROUND (AVG (SAL) OVER (PARTITION BY MGR ORDER BY HIREDATE
+ROWS BETWEEN 1 PRECEDING AND 1 FOLLOWING)) AS AVG_SAL
+FROM EWP;
+
+334 QL 전문가 가이드

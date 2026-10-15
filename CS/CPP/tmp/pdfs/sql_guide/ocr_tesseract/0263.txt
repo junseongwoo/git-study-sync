@@ -1,0 +1,54 @@
+제1장 SQL 기본
+
+SELECT A.ENAME, B.DEPTNO, B.DNAME, B.LOC
+
+FROM EMP A RIGHT JOIN DEPT B
+ON B.DEPTNO = A.DEPTNO;
+
+[실행 결과]
+
+ENAME        DEPTNO       DNAME          LOC
+
+CLARK               10         ACCOUNTING         NEW YORK
+
+KING                10         ACCOUNTING         NEW YORK
+
+MILLER              10         ACCOUNTING         NEW YORK
+
+JONES           20       RESEARCH        DALLAS
+
+FORD            20       RESEARCH        DALLAS
+
+ADAMS           20       RESEARCH        DALLAS
+
+SMITH           20       RESEARCH        DALLAS
+
+SCOTT           20       RESEARCH        DALLAS
+
+WARD            30       SALES          CHICAGO
+
+TURNER          30       SALES          CHICAGO
+
+ALLEN           30       SALES          CHICAGO                                 i
+
+JAMES           30       SALES          CHICAGO                                 1
+
+BLAKE           30       SALES          CHICAGO                                A
+
+MARTIN          30       SALES          CHICAGO                               53
+40       OPERATIONS       BOSTON                                  d
+
+15 개의 행이 선택됐습니다;                     i                        1930 Ea
+
+INNER JOINoJ2}2! 사원 정보와 함께 사원이 배정된 3개의 부서 정보와 14명의 사원 정보만 출력 됐겠지만,
+RIGHT OUTER JOINS 사용했기 때문에 사원이 배정되지 않은 부서번호 40의 OPERATIONS 부서의 LOC 정보까
+지 출력됐다.
+
+다. FULL OUTER JOIN
+
+조인 수행 시 좌측, 우측 테이블의 모든 데이터를 읽어 조인해 결과를 생성한다. F TABLE A2t 8가 있을 때
+(TABLE 'A, '8' 모두 기준이 됨), RIGHT OUTER JOIN LEFT OUTER JOINS] 결과를 합집합으로 처리한
+결과와 동일하다. © 조인에 성공한 행들은 한번만 표시한다. 그리고 FULL JOINSZ OUTER 키워드를 생략해서
+사용할 수 있다.
+
+_SQL 전문가 Pole [269

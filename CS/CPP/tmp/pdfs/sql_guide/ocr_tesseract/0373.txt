@@ -1,0 +1,31 @@
+과목 1 SOL 기본과 활용
+
+1개의 행이 선택됐습니다.
+
+역 참조(630 reference)§ 사용하면 일치한 서브 표현식을 다시 참조할 수 있다. 반복되는 패턴을 검색하거나
+서브 표현식의 위치를 변경하는 용도로 사용할 수 있다.
+
+n
+
+다음은 of 참조를 사용한 쿼리다. cl, 62, 63 열의 패턴은 abxab, cdxed 문자열과 일치한다. 64, 65, 6 BL
+동일한 문자열이 1회 이상 반복되는 패턴을 검색한다.
+
+SELECT REGEXP_SUBSTR ('26%36' , '(abjcd)x\1') AS (1 — abxab, cdxcd
+, REGEXP_SUBSTR ('cdxcd" , '(abjcd)x\1') AS (2
+, REGEXP_SUBSTR (‘abxef' , '(ablcd)x\1') AS (3
+, REGEXP_SUBSTR ('ababab’, '(.*)\1+' ) AS (4
+, REGEXP_SUBSTR (‘abcabc’, '(.*)\1+' ) AS (5
+, REGEXP_SUBSTR (‘abcabd’, '(.*)\1+' ) AS (6
+
+FROM DUAL;
+a               Q               3               69               65               6
+abxab         cdxcd                             ababab  abcabc
+
+1개의 행이 선택됐습니다.
+
+문자 2 AE (character list) 문자를 대괄호로 묶은 표현식이다. 문자 리스트 중 한 문자만 일치하면 패턴이
+일치한 것으로 처리된다. 문자 리스트에서 하이픈(}은 범위 연산자로 동작한다.
+
+리스트 중 한 문자와 일치
+리스트에 포함되지 않은 한 문자와 일치
+

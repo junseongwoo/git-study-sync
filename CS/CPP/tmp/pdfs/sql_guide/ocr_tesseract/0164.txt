@@ -1,0 +1,45 @@
+제1장 SQL 기본
+
+JAMES                             2000
+FORD                               3000
+MILLER                           2000
+
+14 개의 행이 선택됐습니다.
+
+CASE 표현을 하기 위해서는 조건절을 표현하는 두 가지 방법이 있다. Oracle DECODE 함수를 사용할 수
+있다.
+
+[표 Ｌ1-1-18] 단일행 CASE 표현의 종류
+
+CASE
+
+SIMPLE_CASE_EXPRESSION ZZo| 맞으면 SIMPLE_CASE
+SIMPLE._CASE_EXPRESSION £0 | 는노88510 조건 내의 THEN 절을 수행하고, 조건이 맞지 않으면
+[ELSE 디폴트값]                      스
+END                   ELSE 절을 수행한다.
+SEARCHED Be 27 | SEARCHED CASE EXPRESSION 조건이 맞으면 SEARCHED_
+(ELSE 디폴트값]          © | CASE_EXPRESSION 조건 내의 THEN 절을 수행하고, 조건이 맞지
+END              않으면 ELSE 절을 수행한다.
+30[6에서만 사용되는 함수로, 표현식 값이 기준값1이면 값1을 출력
+128600178(표현식, 71234, 값1        하고, 기준값2이면 값2를 출력한다. 기준값이 없으면 디폴트 값을 출력
+[, 기준값2, 값2, .…. , OBER)        한다. CASE 표현의 SIMPLE. CASE_EXPRESSION 조건과 동일
+
+| 하다.
+——————————————————————————————————————————————————————————————————————————————————————————————————
+
+IF-THEN-ELSE =2}& 구현하는 CASE Expressions Simple Case Expression? Searched Case
+Expression 두 가지 표현법 중 하나를 선택해서 사용하게 된다.
+
+CASE
+SIMPLE_CASE_EXPRESSION 조건 0ㄷ SEARCHED_CASE_EXPRESSION 조건
+[ELSE 디폴트값]
+
+END
+
+첫 번째 SIMPLE_CASE_EXPRESSION CASE 다음 바로 조건에 사용되는 칼럼이나 표현식이다. 다음 WHEN
+절에서 앞에서 정의한 칼럼이나 표현식과 같은지와 다른지를 판단하는 문장으로 EQUI) 조건만 사용한다면
+SEARCHED_CASE_EXPRESSION XE} 간단하게 사용할 수 있는 장점이 있다. Oracle®] DECODE 함수와 기능
+면에서 동일하다.
+
+SOL 전문가 가이드 1169
+

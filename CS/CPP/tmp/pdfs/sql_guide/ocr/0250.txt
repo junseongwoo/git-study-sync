@@ -1,0 +1,31 @@
+과목 ll 기본과 활용
+결행 결미
+대1(羈
+20
+40
+ACCUTING
+RESEAR대
+SALES
+TERATIONS
+NYE
+ACCOINTIb6
+T{SIITI%
+LARKETING
+4 개의 행이 선택됐습니다.
+USING에 사용된 LOC와 DEPI'NO가 첫 번째, 두 번째 칼럼으로 출력, 조인 조건에 참여하지 않은 DNAME
+칼럼은 2개의 칼럼0로. 표시된 것을 알 수 있다.
+[예제] 이번에는 DEPTNO, DNAME 2개의 칼럼을 이용한 [INNER) 」대N의 USING 조건절로 수행한다.
+!예제!
+SELECT *
+FO FT A J이N B
+결행 결과!
+NEW YORK
+嚮
+A((0.酊1沰
+″TI에S
+2 개의 행이 선택묐습니다.
+위 SQL의 경우 DNAME의 내용이 바뀐 부서번호 20, 30의 경유는 결과에서 제외된 것을 알 수 있다. 그리고
+USING에 사용된 DEVINO, DNAME이 첫 번째와 두 번째 칼럼으로 출러된 것과 함께, 조인 조건에 참여하지
+않은 L(X)가 2개의 칼럼0로 표시된 것을 알 수 있다
+2%
+전문가 ,삐드

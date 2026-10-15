@@ -1,0 +1,28 @@
+과목 Ⅱ * 기본과 활용
+i예제1
+INTO PUYER (R.AYER-ID. PL.AYER-NAE. TEAU-ID)
+V齪虧 ((SELECT TO.-0獻 (W•X (TO 楔靈R (PLAYER-ID)) + 1) FO PLAYER), '홍길동•
+나. 서브 쿼리를 이용한 다중 행 INSERT 문
+INSERT 문에 서브 쿼리를 사용하면 서브 쿼리의 결과를 테이블에 입력할 수 있다. 서브 쿼리의 결과가 다중
+행이면, 한 번에 여러 건이 입력된다. 단 I酊0 절의 칼럼명 개수와 서브 쿼리의 SELECr 절 칼럼 개수가 일文1해야
+1″T 1酊0 테이불명 [(칼럼1, 칼럼2, ...)1
+서브 워리,
+[예제] 서브 쿼리를 사용해 TEAM 테이불에 데이터를 입력한다.
+[예제]
+INSERT
+INTO TEAM (TEU_ID, REGIm_NAME, TEAN_NA*E, RIG_YYYY, STADIIN_ID)
+SELECT REPLACE(TEAU_ID, 'K' , 'A') AS TEAM_ID
+REGIT{ REGIm_NUE || • 올스타• AS TEAM NNE
+, 羽19 AS STnIW_ID
+FO TEAM
+REGICN_NAUE IN (|성남•, •인천');
+2 개의 행이 만들어졌습니다.
+[예제 서브 귀리를 사용해 PLAYER 테이블에 데이터를 입력한다.
+[예제]
+INSERT
+INTO m-AYER (PLAYER-ID, PLAYER-tUE,
+SELECT 11 SUBSTR(PLAYER-ID, 2) AS PLAYER-ID, PLAYER-NANE
+VLACE(TEN_ID, 'K', '살) AS TEN_ID, mSITIOl
+FO RAYER
+TEÆ-ID IN ('K04', 'KC');
+4圃 전문가 가이드

@@ -1,0 +1,53 @@
+예제] SEARCHED_CASE_EXPRESSION 조건 - SQL Server
+
+SELECT  TEAM_ID
+
+, ISNULL (SUM (CASE WHEN POSITION =
+, ISNULL (SUM (CASE WHEN POSITION =
+, ISNULL (SUM (CASE WHEN POSITION =
+, ISNULL (SUM (CASE WHEN POSITION =
+
+, COUNT(*) AS SLM
+FROM PLAYER
+GROUP BY TEAM_ID;
+
+TEAM_ID                           FW
+1001                12
+Ke2                10
+Ke3                                     6
+Ke4                13
+Kes                10
+06                                          11
+Ke7                                     9
+Kes                                     8
+Ke9               12
+K1e                5
+K11                 1
+K12                1
+K13                1
+K14                                     0
+K15                1
+
+15 개의 행이 선택됐습니다.
+
+1매
+fos
+‘OF’
+fs
+
+THEN 1 END), 0) AS FW
+THEN 1 END), 0) AS MF
+THEN 1 END), 0) AS DF
+THEN 1 END), ©) AS 6K
+
+oe ~Powasrsrbrarunanan | R
+
+제1장 SQL 기본
+
+4개의 예제 SQL 문장은 같은 실행 결과를 출력한다. ORDER BY 절이 적용되지 않았으므로 TEAM _11)별로
+정렬돼 있지 않다. TEAM_ID '608'의 경우 POSITION®| NULL! 3건이 포지션별 분류에는 빠져 있지만 5044에는
+추가돼 있다. 이는 TEAM_ID '08'의 각 POSITIONS] 합계(0\0+&818+100+0#)가 42건이고 SUM 값이 45건인
+
+것으로 계산할 수 있다(45-42=3).
+
+ 50 3g 가이드|217.

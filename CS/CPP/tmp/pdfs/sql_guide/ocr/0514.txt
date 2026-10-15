@@ -1,0 +1,61 @@
+(교1
+Parse
+Execute
+Fetch
+total
+cmnt
+1
+1
+2
+4
+이%
+disk
+0
+0
+0
+0
+0
+0
+2
+2
+0
+0
+0
+0
+Q장 분석 도구
+0
+0
+1
+1
+1
+Misses in library cache 國r驢: 1
+Optimizer -
+Parsing user id: 61
+1 TABLE ACCESS BY 1荻X 血ID EP (CF2 ~ tiFO us)
+1 1荻X 대패)E SCAN EP-PK (cr=l - tiæ44 us)(object id 5278)
+다. 트러미스 분석
+SQL 문 바로 밈에 있는 Call 통계(Statistics) 칼럼들의 의미를 간단히 요약하면 다음과 같다.
+항목
+“11
+count
+cpu
+elapsed
+disk
+query
+current
+rows
+셜명
+커서 상대에 따라 Parse, Execute, Fetch 세 개의 에로 나누어 각각에 대한 통계정보를 보여준다.
+•Parse : 커서를 파상하고 실행계획을 생성하는 것의 통계
+•Execute : 커서의 실행 단계에 대한 통계
+• Fetch : 레코드를 실제로 Fetch하는 것의 통계
+Parse, F-xecute, Fetch 각 단계가 수행된 횟수
+현재 커서가 각 단계에서 사용한 cpu time
+현재 커서가 각 단계를 수행하는 데 소요된 시간
+디스크로부터 읽은 불록 수
+Consistent 모드에서 읽은 불룩 수
+Current 모드에서 읽은 불룩 수
+각 단계에서 읽거나 갱신한 처리 건수
+앞선 AutoTrace 실행통계 항목과 비교해 보면 다음과 같다.
+* 囹 blxk gets
+전문가 가이드 523

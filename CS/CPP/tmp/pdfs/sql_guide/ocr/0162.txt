@@ -1,0 +1,37 @@
+[실행 결과]
+환을반영달러
+$102,ø.碼
+제1장 기본
+원화
+₩123,4%,789
+1 개의 행이 선택됐습니다.
+[예제] N(TEAM) 테이불의 기P코드1과 기P코드2를 숫자로 변환한 후 두 항목을 더한 숫자를 출력한다
+[예제] Oracle
+SELECT TEAU_ID AS WID
+, TO-뾰뚀R (ZIP_OEI, •嚼|) + TO M&ER (ZIP_OE2,
+FROM TEAM;
+[예제] SQL Server
+SELECT TEAM 10 AS WID
+•勇9') AS 우편번호합
+CAST (ZIP_CØEI AS INT) + CAST (ZIP_CTE2 AS INT) AS 우편번호합
+FO TEAM;
+[실행 결과]
+K01
+K03
+K05
+K07
+KC
+KO
+K10
+K11
+K12
+K14
+K15
+우편번호합
+742
+7駟
+331
+1221
+1磻5
+15 개의 행이 선택왰습니다.
+전문가 ,}o|드 167

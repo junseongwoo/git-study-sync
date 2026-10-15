@@ -1,0 +1,32 @@
+과목 II SQL 기본과 활용
+- WT LATCÆD TICN
+INSERT (T.TEÆ_ID, T.REGmUk, T.TEAM_WE, T.STADIUM_ID, T.n, T.TEL)
+VALIÆS (S.TEAN-ID, S.REGIm NAk, S.TEAN WE, S.STADIUM-ID, 咖, S.TEL);
+6 행이 병합왰습니다.
+최신 버전의 Oracle 및 SQL Server 환경에서는 MERGE UPDATE 절(WHEN MATCHED 111EN 이하) 및
+MERGE INSERT 절(IWEN NOT MATCHED THEN 이하)을 선택적으로 사용할 수 있다.
+[예제] TEAM TMP 테이불을 이용해 TEAM 테이블의 기존 데이터를 수정한다.
+[예제]
+INTO TEÆ T
+lJSIt" TEAM_TP S
+얘 (T.TEU_ID = S TEAM_ID)
+~ LAT대ED THEN
+l-mATE
+SET T.REGIm_NAME =
+, T.TEAM NAME = S TEA* NAME
+, T = S.D
+T.TEL = S.TEL;
+15 행이 병합왰습니다.
+[예제] TEAM TMP 테이블을 이용해 TEAM 테이를에 없는 데이터를 입력한다.
+[예제]
+INTO TEX T
+lJSIt" TE.u TP 5
+(T.TEN-ID = S TEN-ID)
+- WT UTCÆD TÆN
+INSERT (T.TE"_ID, T.氈GI애-N襞, T TEN_NNE, T.STADIW_ID, T.D, T.TEL)
+VALIÆS (S.TEU_ID, S.氈GI애 ~, S TEAN WE, S.STADIUU_ID, S.n, S.TEL);
+5 행이 병합묐습니다.
+卽8 전문가 가이드
+4
+4
+1

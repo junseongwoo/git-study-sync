@@ -1,0 +1,41 @@
+AF SQL 분석 도구
+a —————————i
+
+제2절 SQL 트레이스
+
+예상 실행계획을 확인하는 것만으로도 사전에 많은 문제점을 찾아낼 수 있다. 그러나 엑스레이 사진만으로 환자의
+모든 병증을 진단할 수 없듯이, 예상 실행계획만으로는 50)[에 숨겨진 문제점을 정확히 파악할 수 없다. 이때는
+트레이스를 통해 50[.의 실제 수행 과정을 분석해야 한다. 의사가 엑스레이로 병증을 찾지 못했을 때 초음파, CT,
+MRI 촬영을 실시하는 것처럼 말이다.
+
+1. Oracle
+
+가. SQL 트레이스 수집
+
+OracleflAf SQL 트레이스를 수집하는 방법은 매우 다양하다. 하지만 대부분 관리자를 위한 것이므로 여기서는
+개발자에게 필요한 기능만 소개하고자 한다.
+
+아래는 현재 자신이 접속해 있는 세션에만 트레이스를 설정하는 방법이다.
+
+SQL> alter session set sql_trace = true;
+SQL> select * from emp where empno = 7960;
+SQL> select * from dual;
+
+SQL> alter session set sql_trace = false;
+
+위와 같이 트레이스를 설정하고 SQLS 수행한 후에는 user_dump_dest 파라미터로 지정된 서버 디렉터리
+밑에 트레이스 파일(.00)이 생성된다. 가장 최근에 생성되거나 수정된 파일을 찾아 분석하면 되는데, 파일 찾기에
+어려움을 느끼는 독자는 아래 쿼리를 잘 활용하기 바란다. 스크립트로 저장해 두었다가 실행하면 편리하다.
+
+SQL> select r.valve || '/' || lower(t.instance_name) || ‘_ora_'
+2    11 trim(to_char(p.spid)) || *.trc' trace_file
+3 from vSprocess p, visession 5, vparameter r, v3instance t
+4 where p.addr = s.paddr
+5 and r.name = ‘user_dump_dest'
+6 and s.sid = (select sid from vSmystat where rownum = 1) ;
+
+TRACE_FILE
+
+/usr/local/oracle/admin/ORA10g/udump/oral@g_ora_22827.trc
+
+SQL 전문가 가이드 [52]

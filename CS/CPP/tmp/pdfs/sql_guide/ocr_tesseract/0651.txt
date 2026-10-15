@@ -1,0 +1,37 @@
+과목 11 SQL 고급 활용 및 튜닝
+
+다. 조인 조건 Pushdown
+
+“조인 조건001ㅁ Predicate) 20하1000)'은 말 그대로 조인 조건절을 뷰 쿼리 블록 안으로 밀어 넣는 것으로서,
+NL 조인 수행 중에 드라이빙 테이블에서 읽은 조인 칼럼 값을 Inner Z(=right side) 뷰 쿼리 블록 내에서 참조할
+수 있도록 하는 기능이다.
+
+아래 실행계획에서 group 07절을 포함한 뷰를 액세스하는 단계에서 ‘view pushed predicate’ 오퍼레이션
+(18=3)이 나타났다. 그 아래쪽에 emp_deptno_idx 인덱스가 사용된 것을 볼 수 있다. 이는 dept 테이블로부터
+넘겨진 0600)0에 대해서만 group bys 수행함을 의미한다.
+
+select d.deptno, d.dname, e.avg_sal
+from dept d
+
+, (select /차 no_merge push_pred */ deptno, avg(sal) avg_sal from emp group by deptno) e
+where e.deptno(+) = d.deptno
+
+ㅣ Id | Operation                    |             | Rows | Bytes |
+ㅣ 0 | SELECT STATEMENT             |           |   4 | 16 |
+ㅣ 1 ㅣ NESTED LOOPS OUTER         ㅣ         |   41 16 |
+ㅣ 2 ㅣ TABLE ACCESS FULL              | DEPT          |    4 | 64 |
+ㅣ 3 | VIEW PUSHED PREDICATE          |            |    pH SRE 2997외
+11 4 ㅣ FILTR                 |           |     |     |
+11315 가    SORT AGGREGATE              |             |    1-4    Tedd
+e364    TABLE ACCESS BY INDEX ROWID       | ENP          |    5 | 3 |
+x2 |      INDEX RANGE SCAN              | EMP_DEPTNO_IDX |    5 |       \
+
+Predicate Information (identified by operation id):
+4 - filter(COUNT(*)>0)
+7 - access( "DEPTNO"="D" . "DEPTNO")
+
+여기서는 no_merge®} push_pred 힌트를 명시했지만, 힌트가 없어도 옵티마이저에 의해 같은 실행계획이 선택
+될 수 있다. 이 기능은 부분범위처리가 필요한 상황에서 특히 {83% Oracle 118에 이르러서야 구현됐다. 만약
+위 50Ｌ을 Oracle 10g 이하 버전에서 실행한다면, 조인 조건 Pushdown©] 작동하지 않아 다음과 같이 emp 쪽
+인덱스를 Full Scansh= 실행계획이 나타난다. dept 테이블에서 읽히는 666010마다 emp 테이블 HAE group
+하므로 성능상 불리한 것은 당연하다.

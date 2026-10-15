@@ -1,0 +1,19 @@
+과목 ] QL 기본과 활용
+
+STEP 4-3. ROLLUP 함수 결합 칼럼 사용
+[예제] JOB MGR 하나의 집합으로 간주하고 부서별, JOB & MGRO| 대한 ROLLUP 결과를 출력한다.
+
+예저
+
+SELECT  B.DNAME, A.J0B, A.MGR
+, COUNT (*) AS EMP_CNT, SUM (A.SAL) AS SAL_SUM
+FROM EWP A, DEPT 8
+WHERE B.DEPTNO = A.DEPTNO
+GROUP BY ROLLUP (B.DNAME, (A.JOB, A.MGR))
+ORDER BY B.DNAME, A.J0B, A.MGR;
+
+14 행이 선택됐습니다.
+
+ROLLUP 함수 사용 시 괄호로 묶은 ]08과 \(08의 경우 하나의 집합((08+1\408) 칼럼으로 간주해 괄호 내
+칼럼별 집계를 구하지 않는다.
+

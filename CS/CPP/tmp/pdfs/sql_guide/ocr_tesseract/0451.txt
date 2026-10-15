@@ -1,0 +1,33 @@
+과목 1 SQL 기본과 활용
+
+SCOTT R 로그인한다.
+
+SQL Server
+
+SELECT * FROM DBO.MENU;
+메시지 208, 수준 16, 상태 1, 줄 1
+개체 OIF ‘dbo.MEN'O|(7}) 잘못됐습니다.
+
+SCOTT 유저는 5011) 유저로부터 MENU 테이블을 SELECT 수 있는 권한을 부여받지 못했기 때문에 MENU
+테이블을 조회할 수 없다.
+
+[예제] SQLD 유저로 접속해 SCOTT 유저에게 MENU 테이블을 56ㄴ601할 수 있는 권한을 부여한다.
+
+CONN 5010/082019;
+연결됐습니다.
+
+제 및 실행 결과] Oracle
+
+INSERT INTO MENU VALUES (1, '화이팅');
+1 개의 행이 만들어졌습니다.
+
+COMMIT;
+
+#20] 완료됐습니다.
+
+GRANT SELECT ON MENU TO SCOTT;
+
+권한이 부여됐습니다.
+
+458 SL 전문가 가이드
+

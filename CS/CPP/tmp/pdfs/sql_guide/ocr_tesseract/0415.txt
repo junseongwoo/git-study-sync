@@ -1,0 +1,41 @@
+과목 | SQL 기본과 활용                 re ————————————
+
+SAVEPOINT SVPT_A;
+저장점이 생성됐습니다.
+
+UPDATE PLAYER SET WEIGHT = 100;
+481 행이 갱신됐습니다.
+SAVEPOINT SVPT_B;
+
+저장점이 생성됐습니다.
+
+DELETE FROM PLAYER;
+
+481 행이 삭제됐습니다.
+
+현재 위치에서 [예제] 0458 1, 2, 3을 순서대로 수행해본다.
+
+[예제] CASE 1. SAVEPOINT 8 저장점까지 Bug 수행하고 롤백 전후 데이터를 확인해본다.
+
+예제 및 실행 결과] Oracle
+
+SELECT COUNT (*) AS CNT FROM PLAYER;
+NT
+
+Er
+
+1742] 행이 선택됐습니다.
+
+ROLLBACK TO SVPT_B;
+
+룰백이 완료됐습니다.
+
+SELECT COUNT (*) AS CNT FROM PLAYER;
+(Cf
+
+481
+
+1개의 행이 선택됐습니다.
+
+422 [80 전문가 이드
+

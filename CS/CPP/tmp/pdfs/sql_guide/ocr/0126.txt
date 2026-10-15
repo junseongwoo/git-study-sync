@@ -1,0 +1,51 @@
+명령어의 종류
+데이터 정의어
+(DDL, mta l)efimtion
+Language)
+데이터 제어이
+(XL, Data Control
+language)
+트랜책션 제어어
+(TCL, Transaction
+명령어
+CREATE
+ALTER
+DROP
+RENAME
+GRANT
+REVOKE
+COMMIT
+ROLLBACK
+Control language)
+제1장 기본
+설명
+테이불과 같은 데이터 구조를 정의하는 데 사용되는 명령어들이다.
+구조를 생성•변경•삭제하거나 이름을 바꾸는 데이터 구조와 관련된
+명령어들을 DDL이라고 한다.
+데이터베이스에 접근하고 객체를 사용하도록 권한을 주고 회수하
+는 명령어를 I)CL이라고 한다.
+논리적인 작업 단위를 묶어서 DML에 의해 조작된 결과를 작업단위
+(트랜책션)별로 제어하는 명령어를 말한다
+이들 SQL 명령어는 3가지 SAVEÆOINT 그룹인 DDL, DML, XI로 나눌 수 있다. 1℃L의 경우 굳이 나눈다면
+일부에서 DCI로 분류하기도 하지만, 다소 성격이 다르므로 별도의 4번째 그룹으로 분리할 것을 권고한다.
+3. STANDARD SQL 개요
+1970년: Dr. E.F.Codd 관계형 DBMS(Relational DB) 논문 발표
+1974년: IBM SQL 개발
+1979년: Oracle 상용 DBMS 발표
+1980년: Sybase SQL 발표(이후 sybase 쑈E로 개명)
+1%3년: IBM DB2 발표
+1%6년: ANSI/ISO SQL 표준 최초 제정(SQL田6, SQLI)
+1劈2년:
+ANSVISO SQL 표준 개정(따L-92, 製L2)
+1叨3년:
+MS SQL Server 발표(Windows OS, Sybase Code 활용)
+1卿년: ANSI/ISO SQL 표준 개정(SQL-99, SQL3)
+2%3년: ANSI/ISO SQL 표준 개정(따L:2예3)
+2弼년: ANSI/ISO SQL 표준 개정(바L:2뻬
+2예8년: ANSI/ISO SQL 표준 개정(따L:2圄)
+2011년: ANSI/ISO SQL 표준 개정(따L:2011)
+2016년: ANSI/ISO SQL 표준 개정(SQL:2016)
+국내뿐만 아니라 전 세계적으로 많이 사용되는 관계형 데이터베이스는 오브젝트 개념을 포함한 여러 새로운
+기능-들이 꾸준히 추가되고 있다. 현재 기업형 DBMS는 순수 관계형 데이터베이스가 아닌, 객체 지원 기능이 포함된
+객체관계형(Ob.」ect Relauonal) 데이터베이스가 대부분이다.
+전문가 ,lol드 131

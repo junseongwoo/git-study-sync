@@ -1,0 +1,44 @@
+ACC(INTIW
+RESERCH
+RESEBR대
+RESEARCH
+RESEAR대
+RESEARCH
+RESEAR대
+SALES
+SALES
+SAIFS
+RESIM
+N{ALYST
+ÆIALYST
+CLERK
+CLERK
+CLERK
+넓사{A佂R
+LANAGER
+CLERK
+CLERX
+LANAGER
+SALESW
+ANALYST
+CLERX
+CLERK
+飇배A뚀R
+7苅
+76%
+76%
+7粥
+76%
+7%2
+78剪
+76%
+廠장 활용
+11%
+刃75
+2975
+11%
+8275
+27 행이 선택쾼습니다.
+실행 결과에서 첫 번째 10건의 데이터는 (DNAME+JOB+MGR) 기준의 집계이며, 두 번째 9건의 데이터는
+(DNAME+JOB) 기준의 집계이다. 세 번째 8건의 데이터는 (JOB+MGR) 기준의 집계이다.
+전문가 가이드 323

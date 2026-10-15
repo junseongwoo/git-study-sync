@@ -1,0 +1,41 @@
+제2장 SQL 분석 도구
+
+= = > 산>50앙ㅅㅅㅎ=ㅅ= ->예0
+
+아래는 출력된 결과 샘플이다. SQL 트레이스에서 본 실행계획 통계(미37 Statistics)2t 같은 정보를 보여준다.
+
+| Id | Operation | Name | Starts | E-Rows | A-Rows | A-Time | Buffers | Reads |
+
+| 1| TABLE ACC | DEPT  |  1]   1|  12 | 00:00.04 |  20 |  18 |
+| 2] NeSTEDL |    |   pA   12 |  25 | 00:00.93 |   FEES A)      2
+| 31 TABLEAIEW | 11 12] 121 00:00.04 |  al 16)    1
+I+ 4) INDEX JEWSAL] 1] 12] 12 00:00.62 |   29 078가     1
+]|* 51 INDEX R | PK_DEPT |  12]   15]  12 | 00:00.01 |   4  43]
+
+PEEL VES
+
+Predicate Information (identified by operation id):
+
+4 - access("E". "SAL")=1000)
+5 - access("D". "DEPTNO"="E". "DEPTNO")
+
+Starts 항목은 각 오퍼레이션 단계를 몇 번 실행했는지를 나타낸다. 예를 들어 PK DEPT 인덱스를 액세스하는
+단계(1)=5) Starts 항목에 적힌 12는 이 단계를 IF 번 실행했음을 의미한다. 이는 EMP 테이블 액세스 THA|(ID=3)
+에서 얻는 결과건수 12와 관련 있다. NL 조인은 드라이빙 집합에서 얻은 결과건수만큼 반대쪽 집합을 액세스하기
+때문이다.
+
+E-Rowst= SQL 트레이스에 없는 정보다. SQLE 수행하기 전 옵티마이저가 실행단계별로 예상했던 로우 수를
+의미하며, 예상 실행계획에서 보여주는 로우 수(80\5 또는 0310)와 일치한다.
+
+나머지 항목은 이름만 다를 뿐, SQL 트레이스 실행계획 통계와 같다. 일치하는 항목을 매핑해 보면 다음과 같다.
+
+ATime       |         time         각 단계별 소요시간
+Buffers      |         cr         캐시에서 읽은 버퍼 블록 수
+Reads |          한        | 디스크로부터 읽은 블록 수
+
+각 항목은 기본적으로 누적값을 보여주며, 아래처럼 format 옵션에 lasts 추가하면 마지막 수행했을 때의 일량을
+보여준다.
+
+select * from table(dbms_xplan.display_cursor(null, null, '시[51415 LAST'));
+
+SQL 전문가 가이드 [525

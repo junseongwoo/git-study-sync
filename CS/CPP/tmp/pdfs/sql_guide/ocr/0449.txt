@@ -1,0 +1,39 @@
+과못 II 기본과 활용
+스키마에 권한을 부여한다.
+우제! SQL Server
+- 애 S(曰羂:圁 TO *야
+영령이 완료묐습니다.
+SQLD로 로그인한다.
+[예제 및 실행 촐과] SQL Server
+CÆATE TmE ~ (EMJ_SEQ INT tOT NULL, TITLE V枳대AR(10)):
+명령이 완료묐습니다.
+나. 圁E다에 대한 권한 부여
+잎에서 SQLD 유저를 생성해 로그인하고 테이블-을 만드는 과정에서 몇 가지의 권한에 대해 살펴보았다. 이제는
+특정 유저가 소유한 객체(OBJECD 권한에 대해 알아본다.
+오브젝트 권한은 특정 오브젝트인 테이블, 뷰 등에 대한 SELECT, INSERT, DELETE, UPDAIE 작업 명령어를
+의미한다. [표 Ⅱ-추8]과 [표 Ⅱ-3-9]는 오브젝트 권한과 오브젝트와의 관계를 보여 주고 있다.
+[표 Ⅱ-3-8] 오브젝트 권한과 오브젝트와의 관계(Oracle 사례)
+객지 권한
+ALTER
+DHEIE
+INDEX
+REFERENCB
+SELECT
+UPDATE
+4뇨擧 전문가 가이드
+테이를
+0
+0
+0
+0
+0
+0
+0
+VIEWS
+0
+0
+0
+0
+SEQUENCE
+0
+0

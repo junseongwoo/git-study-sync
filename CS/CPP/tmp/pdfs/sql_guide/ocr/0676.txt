@@ -1,0 +1,57 @@
+과목 III 고급 활용 및 튜닝
+t—cmcate『*tion
+1~t턴 Join, OJTER REFERENCES:([&nk1æ이))
+1 SEEK:([deptnol=(10.)))
+1—RID SEEK:([&nk1m=[&nk1W01))
+Join. a-JTER REFERENCEs:([NIN4]))
+SekOJECT:([SQÄ.IE.Ienl.Ie•-dept-idxI), SEEK:([deptnol=(2@.)))
+I—RID LmhoOJECT:(ISQLml.[öol.(eml), SEEK:([&nk1041=[Bmk10@4J))
+참고로 select-list에 empno가 없다면 10번과 20번 부서에 job, mgr이 같은 사원이 있을 수 있 0 1그 구 함부로
+union 궤로 바꿔선 안 된다.
+나. Dstinct를 Exise 서브쿼리로 대체
+중복 레코드를 제거하려고 distinct를 사용하는 경우가 있는데, 대부분 exists 서브쿼리로 대체함으로써 소트
+연산을 제거할 수 있다. 예를 들어 아래는 특정 지역(:reg)에서 특정 월(:yyyymm) 이전에 괴금이 발생한 연월을
+조회하는 쿼리다.
+sel«t distinct 과금연월
+과금
+1 éere 과금연월 수 :yyyym
+! 지역 like |
+r기1
+Fetch
+5
+霧5517
+矗5517
+el尠교d
+1
+1
+4
+6
+27.65
+27.65
+disk
+0
+0
+32圄
+326馹
+q.æry
+0
+0
+1粥2%
+1弼2%
+current
+0
+0
+0
+0
+0
+0
+35
+35
+Ræ 驢.底e
+HA.SH |驪1毯 ((戶1粥2% pr=32圄 ~ ti즈7″0 us)
+PRTITIm PARTITWI: 1 KEY ((戶1苅2% pr=32648 )
+TÆLE KCESS FULL 과금 ((广1粥208 pr=32648 ~ ti~7015%64 us)
+입력한 과금연월()가yym-n) 이전에 발생한 과금 데이터를 모두 스캔하는 동안 1,5%,2%개 블록을 읽었다. 무려
+1″ 건에 가까운 레코드에서 중복 값을 제거하고 고작 35건을 출력했다. 1분 38초나 걸리는 매우 비효율적인
+방식이다.
+圈6 전문가 가이드

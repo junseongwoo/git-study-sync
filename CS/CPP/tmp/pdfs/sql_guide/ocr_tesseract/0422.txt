@@ -1,0 +1,53 @@
+제3장 관리 구문
+
+NATION       (국적)          문자 가변 자릿수 20자리,
+BIRTH DATE 。. (생년월일)      날짜,
+
+SOLAR       (Y/8)        문자 고정 자릿수 1자리,
+HEIGHT       (신장)          숫자 3자리,
+
+WEIGHT       (몸무게)        숫자 3자리
+
+제약조건 _ : PRIMARY KEY (제약조건명은 PLAYER_ID_PK) — PLAYER_ID
+FOREIGN KEY (제약조건명은 PLAYER FK)     — TEAM_ID (참조 : TEAM.TEAM_ID)
+NOT MULL (제약조건명은 미적용)       ~» PLAYER_NAME, TEAM_ID
+
+[예제] Oracle
+
+CREATE TABLE PLAYER (
+
+PLAYER_ID       CHAR(7)         NOT NULL
+, PLAYER NAME ~~ VARCHAR2(20) NOT MULL
+, TEAW_ID        CHAR(3)        NOT NULL
+, E_PLAYER NAME  VARCHAR2(40)
+, NICKNAME      VARCHAR2(38)
+, JOIN YYYY     CHAR(4)
+, POSITION      VARCHAR2(10)
+, BACK_NO      NUMBER(2)
+, NATION       VARCHAR2(20)
+, BIRTH_DATE    DATE
+, SOLAR       CHAR(1)
+, HEIGHT        NUMBER (3)
+, WEIGHT        NUMBER(3)
+
+, CONSTRAINT PLAYER PK PRIMARY KEY (PLAYER ID)
+, CONSTRAINT PLAYER FK FOREIGN KEY (TEAM_ID) REFERENCES TEAM (TEAM_ID)
+):
+
+테이블이 생성됐습니다.
+
+[예제] SQL Server
+
+CREATE TABLE PLAYER (
+
+PLAYER_ID       CHAR(7)        NOT NULL
+, PLAYER_NAME    VARCHAR(20)    NOT NULL
+, TEAM_ID        CHAR(3)        NOT NULL
+, E_PLAYER NAME  VARCHAR(40)
+, NICKNAME      VARCHAR(30)
+, JOIN_YYYY     CHAR(4)
+, POSITION      VARCHAR(10)
+, BACK_NO      TINYINT
+
+Qu 전무 가이드 [429
+

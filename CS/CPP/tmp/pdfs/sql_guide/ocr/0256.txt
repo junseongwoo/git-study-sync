@@ -1,0 +1,52 @@
+과목 II QL 기본과 활용
+[실혈 출과l
+79로
+20
+20
+20
+20
+20
+NUE
+RESEAR대
+SALES
+SALES
+SALES
+SALES
+ACCOI.-NTI%
+ACQ.NTI%
+SALES
+SALES
+ACCÜTII"
+NEW NNE
+CONSULTItK
+MARKETING
+MARKETING
+CONSULTING
+MARKETING
+MARKETING
+ACCO.-NTItK
+CONSULTItK
+ACCUTIt6
+YARKETING
+CONSULTI NG
+MARKETING
+CONSULTING
+ACCUTING
+1
+14 개의 행이 선택묐습니다.
+[예제] GK 포지션의 선수별 연고지명, 팀명, 구장명을 출력한다.
+[예제1
+SELECT A.PLAYER-N,Ö& AS 선수명, AS 포지션
+, B.뚀GI圈 AS 연고지명, B TEAM NAME AS 팀명
+, C.SWIIN ~ AS 구장명
+~ PLAYER A JOIN TEÆ
+B.TEN_ID = A.TEA_ID
+JOIN SWIIN (
+C.STADIIN_ID = B.STADIIN-ID
+BY 선수명;
+위 SQL은 전통적인 방식인 WHERE 절의 INNER J이N으로 구현할 수도 있다.
+[예제I
+SELECT AS 선수명, A.mSITIm AS 포지션
+, B.氈61애-~ AS 연고지명, 8 TEÆ WE AS 팀명
+, AS 구장명
+262 전문가 ,까드

@@ -1,0 +1,42 @@
+제3장 관리
+
+SQLDZ 로그인한다.
+
+예제 및 실행 결과] SQL Server
+
+INSERT INTO MENU VALUES (1, '화이팅');
+
+(1개 행이 영향을 받음)
+
+예제 및 실행 결과] SQL Server
+
+GRANT SELECT ON MENU TO SCOTT;
+
+명령이 완료됐습니다.
+
+다시 한 SCOTT 유저로 접속해 SQLD.MENU 테이블을 조회한다. 이제 SQLD.MENU 테이블을 SELECT
+테이블 자료를 볼 수 있다.
+
+SCOTT fA} SQLD.MENU 테이블을 58.8(7)하는 권한만 부여 받았기 때문에 UPDATE, INSERT, DELETES}
+같은 다른 작업을 할 수 없다, 오브젝트 권한은 SELECT, INSERT, DELETE, UPDATE 등의 권한을 따로따로
+관리한다.
+
+[예제] SQLD.MENU 테이블에 UPDATER 시도한다.
+
+예제 및 실행 결과] Oracle
+
+CONN SCOTT/TIGER;
+
+연결됐습니다.
+
+예제 및 실행 ZH Oracle
+
+SELECT * FROM SQLD.MENU;
+
+MENU_SEQ              TITLE
+
+1            화이팅
+1개의 행이 선택됐습니다.
+
+전문가 가이드 [459
+

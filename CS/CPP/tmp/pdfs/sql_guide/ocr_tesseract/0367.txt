@@ -1,0 +1,18 @@
+과목 ㅠＬ SOL 기본과 활용
+
+다음 실행 결과에서 강조한 부분이 CASE 표현식으로 선택한 값이다.
+
+SELECT A.J08, B.LV, 4.010 54, A.D20_SAL, A.D16_CNT, A.D20_CNT
+
+FROM T1 A
+, (SELECT LEVEL AS LV FROM DUAL CONNECT BY LEVEL <= 2) B
+
+ORDER BY A.J0B, B.LV;
+
+Jos                             Lv                     D10_SAL                     020 54
+ANALYST                    1                                                      6000
+ANALYST                       2                                                             6000
+CLERK                        1                        1300                        1900
+CLERK                        2                        1300                        1960
+
+374 | 50. 전문가 가이드

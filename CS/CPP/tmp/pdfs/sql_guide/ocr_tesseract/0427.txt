@@ -1,0 +1,36 @@
+과목 ] SQL 기본과 활용
+
+Er Ee a te See!
+
+SELECT * INTO TEAM_TEMP FROM TEAM;
+
+(0개 행이 영향을 받음)
+
+t] SQL Server
+
+exec sp_help ‘dbo. TEAM_TENP'
+
+90
+Column_name                 Type                       Length                   Nullable
+TEAM_ID                             char                                       3                        no
+REGION_NAME                    varchar                             8                     no
+TEAM_NAME                       varchar                            40                     no
+E_TEAM_NAME                    varchar                            50                     yes
+ORIG_YYYY                          char                                      4                        yes
+STADIUM_ID                        char                                      3                        no
+ZIP_CODE1                       char                                  3                     yes
+ZIP_CODE2                       char                                  3                     yes
+ADDRESS                          varchar                           80                     yes
+DDD                                varchar                             3                     yes
+TEL                              varchar                          10                    yes
+FAX                                varchar                            10                     yes
+HOMEPAGE                        varchar                            50                     yes
+OWNER                           varchar                          10                    yes
+2. ALTER TABLE
+
+한 번 생성된 테이블은 특별히 사용자가 구조를 변경하기 전까지 생성 당시의 구조를 유지하게 된다. 처음의
+테이블 구조를 그대로 유지하는 것이 최선이지만, 업무적인 요구 사항이나 시스템 운영상 테이블을 사용하는 도중에
+변경해야 할 일들이 발생할 수도 있다. 이 경우 주로 칼럼을 추가/삭제하거나 제약조건을 추가/삭제하는 작업을
+진행하게 된다.
+
+434 | Bt 가이드

@@ -1,0 +1,34 @@
+StmtText
+:—Sort(DlSTINCT BY:([SQLPR01.[&)l.[envI.[deptnol ASC))
+:—Table S(囿(圁E(T:([窪厭이 . [쇄 . («npl))
+5) Sort Join : 소.틴 머지 조인을 수행할 때 나타난다
+Oracle
+select /*+ or曲r配 */ *
+fran e, &pt d
+wtpre d.±ptno = e deptm
+Executim Plan
+0
+1
+2
+4
+SELECT STATEENT ((ost=11 Bytes=177K)
+0 飇R뚀 JOIN ((05t=11 Car&3K Bytes=177K)
+1
+1
+SM (刊IN) (Cost=4 Card=13 Byt鄧킈42)
+TABLE ACCESS (FULL) 聳 'EP' (Cost=2 (ar乍13 Bytes킈42)
+SM (NIN) (COSt=7 Car&654 Bytes=19K)
+TABLE ACCESS (FULL) 'FT' ((05t=2 (ar圊54 Bytes=19K)
+SQL Server
+select *
+e, &pt d
+d.&ptno = e deptm
+option (force order, 肆r爨 join)
+StmtText
+Join(Inrpr JOin, VNY-TO-"NY 飇緶: )
+:—Sort(nER BY ([el.(deptnol ASC))
+S(혜(圁E(T:([빛L測1그如1.[*] AS [이))
+l—Sort(EER BY•([dl.Ideptnol ASC))
+卜T卨le ScanOJECT:([SQ@.Iül.l&pt) AS [비))
+囹장 고급 류님
+聖가 ,}OI드 681

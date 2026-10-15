@@ -1,0 +1,18 @@
+과목 III QL 고급 활용 및 튜닝
+StntText
+l—CIuste
+:—CIuste
+(4개 행 적용됨)
+520 전문가 가이드
+hysican)
+Nested
+1飜x
+lmer Join
+Cluster«i lndex
+Clustered lndex
+41.33333
+43
+1
+Est
+0
+0

@@ -1,0 +1,25 @@
+과목 III 고급 활용 및 튜닝
+장 요약
+제1절 예상 실행계획
+• Or-acle은 plan 명령으로 실행계획을 수집한다.
+• Oncle은 AutoTrace 명령어로 예상 실행계획뿐 아니라 여러 가지 실행통계도 확인할 수 있다.
+• DBMSNLAN 매기지를 이용해 수집된 실행계획을 출력한다.
+• SQL 노r•℃r는 shm4Qlan-text 예 명령으로 예상 실행계획을 확인할 수 있다.
+• SQL Server는 set showplan-all on 명령문을 통해 PhysicalOp(물리 연산자), LogicalOp(&리 연산자),
+EstimateRov•s(예상 로우 수) 등을 확인할 수 있다.
+제2절 SQL 트레이스
+• Oracle은 sql-trace 피라미터를 활성화함으로써 SQL 트레이스를 수집할 수 있다.
+• OracIe은 수집된 트레이스 정보를 tkprof 명령어를 통해 리프트를 출력한다.
+• Oracle에서 gather-plan-statistics 힌트를 이용하면 트레이스 정보를 SGA 메모리에 수집할 수 있고, 그 정보를
+DBMSNLAN 패키지로 포맷팅할 수 있다.
+• ±rver는 statistics profile, statistics io, statistics time 옵션들을 활성화(on)함으로써 SQL 트레이스 정보를
+확인할 수 있다.
+제3절 용담 시간 분석
+• DBMS 내부에서 활동하는 수많은 프로세스 Z!따는 상호작용이 필요하며, 그 과정에서 다른 프로세스가 일을 마칠
+때까지 기다려야만 하는 상황이 자주 발생한다
+• DBMS는 프로세스가 OS에 다U를 반환하고 대기할 때마다 로그를 남긴다. 오라클은 이를 '대기 이벤E(Wa1t
+Event)'라고 부르고, SQL 던1卍er에서는 '대기 유형(Wait T)쫜)끼라고 부른다.
+• 용답 시간(Respnse Trrne)을 Service firne과 wait Tltne의 합으로 정의하괴 대기(Wait) 원인을 분석함으로써
+병목을 해소해 나가는 성능 관리 방법론을 '응답 시간 분석(Response Time Analysis)'이라고 한다.
+• 용답 시간 분석 방법론을 지원하는 많은 성능 관리 도구가 개발됐고, AWR은 이를 지원하는 Oracle 표준 도구다.
+5% 전문가 /끼드

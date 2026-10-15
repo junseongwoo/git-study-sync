@@ -1,0 +1,44 @@
+과목 [| SQL 고급 활용 및 튜닝
+
+6077) {
+EXEC ORACLE OPTION (HOLD_CURSOR=YES);
+EXEC ORACLE OPTION (RELEASE_CURSOR=NO):
+EXEC SQU INSERT ~~ 2        17 50 수행
+EXEC ORACLE OPTION (RELEASE_CURSOR=YES);
+}
+
+아래는 애플리케이션에서 HAMS 캐싱한 상태에서 같은 SQLS 50008 반복 수행했을 때의 SQL 트레이스 결과다.
+
+call          count          cpu          elapsed disk          query         current rows
+
+Parse         1     0.00     0.00        0           0        0         0
+
+Execute 5000      0.18     0.14        0           0        0         0
+Fetch      5000      0.17     0.23        0       10000        0      5000
+total      10001     0.35      0.37        0       10000        0      5000
+
+Misses in library cache during parse: 1
+
+일반적인 방식으로 같은 SOLE 반복 수행할 때는 22756 Call 횟수가 Execute Call 314-9} 같게 나타난다고
+앞서 설명했다. 반면 위 트레이스 결과에선 Parse Calle] 한 번만 발생했고, 이후 4999번 수행할 때는 Parse Call©]
+전혀 발생하지 않았음을 알 수 있다. HZ Parse Callo] 발생한 시점에 하드 파싱을 수행한 사실도 아래쪽 라이브러리
+캐시 Miss 항목을 보고 알 수 있다.
+
+자바에서 이 기능을 구현하려면 다음과 같이 묵시적 캐싱(1070110[ Caching) 옵션을 사용하면 된다.
+
+public static void CursorCaching(Connection conn, int count) throws Exception{
+
+// 캐시 사이즈를 12 지정
+((oracleConnection)conn). setStatementCacheSize(1):
+
+// 묵시적 캐싱 기능을 활성화
+((0racleConnection)conn). setImplicitCachingEnabled( true):
+
+for (int i = 1; i <= count; i+) {
+// PreparedStatenent® 루프문 안쪽에 선언
+PreparedStatement stmt = conn.prepareStatement(
+“SELECT ?,?,?,3.* FROM emp a WHERE a.ename LIKE 'W§'");
+stat. setInt(1,i);
+stmt. setint(2,i);
+
+644 SL #87 가이드

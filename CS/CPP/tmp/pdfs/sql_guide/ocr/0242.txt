@@ -1,0 +1,27 @@
+제1장 기본
+2. INNER J이N
+INNER J이N은 0U1£R(외부) 조인과 대비해 내부 조인이라고 하며 조인 조건을 만족하는 행들만 반환한다
+INNER J이N 표시는 전통적인 방식의 조인 문법에서는 WHERE 절에 기술하던 조인 조건을 FROM 절에서
+정의하겠다는 표시이므로 USING 조건절이나 ON 조건절을 필수적으로 사용해야 한다.
+[예제] 사원 번호와 사원 이다 소속부서 번호와 소속부서 이를을 찾아본다.
+[예제1
+VHERE 절 조인 조건
+SELECT A.EW)t0 A.EV& B.DEPTL B 혜襞
+FROM EP 시 DEPT 8
+HERE B.FTtO = A.DEPTPO;
+위 SQL과 아래 SQL은 같은 결과를 얻을 수 있다.
+[예제]
+FRu 조인 조건
+SELECT A.E"O, A.ENÅÆ B.DEPTt0. B.혜襞
+FROM EP A ItÆR J이N FT
+애 B = A.DEPTt0;
+INNER는 J이N의 디폴트 옵션으로 아래 SQL 문과 같이 생략할 수 있다.
+[예제!
+SELECT A.E"O, A.EkAk B.DEPTIO, B 아4贓
+FROM EP A J이N B
+애 B.FTIO = A.Mt0•
+[실행 결과]
+SMITH
+RESEAR대
+4
+전문가 가이드 247

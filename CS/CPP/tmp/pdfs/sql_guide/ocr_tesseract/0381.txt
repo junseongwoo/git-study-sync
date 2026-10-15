@@ -1,0 +1,37 @@
+과목 I 50Ｌ 기본과 활용
+
+, ' [10916 I{3HN. ([[:digit: 1 J{3D\. ([[:digit:]]{a})’
+, "(년) \2-73') 46 01
+
+FROM HR EMPLOYEES
+
+WHERE EMPLOYEE_ID IN (144, 145);
+
+a
+650.121.2004                   (650) 121-2004
+911.44.1344 429268             011.44,1344 429268
+
+2 행이 선택됐습니다.
+
+다. REGEXP_SUBSTR 함수
+REGEXP_SUBSTR 함수는 500106_아13[에서 일치한 patterng 반환한다.
+
+REGEXP_SUBSTR (source_char, pattern [, position [, occurrence [, match_param [, subexpr]]]])
+
+- subexpre 서브 표현식을 지정한다(0은 전체 패턴, 1 이상은 서브 표현식, 기본값은 0).
+
+다음 쿼리는 URL 패턴과 일치한 문자열을 반환한다.
+
+예제]
+
+SELECT REGEXP_SUBSTR ( ‘http://www. example.com/products’
+, 'http://([[:alnum: ]]4\.2){3,4}/2") AS C1
+FROM DUAL;
+
+1
+
+http: //wes example. com/
+
+1개의 행이 선택됐습니다.
+
+388 | 50! 건문가 가이드

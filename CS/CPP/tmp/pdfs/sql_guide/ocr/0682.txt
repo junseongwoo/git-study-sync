@@ -1,0 +1,29 @@
+과목 III 고급 활용 및 튜닝
+Plm
+e
+SELECT STATEENT
+1
+2
+1 FIRST Ra
+1粧x (RAP& SCA* (NIN/LAX)) OF •주문 PK' (1韲X (I.NIQJE))
+아래는 SQL Serær의 실행계획이다.
+StntText
+l—streæ [弼]. [여叩1.[에삐0])))
+å—Top(TT ((1)))
+卜1飜x 뇼k(圈표CT:([SQL쨰.[弼1.[주문].[주문-PK]), SEEK:(•
+• 0 BACKWARD)
+주의할 점은, 다음과 같이 max 함수 내에서 인덱스 칼럼을 가공하면 인덱스를 사용하지 못하게 될 수 있다는
+사실이다. 조건절에서 인덱스 칼럼을 가공하면 정상적으로 인덱스를 사용하지 못하는 것과 같은 이유다.
+select nvl(~(주문번호 + 1), 1)
+들” 주문
+•yere 주문일자 = :주문일자
+Ex«utim Plm
+0 SELECT STATEEMT
+1 0 (AGEGATE)
+lux (R사뚀 SCM) •주문 PK' (ItOEX (IAIWE))
+사실 함수 *하서 상숫값을 더해도 인덱스 정렬 순서와 일치힘에도 Oracle은 First Row Stopkey 알고리즘을
+사용하지 않는다. 반면에 SQL Server는 사용한다
+5. 소트 영역을 적게 사용하도록 SQL 작성
+소트 연산이 불가피하다면 메모리 내에서 처리하려고 노력해야 한다. 소트 영역 그기를 늘리는 방법도 있지만
+그전에 소-트 영역을 적게 사용할 방법부터 찾는 것이 순서다.
+692 전문가 가이드

@@ -1,0 +1,40 @@
+과목 50 기본과 활용
+Ee e  ————
+
+PIVOT 절은 다수의 집계함수를 지원한다. 다음 쿼리는 SUM 함수와 COUNT 함수를 함께 사용했다.
+
+예제
+
+SELECT =
+FROM (SELECT JOB, DEPTNO, SAL FROM ENP)
+PIVOT (SUM (SAL) AS SAL, COUNT (*) AS CNT FOR DEPTNO IN (10 AS 010, 20 AS D20))
+
+ORDER BY 1;
+
+308             D16_SAL          D16_CNT       D20_SAL        D26_CNT
+ANALYST                                                                        0                       6000                              2
+CLERK              1300               1          1900             2
+MANAGER                             2450                                   1                        2975                               1
+PRESIDENT                         5000                                   1                                                               0
+SALESMAN                                                                      0                                                              0
+
+5 행이 선택됐습니다.
+
+FOR 절에도 다수의 열을 기술할 수 있다. 다음과 같이 IN 절에 다중 열을 사용해야 한다.
+
+56601 ＊
+FROM (SELECT TO_CHAR (HIREDATE, 'YYYY') AS YYYY, JOB, DEPTNO, SAL FROM EMP)
+PIVOT (SUM (SAL) AS SAL, COUNT (*) AS CNT
+FOR (DEPTNO, 208) IN ((10, 'ANALYST') AS D10A, (10, 'CLERK') AS D16C
+, (20, 'ANALYST') AS D20A, (20, CLERK‘) AS D26C))
+ORDER BY 1;
+
+YYYY DIA SAL DIGACNT D16C_SAL  D1OC_CNT 0204. SAL  D26A CNT  D20C_SAL  D28C_CNT
+
+1980                            0                           0                            0           800               1
+1981                             0                           0         3000              1                              0
+1982                            0          1300             1                            0                             0
+1987                            0                           0         3000             1          1100               1
+4 행이 선택됐습니다.
+
+368 | sou #7 가이드

@@ -1,0 +1,38 @@
+select /*+ ordered use_hash(d) full(d) full(e) noparallel(d) parallel(e 4) */
+count(*), min(sal), max(sal), avg(sal), sum(sal)
+
+from dept d, emp e
+
+where d.loc = "CHICAGD'
+
+and e.deptno = d.deptno
+
+{ 1d | Operation               | Name    ㅣ TQ |파씨 | PQ Distrib |
+ㅣ 0 | SELECT STATEMENT         |      |     |     |         |
+1 1 | SORT AGGREGATE       |     |    ㅣ    |       |
+ㅣ 2 | PX COORDINATOR        i      |    |     |        i
+{ 3 1 PX SEND QC (RANDOM)       ㅣ :TQ10062 | Q1,62 | P->S | QC (RAND)    |
+LFS  SORT AGGREGATE      |     1Q,02 | PCWP |       |
+5 가   HASH JOIN          |       101,02 | Paw |         ㅣ
+5:3    BUFFER SORT        |      1Q1,02 | pwc ㅣ         |
+er 를    PX RECEIVE        |      ㅣ Q,02 | Pawp |         |
+1 8    PX SEND HASH      | :TQ10000 |    | SOP | HASH     |
+1 91      TABLE ACCESS FULL    | DEPT    |     |      ㅣ          |
+110 |     PX RECEIVE           ㅣ        ㅣ 이,02 | paw ㅣ           |
+in     PX SEND HASH        | 00001 | Q1,61 | P-)P | HASH       |
+112}    PX BLOCK ITERATOR   ㅣ     ㅣ 0,01 | powc ㅣ       |
+] 13 |      TABLE ACCESS FULL    | EWP     ㅣ 01,01 | pw |          ㅣ
+
+병렬 처리에서 실제 QC 역할을 담당하는 프로세스는 SQL 문을 발행한 사용자 세션 자신이다.
+
+나. Intra-Operation Parallelism} Inter-Operation Parallelism
+
+select /#+ full(27) parallel(D7Z 4) */ *
+from 고객
+order by 고객명
+
+[그림 II-6-14]= order byE 포함하는 위 병렬 쿼리의 수행과정을 도식화한 것이다.
+
+ 742 | 8 전가 Hele
+
+0

@@ -1,0 +1,60 @@
+과목 III 고급 활용 및 튜닝
+- cls = '1'
+birth-yyyy 수 • 19요 :
+if 1-(忒 〉 0 tt•en
+el교
+&ns-OJtßJt.ßJt—lire( • not exists • ) :
+if;
+(a11
+Parse
+Ex«ute
+Total
+0
+1
+291일
+3粥2
+Cant
+1
+1
+2
+4
+STATEENT
+(엔 Tiæ
+이172
+이172
+EI尠s턴 Tiæ
+0.0%
+17.561
+17.561
+Disk
+0
+0
+4742
+4742
+0
+26112
+26112
+Current
+0
+0
+0
+0
+Rows
+0
+0
+1
+1
+snT (C1=26112 p믹742 ti로7561372 us)
+TÆLE ACCESS BY II&X OID EBER (C1=26112 p믹742 ~ ti″″5229 us)
+lux RAWE SCAN 뚀馹ER-1DX01 (C1=105 pr=105 ti~2위2777 us)
+위 쿼리는 26,112개 볼록 1/0가 발생하면서 17.56초나 소요됐다. 총 26,112개 중 디스크 I/0가 4742개나 되는
+것이 성능을 저하시킨 주요인이다. 쿼리를 다음과 같이 바꾸면 블록 1/0를 단 3개로 줄일 수 있어 디스크 1/0
+발생 여부와 상관없이 항상 빠른 성능을 보장한다.
+l—cnt -:
+*lect 1 into 1-예t
+fræ
+- cls = 너•
+Éere
+birth-yyyy 수 • 19%'
+수 1:
+圈8 전문가 가이드

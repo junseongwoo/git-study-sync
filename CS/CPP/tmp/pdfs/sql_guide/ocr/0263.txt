@@ -1,0 +1,52 @@
+[예제]
+SELECT A.EMME, B.FTNO, 8.~, B.LX
+FROM EP A RIGff JOIN FT 8
+애 B.(FTNO = A.FTt0;
+[실행 결과]
+ENAYE
+CLARK
+KI%
+UILLER
+ADANS
+SMITH
+SCOTT
+TI.RNER
+ALLEN
+JAES
+LARTIN
+15 개의 행이 선택왰습니다.
+ACCOI-NTI%
+ACQNTI%
+ACCOINTI%
+氈SE枳대
+氈SE欻대
+RESERCH
+RESER대
+SALES
+SALES
+SALES
+SALES
+SALES
+″TI야6
+제1장 기본
+NEW
+NEW
+NEW
+DALLAS
+DALLAS
+DALLAS
+대ICAØ
+대ICAØ
+대ICAØ
+대ICAØ
+대ICAØ
+대ICAØ
+INNER J이N이라면 사원 정보와 함께 사원이 배정된 3개의 부서 정보와 14명의 사원 정보만 출력 됐겠지만,
+RIGffT OUIER JOⅨ을 A卜&했기 때문에 사원이 배정되지 않은 부서번호 40의 OPERⅧ01`6 부서의 정보까
+지 출력됐다.
+다. FULL OUTER 」대N
+조인 수행 시 좌측, 우측 테이블의 모든 데이터를 읽어 조인해 결과를 생성한다. 즉 TABLE A와 B가 있을 때
+(TABLE '시, 'B' 모두 기준이 됨), RIGHT OtrrER JOIN과 LEFT OUTER JOIN의 결과를 합집합으로 처리한
+결과와 동일하다. 단 조인에 성공한 행들은 한번만 표시한다. 그리고 FULL J이N으로 OUIER 키워드를 생eÄ서
+사용할 수 있다.
+~ ,PI드 269

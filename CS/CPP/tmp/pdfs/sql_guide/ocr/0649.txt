@@ -1,0 +1,46 @@
+과목 III QL 고급 활용 및 튜닝
+F교1 Scan 하고서 먶•에P 이후에 deptno = 조건을 필터링했을 것이다. 하지만 조건절 Pushing이 작동함으로
+써 emp-deptno-idx 인덱스를 사용한 것을 실행계획에서 볼 수 있다.
+이번에는 조인문으로 테스트해 보자.
+select a.avg—sal
+5}
+fræ
+•tere
+ld
+(select &ptno, avg(sal) avg-sal gr0JP deptno) a
+&pt b
+a.&ptro = b.deptm
+b.㈆恤 =
+Nare
+| DEPT
+: DEPT_PK
+ENP_DEPTNO_IDX
+Rows
+1 Bytes
+1*
+1
+0
+1
+2
+3
+6
+SELECT STAT&NT
+LOS
+TABLE ACCESS BY INDEX ROWID
+It&X I.NIU SCAN
+ßT ~ BY
+TABLE ACCESS BY IIOEX ROWID
+mEX SCAN
+(i&ntifi«i 바 operation id) :
+3 - access(t•
+7 - access("FTW=")
+위 실행계획과 Preåcate lnfonnation을 보면, 인라인 뷰에 deptno = 조건절을 적용해 데이터랑을 줄이고서
+group by와 조인연산을 수행한 것을 알 수 있다. deptno = 30 조건이 인라인 부에 pushdown 될 수 있었던
+이유는, 뒤에서 설명할 '좌절 이행' 쿼리 변환이 먼저 일어났기 때문이다. b.deptno = 30 조건이 조인 조건을
+다고 a록에 전이됨으로써 다음과 같이 ædeptno = 30 조건절이 내부적으로 생성된 것이다. 이 상대에서 a.deptno
+= 30 조건절이 인라인 뷰 안쪽으로 Pushing된 것이다.
+select b.&•e, a.꾜9-%1
+fræ (select ±ptm, a四(%1) a四-%1 frm gr0UP by deptno) a
+±pt b
+*ere a.&ptro = b.deptm
+658 전문가 가이드

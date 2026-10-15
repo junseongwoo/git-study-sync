@@ -1,0 +1,30 @@
+R2장 분석 도구
+연습문제
+문제 1. 오라글 SQL 분석 도구 중 실제 I/O 발생량을 확인할 수 없는 것은?
+㉦ explain Plan
+㉨ AutoTrace
+SQL Trace
+DBMS-XPLAN.DISPLAY-CURSOR 함수
+문제 2. MS SQL Server에서 SQL 트레이스를 수집하려고 한다. 이래 괄호 안에 들어갈 키워드는?
+set (
+set (
+) profile 예
+) iO
+) tiæ 예
+select * en •here 위- like :여•- 1| '월•
+㉦ sql-trace
+(기 show-plan
+(㉦ show-plan-all
+㉦ statistics
+문제 3. 보기 중 DB 버퍼 개시 경합과 관련이 없는 것은?
+㉦ latch: shared ~
+(㉦ latch: cache buffers chams
+㉦ buffer busy
+㉦ free buffer walts
+문제 4. 아래 괄호 안에 들어갈 적당한 용어를 적으시오.
+'Rescx:yse Ttme AnalySs 성능관리 방법론은 세션 또는 시스템 전체에 발생하는 병목 현상과 그 원인을 찾아
+문제를 해결하는 방법과 과정을 다루며, 데이터베이스 서버의 용담 시간(R駟n雲 Ti|匯)을 다음과 같이 정의
+하고 있다.
+Response Tire = Service Tiæ + (
+) Tire
+전문가 가이드 537

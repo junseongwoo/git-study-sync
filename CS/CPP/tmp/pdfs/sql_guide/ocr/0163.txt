@@ -1,0 +1,21 @@
+과목 II 기본과 활용
+CASE 표현
+CASE 표현은 IF-THEN-ELSE 논리와 유사한 방식으로 표현식을 작성해 SQL의 비교 연산 기능을 보완하는
+역할을 한다. ANSIJSO SQL 표준에는 CASE Ⅸpr堡si에이라고 표시돼 있는데, 함수와 같은 성격을 갖고 있으며
+*의 함수와 같은 기능을 하므로 단일행 내장 함수에서 같이 설명한다.
+일반 프로그램 및 PVSQL의 IF-THEN-ELSE-END 로직은 다음과 같다.
+iÄRll
+IF 〉 ~
+æVISED_SALARY = SAL
+FI ÆVISED SALRY = 2譬
+위 예제와 같은 기능을 하는 CASE 표현은 다음과 같다.
+!예제1
+SELECT ~
+SEN SAL 〉 2圄 TÆN SAL
+ELSE 2*
+AS SAL.RY
+[실형 결과]
+REVISED-SALRY
+24%
+168 전문가 가이드
+국•

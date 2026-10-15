@@ -1,0 +1,49 @@
+과목 Ⅱ 기본과 활용
+INNER J이N이라면 홍팀이 배정된 15개의 경기장만 출력됐겠지만, OUTER J이N을 사용했기 때문에 홍팀이
+없는 안양경기장, 마산경기장, 일산경기장, 부산시민경기장, 대구시민경기장의 정보까지 추가로 출력횄다.
+[匧 - ~ 부서 酗는 사원이 없는 부서도 있다. ″T와 EB•PS 조인하되 사원이 없는 부서 정보도 같이 출력하도
+[예제1
+SELECT A.EVE A.Fm 8.~ B.LOC
+~ 8.袋PT嚮 = A.DEPTW(+);
+[실행 결과]
+JTES
+CLH
+그襞S
+UILLER
+10
+10
+RESEAR대
+SALES
+RESEAR대
+SALES
+ACCO.-NTI%
+RESEARCH
+ACCUTING
+RESEARCH
+RESEARCH
+ACCÜTI%
+æERATIOåS
+LOC
+DALLAS
+대ICAØ
+대ICAGO
+DALLAS
+대ICAGO
+대ICAØ
+NEW
+DALLAS
+NEW
+대ICAØ
+DALLAS
+에(A㈜
+DALLAS
+IÆW
+BOSW•I
+15 기의 행이 선택됐습니다.
+INNER J이N이라면 사원 정보와 함께 사원이 배정된 3개의 부서 정보와 14명의 사원 정보만 출력됐을 것이다.
+하지만 OU그•厥 J이N을 사용했으므로 사원이 배정되지 않은 부서번호 40의 OPERATIONS 부서의 LOC 정보까지
+출력됐다.
+지금까지 조인에 대한 기본적인 사용법을 획인해 보았다. 조인이 필요한 기본적인 이우는 과목1에서 배운 정규화
+에서부터 출발한다 정규화란 불필요한 데이터의 정합성을 확보하고 이상현상(Anomaly) 발생을 피하기 위해 테이
+불을 분할해 생성한다.
+244 전문가 ,까드

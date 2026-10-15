@@ -1,0 +1,48 @@
+臼장 관리 구문
+마. SELECT 문장으로 테이블 생성 사례
+SELECT 문장을 활용해서 테이블을 생성할 수 있는 방법(cr丕, Create Table ~ As Select 하이 있다. 기존
+테이블을 이용한 ffAS 방법을 사용하면 칼럼별로 데이터 유형을 다시 정의하지 않아도 되는 장점이 있다.
+그러나 crAS 기법 사용 시 주의할 점은 기존 테이블의 제약조건 중에 N(JT NULL 제으빤 새로 생성되는 테이블에
+적용되고, 기본기교유기괵래기℃HECK 등의 다른 제약조건은 없어진다는 점이다. 이와 같은 제약조건을 새로
+생성한 테이블에 적용하기 위해서는 뒤에 나오는 ALTER TABLE 기능을 사용해야 한다.
+SQL 뇨rve새서는 Select ~ lnto ~ 문장을 사용해 위와 같은 결과를 얻을 수 있다. 단 칼럼 속성에 ldentity를
+사용했다면 ldentity 속성까지 같이 적용된다.
+[예제] 선수(PLAYER) 테이불과 같은 내용으로 TEAM TEMP라는 복사 테이불을 만들어 본다.
+[예제] Oracle
+CREATE TABLE TEN TEP AS SELECT * FO TE,u;
+테이블이 생성됐습니다.
+결행 결미 OracIe
+DESC TEN-TEP,
+이름
+TEN 10
+REGIm_NAYE
+TEN
+E—TEAN_NAk
+nIG_YYYY
+ZIP_OEI
+ZIP_CØE2
+TEL
+FAX
+OM{ER
+WT WLL
+IOT MJLL
+tOT MXL
+,OT MIL
+유형
+(훼3)
+v獸(洲2(8)
+vⅨ緦2(40)
+V艇融(駟)
+(훼4)
+(嚮(3)
+(훼3)
+(훼3)
+V膩緦2(%)
+V枳(融(3)
+VRC繡2(10)
+V蠍聰2(10)
+VⅨ聽2(%)
+v獸(禰2(10)
+2
+1
+전문가 가이드 433

@@ -1,0 +1,40 @@
+제1장 SQL 기본
+
+SELECT 목록에 표시돼야 한다.
+
+이 부분은 관계형 데이터베이스가 데이터를 메모리에 올릴 때 행 단위로 모든 칼럼을 가져오게 되므로, SELECT
+절에서 일부 칼럼만 선택하더라도 ORDER BY 절에서 메모리에 올라와 있는 다른 칼럼의 데이터를 사용할 수
+있다.
+
+SQL 문장 실행 순서는 오라클 옵티마이저가 SQL 문장을 해석하는 논리적인 순서이므로, SQL 문장이 실제로
+실행되는 물리적인 순서가 아님을 유의하기 바란다. SQL 문장이 실제 수행되는 물리적인 순서는 실행계획에 의해
+정해진다.
+
+[예제] SELECT 절에 없는 MGR 칼럼을 00068 BY Hol 사용한다.
+
+SELECT  EMPNO, ENAME
+FROM EMP
+ORDER BY MGR:
+
+ENAME
+7962                           FORD
+7788                          SCOTT
+7900                          JANES
+7499                          ALLEN
+7521            WARD
+7844                          TURNER
+7654                          MARTIN
+7934                          MILLER
+7876                          ADANS
+7698                           BLAKE
+7566                           JONES
+7782                           CLARK
+7369                          SMITH
+7839                          KING
+
+14 개의 행이 선택됐습니다.
+
+위의 예제를 통해 ORDER BY 절에 SELECT 절에서 정의하지 않은 칼럼을 사용해도 문제없음을 확인할 수
+있다.
+
+SQL 전문가 가이드 |,225

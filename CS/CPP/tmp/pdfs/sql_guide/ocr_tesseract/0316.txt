@@ -1,0 +1,30 @@
+제2장 SQL 활용
+
+RESEARCH                 ANALYST                  7566                          2                    6000
+RESEARCH                 ANALYST                                                   2                    6000
+RESEARCH           CLERK             7788                 1             1100
+RESEARCH                 CLERK                     7902                          1                      800
+RESEARCH                 CLERK                                                     2                    1900
+RESEARCH           MANAGER           7839                1             2975
+RESEARCH. il © 6 WAGERS Init 우이 오 a 아이린 SC dalles 2078
+SALES              CLERK              7698                1              950
+SALES                CLERK                                      1               950
+SALES                MANAGER             7839                  1              2850
+SALES                MANAGER                                   1              2850
+SALES                 SALESMAN             7698                    4               5600
+SALES itis ny 6 SALEQUANARZ.. on 0 Satelite cine co 201가주밴예초...)
+ANALYST           7566                2             6600
+CLERK                     7698                          1                      950
+CLERK              7782                1             1300
+CLERK                      7788                         1                     1100
+CLERK                      7902                          1                      860
+MANAGER            7839                3             8275
+PRESIDENT                              1             5000
+SALESMAN          7698                4             5600
+
+27 행이 선택됐습니다.
+
+실행 결과에서 A 번째 10건의 데이터는 (DNAME+JOB+MGR) 기준의 집계이며, 두 번째 9건의 데이터는
+(DNAME+]OB) 기준의 집계이다. 세 번째 8건의 데이터는 (JOB+MGR) 기준의 집계이다.
+
+전문가 가이드 [323

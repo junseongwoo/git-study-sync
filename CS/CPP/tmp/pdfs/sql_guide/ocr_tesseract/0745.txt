@@ -1,0 +1,38 @@
+세6장 고급 50. 튜닝
+
+참고로 80[, 56000[는 2005 버전부터 Pivot 구문을 지원하고, Oracle 118부터 지원하기 시작했으므로 앞으론
+이것을 쓰면 된다. 그렇지만 위와 같이 (458문이나 DECODE 함수를 활용하는 기법은 1581.58 같은 분기조건을
+포함한 복잡한 처리절차를 One SQLE 구현하는 데 꼭 필요하고, 다른 비슷한 업무에도 응용할 수 있으므로 반드시
+숙지하기 바란다.
+
+2. 데이터 복제 기법 활용
+
+50[.을 작성하다 보면 데이터 복제 기법을 활용해야 할 때가 많다. 예전부터 많이 쓰던 PAL 다음과 같은
+복제용 elo] (copy) 미리 만들어두고 이를 활용하는 것이다.
+
+create table copy_t ( no number, 102 varchar2(2) );
+
+insert into copy_t
+select rownum, lpad(rownum, 2, '0') from big_table where rownum <= 31;
+
+alter table copy_t add constraint copy_t_pk primary key(no);
+create unique index copy_t_no2_idx on copy_t(no2);
+
+이 테이블과 다음과 같이 조인절 없이 Z2U(Cross ]010)하면 카티션 H{Cartesian Product)o] 발생해 데이터가
+2배로 복제된다. 3배로 복제하려면 70 <= 3 조건으로 바꿔주면 된다.
+
+select * from emp a, copy_t b
+where b.no <= 2;
+
+Oracle 91부터는 dual 테이블을 사용하면 편하다. 다음과 Zo dual 테이블에 start with YE connect
+by 구문을 사용하면 두 레코드를 가진 집합이 자동으로 만들어진다(에서는 버그가 있어 아래 쿼리를 인라인 뷰에
+담을 때만 데이터 복제가 일어난다).
+
+SQL> select rownum no from dual connect by level <= 2;
+
+NO                                                                                                                                                                                                                           |
+ET                                                                                                                                                                                      |
+1
+2
+
+SQL #9 bls [755

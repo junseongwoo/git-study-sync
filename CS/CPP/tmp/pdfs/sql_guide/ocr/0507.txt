@@ -1,0 +1,39 @@
+과목 III 고급 활용 및 튜닝
+실행통계
+Statistics
+1
+0
+2
+0
+743
+374
+1
+0
+1
+(괴S
+囹 bm *ts
+cmsistent *tS
+Size
+bytes sent via SQL*tkt tO client
+bytes via *해한 frm client
+rmrdtrips to/from client
+sorts (•ry)
+sorts (disk)
+다음과 같은 옵션 조합을 통해 필요한 부분만 출력해 볼 수 있다.
+㉦ æt autotraæ on
+따L을 실제 수행하고 그 결과와 함께 실행계획 및 실행통계를 출력한다.
+@ autotrace on explain
+바L을 실제 수행하고 그 결과와 함께 실행계획을 출력한다.
+㉦ et autotraæ on statistics
+SQL을 실제 수행하고 그 결과와 함께 실행통계를 출력한다.
+㉦ 년 autotrace traceonly
+SQL을 실제 수행하지만 그 결과는 출력하지 않고 실행계획과 통계만을 출력한다.
+traceonly explaln
+따L을 실제 수행하지 않고 실행계획만을 출력한다.
+autotrace traceonly statistics
+SQL을 실제 수행하지만 그 결과는 출력하지 않고 실행통계만을 출력한다.
+아•,㉦은 수행결과를 출력해야 하므로 쿼리를 실제 수행한다. (0•은 실행통계를 보여줘야 하므로 쿼리를
+실제 수행한다. ㉭•는 실행계획만 출력하면 되므로 쿼리를 실제 수행하지 않는다. SQL*Plus에서 실행계획을 가장
+쉽고 빠르게 확인해 볼 수 있는 방법이다.
+516
+전문가 ,까드

@@ -1,0 +1,60 @@
+과물 II 기본과 활용
+SQL Server
+SELECT AS 사원명, HI괴E AS 입사일자
+(YER , HIæNTE) AS 입사년도
+DATEPART (O,TH, HIREDATE) AS 입사월
+HIRENTE) AS 입사일
+NTEPART (DAY
+[예제] OracIe
+SELECT AS 사원명, HIREDATE AS 입사일자
+3
+, 교-- (TO ~ 대I″正, 'YYYY')) AS 입사년도
+교-- (TO.-0獻 대I″正, )) AS 입사월
+, 교-- (TO-OAR 대IRENTE. •뾰)) AS 입사일
+TO-NLMBER 함수를 제외하고 TO-CFLAR만 사용하면 문자형으로 출력(예, 01,02,03,...)되므로, 숫자형으로
+출력(예, 1국3,….)하기 위해 TO-NUMBER 함수를 사용한다.
+{예제] SQL Server
+SELECT ~ AS 사원명, HIREDATE AS 입사일자
+YER 대IREDATE) AS 입사년도
+LTH 대IREDATE) AS 입사월
+NY 대IRENTE) AS 입사일
+{실행 결과]
+사원명
+164 전문가 가이드
+입사일자
+1″12-17
+1%1새2-2€
+1%1새2-22
+1%1꿈새2
+1%1″-羽
+1%1쬬-01
+1%1酈-æ
+1%7구-19
+1%1-11-17
+입사년도
+1嚼
+1%1
+1%1
+1%1
+1%1
+1%1
+1%1
+1%7
+1%1
+입사월
+12
+2
+2
+4
+9
+5
+6
+4
+입사일
+17
+20
+22
+2
+1
+9
+19

@@ -1,0 +1,39 @@
+제1장 SQL 기본
+
+[예제] 이번에는 [그림 ㅣ1-1-16]에 나와 있는 팀(164) 테이블과 경기장(51ㅅ0) 테이블의 관계를 이용해 소속팀이 갖고
+있는 전용구장의 정보를 © 정보와 함께 출력하는 SQL 문을 작성한다.
+
+[예제]
+
+SELECT TEAM.REGION_NAME, TEAM. TEAM_NAME, TEAM.STADIUM_ID
+, STADIUM. STADIUM_NAME, STADIUM. SEAT_COUNT
+FROM TEAM, STADIUM
+WHERE STADIUM. STADIUM_ID = TEAM.STADIUM_ID;
+
+위 SQL 문과 ALIASES 사용한 아래 SQL 문은 같은 결과를 얻을 수 있다.
+
+[예제]
+
+SELECT A.REGION_NAME, A TEAM_NAME, A.STADIUM_ID
+, B.STADIUM_NAME, B.SEAT_COUNT
+FROM TEAM A, STADIUM B
+WHERE B.STADIUM_ID = A.STADIUM_ID;
+
+FROM 절에 기술된 테이블 간에 중복되지 않는 칼럼의 경우 아래와 같이 ALIASE 사용하지 않아도 오류가
+발생하지는 않는다. 하지만 가독성 및 일관성 측면에서 SELECT Xo] 기술된 모든 칼럼에 대해 ALIASE 사용하는
+것이 바람직하다.
+
+SELECT REGION_NAME, TEAM_NAME, A.STADIUM_ID
+, STADIUM_NAME, SEAT_COUNT
+FROM TEAM A, STADIUM B
+WHERE B.STADIUM_ID = A.STADIUM_ID;
+
+REGION_NAME  TEAM_NAME             STADIM_ID ~~ STADIUM_NAME              SEAT_COUNT
+광주               광주상무                402                광주월드컵경기장                 40245
+강원               강원                  “03                강릉종합경기장                    33900
+
+주              제주유나이티다(^ 404              제주월드컵경기장               42256
+대구              ChFC                “05              대구월드컵경기장               66422
+인천             유나이티드           801              인천월드컵경기장              35000
+
+SQL 전문가 가이드 |237

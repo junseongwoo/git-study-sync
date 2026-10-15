@@ -1,0 +1,38 @@
+제3장 관리 구문
+
+Eee
+
+. 테이블이 변경됐습니다.
+
+ALTER TABLE PLAYER ADD CONSTRAINT PLAYER FK FOREIGN KEY (TEAM_ID) REFERENCES TEAM(TEAN_ID);
+
+명령이 완료됐습니다.
+
+[예제] PLAYER 테이블이 참조하는 TEAM 테이블을 제거해본다.
+DROP TABLE TEAM;
+
+1행에 오류:
+ORA-62449: 외래 키에 의해 참조되는 고유/기본 키가 테이블에 있습니다
+
+DROP TABLE TEAM;
+
+메시지 3726, 수준 16, 상태 1, 줄 1
+개체 TEAM (i=) FOREIGN KEY 제약조건에서 32802 halk 수 없습니[
+
+※ 위 예제에선 오류가 발생했으므로 테이블은 삭제되지 않는다,
+[예제] TEAM 테이블과 PLAYER 테이블에 각각 데이터를 1건씩 입력한다,
+
+계제
+
+ER
+
+INSERT
+INTO TEAM (TEAM_ID, REGION_NAME, TEAM_NAME, STADIUM_ID)
+VALUES ('10', '대전', '시티즌', '002');
+
+1 개의 행이 만들어졌습니다.
+INSERT
+
+INTO PLAYER (PLAYER_ID, TEAM_ID, PLAYER NAME, POSITION, HEIGHT, WEIGHT, BACK_NO)
+VALUES ('2000003', 'K10', '유동우', 'OF', 177, 70, 40);
+

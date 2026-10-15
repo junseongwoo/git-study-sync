@@ -1,0 +1,39 @@
+과목 데이터 모일링의 이해
+IE 표기법
+바커 표기법
+EOSTS
+ST
+식넓자 관계로 인해 증가완
+PK속성의 수
+식별자 관계로 인해 증가된
+Ⅸ속성의 수
+%`띹밥T0伊지
+STATIS_SEO(FK)
+0 SUT"S-SEQÄ
+EOPEVTSTSHSY
+YATUS_SEQ
+(FK)
+十6 T_DEL_FLAG
+STATUS PROWT
+STATUS OLD
+STATUS r•&W
+十따
+0 STARS_uD
+EOP
+PLANT (FK)'•
+E鰥″뚀쮀T _O(FK)
+STATUS-SEO(FR
+EV'ENT _O (께
+TRANS- (FK)
+ITEM_CO
+PLANT (FK)
+EOIJP%NT_O 『지
+STATUS-SEO (FK) .•
+WORKERÄ••
+STAM.SEQ 十4
+세 개의 테이불에서 정보를 가져오는 SQL 구문을 만들면 어떻게 될까?
+[그림 1-1-51] 식별자관계 연결의 주식별자
+예시 모델의 맨 하위에 있는 EQPEVISISHST에서 다시 새로운 엔터티 EQP-ITEN[, EQP-WORKER와 관계를
+멎고 있을 때, 이 세 개의 엔터티에서 정보를 가져오는 SQL 구문을 작성해 보자.
+72
+전문가 7져드

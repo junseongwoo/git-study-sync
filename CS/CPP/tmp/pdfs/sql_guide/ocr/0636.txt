@@ -1,0 +1,23 @@
+廛장 옵테0十이저
+Stmt. setStrirg(3, •test• ),•
+艙馳lt뉴t rs=stmt.executeQpry();
+rs.dose();
+// 커서를 닫더라도 묵시적 개심 기능을 활성화 했으므로 닫지 않고 개시에 보관하계 됨
+stmt.close();
+또는 아래처럼 Statement를 닫지 않고 재사용해도 같은 효과를 얻을 수 있다
+Pl±Iic static void CursorYbld1ng(Connectim (예바 int cmnt) Exception{
+// preparedStateænt를 루프문 바깥에 선언
+PreparedStatænt Stnt = conn. prOreStatæent(
+"SELECT ?,?,?,a.* FO a HRE a.enæ 니KE •竈“):
+ResultSet 5,•
+for (int = 1; i 수 1++) {
+stmt.setlnt(l,i);
+stmt.setInt(2,i);
+stmt. setString(3, •test");
+rs=stmt. executOery( ),•
+// 루프를 빠져 나왔을 때 커서를 닫는다.
+stnt.dose();
+PL/바L에서는 위와 같은 옵션을 별도로 적용하지 않더라도 자동적으로 커서를 개심한다. 단 Static 따L을
+사용할 때만 그렇다. SQL을 사용하거나 cursor Vanable(=Ref Cursor)을 사용할 때는 커서를 자동으로
+개심하는 효과가 사라진다는 사실을 명심하기 바란다.
+전문가 ,iol드 645
