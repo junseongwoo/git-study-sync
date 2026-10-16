@@ -1,0 +1,353 @@
+{
+  "pdf": "C:\\Users\\user\\Desktop\\Obsidian\\git-study-sync\\CS\\CPP\\tmp\\pdfs\\os_notes\\layout_draft.pdf",
+  "pages": 24,
+  "a4_all": true,
+  "searchable_pages": 24,
+  "fonts": {
+    "/AAAAAA+MalgunGothicBold": true,
+    "/AAAAAB+MalgunGothicBold": true,
+    "/AAAAAA+MalgunGothic": true,
+    "/AAAAAB+MalgunGothic": true,
+    "/AAAAAC+MalgunGothic": true
+  },
+  "outline_count": 61,
+  "outline": [
+    {
+      "title": "정리 범위와 원문 확인 사항",
+      "page": 3
+    },
+    {
+      "title": "전체 학습 내용 개요",
+      "page": 4
+    },
+    {
+      "title": "장별 요약 및 상세 정리",
+      "page": 6
+    },
+    {
+      "title": "제1장. 서론",
+      "page": 6
+    },
+    {
+      "title": "1.1 운영체제가 할 일",
+      "page": 6
+    },
+    {
+      "title": "1.2 컴퓨터 시스템의 구성",
+      "page": 6
+    },
+    {
+      "title": "1.2.1 인터럽트",
+      "page": 7
+    },
+    {
+      "title": "1.2.2 저장장치 구조",
+      "page": 7
+    },
+    {
+      "title": "1.2.3 입출력 구조",
+      "page": 9
+    },
+    {
+      "title": "1.3.1 단일 처리기 시스템",
+      "page": 9
+    },
+    {
+      "title": "1.3.2 다중 처리기 시스템",
+      "page": 9
+    },
+    {
+      "title": "1.3.3 클러스터형 시스템",
+      "page": 9
+    },
+    {
+      "title": "1.4 운영체제의 작동",
+      "page": 10
+    },
+    {
+      "title": "1.4.1 다중 프로그래밍과 다중 태스킹",
+      "page": 10
+    },
+    {
+      "title": "1.4.2 이중 모드와 다중 모드 운용",
+      "page": 10
+    },
+    {
+      "title": "1.4.3 타이머",
+      "page": 11
+    },
+    {
+      "title": "1.5.1 프로세스 관리",
+      "page": 11
+    },
+    {
+      "title": "1.5.2 메모리 관리",
+      "page": 12
+    },
+    {
+      "title": "1.5.3 파일 시스템 관리",
+      "page": 12
+    },
+    {
+      "title": "1.5.4 대용량 저장장치 관리",
+      "page": 12
+    },
+    {
+      "title": "1.5.5 캐시 관리",
+      "page": 12
+    },
+    {
+      "title": "1.5.6 입출력 시스템 관리",
+      "page": 12
+    },
+    {
+      "title": "1.6 보안과 보호",
+      "page": 13
+    },
+    {
+      "title": "1.7 가상화",
+      "page": 13
+    },
+    {
+      "title": "1.8 분산 시스템",
+      "page": 13
+    },
+    {
+      "title": "1.9.1 리스트·스택·큐",
+      "page": 13
+    },
+    {
+      "title": "1.9.2 트리",
+      "page": 14
+    },
+    {
+      "title": "1.9.3 해시 함수와 맵",
+      "page": 14
+    },
+    {
+      "title": "1.9.4 비트맵",
+      "page": 14
+    },
+    {
+      "title": "1.10.1 전통적 계산",
+      "page": 14
+    },
+    {
+      "title": "1.10.2 모바일 컴퓨팅",
+      "page": 14
+    },
+    {
+      "title": "1.10.3 클라이언트·서버 컴퓨팅",
+      "page": 15
+    },
+    {
+      "title": "1.10.4 피어 간 계산",
+      "page": 15
+    },
+    {
+      "title": "1.10.5 클라우드 컴퓨팅",
+      "page": 15
+    },
+    {
+      "title": "1.10.6 실시간 내장형 시스템",
+      "page": 15
+    },
+    {
+      "title": "1.11 무료 및 공개 소스 운영체제",
+      "page": 16
+    },
+    {
+      "title": "1.11.1 역사",
+      "page": 16
+    },
+    {
+      "title": "1.11.2 무료 운영체제",
+      "page": 16
+    },
+    {
+      "title": "1.11.3 GNU/Linux",
+      "page": 16
+    },
+    {
+      "title": "1.11.4 BSD UNIX",
+      "page": 16
+    },
+    {
+      "title": "1.11.5 Solaris",
+      "page": 16
+    },
+    {
+      "title": "1.11.6 학습 도구로서 공개 소스 시스템",
+      "page": 17
+    },
+    {
+      "title": "1.12 요약과 원문 복습 범위",
+      "page": 17
+    },
+    {
+      "title": "제2장. 운영체제 구조",
+      "page": 18
+    },
+    {
+      "title": "2.1 운영체제 서비스 (목차만 확인)",
+      "page": 18
+    },
+    {
+      "title": "2.2 사용자와 운영체제 인터페이스 (목차만 확인)",
+      "page": 18
+    },
+    {
+      "title": "2.3 시스템 콜 (목차만 확인)",
+      "page": 18
+    },
+    {
+      "title": "2.4 시스템 서비스 (목차만 확인)",
+      "page": 18
+    },
+    {
+      "title": "2.5 링커와 로더 (목차만 확인)",
+      "page": 18
+    },
+    {
+      "title": "2.6 응용 프로그램이 운영체제마다 다른 이유 (목차만 확인)",
+      "page": 18
+    },
+    {
+      "title": "2.7 운영체제 설계 및 구현 (목차만 확인)",
+      "page": 18
+    },
+    {
+      "title": "2.8 운영체제 구조 (목차만 확인)",
+      "page": 18
+    },
+    {
+      "title": "2.9 운영체제 빌딩과 부팅 (목차만 확인)",
+      "page": 19
+    },
+    {
+      "title": "2.10 운영체제 디버깅 (목차만 확인)",
+      "page": 19
+    },
+    {
+      "title": "2.11 요약 (목차만 확인)",
+      "page": 19
+    },
+    {
+      "title": "제7부 도입. 보안과 보호",
+      "page": 19
+    },
+    {
+      "title": "P7.1 도입에서 확인되는 보안과 보호의 역할",
+      "page": 19
+    },
+    {
+      "title": "비교·공식·절차 모음",
+      "page": 21
+    },
+    {
+      "title": "주요 개념 복습",
+      "page": 22
+    },
+    {
+      "title": "개념 색인",
+      "page": 23
+    },
+    {
+      "title": "최종 학습 점검표",
+      "page": 24
+    }
+  ],
+  "cover_text": [
+    "운영체제 요약 정리",
+    "핵심 개념 및 시험 대비 학습 노트"
+  ],
+  "errors": [],
+  "sparse_pages": [
+    {
+      "page": 5,
+      "last_y": 300.4,
+      "chars": 260
+    },
+    {
+      "page": 20,
+      "last_y": 296.3,
+      "chars": 255
+    },
+    {
+      "page": 23,
+      "last_y": 245.9,
+      "chars": 100
+    }
+  ],
+  "code_count": 0,
+  "figure_count": 2,
+  "prose_segments_checked": 82,
+  "source_code_character_replacements": [],
+  "toc_headings": [
+    {
+      "level": 0,
+      "title": "정리 범위와 원문 확인 사항",
+      "key": "book-scope",
+      "page": 3
+    },
+    {
+      "level": 0,
+      "title": "전체 학습 내용 개요",
+      "key": "book-overview",
+      "page": 4
+    },
+    {
+      "level": 0,
+      "title": "장별 요약 및 상세 정리",
+      "key": "book-notes",
+      "page": 6
+    },
+    {
+      "level": 1,
+      "title": "제1장. 서론",
+      "key": "chapter-O01",
+      "page": 6
+    },
+    {
+      "level": 1,
+      "title": "제2장. 운영체제 구조",
+      "key": "chapter-O02",
+      "page": 18
+    },
+    {
+      "level": 1,
+      "title": "제7부 도입. 보안과 보호",
+      "key": "chapter-OP7",
+      "page": 19
+    },
+    {
+      "level": 0,
+      "title": "비교·공식·절차 모음",
+      "key": "book-comparisons",
+      "page": 21
+    },
+    {
+      "level": 0,
+      "title": "주요 개념 복습",
+      "key": "book-review",
+      "page": 22
+    },
+    {
+      "level": 0,
+      "title": "개념 색인",
+      "key": "book-index",
+      "page": 23
+    },
+    {
+      "level": 0,
+      "title": "최종 학습 점검표",
+      "key": "book-checklist",
+      "page": 24
+    }
+  ],
+  "rendered_page_images": 24,
+  "contact_sheets": [
+    "C:\\Users\\user\\Desktop\\Obsidian\\git-study-sync\\CS\\CPP\\tmp\\pdfs\\os_notes\\qa_contact_01.jpg",
+    "C:\\Users\\user\\Desktop\\Obsidian\\git-study-sync\\CS\\CPP\\tmp\\pdfs\\os_notes\\qa_contact_02.jpg"
+  ]
+}

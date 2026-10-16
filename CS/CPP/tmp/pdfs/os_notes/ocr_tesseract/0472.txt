@@ -1,0 +1,42 @@
+추가 자료       533
+
+장 작은 전송 크기를 계산하라.
+0. 다음 문장을 완성하라,
+디스크는          바이트 이상의 전송 크기가 되면 임의 접근 장치
+이며 그보다 작은 전송 크기인 경우에는 순차 접근 장치이다.
+e. 캐시, 메모리, 테이프에 대하여 임의 접근 장치로 사용 가능한 최소 전송
+크기를 계산하라.
+6 테이프 장치는 언제 임의 접근 장치로 동작할 수 있고, 언제 순차 접근 장
+치로 동작하는가?
+11.8 RAID 레벨 1 구성이 RAID 레벨 0 구성(비중복 데이터 스트라이핑)보다 읽기
+요청의 성능을 향상할 수 있는가? 그렇다면 어떻게 향상하는가?
+11.9 HDDS 보조저장장치로 사용해야 하는 세 가지 이유를 제시하라.
+11.10 NVM 장치를 보조저장장치로 사용해야 하는 세 가지 이유를 제시하라.
+
+추가 자료
+
+[Services (2012)]는 다양한 최신 컴퓨팅 환경에서의 데이터 저장장치 개요를 제공한
+다. 모스)에 대한 논의는 [Patterson et al. (1988)]에서 제시된다. [Kim et al. (2009)]
+557의 디스크 스케줄링 알고리즘에 관해 설명한다. 객체 기반 저장소는 [Mesnier et
+al. (2003)]에서 설명된다.
+
+[Russinovich et al. (2017)], [McDougall 및 Mauro (2007)] 및 [Love (2010)]
+는 각각 Windows, Solaris 및 Linux®] 파일 시스템 세부 사항에 관해 설명한다.
+
+저장장치는 성능 향상, 용량 증가 또는 둘 다를 목표로 지속해서 발전하고 있다. 용
+량 향상의 한 방향은 http://www.tomsitpro.com/articles/shingled-magnetic-re-
+ㅇ001009-50[-101-635105,2-933.11|을 참조하라.
+
+RedHat(% 다른) Linux 배포판에는 여러 개의 선택 가능한 디스크 스케줄링 알
+고리즘이 있다. 자세한 내용은 https://access.redhat.com/site/documentation/
+en-US/Red_Hat_Enterprise_Linux/7/html/Performance_Tuning_Guide/index.
+html& 참조하라.
+
+디폴트 Linux 부트스트랩 로더에 대한 자세한 내용은 https://www.gnu.org/
+software/grub/manual/grub.html/& 참조하라.
+
+비교적 새로운 파일 시스템인 81805는 https:/btrfs.wiki.kernel.org/index.
+php/Btrfs_designol| 자세히 설명되어 있다.
+
+객체 저장소의 이력은 hitp://www.theregister.co.uk/2016/07/15/the_history_
+boys_cas_and_object_storage_map< 잠조하라.

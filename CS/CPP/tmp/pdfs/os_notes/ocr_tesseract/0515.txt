@@ -1,0 +1,14 @@
+576      Chapter 102 입출력 시스템
+
+사용자 모드 파일 시스템에 FUSES 사용하면 성능 문제가 발생할 수 있다. 이러한
+문제에 대한 분석은 https://www.usenix.org/conference/fast17/technical-ses-
+sions/presentation/vangoor 에서 찾을 수 있다.
+
+참고문헌
+[Hennessy and Patterson (2012)] J. Hennessy and 12. Patterson, Computer
+
+Architecture: A Quantitative Approach, Fifth Edition, Morgan Kaufmann
+(2012).
+
+[Intel (2011)] Intel 64 and 1A-32 Architectures Software Developer's Manual,
+Combined Volumes: 1, 2A, 2B, 3A and 3B. Intel Corporation (2011).

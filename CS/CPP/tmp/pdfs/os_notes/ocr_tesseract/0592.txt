@@ -1,0 +1,42 @@
+656     Chapter 15 ” 피임 시스템 내부구조
+
+파티션 ㅇ              [ 저장장치 2
+
+ob 저장장치 1
+        볼륭37
+
+I  저장장치 3
+
+그림 15.1 전형적인 파일 시스템의 구성
+
+* tmpfs— HA 메인 메모리에 생성되고 시스템이 재부팅되거나 고장 났을 때 파
+일 시스템의 내용이 지워지는 “임시” 파일 시스템
+
+* 06]65-ㅡ디버거가 커널 HES 접근할 수 있게 하는 “가상” 파일 시스템(실제로는
+파일 시스템으로 보이는 커널 인터페이스)
+
+/                                                                             ufs
+/devices                                            devfs
+/dev                                                          dev
+/system/ contract                                 ctfs
+/proc                     proc
+/etc/mnttab                                             mntfs
+/etc/sve/volatile            tmpfs
+/system/ object                                      objfs
+/lib/libe.so.1                                               lofs
+/dev/fd                   fd
+/var                                                                    ufs
+/tmp                                                                  tmpfs
+/var/run                                                        tmpfs
+/opt                     ufs
+/zpbge                  zfs
+/zpbge/backup                                        zfs
+/export/home                                        zfs
+/var/mail                  zfs
+/var/spool/mqueue                           zfs
+/zpbg                    zfs
+/zpbg/zones              zfs
+
+아아아 _ _ _- - -— — — — —  __—_—_—_—_m_—__—_—_—_—_—_—-
+
+그림 15.2_ Solaris 파일 시스템

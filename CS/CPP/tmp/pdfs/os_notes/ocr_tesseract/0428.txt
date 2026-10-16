@@ -1,0 +1,38 @@
+488
+
+Chapter 10 가상 메모리
+
+가상 메모리 및 메모리 압축을 구현하는 방법을 설명한다. Windows 10의 압축 메모리
+는 http://www.makeuseof.com/tag/ram-compression-improves-memory-re-
+500051/610655-\11000\5-10에서 자세히 설명한다.
+
+[McDougall and Mauro (2007)]는 Solaris®] 가상 메모리에 관해 설명한다.
+Linux® 가상 메모리 기술은 [[0\6 (2010)] 및 [Mauerer (2008)]에 설명되어 있다.
+FreeBSD= [McKusick et al. (2015)]에서 자세히 설명한다.
+
+참고문헌
+
+[Carr and Hennessy (1981)] W. R. Carr and J. L. Hennessy, “WSClock—A
+Simple and Effective Algorithm for Virtual Memory Management”, Pro-
+ceedings of the ACM Symposium on Operating Systems Principles (1981), pag-
+es 87-95.
+
+[Denning (1968)] P. J. Denning, “TheWorking Set Model for Program Be-
+havior”, Communications of the ACM, Volume 11, Number 5 (1968), pages
+323-333.
+
+[Love (2010)] R. Love, Linux Kernel Development, Third Edition, Developer's
+Library (2010).
+
+[Mauerer (2008)] W. Mauerer, Professional Linux Kernel Architecture, John Wi-
+ley and Sons (2008).
+
+[McDougall and Mauro (2007)] R. McDougall and J. Mauro, Solaris Inter-
+nals, Second Edition, Prentice Hall (2007).
+
+[McKusick et al. (2015)] M. K. McKusick, G. V. Neville-Neil, and R. N. M.
+Watson, The Design and Implementation of the FreeBSD UNIXOperating Sys-
+tem—-Second Edition, Pearson (2015).
+
+[Russinovich et al. (2017)] M.Russinovich, D.A. Solomon, and A. Ionescu,
+Windows Internals—Part 1, Seventh Edition, Microsoft Press (2017).

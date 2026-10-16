@@ -1,7 +1,7 @@
 import argparse,json,re,subprocess
 from pathlib import Path
 import fitz
-import render_book as renderer
+import render_os as renderer
 from pypdf import PdfReader
 from PIL import Image,ImageDraw,ImageFont
 H=Path(__file__).resolve().parent
@@ -20,7 +20,7 @@ for p in d:
     usedfonts.add(s['font'])
     if 40 < s['bbox'][1] and s['bbox'][3] < 799:kept.append(s['text'])
    if kept:lines.append(''.join(kept))
- bodytext.append('\n'.join(lines).replace('C++ 원문 (계속)','').replace('C++ 원문',''))
+ bodytext.append('\n'.join(lines).replace('원문 코드·기호 (계속)','').replace('원문 코드·기호',''))
 norm=lambda t:re.sub(r'\s+','',t)
 whole=norm('\n'.join(bodytext));errors=[];sparse=[];prose_count=0
 renderer.register_fonts(Path('C:/Windows/Fonts'))
@@ -38,8 +38,10 @@ for ch in sorted((H/'chapters').glob('*.json')):
  for sec in ch['sections']:
   for b in sec['blocks']:
    if b['type']=='p':prosecheck(b.get('text'),ch['id']+':'+sec['number'])
-   if b['type']=='bullets':
-    for t in b.get('items',[]):prosecheck(t,ch['id']+':'+sec['number'])
+   if b['type'] in ('bullets','steps','flow'):
+    for t in b.get('items',b.get('steps',[])):prosecheck(t,ch['id']+':'+sec['number'])
+   if b['type']=='formula':
+    if norm(b.get('text','')) not in whole:errors.append({'type':'formula_text_not_found','at':ch['id']+':'+sec['number']})
  for code in ch.get('codes',[]):
   if code['id'] not in build['code_ids']:continue
   if norm(code['code']) not in whole:errors.append({'type':'code_text_not_found','id':code['id']})
@@ -75,8 +77,8 @@ for h in build['headings']:
  # Heading destinations and visible chapter text must agree.
  if norm(h['title']) not in norm(text[h['page']-1]):errors.append({'type':'heading_absent_at_destination','heading':h})
 cover=text[0].strip().splitlines()
-if norm(''.join(cover))!=norm(build['confirmed_title']+'요약 정리'):errors.append({'type':'extra_or_missing_cover_text','text':cover})
-qa={'pdf':str(pdf),'pages':len(d),'a4_all':True,'searchable_pages':sum(bool(x.strip()) for x in text),'fonts':fonts,'outline_count':len(outlines),'outline':outlines,'cover_text':cover,'errors':errors,'sparse_pages':sparse,'code_count':len(build['code_ids']),'prose_segments_checked':prose_count,'source_code_character_replacements':build['code_character_replacements'],'toc_headings':build['headings']}
+if norm(''.join(cover))!=norm(build['confirmed_title']+'핵심 개념 및 시험 대비 학습 노트'):errors.append({'type':'extra_or_missing_cover_text','text':cover})
+qa={'pdf':str(pdf),'pages':len(d),'a4_all':True,'searchable_pages':sum(bool(x.strip()) for x in text),'fonts':fonts,'outline_count':len(outlines),'outline':outlines,'cover_text':cover,'errors':errors,'sparse_pages':sparse,'code_count':len(build['code_ids']),'figure_count':len(build.get('figure_ids',[])),'prose_segments_checked':prose_count,'source_code_character_replacements':build['code_character_replacements'],'toc_headings':build['headings']}
 if args.render:
  render_dir=H/'qa_pages';render_dir.mkdir(exist_ok=True)
  subprocess.run(['pdftoppm','-r','85','-png','-thinlinemode','shape',str(pdf),str(render_dir/'page')],check=True,capture_output=True)

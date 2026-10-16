@@ -1,0 +1,29 @@
+534     Chapter 11 8% 저장장치 구조
+
+참고문헌
+
+[Kim et al. (2009)] J. Kim, Y. Oh, E. Kim, J. C. D. Lee, and S. Noh, “Disk
+Schedulers for Solid State Drivers”, Proceedings of the seventh ACM interna-
+tional conference on Embedded software (2009), pages 295-304.
+
+[Love (2010)] R. Love, Linux Kernel Development, Third Edition, Developer's
+Library (2010).
+
+[McDougall and Mauro (2007)] R. McDougall and J. Mauro, Solaris Inter-
+nals, Second Edition, Prentice Hall (2007).
+
+[Mesnier et al. (2003)] M. Mesnier, G. Ganger, and E. Ridel, “Object-based
+storage”, IEEE CommunicationsMagazine, Volume 41, Number 8 (2003),
+pages 84-99.
+
+[Patterson et al. (1988)] D. A. Patterson, G. Gibson, and R. H. Katz, “A Case
+for Redundant Arrays of Inexpensive Disks (RAID)", Proceedings of the
+ACM SIGMOD International Conference on the Management of Data (1988),
+pages 109-116.
+
+[Russinovich et al. (2017)] M.Russinovich, D. A. Solomon, and A. Ionescu,
+Windows Internals-Part 1, Seventh Edition, Microsoft Press (2017).
+
+[Services (2012)] E. E. Services, Information Storage and Management: Stor-
+ing, Managing, and Protecting Digital Information in Classic, Virtualized, and
+Cloud Environments, Wiley (2012).

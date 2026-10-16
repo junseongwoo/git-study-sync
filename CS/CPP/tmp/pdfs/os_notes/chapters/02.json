@@ -1,6 +1,7 @@
 {
   "id": "O02",
   "order": 2,
+  "available": false,
   "title": "제2장. 운영체제 구조",
   "source": {
     "pdf": [

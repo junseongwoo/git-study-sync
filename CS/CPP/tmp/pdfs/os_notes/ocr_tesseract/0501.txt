@@ -1,0 +1,49 @@
+562
+
+Chapter 12 입출력 시스템
+
+에 의해 사용자로부터 보호되어야 한다. 하지만 커널이 무조건 모든 사용자의 HE A
+부해서는 안 된다. 예를 들어, 대부분의 그래픽 게임, 비디오 편집기, 재생 소프트웨어는
+그래픽 성능을 높이기 위해 메모리 매핑된 그래픽 컨트롤러 메모리를 직접 접근할 필요
+가 있다. 이러면 커널은 그래픽 ee  한 부분(스크린에서 하나의 윈도로 표시되는)이
+한 번에 한 프로세스에 할당되도록 잠금 기법(10008 mechanism)& 제공해야 한다.
+
+12.4.7 커널 자료구조 Kernel Data Structures
+
+커널은 입출력 구성요소에 대한 상태 정보를 유지해야 한다. AES 14.1절의 open 파
+일 테이블 구조와 같은 다양한 자료구조를 유지한다. 커널은 네트워크 연결, 문자 장치
+통신 그리고 다른 입출력 활동을 관리하기 위해 여러 비슷한 구조를 사용한다.
+
+UNIX: 파일 시스템 인터페이스를 사용하여 다양한 것에 360655를 할 수 있게 of
+준다. 예를 들면 사용자 파일, raw 장치, 프로세스의 주소 공간과 같은 다양한 개체들을
+파일 시스템처럼 액세스할 수 있게 해준다. 이 모든 객체가 read OS 지원  !할지라도 그 그
+객체마다 행해지는 read) 9 의미는 다르다. 예를 들어, 사용자 파일을 읽는 일이라면
+커널은 디스크 liye 수행하기 전에 버퍼 캐시를 먼저 조사해야 한다. 만일 raw 장치
+를 읽기 위해 read S 부른 것이라면 커널은 요청한 크기가 디스크 섹터 크기의 정수배인
+지, 섹터 경계에 걸쳐 있지 않은지 조사해야 한다. 프로세스 이미지를 읽기 위한 것이라
+
+system-wide open-file table
+
+~ file-system record
+inode pointer
+
+pointer to select function
+pointer to ioctl function =     ;
+pointer to close function ~~
+
+file descriptor
+
+networking Clie Cael,   2
+pointer to networkinfo
+pointer to read and write functions
+pointer to select function
+
+pointer to ioctl function
+pointer to close function
+
+kernel memory
+
+그림 12.13 UNIX 입출력 커널 구조
+
+ userprocess memory
+

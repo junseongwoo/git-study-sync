@@ -1,0 +1,49 @@
+586      Chapter 13 파일 시스템 인터페이스
+
+0 -~----- 8 으
+
+import java.io.*;
+import java.nio.channels.*;
+
+public class LockingExample {
+public static final boolean EXCLUSIVE = false;
+public static final boolean SHARED = true;
+
+public static void main(String args[]) throws IOException {
+FileLock sharedLock = null;
+FileLock exclusiveLock = null;
+
+try {
+RandomAccessFile raf = new RandomAccessFile("file.txt", "rw");
+
+// get the channel for the file
+FileChannel ch = raf.getChannel ();
+
+// this locks the first half of the file - exclusive
+exclusiveLock = ch.lock(0, raf.length()/2, EXCLUSIVE) ;
+
+/** Now modify the data . . . */
+
+// release the lock
+exclusiveLock.release () ;
+
+// this locks the second half of the file - shared
+sharedLock = ch.lock(raf.length()/2+1,raf.length(), SHARED) ;
+
+/** Now read the data . . . */
+
+// release the lock
+sharedLock.release() ;
+} catch (java.io.IOException ioe) {
+System.err.println (ioe) ;
+}
+finally {
+if (exclusiveLock != null)
+exclusiveLock.release() ;
+if (sharedLock != null)
+sharedLock.release() ;
+
+3813.2 Java? 파일 락킹 예제
+
+용되지 않는다. 게다가, 두 개 이상의 프로세스가 파일 락을 얻음으로서 생길 수 있는 교
+착 상태 상황이 되지 않도록 특별한 대책이 반드시 취해져야만 한다.

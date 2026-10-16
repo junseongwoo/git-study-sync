@@ -1,0 +1,26 @@
+678      Chapter 15 파일 시스템 내부구조
+
+트워크 파일 시스템에서 분산 상태의 역할에 관해 설명한다. NFS 및 UNIX 파일 시스
+템(085)은 [Mauro and McDougall (2007)]에 설명되어 있다.
+Kerberos 네트워크 인증 프로토콜은 https://web.mit.edu/kerberos/oj| A] 찾을
+
+수 있다.
+
+참고문헌
+
+[Callaghan (2000)] 8. Callaghan, NFS Illustrated, Addison-Wesley (2000).
+
+[Love (2010)] R. Love, Linux Kernel Development, Third Edition, Developer's
+Library (2010).
+
+[Mauro and McDougall (2007)] J. Mauro and R. McDougall, Solaris Inter-
+nals: Core Kernel Architecture, Prentice Hall (2007).
+
+[McKusick et al. (2015)] M. K. McKusick, G. V. Neville-Neil, and R. N. M.
+
+Watson, The Design and Implementation of the FreeBSD UNIXOperating Sys-
+tem-Second Edition, Pearson (2015).
+
+[Ousterhout (1991)] J. Ousterhout. “The Role of Distributed State”. In CMU
+Computer Science: a 25th Anniversary Commemorative, R. F. Rashid, Ed., Ad-
+dison-Wesley (1991).

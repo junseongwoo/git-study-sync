@@ -1,0 +1,50 @@
+612      Chapter 13 파일 시스템 인터페이스
+
+CreateFileMapping()& 호출하여 SharedObject}il 불리는 named 공유 메
+모리 객체를 생성한다. 소비자 프로세스는 같은 이름의 객체에 대한 사상을 만듭으로써
+이 공유 메모리 세그먼트를 통해 FAIR 것이다. 생산자는 메모리 사상 파일의 뷰를 자신
+의 가상 주소 공간상에 생성한다. 마지막 세 인자의 값을 0으로 줌으로써 HE 전체 파일
+에 대한 것으로 지정한다. 대신 06아과 크기를 주면 파일의 일부만을 갖는 뷰를 생성할
+수도 있다. (사상을 만드는 과정에서 모든 사상이 메모리로 적재되지 않을 수도 있음에
+주의해야 한다. 사상된 파일은 요구 페이징을 통해 실제로 접근될 때 필요한 페이지가 적
+재된다.) MapViewOfFile() 함수는 공유 메모리 객체에 대한 포인터를 반환한다. 이 of
+모리 영역에 대한 접근은 따라서 메모리 사상 파일에 대한 접근이 된다. 이 예에서 생산
+자 프로세스는 “Shared memory ㅁ685286' 라는 메시지를 공유 메모리에 기록한다.
+
+소비자 프로세스가 이름 있는 공유 메모리 객체에 대한 뷰를 생성하는 과정을 설명
+한 프로그램이 그림 13.16에 나와 있다. 이 프로그램은 그림 13.15의 프로그램에 비해
+다소 단순하다. 필요한 작업이 이미 존재하는 이름 있는 공유 메모리 객체에 대한 사상
+을 만들어 내는 것뿐이기 때문이다. 소비자 프로세스는 사상된 파일의 BE 그림 13.15
+
+#include <windows.h>
+#include <stdio.h>
+
+int main(int argc, char *argv[])
+{
+
+HANDLE hMapFile;
+
+LPVOID lpMapAddress;
+
+hMapFile = OpenFileMapping (FILE MAP ALL ACCESS, /* R/W access x/
+FALSE, /* no inheritance */         .
+TEXT ("SharedObject")); /* name of mapped file object */
+
+1pMapAddress = MapViewOfFile(hMapFile, /* mapped object handle x/
+FILE MAP ALL ACCESS, /* read/write access */
+0, /* mapped view of entire file */
+0,
+0);
+
+/* read from shared memory */
+printf ("Read message %s", lpMapAddress);
+
+UnmapViewOfFile (1pMapAddress) ;
+CloseHandle (hMapFile) ;
+
+}
+
+_—— eee
+
+18 13.16 Windows APIS 사용하여 공유 메모리를 읽는 소비자
+
