@@ -82,7 +82,8 @@ qa={'pdf':str(pdf),'pages':len(d),'a4_all':True,'searchable_pages':sum(bool(x.st
 if args.render:
  render_dir=H/'qa_pages';render_dir.mkdir(exist_ok=True)
  subprocess.run(['pdftoppm','-r','85','-png','-thinlinemode','shape',str(pdf),str(render_dir/'page')],check=True,capture_output=True)
- paths=sorted(render_dir.glob('page-*.png'))[:len(d)]
+ digits=len(str(len(d)))
+ paths=[render_dir/f'page-{i:0{digits}}.png' for i in range(1,len(d)+1)]
  # Build sheets with 12 pages each, annotated with actual PDF page numbers.
  sheets=[];tw=290;th=430
  font=ImageFont.truetype('C:/Windows/Fonts/consola.ttf',14)

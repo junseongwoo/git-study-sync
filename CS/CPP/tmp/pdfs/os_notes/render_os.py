@@ -49,6 +49,7 @@ def register_fonts(font_dir):
     for name, filename in (
         ("Malgun", "malgun.ttf"), ("Malgun-Bold", "malgunbd.ttf"),
         ("Consolas", "consola.ttf"), ("Consolas-Bold", "consolab.ttf"),
+        ("Symbols", "seguisym.ttf"),
     ):
         path = Path(font_dir) / filename
         if not path.exists():

@@ -22,7 +22,7 @@ for ch in chapters:
  if original and original['available'] and ch['source']['pdf']!=original['pdf']:
   errors.append([where,'chapter page coverage differs from map'])
  numbers={s['number'] for s in ch['sections']}
- for section in original['sections'] if original else []:
+ for section in original['sections'] if original and original['available'] else []:
   if section['number'] not in numbers:errors.append([where,'missing original TOC section',section['number']])
  for sec in ch['sections']:
   sourcecheck(sec.get('source'),where+':'+sec['number'])
