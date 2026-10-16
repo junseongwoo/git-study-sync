@@ -2197,15 +2197,14 @@
     "O10-E01": "7baac30e1cab337d62d56688ee751c5e746598a4d1bb462aa2c0361132c273e5",
     "O10-E02": "d62aa215d121a607939d9d653595bfa4fd6643885d10e741e9165ad33b3e39ae"
   },
-  "unknown_prose_glyphs": {
-    "U+2097 LATIN SUBSCRIPT SMALL LETTER L": 6
-  },
+  "unknown_prose_glyphs": {},
   "code_character_replacements": [],
   "visual_code_line_wraps_across_build_passes": 0,
   "embedded_fonts": [
     "Malgun",
     "Malgun-Bold",
     "Consolas",
-    "Consolas-Bold"
+    "Consolas-Bold",
+    "Symbols"
   ]
 }

@@ -1,16 +1,19 @@
 {
-  "pdf": "C:\\Users\\user\\Desktop\\Obsidian\\git-study-sync\\CS\\CPP\\tmp\\pdfs\\os_notes\\layout_draft.pdf",
-  "pages": 24,
+  "pdf": "C:\\Users\\user\\Desktop\\Obsidian\\git-study-sync\\CS\\CPP\\output\\pdf\\운영체제 요약 정리.pdf",
+  "pages": 224,
   "a4_all": true,
-  "searchable_pages": 24,
+  "searchable_pages": 224,
   "fonts": {
     "/AAAAAA+MalgunGothicBold": true,
     "/AAAAAB+MalgunGothicBold": true,
     "/AAAAAA+MalgunGothic": true,
     "/AAAAAB+MalgunGothic": true,
-    "/AAAAAC+MalgunGothic": true
+    "/AAAAAC+MalgunGothic": true,
+    "/AAAAAD+MalgunGothic": true,
+    "/AAAAAA+Consolas": true,
+    "/AAAAAA+SegoeUISymbol": true
   },
-  "outline_count": 61,
+  "outline_count": 375,
   "outline": [
     {
       "title": "정리 범위와 원문 확인 사항",
@@ -22,239 +25,1495 @@
     },
     {
       "title": "장별 요약 및 상세 정리",
-      "page": 6
+      "page": 8
     },
     {
       "title": "제1장. 서론",
-      "page": 6
+      "page": 8
     },
     {
       "title": "1.1 운영체제가 할 일",
-      "page": 6
+      "page": 8
     },
     {
       "title": "1.2 컴퓨터 시스템의 구성",
-      "page": 6
+      "page": 8
     },
     {
       "title": "1.2.1 인터럽트",
-      "page": 7
+      "page": 9
     },
     {
       "title": "1.2.2 저장장치 구조",
-      "page": 7
+      "page": 9
     },
     {
       "title": "1.2.3 입출력 구조",
-      "page": 9
+      "page": 11
+    },
+    {
+      "title": "1.3 컴퓨터 시스템 구조",
+      "page": 11
     },
     {
       "title": "1.3.1 단일 처리기 시스템",
-      "page": 9
+      "page": 11
     },
     {
       "title": "1.3.2 다중 처리기 시스템",
-      "page": 9
+      "page": 11
     },
     {
       "title": "1.3.3 클러스터형 시스템",
-      "page": 9
+      "page": 11
     },
     {
       "title": "1.4 운영체제의 작동",
-      "page": 10
+      "page": 12
     },
     {
       "title": "1.4.1 다중 프로그래밍과 다중 태스킹",
-      "page": 10
+      "page": 12
     },
     {
       "title": "1.4.2 이중 모드와 다중 모드 운용",
-      "page": 10
+      "page": 12
     },
     {
       "title": "1.4.3 타이머",
-      "page": 11
+      "page": 13
+    },
+    {
+      "title": "1.5 자원 관리",
+      "page": 13
     },
     {
       "title": "1.5.1 프로세스 관리",
-      "page": 11
+      "page": 13
     },
     {
       "title": "1.5.2 메모리 관리",
-      "page": 12
+      "page": 14
     },
     {
       "title": "1.5.3 파일 시스템 관리",
-      "page": 12
+      "page": 14
     },
     {
       "title": "1.5.4 대용량 저장장치 관리",
-      "page": 12
+      "page": 14
     },
     {
       "title": "1.5.5 캐시 관리",
-      "page": 12
+      "page": 14
     },
     {
       "title": "1.5.6 입출력 시스템 관리",
-      "page": 12
+      "page": 14
     },
     {
       "title": "1.6 보안과 보호",
-      "page": 13
+      "page": 15
     },
     {
       "title": "1.7 가상화",
-      "page": 13
+      "page": 15
     },
     {
       "title": "1.8 분산 시스템",
-      "page": 13
+      "page": 15
+    },
+    {
+      "title": "1.9 커널 자료구조",
+      "page": 16
     },
     {
       "title": "1.9.1 리스트·스택·큐",
-      "page": 13
+      "page": 16
     },
     {
       "title": "1.9.2 트리",
-      "page": 14
+      "page": 16
     },
     {
       "title": "1.9.3 해시 함수와 맵",
-      "page": 14
+      "page": 16
     },
     {
       "title": "1.9.4 비트맵",
-      "page": 14
+      "page": 16
+    },
+    {
+      "title": "1.10 계산 환경",
+      "page": 17
     },
     {
       "title": "1.10.1 전통적 계산",
-      "page": 14
+      "page": 17
     },
     {
       "title": "1.10.2 모바일 컴퓨팅",
-      "page": 14
+      "page": 17
     },
     {
       "title": "1.10.3 클라이언트·서버 컴퓨팅",
-      "page": 15
+      "page": 17
     },
     {
       "title": "1.10.4 피어 간 계산",
-      "page": 15
+      "page": 17
     },
     {
       "title": "1.10.5 클라우드 컴퓨팅",
-      "page": 15
+      "page": 17
     },
     {
       "title": "1.10.6 실시간 내장형 시스템",
-      "page": 15
+      "page": 18
     },
     {
       "title": "1.11 무료 및 공개 소스 운영체제",
-      "page": 16
+      "page": 18
     },
     {
       "title": "1.11.1 역사",
-      "page": 16
+      "page": 18
     },
     {
       "title": "1.11.2 무료 운영체제",
-      "page": 16
+      "page": 18
     },
     {
       "title": "1.11.3 GNU/Linux",
-      "page": 16
+      "page": 18
     },
     {
       "title": "1.11.4 BSD UNIX",
-      "page": 16
+      "page": 19
     },
     {
       "title": "1.11.5 Solaris",
-      "page": 16
+      "page": 19
     },
     {
       "title": "1.11.6 학습 도구로서 공개 소스 시스템",
-      "page": 17
+      "page": 19
     },
     {
       "title": "1.12 요약과 원문 복습 범위",
-      "page": 17
+      "page": 19
     },
     {
       "title": "제2장. 운영체제 구조",
-      "page": 18
+      "page": 20
     },
     {
-      "title": "2.1 운영체제 서비스 (목차만 확인)",
-      "page": 18
+      "title": "2 본문 미제공 안내",
+      "page": 20
     },
     {
-      "title": "2.2 사용자와 운영체제 인터페이스 (목차만 확인)",
-      "page": 18
-    },
-    {
-      "title": "2.3 시스템 콜 (목차만 확인)",
-      "page": 18
-    },
-    {
-      "title": "2.4 시스템 서비스 (목차만 확인)",
-      "page": 18
-    },
-    {
-      "title": "2.5 링커와 로더 (목차만 확인)",
-      "page": 18
-    },
-    {
-      "title": "2.6 응용 프로그램이 운영체제마다 다른 이유 (목차만 확인)",
-      "page": 18
-    },
-    {
-      "title": "2.7 운영체제 설계 및 구현 (목차만 확인)",
-      "page": 18
-    },
-    {
-      "title": "2.8 운영체제 구조 (목차만 확인)",
-      "page": 18
-    },
-    {
-      "title": "2.9 운영체제 빌딩과 부팅 (목차만 확인)",
-      "page": 19
-    },
-    {
-      "title": "2.10 운영체제 디버깅 (목차만 확인)",
-      "page": 19
-    },
-    {
-      "title": "2.11 요약 (목차만 확인)",
-      "page": 19
-    },
-    {
-      "title": "제7부 도입. 보안과 보호",
-      "page": 19
-    },
-    {
-      "title": "P7.1 도입에서 확인되는 보안과 보호의 역할",
-      "page": 19
-    },
-    {
-      "title": "비교·공식·절차 모음",
+      "title": "제3장. 프로세스",
       "page": 21
     },
     {
-      "title": "주요 개념 복습",
+      "title": "3.1 프로세스 개념",
+      "page": 21
+    },
+    {
+      "title": "3.1.1 프로세스",
+      "page": 21
+    },
+    {
+      "title": "3.1.2 프로세스 상태",
       "page": 22
     },
     {
-      "title": "개념 색인",
+      "title": "3.1.3 프로세스 제어 블록",
+      "page": 22
+    },
+    {
+      "title": "3.1.4 스레드",
       "page": 23
     },
     {
-      "title": "최종 학습 점검표",
+      "title": "3.2 프로세스 스케줄링",
+      "page": 23
+    },
+    {
+      "title": "3.2.1 스케줄링 큐",
+      "page": 23
+    },
+    {
+      "title": "3.2.2 CPU 스케줄링",
+      "page": 23
+    },
+    {
+      "title": "3.2.3 문맥 교환",
       "page": 24
+    },
+    {
+      "title": "3.3 프로세스에 대한 연산",
+      "page": 24
+    },
+    {
+      "title": "3.3.1 프로세스 생성",
+      "page": 24
+    },
+    {
+      "title": "3.3.2 프로세스 종료",
+      "page": 26
+    },
+    {
+      "title": "3.4 프로세스 간 통신",
+      "page": 26
+    },
+    {
+      "title": "3.5 공유 메모리 시스템에서의 프로세스 간 통신",
+      "page": 26
+    },
+    {
+      "title": "3.6 메시지 전달 시스템에서의 프로세스 간 통신",
+      "page": 28
+    },
+    {
+      "title": "3.6.1 명명",
+      "page": 28
+    },
+    {
+      "title": "3.6.2 동기화",
+      "page": 29
+    },
+    {
+      "title": "3.6.3 버퍼링",
+      "page": 29
+    },
+    {
+      "title": "3.7 IPC 시스템의 사례",
+      "page": 29
+    },
+    {
+      "title": "3.7.1 POSIX 공유 메모리",
+      "page": 29
+    },
+    {
+      "title": "3.7.2 Mach 메시지 전달",
+      "page": 32
+    },
+    {
+      "title": "3.7.3 Windows",
+      "page": 32
+    },
+    {
+      "title": "3.7.4.1 일반 파이프",
+      "page": 32
+    },
+    {
+      "title": "3.7.4.2 지명 파이프",
+      "page": 33
+    },
+    {
+      "title": "3.8 클라이언트 서버 환경에서 통신",
+      "page": 33
+    },
+    {
+      "title": "3.8.1 소켓",
+      "page": 33
+    },
+    {
+      "title": "3.8.2 원격 프로시저 호출",
+      "page": 33
+    },
+    {
+      "title": "3.8.2.1 Android RPC",
+      "page": 36
+    },
+    {
+      "title": "3.9 요약과 원문 복습 범위",
+      "page": 36
+    },
+    {
+      "title": "제4장. 스레드와 병행성",
+      "page": 37
+    },
+    {
+      "title": "4.1 개요",
+      "page": 37
+    },
+    {
+      "title": "4.2 다중 코어 프로그래밍",
+      "page": 38
+    },
+    {
+      "title": "4.2.1 프로그래밍 도전과제",
+      "page": 39
+    },
+    {
+      "title": "4.2.2 병렬 실행의 유형",
+      "page": 40
+    },
+    {
+      "title": "4.3 다중 스레드 모델",
+      "page": 40
+    },
+    {
+      "title": "4.4 스레드 라이브러리",
+      "page": 40
+    },
+    {
+      "title": "4.4.1 Pthreads",
+      "page": 41
+    },
+    {
+      "title": "4.4.2 Windows 스레드",
+      "page": 42
+    },
+    {
+      "title": "4.4.3 Java 스레드",
+      "page": 42
+    },
+    {
+      "title": "4.4.3.1 Java Executor 프레임워크",
+      "page": 42
+    },
+    {
+      "title": "4.5 암묵적 스레딩",
+      "page": 42
+    },
+    {
+      "title": "4.5.1 스레드 풀",
+      "page": 42
+    },
+    {
+      "title": "4.5.2 Fork Join",
+      "page": 43
+    },
+    {
+      "title": "4.5.3 OpenMP",
+      "page": 43
+    },
+    {
+      "title": "4.5.4 Grand Central Dispatch",
+      "page": 44
+    },
+    {
+      "title": "4.5.5 Intel 스레드 빌딩 블록",
+      "page": 44
+    },
+    {
+      "title": "4.6 스레드와 관련된 문제들",
+      "page": 45
+    },
+    {
+      "title": "4.6.1 fork() 및 exec() 시스템 콜",
+      "page": 45
+    },
+    {
+      "title": "4.6.2 신호 처리",
+      "page": 45
+    },
+    {
+      "title": "4.6.3 스레드 취소",
+      "page": 45
+    },
+    {
+      "title": "4.6.4 스레드 로컬 저장장치",
+      "page": 46
+    },
+    {
+      "title": "4.6.5 스케줄러 액티베이션",
+      "page": 46
+    },
+    {
+      "title": "4.7 운영체제 사례",
+      "page": 46
+    },
+    {
+      "title": "4.7.1 Windows 스레드",
+      "page": 46
+    },
+    {
+      "title": "4.7.2 Linux 스레드",
+      "page": 47
+    },
+    {
+      "title": "4.8 요약과 원문 복습 범위",
+      "page": 48
+    },
+    {
+      "title": "제5장. CPU 스케줄링",
+      "page": 49
+    },
+    {
+      "title": "5.1 기본 개념",
+      "page": 49
+    },
+    {
+      "title": "5.1.1 CPU·I/O 버스트 사이클",
+      "page": 49
+    },
+    {
+      "title": "5.1.2 CPU 스케줄러",
+      "page": 49
+    },
+    {
+      "title": "5.1.3 선점 및 비선점 스케줄링",
+      "page": 50
+    },
+    {
+      "title": "5.1.4 디스패처",
+      "page": 50
+    },
+    {
+      "title": "5.2 스케줄링 기준",
+      "page": 50
+    },
+    {
+      "title": "5.3 스케줄링 알고리즘",
+      "page": 51
+    },
+    {
+      "title": "5.3.1 선입 선처리 스케줄링",
+      "page": 51
+    },
+    {
+      "title": "5.3.2 최단 작업 우선 스케줄링",
+      "page": 51
+    },
+    {
+      "title": "5.3.3 라운드 로빈 스케줄링",
+      "page": 53
+    },
+    {
+      "title": "5.3.4 우선순위 스케줄링",
+      "page": 54
+    },
+    {
+      "title": "5.3.5 다단계 큐 스케줄링",
+      "page": 54
+    },
+    {
+      "title": "5.3.6 다단계 피드백 큐 스케줄링",
+      "page": 54
+    },
+    {
+      "title": "5.4 스레드 스케줄링",
+      "page": 55
+    },
+    {
+      "title": "5.4.1 경쟁 범위",
+      "page": 55
+    },
+    {
+      "title": "5.4.2 Pthread 스케줄링",
+      "page": 56
+    },
+    {
+      "title": "5.5 다중 처리기 스케줄링",
+      "page": 56
+    },
+    {
+      "title": "5.5.1 다중 처리기 스케줄링의 접근 방법",
+      "page": 56
+    },
+    {
+      "title": "5.5.2 다중 코어 프로세서",
+      "page": 57
+    },
+    {
+      "title": "5.5.3 부하 균등화",
+      "page": 57
+    },
+    {
+      "title": "5.5.4 처리기 선호도 (원문 번호 5.5.2)",
+      "page": 57
+    },
+    {
+      "title": "5.5.5 이기종 다중 처리",
+      "page": 58
+    },
+    {
+      "title": "5.6 실시간 CPU 스케줄링",
+      "page": 58
+    },
+    {
+      "title": "5.6.1 지연시간 최소화",
+      "page": 58
+    },
+    {
+      "title": "5.6.2 우선순위 기반 스케줄링",
+      "page": 58
+    },
+    {
+      "title": "5.6.3 Rate-Monotonic 스케줄링",
+      "page": 59
+    },
+    {
+      "title": "5.6.4 Earliest-Deadline-First 스케줄링",
+      "page": 60
+    },
+    {
+      "title": "5.6.5 일정 비율의 몫 스케줄링",
+      "page": 60
+    },
+    {
+      "title": "5.6.6 POSIX 실시간 스케줄링",
+      "page": 61
+    },
+    {
+      "title": "5.7 운영체제 사례들",
+      "page": 61
+    },
+    {
+      "title": "5.7.1 사례: Linux 스케줄링",
+      "page": 61
+    },
+    {
+      "title": "5.7.2 사례: Windows 스케줄링",
+      "page": 61
+    },
+    {
+      "title": "5.7.3 사례: Solaris 스케줄링",
+      "page": 62
+    },
+    {
+      "title": "5.8 알고리즘의 평가",
+      "page": 62
+    },
+    {
+      "title": "5.8.1 결정론적 모델링",
+      "page": 62
+    },
+    {
+      "title": "5.8.2 큐잉 모델",
+      "page": 63
+    },
+    {
+      "title": "5.8.3 모의실험",
+      "page": 63
+    },
+    {
+      "title": "5.8.4 구현",
+      "page": 63
+    },
+    {
+      "title": "5.9 요약과 원문 복습 범위",
+      "page": 64
+    },
+    {
+      "title": "제6장. 동기화 도구들",
+      "page": 65
+    },
+    {
+      "title": "6.1 배경",
+      "page": 66
+    },
+    {
+      "title": "6.2 임계구역 문제",
+      "page": 66
+    },
+    {
+      "title": "6.3 Peterson의 해결안",
+      "page": 67
+    },
+    {
+      "title": "6.4 동기화를 위한 하드웨어 지원",
+      "page": 68
+    },
+    {
+      "title": "6.4.1 메모리 장벽",
+      "page": 68
+    },
+    {
+      "title": "6.4.2 하드웨어 명령어",
+      "page": 68
+    },
+    {
+      "title": "6.4.3 원자적 변수",
+      "page": 69
+    },
+    {
+      "title": "6.5 Mutex Locks",
+      "page": 70
+    },
+    {
+      "title": "6.6 세마포",
+      "page": 70
+    },
+    {
+      "title": "6.7 모니터",
+      "page": 72
+    },
+    {
+      "title": "6.8 라이브니스",
+      "page": 73
+    },
+    {
+      "title": "6.9 평가",
+      "page": 73
+    },
+    {
+      "title": "6.10 요약",
+      "page": 73
+    },
+    {
+      "title": "제7장. 동기화 예제",
+      "page": 74
+    },
+    {
+      "title": "7.1 고전적인 동기화 문제들",
+      "page": 74
+    },
+    {
+      "title": "7.1.1 유한 버퍼 문제",
+      "page": 74
+    },
+    {
+      "title": "7.1.2 Readers-Writers 문제",
+      "page": 76
+    },
+    {
+      "title": "7.1.3 식사하는 철학자들 문제",
+      "page": 77
+    },
+    {
+      "title": "7.2 커널 안에서의 동기화",
+      "page": 79
+    },
+    {
+      "title": "7.3 POSIX 동기화",
+      "page": 79
+    },
+    {
+      "title": "7.4 Java에서의 동기화",
+      "page": 80
+    },
+    {
+      "title": "7.5 대체 방안들",
+      "page": 82
+    },
+    {
+      "title": "7.6 요약",
+      "page": 83
+    },
+    {
+      "title": "제8장. 교착 상태",
+      "page": 83
+    },
+    {
+      "title": "8.1 시스템 모델",
+      "page": 84
+    },
+    {
+      "title": "8.2 다중 스레드 응용에서의 교착 상태",
+      "page": 84
+    },
+    {
+      "title": "8.3 교착 상태 특성",
+      "page": 85
+    },
+    {
+      "title": "8.4 교착 상태 처리 방법",
+      "page": 87
+    },
+    {
+      "title": "8.5 교착 상태 예방",
+      "page": 88
+    },
+    {
+      "title": "8.6 교착 상태 회피",
+      "page": 88
+    },
+    {
+      "title": "8.6.1 안전 상태",
+      "page": 88
+    },
+    {
+      "title": "8.6.2 자원 할당 그래프 알고리즘",
+      "page": 89
+    },
+    {
+      "title": "8.6.3 은행원 알고리즘",
+      "page": 89
+    },
+    {
+      "title": "8.7 교착 상태 탐지",
+      "page": 91
+    },
+    {
+      "title": "8.8 교착 상태로부터 회복",
+      "page": 92
+    },
+    {
+      "title": "8.9 요약",
+      "page": 93
+    },
+    {
+      "title": "제9장. 메인 메모리",
+      "page": 93
+    },
+    {
+      "title": "9.1 배경",
+      "page": 94
+    },
+    {
+      "title": "9.1.1 기본 하드웨어",
+      "page": 94
+    },
+    {
+      "title": "9.1.2 주소의 할당",
+      "page": 94
+    },
+    {
+      "title": "9.1.3 논리 대 물리 주소 공간",
+      "page": 94
+    },
+    {
+      "title": "9.1.4 동적 적재",
+      "page": 95
+    },
+    {
+      "title": "9.1.5 동적 연결 및 공유 라이브러리",
+      "page": 95
+    },
+    {
+      "title": "9.2 연속 메모리 할당",
+      "page": 95
+    },
+    {
+      "title": "9.3 페이징",
+      "page": 96
+    },
+    {
+      "title": "9.3.1 기본 방법",
+      "page": 96
+    },
+    {
+      "title": "9.3.2 하드웨어 지원과 TLB",
+      "page": 97
+    },
+    {
+      "title": "9.3.3 보호",
+      "page": 98
+    },
+    {
+      "title": "9.3.4 공유 페이지",
+      "page": 99
+    },
+    {
+      "title": "9.4 페이지 테이블의 구조",
+      "page": 99
+    },
+    {
+      "title": "9.4.1 계층적 페이징",
+      "page": 99
+    },
+    {
+      "title": "9.4.2 해시 페이지 테이블",
+      "page": 99
+    },
+    {
+      "title": "9.4.3 역 페이지 테이블",
+      "page": 99
+    },
+    {
+      "title": "9.4.4 Oracle SPARC Solaris",
+      "page": 100
+    },
+    {
+      "title": "9.5 스와핑",
+      "page": 100
+    },
+    {
+      "title": "9.6 사례: Intel 32비트와 64비트 구조",
+      "page": 100
+    },
+    {
+      "title": "9.7 사례: ARM 구조",
+      "page": 101
+    },
+    {
+      "title": "9.8 요약",
+      "page": 102
+    },
+    {
+      "title": "제10장. 가상 메모리",
+      "page": 102
+    },
+    {
+      "title": "10.1 배경",
+      "page": 103
+    },
+    {
+      "title": "10.2 요구 페이징",
+      "page": 103
+    },
+    {
+      "title": "10.3 쓰기 시 복사",
+      "page": 104
+    },
+    {
+      "title": "10.4 페이지 교체",
+      "page": 104
+    },
+    {
+      "title": "10.4.2 FIFO 페이지 교체",
+      "page": 105
+    },
+    {
+      "title": "10.4.3 최적 페이지 교체",
+      "page": 105
+    },
+    {
+      "title": "10.4.4 LRU 페이지 교체",
+      "page": 106
+    },
+    {
+      "title": "10.4.5 LRU 근사 페이지 교체",
+      "page": 107
+    },
+    {
+      "title": "10.4.6 계수 기반 교체",
+      "page": 107
+    },
+    {
+      "title": "10.4.7 페이지 버퍼링",
+      "page": 108
+    },
+    {
+      "title": "10.4.8 응용과 페이지 교체",
+      "page": 108
+    },
+    {
+      "title": "10.5 프레임의 할당",
+      "page": 108
+    },
+    {
+      "title": "10.5.2 할당 알고리즘",
+      "page": 108
+    },
+    {
+      "title": "10.5.3 전역 대 지역 할당",
+      "page": 109
+    },
+    {
+      "title": "10.5.4 비균등 메모리 접근",
+      "page": 109
+    },
+    {
+      "title": "10.6 스래싱",
+      "page": 109
+    },
+    {
+      "title": "10.6.2 작업 집합 모델",
+      "page": 110
+    },
+    {
+      "title": "10.6.3 페이지 폴트 빈도와 현재 관행",
+      "page": 111
+    },
+    {
+      "title": "10.7 메모리 압축",
+      "page": 111
+    },
+    {
+      "title": "10.8 커널 메모리의 할당",
+      "page": 111
+    },
+    {
+      "title": "10.9 기타 고려 사항",
+      "page": 112
+    },
+    {
+      "title": "10.9.1 프리페이징",
+      "page": 113
+    },
+    {
+      "title": "10.9.2 페이지 크기",
+      "page": 113
+    },
+    {
+      "title": "10.9.3 TLB Reach",
+      "page": 113
+    },
+    {
+      "title": "10.9.4 역 페이지 테이블",
+      "page": 113
+    },
+    {
+      "title": "10.9.5 프로그램 구조",
+      "page": 114
+    },
+    {
+      "title": "10.9.6 I/O 잠금과 페이지 잠금",
+      "page": 115
+    },
+    {
+      "title": "10.10 운영체제의 예",
+      "page": 115
+    },
+    {
+      "title": "10.11 요약",
+      "page": 116
+    },
+    {
+      "title": "제11장. 대용량 저장장치 구조",
+      "page": 116
+    },
+    {
+      "title": "11.1 대용량 저장장치 구조의 개관",
+      "page": 117
+    },
+    {
+      "title": "11.1.1 하드 디스크 드라이브",
+      "page": 117
+    },
+    {
+      "title": "11.1.2 비휘발성 메모리 장치와 NAND 컨트롤러",
+      "page": 117
+    },
+    {
+      "title": "11.1.3 휘발성 메모리와 자기 테이프",
+      "page": 118
+    },
+    {
+      "title": "11.1.4 보조저장장치 연결 방법",
+      "page": 118
+    },
+    {
+      "title": "11.1.5 주소 매핑",
+      "page": 119
+    },
+    {
+      "title": "11.2 디스크 스케줄링",
+      "page": 119
+    },
+    {
+      "title": "11.2.1 선입 선처리 스케줄링",
+      "page": 120
+    },
+    {
+      "title": "11.2.2 SCAN 스케줄링",
+      "page": 121
+    },
+    {
+      "title": "11.2.3 C-SCAN 스케줄링",
+      "page": 121
+    },
+    {
+      "title": "11.2.4 디스크 스케줄링 알고리즘의 선택",
+      "page": 122
+    },
+    {
+      "title": "11.3 NVM 스케줄링",
+      "page": 123
+    },
+    {
+      "title": "11.4 오류 감지 및 수정",
+      "page": 123
+    },
+    {
+      "title": "11.5 저장장치 관리",
+      "page": 124
+    },
+    {
+      "title": "11.5.1 드라이브 포매팅, 파티션, 볼륨",
+      "page": 124
+    },
+    {
+      "title": "11.5.2 부트 블록",
+      "page": 124
+    },
+    {
+      "title": "11.5.3 손상된 블록",
+      "page": 125
+    },
+    {
+      "title": "11.6 스왑 공간 관리",
+      "page": 125
+    },
+    {
+      "title": "11.7 저장장치 연결",
+      "page": 126
+    },
+    {
+      "title": "11.8 RAID 구조",
+      "page": 126
+    },
+    {
+      "title": "11.8.1 중복으로 신뢰성 향상",
+      "page": 126
+    },
+    {
+      "title": "11.8.2 병렬성을 이용한 성능 향상",
+      "page": 127
+    },
+    {
+      "title": "11.8.3 RAID 레벨과 구현",
+      "page": 128
+    },
+    {
+      "title": "11.8.4 RAID 레벨 선택",
+      "page": 132
+    },
+    {
+      "title": "11.8.5 확장",
+      "page": 132
+    },
+    {
+      "title": "11.8.6 RAID의 문제점들",
+      "page": 132
+    },
+    {
+      "title": "11.8.7 객체 저장소",
+      "page": 134
+    },
+    {
+      "title": "11.9 요약과 원문 연습문제의 점검 범위",
+      "page": 134
+    },
+    {
+      "title": "제12장. 입출력 시스템",
+      "page": 135
+    },
+    {
+      "title": "12.1 개관",
+      "page": 135
+    },
+    {
+      "title": "12.2 입출력 하드웨어",
+      "page": 135
+    },
+    {
+      "title": "12.2.1 메모리 맵드 입출력",
+      "page": 135
+    },
+    {
+      "title": "12.2.2 폴링",
+      "page": 136
+    },
+    {
+      "title": "12.2.3 인터럽트",
+      "page": 136
+    },
+    {
+      "title": "12.2.4 직접 메모리 접근(DMA)",
+      "page": 138
+    },
+    {
+      "title": "12.2.5 입출력 하드웨어 요약",
+      "page": 140
+    },
+    {
+      "title": "12.3 응용 입출력 인터페이스",
+      "page": 140
+    },
+    {
+      "title": "12.3.1 블록 장치와 문자 장치",
+      "page": 140
+    },
+    {
+      "title": "12.3.2 네트워크 장치",
+      "page": 141
+    },
+    {
+      "title": "12.3.3 클록과 타이머",
+      "page": 141
+    },
+    {
+      "title": "12.3.4 봉쇄형과 비봉쇄형 입출력",
+      "page": 141
+    },
+    {
+      "title": "12.3.5 벡터형 입출력",
+      "page": 142
+    },
+    {
+      "title": "12.4 커널 입출력 서브시스템",
+      "page": 142
+    },
+    {
+      "title": "12.4.1 I/O 스케줄링",
+      "page": 142
+    },
+    {
+      "title": "12.4.2 버퍼링",
+      "page": 142
+    },
+    {
+      "title": "12.4.3 캐싱",
+      "page": 143
+    },
+    {
+      "title": "12.4.4 스풀링 및 장치 예약",
+      "page": 143
+    },
+    {
+      "title": "12.4.5 오류 처리",
+      "page": 143
+    },
+    {
+      "title": "12.4.6 입출력 보호",
+      "page": 143
+    },
+    {
+      "title": "12.4.7 커널 자료구조",
+      "page": 143
+    },
+    {
+      "title": "12.4.8 전원 관리",
+      "page": 144
+    },
+    {
+      "title": "12.4.9 커널 입출력 서브시스템 요약",
+      "page": 144
+    },
+    {
+      "title": "12.5 입출력 요구를 하드웨어 연산으로 변환",
+      "page": 144
+    },
+    {
+      "title": "12.6 STREAMS",
+      "page": 146
+    },
+    {
+      "title": "12.7 성능",
+      "page": 148
+    },
+    {
+      "title": "12.8 요약과 원문 연습문제의 점검 범위",
+      "page": 148
+    },
+    {
+      "title": "제13장. 파일 시스템 인터페이스",
+      "page": 149
+    },
+    {
+      "title": "13.1 파일 개념",
+      "page": 150
+    },
+    {
+      "title": "13.1.1 파일 속성",
+      "page": 150
+    },
+    {
+      "title": "13.1.2 파일 연산과 열린 파일 관리",
+      "page": 151
+    },
+    {
+      "title": "13.1.3 파일 유형",
+      "page": 153
+    },
+    {
+      "title": "13.1.4 파일 구조",
+      "page": 153
+    },
+    {
+      "title": "13.1.5 파일의 내부 구조",
+      "page": 153
+    },
+    {
+      "title": "13.2 접근 방법",
+      "page": 153
+    },
+    {
+      "title": "13.2.1 순차 접근",
+      "page": 153
+    },
+    {
+      "title": "13.2.2 직접 접근",
+      "page": 154
+    },
+    {
+      "title": "13.2.3 기타 접근 방법",
+      "page": 154
+    },
+    {
+      "title": "13.3 디렉터리 구조",
+      "page": 155
+    },
+    {
+      "title": "13.3.1 1단계 디렉터리",
+      "page": 155
+    },
+    {
+      "title": "13.3.2 2단계 디렉터리",
+      "page": 155
+    },
+    {
+      "title": "13.3.3 트리 구조 디렉터리",
+      "page": 155
+    },
+    {
+      "title": "13.3.4 비순환 그래프 디렉터리",
+      "page": 156
+    },
+    {
+      "title": "13.3.5 일반 그래프 디렉터리",
+      "page": 158
+    },
+    {
+      "title": "13.4 보호",
+      "page": 158
+    },
+    {
+      "title": "13.4.1 보호와 접근의 유형",
+      "page": 158
+    },
+    {
+      "title": "13.4.2 접근 제어",
+      "page": 159
+    },
+    {
+      "title": "13.4.3 다른 보호 방법",
+      "page": 159
+    },
+    {
+      "title": "13.5 메모리 사상 파일",
+      "page": 159
+    },
+    {
+      "title": "13.5.1 메모리 사상 파일의 기본 기법",
+      "page": 159
+    },
+    {
+      "title": "13.5.2 Windows API에서 공유 메모리",
+      "page": 160
+    },
+    {
+      "title": "13.6 요약과 원문 연습문제의 점검 범위",
+      "page": 162
+    },
+    {
+      "title": "제14장. 파일 시스템 구현",
+      "page": 164
+    },
+    {
+      "title": "14.1 파일 시스템 구조",
+      "page": 164
+    },
+    {
+      "title": "14.2 파일 시스템 구현",
+      "page": 165
+    },
+    {
+      "title": "14.2.1 파일 시스템 구현 개요",
+      "page": 165
+    },
+    {
+      "title": "14.2.2 사용법",
+      "page": 165
+    },
+    {
+      "title": "14.3 디렉터리 구현",
+      "page": 166
+    },
+    {
+      "title": "14.3.1 선형 리스트",
+      "page": 166
+    },
+    {
+      "title": "14.3.2 해시 테이블",
+      "page": 166
+    },
+    {
+      "title": "14.4 할당 방법",
+      "page": 166
+    },
+    {
+      "title": "14.4.1 연속 할당",
+      "page": 166
+    },
+    {
+      "title": "14.4.2 연결 할당과 FAT",
+      "page": 167
+    },
+    {
+      "title": "14.4.3 색인 할당",
+      "page": 168
+    },
+    {
+      "title": "14.4.4 할당 방법의 성능",
+      "page": 171
+    },
+    {
+      "title": "14.5 가용 공간의 관리",
+      "page": 171
+    },
+    {
+      "title": "14.5.1 비트 벡터",
+      "page": 171
+    },
+    {
+      "title": "14.5.2 연결 리스트",
+      "page": 172
+    },
+    {
+      "title": "14.5.3 그룹핑",
+      "page": 172
+    },
+    {
+      "title": "14.5.4 계수",
+      "page": 172
+    },
+    {
+      "title": "14.5.5 공간맵",
+      "page": 172
+    },
+    {
+      "title": "14.5.6 사용하지 않는 트림",
+      "page": 173
+    },
+    {
+      "title": "14.6 효율과 성능",
+      "page": 173
+    },
+    {
+      "title": "14.6.1 효율",
+      "page": 173
+    },
+    {
+      "title": "14.6.2 성능",
+      "page": 173
+    },
+    {
+      "title": "14.7 복구",
+      "page": 175
+    },
+    {
+      "title": "14.7.1 일관성 검사",
+      "page": 175
+    },
+    {
+      "title": "14.7.2 로그 구조 파일 시스템",
+      "page": 175
+    },
+    {
+      "title": "14.7.3 다른 해결 방안들",
+      "page": 176
+    },
+    {
+      "title": "14.7.4 백업과 복구",
+      "page": 176
+    },
+    {
+      "title": "14.8 예: WAFL 파일 시스템",
+      "page": 176
+    },
+    {
+      "title": "14.9 요약과 원문 연습문제의 점검 범위",
+      "page": 178
+    },
+    {
+      "title": "제15장. 파일 시스템 내부구조",
+      "page": 179
+    },
+    {
+      "title": "15.1 파일 시스템",
+      "page": 179
+    },
+    {
+      "title": "15.2 파일 시스템 마운팅",
+      "page": 180
+    },
+    {
+      "title": "15.3 파티션과 마운팅",
+      "page": 182
+    },
+    {
+      "title": "15.4 파일 공유",
+      "page": 182
+    },
+    {
+      "title": "15.4.1 파일 공유와 다수의 사용자",
+      "page": 182
+    },
+    {
+      "title": "15.5 가상 파일 시스템",
+      "page": 182
+    },
+    {
+      "title": "15.6 원격 파일 시스템",
+      "page": 184
+    },
+    {
+      "title": "15.6.1 클라이언트 서버 모델",
+      "page": 184
+    },
+    {
+      "title": "15.6.2 분산 정보 시스템",
+      "page": 184
+    },
+    {
+      "title": "15.6.3 고장 모드",
+      "page": 185
+    },
+    {
+      "title": "15.7 일관성의 의미",
+      "page": 185
+    },
+    {
+      "title": "15.7.1 UNIX의 의미",
+      "page": 185
+    },
+    {
+      "title": "15.7.2 세션 의미",
+      "page": 185
+    },
+    {
+      "title": "15.7.3 불변 공유 파일의 의미",
+      "page": 186
+    },
+    {
+      "title": "15.8 NFS",
+      "page": 186
+    },
+    {
+      "title": "15.8.1 NFS 개요",
+      "page": 186
+    },
+    {
+      "title": "15.8.2 마운트 프로토콜",
+      "page": 188
+    },
+    {
+      "title": "15.8.3 NFS 프로토콜",
+      "page": 188
+    },
+    {
+      "title": "15.8.4 경로 이름 변환",
+      "page": 189
+    },
+    {
+      "title": "15.8.5 원격 연산",
+      "page": 190
+    },
+    {
+      "title": "15.9 요약과 원문 연습문제의 점검 범위",
+      "page": 190
+    },
+    {
+      "title": "제7부 도입. 보안과 보호",
+      "page": 191
+    },
+    {
+      "title": "P7.1 도입에서 확인되는 보안과 보호의 역할",
+      "page": 191
+    },
+    {
+      "title": "비교·공식·절차 모음",
+      "page": 193
+    },
+    {
+      "title": "주요 개념 복습",
+      "page": 208
+    },
+    {
+      "title": "개념 색인",
+      "page": 211
+    },
+    {
+      "title": "최종 학습 점검표",
+      "page": 214
     }
   ],
   "cover_text": [
@@ -264,24 +1523,263 @@
   "errors": [],
   "sparse_pages": [
     {
-      "page": 5,
-      "last_y": 300.4,
-      "chars": 260
+      "page": 34,
+      "last_y": 289.8,
+      "chars": 624
     },
     {
-      "page": 20,
+      "page": 130,
+      "last_y": 134.6,
+      "chars": 253
+    },
+    {
+      "page": 146,
+      "last_y": 177.6,
+      "chars": 279
+    },
+    {
+      "page": 167,
+      "last_y": 342.2,
+      "chars": 687
+    },
+    {
+      "page": 169,
+      "last_y": 295.4,
+      "chars": 458
+    },
+    {
+      "page": 180,
+      "last_y": 310.0,
+      "chars": 491
+    },
+    {
+      "page": 192,
       "last_y": 296.3,
       "chars": 255
     },
     {
-      "page": 23,
-      "last_y": 245.9,
-      "chars": 100
+      "page": 224,
+      "last_y": 338.4,
+      "chars": 458
     }
   ],
-  "code_count": 0,
-  "figure_count": 2,
-  "prose_segments_checked": 82,
+  "code_count": 17,
+  "figure_count": 53,
+  "embedded_figure_checks": [
+    {
+      "id": "O01-F01",
+      "pixel_exact_image_embedded": true
+    },
+    {
+      "id": "O01-F02",
+      "pixel_exact_image_embedded": true
+    },
+    {
+      "id": "O03-F01",
+      "pixel_exact_image_embedded": true
+    },
+    {
+      "id": "O03-F02",
+      "pixel_exact_image_embedded": true
+    },
+    {
+      "id": "O03-F03",
+      "pixel_exact_image_embedded": true
+    },
+    {
+      "id": "O03-F04",
+      "pixel_exact_image_embedded": true
+    },
+    {
+      "id": "O04-F01",
+      "pixel_exact_image_embedded": true
+    },
+    {
+      "id": "O04-F02",
+      "pixel_exact_image_embedded": true
+    },
+    {
+      "id": "O05-F01",
+      "pixel_exact_image_embedded": true
+    },
+    {
+      "id": "O05-F02",
+      "pixel_exact_image_embedded": true
+    },
+    {
+      "id": "O05-F03",
+      "pixel_exact_image_embedded": true
+    },
+    {
+      "id": "O05-F04",
+      "pixel_exact_image_embedded": true
+    },
+    {
+      "id": "O05-F05",
+      "pixel_exact_image_embedded": true
+    },
+    {
+      "id": "O05-F06",
+      "pixel_exact_image_embedded": true
+    },
+    {
+      "id": "O05-F07",
+      "pixel_exact_image_embedded": true
+    },
+    {
+      "id": "O07-F01",
+      "pixel_exact_image_embedded": true
+    },
+    {
+      "id": "O07-F02",
+      "pixel_exact_image_embedded": true
+    },
+    {
+      "id": "O08-F01",
+      "pixel_exact_image_embedded": true
+    },
+    {
+      "id": "O08-F02",
+      "pixel_exact_image_embedded": true
+    },
+    {
+      "id": "O08-F03",
+      "pixel_exact_image_embedded": true
+    },
+    {
+      "id": "O08-F04",
+      "pixel_exact_image_embedded": true
+    },
+    {
+      "id": "O08-F05",
+      "pixel_exact_image_embedded": true
+    },
+    {
+      "id": "O09-F01",
+      "pixel_exact_image_embedded": true
+    },
+    {
+      "id": "O09-F02",
+      "pixel_exact_image_embedded": true
+    },
+    {
+      "id": "O09-F03",
+      "pixel_exact_image_embedded": true
+    },
+    {
+      "id": "O09-F04",
+      "pixel_exact_image_embedded": true
+    },
+    {
+      "id": "O10-F01",
+      "pixel_exact_image_embedded": true
+    },
+    {
+      "id": "O10-F02",
+      "pixel_exact_image_embedded": true
+    },
+    {
+      "id": "O10-F03",
+      "pixel_exact_image_embedded": true
+    },
+    {
+      "id": "O10-F04",
+      "pixel_exact_image_embedded": true
+    },
+    {
+      "id": "O10-F05",
+      "pixel_exact_image_embedded": true
+    },
+    {
+      "id": "O10-F06",
+      "pixel_exact_image_embedded": true
+    },
+    {
+      "id": "O11-F01",
+      "pixel_exact_image_embedded": true
+    },
+    {
+      "id": "O11-F02",
+      "pixel_exact_image_embedded": true
+    },
+    {
+      "id": "O11-F03",
+      "pixel_exact_image_embedded": true
+    },
+    {
+      "id": "O11-F04",
+      "pixel_exact_image_embedded": true
+    },
+    {
+      "id": "O11-F05",
+      "pixel_exact_image_embedded": true
+    },
+    {
+      "id": "O12-F01",
+      "pixel_exact_image_embedded": true
+    },
+    {
+      "id": "O12-F02",
+      "pixel_exact_image_embedded": true
+    },
+    {
+      "id": "O12-F03",
+      "pixel_exact_image_embedded": true
+    },
+    {
+      "id": "O12-F04",
+      "pixel_exact_image_embedded": true
+    },
+    {
+      "id": "O13-F01",
+      "pixel_exact_image_embedded": true
+    },
+    {
+      "id": "O13-F02",
+      "pixel_exact_image_embedded": true
+    },
+    {
+      "id": "O13-F03",
+      "pixel_exact_image_embedded": true
+    },
+    {
+      "id": "O13-F04",
+      "pixel_exact_image_embedded": true
+    },
+    {
+      "id": "O14-F01",
+      "pixel_exact_image_embedded": true
+    },
+    {
+      "id": "O14-F02",
+      "pixel_exact_image_embedded": true
+    },
+    {
+      "id": "O14-F03",
+      "pixel_exact_image_embedded": true
+    },
+    {
+      "id": "O14-F04",
+      "pixel_exact_image_embedded": true
+    },
+    {
+      "id": "O15-F01",
+      "pixel_exact_image_embedded": true
+    },
+    {
+      "id": "O15-F02",
+      "pixel_exact_image_embedded": true
+    },
+    {
+      "id": "O15-F03",
+      "pixel_exact_image_embedded": true
+    },
+    {
+      "id": "O15-F04",
+      "pixel_exact_image_embedded": true
+    }
+  ],
+  "prose_segments_checked": 1448,
   "source_code_character_replacements": [],
   "toc_headings": [
     {
@@ -300,54 +1798,149 @@
       "level": 0,
       "title": "장별 요약 및 상세 정리",
       "key": "book-notes",
-      "page": 6
+      "page": 8
     },
     {
       "level": 1,
       "title": "제1장. 서론",
       "key": "chapter-O01",
-      "page": 6
+      "page": 8
     },
     {
       "level": 1,
       "title": "제2장. 운영체제 구조",
       "key": "chapter-O02",
-      "page": 18
+      "page": 20
+    },
+    {
+      "level": 1,
+      "title": "제3장. 프로세스",
+      "key": "chapter-O03",
+      "page": 21
+    },
+    {
+      "level": 1,
+      "title": "제4장. 스레드와 병행성",
+      "key": "chapter-O04",
+      "page": 37
+    },
+    {
+      "level": 1,
+      "title": "제5장. CPU 스케줄링",
+      "key": "chapter-O05",
+      "page": 49
+    },
+    {
+      "level": 1,
+      "title": "제6장. 동기화 도구들",
+      "key": "chapter-O06",
+      "page": 65
+    },
+    {
+      "level": 1,
+      "title": "제7장. 동기화 예제",
+      "key": "chapter-O07",
+      "page": 74
+    },
+    {
+      "level": 1,
+      "title": "제8장. 교착 상태",
+      "key": "chapter-O08",
+      "page": 83
+    },
+    {
+      "level": 1,
+      "title": "제9장. 메인 메모리",
+      "key": "chapter-O09",
+      "page": 93
+    },
+    {
+      "level": 1,
+      "title": "제10장. 가상 메모리",
+      "key": "chapter-O10",
+      "page": 102
+    },
+    {
+      "level": 1,
+      "title": "제11장. 대용량 저장장치 구조",
+      "key": "chapter-O11",
+      "page": 116
+    },
+    {
+      "level": 1,
+      "title": "제12장. 입출력 시스템",
+      "key": "chapter-O12",
+      "page": 135
+    },
+    {
+      "level": 1,
+      "title": "제13장. 파일 시스템 인터페이스",
+      "key": "chapter-O13",
+      "page": 149
+    },
+    {
+      "level": 1,
+      "title": "제14장. 파일 시스템 구현",
+      "key": "chapter-O14",
+      "page": 164
+    },
+    {
+      "level": 1,
+      "title": "제15장. 파일 시스템 내부구조",
+      "key": "chapter-O15",
+      "page": 179
     },
     {
       "level": 1,
       "title": "제7부 도입. 보안과 보호",
       "key": "chapter-OP7",
-      "page": 19
+      "page": 191
     },
     {
       "level": 0,
       "title": "비교·공식·절차 모음",
       "key": "book-comparisons",
-      "page": 21
+      "page": 193
     },
     {
       "level": 0,
       "title": "주요 개념 복습",
       "key": "book-review",
-      "page": 22
+      "page": 208
     },
     {
       "level": 0,
       "title": "개념 색인",
       "key": "book-index",
-      "page": 23
+      "page": 211
     },
     {
       "level": 0,
       "title": "최종 학습 점검표",
       "key": "book-checklist",
-      "page": 24
+      "page": 214
     }
   ],
-  "rendered_page_images": 24,
+  "rendered_page_images": 224,
   "contact_sheets": [
     "C:\\Users\\user\\Desktop\\Obsidian\\git-study-sync\\CS\\CPP\\tmp\\pdfs\\os_notes\\qa_contact_01.jpg",
-    "C:\\Users\\user\\Desktop\\Obsidian\\git-study-sync\\CS\\CPP\\tmp\\pdfs\\os_notes\\qa_contact_02.jpg"
+    "C:\\Users\\user\\Desktop\\Obsidian\\git-study-sync\\CS\\CPP\\tmp\\pdfs\\os_notes\\qa_contact_02.jpg",
+    "C:\\Users\\user\\Desktop\\Obsidian\\git-study-sync\\CS\\CPP\\tmp\\pdfs\\os_notes\\qa_contact_03.jpg",
+    "C:\\Users\\user\\Desktop\\Obsidian\\git-study-sync\\CS\\CPP\\tmp\\pdfs\\os_notes\\qa_contact_04.jpg",
+    "C:\\Users\\user\\Desktop\\Obsidian\\git-study-sync\\CS\\CPP\\tmp\\pdfs\\os_notes\\qa_contact_05.jpg",
+    "C:\\Users\\user\\Desktop\\Obsidian\\git-study-sync\\CS\\CPP\\tmp\\pdfs\\os_notes\\qa_contact_06.jpg",
+    "C:\\Users\\user\\Desktop\\Obsidian\\git-study-sync\\CS\\CPP\\tmp\\pdfs\\os_notes\\qa_contact_07.jpg",
+    "C:\\Users\\user\\Desktop\\Obsidian\\git-study-sync\\CS\\CPP\\tmp\\pdfs\\os_notes\\qa_contact_08.jpg",
+    "C:\\Users\\user\\Desktop\\Obsidian\\git-study-sync\\CS\\CPP\\tmp\\pdfs\\os_notes\\qa_contact_09.jpg",
+    "C:\\Users\\user\\Desktop\\Obsidian\\git-study-sync\\CS\\CPP\\tmp\\pdfs\\os_notes\\qa_contact_10.jpg",
+    "C:\\Users\\user\\Desktop\\Obsidian\\git-study-sync\\CS\\CPP\\tmp\\pdfs\\os_notes\\qa_contact_11.jpg",
+    "C:\\Users\\user\\Desktop\\Obsidian\\git-study-sync\\CS\\CPP\\tmp\\pdfs\\os_notes\\qa_contact_12.jpg",
+    "C:\\Users\\user\\Desktop\\Obsidian\\git-study-sync\\CS\\CPP\\tmp\\pdfs\\os_notes\\qa_contact_13.jpg",
+    "C:\\Users\\user\\Desktop\\Obsidian\\git-study-sync\\CS\\CPP\\tmp\\pdfs\\os_notes\\qa_contact_14.jpg",
+    "C:\\Users\\user\\Desktop\\Obsidian\\git-study-sync\\CS\\CPP\\tmp\\pdfs\\os_notes\\qa_contact_15.jpg",
+    "C:\\Users\\user\\Desktop\\Obsidian\\git-study-sync\\CS\\CPP\\tmp\\pdfs\\os_notes\\qa_contact_16.jpg",
+    "C:\\Users\\user\\Desktop\\Obsidian\\git-study-sync\\CS\\CPP\\tmp\\pdfs\\os_notes\\qa_contact_17.jpg",
+    "C:\\Users\\user\\Desktop\\Obsidian\\git-study-sync\\CS\\CPP\\tmp\\pdfs\\os_notes\\qa_contact_18.jpg",
+    "C:\\Users\\user\\Desktop\\Obsidian\\git-study-sync\\CS\\CPP\\tmp\\pdfs\\os_notes\\qa_contact_19.jpg"
   ]
 }

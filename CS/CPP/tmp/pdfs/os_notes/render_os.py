@@ -491,7 +491,7 @@ class Book:
         from PIL import Image as PILImage
         with PILImage.open(path) as pic:
             iw, ih = pic.size
-        scale = min(TEXT_W / iw, 600 / ih)
+        scale = min(TEXT_W / iw, float(figure.get("max_height", 600)) / ih)
         fig = Image(str(path), width=iw * scale, height=ih * scale, hAlign="CENTER")
         fig.keepWithNext = bool(figure.get("caption") or figure.get("meaning"))
         self.story.append(fig)
@@ -552,8 +552,8 @@ class Book:
             else:
                 raise ValueError(f"Unknown block type: {kind}")
 
-    def start(self, title, key):
-        self.story.append(PageBreak())
+    def start(self, title, key, page_break=True):
+        self.story.append(PageBreak() if page_break else Spacer(1, 18))
         self.heading(title, 0, key)
 
     def linked_page(self, key):
@@ -659,7 +659,7 @@ class Book:
                 self.p("원문 확인 메모", "sub")
                 self.bullets(ch["limitations"])
 
-        self.start("비교·공식·절차 모음", "book-comparisons")
+        self.start("비교·공식·절차 모음", "book-comparisons", page_break=False)
         for ch in self.chapters:
             if ch.get("comparisons"):
                 self.p(ch["title"], "sub")

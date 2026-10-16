@@ -1,9 +1,10 @@
-import argparse,json,re,subprocess
+import argparse,json,re,subprocess,hashlib
 from pathlib import Path
 import fitz
 import render_os as renderer
 from pypdf import PdfReader
 from PIL import Image,ImageDraw,ImageFont
+import io
 H=Path(__file__).resolve().parent
 ap=argparse.ArgumentParser();ap.add_argument('pdf',type=Path);ap.add_argument('--render',action='store_true');args=ap.parse_args()
 pdf=args.pdf.resolve();d=fitz.open(pdf);r=PdfReader(pdf)
@@ -42,6 +43,11 @@ for ch in sorted((H/'chapters').glob('*.json')):
     for t in b.get('items',b.get('steps',[])):prosecheck(t,ch['id']+':'+sec['number'])
    if b['type']=='formula':
     if norm(b.get('text','')) not in whole:errors.append({'type':'formula_text_not_found','at':ch['id']+':'+sec['number']})
+   if b['type']=='table':
+    for row in b.get('rows',[]):
+     for value in row:prosecheck(str(value),ch['id']+':'+sec['number']+':table')
+ for fig in ch.get('figures',[]):
+  prosecheck(fig.get('meaning'),fig['id']+':meaning')
  for code in ch.get('codes',[]):
   if code['id'] not in build['code_ids']:continue
   if norm(code['code']) not in whole:errors.append({'type':'code_text_not_found','id':code['id']})
@@ -66,6 +72,25 @@ for pg in r.pages:
   if fname.lstrip('/').split('+')[-1] in usedfonts:
    fonts[fname]=any(k in desc for k in ('/FontFile','/FontFile2','/FontFile3'))
 if not all(fonts.values()):errors.append({'type':'nonembedded_font','fonts':fonts})
+pixel_hashes=set();seen_xrefs=set()
+for page in d:
+ for entry in page.get_images():
+  xref=entry[0]
+  if xref in seen_xrefs:continue
+  seen_xrefs.add(xref)
+  data=d.extract_image(xref)
+  with Image.open(io.BytesIO(data['image'])) as pic:
+   pixel_hashes.add(hashlib.sha256(pic.convert('RGB').tobytes()).hexdigest())
+embedded_figure_checks=[]
+for chapter_file in sorted((H/'chapters').glob('*.json')):
+ ch=json.loads(chapter_file.read_text(encoding='utf-8-sig'))
+ for figure in ch.get('figures',[]):
+  if figure['id'] not in build.get('figure_ids',[]):continue
+  fp=Path(figure['file']);fp=fp if fp.is_absolute() else H/fp
+  with Image.open(fp) as pic:
+   found=hashlib.sha256(pic.convert('RGB').tobytes()).hexdigest() in pixel_hashes
+  embedded_figure_checks.append({'id':figure['id'],'pixel_exact_image_embedded':found})
+  if not found:errors.append({'type':'figure_pixels_not_embedded','id':figure['id']})
 outlines=[]
 def walk(items):
  for item in items:
@@ -78,7 +103,7 @@ for h in build['headings']:
  if norm(h['title']) not in norm(text[h['page']-1]):errors.append({'type':'heading_absent_at_destination','heading':h})
 cover=text[0].strip().splitlines()
 if norm(''.join(cover))!=norm(build['confirmed_title']+'핵심 개념 및 시험 대비 학습 노트'):errors.append({'type':'extra_or_missing_cover_text','text':cover})
-qa={'pdf':str(pdf),'pages':len(d),'a4_all':True,'searchable_pages':sum(bool(x.strip()) for x in text),'fonts':fonts,'outline_count':len(outlines),'outline':outlines,'cover_text':cover,'errors':errors,'sparse_pages':sparse,'code_count':len(build['code_ids']),'figure_count':len(build.get('figure_ids',[])),'prose_segments_checked':prose_count,'source_code_character_replacements':build['code_character_replacements'],'toc_headings':build['headings']}
+qa={'pdf':str(pdf),'pages':len(d),'a4_all':True,'searchable_pages':sum(bool(x.strip()) for x in text),'fonts':fonts,'outline_count':len(outlines),'outline':outlines,'cover_text':cover,'errors':errors,'sparse_pages':sparse,'code_count':len(build['code_ids']),'figure_count':len(build.get('figure_ids',[])),'embedded_figure_checks':embedded_figure_checks,'prose_segments_checked':prose_count,'source_code_character_replacements':build['code_character_replacements'],'toc_headings':build['headings']}
 if args.render:
  render_dir=H/'qa_pages';render_dir.mkdir(exist_ok=True)
  subprocess.run(['pdftoppm','-r','85','-png','-thinlinemode','shape',str(pdf),str(render_dir/'page')],check=True,capture_output=True)
