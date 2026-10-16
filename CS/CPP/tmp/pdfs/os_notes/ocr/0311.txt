@@ -1,0 +1,31 @@
+8.6 교착 상태 회피 369
+는 자원들을 뜻하고, Needi 벡터는 지가 앞으로 더 요청할 수 있는 자원들을 뜻한다.
+8.6.3.1 안전성 알고리즘 SafetYAlgorithm
+시스템이 안전한지 아닌지를 알아낼 수 있는 알고리즘은 아래와 같다.
+1. work와 Finish는 그기가 m과 n인 벡터이다. Work = Available로 초기 값을 준
+다. i = 0, 1, … ,1 -1에 대해서 Finish[il =false를 초기 값으로 준다.
+2. 아래 두 조건을 만족시기는 i 값을 찾는다.
+a. Finish[i] ==false
+b. Need Work
+그러한 i 값을 찾을 수 없다면 step 4로 간다.
+3. Work = Work + Allocation
+Finish[i] = true
+2번으로 간다.
+4. 모든 i 값에 대해 Finish[il == true이면 이 시스템은 안전 상태에 있다.
+이 알고리즘으로 안전 여부를 알아내는 데에는m x n2개의 연산이 필요하다.
+8.6.3.2 자원 요청 알고리즘 Resource-Request Algorithm
+다음으로 자원 요청이 안전하게 들어줄 수 있는지를 검사하는 알고리즘을 설명한다.
+Requesti는 스레드 기의 요청 벡터라고 하자. Requestz == k라면 기가 R를 k개까
+지 요청하고 있음을 뜻한다. 기가 자원을 요청하게 되면 아래와 같은 조치가 취해진다.
+1. 만일 Requestt SNeedt이면 2번으로 간다. 아니면 시스템에 있는 개수보다 더 많
+이 요청했으므로 오류로 처리한다.
+2. 만일 Requesti Available이면 3번으로 간다. 아니면 요청한 자원이 당장은 없
+으므로 기다려야 한다.
+3. 마치 시스템이 지에게 자원을 할당해준 것처럼 시스템 상태 정보를 아래처럼 바꾸
+어 본다.
+Available = Available-Requesti
+Allocation = Allocati0ttl + Requestl
+Need = Need —Requestt
+만일 이렇게 바뀐 상태가 안전하다면 지에 여기에 반영된 정보대로 자원을 할당해
+준다. 그러나 새로운 상태가 불안전하다면, 위의 자원 할당 상태는 원상태로 복원
+되고 기는 Requesti가 만족하기까지 기다려야만 한다.

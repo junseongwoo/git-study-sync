@@ -1,0 +1,35 @@
+334
+Chapter 7 동기하 예제
+pthread condsignal(&cond var) ;
+pthreadnutex unlock(&mutex) ;
+pthread-cond-signal() 호출은 mutex 락을 해제하지 않는다. Mutex 락을 해
+제하는 것은 이후의 pthread-mutex-unlock() 호출이다. Mutex 락이 해제되면 신
+호받은 스레드는 mutex 락의 소유자가 되고 pthread-cond-wait() 호출에서부터
+제어를 넘겨받아 실행을 재개한다.
+우리는 POSIX 세마포뿐만 아니라 Pthreads mutex 락 및 조건 변수를 A卜우하는
+다수의 프로그래밍 문제와 프로젝트를 이 장의 마지막에서 제공한다.
+7.4 Java에서의 동기화 synchronization in Java
+Java 언어와 API는 언어의 기원부터 스레드 동기화에 대한 풍부한 지원을 제공하였다.
+이 절에서는 먼저 Java의 원래의 동기화 기법인 Java 모니터를 다룬다. 그런 다음 릴리
+스 1.5에서 도입된 세 가지 추가 기법인 재진입 세마포 및 조건 변수를 다룬다. 이
+들은 가장 일반적인 락킹 및 동기화 기법이기 때문에 논의에 포함하였다. 그러나 Java
+API는 이 책에서 다루지 않은 많은 기능(예: 원자적 변수 및 CAS 명령 지원)을 제공하
+며 더 자세한 정보를 원하는 독자는 참고문헌을 참조할 것을 권한다.
+7.4.1 Java 모니터 Java Monitors
+Java는 스레드 동기회를 위한 모니터와 같은 병생성 기법을 제공한다. BoundedBuffer
+클래스(그림 7.9)로 이 기법을 설명한다. BoundedBuffer 클래스는 생산자와 소비자 문
+제의 해결안을 구현하며 생산자와 소비자는 각각 insert() 및 remove() 메소드를 호
+출한다.
+Java의 모든 객체는 하나의 락과 연결되어 있다. 메소드가 synchronized로 선언
+된 경우 메소드를 호출하려면 그 객체와 연결된 락을 획득해야 한다. BoundedBuffer
+클래스의 insert() 및 remove() 메소드와 같은 메소드를 정의할 때 synchronized
+를 선언하면 synchronized 메소드가 된다.
+synchronized 메소드를 호출하려면 BoundedBuffer의 객체 인스턴스와 연결된
+락을 소유해야 한다. 다른 스레드가 이미 락을 소유한 경우 synchronized 메소드를 호
+출한 스레드는 봉쇄되어 객체의 락에 설정된 진입 집합(entry set)에 추가된다. 진입 집
+합은 락이 기용해지기를 기다리는 스레드의 집합을 나타낸다. synchronized 메소-드를
+호출할 때 락이 가용한 경우 호출 스레드는 객체 락의 소유자가 되어 메소드로 진입한
+다. 스레드가 메소드를 종료하면 락이 해제된다. 락이 해제될 때 락에 대한 진입 집합이
+비어 있지 않으면 JVM은 이 집합에서 락 소유자가 될 스레드를 임의로 선택한다. (“임
+의로”라고 말하면 Java 명세는 이 집합의 스레드를 특정 순서로 구성해야 한다는 것을
+요구하지 않는다는 것을 의미한다. 그러나 실제로 대부분의 가상 머신은 FIFO 정책에

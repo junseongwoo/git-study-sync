@@ -1,0 +1,31 @@
+7.4 Java에서의 동기화
+public class BoundedBuffer<E>
+private static final int BUFFER죄ZE = 5;
+private int count, out,
+private E[] buffer;
+public BoundedBuffer() {
+count = 0;
+335
+in = 0;
+out = 0;
+buffer
+(E[]) nev Object[BUFFER죄ZE] ;
+/* Producers call this method */
+public synchronized void insert(E item) {
+/* See Figure 7.11 */
+/* Consumers call this method */
+public synchronized E remove() {
+/* See Figure 7.11 */
+그림 7.9 Java 동기화를 사용한유한버퍼
+따라 진입 집합의 스레드를 정렬한다.) 그림 7.10은 진입 집합의 작동 방식을 보여준다.
+락을 갖는 것 외에도 모든 객체는 스레드 집합으로 구성된 대기 집합과 연결된다. 이
+대기 집합은 처음에는 비어 있다. 스레드가 synchronized 메소드에 들어가면 객체 락
+을 소유한다. 그러나 이 스레드는 특정 조건이 충족되지 않아 계속할 수 없다고 결정할
+수 있다. 예를 들어, 생산자가 insert() 메소드를 호출했는데 버퍼가 가득 찬 경우에
+발생한다. 그러면 스레드는 락을 해제하고 계속할 수 있는 조건이 충족될 때까지 기다
+린다.
+락획득
+객체 락
+소유주
+진입 집합
+그림 7.10 락을 위한 진입 집합

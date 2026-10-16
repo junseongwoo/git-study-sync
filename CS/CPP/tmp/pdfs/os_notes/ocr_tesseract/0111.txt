@@ -1,0 +1,87 @@
+164
+
+Chapter 3 프로세스
+
+= > ㄷ>>>5>27ㅅㅅㅅㅅㅅ0060 ㅅㅅ >ㅅㅅㅅ
+
+import java.net.x;
+import java.io.x*;
+
+public class DateServer
+
+public static void main(String[] args) {
+
+try {
+ServerSocket sock = new ServerSocket(6013) ;
+
+/* now listen for connections */
+
+while (true) {
+Socket client = sock.accept();
+
+PrintWriter pout = new
+PrintWriter(client.getOutputStream(), true);
+
+/* write the Date to the socket x/
+pout.println(new java.util.Date().toString());
+
+/* close the socket and resume */
+/* listening for connections */
+client.close();
+
+}
+
+catch (IOException ioe) {
+System.err.println(ioe);
+}
+
+123.27 Date 서버
+
+분산된 프로세스 간에 널리 사용되고 효율적이기는 하지만 너
+스레드 간에 구조화되지 않은 바이트 스트림만을 통신하
+
+도록 하기 때문이다. 이러한 원시적인 바이트 스트림 데이터를 구조화하여 해석하는
+
+고
+
+것
+스
+부여
+
+no
+으
+[오
+10
+fo
+x
+포
+lo
+p
+ld
+jo
+for rit
+꾼
+3
+Ji)
+2
+>
+rr
+o
+2
+고
+(원
+고
+2
+"
+a
+Ho
+Ir
+
+flor
+
+3.8.2 원격 프로시저 호출 Remote Procedure Calls, RPC
+
+원격 서비스와 관련한 가장 보편적인 형태 중 하나는 RPC 패러다임으로서, 네트워크에
+연결된 두 시스템 사이의 통신에 사용하기 위하여 프로시저 호출 기법을 추상화하는 방
+Hog 설계되었다. 이것은 3.4절에서 소개한 IPC 많은 측면에서 유사하며 사실 그러
+한 106 기반 위에 만들어진다. 그러나 여기서는 프로세스들이 서로 다른 시스템 위에서

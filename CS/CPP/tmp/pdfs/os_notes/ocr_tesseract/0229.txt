@@ -1,0 +1,46 @@
+6.1 비경       285
+
+register; = count
+register, = register +1
+count = register;
+
+여기서 register; 한 CPU 접근할 수 있는(0021) 레지스터 중 하나이다. 마찬가지로,
+문장 “00006--"는 다음과 같이 구현된다.
+register, = count
+
+register, = register, — 1
+count = register,
+
+171A register, 역시  CPUTH 접근할 수 있는 레지스터 중 하나이다. register, TF reg-
+ister,7} 동일한 물리적 레지스터(이를테면, 누산기)이더라도, 이 레지스터의 내용은 인터
+HE 처리기에 의하여 메모리에 보관되었다가 다시 적재된다(1.2.3절)는 것을 상기하라.
+“count ++"¢} “count--" 문장을 병행하게 실행하는 것은 앞에서 제시한 저수준으
+문장들을 임의의 순서로 뒤섞어 순차적으로 실행하는 것과 동등하다(그러나 각 고수준
+문장 내에서의 순서는 유지된다). 그중 하나는 다음과 같은 순서를 가질 수 있다.
+
+Ty: producer execute register; = count         {register, = 5}
+T,: producer execute register; = register; +1 ({register; = 6}
+T,: consumer execute register, = count         {register, = 5}
+Ty: consumer execute register, = register, — 1 {register, = 4}
+Ty: producer execute count = register,         {count = 6}
+Ts: consumer execute count = register,         {count = 4}
+
+실제로 5개의 버퍼가 채워져 있지만 4개의 버퍼가 채워져 있는 것을 의미하는 “count ==
+479) 부정확한 상태에 도달하게 된다. Tyo Ts] 문장 순서를 바꾸면, “count == 6"인 부
+정확한 상태에 도달한다.
+
+이러한 부정확한 상태에 도달하는 것은 두 개의 프로세스가 동시에 변수 count
+조작하도록 허용했기 때문이다. 이처럼 동시에 여러 개의 프로세스가 동일한 자료를 접
+근하여 조작하고, 그 실행 결과가 접근이 발생한 특정 순서에 의존하는 상황을 경쟁 상
+SHrace 00091800)이라고 한다. 위와 같은 경쟁 상황으로부터 보호하기 위해, 우리는
+한순간에 하나의 프로세스만이 변수 0000를 조작하도록 보장해야 한다. 이러한 보장을
+위해, 우리는 어떤 형태로든 프로세스들이 동기화되도록 할 필요가 있다.
+
+운영체제의 여러 부분에서 자원을 조작하기 때문에 위와 같은 상황은 빈번하게 발생
+한다. 게다가 앞선 장들에서 강조한 것처럼 다중 코어 시스템의 대두와 더불어 다중 스
+레드 응용의 개발에 관한 관심이 증가하고 있다. 이러한 다중 스레드 응용에서는 자원
+을 공유할 가능성이 매우 높은 여러 스레드가 서로 다른 처리 코어에서 병렬로 실행된
+다. 분명히 우리는 이러한 행동에서 기인한 수정이 서로 간에 영향을 주지 않기를,
+
+다. 이 문제는 매우 중요하기 때문에, 본 장의 많은 부분은 협력하는 프로세스 간
+세스 동기화와 조정에 할애된다.

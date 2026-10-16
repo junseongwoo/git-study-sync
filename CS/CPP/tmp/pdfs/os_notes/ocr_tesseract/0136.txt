@@ -1,0 +1,54 @@
+190
+
+Chapter 4 스레드와 병행성
+
+프로그램(그림 4.11)이 pthread_join() 문을 이용하여 부모 스레드가 합산 스레드가
+종료될 때까지 기다리게 한 것을 기억하라. 이와 동일한 작업을 Windows 스미에서는
+WaitForSingleObject ) 함수를 이용하여 수행하는데 이 함수는 합산 스레드가 총
+료할 때까지 생성 스레드가 봉쇄되도록 한다.
+
+여러 스레드의 FRE 기다려야 한다면 WaitForMultipleObjects() 함수가 사
+용된다. 이 함수는 다음과 같은 4개의 매개변수를 전달받는다.
+
+. 기다려야 하는 객체의 개수
+
+. 객체 배열을 가리키는 포인터
+
+모든 객체가 신호를 보내왔는지를 나타내는 플래그
+. 대기해야 하는 타임아웃 시간(또는 INFINITE)
+
+는 92 N=
+
+예를 들어 THandles7} 크기가 NI 스레드 HANDLE 객체의 배열이라면 부모 스레드는
++ 자식이 종료하기를 기다려야 할 경우 다음과 같이 호출할 수 있다.
+WaitForMultipleObjects(N, THandles, TRUE, INFINITE);
+
+4.4.3 Java 스레드 Java Thread
+
+2H Es Java 프로그램의 프로그램 실행의 근본적인 모델이고, Java 언어와 APIE A
+레드의 생성과 관리를 지원하는 풍부한 특성을 제공한다. 모든 Java 프로그램은 적어
+도 하나의 단일 제어 스레드를 포함하고 있다. 단지 main) 함수로만 이루어진 단순
+한 Java 프로그램조차 JVM 내의 하나의 단일 스레드로 수행된다. Java 스레드는 JVM
+을 제공하는 어떠한 시스템에서도 사용할 수 있다. [VME 제공하는 시스템에는 Win
+dows, Linux, macOS 등이 포함된다. Java 스레드 API= Android 응용도 사용할
+
+AS
+수 있다.
+
+Java 프로그램에서 스레드를 명시적으로 생성하는 데에는 두 가지 기법이 있다. 한
+가지 방법은 Thread 클래스에서 파생된 A 클래스를 만들고 60ㅁ() 메소드를 재정의하
+는 것이다. 대안(보다 일반적으로 사용되는) 기법은 Runnable 인터페이스를 구현하는
+클래스를 정의하는 것이다. 이 인터페이스는 06116 void run() 2] 서명을 가진 단일
+추상 메소드를 정의한다. Runnable 구현하는 클래스의 run() 메소드 FEE 별도의
+스레드에서 실행된다. 사용 예는 다음과 같다.
+
+class Task implements Runnable
+
+{
+
+public void run() {
+System.out.println("I am a thread.");
+
+}
+
+182에서 스레드를 생성하려면 Thread 객체를 생성하고 RunnableS 구현하는 2

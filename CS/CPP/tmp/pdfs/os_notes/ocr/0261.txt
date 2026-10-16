@@ -1,0 +1,17 @@
+참고문현
+참고문현
+317
+[Bahra (2013)] S. A. Bahra, "Nonblocking Algorithms and Scalable MuIti-
+core Programming", ACM queue, Volume 11, Number 5 (2013).
+[Brinch-Hansen (1973)] P. Bnnch-Hansen, Operating System Principles, Pren-
+tice HaII (1973).
+[Dijkstra (1965)] E. W. Dijkstra, "Cooperatrng Sequenhal Processes", Tech-
+nical report, Techn010gical University, E1ndhoven, the Netherlands (1965).
+[Herlihy and Shavit (2012)] M. Her11hy and N. Shavit, The Art 0fMultiproces-
+sor Programming, Revised First Edition, Morgan Kaufmann Publishers lnc.
+(2012).
+[Hoare (1974)] C. A. R. Hoare, "Mon1tors: An System Structunng
+Concept", Communications ofthe ACM, VoIume 17, Number 10 (1974), pag-
+es 549-557.
+[Mckenney (2010)] P. E. Mckenney, 'Memory Barriers: a Hardware View
+for Software Hackers" (2010).

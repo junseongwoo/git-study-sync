@@ -1,0 +1,35 @@
+330
+7.3
+Chapter 7 동기하 예제
+Linux는 preempt-disable()과 preempt-enable()이리는 두 개의 간단한 시스템
+콜을 제공한다. 커널에서 실행 중인 태스크가 리을 소유하고 있으면 커널은 선점 기능하
+지 않다. 이를 강제하기 위하여 시스템의 각 스레드는 thread-info 구조체를 가지고
+있고 이 구조체에는 태스크가 소유하고 있는 락의 개수를 나타내는 preempt-count라
+는 카운터 필드가 있다. 락을 흐니득하면 preempt-count는 증가하고 락이 방출되면 이
+필드는 감소한다. 현재 수행 중인 태스크의 preempt-count의 값이 0보다 크면 커널을
+선점하는 것은 안선하지 않다. 왜냐하면 이 태스크는 현재 락을 소유하고 있기 때문이다.
+만일 카운트가 0이고 대기 중인 preempt-disable() 호출이 없다고 가정하면 커널은
+안선하게 인터럽트 될 수 있다.
+스핀락과 커널 선점 불능 및 기능은 오직 락(또는 커널 선점 불가능)이 짧은 시간 동
+안만 유지될 때 사용된다. 락이 오랜 시간 동안 유지되어야 한다면 세마포 또는 mutex
+락을 사용하는 것이 적절하다.
+POSIX 동기화 POSIX synchronization
+이전 절에서 설명한 동기화 방법은 커널 내에서의 동기화에만 적용되는 사항이므로 커
+널 개발자만 사용할 수 있다. 대조적으로 POSIX API는 사용자 수준에서 교구 가래머가
+사용할 수 있으며 특정 운영체제 커널의 일부가 아니다. (물론 호스트 운영체제에서 제
+공하는 도구를 시용하여 구현되어야 한다.)
+이 절에서는 Pthread 및 POSIX API에서 제공하는 mutex 력 세마포 및 조건 변
+수에 관해 설명한다. 이 API는 UNIX, L1nux 및 macOS 시스템의 개발자가 스레드를
+생성하고 동기화하는 데 널리 시용된다.
+7.3.1 POSIX mutex 락 POSIX Mutex Locks
+Mutex 락은 Pthreads에서 시용할 수 있는 기본적인 동기화 기법을 대표한다. Mutex
+락은 코드의 임계구역을 보호하기 위해 시용된다. 즉, 스레드는 임계구역에 진입하기 전
+에 락을 획득하고 임계구역에서 나갈 때 락을 방출한다. Pthreads는 mutex 락의 데
+이터 형으로 pthread-mutex-t 데이터 형을 사용한다. Mutex는 pthread-mutex-
+init() 함수를 호출하여 생성한다. 첫 번째 매개변수는 mutex를 가리기는 포인터이
+다. 두 번째 매개변수로 NULL을 전달하여 속성을 디폴트 값으로 초기화한다. 이러한 일
+련의 연산을 다음과 실례를 통하여 보여주고 있다.
+#include <pthread.h>
+pthreadnutex-t mutex ,
+/* create and initialize the mutex 10ck */
+pthread-mutex-init (&mutex , NULL) ;

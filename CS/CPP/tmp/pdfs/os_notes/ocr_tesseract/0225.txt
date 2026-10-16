@@ -1,0 +1,31 @@
+Pthreads 시스템에서의 스케줄링을 설명한다. 다중 코어 스케줄링은 [McNairy and
+Bhatia (2005)], [Kongetira et al. (2005)] 및 [Siddha et al. (2007)]에서 검토되었다.
+
+[Butenhof (1997)] D. Butenhof, Programming with POSIX Threads, Addi-
+son-Wesley (1997).
+
+[Kongetira et al. (2005)] P. Kongetira, K. Aingaran, and K. Olukotun, “Ni-
+agara: A 32-Way Multithreaded SPARC Processor”, [EEE Micro Magazine,
+Volume 25, Number 2 (2005), pages 21-29.
+
+[Lewis and Berg (1998)] B. Lewis and D. Berg, Multithreaded Programming
+with Pthreads, Sun Microsystems Press (1998).
+
+[Mauro and McDougall (2007)] J. Mauro and R. McDougall, Solaris Inter-
+nals: Core Kernel Architecture, Prentice Hall (2007).
+
+[McKusick et al. (2015)] M. K. McKusick, G. V. Neville-Neil, and R. N.
+M.Watson, The Design and Implementation of the FreeBSD UNIX Operating
+System—Second Edition, Pearson (2015).
+
+[McNairy and Bhatia (2005)] C. McNairy and R. Bhatia, “Montecito: A
+Dual-Core, Dual-Threaded Itanium Processor”, IEEE Micro Magazine, Vol-
+ume 25, Number 2 (2005), pages 10-20.
+
+[Russinovich et al. (2017)] M. Russinovich, D. A. Solomon, and A. Ionescu,
+Windows Internals—Part 1, Seventh Edition, Microsoft Press (2017).
+
+[Siddha et al. (2007)] S. Siddha, V. Pallipadi, and A. Mallick, “Process
+
+Scheduling Challenges in the Era of Multi-Core Processors”, Intel Technol-
+ogy Journal, Volume 11, Number 4 (2007).

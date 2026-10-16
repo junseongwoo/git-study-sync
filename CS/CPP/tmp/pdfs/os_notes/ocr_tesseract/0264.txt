@@ -1,0 +1,43 @@
+7.1 고전적인 동기화 문제들    321
+
+while (true) {
+wait (full);
+wait (mutex);
+
+/* remove an item from buffer to next_consumed */
+
+signal (mutex);
+signal (empty);
+
+/* consume the item in next_consumed */
+
+그림 7.2_ 소비자 프로세스의 구조
+
+7.1.2 Readers-Writers 문제 7776 Readers-Writers Problem
+
+하나의 데이터베이스가 다수의 병행 프로세스 간에 공유된다고 가정하자. 이들 프로세스
+들 중의 일부는 데이터베이스의 내용을 읽기만 하고 어떤 프로세스들은 데이터베이스를
+갱신(즉, 읽고 쓰기)하기를 원할 수 있다. LE HAE readers, 그리고 후자를 writ-
+@75로 불러 이 두 가지 유형의 프로세스들을 구별한다. 명백히, 만약 F reader} 동시에
+공유 데이터에 접근하더라도, 불행한 결과가 발생하지는 않는다. 그러나 하나의 writer
+와 어떤 다른 Ad =(reader 또는 writer)7} 동시에 데이터베이스에 접근하면, 혼란이
+야기될 수 있다.
+
+이러한 문제점이 발생하지 않도록 보장하기 위해, 우리는 writer7t 쓰기 작업 동안
+에 공유 데이터베이스에 대해 배타적 접근 권한을 가지게 할 필요가 있다. 이 동기화 문
+제를 readers-writers 문제라고 한다. 이 문제는 처음으로 ogy 이후부터 거의 모든
+새로운 동기화 프리미티브를 시험하기 위해 사용되었다.
+
+Readers-writers 문제에는 여러 가지 변형들이 있는데, 모두 우선순위와 연관된 변
+형들이다. A HA readers-writers 문제라 일컬어지는, 가장 간단한 문제에서는 \ㅁ1
+@가 공유 객체를 사용할 수 있는 허가를 아직 얻지 못했다면, 어느 6806도 기다리게
+해서는 안 된다. 바꿔 말하면, 단순히 writerZt 기다리고 있기 때문에, thE readersol
+끝날 때까지 기다리는 .6396:가 있어서는 안 된다. 두 WA] readers-writers 문제는 일
+단 writer7} 준비되면 가능한 한 빨리 쓰기를 수행할 것을 요구한다. 바꿔 말해서, writ-
+er7t 객체에 접근하려고 기다리고 있다면, 새로운 6396『들은 읽기를 시작하지 못한다.
+
+이들 문제에 대한 해결안이 기아 문제를 낳을 수 있음에 유의해야 한다. A 번째 경
+우에는 writer7} 기아 상태에 빠질 수 있으며, 두 번째 Fol reader} 기아 상태에
+빠질 수 있다. 이러한 이유 때문에, 이 문제의 다른 변형들이 제안되었다. 다음에 우리는
+
+A 번째 readers-writers 문제에 대한 해결안을 제시한다. 두 HA] readers-writers 문

@@ -1,0 +1,48 @@
+426        Chapter 9 메인 메모리
+
+ㄴ 물리 주소에 몇 비트가 필요한가?
+9.10 32비트 논리 주소와 4 KB 페이지 크기의 컴퓨터 시스템을 고려하자. 시스템은 최
+대 512 MBO] 물리 메모리를 지원한다. 다음 테이블에는 각각 몇 개의 항목이 존
+재하는가?
+a. 기존의 단일 레벨 페이지 테이블
+6. 역 페이지 테이블
+
+추기 싸료
+
+페이징의 개념은 Atlas 시스템의 설계자가 창조하였으며 [Kilburn et al. (1961)] 및
+[Howarth et al. (1961)]에서 설명된다.
+
+[Hennessy and Patterson (2012)]은 TLB, 캐시 및 &4\40의 하드웨어 측면을 설
+명한다. [Jacob and Mudge (2001)]는 11.8를 관리하는 기술을 설명한다. [Fang et
+al. (2001)] 큰 페이지에 대한 지원을 평가한다.
+
+Windows 시스템에 대한 PAE 지원은 http://msdn.microsoft.com/en-us/
+library/windows/hardware/gg487512.aspxollA 설명한다. ARM 아키텍처에 대한
+개요는 http://www.arm.com/products/processors/cortexa/cortex-a9.phpell 제
+공된다.
+
+참고문헌
+
+[Fang et al. (2001)] Z. Fang, Ｌ Zhang, J. 8. Carter, W. C. Hsieh, and 5. A.
+McKee, “Reevaluating Online Superpage Promotion with Hardware Sup-
+port”, Proceedings of the International Symposium on High-Performance Com-
+puter Architecture, Volume 50, Number 5 (2001).
+
+[Hennessy and Patterson (2012)] J. Hennessy and D. Patterson, Computer
+Architecture: A Quantitative Approach, Fifth Edition, Morgan Kaufmann
+(2012).
+
+[Howarth et al. (1961)] D. J. Howarth, R. 8. Payne, and F. H. Sumner, “The
+
+Manchester University Atlas Operating System, Part II: User’s Descrip-
+tion”, Computer Journal, Volume 4, Number 3 (1961), pages 226-229.
+
+[Jacob and Mudge (2001)] 8. Jacob and T. Mudge, “Uniprocessor Virtu-
+al Memory Without TLBs", IEEE Transactions on Computers, Volume 50,
+Number 5 (2001).
+
+[Kilburn et al. (1961)] T. Kilburn, D. J. Howarth, R. 8. Payne, and F. H.
+Sumner, “The Manchester University Atlas Operating System, Part I: In-
+
+ternal Organization”, Computer Journal, Volume 4, Number 3 (1961), pages
+222-225,

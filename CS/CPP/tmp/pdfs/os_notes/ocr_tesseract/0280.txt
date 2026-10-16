@@ -1,0 +1,48 @@
+7.4 .13\%2에서의 동기화     337
+
+/* Producers call this method */
+public synchronized void insert (E item) {
+while (count == BUFFER_SIZE) {
+
+try {
+wait();
+
+catch (InterruptedException ie) { }
+
+}
+
+buffer[in] = item;
+in = (in + 1) % BUFFER. SIZE;
+count++;
+
+notify();
+}
+
+/* Consumers call this method */
+public synchronized E remove() {
+E item;
+
+while (count == 0) {
+
+try {
+wait();
+
+catch (InterruptedException ie) { }
+
+}
+
+item = buffer[out];
+
+out = (out + 1) % BUFFER. SIZE;
+count=-;
+
+notify();
+
+return item;
+
+그림 7.11 wait (OD notify()E AKRSK= insert () 2 remove () 메소드.
+
+진입 집합                                             대기 집합
+
+그림 7.12 진입 및 대기 집합
+

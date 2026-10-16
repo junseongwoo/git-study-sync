@@ -1,0 +1,35 @@
+7.4 Java에서의 동기화
+/* Producers call this method */
+public synchronized void insert(E item) {
+while (count == BUFFER-SIZE) {
+try {
+wait();
+catch (InterruptedException ie) { }
+buffer[in] = item;
+in = (in + 1) 7. BUFFER-SIZE;
+count十十 ;
+notify();
+/* Consumers call this method */
+public synchronized E remove() {
+E item;
+while (count == 0) {
+try {
+wait();
+catch (InterruptedException ie) { }
+item = buffer[out] ,
+(out + 1) 7. BUFFER-SIZE;
+out
+count—
+notify();
+return ltem ;
+3曰
+337
+그림 7.11
+wait ()과 notify()를 사용하는 insert ()와 remove () 메木=
+락 획득
+진입 집합
+그림 7.12
+대기
+객체 락
+진입 및 대기 집합
+대기 집합

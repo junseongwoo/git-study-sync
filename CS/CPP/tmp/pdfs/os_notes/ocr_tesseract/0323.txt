@@ -1,0 +1,6 @@
+tation/locking/lockdep-design.txt2 잠조하라.
+
+참고문헌
+
+[Dijkstra (1965)] 8. W. Dijkstra, “Cooperating Sequential Processes”, Techni-
+cal report, Technological University, Eindhoven, the Netherlands (1965).

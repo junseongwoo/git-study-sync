@@ -1,0 +1,25 @@
+(2011)]는 병렬 프로그래밍과 관련하여 동기화 문제에 대한 자세한 내용을 제공한다.
+OpenMP 사용에 대한 자세한 내용은 http://openmp.orgE 참조하라. [Oaks (2014)]
+와 [Goetz et al. (2006)]은 전통적인 동기화와 ]3\2의 CAS 기반 전략을 대조한다.
+
+참고문헌
+[Breshears (2009)] C. Breshears, The Art of Concurrency, O'Reilly & Associ-
+ates (2009).
+
+[Goetz et al. (2006)] B. Goetz, T. Peirls, J. Bloch, J. Bowbeer, D. Holmes, and
+D. Lea, Java Concurrency in Practice, Addison-Wesley (2006).
+
+[Hart (2005)] J. M. Hart, Windows System Programming, Third Edition, Addi-
+son-Wesley (2005).
+
+[Love (2010)] R. Love, Linux Kernel Development, Third Edition, Developer's
+Library (2010).
+
+[Oaks (2014)] S. Oaks, Java Performance—The Definitive Guide, O'Reilly & As-
+sociates (2014).
+
+[Pacheco (2011)] P.S. Pacheco, An Introduction to Parallel Programming, Mor-
+gan Kaufmann (2011).
+
+[Solomon and Russinovich (2000)] D. A. Solomon and M. E. Russinovich,
+Inside Microsoft Windows 2000, Third Edition, Microsoft Press (2000).

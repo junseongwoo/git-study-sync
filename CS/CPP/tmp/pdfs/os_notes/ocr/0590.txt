@@ -1,0 +1,12 @@
+참고문현 653
+ISeltzer 아 교. (1993)1 M. I. SeItzer, K. Bostic, M. K. McKusick, and C. Staelin
+An lmplementation of a Log-Structured FiIe Systemfor UNIX”, USENIX-
+Winter (1993), pages 307-326.
+[Seltzer 교. (1995)] M. I. SeItzer, K. A. Smith, H. BaIaknshnan, J. Chang,
+McMavns, and V. N. Padmanabhan, "File System Loggtng Versus Cluster-
+ing: APerformance Comparison , IISENIX Winter (1995), pages 249-264.
+[Solomon (1998)] D. A. SoIomon, lnside Windows NT, Second Edition, Mic-
+rosoft Press (1998).
+[Thekkath 아 교. (1997)] C.A. Thekkath, T. Mann, and E. K. Lee, "Franypanr
+A Scalable Distributed FiIe System , Symposium (개 Operating Systems Prin-
+ciples (1997), pages 22#237.

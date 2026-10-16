@@ -1,0 +1,52 @@
+3.7 IPC 시스템의 사례       149
+
+#include <stdio.h>
+#include <stdlib.h>
+#include <fcntl.h>
+#include <sys/shm.h>
+#include <sys/stat.h>
+
+#include <sys/mman.h>
+
+int main()
+
+{
+
+/* the size (in bytes) of shared memory object */
+const int SIZE = 4096;
+
+/* name of the shared memory object */
+
+const char *name = "0S";
+
+/* shared memory file descriptor */
+int fd;
+
+/* pointer to shared memory obect */
+char *ptr;
+
+/* open the shared memory object */
+fd = shm_ open (name, 0_RDONLY, 0666);
+
+/* memory map the shared memory object */
+ptr = (char *)
+mmap (0, SIZE, PROT_READ | PROT_WRITE, MAP SHARED, fd, 0);
+
+/* read from the shared memory object */
+printf ("%s", (char *)ptr);
+
+/* remove the shared memory object */
+shm_unlink (name) ;
+
+return O;
+
+33 3.17 POSIX 공유 메모리 APIE 설명하는 소비자 프로세스
+
+3.7.2 Mach 메시지 전달 Mach Message Passing
+
+다음 메시지 전달의 예로 Mach 운영체제를 고려한다. Mach: 특히 분산 시스템용으
+로 설계되었지만 2장에서 논의된 것처럼 23005 및 1055 운영체제에 포함된 사실이 입
+증하듯이 데스크톱 및 모바일 시스템에도 적합하다.
+Mach 커널은 프로세스와 유사하지만 제어 스레드가 많고 관련 자원이 적은 3
+2329 생성 및 제거를 지원한다. 모든 태스크 간 통신을 포함하여 Machol A] 대부분
+의 통신은 메시지로 수행된다. \1300에서 EE (port)etil 하는 메일박스로 메시 지를 주 주

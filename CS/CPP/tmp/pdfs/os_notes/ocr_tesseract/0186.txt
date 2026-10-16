@@ -1,0 +1,41 @@
+240
+
+Chapter 5 CPU 스케줄링
+
+더 높은 우선순위의 스레드를 위하여 현재 실행 중인 스레드를 선점한다는 것을 Foy
+of 한다. 그러나 같은 우선순위의 스레드들 사이에는 타임 슬라이스(5.3.3절)에 대한 uw
+
+5.4.2 Pthread 스케줄링 pthread Scheduling
+
+4.4.1절에서 Pthreads®] 스레드 생성을 소개하면서 POSIX Pthread 프로그램의 예
+를 제공하였다. 이제는 스레드를 생성하면서 PCS 또는 SCSE 지정할 수 있는 2051
+Pthreads APIS 강조한다. Pthreads: 다음과 같은 범위 값을 구분한다.
+
+e PTHREAD SCOPE PROCESS PCS 스케줄링을 사용하여 스레드를 스케줄
+*ㅎ PTHREAD SCOPE SYSTEM SCS 스케줄링을 사용하여 스레드를 스케줄 한다
+
+다대다 모델을 구현하는 시스템에서는 PTHREAD SCOPE PROCESS 정책이 사
+용자 수준 스레드를 가용한 LWPR 스케줄 한다. LWP] 개수는 스레드 라이브러리에
+의해 유지되고 아마도 스케줄러 액티베이션 기법이 사용될 수도 있다(4.6.5절). 다대다
+시스템에서 PTHREAD_SCOPE_SYSTEM 스케줄링 정책은 각 사용자 수준 스레드를
+LWPE 생성하고 바인드 하게 될 것이고 결과적으로 일대일 모델을 사용하게 된다.
+
+Pthread IPC (Interprocess Communication) 는 경쟁 범위 정책의 정보를 얻어
+내고 지정하기 위하여 다음과 같은 두 함수를 제공한다.
+
+ㅎㅇ pthread attr setscope(pthread attr 6 *attr, int scope)
+
+ㅎㅇ pthread attr getscope (pthread attr 6 *attr, int *scope)
+
+}수의 첫 번째 매개변수는 스레드를 위한 속성 집합을 가리키는 포인터를 저장한다.
+Eee om 두 번째 매개변수로는 경쟁 범위가 어떻게 지정되는가
+를 가리키는 PTHREAD SCOPE SYSTEM 또는 PTHREAD SCOPE PROCESS
+값이 A=) pthread_attr_getscope() 함수의 경우에, 이 두 번째 매개변수는
+경쟁 범위의 현재 값을 저장할 int 값을 가리키는 포인터를 저장한다. 만일 오류가 발생
+하면 각 함수들은 0이 아닌 값을 반환한다.
+
+그림 5.10에서 Pthread 스케줄링 APIS 설명한다. 이 프로그램은 기존의 경쟁 범
+위를 결정하고 그 값을 PTHREAD SCOPE PROCESS 값으로 지정한다. 그런 후에
+SCS 스케줄링 정책을 사용하여 실행될 5개의 스레드를 생성한다. 어떤 시스템에서는 오
+직 특정 경쟁 범위 값만이 허용된다는 것을 주의하라. 예를 들어 Linux® macOS 시스
+템은 218008ㅅ12 50008 5\51814만을 허용한다.

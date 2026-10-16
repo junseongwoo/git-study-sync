@@ -1,0 +1,30 @@
+4.5 암묵적 스레딩     199
+
+solve the problem directly
+
+else
+subtaskl = fork(new Task(subset of problem)
+subtask2 =
+
+fork(new Task(subset of problem)
+
+resultl = join(subtaski)
+result? = join(subtask?2)
+
+return combined results
+
+그림 4.172 이 모델의 그림을 보여준다.
+
+이제 정수 배열의 모든 요소를 합산하는 분할-정복 알고리즘을 HAE Javad
+fork join 전략을 설명한다. APT 버전 1.7에서 Javai= 새로운 기본 풀인 ForkJoinPool
+을 도입하여 추상 기본 클래스 ForkJoinTaskS 상속하는 작업을(예제에서 SumTask
+클래스라고 가정함) 배정받을 수 있다. 다음은 다음 FE ForkJoinPool 객체를 만들
+
+고 1000&6() 메소드를 통해 초기 작업을 제출한다.
+
+ForkJoinPool pool = new ForkJoinPool();
+// 배열은 합산될 정수를 포함한다.
+
+int[] array = new int [SIZE];
+
+그림 4.17 Java2| fork-join

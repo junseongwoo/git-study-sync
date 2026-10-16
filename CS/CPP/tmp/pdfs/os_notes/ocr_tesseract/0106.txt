@@ -1,0 +1,56 @@
+3.7 IPC 시스템의 사례       159
+
+/* set up security attributes allowing pipes to be inherited */
+SECURITY ATTRIBUTES sa = {sizeof (SECURITY_ATTRIBUTES),NULL, TRUE};
+/* allocate memory */
+
+ZeroMemory (&pi, sizeof (pi));
+
+/* create the pipe */
+
+if (!CreatePipe(&ReadHandle, &WriteHandle, &sa, 0)) {
+fprintf(stderr, "Create Pipe Failed");
+return 1;
+
+}
+
+/* establish the START_INFO structure for the child process */
+GetStartupInfo(&si);
+
+si.hStdOutput = GetStdHandle (STD_OUTPUT_ HANDLE);
+
+/* redirect standard input to the read end of the pipe */
+si.hStdInput = ReadHandle;
+
+si.dwFlags = STARTF_USESTDHANDLES;
+
+/* don’t allow the child to inherit the write end of pipe */
+SetHandleInformation(WriteHandle, HANDLE FLAG_INHERIT, 0);
+
+/* create the child process */
+
+CreateProcess (NULL, "child.exe", NULL, NULL,
+TRUE, /* inherit handles */
+0, NULL, NULL, &si, &pi);
+
+/* close the unused end of the pipe */
+CloseHandle (ReadHandle) ;
+
+/* the parent writes to the pipe */
+
+if (!WriteFile(WriteHandle, message,BUFFER_SIZE,&written,NULL))
+fprintf(stderr, "Error writing to pipe.");
+
+/* close the write end of the pipe */
+CloseHandle(WriteHandle) ;
+
+/* wait for the child to exit */
+WaitForSingleObject (pi.hProcess, INFINITE);
+CloseHandle(pi.hProcess);
+CloseHandle(pi.hThread) ;
+
+return O;
+
+}
+
+그림 3.24 12! 3.23 프로그램의 계속

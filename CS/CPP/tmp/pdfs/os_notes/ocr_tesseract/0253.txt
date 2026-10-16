@@ -1,0 +1,43 @@
+6.7 모니터        309
+
+x.wait(c);
+
+여기서 c= 정수 +4 (expression)o] al 이 수식은 #21*() 연산이 호출될 때 값이 계산
+된다. cof 값은 우선순위 Wd (priority 0400660)라고 불리며 일시 중지 되는 프로세스
+의 이름과 함께 저장된다. x. signal Oo] 수행되면 가장 작은 우선순위 번호를 가진 =
+로세스가 다음번에 수행 재개 된다.
+
+이 새로운 기법을 설명하기 위해 그림 6.14의 ResourceAllocator 모니터를 예로
+든다. 이 모니터는 한 개의 AUS 여러 프로세스 사이에 할당해 준다. 각 프로세스는 자
+원을 할당받기를 원하면 그 자원을 사용할 최대 시간을 지정한다. 모니터는 이 중 가장
+적은 시간을 희망한 프로세스에 자원을 할당해 준다. 이 자원을 액세스하려는 프로세스
+는 아래 순서를 따라야 한다.
+
+R.acquire(t);
+access the resource;
+
+R.release();
+
+_—_— 00 -  .
+
+monitor ResourceAllocator
+boolean busy;
+condition x;
+
+void acquire(int time) {
+if (busy)
+x.wait(time);
+busy = true;
+
+}
+
+void release() {
+busy = false;
+x.signal();
+
+initialization_code() {
+busy = false;
+}
+}
+
+그림 6.14_ 하나의 자원을 할당해 주는 모니터

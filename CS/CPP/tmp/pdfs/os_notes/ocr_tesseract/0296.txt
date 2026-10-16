@@ -1,0 +1,60 @@
+354     Chapter 8 교칙 상대
+
+/* thread one runs in this function */
+void *do_work_ one(void *param)
+
+{
+
+int done = 0;
+
+while (!done) {
+
+pthread mutex lock (&first mutex) ;
+
+if (pthread mutex trylock (¢second mutex)) {
+/**
+* Do some work
+x/
+pthread mutex unlock (&second mutex) ;
+pthread mutex unlock (&first_ mutex) ;
+done = 1;
+
+}
+
+else
+pthread mutex_unlock (&first mutex) ;
+
+}
+
+pthread exit (0);
+}
+
+/* thread two runs in this function */
+void *do_work_two(void *param)
+
+{
+
+int done = 0;
+
+while (!done) {
+pthread mutex_lock(&second mutex) ;
+if (pthread mutex trylock (&first mutex)) {
+/**
+* Do some work
+*/
+pthread mutex unlock (&first mutex) ;
+pthread mutex unlock (&second mutex) ;
+done = 1;
+}
+
+else
+pthread mutex unlock (&second mutex) ;
+
+}
+
+pthread exit (0);
+
+}
+
+그림 8.2_ 라이브락 코드 예제
+

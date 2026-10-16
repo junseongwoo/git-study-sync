@@ -1,0 +1,49 @@
+3.3 프로세스에 대한 연산       133
+
+다. 더욱이 fork () 7} 아무런 인자가 전달되지 않는 반면에 CreateProcess() = 10개
+이상의 매개변수를 요구한다.
+
+그림 3.10의 C 프로그램은 280321ㅁ6.@※6@를 적재하는 자식 프로세스를 생성하는
+CreateProcess ()& 설명하고 있다. 우리는 0663668ㅜ0ㅇ888()에게 전달되는 10개
+의 매개변수 중에서 많은 수를 디폴트 값으로 선택하였다. Windows APIS] 프로세스
+생성과 관리의 자세한 사항에 대해 궁금한 독자는 이 장의 마지막에 있는 인용문헌 노트
+
+#include <stdio.h>
+#include <windows.h>
+
+int main (VOID)
+
+STARTUPINFO si;
+PROCESS_INFORMATION pi;
+
+/* 메모리 할당 */
+
+ZeroMemory (&81, 8126015(81) ) ;
+si.cb = 812605(81);
+ZeroMemory (&pi, sizeof (pi));
+
+/* 자식 프로세스 생성 */
+
+if (!CreateProcess (NULL, /* 명령어 라인 사용 ＊/
+"C:\\WINDOWS\\system32\\mspaint.exe", /* 명령어 라인 */
+NULL, /* 프로세스를 상속하지 말 것 ＊/'
+NULL, /* 스레드 HES 상속하지 말 것 */
+FALSE, /* 핸들 상속 디제이블 */
+0, /x 생성 플래그 없음 ＊/
+NULL, /* 부모 환경 블록 사용 */
+NULL, /*※ 부모 프로세스가 존재하는 디렉터리 사용 */
+&si,
+&pi))
+
+fprintf(stderr, "Create Process Failed");
+return -1;
+}
+/* 부모 프로세스가 자식 프로세스가 끝나기를 기다림 */
+WaitForSingleObject (pi .hProcess, INFINITE);
+printf ("Child Complete");
+
+/* 핸들 닫기 */
+CloseHandle(pi.hProcess);
+CloseHandle(pi.hThread);
+
+그림 3.10 Windows APIZ 이용한 새로운 프로세스의 생성

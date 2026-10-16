@@ -1,0 +1,53 @@
+352
+
+Chapter 8 교착 상태
+
+/* thread.one 이 함수를 실행한다*/
+void *do work one(void *param)
+
+{
+
+pthread mutex lock (&first mutex) ;
+pthread mutex _lock(&second mutex) ;
+/**
+
+x Do some work
+
+*/
+pthread mutex unlock (&second mutex) ;
+pthread mutex unlock (&first mutex) ;
+
+pthread_exit (0);
+
+}
+
+/* thread two 이 함수를 실행한다*/'
+void *do.work two(void *param)
+{
+pthread mutex lock (second mutex) ;
+pthread mutex lock (&first mutex) ;
+/**
+* Do some work
+*/
+pthread mutex unlock (&first mutex) ;
+pthread mutex unlock (&second mutex) ;
+
+pthread_exit (0);
+
+그림 8.1_ 교착 상태 예제
+
+다음으로, 두 A#C(thread_oned} thread _two)7} 생성되고 두 스레드는 mutex 락
+에 대한 접근 권한을 71). thread one} thread two 그림 8.1에 보인 것처럼
+각각 do_work_one () I} do_work_two () 함수를 실행한다.
+
+이 예제에서 thread one (1) first_mutex, (2) second_mutex 순서로 mu-
+tex 락을 획득하려고 하고 동시에 thread_twor (1) second_mutex, (2) first_
+mutex 순서로 mutex 락을 획득하려고 한다. thread_one©| 61ㅜ565 _ㅁㅁ66※를 획득하
+고 thread_two7} second mutexE 획득하게 되면 교착 상태가 가능하다.
+
+교착 상태가 가능하더라도 64#688_6ㅇ가 락을 획득하려고 시도하기 전에
+thread_one©| first_mutex®} second_mutexs 획득하고 방출할 수 있다면 교착
+상태는 발생하지 않는다는 것을 유의하라. 이 예제는 교착 상태를 다루는 데에서의 문제
+BE 잘 설명한다. 어떤 특정 스케줄링 상황에서만 발생할 수 있는 교착 상태를 식별하
+
+고 검사하는 작업은 어렵다.

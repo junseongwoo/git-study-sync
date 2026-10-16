@@ -1,0 +1,21 @@
+참고문헌
+
+[Bahra (2013)] 5. A. Bahra, “Nonblocking Algorithms and Scalable Multi-
+core Programming”, ACM queue, Volume 11, Number 5 (2013).
+
+[Brinch-Hansen (1973)]  P. Brinch-Hansen, Operating System Principles, Pren-
+tice Hall (1973).
+
+[Dijkstra (1965)] E. W. Dijkstra, “Cooperating Sequential Processes”, Tech-
+nical report, Technological University, Eindhoven, the Netherlands (1965).
+
+[Herlihy and Shavit (2012)] M. Herlihy and N. Shavit, The Art of Multiproces-
+sor Programming, Revised First Edition, Morgan Kaufmann Publishers Inc.
+(2012).
+
+[Hoare (1974)] C. A. R. Hoare, “Monitors: An Operating System Structuring
+Concept”, Communications of the ACM, Volume 17, Number 10 (1974), pag-
+es 549-557.
+
+[Mckenney (2010)] P. E. Mckenney, “Memory Barriers: a Hardware View
+for Software Hackers” (2010).

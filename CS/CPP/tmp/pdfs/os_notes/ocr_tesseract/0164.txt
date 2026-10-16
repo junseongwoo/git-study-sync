@@ -1,0 +1,7 @@
+218      Chapter 4 스레드와 병행성
+
+[Russinovich et al. (2017)] M. Russinovich, D.A. Solomon, and A. lonescy,
+Windows Internals—Part 1, Seventh Edition, Microsoft Press (2017).
+
+[Vahalia (1996)] U. Vahalia, Unix Internals: The New Frontiers, Prentice Ha
+(1996).

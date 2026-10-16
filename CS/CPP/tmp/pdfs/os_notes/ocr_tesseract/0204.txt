@@ -1,0 +1,60 @@
+258     Chapter 5 CPU 스케줄링
+
+ee eee aa ee PF (LI) = TRA 중아 eA
+
+#include <pthread.h>
+#include <stdio.h>
+#define NUM_THREADS 5
+
+int main(int argc, char *argv[])
+{
+int i, policy;
+pthread t tid [NUM_THREADS];
+pthread attr t attr;
+
+/* get the default attributes */
+pthread attr_init(&attr);
+
+/* get the current scheduling policy */
+if (pthread. attr_getschedpolicy (&attr, &policy) != 0)
+
+fprintf(stderr, "Unable to get policy.\n");
+else {
+
+if (policy == SCHED_OTHER)
+
+printf ("SCHED OTHER\n") ;
+
+else if (policy == SCHED_RR)
+
+printf ("SCHED RR\n");
+
+else if (policy == SCHED_FIFO)
+
+printf ("SCHED _FIFO\n");
+
+}
+
+/* set the scheduling policy - FIFO, RR, or OTHER */
+if (pthread _ attr setschedpolicy (attr, SCHED FIFO) != 0)
+fprintf(stderr, "Unable to set policy.\n");
+
+/* create the threads */
+for (i = 0; i < NUM_THREADS; i++)
+
+pthread create(&tid[i],&attr,runner,NULL) ;
+/* now join on each thread */
+
+for (i = 0; i < NUM_THREADS; i++)
+pthread _join(tid[i], NULL);
+}
+
+/* Each thread will begin control in this function */
+void *runner (void *param)
+/* do some work ... */
+
+pthread exit (0);
+
+}
+
+JB 5.25 POSIX 실시간 스케줄링 API

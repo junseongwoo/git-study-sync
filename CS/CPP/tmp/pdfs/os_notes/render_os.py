@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
-"""Render source-grounded C++ chapter JSON files as a searchable A4 PDF.
+"""Render source-grounded operating-systems notes as a searchable A4 PDF.
 
-No C++ instructional content lives in this module. The caller records the PDF
+No instructional subject content lives in this module. The caller records the PDF
 artifact-operation marker once before invoking this renderer.
 """
 
@@ -25,16 +25,16 @@ from reportlab.pdfbase import pdfmetrics
 from reportlab.pdfbase.ttfonts import TTFont
 from reportlab.platypus import (
     BaseDocTemplate, Flowable, Frame, LongTable, NextPageTemplate, PageBreak,
-    PageTemplate, Paragraph, Spacer, TableStyle,
+    PageTemplate, Paragraph, Spacer, TableStyle, Image,
 )
 from reportlab.platypus.tableofcontents import TableOfContents
 
 
 HERE = Path(__file__).resolve().parent
-DEFAULT_OUTPUT = HERE.parents[2] / "output" / "pdf" / "A_Tour_Of_CPP_요약_정리.pdf"
+DEFAULT_OUTPUT = HERE.parents[2] / "output" / "pdf" / "운영체제 요약 정리.pdf"
 PAGE_W, PAGE_H = A4
-LEFT = RIGHT = 46
-TOP, BOTTOM = 53, 43
+LEFT = RIGHT = 51
+TOP, BOTTOM = 54, 48
 TEXT_W = PAGE_W - LEFT - RIGHT
 INK = colors.HexColor("#202C38")
 ACCENT = colors.HexColor("#173F68")
@@ -175,27 +175,27 @@ def source_text(source, prefix="출처"):
 def make_styles():
     common = dict(fontName="Malgun", textColor=INK, wordWrap="CJK", allowWidows=0, allowOrphans=0)
     return {
-        "body": ParagraphStyle("body", fontSize=10.3, leading=16.0, spaceAfter=6, **common),
-        "small": ParagraphStyle("small", fontSize=8.2, leading=12.5, spaceAfter=6,
+        "body": ParagraphStyle("body", fontSize=10.5, leading=16.6, spaceAfter=6, **common),
+        "small": ParagraphStyle("small", fontSize=8.8, leading=13.2, spaceAfter=6,
                                  **{**common, "textColor": MUTED}),
-        "source": ParagraphStyle("source", fontSize=7.6, leading=11.2, spaceAfter=6,
+        "source": ParagraphStyle("source", fontSize=8.2, leading=12.2, spaceAfter=6,
                                   keepWithNext=True, **{**common, "textColor": MUTED}),
         "section": ParagraphStyle("section", fontName="Malgun-Bold", fontSize=20.0, leading=29,
                                    spaceAfter=15, textColor=ACCENT, wordWrap="CJK", keepWithNext=True),
-        "chapter": ParagraphStyle("chapter", fontName="Malgun-Bold", fontSize=16.0, leading=23,
+        "chapter": ParagraphStyle("chapter", fontName="Malgun-Bold", fontSize=19.0, leading=27,
                                    spaceBefore=18, spaceAfter=8, textColor=ACCENT, wordWrap="CJK", keepWithNext=True),
-        "sub": ParagraphStyle("sub", fontName="Malgun-Bold", fontSize=11.8, leading=18,
+        "sub": ParagraphStyle("sub", fontName="Malgun-Bold", fontSize=13.2, leading=19.8,
                                spaceBefore=11, spaceAfter=5, textColor=INK, wordWrap="CJK", keepWithNext=True),
         "label": ParagraphStyle("label", fontName="Malgun-Bold", fontSize=9.8, leading=15.2,
                                  spaceBefore=7, spaceAfter=3, textColor=ACCENT, wordWrap="CJK", keepWithNext=True),
-        "bullet": ParagraphStyle("bullet", fontSize=10.3, leading=16.0, leftIndent=11,
+        "bullet": ParagraphStyle("bullet", fontSize=10.5, leading=16.6, leftIndent=11,
                                   firstLineIndent=-10, spaceAfter=4.0, **common),
-        "table": ParagraphStyle("table", fontSize=9.0, leading=13.4, spaceAfter=0, **common),
-        "table_head": ParagraphStyle("table_head", fontName="Malgun-Bold", fontSize=9.0,
-                                      leading=13.4, textColor=INK, wordWrap="CJK", spaceAfter=0),
+        "table": ParagraphStyle("table", fontSize=9.4, leading=14.1, spaceAfter=0, **common),
+        "table_head": ParagraphStyle("table_head", fontName="Malgun-Bold", fontSize=9.4,
+                                      leading=14.1, textColor=INK, wordWrap="CJK", spaceAfter=0),
         "cover": ParagraphStyle("cover", fontName="Malgun-Bold", fontSize=28.0, leading=39,
                                  alignment=TA_CENTER, textColor=INK, wordWrap="CJK"),
-        "subtitle": ParagraphStyle("subtitle", fontName="Malgun", fontSize=17, leading=25,
+        "subtitle": ParagraphStyle("subtitle", fontName="Malgun", fontSize=15, leading=23,
                                     alignment=TA_CENTER, textColor=ACCENT),
         "toc0": ParagraphStyle("toc0", fontName="Malgun-Bold", fontSize=10.2, leading=17,
                                 textColor=ACCENT, spaceBefore=10, spaceAfter=3, rightIndent=26, wordWrap="CJK"),
@@ -240,7 +240,7 @@ def visual_wrap(line, max_width, font_size):
 
 class CodeBlock(Flowable):
     """Splittable code panel; source data is retained without normalization."""
-    def __init__(self, code="", *, lines=None, continued=False, font_size=8.8, leading=12.1):
+    def __init__(self, code="", *, lines=None, continued=False, font_size=9.2, leading=13.0):
         super().__init__()
         self.raw, self.lines = str(code), lines
         self.continued = continued
@@ -282,7 +282,7 @@ class CodeBlock(Flowable):
         c.setFont("Malgun", 7.3)
         c.setFillColor(MUTED)
         c.drawString(self.pad, self.height - self.pad - 5.5,
-                     "C++ 원문 (계속)" if self.continued else "C++ 원문")
+                     "원문 코드·기호 (계속)" if self.continued else "원문 코드·기호")
         y = self.height - self.pad - self.head - self.font_size
         for line in self.lines:
             x = self.pad
@@ -305,7 +305,7 @@ class Cover(Flowable):
 
     def draw(self):
         title = Paragraph(inline(self.title, markdown=False), self.styles["cover"])
-        subtitle = Paragraph("요약 정리", self.styles["subtitle"])
+        subtitle = Paragraph("핵심 개념 및 시험 대비 학습 노트", self.styles["subtitle"])
         _, th = title.wrap(self.width, self.height)
         _, sh = subtitle.wrap(self.width, self.height)
         gap = 17
@@ -321,7 +321,7 @@ class NoteDocument(BaseDocTemplate):
         self.book_title = title
         super().__init__(str(output), pagesize=A4, leftMargin=LEFT, rightMargin=RIGHT,
                          topMargin=TOP, bottomMargin=BOTTOM, title=title,
-                         author="", subject="제공된 원문에 근거한 C++ 학습 교재", **kwargs)
+                         author="", subject="제공된 원문에 근거한 운영체제 학습 자료", **kwargs)
         self.heading_pages, self.anchor_pages = [], {}
         frame = Frame(LEFT, BOTTOM, TEXT_W, PAGE_H - TOP - BOTTOM,
                       leftPadding=0, rightPadding=0, topPadding=0, bottomPadding=0, id="body")
@@ -346,8 +346,7 @@ class NoteDocument(BaseDocTemplate):
         canvas.line(LEFT, PAGE_H - 34, PAGE_W - RIGHT, PAGE_H - 34)
         canvas.setFont("Malgun", 7.4)
         canvas.setFillColor(MUTED)
-        running_title = "C++ 학습 노트" if self.book_title == "[원문에서 확인할 수 없음]" else self.book_title
-        canvas.drawString(LEFT, PAGE_H - 26, running_title)
+        canvas.drawString(LEFT, PAGE_H - 26, self.book_title)
         canvas.setFont("Malgun", 8)
         canvas.drawRightString(PAGE_W - RIGHT, 25, str(doc.page))
         canvas.restoreState()
@@ -378,13 +377,17 @@ class Book:
         self.chapters, self.info, self.pages = chapters, info, known_pages or {}
         self.s, self.story = make_styles(), []
         self.code_index = {}
+        self.figure_index = {}
         self.section_index = {}
         for ch in chapters:
             for sec in ch["sections"]:
                 self.section_index[(ch["id"], str(sec.get("number", "")))] = section_key(ch["id"], sec.get("number", ""))
             for code in ch.get("codes", []):
                 self.code_index[code["id"]] = (ch, code)
+            for figure in ch.get("figures", []):
+                self.figure_index[figure["id"]] = (ch, figure)
         self.rendered_codes = collections.Counter()
+        self.rendered_figures = collections.Counter()
 
     def p(self, text, style="body", raw_markup=False):
         if text is not None and str(text).strip():
@@ -474,6 +477,48 @@ class Book:
             self.p("원문 주의 사항", "label")
             self.bullets(code["cautions"])
 
+    def figure(self, figure):
+        fid = str(figure["id"])
+        p = self.p(figure.get("title", fid), "sub")
+        if not self.rendered_figures[fid]:
+            p.anchor_key, p.anchor_title, p.outline_level, p.toc_level = "figure-" + fid, clean(figure.get("title", fid)), None, None
+        self.rendered_figures[fid] += 1
+        self.source(figure.get("source"), "그림·표 출처")
+        path = Path(figure["file"])
+        if not path.is_absolute():
+            path = HERE / path
+        from PIL import Image as PILImage
+        with PILImage.open(path) as pic:
+            iw, ih = pic.size
+        scale = min(TEXT_W / iw, 600 / ih)
+        fig = Image(str(path), width=iw * scale, height=ih * scale, hAlign="CENTER")
+        fig.keepWithNext = bool(figure.get("caption") or figure.get("meaning"))
+        self.story.append(fig)
+        if figure.get("caption"):
+            self.p(figure["caption"], "small")
+        if figure.get("meaning"):
+            self.p(figure["meaning"])
+
+    def formula(self, b):
+        if b.get("title"):
+            self.p(b["title"], "label")
+        if b.get("text"):
+            self.story.append(CodeBlock(str(b["text"]), font_size=10.2, leading=15.3))
+        self.bullets(b.get("symbols", []))
+        if b.get("explanation"):
+            self.p(b["explanation"])
+
+    def flow(self, b):
+        if b.get("title"):
+            self.p(b["title"], "label")
+        steps = b.get("steps", b.get("items", []))
+        for i, step in enumerate(steps):
+            self.p(f"{i+1}. {step}", "bullet")
+            if i < len(steps) - 1:
+                arrow = Paragraph("↓", ParagraphStyle("flow-arrow", parent=self.s["body"], alignment=TA_CENTER, leading=11, spaceAfter=1))
+                arrow.keepWithNext = True
+                self.story.append(arrow)
+
     def blocks(self, blocks):
         for b in blocks or []:
             if b.get("source"):
@@ -485,10 +530,20 @@ class Book:
                 self.bullets(b.get("items", []), numbered=bool(b.get("numbered")))
             elif kind == "table":
                 self.table(b.get("headers", []), b.get("rows", []), widths=b.get("widths"))
+            elif kind == "steps":
+                if b.get("title"):
+                    self.p(b["title"], "label")
+                self.bullets(b.get("items", []), numbered=True)
+            elif kind == "flow":
+                self.flow(b)
+            elif kind == "formula":
+                self.formula(b)
             elif kind in ("heading", "subheading"):
                 self.p(b.get("text", b.get("title", "")), "sub")
             elif kind == "code_ref":
                 self.code(self.code_index[str(b["id"])][1])
+            elif kind == "figure_ref":
+                self.figure(self.figure_index[str(b["id"])][1])
             elif kind == "code":
                 raw = b.get("code", b.get("text", ""))
                 validate_code_glyphs(str(raw), "inline block")
@@ -540,13 +595,7 @@ class Book:
         toc.dotsMinLevel = 0
         self.story.append(toc)
 
-        self.start("책 정보 및 정리 범위", "book-scope")
-        self.p("책 정보", "sub")
-        self.p("책 제목: " + self.info["confirmed_title"])
-        if self.info.get("title_note"):
-            self.p(self.info["title_note"], "small")
-        if self.info.get("author"):
-            self.p("저자: " + str(self.info["author"]))
+        self.start("정리 범위와 원문 확인 사항", "book-scope")
         self.p(self.info["scope_note"])
         if self.info.get("source_pages"):
             self.p("제공된 PDF의 전체 쪽수: " + str(self.info["source_pages"]))
@@ -564,7 +613,7 @@ class Book:
                 self.blocks(self.info["overview"])
             else:
                 self.bullets(self.info["overview"])
-        self.table(["장", "원문 범위"], [[ch["title"], source_text(ch.get("source"))] for ch in self.chapters],
+        self.table(["장", "원문 범위"], [[ch["title"], ("본문 미제공 / " if ch.get("available") is False else "") + source_text(ch.get("source"))] for ch in self.chapters],
                    [TEXT_W * .55, TEXT_W * .45])
 
         self.start("장별 요약 및 상세 정리", "book-notes")
@@ -572,7 +621,7 @@ class Book:
             self.heading(ch["title"], 1, "chapter-" + ch["id"])
             self.source(ch.get("source"))
             if ch.get("overview"):
-                self.p("학습 내용 개요", "sub")
+                self.p("학습 주제", "sub")
                 self.bullets(ch["overview"])
             if ch.get("flow"):
                 self.p("설명의 흐름", "label")
@@ -587,11 +636,14 @@ class Book:
             # the author to move beside the most relevant source section.
             unplaced = [code for code in ch.get("codes", []) if not self.rendered_codes[code["id"]]]
             if unplaced:
-                self.p("문법 및 원문 코드 정리", "sub")
+                self.p("원문 코드 및 알고리즘 정리", "sub")
                 for code in unplaced:
                     self.code(code)
+            for fig in ch.get("figures", []):
+                if not self.rendered_figures[fig["id"]]:
+                    self.figure(fig)
             if ch.get("key_points"):
-                self.p("중요 내용 요약", "sub")
+                self.p("핵심 정리", "sub")
                 self.bullets(ch["key_points"])
             if ch.get("comparisons"):
                 self.p("혼동하기 쉬운 내용", "sub")
@@ -606,29 +658,38 @@ class Book:
                 self.p("원문 확인 메모", "sub")
                 self.bullets(ch["limitations"])
 
-        self.start("핵심 문법 및 코드 모음", "book-syntax-code")
-        if self.info.get("syntax"):
-            self.p("핵심 문법", "sub")
-            for entry in self.info["syntax"]:
-                self.p(entry.get("title", ""), "label")
-                self.source(entry.get("source"))
-                if entry.get("form"):
-                    self.story.append(CodeBlock(entry["form"]))
-                self.p(entry.get("meaning", ""))
-        if self.info.get("code_collection"):
-            self.p("주요 원문 코드", "sub")
-            for group in self.info["code_collection"]:
-                self.p(group.get("title", ""), "sub")
-                for cid in group.get("ids", []):
-                    self.code(self.code_index[str(cid)][1], concise=True)
-        else:
-            self.p("원문 코드 찾아보기", "sub")
-            for ch in self.chapters:
-                if ch.get("codes"):
-                    self.p(ch["title"], "label")
-                    self.table(["코드", "출처", "학습 교재 쪽"], [[code.get("title", code["id"]),
-                        source_text(code.get("source")), self.linked_page("code-" + code["id"])]
-                        for code in ch["codes"]], [TEXT_W * .44, TEXT_W * .40, TEXT_W * .16], markup_columns={2}, compact=True)
+        self.start("비교·공식·절차 모음", "book-comparisons")
+        for ch in self.chapters:
+            if ch.get("comparisons"):
+                self.p(ch["title"], "sub")
+                for comp in ch["comparisons"]:
+                    self.p(comp.get("title", ""), "label")
+                    self.source(comp.get("source"))
+                    self.table(comp.get("headers", []), comp.get("rows", []))
+        self.p("주요 공식과 기호", "sub")
+        for ch in self.chapters:
+            for sec in ch["sections"]:
+                for b in sec["blocks"]:
+                    if b["type"] == "formula":
+                        self.p(ch["title"] + " / " + str(sec["number"]) + " " + sec["title"], "label")
+                        self.source(b.get("source", sec.get("source")))
+                        self.formula(b)
+        self.p("주요 처리 순서", "sub")
+        for ch in self.chapters:
+            processes = [(sec, b) for sec in ch["sections"] for b in sec["blocks"] if b["type"] in ("flow", "steps")]
+            if processes:
+                sec, b = processes[0]
+                self.p(ch["title"] + " / " + str(sec["number"]), "label")
+                self.source(b.get("source", sec.get("source")))
+                self.flow(b)
+        self.p("알고리즘·원문 코드 찾아보기", "sub")
+        for ch in self.chapters:
+            if ch.get("codes") or ch.get("figures"):
+                self.p(ch["title"], "label")
+                entries = [(code, "code-") for code in ch.get("codes", [])] + [(fig, "figure-") for fig in ch.get("figures", [])]
+                self.table(["코드·그림", "원문 출처", "교재 쪽"], [[item.get("title", item["id"]),
+                    source_text(item.get("source")), self.linked_page(prefix + item["id"])]
+                    for item, prefix in entries], [TEXT_W * .44, TEXT_W * .40, TEXT_W * .16], markup_columns={2}, compact=True)
 
         self.start("주요 개념 복습", "book-review")
         for ch in self.chapters:
@@ -639,6 +700,16 @@ class Book:
 
         self.start("개념 색인", "book-index")
         self.concept_index()
+        self.start("최종 학습 점검표", "book-checklist")
+        for ch in self.chapters:
+            if ch.get("checklist"):
+                self.p(ch["title"], "sub")
+                for item in ch["checklist"]:
+                    if isinstance(item, dict):
+                        self.p("[ ] " + item["text"])
+                        self.source(item.get("source", ch.get("source")))
+                    else:
+                        self.p("[ ] " + str(item))
         return self.story
 
 
@@ -658,7 +729,7 @@ def load_inputs(chapter_dir, info_path):
     ids = [ch.get("id") for ch in chapters]
     if any(not v for v in ids) or len(ids) != len(set(ids)):
         raise ValueError("Chapter IDs must be nonempty and unique")
-    code_ids, refs = set(), []
+    code_ids, refs, figure_ids, figure_refs = set(), [], set(), []
     for ch in chapters:
         if not ch.get("title") or not ch.get("sections"):
             raise ValueError(f"Chapter title and detailed sections required: {ch['id']}")
@@ -669,18 +740,34 @@ def load_inputs(chapter_dir, info_path):
             for b in sec.get("blocks", []):
                 if b.get("type") == "code_ref":
                     refs.append(str(b.get("id", "")))
+                if b.get("type") == "figure_ref":
+                    figure_refs.append(str(b.get("id", "")))
+                if b.get("type") == "formula":
+                    validate_code_glyphs(str(b.get("text", "")), ch["id"] + ":formula")
         for code in ch.get("codes", []):
             cid = str(code.get("id", ""))
             if not cid or cid in code_ids:
                 raise ValueError(f"Code ID missing or duplicate: {cid}")
             code_ids.add(cid)
             validate_code_glyphs(str(code.get("code", "")), cid)
+        for fig in ch.get("figures", []):
+            fid = str(fig.get("id", ""))
+            if not fid or fid in figure_ids:
+                raise ValueError(f"Figure ID missing or duplicate: {fid}")
+            figure_ids.add(fid)
+            file = Path(fig["file"])
+            if not file.is_absolute():
+                file = HERE / file
+            if not file.is_file():
+                raise ValueError(f"Figure file not found: {file}")
         for term in ch.get("index_terms", []):
             if str(term.get("section", "")) not in numbers:
                 raise ValueError(f"Unknown index section in {ch['id']}: {term}")
     unknown = sorted(set(refs) - code_ids)
     if unknown:
         raise ValueError(f"Unknown code references: {unknown}")
+    if set(figure_refs) - figure_ids:
+        raise ValueError(f"Unknown figure references: {set(figure_refs) - figure_ids}")
     info = read_json(info_path)
     if not str(info.get("confirmed_title", "")).strip() or not info.get("scope_note"):
         raise ValueError("book_info.json requires confirmed_title and scope_note")
@@ -717,6 +804,9 @@ def build(chapter_dir, info_path, output):
             "coverage": len(ch.get("coverage", [])), "limitations": ch.get("limitations", [])} for ch in chapters],
         "headings": doc.heading_pages, "anchor_pages": doc.anchor_pages,
         "unplaced_code_refs": unplaced, "code_ids": list(book.code_index),
+        "figure_ids": list(book.figure_index),
+        "figure_hashes": {fid: hashlib.sha256((Path(fig["file"]) if Path(fig["file"]).is_absolute() else HERE / fig["file"]).read_bytes()).hexdigest()
+                          for fid, (_, fig) in book.figure_index.items()},
         "code_hashes": {cid: hashlib.sha256(str(code.get("code", "")).encode("utf-8")).hexdigest()
                         for cid, (_, code) in book.code_index.items()},
         "unknown_prose_glyphs": dict(MISSING_PROSE_GLYPHS),

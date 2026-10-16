@@ -1,0 +1,35 @@
+7.4 Java에서의 동기화
+339
+기능을 제공한다. 이 공정성은 오래 기다린 스레드에 락을 줄 수 있는 설정이다. (JVM의
+명세는 객체 라의 대기 집합의 스레드가 특정 방식으로 정릴되어야 한다는 것을 명시하
+지 않는다는 것을 기억하라.)
+스레드는 lock() 메소드를 호출하여 ReentrantLock 락을 획득한다. 락을 A卜&할
+수 있거나 lock()을 호출한 스레드가 이미 락을 소유하고 있는 경우, 재진입이라고 명
+명된 이유임, lock()은 호출 스레드에게 락 소유권을 주고 제어를 반환한다 락을 사용
+할 수 없는 경우 호출 스레드는 소유자가 unlock()을 호출하여 락이 배정될 때까지 봉
+쇄된다. ReentrantLock은 Lock 인터페이스를 구현한다. 사용법은 다음과 같다.
+Lock key = new ReentrantLock() •,
+key.lock() •,
+try {
+/* critical section */
+finally {
+key. unlock() ;
+try를 사용하는 프로그래밍 관용구에는 약간의 설명이 필요하다. lock() 메소드
+를 통해 락을 획득한 경우 락을 유사하게 해제하는 것이 중요하다. unlock()을 fi-
+nally 절로 묶음으로써 임계구역이 완료되거나 try 블록 내에서 예외가 발생하면 락
+이 해제되는 것을 보장한다. lock()은 checked 예외를 발생시카지 않으므로 try 절
+안에 넣지 않는다는 것을 주의하라. try 절 내에 lock()을 배치하고 lock()이 호출
+될 때 unchecked 예외가 발생하면(예: 0utofMemoryError) 무슨 일이 발생하는지 고
+려하자. finally 절은 unlock() 호출을 트리거하고 락은 획득된 상태가 아니기 때문
+에 unlock()은 unchecked 111ega1MonitorStateException을 발생시킨다. 이
+111ega1MonitorStateException은 lock()을 호출할 때 발생한 unchecked 예외
+를 대신하게 되고 프로그램이 처음에 실패한 원인을 모호하게 한다.
+ReentrantLock은 상호 배제를 제공하지만 여러 스레드가 공유 데이터를 읽기만
+하고 쓰지 않을 때에는 너무 보수적인 전략일 수 있다 (이 시나리오는 7.1.2절에서 설명
+했다.) 이러한 필요성을 해결하기 위해 Java API는 ReentrantReadWriteLock을 제
+공한다. ReentrantReadWriteLock은 resder는 여러 개일 수 있지만 writer는 반드
+시 하나이어야 하는 락이다.
+7.4.3 세마포 semaphores
+Java API는 6.6절에서 설명된 대로 카운팅 세마포도 제공한다. 세마포의 생성자는 다음
+과 같다.
+Semaphore (int value) ;

@@ -1,0 +1,21 @@
+6.7 모니터
+monitor monitor ttattte
+/* shared variable declarations */
+function PI (
+function P2 (
+function Pn (
+initialization-code (
+그림 6.11 monitor21 의사 코드 구문
+305
+요가 없다(그림 6.12). 그러나 지금까지 정의한 모니터 구조물은 어떤 동기화 기법을 모
+델링하는 데에는 충분한 능력을 제공하지 않는다. 이를 위해 우리는 부가적인 동기화 기
+법을 정의해야 할 필요가 있다. 이 동기화 기법들은 condition이라는 구조물로 제공될
+수 있다 자신의 주문형 동기화 기법을 작성할 필요가 있는 프로그래머는 하나 이상의
+condition 형의 변수를 정의할 수 있다.
+condition X, y;
+이 condition 형 변수에 호출될 수 있는 연산은 오직 wait()와 signal()이다.
+연산
+x.wait();
+는 이 연산을 호출한 프로세스는 다른 프로세스가
+x•signal() ,•
+을 호출할 때까지 일시 중지 되어야 한다는 것을 의미한다.

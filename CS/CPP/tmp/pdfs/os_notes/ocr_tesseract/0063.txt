@@ -1,0 +1,31 @@
+참고문헌           59
+
+참고문헌
+
+[Hennessy and Patterson (2012)] J. Hennessy and D. Patterson, Computer
+Archi tecture: A Quantitative Approach, Fifth Edition, Morgan Kaufmann
+(2012).
+
+[Kurose and Ross (2017)] J. Kurose and K. Ross, Computer Networking—A
+Top-Down Approach, Seventh Edition, Addison-Wesley (2017).
+
+[Levin (2013)] J. Levin, Mac OS X and iOS Internals to the Apple's Core, Wiley
+(2013).
+
+[Levin (2015)] J. Levin, Android Internals—A Confectioner’s Cookbook. Volume I
+(2015).
+
+[Love (2010)] R. Love, Linux Kernel Development, Third Edition, Developer's
+Library (2010).
+
+[McDougall and Mauro (2007)] R. McDougall and J. Mauro, Solaris Inter-
+nals, Second Edition, Prentice Hall (2007).
+
+[Russinovich et al. (2017)] M.Russinovich, D. A. Solomon, and A. Ionescu,
+Win-dows Internals—Part 1, Seventh Edition, Microsoft Press (2017).
+
+[Stallings (2017)] W. Stallings, Operating Systems, Internals and Design Princi-
+ples (9th Edition) Ninth Edition, Prentice Hall (2017).
+
+[Tanenbaum (2014)] A. 5. Tanenbaum, Modern Operating Systems, Prentice
+Hall (2014).

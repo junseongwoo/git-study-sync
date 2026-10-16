@@ -1,0 +1,6 @@
+참고문현
+tation/locking/lockdep-design txt를 참조하라.
+참고문현
+381
+[Dijkstra (1965)] E. W. Dijkstra,"CooperatmgSequenhal Processes”, Techni-
+cal report, Techn010gical Umversity, Erndhoven, the Netherlands (1965).

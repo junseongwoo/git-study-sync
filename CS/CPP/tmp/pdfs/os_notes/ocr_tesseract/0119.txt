@@ -1,0 +1,50 @@
+172
+
+Chapter 3 프로세스
+
+_—___——
+
+#include <stdio.h>
+#include <unistd.h>
+
+int main()
+
+{
+
+/* fork a child process */
+fork();
+
+/* fork another child process */
+fork(Q);
+
+/* and fork another */
+fork();
+
+return 0;
+
+그림 3.31 몇 개의 프로세스가 생성되는가?
+
+C. 공유 메모리 세그먼트
+3.6 RPC 메커니즘과 관련하여 “정확히 한 번” 시맨틱을 고려하자. 네트워크 문제로
+인해 클라이언트로 전송된 ACK 메시지가 손실된 경우에도 이 시맨틱을 구현한
+알고리즘이 올바르게 실행되는가? 메시지 전달 순서를 설명하고 “정확한 한 번"
+이 여전히 보존되는지 여부를 논의하라.
+3.7 분산 시스템이 서버 장애에 취약하다고 가정하자. RPC 실행을 위한 “정확히 한
+번" 시맨틱을 보장하기 위해 어떤 기법이 필요한가?
+
+ry
+=
+경
+
+추가 자료
+
+UNIX 및 Windows 시스템에서 프로세스 생성, 관리 및 [PCE 각각 [Robbins and
+Robbins (2003)] 및 [Russinovich et al. (2017)]에서 논의되었다. [Love (2010)]는
+Linux 커널에서의 프로세스 지원을 다루고 [Hart (2005)]는 Windows 시스템 프로그
+래밍에 대해 자세히 다룬다. Google ENA 사용되는 다중 프로세스 모델에 대한 내
+용은 http://blog.chromium.org/2008/09/multi-process-architecture.htmloj| A
+확인할 수 있다.
+
+다중 코어 시스템을 위한 메시지 AE [Holland and Seltzer (2011)]에서 논의
+된다. [Levin (2013)]은 특히 8005 및 10)5와 관련하여 Mach 시스템에서 메시지 전
+달을 설명한다.

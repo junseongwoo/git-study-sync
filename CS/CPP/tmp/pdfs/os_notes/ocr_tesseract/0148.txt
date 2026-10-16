@@ -1,0 +1,52 @@
+202   Chapter 4 。 스레드와 병행성
+
+OpenMP= 병렬로 실행될 수 있는 블록을 찾아 병렬 (parallel 1081015)이라고 분
+
+른다. 응용 개발자는 자신들의 코드 중 병렬  영역에 컴파일러 디렉티브를 삽입한나. o
+디렉티브는 OpenMP 실행시간 라이브러리에 해당 영역을 병렬로 실행하라고 지시한
+다. 다음 프로그램은 65106() 문을 포함하고 있는 병렬 영역 위에 컴파일러 디렉티
+
+브가 사용되고 있는 것을 보인다.
+
+#include <omp.h>
+#include <stdio.h>
+
+int main(int argc, char *argv[])
+
+{
+
+/* sequential code */
+#pragma omp parallel
+
+printf ("I am a parallel region.");
+
+/* sequential code */
+
+return 0;
+
+}
+OpenMP7} 다음과 같은 컴파일러 디렉티브를 만나게 되면
+
+#pragma omp parallel
+
+시스템의 코어 개수만큼 스레드를 생성한다. 따라서 듀얼 코어 시스템에서는 27, A
+코어 시스템에서는 4개 등 이런 식으로 스레드가 생성된다. 모든 스레드는 동시에 병
+영역을 실행하게 된다. 각 스레드가 병렬 영역을 빠져나가면 스레드는 종료된다.
+
+OpenMP 병렬 처리 반복문 등을                        행하기 위한 추가적인
+디렉티브를 제공한다. 예를 들어, 배열 ash br} 있다고 하자. 우리는 각 원소의 합을 구
+해서 배열 coll 저장했으면 한다. 다음과 같은 코드 세그먼트를 사용하여 이 작업을 병렬
+로 실행할 수 있다. 이 코드에서 병렬화시킬 for 반복문을 위한 컴파일러 디렉티브를 사
+용하고 있다.
+
+그 ㅎㅋ늘
+
+#pragma od parallel for
+for (i = 0; i < N; i++) {
+
+cli] = a[i] + b[i];
+}
+
+OpenMP: for 반복문 안에 들어 있는 연산을 디렉티브에 따라 생성된 스레드들에게
+분배한다.
+#pragma omp parallel for

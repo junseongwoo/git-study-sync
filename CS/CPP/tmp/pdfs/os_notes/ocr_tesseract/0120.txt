@@ -1,0 +1,32 @@
+참고문헌      173
+
+[Harold (2005))%= ]22로 소켓 프로그래밍을 다루고 있다. Android 800에 대
+한 자세한 내용은 https://developer.android.com/guide/components/aidl.html
+에서 확인할 수 있다. [Hart (2005)] 및 [Robbins and Robbins (2003)]는 각각 Win-
+dows 및 UNIX 시스템의 파이프를 다룬다.
+
+Android 개발에 대한 지침은 https://developer.android.com/guide/o| A 찾을
+수 있다.
+
+[Harold (2005)] E. R. Harold, Java Network Programming, Third Edition,
+O'Reilly & Associates (2005).
+
+[Hart (2005)] J. M. Hart, Windows System Programming, Third Edition, Addi-
+son-Wesley (2005).
+
+[Holland and Seltzer (2011)] D. Holland andM. Seltzer, “MulticoreOSes:
+Looking Forward from1991, er, 2011”, Proceedings of the 13thUSENIX con-
+ference on Hot topics in operating systems (2011), pages 33-33.
+
+[Levin (2013)] J. Levin, Mac OS X and iOS Internals to the Apple's Core, Wiley
+(2013).
+
+[Love (2010)] R. Love, Linux Kernel Development, Third Edition, Developer's
+Library (2010).
+
+[Robbins and Robbins (2003)] K. Robbins and 5. Robbins, Unix Systems
+Programming: Communication, Concurrency and Threads, Second Edition,
+Prentice Hall (2003).
+
+[Russinovich et al. (2017)] M. Russinovich, D. A. Solomon, and A. Ionescu,
+Windows Internals—Part 1, Seventh Edition, Microsoft Press (2017).

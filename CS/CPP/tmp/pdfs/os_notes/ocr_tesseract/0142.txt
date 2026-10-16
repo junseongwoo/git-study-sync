@@ -1,0 +1,45 @@
+196
+
+Chapter 4 스레드와 병행성
+
+있다. 예를 들어 태스크를 일정 시간 후에 실행되도록 스케줄 하거나 혹은 주기적
+으로 실행시킬 수 있다.
+
+스레드 풀에 있는 스레드의 개수는 CPU 수, 물리 메모리 용량, 동시 요청 클라이언
+트 최대 개수 등을 고려하여 정해질 수 있다. 더 정교하게 하려면 풀의 활용도를 보며 동
+적으로 풀의 크기를 바꾸어줄 수도 있다. 그러한 구조는 시스템 부하가 적을 때에는 더
+작은 풀을 유지하도록 함으로써 메모리 등의 소모를 더 줄일 수 있다. 그러한 구조 중하
+나인 Apple®] Grand Central Dispatch] 대해 본 절의 후반에 논의한다.
+
+Windows API 스레드 풀과 관련된 여러 함수를 제공한다. 스레드 풀 APIE 사
+용하는 것은 4.4.2절에서 설명한 Thread Create) 함수를 이용하여 스레드를 생성하
+는 것과 유사하다. 여기서 별도의 스레드에서 실행될 함수가 정의된다. 이 함수는 thin
+같은 형식을 따른다.
+
+DWORD WINAPI PoolFunction(PVOID Param) {
+
+:    /* this function runs as a separate thread. */
+
+PoolFunction()Z 가리키는 포인터가 스레드 & API 중 하나의 함수에 전달되고 &
+중의 한 스레드가 이 함수를 실행한다. 그러한 스레드 풀 API 중 한 함수가 QueuelUs-
+erWorkItem() 함수이며, 이 함수는 다음과 같은 세 매개변수를 전달받는다.
+ㅎㅇ LPTHREAD_START_ROUTINE Function: 별도의 스레드가 실행할 함수에 대한 포
+인터
+e PVOID Param: Function] 전달될 매개변수
+ㅎㅇ ULONG Flags: 스레드 풀이 스레드를 생성하고 관리하는 방법을 가리키는 플래그
+
+호출의 예는 다음과 같다.
+
+QueueUserWorkItem(&PoolFunction, NULL, 0);
+이 3&2 프로그래머를 대신하여 스레드 풀의 한 스레드가 PoolFunction() 함수를
+호출하게 한다. 이 예에서는 2001800065108() 함수에 아무런 매개변수도 전달하지 않
+는다. 플래그를 0으로 지정했기 때문에 스레드 생성에 관하여 스레드 풀에 특별한 지시
+를 하지 않는다.
+
+Windows 스레드 풀 APIQ] 다른 함수들은 주기적으로 함수를 호출하거나 비동기
+식인 입출력 요청이 완료되었을 때 함수를 호출하는 등의 기능을 제공한다.
+
+4.5.1.1 Java 스레드 풀 Java Thread Pools
+
+java.util.concurrent 패키지에는 여러 종류의 스레드 풀 구조에 대한 APIZ} 포함
+

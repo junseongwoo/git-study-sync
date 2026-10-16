@@ -1,0 +1,24 @@
+참고문현
+추가 자료
+615
+다중 레벨 디렉터리 구조는 MULTICS 시스템에서 처음 구현되었다 ([Organick
+(1972)]). 대부분의 운영체제는 이제 다중 레벨 디렉터리 구조를 구현한다. Linux
+([Love (2010)]), macOS ((Singh (2007)l), Solaris ([McDougall 및 Mauro
+(2007)1) 및 모든 Windows 버전((Russinovich 아 기. (2017)]) 등이 포함된다..
+Solaris 파일 시스템에 대한 일반적인 설명은 Sun System Administarion Guide: /
+devices and File Systems (http://docs.sun.com/app/docs/doc/817-5093)에 있다.
+Sun Microsystems에서 설계한 NFS (Network File System)를 사용하면 디
+렉터리 구조를 네트워크 컴퓨터 시스템에 분산시길 수 있다. NFS 버전 4는 RFC3505
+(http://www.ietf.org/rfc/rfc3530.txt)에 설명되어 있다.
+컴퓨터 전문 용어의 좋은 소스는 http://www.catb.org/esr/jargon/이다.
+참고문현
+[Love (2010)] R. Love, Linux KerneI Development, Th1rd Edition, Developer's
+Library (2010).
+[McDougall and Mauro (2007)] R. McDougall and J. Mauro, S01aris lnter-
+nals, Second Edit10n, Prentice Hall (2007).
+[Organick (1972)] E. 1. Orgamck, The Multics System: An Examination lts
+Structure, MIT Press (1972).
+[Russinovich 아 교. (2017)] M. Russinovich, D.A. S010mon, and A. lonescu,
+Windows Internals—Part 1, Seventh Edition, Microsoft Press (2017).
+[Singh (2007)] A. Singh, Mac OS X lnternals: A Systems Approach, Addi-
+son-Wesley (2007).

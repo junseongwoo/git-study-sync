@@ -1,0 +1,36 @@
+264     Chapter 5 CPU 스케줄링
+
+e IDLE
+
+e LOWEST
+
+*¢ BELOW NORMAL
+* NORMAL
+
+* ABOVE NORMAL
+e HIGHEST
+
+e TIME CRITICAL
+
+각 스레드의 우선순위는 그 스레드가 속한 우선순위 클래스와 그 클래스 안에서의
+상대적인 9-49 (relative priority)ol 기반을 둔다. 그림 5.28에 이 상관관계가 나와
+있다. 각 우선순위 클래스에 대응하는 HES 맨 위의 행에 나타나 있다. 왼쪽 열은 상대
+적인 우선순위들을 나타낸다. 예를 들어 480\8 NORMAL PRIORITY CLASS)
+속한 스레드의 상대 우선순위가 4010ㅅＬ이라면 그 스레드의 우선순위는 숫자로 10
+이 된다.
+
+게다가 각 스레드는 스레드가 속한 클래스의 우선순위 범위 안의 값을 기본 우선순
+위로 배정받는다. 각 클래스의 디폴트 기본 우선순위는 그 클래스의 NORMAL 해당
+하는 상대적인 우선순위를 따른다. 각 우선순위 클래스에 주어진 기본 우선순위는 아래
+와 같다.
+
+으 REALTIME PRIORITY CLASS—24
+
+* HIGH PRIORITY CLASS—13
+
+¢ ABOVE NORMAL PRIORITY CLASS—10
+이 NORMAL PRIORITY CLASS—38
+
+¢ BELOW NORMAL PRIORITY CLASS—6
+e IDLE PRIORITY CLASS—4
+

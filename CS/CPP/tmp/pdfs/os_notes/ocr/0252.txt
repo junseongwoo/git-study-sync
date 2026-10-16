@@ -1,0 +1,36 @@
+308
+Chapter 6 동기화 도구들
+vait (mutex) ;
+body ofF
+if (next-count > 0)
+signal (next) ;
+else
+signal (mutex) ;
+이처럼 하면 모니터 안에서의 상호 배제는 보징된다.
+이제 조건 변수를 세마포로 구현하는 방법에 관해 기술한다. 각 조건 x마다 x-sem
+이라는 이진 세마포와 x-count라는 정수형 변수를 도입하고 둘 다 초기 값을 0으로 준
+다. x•vait() 연산은 다음과 같이 구현할 수 있다.
+X-count十十 ;
+if (next-count > 0)
+signal (next) ;
+else
+signal (mutex) ;
+wait (x-sem) ;
+x-count—
+x•signal() 연산은 다음과 같이 구현할 수 있다.
+if (x-count > 0) {
+next—count十十 ;
+signal (x-sem) ;
+wait (next) ;
+next -C ount—
+이것은 Hoare와 Brinch-Hansen이 정의한 모니터를 구현하는 데 시용될 수 있다.
+본 장의 마지막에 있는 인용문헌 요약을 참조하라. 그러나 어떤 경우에는 일반적인 구현
+이 필요하지 않으며, 효율성 측면에서의 성능을 현저하게 높이는 것이 기능하다. 이 문제
+는 독자에게 연습문제 6.27로 남긴다.
+6.7.3 모니터 내에서 프로세스 수행 재개 Resuming Processes within a Monitor
+이제 모니터 안에서 프로세스가 수행 재개되는 순서로 주제를 전환한다. 조건 변수 x에
+여러 프로세스가 일시 중지 되어 있고 어떤 프로세스가 x.signal() 연산을 수행했다
+면, 일시 중지 되었던 프로세스 중 어느 프로세스가 수행 재개될 것인가를 어떻게 결정
+하는가? 한 가지 간단한 방법은 FCFS 순이c卜쪽 가장 오래 기다렸던 프로세스가 가장
+먼저 깨어나는 것이다. 그러나 많은 경우 이러한 간단한 스케줄링 기법은 충분하지 않다.
+이를 위해서 아래와 같은 형식의 conditional-wait 구조물을 시용할 수 있다. 이 구조

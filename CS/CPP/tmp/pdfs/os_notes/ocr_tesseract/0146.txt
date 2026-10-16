@@ -1,0 +1,49 @@
+200     Chapter 4 스레드와 병행성
+
+SumTask task = new SumTask(0, SIZE - 1, array) ;
+int sum = pool.invoke (task);
+
+완료되면 첫 HA invoke () of 대한 초기 호출은 배열의 합계를 반환한다.
+그림 4.18에 보인 SumTask 클래스는 (0-]01ㅁ을 사용하여 배열의 내용을 합산하
+는 분할-정복 알고리즘을 구현한다. 60※=*() 메소드를 사용하여 새 작업을 생성하고
+
+—_——————
+
+import java.util.concurrent.x*;
+
+public class SumTask extends RecursiveTask<Integer>
+
+{
+static final int THRESHOLD = 1000;
+
+private int begin;
+private int end;
+private int[] array;
+
+public SumTask(int begin, int end, int[] array) {
+this.begin = begin;
+this.end = end;
+this.array = array;
+
+}
+
+protected Integer compute() {
+if (end - begin < THRESHOLD) {
+int sum = 0;
+for (int i = begin; i <= end; i++)
+sum += array[il;
+
+return sum,
+
+else {
+int mid = (begin + end) / 2;
+
+SumTask leftTask = new SumTask(begin, mid, array) ;
+SumTask rightTask = new SumTask(mid + 1, end, array);
+
+leftTask.fork();
+rightTask. fork ();
+
+return rightTask.join() + leftTask.join();
+
+그림 44518 Java APIE 사용한 fork-join 계산

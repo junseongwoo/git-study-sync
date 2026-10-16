@@ -1,0 +1,47 @@
+7.4 .15\2에서의 동기화       341
+
+/* threadNumber is the thread that wishes to do some work */
+public void doWork(int threadNumber)
+
+  lock.lock();
+
+try {
+/ **
+* If it’s not my turn, then wait
+* until I’m signaled.
+*/
+if (threadNumber != turn)
+
+condVars [threadNumber] . await();
+
+/ **
+* Do some work for awhile ...
+*/
+VETS
+* Now signal to the next thread.
+*/
+turn = (turn + 1) % 5
+condVars [turn] .signal();
+
+catch (InterruptedException ie) { }
+
+finally {
+lock.unlock();
+
+}
+
+}
+
+그림 7.13 Java 조건 변수를 사용하는 예제
+
+원하면 그림 7.13의 doWork() 메소드를 호출하면서 스레드 HEE HE?) thread-
+100266의 값이 turn] 값과 일치하는 스레드만 진행할 수 있다. 다른 스레드는 차례를
+기다려야 한다.
+또한 ReentrantLock®} 5개의 조건 변수(스레드가 대기 중인 조건을 나타냄)를 A
+성하여 다음 차례의 스레드에 신호해야 한다. 다음 코드에 나와 있다.
+Lock lock = new ReentrantLock();
+Condition[] condVars = new Condition[5];
+for (int i = 0; i < 5; i++)
+condVars[i] = lock.newCondition();
+스레드가 doWork () of] 들어갈 때 threadNumber7} turnd} 같지 않은 경우 연관
+된 조건 변수에서 avait) 메소드를 호출하고 다른 스레드가 신호를 보낼 때만 재개한

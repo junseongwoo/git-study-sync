@@ -1,0 +1,51 @@
+326       Chapter 동기화 예제
+
+그림 7.7에 나와 있다. 각 철학자는 식사하기 전에 pickup) 연산을 반드시 호출해야
+한다. 이 행동은 철학자 프로세스의 일시 중지를 낳을 수도 있다. 연산이 성공적으로 끝
+나면, 철학자는 식사할 수 있다. 식사를 마친 후, 철학자는 605900ㅁ() 연산을 호출한다.
+따라서 철학자 iis 반드시 다음과 같은 순서로 610600()과 putdown() 연산을 호출해
+야 한다.
+DiningPhilosophers.pickup (i);
+eat                                          |
+
+DiningPhilosophers.putdown (i);
+
+monitor DiningPhilosophers
+
+{
+enum {THINKING, HUNGRY, EATING} state([5];
+
+condition self [5];
+
+void pickup(int i) {
+state[i] = HUNGRY;
+test(i);
+if (state[i] != EATING)
+self [i] .wait();
+}
+
+void putdown(int i) {
+state[i] = THINKING;
+test((i + 4) % 5);
+test((i + 1) % 5);
+
+}
+
+void test(int i) {
+if ((state[(i + 4) % 5] !'= EATING) &&
+(state[i] == HUNGRY) &&
+(state[(i + 1) % 5] != EATING)) {
+state[i] = EATING;
+self [i] .signal(Q);
+
+}
+}
+initialization. code() {
+for (int i = 0; i < 5; i++)
+state[i] = THINKING;
+}
+
+}
+
+Eo EE BI ch PE y= BT EY 으거 아에-23022200002320덕
+J” 7.7 식사하는 철학자 문제에 대한 모니터 해결안

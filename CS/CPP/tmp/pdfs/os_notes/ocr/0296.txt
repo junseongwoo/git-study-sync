@@ -1,0 +1,28 @@
+354
+Chapter 8 교착 상대
+/* thread-one runs in this function */
+void *dO vork-one(void *param)
+int done = 0;
+while (!done) {
+pthreadnutex-lock(&firstnutex) ;
+* DO some &℃rk
+pthread-mutex unlock(&second-mutex) ;
+pthreadnutex unlock(&first-mutex) ,
+done = 1;
+else
+pthreadnutex-unlock(&first-mutex) ;
+pthread-exit (0) ;
+/* thread-two runs in this function */
+void *dO-vork-쉼넣0 (void *param)
+xnt done = 0;
+vhile (!done) {
+pthread-mutex-lock(&second-mutex) ;
+if (pthread-mutex trylock(&firstnutex)) {
+* DO some work
+pthread-mutex unlock(&first-mutex) ;
+pthreadnutex unlock(&secondnutex) ;
+done = 1;
+else
+pthread-mutex unlock(&second-mutex) ;
+pthread-exit (0) •,
+그림 8.2 라이브락 코드 예제

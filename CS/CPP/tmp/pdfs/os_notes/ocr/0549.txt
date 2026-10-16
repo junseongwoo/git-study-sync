@@ -1,0 +1,35 @@
+13.5 메모리 사상 파일
+#include <vindovs.h>
+#include <stdio.h>
+int main(int argc, char *argvC])
+HANDLE hFi1e, hMapFiIe,
+LPVOID IpMapAddress;
+hFi1e = CreateFi1e("temp.txt", /* file name */
+GENERIC-READ | GENERIC WRITE, /* read/write access */
+0, /* no sharing 0f the file */
+NULL, /* default security */
+OPEN-ALWAYS, /* open new or existing file */
+FILEATTRIBUTnJORMAL, /* routine file attributes */
+NULL) ,• /* no file template */
+hMapFiIe = CreateFiIeMapping(hFiIe, /* file handle */
+NULL, /* default security */
+611
+PAGE-READWRITE, /* read/write access t0 mapped pages */
+0, /* map entire file */
+TEXT("SharedObject")); /* named shared memory object */
+1pMapAddress = MapView0fFiIe(hMapFiIe, /* mapped object handle */
+FILE-MAP-ALL-ACCESS, /* read/write access */
+0, /* mapped view 0f entire file */
+0);
+/* write tO shared memory */
+sprintf (1pMapAddress , "Shared memory message") ,
+UnmapViewOfFiIe (IpMapAddress) ;
+C10seHand1e (hFi1e) ;
+C10seHand1e (hMapFi1e) ;
+그림 13.15 Windows API를 사용하여 공유 메모리에 기록6는 생산자
+고 그에 대한 HANDLE을 반환받는다. 다음으로 CreateFi1eMapping() 함수를
+하여 이 파일 HANDLE의 사상을 생성한다. 파일 사상이 만들어지고 나면, MapView0f-
+Fi1e() 함수를 이용하여 사상된 파일의 가상 주소 공간상의 뷰를 생성한다. 사상된 파
+일의 뷰는 파일에서 프로세스 가상 주소 공간상에 사상된 부분을 나타낸다. 이것은 전체
+파일이 될 수도 있고 파일의 일부만일 수도 있다. 이 과정이 그림 13.15의 프로그램에 나
+와 있다.

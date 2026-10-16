@@ -1,0 +1,62 @@
+656
+Chapter 15 파일 시스Ei책 내부구소
+1
+불통 2
+파티션A
+파티션
+파일
+저장장치 1
+디렉터
+파티션 C
+파티션 D
+저장장치 2
+파일
+4
+저장장치 3
+그림 15.1 전형적인 파일 시스템의 구성
+• tmpfs—91발성 메인 메모리에 생성되고 시스템이 재부팅되거나 고장 났을 때 파
+일 시스템의 내용이 지위지는 “임시” 파일 시스템
+• objfs-디버거가 커널 심볼을 접근할 수 있게 하는 “가상” 파일 시스템(실제로는
+파일 시스템으로 보이는 커널 인터페이스)
+/devices
+/dev
+/system/contract
+/proc
+/etc/mnttab
+/etc/svc/volatile
+/system/object
+/lib/libc.so.l
+/dev/fd
+/var
+/tmp
+/var/run
+/opt
+/zpbge
+/ zpbge/backup
+/export/home
+/var/mail
+/var/spool/mqueue
+ufs
+devfs
+dev
+ctfs
+proc
+mntfs
+tmpfs
+objfs
+lofs
+ufs
+tmpfs
+tmpfs
+ufs
+zfs
+zfs
+zfs
+zfs
+zfs
+zfs
+zfs
+/zpbg
+/zpbg/zones
+그림 15.2
+Solaris 파일 시스템

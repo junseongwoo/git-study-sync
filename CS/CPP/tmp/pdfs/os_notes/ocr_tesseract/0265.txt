@@ -1,0 +1,47 @@
+322
+
+Chapter 7 동기화 예제
+
+제에 대한 기아 문제 없는 해결책을 설명하는 참고 문헌들은 이번 장의 끝에 있는 인용
+문헌 노트를 참조하기 바란다.
+A 번째 readers-writers 문제에 대한 해결안에서, reader 프로세스는 다음과 같은
+자료구조를 공유한다.
+semaphore rw.mutex = 1;
+
+semaphore mutex = 1;
+int read_count = 0;
+
+mutex®} rv_mutex 이진 세마포는 각각 18 초기화되고 read_count= 0으로 초
+기화된다. rw_mutex 세마포는 [0806『와 writer’ 모두 공유한다. mutex 세마포는
+read_countS 갱신함 때 상호 배제를 보장하기 위해 사용된다. 639_ㅇㅇㅁㄴ는 현재
+몇 개의 프로세스들이 객체를 읽고 있는지 알려준다. ru_mutex 세마포는 writerES
+위한 상호 배제 세마포이다. 이것은 또한 임계구역으로 진입하는 첫 HA reader}, 임
+계구역을 빠져나오는 마지막 reader] 의해서도 사용된다. 그러나 thE readers] 임
+계구역 안에 있는 동안 임계구역을 드나드는 68061들은 이것을 사용하지 않는다.
+
+그림 7.3은 writer 프로세스를 위한 코드를 보여준다. 그림 7.4는 reader 프로세
+스를 보여준다. \1ㅁ61가 임계구역에 있고 7?개의 6800가 기다리고 있으면 한 개의
+16306만이 rv_mutex®} 관련된 큐에 삽입되고, 나머지 ? - 1개의 readers mutex
+와 관련된 Fol 삽입됨을 주의하라. 또 writer’ signal (rw_mutex)-& 수행하면 대
+기 중인 여러 6306 혹은 대기 중인 한 개의 writer] 수행이 재개됨을 관찰할 수 있다.
+어느 쪽을 수행할지는 스케줄러가 결정한다.
+
+Readers-writers 문제와 그의 해결안들은 일반화 되어 몇몇 시스템에서는
+read-writer 락을 제공한다. Reader-writer 락을 획득할 때에는 972/인지 또는 쓰기인
+지의 모드를 지정해야만 한다. 프로세스가 공유 데이터를 읽기만 원한다면 읽기 모드의
+reader-writer 락을 요청한다. 공유 데이터의 수정을 원한다면 쓰기 모드의 read-writ-
+er 락을 요청해야 한다. 읽기 BEC] reader-writer 락은 여러 개의 프로세스가 동시에
+획득하는 것이 가능하다. Writers 공유 데이터를 배타적으로 접근해야 하므로 오직 하
+나의 프로세스만이 쓰기 모드의 26306ㄷ\11661 락을 획득할 수 있다.
+
+while (true) {
+wait (rw mutex);
+
+/* writing is performed */
+
+signal (rw mutex);
+
+}
+
+그림 7.3 Writer Z2M|AQ| 구조
+

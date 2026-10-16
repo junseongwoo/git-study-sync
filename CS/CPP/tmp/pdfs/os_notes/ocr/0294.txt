@@ -1,0 +1,31 @@
+352
+Chapter 8 교착 상대
+/* thread-one은 이 함수를 실행한다*/
+void *dO vork-one(void *param)
+pthreadnutex-lock(&firstnutex) ;
+pthreadnutex-lock(&second-mutex) ;
+* DO some 듬℃rk
+pthread-mutex unlock(&secondnutex) ,
+pthreadnutex unlock(&firstnutex) ;
+pthread-exit (0) ;
+/* thread-tvo는 이 함수를 실행한다*/
+void *dO vork-two(void *param)
+pthreadnutex그ock(&second-rnutex) ;
+pthreadnutex-lock(&first-mutex) •,
+* DO some work
+pthreadnutex unlock(&first-mutex) ,
+pthreadnutex-unlock(&secondnutex) ;
+pthread-exit (0) ;
+그림 8.1 교착상태 예제
+다음으로, 두 스레드(thread-one과 thread-tvo)가 생성되고 두 스레드는 mutex 락
+에 대한 접근 권한을 가진다. thread-one과 thread-two는 그림 8.1에 보인 것처럼
+각각 do-vork-one()과 do-work-two() 함수를 실행한다.
+이 예제에서 thread-one은 (1) first-mutex, (2) second-mutex 순서로 mu-
+tex 락을 획득하려고 하고 동시에 thread-two는 (1) second-mutex, (2) first-
+mutex 순서로 mutex 락을 획득하려고 한다. thread-one이 first-mutex를 획득하
+고 thread-two가 second-mutex를 획득하게 되면 교착 상대가 기능하다.
+교착 상대가 가능하더라도 thread-two가 락을 획득하려고 시도하기 전에
+thread-one이 first-mutex와 second-mutex를 획득하고 방출할 수 있다면 교착
+상태는 발생하지 않는다는 것을 유의하라. 이 예제는 교착 상태를 다루는 데에서의 문제
+점을 잘 설명한다. 어떤 특정 스게줄링 상황에서만 발생할 수 있는 교착 상대를 식별하
+고 검사하는 작업은 어렵다.

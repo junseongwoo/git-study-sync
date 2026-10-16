@@ -1,0 +1,53 @@
+7.3 POSIX 동기화     333
+
+Mutex 락과 마찬가지로 모든 세마포 함수는 성공하면 02, 오류 조건이 발생하면 0이
+아닌 값을 반환한다.
+
+7.3.3 POSIX 조건 #4 posix Condition Variables
+Pthread ©] 조건 변수는 6.7절에서 설명한 것과 유사하게 작동한다. 그러나 그 절에서
+조건 변수는 모니터 문맥 내에서 사용되머 모니터가 데이터 무결성을 보장하는 락 기법
+을 제공한다. Pthread= 일반적으로 C 프로그램에서 사용되며 (?에는 모니터가 없으므
+로 조건 변수에 mutex 락을 연결하여 락킹을 제공한다.
+
+Pthread ©] 조건 변수는 256006390_0009_* 데이터 유형
+cond_init() 함수를 사용하여 초기화된다. 다음 코드는 조
+을 생성하고 초기화한다.
+
+pthread mutex _t mutex;
+pthread cond_t cond.var;
+
+사용하고 pthread _
+
+o
+=
+A 변수 및 관련 mutex 2
+
+pthread mutex init (&mutex,NULL);
+pthread _cond_init(&cond var,NULL) ;
+
+pthread_cond_wait() 함수는 조건 변수를 기다리는 데 사용된다. 다음 코드는
+Pthread 조건 변수를 사용하여 스레드가 24 a = b7} 06가 될 때까지 대기하는 방
+HE 보여준다.
+
+pthread mutex lock (&mutex) ;
+
+while (a != b)
+pthread _cond_wait(&cond var, é&mutex);
+
+pthread mutex unlock (&mutex) ;
+
+조건 변수와 연관된 mutex ZH pthread_cond_wait() 함수가 호출되기 전에
+획득되어야 한다. 이는 가능한 경쟁 조건으로부터 조건 절의 데이터를 보호하는 데 사용
+되기 때문이다. 이 락이 획득되면 스레드가 조건을 확인할 수 있다. 270] true” 아닌
+경우 스레드는 ㅁ46× 락과 조건 변수를 매개변수로 전달하여 pthread _cond_wait ()
+를 호출한다. pthread_cond_wait() SE 호출하면 mutex 락이 해제되어 다른 스레드
+가 공유 데이터에 접근하고 해당 값을 갱신하여 조건 절이 606로 계산될 수 있다. (프로
+그램 오류를 방지하려면 ASE 받은 후 조건을 다시 확인할 수 있도록 조건 절을 루프
+내에 배치하는 것이 중요하다.)
+
+공유 데이터를 변경하는 AY EL pthread_cond_signal() 함수를 호출하여 =
+건 변수를 기다리는 하나의 스레드에 신호할 수 있다. 아래에 설명되어 있다.
+
+pthread mutex lock (&mutex) ;
+a = b;
+
