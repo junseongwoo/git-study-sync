@@ -2029,6 +2029,38 @@
       "topics": [
         "요약과 원문 복습 범위"
       ]
+    },
+    {
+      "number": "3.3.2.1",
+      "title": "Android 프로세스 계층",
+      "source": {
+        "pdf": [
+          83
+        ],
+        "printed": [
+          136
+        ]
+      },
+      "topics": [
+        "상위 학습 절의 설명·표·과정에 통합해 정리함: Android 프로세스 계층"
+      ]
+    }
+  ],
+  "coverage_extra": [
+    {
+      "number": "3.3.2.1",
+      "title": "Android 프로세스 계층",
+      "source": {
+        "pdf": [
+          83
+        ],
+        "printed": [
+          136
+        ]
+      },
+      "topics": [
+        "상위 학습 절의 설명·표·과정에 통합해 정리함: Android 프로세스 계층"
+      ]
     }
   ]
 }

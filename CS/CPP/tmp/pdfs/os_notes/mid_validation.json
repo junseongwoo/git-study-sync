@@ -1,0 +1,47 @@
+{
+  "issues": [],
+  "stats": [
+    {
+      "chapter": 6,
+      "sections": 13,
+      "prose_chars": 6398,
+      "codes": 4,
+      "figures": 0,
+      "read_pages": 35
+    },
+    {
+      "chapter": 7,
+      "sections": 9,
+      "prose_chars": 4725,
+      "codes": 4,
+      "figures": 2,
+      "read_pages": 29
+    },
+    {
+      "chapter": 8,
+      "sections": 12,
+      "prose_chars": 4400,
+      "codes": 0,
+      "figures": 5,
+      "read_pages": 33
+    },
+    {
+      "chapter": 9,
+      "sections": 21,
+      "prose_chars": 8003,
+      "codes": 0,
+      "figures": 3,
+      "read_pages": 42
+    },
+    {
+      "chapter": 10,
+      "sections": 29,
+      "prose_chars": 9786,
+      "codes": 2,
+      "figures": 6,
+      "read_pages": 62
+    }
+  ],
+  "all_ocr_winrt": 615,
+  "all_ocr_tesseract": 615
+}
