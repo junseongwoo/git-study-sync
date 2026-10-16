@@ -1,0 +1,43 @@
+148
+Chapter 3 프로세스
+#include
+#include
+#include
+#include
+#include
+#include
+#include
+<stdio.h>
+<stdlib.h>
+<string. h>
+<fcntl.h>
+<sys/shm .h>
+<sys/stat .h>
+<sys/mman. h>
+int main()
+/* the size (in bytes) of shared memory 0bJect */
+const int SIZE = 4096;
+/* name 0f the shared memory 0bJect */
+const Char *na.me =
+/* strings written tO shared memory */
+const char *message-0 = "He110" •
+const char *message—l
+"Wor1dl "•
+/* shared memory file descriptor */
+int fd;
+/* pomter tO shared memory obect */
+char *ptr;
+/* create the shared memory object */
+fd = shm-open(name,O-CREAT | 0꼬D\R,0666) ;
+/* configure the size of the shared memory 0bJect */
+ftruncate(fd, SIZE) •,
+/* memory map the shared memory object */
+ptr = (char *)
+mmap(O, SIZE, PROT-READ I PROT WRITE, MAP-SHARED, fd, 0) ,•
+/* write t0 the shared memory object */
+sprintf (ptr , "%s" ,message-0) •,
+ptr += str1en(message-0) •,
+sprintf (ptr , "%s" ,message-l) ;
+ptr += strlen(message-l) •,
+return 0 ;
+그림 3.16 POSIX 공유 메모리 API를 설명하는 생산자 프로세스

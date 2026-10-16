@@ -1,0 +1,32 @@
+4.4 스레드 라이브러리
+#include <pthread.h>
+#include <stdio.h>
+#include <stdlib.h>
+int sum; /* this data is shared by the thread(s) */
+187
+void *runner(void *param) ; /* threads call this function */
+int main(int argc, char *argvC])
+pthread-t tid; /* the thread identifier */
+pthread attr t attr; /* set Of thread attributes */
+/* set the default attributes Of the thread */
+pthread-attränit(&attr) ;
+/* create the thread */
+pthread create(&tid, &attr, runner, argv[l]) ;
+/* wait for the thread tO exit */
+pthread-join (tid , NULL) ,•
+printf("sum = %d\n" ,sum) ,•
+/* The thread \i11 execute in this functlon */
+void *runner(void *param)
+int 1, upper = atoi(param) ;
+sum = 0;
+for (i = 1; <= upper; 1++)
+sum 十= 1 ;
+pthread-exit(O) ;
+그림 4.11 Pthreads API를 사용하는 다중 스레드 C 프로그램
+이 프로그램을 조금 더 자세히 살펴보자. 모든 Pthreads 프로그램은 pthread•
+h 헤더 파일을 포함해야 한다. pthredad-t tid 문장은 우리가 생성할 스레드를 위
+한 식별자를 선언한다. 각 스레드는 스택의 크기와 스케줄링 정보를 포함한 속성의 집
+합을 갖는다. pthread-attr-t attr 선언은 스레드를 위한 속성을 나타낸다. 우리는
+pthread-attr-init(&attr) 함수에서 속성을 지정한다. 우리는 속성을 지정하지 않
+았기 때문에 디폴트 속성을 久卜옴한다. (5장에서 Pthreads API가 제공하는 스케줄링 속
+성에 대해 논의한다.) 별도의 스레드는 pthread-create()를 이용하여 생성한다. 스레

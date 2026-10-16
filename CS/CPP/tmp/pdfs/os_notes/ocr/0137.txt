@@ -1,0 +1,31 @@
+4.4 스레드 라이브리라
+Java에서의 Lambda 표현식
+191
+Java 버전 1.8부터 Java는 Lambda 표현식을 도입하여 스레드를 작성하는 데 월
+,산 더 명확한 구문을 허용한다. Runnabie9 구현하는 별도의 클래스를 정의하는
+대신 Lambda 표현식을 대신 사-통할 수 있다,
+Runnab1e task * () -> {
+System.out•print1n("i am a thread. ") ;
+Thread worker = nev Thread(task) ,
+worker. start () •,
+Lambda 표현식과 closure라 불리는 유사한 함수는 함수형 프로그래밍 언어의
+두드러진 특징이며 Python, C++ 및 C#을 비롯한 여러 비함수형 프로그래밍 언
+어에서 제공된다. 이 장의 뒷부분에 나오는 예에서 볼 수 있듯이 Lamdba 표현식
+은 종종 병렬 응용 프로그램 개발을 위한 간단한 구문을 제공한다.
+1
+래스의 인스턴스를 전달한 다음 Thread 객체의 start() 메소드를 호출해야 한다. 이
+순서가 다음에 나와 있다.
+Thread worker = new Thread(new Task()) ,•
+worker. start() ;
+새 Thread 객체에 대해 start() 메소드를 호출하면 두 가지 작업이 수행된다.
+1. 메모리가 할당되고, JVM 내에 새로운 스레드가 초기화된다.
+2. run() 메소드를 호출하면 스레드가 JVM에 의해 수행될 자격을 갖게 한다. (다시
+한번 주의: run() 메소드를 직접 호출하지 마라. 그 대신 start() 메소드를 호출
+하고 이 메소드가 우리 대신 run() 메소-드를 호출한다.)
+Pthreads 및 Windows 라이브러리의 부모 스레드는 pthread-join() 및 Wait-
+()를 시용하여 각 스레드가 완료되기를 기다렸다가 계속 진행한다.
+Java의 join() 메소드는 유사한 기능을 제공한다. (join()은 우리가 무시하기로 선택
+한 1nterruptedException을 던질 수 있다.)
+try {
+worker. join() ;
+catch (InterruptedException ie) { }

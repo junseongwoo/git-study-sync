@@ -1,0 +1,6 @@
+218
+Chapter 4 스레드와 병행성
+[Russinovich 아 교. (2017)] M. Russinovich, D.A. S()101Ⅸ)11, and A. lonescu
+Windows Internals—Part 1, Seventh Ediåon, Microsoft Press (2017).
+[Vahalia (1996)] U. VahaIia, llnix lnternals: The New Frontiers, Prentice Hall
+(1996).

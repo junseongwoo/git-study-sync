@@ -1,0 +1,25 @@
+참고문한
+173
+(Harold (2005)1는 Java로 소켓 프로그래밍을 다루고 있다. Android RPC에 대
+한 자세한 내용은 https://developer.android.com/guide/components/aidl.html
+에서 확인할 수 있다. [Hart (2005)1 및 [Robbins and Robbrns (2003)1는 각각 Win-
+dows 및 UNIX 시스템의 파이프를 다룬다.
+Android 개발에 대한 지침은 https://developer.android.com/guide/에서 찾을
+수 있다.
+참고문현
+[Harold (2005)] E. R. HaroId, Java Network Programming, Third Edition,
+O'ReilIy & Associates (2005).
+[Hart (2005)] J. M. Hart, Windows System Programming, Th1rd Ediåon, Add1-
+son-WesIey (2005).
+[HoIIand and SeItzer (2011)] D. HoIIand andM. SeItzer, "MuIticoreOSes:
+Look1ng Forward fmm1991, er, 2011″, Proceedings the 13thUSENIX con-
+ference on Hot topics in operating systems (2011), pages 33-33.
+[Levin (2013)] J. Levin, Mac OS X and iOS lnternals to the Apple's Core, Wiley
+(2013).
+[Love (2010)] R. Love, Linux Kernel Development, Third Ediåon, Developer's
+Library (2010).
+[Robbins and Robbins (2003)] K. Robbins and Robbins, llnix Systems
+Programming: Communication, Concurrency and Threads, Second Edihon,
+Prentice HaII (2003).
+[Russinovich et 교. (2017)] M. Russinovich, D. A. SoIomon, and A. lonescu,
+Windows Internals—Part 1, Seventh Edition, Microsoft Press (2017).

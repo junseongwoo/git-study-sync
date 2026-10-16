@@ -1,0 +1,21 @@
+534 Chapter 11 대용량 저장장치 구조
+참고문현
+[Kim 아 교. (2009)1 J. Kim, Y. 이1, E. Kim, C. D. Lee, and S. Noh, "Disk
+Schedulers for SoIid State Drivers", Pmceedings 0f the seventh ACM interna-
+tional conference 0" Embedded 코)尹t(,a,℃ (2曲9), pages 295-304.
+[Love (2010)] R. Love, Linux Kernel Developnent, Third Edition, Developer's
+Library (2010).
+[McDougall and Mauro (200가] R. McDougall and J. Mauro, Solaris lnter-
+nals, *01년 Edihon, Prentice HaIl (2007).
+[Mesnier 아 al. (2003)] M. Mesmer, G. Ganger, and E. R1deI, ' Object-based
+storage , IEEE ConnnunicationsMagazine, V01ume 41, Number 8 (2003),
+pages 84-99.
+[Patterson 아 교. (19891 D. A. Patterson, G. Gibson, R. H. Katz, "A Case
+for Redundant Arrays of lnexpensive Disks (RAID)”, Proceedings of the
+ACM SIGMOD lnternational Conference on the Management Data (1988),
+pages 109-116.
+[Russinovich 아 교. (201가] M.Russmovich, D. A. %1皿1이1, A. lonescu,
+Windows Internals-Part 1, Seventh Edition, Microsoft Press (2017).
+[Services (2012)] E. E. Services, lnformation Storage and Management: Stor-
+ing, Managzng, and Protecting DigitaI lnformation in Classic, Virtualized, and
+CIoud Environments, WiIey (2012).

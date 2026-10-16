@@ -1,0 +1,43 @@
+124
+Chapter 3
+프로세스
+Linux의 프로세스 표현
+Linux 운영체제의 프로세스 제어 볼록은 c 구조체 task-struct로 표현되는데,
+이에 대한 정의는 커널 소스 코드 디렉터리에 존재하는 <linux/sched•h> 헤더
+파일에 있다. 이 구조체는 프로세스의 상태, 스케줄링과 메모리 관리 정보, 열린 파
+일 및 부모 프로세스와 자식과 형제 프로세스의 리스트를 가리기는 포인터 등의 프
+로세스를 나타내기 위해 모든 필요한 정보를 가지고 있다[프로세스의 부모 프로세
+스는 그 프로세스를 생성한 프로세스이고 자식 프로세스는 그 프로세스가 만든 모
+든 프로세스를 의미한다. 형제 프로세스(siblings)는 부모 프로세스가 같은 자식
+프로세스이다」. 이 필드의 일부분은 다음과 같다.
+10뻄 state ,,
+struct sched entity ;
+struct task struct *parent ;
+struct 1ist head children;
+struct files struct *files ,•
+struct struct
+/* 프로세스 상태 */ 』
+/* 스케줄링 정보 */
+/* 이 프로세스의 부모 */
+/* 이 프로세스의 자식들
+/* 오픈 파일 */
+/* 이 프로세스의 주소 공간
+예를 들어 프로세스의 상태는 이 구조체의 필드 10堊靌 state에 의해 표시된다.
+Linux 커널 안에서 모든 활성 프로세스들은 task-struct의 이중 연결 리스트로
+표현된다. 다음 그림에서 보이는 것처럼 커널은 현재 실행 중인 프로세스를 가리기
+는 포인터를 유지한다(current)•
+struct task_struct
+프로세스 정보
+struct task struct
+프로세스 정보
+1
+current
+(현재 실행 중인 프로세스)
+struct task_struct
+프로세스 정보
+명시된 프로세스에 상응하는 task-struct의 필드를 조작하는 방법을 설명하
+기 위하여 시스템이 현재 실행 중인 프로세스의 상태를 nev-state로 바꾸려고 한
+다고 가정하자. current가 현재 실행 중인 프로세스를 가리키고 있다면 과음 명
+령문에 의해 상태가 바뀌게 된다.
+current—>state new—state ;
+1

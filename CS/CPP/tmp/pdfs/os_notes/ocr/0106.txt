@@ -1,0 +1,35 @@
+3.7 IPC 시스템의 사래
+159
+/* set up security attributes allowing pipes t0 be inherited */
+SECURITY-ATTRIBUTES sa = {sizeof (SECURITY-ATTRIBUTES) ,NULL,TRUE} •,
+/* allocate memory */
+ZeroMemory(&pi, sizeof(pi)) •,
+/* create the pipe */
+if (!CreatePipe(&ReadHandIe, &WriteHandIe, &sa, 0)) {
+fprintf(stderr, "Create Pipe FaiIed") ;
+return 1 •,
+/* establish the START INFO structure for the child process */
+GetStartupInf0 (&si) ;
+si .hStdOutput = GetStdHandIe(STD-OUTPUT-HANDLE) ;
+/* redirect standard input t0 the read end Of the pipe */
+si .hStdInput = ReadHandIe;
+si . dwF1ags = STARTF USESTDHANDLES ,•
+/* don't a110\ the child t0 inherit the write end 0f pipe */
+SetHandIeInformation(WriteHandIe, HANDLE-FLAG-INHERIT, 0) ,
+/* create the child process */
+CreateProcess(NULL, t'child.exe", NULL, NULL,
+TRUE, /* inherit handles */
+0, NULL, NULL, &si, &pi) ,
+/* close the unused end Of the pipe */
+C10seHand1e (ReadHand1e) ;
+/* the parent writes to the pipe */
+if (!WriteFiIe(WriteHandIe, message,BUFFER-SIZE,&written,NULL))
+fprintf(stderr, "Error wrlting t0 pipe. ") ,
+/* close the write end of the pipe */
+C10seHandIe (WriteHand1e) ;
+/* wait for the child 七0 exit */
+WaitForSing1eObject .hProcess, INFINITE) ;
+C10seHand1e (pi. hProcess) ,•
+CIoseHand1e (pi . hThread) ;
+return 0 •,
+그림 3.24 그림 3.23 프로그램의 계속

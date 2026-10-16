@@ -1,0 +1,35 @@
+221
+load store
+add stO『e
+read from file
+wait for I/O
+store increment
+index
+write tO file
+wait for ″0
+load store
+add store
+read from file
+wait forl/O
+5.1 기본 개념
+CPU burst
+|/0 burst
+CPU burst
+I/O burst
+CPU burst
+I/O burst
+그림 5.1 CPU와 |/0 버스트(burst)의 교차
+택해 실행해야 한다. 선택 절치는 CPU 스케줄러에 의해 수행된다. 스케줄러는 실행 준
+비가 되어 있는 메모리 내의 프로세스 중에서 선택하여, 이들 중 하나에게 CPU를 할당
+한다.
+준비 큐는 반드시 선입선출대FO) 방식의 큐가 아니어도 되는 것에 유의해야 한다.
+여러 가지 스케줄링 알고리즘들을 고려할 때 알게 되겠지만, 준비 큐는 선입선출 큐, 우
+선순위 큐, 트리 또는 단순히 순서가 없는 연결 리스트로 구현할 수 있다. 그러나 개넘적
+으로 볼 때 준비 큐에 있는 모든 프로세스는 CPU에서 실행될 기회를 기다리며 대기하
+고 있다. 큐에 있는 레코드들은 일반적으로 프로세스들의 프로세스 제어 블록(PCB)들
+0
+5.1.3 선점 및 비선점 스케줄링 Nonpreemptive scheduling
+CPU 스케줄링 결정은 다음의 네 가지 상황에서 발생할 수 있다.
+1. 한 프로세스가 실행 상태에서 대기 상태로 전환될 때(예를 들어, I/O 요청이나 자
+식 프로세스가 종료되기를 기다리기 위해 wait()를 호출할 때)
+2. 프로세스가 실행 상태에서 준비 완료 상태로 전환될 때(예를 들어, 인터럽트가 발

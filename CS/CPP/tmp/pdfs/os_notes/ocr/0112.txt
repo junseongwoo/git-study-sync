@@ -1,0 +1,33 @@
+3.8 글라이언트 시비 환경에서 통신
+import java.net.*;
+import java.io.*;
+public class DateCIient
+public static 170id main(StringC] args) {
+try {
+/* make connection tO server socket */
+Socket sock = new SO(ket("127.0.0.1" ,6013);
+InputStream in = sock•getInputStream() ,•
+BufferedReader bin = new
+BufferedReader(new InputStreamReader(in) ) ,•
+/* read the date from the socket */
+String line;
+while ( (line = bin.readLine()) != null)
+System. out. println (line) ,•
+/* close the socket connection*/
+sock. close() ,•
+catch (IOException ioe) {
+System. err. println (ioe) ,•
+그림 3.28 Date 클라이언트
+돌아가기 때문에 원격 서비스를 제공하기 위해서는 메시지 기반 통신을 해야 한다.
+165
+IPC 방식과는 달리 RPC 통신에서 전달되는 메시지는 구조화되어 있고, 따라서 데
+이터의 패킷 수준을 넘어서게 된다. 각 메시지에는 원격지 포트에서 listen 중인 RPC
+디먼의 주소가 지정되어 있고 실행되어야 할 함수의 식별八b, 그리고 그 함수에게 전달되
+어야 할 매개변수가 포함된다. 그런 후에 요청된 함수가 실행되고 어떤 출력이든지 별도
+의 메시지를 통해 요청자에게 반환된다.
+이 문맥에서 포트는 단순히 메시지 패기지의 시작 부분에 포함되는 정수이다. 시스
+템은 일반적으로 네트워크 주소는 하나씩 가지지만 그 시스템에서 지원되는 여러 서비
+스를 구별하기 위해 포트를 여러 개 가질 수 있다. 원격 프로세스가 어떤 서비스를 받
+고자 하면 그 서비스에 대응되는 적절한 포트 주소로 메시지를 보내야 한다. 예를 들어
+한 시스템이 자신의 八卜옿자 목록을 다른 시스템에서 알 수 있도록 원하면, 관련(그러한
+RPC 서비스를 제공해 주는) 디먼을 port 3027과 같은 곳에 등록시켜 놓는다. 그러면

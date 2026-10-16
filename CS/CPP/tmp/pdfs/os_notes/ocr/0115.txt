@@ -1,0 +1,61 @@
+168
+Chapter 3 프로세스
+클라이언트
+사용자는 RPC 에시지를
+프로시저 X에게 보내기
+위하여 커널은 호출한다.
+커널은 포트 번호를 찾기
+위해 matchmaker에 메
+시지를 보낸다.
+커널은 포트 PS 사용자
+RPC 메시지에 넣는다.
+커널은 RPC를 보낸다.
+커널 응답을 받고 사용자
+에게 메시지를 넘긴다.
+에시지
+From: client
+TO.• server
+Port: matchmaker
+Re. addrqss
+for RPC X
+From: server
+To: client
+Port: kernel
+Re. RPC X
+PO贊: P
+From. client
+TO. server
+Port: port P
+<contentS>
+From: RPC
+Port: P
+To. client
+Port: kernel
+<output>
+서버
+matchmaker는 메
+시지를 수신하고 해
+답을 찾는다,가壑다 ,
+matchmaker는 포!
+트 P를 가진 클라이,
+언트에 응답한다.
+P를 listen하
+고 있던 다먼이1 메
+시지를 수신한다.
+디먼 프로세스는 요
+청을 처리하고 송신
+출력을 처리한다,
+그림 3.29 RPC (remote procedure call)의 실행
+기능을 구현할 수 있다. 이러한 응용 프로그램 구성요소 중 하나는 사용자 인터페이스가
+없지만 백그라운드로 실행되며 장기 실행 연산을 실행하거나 원격 프로세스에 대한 작
+업을 수행하는 서비스이다. 서비스의 예로는 백그라운드에서 음악을 재생하고 다른 프로
+세스 대신 네트워크 연결을 통해 데이터를 검색하여 데이터를 다운로드 할 때 다른 프로
+세스가 실행 중단되는 것을 방지할 수 있다. 클라이언트 앱이 bindService() 서비스
+메소드를 호출하면 해당 서비스가 “바운드” 되어 메시지 전달 또는 RPC를 사용하여 클
+라이언트-서버 통신을 제공할 수 있다.
+바운드 서비스는 Android 클래스 Service를 상속해야 하며 클라이언트가 bind-
+service()를 호출할 때 호출되는 onBind() 메소드를 구현해야 한다. 메시지 전달의
+경우 onBind() 메소드는 Messenger 서비스를 반환하며, 이 서비스는 클라이언트에서
+서비스로 메시지를 보내는 데 사용된다. Messenger 서비스는 단방향 통신만 가능하다.
+서비스가 클라이언트에게 응답을 보내야 하는 경우, 클라이언트도 Messenger 서비스
+를 제공해야 하며 서비스로 보내진 Message 객체의 rep1yTo 필드에 포함되어 제공된

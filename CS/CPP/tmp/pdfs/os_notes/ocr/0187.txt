@@ -1,0 +1,34 @@
+6.4 스레드 스게출랑
+#include <pthread.h>
+#include <stdio.h>
+#define NUM-THREADS 5
+int main(int argc, char *argvC])
+int 1, scope;
+pthread-t tid CNUM THREADS] ;
+pthread-attr-t attr •,
+/* get the default attributes */
+pthread attr-init (&attr) 1
+/* first inql.llre on the current scope */
+if (pthread-attr-getscope(&attr, &scope) != 0)
+241
+fprintf(stderr, "Unab1e t0 get scheduling scope\n") •,
+else
+if (scope == PTHREAD-SCOPE-PROCESS)
+printf ( "PTHREAD-SCOPE-PROCESS " ) ;
+else if (scope == PTHREAD-SCOPE-SYSTEM)
+printf ( "PTHREAD-SCOPE-SYSTEM" ) ;
+else
+fprintf(stderr, "111ega1 scope value.\n") ;
+/* set the scheduling algorithm tO PCS or SCS */
+pthread-attr-setscope (&attr, PTHREAD-SCOPE-SYSTEM) ;
+/* create the threads */
+for (1 = 0; NUM THREADS; i++)
+pthread-create (&tid [1] , &attr , runner , NULL) ;
+/* now J0in on each thread */
+for (i = 0; i 〈 NUM-THREADS; 1++)
+pthread-join(tid [피 , NULL) ;
+/* Each thread \i11 begin control in this function */
+void *runner (void *param)
+/ * dO some work
+pthread-exit (0) ;
+그림 5.10 Pthreads 스케줄링 API

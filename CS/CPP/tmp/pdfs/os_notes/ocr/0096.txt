@@ -1,0 +1,40 @@
+3.7 IPC 시스템의 사래
+#include
+<stdio.h>
+#include <stdlib.h>
+#include <fcntl.h>
+<sys/shm.h>
+#include
+<sys/stat .h>
+#include
+<sys/mman.h>
+#include
+int main()
+/* the size (in bytes) 0f shared memory 0bJect */
+const int SIZE = 4096;
+/* name Of the shared memory obJect */
+const Char *name
+/* shared memory file descriptor */
+int fd;
+/* pointer tO shared memory obect */
+char *ptr;
+/* open the shared memory 0bJect */
+fd = shm-open(name, O-RDONLY, 0666) •,
+/* memory map the shared memory 0bJect */
+(char *)
+ptr
+149
+mmap(O, SIZE, PROTNLEAD I PROT WRITE, MAP-SHARED, fd, 0);
+/* read from the shared memory object */
+printf("%s" , (char *)ptr) ;
+/* remove the shared memory object */
+shm unlink(name) ;
+return 0;
+그림 3.17 POSⅨ공유 메모리 API를 설명하는소비자프로서스
+3.7.2 Mach 메시지 전달 Mach Message Passing
+다음 메시지 전달의 예로 Mach 운영체제를 고려한다. Mach는 특히 분산 시스템용으
+로 설계되었지만 가에서 논의된 것처럼 macOS 및 iOS 운영체제에 포함된 사실이 입
+중하듯이 데스크톱 및 모바일 시스템에도 적합하다.
+Mach 커널은 프로세스와 유사하지만 제어 스레드가 많고 관련 자원이 적은 다중
+태스크의 생성 및 제거를 지원한다. 모든 태스크 간 통신을 포함하여 Mach에서 대부쁜
+의 통신은 메시지로 수행된다. Mach에서 포트(port)라고 하는 메일박스로 메시지를 주

@@ -1,0 +1,35 @@
+258
+Chapter 5 CPU 스케술렁'
+#include <pthread.h>
+#include <stdio.h>
+#define NUM THREADS 5
+int main(int argc, char *argv[])
+xnt 1, polxcy;
+pthread-t tid [NUM-THREADS] ;
+pthread attr-t attr;
+/* get the default attributes */
+pthread attr-init (&attr) ;
+/* get the current scheduling policy */
+if (pthread attr getschedpolicy(&attr, &policy) != 0)
+fprintf(stderr, "UnabIe t0 get policy. \n") ;
+else
+if (policy == SCHED-OTHER)
+printf ( " SCHED-0THER\n " ) ,•
+else if (policy == SCHED-RR)
+printf ( "SCHED-RR\n") ;
+else if (policy == SCHED-FIFO)
+printf ( "SCHED-FIFO\n " ) ;
+/* set the scheduling policy - FIFO, RR, or OTHER */
+if (pthread-attr-setschedpolicy(&attr, SCHED-FIFO) != 0)
+fprintf(stderr, "Unab1e t0 set policy.\n") ;
+/* create the threads */
+for (1 = 0; i < NUM-THREADS; 1++)
+pthread-create (&tid [1] , &attr , runner , NULL) ,•
+/* no듬7 J0in on each thread */
+for (1 = 0; i 〈 NUM THREADS; i++)
+pthread-join(tid[i] , NULL) ;
+/* Each thread \i11 begin control in this functlon */
+void *runner(void *param)
+/ * dO some work
+pthread-exit (0) •,
+그림 5.25 POSIX 실시간 스케줄링 API

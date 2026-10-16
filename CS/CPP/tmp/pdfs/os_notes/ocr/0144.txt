@@ -1,0 +1,30 @@
+198
+Chapter 4 스레드와 병행성
+xmport ava. util . concurrent . * ;
+public class ThreadP001Examp1e
+public static void main(String[] args) {
+int numTasks = Integer•parseInt(args[O] .trim()) ;
+/* Create the thread P001 */
+ExecutorService P001 = Executors.newCachedThreadP001() ,
+/* Run each task using a thread in the P001 */
+for (int i = 0; i 〈 numTasks; i十十)
+pool.execute(new Task()) ;
+/* Shut down the P001 once a11 threads have completed */
+P001. shutdown() ;
+그림 4.15 Java에서 스레드 풀 생성하기
+된 휴리스틱을 시용하여).
+4.5.2.1 Java에서의 Fork JOin Fork Join in Java
+Java는 Quicksort 및 Mergesort와 같은 재귀 분할-정복 알고리즘과 함께 시용되도록
+설계된 버전 1.7 API에 fork join 라이브러리를 도입하였다. 이 라이브러리를 시용하여
+분할-정복 알고리즘을 구현할 때 분할 단계 동안 별도의 작업이 fork 되고 원래 문제의
+작은 부분집합이 할당된다. 이러한 별도의 작업이 병행하게 실행할 수 있도록 알고리즘
+이 설계되어야 한다. 어떤 시점에서, 작업에 할당된 문제의 크기는 직접 해결할 수 있을
+만큼 작아서 추가 작업을 만들지 않아도 된다. Java fork-join 모델의 일반적인 재귀 알
+고리즘은 다음과 같다.
+Task (problem)
+If problem is small enough
+메인 스레드
+메인 스레드
+7
+그림 4.16
+Fork-join 병렬 처리

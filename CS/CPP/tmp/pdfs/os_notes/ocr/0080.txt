@@ -1,0 +1,36 @@
+3.3 프로세스에 대한 인산
+133
+다. 더욱이 fork()가 아무런 인자가 전달되지 않는 반면에 CreateProcess()는 10개
+이상의 매개변수를 요구한다.
+그림 3.10의 C 프로그램은 mspaint•exe를 적재하는 자식 프로세스를 생성하는
+CreateProcess()를 설명하고 있다. 우리는 CreateProcess()에게 전달되는 10개
+의 매개변수 중에서 많은 수를 디폴트 값으로 선택하였다. Windows API의 프로세스
+생성과 관리의 자세한 사항에 대해 궁금한 독자는 이 장의 마지막에 있는 인용문헌 노트
+#include <stdio . h>
+#include <windows . h>
+int main(VOID)
+STARTUPINFO si ;
+PROCESS-INFORMATION pi;
+/* 메모리 할당 */
+ZeroMemory(&si, sizeof(si)) •,
+si.cb = sizeof(si) ;
+ZeroMemory(&pi, sizeof(pi)) ;
+/* 자식 프로세스 생성 */
+if (!CreateProcess(NULL, /* 명령어 라인人용 */
+"C:\\WINDOWS\\system32\\mspaint.exe" , /* 명령어 라인 */
+NULL, /* 프로세스를 상속하지 말 것 */
+NULL, /* 스레드 핸들을 상속하지 말 것 */
+FALSE, /* 핸들 상속 디제이블 */
+0, /* 생성 플래그 없음 */
+NULL, /* 부모 환경 블록 사용 */
+NULL, /* 부모 프로세스가 존재하는 디렉터리 사용 */
+&si,
+fprintf(stderr, "Create Process FaiIed") ;
+return -1 ;
+/* 부모 프로세스가 자식 프로세스가 끝나기를 기다림 */
+WaitForSingleObject(pi.hProcess, INFINITE) ,•
+printf ("ChiId Comp1ete") ;
+/* 핸들 닫기 */
+CIoseHand1e (pi . hProcess) •,
+CIoseHand1e (pi. hThread) ;
+그림 3.10 Windows API를 이용한 새로운 프로세스의 생성

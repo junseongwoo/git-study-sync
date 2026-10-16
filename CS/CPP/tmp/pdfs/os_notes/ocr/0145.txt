@@ -1,0 +1,33 @@
+4.5 암국적 스레밍
+801ve the problem directly
+else
+subtaskl
+= fork(nev Task(subset 0f problem)
+subtask2 = fork(new Task(subset 0f problem)
+resultl join(subtaskl)
+resu1t2 * join(subtask2)
+return combined results
+그림 4.17은 이 모델의 그림을 보여준다.
+199
+이제 정수 배열의 모든 요소를 합산하는 분할-정복 알고리즘을 설계하여 Java의
+fork join 전략을 설명한다. API 버전 1.7에서 Java는 새로운 기본 풀인 ForkJoinP001
+을 도입하여 추상 기본 클래스 ForkJoinTask를 상속하는 작업을(예제에서 SumTask
+클래스라고 가정함) 배정받을 수 있다. 다음은 다음 코드는 ForkJoinP001 객체를 만들
+고 invoke() 메소드를 통해 초기 작업을 제출한다.
+ForkJ0inP001 P001 = new ForkJoinPooI() •,
+// 배열은 합산될 정수를 포함한다.
+int[] array = new int CSIZE] ;
+fork
+fork
+fork
+JOln
+JOIn
+fork
+fork
+JOln
+JOln
+JOIn
+JOln
+작업
+fork
+그림 4.17 Java의 fork-join

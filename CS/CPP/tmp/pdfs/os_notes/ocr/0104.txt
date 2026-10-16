@@ -1,0 +1,33 @@
+3.7 IPC 시스템의 사례
+/* create the pipe */
+if (pipe(fd) == -1) {
+fprintf (stderr , "Pipe failedt') ;
+return 1;
+/* fork a child process */
+pid = fork();
+if (pid < 0) { /* error occurred */
+fprintf(stderr, "Fork Fai1ed") •,
+return 1 ;
+if (pid > 0) { /* parent process */
+/* close the unused end Of the pipe */
+close (fd [READÆND] ) •,
+/* write tO the pipe */
+157
+write(fd CWRITEÆND] , write-msg, strlen(writensg)+l) ;
+/* close the write end Of the pipe */
+close (fd [WRITEÆND] ) •,
+{ /* child process */
+else
+/* close the unused end 0f the pipe */
+close (fd CWRITEÆND] ) ,•
+/* read from the pipe */
+read(fd CREADÆND] , read-msg, BUFFER-SIZE) ,•
+printf ("read %s" ,read-msg) ,
+/* close the read end Of the pipe */
+close (fd [READ-END] ) ;
+return 0 ;
+그림 3.22 그림 3.21 프로그램의 계속
+Windows 시스템의 일반 파이프는 익명 파이프(anonymous pipe)라고 불리며
+UNIX의 대응되는 파이프와 유사하게 동작한다. 이 파이프는 단방향이고 통신하는 두
+프로세스는 부모-자식 관계여야 한다. 게다가 파이프의 읽기와 쓰기는 보통의 Read-
+Fi1e()과 WriteFi1e()을 사용하여 이루어진다. 파이프를 생성하기 위한 VVindows

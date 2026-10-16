@@ -1,0 +1,27 @@
+488
+Chapter 10 가장 메모리
+가상 메모리 및 메모리 압축을 구현히는 방법을 설명한다. Windows 10의 압축 메모리
+http://www.makeuseof.com/tag/ram-compression-improves-memory-re-
+sponsiveness-windows-10에서 자세히 설명한다.
+[McDougall and Mauro (2007)]는 SoIaris의 가상 메모리에 관해 설명한다.
+Linux의 가상 메모리 기술은 [Love (2010)] 및 [Mauerer (2008)]에 설명되어 있다.
+FreeBSD는 [McKusick 한 교. (2015)]에서 자세히 설명한다.
+참고문현
+[Carr and Hennessy (1981)1 W. R Carr and J. L. Hennessy, WSCIock—A
+Simple and Effective Algorithm for Virtual Memory Management , Pro-
+ceedings ofthe ACM Syntposi11111 0Ⅱ Operating Systems Principles (1981), pag-
+es 87-95.
+[Denning (1968)] P. J. Dennmg, TheWorking Set ModeI for Program Be-
+havior”, Cornmunications of the ACM, Volume 11, Number 5 (1968), pages
+323-333.
+[Love (2010)] R. Love, Li,1111 KerneI Development, Thmrd Edit10n, Developer's
+Library (2010).
+[Mauerer (2008)] Mauerer, Professional Linux KerneI Architecture, John Wi-
+ley and Sons (2008).
+[McDougall and Mauro (200가] R. McDougall and J. Mauro, S01aris lnter-
+71馝s, Second Edition, Prentice Hall (2007).
+[McKusick 아 교. (2015)] M. K. McKusick, G. V. NeviIIe-NeiI, and R. N. M.
+Watson, The Design and lmplementation of the FreeBSD UNIXOperating Sys-
+tem—Second Edition, Pearson (2015).
+[Russinovich 아 교. (2017)] M.Russinovich, D.A. S()1皿1()11, and A. lonescu,
+Windows InternaIs—Part 1, Seventh Edition, Microsoft Press (2017).

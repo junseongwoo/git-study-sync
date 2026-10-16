@@ -1,0 +1,38 @@
+132
+Chapter 3 프로서스
+#include <sys/types .h>
+#include <stdio .h>
+#include <unistd .h>
+int main()
+pid-t pid,
+/* 새 프로세스를 생성한다(fork) */
+pid = fork() ;
+if (pid 0) { /* 오류가발생했음 */
+fprintf(stderr, "Fork FaiIed") ;
+return 1 ,•
+else if (pid == 0) { /* 자식프로세스 */
+execlp( " , "ls" ,NULL) ;
+else { /* 부모프로세스 */
+/* 부모가 자식이 완료되기를 기다릴 것임 */
+wait(NULL) ,•
+printf ("Chi1d Comp1ete") ,•
+return 0 ;
+그림 3.8 fork() 시스템 콜을 사용하여 별도의 프로세스를 생성
+병행 실행 프로세스이다. 자식은 부모의 복사본이기 때문에 각 프로세스는 모든 데이터
+에 대해 자신만의 복사본을 가지고 있다.
+다른 예로 Windows에서의 프로세스 생성에 대해 고려한다. 프로세스는 Win-
+dows API의 CreateProcess() 함수를 이용하여 생성되는 데 이 함수는 부모 프로세
+스가 새로운 자식 프로세스를 생성한다는 점에서 fork()와 유사하다. 그러나 fork()
+가 부모 프로세스로부터 주소 공간을 상속받는 자식 프로세스를 생성하는 반면에 Cre-
+ateprocess()는 자식 프로세스가 생성될 때 주소 공간에 명시된 교구 그램을 적재한
+parent
+pid=fork()
+chlld (pid
+그림 3.9
+parent (Pid > 0)
+exec()
+=0)
+wait()
+exit()
+parent resumes
+fork() 시스템 콜을 사용한 프로세스 생성

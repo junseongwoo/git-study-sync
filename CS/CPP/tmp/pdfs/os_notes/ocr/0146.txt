@@ -1,0 +1,35 @@
+200
+Chapter 4 스레드와 병행성
+SumTask task = new SumTask(O, SIZE - 1, array) ,•
+int sum = pool.invoke(task) ;
+완료되면 첫 번째 invoke()에 대한 초기 호출은 배열의 후]7기를 반환한다.
+그림 4.18에 보인 SumTask 클래스는 fork-join을 시용하여 배열의 내정을 합산하
+는 분할-정복 알고리즘을 구현한다. fork() 메소드를 시용하여 새 작업을 생성하고
+lmport ava. util. concurrent . * ;
+public class SumTask extends RecursiveTask<Integer>
+static final int THRESHOLD = 1000;
+private int begin;
+private int end;
+private int[] array;
+public SumTask(int begin,
+this.begin = begin;
+this.end = end;
+this . array = array;
+int end,
+int[] array) {
+i十十)
+protected lnteger compute() {
+if (end - begin 〈 THRESHOLD) {
+int sum = 0;
+for (int = begin; <= end;
+sum += array[i] ;
+return ;
+else
+(begin + end) / 2;
+int mid
+SumTask IeftTask = new SumTask(begin, mid, array) ;
+SumTask rightTask = new SumTask(mid + 1, end, array) ,•
+IeftTask. fork() ;
+rightTask. fork () ,•
+return rightTask join() + IeftTask.j0in() ,•
+그림 4.18 Java API를사용한fork-join 계산

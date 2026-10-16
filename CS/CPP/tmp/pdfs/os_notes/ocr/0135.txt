@@ -1,0 +1,36 @@
+4.4 스레드 라이브러리
+#include <vindovg.h>
+#include <stdio.h>
+DWORD Sum; /* data is shared by the thread(s) */
+/* The thread 날i11 execute in this function */
+DWORD WINAPI Summation(LPVOID Param)
+DWORD Upper = *(DWORD*)Param,
+for (DWORD i = 1; i <= Upper; i++)
+Sum 十= ;
+return 0;
+int main(int argc, char *argv[])
+DWORD ThreadId;
+HANDLE ThreadHand1e ;
+int Param;
+Param = atoi(argv[l]);
+/* create the thread */
+ThreadHand1e = CreateThread(
+NULL, /* default security attributes */
+0, /* default stack size */
+Summation, /* thread function */
+&Param, /* parameter t0 thread function */
+0, /* default creation flags */
+&ThreadId) ,• /* returns the thread identifier */
+/* now wait for the thread tO flnish */
+WaitForSingleObject (ThreadHand1e , INFINITE) ;
+/* close the thread handle */
+C10seHandIe (ThreadHandIe) ;
+printf("sum = %d\n" ,Sum) ;
+그림 4.13 Windows API를 사용한 다중 스레드 C 프로그램
+189
+와 마찬가지로 이 함수에 스레드를 위한 속성의 집합이 전달된다. 이 속성에는 보안 정
+보, 스택의 크기 및 스레드가 보류 상41(suspended state)에서 시작하는지를 나타낼
+수 있는 플래그 등이 포함된다. 이 프로그램에서는 이 속성들을 위한 디폴트 값을 사용
+한다(디폴트 값은 스레드를 보류 상태로 지정하지 않고 CPU에 의해 실행될 수 있는 준
+비 완료 상태로 지정한다). 합산 스레드가 생성되면 부모는 합산 스레드에 의해 지정되
+어야 할 sum의 값을 출력하기 전에 합산 스레드가 종료하기를 기다려야 한다. Pthreads

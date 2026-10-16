@@ -1,0 +1,34 @@
+참고문현 217
+4.3 4.1절에 설r팅된 다중 스레드 웨 서버는 작업 병릴 처리인가 혹은 데이터 병렬 처
+리인가?
+4.4 사용자 수준 스레드와 거닐 수준 스레드의 2가지 차이점은 무엇인가? 한 유형의
+스레드가 다른 유형의 스레드보다 유리한 상황은 언제인가?
+4.5 커널 수준 스레드 사이에서 문맥 교환을 위해 커널이 해야 할 일을 설명하라.
+4.6 스레드가 생성될 때 어떤 자원이 사용되는가? 프로세스가 생성될 때 사-일되는 자
+원과의 차이점은 무엇인가?
+4.7 다대다 모델을 A卜&하여 운영체제가 사용자 수준 스레드를 커널에 매핑하고 매핑
+은 LWP를 A卜우한다고 가정하자. 또한 개발자는 실시간 시스템에서 사용할 실시
+간 스레드를 만들 수 있다고 하자. 실시간 스레드를 LWP에 바인딩해야 하는가?
+여러분의 답을 설명하라.
+추가 자료
+[Vahalia (1996)]는 여러 버전의 UNIX에서의 스레딩을 다룬다. [McDougall and
+Mauro (2007)]는 Solaris 커널을 스레드 기반으로 만들었던 개발에 관해 설명한다.
+[Russinovich 아 고. (2017)]는 Windows 운영체제 제품군의 스레딩에 대해 설명한
+다. [Mauerer (2008)] 및 [Love (2010)]는 Linux가 스레딩을 다루는 방법을 설명하고
+[Levin (2013)]은 macOS 및 iOS의 스레드를 다룬다. [Herlihy and Shavit (2012)]
+는 다중 코어 시스템의 병렬 처리 문제를 다룬다. [Aubanel (2017)]은 여러 다른 알고
+리즘의 병렬 처리를 다룬다.
+참고문현
+[AubaneI (2017)] E. AubaneI, EIements ParaIIeI Computing, CRC Press
+(2017).
+[HerIihy and Shavit (201기] M. HerIihy and N. Shavit, The Art ofMuItipro-
+cessor Programming, Revised First Edition, Morgan Kaufmann PubIishers
+lnc. (2012).
+[Levin (2013)] J. Levin, Mac OS X and iOS lnternals to the AppIe's Core, WiIey
+(2013).
+[Love (2010)] R. Love, Linux KerneI DeveIopment, Third Edition, DeveIoper's
+Library (2010).
+[Mauerer (2008)] W. Mauerer, ProfessionaI Linux KerneI Architecture,John Wi-
+ley and Sons (2008).
+[McDougall and Mauro (2007)] R. McDougaII and J. Mauro, S01aris lnter-
+nals, Second Edition, Prentice HaII (2007).

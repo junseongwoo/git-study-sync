@@ -1,0 +1,35 @@
+152
+Chapter 3 프로세스
+#include<mach/mach. h>
+struct message {
+mach-msg-header t header;
+int data;
+mach port-t client ;
+mach port-t server;
+/* 클라이언트코드 */
+struct message message ;
+// 헤더를 구축
+message.header.msgh-size = sizeof (message) ,•
+message. header. msgh-remote-port
+server ,
+message. header. msgh그ocal-port
+client ;
+// 메시지를 송신한다
+mach-msg(tmessage•header, // 메시지 헤더
+MACH-SEND-MSG, // 메시지 송신
+sizeof (message) , // 송신 메시지 크기
+0, // 수신 메시지의 최대 크기 - 필요 없음
+MACH-PORT-NULL, // 수신 포트의 이름 포트 없음 필요 없음
+MACHNSG-TIMEOUT-NONE, // 타임아웃 설정 없음
+MACH-PORT-NULL // 포트 없음
+/* 서버코드 */
+Struct message message ;
+// 메시지를수신한다
+mach-rnsg(&message•header, // 메시지 헤더
+MACHnV-MSG, // 메시지 수신
+0, // 송신된메시지크기
+sizeof (message) , // 수신! 메시지의 최대 크기
+server, // 수신 포트의 이름
+MACHNSG-TIMEOUT-NONE, // 타임 이웃 설정 없음
+MACH-PORT-NULL // 포트 없음
+그립 3.18 Mach에서 메시지 전달을 설명하는 예제 프로그램

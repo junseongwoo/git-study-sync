@@ -1,0 +1,31 @@
+4.4 스레드 라이브러리
+import java.util.concurrent.*,
+class Summation implements CaIIabIe<Integer>
+private int upper;
+public Summation(int upper) {
+this•upper = upper,
+/* The thread \i11 execute in this method */
+public lnteger call() {
+int sum = 0;
+for (int i = 1; i <= upper; i++)
+sum 十= 1 ;
+return new lnteger(sum) ,•
+public class Driver
+public static void main(StringC] args) {
+int upper = lnteger•parselnt(args [0]) ;
+193
+ExecutorService P001 = Executors.newSingleThreadExecutor() ;
+Future<Integer> result = pool.submit(new Summation(upper)) ;
+try {
+System.out.print1n("sum = " + result get());
+} catch (InterruptedException | ExecutionException ie) { }
+그림 4.14 Java Executor 프레임워크 API를 사용하는 예제 프로그램
+ExecutorService 유형의 newSing1eThreadExecutor 객체(Executors 클래스에
+서 정적 메소드로 제공됨)를 생성하고 submit() 메소드를 시용하여 Ca11ab1e 태스크
+를 전달한다. (execute() 메소드와 submit() 메소드의 주요 차이점은, 전자는 결과를
+반환하지 않고 후자는 결과를 Future 객체로 반환한다는 점이다.) Ca11ab1e 태스크를
+스레드에 제출하면, 스레드가 반환하는 Future 객체의 get() 메소드를 호출하여 결과
+를 기다린다.
+처음에는 이 스레드 생성 모델이 단순히 스레드를 생성하고 종료 시 결합하는 것보
+다 더 복잡해 보인다는 것을 쉽게 알수 있다. 그러나 적당히 복잡해진 대신 이점이 생긴
+다. 이미 본 것처럼 Ca11ab1e 및 Future를 사용하면 스레드가 결과를 반환할 수 있다.

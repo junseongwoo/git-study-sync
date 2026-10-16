@@ -1,0 +1,11 @@
+576
+Chapter 12 입출력 시스템
+A卜&자 모드 파일 시스템에 FUSE를 시용하면 성능 문제가 발생할 수 있다. 이러한
+문제에 대한 분석은 https://www.usenix.org/conference/fastl 7/technical-ses-
+sions/presentation/vangoor 에서 찾을 수 있다.
+참고문현
+[Hennessy and Patterson (2012)] J. Hennessy and D. Patterson, Computer
+Architecture: A Quantitative Approach, Fifth Edition, Morgan Kaufmann
+(2012).
+[lntel (2011)] lntel 64 and IA-32 Architectures S0ftware DeveIoper's Manual,
+Combined VoIumes: 1, 2A, 2B, 3A and 3B. lntel Corporation (2011).

@@ -1,0 +1,34 @@
+192
+Chapter 4 스레드와 병행성
+부모가 여러 스레드가 완료되기를 기다려야 히는 경우 join() 메소드는 그림 4.1291
+Pthr℃ad에 보인 것과 비슷한 for 루프로 묶을 수 있다.
+4.4.3.1 Java Executor 프레임워크 Java Executor Framework
+Java는 처음부터 지금까지 설명한 방식을 시용하여 스레드 생성을 지원하였다. 그러나
+버전 1.5와 API부터 Java는 개발자에게 스레드 생성 및 통신에 대한 제어 기능을 크게
+항상시기는 몇 가지 새로운 병행 처리 기능-을 도입하였다. 이 도구는 java•util•con-
+current 패기지에서 시용할 수 있다.
+Thread 객체를 명시적으로 생성하는 대신 Executor 인터페이스를 중심으로 스레
+드 생성을 구성한다.
+public interface Executor
+void execute (Runnab1e command) ,
+이 인터페이스를 구현하는 클래스는 Runnab1e 객체가 인자로 전달되는 execute() 메
+소드를 정의해야 한다. Java 개발자에게는 별도의 Thread 객체를 만들고 start() 메
+소드를 호출하는 대신 Executor를 시용하는 것을 의미한다. Executor는 다음과 같이
+시용된다.
+Executor servxce = new Executor;
+servxce . execute (new Task() ) •,
+Executor 프레임워크는 생산자-소비자 모델을 기반으로 한다. Runnab1e 인터페
+이스를 구현하는 작업이 생성되고 이러한 작업을 실행하는 스레드가 이를 소비한다. 이
+방법의 장점은 스레드 생성을 실행에서 분리할 뿐만 아니라 병행하게 실행되는 작업 간
+의 통신 기법을 제공한다는 것이다.
+Windows와 Pthreads에서 공유 데이터는 단순히 전역적으로 선언되기 때문에 동
+일한 프로세스에 속한 스레드 간의 데이터 공유는 쉽게 기능하다. 순수한 객체 지향 언어
+인 Java에는 전역 데이터에 대한 개넘이 없다. Runnab1e을 구현하는 클래스에 매개변
+수를 전달할 수 있지만 Java 스레드는 결괴를 반환할 수 없다. 이러한 필요를 해결하기
+위해 Java•uti1. concurrent 패기지는 Ca11ab1e 인터페이스를 추가로 정의하며, 결
+괴를 반환할 수 있다는 점을 제외하고 Runnab1e과 유사하게 작동한다. Ca11ab1e 작업
+에서 반환된 결괴를 Future 객체라고 한다. Future 인터페이스에 정의된 get() 메소
+드를 시용하여 결괴를 검색할 수 있다. 그림 4.14에 보인 프로그램은 이러한 Java 기능百
+시용하는 합산 프로그램을 보여 준다.
+summation 클래스는 메소드 call()을 지정하는 callable 인터페이스를 구현한
+다. 이 call() 메소드의 코드는 별도의 스레드에서 실행된다. 이 코드를 실행하기 위해
