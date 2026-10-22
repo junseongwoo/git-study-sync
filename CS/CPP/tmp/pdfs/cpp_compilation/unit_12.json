@@ -1,0 +1,1189 @@
+{
+  "unit": 12,
+  "title": "쓰레드·동기화·atomic·비동기·ThreadPool",
+  "part": "C++",
+  "scope": [
+    {
+      "source": "B",
+      "start": 724,
+      "end": 830
+    }
+  ],
+  "learning": [
+    {
+      "text": "thread 객체를 생성하면 인자로 받은 함수를 새로운 쓰레드에서 실행한다.",
+      "refs": [
+        {
+          "source": "B",
+          "section": "16장 / C++ 에서 쓰레드 생성하기",
+          "pages": [
+            734
+          ]
+        }
+      ],
+      "evidence": "새로운쓰레드에서실행"
+    },
+    {
+      "text": "쓰레드풀 사용자는 쓰레드들을 생성해 두고 수행할 일을 쓰레드풀에 추가한다.",
+      "refs": [
+        {
+          "source": "B",
+          "section": "16장 / ThreadPool",
+          "pages": [
+            811
+          ]
+        }
+      ],
+      "evidence": "그냥쓰레드풀에추가"
+    }
+  ],
+  "concepts": [
+    {
+      "title": "C++ 쓰레드와 실행",
+      "items": [
+        {
+          "text": "프로세스는 운영체제에서 실행되는 프로그램의 최소 단위이다.",
+          "refs": [
+            {
+              "source": "B",
+              "section": "16장 / 멀티 쓰레드 프로그램",
+              "pages": [
+                725
+              ]
+            }
+          ],
+          "evidence": "운영체제에서실행되는프로그램의최소단위"
+        },
+        {
+          "text": "같은 프로세스 안의 쓰레드들은 메모리를 공유한다.",
+          "refs": [
+            {
+              "source": "B",
+              "section": "16장 / 멀티 쓰레드 프로그램",
+              "pages": [
+                727
+              ]
+            }
+          ],
+          "evidence": "같은메모리를공유하게됩니다"
+        },
+        {
+          "text": "thread 객체를 생성하면 인자로 받은 함수를 새로운 쓰레드에서 실행한다.",
+          "refs": [
+            {
+              "source": "B",
+              "section": "16장 / C++ 에서 쓰레드 생성하기",
+              "pages": [
+                734
+              ]
+            }
+          ],
+          "evidence": "새로운쓰레드에서실행"
+        },
+        {
+          "text": "쓰레드가 CPU 코어에 어떻게 할당되고 언제 컨텍스트 스위치를 할지는 운영체제가 결정한다.",
+          "refs": [
+            {
+              "source": "B",
+              "section": "16장 / C++ 에서 쓰레드 생성하기",
+              "pages": [
+                734
+              ]
+            }
+          ],
+          "evidence": "전적으로운영체제의마음"
+        },
+        {
+          "text": "join 은 해당 쓰레드가 실행을 종료하면 리턴한다.",
+          "refs": [
+            {
+              "source": "B",
+              "section": "16장 / join",
+              "pages": [
+                735
+              ]
+            }
+          ],
+          "evidence": "해당하는쓰레드들이실행을종료하면리턴"
+        },
+        {
+          "text": "쓰레드를 detach 하면 main 함수에서는 그 쓰레드가 종료될 때까지 기다리지 않는다.",
+          "refs": [
+            {
+              "source": "B",
+              "section": "16장 / detach",
+              "pages": [
+                738
+              ]
+            }
+          ],
+          "evidence": "더이상쓰레드들이종료될때까지기다리지않습니다"
+        },
+        {
+          "text": "thread 생성자의 첫 인자는 Callable 이며, 이어서 그 함수에 전달할 인자들을 적는다.",
+          "refs": [
+            {
+              "source": "B",
+              "section": "16장 / 쓰레드에 인자 전달하기",
+              "pages": [
+                740
+              ]
+            }
+          ],
+          "evidence": "thread 생성자의첫번째인자로함수"
+        },
+        {
+          "text": "this_thread::get_id 로 현재 쓰레드의 아이디를 얻을 수 있다.",
+          "refs": [
+            {
+              "source": "B",
+              "section": "16장 / 쓰레드에 인자 전달하기",
+              "pages": [
+                740
+              ]
+            }
+          ],
+          "evidence": "현재내가돌아가고있는쓰레드의아이디"
+        }
+      ]
+    },
+    {
+      "title": "뮤텍스·조건 변수",
+      "items": [
+        {
+          "text": "원문의 counter 예제는 mutex 의 lock 과 unlock 사이에서 result += 1 을 수행한다.",
+          "refs": [
+            {
+              "source": "B",
+              "section": "16장 / 뮤텍스와 조건 변수",
+              "pages": [
+                749
+              ]
+            }
+          ],
+          "evidence": "m.lock();"
+        },
+        {
+          "text": "뮤텍스의 lock 과 unlock 사이에서 한 쓰레드만 실행할 수 있는 코드 부분을 임계 영역(critical section)이라고 부른다.",
+          "refs": [
+            {
+              "source": "B",
+              "section": "16장 / 뮤텍스(mutex)",
+              "pages": [
+                750
+              ]
+            }
+          ],
+          "evidence": "임계영역(critical section)"
+        },
+        {
+          "text": "lock_guard 는 생성자에서 뮤텍스를 lock 하고 소멸할 때 unlock 한다.",
+          "refs": [
+            {
+              "source": "B",
+              "section": "16장 / lock_guard",
+              "pages": [
+                753
+              ]
+            }
+          ],
+          "evidence": "생성자에서뮤텍스를lock"
+        },
+        {
+          "text": "원문의 데드락 예제에서는 worker1 이 m1 을, worker2 가 m2 를 잠근 채 서로 상대가 가진 뮤텍스의 해제를 기다려 진행하지 못한다.",
+          "refs": [
+            {
+              "source": "B",
+              "section": "16장 / 데드락(deadlock)",
+              "pages": [
+                754,
+                755
+              ]
+            }
+          ],
+          "evidence": "데드락상황"
+        },
+        {
+          "text": "여러 Lock 을 획득해야 한다면 정해진 순서로 획득한다.",
+          "refs": [
+            {
+              "source": "B",
+              "section": "16장 / Lock 들을 언제나 정해진 순서로 획득해라",
+              "pages": [
+                759
+              ]
+            }
+          ],
+          "evidence": "정해진순서로획득"
+        },
+        {
+          "text": "생산자(producer)는 처리할 일을 받아오는 쓰레드이고, 소비자(consumer)는 받은 일을 처리하는 쓰레드이다.",
+          "refs": [
+            {
+              "source": "B",
+              "section": "16장 / 생산자와 소비자 패턴",
+              "pages": [
+                759
+              ]
+            }
+          ],
+          "evidence": "받은일을처리하는쓰레드"
+        },
+        {
+          "text": "조건 변수(condition_variable)는 특정 조건이 만족될 때까지 쓰레드를 기다리게 하는 데 사용한다.",
+          "refs": [
+            {
+              "source": "B",
+              "section": "16장 / condition_variable",
+              "pages": [
+                765
+              ]
+            }
+          ],
+          "evidence": "어떠어떠한조건을만족할때까지"
+        },
+        {
+          "text": "wait 에 전달한 조건이 거짓이면 unique_lock 을 unlock 한 뒤 sleep 한다.",
+          "refs": [
+            {
+              "source": "B",
+              "section": "16장 / condition_variable",
+              "pages": [
+                768
+              ]
+            }
+          ],
+          "evidence": "lk 를unlock 한뒤에"
+        },
+        {
+          "text": "unique_lock 은 unlock 후 다시 lock 할 수 있고, cv->wait 는 unique_lock 을 인자로 받는다.",
+          "refs": [
+            {
+              "source": "B",
+              "section": "16장 / condition_variable",
+              "pages": [
+                769
+              ]
+            }
+          ],
+          "evidence": "unlock 후에다시lock"
+        },
+        {
+          "text": "notify_one 은 기다리는 쓰레드 중 하나를 깨워 조건을 다시 검사하게 한다.",
+          "refs": [
+            {
+              "source": "B",
+              "section": "16장 / condition_variable",
+              "pages": [
+                769
+              ]
+            }
+          ],
+          "evidence": "쓰레드중하나를깨워서조건을다시검사"
+        },
+        {
+          "text": "원문의 생산자·소비자 예제는 생산자들을 join 한 뒤 notify_all 로 잠든 소비자들을 모두 깨운다.",
+          "refs": [
+            {
+              "source": "B",
+              "section": "16장 / condition_variable",
+              "pages": [
+                769
+              ]
+            }
+          ],
+          "evidence": "나머지자고있는쓰레드들을모두깨운다"
+        }
+      ]
+    },
+    {
+      "title": "원자성·메모리 순서",
+      "items": [
+        {
+          "text": "원자적 연산은 중간에 다른 쓰레드가 끼어들 여지가 없으며, 연산을 했거나 하지 않았거나만 존재한다.",
+          "refs": [
+            {
+              "source": "B",
+              "section": "16장 / 원자성(atomicity)",
+              "pages": [
+                779,
+                780
+              ]
+            }
+          ],
+          "evidence": "이연산을했다혹은안했다"
+        },
+        {
+          "text": "atomic 의 템플릿 인자로 원자적으로 만들고 싶은 타입을 전달한다.",
+          "refs": [
+            {
+              "source": "B",
+              "section": "16장 / 원자성(atomicity)",
+              "pages": [
+                781
+              ]
+            }
+          ],
+          "evidence": "원자적으로만들고싶은타입"
+        },
+        {
+          "text": "memory_order_relaxed 는 단일 쓰레드 관점의 결과가 같다면 서로 다른 변수의 relaxed 메모리 연산을 재배치할 수 있다.",
+          "refs": [
+            {
+              "source": "B",
+              "section": "16장 / memory_order_relaxed",
+              "pages": [
+                784
+              ]
+            }
+          ],
+          "evidence": "서로다른변수의relaxed 메모리"
+        },
+        {
+          "text": "memory_order_release 는 이전 메모리 명령이 뒤로 재배치되는 것을 금지하고, memory_order_acquire 는 뒤의 메모리 명령이 앞으로 재배치되는 것을 금지한다.",
+          "refs": [
+            {
+              "source": "B",
+              "section": "16장 / release 와 acquire",
+              "pages": [
+                788
+              ]
+            }
+          ],
+          "evidence": "해당명령뒤에오는모든메모리명"
+        },
+        {
+          "text": "memory_order_seq_cst 를 사용하는 메모리 연산들은 모든 쓰레드에서 동일한 연산 순서로 관찰되며, atomic 의 기본 memory_order 이다.",
+          "refs": [
+            {
+              "source": "B",
+              "section": "16장 / memory_order_seq_cst",
+              "pages": [
+                792
+              ]
+            }
+          ],
+          "evidence": "모든쓰레드에서동일한연산순서"
+        }
+      ]
+    },
+    {
+      "title": "비동기 연산 도구",
+      "items": [
+        {
+          "text": "프로그램 실행이 여러 갈래로 갈라져 동시에 진행되는 것을 비동기적(asynchronous) 실행이라고 부른다.",
+          "refs": [
+            {
+              "source": "B",
+              "section": "16장 / 비동기 연산을 위한 도구들",
+              "pages": [
+                798
+              ]
+            }
+          ],
+          "evidence": "비동기적(asynchronous) 실행"
+        },
+        {
+          "text": "promise 가 future 에 값을 전달하기 전까지 wait 가 기다리며, get 으로 전달된 객체를 얻는다.",
+          "refs": [
+            {
+              "source": "B",
+              "section": "16장 / std::promise 와 std::future",
+              "pages": [
+                800
+              ]
+            }
+          ],
+          "evidence": "promise 가future 에값을전달하기전까지"
+        },
+        {
+          "text": "future 의 get 은 안의 데이터를 이동하므로 두 번 호출하면 안 된다.",
+          "refs": [
+            {
+              "source": "B",
+              "section": "16장 / std::promise 와 std::future",
+              "pages": [
+                800
+              ]
+            }
+          ],
+          "evidence": "get 을두번호출"
+        },
+        {
+          "text": "promise 의 set_exception 으로 전달된 예외는 future 의 get 을 호출할 때 던져진다.",
+          "refs": [
+            {
+              "source": "B",
+              "section": "16장 / 예외 전달",
+              "pages": [
+                802
+              ]
+            }
+          ],
+          "evidence": "get 함수를호출하였을때"
+        },
+        {
+          "text": "wait_for 은 정해진 시간 동안 기다리며, future_status 는 ready, timeout, deferred 의 세 상태를 갖는다.",
+          "refs": [
+            {
+              "source": "B",
+              "section": "16장 / wait_for",
+              "pages": [
+                802,
+                804
+              ]
+            }
+          ],
+          "evidence": "future_status 는총3 가지상태"
+        },
+        {
+          "text": "여러 쓰레드에서 future 를 get 해야 하는 경우 shared_future 를 사용한다.",
+          "refs": [
+            {
+              "source": "B",
+              "section": "16장 / shared_future",
+              "pages": [
+                804
+              ]
+            }
+          ],
+          "evidence": "여러개의다른쓰레드에서future"
+        },
+        {
+          "text": "packaged_task 는 전달받은 함수를 실행하여 리턴값을 promise 에 설정하고, get_future 로 대응하는 future 를 얻는다.",
+          "refs": [
+            {
+              "source": "B",
+              "section": "16장 / packaged_task",
+              "pages": [
+                806
+              ]
+            }
+          ],
+          "evidence": "그함수의리턴값을promise 에설정"
+        },
+        {
+          "text": "std::async 는 실행 결과를 future 로 돌려주며, launch::async 는 바로 새 쓰레드에서 실행하고 launch::deferred 는 future::get 시 새 쓰레드 없이 실행한다.",
+          "refs": [
+            {
+              "source": "B",
+              "section": "16장 / std::async",
+              "pages": [
+                808
+              ]
+            }
+          ],
+          "evidence": "새로운\n쓰레드를생성하지않음"
+        }
+      ]
+    },
+    {
+      "title": "ThreadPool 만들기",
+      "items": [
+        {
+          "text": "쓰레드풀 사용자는 쓰레드들을 생성해 두고 수행할 일을 쓰레드풀에 추가한다.",
+          "refs": [
+            {
+              "source": "B",
+              "section": "16장 / ThreadPool",
+              "pages": [
+                811
+              ]
+            }
+          ],
+          "evidence": "그냥쓰레드풀에추가"
+        },
+        {
+          "text": "원문의 jobs_ 는 std::queue<std::function<void()>> 이며, 가장 오래전에 추가된 작업을 먼저 얻기 위해 큐를 사용한다.",
+          "refs": [
+            {
+              "source": "B",
+              "section": "16장 / ThreadPool 만들기",
+              "pages": [
+                813
+              ]
+            }
+          ],
+          "evidence": "std::queue<std::function<void()>> jobs_;"
+        },
+        {
+          "text": "cv_job_q_ 와 m_job_q_ 는 생산자·소비자 패턴을 구현하고, stop_all 은 Worker 쓰레드의 종료 조건을 나타낸다.",
+          "refs": [
+            {
+              "source": "B",
+              "section": "16장 / ThreadPool 만들기",
+              "pages": [
+                813
+              ]
+            }
+          ],
+          "evidence": "생산자-소비자패턴을구현"
+        },
+        {
+          "text": "WorkerThread 는 작업이 생기거나 stop_all 이 설정될 때까지 기다리고, stop_all 이 참이며 큐가 비면 종료한다.",
+          "refs": [
+            {
+              "source": "B",
+              "section": "16장 / ThreadPool 첫번째 버전",
+              "pages": [
+                814
+              ]
+            }
+          ],
+          "evidence": "stop_all && this->jobs_.empty()"
+        },
+        {
+          "text": "EnqueueJob 은 큐에 작업을 넣은 뒤 notify_one 으로 쓰레드 하나를 깨운다.",
+          "refs": [
+            {
+              "source": "B",
+              "section": "16장 / ThreadPool 첫번째 버전",
+              "pages": [
+                815
+              ]
+            }
+          ],
+          "evidence": "jobs_.push(std::move(job));"
+        },
+        {
+          "text": "원문의 확장 버전은 packaged_task 를 shared_ptr 에 보관하고 람다에 복사본을 전달해 작업 실행 시점까지 객체를 유지한다.",
+          "refs": [
+            {
+              "source": "B",
+              "section": "16장 / ThreadPool 확장",
+              "pages": [
+                823
+              ]
+            }
+          ],
+          "evidence": "람다함수에"
+        },
+        {
+          "text": "EnqueueJob 의 반환형에는 std::result_of 로 구한 함수의 리턴 타입을 가지는 future 를 사용한다.",
+          "refs": [
+            {
+              "source": "B",
+              "section": "16장 / ThreadPool 확장",
+              "pages": [
+                819
+              ]
+            }
+          ],
+          "evidence": "함수F 의리턴값은std::result_of"
+        }
+      ]
+    }
+  ],
+  "procedures": [
+    {
+      "title": "조건 변수를 쓰는 원문 생산자·소비자 처리 순서",
+      "steps": [
+        {
+          "text": "wait 에 전달한 조건이 거짓이면 unique_lock 을 unlock 한 뒤 sleep 한다.",
+          "refs": [
+            {
+              "source": "B",
+              "section": "16장 / condition_variable",
+              "pages": [
+                768
+              ]
+            }
+          ],
+          "evidence": "lk 를unlock 한뒤에"
+        },
+        {
+          "text": "notify_one 은 기다리는 쓰레드 중 하나를 깨워 조건을 다시 검사하게 한다.",
+          "refs": [
+            {
+              "source": "B",
+              "section": "16장 / condition_variable",
+              "pages": [
+                769
+              ]
+            }
+          ],
+          "evidence": "쓰레드중하나를깨워서조건을다시검사"
+        },
+        {
+          "text": "원문의 생산자·소비자 예제는 생산자들을 join 한 뒤 notify_all 로 잠든 소비자들을 모두 깨운다.",
+          "refs": [
+            {
+              "source": "B",
+              "section": "16장 / condition_variable",
+              "pages": [
+                769
+              ]
+            }
+          ],
+          "evidence": "나머지자고있는쓰레드들을모두깨운다"
+        }
+      ]
+    },
+    {
+      "title": "원문 WorkerThread 의 처리 순서",
+      "steps": [
+        {
+          "text": "WorkerThread 는 작업이 생기거나 stop_all 이 설정될 때까지 기다리고, stop_all 이 참이며 큐가 비면 종료한다.",
+          "refs": [
+            {
+              "source": "B",
+              "section": "16장 / ThreadPool 첫번째 버전",
+              "pages": [
+                814
+              ]
+            }
+          ],
+          "evidence": "stop_all && this->jobs_.empty()"
+        },
+        {
+          "text": "큐 맨 앞의 job 을 꺼내고 pop 한 뒤 lock 을 unlock 한다.",
+          "refs": [
+            {
+              "source": "B",
+              "section": "16장 / ThreadPool 첫번째 버전",
+              "pages": [
+                814
+              ]
+            }
+          ],
+          "evidence": "jobs_.pop();"
+        },
+        {
+          "text": "꺼낸 job 을 실행하고 while 루프에서 다음 작업을 기다린다.",
+          "refs": [
+            {
+              "source": "B",
+              "section": "16장 / ThreadPool 첫번째 버전",
+              "pages": [
+                814
+              ]
+            }
+          ],
+          "evidence": "job();"
+        }
+      ]
+    }
+  ],
+  "syntax": [
+    {
+      "label": "lock_guard 를 사용하는 원문 worker 발췌",
+      "code": "void worker(int& result, std::mutex& m) {\n  for (int i = 0; i < 10000; i++) {\n    std::lock_guard<std::mutex> lock(m);\n    result += 1;\n  }\n}",
+      "refs": [
+        {
+          "source": "B",
+          "section": "16장 / lock_guard",
+          "pages": [
+            752
+          ]
+        }
+      ],
+      "evidence": "std::lock_guard<std::mutex> lock(m);",
+      "note": null
+    }
+  ],
+  "formulas": [],
+  "comparisons": [
+    {
+      "title": "원문의 연산별 허용 memory order",
+      "headers": [
+        "연산",
+        "허용 memory order"
+      ],
+      "rows": [
+        [
+          {
+            "text": "쓰기(store)",
+            "refs": [
+              {
+                "source": "B",
+                "section": "16장 / memory order 표",
+                "pages": [
+                  794
+                ]
+              }
+            ],
+            "evidence": "쓰기(store)"
+          },
+          {
+            "text": "memory_order_relaxed, memory_order_release, memory_order_seq_cst",
+            "refs": [
+              {
+                "source": "B",
+                "section": "16장 / memory order 표",
+                "pages": [
+                  794
+                ]
+              }
+            ],
+            "evidence": "memory_order_release"
+          }
+        ],
+        [
+          {
+            "text": "읽기(load)",
+            "refs": [
+              {
+                "source": "B",
+                "section": "16장 / memory order 표",
+                "pages": [
+                  794
+                ]
+              }
+            ],
+            "evidence": "읽기(load)"
+          },
+          {
+            "text": "memory_order_relaxed, memory_order_consume, memory_order_acquire, memory_order_seq_cst",
+            "refs": [
+              {
+                "source": "B",
+                "section": "16장 / memory order 표",
+                "pages": [
+                  794
+                ]
+              }
+            ],
+            "evidence": "memory_order_consume"
+          }
+        ],
+        [
+          {
+            "text": "읽고-수정하고-쓰기",
+            "refs": [
+              {
+                "source": "B",
+                "section": "16장 / memory order 표",
+                "pages": [
+                  794
+                ]
+              }
+            ],
+            "evidence": "read - modify - write"
+          },
+          {
+            "text": "memory_order_relaxed, memory_order_consume, memory_order_acquire, memory_order_release, memory_order_acq_rel, memory_order_seq_cst",
+            "refs": [
+              {
+                "source": "B",
+                "section": "16장 / memory order 표",
+                "pages": [
+                  794
+                ]
+              }
+            ],
+            "evidence": "memory_order_acq_rel"
+          }
+        ]
+      ]
+    }
+  ],
+  "terms": [
+    {
+      "term": "프로세스",
+      "definition": {
+        "text": "프로세스는 운영체제에서 실행되는 프로그램의 최소 단위이다.",
+        "refs": [
+          {
+            "source": "B",
+            "section": "16장 / 멀티 쓰레드 프로그램",
+            "pages": [
+              725
+            ]
+          }
+        ],
+        "evidence": "운영체제에서실행되는프로그램의최소단위"
+      }
+    },
+    {
+      "term": "join",
+      "definition": {
+        "text": "join 은 해당 쓰레드가 실행을 종료하면 리턴한다.",
+        "refs": [
+          {
+            "source": "B",
+            "section": "16장 / join",
+            "pages": [
+              735
+            ]
+          }
+        ],
+        "evidence": "해당하는쓰레드들이실행을종료하면리턴"
+      }
+    },
+    {
+      "term": "lock_guard",
+      "definition": {
+        "text": "lock_guard 는 생성자에서 뮤텍스를 lock 하고 소멸할 때 unlock 한다.",
+        "refs": [
+          {
+            "source": "B",
+            "section": "16장 / lock_guard",
+            "pages": [
+              753
+            ]
+          }
+        ],
+        "evidence": "생성자에서뮤텍스를lock"
+      }
+    },
+    {
+      "term": "condition_variable",
+      "definition": {
+        "text": "조건 변수(condition_variable)는 특정 조건이 만족될 때까지 쓰레드를 기다리게 하는 데 사용한다.",
+        "refs": [
+          {
+            "source": "B",
+            "section": "16장 / condition_variable",
+            "pages": [
+              765
+            ]
+          }
+        ],
+        "evidence": "어떠어떠한조건을만족할때까지"
+      }
+    },
+    {
+      "term": "원자적 연산",
+      "definition": {
+        "text": "원자적 연산은 중간에 다른 쓰레드가 끼어들 여지가 없으며, 연산을 했거나 하지 않았거나만 존재한다.",
+        "refs": [
+          {
+            "source": "B",
+            "section": "16장 / 원자성(atomicity)",
+            "pages": [
+              779,
+              780
+            ]
+          }
+        ],
+        "evidence": "이연산을했다혹은안했다"
+      }
+    },
+    {
+      "term": "promise·future",
+      "definition": {
+        "text": "promise 가 future 에 값을 전달하기 전까지 wait 가 기다리며, get 으로 전달된 객체를 얻는다.",
+        "refs": [
+          {
+            "source": "B",
+            "section": "16장 / std::promise 와 std::future",
+            "pages": [
+              800
+            ]
+          }
+        ],
+        "evidence": "promise 가future 에값을전달하기전까지"
+      }
+    },
+    {
+      "term": "packaged_task",
+      "definition": {
+        "text": "packaged_task 는 전달받은 함수를 실행하여 리턴값을 promise 에 설정하고, get_future 로 대응하는 future 를 얻는다.",
+        "refs": [
+          {
+            "source": "B",
+            "section": "16장 / packaged_task",
+            "pages": [
+              806
+            ]
+          }
+        ],
+        "evidence": "그함수의리턴값을promise 에설정"
+      }
+    },
+    {
+      "term": "ThreadPool",
+      "definition": {
+        "text": "쓰레드풀 사용자는 쓰레드들을 생성해 두고 수행할 일을 쓰레드풀에 추가한다.",
+        "refs": [
+          {
+            "source": "B",
+            "section": "16장 / ThreadPool",
+            "pages": [
+              811
+            ]
+          }
+        ],
+        "evidence": "그냥쓰레드풀에추가"
+      }
+    }
+  ],
+  "summary_basis": "편집 요약",
+  "summary": [
+    {
+      "text": "같은 프로세스 안의 쓰레드들은 메모리를 공유한다.",
+      "refs": [
+        {
+          "source": "B",
+          "section": "16장 / 멀티 쓰레드 프로그램",
+          "pages": [
+            727
+          ]
+        }
+      ],
+      "evidence": "같은메모리를공유하게됩니다"
+    },
+    {
+      "text": "lock_guard 는 생성자에서 뮤텍스를 lock 하고 소멸할 때 unlock 한다.",
+      "refs": [
+        {
+          "source": "B",
+          "section": "16장 / lock_guard",
+          "pages": [
+            753
+          ]
+        }
+      ],
+      "evidence": "생성자에서뮤텍스를lock"
+    },
+    {
+      "text": "memory_order_seq_cst 를 사용하는 메모리 연산들은 모든 쓰레드에서 동일한 연산 순서로 관찰되며, atomic 의 기본 memory_order 이다.",
+      "refs": [
+        {
+          "source": "B",
+          "section": "16장 / memory_order_seq_cst",
+          "pages": [
+            792
+          ]
+        }
+      ],
+      "evidence": "모든쓰레드에서동일한연산순서"
+    },
+    {
+      "text": "std::async 는 실행 결과를 future 로 돌려주며, launch::async 는 바로 새 쓰레드에서 실행하고 launch::deferred 는 future::get 시 새 쓰레드 없이 실행한다.",
+      "refs": [
+        {
+          "source": "B",
+          "section": "16장 / std::async",
+          "pages": [
+            808
+          ]
+        }
+      ],
+      "evidence": "새로운\n쓰레드를생성하지않음"
+    }
+  ],
+  "review": [
+    {
+      "question": "join 은 언제 리턴하는가?",
+      "answer": {
+        "text": "join 은 해당 쓰레드가 실행을 종료하면 리턴한다.",
+        "refs": [
+          {
+            "source": "B",
+            "section": "16장 / join",
+            "pages": [
+              735
+            ]
+          }
+        ],
+        "evidence": "해당하는쓰레드들이실행을종료하면리턴"
+      }
+    },
+    {
+      "question": "lock_guard 는 언제 lock/unlock 하는가?",
+      "answer": {
+        "text": "lock_guard 는 생성자에서 뮤텍스를 lock 하고 소멸할 때 unlock 한다.",
+        "refs": [
+          {
+            "source": "B",
+            "section": "16장 / lock_guard",
+            "pages": [
+              753
+            ]
+          }
+        ],
+        "evidence": "생성자에서뮤텍스를lock"
+      }
+    },
+    {
+      "question": "future::get 을 두 번 호출하면 안 되는 이유는?",
+      "answer": {
+        "text": "future 의 get 은 안의 데이터를 이동하므로 두 번 호출하면 안 된다.",
+        "refs": [
+          {
+            "source": "B",
+            "section": "16장 / std::promise 와 std::future",
+            "pages": [
+              800
+            ]
+          }
+        ],
+        "evidence": "get 을두번호출"
+      }
+    },
+    {
+      "question": "WorkerThread 는 어떤 조건에서 종료하는가?",
+      "answer": {
+        "text": "WorkerThread 는 작업이 생기거나 stop_all 이 설정될 때까지 기다리고, stop_all 이 참이며 큐가 비면 종료한다.",
+        "refs": [
+          {
+            "source": "B",
+            "section": "16장 / ThreadPool 첫번째 버전",
+            "pages": [
+              814
+            ]
+          }
+        ],
+        "evidence": "stop_all && this->jobs_.empty()"
+      }
+    }
+  ],
+  "cheat": {
+    "definitions": [
+      {
+        "term": "쓰레드",
+        "definition": {
+          "text": "같은 프로세스 안의 쓰레드들은 메모리를 공유한다.",
+          "refs": [
+            {
+              "source": "B",
+              "section": "16장 / 멀티 쓰레드 프로그램",
+              "pages": [
+                727
+              ]
+            }
+          ],
+          "evidence": "같은메모리를공유하게됩니다"
+        }
+      },
+      {
+        "term": "lock_guard",
+        "definition": {
+          "text": "lock_guard 는 생성자에서 뮤텍스를 lock 하고 소멸할 때 unlock 한다.",
+          "refs": [
+            {
+              "source": "B",
+              "section": "16장 / lock_guard",
+              "pages": [
+                753
+              ]
+            }
+          ],
+          "evidence": "생성자에서뮤텍스를lock"
+        }
+      },
+      {
+        "term": "future::get",
+        "definition": {
+          "text": "future 의 get 은 안의 데이터를 이동하므로 두 번 호출하면 안 된다.",
+          "refs": [
+            {
+              "source": "B",
+              "section": "16장 / std::promise 와 std::future",
+              "pages": [
+                800
+              ]
+            }
+          ],
+          "evidence": "get 을두번호출"
+        }
+      }
+    ],
+    "comparison_title": "비동기 도구",
+    "comparison_headers": [
+      "도구",
+      "원문 기능"
+    ],
+    "comparison_rows": [
+      [
+        {
+          "text": "shared_future",
+          "refs": [
+            {
+              "source": "B",
+              "section": "16장 / shared_future",
+              "pages": [
+                804
+              ]
+            }
+          ],
+          "evidence": "shared_future"
+        },
+        {
+          "text": "여러 쓰레드에서 future 를 get 해야 하는 경우 shared_future 를 사용한다.",
+          "refs": [
+            {
+              "source": "B",
+              "section": "16장 / shared_future",
+              "pages": [
+                804
+              ]
+            }
+          ],
+          "evidence": "여러개의다른쓰레드에서future"
+        }
+      ],
+      [
+        {
+          "text": "packaged_task",
+          "refs": [
+            {
+              "source": "B",
+              "section": "16장 / packaged_task",
+              "pages": [
+                806
+              ]
+            }
+          ],
+          "evidence": "packaged_task"
+        },
+        {
+          "text": "packaged_task 는 전달받은 함수를 실행하여 리턴값을 promise 에 설정하고, get_future 로 대응하는 future 를 얻는다.",
+          "refs": [
+            {
+              "source": "B",
+              "section": "16장 / packaged_task",
+              "pages": [
+                806
+              ]
+            }
+          ],
+          "evidence": "그함수의리턴값을promise 에설정"
+        }
+      ],
+      [
+        {
+          "text": "std::async",
+          "refs": [
+            {
+              "source": "B",
+              "section": "16장 / std::async",
+              "pages": [
+                807
+              ]
+            }
+          ],
+          "evidence": "std::async"
+        },
+        {
+          "text": "std::async 는 실행 결과를 future 로 돌려주며, launch::async 는 바로 새 쓰레드에서 실행하고 launch::deferred 는 future::get 시 새 쓰레드 없이 실행한다.",
+          "refs": [
+            {
+              "source": "B",
+              "section": "16장 / std::async",
+              "pages": [
+                808
+              ]
+            }
+          ],
+          "evidence": "새로운\n쓰레드를생성하지않음"
+        }
+      ]
+    ],
+    "formulas": [],
+    "syntax": []
+  },
+  "checked_images": [
+    {
+      "source": "B",
+      "pages": [
+        732,
+        752,
+        794,
+        814
+      ]
+    }
+  ],
+  "editor_notes": []
+}

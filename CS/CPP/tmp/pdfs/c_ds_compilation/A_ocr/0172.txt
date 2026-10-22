@@ -1,0 +1,31 @@
+빈이야 하는 이유는 함수 인에서 구조체를 변경한 필요도 있기 때문이다. 포인터를 시용하지 않
+으면 구조체의 복사본이 전달되어서 원본 구조체를 변경할 수 없다. 일단 쉽게 구현할 수 있는
+연산부터 구현해보자.
+// 오류 처리 함수
+void error(char
+fprintf(stderr, i'%s\nn, message) ;
+exit(i);
+// 리스트 초기화 함수
+VOid init(ArrayListType *L)
+L—>size = 0;
+// 리스트가 비어 있으면 1을 반환
+// 그렇지 않으면 반환
+int *L)
+return L—>size == 0;
+// 리스트가 가득 차 있으면 1을 반환
+// 그렇지 않으면 1을 반환
+int is_fuII(ArrayListType *L)
+return L—>size == MAX_LIST_SIZE;
+! el에訔忒 get—entry(ArrayListType *나 int ps)
+if (ps 〈 0 || 〉= L-〉size)
+error("위치 오류");
+return L—>array[pos] ;
+// 리스트 출력
+VOid print_Iist(ArrayListType *L)
+int 5;
+for (특 = 0; i<L—>size; i++)
+printf("%->", L->array[i]);
+printf("\n") ;
+항목 추가 연산
+이제 리스트의 맨 끝에 항목을 추가하는 insert-last() 함수를 구현해보자.
+180 C언어로 쉽게 불어쓴 자료구조

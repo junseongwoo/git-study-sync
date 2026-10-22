@@ -1,0 +1,65 @@
+{
+  "reviewer": "root",
+  "files": {
+    "notes": {
+      "pages": [
+        1,
+        80
+      ],
+      "contact_sheets": [
+        "contact_001_004.jpg",
+        "contact_005_008.jpg",
+        "contact_009_012.jpg",
+        "contact_013_016.jpg",
+        "contact_017_020.jpg",
+        "contact_021_024.jpg",
+        "contact_025_028.jpg",
+        "contact_029_032.jpg",
+        "contact_033_036.jpg",
+        "contact_037_040.jpg",
+        "contact_041_044.jpg",
+        "contact_045_048.jpg",
+        "contact_049_052.jpg",
+        "contact_053_056.jpg",
+        "contact_057_060.jpg",
+        "contact_061_064.jpg",
+        "contact_065_068.jpg",
+        "contact_069_072.jpg",
+        "contact_073_076.jpg",
+        "contact_077_080.jpg"
+      ],
+      "individual_rechecks": [
+        43,
+        44
+      ]
+    },
+    "cheat": {
+      "pages": [
+        1,
+        25
+      ],
+      "contact_sheets": [
+        "contact_001_004.jpg",
+        "contact_005_008.jpg",
+        "contact_009_012.jpg",
+        "contact_013_016.jpg",
+        "contact_017_020.jpg",
+        "contact_021_024.jpg",
+        "contact_025_025.jpg"
+      ]
+    }
+  },
+  "issues": [],
+  "resolved": [
+    {
+      "file": "notes",
+      "pages": [
+        43,
+        44
+      ],
+      "issue": "요약 제목과 기준만 앞 면에 남음",
+      "fix": "제목·기준·첫 요약 문장 묶음 유지",
+      "status": "재확인 통과"
+    }
+  ]
+}

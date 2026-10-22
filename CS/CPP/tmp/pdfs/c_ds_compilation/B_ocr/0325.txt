@@ -1,0 +1,50 @@
+102
+103
+105
+1%
+107
+108
+109
+110
+113
+114
+115
+117
+118
+119
+120
+122
+123
+124
+125
+126
+127
+128
+129
+1%
+RightPosition = LeftPosition + 1;
+if ( H-XJsedSize 〈 ( H-XapacitY / 2 ) )
+H-Xapacity 7= 2;
+H->Nodes =
+대eapNode*) realloc( H->Nodes, sizeof( HeapNode ) * H-Xapacity );
+int HEAP GetParent( int lndex )
+return (int) ((lndex - 1) / 2);
+int HEAP_GetLeftChild( int lndex )
+return (2 * lndex) + 1;
+VOid
+HEAP PrintNcxies대eap* H )
+int i = 0:
+for ( i=O; i 〈 H->UsedSize; i++ )
+printf(•*d •. H->Nodes(il.Data);
+printf("\n");
+1
+07장/Heap/Test—Heap.c
+01
+02
+03
+05
+320
+tinclude "Heap.h"
+int main( void )
+Heap• H = HEAP_Create( 3 );
+Part 02 • 알고리줍

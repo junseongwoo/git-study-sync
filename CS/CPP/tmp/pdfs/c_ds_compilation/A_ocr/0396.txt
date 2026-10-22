@@ -1,0 +1,45 @@
+아래의 알고리즘은 집합의 연신을 구현한 것이다. 트리는 부모 노드를 가리기는 배열로 구성
+된다. 루트 노드는 부모 노드 배열에서 나을 가진다.
+알고리즘 11.3 unm-find 알고리즘
+UNION(a, 바:
+rmtl = FIND(a) •,
+「㈖t2 = FIND(b);
+if * rmt2
+FIND(curr) •.
+if (parent(curr] -
+// 노드 a의 루트를 찾는다.
+// 노드 b의 루트를 찾는다.
+// 합한다.
+// curr의 루트를 찾는다.
+-1)
+// 루트
+return curr;
+while (parent[curr) != -1) curr = parent[curr];
+return curr ;
+위의 알고리즘을 C언어로 구현하면 다음과 같다.
+프로그램 11.7 union-find 프로그램
+int parent[MAX_VERTICES] ;
+VOid set_init(int n)
+for (int 5 = 0; i<n; 1++)
+parent[i]
+// curr가 속하는 집합을 반환한다.
+int set_find(int curr)
+// 부모 노드
+// 초기화
+if (parent[curr]
+return curr;
+-1)
+// 루트
+급file (parent[curr] != -1) curr = parent[curr];
+return curr;
+// 두개의 원소가 속한 집합을 합친다.
+void set—union(int a, int b)
+// 노드 a의 루트를 찾는다.
+// 노드 b의 루트를 찾는다.
+// 합한다.
+404
+int = set_find(a);
+int 「예t2 = set_find(b);
+if (rootl != rOOt2)
+parent[rootl] = root2;
+C언어로 쉽게 불어쓴 자료구조

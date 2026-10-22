@@ -1,0 +1,31 @@
+// 선택한 에지가 사이클을 생성하지 않으면 해당 에지를 MST에 추가
+if (dset.find(e.src) dset.find(e dst))
+MST.add-edge(Edge 〈了〉(e.src, e.dst, e weight});
+dset union sets(e.src, e dst);
+return MST;
+8. main() 함수에 테스트 코드를 추가합니다.
+int main()
+using T = unsigned;
+// 그래프 객체 생성
+Graph<T> 6(9);
+map〈unsigned, vector〈pair〈unsigned, T〉〉〉 edge—map;
+edge
+edge
+edge
+-map[41 = {{2, 1}, {3, 2}, {5, 2}, {6, 4}, {8, 5}};
+edge
+edge
+edge
+edge
+edge
+0)
+for (auto& i
+: edge—map)
+for (auto& j : i.second)
+G.add-edge(Edge<T>{ i.first, j.first, j.second })•,
+cout 〈〈 "[입력 그래프]" 〈〈 endl;
+cout 〈〈 6 〈〈 endl;
+Graph<T> MST = minimum-spanning-tree(G);
+cout 〈〈 "[최소 신장 트리]" 〈〈 endl;
+cout 〈〈 MST;
+231

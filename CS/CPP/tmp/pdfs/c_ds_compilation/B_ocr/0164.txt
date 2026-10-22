@@ -1,0 +1,55 @@
+04&/LCRSTree/LCRSTree. (
+01
+02
+03
+05
+07
+09
+10
+12
+13
+17
+18
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+31
+32
+33
+34
+35
+36
+37
+표
+156
+•include "LCRSTree h"
+LCRSNode* LCRS_CreateNode( ElementType NewData )
+LCRSNode• NewNode = (LCRSNode*)malloc( sizeof(LCRSNode) );
+NewNode->LeftChiId
+= NULL,
+NewNode-RightSibIing = NULL;
+NewNode->Data = NewData,
+return NewNode •
+void LCRS_DestroyNode( LCRSNode* NOde )
+free(Node);
+VOid LCRS_DestroyTree( LCRSNode* ROOt )
+if ( Root-RightSib1ing != NULL )
+LCRS_DestroyTree( Root->RightSibIing );
+if ( Root->LeftChild != NULL )
+LCRS DestroyTree( Root->LeftChi1d );
+Root->LeftChiId = NULL;
+Root-RightSibling = NULL;
+LCRS DestroyNode( ROOt );
+void LCRS_AddChildNode( LCRSNode* Parent, LCRSNode *ChiId)
+if ( Parent->LeftChi1d
+= NULL )
+Parent->LeftChiId = Chi1d;
+else
+Part 01 • 자료구조

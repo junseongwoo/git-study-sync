@@ -1,0 +1,28 @@
+Remove->PrevNode-*extNode = Remove->NextNode•
+Remove->NextNode-PrevNode = Remove-PrevNode,
+Remove-PrevNode = NULL;
+Remove->NextNode = NULL;
+1.4.2 환형 더블 링크드 리스트 예제 프로그램
+환형 더블 링크드 리스트의 노-드 추가와 삭제 연산에 대해 살펴봤는데 조금 싱거웠죠? 하지만 이렇
+게 쉽게 익힐 수 있었던 것은 링크드 리스트와 더블 링크드 리스트를 공부하면서 실력을 쌓았기 때
+문입니다. 이제 여러분은 이 내공을 이용해 다음 장부터 만나게 될 새로운 자료구조들도 쉽게 익힐
+수 있을 것입니다.
+사설은 여기까지 하고 환형 더블 링크드 리스트의 예제 프로그램을 만들어보겠습니다. 이 예제도 3개
+의 파일로 이루어져 있습니다. 그중 2개는 환형 더블 링크드 리스트의 기본 연산 함수를 정의하는
+CircularDoublyLinkedL1st.h와 CircularDoublyLinkedList.c이고, 나머지 하나는 이 함수들
+을 테스~트하는 Test CircularDoublyLinkedList.c입니다.
+01 장/CircuIarDoub1YLinkedList/Circu1arDoub1yLinkedList. h
+01
+02
+04
+05
+07
+60
+$ifndef CIRCULAR_DOIJBLY_니NKED니ST H
+«iefine CIRCULAR nJBLYL니NKED니ST H
+#include <stdi이h〉
+#include <stdlib.h〉
+int ElementType,
+typedef struct tagNode
+EleæntType Data,
+Part 01 • 자료구조

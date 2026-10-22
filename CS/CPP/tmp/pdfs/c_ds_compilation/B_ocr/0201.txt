@@ -1,0 +1,54 @@
+13
+14
+15
+16
+17
+18
+void DS_UnionSet( DisjointSet* Set1, DisjointSet* Set2
+DisjointSet* DS FindSet( DisjointSet* Set );
+DisjointSet* DS MakeSet( void* NewData ):
+void DS DestroySet( DisjointSet* Set );
+ændif
+04장/DisjoingSet/Disj0intSet.c
+01
+02
+03
+04
+05
+06
+07
+08
+09
+12
+13
+14
+15
+16
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+#include "DisjointSet.h"
+void DS UnionSet( DisjointSet* Set1, DisjointSet* Set2 )
+Set2 = DS_FindSet(Set2);
+Set2-Parent = Set1;
+DisjointSet* DS_FindSet( DisjointSet* Set )
+while ( Set-Parent != NULL )
+Set = Set-Parent;
+return Set,
+DisjointSet* DS MakeSet( void* NewData )
+DisjointSet* NewNode = (DisjointSet*)malloc(sizeof(DisjointSet));
+NewData,
+NewNode->Data
+NewNode->Parent = NULL;
+return NewNode,
+void DS DestroySet( Disj0intSet* Set )
+Chapter 04 • 트리
+193

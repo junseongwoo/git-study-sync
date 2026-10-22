@@ -1,0 +1,25 @@
+연산 구현
+다음은 삽입 연산을 구현하는 HEAP-Insert ( ) 입니다. 코드가 단순하지요?
+void HEAP lnsert( Heap* H, NewData )
+int CurrentPosition = H-XJsedSize,
+int ParentPosition = HEAP GetParent( CurrentPosition );
+lJsed&ze가 Capacity에 도달하면
+if ( H-XJsedSize == H-XapacitY )•
+Capaclty를 2배로 늘립니다.
+H-Xapacity *= 2;
+H->Nodes = 대eapNode•)
+realloc( H->Nodes, sizeof( HeapNode ) * H-XapacitY );
+H-*odes[CurrentPositionJ Data
+// 후속 처리
+while ( CurrentPosition 〉 0
+NewData,
+H->Nodes[CurrentPositionl Data 〈 H->Nodes[ParentPositionl.Data )
+HEAP_S•apNodes( H, CurrentPosition, ParentPosition );
+CurrentPosition = ParentPosition;
+ParentPosition = HEAP GetParent( CurrentPosition );
+H-XJsedSize++;
+초솟값 삭제 연산 구현
+다음은 힘의 최솟값을 삭제하는 Heap-DeleteMin( ) 함수입니다. 힘은 항상 최솟값이 뿌리, 즉
+Ncxies 배열의 0번째 요-소에 있음을 염두에 두면 다음 코드를 한결 이해하기 쉬울 것입니다.
+314
+Part 02 • 알고리즘

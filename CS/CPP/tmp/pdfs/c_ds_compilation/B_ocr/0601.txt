@@ -1,0 +1,10 @@
+실행 결과
+Original Size:160 Encoded Size:71
+0riginal
+Encoded
+Decoded
+This ls Algorithms.
+: 101110001011000001111100001111110100010111101110001弼111%1110111%110
+This ls AIgorithms.
+Chapter 14 • 탐욕 알고리즘
+603

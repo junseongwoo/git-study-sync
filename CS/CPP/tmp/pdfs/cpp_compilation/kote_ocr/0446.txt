@@ -1,0 +1,23 @@
+result.push back(min data);
+int nextlndex = min.dataPosition + 1;
+if (nextlndex 〈 input(min.IistPositionl.size())
+heap.push-back({input(min.IistPositionl[nextIndexl, min.IistPosition,
+nextlndex});
+std: :push-heap(heap.begin(), heap,end(), comparator);
+return result;
+5. 이제 ) 함수를 만들고 ) 함수를 사용하는 코드를 작성합니다.
+int main()
+std::vector<int〉 vl = {1, 3, 8, 15, 105〉;
+std::vector<int〉 v2 = {2, 3, 10, 11, 16, 20, 25};
+std::vector<int〉 v3 = {-2, 100, 1000};
+std::vector<int〉 v4 = {-1, 0, 14, 18};
+autO result = merge({vl, v2, v3, v4});
+for (autO i : result)
+std::cout 〈〈 〈〈
+std: :cout 〈〈 std: :endl;
+return 0;
+지금까지 작성한 프로그램을 실행하면 다음과 같은 출력을 확인할 수 있습니다.
+-2 -1 01 2338 10 11 14 15 16 1820 25 100 105 1000
+따>
+「40
+459

@@ -1,0 +1,27 @@
+{
+  "scope": "첨부 15개 자료 기반 25개 통합 단원",
+  "unique_evidence_items": 1248,
+  "files": {
+    "notes": {
+      "path": "C:\\Users\\user\\Desktop\\Obsidian\\git-study-sync\\CS\\CPP\\output\\pdf\\C++_프로그래밍과_코딩테스트_정리_및_요약.pdf",
+      "pages": 177,
+      "bytes": 722801,
+      "sha256": "c9e627802254fb14fd70fb0d1d03dde051dc708baacb6cb5f4b0d90bf20989cd",
+      "a4_portrait": true
+    },
+    "cheat": {
+      "path": "C:\\Users\\user\\Desktop\\Obsidian\\git-study-sync\\CS\\CPP\\output\\pdf\\C++_프로그래밍과_코딩테스트_확인_및_시험.pdf",
+      "pages": 25,
+      "bytes": 268822,
+      "sha256": "2ecaaad12e4d67cfac4aeef23a7473675c993aa75ae476895153855ccaa16e45",
+      "a4_portrait": true
+    },
+    "audit": {
+      "path": "C:\\Users\\user\\Desktop\\Obsidian\\git-study-sync\\CS\\CPP\\output\\pdf\\C++_프로그래밍과_코딩테스트_근거_및_인쇄점검표.pdf",
+      "pages": 159,
+      "bytes": 629242,
+      "sha256": "3c20674e53d84cbd95ffda736f0042b984410d00d76cf3bf1647e8102302d1eb",
+      "a4_portrait": true
+    }
+  }
+}

@@ -1,0 +1,949 @@
+{
+  "unit": 1,
+  "title": "자료구조·알고리즘·추상 자료형",
+  "part": "기초",
+  "scope": [
+    {
+      "source": "A",
+      "start": 7,
+      "end": 15
+    },
+    {
+      "source": "B",
+      "start": 14,
+      "end": 17
+    }
+  ],
+  "learning": [
+    {
+      "text": "자료들을 정리하여 보관하는 여러 가지 구조를 자료구조(data structure)라고 부른다.",
+      "refs": [
+        {
+          "source": "A",
+          "section": "1.1 자료구조와 알고리즘",
+          "pages": [
+            7
+          ]
+        }
+      ],
+      "evidence": "자료들을 정리하여 보관하는"
+    },
+    {
+      "text": "추상 자료형(ADT: abstract data type)은 추상적·수학적으로 자료형을 정의한 것이다.",
+      "refs": [
+        {
+          "source": "A",
+          "section": "1.2 추상 자료형",
+          "pages": [
+            13
+          ]
+        }
+      ],
+      "evidence": "수학적으로 자료형을 정의"
+    }
+  ],
+  "concepts": [
+    {
+      "title": "자료구조와 알고리즘",
+      "items": [
+        {
+          "text": "자료들을 정리하여 보관하는 여러 가지 구조를 자료구조(data structure)라고 부른다.",
+          "refs": [
+            {
+              "source": "A",
+              "section": "1.1 자료구조와 알고리즘",
+              "pages": [
+                7
+              ]
+            }
+          ],
+          "evidence": "자료들을 정리하여 보관하는"
+        },
+        {
+          "text": "알고리즘은 컴퓨터로 문제를 풀기 위한 단계적인 절차이다.",
+          "refs": [
+            {
+              "source": "A",
+              "section": "1.1 알고리즘이란?",
+              "pages": [
+                10
+              ]
+            }
+          ],
+          "evidence": "컴퓨터로 문제를 풀기 위한 단계적인 절차"
+        },
+        {
+          "text": "알고리즘은 특정한 일을 수행하는 명령어들의 집합이며, 알고리즘이 되기 위한 조건을 만족해야 한다.",
+          "refs": [
+            {
+              "source": "A",
+              "section": "1.1 알고리즘이란?",
+              "pages": [
+                10
+              ]
+            }
+          ],
+          "evidence": "특정한 일을 수행하는 명령어들의 집합"
+        },
+        {
+          "text": "최고 성적 예제에서 배열 scores는 자료구조이고, largest를 첫 요소로 초기화하여 나머지 요소들과 순차 비교하는 절차는 알고리즘이다.",
+          "refs": [
+            {
+              "source": "A",
+              "section": "1.1 프로그램 1.1",
+              "pages": [
+                9
+              ]
+            }
+          ],
+          "evidence": "배열 scores가 자료구조"
+        },
+        {
+          "text": "자료구조와 알고리즘은 밀접한 관계가 있어, 각 응용에 적합한 자료구조와 알고리즘을 선택해야 한다.",
+          "refs": [
+            {
+              "source": "A",
+              "section": "1.1 자료구조와 알고리즘",
+              "pages": [
+                9
+              ]
+            }
+          ],
+          "evidence": "가장 적합한 자료"
+        },
+        {
+          "text": "B는 자료구조를 데이터를 효율적으로 다루게 돕는 데이터 보관 방법과 데이터에 관한 연산의 총체로 정의한다.",
+          "refs": [
+            {
+              "source": "B",
+              "section": "0.1 자료구조",
+              "pages": [
+                14
+              ]
+            }
+          ],
+          "evidence": "데이터 보관"
+        },
+        {
+          "text": "알고리즘 설계는 문제 풀이 절차를 설계하는 것이고, 구현은 프로그래밍 언어로 실제 동작하는 코드를 작성하는 것이다.",
+          "refs": [
+            {
+              "source": "B",
+              "section": "0.2 알고리즘",
+              "pages": [
+                17
+              ]
+            }
+          ],
+          "evidence": "알고리즘을 설계한다는 것은"
+        }
+      ]
+    },
+    {
+      "title": "알고리즘의 조건과 표현",
+      "items": [
+        {
+          "text": "입력 조건은 0개 이상의 입력이 존재해야 한다는 것이다.",
+          "refs": [
+            {
+              "source": "A",
+              "section": "1.1 정의 1.1 알고리즘",
+              "pages": [
+                10
+              ]
+            }
+          ],
+          "evidence": "0개 이상의 입력"
+        },
+        {
+          "text": "출력 조건은 1개 이상의 출력이 존재해야 한다는 것이다.",
+          "refs": [
+            {
+              "source": "A",
+              "section": "1.1 정의 1.1 알고리즘",
+              "pages": [
+                10
+              ]
+            }
+          ],
+          "evidence": "1개 이상의 출력"
+        },
+        {
+          "text": "명백성은 각 명령어의 의미가 모호하지 않고 명확해야 한다는 것이다.",
+          "refs": [
+            {
+              "source": "A",
+              "section": "1.1 정의 1.1 알고리즘",
+              "pages": [
+                10
+              ]
+            }
+          ],
+          "evidence": "모호하지 않고 명확"
+        },
+        {
+          "text": "유한성은 한정된 수의 단계 후에 반드시 종료되어야 한다는 것이다.",
+          "refs": [
+            {
+              "source": "A",
+              "section": "1.1 정의 1.1 알고리즘",
+              "pages": [
+                10
+              ]
+            }
+          ],
+          "evidence": "한정된 수의 단계"
+        },
+        {
+          "text": "유효성은 각 명령어가 종이와 연필 또는 컴퓨터로 실행 가능한 연산이어야 한다는 것이다.",
+          "refs": [
+            {
+              "source": "A",
+              "section": "1.1 정의 1.1 알고리즘",
+              "pages": [
+                10
+              ]
+            }
+          ],
+          "evidence": "실행 가능한 연산"
+        },
+        {
+          "text": "알고리즘 기술 방법에는 자연어, 흐름도(flowchart), 의사 코드, 프로그래밍 언어가 있다.",
+          "refs": [
+            {
+              "source": "A",
+              "section": "1.1 알고리즘의 기술 방법",
+              "pages": [
+                11
+              ]
+            }
+          ],
+          "evidence": "4가지의 방법"
+        },
+        {
+          "text": "의사 코드는 자연어보다 체계적이고 프로그래밍 언어보다 덜 엄격하며, 알고리즘을 기술하는 데 사용하는 코드이다.",
+          "refs": [
+            {
+              "source": "A",
+              "section": "1.1 알고리즘의 기술 방법",
+              "pages": [
+                11
+              ]
+            }
+          ],
+          "evidence": "자연어보다는 더 체계적"
+        }
+      ]
+    },
+    {
+      "title": "자료형·추상화·ADT",
+      "items": [
+        {
+          "text": "자료형(data type)은 데이터의 종류이며, 자료형을 다룰 때에는 데이터 간에 가능한 연산도 고려한다.",
+          "refs": [
+            {
+              "source": "A",
+              "section": "1.2 추상 자료형",
+              "pages": [
+                12,
+                13
+              ]
+            }
+          ],
+          "evidence": "데이터 간에 가능한 연산"
+        },
+        {
+          "text": "추상 자료형(ADT: abstract data type)은 추상적·수학적으로 자료형을 정의한 것이다.",
+          "refs": [
+            {
+              "source": "A",
+              "section": "1.2 추상 자료형",
+              "pages": [
+                13
+              ]
+            }
+          ],
+          "evidence": "수학적으로 자료형을 정의"
+        },
+        {
+          "text": "자료구조는 추상 자료형을 프로그래밍 언어로 구현한 것이라 할 수 있다.",
+          "refs": [
+            {
+              "source": "A",
+              "section": "1.2 추상 자료형",
+              "pages": [
+                13
+              ]
+            }
+          ],
+          "evidence": "프로그래밍 언어로 구현"
+        },
+        {
+          "text": "추상화는 시스템의 간략한 기술 또는 명세이며, 핵심적인 구조나 동작에 집중한다.",
+          "refs": [
+            {
+              "source": "A",
+              "section": "1.2 추상 자료형",
+              "pages": [
+                14
+              ]
+            }
+          ],
+          "evidence": "핵심적인 구조나 동작"
+        },
+        {
+          "text": "ADT는 데이터나 연산이 무엇(what)인지 정의하며, 어떻게(how) 구현할 것인지는 정의하지 않는다.",
+          "refs": [
+            {
+              "source": "A",
+              "section": "1.2 추상 자료형",
+              "pages": [
+                14
+              ]
+            }
+          ],
+          "evidence": "무엇(what)"
+        },
+        {
+          "text": "ADT의 연산에는 이름·매개변수·반환형을 정의하지만 구체적인 구현 코드는 주어지지 않는다.",
+          "refs": [
+            {
+              "source": "A",
+              "section": "1.2 추상 자료형",
+              "pages": [
+                14
+              ]
+            }
+          ],
+          "evidence": "매개 변수, 반환형"
+        },
+        {
+          "text": "ADT의 사용자는 구현 세부사항이 아닌 인터페이스를 사용하므로, 인터페이스가 지켜지면 구현 방법을 변경할 수 있다.",
+          "refs": [
+            {
+              "source": "A",
+              "section": "1.2 정보은닉",
+              "pages": [
+                15
+              ]
+            }
+          ],
+          "evidence": "인터페이스만을 공개"
+        },
+        {
+          "text": "B의 추상 데이터 형식(ADT)은 자료구조의 동작 방법을 표현하며, 자료구조가 갖추어야 할 일련의 연산이다.",
+          "refs": [
+            {
+              "source": "B",
+              "section": "0.1 추상 데이터 형식",
+              "pages": [
+                15
+              ]
+            }
+          ],
+          "evidence": "자료구조가 갖춰야 할 일련의 연산"
+        },
+        {
+          "text": "B는 ADT가 개념을 제시하고 자료구조가 구현을 포함한다고 구분한다.",
+          "refs": [
+            {
+              "source": "B",
+              "section": "0.1 자료구조",
+              "pages": [
+                16
+              ]
+            }
+          ],
+          "evidence": "ADT는 개념을 제시"
+        }
+      ]
+    },
+    {
+      "title": "B의 자료구조 분류",
+      "items": [
+        {
+          "text": "단순 자료구조는 프로그래밍 언어에서 통상 제공하는 기본 데이터 형식이며, B는 복합 자료구조를 설명한다.",
+          "refs": [
+            {
+              "source": "B",
+              "section": "0.1 자료구조",
+              "pages": [
+                14
+              ]
+            }
+          ],
+          "evidence": "기본 데이터 형식"
+        },
+        {
+          "text": "선형 자료구조는 데이터 요소를 순차적으로 연결하며, 배열·링크드 리스트·스택·큐 등이 해당한다.",
+          "refs": [
+            {
+              "source": "B",
+              "section": "0.1 자료구조",
+              "pages": [
+                14
+              ]
+            }
+          ],
+          "evidence": "데이터 요소를 순차적으로 연결"
+        },
+        {
+          "text": "비선형 자료구조는 데이터 요소를 비순차적으로 연결하며, 트리와 그래프가 해당한다.",
+          "refs": [
+            {
+              "source": "B",
+              "section": "0.1 자료구조",
+              "pages": [
+                15
+              ]
+            }
+          ],
+          "evidence": "비순차적으로 연결"
+        }
+      ]
+    }
+  ],
+  "procedures": [
+    {
+      "title": "원문의 배열 최댓값 탐색 순서",
+      "steps": [
+        {
+          "text": "첫 번째 배열 요소를 largest에 저장한다.",
+          "refs": [
+            {
+              "source": "A",
+              "section": "1.1 ArrayMax",
+              "pages": [
+                9,
+                12
+              ]
+            }
+          ],
+          "evidence": "largest"
+        },
+        {
+          "text": "나머지 요소를 차례대로 비교하여 현재 요소가 더 크면 largest를 갱신한다.",
+          "refs": [
+            {
+              "source": "A",
+              "section": "1.1 ArrayMax",
+              "pages": [
+                9,
+                12
+              ]
+            }
+          ],
+          "evidence": "return largest"
+        },
+        {
+          "text": "배열 끝까지 비교한 뒤 largest를 반환한다.",
+          "refs": [
+            {
+              "source": "A",
+              "section": "1.1 ArrayMax",
+              "pages": [
+                9,
+                12
+              ]
+            }
+          ],
+          "evidence": "return largest"
+        }
+      ]
+    }
+  ],
+  "syntax": [
+    {
+      "label": "알고리즘 1.1 ArrayMax 원문 의사 코드",
+      "code": "ArrayMax(list, N):\n    largest←list[0]\n    for i←1 to N-1 do\n        if list[i]>largest\n            then largest←list[i]\n    return largest",
+      "refs": [
+        {
+          "source": "A",
+          "section": "1.1 알고리즘 1.1",
+          "pages": [
+            12
+          ]
+        }
+      ],
+      "evidence": "ArrayMax",
+      "note": null
+    }
+  ],
+  "formulas": [
+    {
+      "label": "그림 1-3의 프로그램 구성",
+      "expression": "프로그램 = 자료구조 + 알고리즘",
+      "refs": [
+        {
+          "source": "A",
+          "section": "1.1 프로그램 1.1",
+          "pages": [
+            9
+          ]
+        }
+      ],
+      "evidence": "프로그램 = 자료구조 + 알고리즘",
+      "note": "원문 그림의 표기."
+    }
+  ],
+  "comparisons": [
+    {
+      "title": "ADT와 구현의 구분",
+      "headers": [
+        "구분",
+        "책의 설명"
+      ],
+      "rows": [
+        [
+          {
+            "text": "추상 자료형",
+            "refs": [
+              {
+                "source": "A",
+                "section": "1.2 추상 자료형",
+                "pages": [
+                  14
+                ]
+              }
+            ],
+            "evidence": "ADT"
+          },
+          {
+            "text": "ADT는 데이터나 연산이 무엇(what)인지 정의하며, 어떻게(how) 구현할 것인지는 정의하지 않는다.",
+            "refs": [
+              {
+                "source": "A",
+                "section": "1.2 추상 자료형",
+                "pages": [
+                  14
+                ]
+              }
+            ],
+            "evidence": "무엇(what)"
+          }
+        ],
+        [
+          {
+            "text": "자료구조",
+            "refs": [
+              {
+                "source": "A",
+                "section": "1.2 추상 자료형",
+                "pages": [
+                  13
+                ]
+              }
+            ],
+            "evidence": "자료구조"
+          },
+          {
+            "text": "자료구조는 추상 자료형을 프로그래밍 언어로 구현한 것이라 할 수 있다.",
+            "refs": [
+              {
+                "source": "A",
+                "section": "1.2 추상 자료형",
+                "pages": [
+                  13
+                ]
+              }
+            ],
+            "evidence": "프로그래밍 언어로 구현"
+          }
+        ]
+      ]
+    }
+  ],
+  "terms": [
+    {
+      "term": "자료구조",
+      "definition": {
+        "text": "자료들을 정리하여 보관하는 여러 가지 구조를 자료구조(data structure)라고 부른다.",
+        "refs": [
+          {
+            "source": "A",
+            "section": "1.1 자료구조와 알고리즘",
+            "pages": [
+              7
+            ]
+          }
+        ],
+        "evidence": "자료들을 정리하여 보관하는"
+      }
+    },
+    {
+      "term": "알고리즘",
+      "definition": {
+        "text": "알고리즘은 컴퓨터로 문제를 풀기 위한 단계적인 절차이다.",
+        "refs": [
+          {
+            "source": "A",
+            "section": "1.1 알고리즘이란?",
+            "pages": [
+              10
+            ]
+          }
+        ],
+        "evidence": "컴퓨터로 문제를 풀기 위한 단계적인 절차"
+      }
+    },
+    {
+      "term": "명백성",
+      "definition": {
+        "text": "명백성은 각 명령어의 의미가 모호하지 않고 명확해야 한다는 것이다.",
+        "refs": [
+          {
+            "source": "A",
+            "section": "1.1 정의 1.1 알고리즘",
+            "pages": [
+              10
+            ]
+          }
+        ],
+        "evidence": "모호하지 않고 명확"
+      }
+    },
+    {
+      "term": "유한성",
+      "definition": {
+        "text": "유한성은 한정된 수의 단계 후에 반드시 종료되어야 한다는 것이다.",
+        "refs": [
+          {
+            "source": "A",
+            "section": "1.1 정의 1.1 알고리즘",
+            "pages": [
+              10
+            ]
+          }
+        ],
+        "evidence": "한정된 수의 단계"
+      }
+    },
+    {
+      "term": "유효성",
+      "definition": {
+        "text": "유효성은 각 명령어가 종이와 연필 또는 컴퓨터로 실행 가능한 연산이어야 한다는 것이다.",
+        "refs": [
+          {
+            "source": "A",
+            "section": "1.1 정의 1.1 알고리즘",
+            "pages": [
+              10
+            ]
+          }
+        ],
+        "evidence": "실행 가능한 연산"
+      }
+    },
+    {
+      "term": "의사 코드",
+      "definition": {
+        "text": "의사 코드는 자연어보다 체계적이고 프로그래밍 언어보다 덜 엄격하며, 알고리즘을 기술하는 데 사용하는 코드이다.",
+        "refs": [
+          {
+            "source": "A",
+            "section": "1.1 알고리즘의 기술 방법",
+            "pages": [
+              11
+            ]
+          }
+        ],
+        "evidence": "자연어보다는 더 체계적"
+      }
+    },
+    {
+      "term": "추상 자료형",
+      "definition": {
+        "text": "추상 자료형(ADT: abstract data type)은 추상적·수학적으로 자료형을 정의한 것이다.",
+        "refs": [
+          {
+            "source": "A",
+            "section": "1.2 추상 자료형",
+            "pages": [
+              13
+            ]
+          }
+        ],
+        "evidence": "수학적으로 자료형을 정의"
+      }
+    },
+    {
+      "term": "추상화",
+      "definition": {
+        "text": "추상화는 시스템의 간략한 기술 또는 명세이며, 핵심적인 구조나 동작에 집중한다.",
+        "refs": [
+          {
+            "source": "A",
+            "section": "1.2 추상 자료형",
+            "pages": [
+              14
+            ]
+          }
+        ],
+        "evidence": "핵심적인 구조나 동작"
+      }
+    }
+  ],
+  "summary_basis": "편집 요약",
+  "summary": [
+    {
+      "text": "자료들을 정리하여 보관하는 여러 가지 구조를 자료구조(data structure)라고 부른다.",
+      "refs": [
+        {
+          "source": "A",
+          "section": "1.1 자료구조와 알고리즘",
+          "pages": [
+            7
+          ]
+        }
+      ],
+      "evidence": "자료들을 정리하여 보관하는"
+    },
+    {
+      "text": "알고리즘은 컴퓨터로 문제를 풀기 위한 단계적인 절차이다.",
+      "refs": [
+        {
+          "source": "A",
+          "section": "1.1 알고리즘이란?",
+          "pages": [
+            10
+          ]
+        }
+      ],
+      "evidence": "컴퓨터로 문제를 풀기 위한 단계적인 절차"
+    },
+    {
+      "text": "ADT는 데이터나 연산이 무엇(what)인지 정의하며, 어떻게(how) 구현할 것인지는 정의하지 않는다.",
+      "refs": [
+        {
+          "source": "A",
+          "section": "1.2 추상 자료형",
+          "pages": [
+            14
+          ]
+        }
+      ],
+      "evidence": "무엇(what)"
+    },
+    {
+      "text": "ADT의 사용자는 구현 세부사항이 아닌 인터페이스를 사용하므로, 인터페이스가 지켜지면 구현 방법을 변경할 수 있다.",
+      "refs": [
+        {
+          "source": "A",
+          "section": "1.2 정보은닉",
+          "pages": [
+            15
+          ]
+        }
+      ],
+      "evidence": "인터페이스만을 공개"
+    }
+  ],
+  "review": [
+    {
+      "question": "알고리즘의 입력과 출력 개수 조건은?",
+      "answer": {
+        "text": "입력은 0개 이상, 출력은 1개 이상이어야 한다.",
+        "refs": [
+          {
+            "source": "A",
+            "section": "1.1 정의 1.1",
+            "pages": [
+              10
+            ]
+          }
+        ],
+        "evidence": "0개 이상의 입력"
+      }
+    },
+    {
+      "question": "유한성이란 무엇인가?",
+      "answer": {
+        "text": "유한성은 한정된 수의 단계 후에 반드시 종료되어야 한다는 것이다.",
+        "refs": [
+          {
+            "source": "A",
+            "section": "1.1 정의 1.1 알고리즘",
+            "pages": [
+              10
+            ]
+          }
+        ],
+        "evidence": "한정된 수의 단계"
+      }
+    },
+    {
+      "question": "ADT는 무엇을 정의하고 무엇을 정의하지 않는가?",
+      "answer": {
+        "text": "ADT는 데이터나 연산이 무엇(what)인지 정의하며, 어떻게(how) 구현할 것인지는 정의하지 않는다.",
+        "refs": [
+          {
+            "source": "A",
+            "section": "1.2 추상 자료형",
+            "pages": [
+              14
+            ]
+          }
+        ],
+        "evidence": "무엇(what)"
+      }
+    },
+    {
+      "question": "인터페이스가 유지될 때 ADT 구현 방법을 바꿀 수 있는 이유는?",
+      "answer": {
+        "text": "ADT의 사용자는 구현 세부사항이 아닌 인터페이스를 사용하므로, 인터페이스가 지켜지면 구현 방법을 변경할 수 있다.",
+        "refs": [
+          {
+            "source": "A",
+            "section": "1.2 정보은닉",
+            "pages": [
+              15
+            ]
+          }
+        ],
+        "evidence": "인터페이스만을 공개"
+      }
+    }
+  ],
+  "cheat": {
+    "definitions": [
+      {
+        "term": "자료구조",
+        "definition": {
+          "text": "자료들을 정리하여 보관하는 여러 가지 구조를 자료구조(data structure)라고 부른다.",
+          "refs": [
+            {
+              "source": "A",
+              "section": "1.1 자료구조와 알고리즘",
+              "pages": [
+                7
+              ]
+            }
+          ],
+          "evidence": "자료들을 정리하여 보관하는"
+        }
+      },
+      {
+        "term": "알고리즘",
+        "definition": {
+          "text": "알고리즘은 컴퓨터로 문제를 풀기 위한 단계적인 절차이다.",
+          "refs": [
+            {
+              "source": "A",
+              "section": "1.1 알고리즘이란?",
+              "pages": [
+                10
+              ]
+            }
+          ],
+          "evidence": "컴퓨터로 문제를 풀기 위한 단계적인 절차"
+        }
+      },
+      {
+        "term": "추상 자료형",
+        "definition": {
+          "text": "추상 자료형(ADT: abstract data type)은 추상적·수학적으로 자료형을 정의한 것이다.",
+          "refs": [
+            {
+              "source": "A",
+              "section": "1.2 추상 자료형",
+              "pages": [
+                13
+              ]
+            }
+          ],
+          "evidence": "수학적으로 자료형을 정의"
+        }
+      }
+    ],
+    "comparison_title": "ADT와 구현의 구분",
+    "comparison_headers": [
+      "구분",
+      "책의 설명"
+    ],
+    "comparison_rows": [
+      [
+        {
+          "text": "추상 자료형",
+          "refs": [
+            {
+              "source": "A",
+              "section": "1.2 추상 자료형",
+              "pages": [
+                14
+              ]
+            }
+          ],
+          "evidence": "ADT"
+        },
+        {
+          "text": "ADT는 데이터나 연산이 무엇(what)인지 정의하며, 어떻게(how) 구현할 것인지는 정의하지 않는다.",
+          "refs": [
+            {
+              "source": "A",
+              "section": "1.2 추상 자료형",
+              "pages": [
+                14
+              ]
+            }
+          ],
+          "evidence": "무엇(what)"
+        }
+      ],
+      [
+        {
+          "text": "자료구조",
+          "refs": [
+            {
+              "source": "A",
+              "section": "1.2 추상 자료형",
+              "pages": [
+                13
+              ]
+            }
+          ],
+          "evidence": "자료구조"
+        },
+        {
+          "text": "자료구조는 추상 자료형을 프로그래밍 언어로 구현한 것이라 할 수 있다.",
+          "refs": [
+            {
+              "source": "A",
+              "section": "1.2 추상 자료형",
+              "pages": [
+                13
+              ]
+            }
+          ],
+          "evidence": "프로그래밍 언어로 구현"
+        }
+      ]
+    ],
+    "formulas": [],
+    "syntax": []
+  },
+  "checked_images": [
+    {
+      "source": "A",
+      "pages": [
+        7,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15
+      ]
+    },
+    {
+      "source": "B",
+      "pages": [
+        14,
+        15,
+        16,
+        17
+      ]
+    }
+  ],
+  "editor_notes": []
+}

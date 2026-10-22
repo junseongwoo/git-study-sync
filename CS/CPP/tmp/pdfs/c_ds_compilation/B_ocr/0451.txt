@@ -1,0 +1,66 @@
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+42
+43
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+Vertex* NewVertex = CreateVertex( CurrentVertex-»ata ),•
+AddVertex( ShortestPath, NewVertex);
+Fringes(il
+= NULL;
+Precedences[il = NULL;
+ShortestPathVertices[iI = NewVertex;
+Weights[il
+MAX WEIGHT;
+CurrentVertex = CurrentVertex->Next,
+PQ-Enqueue ( 昶, StartNode );
+Weights[StartVertex쉬ndex] = 0;
+while( ! PQ-IsEmpty( PQ ) )
+PQNode Popped,
+PQ-Dequeue(PQ, vopped);
+CurrentVertex = (Vertex*)Popped.Data,
+Fringes[CurrentVertex->IndexJ = CurrentVertex;
+CurrentEdge = CurrentVertex->AdjacencyList;
+while ( CurrentEdge != NULL )
+Vertex* TargetVertex = CurrentEdge->Target,
+if ( Fringes[TargetVertex쉬ndexl == NULL
+Weights[CurrentVertex->IndexI + CurrentEdge-Xeight 〈
+Weights[TargetVertex->Indexl )
+PQNode NewNode = { CurrentEdge->Weight. TargetVertex }:
+PQ-Enqueue ( 國, NewNode );
+Precedences[TargetVertex->Index) = CurrentEdge-*rom,
+Weights(TargetVertex->Index)
+Weights[CurrentVertex->IndexJ +
+Chapter 09 • 그래프
+449

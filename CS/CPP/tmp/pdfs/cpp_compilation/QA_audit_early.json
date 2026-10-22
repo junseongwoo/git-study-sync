@@ -1,0 +1,103 @@
+{
+  "reviewer": "cpp_middle",
+  "artifact": "문장별 근거·인쇄 점검 PDF",
+  "render_directory": "C:\\Users\\user\\Desktop\\Obsidian\\git-study-sync\\CS\\CPP\\tmp\\pdfs\\cpp_compilation\\render\\audit",
+  "scope": {
+    "pdf_pages": [
+      1,
+      80
+    ],
+    "page_count": 80,
+    "contact_board_count": 20
+  },
+  "method": "20개 contact sheet를 view_image로 직접 확인하고, 002·050·058.png를 개별 확대 확인했다.",
+  "inspected_contact_boards": [
+    "contact_001_004.jpg",
+    "contact_005_008.jpg",
+    "contact_009_012.jpg",
+    "contact_013_016.jpg",
+    "contact_017_020.jpg",
+    "contact_021_024.jpg",
+    "contact_025_028.jpg",
+    "contact_029_032.jpg",
+    "contact_033_036.jpg",
+    "contact_037_040.jpg",
+    "contact_041_044.jpg",
+    "contact_045_048.jpg",
+    "contact_049_052.jpg",
+    "contact_053_056.jpg",
+    "contact_057_060.jpg",
+    "contact_061_064.jpg",
+    "contact_065_068.jpg",
+    "contact_069_072.jpg",
+    "contact_073_076.jpg",
+    "contact_077_080.jpg"
+  ],
+  "inspected_individual_pages": [
+    2,
+    50,
+    58
+  ],
+  "checks": [
+    {
+      "item": "텍스트·표의 페이지 경계 잘림 또는 넘침",
+      "count": 0,
+      "result": "발견 없음"
+    },
+    {
+      "item": "폰트 깨짐 또는 대체 네모(□) 표시",
+      "count": 0,
+      "result": "발견 없음"
+    },
+    {
+      "item": "페이지 끝 제목 고립",
+      "count": 0,
+      "result": "발견 없음"
+    },
+    {
+      "item": "표 행·셀·코드 블록이 페이지 경계에서 잘려 분리됨",
+      "count": 0,
+      "result": "발견 없음"
+    }
+  ],
+  "quality_table_page_2": {
+    "checked": true,
+    "heading": "인쇄 품질 점검",
+    "rows": [
+      {
+        "file": "학습 노트",
+        "pages": "1-177",
+        "잘림·넘침": "이상 없음",
+        "폰트": "이상 없음",
+        "제목 고립": "이상 없음",
+        "표 분리": "분리 없음"
+      },
+      {
+        "file": "확인·시험",
+        "pages": "1-25",
+        "잘림·넘침": "이상 없음",
+        "폰트": "이상 없음",
+        "제목 고립": "이상 없음",
+        "표 분리": "분리 없음"
+      },
+      {
+        "file": "근거·검증",
+        "pages": "1-159",
+        "잘림·넘침": "이상 없음",
+        "폰트": "이상 없음",
+        "제목 고립": "이상 없음",
+        "표 분리": "분리 없음"
+      }
+    ],
+    "observation": "실제 점검 결과 표가 포함되어 있으며 표의 내용·테두리·줄바꿈이 정상이다. 이 검토자가 직접 점검한 범위는 감사 PDF 1-80쪽이다."
+  },
+  "observations": [
+    "긴 문장별 근거 검증표는 다음 페이지에서 열 머리글을 반복한다. 개별 행은 한 페이지 안에 온전히 유지된다.",
+    "50쪽 template <>는 두 꺾쇠가 가까이 보이는 정상 표기이며 깨진 대체 글리프가 아니다.",
+    "장 제목은 새 페이지 상단에서 본문 표와 함께 시작한다.",
+    "페이지 번호가 확인 범위 1-80쪽에 일관되게 표시된다."
+  ],
+  "issues": [],
+  "result": "PASS",
+  "modifications": "검토 대상 PDF 및 원고 수정 없음"
+}

@@ -1,0 +1,39 @@
+64
+65
+66
+67
+70
+73
+74
+75
+76
+77
+78
+Queue->Front = NULL;
+Queue-*ear = NULL;
+else
+Queue->Front = Queue->Front->NextNode;
+Queue-Xwnt--
+return Front;
+int LQ-IsEmpty( LinkedQueue* Queue )
+retum ( Que1Je->Front == NULL);
+03장/LinkedQueue/Test—LinkedQueue. (
+01 *irrlude •LinkedQueue.h"
+02
+03 int main( void )
+05
+07
+08
+09
+14
+138
+Node* Popped
+LinkedQueue* Queue
+LQ-CreateQueue(Queue );
+LQ-Enqueue( Queue, LQ-CreateNode("abc") );
+LQ-Enqueue( Queue, LQ-CreateNode("def") );
+LQ-Enqueue( Queue, LQ-CreateN0de("efg") ):
+LQ-Enqueue( Queue, LQ-CreateNode("hij") );
+printf(øQueue Size : Queue-Xount);
+while ( LQ-IsEmpty( Queue ) == 0 )
+Part 01 • 자료구조

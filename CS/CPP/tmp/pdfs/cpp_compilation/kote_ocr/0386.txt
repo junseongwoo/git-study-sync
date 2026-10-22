@@ -1,0 +1,22 @@
+else
+DP(i][t0talWeight] = DP(i - 11[t0taIWeightJ;
+DP(i][t0ta1Weightl = max(DP(i - Il[totaIWeightl,
+DP[i - 1](t0taIWeight - currentWeight] 十 currentVaIue);
+7. Knapsack-@l () 함수 마지막 부분에서는 DP 테이블의 마지막 원소를 반환합니다.
+return DP[items][capacity];
+8. 다시 main( ) 함수로 돌아와서, () 함수를 호출하고 그 결과를 출력하는 코드를 추
+가합니다.
+int result = Knapsack @l(items, capacity, values, weight);
+cout 〈〈 "배낭에 재울 수 있는 물건들의 최고 가격: " 〈〈 result 〈〈 endl;
+9. 프로그램을 실행한 후, 다음의 숫지들을 입력하십시오.
+8 66
+20 4 89 12 5 50 8 13
+5 23 9 72 16 14 324
+그러면 다음과 같은 출력을 확인할 수 있습니다.
+배낭에 채울 수 있는 물건들의 최고 가격: 180
+이로써 부른집합의 합 문제에서 시용했던 알고리즘을 약간 수정하여 배낭 문제에 대한 효과적인
+동적 계획법 솔루션을 만들 수 있다는 점을 확인할 수 있습니다.
+9.43 무한 개수 배낭 문제
+앞서 살펴본 0-1 배낭 문제는 가장 전통적인 형태의 배낭 문제이며, 이것과 조금 다른 시나리오의
+배낭 문제가 몇 개 더 있습니다. 이번에는 각 물건을 개수 제한없이 배낭에 담을 수 있는 무한 개
+수 배당 문제(unbounded knapsack problem)에 대해 알아보겠습니다.

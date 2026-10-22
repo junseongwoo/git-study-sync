@@ -1,0 +1,28 @@
+autO new distance = current_vertex distance 十 e.weight;
+// 인접한 정점의 거리 값이 새로운 경로에 의한 거리 값보다 크면
+// 힘에 추가하고, 거리 값을 업데이트함
+if (new distance 〈 distance[neighbor))
+heap.emplace(LabeI<T>{neighbor, new distance});
+parent[neighbor) = current vertex.ID,
+distance[neighbor] = new distance;
+visited. insert(current_vertex. ID) ;
+// 백트래킹 방식으로 시작 정점부터 목적 정점까지의 경로 구성
+std: : vector〈unsigned〉 shortest—path;
+autO current_vertex = dst;
+while (current_vertex != src)
+shortest_path. push_back( current_vertex ) :
+current_vertex = parent[current vertex] ;
+shortest-path. push_back( src ) ;
+reverse(shortest-path.begin(), shortest_path. end( ) ) ;
+return shortest_path;
+6. ) 함수를 작성하고 다익스트라 알고리즘 구현 함수를 호출합니다.
+int main()
+using T = unsigned;
+// 파일로부터 그래프 객체 생성
+= read-graph_from file〈T>();
+dst id = 542;
+autO 6
+unsigned
+unsigned
+src id
+=913;

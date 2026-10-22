@@ -1,0 +1,25 @@
+if (distance(e.srcl == UNKNOWN)
+continue;
+if (distance[e.dstl 〉 distance[e.srcl + e weight)
+//cout 〈〈 "음수 가중치 사이클 발견!" 〈〈 endl;
+return {},•
+return distance;
+7. 이제 main() 함수에서 테스트 케이스 파일로부터 그래프를 구성하고, Be11manFord() 함수를
+호출합니다.
+int main()
+int N;
+vector〈Edge〉 edges;
+// 에지 리스트
+// testcase1-5.txt 파일로부터 테스트 입력을 받아 결과 확인
+if (ReadTestCase("testcase1 .txt", N, edges))
+vector<int〉 distance = BeIImanFord(edges, N * N, 0);
+if (distance.empty() distance[N * N- 1] == UNKNOWN)
+cout 〈〈 '탐색 중단" 〈〈 endl;
+else
+cout 〈〈 -1 * distance[N * N - 1] 〈〈 endl;
+Be11manFord() 함수는 그래프에 음수 가중치 사이클이 있으면 비어 있는 벡터를 반환합니다. 그
+리고 목적지 셀에 이동하는 경로가 없을 경우N2 - 1 셀의 거리 값은 UNKNOWN으로 결정됩니다. 이
+두 경우에 대해서는 “탐색 중단” 문자열을 출력하고, 그렇지 않은 경우에는 계산된 최소 거리 값
+에 -1을 곱해서 출력합니다.
+「40
+493

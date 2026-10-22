@@ -1,0 +1,36 @@
+TreeN0de * min_vatue_ruje(TrceNode *
+TreeNode * current = node;
+// 맨 완쪽 단말 노드를 찾으리 내려감
+vhile (current->left != NULL)
+current = current->left;
+return current;
+// 이진 탐색 트리와 기가 주어지면 카가 저장된 노드를 삭제하고
+// 새로운 루트 노드를 반환한다.
+TreeNode * delete ncxie(TreeNode * int key)
+if (root == NULL) return root;
+// 만약 키가 루트보다 작으면 왼쪽 서브 트리에 있는 것임
+if (key 〈 root->key)
+root->left = delete node(root->left, key);
+// 만약 카가 루트보다 크면 오른쪽 서브 트리에 있는 것임
+else if (key 〉 root->key)
+root->right = delete-node(root->right, key) ;
+// 키가 루트와 같으면 이 노드를 삭제하면 됨
+else {
+// 첫 번째나 두 번째 경우
+if == NULL) {
+TreeNode * temp :
+free(root) ;
+return temp;
+else if == NULL) {
+TreeNode * temp = root->left;
+free(root) ;
+return temp;
+// 세 번째 경우
+TreeNode * temp = min value node(root—>right) ;
+// 중외 순회시 후계 노드를 복사한다.
+「㈎t-〉key = temp->key;
+// 중외 순회시 후계 노드를 삭제한다.
+root->right = delete ncxie(root->right, temp->key);
+return ;
+트리
+307

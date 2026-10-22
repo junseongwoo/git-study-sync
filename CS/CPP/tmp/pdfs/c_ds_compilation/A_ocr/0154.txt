@@ -1,0 +1,44 @@
+실행결과
+QUEUE(front=O
+QUEUE(front=1
+QUEUE (front=l
+QJEUE(front=1
+QJEUE(front=1
+QUEUE(front=1 rear=3)
+QUEUE(front=1 rear=3)
+QUEUE(front=1 rear=3)
+rear
+rear
+rear
+rear
+rear
+5.5 덱이란?
+for(int 5=0;5<100•, 5++){
+if (rand() % 5 == 0) { // 5로 나누어 떨어지면
+enqueue(&queue, rand()96100);
+queue-pri nt (&queue) •,
+if (rand() % 10 == 0) { // 10로 나누어 떨어지면
+int data = dequeue(&queue) ;
+queue—pri nt (&queue) ;
+return 0;
+=2) = 73
+=2) = 73
+=73|961
+=73196|
+=1)
+=2)
+= 53
+= 73
+=731961
+Øl(deque)은 double-ended queue의 줄임말로서 큐의 전단(front)과 후단(rear)에서 모두 삽입
+과 삭제가 기능한 큐를 의미한다. 그렇지만 여전히 중간에 삽입하거나 삭제하는 것은 허용하지
+않는다. [그림 5-11]은 데의 구조를 보여준다.
+add_front
+delete front •-
+get-front ----
+전단(front)
+[그림 5-11] 「책의 구조
+162 C언어로 쉽게 물어쓴 자료구조
+add_rear
+- delete rear
+후단(rear)

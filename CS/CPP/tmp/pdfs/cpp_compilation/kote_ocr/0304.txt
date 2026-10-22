@@ -1,0 +1,24 @@
+8. 다시 Kosaraju() 함수 정의로 돌아와서. connectedComponents라는 이름의 정수형 벡터의 벡
+터를 정의하7겠습니다. 이 벡터에 전치 그래프에서의 순회 결과. 즉 강한 연결 요소를 저장
+할 것입니다. while 반복문 안에서 스택으로부터 정점을 하나씩 꺼내고. 이 정점을 아직 방
+문하지 않았다면 DFS 순회를 수행합니다. 이때 정수형 벡터 component를 선언하고. 이를
+C011ectConnectedComponents() 함수에 참조로 전달하여 값을 채웁니다. DFS 순회가 끝나면
+component 벡터를 connectedComponents에 추가합니다. 이 알고리즘은 스택이 빈 상태가 될 때
+까지 반복하고, 최종적으로 connectedComponents를 반환합니다.
+vector〈vector<int〉〉 connectedComponents;
+while (!stack.empty())
+int node = stack.top();
+stack.pop();
+if (!visited[node])
+vector<int〉 component;
+CollectConnectedComponents(node, visited, transpose, component);
+connectedComponents. push_back( component ) •,
+return connectedComponents;
+9. main( ) 함수에서는 각각의 강한 연결 요소에 속하는 정점들의 번호를 화면에 출력합니다.
+int main()
+int V;
+vector〈vector〈int〉〉 adj ;
+vector〈vector<int〉〉 connectedComponents = Kosaraju(V, adj);
+cout 〈〈 "강한 연결 요소 개수: " 〈〈 connectedComponents.size() 〈〈 endl,
+for (int i = 0; i 〈 connectedComponents.size(); i++)
+315

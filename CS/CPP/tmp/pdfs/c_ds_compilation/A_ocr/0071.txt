@@ -1,0 +1,31 @@
+78
+else if (degree-a == degree-b) { // A±I == BN
+C.coef[Cpos++] = A.coef[Ap0S++) + B.coef[Bpos++];
+degree-a--; degree-b--;
+etse {
+C.coef[Cpos++] = B.coef[Bpos++];
+degree-b--
+C;
+return
+void print-poly(potynomial p)
+for (int 5 = p.degree; i>O; 5--)
+printf("%3.1fxA%d + ", p.coef[p.degree - 5], 5);
+printf('t%3.1f 년", p.coef[p.degree));
+// 주함수
+int main(void)
+polynomial a
+polynomial b= { 4,{ 7, 0, 5, 0, 1 } };
+polynomial c;
+print—poly(a) ;
+pnnt—poly(b) ;
+printf("
+print—poly(c) ;
+return 0;
+실행결과
+3.OxA5 + 6.0x^4 + 0.@x^3 + 0.@xA2 + 0.@x^1 + 10.0
+7.€xA4 + 0.@x^3 + 5.@xA2 + 0.@xA1 + 1.0
+3.@xA5 + 13.0x^4 + 0.@xA3 + 5.0x^2 + 0.@x^1 + 11.0
+위의 프로그램은 두 다항식의 최고차항 절대값이 같고 부호는 다른 경우를 처리하지 못한다. 예를 들어
+도전문제
+서 A=xA3+2x+3, B=-xA3+4x-1이면 C=0xA3+6xA1+2가 출력된다. 이것을 해결하는 코드는 추가해보자.
+C언어로 쉽게 풀어쓴 자료구조

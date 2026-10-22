@@ -1,0 +1,71 @@
+021
+022
+023
+024
+025
+026
+027
+028
+029
+030
+031
+032
+033
+034
+035
+036
+037
+038
+039
+041
+042
+043
+044
+045
+047
+049
+050
+051
+052
+053
+054
+055
+056
+057
+058
+059
+StartFound = SUCCEED;
+break,
+if ( StartFound == FAIL )
+return FAIL;
+if ( MoveTo ( Maze, &Start, NORTH ) )•
+Result = SUCCEED,
+else if ( Mov酊0 ( Maze, &Start, SOIJTH ) )
+Resu1t = SUCCEED;
+else if ( Mov酊0 ( Maze, &Start, EAST
+Resu1t = SUCCEED;
+else if ( MoveTo ( Maze, &Start, WEST
+Result = SUCCEED;
+Maze->Data[Start YI[Start.XJ = START,
+return Result;
+북. 남. 동. 서 순으로 MoveTo( )를
+시도합니다.모든 방형羽| FAIL을 반환
+한다면 탈출로는 존團지 않습니다
+int MOV아0( MazeInf0* Maze, Position* Current, int Direction )
+int i=@;
+코딩 편의를 위해 네 방S*
+int Dirs[I = { NORTH, SOUTH, EAST, WEST },••
+Position Next;
+if ( Maze->Data(Current->Yl[Current->XI
+배열에 담습니다
+= GOAL )
+현재 위치를 •지나왔음(MARKEDY
+return SUCCEED;
+Maze->Data[Current->YI[Current->XI
+for ( i=O; i<4; i++ )
+continue,
+MARKED;.--
+표시합니다
+if ( GetNextStep( Maze, Current, Dirs[i), Odext ) == FAIL )
+Chapter 15 • 백트래장
+619

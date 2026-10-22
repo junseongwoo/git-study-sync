@@ -1,0 +1,58 @@
+015
+016
+017
+018
+019
+021
+022
+023
+024
+025
+026
+027
+028
+029
+030
+031
+032
+033
+034
+035
+0%
+037
+039
+041
+043
+045
+046
+%7
+048
+049
+051
+052
+053
+054
+Vertex• Vertices = 6-〉Vertices->Next;
+DestroyVertex( G->Vertices ),•
+6-〉Vertices = Vertices,
+free( 6 ):
+Vertex* CreateVertex( VElementType Data )
+Vertex* V = (Vertex*)maIIoc( sizeof( Vertex ) );
+V-»ata = Data;
+V->Next = NULL;
+V->AdjacencyList = NULL;
+V->Visited = NotVisited;
+V->Index = -1;
+return V;
+void DestroyVertex( Vertex* V )
+while ( V->AdjacencyList != NULL )
+Edge* Edge = V->AdjacencyList->Next;
+DestroyEdge ( V->AdjacencyList );
+V->AdjacencyList = Edge,
+free( V );
+Ed9e• CreateEdge( Vertex* From, Vertex• Target, int Weight )
+Edge• E
+E->Fræ
+= (EdP*)maIloc( sizeof( Edge ) ):
+390
+Part 02 • 일고리줍

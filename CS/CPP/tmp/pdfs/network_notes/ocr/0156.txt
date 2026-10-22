@@ -1,0 +1,37 @@
+148
+CHAPTER02 • 에를리게이션 계층
+c1ientSocket. sendto (message, (serverName, serverPort) )
+modifiedMessage, serverÄddress = c1ientSocket . recvs
+from (2048)
+print modifiedMessage
+clientSocket . close ( )
+이제 UDPClient.py의 코드 라인들-을 살펴보자.
+from socket xmport *
+socket 모듈은 파이썬에서 모든 네트워크 통신의 기본을 구성한다. 이 라인을 포함합
+으로써 프로그램 내에 소켓을 생성할 수 있다.
+rName
+serverPort
+` hOS tname '
+12000
+첫 번째 라인은 문자열 'hostname'을 변수 serverName에 할당한다. 이때 서버의 IP
+주소며: “128.138.32.126”) 혹은 서버의 호스트 이름(예: "cis.poly.edu/)을 포함하는
+문자열을 제공한다. 호스트 이름을 시용하는 경우 IP 주소를 얻기 위해 DNS 검색이
+지동으로 수행된다. 두 번째 라인은 정수 변수 serverport에 12()0()을 할당한다.
+cIientSocket = socket (AF INET, SOCK DGRAM)
+이 라인은 clientsocket이라는 클라이언트의 소켓을 생성한다. 첫 번째 파라미터
+는 주소군(famly)을 나타낸다. 특히, AF INET은 하부 네트워크가 1Pv4를 사용하고
+있음을 나타낸다(4장에서 1Pv4에 대해 설명한다). 두 번째 파라미터는 소킷1이 (TCP
+소켓이 아닌) UDP 소켓임을 의미하는 SOCK DGRAM 타입을 나타낸다. 소켓을 생성
+할 때 클라이언트 소켓의 포트 번호를 명시하지 않아도 되며, 운영체제가 이 작업을 대
+신 수행한다. 이제 클라이언트 프로세스의 문이 생성되었으며 이 문을 통해 보낼 메시
+지를 생성하게 된다.
+message = raw_lnput ( ` lnput lowercase sentence: ' )
+raw_input ()은 파이썬의 내장함수이다. 이 명령이 수행되면, 클라이언트 쪽의 사
+용자에게 "lnput lowercase sentence:”의 프롬프트(prompt)가 나타난다. 그러면 사용
+자는 카보드를 이용하여 변수 message에 할당되는 라인을 입력한다. 이제 소켓과 메
+시지를 생성했으며 이 메시지를 소켓을 통해 목적지 호스트로 보내게 된다.
+cIientSocket . sendto (message . encode () , (serverName, serverport) )
+위 라인에서는 소켓으로 바이트 형태로 보내기 위해 먼저 encode () 메소드를 사용
+해서 문자열 타입의 메시지를 바이트 타입으로 변환한다. sendto() 메소드는 목적
+지 주소 (serverName, serverPort)를 메시지에 붙이고 그 패킷을 프로세스의
+소켓인 clientsocket으로 보낸다(앞서 언급한 바와 같이, 소스 주소도 패킷에 붙

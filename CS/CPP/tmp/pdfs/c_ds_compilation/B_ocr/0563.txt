@@ -1,0 +1,29 @@
+다음은 LCS 추적 알고리즘을 구현한 LCS TraceBack ( ) 함수입니다.
+void LCS_TraceBack( char• 자 char* Y, int m, int n, LCSTable* Table. char* LCS)
+return;
+if ( TabIe-»ata[m)(nl 〉 TabIe-»ata[mJ[n-11 •
+Table-»ataIml[nl 〉 TabIe-»ata[m-Il[nl
+Table-»ataIml[nl 〉 TabIe->Data[m-Il[n-11 )
+char TempLCS[1001;
+strcpy( TempLCS, LCS );
+sprintf(LCS, "QS", 지m-1], TempLCS );
+LCS TraceBack( X, Y, m-l, n-l, Tab1e, LCS );
+else if ( TabIe->DataIml[nl 〉 Tab1e-»ata[m-1][nl•
+m =0 또는n = 0이면 종료
+현재 셀이 완|쪽(刁. 왼쪽 위(\).
+위( 1 ) 셀보다 크면 문자열 잎에 현
+재 셀의 내용 삽입 후 왼쪽 위(\)
+셀로 이동
+현재 셀이 위( 1 ) 셀보다 크고
+왼쪽(-)고는 같은 값일 때 완
+u Tab1e->DataIml[n] == Table->Data[mlIn-Il) • 쪽(-)으로 이동
+LCS TraceBack( Y, m, n-l, Tab1e, LCS ):
+else
+LCS_TraceBack( Y, m-l, n, Table, LCS );•
+위로 이동
+동적 계획법으로 LCS를 구하는 알고리즘을 이해했으니 예제 프로그램을 작성해보는 일만 남았군
+요. 이제 동적 계획법 기반의 LCS 알고리즘 실행 예제 프로그램을 만들어보겠습니다. 다음 프로그램
+에는 잎에서 살펴본 LCS( ) 함수와 TraceBack( ) 함수 외에도 LCS 테이블이 정상적으로 만
+들어졌는지 확인할 수 있게 도오}주는 LCS PrintTabIe( ) 함수가 추가되어 있습니다.
+564
+Part 03 • 알고리즘 설계 기법

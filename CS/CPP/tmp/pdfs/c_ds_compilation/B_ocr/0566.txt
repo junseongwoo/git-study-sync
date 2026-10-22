@@ -1,0 +1,62 @@
+079
+081
+082
+083
+085
+086
+087
+089
+090
+091
+092
+093
+094
+095
+096
+097
+098
+099
+100
+101
+102
+103
+104
+105
+106
+107
+108
+109
+110
+112
+113
+114
+115
+116
+117
+118
+else
+printf("*-2c", 지i-11):
+for ( j=@; j<LEN-Y+1; j++ )
+printf("td “, TabIe->Data[il[jl);
+printf("\n");
+int main( void )
+char• X = "GO MORNING.";
+char* Y = "GUTEN MORGEN.";
+char* Result,
+int
+int
+int
+int
+LEN_X = strlen(X);
+LEN Y = strlen(Y);
+i= 0;
+Length = 0:
+LCSTab1e TabIe;
+Table Data = (int**)malloc( sizeof(int*) * (LEN_X + 1) );
+for ( i=0; i<LEN-X+1; i++ ) {
+TabIe Data[il = (int*)malloc( sizeof(int) * (LEN Y + 1) ),•
+memset( Table Data[iI, 0, sizeof( int) * (LEN_Y + 1 ) ),•
+Length = LCS(X, Y, LEN_X, LEN_Y, &TabIe );
+LCS_PrintTab1e( &TabIe, X, Y, LEN-X, LEN-Y );
+Chapter 13• 동적 계희법 567
+1

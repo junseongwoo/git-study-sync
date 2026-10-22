@@ -1,0 +1,68 @@
+173
+174
+175
+176
+177
+178
+179
+180
+181
+182
+183
+184
+185
+186
+187
+188
+189
+190
+191
+192
+193
+195
+196
+197
+198
+199
+200
+201
+202
+203
+204
+205
+206
+207
+208
+209
+210
+211
+212
+X->Parent-Xolor
+= BLACK;
+X->Parent-Parent-XoIor = RED;
+RBT RotateRight( Root, X->Parent-Parent );
+else
+RBTNode• Unc1e = X-Parent-Parent->Left;
+if ( UncIe-XoIor == RED )
+X-Parent-X010r
+= BLACK;
+UncIe-XoIor
+= BLACK;
+X-Parent->Parent-Xolor = RED;
+X = X->Parent->Parent;
+else
+if ( X =- X->Parent->Left )
+X = X->Parent;
+RBT_R0tateRight( Root, X ):
+X->Parent-Xolor
+= BLACK;
+X->Parent->Parent-Xolor = RED;
+RBT_RotateLeft( ROOt, X-Parent-Parent );
+(*Root)-ⅹ010r = BLACK;
+RBTNode* RBT-RemoveN0de( RBTNode** R00t, EIementTYS* Data )
+RBTNode* Removed = NULL;
+RBTNode* Successor = WLL;
+= RBT_SearchNode( (承㈀t), Data
+RBTNode* Target
+Chapter % • 함책
+293

@@ -1,0 +1,37 @@
+struct ListNode *14nk;
+} ListN0de;
+ListNode* insert_first(ListN0de *head, etement value)
+ListNode *P = (ListNode *)ma110c(s*zeof(ListNode)); // (1)
+p->data = value;
+p-〉tink = head; // 헤드 포인터의 값을 복사
+// 헤드 포인터 변경
+head = 아
+return
+void print_list(ListNode *head)
+for (ListN0de *P = head; P != NULL; P = p->link)
+printfC'%d->", p->data);
+printf("NULL \n");
+ListNode* search_Iist(ListNode *head, element x)
+ListN0de *P = head;
+vhile (p != NULL) {
+if (p->data == x) return 아
+p = p->link;
+return NULL; // 탐색 실패
+// 테스트 프로그램
+int main(void)
+ListNode *head = NULL;
+10);
+head = insert_first(head,
+print_li st(head) ;
+head = insert_first(head, 20);
+pri nt_list(head) ;
+30);
+head = insert first(head,
+pnnt—list(head) ;
+!= NULL)
+if (search_list(head, 30)
+printf("리스트에서 30을 찾았습니다. 년");
+printf("리스트에서 30을 찾지 못했습니다. 년");
+return 0;
+CHAPTER06 연결 리스트 |
+203

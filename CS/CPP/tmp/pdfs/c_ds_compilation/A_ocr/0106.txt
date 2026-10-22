@@ -1,0 +1,34 @@
+이 방법에서는 StackType 구조체 안에 들어 있는 변수들을 초기화하기 위하여 init-stack()
+함수가 필요하다. 여기서 주의할 것은 스택을 초기화하기 위하여 1치원 배열을 0으로 채울 필요
+는 없다. 배열에 어떤 값이 존재하더라도 top의 값만 하로 하면 스택은 비어 있는 것으로 간주
+된다.
+프로그램 4.3 일반적인 배열 스택 프로그램
+#include <stdio.h>
+#include <stdlib.h>
+// 차후에 스택이 필요하면 여기만 복사하여 붙인다.
+= 스택 코드의 시작 :
+#define MAX_STACK_SIZE 100
+typedef int element,
+typede struct {
+element data[卜IAX_STACK_SIZE] ,•
+nnt top;
+} StackType;
+// 스택 초기화 함수
+VOid init_stack(StackType *5)
+s—>top
+// 공백 상태 검출 함수
+int is_empty(StackType *5)
+return (s->top == -1) ;
+// 포화 상태 검출 함수
+int is fu1t(StackType *5)
+return (s->top == (MAX_STACK_SIZE
+// 십입함수
+void push(StackType *하 element item)
+if (is-full(s)) {
+fprintf(stderr, "스택 포화 에러\n");
+return;
+else s-〉data[++(s->top)]
+114 C언어로 쉽게 풀어쓴 자료구조
+스택이 구조체로 정의된다.
+모든 연산은 구조체의 포
+인터를 받는다.

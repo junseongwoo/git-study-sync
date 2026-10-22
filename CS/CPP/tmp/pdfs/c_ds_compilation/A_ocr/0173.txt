@@ -1,0 +1,25 @@
+void insert-tast(ArrayListType *L, elemcnt item)
+if( L->size >= MAX_LIST_SIZE ) (
+err鮮("리스트 오버를로우") ;
+L—>array[L->size++) = item;
+insert-last() 함수에서는 리스트에 빈공간이 없으면 오류를 발생시킨다.
+이제 리스트의 pos 위치에 새로운 항목을 추가하려면 어떻게 해야 할까? 이런 경우에는 pos
+번째부터 마지막 항목까지 한 간씩 오른쪽으로 이동하여 빈자리를 만든 후에, 새로운 항목을 pos
+위치에 저장하여야 한다.
+A C D
+[0] [1] [2] [31 [4] [되
+위의 그림에서는 pos=l에 새로운 항목을 추가하는 것을 나타낸다. 빈자리를 만들기 위하
+여 array[l] 부터 arrayC3]까지를 한 간씩 오른쪽으로 이동한다. 이때 순서가 중요하다. 먼저
+anay[3]를 anay[4]로 이동하고 이어서 array[기을 a다ay[3]으로. array[l]을 array[기로 이동하
+여야 한다. 이어서 새로운 항목을 array[l]에 저장한다.
+임의의 위치에 삽입하는 insert() 함수를 구현해보자.
+VOid insert(ArrayListType *나 int POS, element item)
+if (!is-full(L) && (pos >= 0) && (pos 수 L->size)) {
+for (int i = (L->size - 1); i 〉= pos; 5-)
+L->array[i + 1] = L-〉array[i];
+L->array[pos] = item;
+L—>si ze十+ •,
+항목 삭제 연산
+pos 위치의 항목을 삭제하는 delete(list, 匹s)를 구현해보자. 이때도 마찬가지로 삭제한 후
+에 array[pos+ll부터 anay[size-ll까지를 한 간씩 앞으로 이동하여야 한다.
+CHAPTER0å 연결 리스트 | 181

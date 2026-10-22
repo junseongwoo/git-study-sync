@@ -1,0 +1,52 @@
+4.3 • 인터넷 프로토콤(|P): lPv4. 주소 지정, lPv6S
+315
+DHCP 서버
+223.1 2.5
+DHCP 발견
+src: 0.0 0.0, 68
+dest. 255.255.255.255,67
+DHCPDISCOVER
+yiaddr: 0.0 0 0
+transaction ID. 654
+DHCP 요청
+src: 0 0.0.0, 68
+dest. 255255.255255, 67
+DHCPREQUEST
+yaddrr. 223.1.2 4
+transaction ID. 655
+DHCP server ID. 223.12.5
+L1fetime. 3匍0 secs
+시간
+그림 4.24 • DHCP 클라이언트 상호동작
+도착한
+클라이언트
+DHCP 제공
+src: 223.1 25, 67
+dest: 255.255.255.255,68
+DHCPOFFER
+ytaddrr: 223.12.4
+transaction ID. 654
+DHCP server ID: 223.12.5
+Lifetime. 3600 secs
+DHCP ACK
+src. 223.1.2.5, 67
+dest 255.255 255 255,68
+DHCPACK
+yaddrr: 223.1.2 4
+transaction ID. 655
+DHCP server ID: 223.12.5
+Lifetime. 3600 5貳5
+시간
+DHCP 서버 발견(DHCP server discovery): 먼저 새롭게 도작한 호스트는 상호 동
+작될 DHCP를 발견한다. 이것은 DHCP 발견 메시지(DHCP discover message)
+를 시용하여 수행되며, 클라이언트는 포트 67번으로 UDP 패킷을 보낸다. UDP
+패킷은 IP 데이터그램으로 캡슐화된다. 그러나 이 데이터그램을 누구에게 보낼 것
+인가? 호스트는 자신이 접속될 네트워크의 IP 주소를 알지 못하며 더군다나 해당
+네트워크의 DHCP 서버의 주소도 모른다. 이때 DHCP 클라이언트는 DHCP 발견
+메시지를 포함하는 IP 데이터그램을 생성하는데, 이 메시지 내의 목적지 IP 주소
+를 브로드개스팅 IP 주소 255.255.255.255로 설정하고 출발지 IP 주소는 0.0.0.0
+으로 설정한다. DHCP 클라이언트는 링크 계층으로 IP 데이터그램을 보내며 이
+프레임은 서브넷에 연결된 모든 노뜨로 브로드개스팅된다(6.4절에서 링크 계층 보
+로드개스팅을 자세히 다를 것이다).
+DHCP 서버 제공[DHCP server offeds)l: DHCP 발견 메시지를 받은 DHCP 서
+버는 DHCP 제공 메시지를 클라이언트로 응답한다. 이때에도 다시 IP 브로드개

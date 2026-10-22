@@ -1,0 +1,59 @@
+08장/OpenAddressing/OpenAddressing.c
+%1
+%2
+%3
+%5
+%7
+010
+011
+012
+013
+014
+015
+016
+017
+018
+019
+020
+021
+022
+023
+024
+025
+026
+027
+028
+029
+031
+032
+033
+035
+0%
+037
+•include
+HashTable• OAHT CreateHashTabIe( int TabIeSize )
+HashTabIe* HT = (HashTabIe*)maIIoc( sizeof대ashTabIe) );
+HT->TabIe = (ElementType*)maIIoc( sizeof(EIementType) * TabIeSize);
+memset대T->Table. 0, sizeof(EIementType) * TabIeSize );
+HT->TabIeSize = TableSize,
+HT-X)ccupiedCount = 0;
+return HT;
+VOid OAHT Set( HashTable** HT, KeyType Key, VaIueType Value )
+int KeyLen, Address, StepSize,
+double Usage,
+Usage = (doubIe)(*HT)->OccupiedCount / (*HT)->Tab1eSize;
+if ( Usage 〉 이5 )
+OAHT Rehash( HT ):
+KeyLen
+Address
+StepSize
+str1en(Key);
+= 0AHT_Hash( Key, KeyLen, (*HT)->TableSize );
+= OAHT Hash2( Key, KeyLen, (*HT)->Tab1eSize ):
+while ( (*HT)->TabIe[Addressl.Status != EMPTY
+strcmp((*HT)->Tab1e[AddressI.Key, Key) != 0 )
+printf("CoIIision occured! : Key(S), Address(%d), StepSize(%d)\n"
+Key, Address, StepSize );
+Address = (Address + StepSize) (*HT)->TabIeSize,
+368
+Part 02 • 알고리즘

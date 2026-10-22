@@ -1,0 +1,36 @@
+Dijkstra의 알고리즘 구현
+시작 정점이 (가편인 경우. main() 함수는 shortest-path(0, MAX-VERTICES)로 Dljkstm의 최단
+경로 알고e기넣:우 호출한디•. 알고리즘 수행 결과로써 배열 distance에 0번 정점으로부터 다른 모
+든 정점으로의 최단 경로 거리를 서상하게 된다.
+프로그램 11.10 최단 경로 Dijkstra 프로그램
+#include <stdio.h>
+#include <stdlib.h〉
+#include <limits.h>
+#define TRUE 1
+#define FALSE 0
+#define MAX_VERTICES 100
+#define INF 1000圄 /* 무한대 (연결이 없는 경우) */
+typedef struct GraphType {
+// 정점의 개수
+int weight[MAX_VERTICES] [MAX_VERTICES] ;
+} GraphType;
+int distance[MAX_VERTICES] ;
+int found[MAX_VERTICES] ;
+/* 시직정점으로부터의 최단경로 거리 */
+/* 방문한 정점 표시 */
+int choose(int distance[], int n, int fO내*[])
+mnn = INT MAX•
+rmnpos = -1;
+for (1 = 0; l<n; i++)
+if (distance[i]< min && !found[i]) {
+min = ,•
+return
+void print_status(GraphType* g)
+static int step=l;
+printf("STEP 법: ", step++);
+printf("distance: ");
+for (int 5 = 0; 〈 g->n; 1++) {
+if (distance[i] == INF)
+printf(" * ");
+printf("%2d ", distance[i]);
+422 C언어로 쉽게 물어쓴 자료구조

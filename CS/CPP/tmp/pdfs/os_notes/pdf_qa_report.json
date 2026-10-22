@@ -1,8 +1,8 @@
 {
   "pdf": "C:\\Users\\user\\Desktop\\Obsidian\\git-study-sync\\CS\\CPP\\output\\pdf\\운영체제 요약 정리.pdf",
-  "pages": 224,
+  "pages": 219,
   "a4_all": true,
-  "searchable_pages": 224,
+  "searchable_pages": 219,
   "fonts": {
     "/AAAAAA+MalgunGothicBold": true,
     "/AAAAAB+MalgunGothicBold": true,
@@ -1053,467 +1053,467 @@
     },
     {
       "title": "11.8.4 RAID 레벨 선택",
-      "page": 132
+      "page": 131
     },
     {
       "title": "11.8.5 확장",
-      "page": 132
+      "page": 131
     },
     {
       "title": "11.8.6 RAID의 문제점들",
-      "page": 132
+      "page": 131
     },
     {
       "title": "11.8.7 객체 저장소",
-      "page": 134
+      "page": 133
     },
     {
       "title": "11.9 요약과 원문 연습문제의 점검 범위",
-      "page": 134
+      "page": 133
     },
     {
       "title": "제12장. 입출력 시스템",
-      "page": 135
+      "page": 134
     },
     {
       "title": "12.1 개관",
-      "page": 135
+      "page": 134
     },
     {
       "title": "12.2 입출력 하드웨어",
-      "page": 135
+      "page": 134
     },
     {
       "title": "12.2.1 메모리 맵드 입출력",
-      "page": 135
+      "page": 134
     },
     {
       "title": "12.2.2 폴링",
-      "page": 136
+      "page": 135
     },
     {
       "title": "12.2.3 인터럽트",
-      "page": 136
+      "page": 135
     },
     {
       "title": "12.2.4 직접 메모리 접근(DMA)",
-      "page": 138
+      "page": 137
     },
     {
       "title": "12.2.5 입출력 하드웨어 요약",
-      "page": 140
+      "page": 139
     },
     {
       "title": "12.3 응용 입출력 인터페이스",
-      "page": 140
+      "page": 139
     },
     {
       "title": "12.3.1 블록 장치와 문자 장치",
-      "page": 140
+      "page": 139
     },
     {
       "title": "12.3.2 네트워크 장치",
-      "page": 141
+      "page": 140
     },
     {
       "title": "12.3.3 클록과 타이머",
-      "page": 141
+      "page": 140
     },
     {
       "title": "12.3.4 봉쇄형과 비봉쇄형 입출력",
-      "page": 141
+      "page": 140
     },
     {
       "title": "12.3.5 벡터형 입출력",
-      "page": 142
+      "page": 141
     },
     {
       "title": "12.4 커널 입출력 서브시스템",
-      "page": 142
+      "page": 141
     },
     {
       "title": "12.4.1 I/O 스케줄링",
-      "page": 142
+      "page": 141
     },
     {
       "title": "12.4.2 버퍼링",
-      "page": 142
+      "page": 141
     },
     {
       "title": "12.4.3 캐싱",
-      "page": 143
+      "page": 142
     },
     {
       "title": "12.4.4 스풀링 및 장치 예약",
-      "page": 143
+      "page": 142
     },
     {
       "title": "12.4.5 오류 처리",
-      "page": 143
+      "page": 142
     },
     {
       "title": "12.4.6 입출력 보호",
-      "page": 143
+      "page": 142
     },
     {
       "title": "12.4.7 커널 자료구조",
-      "page": 143
+      "page": 142
     },
     {
       "title": "12.4.8 전원 관리",
-      "page": 144
+      "page": 143
     },
     {
       "title": "12.4.9 커널 입출력 서브시스템 요약",
-      "page": 144
+      "page": 143
     },
     {
       "title": "12.5 입출력 요구를 하드웨어 연산으로 변환",
-      "page": 144
+      "page": 143
     },
     {
       "title": "12.6 STREAMS",
-      "page": 146
+      "page": 145
     },
     {
       "title": "12.7 성능",
-      "page": 148
+      "page": 146
     },
     {
       "title": "12.8 요약과 원문 연습문제의 점검 범위",
-      "page": 148
+      "page": 146
     },
     {
       "title": "제13장. 파일 시스템 인터페이스",
-      "page": 149
+      "page": 147
     },
     {
       "title": "13.1 파일 개념",
-      "page": 150
+      "page": 148
     },
     {
       "title": "13.1.1 파일 속성",
-      "page": 150
+      "page": 148
     },
     {
       "title": "13.1.2 파일 연산과 열린 파일 관리",
-      "page": 151
+      "page": 149
     },
     {
       "title": "13.1.3 파일 유형",
-      "page": 153
+      "page": 151
     },
     {
       "title": "13.1.4 파일 구조",
-      "page": 153
+      "page": 151
     },
     {
       "title": "13.1.5 파일의 내부 구조",
-      "page": 153
+      "page": 151
     },
     {
       "title": "13.2 접근 방법",
-      "page": 153
+      "page": 151
     },
     {
       "title": "13.2.1 순차 접근",
-      "page": 153
+      "page": 151
     },
     {
       "title": "13.2.2 직접 접근",
-      "page": 154
+      "page": 152
     },
     {
       "title": "13.2.3 기타 접근 방법",
-      "page": 154
+      "page": 152
     },
     {
       "title": "13.3 디렉터리 구조",
-      "page": 155
+      "page": 153
     },
     {
       "title": "13.3.1 1단계 디렉터리",
-      "page": 155
+      "page": 153
     },
     {
       "title": "13.3.2 2단계 디렉터리",
-      "page": 155
+      "page": 153
     },
     {
       "title": "13.3.3 트리 구조 디렉터리",
-      "page": 155
+      "page": 153
     },
     {
       "title": "13.3.4 비순환 그래프 디렉터리",
-      "page": 156
+      "page": 154
     },
     {
       "title": "13.3.5 일반 그래프 디렉터리",
-      "page": 158
+      "page": 156
     },
     {
       "title": "13.4 보호",
-      "page": 158
+      "page": 156
     },
     {
       "title": "13.4.1 보호와 접근의 유형",
-      "page": 158
+      "page": 156
     },
     {
       "title": "13.4.2 접근 제어",
-      "page": 159
+      "page": 157
     },
     {
       "title": "13.4.3 다른 보호 방법",
-      "page": 159
+      "page": 157
     },
     {
       "title": "13.5 메모리 사상 파일",
-      "page": 159
+      "page": 157
     },
     {
       "title": "13.5.1 메모리 사상 파일의 기본 기법",
-      "page": 159
+      "page": 157
     },
     {
       "title": "13.5.2 Windows API에서 공유 메모리",
-      "page": 160
+      "page": 158
     },
     {
       "title": "13.6 요약과 원문 연습문제의 점검 범위",
-      "page": 162
+      "page": 160
     },
     {
       "title": "제14장. 파일 시스템 구현",
-      "page": 164
+      "page": 162
     },
     {
       "title": "14.1 파일 시스템 구조",
-      "page": 164
+      "page": 162
     },
     {
       "title": "14.2 파일 시스템 구현",
-      "page": 165
+      "page": 163
     },
     {
       "title": "14.2.1 파일 시스템 구현 개요",
-      "page": 165
+      "page": 163
     },
     {
       "title": "14.2.2 사용법",
-      "page": 165
+      "page": 163
     },
     {
       "title": "14.3 디렉터리 구현",
-      "page": 166
+      "page": 164
     },
     {
       "title": "14.3.1 선형 리스트",
-      "page": 166
+      "page": 164
     },
     {
       "title": "14.3.2 해시 테이블",
-      "page": 166
+      "page": 164
     },
     {
       "title": "14.4 할당 방법",
-      "page": 166
+      "page": 164
     },
     {
       "title": "14.4.1 연속 할당",
-      "page": 166
+      "page": 164
     },
     {
       "title": "14.4.2 연결 할당과 FAT",
-      "page": 167
+      "page": 165
     },
     {
       "title": "14.4.3 색인 할당",
-      "page": 168
+      "page": 166
     },
     {
       "title": "14.4.4 할당 방법의 성능",
-      "page": 171
+      "page": 167
     },
     {
       "title": "14.5 가용 공간의 관리",
-      "page": 171
+      "page": 168
     },
     {
       "title": "14.5.1 비트 벡터",
-      "page": 171
+      "page": 168
     },
     {
       "title": "14.5.2 연결 리스트",
-      "page": 172
+      "page": 168
     },
     {
       "title": "14.5.3 그룹핑",
-      "page": 172
+      "page": 168
     },
     {
       "title": "14.5.4 계수",
-      "page": 172
+      "page": 169
     },
     {
       "title": "14.5.5 공간맵",
-      "page": 172
+      "page": 169
     },
     {
       "title": "14.5.6 사용하지 않는 트림",
-      "page": 173
+      "page": 169
     },
     {
       "title": "14.6 효율과 성능",
-      "page": 173
+      "page": 169
     },
     {
       "title": "14.6.1 효율",
-      "page": 173
+      "page": 169
     },
     {
       "title": "14.6.2 성능",
-      "page": 173
+      "page": 170
     },
     {
       "title": "14.7 복구",
-      "page": 175
+      "page": 171
     },
     {
       "title": "14.7.1 일관성 검사",
-      "page": 175
+      "page": 171
     },
     {
       "title": "14.7.2 로그 구조 파일 시스템",
-      "page": 175
+      "page": 171
     },
     {
       "title": "14.7.3 다른 해결 방안들",
-      "page": 176
+      "page": 172
     },
     {
       "title": "14.7.4 백업과 복구",
-      "page": 176
+      "page": 172
     },
     {
       "title": "14.8 예: WAFL 파일 시스템",
-      "page": 176
+      "page": 172
     },
     {
       "title": "14.9 요약과 원문 연습문제의 점검 범위",
-      "page": 178
+      "page": 174
     },
     {
       "title": "제15장. 파일 시스템 내부구조",
-      "page": 179
+      "page": 175
     },
     {
       "title": "15.1 파일 시스템",
-      "page": 179
+      "page": 175
     },
     {
       "title": "15.2 파일 시스템 마운팅",
-      "page": 180
+      "page": 176
     },
     {
       "title": "15.3 파티션과 마운팅",
-      "page": 182
+      "page": 177
     },
     {
       "title": "15.4 파일 공유",
-      "page": 182
+      "page": 177
     },
     {
       "title": "15.4.1 파일 공유와 다수의 사용자",
-      "page": 182
+      "page": 177
     },
     {
       "title": "15.5 가상 파일 시스템",
-      "page": 182
+      "page": 177
     },
     {
       "title": "15.6 원격 파일 시스템",
-      "page": 184
+      "page": 179
     },
     {
       "title": "15.6.1 클라이언트 서버 모델",
-      "page": 184
+      "page": 179
     },
     {
       "title": "15.6.2 분산 정보 시스템",
-      "page": 184
+      "page": 179
     },
     {
       "title": "15.6.3 고장 모드",
-      "page": 185
+      "page": 180
     },
     {
       "title": "15.7 일관성의 의미",
-      "page": 185
+      "page": 180
     },
     {
       "title": "15.7.1 UNIX의 의미",
-      "page": 185
+      "page": 180
     },
     {
       "title": "15.7.2 세션 의미",
-      "page": 185
+      "page": 180
     },
     {
       "title": "15.7.3 불변 공유 파일의 의미",
-      "page": 186
+      "page": 181
     },
     {
       "title": "15.8 NFS",
-      "page": 186
+      "page": 181
     },
     {
       "title": "15.8.1 NFS 개요",
-      "page": 186
+      "page": 181
     },
     {
       "title": "15.8.2 마운트 프로토콜",
-      "page": 188
+      "page": 183
     },
     {
       "title": "15.8.3 NFS 프로토콜",
-      "page": 188
+      "page": 183
     },
     {
       "title": "15.8.4 경로 이름 변환",
-      "page": 189
+      "page": 184
     },
     {
       "title": "15.8.5 원격 연산",
-      "page": 190
+      "page": 185
     },
     {
       "title": "15.9 요약과 원문 연습문제의 점검 범위",
-      "page": 190
+      "page": 185
     },
     {
       "title": "제7부 도입. 보안과 보호",
-      "page": 191
+      "page": 186
     },
     {
       "title": "P7.1 도입에서 확인되는 보안과 보호의 역할",
-      "page": 191
+      "page": 186
     },
     {
       "title": "비교·공식·절차 모음",
-      "page": 193
+      "page": 187
     },
     {
       "title": "주요 개념 복습",
-      "page": 208
+      "page": 203
     },
     {
       "title": "개념 색인",
-      "page": 211
+      "page": 206
     },
     {
       "title": "최종 학습 점검표",
-      "page": 214
+      "page": 209
     }
   ],
   "cover_text": [
@@ -1528,37 +1528,7 @@
       "chars": 624
     },
     {
-      "page": 130,
-      "last_y": 134.6,
-      "chars": 253
-    },
-    {
-      "page": 146,
-      "last_y": 177.6,
-      "chars": 279
-    },
-    {
-      "page": 167,
-      "last_y": 342.2,
-      "chars": 687
-    },
-    {
-      "page": 169,
-      "last_y": 295.4,
-      "chars": 458
-    },
-    {
-      "page": 180,
-      "last_y": 310.0,
-      "chars": 491
-    },
-    {
-      "page": 192,
-      "last_y": 296.3,
-      "chars": 255
-    },
-    {
-      "page": 224,
+      "page": 219,
       "last_y": 338.4,
       "chars": 458
     }
@@ -1870,77 +1840,77 @@
       "level": 1,
       "title": "제12장. 입출력 시스템",
       "key": "chapter-O12",
-      "page": 135
+      "page": 134
     },
     {
       "level": 1,
       "title": "제13장. 파일 시스템 인터페이스",
       "key": "chapter-O13",
-      "page": 149
+      "page": 147
     },
     {
       "level": 1,
       "title": "제14장. 파일 시스템 구현",
       "key": "chapter-O14",
-      "page": 164
+      "page": 162
     },
     {
       "level": 1,
       "title": "제15장. 파일 시스템 내부구조",
       "key": "chapter-O15",
-      "page": 179
+      "page": 175
     },
     {
       "level": 1,
       "title": "제7부 도입. 보안과 보호",
       "key": "chapter-OP7",
-      "page": 191
+      "page": 186
     },
     {
       "level": 0,
       "title": "비교·공식·절차 모음",
       "key": "book-comparisons",
-      "page": 193
+      "page": 187
     },
     {
       "level": 0,
       "title": "주요 개념 복습",
       "key": "book-review",
-      "page": 208
+      "page": 203
     },
     {
       "level": 0,
       "title": "개념 색인",
       "key": "book-index",
-      "page": 211
+      "page": 206
     },
     {
       "level": 0,
       "title": "최종 학습 점검표",
       "key": "book-checklist",
-      "page": 214
+      "page": 209
     }
   ],
-  "rendered_page_images": 224,
+  "rendered_page_images": 219,
   "contact_sheets": [
-    "C:\\Users\\user\\Desktop\\Obsidian\\git-study-sync\\CS\\CPP\\tmp\\pdfs\\os_notes\\qa_contact_01.jpg",
-    "C:\\Users\\user\\Desktop\\Obsidian\\git-study-sync\\CS\\CPP\\tmp\\pdfs\\os_notes\\qa_contact_02.jpg",
-    "C:\\Users\\user\\Desktop\\Obsidian\\git-study-sync\\CS\\CPP\\tmp\\pdfs\\os_notes\\qa_contact_03.jpg",
-    "C:\\Users\\user\\Desktop\\Obsidian\\git-study-sync\\CS\\CPP\\tmp\\pdfs\\os_notes\\qa_contact_04.jpg",
-    "C:\\Users\\user\\Desktop\\Obsidian\\git-study-sync\\CS\\CPP\\tmp\\pdfs\\os_notes\\qa_contact_05.jpg",
-    "C:\\Users\\user\\Desktop\\Obsidian\\git-study-sync\\CS\\CPP\\tmp\\pdfs\\os_notes\\qa_contact_06.jpg",
-    "C:\\Users\\user\\Desktop\\Obsidian\\git-study-sync\\CS\\CPP\\tmp\\pdfs\\os_notes\\qa_contact_07.jpg",
-    "C:\\Users\\user\\Desktop\\Obsidian\\git-study-sync\\CS\\CPP\\tmp\\pdfs\\os_notes\\qa_contact_08.jpg",
-    "C:\\Users\\user\\Desktop\\Obsidian\\git-study-sync\\CS\\CPP\\tmp\\pdfs\\os_notes\\qa_contact_09.jpg",
-    "C:\\Users\\user\\Desktop\\Obsidian\\git-study-sync\\CS\\CPP\\tmp\\pdfs\\os_notes\\qa_contact_10.jpg",
-    "C:\\Users\\user\\Desktop\\Obsidian\\git-study-sync\\CS\\CPP\\tmp\\pdfs\\os_notes\\qa_contact_11.jpg",
-    "C:\\Users\\user\\Desktop\\Obsidian\\git-study-sync\\CS\\CPP\\tmp\\pdfs\\os_notes\\qa_contact_12.jpg",
-    "C:\\Users\\user\\Desktop\\Obsidian\\git-study-sync\\CS\\CPP\\tmp\\pdfs\\os_notes\\qa_contact_13.jpg",
-    "C:\\Users\\user\\Desktop\\Obsidian\\git-study-sync\\CS\\CPP\\tmp\\pdfs\\os_notes\\qa_contact_14.jpg",
-    "C:\\Users\\user\\Desktop\\Obsidian\\git-study-sync\\CS\\CPP\\tmp\\pdfs\\os_notes\\qa_contact_15.jpg",
-    "C:\\Users\\user\\Desktop\\Obsidian\\git-study-sync\\CS\\CPP\\tmp\\pdfs\\os_notes\\qa_contact_16.jpg",
-    "C:\\Users\\user\\Desktop\\Obsidian\\git-study-sync\\CS\\CPP\\tmp\\pdfs\\os_notes\\qa_contact_17.jpg",
-    "C:\\Users\\user\\Desktop\\Obsidian\\git-study-sync\\CS\\CPP\\tmp\\pdfs\\os_notes\\qa_contact_18.jpg",
-    "C:\\Users\\user\\Desktop\\Obsidian\\git-study-sync\\CS\\CPP\\tmp\\pdfs\\os_notes\\qa_contact_19.jpg"
+    "C:\\Users\\user\\Desktop\\Obsidian\\git-study-sync\\CS\\CPP\\tmp\\pdfs\\os_notes\\qa_pages_219\\contact_01.jpg",
+    "C:\\Users\\user\\Desktop\\Obsidian\\git-study-sync\\CS\\CPP\\tmp\\pdfs\\os_notes\\qa_pages_219\\contact_02.jpg",
+    "C:\\Users\\user\\Desktop\\Obsidian\\git-study-sync\\CS\\CPP\\tmp\\pdfs\\os_notes\\qa_pages_219\\contact_03.jpg",
+    "C:\\Users\\user\\Desktop\\Obsidian\\git-study-sync\\CS\\CPP\\tmp\\pdfs\\os_notes\\qa_pages_219\\contact_04.jpg",
+    "C:\\Users\\user\\Desktop\\Obsidian\\git-study-sync\\CS\\CPP\\tmp\\pdfs\\os_notes\\qa_pages_219\\contact_05.jpg",
+    "C:\\Users\\user\\Desktop\\Obsidian\\git-study-sync\\CS\\CPP\\tmp\\pdfs\\os_notes\\qa_pages_219\\contact_06.jpg",
+    "C:\\Users\\user\\Desktop\\Obsidian\\git-study-sync\\CS\\CPP\\tmp\\pdfs\\os_notes\\qa_pages_219\\contact_07.jpg",
+    "C:\\Users\\user\\Desktop\\Obsidian\\git-study-sync\\CS\\CPP\\tmp\\pdfs\\os_notes\\qa_pages_219\\contact_08.jpg",
+    "C:\\Users\\user\\Desktop\\Obsidian\\git-study-sync\\CS\\CPP\\tmp\\pdfs\\os_notes\\qa_pages_219\\contact_09.jpg",
+    "C:\\Users\\user\\Desktop\\Obsidian\\git-study-sync\\CS\\CPP\\tmp\\pdfs\\os_notes\\qa_pages_219\\contact_10.jpg",
+    "C:\\Users\\user\\Desktop\\Obsidian\\git-study-sync\\CS\\CPP\\tmp\\pdfs\\os_notes\\qa_pages_219\\contact_11.jpg",
+    "C:\\Users\\user\\Desktop\\Obsidian\\git-study-sync\\CS\\CPP\\tmp\\pdfs\\os_notes\\qa_pages_219\\contact_12.jpg",
+    "C:\\Users\\user\\Desktop\\Obsidian\\git-study-sync\\CS\\CPP\\tmp\\pdfs\\os_notes\\qa_pages_219\\contact_13.jpg",
+    "C:\\Users\\user\\Desktop\\Obsidian\\git-study-sync\\CS\\CPP\\tmp\\pdfs\\os_notes\\qa_pages_219\\contact_14.jpg",
+    "C:\\Users\\user\\Desktop\\Obsidian\\git-study-sync\\CS\\CPP\\tmp\\pdfs\\os_notes\\qa_pages_219\\contact_15.jpg",
+    "C:\\Users\\user\\Desktop\\Obsidian\\git-study-sync\\CS\\CPP\\tmp\\pdfs\\os_notes\\qa_pages_219\\contact_16.jpg",
+    "C:\\Users\\user\\Desktop\\Obsidian\\git-study-sync\\CS\\CPP\\tmp\\pdfs\\os_notes\\qa_pages_219\\contact_17.jpg",
+    "C:\\Users\\user\\Desktop\\Obsidian\\git-study-sync\\CS\\CPP\\tmp\\pdfs\\os_notes\\qa_pages_219\\contact_18.jpg",
+    "C:\\Users\\user\\Desktop\\Obsidian\\git-study-sync\\CS\\CPP\\tmp\\pdfs\\os_notes\\qa_pages_219\\contact_19.jpg"
   ]
 }

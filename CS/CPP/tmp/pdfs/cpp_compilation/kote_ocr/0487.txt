@@ -1,0 +1,21 @@
+State top = heap.top();
+heap.pop();
+int dist = top.first;
+int node = top.second;
+visited[node) = true;
+for (autO next : G.adj[nodeJ)
+if (visited[next))
+contlnue;
+if (dist != UNKNOWN && distance[next] 〉 dist + G.weight[node][next])
+distance[next] = dist + 6 weight[nodeJ[nextJ;
+heap.push({distance[next], next});
+return distance;
+10. 이제 TestGraph() 함수에서 각 정점에서의 평균 최단 거리를 계산하겠습니다. Dijkstra() 함
+수가 반환한 거리 벡터에서 시작 정점에 해당하는 원소와 UNKNOWN인 원소를 제외하여 거리 합
+을 계산합니다. 그리고 이때 시용된 거리의 개수를 세어 두었다가 최종적으로 평균 계산할 때
+사용합니다. 모든 정점에 대해서 평균 거리를 계산하여 더한 후, 그 결괴를 다시 그래프의 전
+체 정점 개수로 나눕니다. 정확한 거리 값을 계산하기 위해 가중치 재설정 작업이 필요하다는
+점을 잊지 말이야 합니다.
+double result = 0;
+for (int i = 0; i 〈 G.v; i++)
+vector<int〉 shortest = Dijkstra(i, 6);

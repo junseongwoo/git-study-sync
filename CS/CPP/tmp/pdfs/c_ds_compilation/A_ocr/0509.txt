@@ -1,0 +1,28 @@
+// 새로운 루트를 반환
+return child;
+rotate」eft() 함수 구현
+2
+parent
+1
+child
+0
+// 왼쪽으로 회전시키는 함수
+AVLN0de *rotate_1eft(AVLN0de *parent)
+AVLNode *chitd = parent->right;
+parent->right = child->left;
+child-〉left = parent;
+// 새로운 루트 반환
+return chitd;
+트리의 높이 계산
+0
+child
+0
+parent
+0
+AVL 트리의 구현에서 중요한 것은 트리의 높이를 측정하는 것이다. 트리의 높이는 7장에서도
+다룬바 있다. 트리의 높이 계산은 순환 호출을 이용하여 구현된다. 즉 루트 노드의 왼쪽 서브 트
+리와 오른쪽 서브 트리에 대하여 각각 순환 호출을 하여 각각의 높이를 구한 다음, 이들 중에서
+더 큰 값에 1을 더하면 트리의 높이가 된다. 또한 양쪽 서브 트리의 높이의 차이는 각각의 서브
+트리에 대하여 높이를 구한 다음, 왼쪽 서브 트리의 높이에서 오른쪽 서브 트리의 높이를 빼면
+구할 수 있다.
+518 C언어로 쉽게 물어쓴 자료구조

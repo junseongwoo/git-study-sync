@@ -1,0 +1,27 @@
+for (int i =0; i <V— 1,• i++)
+// 전제 에지에 대해 반복
+for (auto& e : edges)
+// 에지의 시작 정점의 거리 값이 UNKNOWN이면 스킵
+if (distance[e.src] == UNKNOWN)
+contlnue;
+// 인접한 정점의 거리 값이 새로운 경로에 의한 거리 값보다 크면
+// 거리 값을 업데이트함
+if (distance[e dstl 〉 distance[e.src] + e.weight)
+distance[e dst] = distance[e.src] 十 e weight;
+// 음수 가중치 사이클이 있는지 검사
+for (auto& e : edges)
+if (distance[e.src] == UNKNOWN)
+continue;
+if (distance[e.dst] 〉 distance[e src] + e.weight)
+cout 〈〈 "음수 가중치 사이클 발견!" 〈〈 endl;
+return {};
+return distance;
+3. 수정한 Be11manFord() 함수가 제대로 동작하는지 확인하기 위한 코드를 main( ) 함수에 추가
+하겠습니다. 아래 코드에서는 그림 7-2에 나타난 그래프를 이용하여 음수 가중치 사이클 존
+재 여부를 확인합니다.
+int main()
+int V= 6;
+vector<Edge〉 edges;
+290
+// 정점 개수
+// 에지 포인터의 벡터

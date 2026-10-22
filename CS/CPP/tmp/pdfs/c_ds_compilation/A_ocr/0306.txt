@@ -1,0 +1,38 @@
+314
+root->right : delete *〉right, key);
+// 기가 루트외 람으면 이 노드를 식제하면 됨
+etse {
+// 첫 번마나 두 벤대 경우
+if (root->left == NULL) {
+TreeN0dc * tenp =
+free(rd)t);
+return temp;
+etse if (ra)t->right == NULL) {
+TreeN0de * tertV = root->left;
+return temp;
+// 세 번째 경우
+* temp = min value—node(root->right) ;
+// 중외 순회시 후계 노드를 복사한다.
+root->key = temp->key;
+// 중외 순회시 후계 노드를 삭제한다.
+root->right = delete temp->key) ;
+return root;
+void help()
+printf("\n**** i: 입력, d: 삭제, s: 탐색, 인 출력, q: 종료 ****:
+// 이진 탐색 트리를 사용하는 영어 사전 프로그램
+int main(void)
+char cormand;
+element e;
+* = NULL;
+TreeNode * 원叩•
+do {
+help();
+connand = getchar() ;
+// 엔터기 제거
+getchar() ;
+switch (connand) {
+case | 1
+printf("단어:")•,
+gets(e.word) •,
+printf("의미:")•,
+C언어로 쉽게 불어쓴 자료구조

@@ -1,0 +1,28 @@
+6. 삭제 함수를 구현합니다.
+void erase(uint value)
+int n = data.size();
+= data(value % 리;
+autO& entries
+autO iter = std::find(entries.begin(), entries.end(), value);
+if (iter != entries end())
+entries. erase( iter) ;
+std::cout 〈〈 value 〈〈 "을(를) 삭제했습니다.“ 〈〈 std::endl;
+7. 이전 연습 문제와 비슷한 방식으로 ) 함수를 작성하겠습니다.
+int main()
+hash-map map(7);
+auto print = [&](int value) {
+if (map.find(value))
+std::cout 〈〈 "해시 맵에서 " 〈〈 value 〈〈 "을(를) 찾았습니다."
+else
+std::cout 〈〈 "해시 맵에서 " 〈〈 value 〈〈 "을(를) 찾지 못했습니다."
+std: :cout 〈〈 std: :endl;
+8. map에 대해 insert( )와 erase() 함수를 사&하는 코드를 추가하겠습니다.
+map.insert(2);
+map.insert(25);
+map.insert(l@);
+map.insert(l@@);
+map.insert(55);
+print(l@@);
+print(2);
+map.erase(2);
+127

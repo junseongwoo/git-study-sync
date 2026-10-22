@@ -1,0 +1,24 @@
+{
+  "unique_cited_items": 646,
+  "total_pages": 123,
+  "files": {
+    "notes": {
+      "path": "C:\\Users\\user\\Desktop\\Obsidian\\git-study-sync\\CS\\CPP\\output\\pdf\\컴퓨터_네트워킹_1-6장_학습노트.pdf",
+      "pages": 68,
+      "bytes": 427993,
+      "sha256": "15499986f7fab589974be42e37cc86a129c9d495f5aef7f70c3214b1ae1bef36"
+    },
+    "cheat": {
+      "path": "C:\\Users\\user\\Desktop\\Obsidian\\git-study-sync\\CS\\CPP\\output\\pdf\\컴퓨터_네트워킹_1-6장_치트시트.pdf",
+      "pages": 6,
+      "bytes": 159861,
+      "sha256": "c69d4f8fc8dce303580e587ee882cc07bb925b50d4a2a7572675d6dde9bbae4d"
+    },
+    "audit": {
+      "path": "C:\\Users\\user\\Desktop\\Obsidian\\git-study-sync\\CS\\CPP\\output\\pdf\\컴퓨터_네트워킹_1-6장_근거검증_인쇄점검.pdf",
+      "pages": 49,
+      "bytes": 311184,
+      "sha256": "14ef72664319e398ae6a249ea602481e3f40bc4529cb2fc98f87439a817fddbc"
+    }
+  }
+}

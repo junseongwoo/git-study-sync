@@ -1,0 +1,423 @@
+{
+  "source": "K",
+  "filename": "Cpp코테.pdf",
+  "pdf_pages": 530,
+  "contents_pdf_pages": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9
+  ],
+  "page_basis": "PDF 첫 면=1. 원문 인쇄 쪽수로 임의 변환하지 않는다.",
+  "chapters": [
+    {
+      "chapter": "1",
+      "title": "리스트, 스택, 큐",
+      "pdf_start": 10,
+      "pdf_end": 61,
+      "sections": [
+        {
+          "section": "1.1",
+          "title": "들어가며",
+          "pdf_start": 11
+        },
+        {
+          "section": "1.2",
+          "title": "연속된 자료 구조와 연결된 자료 구조",
+          "pdf_start": 12
+        },
+        {
+          "section": "1.3",
+          "title": "std::array",
+          "pdf_start": 17
+        },
+        {
+          "section": "1.4",
+          "title": "std::vector",
+          "pdf_start": 28
+        },
+        {
+          "section": "1.5",
+          "title": "std::forward_list",
+          "pdf_start": 33
+        },
+        {
+          "section": "1.6",
+          "title": "반복자",
+          "pdf_start": 39
+        },
+        {
+          "section": "1.7",
+          "title": "std::list",
+          "pdf_start": 47
+        },
+        {
+          "section": "1.8",
+          "title": "std::deque",
+          "pdf_start": 53
+        },
+        {
+          "section": "1.9",
+          "title": "컨테이너 어댑터",
+          "pdf_start": 56
+        },
+        {
+          "section": "1.10",
+          "title": "벤치마킹",
+          "pdf_start": 59
+        },
+        {
+          "section": "1.11",
+          "title": "나가며",
+          "pdf_start": 61
+        }
+      ]
+    },
+    {
+      "chapter": "2",
+      "title": "트리, 힙, 그래프",
+      "pdf_start": 62,
+      "pdf_end": 105,
+      "sections": [
+        {
+          "section": "2.1",
+          "title": "들어가며",
+          "pdf_start": 63
+        },
+        {
+          "section": "2.2",
+          "title": "비선형 문제",
+          "pdf_start": 64
+        },
+        {
+          "section": "2.3",
+          "title": "트리: 상하 반전된 형태",
+          "pdf_start": 66
+        },
+        {
+          "section": "2.4",
+          "title": "다양한 트리 구조",
+          "pdf_start": 73
+        },
+        {
+          "section": "2.5",
+          "title": "힙",
+          "pdf_start": 88
+        },
+        {
+          "section": "2.6",
+          "title": "그래프",
+          "pdf_start": 96
+        },
+        {
+          "section": "2.7",
+          "title": "나가며",
+          "pdf_start": 105
+        }
+      ]
+    },
+    {
+      "chapter": "3",
+      "title": "해시 테이블과 블룸 필터",
+      "pdf_start": 106,
+      "pdf_end": 145,
+      "sections": [
+        {
+          "section": "3.1",
+          "title": "들어가며",
+          "pdf_start": 107
+        },
+        {
+          "section": "3.2",
+          "title": "해시 테이블",
+          "pdf_start": 108
+        },
+        {
+          "section": "3.3",
+          "title": "해시 테이블에서 충돌",
+          "pdf_start": 114
+        },
+        {
+          "section": "3.4",
+          "title": "C++ 해시 테이블",
+          "pdf_start": 131
+        },
+        {
+          "section": "3.5",
+          "title": "블룸 필터",
+          "pdf_start": 138
+        },
+        {
+          "section": "3.6",
+          "title": "나가며",
+          "pdf_start": 144
+        }
+      ]
+    },
+    {
+      "chapter": "4",
+      "title": "분할 정복",
+      "pdf_start": 146,
+      "pdf_end": 193,
+      "sections": [
+        {
+          "section": "4.1",
+          "title": "들어가며",
+          "pdf_start": 147
+        },
+        {
+          "section": "4.2",
+          "title": "이진 검색",
+          "pdf_start": 149
+        },
+        {
+          "section": "4.3",
+          "title": "분할 정복 이해하기",
+          "pdf_start": 157
+        },
+        {
+          "section": "4.4",
+          "title": "분할 정복을 이용한 정렬 알고리즘",
+          "pdf_start": 158
+        },
+        {
+          "section": "4.5",
+          "title": "분할 정복 기법과 C++ 표준 라이브러리 함수",
+          "pdf_start": 177
+        },
+        {
+          "section": "4.6",
+          "title": "맵리듀스: 더 높은 추상화 레벨의 분할 정복 기법",
+          "pdf_start": 179
+        },
+        {
+          "section": "4.7",
+          "title": "나가며",
+          "pdf_start": 192
+        }
+      ]
+    },
+    {
+      "chapter": "5",
+      "title": "그리디 알고리즘",
+      "pdf_start": 194,
+      "pdf_end": 231,
+      "sections": [
+        {
+          "section": "5.1",
+          "title": "들어가며",
+          "pdf_start": 195
+        },
+        {
+          "section": "5.2",
+          "title": "기본적인 그리디 알고리즘",
+          "pdf_start": 197
+        },
+        {
+          "section": "5.3",
+          "title": "배낭 문제",
+          "pdf_start": 200
+        },
+        {
+          "section": "5.4",
+          "title": "그래프 컬러링",
+          "pdf_start": 222
+        },
+        {
+          "section": "5.5",
+          "title": "나가며",
+          "pdf_start": 230
+        }
+      ]
+    },
+    {
+      "chapter": "6",
+      "title": "그래프 알고리즘 I",
+      "pdf_start": 232,
+      "pdf_end": 269,
+      "sections": [
+        {
+          "section": "6.1",
+          "title": "들어가며",
+          "pdf_start": 233
+        },
+        {
+          "section": "6.2",
+          "title": "그래프 순회 문제",
+          "pdf_start": 235
+        },
+        {
+          "section": "6.3",
+          "title": "프림의 최소 신장 트리 알고리즘",
+          "pdf_start": 253
+        },
+        {
+          "section": "6.4",
+          "title": "다익스트라 최단 경로 알고리즘",
+          "pdf_start": 259
+        },
+        {
+          "section": "6.5",
+          "title": "나가며",
+          "pdf_start": 268
+        }
+      ]
+    },
+    {
+      "chapter": "7",
+      "title": "그래프 알고리즘 II",
+      "pdf_start": 270,
+      "pdf_end": 313,
+      "sections": [
+        {
+          "section": "7.1",
+          "title": "들어가며",
+          "pdf_start": 271
+        },
+        {
+          "section": "7.2",
+          "title": "최단 경로 문제 다시 살펴보기",
+          "pdf_start": 272
+        },
+        {
+          "section": "7.3",
+          "title": "벨만-포드 알고리즘",
+          "pdf_start": 273
+        },
+        {
+          "section": "7.4",
+          "title": "벨만-포드 알고리즘과 음수 가중치 사이클",
+          "pdf_start": 277
+        },
+        {
+          "section": "7.5",
+          "title": "존슨 알고리즘",
+          "pdf_start": 285
+        },
+        {
+          "section": "7.6",
+          "title": "강한 연결 요소",
+          "pdf_start": 297
+        },
+        {
+          "section": "7.7",
+          "title": "코사라주 알고리즘",
+          "pdf_start": 300
+        },
+        {
+          "section": "7.8",
+          "title": "적절한 방법 선택하기",
+          "pdf_start": 311
+        },
+        {
+          "section": "7.9",
+          "title": "나가며",
+          "pdf_start": 312
+        }
+      ]
+    },
+    {
+      "chapter": "8",
+      "title": "동적 계획법 I",
+      "pdf_start": 314,
+      "pdf_end": 373,
+      "sections": [
+        {
+          "section": "8.1",
+          "title": "들어가며",
+          "pdf_start": 315
+        },
+        {
+          "section": "8.2",
+          "title": "동적 계획법이란?",
+          "pdf_start": 316
+        },
+        {
+          "section": "8.3",
+          "title": "메모이제이션: 하향식 접근 방법",
+          "pdf_start": 318
+        },
+        {
+          "section": "8.4",
+          "title": "타뷸레이션: 상향식 접근 방법",
+          "pdf_start": 320
+        },
+        {
+          "section": "8.5",
+          "title": "부분집합의 합 문제",
+          "pdf_start": 321
+        },
+        {
+          "section": "8.6",
+          "title": "문자열과 시퀀스에 대한 동적 계획법",
+          "pdf_start": 353
+        },
+        {
+          "section": "8.7",
+          "title": "실습 문제 21: 멜로디 순열",
+          "pdf_start": 369
+        },
+        {
+          "section": "8.8",
+          "title": "나가며",
+          "pdf_start": 373
+        }
+      ]
+    },
+    {
+      "chapter": "9",
+      "title": "동적 계획법 II",
+      "pdf_start": 374,
+      "pdf_end": 425,
+      "sections": [
+        {
+          "section": "9.1",
+          "title": "들어가며",
+          "pdf_start": 375
+        },
+        {
+          "section": "9.2",
+          "title": "P와 NP",
+          "pdf_start": 376
+        },
+        {
+          "section": "9.3",
+          "title": "부분집합의 합 문제 다시 보기",
+          "pdf_start": 380
+        },
+        {
+          "section": "9.4",
+          "title": "배낭 문제",
+          "pdf_start": 381
+        },
+        {
+          "section": "9.5",
+          "title": "그래프와 동적 계획법",
+          "pdf_start": 401
+        },
+        {
+          "section": "9.6",
+          "title": "나가며",
+          "pdf_start": 423
+        }
+      ]
+    },
+    {
+      "chapter": "부록",
+      "title": "실습 문제 풀이",
+      "pdf_start": 426,
+      "pdf_end": 529,
+      "sections": []
+    }
+  ],
+  "notes": [
+    "PDF 530면은 찾아보기의 첫 면이다. 찾아보기의 뒤쪽 수록 여부는 첨부에서 확인 불가.",
+    "부록 제목은 '실습 문제 풀이'이며 별도 알고리즘 분석 부록으로 소개하지 않는다.",
+    "장은 다음 장 표지 전까지 범위로 표시했다. 빈 메모 면을 포함할 수 있다."
+  ]
+}

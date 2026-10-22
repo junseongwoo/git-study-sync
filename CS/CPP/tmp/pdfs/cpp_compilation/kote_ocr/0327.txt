@@ -1,0 +1,24 @@
+allSubsets [subset. size( )] . push—back(subset) ,•
+return;
+// 원소를 추가하지 않고 재귀 호출
+GetAIISubsets(set, subset, index 十 1, allSubsets);
+// 원소를 부분집합에 추가한 후 재귀 호출
+subset. push—back(set[index]);
+GetAIISubsets(set, subset, index + 1, allSubsets);
+4. SubsetSum-BruteForce() 함수를 선언합니다. 이 함수는 입력 집합을 표현하는 정수 벡터 set
+과 부분집합의 합을 나타내는 정수 target을 인자로 받고, b001 값을 반환합니다. 이 함수의
+앞부분에서 전체 부룬집합을 저장할 a11Subsets를 선언하고 GetA11Subsets() 함수를 호출합
+니다.
+b001 SubsetSum_BruteForce(vector<int〉 set, int target)
+vector〈vector〈vector〈int〉〉〉 aIISubsets(set.size() + 1);
+GetAIISubsets(set, {}, 0, allSubsets);
+5. 각 부륜집합의 원소 합을 target과 비교하고, 만약 일치하면 true를 반환합니다. 만약 부분집
+합의 합이 target과 같은 경우가 발생하지 않으면 fal뚀를 반환합니다.
+for (int size = 0; size 〈= set.size(); size+十)
+PRINT("부분집합의 원소 개수: " 〈〈 size 〈〈 endl);
+for (aut0 subset : a11Subsets[size])
+int sum = 0;
+for (autO number : subset)
+sum 十= number;
+PRINT(number 〈〈 " ")•,
+338

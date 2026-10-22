@@ -1,0 +1,59 @@
+053
+054
+055
+056
+057
+058
+059
+%3
+%5
+%7
+%9
+070
+071
+072
+073
+074
+075
+076
+077
+078
+079
+%1
+%2
+083
+085
+%7
+鬱1
+叨2
+void ET_PostorderPrintTree( ETNode* NOde )
+if ( NOde == NULL )
+return;
+ET—PostorderPrintTree( );
+ET-PostorderPrintTree( Node->Right );
+printf( • *c•, Node->Data
+void ET_BuiIdExpressionTree( char* PostfixExpression, ETNode** Node )
+int len
+char Token
+= strlen( PostfixExpression );
+= PostfixExpression[ len -1 1;
+PostfixExpression[ len-1 1 = •Ⅵ•,
+switch ( Token )
+// 연산자인 경우
+. case •구: case •〃•.
+case '+2 case
+(*Node) = ET_CreateNode( Token ):
+ET-Bui1dExpressionTree( PostfixExpression, &(*Node)-Right );
+ET-Bui1dExpressionTree( PostfixExpression, &(*Node)->Left );
+break;
+// 피연산자인 경우
+default •
+(씨馝e) = ET_CreateNode( Token);
+break,
+double ET-EvaIuate( ETNode* Tree )
+char TempI기;
+double Left
+d0面le Right = 0;
+do面le Result = 0;
+184
+Part 01 • 자료구조

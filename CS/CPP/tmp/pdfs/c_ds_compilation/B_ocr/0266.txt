@@ -1,0 +1,30 @@
+if ( Tree->Left != NULL Tree->Right != NULL )
+// 최솟값 노드를 찾아 제거한 위 현재의 노드에 위치시킨다.
+BSTNode* MinNode = BST SearchMinNode( Tree->Right );
+MinNode = BST RemoveNode( Tree, NULL, MinNode->Data ),•
+Tree-»ata = MinNode->Data;
+MinNode에 대해 BST-RemoveNode( )
+else
+함수를 호출하는 이유는 이 노드에 [糊서도
+제거 후의 뒤처리가 핋요하기 때문입니다
+// 자식이 하나만 있는 경우
+BSTNode• Temp = NULL;
+if ( Tree->Left != NULL )
+Temp = Tree->Left;
+else
+Temp = Tree-Right,
+if ( Parent->Left == Tree )
+Parent->Left
+= Temp,
+else
+Parent-Right
+- Temp;
+return Removed,
+6.43 이진 탐색 트리 예제 프로그램
+지금까지 공부한 내용들을 바탕으로 예제 프로그램을 만들 차례입니다. 이 예제 프로그램은 이진
+탐색 트리의 기본 연산을 구현하는 BinarySearchTree.h와 BinarySearchTree.c, 그리고 이
+들 기본 연소卜을 활용하여 이진 탐색 트리를 만들고 탐색을 시험하는 코-드가 담기는 Test-Btnary
+SearchTree.c, 모두 3개의 파일로 구성됩니다.
+예제 코드의 양이 많기는 하지만 반드시 직접 구현해보기 바랍니다. 프로그래머에게는 눈과 머리로
+알고리즘을 이해하는 것만큼 코드 작성 과정을 통해 알고리즘을 느끼는 것이 중요하기 때문입니다.
+Chapter % • 탐색 259

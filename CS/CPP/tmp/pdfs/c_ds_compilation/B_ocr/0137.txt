@@ -1,0 +1,52 @@
+44
+45
+46
+48
+49
+50
+52
+53
+54
+56
+57
+58
+59
+60
+62
+63
+64
+66
+67
+68
+Queue—>F ront++;
+return Queue->Nodes(Position).Data,
+int CQ_GetSize( CircularQueue* Queue )
+if ( Queue->Front 〈= Queue->Rear )
+return Queue->Rear - Queue->Front;
+eIse
+return Queue-Rear + (Queue-Xapacity - Queue—>Front) + 1,•
+int CQ_IsEmptY( Circu1arQueue* Queue )
+return (Queue—>Front == Queue->Rear);
+int CQ_IsFu11( Circu1arQueue* Queue )
+if ( Queue->Front 〈 Queue->Rear )
+Queue-XapacitY :
+return ( Queue-Rear - Queue->Front)
+else
+return ( Queue-Rear + 1 ) == Queue->Front;
+03장/circu1arQueue/Test—CircularQueue. (
+01
+02
+03
+04
+05
+06
+08
+09
+#include "CircularQueue.h"
+int main( void )
+int 1,•
+Circu1arQueue* Queue;
+CQ-CreateQueue(&Queue, 10):
+CQ-Enqueue( Queue, 1 );
+Chapter 03 • 큐
+129

@@ -1,0 +1,36 @@
+프로그램 10.3 인접 배열로 표현된 그래프에 대한 깊이우선탐색 프로그램
+#include <stdio.h>
+#include <stdlib.h>
+#define TRUE 1
+#define FALSE 0
+#define MAX VERTICES 50
+typedef struct GraphType {
+int n; // 정점의 개수
+int adj-mat[MAX VERTICES] [MAX_VERTICESJ ;
+} GraphType;
+int visited[MAX_VERTICESJ •,
+// 그래프 초기화
+void init(GraphType* g)
+g->n = 0;
+for (r = 0; r<MAX_VERTICES; r++)
+for (c = 0; C<MAX_VERTICES; C++)
+g->adj-mat[r] [리
+// 정점 삽입 연산
+void insert vertex(GraphType* g, nnt v)
+if (((g->n) + 1) 〉 MAX-VERTICES) {
+fpnntf(stderr, "그래프: 정점의 개수 초과");
+return;
+// 간선 삽입 연산
+void insert_edge(GraphType* g, int start, int 이던)
+if (start 〉= g->n ll end >= g->n) {
+fpnntf(stderr, "그래프: 정점 번호 오류");
+return;
+g->adj —mat [start] [이던]
+g->adj -mat [이던] [start]
+// 인접 행렬로 표현된 그래프에 대한 깊이 우선 탐색
+VOid dfs mat(GraphType* g, int v)
+382
+visited[v]
+C언어로 쉽게 풀어쓴 자료구조
+- TRUE;
+// 정점 v의 방문 표시

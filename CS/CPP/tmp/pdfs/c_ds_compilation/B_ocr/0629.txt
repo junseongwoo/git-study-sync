@@ -1,0 +1,25 @@
+는 것입니다. 이 함수가 호출할 IsThreatened( ) 함수는 부분해를 담고 있는 Columns 배열과 새
+로 놓은 퀸이 놓인 행 번호를 매개 변수로 받아 위협 여부를 판단합니다. 만약 새로 놓은 권이 기존
+의 퀸들을 위협한다면 함수를 반환하여 백트래킹합니다. 그 이전 부분해로 돌아가서 다음 후보를 시
+도하는 것이지요.
+일단 1sThreatened ( ) 함수를 통과했다면 이는 새로 놓은 퀸을 부분해로 인정한다는 의미입니다.
+IsThreatened ( ) 함수를 통과한 부분해가 마지막 부븐해라면 (Row == NumberOfQueens—1 )
+이는 하나의 해가 완성되었다는 뜻이므로 해를 출력합니다. 아직 해를 더 찾아야 한다면 다시
+FindSolutionForQueen ( ) 함수를 재귀 호출합니다.
+void FindSolutionForQueen(int Columns(l, int ROW
+int Number0fQueens, int* SolutionCount)
+if ( IsThreatened( Columns, ROW ) )
+return;
+if ( Row == NumberOfQueens-1 )
+printf("SoIution \n", ++(*SoIutionCount));
+PrintSoIution( Columns, Number0fQueens );
+else
+int
+1 :
+for ( i=0; i<Number0fQueens; i++ )
+C01umns[Row+11
+FindSolutionForQueen ( Columns, RO靜1
+Number0fQueens, SolutionCount );
+이제 1sThreatened( ) 함수를 살펴볼까요? 이 함수는 새로 놓은 퀸이 먼저 놓인 퀸들과 위협 관계
+인지 판단하는 역할을 합니다. 위협 여부를 판단하는 방법은 다음과 같습니다.
+Chapter 15 • 백트래킹 631

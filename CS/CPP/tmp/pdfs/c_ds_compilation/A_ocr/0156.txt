@@ -1,0 +1,43 @@
+배열을 이용한 「핵의 구현
+원형 큐와 더는 공통점이 많은데, 원형 큐를 확장하면 데도 손쉽게 구현할 수 있다. 데도 원형 큐
+와 같이 전단과 후단을 시용한다. 따라서 큐에서 시용한 배열 data와 fmnt. 1℃al을 그대로 시용
+하면 되고. 추가적인 데이터는 필요 없다.
+1
+#define MAX_DEQUE_SIZE 5
+typedef int element;
+typedef struct { // 터! 타입
+data [MAX-Q.JEUE-SIZE] ;
+element
+int front, rear;
+} DequeType;
+원형 큐에서 그대로 A卜&할 수 있는 많은 연산들이 있다. is-empty(). is-fult(), size(),
+init-queue(), print-deque(). add-rear(), delete—front(), get—front() 등은 원형 큐의
+연산들과 동일하다. 다만 이름이 변경된 것들이 있다. 예를 들이서 add-rear()는 enqueue()와
+동일하다.
+덱에서 새롭게 추가된 연산에는 delete-rear(), add-front(), get-rear()가 있다. get-
+rear()가 가장 간단한데. 공백상태가 아닌 경우 rear가 가리기는 항목-을 반환하면 된다. de-
+lete-rear()와 add-front()에서는 원형 큐에서와 니르게 반대 방향의 회전이 필요하다. front
+나 rear를 감소시켜야 하는데, 만약 음수가 되면 MAX-QUEUE-SIZE를 더해주어야 한다. 따라서
+front나 rear는 다음과 같이 변경된다.
+front 수 (front-l + MAX_QUEUE_SIZE) % MAX_QUEUE_SIZE;
+rear 수 (rear—l + MAX_QUEUE_SIZE) % MAX_QUEUE_SIZE;
+[3]
+[1]
+front [0]
+[6]
+[7]
+[1]
+front [0]
+delete
+[6]
+[7]
+-rear()
+[3]
+[1]
+[0]
+add_front(E)
+[6]
+front
+[그림 5-13] 덱의 추가된 연산
+전체 소스는 나음과 같다.
+164 C언어로 쉽게 불어쓴 자료구조

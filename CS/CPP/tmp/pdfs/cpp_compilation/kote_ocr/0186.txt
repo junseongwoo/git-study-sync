@@ -1,0 +1,28 @@
+struct reduce task : public mapreduce::reduce t祁k<b001, long〉
+template〈typename Runtime, typename lt〉
+void operator()(Runtime& runtime, key-type (0舫t& key, lt it, lt ite) const
+if (key)
+std::for each(it, ite, std::bind(&Runtime::emit, &runtime, true,
+std: :placeholders : : -1 ) ) ;
+typedef mapreduce: :jOb〈prime_calculator: :map task,
+prime—calculator: :reduce task,
+mapreduce: :null combiner,
+prime_calculator: :number_source〈prime_calculator: :map_task〉〉 j0b,
+} // prime-calculator 네임스페이스
+prime-calculator 네임스페이스는 크게 세 가지 기능-을 가지고 있습니다. 첫 번째는 전달된
+정수가 소수인지를 판별하는 is-prime() 함수 정의입니다. 두 번째는 주어진 범위 내에서 정
+수를 생성하는 number-source() 클래스 정의입니다. 세 번째는 맵과 리듀스 연산을 수행하는
+함수 객체 정의입니다. map-task는 long 타입으로 구성된 구, v〉 쌍을 발행합니다. v가 소수
+이면 k가 1이고, v가 소수가 아니면 k는 0입니다. reduce-task는 필터의 역할을 수행하며, k
+= 1인 구, v〉 쌍을 출력으로 내보냅니다.
+5. main( ) 함수를 작성하고, 맵리듀스를 이용하여 소수를 찾아내는 코드를 추가합니다.
+int main(int argc, char* argv[])
+mapreduce: :specification spec;
+int prime_limit = 1000;
+// 스레드 개수 설정
+int cpu—cores = std: :max(IU, std: :thread: :hardware_concurrency());
+spec. map_tasks = CPU_COreS;
+.reduce tasks = cpu_cores;
+// 지정한 범위의 정수 생성을 위한 객체
+prime—calculator::job: :datasource—type datasource(@, prime_limit, prime_limit /
+spec. reduce_tasks) :

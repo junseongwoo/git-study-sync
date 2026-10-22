@@ -1,0 +1,49 @@
+079
+081
+%5
+087
+曲2
+093
+鬱5
+鬱7
+100
+101
+102
+103
+104
+105
+107
+108
+109
+110
+111
+112
+113
+114
+115
+116
+117
+118
+void OAHT DestroyHashTable( HashTab1e* HT)
+// 1. 각 링크드 리스트를 자유 저장소에서 제거하기
+int i = 0:
+for ( i=O; idT->TabIeSize; i++ )
+OAHT ClearEIement( &대T->TabIe[il) );
+// 2. 해시 테이불을 자유 저장소에서 제거하기
+free ( HT->Table ),•
+free ( HT ):
+int OAHT-Hash( Key, int KeyLength, int TableSize )
+int i=@;
+int HashValue = 0;
+for ( i=O; i<KeyLength; i++ )
+HashVaIue = 대ashValue 《 3) + Key[iJ;
+HashValue = HashVaIue * Tab1eSize;
+return HashVa1ue;
+int OAHT Hash2( KeyType Key, int KeyLength, int TableSize )
+int i=0;
+int HashValue = 0:
+for ( i=0; i<KeyLength; i++ )
+HashVaIue = (HashValue 〈〈 2) + Key[il;
+HashVaIue = HashVaIue ( Tab1eSize - 3 );
+370
+Part 02 • 알고리즘

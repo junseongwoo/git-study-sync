@@ -1,0 +1,39 @@
+ÅDT4.1 Stack
+•객체: 0개 이상의 원소를 가지는 유한 선형 리스트
+.여사•
+create(size) ::= 최대 크기가 size인 공백 스택을 생성한다.
+is_full(s) •
+if(스택의 원소수 == size) return TRUE;
+else return FALSE;
+is-empty(s) •
+if(스택의 원소수 == 0) return TRUE;
+else return FALSE;
+push(s, item)
+if( is_fult(s) ) return ERROR_STACKFULL;
+else 스택의 맨 위에 item* 추가한다.
+pop(s) •
+if( is-empty(s) ) return ERROR STACKEMPTY;
+else 스택의 맨 위의 원소를 제거해서 반환한다.
+peek(s) •
+if( is empty(s) ) return ERROR_STACKEMPTY;
+else 스택의 맨 위의 원소를 제거하지 않고 반환한다.
+入택0)虐 가지의 기본 연산이 있다. 하나는 삽원졏소?뚀츈
+us 연산이라고 하고 또 하나
+는 삭제 연산으되과D)연산이라고 한다. [그림 4-5]는 스택에서의 일련의 push 연산과 POP 연산
+을 보여주고 있다. push(A)를 수행하면 비어 있는 스택에 A가 삽입된다. 다시 push(B)가 수행되
+면 B가 A위에 쌓이게 된다. 같은 식으로 push(c)가 수행되면 C가 B위에 쌓이게 된다. pop0이
+수행되면 가장 위에 쌓여있는 c가 삭제된다. 만약 상자를 쌓을 때 만약 쌓을 공간이 없다면 상자
+를 쌓을 수 없다. 마찬가지로 만약 push 연산중에 스택이 가득차서 입력이 불가능하타면 화류구
+발생한다. 또 상자더미에 상자가 있어야 만이 상자를 가져갈 수 있는 것처럼 POP 연산중에 스택
+에 데이터가 없어서 출력이 불가능하다면 역시 우류가 발생한다.
+push(A)
+초기상태
+push(B)
+push(C)
+8
+pop()
+[그림 4-5] 스택의 삽입과 삭제 연산
+is-empty와 is_full 연산은 스택이 공백상대에 있는지 포화상태에 있는지를 검사하는 함수이
+다. create 연산은 스택을 생상한다. peek 연산은 요소를 스택에서 삭제하지 않고 보기만 하는
+연산이다. 이에 반하여 pop 연산은 요소홀 스택에서 완전히 삭제하면서 가져온다.
+CHAPTERd4 스택 105

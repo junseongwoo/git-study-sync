@@ -1,0 +1,28 @@
+// 기가 루트와 길으면 이 뇨드를 스t제하면 됨
+else (
+// 첫 번깨나 두 번째 경우
+if (root->left == NULL) {
+TreeNcxIe * temp :
+free(root) ;
+return t에鬱;
+else if == NULL) {
+TreeNode * t에牟 =
+return temp;
+// 세 번째 경우
+TreeNode * temp - mnn—value
+// 중외 순회시 후계 노드를 복사한다.
+root->key = temp->key;
+// 중외 순회시 후계 노드를 삭제한다.
+root->right = temp->key);
+return root;
+위의 코드 중에서 min-value-node() 함수는 주어진 이진 탐색 트리에서 최소 키값을 가지는
+노드를 찾아서 반환한다.
+TreeNode * min—value ncxie(TreeNode *
+node)
+TreeNode * current = ncxie;
+// 맨 왼쪽 단말 노드를 찾으러 내려감
+while (current->left != NULL)
+current = current—>left;
+return current;
+CHAPTER 트리
+305

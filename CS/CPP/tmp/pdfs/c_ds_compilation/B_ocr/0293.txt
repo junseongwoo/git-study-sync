@@ -1,0 +1,24 @@
+else
+if ( Removed == Removed-Parent->Left )
+Removed-Parent->Left = Successor;
+else
+Removed-Parent->Right = Successor,
+if ( Removed-XoIor == BLACK )•
+RBT_RebuildAfterRemove( ROOt, Successor );
+return Removed,
+6.53 레드 블랙 트리 예제 프로그램
+삭제한 노드가 검은색이라면 대체 노드를
+RBT_RebuiIdAfterRemove( ) 함수
+에 인수로 넘겨 호출합니다.
+이번에 만들 프로그램은 사용자가 입력하는 명령에 따라 동작합니다. 명령어의 종류는 노드 생성,
+노드 삭제, 노드 탐색, 트리 출력. 종료 이렇게 다섯 가지입니다.
+Enter comand number
+(1) Create a node (2) Remove a node, (3) Search a NOde
+(4) Display Tree (5) quit
+comand number:4
+다섯 가지 명령 중 트리 출력을 선택하면 각 노드는 다음과 같은 형식으로 출력됩니다.
+〈노드 번호〉 〈노드 색상〉 [<부모의 왼쪽과 오른쪽 자식의 유무〉, 〈부모 노드 번호기
+트리 전체는 다음과 같이 들여쓰기 형식으로 출력합니다. 잎 노드 오른쪽에는 점선과 숫자가 출력되
+는데. 이것은 뿌리와 잎 사이 경로 위에 있는 검은색 노드의 수를 나타냅니다. 잎 노드 중에 이 수가
+하나라도 다른 것이 있다면 이 레드 블랙 트리 프로그램은 오류를 갖고 있는 것입니다.
+286 Part 02 • 알고리좀

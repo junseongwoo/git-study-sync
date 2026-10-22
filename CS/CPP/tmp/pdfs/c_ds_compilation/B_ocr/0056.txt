@@ -1,0 +1,24 @@
+더블 링크드 리스트의 DLL AppendNode() 함수는 다음과 같습니다. SLL AppendNode()
+함수에 새로 추가된 노드의 PrevNode 포인터가 기존에 데일이었던 노드를 가리기게 하는 코드만
+더 추가되었습니다.
+Void DLL AppendNode( Node** Head, NO血* NewNode )
+// 헤드 노드가 NULL이라면 새로운 노드가 Head가 된다.
+if ( (*Head) == NULL )
+*ead = NewNode,
+else
+// 테일을 찾아 NewNode를 연결한다.
+Tail = (*Head);
+while ( TaiI->NextNode != NULL )
+Tail = TaiI->NextNode,
+Tail->NextNode = NewNode,
+NewNode-PrevNode = Tai1; //
+기존의 테일을 새로운 테일의 PrevNode가 가리킹
+DLL-AppendNode ( ) 함수는 다음과 같이 시용할 수 있습니다.
+Node• List = NULL;
+DLL AppendNode( &List, DLL-CreateNode( 117 ));
+DLL AppendNode( &List, DLL-CreateNode( 119 ));
+노드 탐색 연산
+노드 탐색을 하는 DLL GetNodeAt( ) 함수도 링그드 리스트 버전을 그대로 사용합니다. 이미 앞
+에서 살펴본 코드이니 설명은 따로 필요 없겠지요?
+46
+Part 01 • 자료구조

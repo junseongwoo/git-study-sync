@@ -1,0 +1,1209 @@
+{
+  "unit": 3,
+  "title": "클래스·생성·복사·const",
+  "part": "C++",
+  "scope": [
+    {
+      "source": "B",
+      "start": 62,
+      "end": 192
+    },
+    {
+      "source": "L05A",
+      "start": 1,
+      "end": 63
+    },
+    {
+      "source": "L05B",
+      "start": 1,
+      "end": 40
+    }
+  ],
+  "learning": [
+    {
+      "text": "절차적 프로그래밍과 객체지향 프로그래밍, 클래스·객체·생성자·소멸자·생성자 오버로딩을 다룬다.",
+      "refs": [
+        {
+          "source": "L05A",
+          "section": "Lecture Plan",
+          "pages": [
+            2,
+            4
+          ]
+        }
+      ],
+      "evidence": "객체지향프로그래밍 / 클래스와객체 / 생성자와소멸자 / 생성자오버로딩"
+    },
+    {
+      "text": "문자열 클래스 프로젝트는 배운 클래스의 중요한 내용을 복습하고 점검하기 위한 것이다.",
+      "refs": [
+        {
+          "source": "B",
+          "section": "5장·내가 만들어보는 문자열 클래스",
+          "pages": [
+            143
+          ]
+        }
+      ],
+      "evidence": "클래스의중요한내용들을복습하고점검"
+    }
+  ],
+  "concepts": [
+    {
+      "title": "객체지향·캡슐화·정보은닉",
+      "items": [
+        {
+          "text": "절차적 프로그래밍은 데이터와 작업이 분리되고, 객체지향 프로그래밍은 데이터와 기능을 캡슐화한다.",
+          "refs": [
+            {
+              "source": "L05A",
+              "section": "(Summary) Object Oriented Programming",
+              "pages": [
+                10
+              ]
+            }
+          ],
+          "evidence": "데이터와작업이분리 / 데이터+ 기능캡슐화"
+        },
+        {
+          "text": "캡슐화는 클래스가 데이터와 데이터를 기반으로 하는 기능을 모두 포함하는 것이다.",
+          "refs": [
+            {
+              "source": "L05A",
+              "section": "Object Oriented Programming",
+              "pages": [
+                8
+              ]
+            }
+          ],
+          "evidence": "클래스는(데이터) + (데이터를기반으로기능)을모두포함"
+        },
+        {
+          "text": "정보은닉에서는 내부 구현을 감추고 외부로 노출된 인터페이스를 사용하게 한다.",
+          "refs": [
+            {
+              "source": "L05A",
+              "section": "Object Oriented Programming",
+              "pages": [
+                8
+              ]
+            }
+          ],
+          "evidence": "사용자는내구부현에대해알필요도없고 / 외부로노출된인터페이스만활용가능"
+        },
+        {
+          "text": "강의는 객체지향 프로그래밍의 한계로 성능 손실 가능성과 설계에 필요한 추가 수고를 제시한다.",
+          "refs": [
+            {
+              "source": "L05A",
+              "section": "(Summary) Object Oriented Programming",
+              "pages": [
+                10
+              ]
+            }
+          ],
+          "evidence": "성능손실가능성, 디자인에더많은수고필요"
+        }
+      ]
+    },
+    {
+      "title": "클래스·객체·멤버 접근",
+      "items": [
+        {
+          "text": "클래스는 객체가 생성되기 위한 틀이며 객체의 데이터와 기능을 정의하는 사용자 정의 자료형이다.",
+          "refs": [
+            {
+              "source": "L05A",
+              "section": "Classes and Objects",
+              "pages": [
+                14
+              ]
+            }
+          ],
+          "evidence": "객체(object)가생성되기위한틀 / 사용자정의“자료형”"
+        },
+        {
+          "text": "객체는 클래스로부터 생성된 실체이다.",
+          "refs": [
+            {
+              "source": "L05A",
+              "section": "Classes and Objects",
+              "pages": [
+                15
+              ]
+            }
+          ],
+          "evidence": "클래스로부터생성된실체"
+        },
+        {
+          "text": "public은 객체에서 접근할 수 있고 private은 클래스 멤버들만 접근할 수 있다.",
+          "refs": [
+            {
+              "source": "L05A",
+              "section": "Class Member Access Modifier",
+              "pages": [
+                24
+              ]
+            }
+          ],
+          "evidence": "public / 객체에서접근가능 / private / 클래스의멤버들만접근가능"
+        },
+        {
+          "text": "멤버함수는 멤버변수에 직접 접근할 수 있으며, 클래스 안 또는 ClassName::MethodName 형식으로 클래스 밖에 구현할 수 있다.",
+          "refs": [
+            {
+              "source": "L05A",
+              "section": "Implementing Member Methods",
+              "pages": [
+                29
+              ]
+            }
+          ],
+          "evidence": "멤버변수에접근이가능 / 클래스선언내에구현가능 / ClassName::MethodName"
+        },
+        {
+          "text": "명세와 구현을 분리할 때 클래스 선언은 .h에, 구현은 .cpp에 작성하고 Include guard로 헤더의 중복 포함을 방지한다.",
+          "refs": [
+            {
+              "source": "L05A",
+              "section": "Implementing Member Methods",
+              "pages": [
+                29,
+                32
+              ]
+            }
+          ],
+          "evidence": "클래스의선언은.h / 구현은.cpp / 중복적인헤더파일의포함을방지"
+        },
+        {
+          "text": "class의 기본 접근권한은 private이고 struct의 기본 접근권한은 public이다.",
+          "refs": [
+            {
+              "source": "L05A",
+              "section": "Struct vs Class",
+              "pages": [
+                36
+              ]
+            }
+          ],
+          "evidence": "클래스: / private이기본값 / 구조체: / public이기본값"
+        }
+      ]
+    },
+    {
+      "title": "생성자·소멸자·기본 생성자",
+      "items": [
+        {
+          "text": "생성자는 객체가 생성될 때 자동 호출되는 특수한 멤버함수로, 클래스와 이름이 같고 반환형이 없다.",
+          "refs": [
+            {
+              "source": "L05A",
+              "section": "Constructors",
+              "pages": [
+                41
+              ]
+            }
+          ],
+          "evidence": "객체가생성될때자동으로호출 / 클래스와동일한이름 / 반환형은존재하지않음"
+        },
+        {
+          "text": "소멸자는 객체가 소멸할 때 자동 호출되며 클래스 이름 앞에 ~를 붙이고 반환형·매개변수가 없다.",
+          "refs": [
+            {
+              "source": "L05A",
+              "section": "Destructor",
+              "pages": [
+                44
+              ]
+            }
+          ],
+          "evidence": "객체가소멸할때자동으로호출 / 이름앞에“~” / 반환형및파라메터는존재하지않음"
+        },
+        {
+          "text": "생성자는 매개변수가 다른 고유한 형태로 오버로딩할 수 있으나 소멸자는 오버로딩할 수 없다.",
+          "refs": [
+            {
+              "source": "L05A",
+              "section": "Overloading Constructor·Destructor",
+              "pages": [
+                53,
+                44
+              ]
+            }
+          ],
+          "evidence": "각각의생성자는고유해야함(매개변수가달라야함) / 오버로딩불가능"
+        },
+        {
+          "text": "기본 생성자는 인자가 없는 생성자이며, 생성자를 직접 구현하지 않으면 컴파일러가 만들어 준다.",
+          "refs": [
+            {
+              "source": "L05A",
+              "section": "Default Constructor",
+              "pages": [
+                47
+              ]
+            }
+          ],
+          "evidence": "인자가없는생성자 / 클래스의생성자를직접구현하지않으면"
+        },
+        {
+          "text": "인자가 있는 생성자만 구현한 경우 기본 생성자는 자동 생성되지 않는다.",
+          "refs": [
+            {
+              "source": "L05A",
+              "section": "Declaring a Class",
+              "pages": [
+                49
+              ]
+            }
+          ],
+          "evidence": "인자가있는생성자만구현한경우 / 기본생성자가자동생성되지않음"
+        }
+      ]
+    },
+    {
+      "title": "초기화 리스트·위임·기본 매개변수",
+      "items": [
+        {
+          "text": "생성자 초기화 리스트는 생성자 본체에서 값을 대입하는 대신 생성과 동시에 값을 지정한다.",
+          "refs": [
+            {
+              "source": "L05A",
+              "section": "Constructor Initialization List",
+              "pages": [
+                56
+              ]
+            }
+          ],
+          "evidence": "생성과동시에값이지정됨"
+        },
+        {
+          "text": "클래스 안의 레퍼런스 변수나 상수는 생성자의 초기화 리스트로 초기화해야 한다.",
+          "refs": [
+            {
+              "source": "B",
+              "section": "5장·const, const, const!·생성자의 초기화 리스트",
+              "pages": [
+                118
+              ]
+            }
+          ],
+          "evidence": "레퍼런스변수나상수를 / 무조건초기화리스트를사용해서초기화"
+        },
+        {
+          "text": "생성자 위임은 다른 생성자를 멤버 초기화 리스트 위치에서 호출하여 코드 반복을 줄이는 방법이다.",
+          "refs": [
+            {
+              "source": "L05A",
+              "section": "Delegating Constructors",
+              "pages": [
+                57
+              ]
+            }
+          ],
+          "evidence": "코드반복을줄일 / 다른생성자를멤버초기화리스트위치에서호출"
+        },
+        {
+          "text": "생성자도 함수이므로 기본 매개변수를 사용할 수 있다.",
+          "refs": [
+            {
+              "source": "L05A",
+              "section": "Default Constructor Parameters",
+              "pages": [
+                60
+              ]
+            }
+          ],
+          "evidence": "생성자또한함수이므로, 기본매개변수사용가능"
+        }
+      ]
+    },
+    {
+      "title": "복사 생성·얕은 복사·깊은 복사",
+      "items": [
+        {
+          "text": "복사 생성자는 기존 객체를 기반으로 새로운 객체가 생성될 때 어떻게 복사할지를 정의한다.",
+          "refs": [
+            {
+              "source": "L05B",
+              "section": "Copy Constructor",
+              "pages": [
+                6
+              ]
+            }
+          ],
+          "evidence": "기존객체를기반으로새로운객체가생성 / 객체가“어떻게” 복사될지정의"
+        },
+        {
+          "text": "강의는 값으로 매개변수 전달, 값으로 결과 반환, 기존 객체를 기반으로 새 객체 생성의 경우에 복사 생성이 일어난다고 설명한다.",
+          "refs": [
+            {
+              "source": "L05B",
+              "section": "Copy Constructor",
+              "pages": [
+                6
+              ]
+            }
+          ],
+          "evidence": "pass by value / value의형태로결과를반환 / 기존객체를기반으로새로운객체"
+        },
+        {
+          "text": "직접 구현하지 않으면 기본 복사 생성자가 자동 생성되며 멤버변수의 값을 복사하여 대입한다.",
+          "refs": [
+            {
+              "source": "L05B",
+              "section": "Copy Constructor",
+              "pages": [
+                10
+              ]
+            }
+          ],
+          "evidence": "구현하지않으면 / 자동으로만들어져 / 멤버변수들의값을복사하여대입"
+        },
+        {
+          "text": "얕은 복사는 포인터가 가리키는 데이터가 아니라 포인터 주소값 자체를 복사한다.",
+          "refs": [
+            {
+              "source": "L05B",
+              "section": "Shallow vs Deep Copy",
+              "pages": [
+                14
+              ]
+            }
+          ],
+          "evidence": "데이터가아닌포인터주소값자체가복사됨"
+        },
+        {
+          "text": "깊은 복사는 새로운 힙 공간을 할당한 뒤 동일한 데이터를 복사하여 복사 생성하는 방식이다.",
+          "refs": [
+            {
+              "source": "L05B",
+              "section": "Shallow vs Deep Copy",
+              "pages": [
+                20
+              ]
+            }
+          ],
+          "evidence": "새로운힙공간을할당한뒤동일한데이터복사"
+        },
+        {
+          "text": "강의의 얕은 복사 예제는 같은 메모리를 두 번 해제하려 하면서 오류가 발생한다.",
+          "refs": [
+            {
+              "source": "L05B",
+              "section": "Shallow vs Deep Copy",
+              "pages": [
+                18
+              ]
+            }
+          ],
+          "evidence": "해제된공간을다시해제하려시도!에러"
+        }
+      ]
+    },
+    {
+      "title": "this·const·static·friend",
+      "items": [
+        {
+          "text": "this 포인터는 멤버함수를 호출한 객체의 주소값이다.",
+          "refs": [
+            {
+              "source": "L05B",
+              "section": "this Pointer",
+              "pages": [
+                26
+              ]
+            }
+          ],
+          "evidence": "멤버함수를호출한객체의주소값"
+        },
+        {
+          "text": "값이 바뀌지 않음을 보장하는 멤버함수는 선언 뒤에 const를 붙여 const 객체에서 호출할 수 있게 한다.",
+          "refs": [
+            {
+              "source": "L05B",
+              "section": "const Object",
+              "pages": [
+                31
+              ]
+            }
+          ],
+          "evidence": "멤버함수선언뒤에const를붙인다 / 값이바뀌지않는것이보장된함수를선별"
+        },
+        {
+          "text": "static 클래스 멤버변수와 멤버함수는 객체가 아니라 클래스에 속한다.",
+          "refs": [
+            {
+              "source": "L05B",
+              "section": "Static Class Members",
+              "pages": [
+                32
+              ]
+            }
+          ],
+          "evidence": "객체가아닌클래스에속하는변수 / 객체가아닌클래스에속하는함수"
+        },
+        {
+          "text": "friend는 특정 함수나 클래스에 private 멤버 접근을 허용하며, 관계는 비대칭이고 전이되지 않는다.",
+          "refs": [
+            {
+              "source": "L05B",
+              "section": "Friends of a Class",
+              "pages": [
+                37
+              ]
+            }
+          ],
+          "evidence": "Private 멤버에대해접근을허용 / 비대칭 / 전이되지않음"
+        }
+      ]
+    },
+    {
+      "title": "MyString 프로젝트의 데이터와 연산",
+      "items": [
+        {
+          "text": "MyString은 문자열 데이터를 가리키는 포인터와 문자열 길이를 보관하여 문자열 크기 변경과 반복적인 길이 계산을 다룬다.",
+          "refs": [
+            {
+              "source": "B",
+              "section": "5장·내가 만들어보는 문자열 클래스·문자열 클래스를 만들자",
+              "pages": [
+                144
+              ]
+            }
+          ],
+          "evidence": "문자열데이터가저장된공간을가리키는포인터 / 문자열데이터의길이 / 길이를한번구해놓고"
+        },
+        {
+          "text": "MyString은 string_length를 별도로 보관하므로 실제 문자에 해당하는 내용만 string_content에 저장한다.",
+          "refs": [
+            {
+              "source": "B",
+              "section": "5장·내가 만들어보는 문자열 클래스",
+              "pages": [
+                145
+              ]
+            }
+          ],
+          "evidence": "실제문자에만해당하는내용만을string_content 에보관"
+        },
+        {
+          "text": "memory_capacity는 현재 할당된 메모리 공간의 크기이며, reserve는 미리 공간을 예약하고 capacity는 할당된 크기를 알려준다.",
+          "refs": [
+            {
+              "source": "B",
+              "section": "5장·내가 만들어보는 문자열 클래스·assign 함수",
+              "pages": [
+                150,
+                151
+              ]
+            }
+          ],
+          "evidence": "현재할당된메모리공간의크기 / 미리예약해놓는reserve / capacity"
+        },
+        {
+          "text": "assign은 기존 문자열을 지정한 문자열로 바꾸며, insert는 지정 위치 앞에 문자열을 삽입하고 erase는 지정 위치에서 문자를 지운다.",
+          "refs": [
+            {
+              "source": "B",
+              "section": "5장·내가 만들어보는 문자열 클래스·assign·insert·erase",
+              "pages": [
+                148,
+                156,
+                169
+              ]
+            }
+          ],
+          "evidence": "원래있었던문자열이지워지고abc / 입력위치’앞’ / num 은지우는문자의수"
+        },
+        {
+          "text": "find는 find_from에서 시작하여 처음 발견한 문자열의 위치를 반환하며, 포함되지 않으면 -1을 반환한다.",
+          "refs": [
+            {
+              "source": "B",
+              "section": "5장·내가 만들어보는 문자열 클래스·find 함수",
+              "pages": [
+                170
+              ]
+            }
+          ],
+          "evidence": "find_from 에서부터 / 가장첫번째str 의위치를리턴 / -1 을리턴"
+        },
+        {
+          "text": "compare의 크기 비교는 문자열을 사전식으로 배열했을 때 어느 문자열이 뒤에 오는지를 판단하는 것이다.",
+          "refs": [
+            {
+              "source": "B",
+              "section": "5장·내가 만들어보는 문자열 클래스·compare",
+              "pages": [
+                176
+              ]
+            }
+          ],
+          "evidence": "사전식으로배열해서어떤문자열이더뒤에오는지판단"
+        }
+      ]
+    },
+    {
+      "title": "explicit과 mutable",
+      "items": [
+        {
+          "text": "생성자를 explicit으로 선언하면 그 생성자를 이용한 암시적 변환을 막을 수 있다.",
+          "refs": [
+            {
+              "source": "B",
+              "section": "5장·클래스의 explicit 과 mutable 키워드·explicit",
+              "pages": [
+                188
+              ]
+            }
+          ],
+          "evidence": "이생성자를이용한암시적변환을수행하지못하게막을수있습니다"
+        },
+        {
+          "text": "mutable로 선언한 멤버변수는 const 멤버함수 안에서도 값을 바꿀 수 있다.",
+          "refs": [
+            {
+              "source": "B",
+              "section": "5장·클래스의 explicit 과 mutable 키워드·mutable",
+              "pages": [
+                188
+              ]
+            }
+          ],
+          "evidence": "멤버변수를mutable 로선언하였다면const 함수에서도이들값을바꿀수있습니다"
+        },
+        {
+          "text": "책의 Server 예제는 const인 GetUserInfo에서 캐쉬를 갱신하기 위해 Cache 멤버를 mutable로 선언한다.",
+          "refs": [
+            {
+              "source": "B",
+              "section": "5장·클래스의 explicit 과 mutable 키워드·mutable",
+              "pages": [
+                191,
+                192
+              ]
+            }
+          ],
+          "evidence": "GetUserInfo 가const / mutable Cache cache;"
+        }
+      ]
+    }
+  ],
+  "procedures": [
+    {
+      "title": "MyString 복사 생성자의 처리 순서",
+      "steps": [
+        {
+          "text": "원본의 문자열 길이를 복사하고 그 길이를 할당 용량으로 설정한다.",
+          "refs": [
+            {
+              "source": "B",
+              "section": "5장·내가 만들어보는 문자열 클래스",
+              "pages": [
+                153
+              ]
+            }
+          ],
+          "evidence": "string_length = str.string_length; / memory_capacity = str.string_length;"
+        },
+        {
+          "text": "문자열 길이만큼 새 char 배열을 할당한다.",
+          "refs": [
+            {
+              "source": "B",
+              "section": "5장·내가 만들어보는 문자열 클래스",
+              "pages": [
+                153
+              ]
+            }
+          ],
+          "evidence": "string_content = new char[string_length];"
+        },
+        {
+          "text": "원본의 문자를 새 배열에 차례로 복사한다.",
+          "refs": [
+            {
+              "source": "B",
+              "section": "5장·내가 만들어보는 문자열 클래스",
+              "pages": [
+                153
+              ]
+            }
+          ],
+          "evidence": "string_content[i] = str.string_content[i];"
+        }
+      ]
+    },
+    {
+      "title": "insert에서 새 할당이 필요한 경우의 순서",
+      "steps": [
+        {
+          "text": "기존 주소를 보관하고 새 메모리를 할당한다.",
+          "refs": [
+            {
+              "source": "B",
+              "section": "5장·내가 만들어보는 문자열 클래스·insert",
+              "pages": [
+                157
+              ]
+            }
+          ],
+          "evidence": "prev_string_content = string_content / new char[memory_capacity]"
+        },
+        {
+          "text": "삽입 위치 앞부분, 삽입할 문자열, 기존 문자열의 나머지 뒷부분 순서로 복사한다.",
+          "refs": [
+            {
+              "source": "B",
+              "section": "5장·내가 만들어보는 문자열 클래스·insert",
+              "pages": [
+                157
+              ]
+            }
+          ],
+          "evidence": "insert 되는부분직전까지 / 새롭에insert 되는문자열 / 원문자열의나머지뒷부분"
+        },
+        {
+          "text": "기존 메모리를 해제하고 문자열 길이를 갱신한 뒤 *this를 반환한다.",
+          "refs": [
+            {
+              "source": "B",
+              "section": "5장·내가 만들어보는 문자열 클래스·insert",
+              "pages": [
+                157
+              ]
+            }
+          ],
+          "evidence": "delete[] prev_string_content; / string_length = string_length + str.string_length; / return *this;"
+        }
+      ]
+    }
+  ],
+  "syntax": [
+    {
+      "label": "MyString 복사 생성자 - 원문 발췌",
+      "code": "MyString::MyString(const MyString& str) {\n  string_length = str.string_length;\n  memory_capacity = str.string_length;\n  string_content = new char[string_length];\n\n  for (int i = 0; i != string_length; i++) {\n    string_content[i] = str.string_content[i];\n  }\n}",
+      "refs": [
+        {
+          "source": "B",
+          "section": "5장·내가 만들어보는 문자열 클래스",
+          "pages": [
+            153
+          ]
+        }
+      ],
+      "evidence": "MyString::MyString(const MyString& str) / string_content = new char[string_length];",
+      "note": null
+    }
+  ],
+  "formulas": [],
+  "comparisons": [
+    {
+      "title": "얕은 복사와 깊은 복사의 대상",
+      "headers": [
+        "방식",
+        "복사 내용"
+      ],
+      "rows": [
+        [
+          {
+            "text": "얕은 복사",
+            "refs": [
+              {
+                "source": "L05B",
+                "section": "Shallow vs Deep Copy",
+                "pages": [
+                  14
+                ]
+              }
+            ],
+            "evidence": "얕은복사의문제점"
+          },
+          {
+            "text": "얕은 복사는 포인터가 가리키는 데이터가 아니라 포인터 주소값 자체를 복사한다.",
+            "refs": [
+              {
+                "source": "L05B",
+                "section": "Shallow vs Deep Copy",
+                "pages": [
+                  14
+                ]
+              }
+            ],
+            "evidence": "데이터가아닌포인터주소값자체가복사됨"
+          }
+        ],
+        [
+          {
+            "text": "깊은 복사",
+            "refs": [
+              {
+                "source": "L05B",
+                "section": "Shallow vs Deep Copy",
+                "pages": [
+                  20
+                ]
+              }
+            ],
+            "evidence": "깊은복사"
+          },
+          {
+            "text": "깊은 복사는 새로운 힙 공간을 할당한 뒤 동일한 데이터를 복사하여 복사 생성하는 방식이다.",
+            "refs": [
+              {
+                "source": "L05B",
+                "section": "Shallow vs Deep Copy",
+                "pages": [
+                  20
+                ]
+              }
+            ],
+            "evidence": "새로운힙공간을할당한뒤동일한데이터복사"
+          }
+        ]
+      ]
+    }
+  ],
+  "terms": [
+    {
+      "term": "클래스",
+      "definition": {
+        "text": "클래스는 객체가 생성되기 위한 틀이며 객체의 데이터와 기능을 정의하는 사용자 정의 자료형이다.",
+        "refs": [
+          {
+            "source": "L05A",
+            "section": "Classes and Objects",
+            "pages": [
+              14
+            ]
+          }
+        ],
+        "evidence": "객체(object)가생성되기위한틀 / 사용자정의“자료형”"
+      }
+    },
+    {
+      "term": "객체",
+      "definition": {
+        "text": "객체는 클래스로부터 생성된 실체이다.",
+        "refs": [
+          {
+            "source": "L05A",
+            "section": "Classes and Objects",
+            "pages": [
+              15
+            ]
+          }
+        ],
+        "evidence": "클래스로부터생성된실체"
+      }
+    },
+    {
+      "term": "캡슐화",
+      "definition": {
+        "text": "캡슐화는 클래스가 데이터와 데이터를 기반으로 하는 기능을 모두 포함하는 것이다.",
+        "refs": [
+          {
+            "source": "L05A",
+            "section": "Object Oriented Programming",
+            "pages": [
+              8
+            ]
+          }
+        ],
+        "evidence": "클래스는(데이터) + (데이터를기반으로기능)을모두포함"
+      }
+    },
+    {
+      "term": "생성자",
+      "definition": {
+        "text": "생성자는 객체가 생성될 때 자동 호출되는 특수한 멤버함수로, 클래스와 이름이 같고 반환형이 없다.",
+        "refs": [
+          {
+            "source": "L05A",
+            "section": "Constructors",
+            "pages": [
+              41
+            ]
+          }
+        ],
+        "evidence": "객체가생성될때자동으로호출 / 클래스와동일한이름 / 반환형은존재하지않음"
+      }
+    },
+    {
+      "term": "소멸자",
+      "definition": {
+        "text": "소멸자는 객체가 소멸할 때 자동 호출되며 클래스 이름 앞에 ~를 붙이고 반환형·매개변수가 없다.",
+        "refs": [
+          {
+            "source": "L05A",
+            "section": "Destructor",
+            "pages": [
+              44
+            ]
+          }
+        ],
+        "evidence": "객체가소멸할때자동으로호출 / 이름앞에“~” / 반환형및파라메터는존재하지않음"
+      }
+    },
+    {
+      "term": "복사 생성자",
+      "definition": {
+        "text": "복사 생성자는 기존 객체를 기반으로 새로운 객체가 생성될 때 어떻게 복사할지를 정의한다.",
+        "refs": [
+          {
+            "source": "L05B",
+            "section": "Copy Constructor",
+            "pages": [
+              6
+            ]
+          }
+        ],
+        "evidence": "기존객체를기반으로새로운객체가생성 / 객체가“어떻게” 복사될지정의"
+      }
+    },
+    {
+      "term": "깊은 복사",
+      "definition": {
+        "text": "깊은 복사는 새로운 힙 공간을 할당한 뒤 동일한 데이터를 복사하여 복사 생성하는 방식이다.",
+        "refs": [
+          {
+            "source": "L05B",
+            "section": "Shallow vs Deep Copy",
+            "pages": [
+              20
+            ]
+          }
+        ],
+        "evidence": "새로운힙공간을할당한뒤동일한데이터복사"
+      }
+    },
+    {
+      "term": "this 포인터",
+      "definition": {
+        "text": "this 포인터는 멤버함수를 호출한 객체의 주소값이다.",
+        "refs": [
+          {
+            "source": "L05B",
+            "section": "this Pointer",
+            "pages": [
+              26
+            ]
+          }
+        ],
+        "evidence": "멤버함수를호출한객체의주소값"
+      }
+    },
+    {
+      "term": "explicit",
+      "definition": {
+        "text": "생성자를 explicit으로 선언하면 그 생성자를 이용한 암시적 변환을 막을 수 있다.",
+        "refs": [
+          {
+            "source": "B",
+            "section": "5장·클래스의 explicit 과 mutable 키워드·explicit",
+            "pages": [
+              188
+            ]
+          }
+        ],
+        "evidence": "이생성자를이용한암시적변환을수행하지못하게막을수있습니다"
+      }
+    },
+    {
+      "term": "mutable",
+      "definition": {
+        "text": "mutable로 선언한 멤버변수는 const 멤버함수 안에서도 값을 바꿀 수 있다.",
+        "refs": [
+          {
+            "source": "B",
+            "section": "5장·클래스의 explicit 과 mutable 키워드·mutable",
+            "pages": [
+              188
+            ]
+          }
+        ],
+        "evidence": "멤버변수를mutable 로선언하였다면const 함수에서도이들값을바꿀수있습니다"
+      }
+    }
+  ],
+  "summary_basis": "원문 Summary: L05A 슬라이드 38·62 및 L05B 슬라이드 23·40",
+  "summary": [
+    {
+      "text": "클래스는 객체의 틀이며, 접근제한자로 멤버 접근을 제한하고 .h 명세와 .cpp 구현을 분리한다.",
+      "refs": [
+        {
+          "source": "L05A",
+          "section": "(Summary) Class and Object",
+          "pages": [
+            38
+          ]
+        }
+      ],
+      "evidence": "객체의틀 / 접근제한자 / .h파일에명세, .cpp 파일에구현"
+    },
+    {
+      "text": "생성자 초기화 리스트는 생성과 동시에 값을 지정하고, 생성자 위임과 기본 매개변수를 사용할 수 있다.",
+      "refs": [
+        {
+          "source": "L05A",
+          "section": "(Summary) Constructor Overloading",
+          "pages": [
+            62
+          ]
+        }
+      ],
+      "evidence": "생성과동시에값의지정 / 생성자위임 / 기본매개변수"
+    },
+    {
+      "text": "기본 복사 생성자는 멤버변수를 그대로 대입하며, 깊은 복사는 새 힙 공간을 할당하여 복사 생성한다.",
+      "refs": [
+        {
+          "source": "L05B",
+          "section": "(Summary) Copy Constructor",
+          "pages": [
+            23
+          ]
+        }
+      ],
+      "evidence": "멤버변수를그대로대입(얕은복사) / 새로운힙공간을할당하여복사생성"
+    },
+    {
+      "text": "this는 현재 객체의 주소값이고, const·static·friend는 멤버의 변경 가능성·클래스 소속·접근 허용에 관계된다.",
+      "refs": [
+        {
+          "source": "L05B",
+          "section": "(Summary) this, const, static, friend",
+          "pages": [
+            40
+          ]
+        }
+      ],
+      "evidence": "현재객체의주소값 / const / 객체가아닌클래스에속하는 / Private에접근을허용"
+    }
+  ],
+  "review": [
+    {
+      "question": "클래스와 객체는 각각 무엇인가?",
+      "answer": {
+        "text": "클래스는 객체 생성의 틀이자 사용자 정의 자료형이고, 객체는 클래스로부터 생성된 실체이다.",
+        "refs": [
+          {
+            "source": "L05A",
+            "section": "Classes and Objects",
+            "pages": [
+              14,
+              15
+            ]
+          }
+        ],
+        "evidence": "객체가생성되기위한틀 / 사용자정의 / 클래스로부터생성된실체"
+      }
+    },
+    {
+      "question": "클래스 안의 레퍼런스 변수나 상수는 어떻게 초기화해야 하는가?",
+      "answer": {
+        "text": "생성자의 초기화 리스트를 사용하여 초기화해야 한다.",
+        "refs": [
+          {
+            "source": "B",
+            "section": "5장·const, const, const!·생성자의 초기화 리스트",
+            "pages": [
+              118
+            ]
+          }
+        ],
+        "evidence": "무조건초기화리스트를사용해서초기화"
+      }
+    },
+    {
+      "question": "얕은 복사와 깊은 복사는 포인터가 가리키는 데이터를 어떻게 다루는가?",
+      "answer": {
+        "text": "얕은 복사는 주소값을 복사하고, 깊은 복사는 새 힙 공간에 데이터를 복사한다.",
+        "refs": [
+          {
+            "source": "L05B",
+            "section": "Shallow vs Deep Copy",
+            "pages": [
+              14,
+              20
+            ]
+          }
+        ],
+        "evidence": "포인터주소값자체가복사 / 새로운힙공간을할당한뒤동일한데이터복사"
+      }
+    },
+    {
+      "question": "explicit과 mutable은 각각 어떤 동작을 지정하는가?",
+      "answer": {
+        "text": "explicit은 해당 생성자를 이용한 암시적 변환을 막고, mutable은 const 함수 안에서 해당 멤버변수를 바꿀 수 있게 한다.",
+        "refs": [
+          {
+            "source": "B",
+            "section": "5장·클래스의 explicit 과 mutable 키워드",
+            "pages": [
+              188
+            ]
+          }
+        ],
+        "evidence": "암시적변환을수행하지못하게 / const 함수에서도이들값을바꿀수"
+      }
+    }
+  ],
+  "cheat": {
+    "definitions": [
+      {
+        "term": "생성자",
+        "definition": {
+          "text": "생성자는 객체가 생성될 때 자동 호출되는 특수한 멤버함수로, 클래스와 이름이 같고 반환형이 없다.",
+          "refs": [
+            {
+              "source": "L05A",
+              "section": "Constructors",
+              "pages": [
+                41
+              ]
+            }
+          ],
+          "evidence": "객체가생성될때자동으로호출 / 클래스와동일한이름 / 반환형은존재하지않음"
+        }
+      },
+      {
+        "term": "소멸자",
+        "definition": {
+          "text": "소멸자는 객체가 소멸할 때 자동 호출되며 클래스 이름 앞에 ~를 붙이고 반환형·매개변수가 없다.",
+          "refs": [
+            {
+              "source": "L05A",
+              "section": "Destructor",
+              "pages": [
+                44
+              ]
+            }
+          ],
+          "evidence": "객체가소멸할때자동으로호출 / 이름앞에“~” / 반환형및파라메터는존재하지않음"
+        }
+      },
+      {
+        "term": "explicit",
+        "definition": {
+          "text": "생성자를 explicit으로 선언하면 그 생성자를 이용한 암시적 변환을 막을 수 있다.",
+          "refs": [
+            {
+              "source": "B",
+              "section": "5장·클래스의 explicit 과 mutable 키워드·explicit",
+              "pages": [
+                188
+              ]
+            }
+          ],
+          "evidence": "이생성자를이용한암시적변환을수행하지못하게막을수있습니다"
+        }
+      },
+      {
+        "term": "mutable",
+        "definition": {
+          "text": "mutable로 선언한 멤버변수는 const 멤버함수 안에서도 값을 바꿀 수 있다.",
+          "refs": [
+            {
+              "source": "B",
+              "section": "5장·클래스의 explicit 과 mutable 키워드·mutable",
+              "pages": [
+                188
+              ]
+            }
+          ],
+          "evidence": "멤버변수를mutable 로선언하였다면const 함수에서도이들값을바꿀수있습니다"
+        }
+      }
+    ],
+    "comparison_title": "복사 방식",
+    "comparison_headers": [
+      "방식",
+      "복사 내용"
+    ],
+    "comparison_rows": [
+      [
+        {
+          "text": "얕은 복사",
+          "refs": [
+            {
+              "source": "L05B",
+              "section": "Shallow vs Deep Copy",
+              "pages": [
+                14
+              ]
+            }
+          ],
+          "evidence": "얕은복사의문제점"
+        },
+        {
+          "text": "얕은 복사는 포인터가 가리키는 데이터가 아니라 포인터 주소값 자체를 복사한다.",
+          "refs": [
+            {
+              "source": "L05B",
+              "section": "Shallow vs Deep Copy",
+              "pages": [
+                14
+              ]
+            }
+          ],
+          "evidence": "데이터가아닌포인터주소값자체가복사됨"
+        }
+      ],
+      [
+        {
+          "text": "깊은 복사",
+          "refs": [
+            {
+              "source": "L05B",
+              "section": "Shallow vs Deep Copy",
+              "pages": [
+                20
+              ]
+            }
+          ],
+          "evidence": "깊은복사"
+        },
+        {
+          "text": "깊은 복사는 새로운 힙 공간을 할당한 뒤 동일한 데이터를 복사하여 복사 생성하는 방식이다.",
+          "refs": [
+            {
+              "source": "L05B",
+              "section": "Shallow vs Deep Copy",
+              "pages": [
+                20
+              ]
+            }
+          ],
+          "evidence": "새로운힙공간을할당한뒤동일한데이터복사"
+        }
+      ]
+    ],
+    "formulas": [],
+    "syntax": []
+  },
+  "checked_images": [
+    {
+      "source": "B",
+      "pages": [
+        153,
+        157,
+        170,
+        188
+      ]
+    },
+    {
+      "source": "L05B",
+      "pages": [
+        14,
+        20
+      ]
+    }
+  ],
+  "editor_notes": [
+    "책의 Marine·Date·MyString 전체 프로그램은 핵심 데이터와 기능 및 처리 순서로 줄였다.",
+    "복사 생성의 상황은 강의가 설명한 범위로만 적었고, 첨부 밖의 최적화·버전별 예외는 보충하지 않았다.",
+    "mutable은 const 함수의 일반 설명에 대한 원문의 예외 항목으로 별도 정리했다."
+  ]
+}

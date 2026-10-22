@@ -1,0 +1,1206 @@
+{
+  "unit": 2,
+  "title": "함수·포인터·참조·메모리",
+  "part": "C++",
+  "scope": [
+    {
+      "source": "B",
+      "start": 35,
+      "end": 61
+    },
+    {
+      "source": "L03",
+      "start": 1,
+      "end": 67
+    },
+    {
+      "source": "L04",
+      "start": 1,
+      "end": 60
+    }
+  ],
+  "learning": [
+    {
+      "text": "함수의 정의·프로토타입·매개변수·return·기본 인수·오버로딩·호출 동작·inline·재귀를 다룬다.",
+      "refs": [
+        {
+          "source": "L03",
+          "section": "Today",
+          "pages": [
+            3
+          ]
+        }
+      ],
+      "evidence": "정의 / 프로토타입 / 매개변수 / return문 / 기본인수 / 오버로딩 / 함수호출 / inline / 재귀함수"
+    },
+    {
+      "text": "포인터의 정의·주소 접근·역참조·동적 할당과 참조자 및 전달 방식의 차이를 다룬다.",
+      "refs": [
+        {
+          "source": "L04",
+          "section": "(Summary) Pointers·References",
+          "pages": [
+            4,
+            41
+          ]
+        }
+      ],
+      "evidence": "포인터의정의 / 주소로의접근 / 역참조 / 동적메모리할당 / 참조자란? / 포인터vs 참조자"
+    }
+  ],
+  "concepts": [
+    {
+      "title": "함수 정의·프로토타입·반환",
+      "items": [
+        {
+          "text": "함수 정의에 필요한 요소는 이름, 매개변수 리스트, 리턴 타입, 본문(body)이다.",
+          "refs": [
+            {
+              "source": "L03",
+              "section": "Function Definition",
+              "pages": [
+                10
+              ]
+            }
+          ],
+          "evidence": "이름 / 매개변수리스트 / 리턴타입 / 본문(body)"
+        },
+        {
+          "text": "함수 프로토타입은 함수를 사용하기 전에 입력 매개변수와 반환형을 미리 알려주는 명령문이다.",
+          "refs": [
+            {
+              "source": "L03",
+              "section": "Function Prototypes",
+              "pages": [
+                20
+              ]
+            }
+          ],
+          "evidence": "함수를사용하기이전에입력매개변수와반환형을미리알려주는명령문"
+        },
+        {
+          "text": "return문은 함수의 결과값을 전달하며 함수를 즉각적으로 종료한다.",
+          "refs": [
+            {
+              "source": "L03",
+              "section": "Function Return",
+              "pages": [
+                28
+              ]
+            }
+          ],
+          "evidence": "return 문을통해서함수의결과값을전달 / 함수는즉각적으로종료"
+        },
+        {
+          "text": "반환값이 없는 경우 반환형을 void로 명시한다.",
+          "refs": [
+            {
+              "source": "L03",
+              "section": "Function Definition",
+              "pages": [
+                13
+              ]
+            }
+          ],
+          "evidence": "반환값이없는경우void로명시"
+        }
+      ]
+    },
+    {
+      "title": "인수·전달·기본 인수·오버로딩",
+      "items": [
+        {
+          "text": "호출에서 전달하는 값은 인수(argument), 함수 정의의 전달 항목은 인자 또는 매개변수(parameter)이며 개수·순서·타입이 일치해야 한다.",
+          "refs": [
+            {
+              "source": "L03",
+              "section": "Function Parameters",
+              "pages": [
+                23
+              ]
+            }
+          ],
+          "evidence": "인수(argument) / 인자또는매개변수(parameter) / 개수, 순서와타입이일치"
+        },
+        {
+          "text": "pass-by-value에서는 데이터 값이 복사되어 전달되므로 함수 안의 사본을 바꾸어도 원본은 바뀌지 않는다.",
+          "refs": [
+            {
+              "source": "L03",
+              "section": "Pass-by-value",
+              "pages": [
+                25
+              ]
+            }
+          ],
+          "evidence": "데이터의값이복사되어전달 / 사본을바꾼다고원본이바뀌지않음"
+        },
+        {
+          "text": "기본 인수는 인수가 주어지지 않았을 때 사용할 기본값으로, 프로토타입 또는 정의부 중 한쪽에만 선언하며 여러 개면 오른쪽부터 선언한다.",
+          "refs": [
+            {
+              "source": "L03",
+              "section": "Default Argument Values",
+              "pages": [
+                29
+              ]
+            }
+          ],
+          "evidence": "인수가주어지지않을시기본값 / 둘다선언해서는안됨 / 오른쪽부터선언"
+        },
+        {
+          "text": "함수 오버로딩은 서로 다른 매개변수 리스트를 갖는 동일한 이름의 함수를 정의하는 것이다.",
+          "refs": [
+            {
+              "source": "L03",
+              "section": "Function Overloading",
+              "pages": [
+                32
+              ]
+            }
+          ],
+          "evidence": "서로다른매개변수리스트를갖는동일한이름의함수를정의"
+        },
+        {
+          "text": "반환 타입만 다른 함수 오버로딩은 불가능하다.",
+          "refs": [
+            {
+              "source": "L03",
+              "section": "Function Overloading",
+              "pages": [
+                34
+              ]
+            }
+          ],
+          "evidence": "반환타입만다른오버로딩은불가능"
+        }
+      ]
+    },
+    {
+      "title": "호출·범위·inline·재귀",
+      "items": [
+        {
+          "text": "함수의 매개변수와 지역변수는 함수 실행 중에만 존재한다.",
+          "refs": [
+            {
+              "source": "L03",
+              "section": "Local/Global Scope",
+              "pages": [
+                36
+              ]
+            }
+          ],
+          "evidence": "함수의(복사된) 인자및지역변수들은함수의실행중에만존재"
+        },
+        {
+          "text": "static 지역변수는 지역 밖에 정의한 것처럼 활용할 수 있지만 scope 밖에서 접근할 수는 없다.",
+          "refs": [
+            {
+              "source": "L03",
+              "section": "Local/Global Scope",
+              "pages": [
+                37
+              ]
+            }
+          ],
+          "evidence": "지역밖에정의한것처럼활용 / scope 밖에서접근할수는없음"
+        },
+        {
+          "text": "강의의 inline 설명은 컴파일 단계에서 함수 호출을 함수 내 명령문으로 대체하며 바이너리 파일 용량이 커질 수 있다고 정리한다.",
+          "refs": [
+            {
+              "source": "L03",
+              "section": "inline function",
+              "pages": [
+                61
+              ]
+            }
+          ],
+          "evidence": "컴파일단계에서함수내의명령문으로함수호출이대체 / 바이너리파일의용량이커질수있음"
+        },
+        {
+          "text": "재귀함수는 스스로를 호출하는 함수이며, 재귀 호출을 끝내는 base case가 반드시 실행되어야 한다.",
+          "refs": [
+            {
+              "source": "L03",
+              "section": "Recursive Function",
+              "pages": [
+                63
+              ]
+            }
+          ],
+          "evidence": "스스로를호출하는함수 / 재귀호출을끝내는base case가반드시실행"
+        }
+      ]
+    },
+    {
+      "title": "포인터·주소·역참조·배열",
+      "items": [
+        {
+          "text": "포인터는 주소값을 저장하는 변수이다.",
+          "refs": [
+            {
+              "source": "L04",
+              "section": "Accessing Pointer Address",
+              "pages": [
+                10
+              ]
+            }
+          ],
+          "evidence": "포인터변수는주소값을저장"
+        },
+        {
+          "text": "포인터는 타입 뒤에 *를 붙여 정의하며, nullptr은 아무것도 가리키지 않는 상태를 의미한다.",
+          "refs": [
+            {
+              "source": "L04",
+              "section": "Definition of Pointers",
+              "pages": [
+                9
+              ]
+            }
+          ],
+          "evidence": "기존변수타입뒤에“*” / 아무것도가리키지않는상태"
+        },
+        {
+          "text": "주소 연산자 &는 적용한 피연산자의 주소값을 반환한다.",
+          "refs": [
+            {
+              "source": "L04",
+              "section": "Accessing Pointer Address",
+              "pages": [
+                10
+              ]
+            }
+          ],
+          "evidence": "연산자가적용되는피연산자의주소값이반환"
+        },
+        {
+          "text": "역참조는 * 연산자로 포인터의 주소에 저장된 데이터에 접근하는 것이다.",
+          "refs": [
+            {
+              "source": "L04",
+              "section": "Dereferencing a Pointer",
+              "pages": [
+                15
+              ]
+            }
+          ],
+          "evidence": "포인터의주소에저장된데이터에접근 / * 연산자를사용"
+        },
+        {
+          "text": "배열 이름은 첫 요소의 주소를 가리키며, 배열과 포인터는 정의 후 주소 변경 가능 여부와 sizeof 반환값에 차이가 있다.",
+          "refs": [
+            {
+              "source": "L04",
+              "section": "Arrays and Pointers",
+              "pages": [
+                26
+              ]
+            }
+          ],
+          "evidence": "배열의이름은배열의첫요소의주소 / 배열은주소값을정의이후변경불가. Sizeof() 반환값이다름"
+        }
+      ]
+    },
+    {
+      "title": "참조자와 수명",
+      "items": [
+        {
+          "text": "참조자는 변수의 별명이며 선언과 동시에 초기화되어야 하고, 한 번 초기화되면 다른 변수의 참조자가 될 수 없다.",
+          "refs": [
+            {
+              "source": "L04",
+              "section": "Reference",
+              "pages": [
+                42
+              ]
+            }
+          ],
+          "evidence": "변수의별명 / 선언과동시에초기화되어야함 / 다른변수의참조자가될수없음"
+        },
+        {
+          "text": "상수 참조자로 선언하면 리터럴도 참조할 수 있다.",
+          "refs": [
+            {
+              "source": "B",
+              "section": "3장·상수에 대한 참조자",
+              "pages": [
+                43
+              ]
+            }
+          ],
+          "evidence": "상수참조자로선언한다면리터럴도참조할수있습니다"
+        },
+        {
+          "text": "레퍼런스의 배열은 불가능하지만 배열의 레퍼런스는 가능하며, 배열 크기에 맞는 별명이 되어야 한다.",
+          "refs": [
+            {
+              "source": "B",
+              "section": "3장·레퍼런스의 배열과 배열의 레퍼런스",
+              "pages": [
+                43,
+                44,
+                45
+              ]
+            }
+          ],
+          "evidence": "arrays of references are illegal / 배열들의레퍼런스가불가능한것은아닙니다 / 반드시크기가3 인int 배열의별명"
+        },
+        {
+          "text": "댕글링 레퍼런스(Dangling reference)는 레퍼런스는 있지만 원래 참조하던 것이 사라진 레퍼런스이다.",
+          "refs": [
+            {
+              "source": "B",
+              "section": "3장·지역변수의 레퍼런스를 리턴?",
+              "pages": [
+                47
+              ]
+            }
+          ],
+          "evidence": "레퍼런스는있는데원래참조하던것이사라진레퍼런스"
+        },
+        {
+          "text": "상수 레퍼런스로 함수의 리턴값을 받으면 그 값의 수명은 레퍼런스가 사라질 때까지 연장된다.",
+          "refs": [
+            {
+              "source": "B",
+              "section": "3장·참조자가 아닌 값을 리턴하는 함수를 참조자로 받기",
+              "pages": [
+                50
+              ]
+            }
+          ],
+          "evidence": "상수레퍼런스로리턴값을받게되면 / 레퍼런스가사라질때까지"
+        }
+      ]
+    },
+    {
+      "title": "동적 메모리와 반환 시 주의",
+      "items": [
+        {
+          "text": "동적 메모리 할당은 런타임에 힙 메모리를 할당하는 것이다.",
+          "refs": [
+            {
+              "source": "L04",
+              "section": "Dynamic Memory Allocation",
+              "pages": [
+                18
+              ]
+            }
+          ],
+          "evidence": "런타임에“힙메모리”를할당"
+        },
+        {
+          "text": "힙 메모리는 스스로 해제되지 않으므로 사용 후 해제하지 않으면 메모리 누수가 발생한다.",
+          "refs": [
+            {
+              "source": "L04",
+              "section": "Dynamic Memory Allocation",
+              "pages": [
+                18
+              ]
+            }
+          ],
+          "evidence": "힙메모리는스택과는달리스스로해제되지않음 / 메모리누수발생"
+        },
+        {
+          "text": "new와 delete가 짝을 이루고, new []와 delete []가 짝을 이룬다.",
+          "refs": [
+            {
+              "source": "B",
+              "section": "4장·new 로 배열 할당하기",
+              "pages": [
+                56
+              ]
+            }
+          ],
+          "evidence": "new - delete 가짝 / new [] 와delete [] 가짝"
+        },
+        {
+          "text": "함수 내부에서 동적으로 할당한 메모리의 주소는 반환할 수 있지만 지역변수에 대한 포인터를 반환해서는 안 된다.",
+          "refs": [
+            {
+              "source": "L04",
+              "section": "Returning a Pointer",
+              "pages": [
+                36,
+                37
+              ]
+            }
+          ],
+          "evidence": "동적으로할당된메모리의주소를반환OK / 지역변수에대한포인터반환안됨"
+        }
+      ]
+    },
+    {
+      "title": "const 포인터와 함수 전달",
+      "items": [
+        {
+          "text": "pointers to const는 데이터가 const이고, 포인터는 다른 데이터를 가리킬 수 있다.",
+          "refs": [
+            {
+              "source": "L04",
+              "section": "Const and Pointers",
+              "pages": [
+                29
+              ]
+            }
+          ],
+          "evidence": "데이터가const / 포인터는다른데이터를가리킬수있음"
+        },
+        {
+          "text": "const pointers는 포인터가 const이고 데이터는 변할 수 있으며, const pointers to const는 둘 다 const이다.",
+          "refs": [
+            {
+              "source": "L04",
+              "section": "Const and Pointers",
+              "pages": [
+                30,
+                31
+              ]
+            }
+          ],
+          "evidence": "포인터가const / 데이터는변할수있음 / 둘다const"
+        },
+        {
+          "text": "포인터를 전달하면 주소값을 통해 함수 범위 밖의 메모리에 접근할 수 있다.",
+          "refs": [
+            {
+              "source": "L03",
+              "section": "Pass-by-address",
+              "pages": [
+                55
+              ]
+            }
+          ],
+          "evidence": "주소값을명시하는포인터를활용하여범위밖메모리에접근"
+        },
+        {
+          "text": "const 참조자를 사용하는 전달은 원본을 수정하지 않고 복사 오버헤드가 클 때, 매개변수가 null이 되지 않음이 보장될 때 사용한다.",
+          "refs": [
+            {
+              "source": "L04",
+              "section": "Pointers vs References",
+              "pages": [
+                56
+              ]
+            }
+          ],
+          "evidence": "실제매개변수를수정하지않는경우 / 복사의오버헤드가클때 / null이되지않는것이보장"
+        }
+      ]
+    },
+    {
+      "title": "동물 관리 예제와 객체지향 도입",
+      "items": [
+        {
+          "text": "동물 관리 예제는 Animal의 이름·나이·체력·배부른 정도·깨끗한 정도를 저장하고, play와 show_stat으로 상태 변경·출력을 수행한다.",
+          "refs": [
+            {
+              "source": "B",
+              "section": "4장·돌아온 마이펫",
+              "pages": [
+                56
+              ]
+            }
+          ],
+          "evidence": "이름 / 나이 / 체력 / 배부른정도 / 깨끗한정도 / play / show_stat"
+        },
+        {
+          "text": "책은 new Animal 뒤에 초기화 함수를 따로 호출해야 하는 문제와, Bird·Fish에 공통 부분을 반복 작성하는 문제를 객체지향 도입에 연결한다.",
+          "refs": [
+            {
+              "source": "B",
+              "section": "4장·돌아온 마이펫",
+              "pages": [
+                60,
+                61
+              ]
+            }
+          ],
+          "evidence": "반드시create_animal 함수를호출 / Animal 과동일한부분은가져다쓰고 / 객체지향프로그래밍의세계"
+        }
+      ]
+    }
+  ],
+  "procedures": [
+    {
+      "title": "강의의 함수 호출 메모리 설명 순서",
+      "steps": [
+        {
+          "text": "함수를 호출하면 호출 영역을 구분하는 구분선이 생긴다.",
+          "refs": [
+            {
+              "source": "L03",
+              "section": "(Summary) Functions",
+              "pages": [
+                64
+              ]
+            }
+          ],
+          "evidence": "함수를호출하면? 구분선이생김"
+        },
+        {
+          "text": "그 영역에는 매개변수를 포함한 지역변수 공간이 들어간다.",
+          "refs": [
+            {
+              "source": "L03",
+              "section": "(Summary) Functions",
+              "pages": [
+                64
+              ]
+            }
+          ],
+          "evidence": "지역변수공간(매개변수포함)"
+        },
+        {
+          "text": "함수가 끝나면 그 공간은 자동으로 사라진다.",
+          "refs": [
+            {
+              "source": "L03",
+              "section": "(Summary) Functions",
+              "pages": [
+                64
+              ]
+            }
+          ],
+          "evidence": "함수가끝나면? 자동으로사라짐"
+        }
+      ]
+    },
+    {
+      "title": "new·사용·delete의 원문 순서",
+      "steps": [
+        {
+          "text": "new로 공간을 할당하고 반환된 주소값을 포인터에 저장한다.",
+          "refs": [
+            {
+              "source": "B",
+              "section": "4장·new 와 delete 의 사용",
+              "pages": [
+                52
+              ]
+            }
+          ],
+          "evidence": "int 크기의공간을할당하여그주소값을p 에"
+        },
+        {
+          "text": "포인터를 역참조하여 값을 저장하고 출력한다.",
+          "refs": [
+            {
+              "source": "B",
+              "section": "4장·new 와 delete 의 사용",
+              "pages": [
+                52
+              ]
+            }
+          ],
+          "evidence": "*p = 10; / 값을집어넣었고이를출력"
+        },
+        {
+          "text": "마지막에 delete로 할당된 공간을 해제한다.",
+          "refs": [
+            {
+              "source": "B",
+              "section": "4장·new 와 delete 의 사용",
+              "pages": [
+                52
+              ]
+            }
+          ],
+          "evidence": "마지막으로할당된공간을해제하기위해서delete"
+        }
+      ]
+    }
+  ],
+  "syntax": [
+    {
+      "label": "참조자 매개변수 - 원문 발췌",
+      "code": "int change_val(int &p) {\n  p = 3;\n\n  return 0;\n}",
+      "refs": [
+        {
+          "source": "B",
+          "section": "3장·참조자를 함수 인자로 받기",
+          "pages": [
+            40
+          ]
+        }
+      ],
+      "evidence": "int change_val(int &p) { p = 3; return 0; }",
+      "note": {
+        "text": "함수 안에서 p = 3;을 수행하는 것은 main 함수의 number에 number = 3;을 수행하는 것과 같다.",
+        "refs": [
+          {
+            "source": "B",
+            "section": "3장·참조자를 함수 인자로 받기",
+            "pages": [
+              40
+            ]
+          }
+        ],
+        "evidence": "main 함수의number 에number = 3; 을하는것과정확히같은작업"
+      }
+    },
+    {
+      "label": "new와 delete - 원문 발췌",
+      "code": "#include <iostream>\nint main() {\n  int* p = new int;\n  *p = 10;\n  std::cout << *p << std::endl;\n  delete p;\n  return 0;\n}",
+      "refs": [
+        {
+          "source": "B",
+          "section": "4장·new 와 delete 의 사용",
+          "pages": [
+            51
+          ]
+        }
+      ],
+      "evidence": "int* p = new int; / delete p;",
+      "note": {
+        "text": "new는 메모리를 할당하고 delete는 메모리를 해제한다.",
+        "refs": [
+          {
+            "source": "B",
+            "section": "4장·C++ 의 세계로",
+            "pages": [
+              51
+            ]
+          }
+        ],
+        "evidence": "new 는 / 메모리를할당하고delete 는 / 메모리를해제"
+      }
+    }
+  ],
+  "formulas": [],
+  "comparisons": [
+    {
+      "title": "강의의 전달 방식별 사용 조건",
+      "headers": [
+        "방식",
+        "원문 사용 조건"
+      ],
+      "rows": [
+        [
+          {
+            "text": "Pass-by-value",
+            "refs": [
+              {
+                "source": "L04",
+                "section": "Pointers vs References",
+                "pages": [
+                  51
+                ]
+              }
+            ],
+            "evidence": "함수가실제매개변수(원본)를수정하지않는경우 / 크기가작은기본자료형"
+          },
+          {
+            "text": "원본을 수정하지 않을 때, 크기가 작은 기본 자료형을 전달한다.",
+            "refs": [
+              {
+                "source": "L04",
+                "section": "Pointers vs References",
+                "pages": [
+                  51
+                ]
+              }
+            ],
+            "evidence": "함수가실제매개변수(원본)를수정하지않는경우 / 크기가작은기본자료형"
+          }
+        ],
+        [
+          {
+            "text": "Pass-by-address",
+            "refs": [
+              {
+                "source": "L04",
+                "section": "Pointers vs References",
+                "pages": [
+                  52
+                ]
+              }
+            ],
+            "evidence": "실제매개변수(원본)를수정해야하는경우 / nullptr이되어도상관없을때"
+          },
+          {
+            "text": "원본 수정이 필요하고, 포인터가 nullptr이어도 상관없을 때 사용한다.",
+            "refs": [
+              {
+                "source": "L04",
+                "section": "Pointers vs References",
+                "pages": [
+                  52
+                ]
+              }
+            ],
+            "evidence": "실제매개변수(원본)를수정해야하는경우 / nullptr이되어도상관없을때"
+          }
+        ],
+        [
+          {
+            "text": "Pass-by-reference",
+            "refs": [
+              {
+                "source": "L04",
+                "section": "Pointers vs References",
+                "pages": [
+                  55
+                ]
+              }
+            ],
+            "evidence": "실제매개변수를수정하는경우 / null이되지않는것이보장될때"
+          },
+          {
+            "text": "원본을 수정하고, 매개변수가 null이 되지 않음이 보장될 때 사용한다.",
+            "refs": [
+              {
+                "source": "L04",
+                "section": "Pointers vs References",
+                "pages": [
+                  55
+                ]
+              }
+            ],
+            "evidence": "실제매개변수를수정하는경우 / null이되지않는것이보장될때"
+          }
+        ]
+      ]
+    }
+  ],
+  "terms": [
+    {
+      "term": "함수 프로토타입",
+      "definition": {
+        "text": "함수 프로토타입은 함수를 사용하기 전에 입력 매개변수와 반환형을 미리 알려주는 명령문이다.",
+        "refs": [
+          {
+            "source": "L03",
+            "section": "Function Prototypes",
+            "pages": [
+              20
+            ]
+          }
+        ],
+        "evidence": "함수를사용하기이전에입력매개변수와반환형을미리알려주는명령문"
+      }
+    },
+    {
+      "term": "pass-by-value",
+      "definition": {
+        "text": "pass-by-value에서는 데이터 값이 복사되어 전달되므로 함수 안의 사본을 바꾸어도 원본은 바뀌지 않는다.",
+        "refs": [
+          {
+            "source": "L03",
+            "section": "Pass-by-value",
+            "pages": [
+              25
+            ]
+          }
+        ],
+        "evidence": "데이터의값이복사되어전달 / 사본을바꾼다고원본이바뀌지않음"
+      }
+    },
+    {
+      "term": "함수 오버로딩",
+      "definition": {
+        "text": "함수 오버로딩은 서로 다른 매개변수 리스트를 갖는 동일한 이름의 함수를 정의하는 것이다.",
+        "refs": [
+          {
+            "source": "L03",
+            "section": "Function Overloading",
+            "pages": [
+              32
+            ]
+          }
+        ],
+        "evidence": "서로다른매개변수리스트를갖는동일한이름의함수를정의"
+      }
+    },
+    {
+      "term": "포인터",
+      "definition": {
+        "text": "포인터는 주소값을 저장하는 변수이다.",
+        "refs": [
+          {
+            "source": "L04",
+            "section": "Accessing Pointer Address",
+            "pages": [
+              10
+            ]
+          }
+        ],
+        "evidence": "포인터변수는주소값을저장"
+      }
+    },
+    {
+      "term": "역참조",
+      "definition": {
+        "text": "역참조는 * 연산자로 포인터의 주소에 저장된 데이터에 접근하는 것이다.",
+        "refs": [
+          {
+            "source": "L04",
+            "section": "Dereferencing a Pointer",
+            "pages": [
+              15
+            ]
+          }
+        ],
+        "evidence": "포인터의주소에저장된데이터에접근 / * 연산자를사용"
+      }
+    },
+    {
+      "term": "참조자",
+      "definition": {
+        "text": "참조자는 변수의 별명이며 선언과 동시에 초기화되어야 하고, 한 번 초기화되면 다른 변수의 참조자가 될 수 없다.",
+        "refs": [
+          {
+            "source": "L04",
+            "section": "Reference",
+            "pages": [
+              42
+            ]
+          }
+        ],
+        "evidence": "변수의별명 / 선언과동시에초기화되어야함 / 다른변수의참조자가될수없음"
+      }
+    },
+    {
+      "term": "동적 메모리 할당",
+      "definition": {
+        "text": "동적 메모리 할당은 런타임에 힙 메모리를 할당하는 것이다.",
+        "refs": [
+          {
+            "source": "L04",
+            "section": "Dynamic Memory Allocation",
+            "pages": [
+              18
+            ]
+          }
+        ],
+        "evidence": "런타임에“힙메모리”를할당"
+      }
+    },
+    {
+      "term": "댕글링 레퍼런스",
+      "definition": {
+        "text": "댕글링 레퍼런스(Dangling reference)는 레퍼런스는 있지만 원래 참조하던 것이 사라진 레퍼런스이다.",
+        "refs": [
+          {
+            "source": "B",
+            "section": "3장·지역변수의 레퍼런스를 리턴?",
+            "pages": [
+              47
+            ]
+          }
+        ],
+        "evidence": "레퍼런스는있는데원래참조하던것이사라진레퍼런스"
+      }
+    },
+    {
+      "term": "재귀함수",
+      "definition": {
+        "text": "재귀함수는 스스로를 호출하는 함수이며, 재귀 호출을 끝내는 base case가 반드시 실행되어야 한다.",
+        "refs": [
+          {
+            "source": "L03",
+            "section": "Recursive Function",
+            "pages": [
+              63
+            ]
+          }
+        ],
+        "evidence": "스스로를호출하는함수 / 재귀호출을끝내는base case가반드시실행"
+      }
+    }
+  ],
+  "summary_basis": "원문 Summary: L03 슬라이드 64 및 L04 슬라이드 39·57",
+  "summary": [
+    {
+      "text": "함수는 매개변수를 복사하여 전달하고, 포인터와 참조자를 사용하여 다른 메모리 영역의 변수를 변경할 수 있다.",
+      "refs": [
+        {
+          "source": "L03",
+          "section": "(Summary) Functions",
+          "pages": [
+            64
+          ]
+        }
+      ],
+      "evidence": "인자는복사하여전달 / 다른메모리영역의변수를변환하고싶을때사용"
+    },
+    {
+      "text": "포인터는 *, 주소 접근은 &, 역참조는 *를 사용하며 동적 메모리는 new와 delete로 다룬다.",
+      "refs": [
+        {
+          "source": "L04",
+          "section": "(Summary) Pointers",
+          "pages": [
+            39
+          ]
+        }
+      ],
+      "evidence": "포인터는변수, * 사용 / 주소로의접근(& / 역참조(* / 동적메모리할당(new, delete"
+    },
+    {
+      "text": "참조자는 변수의 별명이며, 전달 방식에는 값·포인터·참조자 및 const를 사용하는 구분이 있다.",
+      "refs": [
+        {
+          "source": "L04",
+          "section": "(Summary) References",
+          "pages": [
+            57
+          ]
+        }
+      ],
+      "evidence": "변수의별명 / Pass-by-value / Pointer / Reference / Const reference"
+    }
+  ],
+  "review": [
+    {
+      "question": "함수의 반환 타입만 다르게 하여 오버로딩할 수 있는가?",
+      "answer": {
+        "text": "반환 타입만 다른 오버로딩은 불가능하다.",
+        "refs": [
+          {
+            "source": "L03",
+            "section": "Function Overloading",
+            "pages": [
+              34
+            ]
+          }
+        ],
+        "evidence": "반환타입만다른오버로딩은불가능"
+      }
+    },
+    {
+      "question": "참조자를 한 번 초기화한 뒤 다른 변수의 참조자로 바꿀 수 있는가?",
+      "answer": {
+        "text": "참조자는 변수의 별명이며 선언과 동시에 초기화되어야 하고, 한 번 초기화되면 다른 변수의 참조자가 될 수 없다.",
+        "refs": [
+          {
+            "source": "L04",
+            "section": "Reference",
+            "pages": [
+              42
+            ]
+          }
+        ],
+        "evidence": "변수의별명 / 선언과동시에초기화되어야함 / 다른변수의참조자가될수없음"
+      }
+    },
+    {
+      "question": "댕글링 레퍼런스(Dangling reference)란 무엇인가?",
+      "answer": {
+        "text": "댕글링 레퍼런스(Dangling reference)는 레퍼런스는 있지만 원래 참조하던 것이 사라진 레퍼런스이다.",
+        "refs": [
+          {
+            "source": "B",
+            "section": "3장·지역변수의 레퍼런스를 리턴?",
+            "pages": [
+              47
+            ]
+          }
+        ],
+        "evidence": "레퍼런스는있는데원래참조하던것이사라진레퍼런스"
+      }
+    },
+    {
+      "question": "new []로 할당한 배열은 무엇으로 해제하는가?",
+      "answer": {
+        "text": "new []로 할당한 배열은 delete []로 해제한다.",
+        "refs": [
+          {
+            "source": "B",
+            "section": "4장·new 로 배열 할당하기",
+            "pages": [
+              56
+            ]
+          }
+        ],
+        "evidence": "new [] 와delete [] 가짝"
+      }
+    }
+  ],
+  "cheat": {
+    "definitions": [
+      {
+        "term": "포인터",
+        "definition": {
+          "text": "포인터는 주소값을 저장하는 변수이다.",
+          "refs": [
+            {
+              "source": "L04",
+              "section": "Accessing Pointer Address",
+              "pages": [
+                10
+              ]
+            }
+          ],
+          "evidence": "포인터변수는주소값을저장"
+        }
+      },
+      {
+        "term": "역참조",
+        "definition": {
+          "text": "역참조는 * 연산자로 포인터의 주소에 저장된 데이터에 접근하는 것이다.",
+          "refs": [
+            {
+              "source": "L04",
+              "section": "Dereferencing a Pointer",
+              "pages": [
+                15
+              ]
+            }
+          ],
+          "evidence": "포인터의주소에저장된데이터에접근 / * 연산자를사용"
+        }
+      },
+      {
+        "term": "참조자",
+        "definition": {
+          "text": "참조자는 변수의 별명이며 선언과 동시에 초기화되어야 하고, 한 번 초기화되면 다른 변수의 참조자가 될 수 없다.",
+          "refs": [
+            {
+              "source": "L04",
+              "section": "Reference",
+              "pages": [
+                42
+              ]
+            }
+          ],
+          "evidence": "변수의별명 / 선언과동시에초기화되어야함 / 다른변수의참조자가될수없음"
+        }
+      }
+    ],
+    "comparison_title": "인수 전달",
+    "comparison_headers": [
+      "방식",
+      "원문 사용 조건"
+    ],
+    "comparison_rows": [
+      [
+        {
+          "text": "Pass-by-value",
+          "refs": [
+            {
+              "source": "L04",
+              "section": "Pointers vs References",
+              "pages": [
+                51
+              ]
+            }
+          ],
+          "evidence": "함수가실제매개변수(원본)를수정하지않는경우 / 크기가작은기본자료형"
+        },
+        {
+          "text": "원본을 수정하지 않을 때, 크기가 작은 기본 자료형을 전달한다.",
+          "refs": [
+            {
+              "source": "L04",
+              "section": "Pointers vs References",
+              "pages": [
+                51
+              ]
+            }
+          ],
+          "evidence": "함수가실제매개변수(원본)를수정하지않는경우 / 크기가작은기본자료형"
+        }
+      ],
+      [
+        {
+          "text": "Pass-by-address",
+          "refs": [
+            {
+              "source": "L04",
+              "section": "Pointers vs References",
+              "pages": [
+                52
+              ]
+            }
+          ],
+          "evidence": "실제매개변수(원본)를수정해야하는경우 / nullptr이되어도상관없을때"
+        },
+        {
+          "text": "원본 수정이 필요하고, 포인터가 nullptr이어도 상관없을 때 사용한다.",
+          "refs": [
+            {
+              "source": "L04",
+              "section": "Pointers vs References",
+              "pages": [
+                52
+              ]
+            }
+          ],
+          "evidence": "실제매개변수(원본)를수정해야하는경우 / nullptr이되어도상관없을때"
+        }
+      ],
+      [
+        {
+          "text": "Pass-by-reference",
+          "refs": [
+            {
+              "source": "L04",
+              "section": "Pointers vs References",
+              "pages": [
+                55
+              ]
+            }
+          ],
+          "evidence": "실제매개변수를수정하는경우 / null이되지않는것이보장될때"
+        },
+        {
+          "text": "원본을 수정하고, 매개변수가 null이 되지 않음이 보장될 때 사용한다.",
+          "refs": [
+            {
+              "source": "L04",
+              "section": "Pointers vs References",
+              "pages": [
+                55
+              ]
+            }
+          ],
+          "evidence": "실제매개변수를수정하는경우 / null이되지않는것이보장될때"
+        }
+      ]
+    ],
+    "formulas": [],
+    "syntax": [
+      {
+        "label": "참조자 매개변수 - 원문 발췌",
+        "code": "int change_val(int &p) {\n  p = 3;\n\n  return 0;\n}",
+        "refs": [
+          {
+            "source": "B",
+            "section": "3장·참조자를 함수 인자로 받기",
+            "pages": [
+              40
+            ]
+          }
+        ],
+        "evidence": "int change_val(int &p) { p = 3; return 0; }",
+        "note": null
+      }
+    ]
+  },
+  "checked_images": [
+    {
+      "source": "B",
+      "pages": [
+        40,
+        51
+      ]
+    },
+    {
+      "source": "L04",
+      "pages": [
+        51,
+        52,
+        55
+      ]
+    }
+  ],
+  "editor_notes": [
+    "참조자가 메모리 공간을 차지하는지에 관한 강의의 단정적 문구는 일반화하지 않고 별명·초기화·재지정 금지로 요약했다.",
+    "동물 관리 전체 프로그램은 원문이 밝힌 데이터·기능·문제 제기만 정리했다.",
+    "포인터 연산의 전체 예제와 메모리 창 실습 화면은 생략했다."
+  ]
+}

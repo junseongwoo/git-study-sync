@@ -1,0 +1,32 @@
+Edge• CurrentEdge,
+= DS UakeSet( CurrentVertex );
+VertexSet[il
+MSTVertices[il = CreateVertex( CurrentVertex->Data ):
+AcßVertex( MST. MSTVertices[il );
+CurrentEdge = CurrentVertex->AdjacencyList,
+vhile ( CurrentEdge != NULL )
+mNcxje NewNode = { CurrentEdge->Weight, CurrentEdge };
+PQ-Enqueue( 昶, NewNode );
+CurrentEdge = CurrentEdge->Next,
+CurrentVertex
+CurrentVertex->Next ,
+436
+while ( !PQ-IsEmpty( PQ ) )
+Edge* CurrentEdge
+int
+FromIndex,
+int T이ndex;
+PQNode Popped
+PQ-Dequeue( 四, vopped );
+CurrentEdge = (Edge*)Popped.Data;
+printfC%c - %c %d\n•,
+CurrentEdge->From-»ata,
+CurrentEdge->Target-»ata ,
+CurrentEdge-Xeight );
+FromIndex = CurrentEdge->From->Index;
+- CurrentEdge->Target->Index;
+T이ndex
+if ( DS-FindSet( VertexSet[FromIndexJ ) != DS FindSet(
+VertexSet[T이ndexl ) )
+AddEdge( MSTVertices[FromIndexI,
+Part 02 • 알고리좀

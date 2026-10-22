@@ -1,0 +1,31 @@
+// 밑줄을 이용하여 문자의 자리를 표현
+string a—seq(A.size(), '-가;
+string b-seq(B.size(), 2');
+for (autO pair : subsequence)
+// 빈칸을 부분 문자열 문자로 채우기
+a-seq[pair.first) = A[pair.firstl;
+b-seq[pair.second) = B[pair.secondl;
+PRINT("\tU 〈〈 a-seq 〈〈 " •• 〈〈 b-seq 〈〈 endl);
+6. DEBUG 매크로가 정의되어 있으면 main() 함수 뒷부분에서 공통 부분 시권스 출력 함수
+PrintSubsequences ( )를 호출합니다.
+int main()
+#if DEBUG
+PrintSubsequences( ) ;
+#endif
+7. 소스 코드 앞부분에서 DEBUG를 1로 설정하고, 프로그램 입력으로 ABCX와 ACYXB 문자열을 지정
+하면 다음과 같은 출력을 확인할 수 있습니다.
+ABCX와 ACYXB의 최장 공통 부분 시퀀스 길이: 3
+SIZE = 2
+A_C_ AC_
+A_ X A__X-
+SIZE = 1
+SIZE = 3
+A
+AB
+A CX
+A
+ÅC_X_
+이 예제 프로그램은 모든 부분 시권스 쌍 조합을 화면에 출력합니다. 다음 절에서 이 출력을 좀 더
+분석해보고, 최적화 방법에 대해 알아보겠습니다.
+1
+474

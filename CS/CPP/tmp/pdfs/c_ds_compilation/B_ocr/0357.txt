@@ -1,0 +1,66 @@
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+void
+Node*
+VOid
+VOid
+VaIueType
+int
+ændif
+대T-Destr0YHashTabIe( HashTab1e* HT);
+대T_CreateNode( KeyType Key, Va1ueType VaIue )•,
+대T_DestroyNode( NOde* TheNode );
+대T Set( HashTab1e* HT, KeyType Key, Va1ueType VaIue );
+대T_Get( HashTabIe* HT, KeyType Key );
+대T_Hash( KeyType Key, int KeyLength, int Tab1eSize ),•
+08장/Chaining/Chaining. (
+001
+002
+003
+004
+005
+006
+007
+008
+009
+010
+011
+012
+013
+014
+015
+016
+017
+018
+019
+020
+021
+022
+023
+024
+025
+*include "Chaining.h-
+HashTab1e* 대T_CreateHashTab1e( int TabIeSize )
+HashTable* HT = 대ashTab1e*)ma110c( sizeof대ashTable)
+HT->Table
+(List*)maIIoc( sizeof(Node) * TabIeSize);
+memset대T->Table, 0, sizeof(List) * TabIeSize );
+HT->TableSize = TabIeSize,
+return HT;
+Node* 대T_CreateNode( KeyType Key, VaIueType Value )
+No血* NewNode = (Node*) ma110(( sizeof(Node) );
+= (char*)malloc( sizeof(char) * ( strIen(Key) + 1 )):
+strcpy( NewNode->Key, Key );
+NewNode->VaIue = (char*)malloc( sizeof(char) * ( strlen(VaIue) + 1 )):
+strcpy( NewNode十〉VaIue, Value ):
+= NULL;
+Chapter 08 • 해시 테이올
+353

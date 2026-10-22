@@ -1,0 +1,35 @@
+quick—sort<T>(partition—iter, last);
+4. print-vector() 함수는 벡터의 모든 원소를 화면에 출력합니다.
+template 〈typename T>
+VOid print_vector(std: :vector<T〉 arr)
+for (autO i : arr)
+std::cout 〈〈 i 〈〈 "
+std: :cout 〈〈 std: :endl;
+5. 병합 정렬을 구현한 연습 문제 19와 같은 데이터를 시용하여 퀵 정렬을 테스트하겠습니다.
+void run_quick_sort_test( )
+std::vector〈int〉 51 {45, 1, 3, 1, 2, 3, 45, 5, 1, 2, 44, 5, 7};
+std::vector<float〉 52 {45.6f, 1 @f, 3.8f, 1.01f, 2.2f, 3.9f, 45.3f, 5.5f, 1.@f,
+std::vector〈double〉 53 {45.6, 1.0, 3.8, 1.01, 2.2, 3.9, 45.3, 5.5, 1.0, 2.0,
+e
+std::cout 〈〈 "정렬되지 않은 입력 벡터:" 〈〈 std::endl;
+44.0, 5.0, 7.0};
+std: :vector〈char〉 C {lb'
+print_vector<int>(S1 ) •,
+print-vector<float>(S2);
+print—vector<double〉(S3);
+print—vector〈char>(C) ;
+std: :cout 〈〈 std: :endl;
+Z
+a
+q
+u
+// arr.end()는 맨 마지막 원소 다음을 가리키므로 arr.end() - 1 형태로 호출합니다.
+quick-sort<int>(S1.begin(), S1.end() - 1);
+quick-sort<fIoat>(S2.begin(), S2.end() - 1);
+quick-sort〈double>(S3.begin(), S3.end() - 1);
+quick—sort<char>(C.begin(), C.end() - 1);
+std::cout 〈〈 "퀵 정렬 수행 후의 벡터:" 〈〈 std::endl;
+print_vector<int>(S1 ) ;
+print-vector<fIoat>(S2);
+print-vector〈double>(S3);
+178

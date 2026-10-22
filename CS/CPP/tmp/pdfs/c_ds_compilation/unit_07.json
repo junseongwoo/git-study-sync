@@ -1,0 +1,1078 @@
+{
+  "unit": 7,
+  "title": "큐·덱·시뮬레이션",
+  "part": "자료구조",
+  "scope": [
+    {
+      "source": "A",
+      "start": 137,
+      "end": 166
+    },
+    {
+      "source": "A",
+      "start": 235,
+      "end": 241
+    },
+    {
+      "source": "B",
+      "start": 121,
+      "end": 148
+    }
+  ],
+  "learning": [
+    {
+      "text": "큐(queue)는 먼저 들어온 데이터가 먼저 나가는 선입선출(FIFO: First-In First-Out) 구조이다.",
+      "refs": [
+        {
+          "source": "A",
+          "section": "5.1 큐 추상 데이터 타입",
+          "pages": [
+            138
+          ]
+        }
+      ],
+      "evidence": "선입선출(FIFO: First-In First-Out)"
+    },
+    {
+      "text": "덱(deque)은 double-ended queue의 줄임말이며 전단과 후단에서 모두 삽입·삭제가 가능한 큐이다.",
+      "refs": [
+        {
+          "source": "A",
+          "section": "5.5 덱이란?",
+          "pages": [
+            154
+          ]
+        }
+      ],
+      "evidence": "double-ended queue"
+    }
+  ],
+  "concepts": [
+    {
+      "title": "큐 ADT",
+      "items": [
+        {
+          "text": "큐(queue)는 먼저 들어온 데이터가 먼저 나가는 선입선출(FIFO: First-In First-Out) 구조이다.",
+          "refs": [
+            {
+              "source": "A",
+              "section": "5.1 큐 추상 데이터 타입",
+              "pages": [
+                138
+              ]
+            }
+          ],
+          "evidence": "선입선출(FIFO: First-In First-Out)"
+        },
+        {
+          "text": "큐에서 삽입이 일어나는 곳은 후단(rear), 삭제가 일어나는 곳은 전단(front)이다.",
+          "refs": [
+            {
+              "source": "A",
+              "section": "5.1 큐 추상 데이터 타입",
+              "pages": [
+                138
+              ]
+            }
+          ],
+          "evidence": "후단(rear)"
+        },
+        {
+          "text": "큐의 객체는 0개 이상의 요소들로 구성된 선형 리스트이다.",
+          "refs": [
+            {
+              "source": "A",
+              "section": "5.1 ADT 5.1 큐",
+              "pages": [
+                139
+              ]
+            }
+          ],
+          "evidence": "0개 이상의 요소들로 구성된 선형 리스트"
+        },
+        {
+          "text": "enqueue는 큐의 끝에 요소를 추가하며 포화 큐에서는 queue_full 오류를 낸다.",
+          "refs": [
+            {
+              "source": "A",
+              "section": "5.1 ADT 5.1 큐",
+              "pages": [
+                139
+              ]
+            }
+          ],
+          "evidence": "queue_full 오류"
+        },
+        {
+          "text": "dequeue는 큐의 맨 앞 요소를 제거하여 반환하며 공백 큐에서는 queue_empty 오류를 낸다.",
+          "refs": [
+            {
+              "source": "A",
+              "section": "5.1 ADT 5.1 큐",
+              "pages": [
+                139
+              ]
+            }
+          ],
+          "evidence": "맨 앞에 있는 e를 제거하여 반환"
+        },
+        {
+          "text": "peek는 공백이 아닌 큐의 맨 앞 요소를 읽어서 반환한다.",
+          "refs": [
+            {
+              "source": "A",
+              "section": "5.1 ADT 5.1 큐",
+              "pages": [
+                139
+              ]
+            }
+          ],
+          "evidence": "맨 앞에 있는 e를 읽어서 반환"
+        }
+      ]
+    },
+    {
+      "title": "선형큐와 원형큐",
+      "items": [
+        {
+          "text": "선형큐는 front와 rear가 계속 증가하므로 배열 앞부분이 비어 있어도 사용하지 못할 수 있다.",
+          "refs": [
+            {
+              "source": "A",
+              "section": "5.3 원형큐",
+              "pages": [
+                145
+              ]
+            }
+          ],
+          "evidence": "배열의 앞부분이 비어 있더라도"
+        },
+        {
+          "text": "선형큐의 오른쪽에 삽입 공간을 만들려면 요소들을 왼쪽으로 이동시켜야 한다.",
+          "refs": [
+            {
+              "source": "A",
+              "section": "5.3 원형큐",
+              "pages": [
+                145
+              ]
+            }
+          ],
+          "evidence": "모든 요소들을 왼쪽으로 이동"
+        },
+        {
+          "text": "원형큐는 인덱스가 배열 끝에 도달한 뒤 다시 0으로 돌아가도록 한다.",
+          "refs": [
+            {
+              "source": "A",
+              "section": "5.3 원형큐",
+              "pages": [
+                146
+              ]
+            }
+          ],
+          "evidence": "다음에 증가되는 값은 0"
+        },
+        {
+          "text": "A의 원형큐에서 front는 첫 번째 요소의 하나 앞을, rear는 마지막 요소를 가리킨다.",
+          "refs": [
+            {
+              "source": "A",
+              "section": "5.3 원형큐",
+              "pages": [
+                146
+              ]
+            }
+          ],
+          "evidence": "첫 번째 요소의 하나 앞"
+        },
+        {
+          "text": "A의 원형큐는 front와 rear를 모두 0으로 초기화한다.",
+          "refs": [
+            {
+              "source": "A",
+              "section": "5.3 원형큐",
+              "pages": [
+                146
+              ]
+            }
+          ],
+          "evidence": "front, rear는 모두 0"
+        },
+        {
+          "text": "A의 원형큐 삽입은 rear를 먼저 증가시키고 그 위치에 데이터를 저장한다.",
+          "refs": [
+            {
+              "source": "A",
+              "section": "5.3 원형큐",
+              "pages": [
+                146
+              ]
+            }
+          ],
+          "evidence": "rear가 먼저 증가"
+        },
+        {
+          "text": "A의 원형큐 삭제는 front를 먼저 증가시키고 그 위치의 데이터를 삭제한다.",
+          "refs": [
+            {
+              "source": "A",
+              "section": "5.3 원형큐",
+              "pages": [
+                146
+              ]
+            }
+          ],
+          "evidence": "front가 먼저 증가"
+        },
+        {
+          "text": "원형큐는 포화 상태와 공백 상태를 구분하기 위해 한 자리를 항상 비워 둔다.",
+          "refs": [
+            {
+              "source": "A",
+              "section": "5.3 원형큐",
+              "pages": [
+                147
+              ]
+            }
+          ],
+          "evidence": "하나의 자리는 항상 비워둔다"
+        },
+        {
+          "text": "요소 개수를 저장하는 추가 변수 count를 사용하면 한 자리를 비워 두지 않아도 된다.",
+          "refs": [
+            {
+              "source": "A",
+              "section": "5.3 원형큐",
+              "pages": [
+                147
+              ]
+            }
+          ],
+          "evidence": "count 변수를 사용할 수 있다면"
+        }
+      ]
+    },
+    {
+      "title": "B의 순환 큐 구현",
+      "items": [
+        {
+          "text": "B의 순환 큐에서 Front는 제거할 전단의 위치를, Rear는 실제 후단 위치에 1을 더한 값을 나타낸다.",
+          "refs": [
+            {
+              "source": "B",
+              "section": "3.2.2 순환 큐의 기본 연산",
+              "pages": [
+                132,
+                133
+              ]
+            }
+          ],
+          "evidence": "실제 후단의 위치 값에 1"
+        },
+        {
+          "text": "B는 공백·포화 구별을 위해 실제 용량보다 1만큼 더 큰 큐 배열을 만든다.",
+          "refs": [
+            {
+              "source": "B",
+              "section": "3.2.1 공백 상태와 포화 상태",
+              "pages": [
+                128
+              ]
+            }
+          ],
+          "evidence": "실제 용량보다 1만큼 더 크게"
+        }
+      ]
+    },
+    {
+      "title": "덱",
+      "items": [
+        {
+          "text": "덱(deque)은 double-ended queue의 줄임말이며 전단과 후단에서 모두 삽입·삭제가 가능한 큐이다.",
+          "refs": [
+            {
+              "source": "A",
+              "section": "5.5 덱이란?",
+              "pages": [
+                154
+              ]
+            }
+          ],
+          "evidence": "double-ended queue"
+        },
+        {
+          "text": "덱에서도 중간에 삽입하거나 삭제하는 것은 허용하지 않는다.",
+          "refs": [
+            {
+              "source": "A",
+              "section": "5.5 덱이란?",
+              "pages": [
+                154
+              ]
+            }
+          ],
+          "evidence": "중간에 삽입하거나 삭제"
+        },
+        {
+          "text": "덱의 전단 관련 연산만 사용하면 스택으로 동작한다.",
+          "refs": [
+            {
+              "source": "A",
+              "section": "5.5 덱의 추상 자료형",
+              "pages": [
+                155
+              ]
+            }
+          ],
+          "evidence": "전단과 관련된 연산들만"
+        },
+        {
+          "text": "덱에서 후단 삽입과 전단 삭제만 사용하면 큐로 동작한다.",
+          "refs": [
+            {
+              "source": "A",
+              "section": "5.5 덱의 추상 자료형",
+              "pages": [
+                155
+              ]
+            }
+          ],
+          "evidence": "삽입은 후단, 삭제는 전단"
+        },
+        {
+          "text": "get_front와 get_rear는 각각 앞·뒤의 요소를 삭제하지 않고 반환한다.",
+          "refs": [
+            {
+              "source": "A",
+              "section": "5.5 ADT 5.2 Deque",
+              "pages": [
+                155
+              ]
+            }
+          ],
+          "evidence": "삭제하지 않고"
+        }
+      ]
+    },
+    {
+      "title": "연결 큐·버퍼·시뮬레이션",
+      "items": [
+        {
+          "text": "연결된 큐(linked queue)는 연결 리스트로 만든 큐이며 front는 맨 앞 요소, rear는 맨 뒤 요소를 가리킨다.",
+          "refs": [
+            {
+              "source": "A",
+              "section": "7.5 연결 리스트로 구현한 큐",
+              "pages": [
+                235
+              ]
+            }
+          ],
+          "evidence": "연결된 큐(linked queue)"
+        },
+        {
+          "text": "연결된 큐에 요소가 없으면 front와 rear는 NULL이다.",
+          "refs": [
+            {
+              "source": "A",
+              "section": "7.5 연결 리스트로 구현한 큐",
+              "pages": [
+                235
+              ]
+            }
+          ],
+          "evidence": "front와 rear는 NULL"
+        },
+        {
+          "text": "연결된 큐는 크기가 제한되지 않는 장점이 있지만 코드가 더 복잡하고 링크 필드의 메모리가 필요하다.",
+          "refs": [
+            {
+              "source": "A",
+              "section": "7.5 연결 리스트로 구현한 큐",
+              "pages": [
+                235
+              ]
+            }
+          ],
+          "evidence": "링크 필드 때문에 메모리 공간"
+        },
+        {
+          "text": "B의 LinkedQueue 구조체는 Front, Rear, 노드 개수를 나타내는 Count를 갖는다.",
+          "refs": [
+            {
+              "source": "B",
+              "section": "3.3.1 링크드 큐의 기본 연산",
+              "pages": [
+                140
+              ]
+            }
+          ],
+          "evidence": "노드 개수를 나타내는 Count"
+        },
+        {
+          "text": "큐는 서로 다른 속도로 실행되는 두 프로세스의 상호 작용을 조화시키는 버퍼 역할을 담당한다.",
+          "refs": [
+            {
+              "source": "A",
+              "section": "5.4 큐의 응용: 버퍼",
+              "pages": [
+                152
+              ]
+            }
+          ],
+          "evidence": "버퍼 역할을 담당"
+        },
+        {
+          "text": "큐잉모델은 서비스를 수행하는 서버와 고객으로 구성되며 대기 행렬을 큐로 구현한다.",
+          "refs": [
+            {
+              "source": "A",
+              "section": "5.6 큐의 응용: 시뮬레이션",
+              "pages": [
+                160
+              ]
+            }
+          ],
+          "evidence": "이 대기 행렬이 큐로 구현"
+        },
+        {
+          "text": "원문의 은행 시뮬레이션은 행원 한 사람을 가정하고 고객 도착 간격과 서비스 시간을 랜덤하게 정한다.",
+          "refs": [
+            {
+              "source": "A",
+              "section": "5.6 큐의 응용: 시뮬레이션",
+              "pages": [
+                160
+              ]
+            }
+          ],
+          "evidence": "행원은 한사람이라고 가정"
+        }
+      ]
+    }
+  ],
+  "procedures": [
+    {
+      "title": "A의 은행 서비스 시뮬레이션 루프",
+      "steps": [
+        {
+          "text": "현재 시각을 나타내는 clock을 증가시킨다.",
+          "refs": [
+            {
+              "source": "A",
+              "section": "5.6 시뮬레이션 반복 루프",
+              "pages": [
+                160
+              ]
+            }
+          ],
+          "evidence": "clock이라는 변수를 하나 증가"
+        },
+        {
+          "text": "새 고객이 들어오면 아이디·도착시간·서비스 시간을 구조체에 저장하여 enqueue한다.",
+          "refs": [
+            {
+              "source": "A",
+              "section": "5.6 시뮬레이션 반복 루프",
+              "pages": [
+                160
+              ]
+            }
+          ],
+          "evidence": "구조체를 enqueue()"
+        },
+        {
+          "text": "service_time이 0이 아니면 하나 감소시키고, 0이면 큐에서 고객을 꺼내 서비스를 시작한다.",
+          "refs": [
+            {
+              "source": "A",
+              "section": "5.6 시뮬레이션 반복 루프",
+              "pages": [
+                160,
+                161
+              ]
+            }
+          ],
+          "evidence": "service_time이 0이면"
+        },
+        {
+          "text": "60분이 지나면 고객들이 기다린 시간을 모두 합하여 출력한다.",
+          "refs": [
+            {
+              "source": "A",
+              "section": "5.6 시뮬레이션 반복 루프",
+              "pages": [
+                161
+              ]
+            }
+          ],
+          "evidence": "60분의 시간이 지나면"
+        }
+      ]
+    }
+  ],
+  "syntax": [
+    {
+      "label": "원형큐 공백·포화 검출 함수",
+      "code": "int is_empty(QueueType *q)\n{\n    return (q->front == q->rear);\n}\nint is_full(QueueType *q)\n{\n    return ((q->rear + 1) % MAX_QUEUE_SIZE == q->front);\n}",
+      "refs": [
+        {
+          "source": "A",
+          "section": "5.3 프로그램 5.2",
+          "pages": [
+            150
+          ]
+        }
+      ],
+      "evidence": "int is_empty(QueueType *q)",
+      "note": null
+    }
+  ],
+  "formulas": [
+    {
+      "label": "A의 원형 회전",
+      "expression": "front ← (front+1) % MAX_QUEUE_SIZE; rear ← (rear+1) % MAX_QUEUE_SIZE;",
+      "refs": [
+        {
+          "source": "A",
+          "section": "5.3 원형큐의 삽입, 삭제 알고리즘",
+          "pages": [
+            148
+          ]
+        }
+      ],
+      "evidence": "나머지 연산자 %",
+      "note": "배열 끝 다음 인덱스는 0이 된다."
+    },
+    {
+      "label": "A의 공백·포화 조건",
+      "expression": "공백: front == rear; 포화: (rear+1) % MAX_QUEUE_SIZE == front",
+      "refs": [
+        {
+          "source": "A",
+          "section": "5.3 프로그램 5.2",
+          "pages": [
+            150
+          ]
+        }
+      ],
+      "evidence": "(q->rear + 1) % MAX_QUEUE_SIZE == q->front",
+      "note": "한 자리를 비워 두는 원문 구현이다."
+    }
+  ],
+  "comparisons": [
+    {
+      "title": "전단·후단의 구현별 의미",
+      "headers": [
+        "원문 구현",
+        "포인터·인덱스 의미"
+      ],
+      "rows": [
+        [
+          {
+            "text": "A 원형큐",
+            "refs": [
+              {
+                "source": "A",
+                "section": "5.3 원형큐",
+                "pages": [
+                  146
+                ]
+              }
+            ],
+            "evidence": "원형큐"
+          },
+          {
+            "text": "A의 원형큐에서 front는 첫 번째 요소의 하나 앞을, rear는 마지막 요소를 가리킨다.",
+            "refs": [
+              {
+                "source": "A",
+                "section": "5.3 원형큐",
+                "pages": [
+                  146
+                ]
+              }
+            ],
+            "evidence": "첫 번째 요소의 하나 앞"
+          }
+        ],
+        [
+          {
+            "text": "B 순환 큐",
+            "refs": [
+              {
+                "source": "B",
+                "section": "3.2.2 순환 큐의 기본 연산",
+                "pages": [
+                  132
+                ]
+              }
+            ],
+            "evidence": "순환 큐"
+          },
+          {
+            "text": "B의 순환 큐에서 Front는 제거할 전단의 위치를, Rear는 실제 후단 위치에 1을 더한 값을 나타낸다.",
+            "refs": [
+              {
+                "source": "B",
+                "section": "3.2.2 순환 큐의 기본 연산",
+                "pages": [
+                  132,
+                  133
+                ]
+              }
+            ],
+            "evidence": "실제 후단의 위치 값에 1"
+          }
+        ],
+        [
+          {
+            "text": "연결된 큐",
+            "refs": [
+              {
+                "source": "A",
+                "section": "7.5 연결 리스트로 구현한 큐",
+                "pages": [
+                  235
+                ]
+              }
+            ],
+            "evidence": "연결된 큐"
+          },
+          {
+            "text": "연결된 큐(linked queue)는 연결 리스트로 만든 큐이며 front는 맨 앞 요소, rear는 맨 뒤 요소를 가리킨다.",
+            "refs": [
+              {
+                "source": "A",
+                "section": "7.5 연결 리스트로 구현한 큐",
+                "pages": [
+                  235
+                ]
+              }
+            ],
+            "evidence": "연결된 큐(linked queue)"
+          }
+        ]
+      ]
+    }
+  ],
+  "terms": [
+    {
+      "term": "큐",
+      "definition": {
+        "text": "큐(queue)는 먼저 들어온 데이터가 먼저 나가는 선입선출(FIFO: First-In First-Out) 구조이다.",
+        "refs": [
+          {
+            "source": "A",
+            "section": "5.1 큐 추상 데이터 타입",
+            "pages": [
+              138
+            ]
+          }
+        ],
+        "evidence": "선입선출(FIFO: First-In First-Out)"
+      }
+    },
+    {
+      "term": "전단·후단",
+      "definition": {
+        "text": "큐에서 삽입이 일어나는 곳은 후단(rear), 삭제가 일어나는 곳은 전단(front)이다.",
+        "refs": [
+          {
+            "source": "A",
+            "section": "5.1 큐 추상 데이터 타입",
+            "pages": [
+              138
+            ]
+          }
+        ],
+        "evidence": "후단(rear)"
+      }
+    },
+    {
+      "term": "enqueue",
+      "definition": {
+        "text": "enqueue는 큐의 끝에 요소를 추가하며 포화 큐에서는 queue_full 오류를 낸다.",
+        "refs": [
+          {
+            "source": "A",
+            "section": "5.1 ADT 5.1 큐",
+            "pages": [
+              139
+            ]
+          }
+        ],
+        "evidence": "queue_full 오류"
+      }
+    },
+    {
+      "term": "dequeue",
+      "definition": {
+        "text": "dequeue는 큐의 맨 앞 요소를 제거하여 반환하며 공백 큐에서는 queue_empty 오류를 낸다.",
+        "refs": [
+          {
+            "source": "A",
+            "section": "5.1 ADT 5.1 큐",
+            "pages": [
+              139
+            ]
+          }
+        ],
+        "evidence": "맨 앞에 있는 e를 제거하여 반환"
+      }
+    },
+    {
+      "term": "원형큐",
+      "definition": {
+        "text": "원형큐는 인덱스가 배열 끝에 도달한 뒤 다시 0으로 돌아가도록 한다.",
+        "refs": [
+          {
+            "source": "A",
+            "section": "5.3 원형큐",
+            "pages": [
+              146
+            ]
+          }
+        ],
+        "evidence": "다음에 증가되는 값은 0"
+      }
+    },
+    {
+      "term": "덱",
+      "definition": {
+        "text": "덱(deque)은 double-ended queue의 줄임말이며 전단과 후단에서 모두 삽입·삭제가 가능한 큐이다.",
+        "refs": [
+          {
+            "source": "A",
+            "section": "5.5 덱이란?",
+            "pages": [
+              154
+            ]
+          }
+        ],
+        "evidence": "double-ended queue"
+      }
+    },
+    {
+      "term": "연결된 큐",
+      "definition": {
+        "text": "연결된 큐(linked queue)는 연결 리스트로 만든 큐이며 front는 맨 앞 요소, rear는 맨 뒤 요소를 가리킨다.",
+        "refs": [
+          {
+            "source": "A",
+            "section": "7.5 연결 리스트로 구현한 큐",
+            "pages": [
+              235
+            ]
+          }
+        ],
+        "evidence": "연결된 큐(linked queue)"
+      }
+    },
+    {
+      "term": "큐잉모델",
+      "definition": {
+        "text": "큐잉모델은 서비스를 수행하는 서버와 고객으로 구성되며 대기 행렬을 큐로 구현한다.",
+        "refs": [
+          {
+            "source": "A",
+            "section": "5.6 큐의 응용: 시뮬레이션",
+            "pages": [
+              160
+            ]
+          }
+        ],
+        "evidence": "이 대기 행렬이 큐로 구현"
+      }
+    }
+  ],
+  "summary_basis": "편집 요약",
+  "summary": [
+    {
+      "text": "큐(queue)는 먼저 들어온 데이터가 먼저 나가는 선입선출(FIFO: First-In First-Out) 구조이다.",
+      "refs": [
+        {
+          "source": "A",
+          "section": "5.1 큐 추상 데이터 타입",
+          "pages": [
+            138
+          ]
+        }
+      ],
+      "evidence": "선입선출(FIFO: First-In First-Out)"
+    },
+    {
+      "text": "원형큐는 포화 상태와 공백 상태를 구분하기 위해 한 자리를 항상 비워 둔다.",
+      "refs": [
+        {
+          "source": "A",
+          "section": "5.3 원형큐",
+          "pages": [
+            147
+          ]
+        }
+      ],
+      "evidence": "하나의 자리는 항상 비워둔다"
+    },
+    {
+      "text": "덱(deque)은 double-ended queue의 줄임말이며 전단과 후단에서 모두 삽입·삭제가 가능한 큐이다.",
+      "refs": [
+        {
+          "source": "A",
+          "section": "5.5 덱이란?",
+          "pages": [
+            154
+          ]
+        }
+      ],
+      "evidence": "double-ended queue"
+    },
+    {
+      "text": "큐잉모델은 서비스를 수행하는 서버와 고객으로 구성되며 대기 행렬을 큐로 구현한다.",
+      "refs": [
+        {
+          "source": "A",
+          "section": "5.6 큐의 응용: 시뮬레이션",
+          "pages": [
+            160
+          ]
+        }
+      ],
+      "evidence": "이 대기 행렬이 큐로 구현"
+    }
+  ],
+  "review": [
+    {
+      "question": "큐의 삽입과 삭제는 각각 어디서 일어나는가?",
+      "answer": {
+        "text": "큐에서 삽입이 일어나는 곳은 후단(rear), 삭제가 일어나는 곳은 전단(front)이다.",
+        "refs": [
+          {
+            "source": "A",
+            "section": "5.1 큐 추상 데이터 타입",
+            "pages": [
+              138
+            ]
+          }
+        ],
+        "evidence": "후단(rear)"
+      }
+    },
+    {
+      "question": "원형큐에서 한 자리를 비워 두는 이유는 무엇인가?",
+      "answer": {
+        "text": "원형큐는 포화 상태와 공백 상태를 구분하기 위해 한 자리를 항상 비워 둔다.",
+        "refs": [
+          {
+            "source": "A",
+            "section": "5.3 원형큐",
+            "pages": [
+              147
+            ]
+          }
+        ],
+        "evidence": "하나의 자리는 항상 비워둔다"
+      }
+    },
+    {
+      "question": "덱에서 스택으로 동작하려면 어떤 연산을 사용하는가?",
+      "answer": {
+        "text": "덱의 전단 관련 연산만 사용하면 스택으로 동작한다.",
+        "refs": [
+          {
+            "source": "A",
+            "section": "5.5 덱의 추상 자료형",
+            "pages": [
+              155
+            ]
+          }
+        ],
+        "evidence": "전단과 관련된 연산들만"
+      }
+    },
+    {
+      "question": "공백인 연결된 큐의 front와 rear 값은 무엇인가?",
+      "answer": {
+        "text": "연결된 큐에 요소가 없으면 front와 rear는 NULL이다.",
+        "refs": [
+          {
+            "source": "A",
+            "section": "7.5 연결 리스트로 구현한 큐",
+            "pages": [
+              235
+            ]
+          }
+        ],
+        "evidence": "front와 rear는 NULL"
+      }
+    }
+  ],
+  "cheat": {
+    "definitions": [
+      {
+        "term": "큐",
+        "definition": {
+          "text": "큐(queue)는 먼저 들어온 데이터가 먼저 나가는 선입선출(FIFO: First-In First-Out) 구조이다.",
+          "refs": [
+            {
+              "source": "A",
+              "section": "5.1 큐 추상 데이터 타입",
+              "pages": [
+                138
+              ]
+            }
+          ],
+          "evidence": "선입선출(FIFO: First-In First-Out)"
+        }
+      },
+      {
+        "term": "덱",
+        "definition": {
+          "text": "덱(deque)은 double-ended queue의 줄임말이며 전단과 후단에서 모두 삽입·삭제가 가능한 큐이다.",
+          "refs": [
+            {
+              "source": "A",
+              "section": "5.5 덱이란?",
+              "pages": [
+                154
+              ]
+            }
+          ],
+          "evidence": "double-ended queue"
+        }
+      },
+      {
+        "term": "연결된 큐",
+        "definition": {
+          "text": "연결된 큐에 요소가 없으면 front와 rear는 NULL이다.",
+          "refs": [
+            {
+              "source": "A",
+              "section": "7.5 연결 리스트로 구현한 큐",
+              "pages": [
+                235
+              ]
+            }
+          ],
+          "evidence": "front와 rear는 NULL"
+        }
+      }
+    ],
+    "comparison_title": "A·B 원형 구현의 차이",
+    "comparison_headers": [
+      "항목",
+      "원문 설명"
+    ],
+    "comparison_rows": [
+      [
+        {
+          "text": "A 원형큐",
+          "refs": [
+            {
+              "source": "A",
+              "section": "5.3 원형큐",
+              "pages": [
+                146
+              ]
+            }
+          ],
+          "evidence": "원형큐"
+        },
+        {
+          "text": "A의 원형큐에서 front는 첫 번째 요소의 하나 앞을, rear는 마지막 요소를 가리킨다.",
+          "refs": [
+            {
+              "source": "A",
+              "section": "5.3 원형큐",
+              "pages": [
+                146
+              ]
+            }
+          ],
+          "evidence": "첫 번째 요소의 하나 앞"
+        }
+      ],
+      [
+        {
+          "text": "B 순환 큐",
+          "refs": [
+            {
+              "source": "B",
+              "section": "3.2.2 순환 큐의 기본 연산",
+              "pages": [
+                132
+              ]
+            }
+          ],
+          "evidence": "순환 큐"
+        },
+        {
+          "text": "B의 순환 큐에서 Front는 제거할 전단의 위치를, Rear는 실제 후단 위치에 1을 더한 값을 나타낸다.",
+          "refs": [
+            {
+              "source": "B",
+              "section": "3.2.2 순환 큐의 기본 연산",
+              "pages": [
+                132,
+                133
+              ]
+            }
+          ],
+          "evidence": "실제 후단의 위치 값에 1"
+        }
+      ]
+    ],
+    "formulas": [
+      {
+        "label": "A의 공백·포화 조건",
+        "expression": "공백: front == rear; 포화: (rear+1) % MAX_QUEUE_SIZE == front",
+        "refs": [
+          {
+            "source": "A",
+            "section": "5.3 프로그램 5.2",
+            "pages": [
+              150
+            ]
+          }
+        ],
+        "evidence": "(q->rear + 1) % MAX_QUEUE_SIZE == q->front",
+        "note": "한 자리를 비워 두는 원문 구현이다."
+      }
+    ],
+    "syntax": []
+  },
+  "checked_images": [
+    {
+      "source": "A",
+      "pages": [
+        138,
+        139,
+        145,
+        146,
+        147,
+        148,
+        150,
+        152,
+        154,
+        155,
+        160,
+        161,
+        235
+      ]
+    },
+    {
+      "source": "B",
+      "pages": [
+        128,
+        132,
+        133,
+        140
+      ]
+    }
+  ],
+  "editor_notes": [
+    "A의 front·rear와 B의 Front·Rear는 같은 인덱스 의미가 아니므로 각 구현을 구분하였다.",
+    "A의 은행 모델 설명과 프로그램은 일부 수치 표기가 달라 난수 범위·확률의 임의 보정을 하지 않았다."
+  ]
+}

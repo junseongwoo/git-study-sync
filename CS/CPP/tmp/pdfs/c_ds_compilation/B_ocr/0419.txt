@@ -1,0 +1,33 @@
+50
+52
+53
+54
+55
+56
+57
+58
+59
+60
+62
+63
+65
+66
+67
+68
+69
+70
+// 위상 정렬
+TO卿1에icalS0貳( graph->Vertices, &SortedList 뉴
+printf("Topological Sort Result
+CurrentNode = SortedList,
+while ( CurrentNode != NULL )
+printf("%C “, );
+CurrentNode = CurrentNode->NextNode,
+printf("\n");
+// 그래프 소일
+DestroyGraph( graph );
+return 0;
+실행 결과
+6
+TopoIogicaI Sort ResuIt : B E A D 6 ( F H
+• 그래프 417

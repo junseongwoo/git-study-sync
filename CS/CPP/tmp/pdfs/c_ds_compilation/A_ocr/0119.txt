@@ -1,0 +1,37 @@
+위의 알고리츰을 (로 구현하면 프로그구기 4.6과 같다. 아래의 프로그램에서는 피연산자가 한
+문자로. 된 숫자라고 가정한다. 여러 문자로 된 숫자를 처리하려민 입력 문자열을 분석하는 프로
+그램이 추가로 있어야 한다.
+프로그램 4.7 후위표기식 계산
+#include <stdio.h>
+#inctude <stdlib.h>
+#define MAX_STACK_SIZE 1%
+// 프로그램 4.3에서 스택 코드 추가
+typedef char element;
+// 교체!
+// 프로그램 4.3에서 스택 코드 추가 끝
+// 후위 표기 수식 계산 함수
+int eval(char exp[])
+int 0p1, 0p2, value, 1
+int len = strlen(exp);
+char ch;
+StackType s;
+init_stack(&s) ;
+for (5 = 0; i<len; i++)
+ch = exp[i];
+if (ch != '+' ch
+value = ch - '0'
+push(&s, value);
+// 입력이 피연산자이면
+etse { // 연산자이면 피연산자를 스택에서 제거
+0P2 = pop(&s);
+0야 = pop(&s);
+switch (ch) { // 연산을 수행하고 스택에 저장
+case '+' : push(&s, 0야 + 0P2); break;
+: push(&s, 0야 - 0p2),• break;
+case
+case '*' •. push(&s, 0p1 * 0p2),• break;
+case '/' : push(&s, 0야 / 0p2); break;
+return pop(&s) ;
+int main(void)
+CHAPTER04 스택
+127

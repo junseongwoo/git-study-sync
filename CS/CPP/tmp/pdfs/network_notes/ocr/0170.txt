@@ -1,0 +1,52 @@
+162
+CHAPTER 02 • 애플리케이션 계층
+[128.119.240.3〕) by cs.umass.edu (8.13.1/8.12.6) for
+<hg@cs.umass.edu/; Fri, 7 Nov 2008 13:27:10 -0500
+Received: from asusus-4b96 (localhost [127.0.0.1]) by
+barmail.cs.umass.edu (Spam Firewa11) for <hg@cs.umass.
+edu>; Fri, 7
+Nov 2008 13:27:07 -0500 (EST)
+Received: from asusus—4b96 ( [58.88.21.177]) by barmail.
+CS . umass . edu
+for <hg@cs.umass.edu/; Fri, 07 Nov 2008 13:27:07 -0500
+(EST)
+Received: from [58.88.21.177] by inbnd55.exchangeddd.
+com; Sat, 8
+Nov 2008 01:27:07 +0700
+From: ″Jonny" <tennis5@pp33head. com>
+To: <hg@cs . edu>
+Subject: HOW tO secure your savings
+P16. DNS SRV RFC인 RFC 2782를 읽어 보라. SRV 레코드의 목적은 무엇인가 ?
+P17. 전자메일을 POP3로 접근한다고 생각해 보자.
+a. 다운로드-후-삭제 모드로 POP 메일 클라이언트를 설정한다고 가정하자.
+다음의 과정을 완성하라.
+노
+S:
+C:
+S:
+S:
+S:
+9
+1 ist
+1 498
+2 912
+retr 1
+blah blah
+.blah
+b. 다운로드-후-유지 모드로 POP 메일 클라이언트를 설정한다고 가정하자.
+다음의 과정을 완성하라.
+C:
+S:
+C:
+S:
+S:
+9
+9
+1 ist
+1 498
+2 912
+retr 1
+blah blah
+.blah
+c. 다운로드-후-유지 모드로 동작하는 POP 메일 클라이언트를 설정했다고 가
+정하자. (바의 내펑을 시용하여 메시지 1, 2를 검색하고 POP을 마친 후 5분

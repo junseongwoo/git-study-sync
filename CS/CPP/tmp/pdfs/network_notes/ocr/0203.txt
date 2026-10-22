@@ -1,0 +1,77 @@
+196
+rdt—rcv (rcvpkt)
+CHAPTER 03
+트랜스포트 계층
+rdt—send (da ta)
+sndpktemake—pkt (0, data, checksum)
+udt—send (sndpkt)
+4
+rd t—rcv (rcvpkt)
+&& notcorrupt (rcvpkt)
+&& isACK(rcvpkt)
+rdt—rcv (rcvpkt) &&
+(corrupt (rcvpkt) | |
+isNAK (rcvpkt) )
+ud t—send ( sndpkt)
+그림 3.11 • rdt2.I 송신자
+상위로부터
+0번 호출을
+기다림
+1에 대한
+ACK 또는
+NAK 응답을 ?
+기다림
+rdt_send (data)
+/ 0에 대한
+1
+ASK 또는
+NAK 응답을
+기다림
+상위로부터
+1
+4
+1번호출을
+기다림
+rdt—rcv (rcvpkt) &&
+(corrupt (rcvpkt) |
+isNAK (rcvpkt) )
+udt—send (sndpkt)
+rdt—rcv (rcvpkt )
+&& notcorrupt (rcvpkt)
+&& isACK (rcvpkt)
+sndpkt—make—pkt (1 , da , checksum)
+udt—send (sndpkt)
+rdt_rcv (rcvpkt) && notcorrupt (rcvpkt)
+&& has—seqO (rcvpkt)
+extract (rcvpkt, da ta)
+deliver_data (data)
+sndpkt=make—pkt (ACK, checksum)
+&& corrupt (rcvpkt)
+sndpkt=make—pkt (NAK, checksum)
+udt_send (sndpkt)
+rdt_rcv ( rcvpkt) && notcorrupt
+(rcvpkt) &&has—segl (rcvpkt)
+sndpkt=make—pkt (ACK, checksum)
+udt—send (sndpkt)
+그림 3.12 • rdt2 . 1 수신자
+udt_send (sndpkt)
+하위로부터
+0번 호출을
+기다림
+1
+하위로부터
+1 번 호출을
+기다림
+rdt—rcv(rcvpkt) && corrupt (rcvpkt)
+sndpkt—make—pkt (NAK, checksum)
+udt—send (sndpkt)
+rdt_rcv (rcvpkt) && notcorrupt
+(rcvpkt) &&has—seqO (rcvpkt)
+sndpkt=make—pkt (ACK, checksum)
+udt—send ( )
+rdt—rcv (rcvpkt) && notcorrupt (rcvpkt)
+&& has—seql (rcvpkt)
+extract data)
+deliver_data (data)
+sndpkt=make—pkt (ACK, checksum)
+udt—send (sndpkt)

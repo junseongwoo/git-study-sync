@@ -1,0 +1,47 @@
+48
+49
+50
+free( Border );
+return Position;
+51 }
+다음은 KnuthMomsPratt( ) 함수를 테스트하는 Test-KnuthMomsPratt.c 파일입니다. 파일 속
+코드는 고지식한 탐색. 카프-라빈 알고리즘의 테스트 코드와 동일합니다.
+1 /KnuthEorrisPratt/Test—KnuthNorrisPratt. (
+01
+02
+03
+04
+05
+07
+12
+13
+14
+16
+17
+18
+20
+22
+23
+24
+25
+26
+27
+478
+$include <stdio.h>
+〈string.h〉
+없Ⅸlu년e •KrwthMorrisPratt.h-
+MAX BUFFER 512
+int main(int argc, char** argv)
+char* FilePath;
+FILE* fp;
+char TextIMAX_BUFFER];
+char* Pattern;
+int PatternSize = 0;
+int Line
+if ( argc 〈3)
+printf("Usage: 쥐IePath> <Pattern>\n", argv(이 );
+return 1:
+FiIePath = argv(l);
+Pattern • argv[2);
+PatternSize = strlen( Pattern );
+Part 02 • 일고리줍

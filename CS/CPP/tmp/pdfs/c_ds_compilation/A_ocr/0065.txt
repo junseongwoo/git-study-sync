@@ -1,0 +1,59 @@
+listt0) list[l) list[기
+base base•sizeof(int)
+[그림 3-1] 일차원 배열
+tist[3]
+1ist[4] tist[5j
+1
+base+5•sizeof(int)
+컴파일러는 배열을 어떻게 구현할까? 컴파일러는 배열에 메모리의 연속된 위치에 할당한다.
+첫 번째 배열 요소인 list[0〕의 주소가 기선주소가 되고 다른 요소들의 주소는 나음과 같이 된다.
+배열의 요소
+list[@)
+list[l)
+list[기
+list[3]
+tist[4〕
+list[5]
+base
+base
+base
+base
+base
+메모리 주소
+기본주소=base
++ l*sizeof(int)
++ 2*sizeof(int)
++ 3*sizeof(int)
++ 4*sizeof(int)
++ 5*sizeof(int)
+우리가 프로그램에서 list[i]라고 적으면 컴파일러는 주소 base+i*sizeof(int)에 있는 값
+을 가져온다.
+2차원 배열
+2차원 배열은 요소들이 2자원 형태로 나열된 배열이다. 2차원 배열에서 가로줄을 행(row). 세로
+줄을 열(c℃lumn)이라고 한다. c 언어에서 2자원 배열은 다음과 같이 선언한다
+int list[3] [5];
+0행
+2행
+0열
+list[0] [0]
+list[l] [0]
+list[2] [0]
+1열
+tist[@] [1]
+listC1][1]
+tist[기 [1]
+2열
+list[@] [기
+listC1] [2]
+list[기 [2]
+tist[0] [3]
+list[l] [3]
+list[기 [3]
+4열
+tist[@] [4]
+list[l] [4]
+list[기 [4]
+위의 선언에서는 3개의 행과 5개의 열을 가지는 2文1원 배열이 생성된다. C언어에서는 배열의
+배열을 만들어서 2차원 배열을 구현한다. [그림 3-기를 참고하도록 하자. 즉 크기가 3인 1지원 배
+열을 만들고 이 배열의 요소에 크기가 5인 배열을 생성하여 추가한다.
+72 C언어로 쉽게 물어쓴 자료구조

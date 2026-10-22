@@ -1,0 +1,26 @@
+root = new node {월", true, (}}•,
+cwd = root; // 처음에는 루트를 한재 디렉터리로 설정
+5. 디렉터리/파일을 찾는 find() 함수를 추가합니다.
+node_ptr find(const std::string& path)
+if (path[@l == 7') // 절대 경로
+return find_impl(root, path.substr(l));
+else
+// 상대 경로
+return find_impl(cwd, path);
+private:
+node_ptr find_impl(node_ptr directory, const std: :string& path)
+if (path.empty())
+return directory;
+aut0 sep = path.find('/');
+std: :string current—path = sep == std::string: ? path : path.substr(@, sep);
+std: :string rest—path = sep == std::stnng::npos ? "" : path.substr(sep + 1);
+aut0 found = std: :find_if(directory->children.begin(), directory-〉children.end(),
+[&](const node-ptr child) {
+return child-〉name == current_path;
+if (found != directory-〉children.end())
+return find_impl(*found, rest-path);
+return NULL;
+6. 디렉터리를 생성하는 add() 함수를 추가합니다.
+public:
+b001 add(const std::string& path, b001 is-dir)
+「40

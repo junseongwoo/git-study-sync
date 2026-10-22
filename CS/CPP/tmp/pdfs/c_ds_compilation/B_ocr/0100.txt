@@ -1,0 +1,53 @@
+079
+081
+082
+083
+084
+085
+086
+087
+088
+089
+090
+091
+092
+093
+094
+095
+097
+098
+099
+100
+101
+102
+103
+104
+105
+106
+Stack->Top->NextNode = NULL;
+return TopNode,
+Node* LLS_Top( LinkedListStack* Stack )
+return Stack->Top;
+int LLS GetSize( LinkedListStack* Stack )
+int Count = 0;
+Node* Current = Stack->List;
+while ( Current != NULL )
+Current = Current->NextNode.
+Count++;
+return Count,
+int LLS-IsEmpty( LinkedListStack* Stack )
+return (Stack->List
+= NULL);
+02WLinkedListStack/Test—LinkedListStack.c
+01
+02
+03
+04
+05
+06
+#include "LinkedListStack h"
+int main( void )
+int i= 0;
+int Count = 0;
+Chapter 02 • 스택
+91

@@ -1,0 +1,595 @@
+{
+  "document": "notes",
+  "reviewer": "c_ds_catalog_a",
+  "reviewed_pages": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    16,
+    17,
+    18,
+    19,
+    20,
+    21,
+    22,
+    23,
+    24,
+    25,
+    26,
+    27,
+    28,
+    29,
+    30,
+    31,
+    32,
+    33,
+    34,
+    35,
+    36,
+    37,
+    38,
+    39,
+    40,
+    41,
+    42,
+    43,
+    44,
+    45,
+    46,
+    47,
+    48,
+    49,
+    50,
+    51,
+    52,
+    53,
+    54,
+    55,
+    56,
+    57,
+    58,
+    59,
+    60,
+    61,
+    62,
+    63,
+    64,
+    65,
+    66,
+    67,
+    68,
+    69,
+    70,
+    71,
+    72
+  ],
+  "reviewed_contact_sheets": [
+    "contact_001_004.jpg",
+    "contact_005_008.jpg",
+    "contact_009_012.jpg",
+    "contact_013_016.jpg",
+    "contact_017_020.jpg",
+    "contact_021_024.jpg",
+    "contact_025_028.jpg",
+    "contact_029_032.jpg",
+    "contact_033_036.jpg",
+    "contact_037_040.jpg",
+    "contact_041_044.jpg",
+    "contact_045_048.jpg",
+    "contact_049_052.jpg",
+    "contact_053_056.jpg",
+    "contact_057_060.jpg",
+    "contact_061_064.jpg",
+    "contact_065_068.jpg",
+    "contact_069_072.jpg"
+  ],
+  "expanded_pages": [
+    18,
+    19,
+    24,
+    34,
+    37,
+    39,
+    45,
+    55,
+    61,
+    62
+  ],
+  "method": "1~72쪽 연락판 18개를 모두 view_image로 직접 보고, 코드·수식·하단 밀집 부분 등 10면은 개별 PNG로 확대 확인하였다. 내용 원고나 생성기는 수정하지 않았다.",
+  "checks": {
+    "텍스트·표·박스 경계 잘림 또는 넘침": "발견하지 못함",
+    "□ 또는 공백 수식": "발견하지 못함",
+    "수식 식별자 변형": "34·39쪽에서 확인; root 공통 수정 대상",
+    "제목만 페이지 끝에 남음": "발견하지 못함",
+    "표·정의 박스의 페이지 간 분리": "발견하지 못함"
+  },
+  "issues": [
+    {
+      "id": "NOTES-034-ID",
+      "page": 34,
+      "severity": "수정 필요",
+      "category": "수식 식별자 표기",
+      "location": "A의 배열 스택 상태 조건 수식 박스",
+      "finding": "MAX_STACK_SIZE의 밑줄 뒤 글자가 첨자로 내려가 식별자가 변형되어 보인다. 같은 페이지의 일반 코드·표는 정상이다.",
+      "expected": "MAX_STACK_SIZE를 밑줄까지 원문 식별자로 표시",
+      "status": "root가 공통 수식 렌더 수정 중; 수정 후 해당 면 재확인 필요"
+    },
+    {
+      "id": "NOTES-039-ID",
+      "page": 39,
+      "severity": "수정 필요",
+      "category": "수식 식별자 표기",
+      "location": "A의 원형 회전 및 A의 공백·포화 조건 수식 박스",
+      "finding": "MAX_QUEUE_SIZE의 밑줄 뒤 글자가 첨자로 내려가 식별자가 변형되어 보인다. 상단 원문 코드 박스의 MAX_QUEUE_SIZE는 정상이다.",
+      "expected": "두 수식 박스의 MAX_QUEUE_SIZE를 밑줄까지 원문 식별자로 표시",
+      "status": "root가 공통 수식 렌더 수정 중; 수정 후 해당 면 재확인 필요"
+    }
+  ],
+  "observations": [
+    {
+      "page": 10,
+      "category": "문단 연속",
+      "judgment": "단원 요약이 앞면에서 계속된다. 앞면의 제목 아래에 본문이 있으므로 제목 고립은 아니다.",
+      "blocking": false
+    },
+    {
+      "page": 57,
+      "category": "여백·문단 연속",
+      "judgment": "09단원 요약의 마지막 한 문장만 별도 면으로 이어져 여백이 크다. 글자 잘림·제목 고립·표 분리는 없으므로 선택적 편집 개선 사항이다.",
+      "blocking": false
+    },
+    {
+      "page": 5,
+      "category": "큰 표 분할",
+      "judgment": "20개 단원 범위표는 같은 면에서 머리글을 반복한 두 표로 나뉜다. 페이지 사이에서 표 행이 끊기지 않는다.",
+      "blocking": false
+    }
+  ],
+  "page_findings": [
+    {
+      "page": 1,
+      "reviewed": true,
+      "method": "contact_sheet",
+      "status": "요청된 인쇄 결함 발견하지 못함"
+    },
+    {
+      "page": 2,
+      "reviewed": true,
+      "method": "contact_sheet",
+      "status": "요청된 인쇄 결함 발견하지 못함"
+    },
+    {
+      "page": 3,
+      "reviewed": true,
+      "method": "contact_sheet",
+      "status": "요청된 인쇄 결함 발견하지 못함"
+    },
+    {
+      "page": 4,
+      "reviewed": true,
+      "method": "contact_sheet",
+      "status": "요청된 인쇄 결함 발견하지 못함"
+    },
+    {
+      "page": 5,
+      "reviewed": true,
+      "method": "contact_sheet",
+      "status": "요청된 인쇄 결함 발견하지 못함"
+    },
+    {
+      "page": 6,
+      "reviewed": true,
+      "method": "contact_sheet",
+      "status": "요청된 인쇄 결함 발견하지 못함"
+    },
+    {
+      "page": 7,
+      "reviewed": true,
+      "method": "contact_sheet",
+      "status": "요청된 인쇄 결함 발견하지 못함"
+    },
+    {
+      "page": 8,
+      "reviewed": true,
+      "method": "contact_sheet",
+      "status": "요청된 인쇄 결함 발견하지 못함"
+    },
+    {
+      "page": 9,
+      "reviewed": true,
+      "method": "contact_sheet",
+      "status": "요청된 인쇄 결함 발견하지 못함"
+    },
+    {
+      "page": 10,
+      "reviewed": true,
+      "method": "contact_sheet",
+      "status": "요청된 인쇄 결함 발견하지 못함"
+    },
+    {
+      "page": 11,
+      "reviewed": true,
+      "method": "contact_sheet",
+      "status": "요청된 인쇄 결함 발견하지 못함"
+    },
+    {
+      "page": 12,
+      "reviewed": true,
+      "method": "contact_sheet",
+      "status": "요청된 인쇄 결함 발견하지 못함"
+    },
+    {
+      "page": 13,
+      "reviewed": true,
+      "method": "contact_sheet",
+      "status": "요청된 인쇄 결함 발견하지 못함"
+    },
+    {
+      "page": 14,
+      "reviewed": true,
+      "method": "contact_sheet",
+      "status": "요청된 인쇄 결함 발견하지 못함"
+    },
+    {
+      "page": 15,
+      "reviewed": true,
+      "method": "contact_sheet",
+      "status": "요청된 인쇄 결함 발견하지 못함"
+    },
+    {
+      "page": 16,
+      "reviewed": true,
+      "method": "contact_sheet",
+      "status": "요청된 인쇄 결함 발견하지 못함"
+    },
+    {
+      "page": 17,
+      "reviewed": true,
+      "method": "contact_sheet",
+      "status": "요청된 인쇄 결함 발견하지 못함"
+    },
+    {
+      "page": 18,
+      "reviewed": true,
+      "method": "contact_sheet + individual PNG",
+      "status": "요청된 인쇄 결함 발견하지 못함"
+    },
+    {
+      "page": 19,
+      "reviewed": true,
+      "method": "contact_sheet + individual PNG",
+      "status": "요청된 인쇄 결함 발견하지 못함"
+    },
+    {
+      "page": 20,
+      "reviewed": true,
+      "method": "contact_sheet",
+      "status": "요청된 인쇄 결함 발견하지 못함"
+    },
+    {
+      "page": 21,
+      "reviewed": true,
+      "method": "contact_sheet",
+      "status": "요청된 인쇄 결함 발견하지 못함"
+    },
+    {
+      "page": 22,
+      "reviewed": true,
+      "method": "contact_sheet",
+      "status": "요청된 인쇄 결함 발견하지 못함"
+    },
+    {
+      "page": 23,
+      "reviewed": true,
+      "method": "contact_sheet",
+      "status": "요청된 인쇄 결함 발견하지 못함"
+    },
+    {
+      "page": 24,
+      "reviewed": true,
+      "method": "contact_sheet + individual PNG",
+      "status": "요청된 인쇄 결함 발견하지 못함"
+    },
+    {
+      "page": 25,
+      "reviewed": true,
+      "method": "contact_sheet",
+      "status": "요청된 인쇄 결함 발견하지 못함"
+    },
+    {
+      "page": 26,
+      "reviewed": true,
+      "method": "contact_sheet",
+      "status": "요청된 인쇄 결함 발견하지 못함"
+    },
+    {
+      "page": 27,
+      "reviewed": true,
+      "method": "contact_sheet",
+      "status": "요청된 인쇄 결함 발견하지 못함"
+    },
+    {
+      "page": 28,
+      "reviewed": true,
+      "method": "contact_sheet",
+      "status": "요청된 인쇄 결함 발견하지 못함"
+    },
+    {
+      "page": 29,
+      "reviewed": true,
+      "method": "contact_sheet",
+      "status": "요청된 인쇄 결함 발견하지 못함"
+    },
+    {
+      "page": 30,
+      "reviewed": true,
+      "method": "contact_sheet",
+      "status": "요청된 인쇄 결함 발견하지 못함"
+    },
+    {
+      "page": 31,
+      "reviewed": true,
+      "method": "contact_sheet",
+      "status": "요청된 인쇄 결함 발견하지 못함"
+    },
+    {
+      "page": 32,
+      "reviewed": true,
+      "method": "contact_sheet",
+      "status": "요청된 인쇄 결함 발견하지 못함"
+    },
+    {
+      "page": 33,
+      "reviewed": true,
+      "method": "contact_sheet",
+      "status": "요청된 인쇄 결함 발견하지 못함"
+    },
+    {
+      "page": 34,
+      "reviewed": true,
+      "method": "contact_sheet + individual PNG",
+      "status": "수식 식별자 수정 후 재확인 필요"
+    },
+    {
+      "page": 35,
+      "reviewed": true,
+      "method": "contact_sheet",
+      "status": "요청된 인쇄 결함 발견하지 못함"
+    },
+    {
+      "page": 36,
+      "reviewed": true,
+      "method": "contact_sheet",
+      "status": "요청된 인쇄 결함 발견하지 못함"
+    },
+    {
+      "page": 37,
+      "reviewed": true,
+      "method": "contact_sheet + individual PNG",
+      "status": "요청된 인쇄 결함 발견하지 못함"
+    },
+    {
+      "page": 38,
+      "reviewed": true,
+      "method": "contact_sheet",
+      "status": "요청된 인쇄 결함 발견하지 못함"
+    },
+    {
+      "page": 39,
+      "reviewed": true,
+      "method": "contact_sheet + individual PNG",
+      "status": "수식 식별자 수정 후 재확인 필요"
+    },
+    {
+      "page": 40,
+      "reviewed": true,
+      "method": "contact_sheet",
+      "status": "요청된 인쇄 결함 발견하지 못함"
+    },
+    {
+      "page": 41,
+      "reviewed": true,
+      "method": "contact_sheet",
+      "status": "요청된 인쇄 결함 발견하지 못함"
+    },
+    {
+      "page": 42,
+      "reviewed": true,
+      "method": "contact_sheet",
+      "status": "요청된 인쇄 결함 발견하지 못함"
+    },
+    {
+      "page": 43,
+      "reviewed": true,
+      "method": "contact_sheet",
+      "status": "요청된 인쇄 결함 발견하지 못함"
+    },
+    {
+      "page": 44,
+      "reviewed": true,
+      "method": "contact_sheet",
+      "status": "요청된 인쇄 결함 발견하지 못함"
+    },
+    {
+      "page": 45,
+      "reviewed": true,
+      "method": "contact_sheet + individual PNG",
+      "status": "요청된 인쇄 결함 발견하지 못함"
+    },
+    {
+      "page": 46,
+      "reviewed": true,
+      "method": "contact_sheet",
+      "status": "요청된 인쇄 결함 발견하지 못함"
+    },
+    {
+      "page": 47,
+      "reviewed": true,
+      "method": "contact_sheet",
+      "status": "요청된 인쇄 결함 발견하지 못함"
+    },
+    {
+      "page": 48,
+      "reviewed": true,
+      "method": "contact_sheet",
+      "status": "요청된 인쇄 결함 발견하지 못함"
+    },
+    {
+      "page": 49,
+      "reviewed": true,
+      "method": "contact_sheet",
+      "status": "요청된 인쇄 결함 발견하지 못함"
+    },
+    {
+      "page": 50,
+      "reviewed": true,
+      "method": "contact_sheet",
+      "status": "요청된 인쇄 결함 발견하지 못함"
+    },
+    {
+      "page": 51,
+      "reviewed": true,
+      "method": "contact_sheet",
+      "status": "요청된 인쇄 결함 발견하지 못함"
+    },
+    {
+      "page": 52,
+      "reviewed": true,
+      "method": "contact_sheet",
+      "status": "요청된 인쇄 결함 발견하지 못함"
+    },
+    {
+      "page": 53,
+      "reviewed": true,
+      "method": "contact_sheet",
+      "status": "요청된 인쇄 결함 발견하지 못함"
+    },
+    {
+      "page": 54,
+      "reviewed": true,
+      "method": "contact_sheet",
+      "status": "요청된 인쇄 결함 발견하지 못함"
+    },
+    {
+      "page": 55,
+      "reviewed": true,
+      "method": "contact_sheet + individual PNG",
+      "status": "요청된 인쇄 결함 발견하지 못함"
+    },
+    {
+      "page": 56,
+      "reviewed": true,
+      "method": "contact_sheet",
+      "status": "요청된 인쇄 결함 발견하지 못함"
+    },
+    {
+      "page": 57,
+      "reviewed": true,
+      "method": "contact_sheet",
+      "status": "요청된 인쇄 결함 발견하지 못함"
+    },
+    {
+      "page": 58,
+      "reviewed": true,
+      "method": "contact_sheet",
+      "status": "요청된 인쇄 결함 발견하지 못함"
+    },
+    {
+      "page": 59,
+      "reviewed": true,
+      "method": "contact_sheet",
+      "status": "요청된 인쇄 결함 발견하지 못함"
+    },
+    {
+      "page": 60,
+      "reviewed": true,
+      "method": "contact_sheet",
+      "status": "요청된 인쇄 결함 발견하지 못함"
+    },
+    {
+      "page": 61,
+      "reviewed": true,
+      "method": "contact_sheet + individual PNG",
+      "status": "요청된 인쇄 결함 발견하지 못함"
+    },
+    {
+      "page": 62,
+      "reviewed": true,
+      "method": "contact_sheet + individual PNG",
+      "status": "요청된 인쇄 결함 발견하지 못함"
+    },
+    {
+      "page": 63,
+      "reviewed": true,
+      "method": "contact_sheet",
+      "status": "요청된 인쇄 결함 발견하지 못함"
+    },
+    {
+      "page": 64,
+      "reviewed": true,
+      "method": "contact_sheet",
+      "status": "요청된 인쇄 결함 발견하지 못함"
+    },
+    {
+      "page": 65,
+      "reviewed": true,
+      "method": "contact_sheet",
+      "status": "요청된 인쇄 결함 발견하지 못함"
+    },
+    {
+      "page": 66,
+      "reviewed": true,
+      "method": "contact_sheet",
+      "status": "요청된 인쇄 결함 발견하지 못함"
+    },
+    {
+      "page": 67,
+      "reviewed": true,
+      "method": "contact_sheet",
+      "status": "요청된 인쇄 결함 발견하지 못함"
+    },
+    {
+      "page": 68,
+      "reviewed": true,
+      "method": "contact_sheet",
+      "status": "요청된 인쇄 결함 발견하지 못함"
+    },
+    {
+      "page": 69,
+      "reviewed": true,
+      "method": "contact_sheet",
+      "status": "요청된 인쇄 결함 발견하지 못함"
+    },
+    {
+      "page": 70,
+      "reviewed": true,
+      "method": "contact_sheet",
+      "status": "요청된 인쇄 결함 발견하지 못함"
+    },
+    {
+      "page": 71,
+      "reviewed": true,
+      "method": "contact_sheet",
+      "status": "요청된 인쇄 결함 발견하지 못함"
+    },
+    {
+      "page": 72,
+      "reviewed": true,
+      "method": "contact_sheet",
+      "status": "요청된 인쇄 결함 발견하지 못함"
+    }
+  ],
+  "overall_status": "34·39쪽의 공통 수식 식별자 렌더 수정 후 재확인 필요. 그 외 요청된 결함은 발견하지 못함."
+}

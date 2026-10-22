@@ -1,0 +1,32 @@
+if ( Sibling-Xolor == RED )•
+Sibling-Xolor = BLACK,
+Successor-Parent-Xolor = RED;
+RBT RotateLeft( ROOt, Successor->Parent ):
+(0 형제가 빨간색인 경우
+-견 ㉨형제가 검은색이며
+if ( SibIing->Left-XoIor == BLACK
+Sibling-Right-XoIor == BLACK )
+: Ø—A 양쪽 자식이 모두 검은색인 경우
+Sibling-XoIor = RED,
+Successor
+else
+Successor—Parent,
+1
+284
+if ( Sibling->Left-XoIor == RED )•; (기-B.완쪽지식이할간색인경우
+Sibling->Left-XoIor = BLACK,
+Sib1ing-X010r
+= RED;
+RBT_RotateRight( ROOt, Sib1ing );
+Sib1ing = Successor->Parent-Right,
+@-C. 오른쪽 자의이 할간색인 경우
+Sib1ing-X010r
+Successor-Parent-Xolor = BLACK,
+Sibling-Right-X010r
+= BLACK,
+RBT_RotateLeft( ROOt, Successor-Parent );
+Successor = (承00t):
+else
+// 이중 옥색 노드가 부모 니c이 오른쪽 자식인 경우
+Successor-Xolor = BLACK,
+Part 02 • 일고리좀

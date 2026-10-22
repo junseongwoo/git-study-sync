@@ -1,0 +1,39 @@
+VOid
+int
+int
+int
+HEAP DeleteMin( Heap* H, HeapNode* ROOt )
+ParentPosition = 0,
+LeftPosition
+RightPosition
+memcpy(Root. &H->Nodes[OI, sizeof대eapNode)),•-
+memset(&H->N0des[이, 0, sizeof대eapNode));
+H->UsedSize--
+R찞에 최솟값을 저장합니다
+합의 첫 번째 요소에 마x학 다*이 값을
+HEAP_SwapNodes( H, 0, H-XlsedSize );•
+LeftPosition
+RightPosition
+while ( 1 )•
+복사합니다
+= HEAP_GetLeftChild( 0
+LeftPosition + 1;
+힙 순서 속성을 만족할 노드와의 결
+교환을 반복힙니다.
+int Se1ectedChild = 0:
+if ( LeftPosition 〉= H->UsedSize )
+break;
+if ( RightPosition 〉= H->UsedSize )
+SeIectedChi1d = LeftPosition;
+else {
+if ( H->Nodes[LeftPositionl.Data 〉 H->Nodes[RightPositionI.Data)
+Se1ectedChild = RightPosition,
+else
+SeIectedChild = LeftPosition,
+if ( H->Nodes[SelectedChiIdI.Data 〈 H->Nodes[ParentPositionl.Data )
+HEAP SwapNodes대, ParentPosition, SeIectedChild);
+ParentPosition = SelectedChild,
+else
+break,
+Chapter 07 • 우선순위 큐와 입
+315

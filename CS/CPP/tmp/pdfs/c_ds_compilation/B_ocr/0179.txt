@@ -1,0 +1,61 @@
+03
+04
+05
+06
+07
+08
+09
+12
+13
+14
+15
+17
+18
+19
+20
+21
+22
+23
+24
+25
+#include <stdio.h>
+#include <stdlib.h>
+typedef char E1ementType,
+typedef struct tagSBTNode
+struct tagSBTNode* Left;
+struct Right;
+E1ementType Data,
+} SBTNode;
+SBTNode* E1ementType NewData );
+VOid
+VOid
+VOid
+VOid
+VOid
+ændif
+SBT_DestrOYNode( SBTNode* NOde ):
+SBT DestroyTree( SBTNode* ROOt );
+SBT_PreorderPrintTree( SBTNode* NOde );
+SBT_InorderPrintTree( SBTNode* Node );
+SBT PostorderPrintTree( SBTNode* Node ):
+04장/BinaryTree/BinaryTree. (
+01
+02
+03
+05
+06
+07
+08
+09
+#include "BinaryTree.h"
+SBTNode* SBT_CreateNode( E1ementType NewData )
+SBTNode* NewNode = (SBTNode*)malIoc( sizeof(SBTNode) );
+NewNode->Left
+NewNode->Right
+NewNode->Data
+return NewNode,
+= NULL;
+= NULL;
+= NewData,
+04 • 트리
+171

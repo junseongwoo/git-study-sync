@@ -1,0 +1,25 @@
+4. main() 함수에서는 두 개의 문자열을 입력받아 LCS-BruteForce() 함수를 호출하고, 그 결과
+를 출력합니다.
+int main()
+string A, B,
+cin 〉〉 A 〉〉 8;
+int LCS = LCS_BruteForce(A, B, 0, 0, {});
+cout 〈〈 A 〈〈 "와 " 〈〈 〈〈 "의 최장 공통 부분 시퀀스 길이: " 〈〈 LCS 〈〈 endl;
+5. DEBUG가 0으로 설정되지 않았다면 stderr로 부분 시권스를 출력하려고 합니다. 다만 출력을
+위한 코드가 매우 복잡하므로 부분 시권스 출력 함수 printsubsequences()를 따로 정의하여
+사우하겠습니다.
+void PrintSubsequences(string A, string 8)
+// 람다 함수를 이용한 정렬
+sort(found.begin(), found end(), [l(auto a, auto
+// 부분 시퀀스 길이를 기준으로 정렬
+if (a.size() != b.size())
+return a.size() 〈 b.size();
+// 두 부분 시퀀스 길이가 같다면 인덱스의 사전 순서로 정렬
+return a 〈 b;
+// 중복 제거
+found.erase(unique(found.begin(), found.end()), found.end());
+int previousSize = 0;
+for (autO subsequence : found)
+if (subsequence.size() != previousSize)
+previousSize = subsequence. ),•
+PRINT("SIZE = •• 〈〈 previousSize 〈〈 endl);

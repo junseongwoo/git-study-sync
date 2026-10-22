@@ -1,0 +1,33 @@
+elonent get_rear(DcquoTypo *다)
+if (is-empty(q))
+error("9가 공백상태입니다") ;
+return q->data(q->rear] ;
+int main(void)
+DequeType queue;
+nit_deque (&queue) ;
+for (inti : 0; <3•, 5++) {
+add front(&queue, 5);
+deque_print(&queue) ;
+for (int i : 0; 〈 3; i++) {
+delete_rear(&queue) ;
+deque-print(&queue) ;
+return 0;
+실행결과
+DEQUE(front=4 rear=0) = 0
+=IIOI
+DEWE(front=3 rear=0)
+=2|1|이
+DEQUE(front=2 rear=0)
+=211|
+DEQUE(front=2 rear=4)
+DEQUE(front=2 rear=3) = 2
+DEQUE(front=2 rear=2)
+연결된 「핵의 구현
+스택이나 큐와 같이 덱도 연결 리스트로 구현할 수 있다. 그러나 연결된 덱을 구현하는 것은 연
+결된 스택이나 큐에 비해 더 복잡하다. 스택이나 큐와는 달리 덱은 전단과 후단에서 모두 삽입,
+삭제가 기능하기 때문에 하나의 노드에서 알아야 할 정보가 더 많다. 구체적으로는 선행노드
+와 후속노드를 가리키는 포인터 변수를 가져야 하는데, 이러한 구조를 이중 연결 리스트(double
+linked list)라고 부른다. 이중 연결 리스트는 7장에서 공부한다.
+01 넥을 큐처럼 사용하러면 enqueue()와 dequeue() 대신에 어떤 연산들을 호출하여야 하는가?
+02 넥을 스택처럼 사용하려면 push()와 p叩() 대신에 어떤 연산들을 호출하여야 하는가?
+CHAPTERJ5 큐 167

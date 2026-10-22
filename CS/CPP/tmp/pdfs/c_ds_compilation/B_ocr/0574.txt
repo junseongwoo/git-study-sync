@@ -1,0 +1,49 @@
+while ( CurrentAmount 〉= CoinUnit )
+22
+23
+24
+25
+26
+27
+28
+29
+32
+33
+34
+CoinUnits[i], Change[i] );
+35
+36
+CoinCount++;
+CurrentAmount
+return CoinCount;
+CurrentAmount - CoinUnit;
+void PrintChange( int CoinUnits[I, int Change[l, int Size )
+int i=@;
+for ( i=O; i<S1ze; i++ )
+printf( •田d원 : %d개\n"
+14장/NakingChange/TestNakingChange. (
+01
+02
+03
+04
+05
+07
+08
+09
+10
+12
+13
+14
+16
+*include "MakingChange.h"
+#include <stdio.h>
+$include <stdlib.h〉
+int Compare( const void* 하 const VOid* b )
+int _a = *(int*)a,
+int -b = *(int*)b;
+return 1;
+else
+return -1,
+int main( void )
+576
+Part 03 • 알고리즘 설계 기법

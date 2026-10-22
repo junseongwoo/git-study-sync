@@ -1,0 +1,27 @@
+if ( (*Head) == NULL )
+*Head = NewNode,
+(*Head)->NextNode - *Head,
+(*Head)-PrevNode = *Head,
+else
+// 테일과 헤드 사이에 NewN0de를 삽입한다.
+Node* TaiI = (*Head)->PrevNode;
+TaiI->NextNode-PrevNode = NewNode,
+Tail->NextNode = NewNode;
+NewNode->NextNode = (*Head);
+새로운 테일의 PrevNode가 기존의 테일을 가리킨다.
+NewNode->PrevNode = Tai1; //
+노드 삭제 연산
+노-드 삭제 연산 역시 테일과 헤드가 연결되어 있다는 사실에 주의해야 하지만, 더블 랑크드 리스트
+의 것과 비교했을 때 크게 다른 점은 없습니다.
+void CDLL RemoveNode(Node** Head, NOde* Remove)
+if ( *Head == Remove )
+(*Head)->PrevNode->NextNode
+(*Head)->NextNode->PrevNode
+*Head = Remove->NextNode,
+Remove->PrevNode = NULL;
+Remove->NextNode = NULL;
+else
+Remove->Nex tNode ,
+Remove-PrevNode ,
+Chapter 01 • 리스트
+59

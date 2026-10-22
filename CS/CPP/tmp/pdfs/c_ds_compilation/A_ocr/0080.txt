@@ -1,0 +1,35 @@
+일고리좀3.1 전치 행렬
+새로운 구조체 bß 생성한다.
+구조체 저장된 모든 요소에 대하여 다음을 반복
+b.data[bindex] = a.data(i] .cot;
+b.data(bindex] .cot = a.data[i]
+b.data[bindex] .value = a.data[i] .value;
+bindex++;
+여기서 약간 어려운 점은 새로운 전치 행렬을 만들 때. 낮은 행부터 높은 행까지 순서대로 지
+장되어야 한다는 점이다. 어떻게 하는 것이 좋을까? 기존 행렬의 열이 행으로 변경되기 때문에
+0열을 먼저 처리하고 1열을 이어서 처리하면 전치 행렬이 행 순서대로 작성된다. 즉 0열에 있는
+요소를 모두 찾아서 전치 행렬의 0행으로 저장하고. 이어서 1열의 요소를 모두 찾아서 1행으로
+저장하면 된다.
+프로그램 3.5 matnx2.c 행렬 프로그램 #2
+#include <stdio.h〉
+#include <stdlib.h>
+#define MAX_TERMS 100
+typedef struct {
+int C01•,
+int value;
+} element;
+typedef struct SparseMatrix {
+element data[MAX_TERMS] ;
+int cols;
+1 nt terms;
+} SparseMatrix•
+// 행의 개수
+// 열의 개수
+// 항의 개수
+SparseMatrix matrix_transpose2(SparseMatrix a)
+SparseMatrix b•
+int bindex;
+// 행릴 과서 현재 저장 위치
+b.cols = a.cols;
+다lAPTERD3 배열, 구조체, 포인터
+87

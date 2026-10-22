@@ -1,0 +1,54 @@
+typedef Struct {
+int data;
+struct TreeNode *left,
+) TreeNcxie;
+十
+十
+// 1 4 16 25
+*right;
+TreeNode
+TreeNode
+TreeN0de
+TreeNode
+TreeN0de
+TreeNode
+TreeN0de
+TreeNode
+nl
+n2
+n3
+n4
+n5
+n6
+n7
+: { 1, NULL, NULL }•,
+= { 4, NULL, NULL };
+= { 16, NULL, NULL };
+= { 25, NULL, NULL }•,
+*exp
+// 수식 계산 함수
+int evaIuate(TreeNcKde *root)
+if (root == NULL)
+return 0;
+if *〉left == NULL *〉right -= NULL)
+return root—>data;
+else {
+int 0P1 = evaluate(root->left) ;
+int 0p2 = evaluate(root->nght) ;
+printf("%d %c %d을 계산합니다.\n", 0야, root->data, 0p2);
+switch (root->data) {
+case |十| •
+return 0야 + 0p2;
+case
+return 0p1 - 0p2;
+case | *' •
+return 0야 * 叩2;
+case ' /
+return 0P1 / 叩2•,
+return 0;
+int main(void)
+printf("수식의 값은 9던입니다.
+return 0;
+년", evaluate(exp));
+트리
+285

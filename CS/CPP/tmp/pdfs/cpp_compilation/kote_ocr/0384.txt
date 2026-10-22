@@ -1,0 +1,27 @@
+만약 total weight 〈 weight(il이면:
+DP(i, total weight) = DP(i - 1, total weight)
+그렇지 않으면:
+DP(i, total-weight) = 다음 중 최댓값:
+1) DP(i - 1, t0tal weight)
+2) DP(i - 1, t0tal weight - weight(i]) + value[il
+여기서 전체적인 알고리즘의 흐름은 실질적으로 같다는 점을 알 수 있습니다. 집합의 원소 개수와
+집합 원소의 합으로 크기가 한정된 2자원 검색 공간을 탐색하면서 새로운 부분집합의 합을 찾을
+수 있는지 여부를 결정합니다. 다만 차이점은 단순히 특정 부분집합의 합이 존재하는지 여부를 기
+록하는 것이 아니라, 선택된 항목들의 부분집합이 구성하는 무게를 고려하여 최대 가격을 찾는다
+는 점입니다. 다음 연습 문제에서 이러한 내펑을 구현해보겠습니다.
+9.42 연습 문제 41: 0-1 배낭 문제
+이번 연습 문제에서는 앞서 설명한 0-1 배낭 문제 로직을 상향식 毳레이션 방법으로 구현해보
+겠습니다.
+1. 필요한 헤더 파일을 포함합니다.
+#include <iostream〉
+#include 〈vector〉
+#include 〈algorithm〉
+usxng namespace std;
+2. 먼저 main() 함수에서 입력을 처리하는 부분을 만들겠습니다. 두 개의 정수형 변수 items와
+capacity를 선언하괴 표준 입력으로 값을 지정하겠습니다. items는 전체 물건 개수를 나타내
+고, capacity는 배낭의 제한 용량을 나타냅니다. 그리고 value와 weight 벡터에 각 물건의 가
+격과 무게 정보를 저장합니다.
+int main()
+int items, capacity;
+cin 〉〉 items 〉〉 capacity;
+vector<int〉 values(items), weight(items);

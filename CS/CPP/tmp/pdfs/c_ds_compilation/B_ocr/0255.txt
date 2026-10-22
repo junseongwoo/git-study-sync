@@ -1,0 +1,35 @@
+47
+48
+49
+50
+51
+52
+53
+54 }
+// 구매포인트가 671.78점인 고객 찾기
+found = BinarySearch( DataSet, Length, 671.78 );
+printf("found. ID: 년, Point: %f \n", found->id, found->point );
+return 0;
+돈 실행 결과
+found ID: 1780, Point: 671 780000
+63.4 C 언어 표준 라이브러리의 이진 탐색 함수: bsearch( )
+C 언어 표준 라이브러리에 퀵 정렬을 구현한 qsort() 함수가 있는 것처럼 이진 탐색을 구현한
+bsearch() 함수도 있습니다. 덕분에 우리는 성능이나 버그 걱정 없이 이진 탐색 초식을 마음껏 쓸
+수 있지요. bsearch( ) 함수의 원형은 다음과 같습니다.
+void *bsearch(
+const VOid *key,
+const void *base,
+size_t num,
+size t width,
+// 찾고자 하는 목표값 데이터의 주소
+// 데이터 배열의 주소
+// 데이터 요소의 개수
+// 한 데이터 요소의 크기
+int (- cdecl *compare)(const VOid *, const void *)
+// 비교 함수에 대한 포인터
+이 함수의 첫 번째 매개 변수 key는 찾고자 하는 목표값 데이터의 주소입니다. 두 번째 매개 변수
+base는 데이터 배열의 주소를 가리기는 포인터이고. 세 번째 매개 변수 num은 그 데이터 요소의
+개쉬 즉 데이터의 크기입니다. 네 번째 매개 변수 width는 데이터 요소 하나의 크기 (바이트 단위)
+이며. 마지막 매개 변수는 비교를 수행한 결과를 반환하는 함수에 대한 포인터입니다. 비교 함수에
+대해서는 5장의 qsort ( ) 함수 설명을 참고하세요.
+248 Part 02 • 알고리즘

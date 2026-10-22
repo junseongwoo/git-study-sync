@@ -1,0 +1,53 @@
+266
+rdt—rcv(rcvpkt) &&
+(corrupt (rcvpkt) | |
+has—seql (rcvpkt) ) )
+compute chksum
+CHAPTER 03 • 트랜스포트 계층
+rdt—rvc (rcvpkt) && notcorrupt (rcvpkt)
+&& has—seqO (rcvpkt)
+extract data)
+deliver—data (data)
+compute chksum
+make—pkt (sendpkt, ACK, chksum)
+udt—send (sndpkt)
+하위로부터
+하위로부터
+0을 기다림
+1을 기다림
+rdt_rcv(rcvpkt) &&
+(corrupt (rcvpkt) | |
+has—seqO (rcvpkt) ) )
+compute chksum
+ma ke—pkt (sndpkt, NÄK, chksum)
+udt—send (sndpkt)
+make—pkt (sndpkt, NÄK, chksum)
+udt—send (sndpkt)
+rdt—rvc (rcvpkt) && notcorrupt (rcvpkt)
+&& has—seql (rcvpkt)
+extract (rcvpkt, data)
+deliver_data (data)
+compute chksum
+make—pkt (sendpkt, ÄCK, chksum)
+udt—send (sndpkt)
+그림 3.57 • rdt 2.1에 대한 올바르지 않은 수신자
+자. (여기서 보기 편하게 하기 위하여 한 바이트마다 한 간 띄웠다.) 그 호스트는
+모든 필요한 필드에(체크성 필드는 제외) 16-비트 워드를 더하고 난 후 (Ⅸ)11%10
+101값을 얻는다고 하자. 이 세그먼트는 정확하게 수신된 것일까 아닐까? 수
+신자는 무엇을 하는가?
+P5. UDP 수신기가 수신된 UDP 세그먼트에 대한 인터넷 체크섬을 계산하고 체크섬
+필드에서 온 값과 대응되는 것을 찾았다고 가정하자. 수신자는 비트 오류가 발생
+하지 않았다고 절대적으로 확신할 수 있을까? 설명하라.
+P6. 프로토콜 rdt2 .1을 수정하려는 동기를 고려해 보자. 그림 3.57에 보여진 수신
+자가 그림 3.11에 보여진 송신자와 동작할 때, 송신자와 수신자를 교착상태
+(deadlock state)로 끌고 간다는 것을 보여라. 이 교착상대라 함은 각자 일어나지
+않을 사건을 기다린다는 것이다.
+P7. 프로토콜 ret3 . 0에서, 수신자에서 송신자로 가는 ACK 패킷에 순서번호가 없
+*비록 그것들이 확인응답하는 패킷의 순서번호를 포함하는 ACK 필드는 있지
+만). ACK 패것들에 순서번호가 필요하지 않는 이유는 무엇인가?
+P8. 프로토콜 rdt3 . 0의 수신 측에 대한 FSM을 그려라.
+P9. 데이터 패킷과 확인응답 패킷이 뒤섞여 있을 때, 프로토콜 rtd3 . 0 동작 추적을
+하라. 이 동작 추적은 그림 3.16에서 시용되는 방식과 비슷해야 한다.
+PI(1 패킷이 손실될 수 있으나 최대 지연 시간은 알려져 있는 그런 채널을 고려해 보
+자. 송신자의 타임이웃과 재전송을 포함하는 rdt2 . 1 프로토콜을 수정하라. 그
+리고 왜 여러분의 프로토콜이 이 채널에서 정확하게 통신할 수 있는지 간단하게

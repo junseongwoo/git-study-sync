@@ -1,0 +1,20 @@
+if b「eak;
+printf("[,d) 한, root->data);
+「예t = 「㈀t-〉right;
+15
+20
+// 1 16
+25
+TreeNode nl : { 1, NULL, NULL };
+n2 = { 4, &nl, NULL }•,
+n3 = { 16, NULL, NULL };
+TreeNode n4 = { 25, NULL, NULL }•,
+TreeNode n6 = { 15, &n2, &n5 };
+TreeNode = &n6;
+int main(void)
+pnntf("중위 순회=") ;
+pnntf("\n");
+return 0;
+실행결과
+중위 순회=[1] [4] [15] [16] [2이 [25]
+278 C언어로 쉽게 불어쓴 자료구조

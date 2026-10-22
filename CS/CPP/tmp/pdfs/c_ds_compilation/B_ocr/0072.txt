@@ -1,0 +1,64 @@
+023
+024
+025
+026
+027
+028
+029
+0꾜
+031
+032
+033
+034
+035
+036
+037
+0죠
+039
+041
+042
+043
+€44
+045
+046
+047
+049
+050
+051
+052
+053
+054
+055
+056
+057
+058
+059
+%1
+%2
+// 하드 노드가 NULL이라면 새로운 노드가 Head가 된다.
+if ( (러e던) == WLL )
+러e던 = NewNode
+(*Head)->NextNode = *Head;
+(•Head)-PrevNode = *Head,
+eIse
+// 테일과 헤드 사이에 NewNode를 삽입한다.
+No血* TaiI = (*Head)->PrevNode,
+TaiI->NextNode-PrevNode = NewNode,
+TaiI->NextNode = NewNode,
+NewNode->NextNode - (*Head);
+NewNode-PrevNode = Tail; //
+// 노드 삽입
+새로운 테일의 *가 기존의 테일을 가리킨다.
+void CDLL-InsertAfter(Node* Current, NOde* NewNode)
+NewNode->NextNode = Current->NextNode,
+NewNode-PrevNode = Current;
+if ( Current->NextNode != NULL )
+Current->NextNode-PrevNode
+Current->NextNode = NewNode,
+NewNode ,
+// 노드 제거
+void CDLL-RemoveNode(Node** Head, Node* Remove)
+if ( 러e던 == Remove )
+(•Head)-PrevNode->NextNode = Remove->NextNode
+62
+Part 01 • 자료구조

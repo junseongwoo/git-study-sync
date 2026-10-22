@@ -1,0 +1,56 @@
+39
+40
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+62
+63
+64
+65
+66
+LCRSNode* TempNode = Parent->LeftChi1d;
+while ( TempNode->RightSibIing != NULL )
+TempNode = TempNode->RightSib1ing,
+TempNode->RightSib1ing = ChiId,
+void LCRS PrintTree( LCRSNode* NOde, int Depth )
+// 들여쓰기
+int i=@;
+for ( i=O; iOepth-1; i++ )
+printf(" “); // 공백 3간
+if (Depth 〉 0) // 자식 노드 여부 표시
+// 노드 데이터 출력
+printf("%c\n", Node-»ata);
+if ( Node->LeftChi1d != NULL )
+LCRS PrintTree(Node->LeftChiId, Depth+1 ):
+if ( Node->RightSibling != NULL )
+LCRS_PrintTree(Node->RightSibling, Depth);
+ue/LCRSTree/Test—LCRSTree. (
+01
+02
+03
+04
+05
+06
+07
+*include "LCRSTree.h"
+int main( VOid )
+// 노드 생성
+LCRSNode* ROOt =
+Chapter 04 • 트리
+157

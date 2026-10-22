@@ -1,0 +1,27 @@
+singly—ll_iterator result = *this;
+return result;
+6. 두 반복자가 같은지를 판단하는 관계 연산자 함수를 friend로 정의합니다.
+friend b001 operator==(const singly—ll_iterator& left,
+5. 선행 증가와 후행 중가를 위한 ++ 연산자 함수를 구현합니다.
+singly-ll() = default;
+singly_ll_iterator& operator十十()
+ptr = ptr-〉next;
+return *this;
+singly_ll_iterator operator+十(int)
+// 선행 증가
+// 후행 증가
+const
+return left.ptr == right.ptr;
+friend b001 operator!=(const singly—ll_iterator& left,
+const
+return left.ptr != right.ptr;
+7. 다시 singly-ll 클래스 구현으로 돌아오겠습니다. 앞에서 singly-ll 클래스를 위한 반복자를
+정의했으므로, begin( )과 end() 함수를 추가합니다. 두 함수의 const 버전도 함께 추가합니다.
+singly—ll—iterator begin() { return singly—ll—iterator(head); }
+singly-ll—iterator end() { return singly_II_iterator(NULL); }
+singly-ll—iterator begin() const { return singly—ll—iterator(head); }
+singly—ll—iterator end() const { return singIy_II_iterator(NULL); }
+8. 기본 생성자, 깊은 복시를 위한 복사 생성자, 초기화 리스트(initialire list)를 久卜&하는 생성자를
+singly—ll—iterator& right)
+singly—ll—iterator& right)
+추가합니다.

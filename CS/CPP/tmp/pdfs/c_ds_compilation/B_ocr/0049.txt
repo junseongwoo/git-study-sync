@@ -1,0 +1,61 @@
+056
+057
+058
+059
+060
+061
+062
+063
+065
+066
+067
+068
+069
+070
+071
+072
+073
+074
+075
+076
+077
+078
+079
+080
+081
+082
+083
+085
+086
+087
+088
+089
+090
+091
+092
+093
+094
+095
+NewHead->NextNode = (*Head);
+(*Head) = NewHead,
+// 노드 제거
+void SLL_RemoveNode(Node** Head, Node* Remove)
+if ( *Head == Remove )
+*Head = Remove->NextNode,
+else
+Node* Current = *Head;
+while ( Current != NULL Current->NextNode != Re,TD./e )
+Current = Current->NextNode,
+if ( Current != NULL )
+Remove->NextNode;
+Current->NextNode
+// 노드 탐색
+Node* SLL GetNodeAt(Node* Head, int Location)
+Node* Current = Head;
+while ( Current != NULL (--Location) 〉= 0)
+Current = Current->NextNode,
+return Current;
+// 노드 개수 세기
+int SLL-GetNodeCount(Node* Head)
+Chapter 01 • 리스트
+39

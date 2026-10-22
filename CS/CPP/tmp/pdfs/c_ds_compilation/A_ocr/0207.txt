@@ -1,0 +1,23 @@
+// 다항식 1을 생성
+insert_last(listl, 3, 12);
+2, 8);
+insert last(listl,
+insert last(listl,
+// 다항식 2를 생성
+8, 12);
+insert last(list2,
+insert last(tist2, -3, 10);
+10, 6);
+nnsert last(list2,
+p01y-print(list2) ;
+// 다항식 3 : 다항식 1 + 다항식 2
+poly-add(listl, 15st2, Iist3);
+p01y-print(Iist3) ;
+free(listl); free(Iist2); free(list3);
+실행결과
+polynomial - 3A12 + 2A8 + 1A0 +
+polynomal - 8^12 + -3A10 + 10A6 +
+polynomi al
+11A12 + -3A10 + 2A8 + 10A6 + 1A0 +
+CHAPTER06 연결 리스트 |
+215

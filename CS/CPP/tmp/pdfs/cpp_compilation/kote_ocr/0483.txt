@@ -1,0 +1,25 @@
+// 유효하지 않은 그래프에 대해 V 값을 -1로 설정
+if (!used[il[il)
+break;
+4. 그래프의 세 가지 타입 VA니D, INVA니D. INTERESTING을 열거형 상수로 정의합니다.
+enum RESULT
+VA니D,
+INVA니D,
+INTERESTING
+5. ) 함수 앞부분에서는 콘솔로부터 그래프 정보를 입력받습니다. 그리고 주어진 iterations
+횟수만큼 그래프를 생성하고 TestGraph() 함수를 호출하여 그래프 타입을 확인합니다. 각각
+의 그래프 타입 개수를 세어 정수형 변수 invalid, valid, interesting에 저장합니다.
+int main()
+long seed;
+int iterations, V, 타•
+〉〉 seed;
+C1n
+〉〉 iterations;
+C1n
+C1n
+int invalid = 0;
+int valid = 0;
+int interesting = 0;
+srand(seed);
+while (iterations
+Graph G(V, E);

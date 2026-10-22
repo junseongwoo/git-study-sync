@@ -1,0 +1,22 @@
+6. 앞의 결과에서 전수 조사 연산 시간은 당연히 추가지인 부문 문자열 한 때Æ부에 더 오래 결
+린 결과입니다. 소스 코드에서 값을 0으~로 변경하여 다시 실행하면 니유괴 같은 결과를
+화인할 수 있습니다.
+ABCABDBEFBA와 ABCBEFBEAB의 월장 공홍 부분 시원스 길이: 8
+BRUTE FNCE 방법 경과 시간: 0.鸞55
+ABCABDBEF8A와 ABCBEFBEAB의 41장 공통 부분 시원스 길이: 8
+믈E劂12AT10N 방법 경과 시간: 0.0襴2
+7. 이번에는 좀 더 긴 문자열을 입력으로 사용해보겠습니다 프로그램을 실행하고 ABZCYDABAZADAEA
+와 YABAZADB8EAAECYACAZ 문자열을 지 정하세요. 그러면 나음과 같은 결괴를 확인할 수 있습니다.
+ABZCYDABAZADAEA와 YABAZADBBEAAECYACAZ의 최장 공통 부분 시퀀스 길이: 10
+BRUTE FORCE 방법 경과 시간: 8.47842
+ABZCYDABAZADAEA와 YABAZADBBEAAECYACAZ의 최장 공통 부분 시퀀스 길이: 10
+테E믈이ZATION 방법 경과 시간: 0.00008
+No十e= 실제 출력 시간은사용하고있는시스템 성능에 따라 다르게 L斟날수 있습니다. 여기서는 시간 차이
+에 주목하기 비람니다.
+실행 결과를 통해 메모이제이션 방법이 훨씬 빠르게 동작하는 것을 확인할 수 있습니다.
+A.8.3 실습 문제 20: 타뷸레이션을 이용하여 최장 공통 부분 시퀀스 찾기
+실습 문제 19에서 작성했던 소스 코드에 이번에는 ) 함수를 추가하겠습니다.
+1. LCS-Tabu1ation() 함수는 두 개의 문자열 A와 B를 인자로 받고, 최장 공통 시퀀스 문자
+열을 반환합니다.
+string LCS TabuIation(string A, string B)
+518

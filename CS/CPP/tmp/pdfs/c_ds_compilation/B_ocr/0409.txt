@@ -1,0 +1,59 @@
+52
+09 장 /GraphTraversa1/Test—GraphTraversal. (
+01
+02
+03
+04
+06
+07
+09
+10
+13
+14
+17
+20
+22
+23
+24
+25
+26
+27
+29
+30
+31
+32
+33
+#include "Graph h"
+•include "GraphTraversal h"
+int main( VOid )
+int
+MOde = 0;
+Graph* graph = CreateGraph();
+= CreateVertex( 1 ):
+Vertex* VI
+CreateVertex( 2 ),•
+Vertex* V2
+Vertex* V3 = CreateVertex( 3 ):
+CreateVertex( 4 )•,
+Vertex* V4
+Vertex* V5 - CreateVertex( 5 ),•
+CreateVertex( 6 )•,
+Vertex* V6
+CreateVertex( 7 )•,
+Vertex* V7
+AddVertex( graph, VI ):
+AddVertex( graph, V2 ):
+AddVertex( graph, V3 );
+AddVertex( graph, V4 ):
+AddVertex( graph, V5 ):
+AddVertex( graph, V6 );
+AddVertex( graph, V7 );
+// 정점과 정점을 간선으로 잇기
+AddEdge( VI, CreateEdge(V1, V2, 0) ),•
+AddEdge( VI, CreateEdge(V1, V3, 0) ):
+AddEdge( V2, CreateEdge(V2, V4, 0) ),•
+AddEdge( V2, CreateEdge(V2, V5, 0) )
+AddEdge( V3, CreateEdge(V3, V4, 0) );
+AddEdge( V3, CreateEdge(V3, V6, 0) ),•
+Chapter • 그래프
+405

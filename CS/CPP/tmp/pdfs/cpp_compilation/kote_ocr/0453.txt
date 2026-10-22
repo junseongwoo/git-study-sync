@@ -1,0 +1,25 @@
+6. 이메일 주소를 검색하는 함수를 작성합니다.
+b001 mayContain(const std: :string& key)
+hash(key);
+for (aut0 it = &hashValue[@l; it 〈 &hashVaIue[nHashesl; it++)
+if (!bits[*it bits.size()l)
+std::cout 〈〈 key 〈〈 " : 사용할 수 있는 이메일입니다.•• 〈〈 std::endl;
+return false;
+std::cout 〈〈 key 〈〈 : 이미 사용 중입니다." 〈〈 std::endl;
+return true,
+7. main() 함수를 작성합니다.
+int main()
+BloomFilter b100m(128, 5);
+b100m.add("abc@gilbut.com ")•,
+b100m. add( "xyz@gilbut.com/ ) ;
+bIoom.mayContain("abc");
+b100m. "xyz@gilbut.com/ ) ;
+bloom.mayContain("xyz");
+b100m. add( "abcd@gilbut.com/ );
+b100m add("ab@gilbut.com/);
+bloom.mayContain("abcd");
+bloom.mayContain("ab@giIbut.com/);
+지금까지 작성한 코드를 실행하면 다음과 같은 출력을 확인할 수 있습니다.
+볼룸 필터에 추가: abc@gilbut.com
+볼룸 필터에 추가: xyz@gilbut.com
+466

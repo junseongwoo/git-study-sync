@@ -1,0 +1,50 @@
+15 &/NQueens/NQueens. (
+01
+03
+04
+05
+07
+09
+12
+13
+14
+16
+17
+18
+20
+21
+22
+23
+24
+25
+27
+28
+29
+32
+33
+34
+35
+•incll..de •Qæens.h•
+tinclude 〈효diO.h〉
+•include 〈stdlib.h〉
+void FindSoIutionForQueen(int CoIumns[l, int RO”,
+int Number0fQueens, int* SoIutionCount)
+if ( IsThreatened( COIumns, RO넓 ) )
+return;
+if ( RO믈 == NW1berOfQueens-1 )
+pnntf($olution 圊 : \n", ++(*SoIutionCount));
+PrintSolution( CoIumns, Number0fQueens );
+else
+int i;
+for ( i=@; i<NumberOfQueens; i++ )
+(oltnns[RO류+11 = i;
+FindS01utionForQueen ( C01umns, RO법+1,
+Number0fQueens, SoIutionCount ),•
+int IsThreatened ( int (01뼤ns[1, int NewRow )
+int CurrentRow = 0:
+int Threatened = 0;
+while ( CurrentRow 〈 NewRow )
+if ( (01″s(Ne넓RO미 == C01umns(CurrentRowl
+11 abs ((01圓s[NewRO”1 - Columns[CurrentRowl)
+634
+Pa『t 03 • 알고리좀 설계 기법

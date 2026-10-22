@@ -1,0 +1,23 @@
+이고 또 어떤 알고리즘의 증가 함수가 37,, +5라고 한다면. 두 알고리즘의 수행 시간은 모두 점근적
+0 구 n3을 넘어서지 않으므로 이들의 수행 시간은 O(n3)이라고 표현할수 있다는 의미입니다.
+O(n )
+2n +4"
+2
+2
+37,1+5
+그나저나 앞에 나온 표에서 삽입 정렬이 최악의 경우 O(n2)의 수행 시간을 보인다고 했지요? 실제
+도 그런지 삽입 정렬을 소환해서 한번 분석해보겠습니다.
+VOid InsertionSort(int DataSet[l, int Length)
+int i = 0;
+int j = 0;
+int value = 0;
+for ( i=l; i<Length; 1++ )•
+if ( DataSet(i-11 〈= DataSet[il )
+continue,
+value
+= DataSet[il;
+if (DataSet[jl 〉 value)
+memove(OataSet[j+II, OataSet(jl, sizeof(DataSet[이) * (i-j));
+DataSet[jl = value;
+break,
+Chapter 11 • 알고리중 성능 문석 505

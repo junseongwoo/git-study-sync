@@ -1,0 +1,32 @@
+원만을 이동한다는 것은 그냥 화면에 어디서 어디로 이-동한다고 출력해주면 된다. 따라서 다
+음과 같은 프로그램 기8이 얻어진다.
+프로그램 2.8 하노이의 탑 문제 프로그램
+#include <stdio.h〉
+void hanoi_toær(int n, char from, char tmp, char tO)
+if (n == 1) printf("원판 1을 %c 에서 %c으로 옮긴다.\n", from, to);
+else {
+hanoi_tooer(n - 1, from, tO, tmp);
+printf("원판 %d을 %c에서 %c으로 옮긴다.\n", n, from, to);
+hanoi_tovær (n
+int main(void)
+hanoi _tow•er (4 ,
+return 0;
+1, tmp, from, tO);
+프로그램의 출력은 다음과 같다.
+실행결과
+원판 1을 A 에서 B으로 옮긴다.
+원판 2을 A에서 C으로 옮긴다.
+원판 1을 에서 C으로 옮긴다.
+원판 3을 A에서 B으로 옮긴다.
+원판 1을 C 에서 A으로 옮긴다.
+원판 2을 C에서 B으로 옮긴다.
+원판 1을 A 에서 B으로 옮긴다.
+원판 4을 A에서 C으로 옮긴다.
+원판 1을 8 에서 C으로 옮긴다.
+원판 2을 B에서 A으로 옮긴다.
+원판 1을 C 에서 A으로 옮긴다.
+원판 3을 따서 C으로 옮긴다.
+원판 1을 A 에서 B으로 옮긴다.
+원판 2을 A에서 C으로 옮긴다.
+원판 1을 B 에서 C으로 옮긴다.
+CHAPTER02 순환 61

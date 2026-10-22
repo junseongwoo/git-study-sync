@@ -1,0 +1,56 @@
+53
+54
+55
+56
+57
+58
+59
+60
+62
+63
+64
+65
+66
+67
+68
+69
+70
+72
+73
+74
+75
+// 왼쪽 하위 트리 출력
+SBT-InorderPrintTree( Node->Left );
+// 부리 노드 출력
+printf( “ %c" Node->Data ):
+// 오른쪽 하위 트리 출력
+SBT_InorderPrintTree( Node-Right );
+void SBT PostorderPrintTree( SBTNode* NOde )
+if ( Node == NULL )
+return;
+// 왼쪽 하위 트리 출력
+SBT_PostorderPrintTree( Node->Left ):
+// 오른쪽 하위 트리 출력
+SBT_PostorderPrintTree( Node->Right );
+// 부리 노드 출력
+printf( • *(“ Node->Data );
+ue,/BinaryTree/Test—BinaryTree. (
+01
+02
+03
+04
+06
+07
+08
+09
+$include "BinaryTree.h"
+int main( void )
+// 노드 생성
+SBTNode* A = SBT_CreateNodeCA');
+SBTNode* B = SBT CreateNode('B');
+SBTNode* ( = SBT_CreateNode('C');
+SBTNode* D = SBT_CreateNode('D');
+SBTNO&* E = SBT_CreateNodeCE');
+SBTN0de* F = SBT_CreateNode('F');
+Chapter 04 • 트리
+173

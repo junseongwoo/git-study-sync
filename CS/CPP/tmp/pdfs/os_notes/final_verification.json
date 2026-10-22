@@ -1,0 +1,28 @@
+{
+  "output": "C:\\Users\\user\\Desktop\\Obsidian\\git-study-sync\\CS\\CPP\\output\\pdf\\운영체제 요약 정리.pdf",
+  "output_sha256": "204f426fc23ef13d9b90da9e648ff48435c34e3cfddd341892774ca783a6b110",
+  "output_pages": 219,
+  "original_pages_reviewed": 615,
+  "all_provided_chapters_present": true,
+  "all_615_pages_read": true,
+  "source_mapping_errors": [],
+  "source_crops": 53,
+  "all_source_crops_exact": true,
+  "all_53_images_pixel_exact_in_pdf": true,
+  "pdf_qa_errors": [],
+  "visual_review": "초기 통합본 전 페이지를 렌더링해 연락판으로 검수하고, 수정된 목차·도표·후반 페이지를 최종 렌더링본으로 재검수했다. FAT/inode/WAFL의 축소 도표는 개별 페이지 크기로 읽기 가능함을 확인했다.",
+  "manual_sparse_page_reviews": [
+    {
+      "page": 34,
+      "finding": "원문 RPC 흐름도를 읽기 가능한 크기의 온전한 그림으로 다음 페이지에 유지한다. 앞 페이지의 여백은 이 배치에 따른 것이다."
+    },
+    {
+      "page": 219,
+      "finding": "최종 점검표의 자연스러운 마지막 페이지이다."
+    }
+  ],
+  "source_limitations": [
+    "제2장 및 제16~21장·부록 본문 미제공",
+    "원문에 수치·표기 불일치가 있는 부분은 확인 필요로 보존"
+  ]
+}

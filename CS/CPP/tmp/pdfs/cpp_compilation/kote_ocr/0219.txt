@@ -1,0 +1,28 @@
+autO edges = G.edges(i);
+for (auto& e : edges)
+os 〈〈 endl;
+return 05 ;
+No눈三 여기서 구현한Graph구조체는처음 정점 개수를 설정하면 이후 변경할 수 없습니다. 또한 에지 추
+가는 구현되어 있지만, 에지 삭제는 연습 문제에서 사용하지 않으므로 구현하지 않았습니다.
+7. 이제 크루스칼 최소 신장 트리 알고리주을 구현합니다.
+// 트리도 그래프로 표현할 수 있으므로 최소 신장 트리도 Graph 객체로 반환합니다.
+// 다만 여기에는 사이클이 있으면 안 됩니다.
+template 〈typename T〉
+Graph<T〉 minimum-spanning_tree(const Graph<T>& 6)
+// 에지 가중치를 이용한 최소 힙 구성
+priority-queue〈Edge〈丫〉, vector<Edge<T〉〉, greater〈Edge〈丁〉〉〉 edge_min—heap;
+// 모든 에지를 최소 힙에 추가
+for (auto& e : G.edges())
+edge-min-heap. ;
+// 정점 개수에 해당하는 크기의 디스조인트-셋 자료 구조 생성 및 초기화
+autO N = G.vertices();
+SimpleDisjointSet dset(N);
+for (unsigned =0; i 〈N; i++)
+dset .make_set(i);
+// 디스조인트-셋 자료 구조를 이용하여 최소 신장 트리 구하기
+Graph<T〉 MST(N);
+while (!edge_min-heap.empty())
+// 최소 힙에서 최소 가중치 에지를 추출
+aut0 e = edge min—heap.top();
+edge_min_heap. POP( ) ;
+230

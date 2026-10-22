@@ -1,0 +1,20 @@
+다음의 과정을 홍해 실습 문제의 해답을 구해보쳱습니다
+1. 먼저 필요한 헤더 파일을 포한합니다,
+tinciude <stting>
+<vector>
+,iⅨ1吐 〈~)
+<iostren,s
+using næsoace std:
+2. oain() 함수에서 입력을 처리하는 코드를 먼저 작성하겠습니다.
+int æin()
+int
+int setLength;
+cin 〉〉 nelodYLength;
+vector<string〉 nelody(melodyLength) ;
+for (int i = 0; i 〈 me10dyLength; i++)
+cin 〉〉 melody[i);
+cin 〉〉 setLength;
+vector<string〉 set(setLength);
+for (int i = 0; i 〈 setLength; i++)
+cin 〉〉 set[iJ;
+526

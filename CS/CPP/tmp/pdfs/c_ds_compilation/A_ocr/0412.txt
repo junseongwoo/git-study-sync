@@ -1,0 +1,68 @@
+S正P 5:
+[기
+5
+3
+11
+6
+[흐
+7
+1
+4
+0
+6
+4
+2
+9
+2
+S:{O, 4, 1, 6, 2}
+0 1 2 3 4 5 6
+= 11
+= 11
+420
+111
+1, 6, 2}
+S = { 0, 4,
+distance[이
+distance[l)
+distance[2) : 9
+distance[4] : 3
+distance[6J
+STEP 6:
+distance[3) : min(distance[31 [3])
+distance[5) = min(distance[5] ,distance[2Fweight[21 [5])
+min(12, 9+2)
+= min(10, 9+@)
+10
+4
+5
+3
+2
+11
+0
+0
+[지이
+6
+1
+1
+5
+4
+2
+9
+2
+6
+S={ 0, 4,
+distance[@] = 0
+distance[l] = 5
+distance[21
+distance[4] = 3
+distance[5] = 10
+distance[6]
+C언어로 쉽게 불어쓴 자료구조
+S={O, 4, 1, 6, 2, 5}
+0 1 2 3 4 5 6
+3
+1, 6, 2, 5 }
+= 9
+distance[3J : min(distance[3) ,distance[5FweightC5] [3])
+= 8
+= min(11, 10+9)

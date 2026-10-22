@@ -1,0 +1,75 @@
+05
+06
+07
+08
+09
+10
+enum ElementStatus
+11
+13
+14
+16
+typedef struct tagElementType
+17
+20
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+42
+43
+44
+#include <stdlib.h>
+#include <string.h>
+typedef char• KeyType,
+typedef char* VaIueType,
+EMPTY
+OCCUPIED = 1
+Key;
+KeyType
+Va1ue;
+Va1ueType
+해시 테이를 요소의 상태
+비어 있을 때는 0. 점유되어 있을 때는 1
+enum ElementStatus Status;
+} E1ementType,
+typedef struct tagHashTable
+int
+int
+0ccupiedCount;
+TableSize,
+E1ementType* TabIe,
+} HashTab1e;
+HashTab1e* 0AHT_CreateHashTabIe( int Tab1eSize
+VOid
+VOid
+void
+Va1ueType
+int
+int
+void
+ændif
+0AHT_DestroyHashTab1e( HashTable* HT );
+0AHT_C1earEIement( E1ementType* Element ),•
+0AHT_Set( HashTable** HT, KeyType Key. Value );
+OAHT Get( HashTabIe* HT. Key ):
+0AHT-Hash ( KeyTY* Key, int KeyLength. int T±IeSize
+OAHT-Hash2( KeyType Key. int KeyLength. int TabIeSize
+0AHT-Rehash( HashTabIe•• HT
+08 • 해시 테이를
+367

@@ -1,0 +1,65 @@
+067
+068
+069
+070
+071
+072
+073
+074
+075
+076
+077
+078
+079
+080
+081
+082
+083
+084
+085
+086
+087
+088
+089
+090
+091
+092
+093
+094
+095
+0%
+097
+098
+099
+100
+101
+102
+103
+105
+if ( TheList == NULL )
+return NULL;
+// 원하는 값을 찾을 때까지 순차 탐색
+while ( 1 )
+if ( strcmp( TheList->Key, Key )
+Target = TheList;
+break,
+if ( TheList->Next
+break;
+else
+= NULL )
+TheList = TheList->Next;
+return Target->Value;
+void 대T DestroyList( List L )
+if ( L
+= NULL )
+return;
+if ( L->Next != NULL )
+대T DestroyList( L->Next );
+대T_DestroyNode( L );
+void 대T DestroyHashTab1e( HashTable• HT)
+// 1. 각 링크드 리스트를 자유 저장소에서 제거하기
+int i = 0;
+for ( i=O; iGT->Tab1eSize; i++ )
+List L = HT->TabIe(iI;
+08 테시 테이를
+355

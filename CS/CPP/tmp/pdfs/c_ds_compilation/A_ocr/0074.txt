@@ -1,0 +1,38 @@
+프로그램 3.3은 다항식 덧,과을 구현한 프로그램이다. ms과 Ae는 다항식 A의 처음과 마지막을
+가리기며 ns와 Be는 각각 다항식 B의 처음과 끝을 가리킨다. Cs와 Ce는 덧셈의 결과로 생성되
+는 다항식의 처음과 끝을 가리킨다. attach 함수는 해당 항우을 배열 terms의 다음 빈 공간에 더
+하는 함수이다. 이때 avail 변수가 중가된다.
+프로그램 3.3 polynomia12.c 다항식 덧셈 프로그램 #2
+#include <stdio.h>
+#include <stdlib.h>
+#define MAX_TERMS 101
+typedef struct {
+float coef;
+int expon;
+} polynomial;
+polynomial terms[MAX_TERMS]
+int avail = 6;
+// 두개의 정수를 비교
+int b)
+char compare(int a,
+if (a>b) return '>'
+else if (a == b)
+return
+return ' <'
+// 새로운 항을 다항식에 추가한다.
+{8,3
+10,3
+void attach(float coef, int expon)
+if (avail>MAX_TERMS) {
+fprintf(stderr, "항의 개수가 너무 않음\n");
+exit(l);
+termsCavaiIJ .coef = coef;
+terms[avail] .expon = expon;
+avail十十;
+void poIy_add2(int AS, int Ae, int BS, int Be, int *CS, int *Ce)
+float tempcoef;
+*CS = avail;
+while (As <= Ae && Bs <= Be)
+switch (compare(terms[Asl •expon, terms[Bs] .expon)) {
+1,0 }
+CHAPTER03 배열, 구조체, 포인터 81

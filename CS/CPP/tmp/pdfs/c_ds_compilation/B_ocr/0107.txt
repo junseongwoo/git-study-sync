@@ -1,0 +1,23 @@
+else // 토큰이 연산자라면 스택의 피연산자들과 함께 계산한다.
+Operator2 = LLS Pop(&Stack);
+Operator1 = LLS_Pop(&Stack);
+switch (Tygp) // 연산자의 종류에 따라 계산한다.
+case PLUS: TempResult = 0perator1 + Operator2; break,
+case MINUS: TempResuIt = Operator1 - 0perator2; break;
+case MULTIPLY: TempResult = Operator1 * 0perator2; break,
+case DIVIDE: TempResuIt = Operator1 / Operator2; break;
+LLS Push(&Stack, LLS-CreateNode( TempResuIt ));
+// 스택에 마지막까지 남아 있는 결괏값을 ResuIt에 저장한다.
+ResuIt = LLS Pop(&Stack);
+Stack 소일
+return Result,
+2.43 중위 표기식을 후위 표기식으로 바꾸는 알고리즘
+지금까지 후위 표기법의 정의와 후위 표기식 계산 알고리즘을 배웠습니다. 이제 우리에게 남은 일은
+중위 표기식을 후위 표기식으로 변환하는 알고리즘에 대해 이해하는 것뿐입니다.
+| 여기서장깐
+중위 표기법의 駐에
+중위 표기법에는 후위 표기법에 없는 괄호 '('와 ')'가 있습니다. 우선순위가 낮은 연산이라 하더라도 이 괄호
+VOI 우여 있으면 다른 연산보다 우선하여 계산됩니다. 중위 표기식을 후위 표7 식으로 바꾸기 위해서는
+이 괄호의 처리가 아주 중요ER-I다.
+98
+Part 01 • 자료구조

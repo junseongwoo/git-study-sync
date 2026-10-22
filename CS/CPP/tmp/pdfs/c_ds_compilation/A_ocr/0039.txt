@@ -1,0 +1,33 @@
+fxtodat(i)
+•if(1 (달 1) return 11
+factor8al(2)
+ff(2 〈= 1) return 11
+etse return (2•foctoria1(i));
+factoriat(3)
+if(3 〈= 1) return 1;
+else return (3•factorial(2));
+factorial(3)
+if(3 〈= 1) return 1;
+else return (3•factoria1(2));
+else return (2•1)•,
+factoriaI(3)
+if(3 〈= 1) return 1;
+else return (3*factorial(2));
+(d)
+factoriat(2)
+if(2 〈= 1) return 1;
+else return (2•factori01(1));
+factorial(3)
+if(3 〈= 1) return 1;
+else return (3kfoctorial(2));
+(회
+factoriaI(3)
+else return (3*2) ;
+(e)
+[그림 2-3] factorial(3)의 호출중의 시스템 스택의 변화
+C, PASCAL, C++. Java 등의 현대적인 프로그래밍 언어에서 순환을 지원하지만
+FORTRAN, COB이과 같은 고전적인 언어에서는 지역변수가 없거나 있더라도 정적으로 할당되
+므로 순환이 불가능하다. 즉 함수호출마다 새로운 지역변수를 만들지 못하면 이전 호출과 구분
+할 수가 없어서 순환 호출이 불가능하다.
+CHAPTER02 순환
+45

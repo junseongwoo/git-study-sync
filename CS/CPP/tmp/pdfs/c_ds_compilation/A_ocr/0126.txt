@@ -1,0 +1,40 @@
+134
+ch = exp[i];
+switch (ch) {
+: case '*나 case '/' •. // 연산자
+case '十' •. case
+// 스택에 있는 연산자의 우선순위가 더 크거나 같으면 출력
+while (!is-empty(&s) && (prec(ch) <= prec(peek(&s))))
+printf("%c", pop(&s));
+push(&s,
+ch);
+break;
+case | ('
+// 왼쪽 괄호
+push(&s, ch);
+break;
+case ') '
+// 오른쪽 괄호
+top—op
+// 왼쪽 괄호를 만날때까지 출력
+while (tOP-OP != '(1) {
+printf("%c", t0P-op);
+t0P-0P = pp(&s);
+break;
+// 피연산자
+default:
+printf("%c", ch);
+break;
+while (!is-empty(&s)) // 스택에 저장된 연산자들 출력
+printf("%c", pop(&s));
+int main(void)
+char *S = "(2+3)*4+9"
+printf("중위표시수식 %s 년", 5);
+printf("후위표시수식 ") ;
+infix_to_postfix (s) •,
+printf("\n") ;
+return 0;
+실행결과
+중위표시수식 (2+3) *4+9
+후위표시수식 23+4*9+
+C언어로 쉽게 풀어쓴 자료구조

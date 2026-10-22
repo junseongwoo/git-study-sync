@@ -1,0 +1,19 @@
+int UnboundedKnapsack(int items, int capacity, vector<int〉 values,
+vector<int〉 weight)
+3. DP 테이블을 1차원 정수형 벡터로 생성하겠습니다. 이 벡터의 크기는 (capacity + 1)로 지
+정하고. 모든 원소는 0으로 초기화합니다.
+vector<int〉 DP(capacity + 1, 0):
+4.0-1 배당 문제와 마찬가지로 상태 로직은 이중 for 반혁끈을 시용합니다. 그러나 이번에는 바
+깥쪽 반혁문을 0부터 capacity까지 증가하고, 안쪽 반혁끋은 물건의 인덱스를 시용합니다.
+for (int W = 0; W 〈= capacity; w+十)
+for (int i = 0; 〈 items; i++)
+5. 이제 상태를 저장하는 방법을 결정해야 합니다. 선택된 물건에 의해 용량을 초과하면 안 된다
+는 점을 기억해야 합니다. DP 테이블에서 무게를 0부터 capacity까지 표현할 수 있으므로,
+w와 weight[i]의 차이가 음수가 아닌지를 확인해야 합니다. 따라서 다음과 같이 하나의 if 문
+을 사용하여 로직을 구현할 수 있습니다.
+for (int w = 0; W 〈= capacity; w++)
+for (int i = 0; 〈 items; i++)
+if (weight(i] 〈=
+DP[w] = max(DPlwl, DP[w - weight[i]] + values[i]);
+return DP[capacity];
+408

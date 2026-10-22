@@ -1,0 +1,26 @@
+6. 문제의 합 풀이 방법을 나타내는 문자열 배열 types를 정의합니다. 이 문지괼은 화면 출
+력 용도로 시용됩니다.
+vector〈string〉 types -
+"BRUTE FORCE"
+"BACKTRACKING"
+"MEM이ZATION"
+"TABULATION"
+const int UNKNOWN = INT MAX;
+7. 경과 시간 측정을 위한 GetTime() 함수를 작성하겠습니다. 이 함수는 clock-t 객체의 참조와
+문자열을 인자로 받아 경과 시간을 출력합니다.
+void GetTime(cIock_t& timer, string type)
+// 현재 시간에서 timer를 빼서 경과 시간을 계산
+timer = (10(k() - timer;
+// 화면에 경과 시간 출력
+cout 〈〈 type 〈〈 '| 방법 경과 시간:
+cout 〈〈 fixed 〈〈 setprecision(5) 〈〈 (float)timer / CLOCKS_PER SEC 〈〈 endl,
+timer = clock(); // timer를 현재 시간으로 초기화
+8. 이제 main() 함수를 다시 작성하겠습니다. main() 함수에서는 두 가지 부분집합의 합 문제 풀
+이 함수를 각각 호출하고, 경과 시간을 비교합니다. 경과 시간 비교가 두드러지도록 입력 집
+합 set과 target 값도 새롭게 정의했습니다.
+int main()
+vector〈int〉 set = {16, 1058, 22, 13, 46, 55, 3, 92, 47, 7,
+98, 367, 807, 106, 333, 85, 577, 9, 3059};
+int target = 6076;
+int tests = 2;
+sort(set.begin(), set.end());

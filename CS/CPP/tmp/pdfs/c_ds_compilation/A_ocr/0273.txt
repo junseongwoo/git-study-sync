@@ -1,0 +1,29 @@
+fprintf(stderr, "%s\n",
+exit(l);
+// 공백 상태 검출 함수
+message) ;
+void init-queue(QueueType *q)
+q—>front = q->rear = 0;
+// 공백 상태 검출 함수
+int is_empty(QueueType •q)
+return (q-〉front == q->rear) ;
+// 포화 상태 검출 함수
+int is_fulI(QueueType *0
+return ((q->rear + 1) % MAX_QUEUE_SIZE -- q->front);
+// 삽입 함수
+void enqueue(QueueType *q, element item)
+if (is-full(q))
+error("큐가 포화상태입니다") •,
+q->rear = (q->rear + 1) % MAX_QUEUE_SIZE;
+q->data[q->rear] = item;
+// 삭제 함수
+element dequeue(QueueType *q)
+if (is-empty(q))
+error("큐가 공백상태입니다") ;
+q->front = (q->front + 1) % MAX_QUEUE_SIZE;
+return q->data[q->front];
+void level order(TreeNode *Ptr)
+QueueType q;
+init-queue(&q); // 큐 초기화
+if (ptr == NULL) return;
+CRAPTERß 트리 281

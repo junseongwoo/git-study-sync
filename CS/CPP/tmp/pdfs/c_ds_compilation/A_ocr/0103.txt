@@ -1,0 +1,31 @@
+// 피크 학수
+element peek()
+if (is-empty()) {
+fprintf(stderr, "스택 공백 에리\n")•,
+exit(l);
+else return stack[top] •,
+int main(void)
+push(l);
+push(2);
+push(3);
+printf("%d\n",
+printf("%d\n", POP());
+printf("%d\n" ,
+return 0;
+실행결과
+3
+2
+1
+스택의 요소를 구조체로 하기
+만약 스택에 지장되어야 하는 값이 정수나 문자가 아니고 더 복잡한 구조를 갖는 요소이면 어떻
+게 해야 할까? 예를 들면 학생에 대한 정보라면 학생의 학번, 이름, 주소 등의 정보가 요소에 포
+함되어야 할 것이다. 이런 경우에는 스택에 구조체를 저장하면 된다. 구조체 안에 필요한 모든
+정보를 넣으면 된다. 프로그램 4.2에 구조체로 이루어진 일반적인 스택에 대한 코드를 나타내
+었다.
+프로그램 4.2 구조체 배열 스택 프로그램
+#include <stdio.h>
+#include <stdlib.h>
+#define MAX STACK_SIZE 100
+#define 卜IAX STRING 100
+CHAPTER04 스택
+111

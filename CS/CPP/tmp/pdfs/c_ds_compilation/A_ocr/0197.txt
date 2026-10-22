@@ -1,0 +1,44 @@
+typedef int element;
+typedef struct ListNode ( // 노드 타입
+element data;
+struct ListNode *link;
+} ListNode;
+ListN0de* insert_first(ListNcxfe element value)
+ListN0de *P = (ListN0de *)mat10c(sizeof(ListN0de));
+p->data = value;
+p->link = head; // 헤드 포인터의 값을 복사
+head = 아,
+return head;
+// 헤드 포인터 변경
+void print_list(ListN0de *head)
+for (ListN0de *P = head; P != NULL; p = p->link)
+printf("%d->i', p->data);
+printf("NULL 년");
+ListNode* concat_list(ListNode *headl,
+if (headl == NULL) return head2;
+ListN0de *head2)
+else if (head2 == NULL) return headl;
+else {
+ListN0de *아
+p = headl;
+vhile (p->link != NULL)
+P = p->link;
+p->link = head2;
+return headl;
+// 테스트 프로그램
+int main(void)
+ListNode* headl = NULL;
+ListNode* head2 = NULL;
+10);
+headl = insert_first(headl,
+20);
+headl = insert_first(headl,
+30);
+headl = insert_first(headl,
+print—tist(headl) ,•
+40);
+head2 = insert_first(head2,
+head2 = insert—first(head2, 50);
+print—list(head2) ,•
+CHAPTER0å 연결 리스트 |
+205

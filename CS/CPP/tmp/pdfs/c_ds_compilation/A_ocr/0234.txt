@@ -1,0 +1,38 @@
+temp—>link = s->top;
+S->top = tenp;
+void print_stack(LinkedStackType *9
+for (StackN0de *P = S—>top; p != NULL; p = p->link)
+printf("96d->", p->data);
+printf("NULL 년");
+// 식제 함수
+element *9
+if (is-empty(s)) {
+fprintf(stderr, "스택이 비어있음\n");
+exit(l);
+else {
+StackNode *t에鬱 = S->top;
+int data = temp—>data;
+S—>top = s->top->link;
+free(temp) ;
+return data;
+// 피크 함수
+element peek(LinkedStackType *5)
+if (is-empty(s)) {
+fprintf(stderr, "스택이 비어있음\n");
+exit(l);
+else {
+return s—>top—>data;
+// 주 함수
+int main(void)
+LinkedStackType 5;
+init(&s) ,•
+1); print_stack(&s);
+push(&s,
+push(&s, 2); print_stack(&s);
+push(&s, 3); print_stack(&s);
+pri nt_stack(&s) ;
+POP(&S);
+POP(&S); print_stack(&s) ;
+POP(&S); print_stack(&s) ;
+return 0;
+242 C언어로 쉽게 불어쓴 자료구조

@@ -1,0 +1,25 @@
+struct POint
+int
+int y;
+Point(int x, int y) : x(x), y(y) {}
+int H, W,
+int N;
+vector〈string〉 grid,
+vector〈vector<int〉〉 terrain;
+vector〈vector〈int〉〉 (05t;
+vector<Point〉 houses;
+1단계: 입력 처리하기
+2. 입력으로 처리할 것들이 많으므로 별도의 함수 lnput()을 만들어 시용하겠습니다.
+void lnput()
+cin 〉〉 H 〉〉 W;
+cin 〉〉 N;
+grid.resize대);
+houses.resize(N);
+terrain.resize대, vector<int>(W, UNKNOWN));
+cost.resize(N, vector<int>(N, UNKNOWN));
+// 지도 정보
+for (int i =0; i 〈卜; i++)
+cin 〉〉 grid[i];
+// 지반 강도 경보
+for (int i = 0;
+for (int j

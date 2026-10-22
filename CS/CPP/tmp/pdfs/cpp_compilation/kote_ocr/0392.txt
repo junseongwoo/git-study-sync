@@ -1,0 +1,23 @@
+for (int (01 = 1; (01 〈= width; (01++)
+DP[r애][(011 = DP(row - 11k01 - 1] + DP(row - 1]k011;
+if 2== 0)
+DP(row][width + 1]
+= DP[row][widthl;
+for (int i = 0; i 〈 quenes; i++)
+int N, M;
+cin 〉〉 N 〉〉 M;
+if(M*2>N)
+M=N—M+ 1 ;
+cout 〈〈 DP[N][M] 〈〈 endl;
+만약 파스칼의 삼각형에서 특정 원소만을 알고 싶다면 DP 테이블 전체를 저장할 필요가 없습니
+다. 현재 행의 원소를 알기 위해서는 바로 이전 행 원소만 필요하기 때문입니다. 이를 코-드로 구현
+하면 다음과 같습니다.
+map〈pair<int, int〉, int〉 results,
+vector<pair<int, int〉〉 queries;
+int q;
+cin 〉〉 q;
+int maxRow = 0;
+for (int i -
+int N, M;
+cin 〉〉 N 〉〉 M;
+queries.push—back({N, M});

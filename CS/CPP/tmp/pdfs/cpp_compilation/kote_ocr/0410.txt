@@ -1,0 +1,24 @@
+memo((i, 아]
+= UNKNOWN;
+여기서 전치 그래프의 인접 리스트와 가중치 행렬을 나타내기 위해 두 개의 2차원 정수 백
+터 adj-t와 weight-t를 정의했습니다. 이후 중첩 for 문-을 이용하여 전치 그래프를 생성하고.
+memo 테이블 값을 초기화했습니다.
+6. 새로운 함수 ShortestPath-Memoization()을 정의하겠습니다. 이 함수는 정수형 depth와
+node, 2자원 정수 벡터 adj와 weight를 인자로 받습니다. 이때 adj와 weight는 참조형으로 선
+인합니다.
+int ShortestPath_Memoization(int depth, int node, vector〈vector<int〉〉
+&adj, vector〈vector<int〉〉 &weight)
+7. 이 알고리즘에서는 일반적인 깊이 우선 탐색을 사용하며, 다만 함수 끝부분에서 {node,
+depth} 쌍에 대한 결과를 memo에 저장합니다. 함수 시작 부분에서는 m箚0를 확인하여, 해당
+기가 이미 존재하면 저장된 값을 반환합니다.
+// 맵에 기가 있는지를 확인
+if (memo.find({node, depth}) != memo.end())
+return memo[{node, depth}];
+memo[{node, depth}] = UNKNOWN;
+// 인접한 에지에 대해 반복
+for (autO next : adj[node])
+int w = weight[node][nextl;
+int dist = ShortestPath_Memoization(depth - 1, next, adj, weight) 十 w;
+memo[{node, depth}] = min(memo[{node, depth}l, dist);
+return memo[{node, depth}];
+421

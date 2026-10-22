@@ -1,0 +1,55 @@
+abs(NewRow - CurrentRow))
+39
+40
+Threatened = 1:
+42
+break,
+43
+44
+45
+CurrentRow++;
+46
+47
+48
+return Threatened,
+49
+50
+51
+void PrintS01ution( int CoIumns(l, int NumberOfQueens )
+52
+53
+int i=0;
+54
+int j=O;
+55
+56
+for ( i=O; i<Number0fQueens; i++ )
+57
+for ( j=0; j<NumberOfQueens; j++ )
+58
+59
+if ( ColumnsIil == j )
+60
+printf("Q");
+62
+else
+63
+printf(".");
+64
+65
+printf("\n");
+66
+67
+printf("\n");
+68
+69
+15e/NQueens/Test—NQueens.c
+01
+02
+03
+04
+•include <stdio.h>
+#include 〈stdlib.h〉
+•include "tnueens.h"
+Chapter 15 • 백트래킹
+635

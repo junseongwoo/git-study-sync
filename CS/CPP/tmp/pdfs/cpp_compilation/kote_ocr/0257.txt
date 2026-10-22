@@ -1,0 +1,28 @@
+1
+// Label 객체 비교는 거리(distance) 값을 이용
+inline b001 operator〉 (const Label<T>& 1) const
+return this—>distance 〉 l.distance;
+5. 프림 알고리즘을 다음과 같이 작성합니다.
+template 〈typename T>
+autO prim MST(const Graph<T>& 6, unsigned src)
+// 최소 힙
+priority—queue〈Label<T〉, vector〈LabeI<T〉〉, greater〈Label<T〉〉〉 heap;
+// 모든 정점에서 거리 값을 최대로 설정
+vector<T〉 distance(G.vertices(), numeric Iimits<T〉.• :max());
+set〈unsigned> visited; // 방문한 정점
+vector〈unsigned> MST; // 최소 신장 트리
+heap.emplace(Label<T>{src, 0});
+while (!heap.empty())
+autO current_vertex = heap. top();
+heap.pop();
+// 현재 정점을 이전에 방문하지 않았다면
+if (visited.find(current_vertex.ID)
+MST. push_back(current_vertex. 10) ;
+= visited.end( ))
+for (auto& e : G.edges(current_vertex.ID))
+autO neighbor = e.dst;
+autO new distance = e.weight;
+// 인접한 정점의 거리 값이 새로운 경로에 의한 거리 값보다 크면
+// 힙에 추가하고, 거리 값을 업데이트함
+if (new-distance 〈 distance[neighbor))
+heap.emplace(LabeI<T>{neich50r, dist.anceb;

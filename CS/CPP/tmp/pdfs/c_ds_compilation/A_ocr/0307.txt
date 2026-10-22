@@ -1,0 +1,49 @@
+실행결과
+**** i: 입력, d: 삭제, s
+단어 .• tree
+의미:나무
+단어 : student
+의미:학생
+단어 : nformati on
+의미:정보
+단어 : student
+의미:정보
+gets(e ng) •,
+rcx)t = insert ncxle(root, e);
+break;
+case
+printf("단어:")•,
+root=delete 이;
+break;
+case ' p
+display(root) ;
+printf("\n");
+break;
+case '
+printf("단어:");
+gets(e.word) ;
+tmp = 0;
+if (tmp != NULL)
+printf("의미:%s\n", e.meaning);
+break;
+} while (c에vnand !=
+return 0;
+**** i: 입력, d: 삭제, 5:
+**** 5: 입력, d: 삭제, 도•
+**** i: 입력, d: 삭제, 5.
+: 탐색,
+탐색,
+탐색,
+• 탐색,
+• 출력,
+: 출력,
+p
+• 출력,
+: 출력,
+p
+1
+1
+1
+**** i: 입력, d: 삭제, s: 탐색, 아 출력,
+CHAPTERn 트리
+315

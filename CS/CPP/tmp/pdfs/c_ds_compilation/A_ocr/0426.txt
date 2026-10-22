@@ -1,0 +1,31 @@
+434
+// 그래프 초기화
+void graph—init(GraphType 뺑)
+for (v : 0; V<MAX_VERTICES; V++)
+g->adj-tist[v] = NULL;
+// 정점 삽입 연산
+void insert—vertex(GraphType *g, int v)
+if (((g-〉n) + 1) 〉 MAX-VERTICES) {
+fprintf(stderr, "그래프: 정점의 개수 초과");
+return;
+g—>n十十;
+// 간선 삽입 연산, v를 u의 인접 리스트에 삽입한다.
+VOid insert_edge(GraphType *g, int u, int v)
+GraphN0de
+fpnntf(stderr, "그래프: 정점 번호 오류");
+= (GraphN0de *)maIIoc(sizeof(GraphN0de));
+= g->adj_list[u) ,•
+g->adj_list[u] = node;
+#define MAX_STACK_SIZE 100
+typedef int element;
+typedef struct {
+element stack[MAX_STACK_SIZE] ;
+int top;
+} StackType;
+// 스택 초기화 함수
+void init(StackType *5)
+s->top
+// 공백 상태 검출 함수
+int is—empty(StackType *S)
+return (s->top == -1);
+C언어로 쉽게 불어쓴 자료구조

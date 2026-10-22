@@ -1,0 +1,26 @@
+20
+22
+23
+24
+25
+26
+27
+28
+29 }
+Popped = LQ-Dequeue( Queue );
+printf( "Dequeue: %S \n", Popped->Data );
+LQ_DestroyNode( Popped );
+LQ_DestroyQueue( Queue );
+return 0:
+실행 결과
+Queue Size : 4
+Dequeue :
+abc
+• def
+Dequeue.
+efg
+Dequeue :
+hij
+Dequeue •
+Chapter 03 • 큐
+139

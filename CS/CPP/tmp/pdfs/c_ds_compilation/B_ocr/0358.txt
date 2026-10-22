@@ -1,0 +1,59 @@
+026
+027
+028
+029
+031
+032
+033
+034
+035
+036
+037
+038
+039
+041
+042
+043
+045
+047
+048
+049
+050
+051
+052
+053
+054
+055
+056
+057
+058
+059
+%1
+%2
+%3
+%5
+return NewNode
+void 대T DestroyNode( NO血* )
+free( TheNode->Key ):
+free( TheNode->VaIue );
+free( TheNode ):
+void CHT Set( HashTable* HT, KeyType Key, VaIueType VaIue )
+int Address = 대T_Hash( Key, strlen(Key), HT->TabIeSize );
+N馝한 NewN0de = 대T_CreateN0de( Key, VaIUe );
+// 해당 주소가 비어 있는 경우
+if ( HT->TabIe[Addressl == NULL )
+HT->TabIeIAddressJ = NewNode,
+// 해당 주소가 비어 있지 않은 경우
+else
+List L = HT->TabIe[Addressl;
+HT->Tabl이AddressJ = NewNode,
+printf("CoIIision occured : Key(%s), Address(%d)\n"
+대T_Get( HashTable* HT, KeyType Key )
+// 주소를 해싱한다.
+Key, Address );
+int Address = 대T Hash( Key, strIen(Key), HT->Tab1eSize );
+// 해상한 주소에 있는 링크드 리스트를 가져온다.
+List = HT->TabIe(Addressl;
+List Tar9et • WLL;
+354
+Part 02 • 알고리즘

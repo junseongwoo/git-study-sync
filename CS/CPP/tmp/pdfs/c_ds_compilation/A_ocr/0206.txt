@@ -1,0 +1,37 @@
+1 sum;
+while (a && 바 {
+if (a->expon -= b->expon) {
+= a-〉coef + b->coef;
+// a의 차수 〉 b의 차수
+if (sun != 0) insert—Iast(ptist3, sum, a->expon);
+a = a->link; b = b->link;
+else if 〉 { // a의 차수 -= b의 차수
+nnsert Iast(plist3, a—>coef, a—>expon) •,
+a = a->link;
+else {
+b = b->link;
+// a의 차수 〈 b의 차수
+insert 1ast(pIist3, b->coef, b->expon) ;
+// a나 b중의 하나가 먼저 끝나게 되면 남아있는 항들을 모두
+// 결과 다항식으로 복사
+for (; a != NULL; a = a->link)
+insert_Iast(pIist3, a->coef, •,
+for (; b != NULL; b = b->link)
+insert Iast(pIist3, b->coef, ;
+VOid plist)
+ListN0de* p = ptist->head;
+printf("polynomial = ");
+for (; p; P = p->link) {
+printf("%dA96d + ", p->coef, p->expon);
+printf("\n") ;
+int main(void)
+ListType *15st1, *Iist2,
+// 연결 리스트 헤더 생성
+*15st3;
+listl
+tist2
+1ist3
+214 C언어로 쉽게 물어쓴 자료구조
+create() ;
+create() ,•
+- create() ;

@@ -1,0 +1,68 @@
+17
+18
+19
+20
+21
+22
+23
+24
+25
+Node• DLL-CreateNode( E1ementType NewData
+DLL-DestroyNode( Node* Node);
+VOid
+DLL-AppendNode( Node** Head, NewNode );
+VOid
+DLL-InsertAfter( Node* Current, Node• NewNode ):
+VOid
+DLL RemoveNode( Node** Head, Node* Remove ),•
+VOid
+Node* DLL GetNodeAt( Node* Head, int Location );
+DLL GetNodeCount( Node* Head );
+int
+ændif
+01 장/Doub1yLinkedList/Doub1yLinkedList. (
+001
+002
+%3
+004
+005
+006
+007
+008
+009
+010
+011
+012
+013
+014
+015
+016
+017
+018
+019
+020
+021
+022
+023
+024
+025
+026
+#include • Doub1yLinkedList.h •
+// 노드 생성
+Node* DLL-CreateNode( E1ementType NewData )
+Node* NewNode = (Node*)ma110c(sizeof(N0de));
+NewNode-»ata = NewData;
+NewNode-PrevNode = NULL;
+NewNode->NextNode = NULL;
+return NewNode,
+// 노드 소일
+void DLL DestroyNode( Node* NOde )
+free(Node);
+// 노드 추가
+void DLL-AppendNode( Node** Head, Node* NewNode )
+// 헤드 노드가 NULL이라면 새로운 노드가 Head가 된다.
+if ( (*Head) == NULL )
+Chapter 01
+리스트
+1
+51

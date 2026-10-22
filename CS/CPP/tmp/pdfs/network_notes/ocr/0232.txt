@@ -1,0 +1,43 @@
+3.5 • 연결지향형 트랜스포트 TCP
+/+ Assume sender is not congtrained by TCP Ⅱ0년 or CO隘(昑gtion control, that data from above 15 1033
+than MSS in size. and that data tranofer 13 in ono direction 0n1,7. • /
+NextSeqNum—InitiaISeqNumber
+SendBase=Ini tIa1SeqNumber
+100p (forever) (
+swi tCh (event )
+event: data received from application above
+create TCP segment with sequence number NextSeqNum
+if (timer currently not running)
+start timer
+pass segment tO : P
+Nex tSeqNum—Nex tSeqNum+ ieng th (da ta )
+break;
+: timer timeou t
+retransmit not—yet—acknowledged segment with
+lest sequence number
+S tart timer
+break;
+event: ACK received, with ACK field value 0f y
+if (y > SendBase) (
+SendBase=y
+if (there are currently any not—yet—acknowledged segments)
+start timer
+break;
+) /* end 0f 100p forever * /
+그림 3.33 • 간소화된 TCP 송신자
+함하는 것에 유의하자. 또한 타이머가 이미 다른 세그먼트에 대해서 실행 중이 아니면,
+TCP는 이 세그먼트를 IP로 넘길 때 타이머를 시작한r-}(확인되지 않은 가장 오래된 세
+그먼트와 타이머를 연관 지어 생각하면 도움이 될 것이다). 이 타이머에 대한 만료 주
+기는 Timeout1nterva1이다. 이것은 3.5.3절에서 설명했듯이, EstimatedRTT
+와 DevRTT로 계산할 수 있다.
+두 번째 주요 사건은 타임이웃이다. TCP는 타임아웃 이벤트에 대해 타임이웃을
+일으킨 세그먼트를 재전송하여 응답한다. 그리고 TCP의 타이머를 다시 시작한다.
+TCP 송신자에 의해 처리되어야 하는 세 번째 주요 사건은 수신자로부터 수신 확
+인응답 세그먼트(ACK)의 수신이다(좀 더 구체적이고 다양한 ACK 필드값을 가진 세
+그먼트). 이 사건이 일어나면, TCP는 변수 sendBase와 ACK값 y를 비교한다. TCP
+상태 변수 sendBase는 수신 확인응답이 확인되지 않은 가장 오래된 바이트의 순서
+번호이다(그러므로 sendBase-1은 수신자에서 정확하고 차례대로 수신되었음을 알
+리는 마지막 바이트의 순서번호임). 앞에서 언급했듯이, TCP는 누적 확인응답을 사용
+하고, y는 y바이트 이전의 모든 바이트들의 수신을 확인한다. 만일 Y > sendBase
+이면 ACK는 이전에 확인응답 안 된 하나 이상의 세그먼트들을 확인해 준다. 따라서
+225

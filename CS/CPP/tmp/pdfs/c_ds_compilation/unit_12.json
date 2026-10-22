@@ -1,0 +1,1234 @@
+{
+  "unit": 12,
+  "title": "최소 비용 신장 트리·최단 경로",
+  "part": "알고리즘",
+  "scope": [
+    {
+      "source": "A",
+      "start": 388,
+      "end": 422
+    },
+    {
+      "source": "B",
+      "start": 420,
+      "end": 454
+    }
+  ],
+  "learning": [
+    {
+      "text": "최소 비용 신장 트리는 신장 트리 중 사용된 간선들의 가중치 합이 최소인 신장 트리이다.",
+      "refs": [
+        {
+          "source": "A",
+          "section": "11.1 최소 비용 신장 트리",
+          "pages": [
+            389
+          ]
+        }
+      ],
+      "evidence": "가중치 합이 최소"
+    },
+    {
+      "text": "최단 경로 문제는 두 정점을 연결하는 경로 중 간선의 가중치 합이 최소가 되는 경로를 찾는 문제이다.",
+      "refs": [
+        {
+          "source": "A",
+          "section": "11.4 최단 경로",
+          "pages": [
+            406
+          ]
+        }
+      ],
+      "evidence": "가중치 합이 최소"
+    }
+  ],
+  "concepts": [
+    {
+      "title": "신장 트리와 최소 비용 신장 트리",
+      "items": [
+        {
+          "text": "신장 트리(spanning tree)는 그래프 내의 모든 정점을 포함하는 트리이다.",
+          "refs": [
+            {
+              "source": "A",
+              "section": "11.1 최소 비용 신장 트리",
+              "pages": [
+                388
+              ]
+            }
+          ],
+          "evidence": "모든 정점을 포함하는 트리"
+        },
+        {
+          "text": "신장 트리는 모든 정점이 연결되어 있어야 하며 사이클을 포함해서는 안 된다.",
+          "refs": [
+            {
+              "source": "A",
+              "section": "11.1 최소 비용 신장 트리",
+              "pages": [
+                388
+              ]
+            }
+          ],
+          "evidence": "사이클을 포함해서는 안 된다"
+        },
+        {
+          "text": "신장 트리는 n개의 정점을 정확히 (n-1)개의 간선으로 연결한다.",
+          "refs": [
+            {
+              "source": "A",
+              "section": "11.1 최소 비용 신장 트리",
+              "pages": [
+                388
+              ]
+            }
+          ],
+          "evidence": "정확히 (n-1)개의 간선"
+        },
+        {
+          "text": "깊이 우선 또는 너비 우선 탐색 도중 사용된 간선만 모으면 신장 트리를 만들 수 있다.",
+          "refs": [
+            {
+              "source": "A",
+              "section": "11.1 최소 비용 신장 트리",
+              "pages": [
+                388
+              ]
+            }
+          ],
+          "evidence": "사용된 간선만 모으면"
+        },
+        {
+          "text": "최소 비용 신장 트리는 신장 트리 중 사용된 간선들의 가중치 합이 최소인 신장 트리이다.",
+          "refs": [
+            {
+              "source": "A",
+              "section": "11.1 최소 비용 신장 트리",
+              "pages": [
+                389
+              ]
+            }
+          ],
+          "evidence": "가중치 합이 최소"
+        },
+        {
+          "text": "B는 최소 신장 트리가 연결된 가중치 그래프(Connected Weighted Graph)로부터 만들어진다고 설명한다.",
+          "refs": [
+            {
+              "source": "B",
+              "section": "9.5.1 최소 신장 트리를 만들어낼 수 있는 그래프의 조건",
+              "pages": [
+                422
+              ]
+            }
+          ],
+          "evidence": "연결된 가중치 그래프"
+        }
+      ]
+    },
+    {
+      "title": "Kruskal의 MST 알고리즘",
+      "items": [
+        {
+          "text": "탐욕적인 방법은 선택할 때마다 그 순간 가장 좋다고 생각되는 것을 선택하여 최종 해답에 도달하는 방법이다.",
+          "refs": [
+            {
+              "source": "A",
+              "section": "11.2 Kruskal의 MST 알고리즘",
+              "pages": [
+                390
+              ]
+            }
+          ],
+          "evidence": "그 순간 가장 좋다고 생각되는 것"
+        },
+        {
+          "text": "탐욕적인 방법의 지역적인 최적 선택을 모아도 최종 해답의 전역적인 최적은 보장되지 않으므로 검증해야 한다.",
+          "refs": [
+            {
+              "source": "A",
+              "section": "11.2 Kruskal의 MST 알고리즘",
+              "pages": [
+                391
+              ]
+            }
+          ],
+          "evidence": "전역적으로 최적이라는 보장은 없다"
+        },
+        {
+          "text": "Kruskal의 알고리즘은 각 단계에서 사이클을 이루지 않는 최소 비용 간선을 선택한다.",
+          "refs": [
+            {
+              "source": "A",
+              "section": "11.2 Kruskal의 MST 알고리즘",
+              "pages": [
+                391
+              ]
+            }
+          ],
+          "evidence": "사이클을 이루지 않는 최소 비용 간선"
+        },
+        {
+          "text": "새 간선이 다른 경로로 이미 연결된 정점들을 연결하면 사이클이 형성된다.",
+          "refs": [
+            {
+              "source": "A",
+              "section": "11.2 Kruskal의 MST 알고리즘",
+              "pages": [
+                393
+              ]
+            }
+          ],
+          "evidence": "새로운 간선이 이미 다른 경로에 의하여 연결"
+        },
+        {
+          "text": "A의 union-find를 이용한 Kruskal 알고리즘은 간선 정렬 시간에 좌우된다.",
+          "refs": [
+            {
+              "source": "A",
+              "section": "11.2 시간 복잡도 분석",
+              "pages": [
+                399
+              ]
+            }
+          ],
+          "evidence": "간선들을 정렬하는 시간에 좌우"
+        }
+      ]
+    },
+    {
+      "title": "Prim의 MST 알고리즘",
+      "items": [
+        {
+          "text": "Prim의 알고리즘은 시작 정점에서 출발하여 신장 트리 집합을 단계적으로 확장한다.",
+          "refs": [
+            {
+              "source": "A",
+              "section": "11.3 Prim의 MST 알고리즘",
+              "pages": [
+                400
+              ]
+            }
+          ],
+          "evidence": "신장 트리 집합을 단계적으로 확장"
+        },
+        {
+          "text": "Prim의 방법은 신장 트리 집합에 인접한 정점 중 최저 간선으로 연결된 정점을 선택한다.",
+          "refs": [
+            {
+              "source": "A",
+              "section": "11.3 Prim의 MST 알고리즘",
+              "pages": [
+                400
+              ]
+            }
+          ],
+          "evidence": "최저 간선으로 연결된 정점"
+        },
+        {
+          "text": "Kruskal의 알고리즘은 간선을 기반으로 하고 Prim의 알고리즘은 정점을 기반으로 한다.",
+          "refs": [
+            {
+              "source": "A",
+              "section": "11.3 Prim의 MST 알고리즘",
+              "pages": [
+                401
+              ]
+            }
+          ],
+          "evidence": "간선을 기반으로 하는 알고리즘"
+        },
+        {
+          "text": "A의 Prim 구현은 주 반복문과 내부 반복문이 각각 n번 반복하여 O(n²)의 복잡도를 가진다.",
+          "refs": [
+            {
+              "source": "A",
+              "section": "11.3 Prim의 알고리즘의 분석",
+              "pages": [
+                405
+              ]
+            }
+          ],
+          "evidence": "O(n²)의 복잡도"
+        },
+        {
+          "text": "A는 희소 그래프에는 Kruskal이 적합하고 밀집 그래프에는 Prim이 유리하다고 비교한다.",
+          "refs": [
+            {
+              "source": "A",
+              "section": "11.3 Prim의 알고리즘의 분석",
+              "pages": [
+                405
+              ]
+            }
+          ],
+          "evidence": "희소 그래프를 대상으로 할 경우"
+        }
+      ]
+    },
+    {
+      "title": "최단 경로와 Dijkstra — 책별 조건",
+      "items": [
+        {
+          "text": "최단 경로 문제는 두 정점을 연결하는 경로 중 간선의 가중치 합이 최소가 되는 경로를 찾는 문제이다.",
+          "refs": [
+            {
+              "source": "A",
+              "section": "11.4 최단 경로",
+              "pages": [
+                406
+              ]
+            }
+          ],
+          "evidence": "가중치 합이 최소"
+        },
+        {
+          "text": "Dijkstra 알고리즘은 하나의 시작 정점으로부터 모든 다른 정점까지의 최단 경로를 찾는다.",
+          "refs": [
+            {
+              "source": "A",
+              "section": "11.5 Dijkstra의 최단 경로 알고리즘",
+              "pages": [
+                407
+              ]
+            }
+          ],
+          "evidence": "하나의 시작 정점으로부터"
+        },
+        {
+          "text": "A의 최단 거리 알고리즘 입력은 가중치가 음수가 아닌 가중치 그래프이다.",
+          "refs": [
+            {
+              "source": "A",
+              "section": "11.5 알고리즘 11.6",
+              "pages": [
+                409
+              ]
+            }
+          ],
+          "evidence": "가중치는 음수가 아님"
+        },
+        {
+          "text": "A는 가중치 인접 행렬에서 간선이 없으면 상당히 큰 정수를 무한대로 간주하여 저장한다.",
+          "refs": [
+            {
+              "source": "A",
+              "section": "11.5 Dijkstra의 최단 경로 알고리즘",
+              "pages": [
+                407
+              ]
+            }
+          ],
+          "evidence": "상당히 큰 값을 무한대라고 생각"
+        },
+        {
+          "text": "각 단계에서 집합 S에 속하지 않은 정점 중 distance 값이 가장 작은 정점을 S에 추가한다.",
+          "refs": [
+            {
+              "source": "A",
+              "section": "11.5 Dijkstra의 최단 경로 알고리즘",
+              "pages": [
+                408
+              ]
+            }
+          ],
+          "evidence": "distance값이 가장 작은 정점"
+        },
+        {
+          "text": "새 정점 u가 S에 추가되면 u를 거치는 거리와 기존 거리를 비교하여 더 작은 거리로 distance를 수정한다.",
+          "refs": [
+            {
+              "source": "A",
+              "section": "11.5 Dijkstra의 최단 경로 알고리즘",
+              "pages": [
+                409
+              ]
+            }
+          ],
+          "evidence": "더 작은 거리로"
+        },
+        {
+          "text": "A의 distance 배열은 시작 정점부터 다른 정점까지의 최단 경로 거리 정보만 제공한다.",
+          "refs": [
+            {
+              "source": "A",
+              "section": "11.5 Dijkstra의 분석",
+              "pages": [
+                416
+              ]
+            }
+          ],
+          "evidence": "거리 정보만을 제공"
+        },
+        {
+          "text": "A의 Dijkstra 구현은 O(n²)의 복잡도를 가진다.",
+          "refs": [
+            {
+              "source": "A",
+              "section": "11.5 Dijkstra의 분석",
+              "pages": [
+                416
+              ]
+            }
+          ],
+          "evidence": "O(n²)의 복잡도"
+        },
+        {
+          "text": "B는 데이크스트라 알고리즘을 사이클이 없는 방향성 그래프에 한해서 사용할 수 있다고 기술한다.",
+          "refs": [
+            {
+              "source": "B",
+              "section": "9.6.1 데이크스트라 알고리즘의 개념",
+              "pages": [
+                444
+              ]
+            }
+          ],
+          "evidence": "사이클이 없는 방향성 그래프에 한해서만"
+        },
+        {
+          "text": "B는 프림이 간선의 길이를 이용하는 데 비해 데이크스트라는 경로의 길이에 따라 간선을 연결한다고 비교한다.",
+          "refs": [
+            {
+              "source": "B",
+              "section": "9.6.1 데이크스트라 알고리즘의 개념",
+              "pages": [
+                444
+              ]
+            }
+          ],
+          "evidence": "경로의 길이에 따라서 간선을 연결"
+        }
+      ]
+    },
+    {
+      "title": "Floyd의 최단 경로 알고리즘",
+      "items": [
+        {
+          "text": "Floyd 알고리즘은 그래프의 모든 정점 사이의 최단 경로를 한 번에 모두 찾는다.",
+          "refs": [
+            {
+              "source": "A",
+              "section": "11.6 Floyd의 최단 경로 알고리즘",
+              "pages": [
+                417
+              ]
+            }
+          ],
+          "evidence": "모든 정점 사이의 최단 경로"
+        },
+        {
+          "text": "Floyd 알고리즘은 2차원 배열 A와 삼중 반복문으로 구성된다.",
+          "refs": [
+            {
+              "source": "A",
+              "section": "11.6 Floyd의 최단 경로 알고리즘",
+              "pages": [
+                417
+              ]
+            }
+          ],
+          "evidence": "2차원 배열 A를 이용하여"
+        },
+        {
+          "text": "Floyd 알고리즘의 A 초기값은 가중치 행렬 weight이다.",
+          "refs": [
+            {
+              "source": "A",
+              "section": "11.6 Floyd의 최단 경로 알고리즘",
+              "pages": [
+                417
+              ]
+            }
+          ],
+          "evidence": "A의 초기값은 가중치 행렬"
+        },
+        {
+          "text": "Floyd 알고리즘은 삼중 반복문이 실행되므로 시간 복잡도가 O(n³)이다.",
+          "refs": [
+            {
+              "source": "A",
+              "section": "11.6 Floyd 최단 경로 알고리즘의 분석",
+              "pages": [
+                422
+              ]
+            }
+          ],
+          "evidence": "3중 반복문이 실행"
+        }
+      ]
+    }
+  ],
+  "procedures": [
+    {
+      "title": "Kruskal의 최소 비용 신장 트리 — A",
+      "steps": [
+        {
+          "text": "그래프의 간선들을 가중치의 오름차순으로 정렬한다.",
+          "refs": [
+            {
+              "source": "A",
+              "section": "11.2 Kruskal의 MST 알고리즘",
+              "pages": [
+                391
+              ]
+            }
+          ],
+          "evidence": "가중치의 오름차순으로 정렬"
+        },
+        {
+          "text": "정렬된 간선 중 사이클을 형성하지 않는 간선을 신장 트리 집합에 추가하고 사이클을 형성하는 간선은 제외한다.",
+          "refs": [
+            {
+              "source": "A",
+              "section": "11.2 Kruskal의 MST 알고리즘",
+              "pages": [
+                391
+              ]
+            }
+          ],
+          "evidence": "사이클을 형성하면 그 간선은 제외"
+        },
+        {
+          "text": "선택된 간선 수가 (n-1)이 될 때까지 반복한다.",
+          "refs": [
+            {
+              "source": "A",
+              "section": "11.2 알고리즘 11.2",
+              "pages": [
+                391
+              ]
+            }
+          ],
+          "evidence": "ecounter<(n-1)"
+        }
+      ]
+    },
+    {
+      "title": "프림 알고리즘 — B의 순서",
+      "steps": [
+        {
+          "text": "그래프와 정점이 하나도 없는 최소 신장 트리를 준비한다.",
+          "refs": [
+            {
+              "source": "B",
+              "section": "9.5.1 프림 알고리즘",
+              "pages": [
+                422
+              ]
+            }
+          ],
+          "evidence": "노드가 하나도 없는 상태"
+        },
+        {
+          "text": "임의의 정점을 시작 정점으로 선택하여 최소 신장 트리의 뿌리 노드로 삽입한다.",
+          "refs": [
+            {
+              "source": "B",
+              "section": "9.5.1 프림 알고리즘",
+              "pages": [
+                422
+              ]
+            }
+          ],
+          "evidence": "뿌리 노드로 삽입"
+        },
+        {
+          "text": "트리의 정점과 인접 정점 사이에서 최소 가중치 간선을 골라 사이클이 생기지 않는 인접 정점을 삽입한다.",
+          "refs": [
+            {
+              "source": "B",
+              "section": "9.5.1 프림 알고리즘",
+              "pages": [
+                422
+              ]
+            }
+          ],
+          "evidence": "사이클을 형성해서는 안 됩니다"
+        },
+        {
+          "text": "모든 정점이 연결될 때까지 반복하고 종료한다.",
+          "refs": [
+            {
+              "source": "B",
+              "section": "9.5.1 프림 알고리즘",
+              "pages": [
+                422
+              ]
+            }
+          ],
+          "evidence": "그래프의 모든 정점을 연결"
+        }
+      ]
+    },
+    {
+      "title": "Dijkstra의 거리 갱신 — A의 본문 순서",
+      "steps": [
+        {
+          "text": "시작 정점 v에 대해 distance[v]=0, 다른 정점의 distance는 시작 정점과의 가중치 값으로 둔다.",
+          "refs": [
+            {
+              "source": "A",
+              "section": "11.5 Dijkstra의 최단 경로 알고리즘",
+              "pages": [
+                407
+              ]
+            }
+          ],
+          "evidence": "distance[v]=0"
+        },
+        {
+          "text": "S에 속하지 않은 정점 중 distance 값이 가장 작은 정점을 S에 추가한다.",
+          "refs": [
+            {
+              "source": "A",
+              "section": "11.5 Dijkstra의 최단 경로 알고리즘",
+              "pages": [
+                408
+              ]
+            }
+          ],
+          "evidence": "가장 distance값이 작은 정점"
+        },
+        {
+          "text": "새 정점 u가 S에 추가되면 u를 거치는 거리와 기존 거리를 비교하여 더 작은 거리로 distance를 수정한다.",
+          "refs": [
+            {
+              "source": "A",
+              "section": "11.5 Dijkstra의 최단 경로 알고리즘",
+              "pages": [
+                409
+              ]
+            }
+          ],
+          "evidence": "더 작은 거리로"
+        }
+      ]
+    }
+  ],
+  "syntax": [
+    {
+      "label": "floyd()의 핵심 반복문 발췌",
+      "code": "for (k = 0; k<g->n; k++) {\n    for (i = 0; i<g->n; i++)\n        for (j = 0; j<g->n; j++)\n            if (A[i][k] + A[k][j] < A[i][j])\n                A[i][j] = A[i][k] + A[k][j];\n    printA(g);\n}",
+      "refs": [
+        {
+          "source": "A",
+          "section": "11.6 프로그램 11.11",
+          "pages": [
+            421
+          ]
+        }
+      ],
+      "evidence": "A[i][k] + A[k][j] < A[i][j]",
+      "note": null
+    }
+  ],
+  "formulas": [
+    {
+      "label": "distance 갱신",
+      "expression": "distance[w] = min(distance[w], distance[u]+weight[u][w])",
+      "refs": [
+        {
+          "source": "A",
+          "section": "11.5 Dijkstra의 최단 경로 알고리즘",
+          "pages": [
+            409
+          ]
+        }
+      ],
+      "evidence": "distance[w]",
+      "note": "u는 새로 추가된 정점이며 S에 속하지 않는 정점 w의 값을 갱신한다."
+    },
+    {
+      "label": "Floyd 갱신",
+      "expression": "A[i][j] = min(A[i][j], A[i][k] + A[k][j])",
+      "refs": [
+        {
+          "source": "A",
+          "section": "11.6 알고리즘 11.8",
+          "pages": [
+            417
+          ]
+        }
+      ],
+      "evidence": "A[i][j]",
+      "note": "k를 0부터 n-1까지 고려한다."
+    },
+    {
+      "label": "A의 MST 구현 복잡도",
+      "expression": "Kruskal: O(e log₂e), Prim: O(n²)",
+      "refs": [
+        {
+          "source": "A",
+          "section": "11.3 Prim의 알고리즘의 분석",
+          "pages": [
+            405
+          ]
+        }
+      ],
+      "evidence": "O(e log₂e)",
+      "note": "e는 간선 수, n은 정점 수이며 A의 구현과 효율적인 정렬 알고리즘을 기준으로 한다."
+    }
+  ],
+  "comparisons": [
+    {
+      "title": "MST와 최단 경로 알고리즘",
+      "headers": [
+        "알고리즘",
+        "원문 설명"
+      ],
+      "rows": [
+        [
+          {
+            "text": "Kruskal",
+            "refs": [
+              {
+                "source": "A",
+                "section": "11.2 Kruskal의 MST 알고리즘",
+                "pages": [
+                  391
+                ]
+              }
+            ],
+            "evidence": "Kruskal"
+          },
+          {
+            "text": "Kruskal의 알고리즘은 각 단계에서 사이클을 이루지 않는 최소 비용 간선을 선택한다.",
+            "refs": [
+              {
+                "source": "A",
+                "section": "11.2 Kruskal의 MST 알고리즘",
+                "pages": [
+                  391
+                ]
+              }
+            ],
+            "evidence": "사이클을 이루지 않는 최소 비용 간선"
+          }
+        ],
+        [
+          {
+            "text": "Prim",
+            "refs": [
+              {
+                "source": "A",
+                "section": "11.3 Prim의 MST 알고리즘",
+                "pages": [
+                  400
+                ]
+              }
+            ],
+            "evidence": "Prim"
+          },
+          {
+            "text": "Prim의 알고리즘은 시작 정점에서 출발하여 신장 트리 집합을 단계적으로 확장한다.",
+            "refs": [
+              {
+                "source": "A",
+                "section": "11.3 Prim의 MST 알고리즘",
+                "pages": [
+                  400
+                ]
+              }
+            ],
+            "evidence": "신장 트리 집합을 단계적으로 확장"
+          }
+        ],
+        [
+          {
+            "text": "Dijkstra",
+            "refs": [
+              {
+                "source": "A",
+                "section": "11.5 Dijkstra의 최단 경로 알고리즘",
+                "pages": [
+                  407
+                ]
+              }
+            ],
+            "evidence": "Dijkstra"
+          },
+          {
+            "text": "Dijkstra 알고리즘은 하나의 시작 정점으로부터 모든 다른 정점까지의 최단 경로를 찾는다.",
+            "refs": [
+              {
+                "source": "A",
+                "section": "11.5 Dijkstra의 최단 경로 알고리즘",
+                "pages": [
+                  407
+                ]
+              }
+            ],
+            "evidence": "하나의 시작 정점으로부터"
+          }
+        ],
+        [
+          {
+            "text": "Floyd",
+            "refs": [
+              {
+                "source": "A",
+                "section": "11.6 Floyd의 최단 경로 알고리즘",
+                "pages": [
+                  417
+                ]
+              }
+            ],
+            "evidence": "Floyd"
+          },
+          {
+            "text": "Floyd 알고리즘은 그래프의 모든 정점 사이의 최단 경로를 한 번에 모두 찾는다.",
+            "refs": [
+              {
+                "source": "A",
+                "section": "11.6 Floyd의 최단 경로 알고리즘",
+                "pages": [
+                  417
+                ]
+              }
+            ],
+            "evidence": "모든 정점 사이의 최단 경로"
+          }
+        ]
+      ]
+    }
+  ],
+  "terms": [
+    {
+      "term": "신장 트리",
+      "definition": {
+        "text": "신장 트리(spanning tree)는 그래프 내의 모든 정점을 포함하는 트리이다.",
+        "refs": [
+          {
+            "source": "A",
+            "section": "11.1 최소 비용 신장 트리",
+            "pages": [
+              388
+            ]
+          }
+        ],
+        "evidence": "모든 정점을 포함하는 트리"
+      }
+    },
+    {
+      "term": "최소 비용 신장 트리",
+      "definition": {
+        "text": "최소 비용 신장 트리는 신장 트리 중 사용된 간선들의 가중치 합이 최소인 신장 트리이다.",
+        "refs": [
+          {
+            "source": "A",
+            "section": "11.1 최소 비용 신장 트리",
+            "pages": [
+              389
+            ]
+          }
+        ],
+        "evidence": "가중치 합이 최소"
+      }
+    },
+    {
+      "term": "탐욕적인 방법",
+      "definition": {
+        "text": "탐욕적인 방법은 선택할 때마다 그 순간 가장 좋다고 생각되는 것을 선택하여 최종 해답에 도달하는 방법이다.",
+        "refs": [
+          {
+            "source": "A",
+            "section": "11.2 Kruskal의 MST 알고리즘",
+            "pages": [
+              390
+            ]
+          }
+        ],
+        "evidence": "그 순간 가장 좋다고 생각되는 것"
+      }
+    },
+    {
+      "term": "Kruskal",
+      "definition": {
+        "text": "Kruskal의 알고리즘은 각 단계에서 사이클을 이루지 않는 최소 비용 간선을 선택한다.",
+        "refs": [
+          {
+            "source": "A",
+            "section": "11.2 Kruskal의 MST 알고리즘",
+            "pages": [
+              391
+            ]
+          }
+        ],
+        "evidence": "사이클을 이루지 않는 최소 비용 간선"
+      }
+    },
+    {
+      "term": "Prim",
+      "definition": {
+        "text": "Prim의 알고리즘은 시작 정점에서 출발하여 신장 트리 집합을 단계적으로 확장한다.",
+        "refs": [
+          {
+            "source": "A",
+            "section": "11.3 Prim의 MST 알고리즘",
+            "pages": [
+              400
+            ]
+          }
+        ],
+        "evidence": "신장 트리 집합을 단계적으로 확장"
+      }
+    },
+    {
+      "term": "최단 경로",
+      "definition": {
+        "text": "최단 경로 문제는 두 정점을 연결하는 경로 중 간선의 가중치 합이 최소가 되는 경로를 찾는 문제이다.",
+        "refs": [
+          {
+            "source": "A",
+            "section": "11.4 최단 경로",
+            "pages": [
+              406
+            ]
+          }
+        ],
+        "evidence": "가중치 합이 최소"
+      }
+    },
+    {
+      "term": "Dijkstra",
+      "definition": {
+        "text": "Dijkstra 알고리즘은 하나의 시작 정점으로부터 모든 다른 정점까지의 최단 경로를 찾는다.",
+        "refs": [
+          {
+            "source": "A",
+            "section": "11.5 Dijkstra의 최단 경로 알고리즘",
+            "pages": [
+              407
+            ]
+          }
+        ],
+        "evidence": "하나의 시작 정점으로부터"
+      }
+    },
+    {
+      "term": "Floyd",
+      "definition": {
+        "text": "Floyd 알고리즘은 그래프의 모든 정점 사이의 최단 경로를 한 번에 모두 찾는다.",
+        "refs": [
+          {
+            "source": "A",
+            "section": "11.6 Floyd의 최단 경로 알고리즘",
+            "pages": [
+              417
+            ]
+          }
+        ],
+        "evidence": "모든 정점 사이의 최단 경로"
+      }
+    }
+  ],
+  "summary_basis": "편집 요약",
+  "summary": [
+    {
+      "text": "최소 비용 신장 트리는 신장 트리 중 사용된 간선들의 가중치 합이 최소인 신장 트리이다.",
+      "refs": [
+        {
+          "source": "A",
+          "section": "11.1 최소 비용 신장 트리",
+          "pages": [
+            389
+          ]
+        }
+      ],
+      "evidence": "가중치 합이 최소"
+    },
+    {
+      "text": "Kruskal의 알고리즘은 간선을 기반으로 하고 Prim의 알고리즘은 정점을 기반으로 한다.",
+      "refs": [
+        {
+          "source": "A",
+          "section": "11.3 Prim의 MST 알고리즘",
+          "pages": [
+            401
+          ]
+        }
+      ],
+      "evidence": "간선을 기반으로 하는 알고리즘"
+    },
+    {
+      "text": "Dijkstra 알고리즘은 하나의 시작 정점으로부터 모든 다른 정점까지의 최단 경로를 찾는다.",
+      "refs": [
+        {
+          "source": "A",
+          "section": "11.5 Dijkstra의 최단 경로 알고리즘",
+          "pages": [
+            407
+          ]
+        }
+      ],
+      "evidence": "하나의 시작 정점으로부터"
+    },
+    {
+      "text": "Floyd 알고리즘은 그래프의 모든 정점 사이의 최단 경로를 한 번에 모두 찾는다.",
+      "refs": [
+        {
+          "source": "A",
+          "section": "11.6 Floyd의 최단 경로 알고리즘",
+          "pages": [
+            417
+          ]
+        }
+      ],
+      "evidence": "모든 정점 사이의 최단 경로"
+    }
+  ],
+  "review": [
+    {
+      "question": "n개 정점의 신장 트리에는 몇 개의 간선이 있는가?",
+      "answer": {
+        "text": "신장 트리는 n개의 정점을 정확히 (n-1)개의 간선으로 연결한다.",
+        "refs": [
+          {
+            "source": "A",
+            "section": "11.1 최소 비용 신장 트리",
+            "pages": [
+              388
+            ]
+          }
+        ],
+        "evidence": "정확히 (n-1)개의 간선"
+      }
+    },
+    {
+      "question": "Kruskal과 Prim은 무엇을 기반으로 하는가?",
+      "answer": {
+        "text": "Kruskal의 알고리즘은 간선을 기반으로 하고 Prim의 알고리즘은 정점을 기반으로 한다.",
+        "refs": [
+          {
+            "source": "A",
+            "section": "11.3 Prim의 MST 알고리즘",
+            "pages": [
+              401
+            ]
+          }
+        ],
+        "evidence": "간선을 기반으로 하는 알고리즘"
+      }
+    },
+    {
+      "question": "A의 Dijkstra 입력 조건은 무엇인가?",
+      "answer": {
+        "text": "A의 최단 거리 알고리즘 입력은 가중치가 음수가 아닌 가중치 그래프이다.",
+        "refs": [
+          {
+            "source": "A",
+            "section": "11.5 알고리즘 11.6",
+            "pages": [
+              409
+            ]
+          }
+        ],
+        "evidence": "가중치는 음수가 아님"
+      }
+    },
+    {
+      "question": "Floyd는 어느 정점 사이의 최단 경로를 찾는가?",
+      "answer": {
+        "text": "Floyd 알고리즘은 그래프의 모든 정점 사이의 최단 경로를 한 번에 모두 찾는다.",
+        "refs": [
+          {
+            "source": "A",
+            "section": "11.6 Floyd의 최단 경로 알고리즘",
+            "pages": [
+              417
+            ]
+          }
+        ],
+        "evidence": "모든 정점 사이의 최단 경로"
+      }
+    }
+  ],
+  "cheat": {
+    "definitions": [
+      {
+        "term": "신장 트리",
+        "definition": {
+          "text": "신장 트리(spanning tree)는 그래프 내의 모든 정점을 포함하는 트리이다.",
+          "refs": [
+            {
+              "source": "A",
+              "section": "11.1 최소 비용 신장 트리",
+              "pages": [
+                388
+              ]
+            }
+          ],
+          "evidence": "모든 정점을 포함하는 트리"
+        }
+      },
+      {
+        "term": "최소 비용 신장 트리",
+        "definition": {
+          "text": "최소 비용 신장 트리는 신장 트리 중 사용된 간선들의 가중치 합이 최소인 신장 트리이다.",
+          "refs": [
+            {
+              "source": "A",
+              "section": "11.1 최소 비용 신장 트리",
+              "pages": [
+                389
+              ]
+            }
+          ],
+          "evidence": "가중치 합이 최소"
+        }
+      },
+      {
+        "term": "최단 경로",
+        "definition": {
+          "text": "최단 경로 문제는 두 정점을 연결하는 경로 중 간선의 가중치 합이 최소가 되는 경로를 찾는 문제이다.",
+          "refs": [
+            {
+              "source": "A",
+              "section": "11.4 최단 경로",
+              "pages": [
+                406
+              ]
+            }
+          ],
+          "evidence": "가중치 합이 최소"
+        }
+      }
+    ],
+    "comparison_title": "최단 경로의 범위 — A",
+    "comparison_headers": [
+      "알고리즘",
+      "범위"
+    ],
+    "comparison_rows": [
+      [
+        {
+          "text": "Dijkstra",
+          "refs": [
+            {
+              "source": "A",
+              "section": "11.5 Dijkstra의 최단 경로 알고리즘",
+              "pages": [
+                407
+              ]
+            }
+          ],
+          "evidence": "Dijkstra"
+        },
+        {
+          "text": "Dijkstra 알고리즘은 하나의 시작 정점으로부터 모든 다른 정점까지의 최단 경로를 찾는다.",
+          "refs": [
+            {
+              "source": "A",
+              "section": "11.5 Dijkstra의 최단 경로 알고리즘",
+              "pages": [
+                407
+              ]
+            }
+          ],
+          "evidence": "하나의 시작 정점으로부터"
+        }
+      ],
+      [
+        {
+          "text": "Floyd",
+          "refs": [
+            {
+              "source": "A",
+              "section": "11.6 Floyd의 최단 경로 알고리즘",
+              "pages": [
+                417
+              ]
+            }
+          ],
+          "evidence": "Floyd"
+        },
+        {
+          "text": "Floyd 알고리즘은 그래프의 모든 정점 사이의 최단 경로를 한 번에 모두 찾는다.",
+          "refs": [
+            {
+              "source": "A",
+              "section": "11.6 Floyd의 최단 경로 알고리즘",
+              "pages": [
+                417
+              ]
+            }
+          ],
+          "evidence": "모든 정점 사이의 최단 경로"
+        }
+      ]
+    ],
+    "formulas": [
+      {
+        "label": "distance 갱신",
+        "expression": "distance[w] = min(distance[w], distance[u]+weight[u][w])",
+        "refs": [
+          {
+            "source": "A",
+            "section": "11.5 Dijkstra의 최단 경로 알고리즘",
+            "pages": [
+              409
+            ]
+          }
+        ],
+        "evidence": "distance[w]",
+        "note": "u는 새로 추가된 정점이며 S에 속하지 않는 정점 w의 값을 갱신한다."
+      },
+      {
+        "label": "Floyd 갱신",
+        "expression": "A[i][j] = min(A[i][j], A[i][k] + A[k][j])",
+        "refs": [
+          {
+            "source": "A",
+            "section": "11.6 알고리즘 11.8",
+            "pages": [
+              417
+            ]
+          }
+        ],
+        "evidence": "A[i][j]",
+        "note": "k를 0부터 n-1까지 고려한다."
+      }
+    ],
+    "syntax": []
+  },
+  "checked_images": [
+    {
+      "source": "A",
+      "pages": [
+        388,
+        389,
+        390,
+        391,
+        393,
+        399,
+        400,
+        401,
+        405,
+        406,
+        407,
+        408,
+        409,
+        416,
+        417,
+        421,
+        422
+      ]
+    },
+    {
+      "source": "B",
+      "pages": [
+        421,
+        422,
+        430,
+        444,
+        445
+      ]
+    }
+  ],
+  "editor_notes": [
+    "A는 최소 비용 신장 트리, B는 최소 신장 트리라는 표기를 사용한다.",
+    "Dijkstra/데이크스트라의 적용 조건은 각 책의 문장으로 따로 수록했다.",
+    "알고리즘 11.6의 의사 코드에는 본문 설명과 다른 인접 정점 조건 표기가 있어, 절차는 본문 설명과 갱신 수식을 기준으로 옮겼다."
+  ]
+}

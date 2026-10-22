@@ -1,0 +1,37 @@
+ULONG Power( int Base, int Exponent )
+if ( == 1 )
+return Base,
+else if ( Base == 0 )
+return 1;
+if ( Exponent 2 == 0 )
+ULONG NewBase = Power( Base, Exponent/2 ):
+return NewBase * NewBase,
+else
+ULONG NewBase = Power( Base, (Exponent-I)/2 );
+return (NewBase * NewBase) * Base,
+이제 이 함수를 이용하는 예제 프로그램을 만들어봅시다.
+12장/FastExponentiation/FastExponentiation. (
+01
+02
+03
+04
+05
+06
+07
+08
+09
+12
+13
+14
+#include <stdi이h>
+typedef unsigned long ULONG,
+ULONG Power( int Base, int Exponent )
+if ( Exponent == 1 )
+return Base;
+else if ( Base == 0 )
+return 1;
+if ( Exponent 2 == 0 )
+ULONG NewBase = Power( Base, Exponent/2 ),•
+return NewBase * NewBase,
+Chapter 12 • 분할 정목
+535

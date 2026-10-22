@@ -1,0 +1,38 @@
+테이블의 2번부터 N번패 요소까지 차례대로
+피보나치 수를 계산하여 입력
+FibonacciTabIeIil = FitmacciTable[i-11 + FibonacciTabIe[i-기;
+N번째 요소가 결과츲℃I°e 이를 나중에
+Result = FibonacciTabIe[NI;•
+반환할 ResuIt 변수에 저장
+free( FibonacciTabIe );
+return Result,
+이제 실제로 코-드를 작성해서 컴파일해뵈야겠지요? 동적 계획법 버전의 피보나치 수를 구하는 예제
+프로그램의 전체 코-드는 다음과 같습니다.
+13장/FibonacciDP/FibonacciDP. (
+01
+02
+03
+04
+05
+06
+07
+08
+09
+12
+13
+14
+17
+*include <stdio.h〉
+$include <stdlib.h>
+typedef unsigned long ULONG,
+ULONG Fibonacci( int N )
+int
+ULONG Resu1t;
+ULONG* FibonacciTable,
+return N,
+FibonacciTab1e = (ULONG*)ma110C( sizeof( ULONG ) * (N+I) );
+FibonacciTab1e(O) = 0;
+FibonacciTabIe(11 = 1;
+20
+554
+Part 03 • 알고리즘 설계 기법

@@ -1,0 +1,28 @@
+// 모든 정점들 사이의 최단 거리를 저장
+vector〈vector<int〉〉 shortest(V);
+for (int i=0; i<V; i++)
+shortest(i] = Dijkstra(edges, V, i);
+14. 앞의 코드에 의해 계산된 결과가 최종 최단 거리 값이 아닙니다. 왜냐하면 가중치 변환 수식
+에 의해 모든 에지 가중치를 양수로 변경하여 구한 결과이기 때문입니다. 그러므로 가중치 변
+환 수식을 역으로 적용하여 실제 최단 거리 값을 다시 계산해야 합니다.
+// 가중치 변환 수식을 역으로 적용하여 최단 거리를 출력
+for (int i =0; i 〈V; i++)
+for (int j =@;j 〈V; j++)
+if (shortest[i][j] != UNKNOWN)
+shortest[i][j] += h[j] - h[i];
+" 〈〈 shortest[il[jl 〈〈 endl;
+15. 이제 main() 함수를 추가하고 시용할 그래프를 생성합니다. 테스트로 사음할 그래프는 그림
+7카에 나타난 그래프이며, 이 그래프를 Johnson() 함수의 인자로 전달합니다.
+int main()
+int V= 5;
+vector<Edge〉 edges;
+// 정점 개수
+// 에지 포인터의 벡터
+vector〈vector<int〉〉 edge-map{ // {시작 정점, 목표 정점, 가중치}
+{0,
+{1,
+{2,
+{0,
+2, -2},
+0, 10},
+303

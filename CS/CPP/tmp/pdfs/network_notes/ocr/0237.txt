@@ -1,0 +1,38 @@
+230
+CHAPTER 03 • 트랜스포트 계층
+event: ACK received, with ACK field value Of y
+if (y > SendBase) {
+SendBase=y
+if (there are currently any not yet
+acknowledged segments)
+•ack=100
+start timer
+호스트 A
+• 8
+2。
+•seq는22야 25
+:seq—135, 6 bytes 0f
+:seq—241
+26 byt
+&AE B
+.ack
+=100
+• ack
+=100
+• ack
+=100
+seq=92 타임이웃 간격
+Se
+Of dat
+20 bytes
+data
+그림 3.37 • 빠른 재전송: 세그먼트의 타이머가 초과되기 전에 손실된 세그먼트 재전송
+else {/* a duplicate ACK for already ACKed
+segment * /
+increment number Of duplicate ACKs
+received for y
+if (number Of duplicate ACKS received
+for y==3)
+/ * TCP fast retransmit * /
+resend segment with sequence number y
+break;

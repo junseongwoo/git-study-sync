@@ -1,0 +1,69 @@
+062
+int ParentPosition = 0;
+063
+int LeftPosition = 0;
+064
+int RightPosition = 0;
+065
+memcpy(Root, 어-기馝es[이, sizeof대eapNode));
+066
+memset(十>Nodes[이, 0, sizeof대eapN0de));
+067
+068
+069
+H-XJsedSize--
+070
+HEAP_SwapNodes( H, 0, H-ÅJsedSize ):
+071
+072
+LeftPosition = HEAP_GetLeftChild( 0 );
+073
+RightPosition = LeftPosition + 1:
+074
+075
+while ( 1)
+076
+077
+int SelectedChild = 0;
+078
+079
+if ( LeftPosition 〉= H-XJsedSize )
+080
+break;
+081
+082
+if ( RightPosition 〉= H-XJsedSize )
+083
+084
+SelectedChiId = LeftPosition;
+085
+086
+else {
+087
+if ( H->Nodes[LeftPositionJ.Data 〉 H->Nodes[RightPositionl Data)
+088
+SelectedChild = RightPosition;
+089
+else
+090
+SelectedChild = LeftPosition,
+091
+092
+093
+if ( H->Nodes[SeIectedChiIdI Data 〈 H->Nodes[ParentPositionl Data )
+094
+095
+HEAP_SwapNOdes대, ParentPosition, SelectedChild);
+096
+ParentPosition = SelectedChiId,
+097
+098
+100
+101
+else
+break,
+LeftPosition
+= HEAP GetLeftChild(ParentPosition);
+Chapter 07 • 우선순위 규와
+319
+1

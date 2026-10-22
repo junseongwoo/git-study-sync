@@ -1,0 +1,25 @@
+contlnue;
+// 이미 방문했으면 무시
+if (visited[e.dstl)
+continue;
+if (distance[curr] != UNKNOWN &&
+distance[e.dstl 〉 distance[currl + e.weight)
+distance[e dst] = distance[curr] 十 e.weight;
+return distance,
+11. 이제 존슨 알고리즘을 구현할준비가 되었습니다. 먼저 에지 리스트와 정점 개수를 인자로 받
+는 Johnson() 함수를 선언합니다. Jo而s예() 함수 앞부분에서는 BellmanFord() 함수를 호출
+하고, 그 결과를 정수형 벡터 h에 저장합니다. 만약 h가 비어 있으면 함수를 종료합니다.
+VOid Johnson(vector<Edge〉 edges, int V)
+// 더미 정점을 추가한 그래프에서 최단 거리를 계산
+vector<int> h = BeIImanFord(edges, V);
+if (h.empty())
+return;
+12• 모든 에지에 대해 가중치 변환 수식을 적용합니다.
+// 에지 가중치 재설정
+for (auto& e : edges)
+e.weight += (h[e.srcJ - h[e.dst]);
+13. 모든 정점 사이의 최단 경로 거리를 저장하기 위해 v개의 행을 갖는 2차원 shortest를
+선언합니다. shortest[i][j]에는 i번째 정점에서 j번째 정점까지의 최현
+저장할 것입
+-가단 7결리를 계산합니다.
+니다. 그리고 다익스트라 알고리즘 구현 함수를 v번 호출하이, -

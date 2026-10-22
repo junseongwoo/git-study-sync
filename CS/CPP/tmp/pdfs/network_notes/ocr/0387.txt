@@ -1,0 +1,39 @@
+5.5 • 소프트웨어 정의 네트위크(SDN) 제어 평면
+지고 복잡한 미들박스(전용 하드웨어 및 미디어 개성/서비스를 위한 고유의 소프트웨
+어를 가진 미들박스)를 혁신적으로 교체하는 것을 목표로 한다[Gember-Jacobson
+20141. 연구의 중요한 두 번째 영역은 SDN 개님을 AS 내부 설정에서 AS 간 설정으
+로 확장하려는 것이다[Gupta 20141.
+실전원리
+SDN 컨트롤러 사례 연구: OpenDayIight와 ONOS 컨트롤러
+SDN의 초기에는 하나의 SDN 프로토콜 오픈폴로위McKeown 2008, OpenFlow 2009])와
+하나의 SDN 컨트롤러 NOX [Gude 2008]가 있었다. 이후 SDN 컨트롤러의 수가 특히 크게 증
+가했다[Kreutz 2015]. 일부 SDN 컨트롤러는 0볘X [Koponen 201이, Juniper Net—
+works Contrail [Juniper ContraiI 2016], 자사의 B4 광역 네트워크를 위한 구글 컨트롤러
+[Jain 201 이의 예와 같이 특정 회사를 위한 고유 제품이다. 그러나 더 많은 컨트롤러는 오픈 소
+스이며 다양한 프로그래밍 언어로 구현된다[Erickson 2013]. 가장 최근에는 OpenDaylight
+컨트롤러[OpenDayIight Lithium 201 이와 ONOS 컨트를러[ONOS 201 이가 산업계에서 상
+당한 지지를 얻었다. 이 둘은 모두 오픈 소스이며 리눅스 재단과 공동으로 개발 중이다.
+381
+OpenDayIight 컨트롤러
+트래픽
+엔지니어링
+네트워크 서비스
+접근 제어
+REST API
+기본적인 네트워크 서비스 기능들
+스위치
+네트워크
+서비스
+ODL
+Controller
+관리자 관리자
+포워딩
+관리자
+관리자
+6人E
+관리자
+서비스 추상 계å(Service Abstraction Layer; SAL)
+OpenFlow 1.0 • • •
+그림 5.17 • OpenDaylight 컨트롤러
+SNMP
+OVSDB

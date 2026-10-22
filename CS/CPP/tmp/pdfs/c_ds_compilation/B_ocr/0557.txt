@@ -1,0 +1,26 @@
+typedef struct structLCSTable
+int** Data,
+} LCSTabIe,
+TabIe의 크기는 (X의 길이+1 ) x (Y의 길이+1 )
+int LCS( char* X, char* Y, int i, int j, LCSTabIe* TabIe )•
+if(i==Ollj==0)
+TabIe->Data[illjJ = 0;
+return TabIe->Data[iJ[jl;
+else if ( 지i-11 == Y[j-1] )
+TabIe->Data[i)[jJ = LCS( X, Y, i-l, j-l, TabIe ) + 1,
+return TabIe->Data[iJIjl;
+else
+intA = LCS( X, Y, i-l,j , TabIe );
+int = LCS( X, Y, i
+if(A>B)
+Table->Data[i]Ijl
+else
+Tab1e->Data[il[j 1
+j-l, TabIe );
+return Table->Data[il[jJ;
+앞의 함수가 두 문자열 'GOOD MORNING.' 및 'GUTEN MORGEN.'으로부터 얻어낸 LCS 테
+이불의 결과는 다음과 같습니다. 이 테이블의 오른쪽 아래 모서리에 있는 마지막 요소에는 두 문자
+열 사이의 LCS 길이가 저장되어 있습니다. 그리고 테이블 안쪽에는 x와 Y의 부분 문자열에 대한
+LCS의 길이들로 채워져 있습니다. 가령 'GO(기) MO'와 'GUTON MO' 사이에 존재하는 LCS의
+길이는 다음 테이블에서 4CG'. • ', 최', '()')라는 사실을 알 수 있습니다.
+558 Part 03 • 알고리즘 설계 기법

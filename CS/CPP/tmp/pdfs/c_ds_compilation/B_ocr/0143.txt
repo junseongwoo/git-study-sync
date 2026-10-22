@@ -1,0 +1,40 @@
+else
+Queue->Front
+Queue-Xount--
+return Front,
+Queue->Front->NextNode,
+33.2 링크드 큐 예제 프로그램
+지금까지 공부한 링그드 큐를 코드로 옮겨볼 차례입니다. 다음 예제 코드를 따라 프로그램을 작성하
+고 실행해보세요.
+03장/LinkedQueue/LinkedQueue .h
+01
+02
+03
+04
+05
+06
+07
+08
+09
+12
+14
+17
+18
+19
+20
+#ifndef 니NKED-QUEUE_H
+$define 니NKED_QUEUE_H
+$include <stdi이h>
+#include <string.h〉
+#include 〈stdlib.h〉
+typedef struct tagNode
+char* Data,
+Struct tagNode* NextNode,
+} NOde;
+typedef struct tagLinkedQueue
+NOde* Front;
+Node• Rear,
+int Count;
+} LinkedQueue,
+Chapter 03 • 류
+135

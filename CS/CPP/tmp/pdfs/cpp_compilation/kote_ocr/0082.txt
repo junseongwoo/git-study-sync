@@ -1,0 +1,38 @@
+autO tmp = start-〉right;
+delete start;
+return tmp,
+if (!start-〉right) // 오른쪽 자식 노드만 없는 경우
+autO tmp = start->left;
+delete start;
+return tmp;
+// 자식 노드가 들 다 있는 경우
+autO succNode = ;
+start->data = succN0de->data,
+// 오른쪽 서브 트리에서 후속(s표표ssor)을 찾아 삭제
+start-〉right = delete—impl(start-〉right, succNode->data);
+return start;
+9. main( ) 함수를 작성하여 BST를 사용하는 코드를 추가합니다.
+int main()
+bst tree;
+insert(12);
+tree.
+.insert(l@);
+tree
+.insert(2@);
+tree
+.insert(8);
+tree
+.insert(ll);
+tree
+.insert(15);
+tree
+.insert(28);
+tree
+.insert(4);
+tree
+.insert(2);
+tree
+std::cout 〈〈 "중위 순회: •
+inorder(); // BST의 모든 원소를 오름차순으로 출력합니다.
+std: :cout 〈〈 std: :endl;
+093

@@ -1,0 +1,26 @@
+G.add—edge(Edge<T>{ i.first, j.first, j.second }),•
+return 6;
+4. 이제 깊이 우선 탐색을 구현한 함수를 작성합니다. 이 함수의 구성은 연습 문제 28에서 보았
+던 breadth-first-search() 함수와 거의 유사합니다. 다만 std: :queue 대신 std: :stack을 사
+용했다는 점이 다릅니다.
+template 〈typename T>
+autO depth_first_search(const Graph<T>& 6, unsigned start)
+stack〈unsigned> stack;
+set〈unsigned> visited;
+vector〈unsigned> visit order,
+// 방문한 정점
+// 방문 순서
+stack.push(start);
+while (!stack.empty())
+autO current vertex
+stack.pop();
+= stack.top();
+// 현재 정점을 이전에 방문하지 않았다면
+if (visited.find(current vertex) == visited.end())
+visited. insert(current_vertex);
+visit order.push_back(current_vertex);
+for (auto& e : G.edges(current_vertex))
+// 인접한 정점 중에서 방문하지 않은 정점이 있다면 스택에 추가
+if (visited.find(e.dst) == visited.end())
+stack.push(e.dst);
+return visit order;

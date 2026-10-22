@@ -1,0 +1,40 @@
+std::cout 〈〈 i 〈〈 “
+std: :cout 〈〈 std: :endl;
+5. 다음은 앞서 구현한 병합 정렬 알고리즘을 테스트하기 위한 함수입니다.
+void run—merge_sort_test()
+•:vector<int〉 SI {45, 1, 3, 1, 2, 3, 45, 5, 1, 2, 44, 5, 7};
+std.
+•:vector<float〉 52 {45.6f, 1.0f, 3.8f, 1.01f, 2.2f, 3.9f, 45.3f, 5.5f,
+std•
+1.@f, 2.@f, 44.0f, 5.@f, 7.0f}•,
+std::vector<double〉 53 {45.6, 1.0, 3.8, 1 01, 2.2, 3.9, 45.3, 5.5,
+std:
+1.0, 2.0, 44.0, 5.0,
+7.0};
+」框
+std::vector〈char〉 ( {'b'
+a
+e
+:cout 〈〈 "정렬되지 않은 입력 벡터:" 〈〈 std::endl;
+print_vector<int>(S1 ) ,•
+print—vector<float>( 52) ;
+print-vector〈doubIe>(S3);
+print—vector〈char>(C) ;
+std::cout 〈〈 std::endl;
+autO
+autO
+autO
+autO
+sorted_S1 = merge—sort<int>(S1);
+sorted S2 = merge-sort<fIoat>(S2);
+sorted 53 = merge-sort<doubIe>(S3);
+sorted ( = merge-sort〈char>(C);
+std::cout 〈〈 "병합 정렬에 의해 정렬된! 벡터:" 〈〈 std::endl;
+print_vector<int>( sorted_S1 ) ;
+print_vector<float>( sorted_S2) ;
+print—vector<double>( sorted_S3) ;
+print—vector<char〉(sorted 0;
+std: :cout 〈〈 std: :endl,
+int main()
+run_merge_sort_test( ) ;
+return 0;

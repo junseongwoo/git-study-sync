@@ -1,0 +1,35 @@
+A.5.2 실습 문제 12: 웰시-포쀟 알고리즘
+이번 실습 문제에서는 일시-포월1 알고리츰을 이용한 그래프 길러링을 구현해보,겠습니다.
+1. 필요한 헤더 파일을 포함합니다.
+#include 〈string〉
+#include 〈四(tor〉
+#include <iostream〉
+#include 〈set〉
+#include 〈map〉
+#include 〈unordered_map〉
+#include 〈algorithm〉
+uslng namespace std;
+2. 그래프의 에지를 표현하는 Edge 구조체를 정의하고. 에지 리스트로 그래프를 표현하는 Graph
+클래스를 정의합니다. Edge 구조체와 Graph 클래스 정의는 '연습 문제 26: 크루스갈 MST 알
+고리즘'에서 구현했던 코드를 그대로 재사용하겠습니다. 자세한 구현 코드는 연습 문제 26의
+5단계와 6단계 소스 코드를 참고하기 바랍니다.
+3. 해시 맵을 이용하여 그래프 컬러링에 久卜황할 색상을 표현합니다.
+unordered_map〈unsigned, string> color_map = {
+BIue"},
+{2,
+"Green 가,
+{3,
+{4, "Ye11애"},
+BIack"},
+{5,
+"White"}
+{6,
+「40
+4. 웰시-포웰 그래프 걸러링 알고리즘을 다음과 같이 작성합니다.
+template 〈typename T>
+aut0 welsh-powell-coloring(const Graph<T>& 6)
+autO size = G.vertices();
+vector<pair〈unsigned, size_t〉〉 degrees;
+// 각 정점의 차수를 〈정점 ID, 자수〉의 쌍으로 취합
+for (unsigned i = 1; i 〈 size; i++)
+479

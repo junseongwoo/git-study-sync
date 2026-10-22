@@ -1,0 +1,64 @@
+39
+40
+42
+43
+45
+47
+49
+50
+52
+53
+54
+55
+56
+57
+58
+59
+60
+62
+63
+64
+65
+66
+67
+68
+69
+70
+71
+72
+73
+74
+75
+76
+77
+78
+break;
+printf("Enter parameter (1~200) :\n");
+fgets(buffer, sizeof(buffer)-l, stdin);
+sscanf(buffer, "%d", g)aram );
+if ( param 〈 1 || param 〉 200 )
+printf("lnvalid parameter.%d\n"
+continue,
+switch ( cmd )
+case 1 :
+param);
+RBT_InsertNode( &Tree, RBT_CreateNode(param) ):
+break,
+case 2:
+NOde = RBT_RemoveNode( &Tree, param);
+if ( Node == NULL )
+printf("Not found node tO delete:*d\n•, param);
+else
+RBT_DestroyNode( NOde );
+break;
+case 3:
+NOde = RBT SearchNode(Tree, param);
+if ( Node == NULL )
+printf("Not found node:*d\n•, param);
+else
+printf("Found N0de: 년((010r:岱)Ⅵ•,
+Node->Data, (Node-XoIor==RED)rRED•:•BLACK");
+break;
+printf("\n");
+Chapter % •
+299

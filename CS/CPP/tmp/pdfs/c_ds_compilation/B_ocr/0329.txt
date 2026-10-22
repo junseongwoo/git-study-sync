@@ -1,0 +1,63 @@
+嚮7
+010
+012
+013
+014
+015
+016
+017
+018
+019
+020
+021
+022
+023
+024
+025
+026
+027
+028
+029
+030
+031
+032
+033
+034
+035
+036
+037
+0%
+039
+041
+042
+043
+NewPQ-XJsedSize = 이•
+Newm->Nodes = (PQNode•) ma110(( sizeof ( PQNode ) * NewPQ-XapacitY ):
+return NewPQ,
+void PQ_Destroy( PrioritYQueue* 國 )
+free( PQ->Nodes );
+free( 國 );
+void PQ_Enqueue( PriorityQueue* PQ, PQNode NewNode )
+int CurrentPosition
+PQ->UsedSize,
+PQ_GetParent( CurrentPosition );
+int ParentPosition
+if ( m-XJsedSize == PQ-Xapacity )
+if ( m-Xapacity
+= 0 )
+PQ-Xapacity
+1;
+PQ-XapacitY *= 2;
+PQ->Nodes = (PQNode*) realloc( PQ->Nodes, sizeof( PQNode )
+* PQ-XapacitY );
+PQ->Nodes [CurrentPosition)
+// 후속 처리
+NewNode,
+while ( CurrentPosition 〉 0
+PQ->Nodes[CurrentPositionl Priority
+〈 m->Nodes[ParentPositionI Priority )
+PQ_SwapNodes( 昶, CurrentPosition, ParentPosition );
+CurrentPosition : ParentPosition;
+ParentPosition = PQ_GetParent( CurrentPosition );
+324
+Part 02 • 알고리즘

@@ -1,0 +1,47 @@
+base=l
+nextseqnum=l
+3.4 • 신뢰성 있는 데이터 전송의 원리
+rdt—send (da ta)
+if (nextgeqnum<bage+N) (
+ndpkt ke—pkt (nextgeqnum, da checkgum)
+udt—send (3ndpkt (nextgeqnuml )
+if (bage-—nextgeqnum)
+start—timer
+nextseqnum十十
+else
+refuse—data (data)
+205
+대기
+rdt—rcv (rcvpkt) && corrupt (rcvpkt)
+timeout
+start—timer
+udt—send (sndpkt (base] )
+udt—send (sndpkt (base+IJ )
+udt—send (sndpkt (nextseqnum—11 )
+rdt—rcv (rcvpkt) && notcorrupt (rcvpkt)
+base=getacknum (rcvpkt) +1
+1 f (base=—nextseqnum)
+stop—timer
+else
+start_timer
+그림 3.20 • GBN 송신자의 확장된 FSM
+가 기득 찼는지, 즉 N개의 아직 확인응답 되지 않은 패킷이 있는지를 확인한다. 만
+약 윈도우가 기득 자 있지 않다면 패킷이 생성되고 송신된다. 그리고 변수들이 적절
+하게 갱신된다. 만약 윈도우가 가득 차 있다면, 송신자는 윈도우가 기득 자 있다는
+것을 가리기는 함축적인 의미로 단지 데이터를 상위 계층으로 반환한다. 상위 계층으
+나중에 다시 시도할 것이다. 실제적인 구현에서 송신자는 이 데이터를 버퍼링하거
+*그러나 즉시 송신하진 않음), 오직 윈도우가 기득하지 않을 때만 rdt_send ( )
+를 호출하는 동기화 메커니즘(예: 세마포어 또는 플래그)을 사용할 것이다.
+ACK의 수신: GBN 프로토콜에서 순서번호 n을 가진 패킷에 대한 확인응답은 누적
+확인응답(cumulative acknowledgment)으로 인식된다. 이 누적 확인응답은 수신
+측에서 올바르게 수신된 n을 포함하여, n까지의 순서번호를 가진 모든 패것들에 대
+한 확인응답이다. GBN 의 수신자 측을 검토할 때 이 문제를 다시 다를 것이다.
+타임아웃 이벤트: "GBN (Go-Back-N)”이라는 프로토콜의 이름은 손실이 있거나
+아주 긴 지연된 패킷이 있을 때의 송신자의 동작으로부터 유래되었다. 전송-후-
+대기 프로토콜에서와 같이, 타이머는 손실된 데이터 또는 손실된 확인응답 패킷으
+로부터 회복하는 데 사용된다. 만약 타임아웃이 발생한다면, 송신자는 이전에 전
+송되었지만 아직 확인응답 되지 않은 모든 패킷을 다시 송신한다. 그림 3.20에서
+송신자는 가장 오래된 “전송되었지만 아직 확인응답 안 된 패것”에 대한 타이머로
+생각될 수 있는 단일 타이머를 사용한다. 만일 ACK가 수신되었지만, 추가로 “전
+송했지만 아직 확인응답 안 된 패킷”이 아직 존재한다면, 타이머는 다시 시작된다.
+만약 아직 확인응답 안 된 패킷이 없다면, 타이머는 멈춘다.

@@ -1,0 +1,49 @@
+09
+10
+12
+13
+16
+17
+18
+20
+22
+23
+24
+25
+26
+27
+28
+29
+30
+32
+33
+34
+V = V->Next;
+void TS_DFS( Vertex* V, Node** List )
+Node* NewHead = NULL;
+Edge• E = NULL;
+V->Visited = Visited,
+E = V->AdjacencyList;
+while ( E 1= NULL )
+if ( E->Target I= NULL E->Target->Visited == NotVisited )
+TS DFS( E->Target, List );
+E = E->Next;
+printf("*c\n", V->Data ):
+NewHead = SLL-CreateNode( V );
+SLL-InsertNewHead( List, NewHead );
+09장/Graph/Top010gica1Sort/Test—Top010gicaiSort.c
+01
+02
+03
+04
+05
+07
+08
+09
+•include "Graph.h•
+#include "TopologicaISort.h"
+int main( void )
+Node* SortedList = NULL;
+NOde* = NULL;
+// 그래프 생성
+• 그래프 415

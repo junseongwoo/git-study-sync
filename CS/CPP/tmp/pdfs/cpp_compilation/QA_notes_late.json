@@ -1,0 +1,93 @@
+{
+  "document": "학습 노트",
+  "render_directory": "C:/Users/user/Desktop/Obsidian/git-study-sync/CS/CPP/tmp/pdfs/cpp_compilation/render/notes",
+  "pdf_page_range": [
+    81,
+    177
+  ],
+  "pdf_pages_reviewed": 97,
+  "method": "담당 범위의 25개 4면 모아보기 이미지를 모두 직접 확인하고, 의심 구간은 개별 페이지 PNG로 확대 확인",
+  "contact_sheets_reviewed": [
+    "contact_081_084.jpg",
+    "contact_085_088.jpg",
+    "contact_089_092.jpg",
+    "contact_093_096.jpg",
+    "contact_097_100.jpg",
+    "contact_101_104.jpg",
+    "contact_105_108.jpg",
+    "contact_109_112.jpg",
+    "contact_113_116.jpg",
+    "contact_117_120.jpg",
+    "contact_121_124.jpg",
+    "contact_125_128.jpg",
+    "contact_129_132.jpg",
+    "contact_133_136.jpg",
+    "contact_137_140.jpg",
+    "contact_141_144.jpg",
+    "contact_145_148.jpg",
+    "contact_149_152.jpg",
+    "contact_153_156.jpg",
+    "contact_157_160.jpg",
+    "contact_161_164.jpg",
+    "contact_165_168.jpg",
+    "contact_169_172.jpg",
+    "contact_173_176.jpg",
+    "contact_177_177.jpg"
+  ],
+  "individual_pages_reviewed": [
+    106,
+    111,
+    128,
+    129,
+    143,
+    166,
+    170
+  ],
+  "checks": [
+    {
+      "item": "텍스트·표의 페이지 경계 밖 잘림",
+      "issues": 0
+    },
+    {
+      "item": "폰트 깨짐 또는 □ 글리프",
+      "issues": 0
+    },
+    {
+      "item": "제목 고립",
+      "issues": 0
+    },
+    {
+      "item": "표·박스의 페이지 중간 분할",
+      "issues": 0
+    },
+    {
+      "item": "코드 잘림·비정상 행 배치",
+      "issues": 0
+    }
+  ],
+  "findings": [
+    {
+      "id": "late-001",
+      "pdf_page": 128,
+      "category": "제목 고립",
+      "description": "페이지 하단에 '단원 요약'과 '요약 기준: 원문 나가며'만 남으며, 실제 첫 요약 항목은129면에서 시작한다.",
+      "required_fix": "단원 요약 제목·요약 기준·첫 요약 항목을 함께 묶어 배치",
+      "status": "수정 완료: 새128·129면 PNG를 직접 재확인했으며, 제목·요약 기준·첫 요약문장이129면에 함께 배치됨"
+    }
+  ],
+  "notes": [
+    "PDF111의 긴 컨테이너 이름은 셀 내에서 자동 줄바꿈되며 글자 손실이나 셀 넘침은 없다.",
+    "PDF143의 긴 플로이드-워셜 코드는 박스 폭 안에 모두 들어간다.",
+    "PDF166·170의 제목 단원 번호는 개별 페이지 확대에서 온전히 표시됨을 확인했다."
+  ],
+  "overall": "pass — 담당97면의 최종본에서 잘림·표넘침·□글리프·제목고립·표/박스분할·코드잘림 문제 없음",
+  "recheck": {
+    "pages": [
+      128,
+      129
+    ],
+    "method": "재렌더 PNG 직접 확대 확인",
+    "result": "pass",
+    "unchanged_pages": "root가 SHA 비교로 담당 범위의 나머지 PNG가 이전과 바이트 동일함을 확인"
+  }
+}

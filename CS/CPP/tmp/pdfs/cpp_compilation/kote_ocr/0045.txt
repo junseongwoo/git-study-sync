@@ -1,0 +1,30 @@
+singly—ll(const singly-ll& other)
+: head(NULL)
+if (other.head)
+head = new node{@, NULL};
+autO cur = head;
+autO it = other.begin();
+while (true)
+cur->data = *it;
+autO tmp = 표;
+4十tmp;
+if (tmp == other.end())
+break;
+= new node{@, NULL};
+cur—〉next
+cur = cur—〉next;
+it = tmp;
+singly_ll(const std::initializer—list<int>& ilist) : head(NULL)
+for (aut0 it = std::rbegin(ilist); it != std::rend(ilist); it++)
+push_front(*it);
+9. main( ) 함수를 만들고 앞서 구현한 클래스를 시용하는 코드를 추가합니다.
+int main()
+singly—ll 511 = {1, 2, 3};
+sll.push_front(@);
+std::cout 〈〈 "첫 번째 리스트:
+for (aut0 i : 511)
+std::cout 〈〈 i 〈〈 "
+// 출력: 0123
+std: :cout 〈〈 std: :endl;
+auto 5112 = 511;
+056

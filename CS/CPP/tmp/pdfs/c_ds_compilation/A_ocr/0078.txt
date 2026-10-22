@@ -1,0 +1,30 @@
+전치 행렬 계산하기 #1
+먼지 방법 1을 구현하여 보자. 행릴의 전치 행릴을 계산하려면 a[il[jl를 a[jl[ll를 바꾸면 된다. 프
+로그램 3.4에 방법 1을 구현하있다. 프로그램 3.4에서는 배열을 함수의 매기1변수로 전달하고 결
+과도 역시 함수의 매개변수로 받았다. 첫 번째 배열 A는 원래의 배열이며 두 번째 배열 B는 전지
+행릴이다. C언어에서 함수로 배열을 전달하면 항상 원본이 전달된다는 점에 유의하라. 배열의
+이름이 포인터의 역할을 하기 때문이다.
+프로그램 3.4 matnxl.c 행렬 전치 프로그램 #1
+#include <stdio.h>
+#define ROÅS 3
+#define COLS 3
+// 행릴 전치 함수
+void matrix-transpose(int A[RO+/S] [COLS], int BCRO+/S] [COLS])
+for (int r = 0; r<ROWS; r++)
+for (int C = 0; c<COLS; C++)
+B[c][rJ = A[r]Cc];
+void matrix_print(int ACROWS] [COLS])
+printf("=
+for (int r = 0; r<ROÅS; r++) {
+for (int C = 0; c<COLS; C++)
+printf("\n");
+printf("=
+int main(void)
+int array1[ROWSJ [COLS]
+int array2[RO,,lS] [COLSJ •,
+{8,9,1},
+array2) ;
+matrix_print(arrayl) ;
+matri x_pri nt(array2) ;
+return 0;
+CHAPTER03 배열, 구조체, 포인터 85

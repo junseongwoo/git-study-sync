@@ -1,0 +1,23 @@
+for (aut0 d : directions)
+switch (d)
+// power 값의 부호를 바꿔서 에지 가중치로 사용
+edges.push-back(Edge {i, next, -power));
+6. 이제 벨모卜포드 알고리즘 구현 함수를 추가합니다. 벨모卜포드 구현 함수는 연습 문제 33에서
+구현했던 Be11manFord() 함수와 완전히 같습니다. 다만 Be11manFord() 함수를 호출할 때 정점
+의 개수를 전체 셀 개수인 N * N으로 지정해야 합니다.
+vector〈int〉 BellmanFord(vector<Edge〉 edges, int V, int start)
+vector〈int〉 distance(V, UNKNOWN);
+distance[start] = 0;
+// (V- 1)번 반복
+for (int i =0,• i 〈V- 1; i++)
+// 전제 에지에 대해 반복
+for (auto& e : edges)
+// 에지의 시작 정점의 거리 값이 UNKNOWN이면 스킵
+if (distance[e.src] == UNKNOWN)
+contlnue,
+// 인접한 정점의 거리 값이 새로운 경로에 의한 거리 값보다 크면
+// 거리 값을 업데이트함
+if (distance[e.dst] 〉 distance[e.src] + e.weight)
+distance[e.dst] = distance[e.srcJ + e.weight;
+// 음수 가중치 사이클이 있는지 검사
+for (auto& e : edges)

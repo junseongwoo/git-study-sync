@@ -1,0 +1,43 @@
+1. 먼저 필요한 헤더 파일을 포함합니다.
+#include <iostream〉
+#include 〈vector〉
+2. enum 클래스를 이용하여 도시 이름을 저장합니다.
+enum class City
+int
+MOSCOW,
+LONDON,
+SEOUL,
+SEATTLE,
+DUBAI,
+SYDNEY
+3. city enum에 대해 〈〈 연산자를 정의합니다.
+std: :ostream& operator〈〈(std: :ostream& 05, const city c)
+switch (0
+case city: :LONDON:
+return 05 ;
+case city:
+:MOSCOW:
+05 〈〈 "모스크바";
+return
+05 ;
+case city:
+:SEOUL.
+return
+05 ;
+case city•
+•:SEATTLE:
+os 〈〈 “시애틀"•
+return os;
+case C1ty
+::DUBAI:
+05 〈〈 "두바이"
+return
+09
+case city•
+•:SYDNEY:
+05 〈〈 "시드니";
+return
+05 ;
+default:
+return 05 ;
+109

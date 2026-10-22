@@ -1,0 +1,30 @@
+다음 순위의 간선은 F-G (154)입니다. F와 G는 서로 다른 집힘에 소속되어 있습니다. 간선 F—G
+를 최소 신장 트리에 추가하고 (A, B. C. D, E. F. 미와 {G. 다를 하나로 만들기 위해 합집합을 수
+행합니다.
+드디어 모든 정점이 하나의 집합 인에 모여서 최소 신장 트리가 되었습니다. 이제 남은 간선들은 사
+이글을 형성하는 것뿐입니다. 정말 그런지 궁금하면 직접 확인해보세요.
+우가%우℃
+㉦ ㉦
+82
+120
+220
+1%
+0
+다음은 크루스칼 알고리즘을 구현한 KruskaI ( ) 함수입니다.
+void KruskaI(Graph* 6, Graph* MST )
+int
+Vertex*
+Vertex**
+1 ;
+CurrentVertex = NULL;
+(Vertex**) ma110(( sizeof(Vertex*) *
+MSTVertices
+G->VertexCount
+DisjointSet** VertexSet
+(DisjointSet**)malIoc( sizeof(DisjointSet*) * G->VertexCwnt );
+PriorityQueue•
+1
+= PQ-Create(10);
+CurrentVertex = G•〉Vertices,
+while ( CurrentVertex |= NULL )
+Chapter • 그래프 435

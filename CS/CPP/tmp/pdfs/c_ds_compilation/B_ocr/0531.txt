@@ -1,0 +1,56 @@
+18
+20
+22
+23
+24
+25
+26
+27
+28
+29
+32
+33
+34
+35
+36
+37
+39
+40
+43
+44
+45
+46
+47
+48
+49
+51
+52
+53
+54
+55
+56
+57
+Merge( DataSet. StartIndex, MiddIeIndex, EndIndex );
+void Merge(int DataSet[I, int StartIndex, int MiddleIndex, int EndIn&x )
+int i;
+int LeftIndex = StartIndex,
+int RightIndex = MiddleIndex + 1;
+int DestIndex = 0;
+int* Destination = (int*) ma110(( sizeof(int) * (EndIndex - StartIndex + 1)
+while ( LeftIndex 〈= MiddIeIndex RightIndex 〈= EndIndex )
+if (DataSet[ LeftIndex 1 〈 DataSet [RightIndex 1)
+Destination[ DestIndex 1 = DataSetI LeftIndex 1:
+LeftIndex++;
+Destination[ DestIndex 1 = DataSet[ RightIndexl;
+RightIndex++;
+DestIndex++;
+while ( LeftIndex 〈= Midd1eIndex )
+Destination( DestIndex++ 1 = DataSet[ LeftIndex++ 1;
+while ( RightIndex 〈= EndIndex )
+Destination( DestIndex++ 1 = DataSet[ RightIndex++ 1;
+DestIndex = 0,
+for (i = StartIndex; i<=EndIndex; i++)
+DataSet[il = Destination[ DestIndex++ 1;
+free( Destination ):
+Chapter 12 분할 정복
+531

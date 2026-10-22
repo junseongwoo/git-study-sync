@@ -1,0 +1,33 @@
+6. 오른쪽 자식이 더 크면
+7-8. 두개의 자식 노드 중 큰 값의 인덱스를 targestæ 옮긴다.
+9. largest의 부모 노드가 targest보다 크면
+10. 중지
+11. 그렇지 않으면 largest와 largest 부모 노드를 교환한다.
+12. 한 레벨 밑으로 내려간다.
+14. 최대값을 반환한다.
+프로그램 9.2 히프트리에서의삭제함수
+// 삭제 함수
+element delete max-heap대eapType* h)
+int parent, child;
+element ltem, temp;
+item = h->heap[l];
+temp : h->heap[(h->heap-size)--];
+parent = 1;
+child = 2;
+while (child 〈= h->heap-size) {
+// 현재 누c이 자식노드 중 더 큰 자식노드를 찾는다.
+if ((child 〈 h-〉heap-size) &&
+(h->heap[child].key) 〈 h->heap[child + l].key)
+chitd++•
+if (temp.key 〉= h->heap[child].key) break;
+// 한 단계 아래로 이동
+h->heap[parent] = h->heap[child];
+parent = child;
+child *= 2;
+h->heaptparentJ = temp;
+return
+전체 프로그램
+다음은 삽입과 삭제 연산을 테스트하는 완전한 프로그램 소스이다. 먼지 3개의 요소를 삽입하고
+이어서 3개의 요소를 삭제하여 요소들의 것값을 화면에 출력하였다. 최대 히프이므로 값이 큰 순
+서대로 출력됨을 알 수 있다.
+CHAPTER09 우선순위큐 337

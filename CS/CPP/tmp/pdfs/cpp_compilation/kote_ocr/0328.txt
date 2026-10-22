@@ -1,0 +1,19 @@
+PRINT("} = " 〈〈 sum 〈〈 endl);
+if (sum == target)
+return true;
+return false;
+6. 이제 main() 함수를 작성하겠습니다. main() 함수에서 집합 set과 목표치 target은 다음과 같
+이 정의합니다.
+int main()
+vector〈int〉 set = {13, 79, 45, 29};
+int target = 58,•
+7. 다음과 같이 SubsetSum-BruteForce() 함수를 호출하고, 그 결과를 출력합니다.
+b001 found = SubsetSum BruteForce(set, target);
+if (found)
+cout 〈〈 "원소 합이 " 〈〈 target 〈〈 "인 부분집합이 있습니다." 〈〈 endl;
+else
+cout 〈〈 "원소 합이 " 〈〈 target 〈〈 "인 부분집합이 없습니다.” 〈〈 endl;
+8. 지금까지 작성한 프로그램을 실행하면 다음 문자열이 출력됩니다.
+원소 합이 58인 부분집합이 있습니다.
+9. 이번에는 목표치 target을 구할 수 없는 정수로 설정해보겠습니다.
+int target = 1000000;

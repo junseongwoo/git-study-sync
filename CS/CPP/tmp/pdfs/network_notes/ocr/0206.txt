@@ -1,0 +1,64 @@
+3.4 • 신뢰성 있는 데이터 전송의 원리
+미 패킷이 중복되있을 경우를 처리하기 위한 충분한 기능(순서번호)을 가지고 있다.
+송신자의 관점에서 재전송은 만병통치약과 같다. 송신자는 데이터 피|것이 손실되
+있는지, ACK가 손실되었는지, 패것 또는 ACK가 단순히 지나치게 지연된 것인지를
+알지 못한다. 이러한 모든 경우에서 행동(액션)은 같다(재전송). 시간 기반의 재전송
+메커니즘을 구현하기 위해, 주어진 시간이 경과된 후에 송신자를 인터럽트(중단)할 수
+있는 카운트다운 타이머(countdown timer)가 필요하다. 그러므로 송신자는 다음처럼
+동작해야 한다.
+1. 매 패것(첫 번째 또는 재전송 패것)이 송신된 시간에 타이머를 시작한
+2. 타이머 인터럽트에 반응함(적당한 행동을 취함)
+3. 타이머를 멈춤
+그림 3.15는 패것이 손상되거나 손실될 수 있는 채널에서 데이터를 신뢰적으로 전
+송하는 프로토콜인 rdt3 . 0에 대한 송신자 FSM을 보여준다. 그림 3.16은 프로토콜
+이 패것 손실 또는 지연 없이 어떻게 동작하는지와 손실된 데이터 패킷을 어떻게 처리
+하는지를 보여 준다. 그림 3.16에서 시간은 다이어그램의 위로부터 아래로 움직인다.
+즉, 패킷에 대한 수신 시간은 전송 지연과 전파 지연 때문에 패것 전송 시간보다 더 늦
+다. 그림 3.16(b)~(d)에서 송신 측 네모 괄호는 타이머가 설정된 후에 타임 아못된 시
+간을 가리킨다. 이 프로토콜의 좀 더 세세한 부분은 이 장 후반부에 나오는 과제에서
+rdt—send (da ta)
+sndpkt=make—pkt (0 , data , checksum)
+199
+rdt_rcv (rcvpkt)
+rdt—rcv (rcvpkt)
+&& notcorrupt ( rcvpkt)
+&& isACK (rcvpkt, 1)
+S top_timer
+timeout
+udt_send (sndpkt)
+start_timer
+rdt_rcv (rcvpkt) &&
+(corrupt (rcvpkt) | |
+isACK (rcvpkt, 0) )
+udt—send (sndpkt)
+start—timer
+`상위로부터
+0번 호출을
+기다림
+1에 대한
+1
+ACK 응답을
+기다림
+0에 대한
+ACK 응답을 수
+기다림
+1
+rdt—rcv (rcvpkt) &&
+(corrupt(rcvpkt) |
+isACK (rcvpkt, 1) )
+timeout
+udt—send (sndpkt )
+start—timer
+rdt—rcv (rcvpkt)
+&& notcorrupt (rcvpkt)
+&& isACK (rcvpkt, 0)
+S top—txmer
+상위로부터
+1번호출을
+기다림
+rdt—rcv (rcvpkt)
+rdt—send (data)
+sndpkt=make—pkt ( 1 , da ta, checksum)
+udt—send (sndpkt)
+start—timer
+그림 3.15 • rdt3 . 0 송신자

@@ -1,0 +1,24 @@
+Node* DLL_GetNodeAt( Node* Head, int Location )
+Node• Current = Head;
+while ( Current != NULL (--Location) 〉= 0)
+Current = Current->NextNode,
+return Current;
+노드 삭제 연산
+이번에는 더블 링크드 리스트의 노드를 삭제해봅시다. 노드 삭제는 앞에서 봤던 연산들과 달리 약
+간 골치가 아픕니다. 삭제할 노드의 양쪽 포인터 2개, 이전 노드의 NextNode 포인터, 다음 노= 이
+PrevNode 포인터 등 모두 4개의 포인터를 다뤄야 하기 때문입니다.
+다음 그림을 보면 이해하기 쉬울 것입니다. 삭제할 노드의 NextNode 포인터가 가리기던 노-드를
+이전 노드의 NextNode 포인터가 가리기게 바꾸고, 삭제할 노드의 PrevNode 포인터가 가리기던
+노드를 다음 노드의 PrevNode 포인터가 가리기게 바꿉니다. 그리고 삭제할 노드의 NextNode와
+PrevNode는 NULL로 깨끗하게 초기 화합니다.
+> 삭제
+ø젤넓`4젤å`|젤e`젤믈D
+98
+젊젤넓
+믈젤n
+98學c는 12노드 두뗴 있는 87노드를 가리키과
+87노드는 98노드를 가리키게 바꾼다
+가리고 12노드는 아무것도 가리키지 않는다
+0젤e′~』젤|`1믈聾
+Chapter 01 • 리스트
+47

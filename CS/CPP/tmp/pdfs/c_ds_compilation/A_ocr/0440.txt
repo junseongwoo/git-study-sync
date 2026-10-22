@@ -1,0 +1,31 @@
+프로그램 122 선택 정렬 프로그램
+#include <stdio.h>
+#include <stdlib.h>
+#define MAX 코죠 10
+int tist[MAX_SIZE];
+void selection_sort(int list[], int n)
+int i, 」, least, temp;
+least = 5;
+for (j=i+l;j <n; j++) // 최소값 탐색
+if (list[j] 〈 list[least]) least = j;
+SWAP(list[i], list[least], temp);
+int main(void)
+n = MAX_SIZE;
+srand(time(NULL)) ;
+for (i = 0; l<n; 5++)
+list[i] = rand() % 100;
+selection_sort(list, n) ;
+for (i = 0; 그〈n; i++)
+printf("%d ", list[i]);
+printf("\n") ;
+return 0;
+실행결과
+16 24 25 38 48 64 87 % 93 96
+선택 정렬의 분석
+// 난수 생성 및 출력
+// 난수 발생 범위 0~99
+// 선택정릴 호줄
+선택 정렬의 성능 분석을 위하여 비교 횟수와 이동 횟수를 따로 구하여 보자. 먼저 비교 횟수를
+구하기 위하여 두개의 for 루프의 실행 횟수를 계산하여 보자. 외부루프는 ,z-1번 실행될 것이
+며 내부-루프는 0에서 ,z-2까지 변하는 i에 대하여 (n—I)—iEtl 반복될 것이다. 기값들의 비교
+CHAPTER12 정렬 449

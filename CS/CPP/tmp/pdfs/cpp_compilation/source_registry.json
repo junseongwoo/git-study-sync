@@ -1,0 +1,107 @@
+{
+  "B": {
+    "id": "B",
+    "path": "C:\\Users\\user\\Downloads\\cpp.pdf",
+    "filename": "cpp.pdf",
+    "pdf_pages": 983,
+    "printed_offset": -5
+  },
+  "K": {
+    "id": "K",
+    "path": "C:\\Users\\user\\Downloads\\Cpp코테.pdf",
+    "filename": "Cpp코테.pdf",
+    "pdf_pages": 530,
+    "printed_offset": null
+  },
+  "L00": {
+    "id": "L00",
+    "path": "C:\\Users\\user\\Downloads\\drive-download-20261019T123347Z-1-001\\Lec00_CPP_Lecture_Introduction.pdf",
+    "filename": "Lec00_CPP_Lecture_Introduction.pdf",
+    "pdf_pages": 24,
+    "printed_offset": 0
+  },
+  "L01": {
+    "id": "L01",
+    "path": "C:\\Users\\user\\Downloads\\drive-download-20261019T123347Z-1-001\\Lec01_CPP_Introduction_and_Variable.pdf",
+    "filename": "Lec01_CPP_Introduction_and_Variable.pdf",
+    "pdf_pages": 53,
+    "printed_offset": 0
+  },
+  "L02D": {
+    "id": "L02D",
+    "path": "C:\\Users\\user\\Downloads\\drive-download-20261019T123347Z-1-001\\Lec02_Additional_Debugging_in_VS.pdf",
+    "filename": "Lec02_Additional_Debugging_in_VS.pdf",
+    "pdf_pages": 13,
+    "printed_offset": 0
+  },
+  "L02": {
+    "id": "L02",
+    "path": "C:\\Users\\user\\Downloads\\drive-download-20261019T123347Z-1-001\\Lec02_CPP_Basic_Syntax.pdf",
+    "filename": "Lec02_CPP_Basic_Syntax.pdf",
+    "pdf_pages": 41,
+    "printed_offset": 0
+  },
+  "L03": {
+    "id": "L03",
+    "path": "C:\\Users\\user\\Downloads\\drive-download-20261019T123347Z-1-001\\Lec03_Function.pdf",
+    "filename": "Lec03_Function.pdf",
+    "pdf_pages": 67,
+    "printed_offset": 0
+  },
+  "L04": {
+    "id": "L04",
+    "path": "C:\\Users\\user\\Downloads\\drive-download-20261019T123347Z-1-001\\Lec04_Pointer_Reference.pdf",
+    "filename": "Lec04_Pointer_Reference.pdf",
+    "pdf_pages": 60,
+    "printed_offset": 0
+  },
+  "L05A": {
+    "id": "L05A",
+    "path": "C:\\Users\\user\\Downloads\\drive-download-20261019T123347Z-1-001\\Lec05_1_OOP_Class_Part1.pdf",
+    "filename": "Lec05_1_OOP_Class_Part1.pdf",
+    "pdf_pages": 63,
+    "printed_offset": 0
+  },
+  "L05B": {
+    "id": "L05B",
+    "path": "C:\\Users\\user\\Downloads\\drive-download-20261019T123347Z-1-001\\Lec05_2_OOP_Class_Part2.pdf",
+    "filename": "Lec05_2_OOP_Class_Part2.pdf",
+    "pdf_pages": 40,
+    "printed_offset": 0
+  },
+  "L06": {
+    "id": "L06",
+    "path": "C:\\Users\\user\\Downloads\\drive-download-20261019T123347Z-1-001\\Lec06_Inheritance.pdf",
+    "filename": "Lec06_Inheritance.pdf",
+    "pdf_pages": 53,
+    "printed_offset": 0
+  },
+  "L07": {
+    "id": "L07",
+    "path": "C:\\Users\\user\\Downloads\\drive-download-20261019T123347Z-1-001\\Lec07_Polymorphism.pdf",
+    "filename": "Lec07_Polymorphism.pdf",
+    "pdf_pages": 47,
+    "printed_offset": 0
+  },
+  "L08": {
+    "id": "L08",
+    "path": "C:\\Users\\user\\Downloads\\drive-download-20261019T123347Z-1-001\\Lec08_Operator_Overloading.pdf",
+    "filename": "Lec08_Operator_Overloading.pdf",
+    "pdf_pages": 48,
+    "printed_offset": 0
+  },
+  "L09": {
+    "id": "L09",
+    "path": "C:\\Users\\user\\Downloads\\drive-download-20261019T123347Z-1-001\\Lec09_Generic_Programming_Template.pdf",
+    "filename": "Lec09_Generic_Programming_Template.pdf",
+    "pdf_pages": 33,
+    "printed_offset": 0
+  },
+  "L99": {
+    "id": "L99",
+    "path": "C:\\Users\\user\\Downloads\\drive-download-20261019T123347Z-1-001\\Lec99_Summary.pdf",
+    "filename": "Lec99_Summary.pdf",
+    "pdf_pages": 10,
+    "printed_offset": 0
+  }
+}

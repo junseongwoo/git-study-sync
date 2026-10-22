@@ -1,0 +1,30 @@
+1. (i - 1)번째 물건과 total-weight 무게를 고려할 때의 최대 가격 합
+2. (i - 1)번째에서 선택된 물건들의 무게에 current-weight를 더하여 total-weight가 형성되
+있다고 가정할 경우:
+a. (i - 1)번째에서 선택된 물건들의 무게가 total-weight - current-weight일 때의 최대
+가격 합에 현재 물건 가격을 합한 값
+b. 현재 선택된 물건들의 무게가 total-weight - current-weight일 때의 최대 가격 합에 현
+재 물건 가격을 합한 값
+이 새로운 로직을 DP 테이블 관점에서 다음과 같이 나타낼 수 있습니다.
+i번째 인덱스에서 total-weight (1 〈= total weight 〈= max-capacity) 값에 대해:
+만약 total-weight 〈 set[i-ll이면:
+DP(i, total_weight) = DP(i-1, total_weight)
+만약 total-weight 〉= set[i-l]이면:
+DP(i, total-weight) = 다음 중 최댓값:
+1) DP(i-1, total—weight)
+2) DP(i-1, total weight - current_weight) + current_value
+3) DP(i, total_weight - current_weight) + current_value
+이를 C++ 코드로 구현하면 다음과 같습니다.
+[](int a, int b, int c) { return std::max(a, std::max(b, 0)•
+autO max
+for (int i = 1; i 〈= items; i++)
+int
+int
+current_weight = weight[i - 1];
+value = values[i - I];
+for (int total_weight = 0; total_weight 〈= capacity; total—weight++)
+if (total—weight 〈 current_weight)
+DP[i][total—weightl = DP[i - ll[total—weightl;
+else
+DP[iI[t0tal-weightl = max(DP[i - ll[total-weightl,
+DP(i - l][total—weight - current—weightl + value,

@@ -1,0 +1,43 @@
+79
+DestroyGraph( Kruska1MST );
+80
+DestroyGraph( graph );
+82
+return 0;
+83
+실행 결과
+Prim•s Algorithm
+A • B[351
+B . A[351 ([1261 F[15이
+( : 8[1261 D[117]
+D:C[117]
+E: F[821 H[981
+F : E[821 B[150] 6[154]
+G : F[1541 1[106]
+H : E[98]
+I: G[1061
+Kruska1•s AIgorithm.
+A-B : 35
+B -A : 35
+F-E : 82
+E-F : 82
+H-E : 98
+E-H : 98
+6 - I
+: 106
+. 106
+D-C: 117
+( -D: 117
+F -H : 120
+H - F
+: 120
+B-C: 126
+C-B. 126
+B - F
+150
+F-B: 150
+F-C • 162
+6 -( : 220
+( -6 . 220
+• 그래프
+441

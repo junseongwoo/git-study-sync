@@ -1,0 +1,24 @@
+std: :unordered-set과 std: 컨테이너는 검색, 삽입, 삭제 등의 보편적인 기능-을
+제공합니다. 모든 원소에 차례대로 접근할 수 있도록 반복자 기능도 제공하고, 벡터나 배열 같은
+다른 컨테이너로부터 곧바로 std: :unordered-set 또는 std: :unordered-map을 구성할 수 있는 생
+성자도 제공합니다. std: :unordered-map은 [1 연산자를 이용하여 주어진 기에 해당하는 값을 받
+을 수도 있습니다.
+다음 연습 문제를 통해 std: :unordered-set과 std: :unordered-map의 A卜혐 방법에 대해 알아보겠
+습니다.
+3.41 연습 문제 16: STL에서 제공하는 해시 테이블
+이번 연습 문제에서는 std: :unordered-set과 std: :unordered-map을 A卜&하여 데이터 삽입, 삭제,
+검색 등의 작업을 수행해보겠습니다.
+1. 필요한 헤더 파일을 포함합니다.
+#include <iostream〉
+#include 〈unordered_map>
+#include 〈unordered—set〉
+2. 컨테이너에 들어 있는 모든 원소를 출력하는 print() 함수를 정의합니다.
+VOid print(const std: :unordered_set<int〉& container)
+for (const auto& element : container)
+std::cout 〈〈 element 〈〈 "
+std: :cout 〈〈 std: :endl;
+VOid print(const std: :unordered_map〈int, int>& container)
+for (const auto& element : container)
+std::cout 〈〈 element.first 〈〈 "•. '| 〈〈 element.second 〈〈
+std: :cout 〈〈 std: :endl,
+3. 원소 검색 결과를 효과적으로 화면에 출력하기 위해 find() 함수를 정의합니다

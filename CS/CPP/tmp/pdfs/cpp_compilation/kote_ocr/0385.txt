@@ -1,0 +1,20 @@
+for (auto& v : values) cin 〉〉 v;
+for (auto& • weight) cin 〉〉 w;
+3. 이번에는 Knapsack-@l() 함수를 정의하겠습니다. 이 함수는 문제 정의에 필요한 항목-을 인자
+로 받고, 정수 값 하니를 반환합니다.
+int Knapsack_@1(int items, int capacity, vector<int〉 values,
+vector<int〉 weight)
+4. DP 테이블은 2차원으로 만들 것이고, 부룬집합의 합 문제에서 시용한 형태와 상당히 유사합
+니다. 부분집합의 힘에서 사우한 테이블의 경우, 첫 번째 차원 크기는 집합 크기보다 하나 크
+게 설정했고, 두 번째 자원 크기는 집합 전체 원소 합보다 하나 크게 설정했습니다. 0-1 배낭
+문제의 경우, 테이블의 첫 번째 차원 크기는 (물건 개수 + 1)로 설정하고, 두 번째 차원 크기
+는 (배낭 용량 + 1)로 설정합니다.
+vector〈vector〈int〉〉 DP(items + 1, vector<int>(capacity + 1, 0));
+5. DP 테이블 설정을 위한 반복문의 인덱스는 1부터 시작합니다. 바깥쪽 반복문에서 현재 물건
+의 무게와 가격을 currentweight와 currentvalue 변수에 저장하겠습니다.
+for (int i = 1; i 〈= items; i++)
+int currentWeight = weight[i - 1];
+int currentValue = values[i - 1];
+for (int totaIWeight = 1; totalWeight 〈= capacity; tota1Weight+卜)
+45. 터뷸레이션 기법으로 DP 테이블을 채웁니다.
+if (totaIWeight 〈 currentWeight)

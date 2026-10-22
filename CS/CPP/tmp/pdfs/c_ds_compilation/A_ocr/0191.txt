@@ -1,0 +1,28 @@
+printf("NULL \n");
+// 테스트 프로그램
+int main(void)
+ListNode *head : NULL;
+for (int = 0; 1 ( 5; 5++) {
+head = insert-first(head, i); //insert-first()가 반환된 헤드 포인터를 head에 대입한다.
+print-tist(head) •,
+for (int = 0; 〈 5; i++) {
+= delete_first(head) ;
+print_list(head) ;
+return 0;
+위의 프로그램의 출력 화면은 다음과 같다.
+실행결과
+O->NULL
+I->O->NULL
+3—>2->1—>O—>NULL
+3->2->1->0—>NULL
+I->O->NULL
+@->NULL
+NULL
+element get-entry(ListType 진, lnt index)를 구현해보자. 단순 연결 리스트에서 index 번째의 데이터
+도전문제
+를 찾아서 반환한다.
+01 단순 연결 리스트에서 하나의 노드를 삭제하러면 어떤 노드를 가리기는 포인터 변수가 필요한가?
+02 단순 연결 리스트에 존재하는 노드의 수를 계산하는 함수 get-length()를 작성하라.
+Quiz
+CHAPTER0å 연결 리스트 I
+199

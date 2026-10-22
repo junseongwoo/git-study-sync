@@ -1,0 +1,38 @@
+// 인접 행릴 출력 함수
+void print-adj-mat(GraphType* g)
+for (intJ =O;j 〈 g->n; j++) {
+printf("%2d ", g->adj-mat[i〕[j]);
+printf("\n");
+void main()
+GraphType *g;
+g = (GraphType *)maIIoc(sizeof(GraphType));
+init(g);
+for(int 5=0; 1<4;i++)
+insert_vertex(% i);
+1);
+insert-edge(g, 0,
+insert-edge(g, 0, 2);
+insert—edge(g, 0,
+3);
+insert-edge(% 1, 2);
+3);
+insert—edge(g, 2,
+pri nt_adJ -mat (g) ;
+free(g);
+실행결과
+0 1 1 1
+1 0 1 0
+1 1 0 1
+1 0 1 0
+인접 리스트
+0
+1
+3
+2
+인접 리스트(ad」acency 1唇t)는 그래프를 표현함에 있어 각각의 정점에 인접한 정점들을 연결 리
+스트로 표시한 것이다. 각 연결 리스트의 노-드들은 인접 정점을 저장하게 된다. 각 연결 리스트
+들은 헤더 노드를 가지고 있고 이 헤더 노드들은 하나의 배열로 구성되어 있다. 따라서 정점의
+번호만 알면 이 번호를 배열의 인덱스로 하여 각 정점의 연결 리스트에 쉽게 접근할수 있다.
+무방향 그래프의 경우 정점 i와 정점 j를 연결하는 간선 6, j)는 정점 i의 연결 리스트에 인접 정
+점 j로서 한번 표현되고, 정점 j의 연결 리스트에 인접 정점 i로 다시 한번 표현된다. 인접 리스트
+CHAPTERIO 그래픠 373

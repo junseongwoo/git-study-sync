@@ -1,0 +1,38 @@
+리의
+원폭
+서브트리
+원
+오른쪽
+서브트리
+오
+리의
+[그림 8-3이 순환호출의 적용
+노-드를 방문한다는 의미를 여기서는 노드의 자료를 출력하는 것으로 정의하자. 방문의 의미는
+공용에 따라 달라진다. 3가지 표준 순회 방법을 구현한 함수들을 아래에 나타내었다.
+프로그램 8.2 이진트리의 3가지 순회방법
+// 중위 순회
+void inorder(TreeNode *root) {
+if (root != NULL) {
+i norder (root->left) ;
+// 왼쪽서브트리 순회
+printf("[%d] ", root->data); // 노드 방문
+inorder( root->ri ght) ;
+// 전위 순회
+void preorder(TreeN0de *root) {
+if (root != NULL) {
+// 오른쪽서브트리 순회
+printf("[%d) ", root->data); // 노드 방문
+preorder ( root->left) ;
+preorder(root-> ght) •,
+// 후위 순회
+void postorder(TreeN0de *root) {
+if (root != NULL) {
+postorder (root->left) ,•
+(root->ri ght) •,
+// 완쪽서브트리 순회
+// 오른쪽서브트리 순회
+// 왼쪽서브트리 순회
+// 오른쪽서브트리순회
+274
+printf("[%d] ", // 노드 방문
+C언어로 쉽게 불어쓴 자료구조

@@ -1,0 +1,61 @@
+388
+manager—to¯agent
+manager¯to¯agent
+manager—to—man—
+manager¯to¯agent
+agent¯to—manager
+manager—to—man—
+CHAPTEROS • 네트워크 계층. 제어 평면
+5.7.2 Sitnple Network Managelnent Protocol (SNMP)
+SNMPv2 (Simplc Ncmork Management l)rotocol version 2)[RFC 3416]는 관리
+서버와 그 관리 서버를 대표하여 실행되고 있는 에이전트 사이에서 네트워크 관리 제
+어 및 정보 메시지를 전달하기 위해 시용된다. SNMP의 가장 흔한 시용 행태는 요청-
+응답 모드(request-response 1Ⅸ)de)인데, 여기서 SNMP 관리 서버는 에이전트에게 요
+청을 송신하고 이를 받은 SNMP 에이전트는 이를 수행한 후 요청에 대한 응답을 보낸
+다. 일반적으로 요청은 피관리 장치와 관련된 MIB 객체 값들을 질의(검색) 또는 수정
+(설정)하기 위해 이용된다. SNMP의 두 번째로 일반적인 사용은 에이전트가 요구받지
+우ra더라도 트랩 메시지(trap message)라는 이름의 메시지를 관리 서버에게 전송하는
+것이다. 트랩 메시지들은 관리 서버들에게 MIB 객체 값들을 변화시킨 예외 상황(예를
+들면, 링크 인터페이스의 활성 또는 비활성)의 발생을 통지하기 위해 이용된다.
+SNMPv2는 표 5.2에 보이고 이후에 설명할 것처럼, 일반적으로 PDUs (Protocol
+Data Units)로 알려진 일곱 가지 타입의 메시지를 정의하고 있다. PDU의 포n,것은 그림
+5.21에 보였다.
+• GetRequest, GetNextRequest, GetBuIkRequest PDU들은 모두
+에이전트의 피관리 장치 내 하나 이상의 MIB 객체의 값을 요청하기 위해 관리 서
+비로부터 에이전트로 전송된다. 값이 요청된 MIB 객체는 PDU의 변수 관련 부분
+에 명세된다. GetRequest,
+GetNextRequest, GetBu1k-Request는
+SNMPv2 PDU 타입
+GetRequest
+GetNextRequest
+GetBu1kRequest
+InformRequest
+SetRequest
+Response
+SNMPv2 -Trap
+송신자-수신자
+—to—agent
+manager
+ager
+ager
+agent—to
+—manager
+설명
+하나 또는 그 이상의 MIB 객체 인스턴스의 값을
+가져온다.
+목록 또는 테이블에서 다음 MIB 객체 인스턴스
+의 값을 가져온다.
+큰 블록 단위의 데이터를 가져온다. 예를 들면,
+큰 테이블의 값들이다.
+원격으로 접근하는 원격 관리 서버에게 MIB 값
+을 알린다.
+하나 또는 그 이상의 MIB 객체 인스턴스들의 값
+들을 설정한다.
+GetRequest ,
+GetNextRequest ,
+GetBu1kRequest ,
+SetRequest PDU , 또는
+InformRequest
+에 대한 응답으로 발생한다.
+관리자에게 예외적인 이벤트 발생을 알린다.
+표 5.2 • SNMPv2 PDU 타입

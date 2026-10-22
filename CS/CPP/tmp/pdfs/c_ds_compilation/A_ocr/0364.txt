@@ -1,0 +1,33 @@
+물론 이런 식으로 구현하면 한정된 개수의 정점까지만 그래프에 삽입한 수 있다. 만약 동적 배
+열로 구현한다면 사용자가 정점을 삽입한 때마다 다시 크기를 조정할 수 있을 것이다.
+정점을 삼입히는 연산은 n을 하나 중가하면 된다. 정점의 번호는 순차적으로 중가한다고 가정
+하자. 간선을 삽입하는 연산은 adj-mat[start〕 [end]와 adj-mat[end] [start]에 1을 삽입하면
+된다. 물론 방향 그래프인 경우에는 adj-mat[start) [예비에만 1을 삽입하여야 한다. 전체 프로
+그램은 다음과 같다.
+프로그램 10.1 adJ-mat.c
+#include <stdio.h>
+#include <stdlib.h>
+#define MAX_VERTICES 50
+typedef struct GraphType {
+int 마 // 정점의 개수
+int adj_mat[MAX_VERTICES) [MAX_VERTICES) •,
+} GraphType;
+// 그래프 초기화
+void init(GraphType* g)
+g->n = 0;
+for (r = 0; r<MAX_VERTICES; r++)
+for (c = 0; C<MAX VERTICES; C++)
+g->adj-mat[r] [리
+// 정점 삽입 연산
+void insert—vertex(GraphType* g, nnt v)
+if (((g->n) + 1) 〉 MAX VERTICES) {
+fprintf(stderr, "그래프: 정점의 개수 초과");
+return;
+g—>tl十十 ;
+// 간선 삽입 연산
+void insert_edge(GraphType* g, int start, int end)
+if (start 〉= g->n ll end >= g->n) {
+fprintf(stderr, "그래프: 정점 번호 오류");
+g-〉adj-mat[start〕 [이던] = 1;
+g->adj -mat [이던] [start]
+372 C언어로 쉽게 풀어쓴 자료구조

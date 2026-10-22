@@ -1,0 +1,24 @@
+5. 룩업을 수행하는 100kUP( ) 함수를 작성합니다.
+std: :vector〈int〉: :iterator lookup(int key)
+autO hash valuel = hashl(key);
+if (datal[hash valuell == key)
+std::cout 〈〈 "1번 테이블에서 " 〈〈 key 〈〈 "을(를) 찾았습니다." 〈〈 std::endl,
+return datal begin() 十 hash_valuel;
+autO hash—value2 = hash2(key);
+if (data2[hash—value2J == key)
+std::cout 〈〈 "2번 테이블에서 " 〈〈 key 〈〈 "을(를) 찾았습니다." 〈〈 std::endl;
+return data2.begin() + hash_value2;
+return data2.end();
+룩업 함수는 양쪽 해시 테이블에서 기를 검색하고, 해당 위치를 나타내는 반복자를 반환합니
+다. 반복자가 항상 필요한 것은 아니지만, 여기서는 삭제 함수에서 이 반복자를 시용할 것입
+니다. 만약 원소를 찾지 못하면 data2 테이블의 마지막을 가리기는 반복자가 반환됩니다. 이
+룩업 함수는 0(1)의 시간 복잡도를 가지며, 매우 빠르게 동작합니다.
+6. 삭제 함수를 작성합니다.
+void erase(int key)
+autO position = lookup(key);
+if (position != data2.end())
+*position = -1 ;
+std::cout 〈〈 key 〈〈 "에 해당하는 원소를 삭제했습니다. " 〈〈 std: .endl;
+else
+std::cout 〈〈 key 〈〈 "기를 찾지 못했습니다." 〈〈 std::endl;
+136

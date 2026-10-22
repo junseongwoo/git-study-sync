@@ -1,0 +1,67 @@
+101
+102
+103
+104
+105
+1%
+107
+108
+109
+110
+113
+114
+116
+118
+119
+120
+122
+123
+124
+125
+126
+127
+128
+129
+130
+131
+132
+133
+134
+135
+136
+137
+138
+139
+140
+break,
+if ( Maze->Data[Next->Yl[Next-〉XI
+= WALL )
+if ( Maze->Data(Next->Y)[Next十〉XJ == MARKED )
+return SUCCEED;
+int GetMaze( char* FilePath, MazeInf0* Maze )
+int i=0;
+int j=O;
+int RowSize
+int ColumnSize = INIT_VALUE,
+FILE* fp;
+return FAIL;•
+return FAIL,
+다음 갈 곳이 벽이나 지나온 길이라면
+FAIL을 반환합니다
+char buffer(MAX_BUFFER];
+if ( (fp = fopen( FiIePath, "r"))
+= NULL )
+printf("Cannot open file:S\n"
+FilePath);
+return FAIL,
+while ( fgets( buffer, MAX BUFFER, fp ) NULL )
+RowSize十+,•
+if ( CoIumnSize == INIT_VALUE )
+CoIumnSize = strlen( buffer ) - 1,
+else if ( CoIumnSize != strlen( buffer ) - 1 )
+printf("Maze data in file:s is not valid.xn•
+FilePath);
+f(10S이 fp
+return FAIL;
+Chapter 15 • 백트래킹
+621

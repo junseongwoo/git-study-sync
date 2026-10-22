@@ -1,0 +1,24 @@
+9. 기지 조건과 재기 순후나110: 다음과 같이 정의한 수 있습니다.
+기저 초간:
+DP(O, 0) -〉 1
+재귀 순환식:
+DP(i, subset) -〉 DP(i, subset) + DP(i - 1, subset)
+DP(i, subset U note(i-ll) -〉 DP(i, subset tJ note[il) + DP(i - 1, subset)
+여기서 인덱스 i는 1부터 멜로디 길이까지 증가합니다. 이 의사 코드를 C++ 코드로 바꿔 쓰
+면 다음과 같습니다.
+// 기저 조건 -〉 공집합
+DP[@I[OI
+for (int i = 1 ; i 〈= melody.size(); i++)
+for (unsigned int subset = 0; subset 〈 4096,
+• subset十十)
+// (i - 1)에서의 결과 더하기
+DP[il[subset] += DP[i - ll[subset];
+// melody[i - 1]을 포함한 부분집합을 고려
+DP[i][subset | melody[i - 1]] += DP[i - ll[subsetl;
+// 최종 해답
+return DP[meIody .size( ) [targetl ;
+9. 이제 다시 main() 함수에 CountMelodicPermutations() 함수를 호출하고 그 결과를 출력하는
+코드를 추가합니다.
+= CountMe10dicPermutations(ConvertNotes(meIody), ConvertNotes(set));
+int count
+cout 〈〈 count 〈〈 endl;

@@ -1,0 +1,24 @@
+3. SimpleDisjointSet 클래스의 생성자를 만들고. make-set(x)과 find(x) 연산을 구현합니다.
+public:
+SimpIeDisjointSet(unsigned N)
+nodes .reserve(N);
+void make set(const unsigned& x)
+nodes.emplace-back(x);
+unsigned find(unsigned x)
+aut0 node it = find_if(nodes.begin(), nodes end(),
+[x](auto n) { return n.id == x; });
+unsigned node id = (*node it).id;
+while (node_id != nodes[node—idl.parent)
+node-id = nodes[node_id] parent;
+return node id;
+4. 디스조인트-셋 자료 구조에서 두 트리를 합치는 union(x, y) 연산을 구현합니다.
+VOid union_sets(unsigned X, unsigned y)
+autO root_x = find(x);
+autO root—y = find(y);
+// 만약 X와 Y가 같은 트리에 있다면 그대로 종료
+if (root_x == root—y)
+return;
+// 작은 랭크의 트리를 큰 랭크의 트리 쪽으로 병합
+if (nodes[root—xl.rank 〉 nodes[root—yl.rank)
+swap(root—x, root—y);
+nodes[root_x] .parent = nodes[root—y] .parent;

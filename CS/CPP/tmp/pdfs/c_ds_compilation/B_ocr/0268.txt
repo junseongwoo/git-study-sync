@@ -1,0 +1,63 @@
+008
+009
+010
+012
+013
+014
+015
+016
+017
+018
+019
+020
+021
+022
+023
+024
+025
+026
+027
+028
+029
+030
+031
+032
+033
+034
+035
+036
+037
+038
+039
+041
+042
+043
+045
+046
+047
+NewNode->Data
+return NewNode
+= NewData;
+void BST DestroyNode( BSTNode* NOde )
+free(N0de);
+void BST_DestroyTree( BSTNode* Tree )
+if ( Tree->Right != NULL )
+BST_DestroyTree( Tree->Right );
+if ( Tree->Left != NULL )
+BST_DestroyTree( Tree->Left );
+Tree->Left = NULL;
+Tree->Right = NULL;
+BST DestroyNode( Tree ):
+BSTNode* BST_SearchNode( BSTNode• Tree, ElementType Target )
+if ( Tree == NULL )
+return NULL;
+if ( Tree-»ata == Target )
+return Tree,
+else if ( Tree->Data 〉 Target )
+return BST-SearchNode ( Tree->Left, Target ):
+else
+return BST-SearchNode ( Tree-Right, );
+BSTNode*
+BST-SearchMinNode( BSTNode• Tree )
+Chapter % • 탐책
+261

@@ -1,0 +1,1347 @@
+{
+  "unit": 10,
+  "title": "우선순위 큐·힙·허프만",
+  "part": "자료구조",
+  "scope": [
+    {
+      "source": "A",
+      "start": 313,
+      "end": 350
+    },
+    {
+      "source": "B",
+      "start": 308,
+      "end": 334
+    }
+  ],
+  "learning": [
+    {
+      "text": "우선순위 큐는 우선순위 속성을 갖는 데이터의 삽입(Enqueue)과 제거(Dequeue) 연산을 지원하는 ADT이다.",
+      "refs": [
+        {
+          "source": "B",
+          "section": "7.1 우선순위 큐",
+          "pages": [
+            310
+          ]
+        }
+      ],
+      "evidence": "삽입과 제거 연산을 지원하는 ADT"
+    },
+    {
+      "text": "히프(heap)는 여러 개의 값 중에서 가장 큰 값이나 가장 작은 값을 빠르게 찾아내도록 만들어진 자료구조이다.",
+      "refs": [
+        {
+          "source": "A",
+          "section": "9.3 히프란?",
+          "pages": [
+            319
+          ]
+        }
+      ],
+      "evidence": "가장 큰 값이나 가장 작은 값"
+    }
+  ],
+  "concepts": [
+    {
+      "title": "우선순위 큐와 우선순위의 기준",
+      "items": [
+        {
+          "text": "우선순위 큐는 우선순위 속성을 갖는 데이터의 삽입(Enqueue)과 제거(Dequeue) 연산을 지원하는 ADT이다.",
+          "refs": [
+            {
+              "source": "B",
+              "section": "7.1 우선순위 큐",
+              "pages": [
+                310
+              ]
+            }
+          ],
+          "evidence": "삽입과 제거 연산을 지원하는 ADT"
+        },
+        {
+          "text": "우선순위 큐는 가장 높은 우선순위를 가진 요소부터 빠져나오게 한다.",
+          "refs": [
+            {
+              "source": "B",
+              "section": "7.1 우선순위 큐",
+              "pages": [
+                310
+              ]
+            }
+          ],
+          "evidence": "가장 높은 우선순위를 가진 요소부터"
+        },
+        {
+          "text": "우선순위의 기준은 프로그래머가 결정한다.",
+          "refs": [
+            {
+              "source": "B",
+              "section": "7.1 우선순위의 기준",
+              "pages": [
+                310
+              ]
+            }
+          ],
+          "evidence": "전적으로 프로그래머에게 달렸습니다"
+        },
+        {
+          "text": "B에서는 데이터의 값이 작을수록 우선순위가 높은 것으로 간주한다.",
+          "refs": [
+            {
+              "source": "B",
+              "section": "7.1 우선순위의 기준",
+              "pages": [
+                310
+              ]
+            }
+          ],
+          "evidence": "데이터의 값이 작을수록 높은"
+        },
+        {
+          "text": "우선순위 큐는 시뮬레이션 시스템, 네트워크 트래픽 제어, 운영 체제의 작업 스케줄링, 수치 해석적인 계산에 사용된다.",
+          "refs": [
+            {
+              "source": "A",
+              "section": "9.1 우선순위 큐",
+              "pages": [
+                315
+              ]
+            }
+          ],
+          "evidence": "네트워크 트래픽 제어"
+        }
+      ]
+    },
+    {
+      "title": "히프의 정의와 종류",
+      "items": [
+        {
+          "text": "히프(heap)는 여러 개의 값 중에서 가장 큰 값이나 가장 작은 값을 빠르게 찾아내도록 만들어진 자료구조이다.",
+          "refs": [
+            {
+              "source": "A",
+              "section": "9.3 히프란?",
+              "pages": [
+                319
+              ]
+            }
+          ],
+          "evidence": "가장 큰 값이나 가장 작은 값"
+        },
+        {
+          "text": "히프는 완전 이진트리이다.",
+          "refs": [
+            {
+              "source": "A",
+              "section": "9.3 히프란?",
+              "pages": [
+                319
+              ]
+            }
+          ],
+          "evidence": "완전 이진트리"
+        },
+        {
+          "text": "히프는 부모 노드의 키 값이 자식 노드의 키 값보다 큰 느슨한 정렬 상태를 유지한다.",
+          "refs": [
+            {
+              "source": "A",
+              "section": "9.3 히프란?",
+              "pages": [
+                319
+              ]
+            }
+          ],
+          "evidence": "느슨한 정렬 상태"
+        },
+        {
+          "text": "히프 트리에서는 중복된 값을 허용한다.",
+          "refs": [
+            {
+              "source": "A",
+              "section": "9.3 히프란?",
+              "pages": [
+                319
+              ]
+            }
+          ],
+          "evidence": "중복된 값을 허용"
+        },
+        {
+          "text": "최대 히프(max heap)는 부모 노드의 키 값이 자식 노드의 키 값보다 크거나 같은 완전 이진트리이다.",
+          "refs": [
+            {
+              "source": "A",
+              "section": "9.3 최대 히프",
+              "pages": [
+                320
+              ]
+            }
+          ],
+          "evidence": "크거나 같은 완전 이진트리"
+        },
+        {
+          "text": "최소 히프(min heap)는 부모 노드의 키 값이 자식 노드의 키 값보다 작거나 같은 완전 이진트리이다.",
+          "refs": [
+            {
+              "source": "A",
+              "section": "9.3 최소 히프",
+              "pages": [
+                320
+              ]
+            }
+          ],
+          "evidence": "작거나 같은 완전 이진트리"
+        },
+        {
+          "text": "B의 힙에서 가장 작은 데이터를 갖는 노드는 뿌리 노드이다.",
+          "refs": [
+            {
+              "source": "B",
+              "section": "7.2.2 힙의 최솟값 삭제 연산",
+              "pages": [
+                315
+              ]
+            }
+          ],
+          "evidence": "가장 작은 데이터를 갖는 노드는 뿌리"
+        },
+        {
+          "text": "B의 힙은 이진 탐색을 할 수 없으며 어떤 노드를 찾으려면 모든 노드를 순회해야 한다.",
+          "refs": [
+            {
+              "source": "B",
+              "section": "7.2 힙",
+              "pages": [
+                312
+              ]
+            }
+          ],
+          "evidence": "모든 노드를 순회"
+        }
+      ]
+    },
+    {
+      "title": "배열 표현과 B의 구현",
+      "items": [
+        {
+          "text": "A의 배열 표현은 인덱스 0을 사용하지 않고 루트 노드를 인덱스 1에 저장한다.",
+          "refs": [
+            {
+              "source": "A",
+              "section": "9.3 히프의 구현 방법",
+              "pages": [
+                320
+              ]
+            }
+          ],
+          "evidence": "인덱스는 0이 아닌 1부터"
+        },
+        {
+          "text": "B의 배열 표현은 깊이 0의 뿌리 노드를 배열의 0번 요소에 저장한다.",
+          "refs": [
+            {
+              "source": "B",
+              "section": "7.2.3 힙의 구현",
+              "pages": [
+                317
+              ]
+            }
+          ],
+          "evidence": "배열의 0번 요소에 저장"
+        },
+        {
+          "text": "B의 Heap 구조체에서 Capacity는 Nodes 배열의 크기, UsedSize는 실제 배열에 들어 있는 큐 요소의 수이다.",
+          "refs": [
+            {
+              "source": "B",
+              "section": "7.2.3 자료구조 선언",
+              "pages": [
+                318
+              ]
+            }
+          ],
+          "evidence": "Capacity 필드는 힙의 용량"
+        },
+        {
+          "text": "B의 HEAP_Insert()는 UsedSize가 Capacity에 도달하면 Capacity를 2배로 늘리고 realloc()으로 배열을 다시 할당한다.",
+          "refs": [
+            {
+              "source": "B",
+              "section": "7.2.3 삽입 연산 구현",
+              "pages": [
+                319
+              ]
+            }
+          ],
+          "evidence": "Capacity *= 2"
+        },
+        {
+          "text": "B의 최솟값 삭제 구현은 UsedSize가 Capacity/2보다 작으면 Capacity를 반으로 줄이고 realloc()을 호출한다.",
+          "refs": [
+            {
+              "source": "B",
+              "section": "7.2.3 최솟값 삭제 연산 구현",
+              "pages": [
+                321
+              ]
+            }
+          ],
+          "evidence": "H->Capacity /= 2"
+        },
+        {
+          "text": "B의 힙 기반 우선순위 큐는 노드 구조체에 Priority 필드를 추가하고 Data 필드를 void*로 바꾸어 다양한 자료형을 담는다.",
+          "refs": [
+            {
+              "source": "B",
+              "section": "7.3 힙 기반 우선순위 큐의 구현",
+              "pages": [
+                327
+              ]
+            }
+          ],
+          "evidence": "Priority 필드 추가"
+        }
+      ]
+    },
+    {
+      "title": "삽입·삭제·히프 정렬",
+      "items": [
+        {
+          "text": "최대 히프 삽입에서는 마지막 노드에 새 노드를 추가한 뒤 부모 노드와 비교하여 교환하며 올라간다.",
+          "refs": [
+            {
+              "source": "A",
+              "section": "9.4 알고리즘 9.1",
+              "pages": [
+                325
+              ]
+            }
+          ],
+          "evidence": "PARENT(i)"
+        },
+        {
+          "text": "최대 히프 삭제에서는 루트를 삭제하고 마지막 노드를 루트로 옮긴 뒤 자식과 비교하여 교환하며 내려간다.",
+          "refs": [
+            {
+              "source": "A",
+              "section": "9.4 삭제 알고리즘",
+              "pages": [
+                327
+              ]
+            }
+          ],
+          "evidence": "마지막 노드를 루트 노드로"
+        },
+        {
+          "text": "히프의 삽입과 삭제 연산은 최악의 경우 히프의 높이만큼 비교하므로 O(log₂n)이다.",
+          "refs": [
+            {
+              "source": "A",
+              "section": "9.4 삽입과 삭제 연산의 복잡도 분석",
+              "pages": [
+                332
+              ]
+            }
+          ],
+          "evidence": "O(log"
+        },
+        {
+          "text": "히프 정렬은 히프의 삽입과 삭제 연산을 이용하여 정렬하며 전체 시간 복잡도는 O(nlog₂n)이다.",
+          "refs": [
+            {
+              "source": "A",
+              "section": "9.5 히프 정렬",
+              "pages": [
+                334
+              ]
+            }
+          ],
+          "evidence": "O(nlog"
+        },
+        {
+          "text": "히프 정렬은 전체 자료를 정렬하지 않고 가장 큰 값 몇 개만 필요할 때 유용하다.",
+          "refs": [
+            {
+              "source": "A",
+              "section": "9.5 히프 정렬",
+              "pages": [
+                334
+              ]
+            }
+          ],
+          "evidence": "가장 큰 값 몇 개만 필요"
+        }
+      ]
+    },
+    {
+      "title": "기계 스케줄링",
+      "items": [
+        {
+          "text": "기계 스케줄링 문제는 동일한 기계 m개에 서로 다른 작업 시간의 작업 n개를 할당하여 전체 작업을 가장 빨리 끝내도록 하는 문제이다.",
+          "refs": [
+            {
+              "source": "A",
+              "section": "9.6 히프의 응용: 기계 스케줄링",
+              "pages": [
+                335
+              ]
+            }
+          ],
+          "evidence": "동일한 기계 m개"
+        },
+        {
+          "text": "LPT(longest processing time first)는 작업 시간이 가장 긴 작업을 먼저 할당하는 근사해 방법이다.",
+          "refs": [
+            {
+              "source": "A",
+              "section": "9.6 히프의 응용: 기계 스케줄링",
+              "pages": [
+                335
+              ]
+            }
+          ],
+          "evidence": "근사해"
+        },
+        {
+          "text": "LPT에서는 기계가 사용 가능해질 때마다 남은 작업 중 시간이 가장 긴 작업을 할당한다.",
+          "refs": [
+            {
+              "source": "A",
+              "section": "9.6 히프의 응용: 기계 스케줄링",
+              "pages": [
+                335
+              ]
+            }
+          ],
+          "evidence": "기계가 사용 가능하게 될 때마다"
+        },
+        {
+          "text": "기계의 종료 시간을 최소 히프에 저장하여 가장 먼저 사용 가능해지는 기계를 선택한다.",
+          "refs": [
+            {
+              "source": "A",
+              "section": "9.6 히프의 응용: 기계 스케줄링",
+              "pages": [
+                336
+              ]
+            }
+          ],
+          "evidence": "종료 시간을 최소 히프에 저장"
+        }
+      ]
+    },
+    {
+      "title": "허프만 코드",
+      "items": [
+        {
+          "text": "빈도수(frequencies)는 영문 텍스트에서 해당 글자가 나타나는 횟수이다.",
+          "refs": [
+            {
+              "source": "A",
+              "section": "9.7 히프의 응용: 허프만 코드",
+              "pages": [
+                340
+              ]
+            }
+          ],
+          "evidence": "해당 글자가 나타나는 횟수"
+        },
+        {
+          "text": "빈도수에 따라 자주 등장하는 글자에는 짧은 비트열을, 잘 나오지 않는 글자에는 긴 비트열을 사용하는 가변 길이 코드로 전체 크기를 줄인다.",
+          "refs": [
+            {
+              "source": "A",
+              "section": "9.7 히프의 응용: 허프만 코드",
+              "pages": [
+                340
+              ]
+            }
+          ],
+          "evidence": "가변 길이의 코드를 사용"
+        },
+        {
+          "text": "허프만 코드(Huffman codes)에서는 모든 코드가 다른 코드의 첫 부분이 아니므로 왼쪽에서 오른쪽으로 조사하면 정확히 하나의 코드만 일치한다.",
+          "refs": [
+            {
+              "source": "A",
+              "section": "9.7 히프의 응용: 허프만 코드",
+              "pages": [
+                341
+              ]
+            }
+          ],
+          "evidence": "모든 코드가 다른 코드의 첫 부분이 아니라는"
+        },
+        {
+          "text": "A의 허프만 트리에서 왼쪽 간선은 비트 1을, 오른쪽 간선은 비트 0을 나타낸다.",
+          "refs": [
+            {
+              "source": "A",
+              "section": "9.7 히프의 응용: 허프만 코드",
+              "pages": [
+                342
+              ]
+            }
+          ],
+          "evidence": "왼쪽 간선은 비트 1"
+        }
+      ]
+    }
+  ],
+  "procedures": [
+    {
+      "title": "A의 최대 히프 삽입",
+      "steps": [
+        {
+          "text": "히프의 크기를 1 증가시키고 새 원소를 마지막 위치에 둔다.",
+          "refs": [
+            {
+              "source": "A",
+              "section": "9.4 알고리즘 9.1",
+              "pages": [
+                325
+              ]
+            }
+          ],
+          "evidence": "heap_size"
+        },
+        {
+          "text": "새 원소가 루트가 아니며 부모의 키보다 크면 부모와 교환한다.",
+          "refs": [
+            {
+              "source": "A",
+              "section": "9.4 알고리즘 9.1",
+              "pages": [
+                325
+              ]
+            }
+          ],
+          "evidence": "A[i] > A[PARENT(i)]"
+        },
+        {
+          "text": "비교 위치를 부모 위치로 옮겨 같은 과정을 반복한다.",
+          "refs": [
+            {
+              "source": "A",
+              "section": "9.4 알고리즘 9.1",
+              "pages": [
+                325
+              ]
+            }
+          ],
+          "evidence": "i ← PARENT(i)"
+        }
+      ]
+    },
+    {
+      "title": "B의 힙 최솟값 삭제",
+      "steps": [
+        {
+          "text": "뿌리 노드를 삭제한 후 최고 깊이의 가장 우측 노드를 뿌리로 옮긴다.",
+          "refs": [
+            {
+              "source": "B",
+              "section": "7.2.2 힙의 최솟값 삭제 연산",
+              "pages": [
+                315
+              ]
+            }
+          ],
+          "evidence": "최고 깊이 가장 우측"
+        },
+        {
+          "text": "옮겨온 노드의 양쪽 자식을 비교하여 작은 쪽 자식과 위치를 교환한다.",
+          "refs": [
+            {
+              "source": "B",
+              "section": "7.2.2 힙의 최솟값 삭제 연산",
+              "pages": [
+                315
+              ]
+            }
+          ],
+          "evidence": "작은 쪽 자식과 위치를 교환"
+        },
+        {
+          "text": "옮겨온 노드가 잎 노드가 되거나 양쪽 자식보다 작으면 종료하고, 그렇지 않으면 교환을 반복한다.",
+          "refs": [
+            {
+              "source": "B",
+              "section": "7.2.2 힙의 최솟값 삭제 연산",
+              "pages": [
+                315
+              ]
+            }
+          ],
+          "evidence": "그렇지 않으면 단계"
+        }
+      ]
+    },
+    {
+      "title": "A의 허프만 트리 구성",
+      "steps": [
+        {
+          "text": "빈도수에 따라 글자를 나열하고 가장 작은 빈도수의 글자 2개를 추출한다.",
+          "refs": [
+            {
+              "source": "A",
+              "section": "9.7 히프의 응용: 허프만 코드",
+              "pages": [
+                341
+              ]
+            }
+          ],
+          "evidence": "가장 작은 빈도수를 가지는 글자 2개"
+        },
+        {
+          "text": "두 글자를 단말노드로 하는 이진트리를 만들고 루트에 두 자식의 값의 합을 저장한다.",
+          "refs": [
+            {
+              "source": "A",
+              "section": "9.7 히프의 응용: 허프만 코드",
+              "pages": [
+                341
+              ]
+            }
+          ],
+          "evidence": "루트의 값은 각 자식노드의 값을 합한 값"
+        },
+        {
+          "text": "합친 값을 글자들의 정렬된 리스트에 다시 삽입하고 가장 작은 값 2개를 합치는 과정을 최종 트리가 될 때까지 반복한다.",
+          "refs": [
+            {
+              "source": "A",
+              "section": "9.7 히프의 응용: 허프만 코드",
+              "pages": [
+                342
+              ]
+            }
+          ],
+          "evidence": "합쳐진 값을 글자들의 리스트에 삽입"
+        }
+      ]
+    }
+  ],
+  "syntax": [
+    {
+      "label": "B의 Heap 구조체",
+      "code": "typedef struct tagHeap {\n    HeapNode* Nodes;\n    int Capacity;\n    int UsedSize;\n} Heap;",
+      "refs": [
+        {
+          "source": "B",
+          "section": "7.2.3 자료구조 선언",
+          "pages": [
+            318
+          ]
+        }
+      ],
+      "evidence": "typedef struct tagHeap",
+      "note": null
+    }
+  ],
+  "formulas": [
+    {
+      "label": "최대·최소 히프의 키 관계",
+      "expression": "최대 히프: key(부모노드) ≥ key(자식노드); 최소 히프: key(부모노드) ≤ key(자식노드)",
+      "refs": [
+        {
+          "source": "A",
+          "section": "9.3 히프란?",
+          "pages": [
+            320
+          ]
+        }
+      ],
+      "evidence": "key(부모노드)",
+      "note": "두 히프 모두 완전 이진트리."
+    },
+    {
+      "label": "A의 배열 인덱스 관계",
+      "expression": "왼쪽 자식 = 부모 인덱스*2; 오른쪽 자식 = 부모 인덱스*2+1; 부모 = 자식 인덱스/2",
+      "refs": [
+        {
+          "source": "A",
+          "section": "9.3 히프의 구현 방법",
+          "pages": [
+            321
+          ]
+        }
+      ],
+      "evidence": "부모 노드의 인덱스",
+      "note": "루트 인덱스 1을 사용하는 배열 표현."
+    },
+    {
+      "label": "B의 배열 인덱스 관계",
+      "expression": "왼쪽 자식: 2k+1; 오른쪽 자식: 2k+2; 부모: (k-1)÷2의 몫",
+      "refs": [
+        {
+          "source": "B",
+          "section": "7.2.3 힙의 구현",
+          "pages": [
+            318
+          ]
+        }
+      ],
+      "evidence": "(k-1)÷2의 몫",
+      "note": "k는 노드의 인덱스이며, 루트 인덱스는 0."
+    }
+  ],
+  "comparisons": [
+    {
+      "title": "우선순위 큐의 구현 방법별 복잡도",
+      "headers": [
+        "표현 방법",
+        "삽입",
+        "삭제"
+      ],
+      "rows": [
+        [
+          {
+            "text": "순서 없는 배열",
+            "refs": [
+              {
+                "source": "A",
+                "section": "9.2 표 9-2 우선순위 큐의 구현 방법 비교",
+                "pages": [
+                  318
+                ]
+              }
+            ],
+            "evidence": "순서 없는 배열"
+          },
+          {
+            "text": "O(1)",
+            "refs": [
+              {
+                "source": "A",
+                "section": "9.2 표 9-2 우선순위 큐의 구현 방법 비교",
+                "pages": [
+                  318
+                ]
+              }
+            ],
+            "evidence": "O(1)"
+          },
+          {
+            "text": "O(n)",
+            "refs": [
+              {
+                "source": "A",
+                "section": "9.2 표 9-2 우선순위 큐의 구현 방법 비교",
+                "pages": [
+                  318
+                ]
+              }
+            ],
+            "evidence": "O(n)"
+          }
+        ],
+        [
+          {
+            "text": "순서 없는 연결 리스트",
+            "refs": [
+              {
+                "source": "A",
+                "section": "9.2 표 9-2 우선순위 큐의 구현 방법 비교",
+                "pages": [
+                  318
+                ]
+              }
+            ],
+            "evidence": "순서 없는 연결 리스트"
+          },
+          {
+            "text": "O(1)",
+            "refs": [
+              {
+                "source": "A",
+                "section": "9.2 표 9-2 우선순위 큐의 구현 방법 비교",
+                "pages": [
+                  318
+                ]
+              }
+            ],
+            "evidence": "O(1)"
+          },
+          {
+            "text": "O(n)",
+            "refs": [
+              {
+                "source": "A",
+                "section": "9.2 표 9-2 우선순위 큐의 구현 방법 비교",
+                "pages": [
+                  318
+                ]
+              }
+            ],
+            "evidence": "O(n)"
+          }
+        ],
+        [
+          {
+            "text": "정렬된 배열",
+            "refs": [
+              {
+                "source": "A",
+                "section": "9.2 표 9-2 우선순위 큐의 구현 방법 비교",
+                "pages": [
+                  318
+                ]
+              }
+            ],
+            "evidence": "정렬된 배열"
+          },
+          {
+            "text": "O(n)",
+            "refs": [
+              {
+                "source": "A",
+                "section": "9.2 표 9-2 우선순위 큐의 구현 방법 비교",
+                "pages": [
+                  318
+                ]
+              }
+            ],
+            "evidence": "O(n)"
+          },
+          {
+            "text": "O(1)",
+            "refs": [
+              {
+                "source": "A",
+                "section": "9.2 표 9-2 우선순위 큐의 구현 방법 비교",
+                "pages": [
+                  318
+                ]
+              }
+            ],
+            "evidence": "O(1)"
+          }
+        ],
+        [
+          {
+            "text": "정렬된 연결 리스트",
+            "refs": [
+              {
+                "source": "A",
+                "section": "9.2 표 9-2 우선순위 큐의 구현 방법 비교",
+                "pages": [
+                  318
+                ]
+              }
+            ],
+            "evidence": "정렬된 연결 리스트"
+          },
+          {
+            "text": "O(n)",
+            "refs": [
+              {
+                "source": "A",
+                "section": "9.2 표 9-2 우선순위 큐의 구현 방법 비교",
+                "pages": [
+                  318
+                ]
+              }
+            ],
+            "evidence": "O(n)"
+          },
+          {
+            "text": "O(1)",
+            "refs": [
+              {
+                "source": "A",
+                "section": "9.2 표 9-2 우선순위 큐의 구현 방법 비교",
+                "pages": [
+                  318
+                ]
+              }
+            ],
+            "evidence": "O(1)"
+          }
+        ],
+        [
+          {
+            "text": "히프",
+            "refs": [
+              {
+                "source": "A",
+                "section": "9.2 표 9-2 우선순위 큐의 구현 방법 비교",
+                "pages": [
+                  318
+                ]
+              }
+            ],
+            "evidence": "히프"
+          },
+          {
+            "text": "O(logn)",
+            "refs": [
+              {
+                "source": "A",
+                "section": "9.2 표 9-2 우선순위 큐의 구현 방법 비교",
+                "pages": [
+                  318
+                ]
+              }
+            ],
+            "evidence": "O(logn)"
+          },
+          {
+            "text": "O(logn)",
+            "refs": [
+              {
+                "source": "A",
+                "section": "9.2 표 9-2 우선순위 큐의 구현 방법 비교",
+                "pages": [
+                  318
+                ]
+              }
+            ],
+            "evidence": "O(logn)"
+          }
+        ]
+      ]
+    }
+  ],
+  "terms": [
+    {
+      "term": "우선순위 큐",
+      "definition": {
+        "text": "우선순위 큐는 우선순위 속성을 갖는 데이터의 삽입(Enqueue)과 제거(Dequeue) 연산을 지원하는 ADT이다.",
+        "refs": [
+          {
+            "source": "B",
+            "section": "7.1 우선순위 큐",
+            "pages": [
+              310
+            ]
+          }
+        ],
+        "evidence": "삽입과 제거 연산을 지원하는 ADT"
+      }
+    },
+    {
+      "term": "히프(heap)",
+      "definition": {
+        "text": "히프(heap)는 여러 개의 값 중에서 가장 큰 값이나 가장 작은 값을 빠르게 찾아내도록 만들어진 자료구조이다.",
+        "refs": [
+          {
+            "source": "A",
+            "section": "9.3 히프란?",
+            "pages": [
+              319
+            ]
+          }
+        ],
+        "evidence": "가장 큰 값이나 가장 작은 값"
+      }
+    },
+    {
+      "term": "최대 히프(max heap)",
+      "definition": {
+        "text": "최대 히프(max heap)는 부모 노드의 키 값이 자식 노드의 키 값보다 크거나 같은 완전 이진트리이다.",
+        "refs": [
+          {
+            "source": "A",
+            "section": "9.3 최대 히프",
+            "pages": [
+              320
+            ]
+          }
+        ],
+        "evidence": "크거나 같은 완전 이진트리"
+      }
+    },
+    {
+      "term": "최소 히프(min heap)",
+      "definition": {
+        "text": "최소 히프(min heap)는 부모 노드의 키 값이 자식 노드의 키 값보다 작거나 같은 완전 이진트리이다.",
+        "refs": [
+          {
+            "source": "A",
+            "section": "9.3 최소 히프",
+            "pages": [
+              320
+            ]
+          }
+        ],
+        "evidence": "작거나 같은 완전 이진트리"
+      }
+    },
+    {
+      "term": "LPT",
+      "definition": {
+        "text": "LPT(longest processing time first)는 작업 시간이 가장 긴 작업을 먼저 할당하는 근사해 방법이다.",
+        "refs": [
+          {
+            "source": "A",
+            "section": "9.6 히프의 응용: 기계 스케줄링",
+            "pages": [
+              335
+            ]
+          }
+        ],
+        "evidence": "근사해"
+      }
+    },
+    {
+      "term": "빈도수(frequencies)",
+      "definition": {
+        "text": "빈도수(frequencies)는 영문 텍스트에서 해당 글자가 나타나는 횟수이다.",
+        "refs": [
+          {
+            "source": "A",
+            "section": "9.7 히프의 응용: 허프만 코드",
+            "pages": [
+              340
+            ]
+          }
+        ],
+        "evidence": "해당 글자가 나타나는 횟수"
+      }
+    },
+    {
+      "term": "허프만 코드(Huffman codes)",
+      "definition": {
+        "text": "허프만 코드(Huffman codes)에서는 모든 코드가 다른 코드의 첫 부분이 아니므로 왼쪽에서 오른쪽으로 조사하면 정확히 하나의 코드만 일치한다.",
+        "refs": [
+          {
+            "source": "A",
+            "section": "9.7 히프의 응용: 허프만 코드",
+            "pages": [
+              341
+            ]
+          }
+        ],
+        "evidence": "모든 코드가 다른 코드의 첫 부분이 아니라는"
+      }
+    },
+    {
+      "term": "Capacity·UsedSize",
+      "definition": {
+        "text": "B의 Heap 구조체에서 Capacity는 Nodes 배열의 크기, UsedSize는 실제 배열에 들어 있는 큐 요소의 수이다.",
+        "refs": [
+          {
+            "source": "B",
+            "section": "7.2.3 자료구조 선언",
+            "pages": [
+              318
+            ]
+          }
+        ],
+        "evidence": "Capacity 필드는 힙의 용량"
+      }
+    }
+  ],
+  "summary_basis": "편집 요약",
+  "summary": [
+    {
+      "text": "우선순위 큐는 가장 높은 우선순위를 가진 요소부터 빠져나오게 한다.",
+      "refs": [
+        {
+          "source": "B",
+          "section": "7.1 우선순위 큐",
+          "pages": [
+            310
+          ]
+        }
+      ],
+      "evidence": "가장 높은 우선순위를 가진 요소부터"
+    },
+    {
+      "text": "히프의 삽입과 삭제 연산은 최악의 경우 히프의 높이만큼 비교하므로 O(log₂n)이다.",
+      "refs": [
+        {
+          "source": "A",
+          "section": "9.4 삽입과 삭제 연산의 복잡도 분석",
+          "pages": [
+            332
+          ]
+        }
+      ],
+      "evidence": "O(log"
+    },
+    {
+      "text": "LPT(longest processing time first)는 작업 시간이 가장 긴 작업을 먼저 할당하는 근사해 방법이다.",
+      "refs": [
+        {
+          "source": "A",
+          "section": "9.6 히프의 응용: 기계 스케줄링",
+          "pages": [
+            335
+          ]
+        }
+      ],
+      "evidence": "근사해"
+    },
+    {
+      "text": "허프만 코드(Huffman codes)에서는 모든 코드가 다른 코드의 첫 부분이 아니므로 왼쪽에서 오른쪽으로 조사하면 정확히 하나의 코드만 일치한다.",
+      "refs": [
+        {
+          "source": "A",
+          "section": "9.7 히프의 응용: 허프만 코드",
+          "pages": [
+            341
+          ]
+        }
+      ],
+      "evidence": "모든 코드가 다른 코드의 첫 부분이 아니라는"
+    }
+  ],
+  "review": [
+    {
+      "question": "B에서는 어떤 데이터가 더 높은 우선순위를 갖는가?",
+      "answer": {
+        "text": "B에서는 데이터의 값이 작을수록 우선순위가 높은 것으로 간주한다.",
+        "refs": [
+          {
+            "source": "B",
+            "section": "7.1 우선순위의 기준",
+            "pages": [
+              310
+            ]
+          }
+        ],
+        "evidence": "데이터의 값이 작을수록 높은"
+      }
+    },
+    {
+      "question": "최대 히프에서 부모와 자식의 키 관계는 무엇인가?",
+      "answer": {
+        "text": "최대 히프(max heap)는 부모 노드의 키 값이 자식 노드의 키 값보다 크거나 같은 완전 이진트리이다.",
+        "refs": [
+          {
+            "source": "A",
+            "section": "9.3 최대 히프",
+            "pages": [
+              320
+            ]
+          }
+        ],
+        "evidence": "크거나 같은 완전 이진트리"
+      }
+    },
+    {
+      "question": "히프 삽입·삭제의 최악 시간 복잡도는 무엇인가?",
+      "answer": {
+        "text": "히프의 삽입과 삭제 연산은 최악의 경우 히프의 높이만큼 비교하므로 O(log₂n)이다.",
+        "refs": [
+          {
+            "source": "A",
+            "section": "9.4 삽입과 삭제 연산의 복잡도 분석",
+            "pages": [
+              332
+            ]
+          }
+        ],
+        "evidence": "O(log"
+      }
+    },
+    {
+      "question": "A의 허프만 트리에서 왼쪽과 오른쪽 간선의 비트는 각각 무엇인가?",
+      "answer": {
+        "text": "A의 허프만 트리에서 왼쪽 간선은 비트 1을, 오른쪽 간선은 비트 0을 나타낸다.",
+        "refs": [
+          {
+            "source": "A",
+            "section": "9.7 히프의 응용: 허프만 코드",
+            "pages": [
+              342
+            ]
+          }
+        ],
+        "evidence": "왼쪽 간선은 비트 1"
+      }
+    }
+  ],
+  "cheat": {
+    "definitions": [
+      {
+        "term": "우선순위 큐",
+        "definition": {
+          "text": "우선순위 큐는 우선순위 속성을 갖는 데이터의 삽입(Enqueue)과 제거(Dequeue) 연산을 지원하는 ADT이다.",
+          "refs": [
+            {
+              "source": "B",
+              "section": "7.1 우선순위 큐",
+              "pages": [
+                310
+              ]
+            }
+          ],
+          "evidence": "삽입과 제거 연산을 지원하는 ADT"
+        }
+      },
+      {
+        "term": "최대 히프",
+        "definition": {
+          "text": "최대 히프(max heap)는 부모 노드의 키 값이 자식 노드의 키 값보다 크거나 같은 완전 이진트리이다.",
+          "refs": [
+            {
+              "source": "A",
+              "section": "9.3 최대 히프",
+              "pages": [
+                320
+              ]
+            }
+          ],
+          "evidence": "크거나 같은 완전 이진트리"
+        }
+      },
+      {
+        "term": "최소 히프",
+        "definition": {
+          "text": "최소 히프(min heap)는 부모 노드의 키 값이 자식 노드의 키 값보다 작거나 같은 완전 이진트리이다.",
+          "refs": [
+            {
+              "source": "A",
+              "section": "9.3 최소 히프",
+              "pages": [
+                320
+              ]
+            }
+          ],
+          "evidence": "작거나 같은 완전 이진트리"
+        }
+      }
+    ],
+    "comparison_title": "두 책의 배열 시작 위치",
+    "comparison_headers": [
+      "항목",
+      "원문 설명"
+    ],
+    "comparison_rows": [
+      [
+        {
+          "text": "A",
+          "refs": [
+            {
+              "source": "A",
+              "section": "9.3 히프의 구현 방법",
+              "pages": [
+                320
+              ]
+            }
+          ],
+          "evidence": "인덱스"
+        },
+        {
+          "text": "A의 배열 표현은 인덱스 0을 사용하지 않고 루트 노드를 인덱스 1에 저장한다.",
+          "refs": [
+            {
+              "source": "A",
+              "section": "9.3 히프의 구현 방법",
+              "pages": [
+                320
+              ]
+            }
+          ],
+          "evidence": "인덱스는 0이 아닌 1부터"
+        }
+      ],
+      [
+        {
+          "text": "B",
+          "refs": [
+            {
+              "source": "B",
+              "section": "7.2.3 힙의 구현",
+              "pages": [
+                317
+              ]
+            }
+          ],
+          "evidence": "0번 요소"
+        },
+        {
+          "text": "B의 배열 표현은 깊이 0의 뿌리 노드를 배열의 0번 요소에 저장한다.",
+          "refs": [
+            {
+              "source": "B",
+              "section": "7.2.3 힙의 구현",
+              "pages": [
+                317
+              ]
+            }
+          ],
+          "evidence": "배열의 0번 요소에 저장"
+        }
+      ]
+    ],
+    "formulas": [
+      {
+        "label": "A의 배열 인덱스 관계",
+        "expression": "왼쪽 자식 = 부모 인덱스*2; 오른쪽 자식 = 부모 인덱스*2+1; 부모 = 자식 인덱스/2",
+        "refs": [
+          {
+            "source": "A",
+            "section": "9.3 히프의 구현 방법",
+            "pages": [
+              321
+            ]
+          }
+        ],
+        "evidence": "부모 노드의 인덱스",
+        "note": "루트 인덱스 1을 사용하는 배열 표현."
+      },
+      {
+        "label": "B의 배열 인덱스 관계",
+        "expression": "왼쪽 자식: 2k+1; 오른쪽 자식: 2k+2; 부모: (k-1)÷2의 몫",
+        "refs": [
+          {
+            "source": "B",
+            "section": "7.2.3 힙의 구현",
+            "pages": [
+              318
+            ]
+          }
+        ],
+        "evidence": "(k-1)÷2의 몫",
+        "note": "k는 노드의 인덱스이며, 루트 인덱스는 0."
+      }
+    ],
+    "syntax": []
+  },
+  "checked_images": [
+    {
+      "source": "B",
+      "pages": [
+        310,
+        312,
+        315,
+        317,
+        318,
+        319,
+        321,
+        327
+      ]
+    },
+    {
+      "source": "A",
+      "pages": [
+        315,
+        318,
+        319,
+        320,
+        321,
+        325,
+        327,
+        332,
+        334,
+        335,
+        336,
+        340,
+        341,
+        342
+      ]
+    }
+  ],
+  "editor_notes": [
+    "A의 본문 표기인 히프와 B의 힙을 각 출처에 맞추어 사용하였다.",
+    "A는 배열 루트 인덱스 1, B는 0을 사용하므로 두 인덱스 공식을 각각 제시하였다.",
+    "허프만 코드의 숫자 합계 예시는 발췌하지 않았으며, 간선의 비트는 A의 왼쪽 1·오른쪽 0 표기를 보존하였다.",
+    "기계 스케줄링의 LPT는 원문이 근사해라고 명시한 조건을 보존하였다."
+  ]
+}

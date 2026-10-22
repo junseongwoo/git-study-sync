@@ -1,0 +1,47 @@
+그림 5-5 분할 가능 배낭 문제의 예
+01
+무게
+가격 210
+가격/무게 10
+02 이
+2 1 5
+7 15
+3.5쯔 3
+0•1
+9
+10
+1.11
+05
+2
+12
+6
+06 0,
+4
+1155
+3.67 125
+배남
+전체 부게: 8
+전체 가격: 40
+다음 연습 문제에서 이 문제에 대한 솔루션을 구해보겠습니다.
+53.3 연습 문제 25: 분할 가능 배낭 문제
+이번 연습 문제에서는 그림 5-5에서 예로 들었던 문제를 실제 C++ 프로그램으로 구현하여 결과
+를 확인해보겠습니다.
+1. 먼저 필요한 헤더 파일을 포함하고, 객체를 표현할 0bject 구조체를 정의합니다
+#include <iostream>
+#include 〈algorithm>
+#include 〈vector>
+struct Object
+int id;
+int weight;
+double value;
+double value_per_unit_weight;
+0bject(int i, int `햅, double v) : id(i), weight(w), value(v),
+value-per-unit-weight(v / w) {}
+// std::sort()에서 사용
+inline b001 operator〈 (const Object& 0bj) const
+return this-〉value per_unit_weight 〈 ObJ .value—per_unit_weight;
+// 콘솔 출력 지원. std::cout 〈〈 obj 〈〈 std::endl; 코드 사용 가능
+friend std: :ostream& operator〈〈(std: :ostream& 05, const 0bject& Obj);
+std: :ostream& operator〈<(std: :ostream& 05, const 0bject& Obj)
+0)
+213

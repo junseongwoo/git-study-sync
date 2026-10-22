@@ -1,0 +1,52 @@
+순회는 가장 왼쪽 노드부터 시작하기 t대문에 따라서 왼쪽 지적이 NULL이 될 따P가지 왼쪽 링크
+를 타고 이동한다. 다음으로 데이터를 출력하고 중위 후속지를 찾는 함수를 호출하여 후속자가
+NULL이 아니면 계속 루프를 반복한다.
+void * t)
+1
+TreeN0de *
+white (q•〉left) q = q->left;
+printf("%c -〉 ", q->data);
+q = find-successor(q) •,
+// 가장 왼쪽 노드로 간다.
+// 데이터 출력
+// 후속자 함수 호출
+// NULL이 아니면
+전체 프로그램은 다음과 같다. 여기서도 코드를 간편하게 하기 위하여 노드들을 동적이 아닌
+정적으로 생성하였다.
+프로그램 8.8 스레드 이진 트리 순회 프로그램
+#include <stdio.h>
+#define TRUE 1
+#define FALSE 0
+typedef struct TreeN0de {
+int data;
+struct TreeNode *left, *right;
+int is thread; // 스레드이면 TRUE
+} TreeN0de;
+//A BDE
+TreeN0de
+nl
+TreeN0de
+n2
+TreeN0de
+n3
+TreeNode
+n4
+TreeNode
+n5
+TreeNode
+n6
+TreeNode
+n7
+TreeNode
+* exp
+TreeNode * find
+292 C언어로 쉽게 물어쓴 자료구조
+NULL, NULL,
+NULL, NULL,
+&nl, &n2, 0
+NULL, NULL,
+NULL, NULL,
+&n4, &n5, 0
+&n3, &n6, 0
+1};
+—successor(TreeNode * p)

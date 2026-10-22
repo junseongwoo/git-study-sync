@@ -1,0 +1,35 @@
+프로그램 14.6 선형조사법의 구현 part 5
+// 해싱 테이블의 내용을 출력
+void hash—lp—print(element ht[])
+printf("\n=
+for (5 = 0; i<TABLE_SIZE; 5++)
+printf("[%d] %s\n", 1, ht[i].key);
+printf("
+// 해싱 테이블을 사용한 예제
+int main(void)
+char *S[7]
+element 일,
+for (int i
+strcpy(e.key, s[i]);
+hash—lp_add(e, hash—table) ;
+hash—lp—pri nt (hash—table) •,
+for (int = 0; 〈 7; i++) {
+strcpy(e.key, s[i]);
+hash-lp—search(e, hash_table) •,
+return 0;
+실행결과
+[0] function
+[1]
+[기 for
+[3] do
+[4]
+[5]
+[6]
+[7]
+[8]
+[9] case
+[10] else
+[11] return
+[12] if
+CHAPTERU 해심
+553

@@ -1,0 +1,27 @@
+다음 코-드는 삽입을 수행하는 BST-lnsertNode ( ) 함수입니다. BST-SearchNode( ) 함수와 비
+교해보면 코드를 이루고 있는 뼈대가 상당히 닮았다는 사실을 알 수 있습니다.
+void BST_InsertNode( BSTNode• Tree, BSTNode *Chi1d)
+if ( Tree->Data 〈 ChiId->Data )•
+if ( Tree->Right == NULL )
+Tree->Right = ChiId;
+else
+새 노드가 현재 노드보다 큰 경우
+BST_InsertNode( Tree-Right, ChiId ):
+else if ( Tree->Data 〉 Child-»ata )•
+if ( Tree->Left == NULL )
+Tree->Left = Child;
+else
+새 노드가 현재 노드보다 4은 경우
+BST-InsertNode( Tree->Left, Child 뉴
+노드 삭제 연산
+이 세상에서는 원기를 파괴亏는 일이 만드는 일보다 쉬운 법이지모且 이싱빠게도 자료구조에서만큼
+은 무언가를 만드는 일보다 없애는 일이 대체로 어렵습니다. 사실 없애는 일 자체보다 없애고 난 후
+의 '뒤처리'가 복잡하지요(링크드 리스트를 떠올리면 공감이 갈 것입니다). 이진 탐색 트리의 노드
+삭제가 딱 그런 경우입니다.
+이진 탐색 트리에서 임의의 노-드를 삭제하려면 먼저 삭제할 노-드를 찾아야 합니다. 이 작업은 이진
+탐색을 통해 간단히 끝낼 수 있습니다. 이진 탐색을 통해 노드가 어디에 있는지 알아낸 후에는 노드
+를 트리에서 떼어냅니다. 이때 떼어내는 노드가 '잎 노드'라면 아무 걱정 없이 부모 노드에서 자식
+노드 (어느 쪽이든) 의 포인터를 NULL로 봉합하고 삭제한 노드의 주소를 반환하면 작업이 깔끔하게
+마무리됩니다.
+다음 그림은 이진 탐색 트리에서 14 노드를 제거하는 과정입니다. 14 노드는 자식이 없습니다. 따
+Chapter %• 람책 255

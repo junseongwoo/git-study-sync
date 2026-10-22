@@ -1,0 +1,26 @@
+A.7.2 실습 문제 16: 무작위 그래프 통계
+이번 실습 문제에서는 7징에서 설명한 바와 길이 기술 인터뷰에서 시용할 그래프를 무작위로 생
+성하괴 유효한 그래프에 대한 통계를 계산합니다.
+1. 필요한 헤더 파일을 포함하괴 7장 연습 문제에서 시용한 것과 같이 Edge 구조체와 UNKNOWN
+상수를 정의합니다.
+$include 〈vector〉
+$include <iostream〉
+$include 〈climits>
+$include <iomanip〉
+$include 〈algonthm〉
+$include 〈queue〉
+usxng namespace std;
+Struct Edge
+int src;
+int dst;
+int weight;
+const int UNKNOWN = 1e9;
+2. 이번 실습 문제에서는 여러 개의 그래프를 생성해야 합니다. 그러므로 그래프를 표현할 Graph
+구조체를 만들어 사용하겠습니다.
+struct Graph
+int V, E;
+int maxWeight = -UNKNOWN;
+vector〈Edge〉 edges;
+vector<vector<int〉〉 adj;
+vector〈vector〈int〉〉 weight,
+Graph(int v, int e) : V(v), E(e)

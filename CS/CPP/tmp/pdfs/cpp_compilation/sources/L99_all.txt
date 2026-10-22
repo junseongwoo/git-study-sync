@@ -1,0 +1,223 @@
+
+=== L99 | PDF p.1 | 印刷 p.None ===
+C++ 프로그래밍
+      김형기
+           hk.kim@jbnu.ac.kr
+
+=== L99 | PDF p.2 | 印刷 p.2 ===
+ Summary of 2023-2 C++ Programming Class
+
+ Introduction
+
+    C++ 탄생배경, 출력방법, 컴파일/링킹이무엇인지, 전처리기(#), namespace
+   변수
+
+          Bit, Byte, Hex, 변수와변수의주소란무엇인지, VS에서메모리상태관찰방법, 변수의사용과정의
+   VS에서의디버깅방법(중단점, step over(F10), step in(F11))
+
+ 배열/벡터, 명령문, 연산자, 제어문(조건문, 반복문)
+
+ 함수
+
+   독립적인연산으로분할, 모듈화하여재사용성확보, 프로토타입, 오버로딩
+     stack & heap, 함수를호출하면구분선이생기고, 끝나면지역변수가없어짐
+     pass-by-value/address/reference의차이점
+
+
+강의자료무단배포금지                                                                                                                2
+문의사항: hk.kim@jbnu.ac.kr  || diskhkme@gmail.com
+
+=== L99 | PDF p.3 | 印刷 p.3 ===
+ Summary of 2023-2 C++ Programming Class
+
+ 포인터
+
+   주소를저장하는변수
+
+     선언(*), 역참조(*), 주소값(&)
+
+     pass-by-address, 동적할당(new, delete)은heap 메모리
+
+   허상포인터, 메모리누수에유의
+
+ 참조자
+
+   변수의별명
+
+   선언(&)과동시에초기화, pass-by-reference
+
+     const 참조자로복사비용을줄인다
+
+
+
+
+강의자료무단배포금지                                                                                                                3
+문의사항: hk.kim@jbnu.ac.kr  || diskhkme@gmail.com
+
+=== L99 | PDF p.4 | 印刷 p.4 ===
+ Summary of 2023-2 C++ Programming Class
+
+ 객체지향프로그래밍
+
+   절차적프로그래밍과다르게데이터와기능을클래스로캡슐화
+
+ 클래스와객체
+
+   클래스는사용자정의자료형, 데이터(멤버변수)와기능(멤버함수)을정의
+      ., ->로접근, public/private/protected
+   생성자, 소멸자
+   생성자오버로딩, 생성자초기화리스트, 생성자위임
+    (얕은/깊은) 복사생성자
+      this, const, static, friend
+   멤버변수값을변경하지않는멤버함수는함수뒤에const 붙여주어야함
+
+
+
+강의자료무단배포금지                                                                                                                4
+문의사항: hk.kim@jbnu.ac.kr  || diskhkme@gmail.com
+
+=== L99 | PDF p.5 | 印刷 p.5 ===
+ Summary of 2023-2 C++ Programming Class
+
+ 상속
+
+  기본클래스를기반으로새로운유도클래스를생성
+
+   유도클래스는기본클래스를포함(멤버변수/함수)
+
+   상속하면타입이두개가됨. 기본클래스를사용하는곳에는유도클래스도사용가능하다
+
+     protected 멤버는상속되는private 개념
+
+   기본클래스생성자유도클래스생성자순으로호출, 소멸자는반대순서
+
+  유도클래스생성자에서기본클래스의어떤생성자를호출할지명시가능
+
+     Base *ptr = new Derived(); 가능하지만, 기본적으로정적바인딩
+
+
+
+
+
+강의자료무단배포금지                                                                                                                5
+문의사항: hk.kim@jbnu.ac.kr  || diskhkme@gmail.com
+
+=== L99 | PDF p.6 | 印刷 p.6 ===
+ Summary of 2023-2 C++ Programming Class
+
+ 다형성
+
+   C++에서동적바인딩하려면? 함수오버라이딩
+
+     1. 상속2. 기본클래스의포인터또는참조자3. 가상함수조건필요
+
+       기본클래스의가상(virtual) 멤버함수를유도클래스에서오버라이딩하면동적바인딩
+
+     오버라이딩할거면가상소멸자만들어줘야함
+
+     override / final 지정자
+
+  본문이없는가상함수는순수가상함수( void func() = 0; )
+
+   순수가상함수가포함된클래스는추상클래스. 객체생성불가능
+
+   순수가상함수만으로이루어진클래스는인터페이스클래스
+
+
+
+
+
+강의자료무단배포금지                                                                                                                6
+문의사항: hk.kim@jbnu.ac.kr  || diskhkme@gmail.com
+
+=== L99 | PDF p.7 | 印刷 p.7 ===
+ Summary of 2023-2 C++ Programming Class
+
+ 연산자오버로딩
+
+   멤버함수구현, 전역함수(friend 사용) 구현( p1 * 3, 3 * p1)
+
+    p1 + p2 p1.operator+(p2) or operator+(p1,p2) 변환방식을이해해야함
+
+   스트림삽입및추출, 대입연산자, 첨자연산자
+
+    반환형, chaining을위함참조자사용에주의(ostream& 반환)
+
+   대입연산자의경우얕은/깊은복사주의
+
+ 템플릿
+
+      Generic programming을위해서매크로또는템플릿사용가능
+
+      template <typename T> 선언후T 사용하여함수/클래스템플릿구현
+
+   T가사용자정의타입일경우연산자사용이가능한지체크필요
+
+   클래스템플릿의경우반환형, 파라메터등적절한위치에T 사용필요
+
+   템플릿의특수화, 템플릿의인자<int N>
+
+
+강의자료무단배포금지                                                                                                                7
+문의사항: hk.kim@jbnu.ac.kr  || diskhkme@gmail.com
+
+=== L99 | PDF p.8 | 印刷 p.8 ===
+ Summary of 2023-2 C++ Programming Class
+
+ STL
+
+   컨테이너, 알고리즘, 반복자
+
+   반복자는포인터와유사. 역참조를통해값에접근(begin(), end() 반복자반환)
+
+    알고리즘사용에functor/function pointer/lambda expression 필요한경우있음
+
+     Sequence 컨테이너
+
+          array, vector, list
+
+     list는첨자연산자로접근불가
+
+      Associative 컨테이너
+
+          set, map
+
+         key-value pair
+
+
+
+강의자료무단배포금지                                                                                                                8
+문의사항: hk.kim@jbnu.ac.kr  || diskhkme@gmail.com
+
+=== L99 | PDF p.9 | 印刷 p.9 ===
+ Summary of 2023-2 C++ Programming Class
+
+ 더하지못한내용…
+
+   예외처리
+
+     예외상황에서의동작처리를위한Try, catch문, stack unwinding
+
+    IO Stream
+
+     C++의입출력스트림조작기능, filestream, stringstream
+
+   스마트포인터
+
+     포인터관리를위한부가기능, unique_ptr, shared_ptr, weak_ptr
+
+
+
+
+
+강의자료무단배포금지                                                                                                                9
+문의사항: hk.kim@jbnu.ac.kr  || diskhkme@gmail.com
+
+=== L99 | PDF p.10 | 印刷 p.10 ===
+수고많으셨습니다!
+
+
+
+
+
+                                                                                               10

@@ -1,0 +1,52 @@
+59
+60
+62
+65
+67
+68
+69
+71
+73
+74
+75
+76
+77
+78
+79
+82
+83
+84
+85
+86
+87
+91
+92
+93
+95
+490
+// Case 1
+int i = PatternSize;
+int j • PatternSize + 1;
+PosOfBorderIiJ=j ;
+vhile (i*)•-
+패턴의 길이만큼 반복
+while (j<=PatternSize Pattern[i-11 != Pattern[j-IJ)•
+if ( GoodSuffTable[jl == 0 )
+GoodSuffTable[j l=j-i;
+패턴에서 경계 찾기
+j =PosOfBorder[j 1;
+PosOfBorder[il = j;•-
+// Case 2
+j = PosOfBorderI이:
+•••들 찾아낸 경계의 시작점 저장
+for ( i = 0; i 〈= PatternSize; i++ )
+if ( GoodSuffTabIe[il == 0 )
+이동 거리가 0인 항목에 대해서만 첫 •접미부의
+GoodSuffTabIe(il = j;••
+: 가장 넓은 경계의 시작 위치• 입력(79행 참조)
+J - PosOfBorder[jI;
+int Max( int 사 int )
+if(A>B)
+return A;
+else
+Part 02 • 알고리좀

@@ -1,0 +1,33 @@
+레드 블랙 트리가 아닌 이진 탐색 트리의 조건마저 무너뜨리게 됩니다. 이런 문제를 일으기지 않으
+려면 다음과 같이 자식 노드를 처리해줘야 합니다.
+• 우회전할 때는 왼쪽 자의 노드의 오른쪽 지식 노드를 부모 學c이 왼쪽 자AIOZ 연결합니다. 앞의 그림에서 왼
+쪽 트리를 보세요. 이 트리를 우회전하니 노드 6이 노드 8의 왼쪽 자식이 왰습니다
+• 좌회전할 때는 오른쪽 자의 노드의 왼쪽 지식 노드를 부모 노드의 오른쪽 자K10己 연결합니다. 이번에는 오른
+쪽 트리를 이 트리를 좌회전해서 노드 6이 다시 노드 5의 오른쪽 자식이 됐습니다.
+다음-은 우회전을 구현한 RBT-Rotatemght ( ) 함수입니다. 좌회전 연산을 구현할 때는 이 함수에서
+시용하는 왼쪽 자식을 오른쪽 자식 0 리 오른쪽 자식을 왼쪽 자식으로 바꿔 사우하면 됩니다.
+void RBT_RotateRight( RBTNode** R00t, RBTNode* Parent )
+RBTNode* LeftChiId = Parent->Left;•
+Parent->Left = LeftChiId-Right;
+if ( LeftChild-Right != Nil )
+LeftChiId-Right-Parent = Parent;
+LeftChild-Parent = Parent->Parent;
+if ( Parent-Parent == NULL )•
+= LeftChiId;
+else
+if ( Parent == Parent-Parent->Left )•
+Parent-Parent->Left = LeftChi1d;
+else
+Parent-Parent->Right = LeftChiId;
+LeftChild-Right = Parent;
+Parent-Parent = LeftChi1d,
+왼쪽 자식 니c이 오른쪽 자식 노드를 부모
+부c이 왼쪽 자신4으로 등록합니다.
+부모가 NULL이라면 이 노드는 Root입
+니다. 이 경우에는완쪽자식을 Root 노드
+로 만듬어 회전시김니다.
+완쪽 자식 노드를 부모 노드가 있던 곳(할
+아버지의 자의 노회에 위치시킵니다.
+좌회전 구현이 궁금한 분은 예제 파일로 저공되는 RBT_RotateLeft( ) 함수를 살펴보기 바랍니다.
+NOTE
+270 Part 02 • 알고리좀

@@ -1,0 +1,26 @@
+5. 인접 리스트를 시용하는 graph 구조체의 생성자가 어떻게 달라지는지 확인하세요.
+graph(int n)
+data = std::vector〈std::vector〈std: :pair<int, int>〉〉(n,
+std::vector〈std: :pair〈int, int〉〉()),•
+여기서도 2치원 벡터를 A卜&하여 데이터를 저장하지만, 처음에는 에지가 전혀 없으므로 모든
+행은 비어 있는 형대로 초기회됩니다.
+6. addEdge() 함수를 작성합니다.
+void addEdge(const city cl, const city c2, int dis)
+std::cout 〈〈 "에지 추가: " 〈〈 cl 〈〈 "-" 〈〈 c2 〈〈 " " 〈〈 dis 〈〈 std::endl;
+autO nl = static_cast〈int>(cl);
+autO n2 = static—cast〈int〉((2);
+data[n1].push-back({n2, dis});
+data[n2] .push-back({nl, dis));
+7. 에지를 제거하는 removeEdge( ) 함수를 추가합니다.
+void removeEdge(const city (1, const city c2)
+std::cout 〈〈 "에지 삭제: “ 〈〈 cl 〈〈 "-" 〈〈 c2 〈〈 std::endl;
+autO nl = static—cast<int>(cl);
+autO n2 = static_cast<int>(c2);
+std::remove-if(data[nl] begin(), data[nl].end(),
+return pair.first == n2;
+std: :remove-if(data[n2] begin(), data[n2J .end(),
+return pair.first == nl;
+[n2](const auto& pair) {
+[nl](const auto& pair) {
+8. 앞서 만든 함수를 이용하여 그래프를 구성하는 ) 함수를 작성합니다.
+114

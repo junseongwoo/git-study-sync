@@ -1,0 +1,22 @@
+9. 구간 한 배열을 A卜우하여 ) 함수를 다음과 같이 작성한 수 있습니다.
+LL TraveIItinerary(int n, vector<int〉 distance)
+reverse(distance .begin( ), distance .end( )) :
+vector<LL> DP(n + 1, 0);
+vector<LL> sums(n + 2, 0);
+DP[OI = = 1;
+for (int i =1; i<=n; i++)
+int dist = distance[i - 1];
+LL sum = sums[i] - sums[i - distl;
+DP[i] = (DP[i] + sum) % MOD;
+sums[i + 1] = (sums[i] + DP[i]) % MOD;
+return DP[n];
+10. 한 가지 더 직면할 수 있는 문제가 있습니다. 즉, 앞서 구현한 Trave11tinerary() 함수가 음수
+를 반환하는 경우가 발생할 수 있습니다. 왜냐하면 나머지 연산에 의해 sum 배열에서 높은 인
+덱스 원소 값이 낮은 인덱스 원소 값보다 작아지는 경우가 발생할 수 있고, 이로 인해 뺄셈 연
+산 결과가 음수가 될 수 있기 때문입니다. 이러한 현상은 나머지 연산을 사용하는 경우에 충
+분히 발생할 수 있는 문제이며, return 문장을 조금 수정하여 문제를 해결할 수 있습니다.
+return (DP[n] 〈 0) ? DP[n] + MOD : DP[n];
+F케0
+위와 같이 수정하면 음수가 반환되는 경우가 사라집니다. 이로써 대규모 입력 배열에 대해서
+도 단 1초 안에 문제를 해결할 수 있는 훌륭한 솔루션을 완성했습니다.
+5

@@ -1,0 +1,33 @@
+// 삭제 함수
+eloment dequeue(QucueTypo *다)
+if (is-empty(q))
+error("9가 공백상태입니다") •,
+q->front = (q->front + 1) % MAX QUEUE_SIZE;
+return q->data[q->front] ;
+// 삭제 함수
+element *q)
+if (is-empty(q))
+error("큐가 공백상태입니다")•,
+return q->data[(q->front + 1) % MAX_QUEUE_SIZE];
+: 원형큐 코드 끝 :
+int main(void)
+QueueType queue;
+int element;
+ni t_queue (&queue) ;
+pnntf("--ßl이터 추가 단계--\n");
+while (!is-full(&queue))
+printf("정수를 입력하시오: ");
+scanf("%d" , &element) ;
+enqueue(&queue, element) ;
+queue—print(&queue) ;
+printf("큐는 포화상태입니다. \n\n") ;
+printf("--데이터 삭제 단계--\n")•,
+while (!is-empty(&queue))
+element = dequeue(&queue) ;
+printf("lld내진 정수: 년"
+queue—print(&queue) ;
+printf("큐는 공백상태입니다 . 년") •,
+return 0;
+element) ;
+CHAPTER05 큐
+159

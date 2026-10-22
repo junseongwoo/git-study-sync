@@ -1,0 +1,59 @@
+e2&tArrayStack/ArrayStack.h
+01
+02
+03
+04
+05
+07
+08
+09
+12
+13
+14
+16
+17
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+•ifndef ARRAYSTACK-H
+ARRAYSTACK-H
+•include <stdio.h>
+•include <stdlib.h〉
+int ElementType,
+struct tagNode
+EIementType Data;
+} Node.
+struct tagArrayStack
+int Capacity;
+int Top,
+Node* Nodes;
+} ArrayStack;
+VOid
+VOid
+VOid
+AS-CreateStack(ArrayStack** Stack, int Capacity);
+AS DestroyStack(ArrayStack* Stack);
+AS Push(ArrayStack* Stack, EIementType Data);
+EIementType AS-Pop(ArrayStack* Stack);
+EIementType AS-Top(ArrayStack* Stack);
+int
+int
+ændif
+AS GetSize(ArrayStack* Stack);
+AS-IsEmpty(ArrayStack* Stack);
+02 &/ArrayStack/ArrayStack. (
+01
+02
+03
+tinclude •ArrayStack.h•
+void AS CreateStack(ArrayStack** Stack, int CapacitY)
+78
+Part 01 • 자료구조

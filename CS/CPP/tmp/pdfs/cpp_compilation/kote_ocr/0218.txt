@@ -1,0 +1,27 @@
+autO vertices() const ( return V; }
+// 전체 에지 리스트 반한
+auto& edges() const ( return edge-list; }
+// 정점 v에서 나가는 모든 에지를 반한
+autO edges(unsigned V) (0碼t
+vector<Edge〈了〉〉 edges—from v;
+for (autO& e : edge-list)
+if (e.src == v)
+edges—from—v. emplace—back(e) ;
+return edges_from v;
+void add-edge(Edge<T>&& e)
+// 에지 양 끝 정점 ID가 유효한지 검사
+if (e.src 〉= 1 && e.src 〈= V && e.dst 〉= 1 && e.dst 〈= V)
+edge—list ;
+else
+cerr 〈〈 '에러: 유효 범위를 벗어난 정점!" 〈〈 endl;
+// 표준 출력 스트림 지원
+template <typename U>
+friend ostream& operator〈〈 (ostream& 05, (0舫t Graph<U>& 6);
+private:
+// 정점 개수
+unsigned V;
+vector<Edge〈丁〉〉 edge-list;
+template 〈typename U>
+ostream& operator〈〈 (ostream& OS, const Graph<U>& 6)
+for (unsigned i = 1; i 〈 G.vertices(); i++)
+0%

@@ -1,0 +1,600 @@
+
+=== L09 | PDF p.1 | 印刷 p.None ===
+C++ 프로그래밍
+      김형기
+           hk.kim@jbnu.ac.kr
+
+=== L09 | PDF p.2 | 印刷 p.2 ===
+Generic Programming과템플릿
+
+
+
+
+
+                                                                                                                          2
+
+=== L09 | PDF p.3 | 印刷 p.3 ===
+ Generic Programming과템플릿
+
+ Generic Programming이란
+
+    Macro를활용한Generic programming
+
+ 템플릿을활용한Generic Programming
+
+  함수템플릿
+
+  클래스템플릿
+
+
+
+
+
+강의자료무단배포금지                                                                                                                3
+문의사항: hk.kim@jbnu.ac.kr  || diskhkme@gmail.com
+
+=== L09 | PDF p.4 | 印刷 p.4 ===
+ Generic Programming과템플릿
+
+ Generic Programming이란
+
+    Macro를활용한Generic programming
+
+ Generic Programming using Template
+
+ 함수템플릿
+
+ 클래스템플릿
+
+
+
+
+
+강의자료무단배포금지                                                                                                                4
+문의사항: hk.kim@jbnu.ac.kr  || diskhkme@gmail.com
+
+=== L09 | PDF p.5 | 印刷 p.5 ===
+ Generic Programming
+
+ 제네릭프로그래밍
+
+   간략한정의타입에관계없이동작하는“일반적인” 코드를작성하는방법
+
+     Ex) 여러가지덧셈을수행하는함수들을작성할때, 기존에는아래와같은함수들을개별적으로
+   구현해야했음
+
+           add(int,int) / add(double,double) / add(Point,Point)
+
+  이를한번의코드작성으로가능하게하는방법이제네릭프로그래밍기법
+
+
+ 제네릭프로그래밍의구현방법
+
+   매크로사용주의가필요함!
+
+   함수/클래스템플릿사용
+
+
+강의자료무단배포금지                                                                                                                5
+문의사항: hk.kim@jbnu.ac.kr  || diskhkme@gmail.com
+
+=== L09 | PDF p.6 | 印刷 p.6 ===
+ Generic Programming using Macro
+
+ 매크로를사용한제네릭프로그래밍
+
+ 매크로(#define)
+
+   코드의단순대체(복붙)
+
+
+
+
+
+강의자료무단배포금지                                                                                                                6
+문의사항: hk.kim@jbnu.ac.kr  || diskhkme@gmail.com
+
+=== L09 | PDF p.7 | 印刷 p.7 ===
+ Generic Programming using Macro
+
+ 매크로를사용한제네릭프로그래밍
+
+
+
+
+                               전처리후아래와같은
+                                코드가생성되는개념임
+
+
+
+
+
+강의자료무단배포금지                                                                                                                7
+문의사항: hk.kim@jbnu.ac.kr  || diskhkme@gmail.com
+
+=== L09 | PDF p.8 | 印刷 p.8 ===
+ Generic Programming using Macro
+
+ Generic 하지않은프로그래밍
+
+     int 타입에대한Max 함수의구현
+
+
+
+
+
+ [주의] 비주얼스튜디오의경우“Max”처럼대문자를사용하지
+강의자료무단배포금지않으면, 기본라이브러리에있는“max”함수와충돌발생할수있음                                                                             8
+문의사항: hk.kim@jbnu.ac.kr  || diskhkme@gmail.com
+
+=== L09 | PDF p.9 | 印刷 p.9 ===
+ Generic Programming using Macro
+
+ Generic 하지않은프로그래밍
+
+     double, char 타입으로확장하려면추가적인구현이필요
+
+     (암시적형변환을통해추가구현하지않아도가능한경우도있으나제한적)
+
+
+
+
+
+강의자료무단배포금지                                                                                                                9
+문의사항: hk.kim@jbnu.ac.kr  || diskhkme@gmail.com
+
+=== L09 | PDF p.10 | 印刷 p.10 ===
+ Generic Programming using Macro
+
+ 매크로를사용한max함수의일반적인구현
+
+   매크로에인수(a,b)를정의해줄수있음
+
+
+
+
+
+                                 전처리후아래와같은
+                                 코드가생성되는개념임
+
+
+
+
+
+강의자료무단배포금지                                                                                                               10
+문의사항: hk.kim@jbnu.ac.kr  || diskhkme@gmail.com
+
+=== L09 | PDF p.11 | 印刷 p.11 ===
+ Generic Programming using Macro
+
+ 매크로를사용할때의유의사항
+
+  코드가단순대체됨에유의해야함
+
+   매크로문을괄호로감싸는것이안전
+
+     세미콜론(;)은포함하지않는것이기본약속
+
+
+
+
+
+강의자료무단배포금지                                                                                                               11
+문의사항: hk.kim@jbnu.ac.kr  || diskhkme@gmail.com
+
+=== L09 | PDF p.12 | 印刷 p.12 ===
+ C++ preprocessor              고급
+
+ #define ?
+
+   단순한복사붙여넣기!
+
+     Platform independency 구현, 코드단축, debug 목적등으로다양하게활용
+
+
+                                       *3번라인의#define…이
+                        있는경우와없는경우
+                         동작을비교
+
+
+
+
+
+강의자료무단배포금지                                                                                                               12
+문의사항: hk.kim@jbnu.ac.kr  || diskhkme@gmail.com
+
+=== L09 | PDF p.13 | 印刷 p.13 ===
+ Generic Programming using Macro
+
+
+
+
+
+강의자료무단배포금지                                                                                                               13
+문의사항: hk.kim@jbnu.ac.kr  || diskhkme@gmail.com
+
+=== L09 | PDF p.14 | 印刷 p.14 ===
+ Generic Programming과템플릿
+
+ Generic Programming이란: 타입에관계없이작동하는코드작성개념
+
+    Macro를활용한Generic programming  : 매크로를활용하여코드를대체하는방식, 주의가필요
+
+ 템플릿을활용한Generic Programming
+
+  함수템플릿
+
+  클래스템플릿
+
+
+
+
+
+강의자료무단배포금지                                                                                                               14
+문의사항: hk.kim@jbnu.ac.kr  || diskhkme@gmail.com
+
+=== L09 | PDF p.15 | 印刷 p.15 ===
+ Generic Programming using Template
+
+ C++ 템플릿
+
+   “설계도” 개념
+
+  함수템플릿과클래스템플릿구현을지원
+
+   어떤데이터타입이든, 컴파일러가적절한함수/클래스를설계도를기반으로생성함
+
+     다른언어의경우런타임에생성하는경우도있음
+
+     사용하지않는경우생성하지않음
+
+   제네릭프로그래밍/ 메타프로그래밍
+
+
+
+
+
+강의자료무단배포금지                                                                                                               15
+문의사항: hk.kim@jbnu.ac.kr  || diskhkme@gmail.com
+
+=== L09 | PDF p.16 | 印刷 p.16 ===
+ Generic Programming using Template
+
+ 템플릿을사용한max 함수의구현
+
+       1. 타입명을T로대체
+
+       2. T가템플릿인수라는것을명시
+
+         template <typename T> or template <class T>
+
+     (꼭T를써야하는것은아니지만일반적인약속으로T를우선적으로사용함)
+
+
+
+
+
+강의자료무단배포금지                                                                                                               16
+문의사항: hk.kim@jbnu.ac.kr  || diskhkme@gmail.com
+
+=== L09 | PDF p.17 | 印刷 p.17 ===
+ Generic Programming using Template
+
+ 템플릿을사용한max 함수의사용
+
+   템플릿함수를사용할때는자료형을< >안에명시
+
+     컴파일러가타입을추론가능할때는생략가능
+
+   호출할타입이결정되면, 컴파일러가템플릿을기반으로실제함수를생성
+
+     템플릿코드만존재할때는아무함수도생성되지않음. 실제사용이되어야만코드가생성됨
+
+
+
+
+
+강의자료무단배포금지                                                                                                               17
+문의사항: hk.kim@jbnu.ac.kr  || diskhkme@gmail.com
+
+=== L09 | PDF p.18 | 印刷 p.18 ===
+ Generic Programming using Template
+
+ 템플릿이사용가능한경우
+
+   max함수의경우>가정의되어있어야(a > b)가연산가능
+
+    즉, 클래스의경우필요한연산자가오버로딩되어있어야템플릿max함수사용가능
+
+
+
+
+
+                            (a>b)의결과를계산할수있어야만함수
+                           본문이실행가능함!
+
+
+
+
+
+강의자료무단배포금지                                                                                                               18
+문의사항: hk.kim@jbnu.ac.kr  || diskhkme@gmail.com
+
+=== L09 | PDF p.19 | 印刷 p.19 ===
+ Generic Programming using Template
+
+ 템플릿이사용가능한경우
+
+   만일아래의경우, Point 클래스에대해operator>가오버로딩되어있지않다면컴파일오류발
+    생
+
+
+
+
+
+강의자료무단배포금지                                                                                                               19
+문의사항: hk.kim@jbnu.ac.kr  || diskhkme@gmail.com
+
+=== L09 | PDF p.20 | 印刷 p.20 ===
+ Generic Programming using Template
+
+ 템플릿의다중매개변수
+
+  서로다른이름을사용하여다중매개변수를정의가능
+
+  매개변수가다르다면서로타입이다를수있음
+
+
+
+
+
+                                                   T1은int고T2는double인
+                                                            func함수가생성됨
+
+
+                                   타입을명시하진않았지만,
+                                               T1은char이고T2가
+                                         double인것이명확하므로
+                                해당하는함수가생성됨
+
+강의자료무단배포금지                                                                                                               20
+문의사항: hk.kim@jbnu.ac.kr  || diskhkme@gmail.com
+
+=== L09 | PDF p.21 | 印刷 p.21 ===
+ Generic Programming using Template
+
+ 템플릿의특수화
+
+  특정자료형에대해서는템플릿을사용하지않고별도구현한함수를사용하도록구현가능
+
+       즉, string 타입에대해Min함수를호출할때는위의함수가아닌아래함수가실행됨
+
+
+
+
+
+                                                                                 std::stringtype의인자에대해사용하는
+                                            (명시적)특수화
+
+
+
+
+
+강의자료무단배포금지                                                                                                               21
+문의사항: hk.kim@jbnu.ac.kr  || diskhkme@gmail.com
+
+=== L09 | PDF p.22 | 印刷 p.22 ===
+ Generic Programming과템플릿
+
+ Generic Programming이란: 타입에관계없이작동하는코드의작성
+
+    Macro를활용한Generic programming  : 매크로를활용하여코드를대체하는방식, 주의가필요
+
+ Generic Programming using Template  : 타입이정해지지않은템플릿을만들고, 컴파일시
+  해당템플릿이사용되는경우코드가생성됨
+
+  함수템플릿: template<typename T>, 템플릿인자와특수화
+
+  클래스템플릿
+
+
+
+
+
+강의자료무단배포금지                                                                                                               22
+문의사항: hk.kim@jbnu.ac.kr  || diskhkme@gmail.com
+
+=== L09 | PDF p.23 | 印刷 p.23 ===
+ Generic Programming using Template
+
+ 클래스템플릿
+
+   함수템플릿과유사한, 클래스에대한템플릿구현지원
+
+   클래스의“설계도“
+
+  컴파일러가타입에따라적절한클래스를생성해줌
+
+
+
+
+
+강의자료무단배포금지                                                                                                               23
+문의사항: hk.kim@jbnu.ac.kr  || diskhkme@gmail.com
+
+=== L09 | PDF p.24 | 印刷 p.24 ===
+ Generic Programming using Template
+
+ 클래스템플릿, Item 클래스예제
+
+
+
+
+
+강의자료무단배포금지                                                                                                               24
+문의사항: hk.kim@jbnu.ac.kr  || diskhkme@gmail.com
+
+=== L09 | PDF p.25 | 印刷 p.25 ===
+ Generic Programming using Template
+
+ 클래스템플릿의정의
+
+
+
+
+
+강의자료무단배포금지                                                                                                               25
+문의사항: hk.kim@jbnu.ac.kr  || diskhkme@gmail.com
+
+=== L09 | PDF p.26 | 印刷 p.26 ===
+ Generic Programming using Template
+
+ 클래스템플릿의사용
+
+
+
+
+
+강의자료무단배포금지                                                                                                               26
+문의사항: hk.kim@jbnu.ac.kr  || diskhkme@gmail.com
+
+=== L09 | PDF p.27 | 印刷 p.27 ===
+ Generic Programming using Template      고급
+
+ 클래스템플릿의사용
+
+   함수처럼타입을적지않아도타입을추론하는기능이C++ 17부터추가됨
+
+
+
+
+
+   VS2017에서는프로젝트속성C/C++ 언어C++ 언어표준을C++17로바꾸어주어야
+    가능
+
+
+
+
+
+강의자료무단배포금지                                                                                                               27
+문의사항: hk.kim@jbnu.ac.kr  || diskhkme@gmail.com
+
+=== L09 | PDF p.28 | 印刷 p.28 ===
+ Generic Programming using Template
+
+ 클래스템플릿의다중매개변수
+
+   선언과사용
+
+
+
+
+
+강의자료무단배포금지                                                                                                               28
+문의사항: hk.kim@jbnu.ac.kr  || diskhkme@gmail.com
+
+=== L09 | PDF p.29 | 印刷 p.29 ===
+ Generic Programming using Template
+
+ 클래스템플릿의(부분)특수화
+
+     class classname<type 명시>
+
+
+
+
+
+                                            value가double형일때사용할
+                        클래스템플릿의특수화
+
+
+
+
+
+강의자료무단배포금지                                                                                                               29
+문의사항: hk.kim@jbnu.ac.kr  || diskhkme@gmail.com
+
+=== L09 | PDF p.30 | 印刷 p.30 ===
+ Generic Programming using Template         중요!
+
+ 클래스템플릿매개변수
+
+   타입이아닌다른매개변수를사용할수있음(non-type template argument)
+
+     아래예제에서N의값을템플릿클래스의사용시에직접명시해줌
+
+
+
+
+                    정적배열이기때문에고정된크기가
+                        필요해서,숫자N자체를템플릿인수로
+                     같이받도록정의함!
+
+
+
+                      왼쪽사용코드를보고컴파일러가
+                      오른쪽과같은두개의클래스를
+                       만들어냄
+
+
+
+
+
+강의자료무단배포금지                                                                                                               30
+문의사항: hk.kim@jbnu.ac.kr  || diskhkme@gmail.com
+
+=== L09 | PDF p.31 | 印刷 p.31 ===
+ Generic Programming과템플릿
+
+ Generic Programming이란: 타입에관계없이작동하는코드의작성
+
+    Macro를활용한Generic programming  : 매크로를활용하여코드를대체하는방식, 주의가필요
+
+ Generic Programming using Template  : 타입이정해지지않은템플릿을만들고, 컴파일시
+  해당템플릿이사용되는경우코드가생성됨
+
+  함수템플릿: template<typename T>, 템플릿인자와특수화
+
+  클래스템플릿: 클래스에도동일하게사용가능, 템플릿인자에int N 등도사용가능함
+
+
+
+
+
+강의자료무단배포금지                                                                                                               31
+문의사항: hk.kim@jbnu.ac.kr  || diskhkme@gmail.com
+
+=== L09 | PDF p.32 | 印刷 p.32 ===
+추가슬라이드
+
+
+
+
+
+                                                                                                                         32
+
+=== L09 | PDF p.33 | 印刷 p.33 ===
+ Generic Programming using Template
+
+ 템플릿의특수화
+
+  특정자료형에대해서는템플릿을사용하지않고별도구현한함수를사용하도록구현가능
+
+  사실아래경우에는템플릿특수화를하지않아도오버로딩을통해동일하게동작
+
+  하지만미묘한차이가있으므로실제사용할때문제가생기면참고
+
+           https://stackoverflow.com/questions/7108033/template-specialization-vs-function-overloading
+
+           https://stackoverflow.com/questions/5986935/difference-between-explicit-specialization-and-
+                                        template <typename T>             regular-functions-when-overloadin
+                                        T min(T a, T b) {
+                                               return (a < b) ? a : b;
+                                        }                                            사실이예제에서는특수화명시를하지
+                                                                않아도std::string에대해서잘동작
+                                        template<>
+                                        std::string min(std::string a, std::string b)
+                                        {
+                                               return (a.length() < b.length()) ? a : b;
+강의자료무단배포금지                            }                                                                33
+문의사항: hk.kim@jbnu.ac.kr  || diskhkme@gmail.com

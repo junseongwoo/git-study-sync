@@ -1,0 +1,35 @@
+ListNode *,1馝e = (ListNode *)maUoc(sizeof(ListN0de));
+node->data = data;
+if (head == NULL) {
+head = node;
+node->tink = head;
+else {
+= head-〉tink; // (1)
+head->link = node;
+return head; // 변경된 헤드 포인터를 반환한다.
+ListNode* insert Iast(ListNode* head, element data)
+ListN0de = (ListNode *)maIIoc(sizeof(ListN0de));
+node->data = data;
+if (head == NULL) {
+head = node;
+= head;
+else {
+node—>tink = head->link;
+head->link = node;
+head = node;
+return head; // 변경된 헤드 포인터를 반환한다.
+// 원형 연결 리스트 테스트 프로그램
+int main(void)
+ListNode *head = NULL;
+// list = 10->20->30->40
+head = insert last(head, 20)•,
+head = insert—last(head, 30);
+head = insert_last(head, 40);
+head = insert_first(head, 10);
+print_li (head) ;
+return 0;
+// insert-last()가 반환한 헤드 포인터를 head에 대입한다.
+위의 프로그램의 출력 화면은 다음과 같다.
+실행결과
+10->20->30->40-〉
+226 C언어로 쉽게 물어쓴 자료구조

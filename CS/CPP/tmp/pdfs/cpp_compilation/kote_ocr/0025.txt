@@ -1,0 +1,28 @@
+10. 이제 ) 함수에서 dynamic-array를 시용하는 코드를 작성합니다.
+int main()
+int nStudents;
+std::cout 〈〈 "1반 학생 수를 입력하세요:
+std: :cin 〉〉 nStudents;
+dynamic—array〈student〉 cl쬬sl (nStudents);
+for (int i = 0; i 〈 nStudents; i++)
+std: :string name,
+int standard;
+std::cout 〈〈 i + 1 〈〈 "번째 학생 이름과 나이를 입력하세요:
+std::cin 〉〉 name 〉〉 standard;
+classl[i] = student{name, standard};
+// class1[nStudents] = student {"John", 8};
+// 배열 크기보다 큰 인덱스의 학생에 접근
+try
+// 아래 주석을 해제하면 프로그램이 비정상 종료합니다.
+classl .at(nStudents) = student{"John", 8};
+catch (...)
+std::cout 〈〈 '예외 발생!" 〈〈 std::endl;
+// 깊은 복사
+autO class2 = classl;
+// 두 학급을 합쳐서 새로운 큰 학급을 생성
+autO class3 = classl 十 class2;
+return 0;
+// 예상할 수 없는 동작
+// 예외 발생
+std::cout 〈〈 서반을 복사하여 2반 생성: " 〈〈 cIass2.t0-string() 〈〈 std::endl;
+std::cout 〈〈 '서반과 2반을 합쳐 3반 생성: " 〈〈 class3.t0-string() 〈〈 std::endl;

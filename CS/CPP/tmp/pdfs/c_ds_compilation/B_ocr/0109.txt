@@ -1,0 +1,32 @@
+몇 가지 규칙에 따라 스택만 A卜&했는데 중위 표기식이 깔끔하게 후위 표기식으로 변환되었습니다.
+멋지지 않습니까? 다음 코드는 방금 살펴본 데이크스트라의 중위-후위 표기 변환 알고리즘을 구현
+한 GetPostfix ( ) 함수입니다.
+void GetPostfix( char• InfixExpressxon, char* PostfixExpression )
+LinkedListStack* Stack; : 중위표기식
+char Token132J;
+int = -1,
+L.nsigned int Position = 이•
+후위표기식
+l.nsigned int Length = strlen( InfixExpression ):
+LLS_CreateStack(&Stack);
+while ( Position 〈 Length )•
+중위 표기식을 다 읽을 때까지 반복
+Position += GetNextToken( &InfixExpression[Positionl, Token, &Type );
+if ( Type == OPERAND )•
+토큰이 피연산자라면 후위 표기식에 출력
+strcat( PostfixExpression, Token );
+strcat( PostfixExpreSS10n,
+else if ( Type == RIGHT PARENTHESIS )
+while ( !LLS-IsEmpty(Stack) )
+토큰이 오른쪽 괄호라면 완쪽 괄호가
+NO血* Popped = LLS-Pop( Stack );
+나타날 때까지 스택의 노드를 제거합니다.
+if ( Popped-»ata[@I == LEFT PARENTHESIS )
+LLS DestroyNode( ):
+break;
+else ••
+토큰이 연산자인 경우
+1예
+strcat( PostfixExpression, Popped->Data );
+LLS-DestroyN0de( POPPed ):
+PÜt 01 , 자료구조

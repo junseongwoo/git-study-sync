@@ -1,0 +1,28 @@
+struct node
+int data;
+int listPosition;
+int dataPosition;
+std: :vector<int〉 merge(const std: :vector<std: :vector<int>>& input)
+autO comparator = [](const node& left, const node& right) {
+if (left.data == right.data)
+return left listPosition 〉 right.listPosition;
+return left.data 〉 right.data;
+힘 노드는 데이터와 입력 리스트 인덱스, 그리고 해당 입력 리스트에서의 데이터 인덱스를 저
+장합니다.
+3. 힘을 구성합니다. 각각의 리스트에서 가장 작은 원소를 추출하여 최소 힘을 구성할 것입니다.
+따라서 힘에서 원소를 꺼내면 전체 리스트에서 가장 작은 원소가 추출됩니다. 이 원소를 삭제
+한 후, 같은 리스트에서 다음 번 원소를 꺼내어 힘에 추가합니다.
+std: :vector〈node〉 heap;
+for (int i = 0; 1 〈 input.size(); i++)
+heap.push-back({input[i][@], i, 0});
+std: :push_heap(heap.begin(), heap.end(), comparator);
+4. 이제 출력 벡터를 만들겠습니다. 힘에서 원소 하니를 꺼내어 출력 벡터에 추가하고, 해당 원
+소가 있던 리스트에서 다음 원소가 있다면 이를 다시 힘에 넣습니다. 그리고 힘이 완전히 빌
+때까지 이 작업을 반복합니다.
+std: :vector<int〉 result;
+while (!heap.empty())
+std: :pop-heap(heap.begin(), heap.end(), comparator);
+= heap.back();
+autO min
+heap. );
+8

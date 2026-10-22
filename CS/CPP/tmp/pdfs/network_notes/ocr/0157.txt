@@ -1,0 +1,39 @@
+2.7 • 소켓 프로그래叩 네트워크 에를리게이선 생성
+이는데, 이는 코드를 통해 명시적으로 하지 않고 자동으로 수행된다). UDP 소켓을 통
+해 클라이언트에서 서버로 가는 에시지를 보내는 것은 매우 간단하다. 클라이언트는
+패킷을 보닛까 후에 서버로부터의 데이터 수신을 기다린다.
+modifiedMessage, serverAddregg = cIientSocket .recvfrom(2048)
+위 라인의 경우, 패것이 클라이언트의 소켓에 인터넷으로부터 도착하면 패것 데이터는
+변수 modifiedMessage에 할당되고 패킷의 소스 주소는 변수 serverAddress
+에 할당된다. 변수 serverAddress는 서버의 IP 주소와 서버의 포-트 번호를 포함
+한다. UDPClient 프로그램은 처음부터 서비 주소를 알고 있기 때문에 실제로 이 서버
+주소 정보를 필요로 하지 않는다. 그럼에도 불구하고 파이썬의 이 라인은 서버 주소를
+제공한다. recvfrom 메소드 또한 2048을 버퍼 그기로 받아들인다(이 버퍼 그기는
+여러 목적으로 사용된다).
+print (modifiedMessage .decode () )
+이 라인은 메시지를 바이트에서 문자열로 변환한 다음에 사용자의 화면에 modi-
+fiedMessage를 출력한다. 대문자로 전환된 사용자가 입력한 원래의 라인이어야
+한다.
+c1ientSocket . close ()
+이 라인은 소켓을 닫으며, 그 후 프로세스가 종료된다.
+UDPServer.py
+이제 애플리케이션 서버 쪽을 살펴보자.
+from socket import *
+serverPort = 12000
+serverSocket = socket (AF_INET, SOCK_DGRAM)
+serverSocket .bind ( ('
+serverPort) )
+print ("The server is ready tO receive")
+while True •.
+message, c1ientAddress = serverSocket.recvfrom(2048)
+modifiedMessage = message.decode () ()
+serverSocket. sendto (modifiedMessage.encode () , c1ientAddress)
+UDPServer의 시작은 UDPC1ient와 유사하다. 즉, 소켓 모듈을 사통하고(import), 정
+수 변수 serverport에 12000을 할당하며, (UDP 소켓) SOCK DGRAM 타입의 소
+것을 생성한다. UDPClient와 상이한 코드의 첫 번째 라인은 다음과 같다.
+serverSocket . bind ( ( '
+serverPort) )
+위 라인은 포트 번호 12000을 서버의 소켓에 할당한다(bind). 즉, UDPServer의 (애플
+리케이션 개발자가 작성한) 코드는 명시적으로 포트 번호를 소켓에 할당한다. 이렇게
+서버 IP 주소의 12000 포트로 패킷을 보내면 해당 소켓으로 패킷이 전달된다(direct-
+149

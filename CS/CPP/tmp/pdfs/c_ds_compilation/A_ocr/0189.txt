@@ -1,0 +1,25 @@
+free(remved) ;
+return head;
+print-list() 함수
+우리는 연결 리스트의 노드를 방문하면시 노드를 대상으로 다양한 작업을 할 수 있다. 예를 들면
+노드를 방문하면서 노드의 데이터를 화면에 출력할 수 있다. 연결 리스트 안의 모든 노드의 데이
+터를 출력하는 함수 print-list를 작성해보자. 노드의 링그값이 NULL이 아니면 계속 링크를 따
+라 가면서 노드를 방문한다. 링크값이 NULL이면 연결 리스트의 끝에 도달한 것이므로 반복을 중
+단한다. 방문 연산은 연결 리스트에서 가장 기본이 되는 연산이므로 그 개님을 확실하게 이해해
+야 한다.
+II?그램 6.6 리스트 방문 알고리즘
+void print_list(ListNode *head)
+for (ListN0de *P = head; p != NULL; P = p->link)
+printf("%->", p->data);
+printf("NULL 년");
+전체 테스트 프로그램
+앞에서 작성한 함수들~을 모아서 테스트하는 프로그램을 작성하여 보자.
+프로그램 6.7 전체 테스트 프로그램
+#include <stdio.h>
+#include <stdlib.h>
+typedef int element;
+typedef Struct ListN0de { // 노드 타입
+element data;
+struct ListNode *link;
+} ListNode,
+CHAPTER06 연결 리스트 | 197

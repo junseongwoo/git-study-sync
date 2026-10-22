@@ -1,0 +1,26 @@
+LAb
+특정한 값을 탐색하는 함수를 작성해보자.
+리스프에서 특정한 값을 담색하는 연산도 기본적인 연산이다. 먼저 헤드 포인터가 가리기는 노
+드부터 순서대로 랑그를 따라가면서 노드가 저장하고 있는 데이터와 찾는 값을 비교하면 된다.
+렁1크값이 NULL이면 연결 리스트의 끝에 도달한 것이므로 탐색을 중단한다. 반환값은 탐색값을
+가지고 있는 노드의 주소이다.
+프로그램 6.8 노드값탐색 알고리즘
+ListNode• search_list(ListNode *head, element x)
+*P = head;
+(p != NULL) {
+if (p->data == x) return 아
+P = p->link;
+return NULL; // 탐색 실패
+실행결과
+I@->WLL
+20->10-〉刪LL
+30->20->10->NULL
+리人E에서 30을 찾았습니다.
+Solution
+특정한 값을 탐색하는 함수를 작성해보자.
+#inctude 〈stdio.h>
+#inctude 〈stdtib.h>
+typedef int element;
+typedef struct ListNode { // 노드 타입
+element data;
+202 C언어로 쉽게 불어쓴 자료구조

@@ -1,0 +1,99 @@
+S={0,4}
+distance[OJ
+distance[l)
+= min(distance[1],distance(4]•weight(41(11) - min(7, 3+2) = 5
+distance(2] = ,distance[4)•weight(4J(기) :
+distance[3J = min(distance(3],distance(4]•weight(4J(3J) - min(m, 3+11)
+: 14
+distance[4]
+= 3
+distance[5) = mn(distance(51,distanceC4J•weight[4)[5J) : min(10, 3㈄ : 10
+= min(distance[5〕 : min(10, 3••) : 10
+distance[6]
+STEP 3:
+= 0
+= 5
+= 9
+= 3
+= 8
+4
+5
+3
+2
+11
+[이
+0
+0
+[지이
+6
+1
+5
+4
+1
+2
+6
+distance[O)
+distance[l)
+distance[2]
+di stance [4]
+STEP 4:
+5=(0, 4, 1}
+0 1
+4
+9
+2
+3
+14
+= 0
+= 5
+= min(distance[2] ,distance[l]+weight[l) [기 )
+distance[3] = min(distanceC3] ,distance[1]+weight[11[3])
+= 3
+distance[5J = min(distance[5J,distance[1]+weight[1][5)) = mn(10, 5+6)
+distance[6] - min(distanceC6] [5])=
+4
+5
+6
+3
+2
+11
+0
+0
+[되 까이
+6
+1
+5
+4
+1•
+2
+S={O, 4, 1, 6}
+0 1
+distance[]
+2 3 4 5 6
+= mn(m, 5+4) = 9
+= min(14, 5+10)
+= 10
+mn(8, 3+匃) = 8
+2 3 4 5 6
+9
+2
+4
+3
+[피
+5= { 0, 4, 1, 6}
+distance[@]
+distance[l]
+= min(distance[2) ,distance[6] +weight[6] [기 )
+distance[2J
+distance[3J = min(distance[3] ,distance[6]+weight[6] [3])
+distance[4]
+= min(distance[5J ,distance[6]+weight[6] [되)
+distance[5]
+distance(6)
+= mn(9, 8恟)
+= min(14, 8+4)
+: min(10, 8~)
+= 12
+= 10
+CHAPTERII 그래픠|
+419

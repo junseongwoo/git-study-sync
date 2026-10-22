@@ -1,0 +1,980 @@
+{
+  "unit": 24,
+  "title": "동적 계획법 II",
+  "part": "코딩 테스트",
+  "scope": [
+    {
+      "source": "K",
+      "start": 374,
+      "end": 425
+    }
+  ],
+  "learning": [
+    {
+      "text": "0-1 배낭 문제와 무한 개수 배낭 문제를 구현하고 상태 공간 축소를 적용한다.",
+      "refs": [
+        {
+          "source": "K",
+          "section": "9장 학습 목표",
+          "pages": [
+            375
+          ]
+        }
+      ],
+      "evidence": "0-1 배낭 문제와 무한 개수 배낭 문제 / 상태 공간 축소"
+    },
+    {
+      "text": "가중 그래프의 모든 쌍 최단 경로 문제를 동적 계획법의 최적화 접근으로 해결한다.",
+      "refs": [
+        {
+          "source": "K",
+          "section": "9장 학습 목표",
+          "pages": [
+            375
+          ]
+        }
+      ],
+      "evidence": "가중 그래프에서 모든 쌍 최단 경로 문제"
+    }
+  ],
+  "concepts": [
+    {
+      "title": "P·NP와 해답 검증·생성의 구분",
+      "items": [
+        {
+          "text": "P 문제는 다항 시간(polynomial time) 내에 해답을 구할 수 있는 문제이다.",
+          "refs": [
+            {
+              "source": "K",
+              "section": "9.2 P와 NP",
+              "pages": [
+                377
+              ]
+            }
+          ],
+          "evidence": "P 문제 / 다항 시간 내에 해답을 구할 수"
+        },
+        {
+          "text": "9.2절은 정점에 이미 할당된 색상을 검증하는 문제와 조건에 맞는 색상을 배정할 수 있는지 찾는 문제를 비교한다.",
+          "refs": [
+            {
+              "source": "K",
+              "section": "9.2 P와 NP",
+              "pages": [
+                377
+              ]
+            }
+          ],
+          "evidence": "세 가지 색상 / 인접한 두 정점이 같은 / 지정할 수 있는지"
+        },
+        {
+          "text": "원문은 주어진 솔루션의 검증이 쉽다는 점과 실제 솔루션을 만들어내는 어려움을 구분하며 P = NP인가를 미해결 문제로 소개한다.",
+          "refs": [
+            {
+              "source": "K",
+              "section": "9.2 P와 NP",
+              "pages": [
+                378
+              ]
+            }
+          ],
+          "evidence": "솔루션을 검증하는 것은 쉬운 반면 / 만들어내는 작업 / 미해결 문제 / P = NP"
+        },
+        {
+          "text": "부분집합 합의 유효성 검증은 원소를 모두 더하여 목표치와 같은지 확인하므로 부분집합 크기에 대해 선형이다.",
+          "refs": [
+            {
+              "source": "K",
+              "section": "9.3 부분집합의 합 문제 다시 보기",
+              "pages": [
+                380
+              ]
+            }
+          ],
+          "evidence": "원소를 모두 더하여 목표치와 같은지 / 크기에 대해 선형"
+        },
+        {
+          "text": "원문은 부분집합 합의 동적 계획법을 의사 다항 시간(pseudo-polynomial time)으로 분류한다.",
+          "refs": [
+            {
+              "source": "K",
+              "section": "9.3 부분집합의 합 문제 다시 보기",
+              "pages": [
+                381
+              ]
+            }
+          ],
+          "evidence": "의사 다항 시간(pseudo-polynomial time)으로 동작"
+        }
+      ]
+    },
+    {
+      "title": "부분집합 합에서 배낭 문제로",
+      "items": [
+        {
+          "text": "배낭 문제는 제한 용량을 넘지 않으면서 넣은 물건들의 가격 합을 최대화하는 조합을 찾는 문제이다.",
+          "refs": [
+            {
+              "source": "K",
+              "section": "9.4 배낭 문제",
+              "pages": [
+                381
+              ]
+            }
+          ],
+          "evidence": "제한 용량을 넘지 않으면서 / 가격 합이 최대"
+        },
+        {
+          "text": "0-1 배낭에서는 물건을 추가해도 용량을 넘지 않으면 가격을 더하는 선택과, 기존 가격 합을 유지하는 선택을 비교한다.",
+          "refs": [
+            {
+              "source": "K",
+              "section": "9.4.1 0-1 배낭 문제",
+              "pages": [
+                383
+              ]
+            }
+          ],
+          "evidence": "무게에 w를 더한 결과가 최대 용량보다 같거나 작을 경우 / 가격 합을 그대로 유지"
+        },
+        {
+          "text": "원문의 0-1 배낭 DP는 이전 행의 같은 무게 값과 현재 물건을 넣는 경우의 가격 합 중 최댓값을 저장한다.",
+          "refs": [
+            {
+              "source": "K",
+              "section": "9.4.2 연습 문제 41: 0-1 배낭 문제",
+              "pages": [
+                386
+              ]
+            }
+          ],
+          "evidence": "max(DP[i - 1][totalWeight], DP[i - 1][totalWeight - currentWeight] + currentValue)"
+        },
+        {
+          "text": "무한 개수 배낭 문제(unbounded knapsack problem)는 각 물건을 개수 제한 없이 배낭에 담을 수 있는 문제이다.",
+          "refs": [
+            {
+              "source": "K",
+              "section": "9.4.3 무한 개수 배낭 문제",
+              "pages": [
+                386
+              ]
+            }
+          ],
+          "evidence": "각 물건을 개수 제한없이 배낭에 담을 수"
+        },
+        {
+          "text": "무한 개수 배낭은 상태 전환 조건이 무게에만 의존하여 1차원 DP 테이블로 표현할 수 있다.",
+          "refs": [
+            {
+              "source": "K",
+              "section": "9.4.4 상태 공간 축소",
+              "pages": [
+                394
+              ]
+            }
+          ],
+          "evidence": "오직 무게 weight에만 의존 / 1차원 DP 테이블"
+        }
+      ]
+    },
+    {
+      "title": "상태 공간 축소·대칭·필요한 행",
+      "items": [
+        {
+          "text": "상태 공간 축소(state space reduction)는 상태를 표현하는 공간의 크기를 최소화하도록 동적 계획법 알고리즘을 재구성하는 작업이다.",
+          "refs": [
+            {
+              "source": "K",
+              "section": "9.4.4 상태 공간 축소",
+              "pages": [
+                389
+              ]
+            }
+          ],
+          "evidence": "상태를 표현하기 위해 사용하는 공간의 크기가 최소화하도록 / 재구성"
+        },
+        {
+          "text": "파스칼의 삼각형은 각 행에 필요한 만큼만 공간을 만들고 행의 좌우 대칭을 활용하여 중복 계산을 줄일 수 있다.",
+          "refs": [
+            {
+              "source": "K",
+              "section": "9.4.4 상태 공간 축소",
+              "pages": [
+                391
+              ]
+            }
+          ],
+          "evidence": "각각의 행을 딱 필요한 크기로 / 각 행의 절반이 서로 대칭"
+        },
+        {
+          "text": "파스칼의 삼각형에서 특정 원소만 필요하면 현재 행 계산에 이전 행만 필요하므로 전체 DP 테이블을 저장할 필요가 없다.",
+          "refs": [
+            {
+              "source": "K",
+              "section": "9.4.4 상태 공간 축소",
+              "pages": [
+                392
+              ]
+            }
+          ],
+          "evidence": "특정 원소만 / 전체를 저장할 필요가 없습니다 / 바로 이전 행"
+        }
+      ]
+    },
+    {
+      "title": "최단 경로의 동적 계획법 해석",
+      "items": [
+        {
+          "text": "단일 시작 최단 경로 문제(single-source shortest path problem)는 한 정점에서 나머지 모든 정점까지의 최단 경로를 찾는다.",
+          "refs": [
+            {
+              "source": "K",
+              "section": "9.5.2 동적 계획법으로 최단 경로 문제 다루기",
+              "pages": [
+                405
+              ]
+            }
+          ],
+          "evidence": "하나의 정점에서 시작하여 나머지 모든 정점까지의 최단 경로"
+        },
+        {
+          "text": "모든 쌍 최단 경로 문제(all-pairs shortest path problem)는 모든 정점 사이의 최단 경로를 계산한다.",
+          "refs": [
+            {
+              "source": "K",
+              "section": "9.5.2 동적 계획법으로 최단 경로 문제 다루기",
+              "pages": [
+                405
+              ]
+            }
+          ],
+          "evidence": "모든 정점 사이의 최단 경로 / 모든 쌍 최단 경로 문제"
+        },
+        {
+          "text": "존슨 알고리즘은 벨만-포드의 동적 계획법 접근과 다익스트라의 그리디 접근을 결합한다.",
+          "refs": [
+            {
+              "source": "K",
+              "section": "9.5.2 동적 계획법으로 최단 경로 문제 다루기",
+              "pages": [
+                405
+              ]
+            }
+          ],
+          "evidence": "벨만-포드 / 동적 계획법 / 다익스트라 / 그리디 / 결합"
+        },
+        {
+          "text": "최단 경로 메모이제이션은 현재 정점 node와 반복수 depth의 쌍으로 상태를 표현한다.",
+          "refs": [
+            {
+              "source": "K",
+              "section": "9.5.2 동적 계획법으로 최단 경로 문제 다루기",
+              "pages": [
+                405,
+                406
+              ]
+            }
+          ],
+          "evidence": "node → 현재 정점 / depth → 현재 반복수 / node와 depth의 쌍"
+        }
+      ]
+    },
+    {
+      "title": "플로이드-워셜 알고리즘",
+      "items": [
+        {
+          "text": "플로이드-워셜은 모든 정점을 중간 정점으로 사용하면서 모든 정점 쌍 사이의 거리를 테이블에 저장한다.",
+          "refs": [
+            {
+              "source": "K",
+              "section": "9.5.5 플로이드-워셜 알고리즘",
+              "pages": [
+                413
+              ]
+            }
+          ],
+          "evidence": "모든 정점을 중간 정점으로 / 모든 정점 쌍 사이의 최단 거리"
+        },
+        {
+          "text": "현재 start-end 거리보다 start-mid와 mid-end 거리의 합이 짧으면 그 합으로 갱신한다.",
+          "refs": [
+            {
+              "source": "K",
+              "section": "9.5.6 플로이드-워셜 알고리즘 구현하기",
+              "pages": [
+                416
+              ]
+            }
+          ],
+          "evidence": "distance[start][mid] + distance[mid][end] < distance[start][end]"
+        },
+        {
+          "text": "중첩 반복문의 순서는 가장 바깥쪽 mid, 그다음 start, 가장 안쪽 end이다.",
+          "refs": [
+            {
+              "source": "K",
+              "section": "9.5.6 플로이드-워셜 알고리즘 구현하기",
+              "pages": [
+                416
+              ]
+            }
+          ],
+          "evidence": "가장 바깥쪽 / mid / 가운데 / start / 가장 안쪽 / end"
+        },
+        {
+          "text": "테이블의 distance[i][i]가 0보다 작으면 음수 가중치 사이클이 있는 것으로 판단한다.",
+          "refs": [
+            {
+              "source": "K",
+              "section": "9.5.6 플로이드-워셜 알고리즘 구현하기",
+              "pages": [
+                416
+              ]
+            }
+          ],
+          "evidence": "자기 자신으로의 거리가 0보다 작으면 음수 가중치 사이클"
+        },
+        {
+          "text": "원문은 밀집 그래프에서 플로이드-워셜을 고려하며, 음수 에지 가중치는 허용하되 음수 사이클에 별도 처리가 필요하다고 설명한다.",
+          "refs": [
+            {
+              "source": "K",
+              "section": "9.5.5 플로이드-워셜 알고리즘",
+              "pages": [
+                414
+              ]
+            }
+          ],
+          "evidence": "밀집 그래프 / 음수 에지 가중치 / 음수 에지 사이클 / 별도의 처리"
+        }
+      ]
+    },
+    {
+      "title": "실습 문제: 최대 이익·도로 건설",
+      "items": [
+        {
+          "text": "최대 이익 실습은 capacity와 budget의 두 제약을 고려하기 위해 3차원 DP 테이블을 사용하도록 안내한다.",
+          "refs": [
+            {
+              "source": "K",
+              "section": "9.4.6 실습 문제 22: 최대 이익",
+              "pages": [
+                401
+              ]
+            }
+          ],
+          "evidence": "capacity와 budget 두 개의 제약 / DP 테이블은 3차원"
+        },
+        {
+          "text": "도로 건설 실습은 지반 강도에 따라 비용이 달라지는 지역에서 저렴한 도로 시스템을 설계하는 문제이다.",
+          "refs": [
+            {
+              "source": "K",
+              "section": "9.5.7 실습 문제 23: 도로 건설",
+              "pages": [
+                419
+              ]
+            }
+          ],
+          "evidence": "최대한 저렴하게 도로 시스템 / 지반 강도 / 비용이 선형으로 증가"
+        }
+      ]
+    }
+  ],
+  "procedures": [
+    {
+      "title": "벨만-포드 알고리즘을 다시 보는 원문 순서",
+      "steps": [
+        {
+          "text": "각 정점 거리를 UNKNOWN으로 초기화하고 시작 정점은 0으로 둔다.",
+          "refs": [
+            {
+              "source": "K",
+              "section": "9.5.1 벨만-포드 알고리즘 다시 보기",
+              "pages": [
+                402
+              ]
+            }
+          ],
+          "evidence": "UNKNOWN으로 초기화 / start 정점의 거리 값은 0"
+        },
+        {
+          "text": "V-1번 반복하며 모든 에지를 검사하고 시작 정점의 거리가 알려진 경우 인접 정점까지의 후보 거리를 비교한다.",
+          "refs": [
+            {
+              "source": "K",
+              "section": "9.5.1 벨만-포드 알고리즘 다시 보기",
+              "pages": [
+                402
+              ]
+            }
+          ],
+          "evidence": "1부터 (V - 1)까지 반복 / 모든 에지를 검사"
+        },
+        {
+          "text": "더 짧은 후보 거리로 갱신하며, 마지막에 한 번 더 검사하여 음수 사이클 존재 여부를 확인한다.",
+          "refs": [
+            {
+              "source": "K",
+              "section": "9.5.1 벨만-포드 알고리즘 다시 보기",
+              "pages": [
+                402
+              ]
+            }
+          ],
+          "evidence": "더 작은 값으로 갱신 / 반복을 한 번 더 수행 / 음수 가중치 사이클"
+        }
+      ]
+    },
+    {
+      "title": "플로이드-워셜 구현 순서",
+      "steps": [
+        {
+          "text": "distance 테이블을 가중치 행렬로 초기화하고 자기 자신까지의 거리는 0으로 설정한다.",
+          "refs": [
+            {
+              "source": "K",
+              "section": "9.5.6 플로이드-워셜 알고리즘 구현하기",
+              "pages": [
+                415
+              ]
+            }
+          ],
+          "evidence": "가중치 행렬을 참조 / 자기 자신까지의 거리 값은 0"
+        },
+        {
+          "text": "mid, start, end의 중첩 반복문에서 더 짧은 거리를 발견할 때 테이블을 갱신한다.",
+          "refs": [
+            {
+              "source": "K",
+              "section": "9.5.6 플로이드-워셜 알고리즘 구현하기",
+              "pages": [
+                416
+              ]
+            }
+          ],
+          "evidence": "mid / start / end / 더 짧은 거리 / 갱신"
+        },
+        {
+          "text": "대각 원소가 음수인지 확인하여 음수 가중치 사이클을 검사하고 distance를 반환한다.",
+          "refs": [
+            {
+              "source": "K",
+              "section": "9.5.6 플로이드-워셜 알고리즘 구현하기",
+              "pages": [
+                416
+              ]
+            }
+          ],
+          "evidence": "distance[i][i] < 0 / return distance;"
+        }
+      ]
+    }
+  ],
+  "syntax": [
+    {
+      "label": "플로이드-워셜 거리 갱신 - 원문 발췌",
+      "code": "for (int mid = 0; mid < V; mid++) {\n    for (int start = 0; start < V; start++) {\n        for (int end = 0; end < V; end++) {\n            if (distance[start][mid] + distance[mid][end] < distance[start][end]) {\n                distance[start][end] = distance[start][mid] + distance[mid][end];\n            }\n        }\n    }\n}",
+      "refs": [
+        {
+          "source": "K",
+          "section": "9.5.6 연습 문제 44: 플로이드-워셜 알고리즘 구현하기",
+          "pages": [
+            416
+          ]
+        }
+      ],
+      "evidence": "for (int mid = 0; mid < V; mid++) / distance[start][end] = distance[start][mid] + distance[mid][end];",
+      "note": null
+    }
+  ],
+  "formulas": [
+    {
+      "label": "파스칼의 삼각형: 원문 기저 조건·순환식",
+      "expression": "m = 1, m = n → triangle(n, m) = 1\ntriangle(n, m) = triangle(n-1, m-1) + triangle(n-1, m)",
+      "refs": [
+        {
+          "source": "K",
+          "section": "9.4.4 상태 공간 축소",
+          "pages": [
+            389
+          ]
+        }
+      ],
+      "evidence": "m = 1, m = n / triangle(n, m) = triangle(n-1, m-1) + triangle(n-1, m)",
+      "note": "m ≤ n인 두 정수 m, n에 대한 원문 표기."
+    },
+    {
+      "label": "플로이드-워셜 알고리즘 복잡도",
+      "expression": "시간 O(V^3) · 메모리 O(V^2)",
+      "refs": [
+        {
+          "source": "K",
+          "section": "9.5.4 모든 쌍 최단 경로",
+          "pages": [
+            413
+          ]
+        }
+      ],
+      "evidence": "O(V³)의 시간 복잡도와 O(V²)의 메모리 사용량",
+      "note": "V는 그래프 정점 수이다."
+    }
+  ],
+  "comparisons": [
+    {
+      "title": "배낭 문제의 선택과 상태",
+      "headers": [
+        "문제",
+        "상태 전환의 차이"
+      ],
+      "rows": [
+        [
+          {
+            "text": "0-1 배낭",
+            "refs": [
+              {
+                "source": "K",
+                "section": "9.4.4 상태 공간 축소",
+                "pages": [
+                  394
+                ]
+              }
+            ],
+            "evidence": "0-1 배낭 문제"
+          },
+          {
+            "text": "i번째 물건 포함 여부를 결정하기 위해 (i - 1)개 물건의 상태를 고려한다.",
+            "refs": [
+              {
+                "source": "K",
+                "section": "9.4.4 상태 공간 축소",
+                "pages": [
+                  394
+                ]
+              }
+            ],
+            "evidence": "(i - 1)개의 물건들만 고려"
+          }
+        ],
+        [
+          {
+            "text": "무한 개수 배낭",
+            "refs": [
+              {
+                "source": "K",
+                "section": "9.4.4 상태 공간 축소",
+                "pages": [
+                  394
+                ]
+              }
+            ],
+            "evidence": "무한 개수 배낭 문제"
+          },
+          {
+            "text": "같은 물건을 중복 포함할 수 있고, 상태 전환은 무게에만 의존하므로 1차원 DP로 표현할 수 있다.",
+            "refs": [
+              {
+                "source": "K",
+                "section": "9.4.4 상태 공간 축소",
+                "pages": [
+                  394
+                ]
+              }
+            ],
+            "evidence": "현재 물건을 중복해서 포함 / 오직 무게 weight에만 의존 / 1차원 DP 테이블"
+          }
+        ]
+      ]
+    }
+  ],
+  "terms": [
+    {
+      "term": "P 문제",
+      "definition": {
+        "text": "P 문제는 다항 시간(polynomial time) 내에 해답을 구할 수 있는 문제이다.",
+        "refs": [
+          {
+            "source": "K",
+            "section": "9.2 P와 NP",
+            "pages": [
+              377
+            ]
+          }
+        ],
+        "evidence": "P 문제 / 다항 시간 내에 해답을 구할 수"
+      }
+    },
+    {
+      "term": "의사 다항 시간",
+      "definition": {
+        "text": "원문은 부분집합 합의 동적 계획법을 의사 다항 시간(pseudo-polynomial time)으로 분류한다.",
+        "refs": [
+          {
+            "source": "K",
+            "section": "9.3 부분집합의 합 문제 다시 보기",
+            "pages": [
+              381
+            ]
+          }
+        ],
+        "evidence": "의사 다항 시간(pseudo-polynomial time)으로 동작"
+      }
+    },
+    {
+      "term": "배낭 문제",
+      "definition": {
+        "text": "배낭 문제는 제한 용량을 넘지 않으면서 넣은 물건들의 가격 합을 최대화하는 조합을 찾는 문제이다.",
+        "refs": [
+          {
+            "source": "K",
+            "section": "9.4 배낭 문제",
+            "pages": [
+              381
+            ]
+          }
+        ],
+        "evidence": "제한 용량을 넘지 않으면서 / 가격 합이 최대"
+      }
+    },
+    {
+      "term": "무한 개수 배낭 문제",
+      "definition": {
+        "text": "무한 개수 배낭 문제(unbounded knapsack problem)는 각 물건을 개수 제한 없이 배낭에 담을 수 있는 문제이다.",
+        "refs": [
+          {
+            "source": "K",
+            "section": "9.4.3 무한 개수 배낭 문제",
+            "pages": [
+              386
+            ]
+          }
+        ],
+        "evidence": "각 물건을 개수 제한없이 배낭에 담을 수"
+      }
+    },
+    {
+      "term": "상태 공간 축소",
+      "definition": {
+        "text": "상태 공간 축소(state space reduction)는 상태를 표현하는 공간의 크기를 최소화하도록 동적 계획법 알고리즘을 재구성하는 작업이다.",
+        "refs": [
+          {
+            "source": "K",
+            "section": "9.4.4 상태 공간 축소",
+            "pages": [
+              389
+            ]
+          }
+        ],
+        "evidence": "상태를 표현하기 위해 사용하는 공간의 크기가 최소화하도록 / 재구성"
+      }
+    },
+    {
+      "term": "단일 시작 최단 경로",
+      "definition": {
+        "text": "단일 시작 최단 경로 문제(single-source shortest path problem)는 한 정점에서 나머지 모든 정점까지의 최단 경로를 찾는다.",
+        "refs": [
+          {
+            "source": "K",
+            "section": "9.5.2 동적 계획법으로 최단 경로 문제 다루기",
+            "pages": [
+              405
+            ]
+          }
+        ],
+        "evidence": "하나의 정점에서 시작하여 나머지 모든 정점까지의 최단 경로"
+      }
+    },
+    {
+      "term": "모든 쌍 최단 경로",
+      "definition": {
+        "text": "모든 쌍 최단 경로 문제(all-pairs shortest path problem)는 모든 정점 사이의 최단 경로를 계산한다.",
+        "refs": [
+          {
+            "source": "K",
+            "section": "9.5.2 동적 계획법으로 최단 경로 문제 다루기",
+            "pages": [
+              405
+            ]
+          }
+        ],
+        "evidence": "모든 정점 사이의 최단 경로 / 모든 쌍 최단 경로 문제"
+      }
+    }
+  ],
+  "summary_basis": "원문 9.6 나가며",
+  "summary": [
+    {
+      "text": "익숙한 문제를 동적 계획법 관점에서 바라보는 것은 적절한 해법을 작성하는 핵심 아이디어를 제공한다.",
+      "refs": [
+        {
+          "source": "K",
+          "section": "9.6 나가며",
+          "pages": [
+            424
+          ]
+        }
+      ],
+      "evidence": "익숙한 문제를 동적 계획법 관점 / 핵심 아이디어"
+    },
+    {
+      "text": "배운 기법을 언제 사용할지는 하나로 정해져 있지 않으므로 여러 맥락에 적용해보는 것이 좋다.",
+      "refs": [
+        {
+          "source": "K",
+          "section": "9.6 나가며",
+          "pages": [
+            424
+          ]
+        }
+      ],
+      "evidence": "명확하게 정해져 있지 않으며 / 여러 맥락에 다양하게 적용"
+    },
+    {
+      "text": "책은 자료 구조와 여러 기법을 적절하게 사용하는 감각을 얻고 더 깊이 탐구하기를 권한다.",
+      "refs": [
+        {
+          "source": "K",
+          "section": "9.6 나가며",
+          "pages": [
+            424
+          ]
+        }
+      ],
+      "evidence": "자료 구조와 여러 기법을 적절하게 / 더 깊이 탐구"
+    }
+  ],
+  "review": [
+    {
+      "question": "부분집합 합의 O(N × M)에서 M은 무엇이며 원문은 이 해법을 어떻게 분류하는가?",
+      "answer": {
+        "text": "M은 부분집합 합의 목표치이고, 원문은 해법을 의사 다항 시간으로 분류한다.",
+        "refs": [
+          {
+            "source": "K",
+            "section": "9.3 부분집합의 합 문제 다시 보기",
+            "pages": [
+              380,
+              381
+            ]
+          }
+        ],
+        "evidence": "M은 부분집합의 합 목표치 / 의사 다항 시간"
+      }
+    },
+    {
+      "question": "무한 개수 배낭에서 1차원 DP를 사용할 수 있는 이유는 무엇인가?",
+      "answer": {
+        "text": "상태 전환 조건이 물건 인덱스가 아니라 무게에만 의존하기 때문이다.",
+        "refs": [
+          {
+            "source": "K",
+            "section": "9.4.4 상태 공간 축소",
+            "pages": [
+              394
+            ]
+          }
+        ],
+        "evidence": "오직 무게 weight에만 의존"
+      }
+    },
+    {
+      "question": "플로이드-워셜의 세 중첩 반복문 순서는 무엇인가?",
+      "answer": {
+        "text": "중간 정점 mid, 시작 정점 start, 목표 정점 end 순서이다.",
+        "refs": [
+          {
+            "source": "K",
+            "section": "9.5.6 플로이드-워셜 알고리즘 구현하기",
+            "pages": [
+              416
+            ]
+          }
+        ],
+        "evidence": "가장 바깥쪽 / mid / 가운데 / start / 가장 안쪽 / end"
+      }
+    },
+    {
+      "question": "플로이드-워셜은 음수 사이클을 어떤 테이블 원소로 판별하는가?",
+      "answer": {
+        "text": "distance[i][i]가 0보다 작은지 확인한다.",
+        "refs": [
+          {
+            "source": "K",
+            "section": "9.5.6 플로이드-워셜 알고리즘 구현하기",
+            "pages": [
+              416
+            ]
+          }
+        ],
+        "evidence": "distance[i][i] < 0"
+      }
+    }
+  ],
+  "cheat": {
+    "definitions": [
+      {
+        "term": "상태 공간 축소",
+        "definition": {
+          "text": "상태 공간 축소(state space reduction)는 상태를 표현하는 공간의 크기를 최소화하도록 동적 계획법 알고리즘을 재구성하는 작업이다.",
+          "refs": [
+            {
+              "source": "K",
+              "section": "9.4.4 상태 공간 축소",
+              "pages": [
+                389
+              ]
+            }
+          ],
+          "evidence": "상태를 표현하기 위해 사용하는 공간의 크기가 최소화하도록 / 재구성"
+        }
+      },
+      {
+        "term": "단일 시작 최단 경로",
+        "definition": {
+          "text": "단일 시작 최단 경로 문제(single-source shortest path problem)는 한 정점에서 나머지 모든 정점까지의 최단 경로를 찾는다.",
+          "refs": [
+            {
+              "source": "K",
+              "section": "9.5.2 동적 계획법으로 최단 경로 문제 다루기",
+              "pages": [
+                405
+              ]
+            }
+          ],
+          "evidence": "하나의 정점에서 시작하여 나머지 모든 정점까지의 최단 경로"
+        }
+      },
+      {
+        "term": "모든 쌍 최단 경로",
+        "definition": {
+          "text": "모든 쌍 최단 경로 문제(all-pairs shortest path problem)는 모든 정점 사이의 최단 경로를 계산한다.",
+          "refs": [
+            {
+              "source": "K",
+              "section": "9.5.2 동적 계획법으로 최단 경로 문제 다루기",
+              "pages": [
+                405
+              ]
+            }
+          ],
+          "evidence": "모든 정점 사이의 최단 경로 / 모든 쌍 최단 경로 문제"
+        }
+      }
+    ],
+    "comparison_title": "배낭 문제",
+    "comparison_headers": [
+      "문제",
+      "상태 전환의 차이"
+    ],
+    "comparison_rows": [
+      [
+        {
+          "text": "0-1 배낭",
+          "refs": [
+            {
+              "source": "K",
+              "section": "9.4.4 상태 공간 축소",
+              "pages": [
+                394
+              ]
+            }
+          ],
+          "evidence": "0-1 배낭 문제"
+        },
+        {
+          "text": "i번째 물건 포함 여부를 결정하기 위해 (i - 1)개 물건의 상태를 고려한다.",
+          "refs": [
+            {
+              "source": "K",
+              "section": "9.4.4 상태 공간 축소",
+              "pages": [
+                394
+              ]
+            }
+          ],
+          "evidence": "(i - 1)개의 물건들만 고려"
+        }
+      ],
+      [
+        {
+          "text": "무한 개수 배낭",
+          "refs": [
+            {
+              "source": "K",
+              "section": "9.4.4 상태 공간 축소",
+              "pages": [
+                394
+              ]
+            }
+          ],
+          "evidence": "무한 개수 배낭 문제"
+        },
+        {
+          "text": "같은 물건을 중복 포함할 수 있고, 상태 전환은 무게에만 의존하므로 1차원 DP로 표현할 수 있다.",
+          "refs": [
+            {
+              "source": "K",
+              "section": "9.4.4 상태 공간 축소",
+              "pages": [
+                394
+              ]
+            }
+          ],
+          "evidence": "현재 물건을 중복해서 포함 / 오직 무게 weight에만 의존 / 1차원 DP 테이블"
+        }
+      ]
+    ],
+    "formulas": [
+      {
+        "label": "플로이드-워셜 알고리즘 복잡도",
+        "expression": "시간 O(V^3) · 메모리 O(V^2)",
+        "refs": [
+          {
+            "source": "K",
+            "section": "9.5.4 모든 쌍 최단 경로",
+            "pages": [
+              413
+            ]
+          }
+        ],
+        "evidence": "O(V³)의 시간 복잡도와 O(V²)의 메모리 사용량",
+        "note": "V는 그래프 정점 수이다."
+      }
+    ],
+    "syntax": []
+  },
+  "checked_images": [
+    {
+      "source": "K",
+      "pages": [
+        375,
+        377,
+        378,
+        380,
+        381,
+        383,
+        386,
+        389,
+        391,
+        392,
+        394,
+        401,
+        402,
+        405,
+        406,
+        413,
+        414,
+        415,
+        416,
+        419,
+        424
+      ]
+    }
+  ],
+  "editor_notes": [
+    "인용면은 모두 PDF 기준으로 기록하고 이미지를 직접 확인했다.",
+    "P·NP는 원문이 비교한 해답 검증/구성 관점과 용어 범위만 요약했으며 첨부 밖의 정의나 증명을 추가하지 않았다.",
+    "원문의 코드와 수치를 실행 또는 교정하지 않았다. 도로 건설 제목은 실제 본문의 표기를 따랐다."
+  ]
+}

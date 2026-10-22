@@ -1,0 +1,25 @@
+*include <boost/functional/hash,hpp〉
+struct Car
+std: :string model;
+std: :string brand,
+int buildYear,
+struct CarHasher
+std: :size_t operator()(const Car& car) const
+std: :size_t seed = 0;
+boost: :hash-combine(seed, car.model);
+boost: :hash—combine(seed, car.brand);
+return seed;
+struct CarComparator
+b001 operator()(const Car& carl, const Car& car2) const
+return (carl .model == car2.m0deI) && (carl .brand == car2.brand);
+// 사용자 정의 구조체를 사용하는 unordered-set과 unordered-map 객체 생성하기
+std: :unordered set<Car, CarHasher, CarComparator〉 carSet;
+std: :unordered_map<Car, std: :string, CarHasher, CarComparator〉 carDescriptionMap;
+이 코드에서 CarHasher 구조체는 () 연산자를 재정의한 함수 객체로, std::unordered-set 또는
+std: :unordered-map 객체를 생성할 때 템플릿 매개변수로 사용-됩니다. 또한 CarComparator 구조
+체는 비교자의 역할을 하며, 마찬가지로 템플릿 매개변수로 사용-됩니다. 이러한 방식을 사우하면
+서로 다른 타입의 해시 함수와 비교지를 시용하는 여러 객체를 만들 수 있습니다.
+해시 함수로 MD5, SHA-I, SHA-256 같은 복잡한 암호화 함수도 사용할 수 있습니다. 이들 알
+고리즘은 매우 복잡하며 파일 같은 다양한 종류의 데이터를 입력으로 받을 수 있습니다. 암호화
+함수를 久卜용할 경우, 해시 값으로부터 원본 데이터를 알아내는 역해å(revetse hashing)이 매우 어
+147

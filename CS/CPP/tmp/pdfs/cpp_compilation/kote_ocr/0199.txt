@@ -1,0 +1,27 @@
+std::cout.width(2);
+std::cout 〈〈 i 〈〈
+std: :cout 〈〈 std: :endl;
+template〈typename T>
+void compute_and_print waiting—times(std: :vector<T>& service_times)
+autO waitlng_times = compute—waiting_times<int>(service times);
+std::cout 〈〈 "- 처리 시간:
+print_vector<T>( service_times ) ;
+std::cout 〈〈 "- 대기 시간:
+print_vector<T>(waiting_times) ;
+autO ave_waiting_times = std: :accumulate(waiting—times.begin(),
+end(), 0.0) / waiting-times.size();
+std::cout 〈〈 "- 평균 대기 시간: " 〈〈 ave-waiting-times;
+std: :C01Jt 〈〈 std: :endl;
+2. main( ) 함수를 추가하고 테스트 코드를 추가합니다.
+int main(int argc, char* argv[])
+std::vector<int〉 service—times {8, 1, 2, 4, 9, 2, 3, 5};
+std::cout 〈〈 "[처음 일 처리 시간 & 대기 시간]" 〈〈 std::endl;
+compute and_print_waiting_times<int>(service_times);
+// 일 처리 시간을 오름차순으로 정렬
+std: : sort(service_times .begin(), service_times .end( ) )•,
+std: :cout 〈〈 std: :endl;
+std::cout 〈〈 "[정렬 후 일 처리 시간 & 대기 시간]" 〈〈 std::endl;
+compute_and_print_waiting—times〈int>( ;
+-210
+waiting_times .
+1

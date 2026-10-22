@@ -1,0 +1,1381 @@
+{
+  "unit": 8,
+  "title": "트리·순회·트리 응용",
+  "part": "자료구조",
+  "scope": [
+    {
+      "source": "A",
+      "start": 245,
+      "end": 285
+    },
+    {
+      "source": "B",
+      "start": 149,
+      "end": 194
+    }
+  ],
+  "learning": [
+    {
+      "text": "이진트리는 공집합이거나 루트와 왼쪽·오른쪽 서브 트리로 구성된 유한 집합이며 서브 트리들도 이진트리여야 한다.",
+      "refs": [
+        {
+          "source": "A",
+          "section": "8.2 정의 8.1 이진트리",
+          "pages": [
+            250
+          ]
+        }
+      ],
+      "evidence": "공집합이거나"
+    },
+    {
+      "text": "이진트리 순회(traversal)는 모든 노드를 한 번씩 방문하여 데이터를 목적에 맞게 처리하는 것이다.",
+      "refs": [
+        {
+          "source": "A",
+          "section": "8.4 이진 트리의 순회",
+          "pages": [
+            259
+          ]
+        }
+      ],
+      "evidence": "모든 노드를 한 번씩 방문"
+    }
+  ],
+  "concepts": [
+    {
+      "title": "트리의 용어와 책별 높이 정의",
+      "items": [
+        {
+          "text": "트리는 한 개 이상의 노드로 이루어진 유한 집합이다.",
+          "refs": [
+            {
+              "source": "A",
+              "section": "8.1 트리의 용어들",
+              "pages": [
+                247
+              ]
+            }
+          ],
+          "evidence": "한 개 이상의 노드로 이루어진 유한 집합"
+        },
+        {
+          "text": "루트(root)는 계층적인 구조에서 가장 높은 곳에 있는 노드이다.",
+          "refs": [
+            {
+              "source": "A",
+              "section": "8.1 트리의 용어들",
+              "pages": [
+                247
+              ]
+            }
+          ],
+          "evidence": "가장 높은 곳에 있는 노드"
+        },
+        {
+          "text": "트리에서 루트와 서브트리를 연결하는 선을 간선(edge)이라고 한다.",
+          "refs": [
+            {
+              "source": "A",
+              "section": "8.1 트리의 용어들",
+              "pages": [
+                247
+              ]
+            }
+          ],
+          "evidence": "이 연결선을 간선(edge)"
+        },
+        {
+          "text": "자식 노드가 없는 노드를 단말노드(terminal node, 또는 leaf node)라고 한다.",
+          "refs": [
+            {
+              "source": "A",
+              "section": "8.1 트리의 용어들",
+              "pages": [
+                248
+              ]
+            }
+          ],
+          "evidence": "자식 노드가 없는 노드"
+        },
+        {
+          "text": "후손 노드는 임의의 노드 하위에 연결된 모든 노드를 의미한다.",
+          "refs": [
+            {
+              "source": "A",
+              "section": "8.1 트리의 용어들",
+              "pages": [
+                248
+              ]
+            }
+          ],
+          "evidence": "임의의 노드 하위에 연결된 모든 노드"
+        },
+        {
+          "text": "노드의 차수(degree)는 자식 노드의 개수이며 트리의 차수는 노드 차수 중 가장 큰 값이다.",
+          "refs": [
+            {
+              "source": "A",
+              "section": "8.1 트리의 용어들",
+              "pages": [
+                248
+              ]
+            }
+          ],
+          "evidence": "자식 노드의 개수"
+        },
+        {
+          "text": "A에서 루트의 레벨은 1이고 한 층씩 내려갈수록 1씩 증가한다.",
+          "refs": [
+            {
+              "source": "A",
+              "section": "8.1 트리의 용어들",
+              "pages": [
+                248
+              ]
+            }
+          ],
+          "evidence": "루트의 레벨은 1"
+        },
+        {
+          "text": "A에서 트리의 높이(height)는 최대 레벨이다.",
+          "refs": [
+            {
+              "source": "A",
+              "section": "8.1 트리의 용어들",
+              "pages": [
+                248
+              ]
+            }
+          ],
+          "evidence": "최대 레벨"
+        },
+        {
+          "text": "포리스트(forest)는 트리들의 집합이다.",
+          "refs": [
+            {
+              "source": "A",
+              "section": "8.1 트리의 용어들",
+              "pages": [
+                248
+              ]
+            }
+          ],
+          "evidence": "트리들의 집합"
+        },
+        {
+          "text": "B에서 뿌리 노드의 깊이는 0이다.",
+          "refs": [
+            {
+              "source": "B",
+              "section": "4.1.2 트리의 구성 요소",
+              "pages": [
+                154
+              ]
+            }
+          ],
+          "evidence": "뿌리 노드의 깊이"
+        },
+        {
+          "text": "B에서 레벨은 깊이가 같은 노드의 집합이며, 높이는 가장 깊은 잎 노드까지의 깊이이다.",
+          "refs": [
+            {
+              "source": "B",
+              "section": "4.1.2 트리의 구성 요소",
+              "pages": [
+                154
+              ]
+            }
+          ],
+          "evidence": "깊이가 같은 노드의 집합"
+        }
+      ]
+    },
+    {
+      "title": "이진트리의 정의와 종류",
+      "items": [
+        {
+          "text": "이진트리는 공집합이거나 루트와 왼쪽·오른쪽 서브 트리로 구성된 유한 집합이며 서브 트리들도 이진트리여야 한다.",
+          "refs": [
+            {
+              "source": "A",
+              "section": "8.2 정의 8.1 이진트리",
+              "pages": [
+                250
+              ]
+            }
+          ],
+          "evidence": "공집합이거나"
+        },
+        {
+          "text": "이진트리에는 서브 트리 간 순서가 있어 왼쪽과 오른쪽 서브 트리가 구별된다.",
+          "refs": [
+            {
+              "source": "A",
+              "section": "8.2 이진 트리의 정의",
+              "pages": [
+                250
+              ]
+            }
+          ],
+          "evidence": "왼쪽 서브 트리와 오른쪽 서브 트리는 서로 구별"
+        },
+        {
+          "text": "포화 이진 트리(full binary tree)는 각 레벨에 노드가 꽉 차 있는 이진트리이다.",
+          "refs": [
+            {
+              "source": "A",
+              "section": "8.2 이진트리의 분류",
+              "pages": [
+                253
+              ]
+            }
+          ],
+          "evidence": "각 레벨에 노드가 꽉 차있는"
+        },
+        {
+          "text": "완전 이진 트리(complete binary tree)는 마지막 전 레벨까지 모두 채워지고 마지막 레벨은 왼쪽부터 순서대로 채워진다.",
+          "refs": [
+            {
+              "source": "A",
+              "section": "8.2 이진트리의 분류",
+              "pages": [
+                254
+              ]
+            }
+          ],
+          "evidence": "왼쪽부터 오른쪽으로 노드가 순서대로"
+        },
+        {
+          "text": "포화 이진트리는 항상 완전 이진트리이지만 그 역은 항상 성립하지 않는다.",
+          "refs": [
+            {
+              "source": "A",
+              "section": "8.2 이진트리의 분류",
+              "pages": [
+                254
+              ]
+            }
+          ],
+          "evidence": "그 역은 항상 성립하지 않는다"
+        }
+      ]
+    },
+    {
+      "title": "노드 표현",
+      "items": [
+        {
+          "text": "링크 표현법의 이진트리 노드는 데이터 필드와 왼쪽·오른쪽 자식을 가리키는 2개의 포인터 필드를 갖는다.",
+          "refs": [
+            {
+              "source": "A",
+              "section": "8.3 링크 표현법",
+              "pages": [
+                256
+              ]
+            }
+          ],
+          "evidence": "2개의 포인터 필드"
+        },
+        {
+          "text": "링크 표현의 이진트리는 루트 노드를 가리키는 포인터로 모든 노드에 접근할 수 있다.",
+          "refs": [
+            {
+              "source": "A",
+              "section": "8.3 링크 표현법",
+              "pages": [
+                257
+              ]
+            }
+          ],
+          "evidence": "루트 노드를 가리키는 포인터만"
+        },
+        {
+          "text": "N-링크 표현법은 차수가 N인 노드에 N개의 자식 링크를 두며, 노드마다 차수가 다른 트리에는 적용하기 힘들다.",
+          "refs": [
+            {
+              "source": "B",
+              "section": "4.1.4 노드 표현 방법",
+              "pages": [
+                157
+              ]
+            }
+          ],
+          "evidence": "노드가 N개의 링크"
+        },
+        {
+          "text": "왼쪽 자식-오른쪽 형제 표현법은 왼쪽 자식과 오른쪽 형제에 대한 2개의 포인터로 노드를 구성한다.",
+          "refs": [
+            {
+              "source": "B",
+              "section": "4.1.4 노드 표현 방법",
+              "pages": [
+                157
+              ]
+            }
+          ],
+          "evidence": "왼쪽 자식과 오른쪽 형제"
+        }
+      ]
+    },
+    {
+      "title": "순회",
+      "items": [
+        {
+          "text": "이진트리 순회(traversal)는 모든 노드를 한 번씩 방문하여 데이터를 목적에 맞게 처리하는 것이다.",
+          "refs": [
+            {
+              "source": "A",
+              "section": "8.4 이진 트리의 순회",
+              "pages": [
+                259
+              ]
+            }
+          ],
+          "evidence": "모든 노드를 한 번씩 방문"
+        },
+        {
+          "text": "전위순회(preorder traversal)의 방문 순서는 VLR이다.",
+          "refs": [
+            {
+              "source": "A",
+              "section": "8.4 이진트리 순회방법",
+              "pages": [
+                260
+              ]
+            }
+          ],
+          "evidence": "전위순회(preorder traversal) : VLR"
+        },
+        {
+          "text": "중위순회(inorder traversal)의 방문 순서는 LVR이다.",
+          "refs": [
+            {
+              "source": "A",
+              "section": "8.4 이진트리 순회방법",
+              "pages": [
+                260
+              ]
+            }
+          ],
+          "evidence": "중위순회(inorder traversal) : LVR"
+        },
+        {
+          "text": "후위순회(postorder traversal)의 방문 순서는 LRV이다.",
+          "refs": [
+            {
+              "source": "A",
+              "section": "8.4 이진트리 순회방법",
+              "pages": [
+                260
+              ]
+            }
+          ],
+          "evidence": "후위순회(postorder traversal) : LRV"
+        },
+        {
+          "text": "각 서브 트리에도 전체 이진트리와 같은 순회 방법을 적용한다.",
+          "refs": [
+            {
+              "source": "A",
+              "section": "8.4 이진트리 순회방법",
+              "pages": [
+                260
+              ]
+            }
+          ],
+          "evidence": "똑같은 방법을 적용"
+        },
+        {
+          "text": "반복적 트리 순회는 별도의 스택에 자식 노드를 저장하고 꺼내면서 순환 호출을 흉내 낼 수 있다.",
+          "refs": [
+            {
+              "source": "A",
+              "section": "8.5 반복적 순회",
+              "pages": [
+                269
+              ]
+            }
+          ],
+          "evidence": "별도의 스택을 사용하면"
+        },
+        {
+          "text": "레벨 순회(level order)는 레벨 순으로 방문하고 같은 레벨에서는 좌에서 우로 방문하며 큐를 사용한다.",
+          "refs": [
+            {
+              "source": "A",
+              "section": "8.6 레벨 순회",
+              "pages": [
+                271
+              ]
+            }
+          ],
+          "evidence": "레벨 순회는 큐를 사용"
+        }
+      ]
+    },
+    {
+      "title": "수식·디렉토리 응용",
+      "items": [
+        {
+          "text": "수식 트리에서 피연산자는 단말노드, 연산자는 비단말 노드가 된다.",
+          "refs": [
+            {
+              "source": "A",
+              "section": "8.7 트리의 응용: 수식 트리 처리",
+              "pages": [
+                275
+              ]
+            }
+          ],
+          "evidence": "피연산자들은 단말노드"
+        },
+        {
+          "text": "수식 트리를 전위·중위·후위로 읽으면 각각 전위·중위·후위 표기 수식이 된다.",
+          "refs": [
+            {
+              "source": "A",
+              "section": "8.7 트리의 응용: 수식 트리 처리",
+              "pages": [
+                275
+              ]
+            }
+          ],
+          "evidence": "각각 전위 표기 수식"
+        },
+        {
+          "text": "수식 트리의 값을 계산하려면 자식 노드를 루트보다 먼저 방문하는 후위 순회를 사용한다.",
+          "refs": [
+            {
+              "source": "A",
+              "section": "8.7 트리의 응용: 수식 트리 처리",
+              "pages": [
+                275
+              ]
+            }
+          ],
+          "evidence": "후위 순회"
+        },
+        {
+          "text": "B의 수식 트리는 하나의 연산자가 2개의 피연산자를 취한다고 가정한다.",
+          "refs": [
+            {
+              "source": "B",
+              "section": "4.3 수식 트리",
+              "pages": [
+                183
+              ]
+            }
+          ],
+          "evidence": "2개의 피연산자를 취한다는 가정"
+        },
+        {
+          "text": "A의 이진트리 디렉토리 용량 계산에서는 한 디렉토리 안의 다른 디렉토리가 2개를 초과하면 안 된다.",
+          "refs": [
+            {
+              "source": "A",
+              "section": "8.8 트리의 응용: 디렉토리 용량 계산",
+              "pages": [
+                278
+              ]
+            }
+          ],
+          "evidence": "2개를 초과하면 안 된다"
+        },
+        {
+          "text": "디렉토리 용량은 서브 디렉토리부터 계산하여 반환하는 후위 순회로 구한다.",
+          "refs": [
+            {
+              "source": "A",
+              "section": "8.8 트리의 응용: 디렉토리 용량 계산",
+              "pages": [
+                278
+              ]
+            }
+          ],
+          "evidence": "따라서 후위 순회"
+        }
+      ]
+    },
+    {
+      "title": "추가 연산·스레드 이진트리",
+      "items": [
+        {
+          "text": "노드 개수는 왼쪽·오른쪽 서브트리의 노드 개수에 현재 노드 1개를 더하여 구한다.",
+          "refs": [
+            {
+              "source": "A",
+              "section": "8.9 노드의 개수",
+              "pages": [
+                280
+              ]
+            }
+          ],
+          "evidence": "반환되는 값에 1을 더하여"
+        },
+        {
+          "text": "단말노드 개수는 양쪽 자식이 NULL인 노드에서 1을 반환하고, 비단말 노드에서 양쪽 서브트리의 결과를 더한다.",
+          "refs": [
+            {
+              "source": "A",
+              "section": "8.9 단말 노드 개수 구하기",
+              "pages": [
+                280
+              ]
+            }
+          ],
+          "evidence": "반환되는 값을 서로 더하면"
+        },
+        {
+          "text": "높이 계산은 각 서브트리의 높이를 구한 뒤 그 최댓값에 1을 더한다.",
+          "refs": [
+            {
+              "source": "A",
+              "section": "8.9 알고리즘 8.8",
+              "pages": [
+                281
+              ]
+            }
+          ],
+          "evidence": "return 1 + max"
+        },
+        {
+          "text": "스레드 이진 트리는 NULL 링크에 중위 선행자나 중위 후속자를 저장하여 순회 순서대로 연결한 트리이다.",
+          "refs": [
+            {
+              "source": "A",
+              "section": "8.10 스레드 이진 트리",
+              "pages": [
+                282
+              ]
+            }
+          ],
+          "evidence": "중위 선행자"
+        },
+        {
+          "text": "스레드 이진트리에서는 링크가 자식 포인터인지 스레드인지 구별하는 태그 필드가 필요하다.",
+          "refs": [
+            {
+              "source": "A",
+              "section": "8.10 스레드 이진 트리",
+              "pages": [
+                283
+              ]
+            }
+          ],
+          "evidence": "구별해주는 태그 필드"
+        }
+      ]
+    }
+  ],
+  "procedures": [
+    {
+      "title": "레벨 순회의 반복",
+      "steps": [
+        {
+          "text": "루트를 큐에 입력한 상태에서 시작한다.",
+          "refs": [
+            {
+              "source": "A",
+              "section": "8.6 레벨 순회",
+              "pages": [
+                271
+              ]
+            }
+          ],
+          "evidence": "루트 노드인 +가 큐에 입력"
+        },
+        {
+          "text": "큐의 노드를 꺼내어 방문한 뒤 그 노드의 자식 노드를 큐에 삽입한다.",
+          "refs": [
+            {
+              "source": "A",
+              "section": "8.6 레벨 순회",
+              "pages": [
+                271
+              ]
+            }
+          ],
+          "evidence": "그 노드의 자식 노드를 큐에 삽입"
+        },
+        {
+          "text": "큐에 노드가 더 이상 없을 때까지 반복한다.",
+          "refs": [
+            {
+              "source": "A",
+              "section": "8.6 레벨 순회",
+              "pages": [
+                271
+              ]
+            }
+          ],
+          "evidence": "더 이상의 노드가 없을 때까지"
+        }
+      ]
+    },
+    {
+      "title": "B의 후위 표기식 기반 수식 트리 구축",
+      "steps": [
+        {
+          "text": "수식을 뒤에서 앞쪽으로 읽으며 토큰을 취하고 마지막 토큰으로 뿌리 노드를 생성한다.",
+          "refs": [
+            {
+              "source": "B",
+              "section": "4.3.1 수식 트리 구축 방법",
+              "pages": [
+                184
+              ]
+            }
+          ],
+          "evidence": "뒤에서부터 앞쪽으로 읽어나가며"
+        },
+        {
+          "text": "연산자 토큰이면 가지 노드를 생성하고 오른쪽 자식과 왼쪽 자식을 구성하며, 다음 토큰도 연산자이면 그 하위 트리를 먼저 완성한다.",
+          "refs": [
+            {
+              "source": "B",
+              "section": "4.3.1 수식 트리 구축 방법",
+              "pages": [
+                184
+              ]
+            }
+          ],
+          "evidence": "하위 트리가 완성된 이후"
+        },
+        {
+          "text": "숫자 토큰이면 잎 노드를 생성한다.",
+          "refs": [
+            {
+              "source": "B",
+              "section": "4.3.1 수식 트리 구축 방법",
+              "pages": [
+                185
+              ]
+            }
+          ],
+          "evidence": "숫자인 경우 잎 노드를 생성"
+        }
+      ]
+    }
+  ],
+  "syntax": [
+    {
+      "label": "이진트리 노드의 링크 표현",
+      "code": "typedef struct TreeNode {\n    int data;\n    struct TreeNode *left, *right;\n} TreeNode;",
+      "refs": [
+        {
+          "source": "A",
+          "section": "8.3 링크 표현법",
+          "pages": [
+            257
+          ]
+        }
+      ],
+      "evidence": "typedef struct TreeNode",
+      "note": null
+    }
+  ],
+  "formulas": [
+    {
+      "label": "노드 수와 간선 수",
+      "expression": "간선의 개수 = n-1",
+      "refs": [
+        {
+          "source": "A",
+          "section": "8.2 이진트리의 성질",
+          "pages": [
+            251
+          ]
+        }
+      ],
+      "evidence": "n-1의 간선",
+      "note": "노드가 n개인 이진트리."
+    },
+    {
+      "label": "A의 노드 수·높이 범위",
+      "expression": "최소 노드 수 h; 최대 노드 수 2^h-1; 최소 높이 ⌈log₂(n+1)⌉; 최대 높이 n",
+      "refs": [
+        {
+          "source": "A",
+          "section": "8.2 이진트리의 성질",
+          "pages": [
+            252
+          ]
+        }
+      ],
+      "evidence": "최대 2",
+      "note": "h는 A의 높이 정의(루트 레벨 1), n은 노드 수."
+    },
+    {
+      "label": "A의 배열 표현 인덱스",
+      "expression": "부모: i/2; 왼쪽 자식: 2i; 오른쪽 자식: 2i+1",
+      "refs": [
+        {
+          "source": "A",
+          "section": "8.3 배열 표현법",
+          "pages": [
+            256
+          ]
+        }
+      ],
+      "evidence": "부모 노드 인덱스 = i/2",
+      "note": "루트 인덱스 1인 원문 배열 표현."
+    }
+  ],
+  "comparisons": [
+    {
+      "title": "표준 순회 순서: V=루트, L=왼쪽, R=오른쪽",
+      "headers": [
+        "순회",
+        "방문 순서"
+      ],
+      "rows": [
+        [
+          {
+            "text": "전위순회",
+            "refs": [
+              {
+                "source": "A",
+                "section": "8.4 이진트리 순회방법",
+                "pages": [
+                  260
+                ]
+              }
+            ],
+            "evidence": "전위순회"
+          },
+          {
+            "text": "전위순회(preorder traversal)의 방문 순서는 VLR이다.",
+            "refs": [
+              {
+                "source": "A",
+                "section": "8.4 이진트리 순회방법",
+                "pages": [
+                  260
+                ]
+              }
+            ],
+            "evidence": "전위순회(preorder traversal) : VLR"
+          }
+        ],
+        [
+          {
+            "text": "중위순회",
+            "refs": [
+              {
+                "source": "A",
+                "section": "8.4 이진트리 순회방법",
+                "pages": [
+                  260
+                ]
+              }
+            ],
+            "evidence": "중위순회"
+          },
+          {
+            "text": "중위순회(inorder traversal)의 방문 순서는 LVR이다.",
+            "refs": [
+              {
+                "source": "A",
+                "section": "8.4 이진트리 순회방법",
+                "pages": [
+                  260
+                ]
+              }
+            ],
+            "evidence": "중위순회(inorder traversal) : LVR"
+          }
+        ],
+        [
+          {
+            "text": "후위순회",
+            "refs": [
+              {
+                "source": "A",
+                "section": "8.4 이진트리 순회방법",
+                "pages": [
+                  260
+                ]
+              }
+            ],
+            "evidence": "후위순회"
+          },
+          {
+            "text": "후위순회(postorder traversal)의 방문 순서는 LRV이다.",
+            "refs": [
+              {
+                "source": "A",
+                "section": "8.4 이진트리 순회방법",
+                "pages": [
+                  260
+                ]
+              }
+            ],
+            "evidence": "후위순회(postorder traversal) : LRV"
+          }
+        ]
+      ]
+    },
+    {
+      "title": "원문별 레벨·높이 정의",
+      "headers": [
+        "출처",
+        "책에 나온 정의"
+      ],
+      "rows": [
+        [
+          {
+            "text": "A",
+            "refs": [
+              {
+                "source": "A",
+                "section": "8.1 트리의 용어들",
+                "pages": [
+                  248
+                ]
+              }
+            ],
+            "evidence": "레벨"
+          },
+          {
+            "text": "A에서 루트의 레벨은 1이고 한 층씩 내려갈수록 1씩 증가한다.",
+            "refs": [
+              {
+                "source": "A",
+                "section": "8.1 트리의 용어들",
+                "pages": [
+                  248
+                ]
+              }
+            ],
+            "evidence": "루트의 레벨은 1"
+          }
+        ],
+        [
+          {
+            "text": "A",
+            "refs": [
+              {
+                "source": "A",
+                "section": "8.1 트리의 용어들",
+                "pages": [
+                  248
+                ]
+              }
+            ],
+            "evidence": "높이"
+          },
+          {
+            "text": "A에서 트리의 높이(height)는 최대 레벨이다.",
+            "refs": [
+              {
+                "source": "A",
+                "section": "8.1 트리의 용어들",
+                "pages": [
+                  248
+                ]
+              }
+            ],
+            "evidence": "최대 레벨"
+          }
+        ],
+        [
+          {
+            "text": "B",
+            "refs": [
+              {
+                "source": "B",
+                "section": "4.1.2 트리의 구성 요소",
+                "pages": [
+                  154
+                ]
+              }
+            ],
+            "evidence": "레벨"
+          },
+          {
+            "text": "B에서 레벨은 깊이가 같은 노드의 집합이며, 높이는 가장 깊은 잎 노드까지의 깊이이다.",
+            "refs": [
+              {
+                "source": "B",
+                "section": "4.1.2 트리의 구성 요소",
+                "pages": [
+                  154
+                ]
+              }
+            ],
+            "evidence": "깊이가 같은 노드의 집합"
+          }
+        ]
+      ]
+    }
+  ],
+  "terms": [
+    {
+      "term": "루트",
+      "definition": {
+        "text": "루트(root)는 계층적인 구조에서 가장 높은 곳에 있는 노드이다.",
+        "refs": [
+          {
+            "source": "A",
+            "section": "8.1 트리의 용어들",
+            "pages": [
+              247
+            ]
+          }
+        ],
+        "evidence": "가장 높은 곳에 있는 노드"
+      }
+    },
+    {
+      "term": "단말노드",
+      "definition": {
+        "text": "자식 노드가 없는 노드를 단말노드(terminal node, 또는 leaf node)라고 한다.",
+        "refs": [
+          {
+            "source": "A",
+            "section": "8.1 트리의 용어들",
+            "pages": [
+              248
+            ]
+          }
+        ],
+        "evidence": "자식 노드가 없는 노드"
+      }
+    },
+    {
+      "term": "차수",
+      "definition": {
+        "text": "노드의 차수(degree)는 자식 노드의 개수이며 트리의 차수는 노드 차수 중 가장 큰 값이다.",
+        "refs": [
+          {
+            "source": "A",
+            "section": "8.1 트리의 용어들",
+            "pages": [
+              248
+            ]
+          }
+        ],
+        "evidence": "자식 노드의 개수"
+      }
+    },
+    {
+      "term": "포리스트",
+      "definition": {
+        "text": "포리스트(forest)는 트리들의 집합이다.",
+        "refs": [
+          {
+            "source": "A",
+            "section": "8.1 트리의 용어들",
+            "pages": [
+              248
+            ]
+          }
+        ],
+        "evidence": "트리들의 집합"
+      }
+    },
+    {
+      "term": "이진트리",
+      "definition": {
+        "text": "이진트리는 공집합이거나 루트와 왼쪽·오른쪽 서브 트리로 구성된 유한 집합이며 서브 트리들도 이진트리여야 한다.",
+        "refs": [
+          {
+            "source": "A",
+            "section": "8.2 정의 8.1 이진트리",
+            "pages": [
+              250
+            ]
+          }
+        ],
+        "evidence": "공집합이거나"
+      }
+    },
+    {
+      "term": "포화 이진 트리",
+      "definition": {
+        "text": "포화 이진 트리(full binary tree)는 각 레벨에 노드가 꽉 차 있는 이진트리이다.",
+        "refs": [
+          {
+            "source": "A",
+            "section": "8.2 이진트리의 분류",
+            "pages": [
+              253
+            ]
+          }
+        ],
+        "evidence": "각 레벨에 노드가 꽉 차있는"
+      }
+    },
+    {
+      "term": "완전 이진 트리",
+      "definition": {
+        "text": "완전 이진 트리(complete binary tree)는 마지막 전 레벨까지 모두 채워지고 마지막 레벨은 왼쪽부터 순서대로 채워진다.",
+        "refs": [
+          {
+            "source": "A",
+            "section": "8.2 이진트리의 분류",
+            "pages": [
+              254
+            ]
+          }
+        ],
+        "evidence": "왼쪽부터 오른쪽으로 노드가 순서대로"
+      }
+    },
+    {
+      "term": "순회",
+      "definition": {
+        "text": "이진트리 순회(traversal)는 모든 노드를 한 번씩 방문하여 데이터를 목적에 맞게 처리하는 것이다.",
+        "refs": [
+          {
+            "source": "A",
+            "section": "8.4 이진 트리의 순회",
+            "pages": [
+              259
+            ]
+          }
+        ],
+        "evidence": "모든 노드를 한 번씩 방문"
+      }
+    },
+    {
+      "term": "스레드 이진 트리",
+      "definition": {
+        "text": "스레드 이진 트리는 NULL 링크에 중위 선행자나 중위 후속자를 저장하여 순회 순서대로 연결한 트리이다.",
+        "refs": [
+          {
+            "source": "A",
+            "section": "8.10 스레드 이진 트리",
+            "pages": [
+              282
+            ]
+          }
+        ],
+        "evidence": "중위 선행자"
+      }
+    }
+  ],
+  "summary_basis": "편집 요약",
+  "summary": [
+    {
+      "text": "이진트리는 공집합이거나 루트와 왼쪽·오른쪽 서브 트리로 구성된 유한 집합이며 서브 트리들도 이진트리여야 한다.",
+      "refs": [
+        {
+          "source": "A",
+          "section": "8.2 정의 8.1 이진트리",
+          "pages": [
+            250
+          ]
+        }
+      ],
+      "evidence": "공집합이거나"
+    },
+    {
+      "text": "이진트리 순회(traversal)는 모든 노드를 한 번씩 방문하여 데이터를 목적에 맞게 처리하는 것이다.",
+      "refs": [
+        {
+          "source": "A",
+          "section": "8.4 이진 트리의 순회",
+          "pages": [
+            259
+          ]
+        }
+      ],
+      "evidence": "모든 노드를 한 번씩 방문"
+    },
+    {
+      "text": "레벨 순회(level order)는 레벨 순으로 방문하고 같은 레벨에서는 좌에서 우로 방문하며 큐를 사용한다.",
+      "refs": [
+        {
+          "source": "A",
+          "section": "8.6 레벨 순회",
+          "pages": [
+            271
+          ]
+        }
+      ],
+      "evidence": "레벨 순회는 큐를 사용"
+    },
+    {
+      "text": "스레드 이진 트리는 NULL 링크에 중위 선행자나 중위 후속자를 저장하여 순회 순서대로 연결한 트리이다.",
+      "refs": [
+        {
+          "source": "A",
+          "section": "8.10 스레드 이진 트리",
+          "pages": [
+            282
+          ]
+        }
+      ],
+      "evidence": "중위 선행자"
+    }
+  ],
+  "review": [
+    {
+      "question": "단말노드와 차수의 관계에서 단말노드는 어떤 노드인가?",
+      "answer": {
+        "text": "자식 노드가 없는 노드를 단말노드(terminal node, 또는 leaf node)라고 한다.",
+        "refs": [
+          {
+            "source": "A",
+            "section": "8.1 트리의 용어들",
+            "pages": [
+              248
+            ]
+          }
+        ],
+        "evidence": "자식 노드가 없는 노드"
+      }
+    },
+    {
+      "question": "전위순회의 방문 순서는 무엇인가?",
+      "answer": {
+        "text": "전위순회(preorder traversal)의 방문 순서는 VLR이다.",
+        "refs": [
+          {
+            "source": "A",
+            "section": "8.4 이진트리 순회방법",
+            "pages": [
+              260
+            ]
+          }
+        ],
+        "evidence": "전위순회(preorder traversal) : VLR"
+      }
+    },
+    {
+      "question": "레벨 순회는 어떤 자료구조를 사용하는가?",
+      "answer": {
+        "text": "레벨 순회(level order)는 레벨 순으로 방문하고 같은 레벨에서는 좌에서 우로 방문하며 큐를 사용한다.",
+        "refs": [
+          {
+            "source": "A",
+            "section": "8.6 레벨 순회",
+            "pages": [
+              271
+            ]
+          }
+        ],
+        "evidence": "레벨 순회는 큐를 사용"
+      }
+    },
+    {
+      "question": "A의 디렉토리 용량 계산 예제에는 어떤 이진트리 조건이 있는가?",
+      "answer": {
+        "text": "A의 이진트리 디렉토리 용량 계산에서는 한 디렉토리 안의 다른 디렉토리가 2개를 초과하면 안 된다.",
+        "refs": [
+          {
+            "source": "A",
+            "section": "8.8 트리의 응용: 디렉토리 용량 계산",
+            "pages": [
+              278
+            ]
+          }
+        ],
+        "evidence": "2개를 초과하면 안 된다"
+      }
+    }
+  ],
+  "cheat": {
+    "definitions": [
+      {
+        "term": "이진트리",
+        "definition": {
+          "text": "이진트리는 공집합이거나 루트와 왼쪽·오른쪽 서브 트리로 구성된 유한 집합이며 서브 트리들도 이진트리여야 한다.",
+          "refs": [
+            {
+              "source": "A",
+              "section": "8.2 정의 8.1 이진트리",
+              "pages": [
+                250
+              ]
+            }
+          ],
+          "evidence": "공집합이거나"
+        }
+      },
+      {
+        "term": "포화 이진 트리",
+        "definition": {
+          "text": "포화 이진 트리(full binary tree)는 각 레벨에 노드가 꽉 차 있는 이진트리이다.",
+          "refs": [
+            {
+              "source": "A",
+              "section": "8.2 이진트리의 분류",
+              "pages": [
+                253
+              ]
+            }
+          ],
+          "evidence": "각 레벨에 노드가 꽉 차있는"
+        }
+      },
+      {
+        "term": "완전 이진 트리",
+        "definition": {
+          "text": "완전 이진 트리(complete binary tree)는 마지막 전 레벨까지 모두 채워지고 마지막 레벨은 왼쪽부터 순서대로 채워진다.",
+          "refs": [
+            {
+              "source": "A",
+              "section": "8.2 이진트리의 분류",
+              "pages": [
+                254
+              ]
+            }
+          ],
+          "evidence": "왼쪽부터 오른쪽으로 노드가 순서대로"
+        }
+      }
+    ],
+    "comparison_title": "V=루트, L=왼쪽, R=오른쪽",
+    "comparison_headers": [
+      "항목",
+      "원문 설명"
+    ],
+    "comparison_rows": [
+      [
+        {
+          "text": "전위순회",
+          "refs": [
+            {
+              "source": "A",
+              "section": "8.4 이진트리 순회방법",
+              "pages": [
+                260
+              ]
+            }
+          ],
+          "evidence": "전위순회"
+        },
+        {
+          "text": "전위순회(preorder traversal)의 방문 순서는 VLR이다.",
+          "refs": [
+            {
+              "source": "A",
+              "section": "8.4 이진트리 순회방법",
+              "pages": [
+                260
+              ]
+            }
+          ],
+          "evidence": "전위순회(preorder traversal) : VLR"
+        }
+      ],
+      [
+        {
+          "text": "중위순회",
+          "refs": [
+            {
+              "source": "A",
+              "section": "8.4 이진트리 순회방법",
+              "pages": [
+                260
+              ]
+            }
+          ],
+          "evidence": "중위순회"
+        },
+        {
+          "text": "중위순회(inorder traversal)의 방문 순서는 LVR이다.",
+          "refs": [
+            {
+              "source": "A",
+              "section": "8.4 이진트리 순회방법",
+              "pages": [
+                260
+              ]
+            }
+          ],
+          "evidence": "중위순회(inorder traversal) : LVR"
+        }
+      ],
+      [
+        {
+          "text": "후위순회",
+          "refs": [
+            {
+              "source": "A",
+              "section": "8.4 이진트리 순회방법",
+              "pages": [
+                260
+              ]
+            }
+          ],
+          "evidence": "후위순회"
+        },
+        {
+          "text": "후위순회(postorder traversal)의 방문 순서는 LRV이다.",
+          "refs": [
+            {
+              "source": "A",
+              "section": "8.4 이진트리 순회방법",
+              "pages": [
+                260
+              ]
+            }
+          ],
+          "evidence": "후위순회(postorder traversal) : LRV"
+        }
+      ]
+    ],
+    "formulas": [
+      {
+        "label": "A의 배열 표현 인덱스",
+        "expression": "부모: i/2; 왼쪽 자식: 2i; 오른쪽 자식: 2i+1",
+        "refs": [
+          {
+            "source": "A",
+            "section": "8.3 배열 표현법",
+            "pages": [
+              256
+            ]
+          }
+        ],
+        "evidence": "부모 노드 인덱스 = i/2",
+        "note": "루트 인덱스 1인 원문 배열 표현."
+      }
+    ],
+    "syntax": []
+  },
+  "checked_images": [
+    {
+      "source": "A",
+      "pages": [
+        247,
+        248,
+        250,
+        251,
+        252,
+        253,
+        254,
+        256,
+        257,
+        259,
+        260,
+        269,
+        271,
+        275,
+        278,
+        280,
+        281,
+        282,
+        283
+      ]
+    },
+    {
+      "source": "B",
+      "pages": [
+        154,
+        157,
+        183,
+        184,
+        185
+      ]
+    }
+  ],
+  "editor_notes": [
+    "A의 높이는 루트 레벨 1을 기준으로 하고, B의 높이는 루트 깊이 0을 기준으로 한다. 두 정의를 통합하여 하나로 고치지 않았다.",
+    "B의 순회 소개 문장 중 후위 순서 표기가 상세 설명과 달라, 일관된 A의 VLR/LVR/LRV 표와 B 상세 수식 트리 설명을 사용하였다."
+  ]
+}

@@ -1,0 +1,24 @@
+template〈typename Runtime〉
+void operator()(Runtime& runtime, key_type (0碼t& key, value type& value) (0碼t
+b001 in word = false;
+char (0飭t* ptr = value first;
+char const* end = ptr 十 value.second,
+char const* word = ptr;
+for (,• ptr != end; ++ptr)
+char const ch = std: :toupper(*ptr, std: :10(ale: :classic());
+if (in word)
+runtime.emit_intermediate(std: :pair〈char const*, std: :uintmax
+t>(word,
+ptr - word), 1);
+ln word = false;
+else if (ch 〉= 'A' && ch<= 2')
+word = ptr;
+in word = true,
+if (in—word)
+assert(ptr 〉 word);
+runtime.emit_intermediate(std: :pair〈char const*, std: :uintmax t〉(word,
+ptr - word), 1);
+앞의 맵 함수는 입력 디렉터리의 각 파일에 개별적으로 적용됩니다. 입력 파일 내용은 value
+를 통해 접근할 수 있습니다. 그런 다음 안쪽 for 문에서 파일 내용으로부터 단어를 추출하고
+〈key, value〉 쌍을 생성합니다. 여기서 key는 단어이고 value는 1로 설정됩니다.
+475

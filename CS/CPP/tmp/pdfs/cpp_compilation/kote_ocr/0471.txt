@@ -1,0 +1,24 @@
+current_color = (010쓰: :RED,
+// 인접한 정점 중에서 방문하지 않은 정점이 있다면 스택에 추가
+for (autO e •• G.edges(current_vertex))
+if (visited.find(e.dst) == visited.end())
+stack.push(e.dst);
+// 현재 정점이 이미 방문한 정점이고,
+// 현재 칠할 색상과 같은 색상이 칠해져 있다면 이분 그래프가 아님
+else if (vertex—colors[current—vertex] != C010즈.• :NONE &&
+vertex colors[current_vertex] != current C010r)
+return false;
+// 모든 정점에 색상이 질해졌으면 이분 그래프가 맞음
+return true;
+5. main() 함수에서는 그래프를 생성하고, 이분 그래프 판별 알고리즘을 실행합니다. 그리고 그
+결과를 화면에 출력합니다.
+int main()
+using T = unsigned;
+// 그래프 객체 생성
+autO 86 = create_bipartite reference_graph<T>( );
+cout 〈〈 "[입력 그래프]" 〈〈 endl;
+cout 〈〈 〈〈 endl;
+if (bipartite-check<T>(BG))
+cout 〈〈 endl 〈〈 "이분 그래프가 맞습니다." 〈〈 endl;
+else
+cout 〈〈 endl 〈〈 "이분 그래프가 아닙니다." 〈〈 endl;

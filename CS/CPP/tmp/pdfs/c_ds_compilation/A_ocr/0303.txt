@@ -1,0 +1,35 @@
+의미:학생
+**** 5: 입력, d: 삭제, s: 탐색, 아. 출력, q: 종료 ***ㆍ: 1
+단어 : information
+의미:정보
+**** 5: 입력, d: 삭제, s: 탐색, 아. 출력, q: 종료 ****:
+단어 :student
+의미:정보
+**** i: 입력, d: 삭제, 탐색, 아. 출력, q: 종료 ****:
+여기서는 이진 탐색 트리에 저장되는 데이터가 정수가 아니다. 따라서 타입을 구조체
+로 정의하고 구조체 안에 우리가 필요한 필드들을 넣어야 한다. 필수적으로 영어 단어와 그 의미
+가 각각 저장되어야 하므로 우리는 두 개의 문자열 배열이 필요하다. 따라서 element 타입은 다
+음과 같이 word 배열과 meaning 필드를 가지도록 정의된다. 여기서 타입의 필드
+는 탐색의 기준이 되는 기 필드가 된다. 트리 노드-도 타입을 데이터로 저장하도록 변경
+되었다.
+#define MAX WRD_SIZE 100
+#define MAX_MEANING_SIZE 2%
+// 데이터 형식
+typedef struct {
+char word[MAX IORD_SIZE]; // 기필드
+char npaning[MAX_MEANING_SIZEJ •,
+} element;
+// 노드의 구조
+typedef struct TreeNode {
+element key;
+TreeNode *left, *right;
+} TreeNode;
+추가로 두 개의 element 항목의 순서를 비교하는 함수 compare가 필요하다. compare(el,
+e2) 함수는 el과 e2를 알파벳 순서로 비교하여 만이 e2보다 작으면 -1, 같으면 0, 크면 1을 각각
+반환한다. compare 함수는 strcmp 함수를 이용하여 구현되었다.
+// 만약 〈 e2 이면 -1 반환
+// 만약 == e2 이면 0 반환
+// 만약 ) e2 이면 1 반환
+int compare(element el, element e2)
+return strcmp(el.word, e2.word);
+CHAPTER08 트리 311

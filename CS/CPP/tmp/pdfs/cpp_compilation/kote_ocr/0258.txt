@@ -1,0 +1,34 @@
+distance(neighborl = new distance;
+visited. insert(current vertex. ID) ;
+return MST;
+6. ) 함수에서는 그래프를 생성하고 프림 알고리수을 실행합니다.
+int main()
+using T = unsigned;
+// 그래프 객체 생성
+= create_reference-graph<T>( ) ;
+autO
+cout 〈〈 "[입력 그래프]" 〈〈 endl;
+cout 〈〈 〈〈 endl;
+autO MST = prim_MST<T>(G, 1);
+cout 〈〈 "[최소 신장 트리]" 〈〈 endl;
+for (autO v : MST)
+cout 〈〈 v 〈〈 endl;
+cout 〈〈 endl;
+7. 지금까지 작성한 프로그램을 실행하면 다음과 같은 출력을 확인할 수 있습니다.
+[입력 그래프]
+{2: 2}, {5: 3},
+{1: 2}, {5: 5}, {4: 1},
+2:
+{4: 2}, {7: 3},
+3:
+4:
+{1: 3}, {2: 5}, {4: 2}, {8: 3},
+5:
+6:
+{3: 3}, {6: 4},
+7:
+{4: 5}, {5: 3}, {6: 1},
+8:
+[최소 신장 트리]
+0)
+269

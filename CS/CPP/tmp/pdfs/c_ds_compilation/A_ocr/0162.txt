@@ -1,0 +1,32 @@
+170
+servn
+else {
+if (!is-empty(&queue)) {
+element customer = dequeue(&queue) ;
+servnce custmer =
+= customer
+printf("고객 법이 9던분에 업무를 시작합니다. 대기시간은 %d분이었습니다.\n"
+customer.id, CtOCk, ClOCk - customer.arrivat_time) ;
+total wait += CIOCk - customer.arrivat time;
+printf("전체 대기 시간=법분 년", totat-wait);
+return 0;
+실행결과
+현재시각=0
+현재시각=1
+고객 1분에 들어옵니다. 업무처리시간= 2분
+고객 1분에 업무를 시작합니다. 대기시간은 0분이었습니다.
+현재시각=2
+고객 0 업무처리중입니다.
+현재시각=3
+고객 1이 3분에 들어옵니다. 업무처리시간= 1분
+고객 0 업무처리중입니다.
+현재시각=4
+고객 1이 4분에 업무를 시작합니다. 대기시간은 1분이었습니다.
+현재시각=5
+고객 1 업무처리중입니다.
+현재시각=6
+고객 2이 6분에 들어옵니다. 업무처리시간= 2분
+위의 소스에서는 은행원이 1명이라고 가정하고 있다. 만약 은행의 행원이 2명이라면 위의 소스를 어떻
+도전문제
+게 수정하여아 하는가?
+C언어로 쉽게 물어쓴 자료구조

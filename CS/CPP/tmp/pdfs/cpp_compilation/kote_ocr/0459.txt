@@ -1,0 +1,28 @@
+std: :iter—swap(begin, right iter);
+return right_iter;
+3. 출력 결괴에서 전체 퀵 정렬의 결과도 확인할 것이므로 퀵 정렬 함수를 작성합니다.
+template 〈typename T>
+VOid quick_sort(typename std: :vector<T>: :iterator begin,
+typename std: :vector<T〉: :iterator last)
+// 만약 벡터에 하나 이상의 원소가 있다면
+if (std::distance(begin, last) 〉= 1)
+// 분할 작업을 수행
+autO partition_iter = partition<T〉(begin, last);
+// 분할 작업에 의해 생성된 벡터를 재귀적으로 정렬
+quick_sort<T〉(begin, partition_iter - 1);
+quick_sort<T>(partition_iter, last);
+4. 부분 퀵 정렬 함수를 작성합니다.
+template 〈typename T>
+VOid partial_quick_sort(typename std: :vector<T>: :iterator begin,
+typename std: :vector〈丁〉: :iterator last,
+size_t k)
+// 벡터에 하나 이상의 원소가 남아 있는 경우
+if (std::distance(begin, last) 〉= 1)
+// 분할 연산을 수행
+last);
+autO partition_iter = partition〈T>(begin,
+// 분할 연산에 의해 생성된 두 벡터를 재귀적으로 정렬
+partial_quick_sort<T>(begin, partition_iter - 1, k);
+// 만약 마지막 피벗 위치가 k보다 작으면 오른쪽 부분 벡터도 정렬
+if (std: :distance(begin, partition—iter) 〈 k)
+partial_quick_sort〈T>(partition_iter, last, k);

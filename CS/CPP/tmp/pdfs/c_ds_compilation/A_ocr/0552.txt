@@ -1,0 +1,27 @@
+if (ncxje_before)
+ncxle before->link = Ptr;
+else
+ht(hash-value] : ptr;
+// 체인법을 이용하여 테이블에 저장된 키를 탐색
+void hash_chain search(element item, struct list *ht[])
+struct list •ncxie;
+int hash_value = hash function(item.key);
+for (node = ht[hash-value]; node; node = {
+if (node->item.key == item.key) {
+fprintf(stderr, "탐색 9% 성공 년", item.key);
+return;
+printf("?l를 찾지 못했음\n") ;
+// 체인법을 이용하여 테이블에 저장된 카를 탐색
+void hash_chain-search(element item, struct list *ht[])
+struct 155t *node;
+int hash value = hash_function(item.key);
+for (node = ht[hash_value]; node; node = node->link) {
+if (node->item.key == item.key) {
+fprintf(stderr, "탐색 성공 년", item•key);
+return;
+printf("키를 찾지못했음\n") ;
+체이닝 소스가 조금 복잡해지는 것은 몇 개의 포인터 때문이다. node-before 포인터가 필요
+한 이유는 node 포인터가 NULL이 되면 for루프가 끝나게 된다. 하지만 우리가 필요한 포인터는
+NULL바로 앞에 있는 포인터이다. 따라서 for 루프 수행 시에 항상 앞의 포인터를 가지고 있어야
+한다.
+해상 561

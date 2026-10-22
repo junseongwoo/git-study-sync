@@ -1,0 +1,23 @@
+int direction 렛 y-dir);
+char nark roadstdirectionl;
+12. 이제 a 지점부터 b 지점까지 이-통하면서 지도상의 각 셀 값이 EMPTY-SPACE이면 적절한 도로
+문자로 설정합니다. 만학 이미 다른 도로가 건설되어 있는 경우라면 나• 문자로 교체합니다.
+do{
+a.X 十= X dir;
+a.Y y-dir;
+if (gnd(a.y)[a.xl =
+= EMPTY_SPACE)
+gnd[a.yl[a.xl
+= mark;
+else if (!isalpha(grid[a.y)[a.x]))
+// 만약 두 도로가 교차하면 '+' 문자로 대제
+}while (a !=b);
+• mark,
+13. 이제 main() 함수에서 앞서 구현한 함수들을 호출하고, 그 결과를 화면에 출력합니다.
+int main()
+lnput();
+BuiIdGraph();
+GetShortestPaths( ) ;
+for (auto it : grid)
+return 0;
+542

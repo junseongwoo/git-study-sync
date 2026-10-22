@@ -1,0 +1,61 @@
+293
+295
+297
+299
+301
+302
+303
+305
+307
+310
+311
+312
+313
+314
+315
+316
+317
+318
+319
+320
+321
+323
+324
+325
+326
+327
+328
+329
+330
+331
+332
+else
+Sibling = Successor->Parent->Left;
+if ( SibIing-Xolor == RED )
+SibIing-Xolor
+= BLACK;
+Successor-Parent-Xolor = RED;
+RBT_RotateRight( ROOt, Successor->Parent ):
+else
+if ( Sibling->Right-X010r ==
+BLACK
+Sibling->Left-X010r == BLACK )
+SibIing-XoIor = RED;
+Successor
+else
+Succes ;
+if ( Sib1ing->Right-XoIor == RED )
+Sib1ing-Right-Xolor = BLACK;
+SibIing-X010r
+= RED,
+RBT RotateLeft( ROOt, Sib1ing );
+Sibling = Successor-Parent->Left;
+SibIing-X010r
+Succ 1 ,
+Successor-Parent-X010r = BLACK,
+Sibling->Left-X010r
+= BLACK;
+RBT_RotateRight( ROOt, Successor-Parent );
+Successor = (*Root);
+296
+Part 02 • 알고리즘

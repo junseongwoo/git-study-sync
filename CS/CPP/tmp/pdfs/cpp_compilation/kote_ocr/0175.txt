@@ -1,0 +1,23 @@
+5. 병합 정렬 구현 함수를 추가합니다. 이 함수는 선형 시간 선택 알고리즘에 의해 선택된 i번째
+원소가 정확한지를 확인하기 위한 용도로 사용할 것입니다.
+template <typename T>
+std: :vector<T〉 merge(std: :vector〈T>& arrl, std: :vector<T>& arr2)
+std: :vector〈丫〉 merged;
+autO iterl = arrl .begin();
+autO iter2 = arr2.begin();
+while (iterl != arrl.end() && iter2 != arr2.end())
+if (*iterl 〈 *iter2)
+merged. emplace_back(*iterl ) ;
+iterl++;
+else
+merged. emplace_back (*iter2) ;
+iter2十十,•
+if (iterl != arrl.end())
+for (; iterl != arrl.end(); iterl++)
+merged. emplace_back(*iterl ) •,
+else
+for (; iter2 != arr2.end(); iter2++)
+merged. emplace_back(*iter2) ;
+return merged,
+template <typename T>
+std: :vector〈주〉 merge_sort(std: :vector〈丫〉 arr)

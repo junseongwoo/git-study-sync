@@ -1,0 +1,23 @@
+int result = UNKNOWN,
+for (int i =0,• i <V; i++)
+if (i == start) continue;
+result = min(result, distance[il);
+return result;
+4. 이제 main() 함수에서 Be11manFord() 함수를 호출하고 그 결과를 정수형 벡터 results에 저장
+하겠습니다 BellmanFord() 함수가 UNKNOWN을 반환하면 “유효하지 않은 미로” 문자열을
+출력하고 프로그램을 종료합니다. 만약 시작 정점에서 다른 정점으로 이동하는 에지가 하나
+도 없을 경우, Be11manFord() 함수 호출을 생략하고 단순히 results 벡터에 IJNKNOWN을 추가합
+니다. 최종 결과 출력 시, results 벡터 값이 UNKNOWN이면 '고립된 방' 문자열을 출력합니다.
+vector〈int〉 results;
+for (int i =0,• 〈 V; i++)
+if (adj[iJ.empty())
+results.push—back(UNKNOWN);
+contxnue;
+int shortest = BeIImanFord(edges, V, i);
+if (shortest == UNKNOWN)
+cout 〈〈 "유효하지 않은 미로” 〈〈 endl;
+return 0;
+results. shortest);
+for (int i =0: i 〈V; i++)
+if (results[i] == UNKNOWN)
+504

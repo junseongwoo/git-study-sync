@@ -1,0 +1,1449 @@
+{
+  "unit": 15,
+  "title": "해싱·해시 테이블",
+  "part": "자료구조",
+  "scope": [
+    {
+      "source": "A",
+      "start": 524,
+      "end": 561
+    },
+    {
+      "source": "B",
+      "start": 335,
+      "end": 378
+    }
+  ],
+  "learning": [
+    {
+      "text": "해싱(hashing)은 키에 산술 연산을 적용하여 항목이 저장된 테이블 주소를 계산하고 접근하는 탐색이다.",
+      "refs": [
+        {
+          "source": "A",
+          "section": "14.1 해싱이란?",
+          "pages": [
+            525
+          ]
+        }
+      ],
+      "evidence": "키(key)에 산술적인 연산"
+    },
+    {
+      "text": "적재 밀도(loading density) 또는 적재 비율(loading factor)은 저장 항목 수 n과 테이블 크기 M의 비율이다.",
+      "refs": [
+        {
+          "source": "A",
+          "section": "14.7 해싱의 성능 분석",
+          "pages": [
+            555
+          ]
+        }
+      ],
+      "evidence": "저장되는 항목의 개수 n"
+    }
+  ],
+  "concepts": [
+    {
+      "title": "해싱과 추상 자료형 사전",
+      "items": [
+        {
+          "text": "해싱(hashing)은 키에 산술 연산을 적용하여 항목이 저장된 테이블 주소를 계산하고 접근하는 탐색이다.",
+          "refs": [
+            {
+              "source": "A",
+              "section": "14.1 해싱이란?",
+              "pages": [
+                525
+              ]
+            }
+          ],
+          "evidence": "키(key)에 산술적인 연산"
+        },
+        {
+          "text": "키 연산으로 직접 접근 가능한 구조를 해시 테이블(hash table)이라 한다.",
+          "refs": [
+            {
+              "source": "A",
+              "section": "14.1 해싱이란?",
+              "pages": [
+                525
+              ]
+            }
+          ],
+          "evidence": "직접 접근이 가능한 구조"
+        },
+        {
+          "text": "사전(dictionary)은 (키, 값) 쌍의 집합이다.",
+          "refs": [
+            {
+              "source": "A",
+              "section": "14.2 추상 자료형 사전",
+              "pages": [
+                526
+              ]
+            }
+          ],
+          "evidence": "(키, 값) 쌍의 집합"
+        },
+        {
+          "text": "사전은 항목 위치가 아니라 키에 의하여 관리되며 정렬 여부는 구현할 때 결정한다.",
+          "refs": [
+            {
+              "source": "A",
+              "section": "14.2 추상 자료형 사전",
+              "pages": [
+                527
+              ]
+            }
+          ],
+          "evidence": "사전은 오직 키에 의해서만 관리"
+        },
+        {
+          "text": "사전의 핵심 연산은 add(key, value), delete(key), search(key)이다.",
+          "refs": [
+            {
+              "source": "A",
+              "section": "14.2 ADT 14.1",
+              "pages": [
+                527
+              ]
+            }
+          ],
+          "evidence": "add(key, value)"
+        },
+        {
+          "text": "search(key)는 관련 value를 반환하며 탐색 실패 시 NULL을 반환한다.",
+          "refs": [
+            {
+              "source": "A",
+              "section": "14.2 ADT 14.1",
+              "pages": [
+                527
+              ]
+            }
+          ],
+          "evidence": "탐색이 실패하면 NULL"
+        }
+      ]
+    },
+    {
+      "title": "해시 테이블·버킷·충돌",
+      "items": [
+        {
+          "text": "해시 함수(hash function)는 키를 입력받아 해시 주소(hash address)를 생성하고 이를 테이블 인덱스로 사용한다.",
+          "refs": [
+            {
+              "source": "A",
+              "section": "14.3 해싱의 구조",
+              "pages": [
+                528
+              ]
+            }
+          ],
+          "evidence": "해시 주소(hash address)"
+        },
+        {
+          "text": "해시 테이블 ht는 M개 버킷(bucket)으로 이루어지며 하나의 버킷은 여러 슬롯(slot)을 가질 수 있다.",
+          "refs": [
+            {
+              "source": "A",
+              "section": "14.3 해싱의 구조",
+              "pages": [
+                528
+              ]
+            }
+          ],
+          "evidence": "M개의 버킷"
+        },
+        {
+          "text": "하나의 슬롯에는 하나의 항목이 저장된다.",
+          "refs": [
+            {
+              "source": "A",
+              "section": "14.3 해싱의 구조",
+              "pages": [
+                528
+              ]
+            }
+          ],
+          "evidence": "하나의 슬롯에는 하나의 항목"
+        },
+        {
+          "text": "서로 다른 키 k1, k2에 대해 h(k1)=h(k2)이면 충돌(collision)이며 두 키는 동의어(synonym)이다.",
+          "refs": [
+            {
+              "source": "A",
+              "section": "14.3 해싱의 구조",
+              "pages": [
+                529
+              ]
+            }
+          ],
+          "evidence": "동의어(synonym)"
+        },
+        {
+          "text": "충돌이 버킷의 슬롯 수보다 많이 발생하여 항목을 더 저장할 수 없으면 오버플로우(overflow)이다.",
+          "refs": [
+            {
+              "source": "A",
+              "section": "14.3 해싱의 구조",
+              "pages": [
+                529
+              ]
+            }
+          ],
+          "evidence": "오버플로우(overflow)"
+        },
+        {
+          "text": "버킷당 슬롯이 하나이면 충돌이 곧 오버플로우를 의미한다.",
+          "refs": [
+            {
+              "source": "A",
+              "section": "14.3 해싱의 구조",
+              "pages": [
+                529
+              ]
+            }
+          ],
+          "evidence": "충돌이 곧 오버플로우"
+        }
+      ]
+    },
+    {
+      "title": "해시 함수의 종류",
+      "items": [
+        {
+          "text": "좋은 해시 함수는 충돌이 적고 주소 영역에 고르게 분포하며 계산이 빨라야 한다.",
+          "refs": [
+            {
+              "source": "A",
+              "section": "14.4 해시함수",
+              "pages": [
+                533
+              ]
+            }
+          ],
+          "evidence": "계산이 빨라야 한다"
+        },
+        {
+          "text": "제산 함수는 키를 테이블 크기로 나눈 나머지를 해시 주소로 사용한다.",
+          "refs": [
+            {
+              "source": "A",
+              "section": "14.4 제산 함수",
+              "pages": [
+                534
+              ]
+            }
+          ],
+          "evidence": "나눈 나머지"
+        },
+        {
+          "text": "폴딩은 키를 여러 부분으로 나누어 더하거나 비트별 XOR와 같은 연산으로 해시 주소를 만드는 방법이다.",
+          "refs": [
+            {
+              "source": "A",
+              "section": "14.4 폴딩 함수",
+              "pages": [
+                535
+              ]
+            }
+          ],
+          "evidence": "키를 몇 개의 부분으로 나누어"
+        },
+        {
+          "text": "이동 폴딩은 나눈 부분의 값을 더하고 경계 폴딩은 이웃한 부분을 거꾸로 더한다.",
+          "refs": [
+            {
+              "source": "A",
+              "section": "14.4 폴딩 함수",
+              "pages": [
+                535
+              ]
+            }
+          ],
+          "evidence": "경계 폴딩"
+        },
+        {
+          "text": "중간 제곱 함수는 키를 제곱한 다음 중간의 몇 비트를 해시 주소로 사용한다.",
+          "refs": [
+            {
+              "source": "A",
+              "section": "14.4 중간 제곱 함수",
+              "pages": [
+                536
+              ]
+            }
+          ],
+          "evidence": "키를 제곱한 다음"
+        },
+        {
+          "text": "비트 추출은 테이블 크기 M=2^k일 때 키를 이진수로 보고 임의 위치의 k개 비트를 해시 주소로 사용한다.",
+          "refs": [
+            {
+              "source": "A",
+              "section": "14.4 비트 추출 방법",
+              "pages": [
+                536
+              ]
+            }
+          ],
+          "evidence": "임의의 위치의 k개의 비트"
+        },
+        {
+          "text": "숫자 분석 방법은 키의 각 위치의 수 특징을 알고 있을 때 편중되지 않은 숫자를 조합하여 해시 주소로 사용한다.",
+          "refs": [
+            {
+              "source": "A",
+              "section": "14.4 숫자 분석 방법",
+              "pages": [
+                536
+              ]
+            }
+          ],
+          "evidence": "편중되지 않는 수들을"
+        },
+        {
+          "text": "A는 문자열 문자들의 코드값에 위치에 기초한 값을 곱하고 호너의 방법(Horner’s method)으로 계산량을 줄이는 방법을 설명한다.",
+          "refs": [
+            {
+              "source": "A",
+              "section": "14.4 탐색키가 문자열일 경우 주의할 점",
+              "pages": [
+                536,
+                537
+              ]
+            }
+          ],
+          "evidence": "호너의 방법"
+        },
+        {
+          "text": "B의 자릿수 접기(Folding)는 숫자를 자릿수별로 더하여 해시값을 만드는 방법이다.",
+          "refs": [
+            {
+              "source": "B",
+              "section": "8.2.2 자릿수 접기",
+              "pages": [
+                347
+              ]
+            }
+          ],
+          "evidence": "숫자를 각 자릿수별로 더해"
+        }
+      ]
+    },
+    {
+      "title": "개방 주소법과 탐사",
+      "items": [
+        {
+          "text": "개방 주소법(open addressing)은 충돌이 일어난 항목을 테이블의 다른 위치에 저장한다.",
+          "refs": [
+            {
+              "source": "A",
+              "section": "14.5 개방 주소법",
+              "pages": [
+                538
+              ]
+            }
+          ],
+          "evidence": "해시 테이블의 다른 위치"
+        },
+        {
+          "text": "선형 조사법은 빈 공간이 나올 때까지 다음 버킷을 차례로 조사하고 끝에서는 처음으로 돌아간다.",
+          "refs": [
+            {
+              "source": "A",
+              "section": "14.5 선형 조사법",
+              "pages": [
+                538
+              ]
+            }
+          ],
+          "evidence": "테이블의 처음으로 간다"
+        },
+        {
+          "text": "조사 시작 위치로 되돌아오면 테이블이 가득 찬 것으로 판단한다.",
+          "refs": [
+            {
+              "source": "A",
+              "section": "14.5 선형 조사법",
+              "pages": [
+                538
+              ]
+            }
+          ],
+          "evidence": "조사를 시작했던 곳으로 되돌아오게"
+        },
+        {
+          "text": "선형 조사법에서 삭제를 지원하려면 미사용·사용 후 공백·현재 사용 중인 버킷을 구분해야 한다.",
+          "refs": [
+            {
+              "source": "A",
+              "section": "14.5 선형 조사법",
+              "pages": [
+                545
+              ]
+            }
+          ],
+          "evidence": "현재 사용 중인 버킷"
+        },
+        {
+          "text": "삭제가 있는 선형 조사법의 탐색은 한 번도 사용하지 않은 버킷을 만나야 중단한다.",
+          "refs": [
+            {
+              "source": "A",
+              "section": "14.5 선형 조사법",
+              "pages": [
+                545
+              ]
+            }
+          ],
+          "evidence": "한 번도 사용이 안 된 버킷"
+        },
+        {
+          "text": "이차 조사법은 다음 위치를 (h(k)+inc*inc) mod M으로 결정한다.",
+          "refs": [
+            {
+              "source": "A",
+              "section": "14.5 이차 조사법",
+              "pages": [
+                545
+              ]
+            }
+          ],
+          "evidence": "(h(k)+inc*inc) mod M"
+        },
+        {
+          "text": "A의 이중 해싱법(double hashing) 또는 재해싱(rehashing)은 다음 저장 위치를 별개의 해시 함수로 결정한다.",
+          "refs": [
+            {
+              "source": "A",
+              "section": "14.5 이중 해싱법",
+              "pages": [
+                546
+              ]
+            }
+          ],
+          "evidence": "재해싱(rehashing)"
+        },
+        {
+          "text": "B의 이중 해싱은 최초 주소용 해시 함수와 충돌 시 이동폭을 얻는 두 번째 해시 함수를 사용한다.",
+          "refs": [
+            {
+              "source": "B",
+              "section": "8.3.2 이중 해싱",
+              "pages": [
+                367
+              ]
+            }
+          ],
+          "evidence": "2개의 해시 함수를 준비"
+        },
+        {
+          "text": "B는 같은 해시값을 가진 데이터가 제곱 탐사에서 2차 클러스터를 형성할 수 있다고 설명한다.",
+          "refs": [
+            {
+              "source": "B",
+              "section": "8.3.2 제곱 탐사",
+              "pages": [
+                366
+              ]
+            }
+          ],
+          "evidence": "2차 클러스터"
+        },
+        {
+          "text": "B의 OAHT_Rehash()는 두 배 크기의 새 테이블을 만들고 점유 항목을 옮긴 뒤 이전 테이블을 소멸시킨다.",
+          "refs": [
+            {
+              "source": "B",
+              "section": "8.3.2 OAHT_Rehash()",
+              "pages": [
+                375
+              ]
+            }
+          ],
+          "evidence": "TableSize * 2"
+        }
+      ]
+    },
+    {
+      "title": "체이닝과 해싱 분류",
+      "items": [
+        {
+          "text": "체이닝(chaining)은 각 버킷에 연결 리스트를 할당하여 오버플로우를 해결한다.",
+          "refs": [
+            {
+              "source": "A",
+              "section": "14.6 체이닝",
+              "pages": [
+                550
+              ]
+            }
+          ],
+          "evidence": "각 버킷에"
+        },
+        {
+          "text": "체이닝에서 원하는 항목은 버킷의 연결 리스트를 순차 탐색하여 찾는다.",
+          "refs": [
+            {
+              "source": "A",
+              "section": "14.6 체이닝",
+              "pages": [
+                550
+              ]
+            }
+          ],
+          "evidence": "연결 리스트를 순차 탐색"
+        },
+        {
+          "text": "중복 키를 허용하면 리스트 처음에 삽입하는 것이 능률적이며 허용하지 않으면 먼저 리스트를 탐색한다.",
+          "refs": [
+            {
+              "source": "A",
+              "section": "14.6 체이닝",
+              "pages": [
+                550
+              ]
+            }
+          ],
+          "evidence": "키들의 중복을 허용"
+        },
+        {
+          "text": "B는 테이블 주소 바깥에 공간을 할당하는 것을 개방 해싱, 테이블 내부 공간에서 해결하는 것을 폐쇄 해싱이라 부른다.",
+          "refs": [
+            {
+              "source": "B",
+              "section": "8.3 충돌 해결 기법",
+              "pages": [
+                350
+              ]
+            }
+          ],
+          "evidence": "개방 해싱"
+        },
+        {
+          "text": "B의 체이닝은 각 테이블 요소가 데이터 대신 링크드 리스트의 포인터를 관리한다.",
+          "refs": [
+            {
+              "source": "B",
+              "section": "8.3.1 체이닝",
+              "pages": [
+                351
+              ]
+            }
+          ],
+          "evidence": "링크드 리스트에 대한 포인터"
+        }
+      ]
+    },
+    {
+      "title": "적재 밀도·성능·응용",
+      "items": [
+        {
+          "text": "이상적인 해싱의 시간 복잡도 O(1)은 충돌이 전혀 없다는 가정에서 가능하다.",
+          "refs": [
+            {
+              "source": "A",
+              "section": "14.7 해싱의 성능 분석",
+              "pages": [
+                555
+              ]
+            }
+          ],
+          "evidence": "충돌은 전혀 일어나지 않는다는 가정"
+        },
+        {
+          "text": "적재 밀도(loading density) 또는 적재 비율(loading factor)은 저장 항목 수 n과 테이블 크기 M의 비율이다.",
+          "refs": [
+            {
+              "source": "A",
+              "section": "14.7 해싱의 성능 분석",
+              "pages": [
+                555
+              ]
+            }
+          ],
+          "evidence": "저장되는 항목의 개수 n"
+        },
+        {
+          "text": "선형 조사법에서 적재 밀도 최댓값은 1이며 체이닝에서는 항목 수가 테이블 크기를 넘을 수 있어 최댓값이 없다.",
+          "refs": [
+            {
+              "source": "A",
+              "section": "14.7 해싱의 성능 분석",
+              "pages": [
+                555,
+                556
+              ]
+            }
+          ],
+          "evidence": "최대값을 가지지 않는다"
+        },
+        {
+          "text": "체이닝에서 적재 밀도 α는 평균 연결 리스트당 항목 수이며 실패 탐색의 평균 비교 수는 α, 성공 탐색은 1+α/2이다.",
+          "refs": [
+            {
+              "source": "A",
+              "section": "14.7 해싱의 성능 분석",
+              "pages": [
+                556
+              ]
+            }
+          ],
+          "evidence": "1+α/2"
+        },
+        {
+          "text": "A는 선형 조사법 적재 밀도를 0.5 이하, 이차 조사법·이중 해싱법은 0.7 이하로 유지하는 것이 좋다고 정리한다.",
+          "refs": [
+            {
+              "source": "A",
+              "section": "14.7 정리 문단",
+              "pages": [
+                557
+              ]
+            }
+          ],
+          "evidence": "0.7이하"
+        },
+        {
+          "text": "모든 값이 하나의 버킷으로 집중되는 최악의 해싱 시간 복잡도는 O(n)이다.",
+          "refs": [
+            {
+              "source": "A",
+              "section": "14.7 해싱의 성능 분석",
+              "pages": [
+                558
+              ]
+            }
+          ],
+          "evidence": "시간 복잡도는 O(n)"
+        },
+        {
+          "text": "A가 제시하는 해싱 응용은 데이터베이스 인덱싱·컴파일러 심볼 테이블·인터넷 검색 엔진이다.",
+          "refs": [
+            {
+              "source": "A",
+              "section": "14.8 해싱의 응용 분야",
+              "pages": [
+                559
+              ]
+            }
+          ],
+          "evidence": "심볼 테이블"
+        }
+      ]
+    }
+  ],
+  "procedures": [
+    {
+      "title": "선형 조사법 — A의 조사 순서",
+      "steps": [
+        {
+          "text": "충돌 위치 ht[k]의 다음 버킷 ht[k+1]을 조사한다.",
+          "refs": [
+            {
+              "source": "A",
+              "section": "14.5 선형 조사법",
+              "pages": [
+                538
+              ]
+            }
+          ],
+          "evidence": "ht[k+1]"
+        },
+        {
+          "text": "빈 버킷이 없으면 ht[k+2] 등으로 계속 조사하며 테이블 끝에서는 처음으로 간다.",
+          "refs": [
+            {
+              "source": "A",
+              "section": "14.5 선형 조사법",
+              "pages": [
+                538
+              ]
+            }
+          ],
+          "evidence": "ht[k+2]"
+        },
+        {
+          "text": "조사 시작 위치로 되돌아오면 테이블이 가득 찬 것으로 판단한다.",
+          "refs": [
+            {
+              "source": "A",
+              "section": "14.5 선형 조사법",
+              "pages": [
+                538
+              ]
+            }
+          ],
+          "evidence": "조사를 시작했던 곳으로 되돌아오게"
+        }
+      ]
+    },
+    {
+      "title": "B의 재해싱 함수 OAHT_Rehash()",
+      "steps": [
+        {
+          "text": "기존 테이블 크기의 두 배인 새 해시 테이블을 만든다.",
+          "refs": [
+            {
+              "source": "B",
+              "section": "8.3.2 OAHT_Rehash()",
+              "pages": [
+                375
+              ]
+            }
+          ],
+          "evidence": "TableSize * 2"
+        },
+        {
+          "text": "이전 테이블의 OCCUPIED 항목을 OAHT_Set()으로 새 테이블에 넣는다.",
+          "refs": [
+            {
+              "source": "B",
+              "section": "8.3.2 OAHT_Rehash()",
+              "pages": [
+                375
+              ]
+            }
+          ],
+          "evidence": "OCCUPIED"
+        },
+        {
+          "text": "이전 테이블을 소멸시키고 HT 포인터에 새 테이블 주소를 대입한다.",
+          "refs": [
+            {
+              "source": "B",
+              "section": "8.3.2 OAHT_Rehash()",
+              "pages": [
+                375
+              ]
+            }
+          ],
+          "evidence": "(*HT) = NewHT"
+        }
+      ]
+    }
+  ],
+  "syntax": [
+    {
+      "label": "음수 결과를 처리하는 hash_function() 발췌",
+      "code": "int hash_function(int key)\n{\n    int hash_index = key % M;\n    if (hash_index < 0)\n        hash_index += M;\n    return hash_index;\n}",
+      "refs": [
+        {
+          "source": "A",
+          "section": "14.4 제산 함수",
+          "pages": [
+            534
+          ]
+        }
+      ],
+      "evidence": "int hash_function",
+      "note": null
+    }
+  ],
+  "formulas": [
+    {
+      "label": "제산 해시 함수",
+      "expression": "h(k) = k mod M",
+      "refs": [
+        {
+          "source": "A",
+          "section": "14.4 제산 함수",
+          "pages": [
+            534
+          ]
+        }
+      ],
+      "evidence": "h(k)=k mod M",
+      "note": "M은 해시 테이블 크기이다."
+    },
+    {
+      "label": "적재 밀도",
+      "expression": "α = n/M",
+      "refs": [
+        {
+          "source": "A",
+          "section": "14.7 해싱의 성능 분석",
+          "pages": [
+            555
+          ]
+        }
+      ],
+      "evidence": "n/M",
+      "note": "n은 저장된 항목 수, M은 해시 테이블의 버킷 수이다."
+    },
+    {
+      "label": "선형 조사법의 탐색 비교 연산 수",
+      "expression": "실패: ½{1+1/(1-α)²}, 성공: ½{1+1/(1-α)}",
+      "refs": [
+        {
+          "source": "A",
+          "section": "14.7 선형 조사법의 비교 연산 수",
+          "pages": [
+            556
+          ]
+        }
+      ],
+      "evidence": "실패한 탐색",
+      "note": "α는 적재 밀도이다."
+    }
+  ],
+  "comparisons": [
+    {
+      "title": "충돌 해결 방법",
+      "headers": [
+        "방법",
+        "원문 설명"
+      ],
+      "rows": [
+        [
+          {
+            "text": "개방 주소법",
+            "refs": [
+              {
+                "source": "A",
+                "section": "14.5 개방 주소법",
+                "pages": [
+                  538
+                ]
+              }
+            ],
+            "evidence": "개방 주소법"
+          },
+          {
+            "text": "개방 주소법(open addressing)은 충돌이 일어난 항목을 테이블의 다른 위치에 저장한다.",
+            "refs": [
+              {
+                "source": "A",
+                "section": "14.5 개방 주소법",
+                "pages": [
+                  538
+                ]
+              }
+            ],
+            "evidence": "해시 테이블의 다른 위치"
+          }
+        ],
+        [
+          {
+            "text": "선형 조사법",
+            "refs": [
+              {
+                "source": "A",
+                "section": "14.5 선형 조사법",
+                "pages": [
+                  538
+                ]
+              }
+            ],
+            "evidence": "선형 조사법"
+          },
+          {
+            "text": "선형 조사법은 빈 공간이 나올 때까지 다음 버킷을 차례로 조사하고 끝에서는 처음으로 돌아간다.",
+            "refs": [
+              {
+                "source": "A",
+                "section": "14.5 선형 조사법",
+                "pages": [
+                  538
+                ]
+              }
+            ],
+            "evidence": "테이블의 처음으로 간다"
+          }
+        ],
+        [
+          {
+            "text": "이차 조사법",
+            "refs": [
+              {
+                "source": "A",
+                "section": "14.5 이차 조사법",
+                "pages": [
+                  545
+                ]
+              }
+            ],
+            "evidence": "이차 조사법"
+          },
+          {
+            "text": "이차 조사법은 다음 위치를 (h(k)+inc*inc) mod M으로 결정한다.",
+            "refs": [
+              {
+                "source": "A",
+                "section": "14.5 이차 조사법",
+                "pages": [
+                  545
+                ]
+              }
+            ],
+            "evidence": "(h(k)+inc*inc) mod M"
+          }
+        ],
+        [
+          {
+            "text": "이중 해싱법",
+            "refs": [
+              {
+                "source": "A",
+                "section": "14.5 이중 해싱법",
+                "pages": [
+                  546
+                ]
+              }
+            ],
+            "evidence": "이중 해싱법"
+          },
+          {
+            "text": "A의 이중 해싱법(double hashing) 또는 재해싱(rehashing)은 다음 저장 위치를 별개의 해시 함수로 결정한다.",
+            "refs": [
+              {
+                "source": "A",
+                "section": "14.5 이중 해싱법",
+                "pages": [
+                  546
+                ]
+              }
+            ],
+            "evidence": "재해싱(rehashing)"
+          }
+        ],
+        [
+          {
+            "text": "체이닝",
+            "refs": [
+              {
+                "source": "A",
+                "section": "14.6 체이닝",
+                "pages": [
+                  550
+                ]
+              }
+            ],
+            "evidence": "체이닝"
+          },
+          {
+            "text": "체이닝(chaining)은 각 버킷에 연결 리스트를 할당하여 오버플로우를 해결한다.",
+            "refs": [
+              {
+                "source": "A",
+                "section": "14.6 체이닝",
+                "pages": [
+                  550
+                ]
+              }
+            ],
+            "evidence": "각 버킷에"
+          }
+        ]
+      ]
+    }
+  ],
+  "terms": [
+    {
+      "term": "해싱",
+      "definition": {
+        "text": "해싱(hashing)은 키에 산술 연산을 적용하여 항목이 저장된 테이블 주소를 계산하고 접근하는 탐색이다.",
+        "refs": [
+          {
+            "source": "A",
+            "section": "14.1 해싱이란?",
+            "pages": [
+              525
+            ]
+          }
+        ],
+        "evidence": "키(key)에 산술적인 연산"
+      }
+    },
+    {
+      "term": "사전",
+      "definition": {
+        "text": "사전(dictionary)은 (키, 값) 쌍의 집합이다.",
+        "refs": [
+          {
+            "source": "A",
+            "section": "14.2 추상 자료형 사전",
+            "pages": [
+              526
+            ]
+          }
+        ],
+        "evidence": "(키, 값) 쌍의 집합"
+      }
+    },
+    {
+      "term": "해시 함수",
+      "definition": {
+        "text": "해시 함수(hash function)는 키를 입력받아 해시 주소(hash address)를 생성하고 이를 테이블 인덱스로 사용한다.",
+        "refs": [
+          {
+            "source": "A",
+            "section": "14.3 해싱의 구조",
+            "pages": [
+              528
+            ]
+          }
+        ],
+        "evidence": "해시 주소(hash address)"
+      }
+    },
+    {
+      "term": "버킷",
+      "definition": {
+        "text": "해시 테이블 ht는 M개 버킷(bucket)으로 이루어지며 하나의 버킷은 여러 슬롯(slot)을 가질 수 있다.",
+        "refs": [
+          {
+            "source": "A",
+            "section": "14.3 해싱의 구조",
+            "pages": [
+              528
+            ]
+          }
+        ],
+        "evidence": "M개의 버킷"
+      }
+    },
+    {
+      "term": "슬롯",
+      "definition": {
+        "text": "하나의 슬롯에는 하나의 항목이 저장된다.",
+        "refs": [
+          {
+            "source": "A",
+            "section": "14.3 해싱의 구조",
+            "pages": [
+              528
+            ]
+          }
+        ],
+        "evidence": "하나의 슬롯에는 하나의 항목"
+      }
+    },
+    {
+      "term": "충돌·동의어",
+      "definition": {
+        "text": "서로 다른 키 k1, k2에 대해 h(k1)=h(k2)이면 충돌(collision)이며 두 키는 동의어(synonym)이다.",
+        "refs": [
+          {
+            "source": "A",
+            "section": "14.3 해싱의 구조",
+            "pages": [
+              529
+            ]
+          }
+        ],
+        "evidence": "동의어(synonym)"
+      }
+    },
+    {
+      "term": "오버플로우",
+      "definition": {
+        "text": "충돌이 버킷의 슬롯 수보다 많이 발생하여 항목을 더 저장할 수 없으면 오버플로우(overflow)이다.",
+        "refs": [
+          {
+            "source": "A",
+            "section": "14.3 해싱의 구조",
+            "pages": [
+              529
+            ]
+          }
+        ],
+        "evidence": "오버플로우(overflow)"
+      }
+    },
+    {
+      "term": "개방 주소법",
+      "definition": {
+        "text": "개방 주소법(open addressing)은 충돌이 일어난 항목을 테이블의 다른 위치에 저장한다.",
+        "refs": [
+          {
+            "source": "A",
+            "section": "14.5 개방 주소법",
+            "pages": [
+              538
+            ]
+          }
+        ],
+        "evidence": "해시 테이블의 다른 위치"
+      }
+    },
+    {
+      "term": "체이닝",
+      "definition": {
+        "text": "체이닝(chaining)은 각 버킷에 연결 리스트를 할당하여 오버플로우를 해결한다.",
+        "refs": [
+          {
+            "source": "A",
+            "section": "14.6 체이닝",
+            "pages": [
+              550
+            ]
+          }
+        ],
+        "evidence": "각 버킷에"
+      }
+    },
+    {
+      "term": "적재 밀도",
+      "definition": {
+        "text": "적재 밀도(loading density) 또는 적재 비율(loading factor)은 저장 항목 수 n과 테이블 크기 M의 비율이다.",
+        "refs": [
+          {
+            "source": "A",
+            "section": "14.7 해싱의 성능 분석",
+            "pages": [
+              555
+            ]
+          }
+        ],
+        "evidence": "저장되는 항목의 개수 n"
+      }
+    }
+  ],
+  "summary_basis": "A 14.7절의 정리 문단 기준",
+  "summary": [
+    {
+      "text": "A는 선형 조사법 적재 밀도를 0.5 이하, 이차 조사법·이중 해싱법은 0.7 이하로 유지하는 것이 좋다고 정리한다.",
+      "refs": [
+        {
+          "source": "A",
+          "section": "14.7 정리 문단",
+          "pages": [
+            557
+          ]
+        }
+      ],
+      "evidence": "0.7이하"
+    },
+    {
+      "text": "적재 밀도가 작은 경우에는 선형 조사법이 이차 조사법이나 이중 해싱보다 효율적일 수 있다.",
+      "refs": [
+        {
+          "source": "A",
+          "section": "14.7 정리 문단",
+          "pages": [
+            557
+          ]
+        }
+      ],
+      "evidence": "적재 밀도가 작은 경우"
+    },
+    {
+      "text": "체인법은 적재 밀도에 비례하는 성능을 보이며 링크용 메모리 낭비는 저장 자료 크기에 따라 달라진다.",
+      "refs": [
+        {
+          "source": "A",
+          "section": "14.7 정리 문단",
+          "pages": [
+            558
+          ]
+        }
+      ],
+      "evidence": "적재 밀도에 비례하는 성능"
+    },
+    {
+      "text": "모든 값이 하나의 버킷으로 집중되는 최악의 해싱 시간 복잡도는 O(n)이다.",
+      "refs": [
+        {
+          "source": "A",
+          "section": "14.7 해싱의 성능 분석",
+          "pages": [
+            558
+          ]
+        }
+      ],
+      "evidence": "시간 복잡도는 O(n)"
+    }
+  ],
+  "review": [
+    {
+      "question": "사전의 핵심 연산 세 가지는?",
+      "answer": {
+        "text": "사전의 핵심 연산은 add(key, value), delete(key), search(key)이다.",
+        "refs": [
+          {
+            "source": "A",
+            "section": "14.2 ADT 14.1",
+            "pages": [
+              527
+            ]
+          }
+        ],
+        "evidence": "add(key, value)"
+      }
+    },
+    {
+      "question": "버킷당 슬롯 하나인 경우 충돌은 무엇을 뜻하는가?",
+      "answer": {
+        "text": "버킷당 슬롯이 하나이면 충돌이 곧 오버플로우를 의미한다.",
+        "refs": [
+          {
+            "source": "A",
+            "section": "14.3 해싱의 구조",
+            "pages": [
+              529
+            ]
+          }
+        ],
+        "evidence": "충돌이 곧 오버플로우"
+      }
+    },
+    {
+      "question": "삭제가 있는 선형 조사법에서 탐색은 언제 중단해야 하는가?",
+      "answer": {
+        "text": "삭제가 있는 선형 조사법의 탐색은 한 번도 사용하지 않은 버킷을 만나야 중단한다.",
+        "refs": [
+          {
+            "source": "A",
+            "section": "14.5 선형 조사법",
+            "pages": [
+              545
+            ]
+          }
+        ],
+        "evidence": "한 번도 사용이 안 된 버킷"
+      }
+    },
+    {
+      "question": "해싱의 O(1) 성능에는 어떤 가정이 있는가?",
+      "answer": {
+        "text": "이상적인 해싱의 시간 복잡도 O(1)은 충돌이 전혀 없다는 가정에서 가능하다.",
+        "refs": [
+          {
+            "source": "A",
+            "section": "14.7 해싱의 성능 분석",
+            "pages": [
+              555
+            ]
+          }
+        ],
+        "evidence": "충돌은 전혀 일어나지 않는다는 가정"
+      }
+    }
+  ],
+  "cheat": {
+    "definitions": [
+      {
+        "term": "해싱",
+        "definition": {
+          "text": "해싱(hashing)은 키에 산술 연산을 적용하여 항목이 저장된 테이블 주소를 계산하고 접근하는 탐색이다.",
+          "refs": [
+            {
+              "source": "A",
+              "section": "14.1 해싱이란?",
+              "pages": [
+                525
+              ]
+            }
+          ],
+          "evidence": "키(key)에 산술적인 연산"
+        }
+      },
+      {
+        "term": "충돌·동의어",
+        "definition": {
+          "text": "서로 다른 키 k1, k2에 대해 h(k1)=h(k2)이면 충돌(collision)이며 두 키는 동의어(synonym)이다.",
+          "refs": [
+            {
+              "source": "A",
+              "section": "14.3 해싱의 구조",
+              "pages": [
+                529
+              ]
+            }
+          ],
+          "evidence": "동의어(synonym)"
+        }
+      },
+      {
+        "term": "적재 밀도",
+        "definition": {
+          "text": "적재 밀도(loading density) 또는 적재 비율(loading factor)은 저장 항목 수 n과 테이블 크기 M의 비율이다.",
+          "refs": [
+            {
+              "source": "A",
+              "section": "14.7 해싱의 성능 분석",
+              "pages": [
+                555
+              ]
+            }
+          ],
+          "evidence": "저장되는 항목의 개수 n"
+        }
+      }
+    ],
+    "comparison_title": "충돌 해결",
+    "comparison_headers": [
+      "방법",
+      "설명"
+    ],
+    "comparison_rows": [
+      [
+        {
+          "text": "개방 주소법",
+          "refs": [
+            {
+              "source": "A",
+              "section": "14.5 개방 주소법",
+              "pages": [
+                538
+              ]
+            }
+          ],
+          "evidence": "개방 주소법"
+        },
+        {
+          "text": "개방 주소법(open addressing)은 충돌이 일어난 항목을 테이블의 다른 위치에 저장한다.",
+          "refs": [
+            {
+              "source": "A",
+              "section": "14.5 개방 주소법",
+              "pages": [
+                538
+              ]
+            }
+          ],
+          "evidence": "해시 테이블의 다른 위치"
+        }
+      ],
+      [
+        {
+          "text": "이중 해싱법",
+          "refs": [
+            {
+              "source": "A",
+              "section": "14.5 이중 해싱법",
+              "pages": [
+                546
+              ]
+            }
+          ],
+          "evidence": "이중 해싱법"
+        },
+        {
+          "text": "A의 이중 해싱법(double hashing) 또는 재해싱(rehashing)은 다음 저장 위치를 별개의 해시 함수로 결정한다.",
+          "refs": [
+            {
+              "source": "A",
+              "section": "14.5 이중 해싱법",
+              "pages": [
+                546
+              ]
+            }
+          ],
+          "evidence": "재해싱(rehashing)"
+        }
+      ],
+      [
+        {
+          "text": "체이닝",
+          "refs": [
+            {
+              "source": "A",
+              "section": "14.6 체이닝",
+              "pages": [
+                550
+              ]
+            }
+          ],
+          "evidence": "체이닝"
+        },
+        {
+          "text": "체이닝(chaining)은 각 버킷에 연결 리스트를 할당하여 오버플로우를 해결한다.",
+          "refs": [
+            {
+              "source": "A",
+              "section": "14.6 체이닝",
+              "pages": [
+                550
+              ]
+            }
+          ],
+          "evidence": "각 버킷에"
+        }
+      ]
+    ],
+    "formulas": [
+      {
+        "label": "제산 해시 함수",
+        "expression": "h(k) = k mod M",
+        "refs": [
+          {
+            "source": "A",
+            "section": "14.4 제산 함수",
+            "pages": [
+              534
+            ]
+          }
+        ],
+        "evidence": "h(k)=k mod M",
+        "note": "M은 해시 테이블 크기이다."
+      },
+      {
+        "label": "적재 밀도",
+        "expression": "α = n/M",
+        "refs": [
+          {
+            "source": "A",
+            "section": "14.7 해싱의 성능 분석",
+            "pages": [
+              555
+            ]
+          }
+        ],
+        "evidence": "n/M",
+        "note": "n은 저장된 항목 수, M은 해시 테이블의 버킷 수이다."
+      }
+    ],
+    "syntax": []
+  },
+  "checked_images": [
+    {
+      "source": "A",
+      "pages": [
+        525,
+        526,
+        527,
+        528,
+        529,
+        533,
+        534,
+        535,
+        536,
+        537,
+        538,
+        545,
+        546,
+        547,
+        548,
+        549,
+        550,
+        555,
+        556,
+        557,
+        558,
+        559
+      ]
+    },
+    {
+      "source": "B",
+      "pages": [
+        347,
+        350,
+        351,
+        362,
+        364,
+        366,
+        367,
+        375
+      ]
+    }
+  ],
+  "editor_notes": [
+    "A의 선형 조사법·이차 조사법과 B의 선형 탐사·제곱 탐사는 각 책의 용어를 유지했다.",
+    "A는 이중 해싱법을 재해싱이라고도 부르며, B의 OAHT_Rehash()는 두 배 테이블로 데이터를 옮기는 함수이다. 두 용례를 구분했다.",
+    "A의 체이닝 성능 분석 식과 표는 일부 반올림 값이 다르므로 비교 연산 수는 본문 식을 기준으로 옮겼다."
+  ]
+}

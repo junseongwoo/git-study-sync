@@ -1,0 +1,24 @@
+static node* find(node* root, const std::string& value)
+if (root == NULL)
+return NULL;
+if (root-〉position == value)
+return root;
+autO firstFound = org-tree: :find(root->first, value);
+if (firstFound != NULL)
+return firstFound;
+return org_tree: :find(root—〉second, value);
+특정 원소를 찾기 위해 트리를 탐색할 때, 해당 원소는 현재 노드이거나 왼쪽 또는 오른쪽 서
+보 트리(subtrce)에 있습니다. 가장 먼저 루트 노드를 검사하고, 만약 찾고자 하는 원소가 아니
+라면 왼쪽 서브 트리에서 다시 찾으려고 시도합니다. 그래도 해당 원소를 찾지 못하면 오른쪽
+서브 트리도 검사합니다.
+6. 이제 새로운 원소(부하 직원)를 추가하는 삽입 함수를 만들겠습니다. 이 함수에서는 앞서 만
+들었던 find() 함수를 활용합니다.
+b001 addSubordinate(const std: :string& manager, const std::string& subordinate)
+autO managerNode = org_tree: :find(root, manager);
+if (!managerNode)
+std::cout 〈〈 manager 〈〈 "을(를) 찾을 수 없습니다: " 〈〈 std::endl;
+return false;
+if (managerNode-〉first && managerNode->second)
+std::cout 〈〈 manager 〈〈 " 아래에 •• 〈〈 subordinate 〈〈 "을(를) 추가할 수 없습니
+다." 〈〈 std::endl;
+return false;

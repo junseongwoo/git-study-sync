@@ -1,0 +1,41 @@
+case '되: // A의 차수 〉 B의 차수
+attach(terms[As] .coef, terms[As] .expon);
+case
+break;
+// A의 차수 == B의 차수
+tempcoef = terms[As] .coef + terms[Bs] .coef;
+if (tempcoef)
+attach(tempcoef, terms[As] .expon) ;
+AS++; BS++; break;
+case '<' : // A의 차수 〈 B의 차수
+attach(terms[Bs] .coef, terms[Bs] ;
+break;
+// A의 나머지 항들을 이동함
+for (•, AS <= Ae; AS++)
+attach(terms[As] .coef, terms[As] .expon) ;
+// B의 나머지 항들을 이동함
+for (•, Bs <= Be; BS++)
+attach(terms[BsJ .coef, terms[Bs] .expon) ;
+*Ce = avail - 1;
+void print—poly(int s, int e)
+for (int = 독• 〈 e; 5十十)
+printf("%3.1fxA%d + ", termsCiJ .coef, terms[i] .expon);
+printf("%3.1fxA96d\n", terms[e] .coef, terms[e] .expon);
+82
+nnt main(void)
+int As = 0, Ae = 2, Bs = 3, Be = 5, Cs,
+Ae, BS, Be, &CS, &Ce);
+Ae);
+pri nt_poly (AS,
+Be);
+print_poIy(Bs,
+printf("—
+Ce);
+print—poly(Cs,
+return 0;
+실행결과
+8.Ox^3 + 7.OxA1 + 1.@x^0
+10.@x^3 + 3.Ox^2 + 1.@x^0
+18.OxA3 + 3.@x^2 + 7.€x^1 + 2.@x^0
+C언어로 쉽게 물어쓴 자료구조
+Ce;

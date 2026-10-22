@@ -1,0 +1,24 @@
+프로그램 6경 단순 연결 리스트의 십입함수
+// 노드 pre 두나에 내(1문 노드 십입
+ListNode• insert(lnstt,vkxd€, ListNOde •pre, element value)
+€P : (ListNode A)maIIoc(sizeof(ListNode)); // (1)
+p->data : value;
+p->link : pre->link; // (3)
+pre-〉link : 아
+return head•
+delete-first() 함수
+첫 번째 노드를 삭제하는 함수 delete-first() 함수는 디음과 같은 원형을 가진다.
+ListNode* deIete_first(ListN0de *head)
+연결 리스트의 시작 부분에서 노드를 삭제하려면 어떤 절차가 필요한가?
+head -
+head
+head
+10
+20
+20
+30
+30
+NULL
+NULL
+이것을 알고리즘으로 만들면 다음과 같다.
+194 C언어로 쉽게 풀어쓴 자료구조

@@ -1,0 +1,46 @@
+20
+22
+23
+25
+26
+27
+28
+29
+31
+32
+33
+34
+35
+37
+39
+40
+43
+44
+45
+46
+48
+return 1 ;
+Fi1ePath = argv[1J;
+Pattern = argvl기,•
+PattemSize = strlen( Pattern ),•
+if ( (fp = fopen( FilePath, "r"))
+= NULL )
+printf(ÄCannot 0畔n fiIe:S\n", Fi1ePath);
+return 1 :
+while ( fgets( Text, MAX_BUFFER, fp ) != NULL )
+int Position
+KarpRabin( Text, strlen(Text), 0, Pattern, PatternSize );
+Line++;
+if ( Position 〉= 0 )
+printf("line:%d, column:%d
+f(10S이 fp );
+return 0;
+Line, Position+1, Text);
+돈 실행 결과
+kjv.txt Righteousness
+line:15287, (olum:10 : Psa85:13 Righteousness 5ha11 90 before him; and shall set us
+in the øay Of his steps.
+lir塗:167%, (Olum:9 : Prv13:6 Righteousness keepeth him that is upright in the way:
+bJt øickedness overthroweth the sinner.
+470
+Part 02 • 일고리중

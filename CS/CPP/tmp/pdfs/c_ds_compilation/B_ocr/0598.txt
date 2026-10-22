@@ -1,0 +1,56 @@
+132
+133
+134
+135
+136
+137
+1圈
+1剪
+140
+141
+142
+143
+144
+145
+146
+147
+148
+149
+1%
+153
+154
+155
+156
+157
+158
+159
+1碼
+161
+162
+163
+164
+165
+167
+168
+169
+void Huffman Encode( HuffmanNode** Tree, UCHAR* Source. BitBuffer* Encoded
+HuffmanCode CodeTab1e(MAX2대ARI )
+int
+SymboIInfo Symb011nfoTabIe[MAX2대ARI;
+U대AR
+Temporary[MAX-BITl;
+for ( i=@; idAX 대AR; i++ )
+Symb011nfoTable(il.SymboI
+SymboIInf0TabIe[il Frequency = 0;
+while ( Source[iJ != •田• )
+SymboIInfoTabIe[Source[i++Jl.FrequencY++;
+Huffman BuildPrefixTree( Tree, SymbolInfoTab1e ),•
+Huffman BuildCodeTab1e( *Tree, C0deTable, Temporary, 0 ):
+i=€;
+while ( Sourc이iJ != '\이 )
+int BitCount = CodeTabIe[Source[il].Size;
+for ( j=@; j<BitCount; j++ )
+Huffman Huffman AddBit( Encoded, CodeTab1eISource[ill.Code(jl );
+void Huffman-Decode( HuffmanNode* Tree, BitBuffer* Encoded, UCHAR* Decoded )
+600
+Part 03 • 알고리즘 설계 기법

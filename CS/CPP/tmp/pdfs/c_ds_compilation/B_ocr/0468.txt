@@ -1,0 +1,37 @@
+103.2 카프-라빈 알고리즘 예제 프로그램
+카프-라빈 알고리즘을 구현하기 위해 3개의 함수를 정의하겠습니다. 패턴과 본문[0•••m -1]의 해
+시값을 구하는 Hash() 함수, e-&[i•••i +m- 1]의 해시값을 구하는 Rehash() 함수, 카프-라빈
+알고리즘 자체를 구현하는 KarpRabin( ) 함수입니다. 이 함수들은 다음과 같이 KarpRabin.h에
+선언합니다.
+10장/KarpRabin/Kar Rabin.h
+01
+02
+03
+04
+05
+06
+07
+08
+09
+$ifndef KARPRABIN H
+«iefine KARPRABIN_H
+int KarpRabin( char* Text, int TextSize, int Start,
+char* Pattern, int PatternSize 뉴
+int Hash( char* String, int Size 뉴
+int ReHash( char* String, int Start, int Size, int HashPrev, int Coefficient);
+ændif
+KarpRabin.c에서는 KarpRabin.h에서 선언한 함수 3개를 구현합니다. 먼저 Hash( ) 함수를 보
+면, S[i]x2m +S[i+1]x2m- +…+S[i+m-기x21+S[i+m-1]x20)modq를그대로구현
+하고 있는 것을 알 수 있습니다. 그런데 무엇인가 빠져 있지요? q로 나눈 나머지를 반환해야 하는데
+Hash ( ) 함수는 나머지 연산 없이 그대로 반환하고 있습니다. 이렇게 처리亏는 이우는 int의 최댓
+값을 q로 정해서 해시값이 q보다 더 커지는 경우 오버플로overflow된 값을 그대로 사용하면 되기 때
+문입니다. 그리고 연산 하나를 더 줄일 수도 있지요.
+이것은 Rehash() 함수도 마찬가지입니다. 이 함수는 (2(테-1 -S[i - 11 x2″1) +S[i +m - 11)
+mod q를 구현하는데. q는 Hash( ) 함수처럼 int의 최댓값을 A卜우하므로 q로 나눈 나머지를 반환
+하는 부분이 생략되어 있습니다. 그런데 2m-|의 자리에 coefficient라는 변수가 앉아 있군요. 거듭
+제곱은 비용이 많이 소요되는 연산입니다. 게다가 한 패턴에 대해 2”기은 항상 같은 값을 가지므로
+Rehash ( ) 함수 요뻬서 매번 계산하는 것보다 밖에서 계산한 후 안으로 가져와 A卜우하는 것이
+경제적입니다. 그래서 2”-1 대신 coefficient 매개 변수를 받아들이는 것입니다.
+KarpRabin ( ) 함수는 앞에서 설명한 카프-라빈 알고리즘의 동작 과정을 그대로 따라 구현하고 있
+습니다. 이 함수는 구현이 간단하므로 설명을 생략하겠습니다.
+Chapter 10 • 문자열 함책 467

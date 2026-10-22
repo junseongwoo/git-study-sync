@@ -1,0 +1,42 @@
+12
+14
+22
+23
+25
+26
+28
+29
+32
+34
+35
+37
+39
+40
+44
+46
+49
+E • V-MdjacencyList,
+while ( E |= MJLL )
+if ( E->Tar*t ,= WLL E->Target->Visited == NotVisited )
+E->Target ):
+E = E->Next;
+void BFS( Vertex• V, LinkedQueue* Queue )
+Edge• E = WLL;
+printfftd •. V-»ata);
+V->Visited = Visited,
+// 큐에 노드 삽입
+LQ-Enqueue( Queue, LQ-CreateNode( V ) );
+while ( ILQ-IsEmpty( Queue ) )
+Node* = LQ-Dequeue( Queue );
+V = Popspd-»ata,
+E = V->AdjacencyList;
+while ( E != NULL )
+V = E->Target;
+if ( V |= MJLL V->Visited
+printf(•td •. V-»ata);
+V->Visited = Visited,
+= NotVisited )
+LQ-Erqueue( Queue, LQ-CreateNode( V ) )
+= E-*ext;
+404
+Part 02 • 알고리즘

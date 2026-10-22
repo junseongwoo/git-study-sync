@@ -1,0 +1,33 @@
+// AVL 트리에 새로운 노드 추가 함수
+// 새로운 루트를 반환한다.
+AVLNode• insert(AVLNode• node, int key)
+// 이진 담색 트리의 노드 추가 수행
+if == NULL)
+if (key 〈
+node->teft = insert(node->left, key);
+else if (key 〉 node->key)
+node->right : insert(node-〉right, key);
+else // 동일한 키는 허용되지 않음
+return
+// 노드들의 균형인수 재계산
+int balance = get-balance(node) ;
+// LL 타입 처리
+if (balance 〉 1 && key 〈 node->teft->key)
+return rotate_right(node) ;
+// RR 타입 처리
+if (balance 〈 -1 key 〉 node->right->key)
+return rotate_left(node) •,
+// LR 타입 처리
+if (batance 〉 1 key 〉 node->left->key)
+node-〉left = rotate_left(node->left) •,
+return rotate_right(node) ;
+// RL 타입 처리
+if (balance 〈 -1 && key 〈 node->right->key)
+node->right = rotate_right(node->right) ;
+return rotate left(node) •,
+return ;
+// 전위 순회 함수
+VOid preorder(AVLNode *root)
+if (root 1= NULL)
+printf("[%d] ", root->key);
+522 C언어로 쉽게 풀어쓴 자료구조

@@ -1,0 +1,65 @@
+%장/BinarySearchTree/BinarySearchTree. h
+01
+02
+03
+05
+07
+09
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+$ifndef BINARY_SEAR대 TREE_H
+BINARY SEAR대 TREE_H
+•include <stdio h〉
+•include <stdlib.h>
+typedef int EIementType,
+typedef struct tagBSTNode
+struct tagBSTNode•* Left;
+Struct tagBSTNode• Right,
+ElementType Data,
+} BSTNode,
+BSTNode*
+VOid
+VOid
+BSTNode*
+BSTNode*
+VOid
+BSTNode*
+VOid
+ændif
+BST CreateNode( ElementType NewData );
+BST_DestroyNode( BSTNode* Node );
+BST DestroyTree( BSTNode* Tree );
+BST SearchNode( BSTNode* Tree, EIementType Target );
+BST_SearchMinNode( BSTNode* Tree );
+BST_InsertNode( BSTNode* Tree, BSTNode <hild ),•
+BST RemoveNode( BSTNode* Tree BSTNode* Parent, E1ementType Target );
+BST_InorderPrintTree( BSTNode* NOde );
+%장/BinarySearchTree/BinarySearchTree. (
+%1
+%2
+%3
+%5
+%7
+$include "BinarySearchTree.h"
+BSTNcx:ie* BST_CreateNode( E1ementType NewData )
+BSTNode* NewNode = (BSTNode*)malloc( sizeof(BSTNode) );
+NewNode->Left
+NewNode->Right
+= NULL;
+= NULL;
+260
+Part 02 • 알고리즘

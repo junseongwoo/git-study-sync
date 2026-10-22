@@ -1,0 +1,57 @@
+1%
+107
+108
+109
+110
+111
+112
+113
+114
+116
+117
+118
+119
+120
+121
+122
+123
+124
+125
+126
+127
+대T—DestroyList( L );
+// 2. 해시 테이불을 자유 저장소에서 제거하기
+free ( HT->TabIe );
+free ( HT );
+int 대T Hash( Key, int KeyLength, int TabIeSize )
+int i=e;
+int HashVaIue = 0:
+for ( i=9; i<KeyLength; i++ )
+HashValue = 대ashVaIue 《 3) + KeY[il;
+HashVa1ue = HashValue * TabIeSize,
+return HashVa1ue,
+%장/Chaining/Test—Chaining. (
+01 $include "Chaining.h"
+02
+03 int main( void )
+05
+12
+13
+356
+HashTab1e* HT = 대T_CreateHashTab1e( 12289 );
+대TSet( HT, *SFT",
+대TSet( HT, •JAVA•,
+대TSet( HT. •REDH",
+대TSet( HT, "APAC,
+대TSet( HT, •ZYUZZ",
+대TSet( HT, "IBM"
+대TSet( HT,
+Part 02 • 알고리좀
+Ticrosoft Corporation");
+•sun Uicrosystems");
+"Red Hat Linux");
+"Apache Or이);
+"thisys Ops Check"); //
+"IBM Ltd.");
+•Oracle Corporation");
+APAC와 충돌

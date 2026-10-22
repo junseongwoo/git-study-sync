@@ -1,0 +1,64 @@
+088
+089
+091
+092
+093
+094
+095
+0%
+097
+098
+099
+100
+101
+102
+103
+104
+105
+106
+107
+108
+109
+110
+112
+113
+114
+115
+116
+118
+119
+120
+121
+122
+123
+124
+125
+126
+127
+Removed = Tree,
+// 잎 노드인 경우 바로 삭제
+if ( Tree->Left == NULL Tree-Right == NULL )
+if ( Parent->Left == Tree )
+Parent->Left = NULL;
+e1se
+Parent->Right = NULL;
+// 자식이 양쪽 다 있는 경우
+if ( Tree->Left != NULL Tree->Right |= MJLL )
+// 최솟값 노드를 찾아 제거한 위 현재의 노드에 위지시킨다.
+BSTNode* MinNode = Tree->Right
+MinNode = BST-RemoveNode( Tree, NULL, MinNode-»ata )•,
+Tree->Data =
+else
+// 자식이 한쪽만 있는 경우
+BSTNode* Temp = NULL;
+if ( Tree->Left != NULL )
+Temp = Tree->Left;
+else
+Temp = Tree->Right;
+if ( Parent->Left == Tree )
+Parent->Left = Temp
+else
+Parent-Right = Temp;
+return Removed,
+Chapter % 탐책
+263

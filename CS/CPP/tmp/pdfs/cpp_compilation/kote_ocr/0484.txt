@@ -1,0 +1,23 @@
+SWitch (TestGraph(G))
+case INVALID: invalid++; break;
+case VALID: valid++; break;
+case INTERESTING:
+valid++;
+interesting十十;
+break;
+6. TestGraph() 함수는 먼저 각 그래프 객체의 v 멤버 변수 값이 의인지를 확인하여, 만약 -1이
+맞으면 INVA니D를 반환합니다. 그렇지 않은 경우에는 존슨 알고리즘을 이용하여 최단 거리를
+계산합니다. 존슨 알고리즘의 첫 번째 단계에서는 벨만-포드 알고리즘을 이용하여 에지 가중
+치를 재설정합니다.
+RESULT TestGraph(Graph 6)
+if (G.V =
+return INVA니D;
+vector<int〉 distance = BeIlmanFord(G);
+7. 벨모卜포드 알고리즘 구현 함수는 7장의 연습 문제 34에서 구현했던 것과 거의 유사하며, 다만
+인자로 Graph 객체 하나만 전달받습니다.
+vector〈int〉 BelImanFord(Graph 6)
+vector<int〉 distance(G.V 十 1, UNKNOWN);
+int = G.V;
+for (int = 0; i 〈 V; i++)
+띠〉
+「서0

@@ -1,0 +1,47 @@
+(앞에서 작성한 파일이니 새로 코팅할 필요는 없습니다). calculator.h와 calculator.c는 중위
+표기식을 후위 표기식으로 변환하는 알고리즘과 후위 표기식을 계산하는 알고리즘을 구현합니다.
+Test CaIcuIator.c는 사용자가 중위 표기식을 입력하면 calculator.h와 Calculator.c에 구현된
+함수를 토대로 결과를 계산하여 출력합니다.
+그러면 시작해볼까요? 조금 전에 이야기한 것처럼 LinkedListStack.h. LinkedListStack.
+c는 링크드 리스트로 구현하는 스택 예제에서 만든 파일을 그대로 복사해서 사용하면 됩니다.
+CaIculator. h와 CalcuIator.c, Test Calculator.c만 새로 작성하세요.
+02장/CaIcuIator/Calculator .h
+01
+02
+03
+04
+05
+07
+09
+13
+14
+15
+16
+17
+18
+19
+20
+21
+$ifndef CALCULATOR-H
+CALCULATOR H
+$include <stdlib.h>
+nnclude "LinkedListStack.h"
+typedef
+'(', RIGHT_PARENTHESIS = ')',
+LEFT PARENTHESIS
+= MINUS
+WLTIPLY = '구 DIVIDE
+SPACE
+} SYUBOL;
+int
+OPERAND
+IsNl,mber( char Cipher
+unsigned int GetNextToken( char* Expression, char* Token, int* TYPE ):
+int
+void
+double
+ændif
+IsPrior( char OperatorI, char Operator2 );
+GetPostfix( char* InfixExpression, char* PostfixExpression );
+CaIculate( char* PostfixExpression );
+102 Part 01 • 자료구조

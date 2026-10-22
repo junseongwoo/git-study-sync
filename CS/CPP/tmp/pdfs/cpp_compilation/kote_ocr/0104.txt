@@ -1,0 +1,34 @@
+int main()
+graph g(6);
+g.addEdge(city: :LONDON, city: :MOSCOW, 2500);
+g.addEdge(city: :LONDON, city: :SEOUL, 9000);
+g.addEdge(city: :LONDON, city: :DUBAI, 5500);
+g.addEdge(city: :SEOUL, city::MOSCOW, 6600);
+g.addEdge(city::SEOUL, city::SEATTLE, 8000);
+g.addEdge(city::SEOUL, city: :DUBAI, 7000);
+g.addEdge(city: :SEOUL, City::SYDNEY, 8000);
+g.addEdge(city: :SEATTLE, city: :MOSCOW, 8400);
+g.addEdge(city: :SEATTLE, city: :SYDNEY, 12000);
+g.addEdge(city::DUBAI, city::SYDNEY, 1200);
+g.addEdge(city: :SEATTLE, city: :LONDON, 8000);
+g. removeEdge(city: :SEATTLE, city: : LONDON) ;
+return 0;
+이 프로그램을 실행하면 다음과 같은 출력을 확인할 수 있습니다.
+에지 추가: 런던-모스크바=2500
+에지 추가: 런던-서울=9000
+에지 추가: 런던-두바이=5500
+에지 추가: 서울-모스크바=6600
+에지 추가: 서우시0H틀=8000
+서울-두바이=7000
+에지 추가:
+에지 추가: 서울-시드니=8000
+에지 추가: 시애틀-모스크바=8400
+에지 추가: 시애틀-시드니=12000
+에지 추가: 두바이-시드니=1200
+에지 추가: 시애틀-런던=8000
+에지 삭제: 시애틀-런던
+각 노드에 인접한 노드를 리스트로 저장하기 때문에 인접 리스트라고 합니다. 이 방법은 앞서 설
+명한 인접 행렬 방법과 마찬가지로 데이터 저장을 위해 벡터의 벡터를 시용합니다. 다만 안쪽 벡
+터의 크기가 전체 노드 개수가 아니라 해당 노드에 연결된 노드 개수와 같습니다. ) 함수
+구현을 보면 에지 끝에 있는 두 노드에 대해 각각 에지 연결을 설정하는 것을 확인할 수 있습니다.
+인접 리스트에 의한 그래프 표현은 전체 에지 개수 E에 비례한 크기의 메모리를 久卜우합니다.

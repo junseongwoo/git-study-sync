@@ -1,0 +1,23 @@
+else
+while ( !LLS-IsEmpty( Stack )
+!IsPrior( LLS Top( Stack )-»ata[@l, Token(Ol ) )
+Node• Popped = LLS POP( Stack );
+if ( Popped-X)ata[@J != LEFT_PARENTHESIS )
+strcat( PostfixExpression, Popped-»ata ):
+LLS DestroyNode( Popped );
+LLS Push( Stack, LLS_CreateNode( Token ) );
+while ( !LLS-IsEmpty( Stack) )•
+Node* Popped = LLS_Pop( Stack );
+중위 표기식을 다 읽었으니 Stack에
+남겨진 모든 연산자를 후위 표기식에
+출력합니다
+if ( Popped-»ata[@I != LEFT_PARENTHESIS )
+strcat( PostfixExpression, Popped->Data );
+LLS-DestroyNode( Popped );
+LLS-DestroyStack(Stack);
+2.44 사칙 연산 계산기 예제 프로그램
+이제 계산기를 만들기 위한 준비는 모두 끝났으니 프로그램을 만들어봅시다. 이번 예제 프로그램은
+다음과 같이 모두 5개의 파일로 이루어집니다.
+LtnkedLtstStack.h와 LinkedListStack.c에는 링크드 리스트 기반의 스택이 구현되어 있습니다
+Chapter 02 • 스리
+1이

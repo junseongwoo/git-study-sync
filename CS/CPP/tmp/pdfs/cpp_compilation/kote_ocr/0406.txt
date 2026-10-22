@@ -1,0 +1,42 @@
+만아 node = target이면:
+ShortestPath(node, depth) -〉 0
+이제 중간 상태 정의에 대해 생각해보겠습니다. 벨만-포드 알고리츰에서 A卜우되는 순환식은 다음
+과 같습니다.
+i를 1부터 V - 1까지 증가시기면서:
+그래프 모든 에지에 대해:
+edge -〉 바 v, welght
+만약 distance(u)가 UNKNOWN이 아니고, distance(u) + weight 〈 distance(v)이면:
+distance(v) = distance(u) 十 weight
+이를 재귀 호출 관점에서 다시 작성하면 다음과 같습니다.
+현재 정점과 연결된 모든 에지에 대해:
+edge -〉 neighbor, weight
+만약 ShortestPath(neighbor, depth-l) + weight 〈 ShortestPath(node, depth)이면:
+ShortestPath(node, depth) = ShortestPath(neighbor, depth-l) + weight
+모든 상태는 2자원 공간에서 유일한 형태로 표현될 수 있고 사이클로 인해 같은 상태를 두 번 이
+상 만나게 될 가능성이 있습니다. 그러므로 메모이제이션 방법을 위해 상태를 node와 depth의 쌍
+으로 저장하는 것은 유효하고, 또한 우우하다고 결론지을 수 있습니다.
+Depth = 7:
+7): 0
+SP(I, 7):
+6
+SP(2, 7): UNKNOWN
+7):
+SP(3,
+12
+SP(4,
+7):
+UNKNOWN
+7):
+SP(5,
+UNKNOWN
+7)•
+SP(6,
+. 13
+SP(7,
+7): UNKNOWN
+Depth = 6:
+6): 0
+6):
+SP(I,
+6
+417

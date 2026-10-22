@@ -1,0 +1,27 @@
+BSTNode• BST_SearchNode( BSTNode• Tree. ElementType Target )
+if ( Tree == MJLL )
+return WLL;
+4 목표값이 현재 노드와 같은 경우
+if ( Tree-»ata == Target )•
+return Tree,
+else if ( Tree-»ata 〉 Target )
+4 목표값이 현재 노드보다 작은 경우
+return BST_SearchNode ( Tree->Left, Target );••
+else
+return BST SearchNode ( Tree-Right, Target );• •••좋 목표츲℃| 현재 노드보다 큰 경우
+노드 삽입 연산
+노드 삽입 연산의 핵심은 새 노드가 십입될 곳이 어디인지를 찾아내는 일입니다. 다시 말해, 새 노드가
+삽입될 곳을 이진 탐색으로 찾아내야 합니다. 이진 탐색으로 새 노드를 연결할 부모 노드를 찾아낸
+후 그곳에 노드를 살포시 내려놓으면 노드 삽입 연산의 임무가 종료됩니다.
+예를 한 가지 들어보겠습니다. 다음 이진 탐색 트리에 14를 삽입해봅시다.
+1
+23
+139
+67
+14는 23보다 작으므로 23의 왼쪽 하위 트리에 위치해야 하고 11보다 교므로 11의 오른쪽 하위 트
+리에 위치해야 합니다. 마침 11의 오른쪽 자식 트리가 없으니 여기에 새 노드 14를 연결하면 됩니다.
+1
+23
+139
+14
+254 Part 02 • 알고리즘

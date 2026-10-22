@@ -1,0 +1,32 @@
+edge-map(8J
+edge-map(91
+for (auto& i : edge-map)
+for (auto& j : i.second)
+G.add-edge(Edge<T>{ i.first, j.first, j.second });
+return 6;
+4.6장 본문에서 설명한 이분 그래프 판별 알고리즘 구현 함수를 다음과 같이 작성합니다.
+template 〈typename T>
+aut0 bipartite_check(const Graph<T>& 6)
+stack<unsigned> stack;
+set〈unsigned> visited;
+stack.push(l);
+// 방문한 정점
+// 1번 정점부터 시작
+enum class (010TS { NONE, BLACK, RED };
+(010TS current-color { c010rs::BLACK }; // 다음 정점에 칠할 색상
+vector<colors〉 vertex c010rs(G.vertices(), (010죠: :NONE);
+while (!stack.empty())
+autO current vertex = stack.top();
+stack.pop();
+// 현재 정점을 이전에 방문하지 않았다면
+if (visited.find(current-vertex) == visited.end())
+visited. insert(current_vertex) ;
+vertex colors[current_vertex] = current C010r,•
+if (current_color == colors: :RED)
+cout 〈〈 current-vertex 〈〈 "번 정점: 빨간색" 〈〈 endl;
+current (010r = COlors::BLACK;
+else
+cout 〈〈 current-vertex 〈〈 "번 정점: 검정색" 〈〈 endl;
+희>
+터0
+때爻

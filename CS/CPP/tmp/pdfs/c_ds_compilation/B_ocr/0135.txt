@@ -1,0 +1,64 @@
+03장/CircuIarQueue/Circu1arQueue .h
+01
+02
+03
+04
+05
+07
+09
+12
+13
+14
+16
+17
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+tifndef CIRCULAR-QJEUE-H
+«iefine CIRCULAR_WEUE_H
+•include <stdi이h>
+#include <stdlib.h>
+typedef int E1ementType,
+typedef struct tagNode
+E1ementType Data,
+} NOde;
+typedef struct tagCircularQueue
+int
+int
+int
+Capacity;
+Front;
+Rear,
+No血* Nodes;
+} Circu1arQueue;
+CQ-CreateQueue( CircularQueue** Queue. int CapacitY);
+VOid
+CQ-DestroyQueue( CircularQueue* Queue );
+VOid
+CQ_Enqueue( CircularQueue* Queue, EIementTygp Data);
+void
+E1ementType CQ-Dequeue( Circu1arQueue* Queue ):
+CQ-GetSize( CircuIarQueue* Queue ),•
+int
+CQ-IsEmpty( CircuIarQueue* Queue )•,
+int
+CQ-IsFu11( CircularQueue Queue ),•
+int
+ændif
+03&/CircuIarQueue/Circu1arQueue. (
+01
+02
+03
+$include "CircularQueue.h"
+void CQ-CreateQueue( CircularQueue** Queue. int CapacitY)
+Chapter 03 • 큐
+127

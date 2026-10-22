@@ -1,0 +1,1140 @@
+{
+  "unit": 10,
+  "title": "우측값·이동·완벽한 전달",
+  "part": "C++",
+  "scope": [
+    {
+      "source": "B",
+      "start": 635,
+      "end": 675
+    }
+  ],
+  "learning": [
+    {
+      "text": "우측값 레퍼런스와 이동 생성자를 다룬다.",
+      "refs": [
+        {
+          "source": "B",
+          "section": "우측값 레퍼런스와 이동 생성자",
+          "pages": [
+            635
+          ]
+        }
+      ],
+      "evidence": "우측값레퍼런스에대해서"
+    },
+    {
+      "text": "좌측값을 이동할 수 있게 하는 move와 인자 전달을 위한 forward를 다룬다.",
+      "refs": [
+        {
+          "source": "B",
+          "section": "move 문법과 완벽한 전달",
+          "pages": [
+            654,
+            660,
+            674
+          ]
+        }
+      ],
+      "evidence": "좌측값도이동을시키고싶다면"
+    }
+  ],
+  "concepts": [
+    {
+      "title": "복사 생략과 값의 종류",
+      "items": [
+        {
+          "text": "복사 생략(copy elision)은 컴파일러가 불필요한 복사 생성을 생략하는 작업이다.",
+          "refs": [
+            {
+              "source": "B",
+              "section": "복사 생략(Copy Elision)",
+              "pages": [
+                636
+              ]
+            }
+          ],
+          "evidence": "컴파일러자체에서복사를생략"
+        },
+        {
+          "text": "원문의 MyString 덧셈 예는 반환된 임시 문자열을 복사할 때 추가적인 자원이 소모되는 문제를 다룬다.",
+          "refs": [
+            {
+              "source": "B",
+              "section": "복사 생략(Copy Elision)",
+              "pages": [
+                639,
+                640
+              ]
+            }
+          ],
+          "evidence": "쓸데없는복사를두번"
+        },
+        {
+          "text": "nullptr는 원문에서 포인터 주소값 0을 명확히 나타내며 기존 NULL을 대체하는 키워드로 설명한다.",
+          "refs": [
+            {
+              "source": "B",
+              "section": "복사 생략(Copy Elision)",
+              "pages": [
+                639
+              ]
+            }
+          ],
+          "evidence": "포인터주소값0"
+        },
+        {
+          "text": "원문은 주소값을 취할 수 있는 값을 좌측값(lvalue), 주소값을 취할 수 없는 값을 우측값(rvalue)으로 설명한다.",
+          "refs": [
+            {
+              "source": "B",
+              "section": "좌측값(lvalue)과 우측값(rvalue)",
+              "pages": [
+                640
+              ]
+            }
+          ],
+          "evidence": "주소값을취할수없는값을우측값"
+        },
+        {
+          "text": "& 하나로 정의하는 좌측값 레퍼런스(lvalue reference)는 좌측값을 참조하며, 좌측값 레퍼런스 자체도 좌측값이다.",
+          "refs": [
+            {
+              "source": "B",
+              "section": "좌측값(lvalue)과 우측값(rvalue)",
+              "pages": [
+                641
+              ]
+            }
+          ],
+          "evidence": "좌측값레퍼런스자체도좌측값"
+        },
+        {
+          "text": "const T&는 예외적으로 우측값도 참조할 수 있지만 그 임시 객체의 값을 변경할 수 없다.",
+          "refs": [
+            {
+              "source": "B",
+              "section": "그렇다면 이동은 어떻게?",
+              "pages": [
+                643
+              ]
+            }
+          ],
+          "evidence": "우측값도레퍼런스로받을수있습니다."
+        }
+      ]
+    },
+    {
+      "title": "우측값 레퍼런스와 이동 생성자",
+      "items": [
+        {
+          "text": "우측값 레퍼런스는 &&로 정의하며, 원문의 MyString(MyString&& str)은 우측값을 인자로 받는다.",
+          "refs": [
+            {
+              "source": "B",
+              "section": "우측값 레퍼런스",
+              "pages": [
+                646
+              ]
+            }
+          ],
+          "evidence": "& 를두개사용해서정의"
+        },
+        {
+          "text": "우측값 레퍼런스 매개변수 str은 이름이 있으므로 표현식 자체는 좌측값이다.",
+          "refs": [
+            {
+              "source": "B",
+              "section": "우측값 레퍼런스",
+              "pages": [
+                646
+              ]
+            }
+          ],
+          "evidence": "타입이’MyString 의우측값레퍼런스’ 인좌측값"
+        },
+        {
+          "text": "원문의 이동 생성자는 문자열 전체를 새로 복사하는 대신 string_content의 주소를 새 객체에 전달한다.",
+          "refs": [
+            {
+              "source": "B",
+              "section": "우측값 레퍼런스",
+              "pages": [
+                647
+              ]
+            }
+          ],
+          "evidence": "단순히주소값하나만"
+        },
+        {
+          "text": "이동한 원본의 string_content를 nullptr로 바꾸어 원본 소멸자가 새 객체도 가리키는 메모리를 해제하지 않게 한다.",
+          "refs": [
+            {
+              "source": "B",
+              "section": "우측값 레퍼런스",
+              "pages": [
+                647
+              ]
+            }
+          ],
+          "evidence": "string_content 를nullptr 로바꿔"
+        },
+        {
+          "text": "원문의 일반적인 int&& 예제는 우측값을 받을 수 있고 좌측값 a를 직접 받을 수 없다.",
+          "refs": [
+            {
+              "source": "B",
+              "section": "우측값 레퍼런스",
+              "pages": [
+                647
+              ]
+            }
+          ],
+          "evidence": "a 가좌측값이기때문에컴파일되지"
+        },
+        {
+          "text": "우측값 레퍼런스는 참조하는 임시 객체가 소멸되지 않도록 붙들 수 있다.",
+          "refs": [
+            {
+              "source": "B",
+              "section": "우측값 레퍼런스",
+              "pages": [
+                647
+              ]
+            }
+          ],
+          "evidence": "임시객체가소멸되지않도록"
+        },
+        {
+          "text": "원문 vector 예제는 이동 생성자에 noexcept를 명시하면 재할당할 때 이동 생성자를 사용함을 보여준다.",
+          "refs": [
+            {
+              "source": "B",
+              "section": "이동 생성자 작성 시 주의할 점",
+              "pages": [
+                648,
+                650,
+                652
+              ]
+            }
+          ],
+          "evidence": "이동생성자에noexcept 를추가"
+        }
+      ]
+    },
+    {
+      "title": "move와 이동 대입",
+      "items": [
+        {
+          "text": "std::move는 <utility>에서 제공되며, 이동 자체를 수행하지 않고 받은 객체를 우측값으로 변환한다.",
+          "refs": [
+            {
+              "source": "B",
+              "section": "move 함수(move semantics)",
+              "pages": [
+                660,
+                661,
+                662
+              ]
+            }
+          ],
+          "evidence": "실제로는단순한타입변환"
+        },
+        {
+          "text": "실제 이동은 우측값을 받는 이동 생성자나 이동 대입 연산자가 호출될 때 수행된다.",
+          "refs": [
+            {
+              "source": "B",
+              "section": "move 함수(move semantics)",
+              "pages": [
+                666
+              ]
+            }
+          ],
+          "evidence": "이동생성자나이동대입연산자를호출할때"
+        },
+        {
+          "text": "원문의 MyString 이동 대입은 주소·길이·용량을 전달하고 원본의 주소를 nullptr로, 길이와 용량을 0으로 바꾼다.",
+          "refs": [
+            {
+              "source": "B",
+              "section": "move 함수(move semantics)",
+              "pages": [
+                663,
+                664,
+                665
+              ]
+            }
+          ],
+          "evidence": "s.memory_capacity = 0;"
+        },
+        {
+          "text": "이동 대입 연산자를 정의하지 않은 원문 예제에서는 move를 써도 일반적인 대입 연산자의 복사가 수행된다.",
+          "refs": [
+            {
+              "source": "B",
+              "section": "move 함수(move semantics)",
+              "pages": [
+                666
+              ]
+            }
+          ],
+          "evidence": "일반적인대입연산자가오버로딩"
+        },
+        {
+          "text": "원문의 my_swap은 a로 tmp를 이동 생성하고 b를 a로, tmp를 b로 이동 대입한다.",
+          "refs": [
+            {
+              "source": "B",
+              "section": "move 함수(move semantics)",
+              "pages": [
+                665
+              ]
+            }
+          ],
+          "evidence": "b 에다시tmp 를이동"
+        }
+      ]
+    },
+    {
+      "title": "wrapper와 완벽한 전달",
+      "items": [
+        {
+          "text": "완벽한 전달(perfect forwarding)은 wrapper가 받은 인자를 원래 호출과 같은 형태로 다른 함수에 전달하는 문제를 다룬다.",
+          "refs": [
+            {
+              "source": "B",
+              "section": "완벽한 전달(perfect forwarding)",
+              "pages": [
+                666,
+                667,
+                668,
+                675
+              ]
+            }
+          ],
+          "evidence": "원본과Wrapper 을사용했을때모두호출되는함수가동일"
+        },
+        {
+          "text": "emplace_back은 생성자 인자를 직접 받아 내부에서 객체를 생성하여 vector 뒤에 추가한다.",
+          "refs": [
+            {
+              "source": "B",
+              "section": "완벽한 전달(perfect forwarding)",
+              "pages": [
+                667
+              ]
+            }
+          ],
+          "evidence": "내부에서A 의생성자를호출"
+        },
+        {
+          "text": "wrapper(T u)는 원문의 좌측값·상수 좌측값·우측값 호출에서 모두 좌측값 레퍼런스 g를 호출하여 원래 형태를 보존하지 못한다.",
+          "refs": [
+            {
+              "source": "B",
+              "section": "완벽한 전달(perfect forwarding)",
+              "pages": [
+                668
+              ]
+            }
+          ],
+          "evidence": "세경우모두좌측값레퍼런스"
+        },
+        {
+          "text": "wrapper(T& u)는 원문의 우측값 A()를 받지 못하고, const T&와의 오버로드도 우측값을 상수 좌측값 레퍼런스로 전달한다.",
+          "refs": [
+            {
+              "source": "B",
+              "section": "완벽한 전달(perfect forwarding)",
+              "pages": [
+                669,
+                670,
+                671
+              ]
+            }
+          ],
+          "evidence": "const T& 로추론되면서"
+        }
+      ]
+    },
+    {
+      "title": "보편적 레퍼런스와 forward",
+      "items": [
+        {
+          "text": "원문은 템플릿 인자 T에 대한 T&&를 보편적 레퍼런스(Universal reference)라 부르며 좌측값과 우측값을 모두 받을 수 있다고 설명한다.",
+          "refs": [
+            {
+              "source": "B",
+              "section": "보편적 레퍼런스(Universal reference)",
+              "pages": [
+                673
+              ]
+            }
+          ],
+          "evidence": "좌측값역시받아낼수"
+        },
+        {
+          "text": "레퍼런스 겹침 규칙에서 &와 겹치면 &가 되고, &&와 &&가 겹친 경우만 &&가 된다.",
+          "refs": [
+            {
+              "source": "B",
+              "section": "보편적 레퍼런스(Universal reference)",
+              "pages": [
+                674
+              ]
+            }
+          ],
+          "evidence": "r4 는int&&"
+        },
+        {
+          "text": "원문의 wrapper에서는 a에 대해 T가 A&, ca에 대해 const A&, A()에 대해 A로 추론된다.",
+          "refs": [
+            {
+              "source": "B",
+              "section": "보편적 레퍼런스(Universal reference)",
+              "pages": [
+                674
+              ]
+            }
+          ],
+          "evidence": "T 가각각A& 와const A&"
+        },
+        {
+          "text": "std::forward<T>(u)는 원래 우측값인 인자는 우측값으로, 좌측값인 인자는 좌측값으로 전달하여 원문과 같은 g 오버로드가 호출되게 한다.",
+          "refs": [
+            {
+              "source": "B",
+              "section": "보편적 레퍼런스(Universal reference)",
+              "pages": [
+                674,
+                675
+              ]
+            }
+          ],
+          "evidence": "성공적으로인자를전달"
+        }
+      ]
+    }
+  ],
+  "procedures": [
+    {
+      "title": "원문 MyString의 이동 생성",
+      "steps": [
+        {
+          "text": "원본의 길이·문자열 주소·용량을 새 객체에 복사한다.",
+          "refs": [
+            {
+              "source": "B",
+              "section": "우측값 레퍼런스",
+              "pages": [
+                645
+              ]
+            }
+          ],
+          "evidence": "string_content = str.string_content;"
+        },
+        {
+          "text": "원본 문자열 주소를 nullptr로 바꾼다.",
+          "refs": [
+            {
+              "source": "B",
+              "section": "우측값 레퍼런스",
+              "pages": [
+                645
+              ]
+            }
+          ],
+          "evidence": "str.string_content = nullptr;"
+        },
+        {
+          "text": "소멸자는 문자열 주소가 nullptr가 아닐 때에만 delete[]를 수행한다.",
+          "refs": [
+            {
+              "source": "B",
+              "section": "우측값 레퍼런스",
+              "pages": [
+                647
+              ]
+            }
+          ],
+          "evidence": "nullptr 가아닐때에만"
+        }
+      ]
+    },
+    {
+      "title": "원문의 완벽한 전달 wrapper",
+      "steps": [
+        {
+          "text": "T&&로 인자를 받아 원래 인자의 형태에 맞게 T를 추론한다.",
+          "refs": [
+            {
+              "source": "B",
+              "section": "보편적 레퍼런스(Universal reference)",
+              "pages": [
+                673,
+                674
+              ]
+            }
+          ],
+          "evidence": "보편적레퍼런스"
+        },
+        {
+          "text": "이름 있는 매개변수 u를 std::forward<T>(u)를 거쳐 g에 전달한다.",
+          "refs": [
+            {
+              "source": "B",
+              "section": "보편적 레퍼런스(Universal reference)",
+              "pages": [
+                672,
+                674
+              ]
+            }
+          ],
+          "evidence": "g(std::forward<T>(u));"
+        },
+        {
+          "text": "원래 호출과 wrapper 호출이 같은 g 오버로드를 선택한다.",
+          "refs": [
+            {
+              "source": "B",
+              "section": "보편적 레퍼런스(Universal reference)",
+              "pages": [
+                675
+              ]
+            }
+          ],
+          "evidence": "호출되는함수가동일"
+        }
+      ]
+    }
+  ],
+  "syntax": [
+    {
+      "label": "MyString 이동 생성자: 원문 발췌",
+      "code": "MyString::MyString(MyString &&str) {\n  std::cout << \"이동생성자호출!\" << std::endl;\n  string_length = str.string_length;\n  string_content = str.string_content;\n  memory_capacity = str.memory_capacity;\n\n  // 임시객체소멸시에메모리를해제하지\n  // 못하게한다.\n  str.string_content = nullptr;\n}",
+      "refs": [
+        {
+          "source": "B",
+          "section": "우측값 레퍼런스",
+          "pages": [
+            645
+          ]
+        }
+      ],
+      "evidence": "MyString::MyString(MyString &&str) {\n  std::cout << \"이동생성자호출!\" << std::endl;\n  string_length = str.string_length;\n  string_content = str.string_content;\n  memory_capacity = str.memory_capacity;\n\n  // 임시객체소멸시에메모리를해제하지\n  // 못하게한다.\n  str.string_content = nullptr;\n}",
+      "note": null
+    },
+    {
+      "label": "move를 사용하는 my_swap: 원문 발췌",
+      "code": "template <typename T>\nvoid my_swap(T &a, T &b) {\n  T tmp(std::move(a));\n  a = std::move(b);\n  b = std::move(tmp);\n}",
+      "refs": [
+        {
+          "source": "B",
+          "section": "move 함수(move semantics)",
+          "pages": [
+            664
+          ]
+        }
+      ],
+      "evidence": "template <typename T>\nvoid my_swap(T &a, T &b) {\n  T tmp(std::move(a));\n  a = std::move(b);\n  b = std::move(tmp);\n}",
+      "note": null
+    }
+  ],
+  "formulas": [],
+  "comparisons": [
+    {
+      "title": "원문의 레퍼런스 겹침 규칙",
+      "headers": [
+        "겹치는 형태",
+        "결과"
+      ],
+      "rows": [
+        [
+          {
+            "text": "int& &",
+            "refs": [
+              {
+                "source": "B",
+                "section": "보편적 레퍼런스 / 레퍼런스 겹침 규칙",
+                "pages": [
+                  674
+                ]
+              }
+            ],
+            "evidence": "int&&"
+          },
+          {
+            "text": "int&",
+            "refs": [
+              {
+                "source": "B",
+                "section": "보편적 레퍼런스 / 레퍼런스 겹침 규칙",
+                "pages": [
+                  674
+                ]
+              }
+            ],
+            "evidence": "int&"
+          }
+        ],
+        [
+          {
+            "text": "int& &&",
+            "refs": [
+              {
+                "source": "B",
+                "section": "보편적 레퍼런스 / 레퍼런스 겹침 규칙",
+                "pages": [
+                  674
+                ]
+              }
+            ],
+            "evidence": "int&&&"
+          },
+          {
+            "text": "int&",
+            "refs": [
+              {
+                "source": "B",
+                "section": "보편적 레퍼런스 / 레퍼런스 겹침 규칙",
+                "pages": [
+                  674
+                ]
+              }
+            ],
+            "evidence": "int&"
+          }
+        ],
+        [
+          {
+            "text": "int&& &",
+            "refs": [
+              {
+                "source": "B",
+                "section": "보편적 레퍼런스 / 레퍼런스 겹침 규칙",
+                "pages": [
+                  674
+                ]
+              }
+            ],
+            "evidence": "int&&&"
+          },
+          {
+            "text": "int&",
+            "refs": [
+              {
+                "source": "B",
+                "section": "보편적 레퍼런스 / 레퍼런스 겹침 규칙",
+                "pages": [
+                  674
+                ]
+              }
+            ],
+            "evidence": "int&"
+          }
+        ],
+        [
+          {
+            "text": "int&& &&",
+            "refs": [
+              {
+                "source": "B",
+                "section": "보편적 레퍼런스 / 레퍼런스 겹침 규칙",
+                "pages": [
+                  674
+                ]
+              }
+            ],
+            "evidence": "int&&&&"
+          },
+          {
+            "text": "int&&",
+            "refs": [
+              {
+                "source": "B",
+                "section": "보편적 레퍼런스 / 레퍼런스 겹침 규칙",
+                "pages": [
+                  674
+                ]
+              }
+            ],
+            "evidence": "int&&"
+          }
+        ]
+      ]
+    }
+  ],
+  "terms": [
+    {
+      "term": "복사 생략(copy elision)",
+      "definition": {
+        "text": "복사 생략(copy elision)은 컴파일러가 불필요한 복사 생성을 생략하는 작업이다.",
+        "refs": [
+          {
+            "source": "B",
+            "section": "복사 생략(Copy Elision)",
+            "pages": [
+              636
+            ]
+          }
+        ],
+        "evidence": "컴파일러자체에서복사를생략"
+      }
+    },
+    {
+      "term": "nullptr",
+      "definition": {
+        "text": "nullptr는 원문에서 포인터 주소값 0을 명확히 나타내며 기존 NULL을 대체하는 키워드로 설명한다.",
+        "refs": [
+          {
+            "source": "B",
+            "section": "복사 생략(Copy Elision)",
+            "pages": [
+              639
+            ]
+          }
+        ],
+        "evidence": "포인터주소값0"
+      }
+    },
+    {
+      "term": "좌측값·우측값",
+      "definition": {
+        "text": "원문은 주소값을 취할 수 있는 값을 좌측값(lvalue), 주소값을 취할 수 없는 값을 우측값(rvalue)으로 설명한다.",
+        "refs": [
+          {
+            "source": "B",
+            "section": "좌측값(lvalue)과 우측값(rvalue)",
+            "pages": [
+              640
+            ]
+          }
+        ],
+        "evidence": "주소값을취할수없는값을우측값"
+      }
+    },
+    {
+      "term": "우측값 레퍼런스",
+      "definition": {
+        "text": "우측값 레퍼런스는 &&로 정의하며, 원문의 MyString(MyString&& str)은 우측값을 인자로 받는다.",
+        "refs": [
+          {
+            "source": "B",
+            "section": "우측값 레퍼런스",
+            "pages": [
+              646
+            ]
+          }
+        ],
+        "evidence": "& 를두개사용해서정의"
+      }
+    },
+    {
+      "term": "std::move",
+      "definition": {
+        "text": "std::move는 <utility>에서 제공되며, 이동 자체를 수행하지 않고 받은 객체를 우측값으로 변환한다.",
+        "refs": [
+          {
+            "source": "B",
+            "section": "move 함수(move semantics)",
+            "pages": [
+              660,
+              661,
+              662
+            ]
+          }
+        ],
+        "evidence": "실제로는단순한타입변환"
+      }
+    },
+    {
+      "term": "완벽한 전달(perfect forwarding)",
+      "definition": {
+        "text": "완벽한 전달(perfect forwarding)은 wrapper가 받은 인자를 원래 호출과 같은 형태로 다른 함수에 전달하는 문제를 다룬다.",
+        "refs": [
+          {
+            "source": "B",
+            "section": "완벽한 전달(perfect forwarding)",
+            "pages": [
+              666,
+              667,
+              668,
+              675
+            ]
+          }
+        ],
+        "evidence": "원본과Wrapper 을사용했을때모두호출되는함수가동일"
+      }
+    },
+    {
+      "term": "보편적 레퍼런스(Universal reference)",
+      "definition": {
+        "text": "원문은 템플릿 인자 T에 대한 T&&를 보편적 레퍼런스(Universal reference)라 부르며 좌측값과 우측값을 모두 받을 수 있다고 설명한다.",
+        "refs": [
+          {
+            "source": "B",
+            "section": "보편적 레퍼런스(Universal reference)",
+            "pages": [
+              673
+            ]
+          }
+        ],
+        "evidence": "좌측값역시받아낼수"
+      }
+    },
+    {
+      "term": "std::forward",
+      "definition": {
+        "text": "std::forward<T>(u)는 원래 우측값인 인자는 우측값으로, 좌측값인 인자는 좌측값으로 전달하여 원문과 같은 g 오버로드가 호출되게 한다.",
+        "refs": [
+          {
+            "source": "B",
+            "section": "보편적 레퍼런스(Universal reference)",
+            "pages": [
+              674,
+              675
+            ]
+          }
+        ],
+        "evidence": "성공적으로인자를전달"
+      }
+    }
+  ],
+  "summary_basis": "편집 요약",
+  "summary": [
+    {
+      "text": "복사 생략(copy elision)은 컴파일러가 불필요한 복사 생성을 생략하는 작업이다.",
+      "refs": [
+        {
+          "source": "B",
+          "section": "복사 생략(Copy Elision)",
+          "pages": [
+            636
+          ]
+        }
+      ],
+      "evidence": "컴파일러자체에서복사를생략"
+    },
+    {
+      "text": "원문의 이동 생성자는 문자열 전체를 새로 복사하는 대신 string_content의 주소를 새 객체에 전달한다.",
+      "refs": [
+        {
+          "source": "B",
+          "section": "우측값 레퍼런스",
+          "pages": [
+            647
+          ]
+        }
+      ],
+      "evidence": "단순히주소값하나만"
+    },
+    {
+      "text": "std::move는 <utility>에서 제공되며, 이동 자체를 수행하지 않고 받은 객체를 우측값으로 변환한다.",
+      "refs": [
+        {
+          "source": "B",
+          "section": "move 함수(move semantics)",
+          "pages": [
+            660,
+            661,
+            662
+          ]
+        }
+      ],
+      "evidence": "실제로는단순한타입변환"
+    },
+    {
+      "text": "std::forward<T>(u)는 원래 우측값인 인자는 우측값으로, 좌측값인 인자는 좌측값으로 전달하여 원문과 같은 g 오버로드가 호출되게 한다.",
+      "refs": [
+        {
+          "source": "B",
+          "section": "보편적 레퍼런스(Universal reference)",
+          "pages": [
+            674,
+            675
+          ]
+        }
+      ],
+      "evidence": "성공적으로인자를전달"
+    }
+  ],
+  "review": [
+    {
+      "question": "이름이 있는 우측값 레퍼런스 매개변수 str 자체는 어떤 값인가?",
+      "answer": {
+        "text": "우측값 레퍼런스 매개변수 str은 이름이 있으므로 표현식 자체는 좌측값이다.",
+        "refs": [
+          {
+            "source": "B",
+            "section": "우측값 레퍼런스",
+            "pages": [
+              646
+            ]
+          }
+        ],
+        "evidence": "타입이’MyString 의우측값레퍼런스’ 인좌측값"
+      }
+    },
+    {
+      "question": "이동 생성자에서 원본 포인터를 nullptr로 바꾸는 이유는 무엇인가?",
+      "answer": {
+        "text": "이동한 원본의 string_content를 nullptr로 바꾸어 원본 소멸자가 새 객체도 가리키는 메모리를 해제하지 않게 한다.",
+        "refs": [
+          {
+            "source": "B",
+            "section": "우측값 레퍼런스",
+            "pages": [
+              647
+            ]
+          }
+        ],
+        "evidence": "string_content 를nullptr 로바꿔"
+      }
+    },
+    {
+      "question": "std::move 자체가 이동을 수행하는가?",
+      "answer": {
+        "text": "std::move는 <utility>에서 제공되며, 이동 자체를 수행하지 않고 받은 객체를 우측값으로 변환한다.",
+        "refs": [
+          {
+            "source": "B",
+            "section": "move 함수(move semantics)",
+            "pages": [
+              660,
+              661,
+              662
+            ]
+          }
+        ],
+        "evidence": "실제로는단순한타입변환"
+      }
+    },
+    {
+      "question": "완벽한 전달에서 std::forward를 사용하는 이유는 무엇인가?",
+      "answer": {
+        "text": "std::forward<T>(u)는 원래 우측값인 인자는 우측값으로, 좌측값인 인자는 좌측값으로 전달하여 원문과 같은 g 오버로드가 호출되게 한다.",
+        "refs": [
+          {
+            "source": "B",
+            "section": "보편적 레퍼런스(Universal reference)",
+            "pages": [
+              674,
+              675
+            ]
+          }
+        ],
+        "evidence": "성공적으로인자를전달"
+      }
+    }
+  ],
+  "cheat": {
+    "definitions": [
+      {
+        "term": "우측값 레퍼런스",
+        "definition": {
+          "text": "우측값 레퍼런스는 &&로 정의하며, 원문의 MyString(MyString&& str)은 우측값을 인자로 받는다.",
+          "refs": [
+            {
+              "source": "B",
+              "section": "우측값 레퍼런스",
+              "pages": [
+                646
+              ]
+            }
+          ],
+          "evidence": "& 를두개사용해서정의"
+        }
+      },
+      {
+        "term": "std::move",
+        "definition": {
+          "text": "std::move는 <utility>에서 제공되며, 이동 자체를 수행하지 않고 받은 객체를 우측값으로 변환한다.",
+          "refs": [
+            {
+              "source": "B",
+              "section": "move 함수(move semantics)",
+              "pages": [
+                660,
+                661,
+                662
+              ]
+            }
+          ],
+          "evidence": "실제로는단순한타입변환"
+        }
+      },
+      {
+        "term": "완벽한 전달",
+        "definition": {
+          "text": "완벽한 전달(perfect forwarding)은 wrapper가 받은 인자를 원래 호출과 같은 형태로 다른 함수에 전달하는 문제를 다룬다.",
+          "refs": [
+            {
+              "source": "B",
+              "section": "완벽한 전달(perfect forwarding)",
+              "pages": [
+                666,
+                667,
+                668,
+                675
+              ]
+            }
+          ],
+          "evidence": "원본과Wrapper 을사용했을때모두호출되는함수가동일"
+        }
+      }
+    ],
+    "comparison_title": "레퍼런스 겹침",
+    "comparison_headers": [
+      "형태",
+      "결과"
+    ],
+    "comparison_rows": [
+      [
+        {
+          "text": "int& &",
+          "refs": [
+            {
+              "source": "B",
+              "section": "보편적 레퍼런스 / 레퍼런스 겹침 규칙",
+              "pages": [
+                674
+              ]
+            }
+          ],
+          "evidence": "int&&"
+        },
+        {
+          "text": "int&",
+          "refs": [
+            {
+              "source": "B",
+              "section": "보편적 레퍼런스 / 레퍼런스 겹침 규칙",
+              "pages": [
+                674
+              ]
+            }
+          ],
+          "evidence": "int&"
+        }
+      ],
+      [
+        {
+          "text": "int& &&",
+          "refs": [
+            {
+              "source": "B",
+              "section": "보편적 레퍼런스 / 레퍼런스 겹침 규칙",
+              "pages": [
+                674
+              ]
+            }
+          ],
+          "evidence": "int&&&"
+        },
+        {
+          "text": "int&",
+          "refs": [
+            {
+              "source": "B",
+              "section": "보편적 레퍼런스 / 레퍼런스 겹침 규칙",
+              "pages": [
+                674
+              ]
+            }
+          ],
+          "evidence": "int&"
+        }
+      ],
+      [
+        {
+          "text": "int&& &",
+          "refs": [
+            {
+              "source": "B",
+              "section": "보편적 레퍼런스 / 레퍼런스 겹침 규칙",
+              "pages": [
+                674
+              ]
+            }
+          ],
+          "evidence": "int&&&"
+        },
+        {
+          "text": "int&",
+          "refs": [
+            {
+              "source": "B",
+              "section": "보편적 레퍼런스 / 레퍼런스 겹침 규칙",
+              "pages": [
+                674
+              ]
+            }
+          ],
+          "evidence": "int&"
+        }
+      ],
+      [
+        {
+          "text": "int&& &&",
+          "refs": [
+            {
+              "source": "B",
+              "section": "보편적 레퍼런스 / 레퍼런스 겹침 규칙",
+              "pages": [
+                674
+              ]
+            }
+          ],
+          "evidence": "int&&&&"
+        },
+        {
+          "text": "int&&",
+          "refs": [
+            {
+              "source": "B",
+              "section": "보편적 레퍼런스 / 레퍼런스 겹침 규칙",
+              "pages": [
+                674
+              ]
+            }
+          ],
+          "evidence": "int&&"
+        }
+      ]
+    ],
+    "formulas": [],
+    "syntax": [
+      {
+        "label": "move를 사용하는 my_swap: 원문 발췌",
+        "code": "template <typename T>\nvoid my_swap(T &a, T &b) {\n  T tmp(std::move(a));\n  a = std::move(b);\n  b = std::move(tmp);\n}",
+        "refs": [
+          {
+            "source": "B",
+            "section": "move 함수(move semantics)",
+            "pages": [
+              664
+            ]
+          }
+        ],
+        "evidence": "template <typename T>\nvoid my_swap(T &a, T &b) {\n  T tmp(std::move(a));\n  a = std::move(b);\n  b = std::move(tmp);\n}",
+        "note": null
+      }
+    ]
+  },
+  "checked_images": [
+    {
+      "source": "B",
+      "pages": [
+        645,
+        647,
+        664,
+        674
+      ]
+    }
+  ],
+  "editor_notes": [
+    "값 분류와 용어는 원문 설명 범위를 유지했으며 외부 표준 분류로 보충하지 않았다.",
+    "별도 요약 절은 확인되지 않아 본문을 편집 요약했다."
+  ]
+}

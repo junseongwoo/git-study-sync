@@ -1,0 +1,30 @@
+2•
+: 3.
+4•
+5.
+p->data vatue
+p->tink head
+head + p
+return head
+일고리증 설명
+1. 동적 메모리 할당을 통하여 새로운 노드 pg 생성한다.
+2• vatue5 저장한다.
+3. p-〉tink를 현재의 head값으로 변경한다.
+4. he법를 p값으로 변경한다.
+5. 변경된 헤드 포인터 반환
+위의 알고리즘에 따라서 insert-first()를 구현해보면 나음과 같다.
+프로그램 6.1 단순 연결 리스트의 삽입함수
+ListN0de* insert_first(ListN0de *head, int value)
+ListN0de *P = (ListN0de *)maIIoc(sizeof(ListN0de)); // (1)
+p->data = value;
+p->link = head;
+return head;
+삽입 연산 insert()
+// 헤드 포인터의 값을 복사
+// 헤드 포인터 변경
+// 변경된 헤드 포인터 반환
+insert()는 가장 일반적인 경우로서 연결 리스트의 중간에 새로운 노드를 추가한다. 이때는 반
+드시 삽입되는 위치의 선행 노드를 알이야 삽입이 기능하다. 선행 노드를 pre가 가리키고 있다고
+가정하久h 예를 들어서 아래 그림에서 “20”과 “40” 사이에 “30”을 삽입하여보자. 다음과 같은 절
+차가 필요하다.
+192 C언어로 쉽게 풀어쓴 자료구조

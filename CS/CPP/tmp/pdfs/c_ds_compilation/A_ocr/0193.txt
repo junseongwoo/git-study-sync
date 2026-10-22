@@ -1,0 +1,34 @@
+typedef struct ListNcxfe ( // 노드 타입
+etement data;
+struct ListNcxle *link;
+} ListNcxje;
+// 오류 처리 함수
+VOid error(char *npssage)
+fprintf(stderr, "%s\n", message);
+exit(l);
+ListNode* insert_first(ListNode *head, element value)
+ListNode *P = (ListNode *)matIoc(sizeof(ListN0de)); //(1)
+p-〉data = value;
+p->tink = head; // 헤드 포인터의 값을 복사 //(3)
+head = 아 // 헤드 포인터 변경 //(4)
+return head;
+VOid print—list(ListNode *head)
+for (ListN0de *P = head; p != NULL; P
+pnntf("%s->", p->data.name);
+printf("NULL \n");
+// 테스트 프로그램
+int main(void)
+ListNode *head = NULL;
+element data;
+strcpy(data.nare, "APPLE");
+head = insert_first(head, data);
+print_tist(head) ;
+strcpy(data.narne, "KIWI");
+head = insert_first(head, data);
+pri ;
+strcpy(data.name, "BANANA");
+head = insert_first(head, data) ;
+return 0;
+- p->link)
+4
+CHAPTER06 연결 리스트 | 201

@@ -1,0 +1,31 @@
+프로그램 1기11 영어사전 프로그램
+#include<Stdio.h>
+#include <string.h〉
+#define MAX_WRD_SIZE 50
+#define MAX_MEANING SIZE 5%
+#define SIZE 5
+typedef struct {
+char word [MAX_WORD_SIZE] ;
+char meaning[MAX_MEANING_SIZE] ;
+} element;
+element Iist[SIZE]; // 구조체 배열의 선언
+int main(void)
+int 1, 〕;
+element t에鬱;
+printf("5개의 단어와 의미를 입력하시오\n");
+for (5 = 0; i 〈 SIZE; 5++) {
+scanf("%s[h\n]", tist[i] .word);
+scanf("%s[h\n]", list[i] .meaning);
+// 버블 정렬
+for (5 = 0; 5 SIZE - 1; ++5) {
+for (j + 1; 〕 〈 SIZE; ++j) {
+// 엔터카만을 제외하고 받는다.
+// 엔터키만을 제외하고 받는다.
+488
+if (strcmp(list[i]•word, list[j].word) 〉 0) {
+SWAP(list[i], listCj], temp);
+printf("\n정릴 후 사전의 내용: 년");
+for (i = 0; i<SIZE; 5++) {
+printf("%s: %s 년", list[i].word,
+return 0;
+C언어로 쉽게 물어쓴 자료구조

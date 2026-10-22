@@ -1,0 +1,28 @@
+46
+47
+52
+53
+55
+58
+59
+63
+실행 결과
+AddEdge( 티 CreateEdge(E, H, 98 )
+AddEdge( 타 CreateEdge(F, 타 82 ) );
+타 CreateEdge(F, 6, 154 ) );
+타 CreateEdge(F. H, 120 ) ):
+AddEdge( 6, CreateEdge(G, 1, 106 ) ):
+// 정점 B를 시작 정점으로 하는 최소 신장 트리
+Dijkstra(graph, 8, PrimMST);
+PrintGraph ( Prin*ST ):
+// 그래프 소일
+DestroyGraph( PrimUST );
+Destr0YGrac*1( KruskaIMST ),•
+graph );
+return 이•
+8 . 시조] 다126] F[150J
+(: D[243]
+F : E[2321 6[3위1 H[27이
+6 : 1141이
+452
+Part 02 • 알고리줍

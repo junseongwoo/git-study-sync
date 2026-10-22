@@ -1,0 +1,1216 @@
+
+=== L05A | PDF p.1 | 印刷 p.None ===
+C++ 프로그래밍
+      김형기
+           hk.kim@jbnu.ac.kr
+
+=== L05A | PDF p.2 | 印刷 p.2 ===
+ Lecture Plan
+
+ OOP 개요
+
+ 클래스와객체
+                                  Part 1
+ 생성자와소멸자
+
+ 생성자오버로딩
+
+ 복사생성자
+                                            Part 2
+  this, const, static, friend
+
+
+
+
+
+강의자료무단배포금지                                                                                                                2
+문의사항: hk.kim@jbnu.ac.kr  || diskhkme@gmail.com
+
+=== L05A | PDF p.3 | 印刷 p.3 ===
+객체지향프로그래밍개요
+
+
+
+
+
+                                                                                                                          3
+
+=== L05A | PDF p.4 | 印刷 p.4 ===
+ (Summary) Object Oriented Programming
+
+ 절차적프로그래밍이란?
+
+ 절차적프로그래밍의단점
+
+ 객체지향프로그래밍의개념과장점
+
+ 객체지향프로그래밍의단점
+
+
+
+
+
+강의자료무단배포금지                                                                                                                4
+문의사항: hk.kim@jbnu.ac.kr  || diskhkme@gmail.com
+
+=== L05A | PDF p.5 | 印刷 p.5 ===
+ Procedural Programming
+
+ 절차적프로그래밍
+
+   프로그램이수행하는일련의작업을기준으로하는프로그래밍패러다임
+
+   작업의구현=함수/ 함수의집합=프로그램
+
+   데이터와작업이분리되어있는개념
+
+  데이터는작업의실행을위해매개변수로전달될뿐
+
+   이해가쉬운방식
+
+
+
+
+
+강의자료무단배포금지                                                                                                                5
+문의사항: hk.kim@jbnu.ac.kr  || diskhkme@gmail.com
+
+=== L05A | PDF p.6 | 印刷 p.6 ===
+ Disadvantages of Procedural Programming
+
+ 절차적프로그래밍의단점
+
+   함수가데이터의구조를정확히알아야만함
+
+      데이터가변하면, 함수의수정이필요
+
+          Tightly coupled
+
+
+   프로그램의규모가커지면,
+
+     이해하기어렵고
+
+     유지/보수하기어렵고
+
+     확장하기어렵고
+
+     디버깅하기어렵고
+
+     코드를재사용하기어렵고
+
+     오동작할확률이커짐
+
+
+강의자료무단배포금지                                                                                                                6
+문의사항: hk.kim@jbnu.ac.kr  || diskhkme@gmail.com
+
+=== L05A | PDF p.7 | 印刷 p.7 ===
+ Object Oriented Programming
+
+ 객체지향프로그래밍
+
+  절차적프로그래밍의단점을극복하기위해제안된프로그래밍패러다임중의하나
+
+    C++, C#, Java 등에서는이러한방식을손쉽게구현할수있는언어의문법을제공
+
+    함수형프로그래밍등새로운패러다임을적용할수있도록언어는계속확장될수있음
+
+
+ 클래스와객체를기반으로함
+
+   데이터와작업을하나로묶어서표현
+
+
+
+
+
+강의자료무단배포금지                                                                                                                7
+문의사항: hk.kim@jbnu.ac.kr  || diskhkme@gmail.com
+
+=== L05A | PDF p.8 | 印刷 p.8 ===
+ Object Oriented Programming
+
+ 객체지향프로그래밍의특징
+
+       1. 캡슐화
+
+      클래스는(데이터) + (데이터를기반으로기능)을모두포함
+
+       2.  정보은닉(추상화)
+
+     사용자는내구부현에대해알필요도없고, 알아서도안됨
+
+                       • 잘못된사용및수정을방지
+
+     사용자는외부로노출된인터페이스만활용가능
+
+      테스트, 디버깅, 유지보수, 확장이용이해짐
+
+       3. 상속
+
+       4. 다형성
+
+
+
+강의자료무단배포금지                                                                                                                8
+문의사항: hk.kim@jbnu.ac.kr  || diskhkme@gmail.com
+
+=== L05A | PDF p.9 | 印刷 p.9 ===
+ Disadvantages of Object Oriented Programming
+
+ 절차적프로그램의상위호환이아니다!
+
+   잘설계된절차적프로그램> 잘못설계된객체지향프로그램
+
+  모든문제에어울리는설계방안이아님
+
+  모든대상이클래스로치환되는것은아님
+
+ 객체지향프로그램은어렵다
+
+   직관적이지않을수도…
+
+ 문제를잘분석하여좋은설계를만들어야함(어렵다)
+
+ 성능에서손해를보거나, 지나치게복잡한코드가작성될수있음
+
+
+
+
+
+강의자료무단배포금지                                                                                                                9
+문의사항: hk.kim@jbnu.ac.kr  || diskhkme@gmail.com
+
+=== L05A | PDF p.10 | 印刷 p.10 ===
+ (Summary) Object Oriented Programming
+
+ 절차적프로그래밍
+   데이터와작업이분리
+
+ 절차적프로그래밍의한계
+    작업이데이터에의존적(ex, 데이터가변하면함수를수정해야함)
+
+ 객체지향프로그래밍의개념과장점
+   데이터+ 기능캡슐화
+   정보은닉
+    상속, 다형성…
+
+ 객체지향프로그래밍의한계
+   완벽한상위호환은없음
+   성능손실가능성, 디자인에더많은수고필요
+
+
+강의자료무단배포금지                                                                                                               10
+문의사항: hk.kim@jbnu.ac.kr  || diskhkme@gmail.com
+
+=== L05A | PDF p.11 | 印刷 p.11 ===
+클래스와객체
+
+
+
+
+
+                                                                                                                         11
+
+=== L05A | PDF p.12 | 印刷 p.12 ===
+ (Summary) Class and Object
+
+ 클래스란?
+
+ 객체란?
+
+ 클래스의선언과객체의생성
+
+ 접근제한자
+
+ 멤버변수와멤버함수
+
+ 명세와구현의분리
+
+ 구조체vs 클래스
+
+
+
+
+강의자료무단배포금지                                                                                                               12
+문의사항: hk.kim@jbnu.ac.kr  || diskhkme@gmail.com
+
+=== L05A | PDF p.13 | 印刷 p.13 ===
+ Classes and Objects
+
+ Example
+
+   플레이어와여러명의적이존재하는게임을만든다면…
+
+
+
+
+
+     (절차지향)기존에배운바로는플레이어관련
+     변수,적관련변수들을만들고이러한변수들을
+    함수를사용해변경하는방식으로프로그램작성                                     (객체지향)플레이어와관련된데이터와동작을
+                                       하나로묶어정의하고(클래스)그로부터
+강의자료무단배포금지                                 변수(객체)를만들어사용                  13
+문의사항: hk.kim@jbnu.ac.kr  || diskhkme@gmail.com
+
+=== L05A | PDF p.14 | 印刷 p.14 ===
+ Classes and Objects
+
+ 클래스
+
+   객체(object)가생성되기위한틀
+
+     객체가가져야할데이터와기능을정의
+
+    사용자정의“자료형”(user-defined data-type)
+
+   멤버변수를가짐(데이터)
+
+         속성(property, attribute), 필드(field), 클래스변수(class variable) ≈멤버변수와비슷한용어
+
+   멤버함수를가짐(함수, 동작)
+
+        Method ≈멤버함수의또다른용어
+
+   데이터와함수를은닉가능
+
+   인터페이스를공개가능
+
+
+
+강의자료무단배포금지                                                                                                               14
+문의사항: hk.kim@jbnu.ac.kr  || diskhkme@gmail.com
+
+=== L05A | PDF p.15 | 印刷 p.15 ===
+ Classes and Objects
+
+ 객체
+
+   클래스로부터생성된실체
+
+     (메모리에올라간객체는인스턴스로구분하여명명하는경우도있음)
+
+   객체는개별적으로관리되며, 원하는만큼생성가능함
+
+   객체를통해클래스에정의된멤버함수호출, 멤버변수접근가능
+
+
+   개념적인예
+
+     “철수”는학생이라는클래스의객체
+
+     “영희”도학생이라는클래스의객체
+
+     철수와영희는각각의학과, 학번, 키, 몸무게, 나이등의멤버변수(데이터)를가지고있음
+
+
+
+강의자료무단배포금지                                                                                                               15
+문의사항: hk.kim@jbnu.ac.kr  || diskhkme@gmail.com
+
+=== L05A | PDF p.16 | 印刷 p.16 ===
+ Classes and Objects                    중요!
+
+ 클래스와객체
+
+   클래스이름은자료형(ex, int) 처럼사용됨
+
+   클래스를정의하는것= 새로운데이터타입을만드는것!
+
+     우리가사용할실체는“객체“로만들어메모리에올려야함
+
+
+
+
+
+강의자료무단배포금지                                                                                                               16
+문의사항: hk.kim@jbnu.ac.kr  || diskhkme@gmail.com
+
+=== L05A | PDF p.17 | 印刷 p.17 ===
+ Classes and Objects                    중요!
+
+ 클래스와객체
+
+
+
+
+
+                                                    1)실제프로그램이동작할때메모리에올라가는객체들을만들고그
+                              안에포함된멤버변수와멤버함수를사용하는부분
+                                객체가있어야만멤버변수와멤버함수가메모리상에“존재”하게됨
+
+
+
+     2)Player라는클래스는이러한데이터들과이러한
+   기능을수행해야해라는개념을정의하는부분일뿐
+
+
+
+
+
+강의자료무단배포금지                                                                                                               17
+문의사항: hk.kim@jbnu.ac.kr  || diskhkme@gmail.com
+
+=== L05A | PDF p.18 | 印刷 p.18 ===
+ Class Definition
+
+ 클래스의정의
+
+   기본모양
+
+
+
+
+
+   예시
+
+
+
+
+                              멤버변수,데이터
+
+
+
+                             멤버함수,행위/기능
+
+강의자료무단배포금지                                                                                                               18
+문의사항: hk.kim@jbnu.ac.kr  || diskhkme@gmail.com
+
+=== L05A | PDF p.19 | 印刷 p.19 ===
+ Create Object
+
+ 객체의생성
+
+  변수와동일하게스택또는힙메모리에선택적으로생성가능
+
+
+
+
+
+강의자료무단배포금지                                                                                                               19
+문의사항: hk.kim@jbnu.ac.kr  || diskhkme@gmail.com
+
+=== L05A | PDF p.20 | 印刷 p.20 ===
+ Account Example
+
+ 계좌클래스예시
+
+
+
+
+
+강의자료무단배포금지                                                                                                               20
+문의사항: hk.kim@jbnu.ac.kr  || diskhkme@gmail.com
+
+=== L05A | PDF p.21 | 印刷 p.21 ===
+ Accessing Class Members
+
+ 클래스멤버의접근
+
+   멤버= 멤버변수+ 멤버함수
+
+   멤버변수/함수에접근하기위해서는객체가필요
+
+           (Static 멤버의경우는예외)
+
+   어떠한멤버변수/함수는“클래스외부”에서접근이불가능하게만들수있음(정보은닉)
+
+
+
+
+
+강의자료무단배포금지                                                                                                               21
+문의사항: hk.kim@jbnu.ac.kr  || diskhkme@gmail.com
+
+=== L05A | PDF p.22 | 印刷 p.22 ===
+ Accessing Class Members                 중요!
+
+ 값형식의객체인경우멤버접근방법
+
+      “.” 연산자사용(멤버접근연산자)
+
+
+
+
+
+           “Player가가진”이아니라,“player1이가진”이라고표현한것에유의!
+
+
+
+
+
+강의자료무단배포금지                                                                                                               22
+문의사항: hk.kim@jbnu.ac.kr  || diskhkme@gmail.com
+
+=== L05A | PDF p.23 | 印刷 p.23 ===
+ Accessing Class Members                 중요!
+
+ 객체의포인터인경우
+
+   역참조후점연산자사용(사용빈도적음)
+
+
+
+
+
+   화살표연산자(member of pointer 연산자) 사용
+
+     위와완전히동일한의미. 그냥축약표현일뿐
+
+
+
+
+
+강의자료무단배포금지                                                                                                               23
+문의사항: hk.kim@jbnu.ac.kr  || diskhkme@gmail.com
+
+=== L05A | PDF p.24 | 印刷 p.24 ===
+ Class Member Access Modifier (visibility)
+
+ 정보은닉을위해멤버접근을제한할수있음
+
+ 클래스멤버접근제한자
+
+     public
+
+     객체에서접근가능
+
+     private
+
+     클래스의멤버들만접근가능
+
+     protected
+
+     상속된클래스의객체에서만접근가능(상속강의에서설명예정)
+
+
+
+
+
+강의자료무단배포금지                                                                                                               24
+문의사항: hk.kim@jbnu.ac.kr  || diskhkme@gmail.com
+
+=== L05A | PDF p.25 | 印刷 p.25 ===
+ Class Member Access Modifier
+
+ 클래스멤버접근제한자
+
+
+
+
+
+                                                                                        Public,객체를통해서도접근가능
+
+
+
+
+
+                                                                                            Private,클래스내부에서만접근가능
+
+
+
+
+
+강의자료무단배포금지                                                                                                               25
+문의사항: hk.kim@jbnu.ac.kr  || diskhkme@gmail.com
+
+=== L05A | PDF p.26 | 印刷 p.26 ===
+ Class Member Access Modifier              중요!
+
+ 클래스멤버접근제한자의적용
+
+     private 멤버에접근하기위해서는public 멤버함수가필요
+
+   다public으로하면안되나요?
+
+    멤버에직접접근하는것이오류를초래할수있음
+
+     예를들어, 게임에서플레이어의체력이100이상한선인데, 실수로1000을할당해버린다면?
+
+
+
+
+
+강의자료무단배포금지                                                                                                               26
+문의사항: hk.kim@jbnu.ac.kr  || diskhkme@gmail.com
+
+=== L05A | PDF p.27 | 印刷 p.27 ===
+ Account Example
+
+ 계좌클래스예제
+
+
+
+
+
+강의자료무단배포금지                                                                                                               27
+문의사항: hk.kim@jbnu.ac.kr  || diskhkme@gmail.com
+
+=== L05A | PDF p.28 | 印刷 p.28 ===
+ Account Example
+
+ 계좌객체예제
+
+   Kim의계좌잔액(balance)에문제가있다면? 입금(deposit) 과정만살펴보면된다!
+
+     잔액에직접접근이불가능하고, public 입금멤버함수를통해서만접근이가능하기때문
+
+   테스트및디버깅이쉬워짐, 오류의가능성이줄어듬, 방어적프로그래밍
+
+
+
+
+
+강의자료무단배포금지                                                                                                               28
+문의사항: hk.kim@jbnu.ac.kr  || diskhkme@gmail.com
+
+=== L05A | PDF p.29 | 印刷 p.29 ===
+ Implementing Member Methods
+
+ 멤버함수의구현
+
+  기존일반함수의구현과유사
+
+  멤버변수에접근이가능하기때문에인자로전달할데이터가적어짐
+
+  클래스선언내에구현가능
+
+          Inline 구현
+
+  클래스선언외부에서도구현가능
+
+         ClassName::MethodName
+
+    명세(specification)와구현의분리
+
+     클래스의선언은.h 파일에작성
+
+      클래스의구현은.cpp 파일에작성
+
+
+
+강의자료무단배포금지                                                                                                               29
+문의사항: hk.kim@jbnu.ac.kr  || diskhkme@gmail.com
+
+=== L05A | PDF p.30 | 印刷 p.30 ===
+ Implementing Member Methods
+
+ 클래스선언내에멤버함수구현
+
+
+
+
+
+강의자료무단배포금지                                                                                                               30
+문의사항: hk.kim@jbnu.ac.kr  || diskhkme@gmail.com
+
+=== L05A | PDF p.31 | 印刷 p.31 ===
+ Implementing Member Methods
+
+ 클래스선언외부에구현
+
+
+
+
+
+                                  클래스내에서는멤버함수의선언만해두고,
+
+
+
+
+
+                                    외부에서따로본문을구현하는방식.
+
+                                            이때이함수가Account클래스에속한멤버함수하는것은
+
+                                                                           Account::을통해알려주어야함
+
+
+
+
+강의자료무단배포금지                                                                                                               31
+문의사항: hk.kim@jbnu.ac.kr  || diskhkme@gmail.com
+
+=== L05A | PDF p.32 | 印刷 p.32 ===
+ Implementing Member Methods        고급
+
+ 명세와구현의분리
+
+    헤더파일(Account.h)
+
+         Include guard를통해전처리기에서중복적인헤더파일의포함을방지
+
+
+                                                                                 Includeguard
+
+
+
+
+
+강의자료무단배포금지                                                                                                               32
+문의사항: hk.kim@jbnu.ac.kr  || diskhkme@gmail.com
+
+=== L05A | PDF p.33 | 印刷 p.33 ===
+ Implementing Member Methods        고급
+
+ 명세와구현의분리
+
+    헤더파일(Account.h)
+
+         Include guard를통해전처리기에서중복적인헤더파일의포함을방지
+
+
+
+                                                                        Includeguard
+
+
+
+
+
+강의자료무단배포금지                                                                                                               33
+문의사항: hk.kim@jbnu.ac.kr  || diskhkme@gmail.com
+
+=== L05A | PDF p.34 | 印刷 p.34 ===
+ Implementing Member Methods
+
+ 명세와구현의파일분리
+
+   일반적으로마주치는대부분의라이브러리는클래스명세(정의)와구현이별도의파일로분리
+   되어있음
+
+    구현파일(Account.cpp)
+
+
+
+
+
+강의자료무단배포금지                                                                                                               34
+문의사항: hk.kim@jbnu.ac.kr  || diskhkme@gmail.com
+
+=== L05A | PDF p.35 | 印刷 p.35 ===
+ Implementing Member Methods
+
+ 명세와구현의분리
+
+    메인파일(main.cpp)
+
+
+
+
+
+                                                  Account.h에Account클래스의                                                                                             Account.cpp에Account::SetBalance()함수의                          정의가있으므로사용가능                                           본문이있으므로링커가연결가능
+
+
+
+
+
+강의자료무단배포금지                                                                                                               35
+문의사항: hk.kim@jbnu.ac.kr  || diskhkme@gmail.com
+
+=== L05A | PDF p.36 | 印刷 p.36 ===
+ Struct vs Class
+
+ 구조체와클래스
+
+   C++에서는구조체와클래스모두사용가능
+
+   문법적으로는, 기본접근권한의차이외에는차이점이존재하지않음
+
+     클래스: 명시되어있지않으면private이기본값
+
+     구조체: 명시되어있지않으면public이기본값
+
+
+
+
+
+                  클래스                       구조체
+강의자료무단배포금지                                                                                                               36
+문의사항: hk.kim@jbnu.ac.kr  || diskhkme@gmail.com
+
+=== L05A | PDF p.37 | 印刷 p.37 ===
+ Struct vs Class
+
+ 구조체와클래스사용가이드라인
+
+   구조체
+
+         Public 접근이필요한데이터로사용
+
+    멤버함수를구조체안에설정하지않는것을권고
+
+
+   클래스
+
+          Private 멤버변수와멤버함수
+
+     멤버함수를통해서멤버변수에접근하도록get/set 구현
+
+
+
+
+
+강의자료무단배포금지                                                                                                               37
+문의사항: hk.kim@jbnu.ac.kr  || diskhkme@gmail.com
+
+=== L05A | PDF p.38 | 印刷 p.38 ===
+ (Summary) Class and Object
+
+ 클래스란? (사용자정의자료형, 객체의틀, 데이터+ 함수)
+
+ 객체란? (클래스를기반으로만들어진객체)
+
+ 클래스의선언과객체의생성
+
+ 접근제한자(private, public, protected)
+
+ 멤버변수와멤버함수(멤버함수는멤버변수에바로접근가능)
+
+ 명세와구현의분리(.h파일에명세, .cpp 파일에구현소스)
+
+ 구조체vs 클래스(동일한문법, 기본접근권한이다르다)
+
+
+
+
+강의자료무단배포금지                                                                                                               38
+문의사항: hk.kim@jbnu.ac.kr  || diskhkme@gmail.com
+
+=== L05A | PDF p.39 | 印刷 p.39 ===
+생성자와소멸자
+
+
+
+
+
+                                                                                                                         39
+
+=== L05A | PDF p.40 | 印刷 p.40 ===
+ (Summary) Constructor and Destructor
+
+ 생성자
+
+ 소멸자
+
+ 기본생성자
+
+
+
+
+
+강의자료무단배포금지                                                                                                               40
+문의사항: hk.kim@jbnu.ac.kr  || diskhkme@gmail.com
+
+=== L05A | PDF p.41 | 印刷 p.41 ===
+ Constructors                         중요!
+
+ 생성자
+
+   특수한멤버함수
+
+  객체가생성될때자동으로호출됨
+
+   초기화목적으로유용하게사용됨
+
+  클래스와동일한이름을갖는멤버함수
+
+   반환형은존재하지않음
+
+   오버로딩가능
+
+
+
+
+
+강의자료무단배포금지                                                                                                               41
+문의사항: hk.kim@jbnu.ac.kr  || diskhkme@gmail.com
+
+=== L05A | PDF p.42 | 印刷 p.42 ===
+ Constructors
+
+ 생성자
+
+
+
+
+
+                                          생성자들
+                                              반환형이없고,함수이름이
+                                         클래스이름과동일함
+
+
+
+
+
+강의자료무단배포금지                                                                                                               42
+문의사항: hk.kim@jbnu.ac.kr  || diskhkme@gmail.com
+
+=== L05A | PDF p.43 | 印刷 p.43 ===
+ Constructors
+
+ 생성자
+
+
+
+
+
+                                      생성자들
+                                           반환형이없고,함수이름이
+                                      클래스이름과동일함
+
+
+
+
+
+강의자료무단배포금지                                                                                                               43
+문의사항: hk.kim@jbnu.ac.kr  || diskhkme@gmail.com
+
+=== L05A | PDF p.44 | 印刷 p.44 ===
+ Destructor                          중요!
+
+ 소멸자
+
+   특수한멤버함수
+
+  객체가소멸할때자동으로호출됨
+
+   메모리및기타리소스(파일close 등)해제목적으로유용하게사용됨
+
+   클래스와동일한이름앞에“~”을갖는멤버함수
+
+   반환형및파라메터는존재하지않음
+
+   오버로딩불가능!
+
+
+
+
+
+강의자료무단배포금지                                                                                                               44
+문의사항: hk.kim@jbnu.ac.kr  || diskhkme@gmail.com
+
+=== L05A | PDF p.45 | 印刷 p.45 ===
+ Destructor
+
+ 소멸자
+
+
+
+
+
+강의자료무단배포금지                                                                                                               45
+문의사항: hk.kim@jbnu.ac.kr  || diskhkme@gmail.com
+
+=== L05A | PDF p.46 | 印刷 p.46 ===
+ Destructor
+
+ 소멸자
+
+  객체또는객체의포인터가소멸되는시점에자동으로호출
+
+
+
+
+
+강의자료무단배포금지                                                                                                               46
+문의사항: hk.kim@jbnu.ac.kr  || diskhkme@gmail.com
+
+=== L05A | PDF p.47 | 印刷 p.47 ===
+ Default Constructor
+
+ 기본생성자
+
+   인자가없는생성자
+
+   클래스의생성자를직접구현하지않으면, 컴파일러가기본적으로만들어줌!
+
+      초반부에, 생성자가없는상태에서도객체를만들수있었음
+
+     컴파일러가기본생성자를알아서만들어서사용했기때문
+
+  객체를인자없이생성하면호출됨
+
+
+             이렇게만코드를작성해도,
+
+
+
+
+
+             컴파일하면자동으로생성자가하나생김!
+
+                                    따라서위와같은명령문를생성자만들지않고도             (진짜로눈에보이게코드가생성되는것이아니라,
+                                    사용가능했음강의자료무단배포금지    내부적으로생성됨)                                                                                   47
+문의사항: hk.kim@jbnu.ac.kr  || diskhkme@gmail.com
+
+=== L05A | PDF p.48 | 印刷 p.48 ===
+ Declaring a Class
+
+ 인자가없는클래스생성자도구현해주는것이좋음
+
+  쓰레기값은항상방지하는것이안전
+
+
+
+
+
+강의자료무단배포금지                                                                                                               48
+문의사항: hk.kim@jbnu.ac.kr  || diskhkme@gmail.com
+
+=== L05A | PDF p.49 | 印刷 p.49 ===
+ Declaring a Class
+
+ 인자가있는생성자만구현한경우
+
+  기본생성자가자동생성되지않음
+
+
+                                                 인자가있는생성자“만”정의되어있으므로,
+                                           인자가없이객체를만들수없음
+                                                 기본생성자(인자가없는생성자)가자동
+                                            생성되지않기때문
+
+
+
+
+
+강의자료무단배포금지                                                                                                               49
+문의사항: hk.kim@jbnu.ac.kr  || diskhkme@gmail.com
+
+=== L05A | PDF p.50 | 印刷 p.50 ===
+ (Summary) Constructor and Destructor
+
+ 생성자
+
+  클래스이름과동일한이름을갖는특별한함수
+  객체가생성될때자동호출되며반환값없음. 오버로딩가능
+
+ 소멸자
+
+  클래스이름과동일한이름앞이~가붙은특별한함수
+  객체가소멸될때자동호출되며반환값없음. 오버로딩불가능
+
+ 기본생성자
+
+  명시하지않으면자동으로만들어주지만, 쓰레기값은없어야하므로구현필요
+  인자가있는생성자를만들면기본생성자는자동생성되지않는다
+
+
+
+강의자료무단배포금지                                                                                                               50
+문의사항: hk.kim@jbnu.ac.kr  || diskhkme@gmail.com
+
+=== L05A | PDF p.51 | 印刷 p.51 ===
+생성자오버로딩
+
+
+
+
+
+                                                                                                                         51
+
+=== L05A | PDF p.52 | 印刷 p.52 ===
+ (Summary) Constructor Overloading
+
+ 생성자오버로딩개요
+
+ 생성자초기화리스트
+
+ 생성자위임
+
+ 생성자기본매개변수
+
+
+
+
+
+강의자료무단배포금지                                                                                                               52
+문의사항: hk.kim@jbnu.ac.kr  || diskhkme@gmail.com
+
+=== L05A | PDF p.53 | 印刷 p.53 ===
+ Overloading Constructor
+
+ 생성자오버로딩
+
+   생성자는오버로딩가능(생성자도함수이므로)
+
+   각각의생성자는고유해야함(매개변수가달라야함)
+
+     함수오버로딩과동일
+
+
+
+
+
+강의자료무단배포금지                                                                                                               53
+문의사항: hk.kim@jbnu.ac.kr  || diskhkme@gmail.com
+
+=== L05A | PDF p.54 | 印刷 p.54 ===
+ Overloading Constructor
+
+ 생성자오버로딩
+
+
+
+
+
+강의자료무단배포금지                                                                                                               54
+문의사항: hk.kim@jbnu.ac.kr  || diskhkme@gmail.com
+
+=== L05A | PDF p.55 | 印刷 p.55 ===
+ Overloading Constructor
+
+ 오버로딩된생성자의활용
+
+
+
+
+
+강의자료무단배포금지                                                                                                               55
+문의사항: hk.kim@jbnu.ac.kr  || diskhkme@gmail.com
+
+=== L05A | PDF p.56 | 印刷 p.56 ===
+ Constructor Initialization List               중요!
+
+ 생성자초기화리스트
+
+    진짜(?) 초기화
+
+   이전의생성자는생성자본체(body) 내에서멤버변수에값을대입
+
+  생성자초기화리스트를사용할경우생성과동시에값이지정됨
+
+
+    이시점에서생각해보면,멤버변수에
+    쓰레기값이들어있는상태
+
+
+
+
+
+      기존방법                  생성자멤버초기화리스트(권장방법)
+강의자료무단배포금지                                                                                                               56
+문의사항: hk.kim@jbnu.ac.kr  || diskhkme@gmail.com
+
+=== L05A | PDF p.57 | 印刷 p.57 ===
+ Delegating Constructors
+
+ 생성자위임
+
+   다양한생성자의오버로딩에유사한코드가반복적으로사용
+
+   오류의가능성이높아짐
+
+  생성자위임을통해오류가능성과코드반복을줄일수있음
+
+     다른생성자를멤버초기화리스트위치에서호출
+
+     생성자멤버초기화리스트를사용해서만가능!
+
+
+
+
+
+강의자료무단배포금지                                                                                                               57
+문의사항: hk.kim@jbnu.ac.kr  || diskhkme@gmail.com
+
+=== L05A | PDF p.58 | 印刷 p.58 ===
+ Delegating Constructors
+
+ 생성자위임을사용하지않는기존코드
+
+
+
+
+
+강의자료무단배포금지                                                                                                               58
+문의사항: hk.kim@jbnu.ac.kr  || diskhkme@gmail.com
+
+=== L05A | PDF p.59 | 印刷 p.59 ===
+ Delegating Constructors
+
+ 생성자위임을사용한코드
+
+
+
+
+
+                                         호출
+
+
+
+
+
+                                         호출
+
+
+
+
+
+강의자료무단배포금지                                                                                                               59
+문의사항: hk.kim@jbnu.ac.kr  || diskhkme@gmail.com
+
+=== L05A | PDF p.60 | 印刷 p.60 ===
+ Default Constructor Parameters
+
+ 생성자기본매개변수
+
+   생성자또한함수이므로, 기본매개변수사용가능
+
+
+
+
+
+강의자료무단배포금지                                                                                                               60
+문의사항: hk.kim@jbnu.ac.kr  || diskhkme@gmail.com
+
+=== L05A | PDF p.61 | 印刷 p.61 ===
+ Default Constructor Parameters
+
+ 생성자기본매개변수
+
+   생성자또한함수이므로, 기본매개변수사용가능
+
+
+
+
+
+강의자료무단배포금지                                                                                                               61
+문의사항: hk.kim@jbnu.ac.kr  || diskhkme@gmail.com
+
+=== L05A | PDF p.62 | 印刷 p.62 ===
+ (Summary) Constructor Overloading
+
+ 생성자오버로딩개요
+
+  매개변수가다른고유한생성자들을오버로딩
+
+ 생성자초기화리스트
+
+  본체에서값을대입하는것이아닌생성과동시에값의지정
+
+ 생성자위임
+
+  다른생성자를초기화리스트자리에서호출
+  생성자초기화리스트를사용해서만가능
+
+ 생성자기본매개변수
+
+  함수처럼기본매개변수사용가능
+
+
+강의자료무단배포금지                                                                                                               62
+문의사항: hk.kim@jbnu.ac.kr  || diskhkme@gmail.com
+
+=== L05A | PDF p.63 | 印刷 p.63 ===
+ Construction Approaches           고급
+
+ 아래각각의경우의차이점은무엇이고, 언제어떤방법을사용해야할까?
+
+
+
+
+
+강의자료무단배포금지                                                                                                               63    https://stackoverflow.com/questions/51183155/initializer-list-vs-constructor-assignment-vs-variable-defining
+문의사항: hk.kim@jbnu.ac.kr  || diskhkme@gmail.com

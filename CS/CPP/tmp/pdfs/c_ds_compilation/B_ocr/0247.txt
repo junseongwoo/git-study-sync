@@ -1,0 +1,27 @@
+다시 한 번 48이 탐색되면 48이 담긴 요소와 그 앞에 있는 요소가 또 한 번 교환됩니다.
+젤A젤ㆍ毳|쬪目a젤
+그 결과 48이 담긴 요소는 또다시 한 간 앞으로 이동합니다.
+전진 이동법은 탐색된 항목-을 무조건 앞으로 옮기는 것에 비해, 전위법은 자주 탐색된 항목을 조금씌 앞
+옮깁니다. 그래서 자주 탐색되는 항목들이 데이터 앞쪽으로 모이게 되고 이로 인해 지주 탐색되
+는 항목들을 빠르게 찾을 수 있게 됩니다 많은 선택을 받는 항목을 데이터 앞쪽으로 보내므로 어떤
+면에서는 제법 민주적인 알고리즘이라 할 수 있습니다.
+다음의 SLL-Transpose( ) 함수는 링크드 리스트를 위한 전위법 순차 탐색을 구현하고 있습니다.
+전진 이동법 때와 마찬가지로 이 함수의 배열용 버전 구현은 여러분에게 숙제로 남기겠습니다.
+NOde• SLL TransgMe(Node** Head, int Target)
+N馝한 Current
+No血* PPrevious = NULL; // 이전 노드의 이전 노드
+- NULL; // 이전 노드
+NOde• Previous
+NOde• uatch
+= NULL;
+while ( Current != NULL )
+if ( Current-»ata == Target )
+Match = Current;
+if ( Previous != NULL )
+if ( PPrevious != NULL )
+PPrevious->NextNode
+else
+(*Head) = Current;
+Previous->NextNode =
+240 Part 02 • 알고리즘
+Current;

@@ -1,0 +1,33 @@
+十.
+t0P
+tenp
+[그림 7-13] 동적 스택에서의 삽입 연산 실선은 삽입한 점선은 삽입후의 모습이다
+연결된 스택에서 공백상태는 연결 리스트와 마찬가지로 top 포인터가 NULL인 경우이다. 그
+리고 포화상태는 동적 메모리 할당만 된다면 노드를 생성할 수 있기 때문에 없는 거나 마찬가지
+이다.
+프로그램 7.9 연결된 스택 프로그램
+#include <stdio.h>
+#include <malloc.h>
+typedef int element;
+typedef struct StackN0de {
+element data;
+struct StackNode *link;
+} StackNode;
+typedef struct {
+StackNode *top;
+} LinkedStackType;
+// 초기화 함수
+void init(LinkedStackType *5)
+s—>top = NULL;
+// 공백 상태 검술 함수
+int is_empty(LinkedStackType *9
+return (s->top == NULL);
+// 포화 상태 검출 함수
+int is fult(LinkedStackType *9
+return 0;
+// 삽입 함수
+VOid push(LinkedStackType *S, element item)
+StackNode *ternp = (StackN0de *)malloc(sizeof(StackN0de));
+temp->data
+item;
+CHAPTER07 연결 리스틔| 241

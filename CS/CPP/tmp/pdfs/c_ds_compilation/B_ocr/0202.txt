@@ -1,0 +1,40 @@
+실행 결과
+Set1
+Set1
+29
+free( Set );
+國장/DisjoingSet/Test—Disj0intSet. (
+Set3 == Set4 : 1
+01
+02
+03
+04
+07
+08
+09
+10
+12
+14
+16
+20
+#include <stdi이h>
+*include "DisjointSet h"
+int main( void )
+int a=l, b=2, (=3, d=4,
+= DS MakeSet(G);
+DisjointSet* Set1
+DisjointSet* Set2 = DS MakeSet(O);
+DisjointSet* Set3 = DS MakeSet(&C);
+DisjointSet* Set4 = DS MakeSet(ui);
+= Set2 • \n•, DS FindSet( Set1 )
+pnntf("SetI
+= DS FindSet( Set2 ) );
+DS-UnionSet( SetI, Set3 );
+printfCSet1 == Set3 : 년 \n", DS_FindSet( Set1 ) -= DS FindSet( Set3 ) );
+DS-UnionSet( Set3, Set4 );
+printf("Set3 == Set4 : 년 \n", DS_FindSet( Set3 ) == DS FindSet( Set4 ) ),•
+return 0;
+= Set2 : 0
+= Set3 : 1
+194
+Part 01 • 자료구조

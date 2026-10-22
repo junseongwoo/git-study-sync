@@ -1,0 +1,27 @@
+을 'Node의 크기 x (Capacity+1)'의 그기로 자유 저장소에 할당합니다. 앞에서도 설명했지만 배
+열이 실제 데이터가 담길 공간보다 1만큼 더 큰 이유는 순환 큐가 공백 상대인지 포화 상태인지 구
+분하는 '더미 노드가 필요하기 때문입니다.
+void CQ_CreateQueue( CircularQueue** Queue, int Capacity)
+// 큐를 자유 저장소에 생성
+(*Queue )->Nodes
+(*Queue )
+( Circu1arQueue*)maIIoc(sizeof( Circu1arQueue ));
+// 입력된 CapacitY+I만큼의 노드를 자유 저장소에 생성
+(Node*)malloc(sizeof(Node )* ( CapacitY+1) );
+(*Queue )-Xapacity = Capacity;
+(*Queue )->Front = 0;
+(*Queue )->Rear = 0,
+다음 코드는 순환 큐를 메모리에서 제거하는 CQ-DestroyQueue( ) 함수입니다. 우리가 앞서 살
+펴본 리스트와 스택을 메모리에서 제거하는 코드처럼 배열을 먼저 자유 저장소에서 제거하고 순환
+큐 구조체를 제거합니다.
+void CQ_DestroyQueue( CircularQueue* Queue )
+free(Queue->Nodes);
+free(Queue );
+노드 삽입 연산
+순환 큐에서 삽입Enqueue 연산 구현은 후단의 위치를 가리기는 Rear를 다루는 것이 핵심입니다. 다
+음 CQ Enqueue() 함수에 if else 블록이 보이지요? 이 if 블록에서 Rear의 값이 '*Queue
+-> Capacity + 1'과 같은 값이라면 후단이 배열 끝에 도달했다는 의미이므로 Rear와 Pos1tion
+을 0으로 지정합니다. 그렇지 않은 경우(후단이 배열 끝에 도달하지 않은 경우) else 블록으로 넘어
+가서 현재 Rear의 위치를 position에 저장하고 Rear의 값을 1 중가시킵니다.
+Chapter 03 • 큐
+123

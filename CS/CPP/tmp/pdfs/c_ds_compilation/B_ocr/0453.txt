@@ -1,0 +1,67 @@
+06
+07
+08
+10
+12
+13
+Vertex* A = CreateVertex(
+14
+16
+17
+18
+20
+22
+23
+AddVertex( graph, A );
+24
+AddVertex( graph, B ):
+25
+AddVertex( graph, ( ):
+26
+AddVertex( graph, 0 );
+27
+AddVertex( graph, E ):
+28
+AddVertex( graph, F );
+29
+AddVertex( graph, 6 ):
+30
+AddVertex( graph. H );
+AddVertex( graph, 1 );
+33
+34
+35
+36
+37
+馹
+39
+40
+42
+43
+44
+45
+// 그래프 생성
+Graph* graph
+Graph* PrirÆST
+= CreateGraph();
+= CreateGraph();
+Graph* KruskalMST = CreateGraph();
+// 정점 생성
+Vertex• = CreateVertex( •B' );
+Vertex* ( = CreateVertex( 'C' ):
+Vertex* D = CreateVertex(
+Vertex* E = CreateVertex(
+Vertex* F = CreateVertex( •「•
+Vertex* 6 = CreateVertex(
+Vertex* H = CreateVertex(
+Vertex* I = CreateVertex(
+// 그래프에 정점을 추가
+// 정정과 정점을 간선으로 잇기
+AddEdge( A. CreateEdge(A, 티 247) );
+AddEdge( 8, CreateEdge(B. A, 35
+AddEdge( 하 CreateEdge(B, (, 126 ) )
+AddEdge( 하 CreateEdge(B, 타 1駟 ) )
+AddEdge( (, CreateEdge(C, 0. 117 ) )
+AddEdge( (, CreateEdge(C, 타 162 ) )
+AddEdge( (, CreateE$e(C. 6, 220 ) )
+451

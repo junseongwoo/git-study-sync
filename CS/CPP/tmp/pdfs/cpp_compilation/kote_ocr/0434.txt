@@ -1,0 +1,32 @@
+std: :ostringstream os;
+if (number 〉 0 && number 〈= 10)
+os 〈〈 number;
+else
+switch (number)
+case 1 •.
+OS 〈〈 "Ace";
+break;
+case 11:
+os 〈〈 "Jack";
+break;
+case 12:
+05 〈〈 "Queen"
+break;
+case 13:
+OS 〈〈 "King";
+break;
+default:
+return "lnvalid card";
+switch (suit)
+case HEART:
+os 〈〈 "hearts";
+break;
+case SPADE:
+os 〈〈 "spades"
+break;
+case CLUB.•
+OS 〈〈 "clubs";
+break;
+case DIAMOND:
+OS 〈〈 "diamonds";
+break;

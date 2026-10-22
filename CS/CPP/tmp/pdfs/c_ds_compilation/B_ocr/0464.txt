@@ -1,0 +1,26 @@
+더 큰 파일을 이용하는 것이 좋습니다 소스 코드를 컴파일하고 본문 kjv.txt와 패턴 FaithfuI을 매
+개 변수로 입력하여 실행해봅시다.
+실행 결과
+>BruteForce kjv txt Faithfu1
+line:17178, (01um:9 : Prv27:6 Faihful are the wounds 0f a friend, but the kisses Of
+an enemy are deceitful.
+line:2%48 (01um:9 : 1Th5:24 FaihfuI is he that calleth YW, vhO also •i11 固 it
+line:31031, (olum:97 : Reⅵ9:11 And 1 saw heaven opened and a white horse,
+and he that sat upon him was called FaihfuI and True, in nghteousress he c%th
+judge and make war.
+10.3 카프-라빈 알고리즘
+리처드 카프RichardMKarp와 마이클 라빈Michae10• Rabtn은 튜링상을 수상한 천재들입니다. 이들이 이토
+록 천재적인 영감으로 가득-한 문자열 탐색 알고리즘을 만든 것은 놀랄 일도 아니지요. 이 알고리즘
+의 핵심은 해성에 있다고 해도 과언이 아닌데요. 이어서 이 알고리즘에서 해시를 어떻게 이용呑는지
+자세히 알아보겠습니다.
+103.1 카프-라빈 알고리즘의 동작 방식
+카프-라빈Ka爭-刷in 알고리즘은 문자열 탐색을 위해 해시 함수를 이용합니다 패턴 내의 문자들을
+일일이 비교하는 대신 패턴의 해시값과 본문 내에 있는 하위 문자열의 해시값만 비교하는 방식으로
+말이지요. 해시 함수는 다음과 같이 정의하겠습니다. S는 문자열이며 S[n]은 문자열 내의 n번째 문
+자, m은 문자열의 길이입니다
+H,=S[i]x2m- +S[i+11xr-2+•••+S[i+m-21x21+S[i+m—11x20
+해시값을 비교해서 탐색을 수행한다는 아이디어가 멋지기는 한데, 이 식을 자세히 보니 고지식한 탐
+색보다 나은 점이 별로 없는 것 같습니다. 문자열의 각 요소에 일일이 접근해서 수를 곱한 다음 덧샘
+까지 하는 '비용을 더 지불하고 있으니까요. 오히려 고지식한 탐색 쪽의 연산이 더 적습니다 이렇
+게 많은 연산을 거쳐 해시값을 비교하는 것보다 문자를 직접 비교하는 쪽이 차라리 더 저렴하지 않
+Chapter 10 • 문자열 탐책 463

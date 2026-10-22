@@ -1,0 +1,32 @@
+이렇지 구현한 SLL-AppendNode( ) 함수는 다음과 같이 A卜&합니다.
+- List = WLL;
+- Ne«Node = WLL;
+는•~ = SLL-CreateNode( 117 );
+&List, NewNode );
+= 119
+&List, NewNode );
+// 자유 저장소에 생성
+// 생성한 노드를 List에 추가
+// 자유 저장소에 또 다른 노드 생성
+// 생성한 노드를 List에 추가
+I 여기서장깐
+•••가 0斟고 '••'2Pt요?
+SLL-AppendNode( ) 함수의 원형이 다음과 V•--I고 가정해봅시다. 매개 변수가 Node**가 아닌 Node•로
+선언되었다고 일입니다
+void NOde* Head, NOde* NewNode );
+그리고 이 함수를 다음과 같이 호출하는 코드를 작성했다고 합시다.
+List = MJLL;
+Node* = WLL;
+= SLL-CreateNo&( 117 );
+List, NewNode ),•
+이 코드에서 ust는 비어 있습니다 117을 담고 있는 NewNode가 LlSt에 추가되면 바로 헤드 노드가 될 참
+이었天요 SLL-AppendNode( ) 함수를 호출하면 NewNode가 LlSt에 추가될까요? 답은 •아니오•입니다.
+Ljst는 여전히 아무 노드도 갖고 있지 않은 NULL로 님아 있습니다. 왜 그런지 생21해봅시다.
+먼저 니효와 NewNode를 선언할 때 다음과 같이 자동 메모리에 두 포인터 변수가 생성됩니다 그리고 이 두
+포인터는 아무 메모리도 가리키지 않는 상태로 초기화되어 있습니다.
+자동 메모리
+자유 저장소
+30
+그다음 NewNode = SLL-CreateNode( 117 ); 문장이 실행되면 자유 저장소에 117을 가진 노드가 생성
+되고 NewNode가 그 주소를 가리킵니다.
+Part 01 • 자료구조

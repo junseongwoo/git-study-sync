@@ -1,0 +1,32 @@
+프로그램 13.8 AVL트리 구현 #1
+#include<stdio.h>
+#include<stdlib.h>
+// AVL 트리 노드 정의
+typedef struct AVLNode
+int key;
+struct AVLNode *left;
+Struct AVLNcxie *right;
+} AVLNode;
+rotate-right() 함수 구현
+AVL 트리를 구현하려면 2가지의 기본 회전 함수가 필요하다. 왼쪽으로 회전시카는 함수 ro-
+tate-left()와 오른쪽으로 회전시카는 함수 rotate-right()을 작성한다. 이중에서 rotate-
+right() 함수를 살펴보자. rotate-right() 함수는 주어진 트리를 다음과 같이 오른쪽으로 회
+전시기는 함수이다.
+2
+parent
+1
+child
+0
+모든 것은 포인터로 되어 있으므로 포인터만 이동시기면 된다.
+프로그램 13.9 AⅥ트리 구현 #2
+// 오른쪽으로 회전시키는 함수
+AVLNode *rotate_right(AVLNode *parent)
+AVLN0de* child = parent->left;
+parent->left = child->right;
+child—>right = parent;
+0
+child
+0
+parent
+0
+CHAPTER13 탐색 517

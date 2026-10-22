@@ -1,0 +1,40 @@
+34
+35
+return Key TableSize;
+u&tSinpIeHashTabIe/Test—Simp1eHashTab1e. (
+01
+02
+03
+05
+07
+08
+09
+10
+12
+13
+14
+18
+20
+•include "SimpIeHashTabIe.h"
+int main( VOid )
+HashTable* HT = SHT CreateHashTable( 193 );
+32114);
+SHT_Set( HT, 418,
+SHT_Set( HT, 9,
+514);
+SHT_Set( HT, 27,
+8917);
+SHT_Set( HT, 1031, 286):
+printf("Key:*d, VaIue:%d\n•, 418, SHT Get( HT, 418 ) ):
+printfCKey:u, VaIue:*d\n", 9, SHT Get( HT, 9 ) );
+printf("Key:*d, VaIue:%d\n• 27, SHT Get( HT, 27 ) );
+printf(•Key:u, VaIue:%d\n", 1031, SHT_Get( HT, 1031 ) );
+SHT_DestroyHashTable( HT );
+return 0;
+돈 실행 결과
+Key:418, Va1ue:32114
+Key:9, Value:514
+Key:27, VaIue:8917
+Key:1031. VaIue:286
+342
+Part 02 • 알고리중

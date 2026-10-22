@@ -1,0 +1,55 @@
+103
+if ( Current == Head )
+104
+break.
+105
+106
+107
+return Count,
+108
+110
+void PrintNode(Node•
+111
+if ( _Node-PrevNode == NULL )
+113
+printf("Prev: NULL");
+114
+115
+else
+116
+printf("Prev: 년”, Node-PrevNode->Data);
+117
+118
+printf("Current: 년”, Node->Data);
+119
+120
+if ( Node->NextNode == NULL )
+printf("Next: NULL\n");
+122
+else
+123
+printf("Next: %d\nø, _Node->NextNode->Data);
+124
+서 장/CircuIarDoubIyLinkedList/Test—Circu1arDoub1YLinkedList.c
+Node• List
+01
+02
+03
+04
+08
+09
+13
+64
+$include "CircularDoublyLinkedList.h"
+void )
+int main(
+int
+1
+C01Jnt
+int
+= NULL;
+NO血* NewNode = NULL;
+NOde* Current = NULL;
+// 노드 5개 추가
+for ( i = 0; i<5; i++ )
+Part 01 • 자료구조

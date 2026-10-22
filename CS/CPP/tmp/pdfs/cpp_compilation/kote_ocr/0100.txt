@@ -1,0 +1,34 @@
+autO nl , static cast<int>(cl);
+autO n2 = static cast<int>(c2);
+data(nll(n기 = -1;
+data(n기[n11 =
+8. 앞서 만든 함수를 이용하여 그래프를 구성하는 ) 함수를 작성합니다.
+int main()
+graph g(6);
+g.addEdge(city: :LONDON, city: :MOSCOW, 2500);
+g.addEdge(city: :LONDON, city: :SEOUL, 9000);
+g.addEdge(city: :LONDON, city: :DUBAI, 5500);
+g.addEdge(city: :SEOUL, city: :MOSCOW, 6600);
+g.addEdge(city: :SEOUL, city: :SEATTLE, 8000);
+g.addEdge(city: :SEOUL, city: :DUBAI, 7000);
+g.addEdge(city: :SEOUL, city: :SYDNEY, 8000);
+g.addEdge(city: :SEATTLE, city: :MOSCOW, 8400);
+g.addEdge(city: :SEATTLE, city: :SYDNEY, 12000);
+g.addEdge(city: :DUBAI, city: :SYDNEY, 1200);
+g.addEdge(city::SEATTLE, city::LONDON, 8000);
+g.removeEdge(city: :SEATTLE, city: :LONDON);
+return 0;
+9. 이 프로그램을 실행하면 다음과 같은 출력을 확인할 수 있습니다.
+에지 추가: 런던-모스크바=2500
+에지 추가: 런던-서울=9000
+에지 추가: 런던-두바이=5500
+에지 추가: 서울-모스크바=6600
+에지 추가: 서울-시애틀=8000
+에지 추가: 서울-두바이=7000
+에지 추가: 서울-시드니=8000
+에지 추가: 시0H똹모스크바=8400
+에지 추가: 시애틀-시드니=12000
+에지 추가: 두바이-시드니=1200
+에지 추가: 시애틀-런던=8000
+에지 삭제: 시애틀-런던
+111

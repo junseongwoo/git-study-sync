@@ -1,0 +1,31 @@
+8.5 반복적 순회
+앞에서는 순회를 순환 호출을 이용하여 구현하있다. 물론 이것이 표준적인 방법이고 쉽게 이해
+될 수 있는 방법이지만 우리는 반혁-을 이용해서도 트리 순회를 할 수 있다. 물론. 이 경우에는 스
+대이 필요하다. 스택에 자식 노드들을 저장하고 꺼내면서 순회를 할 수 있는 것이다. 순환 호출
+도 사실은 시스템 스택을 사용하고 있는 것이기 때문에 별도의 스택을 시용하면 순환 호출을 홍
+내 낼 수 있는 것이다. 실제로 이 방법은 인공지능에서 지능적인 탐색을 할 때 시용된다. 예를 들
+어서 중위 순회를 별도의 스택을 이용하여 구현해보자.
+프로그램 8.4 반복적인 중위 순회
+#include <stdio.h>
+#include <stdlib.h>
+#include <rnemory.h>
+typedef struct TreeN0de {
+int data;
+struct *left, *right;
+} TreeNode;
+#define SIZE 100
+int top = -1;
+TreeNode *stackCSIZE] ;
+void push(TreeN0de *P)
+if (top 〈 SIZE - 1)
+stack[++top] =
+TreeNode *POP()
+TreeNode *P = NULL;
+if (top 〉= 0)
+p = stack[top--];
+return p;
+VOid inorder iter(TreeNode *root)
+while (1) {
+for (•, root; root = root—>left)
+root = pop();
+트리 277

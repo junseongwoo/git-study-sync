@@ -1,0 +1,150 @@
+{
+  "document": "문장별 근거·인쇄 점검 감사표",
+  "scope": {
+    "pdf_pages": [
+      81,
+      159
+    ],
+    "page_count": 79
+  },
+  "method": "각 페이지가 포함된 4면 연락판 20개를 view_image로 직접 확인. 코드가 있는 PDF150·158면은 개별 이미지로 추가 확인.",
+  "boards": [
+    {
+      "file": "render/audit/contact_081_084.jpg",
+      "status": "확인 완료",
+      "issues": []
+    },
+    {
+      "file": "render/audit/contact_085_088.jpg",
+      "status": "확인 완료",
+      "issues": []
+    },
+    {
+      "file": "render/audit/contact_089_092.jpg",
+      "status": "확인 완료",
+      "issues": []
+    },
+    {
+      "file": "render/audit/contact_093_096.jpg",
+      "status": "확인 완료",
+      "issues": []
+    },
+    {
+      "file": "render/audit/contact_097_100.jpg",
+      "status": "확인 완료",
+      "issues": []
+    },
+    {
+      "file": "render/audit/contact_101_104.jpg",
+      "status": "확인 완료",
+      "issues": []
+    },
+    {
+      "file": "render/audit/contact_105_108.jpg",
+      "status": "확인 완료",
+      "issues": []
+    },
+    {
+      "file": "render/audit/contact_109_112.jpg",
+      "status": "확인 완료",
+      "issues": []
+    },
+    {
+      "file": "render/audit/contact_113_116.jpg",
+      "status": "확인 완료",
+      "issues": []
+    },
+    {
+      "file": "render/audit/contact_117_120.jpg",
+      "status": "확인 완료",
+      "issues": []
+    },
+    {
+      "file": "render/audit/contact_121_124.jpg",
+      "status": "확인 완료",
+      "issues": []
+    },
+    {
+      "file": "render/audit/contact_125_128.jpg",
+      "status": "확인 완료",
+      "issues": []
+    },
+    {
+      "file": "render/audit/contact_129_132.jpg",
+      "status": "확인 완료",
+      "issues": []
+    },
+    {
+      "file": "render/audit/contact_133_136.jpg",
+      "status": "확인 완료",
+      "issues": []
+    },
+    {
+      "file": "render/audit/contact_137_140.jpg",
+      "status": "확인 완료",
+      "issues": []
+    },
+    {
+      "file": "render/audit/contact_141_144.jpg",
+      "status": "확인 완료",
+      "issues": []
+    },
+    {
+      "file": "render/audit/contact_145_148.jpg",
+      "status": "확인 완료",
+      "issues": []
+    },
+    {
+      "file": "render/audit/contact_149_152.jpg",
+      "status": "확인 완료",
+      "issues": []
+    },
+    {
+      "file": "render/audit/contact_153_156.jpg",
+      "status": "확인 완료",
+      "issues": []
+    },
+    {
+      "file": "render/audit/contact_157_159.jpg",
+      "status": "확인 완료",
+      "issues": []
+    }
+  ],
+  "individual_images": [
+    "render/audit/150.png",
+    "render/audit/158.png"
+  ],
+  "checks": {
+    "page_boundary_clipping": {
+      "count": 0,
+      "result": "텍스트·표·코드가 페이지 경계 밖으로 잘린 곳 없음"
+    },
+    "table_overflow": {
+      "count": 0,
+      "result": "표 너비 및 셀 내용이 인쇄 영역 안에 있음"
+    },
+    "missing_glyph_square": {
+      "count": 0,
+      "result": "확인한 이미지에서 폰트 깨짐·대체 네모 표시 없음"
+    },
+    "orphan_heading": {
+      "count": 0,
+      "result": "각 단원 제목 아래 감사표가 이어지고 페이지 맨 아래에 제목만 남은 곳 없음"
+    },
+    "split_row_or_code": {
+      "count": 0,
+      "result": "감사표 행과 코드 기록의 중간 분리 없음"
+    },
+    "code_record_visibility": {
+      "count": 0,
+      "result": "코드 기록의 괄호·세미콜론·문자열·들여쓰기 및 줄바꿈이 셀 안에 표시됨"
+    }
+  },
+  "notes": [
+    "감사표는 여러 페이지에 이어지며 각 페이지에 표 머리글이 반복된다. 한 행의 본문·근거·출처가 페이지 사이에서 나뉘는 현상은 발견하지 못했다.",
+    "표 셀 안의 긴 출처·영문 식별자는 자동 줄바꿈되어 있다.",
+    "시각 검사는 화면에 보이는 인쇄 품질 확인이며, 새로운 원문 근거 검증을 뜻하지 않는다."
+  ],
+  "issues": [],
+  "status": "pass"
+}

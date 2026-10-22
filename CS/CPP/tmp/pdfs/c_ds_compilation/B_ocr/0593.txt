@@ -1,0 +1,48 @@
+14.5.5 허프만 코팅 예제 프로그램
+이 예제 프로그램은 우리가 지금까지 많이 A용했던 Prrority Queue.h. PriorityQueue.c를 비롯
+해 허프만 알고리즘을 구현하는 Huffman.h와 Huffman.c, 그리고 허프만 알고리즘을 테스트하
+는 Test Huffman.c 이렇게 5개의 파일로 구성됩니다.
+PriorityQueue.h와 PriorityQueue.c는 앞에서 작성해둔 코-드를 복사해서 사용하면 됩니다. 그
+러므로 이번에 새로 작성할 코드는 Huffman.h. Huffman.c, Test Huffman.c 3개인 셈입니다.
+14장/Huffman/Huffman.h
+01
+02
+04
+05
+06
+07
+08
+09
+11
+12
+14
+18
+20
+22
+23
+24
+25
+26
+27
+28
+$ifndef HUFFMAN_H
+$define HUFFMAN H
+#include <stdio.h〉
+#include <stdlib.h>
+#include "PriorityQueue.h"
+#define MAX_,대AR 256
+MAX BIT 8
+typedef unsigned int UINT;
+typedef unsigned char U대AR,
+typedef struct TagSymb011nfo
+U대AR SymboI;
+int Frequency;
+} SymboIInfo;
+typedef struct TagHuffmanNode
+SymboIInfo
+Data;
+struct TagHuffmanNode* Left;
+struct TagHuffmanN0de* Right,
+} HuffmanNode,
+typedef struct TagBitBuffer
+Chapter 14 • 탐욕 알고리즘 595

@@ -1,0 +1,32 @@
+LPT 알고리즘의 구현
+이기서는 기계의 종료 시간이 중요하다. 종료 시간이 최소인 기계가 항상 선대되기 때문이다. 따
+라서 기계의 종료 시간을 최소 히프에 넣고 최소 히프에서 기계를 꺼내서 그 기계에 작업을 할당
+하면 된다. 작업을 할당한 후에는 기계의 종료 시간을 작업 시간만큼 중가시킨 후에 다시 최소
+히프에 넣는다. 다음은 이 알고리즘을 구현한 코드이다.
+프로그램 9.5 LPT 프로그램
+#include <stdio.h>
+#define MAX_ELEMENT 2%
+typedef struct {
+int id;
+int avail;
+} element;
+typedef struct {
+element heap[MAX_ELEMENT] ;
+int heap_size;
+} HeapType;
+// 생성 함수
+HeapType* create()
+return 대eapType*)matIoc(sizeof대eapType)) ;
+// 초기화 함수
+void init대eapType* h)
+h->heap-size = 0;
+// 현재 요소의 개수가 heap-size인 히프 h에 item을 삽입한다.
+// 삽입 함수
+void insert_min_heap대eapType* h, element item)
+= ++(h->heap-size) ;
+1
+// 트리를 거슬러 올라가면서 부모 노드와 비교하는 과정
+while ((1 != 1) && (item.avail 〈 h->heap[i / 기.avait)) {
+h->heapCiJ = h->heap[i / 기;
+h->heap[il = item; // 새로운 노드를 삽입
+CHAPTER09 우선순위큐 345

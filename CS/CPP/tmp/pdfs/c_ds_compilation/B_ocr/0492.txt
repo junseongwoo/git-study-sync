@@ -1,0 +1,54 @@
+return B,
+97
+10 장 /BoyreMoore/Test—BoyreMoore. (
+01
+02
+03
+04
+05
+06
+07
+08
+09
+10
+12
+13
+14
+17
+18
+20
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+•include 〈stdi이h〉
+•include <string.h>
+#include "BoyerMoore h"
+«iefine MAX BUFFER 512
+int main(int argc, char** argv)
+char* FilePath;
+FILE* fp;
+char Text[MAX BUFFER];
+char* Pattern;
+int PatternSize = 0;
+int Line
+if ( argc 〈3)
+printf("Usage: 쥐lePath〉 <Pattern>\n", argv[이 ):
+return 1;
+FilePath = argv[ll;
+Pattern = argv[기;
+PatternSize = strlen( Pattern );
+if ( (fp = fopen( FilePath, 누•))
+== NULL )
+printf("Cannot 0畔n file:sxn•, FilePath);
+return 1;
+Chapter 10 • 문자열 함책
+491

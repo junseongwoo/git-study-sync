@@ -1,0 +1,26 @@
+마지막 매개 변수로 넘기는 포인터가 가리길 함수는 다음과 같은 원형을 가져야 합니다.
+int (void *) & eleml. (void *) & elem2 ):
+비교 함수는 eleml이 elem2보다 그면 0보다 큰 수를, 같으면 0을, 작으면 0보다 작은 수를 반환
+합니다. 정수를 정렬하는 함수의 구현 예는 다음과 같습니다. 만약 정수 대신 문자열이나 구조체를
+정렬해야 한다면 해당 자료형에 맞추니 eleml과 elem2를 叩고하는 코드를 작성해야 합니 다.
+int &parePoint( (0舫t void * eleml, (0丕t void * elem2 )
+int* eleml = (int*) eleml,
+int* eIem2 = (int*) eIem2
+if ( •eleml 〉 쏘1em2)
+return 1;
+el교 if ( 뙤eml 〈 뙤em2)
+return -1,
+else
+return 0;
+| 여기서장깐
+함수 포인터
+qsort( ) 함수의 마지막 매개 변수가 잘 이해되지 않는 분도 많으실 것 같습니다. 변수와 상수처럼 함수도 메
+모리에 존재힙니다. 따라서 함수에 대한 포인터를 갖고 있으면 해당 포인터가 가리기는 메모리에 위치한 함수
+를 실행할 수 있습니다.
+대부분의 경우 어떤 함수가 와부에 있는 함수를 호출하려면 다음 코드처럼 호출되는 함수가 미리 구현되어 있
+어야 변-다
+228
+VOid FunctionA( )
+int a = FunctionB();
+Fl.nctionA(); // 내부에서 FunctionB 호출
+Part 02 • 알고리즘

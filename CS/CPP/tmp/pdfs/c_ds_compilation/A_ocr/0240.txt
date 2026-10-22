@@ -1,0 +1,46 @@
+// 큐 초기화 함수
+void init(LinkedQueueType •q)
+q->front = q->t-ear = 0;
+// 공백 상태 검출 함수
+int is—empty(LinkedQucueType *0
+return (q->front == NULL) ;
+// 포화 상태 검출 함수
+int is_futt(LinkedQueueType *q)
+return 0;
+// 삽입 함수
+void enqueue(LinkedQueueType *q, element data)
+QueueN0de *temp = (QueueN0de *)malIoc(sizeof(QueueN0de)) ,•
+temp->data = data;
+temp->link = NULL;
+if (is-empty(q)) {
+q->front = temp;
+q—>rear = temp;
+else {
+// 데이터 저장
+// 링크 필드를 NULL
+// 큐가 공백이면
+// 큐가 공백이 아니면
+// 순서가 중요
+q->rear->link = temp;
+q—>rear = temp;
+// 삭제 함수
+element dequeue(LinkedQueueType *q)
+QueueNode *temp =q-> front;
+element data;
+if (is-empty(q)) { // 공백상태
+fprintf(stderr, "스택이 비어있음\n");
+exit(l);
+else {
+data = temp->data;
+q->front = q->front—>link;
+if (q->front == NULL)
+// 데이터를 꺼낸다.
+// front를 다음노드를 가리키도록 한다.
+// 공백 상대
+q->rear = NULL;
+free(temp) ;
+return data;
+// 동적메모리 해제
+// 데이터 반환
+248
+C언어로 쉽게 물어쓴 자료구조

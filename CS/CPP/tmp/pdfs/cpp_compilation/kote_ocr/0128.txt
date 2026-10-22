@@ -1,0 +1,42 @@
+9. ) 함수를 정의하고. 해시 싸일 코드를 추가합니다.
+int main()
+hash map map(7);
+print();
+map.
+std: :cout 〈〈 std: :endl;
+map.insert(l@);
+map.insert(20);
+map.insert(30);
+std: :cout 〈〈 std: :endl;
+maP.insert(1@4);
+map.insert(2);
+map.insert(70);
+map.insert(9);
+map. insert(90);
+map.insert(2);
+map.insert(7);
+std: :cout 〈〈 std: :endl;
+print();
+map.
+std: :cout 〈〈 std: :endl;
+map.insert(14);
+// 순환 발생!
+10. 지금까지 작성한 프로그램을 실행하면 다음과 같은 출력을 확인할 수 있습니다.
+lndex: 0
+Data1: -1
+Data2: -1
+1
+2
+3
+4
+5
+6
+1번 테이블에 10 삽입
+1번 테이블에 20 삽입
+1번 테이블에 30 삽입
+1번 테이블에 104 삽입: 기존의 20 이동 -〉 2번 테이블에 20 삽입
+1번 테이블에 2 삽입: 기존의 30 이동 -〉 2번 테이블에 30 삽입
+1번 테이블에 70 삽입
+1번 테이블에 9 삽입: 기존의 2 이동 -〉 2번 테이블에 2 삽입
+1번 테이블에 90 삽입: 기존의 104 이동 -〉 2번 테이블에 104 삽입: 기존의 2 이동 -〉 1번 테이블에
+139

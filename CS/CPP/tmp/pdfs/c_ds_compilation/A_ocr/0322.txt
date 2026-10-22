@@ -1,0 +1,22 @@
+9.4 히프의 구현
+히프의 정의
+히프를 구현하여 보자. 히프는 다원 배열로 표현될 수 있기 때문에 아래와 같이 히프의 각 요
+소들~을 구조체 el에팥nt로 정의하고. element의 1자원 배열을 민들어 히프를 구현한다. 여기서
+heap-size는 현재 히프 인에 저장된 요소의 개수이다.
+#define MAX_ELEHENT 200
+typedef struct {
+int key;
+} element;
+typedef struct {
+element heap[MAX_ELEHENT] •,
+int heap_size;
+} HeapType;
+위의 정의를 이용하여 히프 heap를 생성하고 싶으면 다음과 같이 하면 된다.
+HeapType heap;
+또는 다음과 같이 동적으로 생성할 수도 있다.
+HeapType *heap = create(); // 메모리 동적 할당을 이용한다.
+삽입 연산
+히프에 새로운 요소를 삼입하는 삽입 연산에 대하여 살펴보자. 히프에 있어서 삽입 연산은 [그림
+느9]처럼 회시에서 신입 사원이 들어오면 일단 말단 위치에 앉힌 다음에, 신입 시원의 능력을 봐
+서 위로 승진시카는 것과 비슷하다
+330 C언어로 쉽게 물어쓴 자료구조

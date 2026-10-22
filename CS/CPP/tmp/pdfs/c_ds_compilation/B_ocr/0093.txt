@@ -1,0 +1,25 @@
+스택 생성/소열 연산
+우선 자유 저장소 안에 스택을 생성하는 LLS-CreateStack() 함수를 구현해야 합니다. LLS
+createstack() 함수는 배열 버전의 AS createstack() 함수와 달리 stack의 용량을 결정짓는
+매개 변수를 필요로 하지 않습니다. 링크-드 리스트 기반이므로 용량 제한에서 자유로운 것이지요.
+LlS-CreateStack( ) 함수가 하는 일은 다음 코드에서처럼 LinkedListStack 구조체를 자부 저장
+소에 할당하는 것뿐입니다.
+void LLS CreateStack( LinkedListStack** Stack )
+// 스택을 자유 저장소에 생성
+( LinkedListStack*)ma110c(sizeof( LinkedListStack ) ),•
+(*Stack )
+(*Stack )->List = NULL;
+(*Stack )->TOP
+= NULL;
+이제 자유 저장소에 공간을 할당하는 malloc( ) 함수와 free( ) 함수가 실과 바늘처럼 함께 다닌다
+는 사실 정도는 잘 알고 있지요? LLS createstack ( ) 함수가 malloc ( ) 함수를 이용해서 Linked
+ListStack 구조체를 자유 저장소에 할당하도록 구현했으니, 이 메모리를 해제하는 free ( ) 함수를
+호출하는 니s DestroyStack ( ) 함수도 구현해봅시다.
+void LLS-DestroyStack( LinkedListStack* Stack )
+while ( !LLS-IsEmpty(Stack ) )
+No血* Popped = LLS-Pop( Stack );
+LLS-DestroyNode );
+// 스택을 자유 저장소에서 해제
+free(Stack );
+84
+Part 01 • 자료구조

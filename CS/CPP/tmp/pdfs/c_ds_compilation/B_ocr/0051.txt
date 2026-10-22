@@ -1,0 +1,64 @@
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+42
+43
+44
+45
+46
+47
+48
+49
+50
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+// 리스트 출력
+Count = SLL GetNodeCount(List);
+for ( i = 0; i<Count; i++ )
+Current = SLL GetNodeAt(List, i);
+printf("List[%dI : %d\n", i, Current-»ata);
+// 리스트의 세 번째 노드 뒤에 새 노드 삽입
+printf("\nlnserting 3000 After (21...\n\n");
+Current = SLL GetNodeAt(List, 2);
+NewNode = SLL_CreateNode(30@O);
+SLL-InsertAfter(Current, NewNode);
+// 리스트 출력
+Count = SLL_GetNodeCount(List);
+for ( i = 0: i<Count; i++ )
+Current = SLL GetNodeAt(List, i);
+printf("List[%dl : %d\n", i, Current->Data);
+// 모든 노드를 메모리에서 제거
+printf("\nDestroying List...\n");
+for ( i = 0; i<Count; i++ )
+Current = SLL GetNodeAt(List, 0);
+if ( Current != NULL )
+SLL RemoveNode(&List, Current);
+SLL DestroyNode(Current);
+return 0,
+Chapter 01 • 리스트
+1
+41

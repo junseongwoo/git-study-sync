@@ -1,0 +1,20 @@
+int data[SIZEJ = {8, 1, 9, 6, 13 }•,
+element e;
+for (int i : 0; 〈 코죠; 특++) {
+e.key : data[i];
+hash-chain_add(e, hash_table);
+hash_chain-print(hash_table) •,
+for (int = 0; i 〈 SIZE; 5++) {
+e.key = data[i];
+hash chain_search(e, hash_table) ;
+return 0;
+실행결과
+[1]
+>6->13->
+탐색 8 성공
+탐색 1 성공
+탐색 9 성공
+탐색 6 성공
+탐색 13 성공
+CHAPTER 14 해싱
+563

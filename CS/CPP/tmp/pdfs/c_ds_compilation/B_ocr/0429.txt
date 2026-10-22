@@ -1,0 +1,27 @@
+Weights[StartVertex쉬ndexl = 0;
+while( ! PQ_IsEmpty( PQ ) )
+PQNode Popped,
+PQ-Dequeue(PQ, &Dopped);
+CurrentVertex = (Vertex*)Popped Data,
+Fringes[CurrentVertex->IndexI = CurrentVertex,
+CurrentEdge = CurrentVertex->AdjacencyList;
+while ( CurrentEdge != NULL )
+Vertex* TargetVertex = CurrentEdge->Target,
+if ( Fringes[TargetVertex->IndexI
+= NULL
+CurrentEdge->Weight 〈 Weights[TargetVertex->Indexl )
+PQNode NewNode = { CurrentEdge->Weight, TargetVertex
+PQ-Enqueue ( PQ, NewN0de );
+Precedences[TargetVertex->IndexI =
+= CurrentEdge->Weight;
+Weights ndexl
+CurrentEdge = CurrentEdge->Next;
+for ( i=@; i<G->VertexCount; i++ )
+int FromIndex, T이ndex,
+if ( Precedences[il == NULL )
+continue;
+FromIndex = Precedences[iI쉬ndex•
+T이ndex
+AddEdge( MSTVertices[FromIndexl,
+ChapterN 그래프
+427

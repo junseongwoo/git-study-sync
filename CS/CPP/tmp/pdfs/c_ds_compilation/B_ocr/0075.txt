@@ -1,0 +1,63 @@
+14
+16
+18
+20
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+42
+43
+44
+45
+46
+47
+48
+49
+50
+52
+53
+NewNode = CDLL CreateNode( i );
+CDLL-AppendNode( &List,NewNode ):
+// 리스트 출력
+Count = CDLL GetNodeCount( List );
+for ( i = 0: i<Count; i++ )
+Current = CDLL GetNodeAt( List, i ),•
+printf( "List[%dI : %d\n", i, Current->Data ):
+// 리스트의 세 번째 간 뒤에 노드 삽입
+printf( "\nlnserting 3000 After [21.. \n\n" ):
+Current = CDLL GetNodeAt( List, 2 );
+NewNode = CDLL_CreateNode( 3000 );
+CDLL InsertAfter( Current, NewNode );
+printf( "\nRemoving NOde at 2...\n" );
+Current = CDLL_GetNodeAt( List, 2 );
+CDLL RemoveNode( &List, Current );
+CDLL DestroyNode( Current );
+// 리스트 출력
+// (노드 개수의 2HH만큼 루프를 돌며 환형임을 확인한다.)
+Count = CDLL GetNodeCount( List );
+for ( i = 0; i<Count*2; i++ )
+Current = List,
+else
+Current = Current->NextNode,
+printf( "List[%dl : %d\n", i, Current->Data );
+// 모든 노드를 메모리에서 제거
+printf( "\nDestroying List. .\n" ),•
+Chapter 01
+리스트
+65

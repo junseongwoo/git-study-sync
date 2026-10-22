@@ -1,0 +1,32 @@
+printf("정점 9년 -〉 ", 하;
+// 방문한 정정 출력
+for (w = 0; w<g->n; 만+) // 인접 정점 탐색
+if (g->adj-mat(v][w] && !vnsited(wl)
+dfs-mat(g, 미; //정정 ,서서 DFS 새로 시작
+int main(void)
+GraphType *g;
+g = (GraphType *)maIIoc(sizeof(GraphType));
+init(g);
+for (int i = 0; i<4; i++)
+insert vertex(g, 5);
+insert edge(g, 0, 1);
+insert edge(g, 0, 2);
+insert-edge(g, 0, 3);
+insert-edge(% 1, 2);
+insert-edge(g, 2, 3);
+printf("깊이 우선 탐색\n")•,
+dfs—mat(g, 0);
+printf("\n") ;
+free(g) ;
+return 0;
+실행결과
+깊이 우선 탐색
+정점 0 -〉 정점 1 -〉 정점 2 -〉 정점 3 -〉
+깊이 우선 탐색의 구현(인접 리스트 버전)
+프로그램 10.4는 그래프가 인접 리스트로 표현되었을 경우의 깊이 우선 탐색 프로그램이다. 인
+접 리스트는 다수의 연결 리스트로 구성되는데, 각 연결 리스트의 노-드는 데이터 필드와 링크 필
+드로 이루어지는데, 데이터 필드에는 인접 정점의 번호가 저장되고 링크 필드에는 다음 인접 정
+점을 가리기는 포인터가 저장된다. 연결 리스트의 노드는 구조체 타입 GraphNode로 정의되었다.
+포인터 배열 adj-list의 각 요소는 각 연결 리스트의 첫번째 노드를 가리킨다. 역시 방문 여부
+를 기록하기 위하여 visited를 사용하였다.
+CHAPTERIO 그래픠 383

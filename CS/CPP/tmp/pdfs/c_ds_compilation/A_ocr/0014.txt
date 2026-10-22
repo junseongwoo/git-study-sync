@@ -1,0 +1,39 @@
+리한 주제는 추상화(ahstraction)와 관련된 도구들의 개발이었다. 추상화란 어떤 시스템의 간략
+화된 기술 또는 명세로서 시세의 정말 핵심적인 구조나 동작에만 집중하는 것이다. 좋은 추상
+화는 A卜%자에게 중요한 정보는 강조되고 반면 중요하지 않은 구현 세부 사항은 제거되는 것이
+다. 이를 위하여 정보은닉기법(in『酊rnation hiding)이 기1는찰되었고 추상 자료형(AI兀)의 개님으
+로 발전되었다.
+ADT
+공용 인터페이스
+프로그램
+구현 코드
+ALYP는 실제적인 구현으로부터 분리되어 정의된 자료형을 말한다. 즉 자료형을 추상적(수학
+적)으로 정의함을 의미한다. AI兀에서는 데이터나 연산이 무엇(what)인지는 정의되지만 데이터
+나 연산을 어떻게(how) 컴퓨터 상에서 구현할 것인지는 정의되지 않는다. 예를 들어서 연산을
+정의할 때 연산의 이름, 매개 변숴 반환형은 정의하지만 연산을 구현하는 구체적인 코드는 주어
+지지 않는 것이 ADT이다. 다만 연산을 정의하는 추상적인 의사 코드는 주어질 수 있다.
+예를 들어서 자연수를 나타내는 추상 자료형을 정의해보면 ADT 1.1과 같다. 자연수(즉 음이
+아닌 정수는 보통 컴퓨터 상에서 기본적으로 제공되지 않는 자료형이다.
+ADT 1.1 추상 자료형: Nat-Number
+•객체: 0에서 시작하여 INT_MAX까지의 순서화된 정수의 부분범위
+Nat_Number zero()
+= if( x==INT MAX ) return x
+Nat_Number successor(x)
+Boolean is_zero(x)
+B001ean equal(x,y)
+Nat_Number add(x,y)
+Nat_Number sub(x,y)
+else return X十I
+= if (x) return FALSE
+else return TRUE
+= if( x==y ) return TRUE
+else return FALSE
+= if( (X+Y) <= INT-MAX )
+return X十Y
+else return INT MAX
+- if ( x<Y ) return 0
+return X¯y;
+ADT는 먼저 AIJI*의 이름부터 시작된다. AIJI, 안에는 객체(obj惢ts)와 함수(functions)들이 정
+의된다. 객체는 주로 집합의 개념을 시용하여 정의된다. 이후에 함수들이 정의된다. 함수는 앞에
+서 언급한 연산을 의미한다. 여기에는 함수의 이름, 함수의 매개변수, 함수의 반환형, 함수가 수
+CHAPTEROI 자료구조와 알고리즘 19

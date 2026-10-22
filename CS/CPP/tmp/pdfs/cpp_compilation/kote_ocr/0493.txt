@@ -1,0 +1,24 @@
+ColIectConnectedComponents(node, visited, transpose, omponent);
+connectedComponents.push back(component);
+componentlndex+十,
+8. 이제 collectConnectedComponents() 함수를 작성하겠습니다. 일단 incomponent 벡터에서
+node 인덱스에 해당하는 원소 값을 componentlndex로 설정합니다. 그리고 각 정점의 이웃 중
+에서 이미 방문했던 정점에 대해서는 별도의 처리 코드를 추가합니다.
+void CollectConnectedComponents(int node, vector<bool>& visited,
+vector〈vector<int〉〉& adj, vector<int>& component)
+visited[nodel = true,
+component push back(node);
+inComponent[node] = componentlndex;
+for (aut0 next : adj[node])
+if (!visited[next])
+CollectConnectedComponents(next, visited, adj, component);
+else if (inComponent[node] != inComponent[next])
+isStuck[inComponent[next]] = false;
+기본적으로 이전에 방문한 각 이웃의 연결 요소가 현재 정점의 연결 요소와 일치하는지 확인
+합니다. 만약 두 연결 요소의 1D가 다르면 이웃의 연결 요소에 그래프의 다른 부분으로 연결
+된 경로가 있다고 판단할 수 있습니다.
+방향 그래프에서 현재 정점에서 나가는 에지가 존재한다는 사실이 어째서 이웃 정점이 자신
+의 연결 요소 바깥으로 나가는 경로를 가지고 있음을 나타내는지가 궁금할 수 있습니다. 이
+논리가 '반대로' 보이는 이훍는 그래프가 전치되어 있기 때문입니다. 전치 그래프에서 에지의
+방향은 모두 반전되어 있다는 점을 기억하십시오!
+506

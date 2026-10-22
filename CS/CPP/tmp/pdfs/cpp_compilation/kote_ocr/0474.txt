@@ -1,0 +1,31 @@
+return this->distance 〉 l.distance;
+5. 다익스트라 알고리즘을 구현합니다. 이 함수는 인습 문세 쇠에서 구현한 것과 거의 같으며.
+다만 알고리즘 동작 확인을 위한 문자열 출력 고-드는 주석 지리했습니다.
+template 〈typename T>
+autO dijkstra-shortest_path(const Graph<T>& 6, unsigned src, unsigned dst)
+// 최소 힙
+prioritY-queue<LabeI<T>, vector<LabeI<T〉〉, greater<Label<T〉〉〉 heap;
+// 모든 정점에서 거리 값을 최대로 설정
+vector〈丫〉 distance(G.vertices(), numeric-limits<T>::max());
+set〈unsigned> visited;
+vector〈unsigned> parent(G. vertices( ) ) ;
+heap.emplace(LabeI<T>{src, 0});
+// 방문한 정점
+// 이동 경로 기억을 위한 벡터
+parent[src]
+src;
+while (!heap.empty())
+autO current_vertex
+heap.pop();
+= heap.top();
+// 목적지 정점에 도작했다면 종료
+if (current_vertex.ID == dst)
+//cout 〈〈 current-vertex.ID 〈〈 "번 정점(목적 정점)에 도착!" 〈〈 endl;
+break;
+// 현재 정점을 이전에 방문하지 않았다면
+if (visited.find(current-vertex.ID) == visited.end())
+//cout 〈〈 current-vertex.ID 〈〈 "번 정점에 안착!" 〈〈 endl;
+// 현재 정점과 연결된 모든 에지에 대해
+for (autO& e : G.edges(current_vertex.ID))
+autO neighbor = e.dst;
+따>

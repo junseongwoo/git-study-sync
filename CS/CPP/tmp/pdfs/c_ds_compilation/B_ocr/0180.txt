@@ -1,0 +1,52 @@
+13
+17
+18
+20
+22
+23
+24
+25
+26
+27
+29
+30
+32
+33
+35
+36
+37
+39
+40
+43
+44
+45
+47
+48
+49
+52
+void SBTNode• Node )
+free(Node);
+void SBT-DestroyTree( SBTNode* NOde )
+if ( Node
+return;
+= WLL )
+// 완쪽 하위 트리 소일
+SBT_DestroyTree( Node->Left );
+// 오른쪽 하위 트리 소일
+SBT_DestroyTree( Node->Right );
+// 부리 노드 소일
+SBT_DestroyNode( Node );
+void SBT_PreorderPrintTree( SBTNode* NOde )
+if ( Node == WLL )
+return;
+// 부리 노드 출력
+printf( • 忒•, Node->Data );
+// 왼쪽 하위 트리 출력
+SBT-PreorderPrintTree( Node->Left );
+// 오른쪽 하위 트리 출력
+SBT PreorderPrintTree( Node->Right );
+void SBT-InorderPrintTree( SBTNode* NOde )
+if ( Node == NULL )
+return;
+172
+Part 01 • 자료구조

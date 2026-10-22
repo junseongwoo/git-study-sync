@@ -1,0 +1,7877 @@
+{
+  "stats": [
+    {
+      "unit": 1,
+      "core": 26,
+      "items": 34,
+      "ocr_evidence_misses": 2,
+      "unchecked_images": []
+    },
+    {
+      "unit": 2,
+      "core": 32,
+      "items": 40,
+      "ocr_evidence_misses": 3,
+      "unchecked_images": []
+    },
+    {
+      "unit": 3,
+      "core": 35,
+      "items": 41,
+      "ocr_evidence_misses": 21,
+      "unchecked_images": []
+    },
+    {
+      "unit": 4,
+      "core": 29,
+      "items": 43,
+      "ocr_evidence_misses": 9,
+      "unchecked_images": []
+    },
+    {
+      "unit": 5,
+      "core": 31,
+      "items": 42,
+      "ocr_evidence_misses": 28,
+      "unchecked_images": []
+    },
+    {
+      "unit": 6,
+      "core": 26,
+      "items": 40,
+      "ocr_evidence_misses": 23,
+      "unchecked_images": []
+    },
+    {
+      "unit": 7,
+      "core": 29,
+      "items": 39,
+      "ocr_evidence_misses": 17,
+      "unchecked_images": []
+    },
+    {
+      "unit": 8,
+      "core": 38,
+      "items": 53,
+      "ocr_evidence_misses": 19,
+      "unchecked_images": []
+    },
+    {
+      "unit": 9,
+      "core": 66,
+      "items": 80,
+      "ocr_evidence_misses": 50,
+      "unchecked_images": []
+    },
+    {
+      "unit": 10,
+      "core": 32,
+      "items": 55,
+      "ocr_evidence_misses": 46,
+      "unchecked_images": []
+    },
+    {
+      "unit": 11,
+      "core": 33,
+      "items": 50,
+      "ocr_evidence_misses": 35,
+      "unchecked_images": []
+    },
+    {
+      "unit": 12,
+      "core": 30,
+      "items": 47,
+      "ocr_evidence_misses": 18,
+      "unchecked_images": []
+    },
+    {
+      "unit": 13,
+      "core": 39,
+      "items": 64,
+      "ocr_evidence_misses": 48,
+      "unchecked_images": []
+    },
+    {
+      "unit": 14,
+      "core": 29,
+      "items": 46,
+      "ocr_evidence_misses": 19,
+      "unchecked_images": []
+    },
+    {
+      "unit": 15,
+      "core": 43,
+      "items": 59,
+      "ocr_evidence_misses": 41,
+      "unchecked_images": []
+    },
+    {
+      "unit": 16,
+      "core": 32,
+      "items": 42,
+      "ocr_evidence_misses": 27,
+      "unchecked_images": []
+    },
+    {
+      "unit": 17,
+      "core": 27,
+      "items": 36,
+      "ocr_evidence_misses": 32,
+      "unchecked_images": []
+    },
+    {
+      "unit": 18,
+      "core": 31,
+      "items": 40,
+      "ocr_evidence_misses": 25,
+      "unchecked_images": []
+    },
+    {
+      "unit": 19,
+      "core": 37,
+      "items": 42,
+      "ocr_evidence_misses": 14,
+      "unchecked_images": []
+    },
+    {
+      "unit": 20,
+      "core": 33,
+      "items": 41,
+      "ocr_evidence_misses": 37,
+      "unchecked_images": []
+    }
+  ],
+  "ocr_evidence_review": [
+    {
+      "unit": 1,
+      "location": ".concepts[2].items[5]",
+      "text": "ADT의 연산에는 이름·매개변수·반환형을 정의하지만 구체적인 구현 코드는 주어지지 않는다.",
+      "evidence": "매개 변수, 반환형",
+      "refs": [
+        {
+          "source": "A",
+          "section": "1.2 추상 자료형",
+          "pages": [
+            14
+          ]
+        }
+      ]
+    },
+    {
+      "unit": 1,
+      "location": ".concepts[2].items[7]",
+      "text": "B의 추상 데이터 형식(ADT)은 자료구조의 동작 방법을 표현하며, 자료구조가 갖추어야 할 일련의 연산이다.",
+      "evidence": "자료구조가 갖춰야 할 일련의 연산",
+      "refs": [
+        {
+          "source": "B",
+          "section": "0.1 추상 데이터 형식",
+          "pages": [
+            15
+          ]
+        }
+      ]
+    },
+    {
+      "unit": 2,
+      "location": ".concepts[1].items[3]",
+      "text": "희소행렬은 많은 항이 0이며, 2차원 배열로 표현하면 메모리 낭비가 커질 수 있다.",
+      "evidence": "메모리의 낭비",
+      "refs": [
+        {
+          "source": "A",
+          "section": "3.4 배열의 응용: 희소행렬",
+          "pages": [
+            77
+          ]
+        }
+      ]
+    },
+    {
+      "unit": 2,
+      "location": ".procedures[0].steps[0]",
+      "text": "두 다항식의 현재 항 차수를 비교한다.",
+      "evidence": "각 항의 차수를 비교",
+      "refs": [
+        {
+          "source": "A",
+          "section": "3.3 두 번째 방법",
+          "pages": [
+            72
+          ]
+        }
+      ]
+    },
+    {
+      "unit": 2,
+      "location": ".terms[2].definition",
+      "text": "희소행렬은 많은 항이 0이며, 2차원 배열로 표현하면 메모리 낭비가 커질 수 있다.",
+      "evidence": "메모리의 낭비",
+      "refs": [
+        {
+          "source": "A",
+          "section": "3.4 배열의 응용: 희소행렬",
+          "pages": [
+            77
+          ]
+        }
+      ]
+    },
+    {
+      "unit": 3,
+      "location": ".concepts[0].items[0]",
+      "text": "효율적인 알고리즘은 실행 시간이 짧고 메모리와 같은 컴퓨터 자원을 적게 사용한다.",
+      "evidence": "실행시간이 짧고",
+      "refs": [
+        {
+          "source": "A",
+          "section": "1.3 알고리즘의 성능 분석",
+          "pages": [
+            17
+          ]
+        }
+      ]
+    },
+    {
+      "unit": 3,
+      "location": ".concepts[0].items[1]",
+      "text": "실행 시간 측정은 알고리즘을 실제로 구현하고 실행 시간을 측정하여 성능을 비교하는 방법이다.",
+      "evidence": "실제로 구현하고",
+      "refs": [
+        {
+          "source": "A",
+          "section": "1.3 수행 시간 측정",
+          "pages": [
+            17
+          ]
+        }
+      ]
+    },
+    {
+      "unit": 3,
+      "location": ".concepts[0].items[2]",
+      "text": "실행 시간으로 비교하려면 같은 하드웨어와 소프트웨어 환경을 사용해야 하며, 실험하지 않은 입력에 대한 수행 시간은 알 수 없다.",
+      "evidence": "동일한 하드웨어",
+      "refs": [
+        {
+          "source": "A",
+          "section": "1.3 수행 시간 측정",
+          "pages": [
+            18
+          ]
+        }
+      ]
+    },
+    {
+      "unit": 3,
+      "location": ".concepts[1].items[1]",
+      "text": "모든 n>n₀에 대해 |f(n)|≤c|g(n)|을 만족하는 상수 c와 n₀가 존재하면 f(n)=O(g(n))이다.",
+      "evidence": "모든 n>n",
+      "refs": [
+        {
+          "source": "A",
+          "section": "1.3 정의 1.2 빅오 표기법",
+          "pages": [
+            23
+          ]
+        }
+      ]
+    },
+    {
+      "unit": 3,
+      "location": ".concepts[1].items[2]",
+      "text": "다항식에서는 최고차항만 고려하고 계수와 낮은 차수 항을 무시하되, log n과 같은 항을 함부로 무시해서는 안 된다.",
+      "evidence": "logn 항을 무시하면",
+      "refs": [
+        {
+          "source": "A",
+          "section": "1.3 빅오 표기법",
+          "pages": [
+            24
+          ]
+        }
+      ]
+    },
+    {
+      "unit": 3,
+      "location": ".concepts[1].items[3]",
+      "text": "빅오 표기법의 계수 차이는 n이 작을 때 수행 시간에 영향을 줄 수 있다.",
+      "evidence": "상수항도 중요",
+      "refs": [
+        {
+          "source": "A",
+          "section": "1.3 빅오 표기법",
+          "pages": [
+            25
+          ]
+        }
+      ]
+    },
+    {
+      "unit": 3,
+      "location": ".concepts[1].items[4]",
+      "text": "상한은 여러 개일 수 있으므로 가능한 한 차수가 작은 빅오 표기법을 사용한다.",
+      "evidence": "차수가 가장 낮은",
+      "refs": [
+        {
+          "source": "A",
+          "section": "1.3 빅오메가와 빅세타 표기법",
+          "pages": [
+            27
+          ]
+        }
+      ]
+    },
+    {
+      "unit": 3,
+      "location": ".concepts[2].items[5]",
+      "text": "순차 탐색의 최악은 찾는 항목이 맨 뒤에 있어 모든 항목과 비교하는 경우이며 O(n)이다.",
+      "evidence": "맨 뒤",
+      "refs": [
+        {
+          "source": "A",
+          "section": "1.3 순차 탐색 알고리즘",
+          "pages": [
+            29
+          ]
+        }
+      ]
+    },
+    {
+      "unit": 3,
+      "location": ".concepts[2].items[6]",
+      "text": "각 항목이 탐색될 확률이 1/n으로 같다고 가정하면 순차 탐색의 평균 비교 횟수는 (n+1)/2이며 O(n)이다.",
+      "evidence": "확률이 동일",
+      "refs": [
+        {
+          "source": "A",
+          "section": "1.3 순차 탐색 알고리즘",
+          "pages": [
+            30
+          ]
+        }
+      ]
+    },
+    {
+      "unit": 3,
+      "location": ".concepts[4].items[0]",
+      "text": "마스터 정리는 T(n)=aT(n/b)+f(n) 형태의 재귀 방정식에 대한 점근적 한계를 구하는 방법이며, a≥1, b>1은 상수이다.",
+      "evidence": "a≥1",
+      "refs": [
+        {
+          "source": "B",
+          "section": "11.3.3 마스터 정리",
+          "pages": [
+            517
+          ]
+        }
+      ]
+    },
+    {
+      "unit": 3,
+      "location": ".formulas[1]",
+      "text": "(1+2+…+n)/n=(n+1)/2",
+      "evidence": "확률이 동일",
+      "refs": [
+        {
+          "source": "A",
+          "section": "1.3 순차 탐색 알고리즘",
+          "pages": [
+            30
+          ]
+        }
+      ]
+    },
+    {
+      "unit": 3,
+      "location": ".formulas[2]",
+      "text": "T(n)=aT(n/b)+f(n)",
+      "evidence": "a≥1",
+      "refs": [
+        {
+          "source": "B",
+          "section": "11.3.3 마스터 정리",
+          "pages": [
+            517
+          ]
+        }
+      ]
+    },
+    {
+      "unit": 3,
+      "location": ".comparisons[0].rows[0][0]",
+      "text": "O(g(n))",
+      "evidence": "O(g(n))",
+      "refs": [
+        {
+          "source": "A",
+          "section": "1.3 정의 1.2",
+          "pages": [
+            23
+          ]
+        }
+      ]
+    },
+    {
+      "unit": 3,
+      "location": ".comparisons[0].rows[0][1]",
+      "text": "모든 n>n₀에 대해 |f(n)|≤c|g(n)|을 만족하는 상수 c와 n₀가 존재하면 f(n)=O(g(n))이다.",
+      "evidence": "모든 n>n",
+      "refs": [
+        {
+          "source": "A",
+          "section": "1.3 정의 1.2 빅오 표기법",
+          "pages": [
+            23
+          ]
+        }
+      ]
+    },
+    {
+      "unit": 3,
+      "location": ".terms[7].definition",
+      "text": "마스터 정리는 T(n)=aT(n/b)+f(n) 형태의 재귀 방정식에 대한 점근적 한계를 구하는 방법이며, a≥1, b>1은 상수이다.",
+      "evidence": "a≥1",
+      "refs": [
+        {
+          "source": "B",
+          "section": "11.3.3 마스터 정리",
+          "pages": [
+            517
+          ]
+        }
+      ]
+    },
+    {
+      "unit": 3,
+      "location": ".review[1].answer",
+      "text": "각 항목이 탐색될 확률이 1/n으로 같다고 가정하면 순차 탐색의 평균 비교 횟수는 (n+1)/2이며 O(n)이다.",
+      "evidence": "확률이 동일",
+      "refs": [
+        {
+          "source": "A",
+          "section": "1.3 순차 탐색 알고리즘",
+          "pages": [
+            30
+          ]
+        }
+      ]
+    },
+    {
+      "unit": 3,
+      "location": ".review[3].answer",
+      "text": "마스터 정리는 T(n)=aT(n/b)+f(n) 형태의 재귀 방정식에 대한 점근적 한계를 구하는 방법이며, a≥1, b>1은 상수이다.",
+      "evidence": "a≥1",
+      "refs": [
+        {
+          "source": "B",
+          "section": "11.3.3 마스터 정리",
+          "pages": [
+            517
+          ]
+        }
+      ]
+    },
+    {
+      "unit": 3,
+      "location": ".cheat.definitions[2].definition",
+      "text": "마스터 정리는 T(n)=aT(n/b)+f(n) 형태의 재귀 방정식에 대한 점근적 한계를 구하는 방법이며, a≥1, b>1은 상수이다.",
+      "evidence": "a≥1",
+      "refs": [
+        {
+          "source": "B",
+          "section": "11.3.3 마스터 정리",
+          "pages": [
+            517
+          ]
+        }
+      ]
+    },
+    {
+      "unit": 3,
+      "location": ".cheat.comparison_rows[0][0]",
+      "text": "O(g(n))",
+      "evidence": "O(g(n))",
+      "refs": [
+        {
+          "source": "A",
+          "section": "1.3 정의 1.2",
+          "pages": [
+            23
+          ]
+        }
+      ]
+    },
+    {
+      "unit": 3,
+      "location": ".cheat.comparison_rows[0][1]",
+      "text": "모든 n>n₀에 대해 |f(n)|≤c|g(n)|을 만족하는 상수 c와 n₀가 존재하면 f(n)=O(g(n))이다.",
+      "evidence": "모든 n>n",
+      "refs": [
+        {
+          "source": "A",
+          "section": "1.3 정의 1.2 빅오 표기법",
+          "pages": [
+            23
+          ]
+        }
+      ]
+    },
+    {
+      "unit": 3,
+      "location": ".cheat.formulas[0]",
+      "text": "(1+2+…+n)/n=(n+1)/2",
+      "evidence": "확률이 동일",
+      "refs": [
+        {
+          "source": "A",
+          "section": "1.3 순차 탐색 알고리즘",
+          "pages": [
+            30
+          ]
+        }
+      ]
+    },
+    {
+      "unit": 4,
+      "location": ".concepts[0].items[3]",
+      "text": "순환 호출을 멈추는 부분이 없으면 시스템 스택을 다 사용할 때까지 호출되다가 오류를 내며 멈춘다.",
+      "evidence": "시스템 스택을 다 사용",
+      "refs": [
+        {
+          "source": "A",
+          "section": "2.1 순환 알고리즘의 구조",
+          "pages": [
+            40
+          ]
+        }
+      ]
+    },
+    {
+      "unit": 4,
+      "location": ".concepts[0].items[8]",
+      "text": "순환 호출이 일어날 때마다 문제의 크기가 작아지며, 결국 쉽게 풀 수 있는 문제가 된다.",
+      "evidence": "문제의 크기가 작아진다",
+      "refs": [
+        {
+          "source": "A",
+          "section": "2.1 순환의 원리",
+          "pages": [
+            43
+          ]
+        }
+      ]
+    },
+    {
+      "unit": 4,
+      "location": ".concepts[1].items[5]",
+      "text": "팩토리얼의 반복 알고리즘과 순환 알고리즘은 모두 시간 복잡도가 O(n)이다.",
+      "evidence": "역시 O(n)",
+      "refs": [
+        {
+          "source": "A",
+          "section": "2.1 순환 알고리즘의 성능",
+          "pages": [
+            44
+          ]
+        }
+      ]
+    },
+    {
+      "unit": 4,
+      "location": ".concepts[2].items[4]",
+      "text": "순환적인 fib(n)은 fib(n−1)+fib(n−2)를 반환하며, 같은 값을 여러 번 계산할 수 있다.",
+      "evidence": "fib(n-1)",
+      "refs": [
+        {
+          "source": "A",
+          "section": "2.3 피보나치 수열의 계산",
+          "pages": [
+            48,
+            49
+          ]
+        }
+      ]
+    },
+    {
+      "unit": 4,
+      "location": ".concepts[3].items[2]",
+      "text": "n개 원판을 옮길 때 문제의 크기는 이동해야 하는 원판의 개수이며, 순환할수록 작아진다.",
+      "evidence": "문제의 크기는 이동",
+      "refs": [
+        {
+          "source": "A",
+          "section": "2.4 하노이탑 문제",
+          "pages": [
+            52
+          ]
+        }
+      ]
+    },
+    {
+      "unit": 4,
+      "location": ".syntax[1]",
+      "text": "프로그램 2.5 순환적인 거듭제곱",
+      "evidence": "double power",
+      "refs": [
+        {
+          "source": "A",
+          "section": "2.2 프로그램 2.5",
+          "pages": [
+            46
+          ]
+        }
+      ]
+    },
+    {
+      "unit": 4,
+      "location": ".comparisons[0].rows[0][1]",
+      "text": "팩토리얼의 반복 알고리즘과 순환 알고리즘은 모두 시간 복잡도가 O(n)이다.",
+      "evidence": "역시 O(n)",
+      "refs": [
+        {
+          "source": "A",
+          "section": "2.1 순환 알고리즘의 성능",
+          "pages": [
+            44
+          ]
+        }
+      ]
+    },
+    {
+      "unit": 4,
+      "location": ".summary[1]",
+      "text": "순환 호출이 일어날 때마다 문제의 크기가 작아지며, 결국 쉽게 풀 수 있는 문제가 된다.",
+      "evidence": "문제의 크기가 작아진다",
+      "refs": [
+        {
+          "source": "A",
+          "section": "2.1 순환의 원리",
+          "pages": [
+            43
+          ]
+        }
+      ]
+    },
+    {
+      "unit": 4,
+      "location": ".cheat.comparison_rows[0][1]",
+      "text": "팩토리얼의 반복 알고리즘과 순환 알고리즘은 모두 시간 복잡도가 O(n)이다.",
+      "evidence": "역시 O(n)",
+      "refs": [
+        {
+          "source": "A",
+          "section": "2.1 순환 알고리즘의 성능",
+          "pages": [
+            44
+          ]
+        }
+      ]
+    },
+    {
+      "unit": 5,
+      "location": ".concepts[0].items[2]",
+      "text": "insert(), delete(), get_entry(), get_length(), is_empty(), is_full() 등의 연산으로 리스트를 다룬다.",
+      "evidence": "get_entry(list, pos)",
+      "refs": [
+        {
+          "source": "A",
+          "section": "6.1 리스트 추상 데이터 타입",
+          "pages": [
+            169
+          ]
+        }
+      ]
+    },
+    {
+      "unit": 5,
+      "location": ".concepts[0].items[4]",
+      "text": "배열을 이용한 리스트 구현은 순차적인 메모리 공간을 할당하므로 순차적 표현(sequential representation)이라고도 한다.",
+      "evidence": "순차적 표현",
+      "refs": [
+        {
+          "source": "A",
+          "section": "6.2 배열로 구현된 리스트",
+          "pages": [
+            170
+          ]
+        }
+      ]
+    },
+    {
+      "unit": 5,
+      "location": ".concepts[0].items[6]",
+      "text": "배열 리스트의 get_entry 연산은 인덱스로 항목에 바로 접근하므로 O(1)이다.",
+      "evidence": "get_entry",
+      "refs": [
+        {
+          "source": "A",
+          "section": "6.2 실행 시간 분석",
+          "pages": [
+            175
+          ]
+        }
+      ]
+    },
+    {
+      "unit": 5,
+      "location": ".concepts[0].items[8]",
+      "text": "배열 리스트의 맨 끝에 삽입하는 경우는 O(1)이다.",
+      "evidence": "맨 끝에 삽입하는 경우는 O(1)",
+      "refs": [
+        {
+          "source": "A",
+          "section": "6.2 실행 시간 분석",
+          "pages": [
+            175
+          ]
+        }
+      ]
+    },
+    {
+      "unit": 5,
+      "location": ".concepts[1].items[1]",
+      "text": "데이터 필드에는 저장할 데이터가, 링크 필드에는 다른 노드를 가리키는 포인터가 저장된다.",
+      "evidence": "링크 필드에는 다른 노드를 가리키는 포인터",
+      "refs": [
+        {
+          "source": "A",
+          "section": "6.3 연결 리스트",
+          "pages": [
+            177
+          ]
+        }
+      ]
+    },
+    {
+      "unit": 5,
+      "location": ".concepts[1].items[2]",
+      "text": "헤드 포인터(head pointer)는 연결 리스트의 첫 번째 노드를 가리키는 변수이다.",
+      "evidence": "첫 번째 노드를 가리키고 있는 변수",
+      "refs": [
+        {
+          "source": "A",
+          "section": "6.3 연결 리스트",
+          "pages": [
+            177
+          ]
+        }
+      ]
+    },
+    {
+      "unit": 5,
+      "location": ".concepts[1].items[3]",
+      "text": "연결 리스트는 포인터도 저장하여야 하므로 메모리 공간을 많이 사용하고, i번째 데이터는 앞에서부터 순차적으로 접근하여야 한다.",
+      "evidence": "i번째 데이터를 찾으려면 앞에서부터 순차적으로",
+      "refs": [
+        {
+          "source": "A",
+          "section": "6.3 연결 리스트",
+          "pages": [
+            177
+          ]
+        }
+      ]
+    },
+    {
+      "unit": 5,
+      "location": ".concepts[2].items[2]",
+      "text": "노드 삭제는 리스트에서 노드를 제외하는 연산이다.",
+      "evidence": "노드 삭제는 리스트에서 노드를 제외",
+      "refs": [
+        {
+          "source": "B",
+          "section": "1.2.2 링크드 리스트의 주요 연산",
+          "pages": [
+            35
+          ]
+        }
+      ]
+    },
+    {
+      "unit": 5,
+      "location": ".concepts[2].items[3]",
+      "text": "노드 소멸은 노드를 메모리에서 없애는 연산이다.",
+      "evidence": "노드 소멸은 노드를 메모리에서 없애는",
+      "refs": [
+        {
+          "source": "B",
+          "section": "1.2.2 링크드 리스트의 주요 연산",
+          "pages": [
+            35
+          ]
+        }
+      ]
+    },
+    {
+      "unit": 5,
+      "location": ".concepts[2].items[5]",
+      "text": "중간 삽입 insert()는 삽입 위치의 선행 노드를 알아야 가능하다.",
+      "evidence": "선행 노드를 알아야 삽입이 가능",
+      "refs": [
+        {
+          "source": "A",
+          "section": "6.5 삽입 연산 insert()",
+          "pages": [
+            184
+          ]
+        }
+      ]
+    },
+    {
+      "unit": 5,
+      "location": ".concepts[3].items[0]",
+      "text": "단순 연결 리스트(singly linked list)는 하나의 방향으로만 연결되며 체인(chain)이라고도 한다.",
+      "evidence": "체인(chain)",
+      "refs": [
+        {
+          "source": "A",
+          "section": "6.3 연결 리스트의 종류",
+          "pages": [
+            178
+          ]
+        }
+      ]
+    },
+    {
+      "unit": 5,
+      "location": ".concepts[3].items[7]",
+      "text": "더블 링크드 리스트를 환형으로 구현하면 헤드의 이전 노드는 테일이고 테일의 다음 노드는 헤드가 된다.",
+      "evidence": "헤드의 이전 노드가 테일",
+      "refs": [
+        {
+          "source": "B",
+          "section": "1.4 환형 링크드 리스트",
+          "pages": [
+            67
+          ]
+        }
+      ]
+    },
+    {
+      "unit": 5,
+      "location": ".concepts[4].items[1]",
+      "text": "링크드 리스트는 레코드의 추가·삽입·삭제가 잦지만 조회는 드문 곳에서 사용하기 적합하다.",
+      "evidence": "추가, 삽입, 삭제가 잦지만 조회는 드문",
+      "refs": [
+        {
+          "source": "B",
+          "section": "1.2.4 링크드 리스트의 장단점",
+          "pages": [
+            53
+          ]
+        }
+      ]
+    },
+    {
+      "unit": 5,
+      "location": ".procedures[0].steps[0]",
+      "text": "동적 메모리 할당으로 새로운 노드 p를 생성한다.",
+      "evidence": "새로운 노드 p를 생성",
+      "refs": [
+        {
+          "source": "A",
+          "section": "6.5 알고리즘 6.1",
+          "pages": [
+            184
+          ]
+        }
+      ]
+    },
+    {
+      "unit": 5,
+      "location": ".procedures[0].steps[1]",
+      "text": "p->data에 value를 저장한다.",
+      "evidence": "p->data에 value",
+      "refs": [
+        {
+          "source": "A",
+          "section": "6.5 알고리즘 6.1",
+          "pages": [
+            184
+          ]
+        }
+      ]
+    },
+    {
+      "unit": 5,
+      "location": ".procedures[0].steps[2]",
+      "text": "p->link를 현재의 head값으로 변경한다.",
+      "evidence": "p->link를 현재의 head값",
+      "refs": [
+        {
+          "source": "A",
+          "section": "6.5 알고리즘 6.1",
+          "pages": [
+            184
+          ]
+        }
+      ]
+    },
+    {
+      "unit": 5,
+      "location": ".procedures[0].steps[3]",
+      "text": "head를 p값으로 변경한다.",
+      "evidence": "head를 p값",
+      "refs": [
+        {
+          "source": "A",
+          "section": "6.5 알고리즘 6.1",
+          "pages": [
+            184
+          ]
+        }
+      ]
+    },
+    {
+      "unit": 5,
+      "location": ".formulas[0]",
+      "text": "get_entry: O(1)",
+      "evidence": "get_entry",
+      "refs": [
+        {
+          "source": "A",
+          "section": "6.2 실행 시간 분석",
+          "pages": [
+            175
+          ]
+        }
+      ]
+    },
+    {
+      "unit": 5,
+      "location": ".comparisons[0].rows[0][1]",
+      "text": "단순 연결 리스트(singly linked list)는 하나의 방향으로만 연결되며 체인(chain)이라고도 한다.",
+      "evidence": "체인(chain)",
+      "refs": [
+        {
+          "source": "A",
+          "section": "6.3 연결 리스트의 종류",
+          "pages": [
+            178
+          ]
+        }
+      ]
+    },
+    {
+      "unit": 5,
+      "location": ".terms[2].definition",
+      "text": "배열을 이용한 리스트 구현은 순차적인 메모리 공간을 할당하므로 순차적 표현(sequential representation)이라고도 한다.",
+      "evidence": "순차적 표현",
+      "refs": [
+        {
+          "source": "A",
+          "section": "6.2 배열로 구현된 리스트",
+          "pages": [
+            170
+          ]
+        }
+      ]
+    },
+    {
+      "unit": 5,
+      "location": ".terms[4].definition",
+      "text": "헤드 포인터(head pointer)는 연결 리스트의 첫 번째 노드를 가리키는 변수이다.",
+      "evidence": "첫 번째 노드를 가리키고 있는 변수",
+      "refs": [
+        {
+          "source": "A",
+          "section": "6.3 연결 리스트",
+          "pages": [
+            177
+          ]
+        }
+      ]
+    },
+    {
+      "unit": 5,
+      "location": ".summary[1]",
+      "text": "연결 리스트는 포인터도 저장하여야 하므로 메모리 공간을 많이 사용하고, i번째 데이터는 앞에서부터 순차적으로 접근하여야 한다.",
+      "evidence": "i번째 데이터를 찾으려면 앞에서부터 순차적으로",
+      "refs": [
+        {
+          "source": "A",
+          "section": "6.3 연결 리스트",
+          "pages": [
+            177
+          ]
+        }
+      ]
+    },
+    {
+      "unit": 5,
+      "location": ".summary[2]",
+      "text": "노드 삭제는 리스트에서 노드를 제외하는 연산이다.",
+      "evidence": "노드 삭제는 리스트에서 노드를 제외",
+      "refs": [
+        {
+          "source": "B",
+          "section": "1.2.2 링크드 리스트의 주요 연산",
+          "pages": [
+            35
+          ]
+        }
+      ]
+    },
+    {
+      "unit": 5,
+      "location": ".summary[3]",
+      "text": "더블 링크드 리스트를 환형으로 구현하면 헤드의 이전 노드는 테일이고 테일의 다음 노드는 헤드가 된다.",
+      "evidence": "헤드의 이전 노드가 테일",
+      "refs": [
+        {
+          "source": "B",
+          "section": "1.4 환형 링크드 리스트",
+          "pages": [
+            67
+          ]
+        }
+      ]
+    },
+    {
+      "unit": 5,
+      "location": ".review[0].answer",
+      "text": "노드 소멸은 노드를 메모리에서 없애는 연산이다.",
+      "evidence": "노드 소멸은 노드를 메모리에서 없애는",
+      "refs": [
+        {
+          "source": "B",
+          "section": "1.2.2 링크드 리스트의 주요 연산",
+          "pages": [
+            35
+          ]
+        }
+      ]
+    },
+    {
+      "unit": 5,
+      "location": ".cheat.definitions[1].definition",
+      "text": "헤드 포인터(head pointer)는 연결 리스트의 첫 번째 노드를 가리키는 변수이다.",
+      "evidence": "첫 번째 노드를 가리키고 있는 변수",
+      "refs": [
+        {
+          "source": "A",
+          "section": "6.3 연결 리스트",
+          "pages": [
+            177
+          ]
+        }
+      ]
+    },
+    {
+      "unit": 5,
+      "location": ".cheat.comparison_rows[0][1]",
+      "text": "단순 연결 리스트(singly linked list)는 하나의 방향으로만 연결되며 체인(chain)이라고도 한다.",
+      "evidence": "체인(chain)",
+      "refs": [
+        {
+          "source": "A",
+          "section": "6.3 연결 리스트의 종류",
+          "pages": [
+            178
+          ]
+        }
+      ]
+    },
+    {
+      "unit": 5,
+      "location": ".cheat.formulas[0]",
+      "text": "get_entry: O(1)",
+      "evidence": "get_entry",
+      "refs": [
+        {
+          "source": "A",
+          "section": "6.2 실행 시간 분석",
+          "pages": [
+            175
+          ]
+        }
+      ]
+    },
+    {
+      "unit": 6,
+      "location": ".learning[0]",
+      "text": "스택의 입출력 형태는 후입선출(LIFO: Last-In First-Out)이다.",
+      "evidence": "후입선출(LIFO: Last-In First-Out)",
+      "refs": [
+        {
+          "source": "A",
+          "section": "4.1 스택이란?",
+          "pages": [
+            94
+          ]
+        }
+      ]
+    },
+    {
+      "unit": 6,
+      "location": ".concepts[0].items[0]",
+      "text": "스택의 입출력 형태는 후입선출(LIFO: Last-In First-Out)이다.",
+      "evidence": "후입선출(LIFO: Last-In First-Out)",
+      "refs": [
+        {
+          "source": "A",
+          "section": "4.1 스택이란?",
+          "pages": [
+            94
+          ]
+        }
+      ]
+    },
+    {
+      "unit": 6,
+      "location": ".concepts[0].items[1]",
+      "text": "스택의 입출력은 맨 위에서만 일어나며, 입출력이 이루어지는 부분을 스택 상단(stack top)이라 한다.",
+      "evidence": "스택 상단(stack top)",
+      "refs": [
+        {
+          "source": "A",
+          "section": "4.1 스택이란?",
+          "pages": [
+            95
+          ]
+        }
+      ]
+    },
+    {
+      "unit": 6,
+      "location": ".concepts[0].items[2]",
+      "text": "스택에 요소가 하나도 없을 때 공백 스택(empty stack)이라고 한다.",
+      "evidence": "공백 스택(empty stack)",
+      "refs": [
+        {
+          "source": "A",
+          "section": "4.1 스택이란?",
+          "pages": [
+            95
+          ]
+        }
+      ]
+    },
+    {
+      "unit": 6,
+      "location": ".concepts[0].items[5]",
+      "text": "push는 스택의 맨 위에 item을 추가하는 연산이다.",
+      "evidence": "스택의 맨 위에 item을 추가",
+      "refs": [
+        {
+          "source": "A",
+          "section": "4.1 ADT 4.1 Stack",
+          "pages": [
+            97
+          ]
+        }
+      ]
+    },
+    {
+      "unit": 6,
+      "location": ".concepts[1].items[0]",
+      "text": "배열 스택에서 top은 가장 최근에 입력된 자료를 가리키며, 공백일 때 -1이다.",
+      "evidence": "top 변수는 스택이 비어 있으면 -1",
+      "refs": [
+        {
+          "source": "A",
+          "section": "4.2 스택의 구현",
+          "pages": [
+            98
+          ]
+        }
+      ]
+    },
+    {
+      "unit": 6,
+      "location": ".concepts[1].items[2]",
+      "text": "배열 스택의 push는 top을 먼저 증가시킨 후 stack[top]에 요소를 삽입한다.",
+      "evidence": "먼저 top의 값을 증가",
+      "refs": [
+        {
+          "source": "A",
+          "section": "4.2 스택의 push 연산",
+          "pages": [
+            100
+          ]
+        }
+      ]
+    },
+    {
+      "unit": 6,
+      "location": ".concepts[1].items[4]",
+      "text": "동적 배열 스택의 push는 공간이 부족하면 capacity를 2배로 늘리고 realloc()으로 메모리를 확보한다.",
+      "evidence": "공간이 부족하면 메모리를 2배",
+      "refs": [
+        {
+          "source": "A",
+          "section": "4.3 동적 배열 스택",
+          "pages": [
+            109
+          ]
+        }
+      ]
+    },
+    {
+      "unit": 6,
+      "location": ".concepts[1].items[7]",
+      "text": "B의 링크드 리스트 스택은 List가 헤드를 가리키고 Top이 테일을 가리키는 구현을 사용한다.",
+      "evidence": "Top 포인터는 이 링크드 리스트의 테일",
+      "refs": [
+        {
+          "source": "B",
+          "section": "2.3.1 링크드 리스트 기반 스택과 스택의 노드 표현",
+          "pages": [
+            92
+          ]
+        }
+      ]
+    },
+    {
+      "unit": 6,
+      "location": ".procedures[1].steps[0]",
+      "text": "스택을 생성·초기화하고 후위식을 순서대로 읽어 피연산자를 스택에 삽입한다.",
+      "evidence": "스택 s를 생성하고 초기화",
+      "refs": [
+        {
+          "source": "A",
+          "section": "4.5 알고리즘 4.6",
+          "pages": [
+            118
+          ]
+        }
+      ]
+    },
+    {
+      "unit": 6,
+      "location": ".procedures[1].steps[1]",
+      "text": "연산자 op를 만나면 second, first 순서로 pop하고 first op second의 결과를 push한다.",
+      "evidence": "result ← first op second",
+      "refs": [
+        {
+          "source": "A",
+          "section": "4.5 알고리즘 4.6",
+          "pages": [
+            118
+          ]
+        }
+      ]
+    },
+    {
+      "unit": 6,
+      "location": ".procedures[1].steps[2]",
+      "text": "식의 처리가 끝나면 pop한 값을 최종 결과로 얻는다.",
+      "evidence": "final_result",
+      "refs": [
+        {
+          "source": "A",
+          "section": "4.5 알고리즘 4.6",
+          "pages": [
+            118
+          ]
+        }
+      ]
+    },
+    {
+      "unit": 6,
+      "location": ".formulas[0]",
+      "text": "공백: top == -1; 포화: top >= (MAX_STACK_SIZE-1)",
+      "evidence": "top >= (MAX_STACK_SIZE-1)",
+      "refs": [
+        {
+          "source": "A",
+          "section": "4.2 알고리즘 4.1·4.2",
+          "pages": [
+            99
+          ]
+        }
+      ]
+    },
+    {
+      "unit": 6,
+      "location": ".comparisons[0].rows[0][1]",
+      "text": "push는 스택의 맨 위에 item을 추가하는 연산이다.",
+      "evidence": "스택의 맨 위에 item을 추가",
+      "refs": [
+        {
+          "source": "A",
+          "section": "4.1 ADT 4.1 Stack",
+          "pages": [
+            97
+          ]
+        }
+      ]
+    },
+    {
+      "unit": 6,
+      "location": ".terms[0].definition",
+      "text": "스택의 입출력 형태는 후입선출(LIFO: Last-In First-Out)이다.",
+      "evidence": "후입선출(LIFO: Last-In First-Out)",
+      "refs": [
+        {
+          "source": "A",
+          "section": "4.1 스택이란?",
+          "pages": [
+            94
+          ]
+        }
+      ]
+    },
+    {
+      "unit": 6,
+      "location": ".terms[1].definition",
+      "text": "스택의 입출력은 맨 위에서만 일어나며, 입출력이 이루어지는 부분을 스택 상단(stack top)이라 한다.",
+      "evidence": "스택 상단(stack top)",
+      "refs": [
+        {
+          "source": "A",
+          "section": "4.1 스택이란?",
+          "pages": [
+            95
+          ]
+        }
+      ]
+    },
+    {
+      "unit": 6,
+      "location": ".terms[2].definition",
+      "text": "스택에 요소가 하나도 없을 때 공백 스택(empty stack)이라고 한다.",
+      "evidence": "공백 스택(empty stack)",
+      "refs": [
+        {
+          "source": "A",
+          "section": "4.1 스택이란?",
+          "pages": [
+            95
+          ]
+        }
+      ]
+    },
+    {
+      "unit": 6,
+      "location": ".summary[0]",
+      "text": "스택의 입출력 형태는 후입선출(LIFO: Last-In First-Out)이다.",
+      "evidence": "후입선출(LIFO: Last-In First-Out)",
+      "refs": [
+        {
+          "source": "A",
+          "section": "4.1 스택이란?",
+          "pages": [
+            94
+          ]
+        }
+      ]
+    },
+    {
+      "unit": 6,
+      "location": ".summary[2]",
+      "text": "동적 배열 스택의 push는 공간이 부족하면 capacity를 2배로 늘리고 realloc()으로 메모리를 확보한다.",
+      "evidence": "공간이 부족하면 메모리를 2배",
+      "refs": [
+        {
+          "source": "A",
+          "section": "4.3 동적 배열 스택",
+          "pages": [
+            109
+          ]
+        }
+      ]
+    },
+    {
+      "unit": 6,
+      "location": ".review[0].answer",
+      "text": "스택의 입출력 형태는 후입선출(LIFO: Last-In First-Out)이다.",
+      "evidence": "후입선출(LIFO: Last-In First-Out)",
+      "refs": [
+        {
+          "source": "A",
+          "section": "4.1 스택이란?",
+          "pages": [
+            94
+          ]
+        }
+      ]
+    },
+    {
+      "unit": 6,
+      "location": ".cheat.definitions[0].definition",
+      "text": "스택의 입출력 형태는 후입선출(LIFO: Last-In First-Out)이다.",
+      "evidence": "후입선출(LIFO: Last-In First-Out)",
+      "refs": [
+        {
+          "source": "A",
+          "section": "4.1 스택이란?",
+          "pages": [
+            94
+          ]
+        }
+      ]
+    },
+    {
+      "unit": 6,
+      "location": ".cheat.comparison_rows[0][1]",
+      "text": "push는 스택의 맨 위에 item을 추가하는 연산이다.",
+      "evidence": "스택의 맨 위에 item을 추가",
+      "refs": [
+        {
+          "source": "A",
+          "section": "4.1 ADT 4.1 Stack",
+          "pages": [
+            97
+          ]
+        }
+      ]
+    },
+    {
+      "unit": 6,
+      "location": ".cheat.formulas[0]",
+      "text": "공백: top == -1; 포화: top >= (MAX_STACK_SIZE-1)",
+      "evidence": "top >= (MAX_STACK_SIZE-1)",
+      "refs": [
+        {
+          "source": "A",
+          "section": "4.2 알고리즘 4.1·4.2",
+          "pages": [
+            99
+          ]
+        }
+      ]
+    },
+    {
+      "unit": 7,
+      "location": ".learning[0]",
+      "text": "큐(queue)는 먼저 들어온 데이터가 먼저 나가는 선입선출(FIFO: First-In First-Out) 구조이다.",
+      "evidence": "선입선출(FIFO: First-In First-Out)",
+      "refs": [
+        {
+          "source": "A",
+          "section": "5.1 큐 추상 데이터 타입",
+          "pages": [
+            138
+          ]
+        }
+      ]
+    },
+    {
+      "unit": 7,
+      "location": ".concepts[0].items[0]",
+      "text": "큐(queue)는 먼저 들어온 데이터가 먼저 나가는 선입선출(FIFO: First-In First-Out) 구조이다.",
+      "evidence": "선입선출(FIFO: First-In First-Out)",
+      "refs": [
+        {
+          "source": "A",
+          "section": "5.1 큐 추상 데이터 타입",
+          "pages": [
+            138
+          ]
+        }
+      ]
+    },
+    {
+      "unit": 7,
+      "location": ".concepts[0].items[3]",
+      "text": "enqueue는 큐의 끝에 요소를 추가하며 포화 큐에서는 queue_full 오류를 낸다.",
+      "evidence": "queue_full 오류",
+      "refs": [
+        {
+          "source": "A",
+          "section": "5.1 ADT 5.1 큐",
+          "pages": [
+            139
+          ]
+        }
+      ]
+    },
+    {
+      "unit": 7,
+      "location": ".concepts[0].items[5]",
+      "text": "peek는 공백이 아닌 큐의 맨 앞 요소를 읽어서 반환한다.",
+      "evidence": "맨 앞에 있는 e를 읽어서 반환",
+      "refs": [
+        {
+          "source": "A",
+          "section": "5.1 ADT 5.1 큐",
+          "pages": [
+            139
+          ]
+        }
+      ]
+    },
+    {
+      "unit": 7,
+      "location": ".concepts[1].items[7]",
+      "text": "원형큐는 포화 상태와 공백 상태를 구분하기 위해 한 자리를 항상 비워 둔다.",
+      "evidence": "하나의 자리는 항상 비워둔다",
+      "refs": [
+        {
+          "source": "A",
+          "section": "5.3 원형큐",
+          "pages": [
+            147
+          ]
+        }
+      ]
+    },
+    {
+      "unit": 7,
+      "location": ".concepts[1].items[8]",
+      "text": "요소 개수를 저장하는 추가 변수 count를 사용하면 한 자리를 비워 두지 않아도 된다.",
+      "evidence": "count 변수를 사용할 수 있다면",
+      "refs": [
+        {
+          "source": "A",
+          "section": "5.3 원형큐",
+          "pages": [
+            147
+          ]
+        }
+      ]
+    },
+    {
+      "unit": 7,
+      "location": ".concepts[4].items[5]",
+      "text": "큐잉모델은 서비스를 수행하는 서버와 고객으로 구성되며 대기 행렬을 큐로 구현한다.",
+      "evidence": "이 대기 행렬이 큐로 구현",
+      "refs": [
+        {
+          "source": "A",
+          "section": "5.6 큐의 응용: 시뮬레이션",
+          "pages": [
+            160
+          ]
+        }
+      ]
+    },
+    {
+      "unit": 7,
+      "location": ".procedures[0].steps[2]",
+      "text": "service_time이 0이 아니면 하나 감소시키고, 0이면 큐에서 고객을 꺼내 서비스를 시작한다.",
+      "evidence": "service_time이 0이면",
+      "refs": [
+        {
+          "source": "A",
+          "section": "5.6 시뮬레이션 반복 루프",
+          "pages": [
+            160,
+            161
+          ]
+        }
+      ]
+    },
+    {
+      "unit": 7,
+      "location": ".syntax[0]",
+      "text": "원형큐 공백·포화 검출 함수",
+      "evidence": "int is_empty(QueueType *q)",
+      "refs": [
+        {
+          "source": "A",
+          "section": "5.3 프로그램 5.2",
+          "pages": [
+            150
+          ]
+        }
+      ]
+    },
+    {
+      "unit": 7,
+      "location": ".terms[0].definition",
+      "text": "큐(queue)는 먼저 들어온 데이터가 먼저 나가는 선입선출(FIFO: First-In First-Out) 구조이다.",
+      "evidence": "선입선출(FIFO: First-In First-Out)",
+      "refs": [
+        {
+          "source": "A",
+          "section": "5.1 큐 추상 데이터 타입",
+          "pages": [
+            138
+          ]
+        }
+      ]
+    },
+    {
+      "unit": 7,
+      "location": ".terms[2].definition",
+      "text": "enqueue는 큐의 끝에 요소를 추가하며 포화 큐에서는 queue_full 오류를 낸다.",
+      "evidence": "queue_full 오류",
+      "refs": [
+        {
+          "source": "A",
+          "section": "5.1 ADT 5.1 큐",
+          "pages": [
+            139
+          ]
+        }
+      ]
+    },
+    {
+      "unit": 7,
+      "location": ".terms[7].definition",
+      "text": "큐잉모델은 서비스를 수행하는 서버와 고객으로 구성되며 대기 행렬을 큐로 구현한다.",
+      "evidence": "이 대기 행렬이 큐로 구현",
+      "refs": [
+        {
+          "source": "A",
+          "section": "5.6 큐의 응용: 시뮬레이션",
+          "pages": [
+            160
+          ]
+        }
+      ]
+    },
+    {
+      "unit": 7,
+      "location": ".summary[0]",
+      "text": "큐(queue)는 먼저 들어온 데이터가 먼저 나가는 선입선출(FIFO: First-In First-Out) 구조이다.",
+      "evidence": "선입선출(FIFO: First-In First-Out)",
+      "refs": [
+        {
+          "source": "A",
+          "section": "5.1 큐 추상 데이터 타입",
+          "pages": [
+            138
+          ]
+        }
+      ]
+    },
+    {
+      "unit": 7,
+      "location": ".summary[1]",
+      "text": "원형큐는 포화 상태와 공백 상태를 구분하기 위해 한 자리를 항상 비워 둔다.",
+      "evidence": "하나의 자리는 항상 비워둔다",
+      "refs": [
+        {
+          "source": "A",
+          "section": "5.3 원형큐",
+          "pages": [
+            147
+          ]
+        }
+      ]
+    },
+    {
+      "unit": 7,
+      "location": ".summary[3]",
+      "text": "큐잉모델은 서비스를 수행하는 서버와 고객으로 구성되며 대기 행렬을 큐로 구현한다.",
+      "evidence": "이 대기 행렬이 큐로 구현",
+      "refs": [
+        {
+          "source": "A",
+          "section": "5.6 큐의 응용: 시뮬레이션",
+          "pages": [
+            160
+          ]
+        }
+      ]
+    },
+    {
+      "unit": 7,
+      "location": ".review[1].answer",
+      "text": "원형큐는 포화 상태와 공백 상태를 구분하기 위해 한 자리를 항상 비워 둔다.",
+      "evidence": "하나의 자리는 항상 비워둔다",
+      "refs": [
+        {
+          "source": "A",
+          "section": "5.3 원형큐",
+          "pages": [
+            147
+          ]
+        }
+      ]
+    },
+    {
+      "unit": 7,
+      "location": ".cheat.definitions[0].definition",
+      "text": "큐(queue)는 먼저 들어온 데이터가 먼저 나가는 선입선출(FIFO: First-In First-Out) 구조이다.",
+      "evidence": "선입선출(FIFO: First-In First-Out)",
+      "refs": [
+        {
+          "source": "A",
+          "section": "5.1 큐 추상 데이터 타입",
+          "pages": [
+            138
+          ]
+        }
+      ]
+    },
+    {
+      "unit": 8,
+      "location": ".concepts[0].items[2]",
+      "text": "트리에서 루트와 서브트리를 연결하는 선을 간선(edge)이라고 한다.",
+      "evidence": "이 연결선을 간선(edge)",
+      "refs": [
+        {
+          "source": "A",
+          "section": "8.1 트리의 용어들",
+          "pages": [
+            247
+          ]
+        }
+      ]
+    },
+    {
+      "unit": 8,
+      "location": ".concepts[0].items[4]",
+      "text": "후손 노드는 임의의 노드 하위에 연결된 모든 노드를 의미한다.",
+      "evidence": "임의의 노드 하위에 연결된 모든 노드",
+      "refs": [
+        {
+          "source": "A",
+          "section": "8.1 트리의 용어들",
+          "pages": [
+            248
+          ]
+        }
+      ]
+    },
+    {
+      "unit": 8,
+      "location": ".concepts[3].items[1]",
+      "text": "전위순회(preorder traversal)의 방문 순서는 VLR이다.",
+      "evidence": "전위순회(preorder traversal) : VLR",
+      "refs": [
+        {
+          "source": "A",
+          "section": "8.4 이진트리 순회방법",
+          "pages": [
+            260
+          ]
+        }
+      ]
+    },
+    {
+      "unit": 8,
+      "location": ".concepts[3].items[2]",
+      "text": "중위순회(inorder traversal)의 방문 순서는 LVR이다.",
+      "evidence": "중위순회(inorder traversal) : LVR",
+      "refs": [
+        {
+          "source": "A",
+          "section": "8.4 이진트리 순회방법",
+          "pages": [
+            260
+          ]
+        }
+      ]
+    },
+    {
+      "unit": 8,
+      "location": ".concepts[3].items[3]",
+      "text": "후위순회(postorder traversal)의 방문 순서는 LRV이다.",
+      "evidence": "후위순회(postorder traversal) : LRV",
+      "refs": [
+        {
+          "source": "A",
+          "section": "8.4 이진트리 순회방법",
+          "pages": [
+            260
+          ]
+        }
+      ]
+    },
+    {
+      "unit": 8,
+      "location": ".concepts[3].items[5]",
+      "text": "반복적 트리 순회는 별도의 스택에 자식 노드를 저장하고 꺼내면서 순환 호출을 흉내 낼 수 있다.",
+      "evidence": "별도의 스택을 사용하면",
+      "refs": [
+        {
+          "source": "A",
+          "section": "8.5 반복적 순회",
+          "pages": [
+            269
+          ]
+        }
+      ]
+    },
+    {
+      "unit": 8,
+      "location": ".concepts[4].items[0]",
+      "text": "수식 트리에서 피연산자는 단말노드, 연산자는 비단말 노드가 된다.",
+      "evidence": "피연산자들은 단말노드",
+      "refs": [
+        {
+          "source": "A",
+          "section": "8.7 트리의 응용: 수식 트리 처리",
+          "pages": [
+            275
+          ]
+        }
+      ]
+    },
+    {
+      "unit": 8,
+      "location": ".concepts[4].items[3]",
+      "text": "B의 수식 트리는 하나의 연산자가 2개의 피연산자를 취한다고 가정한다.",
+      "evidence": "2개의 피연산자를 취한다는 가정",
+      "refs": [
+        {
+          "source": "B",
+          "section": "4.3 수식 트리",
+          "pages": [
+            183
+          ]
+        }
+      ]
+    },
+    {
+      "unit": 8,
+      "location": ".procedures[1].steps[0]",
+      "text": "수식을 뒤에서 앞쪽으로 읽으며 토큰을 취하고 마지막 토큰으로 뿌리 노드를 생성한다.",
+      "evidence": "뒤에서부터 앞쪽으로 읽어나가며",
+      "refs": [
+        {
+          "source": "B",
+          "section": "4.3.1 수식 트리 구축 방법",
+          "pages": [
+            184
+          ]
+        }
+      ]
+    },
+    {
+      "unit": 8,
+      "location": ".formulas[0]",
+      "text": "간선의 개수 = n-1",
+      "evidence": "n-1의 간선",
+      "refs": [
+        {
+          "source": "A",
+          "section": "8.2 이진트리의 성질",
+          "pages": [
+            251
+          ]
+        }
+      ]
+    },
+    {
+      "unit": 8,
+      "location": ".formulas[2]",
+      "text": "부모: i/2; 왼쪽 자식: 2i; 오른쪽 자식: 2i+1",
+      "evidence": "부모 노드 인덱스 = i/2",
+      "refs": [
+        {
+          "source": "A",
+          "section": "8.3 배열 표현법",
+          "pages": [
+            256
+          ]
+        }
+      ]
+    },
+    {
+      "unit": 8,
+      "location": ".comparisons[0].rows[0][1]",
+      "text": "전위순회(preorder traversal)의 방문 순서는 VLR이다.",
+      "evidence": "전위순회(preorder traversal) : VLR",
+      "refs": [
+        {
+          "source": "A",
+          "section": "8.4 이진트리 순회방법",
+          "pages": [
+            260
+          ]
+        }
+      ]
+    },
+    {
+      "unit": 8,
+      "location": ".comparisons[0].rows[1][1]",
+      "text": "중위순회(inorder traversal)의 방문 순서는 LVR이다.",
+      "evidence": "중위순회(inorder traversal) : LVR",
+      "refs": [
+        {
+          "source": "A",
+          "section": "8.4 이진트리 순회방법",
+          "pages": [
+            260
+          ]
+        }
+      ]
+    },
+    {
+      "unit": 8,
+      "location": ".comparisons[0].rows[2][1]",
+      "text": "후위순회(postorder traversal)의 방문 순서는 LRV이다.",
+      "evidence": "후위순회(postorder traversal) : LRV",
+      "refs": [
+        {
+          "source": "A",
+          "section": "8.4 이진트리 순회방법",
+          "pages": [
+            260
+          ]
+        }
+      ]
+    },
+    {
+      "unit": 8,
+      "location": ".review[1].answer",
+      "text": "전위순회(preorder traversal)의 방문 순서는 VLR이다.",
+      "evidence": "전위순회(preorder traversal) : VLR",
+      "refs": [
+        {
+          "source": "A",
+          "section": "8.4 이진트리 순회방법",
+          "pages": [
+            260
+          ]
+        }
+      ]
+    },
+    {
+      "unit": 8,
+      "location": ".cheat.comparison_rows[0][1]",
+      "text": "전위순회(preorder traversal)의 방문 순서는 VLR이다.",
+      "evidence": "전위순회(preorder traversal) : VLR",
+      "refs": [
+        {
+          "source": "A",
+          "section": "8.4 이진트리 순회방법",
+          "pages": [
+            260
+          ]
+        }
+      ]
+    },
+    {
+      "unit": 8,
+      "location": ".cheat.comparison_rows[1][1]",
+      "text": "중위순회(inorder traversal)의 방문 순서는 LVR이다.",
+      "evidence": "중위순회(inorder traversal) : LVR",
+      "refs": [
+        {
+          "source": "A",
+          "section": "8.4 이진트리 순회방법",
+          "pages": [
+            260
+          ]
+        }
+      ]
+    },
+    {
+      "unit": 8,
+      "location": ".cheat.comparison_rows[2][1]",
+      "text": "후위순회(postorder traversal)의 방문 순서는 LRV이다.",
+      "evidence": "후위순회(postorder traversal) : LRV",
+      "refs": [
+        {
+          "source": "A",
+          "section": "8.4 이진트리 순회방법",
+          "pages": [
+            260
+          ]
+        }
+      ]
+    },
+    {
+      "unit": 8,
+      "location": ".cheat.formulas[0]",
+      "text": "부모: i/2; 왼쪽 자식: 2i; 오른쪽 자식: 2i+1",
+      "evidence": "부모 노드 인덱스 = i/2",
+      "refs": [
+        {
+          "source": "A",
+          "section": "8.3 배열 표현법",
+          "pages": [
+            256
+          ]
+        }
+      ]
+    },
+    {
+      "unit": 9,
+      "location": ".learning[0]",
+      "text": "이진 탐색 트리는 모든 원소의 키가 유일한 이진 트리이다.",
+      "evidence": "모든 원소의 키는 유일한 키를 가진다.",
+      "refs": [
+        {
+          "source": "A",
+          "section": "8.11 이진 탐색 트리",
+          "pages": [
+            287
+          ]
+        }
+      ]
+    },
+    {
+      "unit": 9,
+      "location": ".learning[2]",
+      "text": "레드 블랙 트리는 노드를 빨간색 또는 검은색으로 표시하여 트리 균형을 유지하는 이진 탐색 트리이다.",
+      "evidence": "노드의 색은 트리 전체의 균형을 유지",
+      "refs": [
+        {
+          "source": "B",
+          "section": "6.5 레드 블랙 트리",
+          "pages": [
+            274
+          ]
+        }
+      ]
+    },
+    {
+      "unit": 9,
+      "location": ".concepts[0].items[0]",
+      "text": "이진 탐색 트리는 모든 원소의 키가 유일한 이진 트리이다.",
+      "evidence": "모든 원소의 키는 유일한 키를 가진다.",
+      "refs": [
+        {
+          "source": "A",
+          "section": "8.11 이진 탐색 트리",
+          "pages": [
+            287
+          ]
+        }
+      ]
+    },
+    {
+      "unit": 9,
+      "location": ".concepts[0].items[1]",
+      "text": "왼쪽 서브 트리의 키들은 루트 키보다 작고 오른쪽 서브 트리의 키들은 루트 키보다 크다.",
+      "evidence": "왼쪽 서브 트리 키들은 루트 키보다 작다.",
+      "refs": [
+        {
+          "source": "A",
+          "section": "8.11 이진 탐색 트리",
+          "pages": [
+            287
+          ]
+        }
+      ]
+    },
+    {
+      "unit": 9,
+      "location": ".concepts[0].items[3]",
+      "text": "이진 탐색 트리를 중위 순회하면 키값이 크기순으로 나온다.",
+      "evidence": "숫자들의 크기 순이 된다.",
+      "refs": [
+        {
+          "source": "A",
+          "section": "8.11 이진 탐색 트리",
+          "pages": [
+            288
+          ]
+        }
+      ]
+    },
+    {
+      "unit": 9,
+      "location": ".concepts[0].items[5]",
+      "text": "이진 탐색 트리의 탐색은 순환적 방법과 반복적 방법으로 구현할 수 있다.",
+      "evidence": "순환적 방법과 반복적인 방법",
+      "refs": [
+        {
+          "source": "A",
+          "section": "8.11 이진 탐색 트리",
+          "pages": [
+            290
+          ]
+        }
+      ]
+    },
+    {
+      "unit": 9,
+      "location": ".concepts[2].items[1]",
+      "text": "한쪽으로 치우친 경사 트리의 최악 경우에는 높이가 n이 되어 탐색·삽입·삭제 시간이 O(n)이 된다.",
+      "evidence": "트리의 높이가 n",
+      "refs": [
+        {
+          "source": "A",
+          "section": "8.11 이진 탐색 트리",
+          "pages": [
+            301
+          ]
+        }
+      ]
+    },
+    {
+      "unit": 9,
+      "location": ".concepts[2].items[2]",
+      "text": "A의 영어 사전 예제는 입력에 insert_node(), 탐색에 search(), 삭제에 delete_node()를 사용한다.",
+      "evidence": "가장 중요한 메뉴는 입력과 탐색, 삭제",
+      "refs": [
+        {
+          "source": "A",
+          "section": "8.12 이진 탐색 트리의 응용: 영어 사전",
+          "pages": [
+            302
+          ]
+        }
+      ]
+    },
+    {
+      "unit": 9,
+      "location": ".concepts[3].items[3]",
+      "text": "A는 AVL 트리의 탐색과 삽입·삭제가 O(logn) 시간 안에 가능하다고 설명한다.",
+      "evidence": "삽입과 삭제 연산도 O(logn)시간",
+      "refs": [
+        {
+          "source": "A",
+          "section": "13.5 AVL 트리",
+          "pages": [
+            502
+          ]
+        }
+      ]
+    },
+    {
+      "unit": 9,
+      "location": ".concepts[3].items[8]",
+      "text": "A의 LR 처리 코드는 왼쪽 자식을 왼쪽으로 회전한 뒤 현재 노드를 오른쪽으로 회전한다.",
+      "evidence": "node->left = rotate_left(node->left);",
+      "refs": [
+        {
+          "source": "A",
+          "section": "13.5 AVL 트리",
+          "pages": [
+            511
+          ]
+        }
+      ]
+    },
+    {
+      "unit": 9,
+      "location": ".concepts[3].items[9]",
+      "text": "A의 RL 처리 코드는 오른쪽 자식을 오른쪽으로 회전한 뒤 현재 노드를 왼쪽으로 회전한다.",
+      "evidence": "node->right = rotate_right(node->right);",
+      "refs": [
+        {
+          "source": "A",
+          "section": "13.5 AVL 트리",
+          "pages": [
+            511
+          ]
+        }
+      ]
+    },
+    {
+      "unit": 9,
+      "location": ".concepts[4].items[0]",
+      "text": "2-3 트리는 차수가 2 또는 3인 노드를 가지는 트리이다.",
+      "evidence": "차수가 2 또는 3인 노드",
+      "refs": [
+        {
+          "source": "A",
+          "section": "13.6 2-3 트리",
+          "pages": [
+            514
+          ]
+        }
+      ]
+    },
+    {
+      "unit": 9,
+      "location": ".concepts[4].items[1]",
+      "text": "2-노드는 데이터 k1 하나와 자식 노드 둘을 가진다.",
+      "evidence": "하나의 데이터 k1과 두 개의 자식 노드",
+      "refs": [
+        {
+          "source": "A",
+          "section": "13.6 2-3 트리",
+          "pages": [
+            514
+          ]
+        }
+      ]
+    },
+    {
+      "unit": 9,
+      "location": ".concepts[4].items[2]",
+      "text": "3-노드는 데이터 k1, k2 둘과 자식 노드 셋을 가진다.",
+      "evidence": "2개의 데이터 k1, k2와 3개의 자식",
+      "refs": [
+        {
+          "source": "A",
+          "section": "13.6 2-3 트리",
+          "pages": [
+            514,
+            515
+          ]
+        }
+      ]
+    },
+    {
+      "unit": 9,
+      "location": ".concepts[4].items[3]",
+      "text": "3-노드의 왼쪽 데이터는 k1보다 작고, 중간 데이터는 k1보다 크고 k2보다 작으며, 오른쪽 데이터는 k2보다 크다.",
+      "evidence": "중간 서브 트리에 있는 값들은 모두 k1보다 크고 k2보다 작다.",
+      "refs": [
+        {
+          "source": "A",
+          "section": "13.6 2-3 트리",
+          "pages": [
+            515
+          ]
+        }
+      ]
+    },
+    {
+      "unit": 9,
+      "location": ".concepts[6].items[0]",
+      "text": "레드 블랙 트리는 노드를 빨간색 또는 검은색으로 표시하여 트리 균형을 유지하는 이진 탐색 트리이다.",
+      "evidence": "노드의 색은 트리 전체의 균형을 유지",
+      "refs": [
+        {
+          "source": "B",
+          "section": "6.5 레드 블랙 트리",
+          "pages": [
+            274
+          ]
+        }
+      ]
+    },
+    {
+      "unit": 9,
+      "location": ".concepts[6].items[2]",
+      "text": "레드 블랙 트리의 모든 노드는 빨간색이거나 검은색이다.",
+      "evidence": "모든 노드는 빨간색이거나 검은색",
+      "refs": [
+        {
+          "source": "B",
+          "section": "6.5.1 레드 블랙 트리의 구현 규칙",
+          "pages": [
+            275
+          ]
+        }
+      ]
+    },
+    {
+      "unit": 9,
+      "location": ".concepts[6].items[3]",
+      "text": "레드 블랙 트리의 뿌리 노드와 잎 노드는 검은색이다.",
+      "evidence": "뿌리 노드는 검은색이다.",
+      "refs": [
+        {
+          "source": "B",
+          "section": "6.5.1 레드 블랙 트리의 구현 규칙",
+          "pages": [
+            275
+          ]
+        }
+      ]
+    },
+    {
+      "unit": 9,
+      "location": ".concepts[6].items[6]",
+      "text": "NIL은 데이터 없이 검은색만 갖는 더미 노드이며 센티넬(Sentinel) 노드라고 한다.",
+      "evidence": "센티넬Sentinel",
+      "refs": [
+        {
+          "source": "B",
+          "section": "6.5.1 레드 블랙 트리의 구현 규칙",
+          "pages": [
+            275,
+            276
+          ]
+        }
+      ]
+    },
+    {
+      "unit": 9,
+      "location": ".concepts[7].items[1]",
+      "text": "회전은 부모와 자식 노드의 위치를 바꾸는 연산이고 우회전은 왼쪽 자식, 좌회전은 오른쪽 자식과 부모 위치를 교환한다.",
+      "evidence": "부모와 자식 노드의 위치를 서로 바꾸는 연산",
+      "refs": [
+        {
+          "source": "B",
+          "section": "6.5.2 레드 블랙 트리의 기본 연산",
+          "pages": [
+            276
+          ]
+        }
+      ]
+    },
+    {
+      "unit": 9,
+      "location": ".concepts[7].items[2]",
+      "text": "우회전할 때는 왼쪽 자식의 오른쪽 자식을 부모의 왼쪽 자식으로 연결한다.",
+      "evidence": "왼쪽 자식 노드의 오른쪽 자식 노드",
+      "refs": [
+        {
+          "source": "B",
+          "section": "6.5.2 레드 블랙 트리의 기본 연산",
+          "pages": [
+            277
+          ]
+        }
+      ]
+    },
+    {
+      "unit": 9,
+      "location": ".concepts[7].items[3]",
+      "text": "좌회전할 때는 오른쪽 자식의 왼쪽 자식을 부모의 오른쪽 자식으로 연결한다.",
+      "evidence": "오른쪽 자식 노드의 왼쪽 자식 노드",
+      "refs": [
+        {
+          "source": "B",
+          "section": "6.5.2 레드 블랙 트리의 기본 연산",
+          "pages": [
+            277
+          ]
+        }
+      ]
+    },
+    {
+      "unit": 9,
+      "location": ".concepts[7].items[4]",
+      "text": "새 노드를 이진 탐색으로 삽입한 뒤 빨간색으로 칠하고 양쪽 자식에 NIL을 연결하여 규칙을 복구한다.",
+      "evidence": "새 노드를 빨간색으로 칠한 다음 NIL",
+      "refs": [
+        {
+          "source": "B",
+          "section": "6.5.2 레드 블랙 트리의 기본 연산",
+          "pages": [
+            278
+          ]
+        }
+      ]
+    },
+    {
+      "unit": 9,
+      "location": ".concepts[8].items[0]",
+      "text": "빨간색 노드 삭제는 색 규칙을 무너뜨리지 않지만 이진 탐색 트리로서의 뒤처리는 진행한다.",
+      "evidence": "이진 탐색 트리로서의 뒤처리는 진행",
+      "refs": [
+        {
+          "source": "B",
+          "section": "6.5.2 레드 블랙 트리의 기본 연산",
+          "pages": [
+            284
+          ]
+        }
+      ]
+    },
+    {
+      "unit": 9,
+      "location": ".concepts[8].items[2]",
+      "text": "이중 흑색은 대체 노드가 검은색을 두 개 가진다고 표현하는 개념이며 실제 코드에서 별도로 표시하지 않는다.",
+      "evidence": "실제 코드에서 노드를 이중 흑색으로 표시하는 일은 없",
+      "refs": [
+        {
+          "source": "B",
+          "section": "6.5.2 레드 블랙 트리의 기본 연산",
+          "pages": [
+            285,
+            286
+          ]
+        }
+      ]
+    },
+    {
+      "unit": 9,
+      "location": ".concepts[8].items[4]",
+      "text": "형제가 빨간색이면 형제를 검은색, 부모를 빨간색으로 칠하고 부모를 좌회전하여 검은색 형제의 경우로 바꾼다.",
+      "evidence": "형제를 검은색, 부모를 빨간색",
+      "refs": [
+        {
+          "source": "B",
+          "section": "6.5.2 레드 블랙 트리의 기본 연산",
+          "pages": [
+            286,
+            287
+          ]
+        }
+      ]
+    },
+    {
+      "unit": 9,
+      "location": ".concepts[8].items[5]",
+      "text": "형제가 검은색이고 양쪽 자식도 검은색이면 형제를 빨간색으로 칠하고 이중 흑색 중 하나를 부모에게 넘긴다.",
+      "evidence": "형제 노드만 빨간색으로 칠한 후",
+      "refs": [
+        {
+          "source": "B",
+          "section": "6.5.2 레드 블랙 트리의 기본 연산",
+          "pages": [
+            287
+          ]
+        }
+      ]
+    },
+    {
+      "unit": 9,
+      "location": ".procedures[2].steps[0]",
+      "text": "새 노드를 이진 탐색으로 삽입한 뒤 빨간색으로 칠하고 양쪽 자식에 NIL을 연결하여 규칙을 복구한다.",
+      "evidence": "새 노드를 빨간색으로 칠한 다음 NIL",
+      "refs": [
+        {
+          "source": "B",
+          "section": "6.5.2 레드 블랙 트리의 기본 연산",
+          "pages": [
+            278
+          ]
+        }
+      ]
+    },
+    {
+      "unit": 9,
+      "location": ".procedures[3].steps[0]",
+      "text": "형제가 빨간색이면 형제를 검은색, 부모를 빨간색으로 칠하고 부모를 좌회전하여 검은색 형제의 경우로 바꾼다.",
+      "evidence": "형제를 검은색, 부모를 빨간색",
+      "refs": [
+        {
+          "source": "B",
+          "section": "6.5.2 레드 블랙 트리의 기본 연산",
+          "pages": [
+            286,
+            287
+          ]
+        }
+      ]
+    },
+    {
+      "unit": 9,
+      "location": ".procedures[3].steps[1]",
+      "text": "형제가 검은색이고 양쪽 자식도 검은색이면 형제를 빨간색으로 칠하고 이중 흑색 중 하나를 부모에게 넘긴다.",
+      "evidence": "형제 노드만 빨간색으로 칠한 후",
+      "refs": [
+        {
+          "source": "B",
+          "section": "6.5.2 레드 블랙 트리의 기본 연산",
+          "pages": [
+            287
+          ]
+        }
+      ]
+    },
+    {
+      "unit": 9,
+      "location": ".syntax[0]",
+      "text": "A 프로그램 8.9 순환 탐색 함수",
+      "evidence": "TreeNode * search(TreeNode * node, int key)",
+      "refs": [
+        {
+          "source": "A",
+          "section": "8.11 이진 탐색 트리",
+          "pages": [
+            290
+          ]
+        }
+      ]
+    },
+    {
+      "unit": 9,
+      "location": ".syntax[1]",
+      "text": "A rotate_left() 원문 함수",
+      "evidence": "AVLNode *rotate_left(AVLNode *parent)",
+      "refs": [
+        {
+          "source": "A",
+          "section": "13.5 AVL 트리",
+          "pages": [
+            509
+          ]
+        }
+      ]
+    },
+    {
+      "unit": 9,
+      "location": ".formulas[2]",
+      "text": "O(logn)",
+      "evidence": "삽입과 삭제 연산도 O(logn)시간",
+      "refs": [
+        {
+          "source": "A",
+          "section": "13.5 AVL 트리",
+          "pages": [
+            502
+          ]
+        }
+      ]
+    },
+    {
+      "unit": 9,
+      "location": ".comparisons[0].rows[0][1]",
+      "text": "왼쪽 서브 트리의 키들은 루트 키보다 작고 오른쪽 서브 트리의 키들은 루트 키보다 크다.",
+      "evidence": "왼쪽 서브 트리 키들은 루트 키보다 작다.",
+      "refs": [
+        {
+          "source": "A",
+          "section": "8.11 이진 탐색 트리",
+          "pages": [
+            287
+          ]
+        }
+      ]
+    },
+    {
+      "unit": 9,
+      "location": ".comparisons[0].rows[2][1]",
+      "text": "2-3 트리는 차수가 2 또는 3인 노드를 가지는 트리이다.",
+      "evidence": "차수가 2 또는 3인 노드",
+      "refs": [
+        {
+          "source": "A",
+          "section": "13.6 2-3 트리",
+          "pages": [
+            514
+          ]
+        }
+      ]
+    },
+    {
+      "unit": 9,
+      "location": ".comparisons[0].rows[4][1]",
+      "text": "레드 블랙 트리는 노드를 빨간색 또는 검은색으로 표시하여 트리 균형을 유지하는 이진 탐색 트리이다.",
+      "evidence": "노드의 색은 트리 전체의 균형을 유지",
+      "refs": [
+        {
+          "source": "B",
+          "section": "6.5 레드 블랙 트리",
+          "pages": [
+            274
+          ]
+        }
+      ]
+    },
+    {
+      "unit": 9,
+      "location": ".terms[0].definition",
+      "text": "이진 탐색 트리는 모든 원소의 키가 유일한 이진 트리이다.",
+      "evidence": "모든 원소의 키는 유일한 키를 가진다.",
+      "refs": [
+        {
+          "source": "A",
+          "section": "8.11 이진 탐색 트리",
+          "pages": [
+            287
+          ]
+        }
+      ]
+    },
+    {
+      "unit": 9,
+      "location": ".terms[3].definition",
+      "text": "2-노드는 데이터 k1 하나와 자식 노드 둘을 가진다.",
+      "evidence": "하나의 데이터 k1과 두 개의 자식 노드",
+      "refs": [
+        {
+          "source": "A",
+          "section": "13.6 2-3 트리",
+          "pages": [
+            514
+          ]
+        }
+      ]
+    },
+    {
+      "unit": 9,
+      "location": ".terms[4].definition",
+      "text": "3-노드는 데이터 k1, k2 둘과 자식 노드 셋을 가진다.",
+      "evidence": "2개의 데이터 k1, k2와 3개의 자식",
+      "refs": [
+        {
+          "source": "A",
+          "section": "13.6 2-3 트리",
+          "pages": [
+            514,
+            515
+          ]
+        }
+      ]
+    },
+    {
+      "unit": 9,
+      "location": ".terms[6].definition",
+      "text": "레드 블랙 트리는 노드를 빨간색 또는 검은색으로 표시하여 트리 균형을 유지하는 이진 탐색 트리이다.",
+      "evidence": "노드의 색은 트리 전체의 균형을 유지",
+      "refs": [
+        {
+          "source": "B",
+          "section": "6.5 레드 블랙 트리",
+          "pages": [
+            274
+          ]
+        }
+      ]
+    },
+    {
+      "unit": 9,
+      "location": ".terms[7].definition",
+      "text": "NIL은 데이터 없이 검은색만 갖는 더미 노드이며 센티넬(Sentinel) 노드라고 한다.",
+      "evidence": "센티넬Sentinel",
+      "refs": [
+        {
+          "source": "B",
+          "section": "6.5.1 레드 블랙 트리의 구현 규칙",
+          "pages": [
+            275,
+            276
+          ]
+        }
+      ]
+    },
+    {
+      "unit": 9,
+      "location": ".terms[8].definition",
+      "text": "회전은 부모와 자식 노드의 위치를 바꾸는 연산이고 우회전은 왼쪽 자식, 좌회전은 오른쪽 자식과 부모 위치를 교환한다.",
+      "evidence": "부모와 자식 노드의 위치를 서로 바꾸는 연산",
+      "refs": [
+        {
+          "source": "B",
+          "section": "6.5.2 레드 블랙 트리의 기본 연산",
+          "pages": [
+            276
+          ]
+        }
+      ]
+    },
+    {
+      "unit": 9,
+      "location": ".terms[9].definition",
+      "text": "이중 흑색은 대체 노드가 검은색을 두 개 가진다고 표현하는 개념이며 실제 코드에서 별도로 표시하지 않는다.",
+      "evidence": "실제 코드에서 노드를 이중 흑색으로 표시하는 일은 없",
+      "refs": [
+        {
+          "source": "B",
+          "section": "6.5.2 레드 블랙 트리의 기본 연산",
+          "pages": [
+            285,
+            286
+          ]
+        }
+      ]
+    },
+    {
+      "unit": 9,
+      "location": ".summary[0]",
+      "text": "왼쪽 서브 트리의 키들은 루트 키보다 작고 오른쪽 서브 트리의 키들은 루트 키보다 크다.",
+      "evidence": "왼쪽 서브 트리 키들은 루트 키보다 작다.",
+      "refs": [
+        {
+          "source": "A",
+          "section": "8.11 이진 탐색 트리",
+          "pages": [
+            287
+          ]
+        }
+      ]
+    },
+    {
+      "unit": 9,
+      "location": ".summary[3]",
+      "text": "레드 블랙 트리는 노드를 빨간색 또는 검은색으로 표시하여 트리 균형을 유지하는 이진 탐색 트리이다.",
+      "evidence": "노드의 색은 트리 전체의 균형을 유지",
+      "refs": [
+        {
+          "source": "B",
+          "section": "6.5 레드 블랙 트리",
+          "pages": [
+            274
+          ]
+        }
+      ]
+    },
+    {
+      "unit": 9,
+      "location": ".review[3].answer",
+      "text": "NIL은 데이터 없이 검은색만 갖는 더미 노드이며 센티넬(Sentinel) 노드라고 한다.",
+      "evidence": "센티넬Sentinel",
+      "refs": [
+        {
+          "source": "B",
+          "section": "6.5.1 레드 블랙 트리의 구현 규칙",
+          "pages": [
+            275,
+            276
+          ]
+        }
+      ]
+    },
+    {
+      "unit": 9,
+      "location": ".cheat.definitions[0].definition",
+      "text": "왼쪽 서브 트리의 키들은 루트 키보다 작고 오른쪽 서브 트리의 키들은 루트 키보다 크다.",
+      "evidence": "왼쪽 서브 트리 키들은 루트 키보다 작다.",
+      "refs": [
+        {
+          "source": "A",
+          "section": "8.11 이진 탐색 트리",
+          "pages": [
+            287
+          ]
+        }
+      ]
+    },
+    {
+      "unit": 9,
+      "location": ".cheat.definitions[2].definition",
+      "text": "레드 블랙 트리는 노드를 빨간색 또는 검은색으로 표시하여 트리 균형을 유지하는 이진 탐색 트리이다.",
+      "evidence": "노드의 색은 트리 전체의 균형을 유지",
+      "refs": [
+        {
+          "source": "B",
+          "section": "6.5 레드 블랙 트리",
+          "pages": [
+            274
+          ]
+        }
+      ]
+    },
+    {
+      "unit": 9,
+      "location": ".cheat.comparison_rows[0][1]",
+      "text": "2-노드는 데이터 k1 하나와 자식 노드 둘을 가진다.",
+      "evidence": "하나의 데이터 k1과 두 개의 자식 노드",
+      "refs": [
+        {
+          "source": "A",
+          "section": "13.6 2-3 트리",
+          "pages": [
+            514
+          ]
+        }
+      ]
+    },
+    {
+      "unit": 9,
+      "location": ".cheat.comparison_rows[1][1]",
+      "text": "3-노드는 데이터 k1, k2 둘과 자식 노드 셋을 가진다.",
+      "evidence": "2개의 데이터 k1, k2와 3개의 자식",
+      "refs": [
+        {
+          "source": "A",
+          "section": "13.6 2-3 트리",
+          "pages": [
+            514,
+            515
+          ]
+        }
+      ]
+    },
+    {
+      "unit": 10,
+      "location": ".learning[0]",
+      "text": "우선순위 큐는 우선순위 속성을 갖는 데이터의 삽입(Enqueue)과 제거(Dequeue) 연산을 지원하는 ADT이다.",
+      "evidence": "삽입과 제거 연산을 지원하는 ADT",
+      "refs": [
+        {
+          "source": "B",
+          "section": "7.1 우선순위 큐",
+          "pages": [
+            310
+          ]
+        }
+      ]
+    },
+    {
+      "unit": 10,
+      "location": ".learning[1]",
+      "text": "히프(heap)는 여러 개의 값 중에서 가장 큰 값이나 가장 작은 값을 빠르게 찾아내도록 만들어진 자료구조이다.",
+      "evidence": "가장 큰 값이나 가장 작은 값",
+      "refs": [
+        {
+          "source": "A",
+          "section": "9.3 히프란?",
+          "pages": [
+            319
+          ]
+        }
+      ]
+    },
+    {
+      "unit": 10,
+      "location": ".concepts[0].items[0]",
+      "text": "우선순위 큐는 우선순위 속성을 갖는 데이터의 삽입(Enqueue)과 제거(Dequeue) 연산을 지원하는 ADT이다.",
+      "evidence": "삽입과 제거 연산을 지원하는 ADT",
+      "refs": [
+        {
+          "source": "B",
+          "section": "7.1 우선순위 큐",
+          "pages": [
+            310
+          ]
+        }
+      ]
+    },
+    {
+      "unit": 10,
+      "location": ".concepts[0].items[2]",
+      "text": "우선순위의 기준은 프로그래머가 결정한다.",
+      "evidence": "전적으로 프로그래머에게 달렸습니다",
+      "refs": [
+        {
+          "source": "B",
+          "section": "7.1 우선순위의 기준",
+          "pages": [
+            310
+          ]
+        }
+      ]
+    },
+    {
+      "unit": 10,
+      "location": ".concepts[0].items[3]",
+      "text": "B에서는 데이터의 값이 작을수록 우선순위가 높은 것으로 간주한다.",
+      "evidence": "데이터의 값이 작을수록 높은",
+      "refs": [
+        {
+          "source": "B",
+          "section": "7.1 우선순위의 기준",
+          "pages": [
+            310
+          ]
+        }
+      ]
+    },
+    {
+      "unit": 10,
+      "location": ".concepts[1].items[0]",
+      "text": "히프(heap)는 여러 개의 값 중에서 가장 큰 값이나 가장 작은 값을 빠르게 찾아내도록 만들어진 자료구조이다.",
+      "evidence": "가장 큰 값이나 가장 작은 값",
+      "refs": [
+        {
+          "source": "A",
+          "section": "9.3 히프란?",
+          "pages": [
+            319
+          ]
+        }
+      ]
+    },
+    {
+      "unit": 10,
+      "location": ".concepts[1].items[6]",
+      "text": "B의 힙에서 가장 작은 데이터를 갖는 노드는 뿌리 노드이다.",
+      "evidence": "가장 작은 데이터를 갖는 노드는 뿌리",
+      "refs": [
+        {
+          "source": "B",
+          "section": "7.2.2 힙의 최솟값 삭제 연산",
+          "pages": [
+            315
+          ]
+        }
+      ]
+    },
+    {
+      "unit": 10,
+      "location": ".concepts[2].items[0]",
+      "text": "A의 배열 표현은 인덱스 0을 사용하지 않고 루트 노드를 인덱스 1에 저장한다.",
+      "evidence": "인덱스는 0이 아닌 1부터",
+      "refs": [
+        {
+          "source": "A",
+          "section": "9.3 히프의 구현 방법",
+          "pages": [
+            320
+          ]
+        }
+      ]
+    },
+    {
+      "unit": 10,
+      "location": ".concepts[2].items[2]",
+      "text": "B의 Heap 구조체에서 Capacity는 Nodes 배열의 크기, UsedSize는 실제 배열에 들어 있는 큐 요소의 수이다.",
+      "evidence": "Capacity 필드는 힙의 용량",
+      "refs": [
+        {
+          "source": "B",
+          "section": "7.2.3 자료구조 선언",
+          "pages": [
+            318
+          ]
+        }
+      ]
+    },
+    {
+      "unit": 10,
+      "location": ".concepts[2].items[3]",
+      "text": "B의 HEAP_Insert()는 UsedSize가 Capacity에 도달하면 Capacity를 2배로 늘리고 realloc()으로 배열을 다시 할당한다.",
+      "evidence": "Capacity *= 2",
+      "refs": [
+        {
+          "source": "B",
+          "section": "7.2.3 삽입 연산 구현",
+          "pages": [
+            319
+          ]
+        }
+      ]
+    },
+    {
+      "unit": 10,
+      "location": ".concepts[2].items[4]",
+      "text": "B의 최솟값 삭제 구현은 UsedSize가 Capacity/2보다 작으면 Capacity를 반으로 줄이고 realloc()을 호출한다.",
+      "evidence": "H->Capacity /= 2",
+      "refs": [
+        {
+          "source": "B",
+          "section": "7.2.3 최솟값 삭제 연산 구현",
+          "pages": [
+            321
+          ]
+        }
+      ]
+    },
+    {
+      "unit": 10,
+      "location": ".concepts[2].items[5]",
+      "text": "B의 힙 기반 우선순위 큐는 노드 구조체에 Priority 필드를 추가하고 Data 필드를 void*로 바꾸어 다양한 자료형을 담는다.",
+      "evidence": "Priority 필드 추가",
+      "refs": [
+        {
+          "source": "B",
+          "section": "7.3 힙 기반 우선순위 큐의 구현",
+          "pages": [
+            327
+          ]
+        }
+      ]
+    },
+    {
+      "unit": 10,
+      "location": ".concepts[3].items[1]",
+      "text": "최대 히프 삭제에서는 루트를 삭제하고 마지막 노드를 루트로 옮긴 뒤 자식과 비교하여 교환하며 내려간다.",
+      "evidence": "마지막 노드를 루트 노드로",
+      "refs": [
+        {
+          "source": "A",
+          "section": "9.4 삭제 알고리즘",
+          "pages": [
+            327
+          ]
+        }
+      ]
+    },
+    {
+      "unit": 10,
+      "location": ".concepts[3].items[2]",
+      "text": "히프의 삽입과 삭제 연산은 최악의 경우 히프의 높이만큼 비교하므로 O(log₂n)이다.",
+      "evidence": "O(log",
+      "refs": [
+        {
+          "source": "A",
+          "section": "9.4 삽입과 삭제 연산의 복잡도 분석",
+          "pages": [
+            332
+          ]
+        }
+      ]
+    },
+    {
+      "unit": 10,
+      "location": ".concepts[3].items[3]",
+      "text": "히프 정렬은 히프의 삽입과 삭제 연산을 이용하여 정렬하며 전체 시간 복잡도는 O(nlog₂n)이다.",
+      "evidence": "O(nlog",
+      "refs": [
+        {
+          "source": "A",
+          "section": "9.5 히프 정렬",
+          "pages": [
+            334
+          ]
+        }
+      ]
+    },
+    {
+      "unit": 10,
+      "location": ".concepts[4].items[0]",
+      "text": "기계 스케줄링 문제는 동일한 기계 m개에 서로 다른 작업 시간의 작업 n개를 할당하여 전체 작업을 가장 빨리 끝내도록 하는 문제이다.",
+      "evidence": "동일한 기계 m개",
+      "refs": [
+        {
+          "source": "A",
+          "section": "9.6 히프의 응용: 기계 스케줄링",
+          "pages": [
+            335
+          ]
+        }
+      ]
+    },
+    {
+      "unit": 10,
+      "location": ".concepts[4].items[1]",
+      "text": "LPT(longest processing time first)는 작업 시간이 가장 긴 작업을 먼저 할당하는 근사해 방법이다.",
+      "evidence": "근사해",
+      "refs": [
+        {
+          "source": "A",
+          "section": "9.6 히프의 응용: 기계 스케줄링",
+          "pages": [
+            335
+          ]
+        }
+      ]
+    },
+    {
+      "unit": 10,
+      "location": ".concepts[4].items[2]",
+      "text": "LPT에서는 기계가 사용 가능해질 때마다 남은 작업 중 시간이 가장 긴 작업을 할당한다.",
+      "evidence": "기계가 사용 가능하게 될 때마다",
+      "refs": [
+        {
+          "source": "A",
+          "section": "9.6 히프의 응용: 기계 스케줄링",
+          "pages": [
+            335
+          ]
+        }
+      ]
+    },
+    {
+      "unit": 10,
+      "location": ".concepts[4].items[3]",
+      "text": "기계의 종료 시간을 최소 히프에 저장하여 가장 먼저 사용 가능해지는 기계를 선택한다.",
+      "evidence": "종료 시간을 최소 히프에 저장",
+      "refs": [
+        {
+          "source": "A",
+          "section": "9.6 히프의 응용: 기계 스케줄링",
+          "pages": [
+            336
+          ]
+        }
+      ]
+    },
+    {
+      "unit": 10,
+      "location": ".concepts[5].items[0]",
+      "text": "빈도수(frequencies)는 영문 텍스트에서 해당 글자가 나타나는 횟수이다.",
+      "evidence": "해당 글자가 나타나는 횟수",
+      "refs": [
+        {
+          "source": "A",
+          "section": "9.7 히프의 응용: 허프만 코드",
+          "pages": [
+            340
+          ]
+        }
+      ]
+    },
+    {
+      "unit": 10,
+      "location": ".concepts[5].items[1]",
+      "text": "빈도수에 따라 자주 등장하는 글자에는 짧은 비트열을, 잘 나오지 않는 글자에는 긴 비트열을 사용하는 가변 길이 코드로 전체 크기를 줄인다.",
+      "evidence": "가변 길이의 코드를 사용",
+      "refs": [
+        {
+          "source": "A",
+          "section": "9.7 히프의 응용: 허프만 코드",
+          "pages": [
+            340
+          ]
+        }
+      ]
+    },
+    {
+      "unit": 10,
+      "location": ".concepts[5].items[2]",
+      "text": "허프만 코드(Huffman codes)에서는 모든 코드가 다른 코드의 첫 부분이 아니므로 왼쪽에서 오른쪽으로 조사하면 정확히 하나의 코드만 일치한다.",
+      "evidence": "모든 코드가 다른 코드의 첫 부분이 아니라는",
+      "refs": [
+        {
+          "source": "A",
+          "section": "9.7 히프의 응용: 허프만 코드",
+          "pages": [
+            341
+          ]
+        }
+      ]
+    },
+    {
+      "unit": 10,
+      "location": ".procedures[2].steps[1]",
+      "text": "두 글자를 단말노드로 하는 이진트리를 만들고 루트에 두 자식의 값의 합을 저장한다.",
+      "evidence": "루트의 값은 각 자식노드의 값을 합한 값",
+      "refs": [
+        {
+          "source": "A",
+          "section": "9.7 히프의 응용: 허프만 코드",
+          "pages": [
+            341
+          ]
+        }
+      ]
+    },
+    {
+      "unit": 10,
+      "location": ".formulas[0]",
+      "text": "최대 히프: key(부모노드) ≥ key(자식노드); 최소 히프: key(부모노드) ≤ key(자식노드)",
+      "evidence": "key(부모노드)",
+      "refs": [
+        {
+          "source": "A",
+          "section": "9.3 히프란?",
+          "pages": [
+            320
+          ]
+        }
+      ]
+    },
+    {
+      "unit": 10,
+      "location": ".formulas[1]",
+      "text": "왼쪽 자식 = 부모 인덱스*2; 오른쪽 자식 = 부모 인덱스*2+1; 부모 = 자식 인덱스/2",
+      "evidence": "부모 노드의 인덱스",
+      "refs": [
+        {
+          "source": "A",
+          "section": "9.3 히프의 구현 방법",
+          "pages": [
+            321
+          ]
+        }
+      ]
+    },
+    {
+      "unit": 10,
+      "location": ".formulas[2]",
+      "text": "왼쪽 자식: 2k+1; 오른쪽 자식: 2k+2; 부모: (k-1)÷2의 몫",
+      "evidence": "(k-1)÷2의 몫",
+      "refs": [
+        {
+          "source": "B",
+          "section": "7.2.3 힙의 구현",
+          "pages": [
+            318
+          ]
+        }
+      ]
+    },
+    {
+      "unit": 10,
+      "location": ".comparisons[0].rows[0][1]",
+      "text": "O(1)",
+      "evidence": "O(1)",
+      "refs": [
+        {
+          "source": "A",
+          "section": "9.2 표 9-2 우선순위 큐의 구현 방법 비교",
+          "pages": [
+            318
+          ]
+        }
+      ]
+    },
+    {
+      "unit": 10,
+      "location": ".comparisons[0].rows[1][1]",
+      "text": "O(1)",
+      "evidence": "O(1)",
+      "refs": [
+        {
+          "source": "A",
+          "section": "9.2 표 9-2 우선순위 큐의 구현 방법 비교",
+          "pages": [
+            318
+          ]
+        }
+      ]
+    },
+    {
+      "unit": 10,
+      "location": ".comparisons[0].rows[2][0]",
+      "text": "정렬된 배열",
+      "evidence": "정렬된 배열",
+      "refs": [
+        {
+          "source": "A",
+          "section": "9.2 표 9-2 우선순위 큐의 구현 방법 비교",
+          "pages": [
+            318
+          ]
+        }
+      ]
+    },
+    {
+      "unit": 10,
+      "location": ".comparisons[0].rows[2][2]",
+      "text": "O(1)",
+      "evidence": "O(1)",
+      "refs": [
+        {
+          "source": "A",
+          "section": "9.2 표 9-2 우선순위 큐의 구현 방법 비교",
+          "pages": [
+            318
+          ]
+        }
+      ]
+    },
+    {
+      "unit": 10,
+      "location": ".comparisons[0].rows[3][2]",
+      "text": "O(1)",
+      "evidence": "O(1)",
+      "refs": [
+        {
+          "source": "A",
+          "section": "9.2 표 9-2 우선순위 큐의 구현 방법 비교",
+          "pages": [
+            318
+          ]
+        }
+      ]
+    },
+    {
+      "unit": 10,
+      "location": ".terms[0].definition",
+      "text": "우선순위 큐는 우선순위 속성을 갖는 데이터의 삽입(Enqueue)과 제거(Dequeue) 연산을 지원하는 ADT이다.",
+      "evidence": "삽입과 제거 연산을 지원하는 ADT",
+      "refs": [
+        {
+          "source": "B",
+          "section": "7.1 우선순위 큐",
+          "pages": [
+            310
+          ]
+        }
+      ]
+    },
+    {
+      "unit": 10,
+      "location": ".terms[1].definition",
+      "text": "히프(heap)는 여러 개의 값 중에서 가장 큰 값이나 가장 작은 값을 빠르게 찾아내도록 만들어진 자료구조이다.",
+      "evidence": "가장 큰 값이나 가장 작은 값",
+      "refs": [
+        {
+          "source": "A",
+          "section": "9.3 히프란?",
+          "pages": [
+            319
+          ]
+        }
+      ]
+    },
+    {
+      "unit": 10,
+      "location": ".terms[4].definition",
+      "text": "LPT(longest processing time first)는 작업 시간이 가장 긴 작업을 먼저 할당하는 근사해 방법이다.",
+      "evidence": "근사해",
+      "refs": [
+        {
+          "source": "A",
+          "section": "9.6 히프의 응용: 기계 스케줄링",
+          "pages": [
+            335
+          ]
+        }
+      ]
+    },
+    {
+      "unit": 10,
+      "location": ".terms[5].definition",
+      "text": "빈도수(frequencies)는 영문 텍스트에서 해당 글자가 나타나는 횟수이다.",
+      "evidence": "해당 글자가 나타나는 횟수",
+      "refs": [
+        {
+          "source": "A",
+          "section": "9.7 히프의 응용: 허프만 코드",
+          "pages": [
+            340
+          ]
+        }
+      ]
+    },
+    {
+      "unit": 10,
+      "location": ".terms[6].definition",
+      "text": "허프만 코드(Huffman codes)에서는 모든 코드가 다른 코드의 첫 부분이 아니므로 왼쪽에서 오른쪽으로 조사하면 정확히 하나의 코드만 일치한다.",
+      "evidence": "모든 코드가 다른 코드의 첫 부분이 아니라는",
+      "refs": [
+        {
+          "source": "A",
+          "section": "9.7 히프의 응용: 허프만 코드",
+          "pages": [
+            341
+          ]
+        }
+      ]
+    },
+    {
+      "unit": 10,
+      "location": ".terms[7].definition",
+      "text": "B의 Heap 구조체에서 Capacity는 Nodes 배열의 크기, UsedSize는 실제 배열에 들어 있는 큐 요소의 수이다.",
+      "evidence": "Capacity 필드는 힙의 용량",
+      "refs": [
+        {
+          "source": "B",
+          "section": "7.2.3 자료구조 선언",
+          "pages": [
+            318
+          ]
+        }
+      ]
+    },
+    {
+      "unit": 10,
+      "location": ".summary[1]",
+      "text": "히프의 삽입과 삭제 연산은 최악의 경우 히프의 높이만큼 비교하므로 O(log₂n)이다.",
+      "evidence": "O(log",
+      "refs": [
+        {
+          "source": "A",
+          "section": "9.4 삽입과 삭제 연산의 복잡도 분석",
+          "pages": [
+            332
+          ]
+        }
+      ]
+    },
+    {
+      "unit": 10,
+      "location": ".summary[2]",
+      "text": "LPT(longest processing time first)는 작업 시간이 가장 긴 작업을 먼저 할당하는 근사해 방법이다.",
+      "evidence": "근사해",
+      "refs": [
+        {
+          "source": "A",
+          "section": "9.6 히프의 응용: 기계 스케줄링",
+          "pages": [
+            335
+          ]
+        }
+      ]
+    },
+    {
+      "unit": 10,
+      "location": ".summary[3]",
+      "text": "허프만 코드(Huffman codes)에서는 모든 코드가 다른 코드의 첫 부분이 아니므로 왼쪽에서 오른쪽으로 조사하면 정확히 하나의 코드만 일치한다.",
+      "evidence": "모든 코드가 다른 코드의 첫 부분이 아니라는",
+      "refs": [
+        {
+          "source": "A",
+          "section": "9.7 히프의 응용: 허프만 코드",
+          "pages": [
+            341
+          ]
+        }
+      ]
+    },
+    {
+      "unit": 10,
+      "location": ".review[0].answer",
+      "text": "B에서는 데이터의 값이 작을수록 우선순위가 높은 것으로 간주한다.",
+      "evidence": "데이터의 값이 작을수록 높은",
+      "refs": [
+        {
+          "source": "B",
+          "section": "7.1 우선순위의 기준",
+          "pages": [
+            310
+          ]
+        }
+      ]
+    },
+    {
+      "unit": 10,
+      "location": ".review[2].answer",
+      "text": "히프의 삽입과 삭제 연산은 최악의 경우 히프의 높이만큼 비교하므로 O(log₂n)이다.",
+      "evidence": "O(log",
+      "refs": [
+        {
+          "source": "A",
+          "section": "9.4 삽입과 삭제 연산의 복잡도 분석",
+          "pages": [
+            332
+          ]
+        }
+      ]
+    },
+    {
+      "unit": 10,
+      "location": ".cheat.definitions[0].definition",
+      "text": "우선순위 큐는 우선순위 속성을 갖는 데이터의 삽입(Enqueue)과 제거(Dequeue) 연산을 지원하는 ADT이다.",
+      "evidence": "삽입과 제거 연산을 지원하는 ADT",
+      "refs": [
+        {
+          "source": "B",
+          "section": "7.1 우선순위 큐",
+          "pages": [
+            310
+          ]
+        }
+      ]
+    },
+    {
+      "unit": 10,
+      "location": ".cheat.comparison_rows[0][1]",
+      "text": "A의 배열 표현은 인덱스 0을 사용하지 않고 루트 노드를 인덱스 1에 저장한다.",
+      "evidence": "인덱스는 0이 아닌 1부터",
+      "refs": [
+        {
+          "source": "A",
+          "section": "9.3 히프의 구현 방법",
+          "pages": [
+            320
+          ]
+        }
+      ]
+    },
+    {
+      "unit": 10,
+      "location": ".cheat.formulas[0]",
+      "text": "왼쪽 자식 = 부모 인덱스*2; 오른쪽 자식 = 부모 인덱스*2+1; 부모 = 자식 인덱스/2",
+      "evidence": "부모 노드의 인덱스",
+      "refs": [
+        {
+          "source": "A",
+          "section": "9.3 히프의 구현 방법",
+          "pages": [
+            321
+          ]
+        }
+      ]
+    },
+    {
+      "unit": 10,
+      "location": ".cheat.formulas[1]",
+      "text": "왼쪽 자식: 2k+1; 오른쪽 자식: 2k+2; 부모: (k-1)÷2의 몫",
+      "evidence": "(k-1)÷2의 몫",
+      "refs": [
+        {
+          "source": "B",
+          "section": "7.2.3 힙의 구현",
+          "pages": [
+            318
+          ]
+        }
+      ]
+    },
+    {
+      "unit": 11,
+      "location": ".learning[0]",
+      "text": "그래프는 정점(vertex)과 간선(edge)들의 유한 집합이며 G = (V, E)로 표시한다.",
+      "evidence": "그래프는 정점(vertex)와 간선(edge)들의 유한 집합",
+      "refs": [
+        {
+          "source": "A",
+          "section": "10.2 그래프의 정의와 용어",
+          "pages": [
+            355,
+            356
+          ]
+        }
+      ]
+    },
+    {
+      "unit": 11,
+      "location": ".learning[1]",
+      "text": "방향 그래프의 각 정점들의 선행 순서를 위배하지 않으면서 모든 정점을 나열하는 것을 위상 정렬(topological sort)이라 한다.",
+      "evidence": "선행 순서를 위배하지 않으면서",
+      "refs": [
+        {
+          "source": "A",
+          "section": "11.7 위상 정렬",
+          "pages": [
+            423
+          ]
+        }
+      ]
+    },
+    {
+      "unit": 11,
+      "location": ".concepts[0].items[0]",
+      "text": "그래프는 정점(vertex)과 간선(edge)들의 유한 집합이며 G = (V, E)로 표시한다.",
+      "evidence": "그래프는 정점(vertex)와 간선(edge)들의 유한 집합",
+      "refs": [
+        {
+          "source": "A",
+          "section": "10.2 그래프의 정의와 용어",
+          "pages": [
+            355,
+            356
+          ]
+        }
+      ]
+    },
+    {
+      "unit": 11,
+      "location": ".concepts[0].items[2]",
+      "text": "무방향 그래프의 간선 (A, B)와 (B, A)는 동일한 간선이다.",
+      "evidence": "(A, B)와 (B, A)는 동일한 간선",
+      "refs": [
+        {
+          "source": "A",
+          "section": "10.2 그래프의 정의와 용어",
+          "pages": [
+            356
+          ]
+        }
+      ]
+    },
+    {
+      "unit": 11,
+      "location": ".concepts[0].items[10]",
+      "text": "무방향 그래프의 모든 정점쌍 사이에 항상 경로가 존재하면 연결 그래프(connected graph)라 한다.",
+      "evidence": "모든 정점쌍에 대하여 항상 경로가 존재",
+      "refs": [
+        {
+          "source": "A",
+          "section": "10.2 그래프의 정의와 용어",
+          "pages": [
+            359
+          ]
+        }
+      ]
+    },
+    {
+      "unit": 11,
+      "location": ".concepts[1].items[0]",
+      "text": "인접 행렬(adjacency matrix)은 2차원 배열을 사용하여 그래프를 표현한다.",
+      "evidence": "2차원 배열을 사용하여 그래프를 표현한다",
+      "refs": [
+        {
+          "source": "A",
+          "section": "10.3 그래프의 표현 방법",
+          "pages": [
+            361
+          ]
+        }
+      ]
+    },
+    {
+      "unit": 11,
+      "location": ".concepts[1].items[2]",
+      "text": "무방향 그래프의 인접 행렬은 대칭 행렬이다.",
+      "evidence": "무방향 그래프의 인접 행렬은 대칭 행렬",
+      "refs": [
+        {
+          "source": "A",
+          "section": "10.3 그래프의 표현 방법",
+          "pages": [
+            362
+          ]
+        }
+      ]
+    },
+    {
+      "unit": 11,
+      "location": ".concepts[1].items[4]",
+      "text": "인접 행렬에서는 두 정점을 연결하는 간선의 존재 여부를 O(1) 시간에 알 수 있다.",
+      "evidence": "O(1)시간 안에 즉시 알 수",
+      "refs": [
+        {
+          "source": "A",
+          "section": "10.3 그래프의 표현 방법",
+          "pages": [
+            362
+          ]
+        }
+      ]
+    },
+    {
+      "unit": 11,
+      "location": ".concepts[4].items[0]",
+      "text": "방향 그래프의 각 정점들의 선행 순서를 위배하지 않으면서 모든 정점을 나열하는 것을 위상 정렬(topological sort)이라 한다.",
+      "evidence": "선행 순서를 위배하지 않으면서",
+      "refs": [
+        {
+          "source": "A",
+          "section": "11.7 위상 정렬",
+          "pages": [
+            423
+          ]
+        }
+      ]
+    },
+    {
+      "unit": 11,
+      "location": ".concepts[4].items[2]",
+      "text": "남은 정점 중 진입 차수가 0인 정점이 없으면 위상 정렬 알고리즘은 중단된다.",
+      "evidence": "진입 차수 0인 정점이 없다면",
+      "refs": [
+        {
+          "source": "A",
+          "section": "11.7 위상 정렬",
+          "pages": [
+            423
+          ]
+        }
+      ]
+    },
+    {
+      "unit": 11,
+      "location": ".concepts[5].items[1]",
+      "text": "분리 집합의 목적은 원소가 어느 집합에 귀속되어 있는지 쉽게 알아내는 것이다.",
+      "evidence": "원소가 어느 집합에 귀속되어 있는지",
+      "refs": [
+        {
+          "source": "B",
+          "section": "4.4.2 분리 집합의 기본 연산",
+          "pages": [
+            198
+          ]
+        }
+      ]
+    },
+    {
+      "unit": 11,
+      "location": ".concepts[5].items[3]",
+      "text": "집합 탐색은 집합에서 원소를 찾는 연산이 아니라 원소가 속한 집합을 찾는 연산이다.",
+      "evidence": "원소가 속한 집합을 찾는 연산",
+      "refs": [
+        {
+          "source": "B",
+          "section": "4.4.2 분리 집합의 기본 연산",
+          "pages": [
+            199,
+            200
+          ]
+        }
+      ]
+    },
+    {
+      "unit": 11,
+      "location": ".procedures[1].steps[0]",
+      "text": "v를 방문 표시하고 큐에 정점 v를 삽입한다.",
+      "evidence": "큐에 정점 v를 삽입",
+      "refs": [
+        {
+          "source": "A",
+          "section": "10.6 알고리즘 10.2",
+          "pages": [
+            378
+          ]
+        }
+      ]
+    },
+    {
+      "unit": 11,
+      "location": ".procedures[1].steps[1]",
+      "text": "큐가 공백이 아니면 큐에서 정점 w를 삭제한다.",
+      "evidence": "큐에서 정점 w를 삭제",
+      "refs": [
+        {
+          "source": "A",
+          "section": "10.6 알고리즘 10.2",
+          "pages": [
+            378
+          ]
+        }
+      ]
+    },
+    {
+      "unit": 11,
+      "location": ".procedures[2].steps[1]",
+      "text": "진입 간선이 없는 정점을 리스트에 추가하고 해당 정점과 진출 간선을 제거한다.",
+      "evidence": "진입 간선이 없는 정점을 리스트에 추가",
+      "refs": [
+        {
+          "source": "B",
+          "section": "9.4.1 위상 정렬의 동작 방식",
+          "pages": [
+            410
+          ]
+        }
+      ]
+    },
+    {
+      "unit": 11,
+      "location": ".procedures[2].steps[2]",
+      "text": "모든 정점에 대해 반복하고 정점이 남아 있지 않으면 종료한다.",
+      "evidence": "정점이 남아 있지 않으면 정렬을 종료",
+      "refs": [
+        {
+          "source": "B",
+          "section": "9.4.1 위상 정렬의 동작 방식",
+          "pages": [
+            410
+          ]
+        }
+      ]
+    },
+    {
+      "unit": 11,
+      "location": ".syntax[0]",
+      "text": "DS_FindSet() 원문 발췌",
+      "evidence": "DisjointSet* DS_FindSet",
+      "refs": [
+        {
+          "source": "B",
+          "section": "4.4.2 집합 탐색 연산",
+          "pages": [
+            200
+          ]
+        }
+      ]
+    },
+    {
+      "unit": 11,
+      "location": ".formulas[0]",
+      "text": "n×(n-1)/2",
+      "evidence": "n×(n-1)/2",
+      "refs": [
+        {
+          "source": "A",
+          "section": "10.2 완전 그래프",
+          "pages": [
+            359
+          ]
+        }
+      ]
+    },
+    {
+      "unit": 11,
+      "location": ".formulas[1]",
+      "text": "인접 리스트: O(n+e), 인접 행렬: O(n²)",
+      "evidence": "시간 복잡도",
+      "refs": [
+        {
+          "source": "A",
+          "section": "10.5 깊이 우선 탐색의 분석",
+          "pages": [
+            377
+          ]
+        }
+      ]
+    },
+    {
+      "unit": 11,
+      "location": ".comparisons[0].rows[0][0]",
+      "text": "인접 행렬",
+      "evidence": "인접 행렬",
+      "refs": [
+        {
+          "source": "A",
+          "section": "10.3 그래프의 표현 방법",
+          "pages": [
+            361
+          ]
+        }
+      ]
+    },
+    {
+      "unit": 11,
+      "location": ".comparisons[0].rows[0][1]",
+      "text": "인접 행렬(adjacency matrix)은 2차원 배열을 사용하여 그래프를 표현한다.",
+      "evidence": "2차원 배열을 사용하여 그래프를 표현한다",
+      "refs": [
+        {
+          "source": "A",
+          "section": "10.3 그래프의 표현 방법",
+          "pages": [
+            361
+          ]
+        }
+      ]
+    },
+    {
+      "unit": 11,
+      "location": ".terms[0].definition",
+      "text": "그래프는 정점(vertex)과 간선(edge)들의 유한 집합이며 G = (V, E)로 표시한다.",
+      "evidence": "그래프는 정점(vertex)와 간선(edge)들의 유한 집합",
+      "refs": [
+        {
+          "source": "A",
+          "section": "10.2 그래프의 정의와 용어",
+          "pages": [
+            355,
+            356
+          ]
+        }
+      ]
+    },
+    {
+      "unit": 11,
+      "location": ".terms[4].definition",
+      "text": "무방향 그래프의 모든 정점쌍 사이에 항상 경로가 존재하면 연결 그래프(connected graph)라 한다.",
+      "evidence": "모든 정점쌍에 대하여 항상 경로가 존재",
+      "refs": [
+        {
+          "source": "A",
+          "section": "10.2 그래프의 정의와 용어",
+          "pages": [
+            359
+          ]
+        }
+      ]
+    },
+    {
+      "unit": 11,
+      "location": ".terms[6].definition",
+      "text": "방향 그래프의 각 정점들의 선행 순서를 위배하지 않으면서 모든 정점을 나열하는 것을 위상 정렬(topological sort)이라 한다.",
+      "evidence": "선행 순서를 위배하지 않으면서",
+      "refs": [
+        {
+          "source": "A",
+          "section": "11.7 위상 정렬",
+          "pages": [
+            423
+          ]
+        }
+      ]
+    },
+    {
+      "unit": 11,
+      "location": ".terms[7].definition",
+      "text": "집합 탐색은 집합에서 원소를 찾는 연산이 아니라 원소가 속한 집합을 찾는 연산이다.",
+      "evidence": "원소가 속한 집합을 찾는 연산",
+      "refs": [
+        {
+          "source": "B",
+          "section": "4.4.2 분리 집합의 기본 연산",
+          "pages": [
+            199,
+            200
+          ]
+        }
+      ]
+    },
+    {
+      "unit": 11,
+      "location": ".summary[0]",
+      "text": "그래프는 정점(vertex)과 간선(edge)들의 유한 집합이며 G = (V, E)로 표시한다.",
+      "evidence": "그래프는 정점(vertex)와 간선(edge)들의 유한 집합",
+      "refs": [
+        {
+          "source": "A",
+          "section": "10.2 그래프의 정의와 용어",
+          "pages": [
+            355,
+            356
+          ]
+        }
+      ]
+    },
+    {
+      "unit": 11,
+      "location": ".summary[1]",
+      "text": "인접 행렬(adjacency matrix)은 2차원 배열을 사용하여 그래프를 표현한다.",
+      "evidence": "2차원 배열을 사용하여 그래프를 표현한다",
+      "refs": [
+        {
+          "source": "A",
+          "section": "10.3 그래프의 표현 방법",
+          "pages": [
+            361
+          ]
+        }
+      ]
+    },
+    {
+      "unit": 11,
+      "location": ".summary[3]",
+      "text": "방향 그래프의 각 정점들의 선행 순서를 위배하지 않으면서 모든 정점을 나열하는 것을 위상 정렬(topological sort)이라 한다.",
+      "evidence": "선행 순서를 위배하지 않으면서",
+      "refs": [
+        {
+          "source": "A",
+          "section": "11.7 위상 정렬",
+          "pages": [
+            423
+          ]
+        }
+      ]
+    },
+    {
+      "unit": 11,
+      "location": ".review[3].answer",
+      "text": "집합 탐색은 집합에서 원소를 찾는 연산이 아니라 원소가 속한 집합을 찾는 연산이다.",
+      "evidence": "원소가 속한 집합을 찾는 연산",
+      "refs": [
+        {
+          "source": "B",
+          "section": "4.4.2 분리 집합의 기본 연산",
+          "pages": [
+            199,
+            200
+          ]
+        }
+      ]
+    },
+    {
+      "unit": 11,
+      "location": ".cheat.definitions[0].definition",
+      "text": "그래프는 정점(vertex)과 간선(edge)들의 유한 집합이며 G = (V, E)로 표시한다.",
+      "evidence": "그래프는 정점(vertex)와 간선(edge)들의 유한 집합",
+      "refs": [
+        {
+          "source": "A",
+          "section": "10.2 그래프의 정의와 용어",
+          "pages": [
+            355,
+            356
+          ]
+        }
+      ]
+    },
+    {
+      "unit": 11,
+      "location": ".cheat.definitions[2].definition",
+      "text": "방향 그래프의 각 정점들의 선행 순서를 위배하지 않으면서 모든 정점을 나열하는 것을 위상 정렬(topological sort)이라 한다.",
+      "evidence": "선행 순서를 위배하지 않으면서",
+      "refs": [
+        {
+          "source": "A",
+          "section": "11.7 위상 정렬",
+          "pages": [
+            423
+          ]
+        }
+      ]
+    },
+    {
+      "unit": 11,
+      "location": ".cheat.comparison_rows[0][0]",
+      "text": "인접 행렬",
+      "evidence": "인접 행렬",
+      "refs": [
+        {
+          "source": "A",
+          "section": "10.3 그래프의 표현 방법",
+          "pages": [
+            361
+          ]
+        }
+      ]
+    },
+    {
+      "unit": 11,
+      "location": ".cheat.comparison_rows[0][1]",
+      "text": "인접 행렬(adjacency matrix)은 2차원 배열을 사용하여 그래프를 표현한다.",
+      "evidence": "2차원 배열을 사용하여 그래프를 표현한다",
+      "refs": [
+        {
+          "source": "A",
+          "section": "10.3 그래프의 표현 방법",
+          "pages": [
+            361
+          ]
+        }
+      ]
+    },
+    {
+      "unit": 11,
+      "location": ".cheat.formulas[0]",
+      "text": "n×(n-1)/2",
+      "evidence": "n×(n-1)/2",
+      "refs": [
+        {
+          "source": "A",
+          "section": "10.2 완전 그래프",
+          "pages": [
+            359
+          ]
+        }
+      ]
+    },
+    {
+      "unit": 11,
+      "location": ".cheat.formulas[1]",
+      "text": "인접 리스트: O(n+e), 인접 행렬: O(n²)",
+      "evidence": "시간 복잡도",
+      "refs": [
+        {
+          "source": "A",
+          "section": "10.5 깊이 우선 탐색의 분석",
+          "pages": [
+            377
+          ]
+        }
+      ]
+    },
+    {
+      "unit": 12,
+      "location": ".learning[1]",
+      "text": "최단 경로 문제는 두 정점을 연결하는 경로 중 간선의 가중치 합이 최소가 되는 경로를 찾는 문제이다.",
+      "evidence": "가중치 합이 최소",
+      "refs": [
+        {
+          "source": "A",
+          "section": "11.4 최단 경로",
+          "pages": [
+            406
+          ]
+        }
+      ]
+    },
+    {
+      "unit": 12,
+      "location": ".concepts[0].items[3]",
+      "text": "깊이 우선 또는 너비 우선 탐색 도중 사용된 간선만 모으면 신장 트리를 만들 수 있다.",
+      "evidence": "사용된 간선만 모으면",
+      "refs": [
+        {
+          "source": "A",
+          "section": "11.1 최소 비용 신장 트리",
+          "pages": [
+            388
+          ]
+        }
+      ]
+    },
+    {
+      "unit": 12,
+      "location": ".concepts[2].items[3]",
+      "text": "A의 Prim 구현은 주 반복문과 내부 반복문이 각각 n번 반복하여 O(n²)의 복잡도를 가진다.",
+      "evidence": "O(n²)의 복잡도",
+      "refs": [
+        {
+          "source": "A",
+          "section": "11.3 Prim의 알고리즘의 분석",
+          "pages": [
+            405
+          ]
+        }
+      ]
+    },
+    {
+      "unit": 12,
+      "location": ".concepts[3].items[0]",
+      "text": "최단 경로 문제는 두 정점을 연결하는 경로 중 간선의 가중치 합이 최소가 되는 경로를 찾는 문제이다.",
+      "evidence": "가중치 합이 최소",
+      "refs": [
+        {
+          "source": "A",
+          "section": "11.4 최단 경로",
+          "pages": [
+            406
+          ]
+        }
+      ]
+    },
+    {
+      "unit": 12,
+      "location": ".concepts[3].items[5]",
+      "text": "새 정점 u가 S에 추가되면 u를 거치는 거리와 기존 거리를 비교하여 더 작은 거리로 distance를 수정한다.",
+      "evidence": "더 작은 거리로",
+      "refs": [
+        {
+          "source": "A",
+          "section": "11.5 Dijkstra의 최단 경로 알고리즘",
+          "pages": [
+            409
+          ]
+        }
+      ]
+    },
+    {
+      "unit": 12,
+      "location": ".concepts[3].items[7]",
+      "text": "A의 Dijkstra 구현은 O(n²)의 복잡도를 가진다.",
+      "evidence": "O(n²)의 복잡도",
+      "refs": [
+        {
+          "source": "A",
+          "section": "11.5 Dijkstra의 분석",
+          "pages": [
+            416
+          ]
+        }
+      ]
+    },
+    {
+      "unit": 12,
+      "location": ".concepts[3].items[9]",
+      "text": "B는 프림이 간선의 길이를 이용하는 데 비해 데이크스트라는 경로의 길이에 따라 간선을 연결한다고 비교한다.",
+      "evidence": "경로의 길이에 따라서 간선을 연결",
+      "refs": [
+        {
+          "source": "B",
+          "section": "9.6.1 데이크스트라 알고리즘의 개념",
+          "pages": [
+            444
+          ]
+        }
+      ]
+    },
+    {
+      "unit": 12,
+      "location": ".concepts[4].items[3]",
+      "text": "Floyd 알고리즘은 삼중 반복문이 실행되므로 시간 복잡도가 O(n³)이다.",
+      "evidence": "3중 반복문이 실행",
+      "refs": [
+        {
+          "source": "A",
+          "section": "11.6 Floyd 최단 경로 알고리즘의 분석",
+          "pages": [
+            422
+          ]
+        }
+      ]
+    },
+    {
+      "unit": 12,
+      "location": ".procedures[0].steps[2]",
+      "text": "선택된 간선 수가 (n-1)이 될 때까지 반복한다.",
+      "evidence": "ecounter<(n-1)",
+      "refs": [
+        {
+          "source": "A",
+          "section": "11.2 알고리즘 11.2",
+          "pages": [
+            391
+          ]
+        }
+      ]
+    },
+    {
+      "unit": 12,
+      "location": ".procedures[1].steps[1]",
+      "text": "임의의 정점을 시작 정점으로 선택하여 최소 신장 트리의 뿌리 노드로 삽입한다.",
+      "evidence": "뿌리 노드로 삽입",
+      "refs": [
+        {
+          "source": "B",
+          "section": "9.5.1 프림 알고리즘",
+          "pages": [
+            422
+          ]
+        }
+      ]
+    },
+    {
+      "unit": 12,
+      "location": ".procedures[2].steps[1]",
+      "text": "S에 속하지 않은 정점 중 distance 값이 가장 작은 정점을 S에 추가한다.",
+      "evidence": "가장 distance값이 작은 정점",
+      "refs": [
+        {
+          "source": "A",
+          "section": "11.5 Dijkstra의 최단 경로 알고리즘",
+          "pages": [
+            408
+          ]
+        }
+      ]
+    },
+    {
+      "unit": 12,
+      "location": ".procedures[2].steps[2]",
+      "text": "새 정점 u가 S에 추가되면 u를 거치는 거리와 기존 거리를 비교하여 더 작은 거리로 distance를 수정한다.",
+      "evidence": "더 작은 거리로",
+      "refs": [
+        {
+          "source": "A",
+          "section": "11.5 Dijkstra의 최단 경로 알고리즘",
+          "pages": [
+            409
+          ]
+        }
+      ]
+    },
+    {
+      "unit": 12,
+      "location": ".syntax[0]",
+      "text": "floyd()의 핵심 반복문 발췌",
+      "evidence": "A[i][k] + A[k][j] < A[i][j]",
+      "refs": [
+        {
+          "source": "A",
+          "section": "11.6 프로그램 11.11",
+          "pages": [
+            421
+          ]
+        }
+      ]
+    },
+    {
+      "unit": 12,
+      "location": ".formulas[1]",
+      "text": "A[i][j] = min(A[i][j], A[i][k] + A[k][j])",
+      "evidence": "A[i][j]",
+      "refs": [
+        {
+          "source": "A",
+          "section": "11.6 알고리즘 11.8",
+          "pages": [
+            417
+          ]
+        }
+      ]
+    },
+    {
+      "unit": 12,
+      "location": ".formulas[2]",
+      "text": "Kruskal: O(e log₂e), Prim: O(n²)",
+      "evidence": "O(e log₂e)",
+      "refs": [
+        {
+          "source": "A",
+          "section": "11.3 Prim의 알고리즘의 분석",
+          "pages": [
+            405
+          ]
+        }
+      ]
+    },
+    {
+      "unit": 12,
+      "location": ".terms[5].definition",
+      "text": "최단 경로 문제는 두 정점을 연결하는 경로 중 간선의 가중치 합이 최소가 되는 경로를 찾는 문제이다.",
+      "evidence": "가중치 합이 최소",
+      "refs": [
+        {
+          "source": "A",
+          "section": "11.4 최단 경로",
+          "pages": [
+            406
+          ]
+        }
+      ]
+    },
+    {
+      "unit": 12,
+      "location": ".cheat.definitions[2].definition",
+      "text": "최단 경로 문제는 두 정점을 연결하는 경로 중 간선의 가중치 합이 최소가 되는 경로를 찾는 문제이다.",
+      "evidence": "가중치 합이 최소",
+      "refs": [
+        {
+          "source": "A",
+          "section": "11.4 최단 경로",
+          "pages": [
+            406
+          ]
+        }
+      ]
+    },
+    {
+      "unit": 12,
+      "location": ".cheat.formulas[1]",
+      "text": "A[i][j] = min(A[i][j], A[i][k] + A[k][j])",
+      "evidence": "A[i][j]",
+      "refs": [
+        {
+          "source": "A",
+          "section": "11.6 알고리즘 11.8",
+          "pages": [
+            417
+          ]
+        }
+      ]
+    },
+    {
+      "unit": 13,
+      "location": ".learning[0]",
+      "text": "정렬(sorting)은 크기순으로 오름차순(ascending order)이나 내림차순(descending order)으로 나열하는 것이다.",
+      "evidence": "오름차순",
+      "refs": [
+        {
+          "source": "A",
+          "section": "12.1 정렬이란?",
+          "pages": [
+            433
+          ]
+        }
+      ]
+    },
+    {
+      "unit": 13,
+      "location": ".learning[1]",
+      "text": "안정성(stability)은 동일 키값 레코드들의 상대적 위치가 정렬 후에도 바뀌지 않는 성질이다.",
+      "evidence": "상대적인 위치가 정렬 후에도 바뀌지",
+      "refs": [
+        {
+          "source": "A",
+          "section": "12.1 정렬이란?",
+          "pages": [
+            436
+          ]
+        }
+      ]
+    },
+    {
+      "unit": 13,
+      "location": ".concepts[0].items[0]",
+      "text": "정렬(sorting)은 크기순으로 오름차순(ascending order)이나 내림차순(descending order)으로 나열하는 것이다.",
+      "evidence": "오름차순",
+      "refs": [
+        {
+          "source": "A",
+          "section": "12.1 정렬이란?",
+          "pages": [
+            433
+          ]
+        }
+      ]
+    },
+    {
+      "unit": 13,
+      "location": ".concepts[0].items[2]",
+      "text": "키(key)는 레코드와 레코드를 식별하는 필드이며 정렬은 레코드들을 키값 순서로 재배열하는 것이다.",
+      "evidence": "키값의 순서로 재배열",
+      "refs": [
+        {
+          "source": "A",
+          "section": "12.1 정렬이란?",
+          "pages": [
+            434
+          ]
+        }
+      ]
+    },
+    {
+      "unit": 13,
+      "location": ".concepts[0].items[5]",
+      "text": "외부 정렬은 대부분의 데이터가 외부 기억 장치에 있고 일부만 메모리에 올려놓은 상태의 정렬이다.",
+      "evidence": "외부 기억 장치에 대부분의 데이터",
+      "refs": [
+        {
+          "source": "A",
+          "section": "12.1 정렬이란?",
+          "pages": [
+            436
+          ]
+        }
+      ]
+    },
+    {
+      "unit": 13,
+      "location": ".concepts[0].items[6]",
+      "text": "안정성(stability)은 동일 키값 레코드들의 상대적 위치가 정렬 후에도 바뀌지 않는 성질이다.",
+      "evidence": "상대적인 위치가 정렬 후에도 바뀌지",
+      "refs": [
+        {
+          "source": "A",
+          "section": "12.1 정렬이란?",
+          "pages": [
+            436
+          ]
+        }
+      ]
+    },
+    {
+      "unit": 13,
+      "location": ".concepts[0].items[7]",
+      "text": "A는 안정성을 충족하는 정렬로 삽입 정렬·버블 정렬·합병 정렬을 든다.",
+      "evidence": "삽입정렬, 버블정렬, 합병정렬",
+      "refs": [
+        {
+          "source": "A",
+          "section": "12.1 정렬이란?",
+          "pages": [
+            436
+          ]
+        }
+      ]
+    },
+    {
+      "unit": 13,
+      "location": ".concepts[1].items[5]",
+      "text": "버블 정렬은 인접한 두 레코드를 비교하여 순서가 맞지 않으면 교환하는 비교-교환 과정을 반복한다.",
+      "evidence": "인접한 2개의 레코드를 비교",
+      "refs": [
+        {
+          "source": "A",
+          "section": "12.4 버블 정렬",
+          "pages": [
+            446
+          ]
+        }
+      ]
+    },
+    {
+      "unit": 13,
+      "location": ".concepts[2].items[0]",
+      "text": "쉘 정렬은 일정 간격의 요소들로 만든 연속적이지 않은 부분 리스트를 삽입 정렬한다.",
+      "evidence": "연속적이지 않은 여러 개의 부분 리스트",
+      "refs": [
+        {
+          "source": "A",
+          "section": "12.5 쉘 정렬",
+          "pages": [
+            450
+          ]
+        }
+      ]
+    },
+    {
+      "unit": 13,
+      "location": ".concepts[3].items[0]",
+      "text": "합병 정렬은 리스트를 균등한 두 부분으로 분할하고 각 부분을 정렬한 다음 합하여 전체 정렬 리스트를 얻는다.",
+      "evidence": "두 개의 균등한 크기로 분할",
+      "refs": [
+        {
+          "source": "A",
+          "section": "12.6 합병 정렬",
+          "pages": [
+            453
+          ]
+        }
+      ]
+    },
+    {
+      "unit": 13,
+      "location": ".concepts[4].items[0]",
+      "text": "퀵 정렬은 피벗(pivot)보다 작은 요소를 왼쪽, 큰 요소를 오른쪽으로 옮겨 비균등하게 분할한다.",
+      "evidence": "비균등하게 분할",
+      "refs": [
+        {
+          "source": "A",
+          "section": "12.7 퀵 정렬",
+          "pages": [
+            461
+          ]
+        }
+      ]
+    },
+    {
+      "unit": 13,
+      "location": ".concepts[4].items[4]",
+      "text": "A는 왼쪽·오른쪽·중간의 세 데이터 중 중간값을 피벗으로 고르는 median of three를 설명한다.",
+      "evidence": "median of three",
+      "refs": [
+        {
+          "source": "A",
+          "section": "12.7 퀵 정렬의 복잡도 분석",
+          "pages": [
+            468
+          ]
+        }
+      ]
+    },
+    {
+      "unit": 13,
+      "location": ".procedures[0].steps[2]",
+      "text": "key보다 작은 정수 다음 위치인 j+1에 key를 넣는다.",
+      "evidence": "j+1번째가 key값이 들어갈 위치",
+      "refs": [
+        {
+          "source": "A",
+          "section": "12.3 알고리즘 설명",
+          "pages": [
+            444
+          ]
+        }
+      ]
+    },
+    {
+      "unit": 13,
+      "location": ".procedures[1].steps[0]",
+      "text": "분할(Divide): 입력 배열을 같은 크기의 두 부분 배열로 분할한다.",
+      "evidence": "분할(Divide)",
+      "refs": [
+        {
+          "source": "A",
+          "section": "12.6 합병 정렬",
+          "pages": [
+            453
+          ]
+        }
+      ]
+    },
+    {
+      "unit": 13,
+      "location": ".procedures[1].steps[1]",
+      "text": "정복(Conquer): 부분 배열을 정렬하고 충분히 작지 않으면 순환 호출로 다시 분할 정복한다.",
+      "evidence": "정복(Conquer)",
+      "refs": [
+        {
+          "source": "A",
+          "section": "12.6 합병 정렬",
+          "pages": [
+            453
+          ]
+        }
+      ]
+    },
+    {
+      "unit": 13,
+      "location": ".procedures[2].steps[2]",
+      "text": "피벗 바로 다음부터 right까지를 순환 호출한다.",
+      "evidence": "right까지를 대상으로 순환호출",
+      "refs": [
+        {
+          "source": "A",
+          "section": "12.7 프로그램 설명",
+          "pages": [
+            463
+          ]
+        }
+      ]
+    },
+    {
+      "unit": 13,
+      "location": ".syntax[0]",
+      "text": "quick_sort() 원문 발췌",
+      "evidence": "void quick_sort",
+      "refs": [
+        {
+          "source": "A",
+          "section": "12.7 프로그램 12.6",
+          "pages": [
+            462
+          ]
+        }
+      ]
+    },
+    {
+      "unit": 13,
+      "location": ".formulas[0]",
+      "text": "(n-1)+(n-2)+...+1 = n(n-1)/2 = O(n²)",
+      "evidence": "n(n-1)/2",
+      "refs": [
+        {
+          "source": "A",
+          "section": "12.2 선택 정렬의 복잡도",
+          "pages": [
+            441
+          ]
+        }
+      ]
+    },
+    {
+      "unit": 13,
+      "location": ".comparisons[0].rows[0][0]",
+      "text": "삽입 정렬",
+      "evidence": "삽입 정렬",
+      "refs": [
+        {
+          "source": "A",
+          "section": "12.10 표 12-1",
+          "pages": [
+            477
+          ]
+        }
+      ]
+    },
+    {
+      "unit": 13,
+      "location": ".comparisons[0].rows[3][0]",
+      "text": "퀵 정렬",
+      "evidence": "퀵 정렬",
+      "refs": [
+        {
+          "source": "A",
+          "section": "12.10 표 12-1",
+          "pages": [
+            477
+          ]
+        }
+      ]
+    },
+    {
+      "unit": 13,
+      "location": ".comparisons[0].rows[3][1]",
+      "text": "O(nlog₂n)",
+      "evidence": "O(nlog₂n)",
+      "refs": [
+        {
+          "source": "A",
+          "section": "12.10 표 12-1",
+          "pages": [
+            477
+          ]
+        }
+      ]
+    },
+    {
+      "unit": 13,
+      "location": ".comparisons[0].rows[3][2]",
+      "text": "O(nlog₂n)",
+      "evidence": "O(nlog₂n)",
+      "refs": [
+        {
+          "source": "A",
+          "section": "12.10 표 12-1",
+          "pages": [
+            477
+          ]
+        }
+      ]
+    },
+    {
+      "unit": 13,
+      "location": ".comparisons[1].rows[0][2]",
+      "text": "O(n^1.5)",
+      "evidence": "O(n^1.5)",
+      "refs": [
+        {
+          "source": "A",
+          "section": "12.10 표 12-1",
+          "pages": [
+            477
+          ]
+        }
+      ]
+    },
+    {
+      "unit": 13,
+      "location": ".comparisons[1].rows[0][3]",
+      "text": "O(n^1.5)",
+      "evidence": "O(n^1.5)",
+      "refs": [
+        {
+          "source": "A",
+          "section": "12.10 표 12-1",
+          "pages": [
+            477
+          ]
+        }
+      ]
+    },
+    {
+      "unit": 13,
+      "location": ".comparisons[1].rows[1][0]",
+      "text": "히프 정렬",
+      "evidence": "히프 정렬",
+      "refs": [
+        {
+          "source": "A",
+          "section": "12.10 표 12-1",
+          "pages": [
+            477
+          ]
+        }
+      ]
+    },
+    {
+      "unit": 13,
+      "location": ".comparisons[1].rows[1][1]",
+      "text": "O(nlog₂n)",
+      "evidence": "O(nlog₂n)",
+      "refs": [
+        {
+          "source": "A",
+          "section": "12.10 표 12-1",
+          "pages": [
+            477
+          ]
+        }
+      ]
+    },
+    {
+      "unit": 13,
+      "location": ".comparisons[1].rows[1][2]",
+      "text": "O(nlog₂n)",
+      "evidence": "O(nlog₂n)",
+      "refs": [
+        {
+          "source": "A",
+          "section": "12.10 표 12-1",
+          "pages": [
+            477
+          ]
+        }
+      ]
+    },
+    {
+      "unit": 13,
+      "location": ".comparisons[1].rows[1][3]",
+      "text": "O(nlog₂n)",
+      "evidence": "O(nlog₂n)",
+      "refs": [
+        {
+          "source": "A",
+          "section": "12.10 표 12-1",
+          "pages": [
+            477
+          ]
+        }
+      ]
+    },
+    {
+      "unit": 13,
+      "location": ".comparisons[1].rows[2][1]",
+      "text": "O(nlog₂n)",
+      "evidence": "O(nlog₂n)",
+      "refs": [
+        {
+          "source": "A",
+          "section": "12.10 표 12-1",
+          "pages": [
+            477
+          ]
+        }
+      ]
+    },
+    {
+      "unit": 13,
+      "location": ".comparisons[1].rows[2][2]",
+      "text": "O(nlog₂n)",
+      "evidence": "O(nlog₂n)",
+      "refs": [
+        {
+          "source": "A",
+          "section": "12.10 표 12-1",
+          "pages": [
+            477
+          ]
+        }
+      ]
+    },
+    {
+      "unit": 13,
+      "location": ".comparisons[1].rows[2][3]",
+      "text": "O(nlog₂n)",
+      "evidence": "O(nlog₂n)",
+      "refs": [
+        {
+          "source": "A",
+          "section": "12.10 표 12-1",
+          "pages": [
+            477
+          ]
+        }
+      ]
+    },
+    {
+      "unit": 13,
+      "location": ".terms[0].definition",
+      "text": "정렬(sorting)은 크기순으로 오름차순(ascending order)이나 내림차순(descending order)으로 나열하는 것이다.",
+      "evidence": "오름차순",
+      "refs": [
+        {
+          "source": "A",
+          "section": "12.1 정렬이란?",
+          "pages": [
+            433
+          ]
+        }
+      ]
+    },
+    {
+      "unit": 13,
+      "location": ".terms[2].definition",
+      "text": "키(key)는 레코드와 레코드를 식별하는 필드이며 정렬은 레코드들을 키값 순서로 재배열하는 것이다.",
+      "evidence": "키값의 순서로 재배열",
+      "refs": [
+        {
+          "source": "A",
+          "section": "12.1 정렬이란?",
+          "pages": [
+            434
+          ]
+        }
+      ]
+    },
+    {
+      "unit": 13,
+      "location": ".terms[4].definition",
+      "text": "외부 정렬은 대부분의 데이터가 외부 기억 장치에 있고 일부만 메모리에 올려놓은 상태의 정렬이다.",
+      "evidence": "외부 기억 장치에 대부분의 데이터",
+      "refs": [
+        {
+          "source": "A",
+          "section": "12.1 정렬이란?",
+          "pages": [
+            436
+          ]
+        }
+      ]
+    },
+    {
+      "unit": 13,
+      "location": ".terms[5].definition",
+      "text": "안정성(stability)은 동일 키값 레코드들의 상대적 위치가 정렬 후에도 바뀌지 않는 성질이다.",
+      "evidence": "상대적인 위치가 정렬 후에도 바뀌지",
+      "refs": [
+        {
+          "source": "A",
+          "section": "12.1 정렬이란?",
+          "pages": [
+            436
+          ]
+        }
+      ]
+    },
+    {
+      "unit": 13,
+      "location": ".terms[6].definition",
+      "text": "퀵 정렬은 피벗(pivot)보다 작은 요소를 왼쪽, 큰 요소를 오른쪽으로 옮겨 비균등하게 분할한다.",
+      "evidence": "비균등하게 분할",
+      "refs": [
+        {
+          "source": "A",
+          "section": "12.7 퀵 정렬",
+          "pages": [
+            461
+          ]
+        }
+      ]
+    },
+    {
+      "unit": 13,
+      "location": ".summary[0]",
+      "text": "키(key)는 레코드와 레코드를 식별하는 필드이며 정렬은 레코드들을 키값 순서로 재배열하는 것이다.",
+      "evidence": "키값의 순서로 재배열",
+      "refs": [
+        {
+          "source": "A",
+          "section": "12.1 정렬이란?",
+          "pages": [
+            434
+          ]
+        }
+      ]
+    },
+    {
+      "unit": 13,
+      "location": ".summary[1]",
+      "text": "안정성(stability)은 동일 키값 레코드들의 상대적 위치가 정렬 후에도 바뀌지 않는 성질이다.",
+      "evidence": "상대적인 위치가 정렬 후에도 바뀌지",
+      "refs": [
+        {
+          "source": "A",
+          "section": "12.1 정렬이란?",
+          "pages": [
+            436
+          ]
+        }
+      ]
+    },
+    {
+      "unit": 13,
+      "location": ".summary[2]",
+      "text": "합병 정렬은 리스트를 균등한 두 부분으로 분할하고 각 부분을 정렬한 다음 합하여 전체 정렬 리스트를 얻는다.",
+      "evidence": "두 개의 균등한 크기로 분할",
+      "refs": [
+        {
+          "source": "A",
+          "section": "12.6 합병 정렬",
+          "pages": [
+            453
+          ]
+        }
+      ]
+    },
+    {
+      "unit": 13,
+      "location": ".summary[3]",
+      "text": "퀵 정렬은 피벗(pivot)보다 작은 요소를 왼쪽, 큰 요소를 오른쪽으로 옮겨 비균등하게 분할한다.",
+      "evidence": "비균등하게 분할",
+      "refs": [
+        {
+          "source": "A",
+          "section": "12.7 퀵 정렬",
+          "pages": [
+            461
+          ]
+        }
+      ]
+    },
+    {
+      "unit": 13,
+      "location": ".review[0].answer",
+      "text": "안정성(stability)은 동일 키값 레코드들의 상대적 위치가 정렬 후에도 바뀌지 않는 성질이다.",
+      "evidence": "상대적인 위치가 정렬 후에도 바뀌지",
+      "refs": [
+        {
+          "source": "A",
+          "section": "12.1 정렬이란?",
+          "pages": [
+            436
+          ]
+        }
+      ]
+    },
+    {
+      "unit": 13,
+      "location": ".cheat.definitions[0].definition",
+      "text": "정렬(sorting)은 크기순으로 오름차순(ascending order)이나 내림차순(descending order)으로 나열하는 것이다.",
+      "evidence": "오름차순",
+      "refs": [
+        {
+          "source": "A",
+          "section": "12.1 정렬이란?",
+          "pages": [
+            433
+          ]
+        }
+      ]
+    },
+    {
+      "unit": 13,
+      "location": ".cheat.definitions[1].definition",
+      "text": "안정성(stability)은 동일 키값 레코드들의 상대적 위치가 정렬 후에도 바뀌지 않는 성질이다.",
+      "evidence": "상대적인 위치가 정렬 후에도 바뀌지",
+      "refs": [
+        {
+          "source": "A",
+          "section": "12.1 정렬이란?",
+          "pages": [
+            436
+          ]
+        }
+      ]
+    },
+    {
+      "unit": 13,
+      "location": ".cheat.definitions[2].definition",
+      "text": "퀵 정렬은 피벗(pivot)보다 작은 요소를 왼쪽, 큰 요소를 오른쪽으로 옮겨 비균등하게 분할한다.",
+      "evidence": "비균등하게 분할",
+      "refs": [
+        {
+          "source": "A",
+          "section": "12.7 퀵 정렬",
+          "pages": [
+            461
+          ]
+        }
+      ]
+    },
+    {
+      "unit": 13,
+      "location": ".cheat.comparison_rows[0][0]",
+      "text": "삽입 정렬",
+      "evidence": "삽입 정렬",
+      "refs": [
+        {
+          "source": "A",
+          "section": "12.10 표 12-1",
+          "pages": [
+            477
+          ]
+        }
+      ]
+    },
+    {
+      "unit": 13,
+      "location": ".cheat.comparison_rows[3][0]",
+      "text": "퀵 정렬",
+      "evidence": "퀵 정렬",
+      "refs": [
+        {
+          "source": "A",
+          "section": "12.10 표 12-1",
+          "pages": [
+            477
+          ]
+        }
+      ]
+    },
+    {
+      "unit": 13,
+      "location": ".cheat.comparison_rows[3][1]",
+      "text": "O(nlog₂n)",
+      "evidence": "O(nlog₂n)",
+      "refs": [
+        {
+          "source": "A",
+          "section": "12.10 표 12-1",
+          "pages": [
+            477
+          ]
+        }
+      ]
+    },
+    {
+      "unit": 13,
+      "location": ".cheat.comparison_rows[3][2]",
+      "text": "O(nlog₂n)",
+      "evidence": "O(nlog₂n)",
+      "refs": [
+        {
+          "source": "A",
+          "section": "12.10 표 12-1",
+          "pages": [
+            477
+          ]
+        }
+      ]
+    },
+    {
+      "unit": 14,
+      "location": ".concepts[0].items[1]",
+      "text": "탐색의 단위는 항목이며 항목 안에는 항목을 구별하는 탐색키(search key)가 있다.",
+      "evidence": "탐색키(search key)",
+      "refs": [
+        {
+          "source": "A",
+          "section": "13.1 탐색이란?",
+          "pages": [
+            487
+          ]
+        }
+      ]
+    },
+    {
+      "unit": 14,
+      "location": ".concepts[0].items[2]",
+      "text": "탐색은 탐색키와 데이터로 이루어진 항목들 중 원하는 탐색키를 가진 항목을 찾는 것이다.",
+      "evidence": "원하는 탐색키를 가지고 있는 항목",
+      "refs": [
+        {
+          "source": "A",
+          "section": "13.1 탐색이란?",
+          "pages": [
+            487
+          ]
+        }
+      ]
+    },
+    {
+      "unit": 14,
+      "location": ".concepts[1].items[0]",
+      "text": "순차 탐색은 정렬되지 않은 배열의 처음부터 마지막까지 하나씩 검사하여 원하는 항목을 찾는다.",
+      "evidence": "처음부터 마지막까지 하나씩 검사",
+      "refs": [
+        {
+          "source": "A",
+          "section": "13.2 정렬되지 않은 배열에서의 탐색",
+          "pages": [
+            488
+          ]
+        }
+      ]
+    },
+    {
+      "unit": 14,
+      "location": ".concepts[1].items[2]",
+      "text": "A의 개선된 순차 탐색은 리스트 끝에 탐색키를 저장하여 끝 도달 여부를 매번 비교하지 않는다.",
+      "evidence": "리스트의 끝에 찾고자 하는 키 값을 저장",
+      "refs": [
+        {
+          "source": "A",
+          "section": "13.2 개선된 순차 탐색",
+          "pages": [
+            489
+          ]
+        }
+      ]
+    },
+    {
+      "unit": 14,
+      "location": ".concepts[1].items[4]",
+      "text": "각 키의 탐색 확률이 같으면 순차 탐색 성공 시 평균 비교 횟수는 (n+1)/2이다.",
+      "evidence": "모든 키가 탐색될 확률이 동일",
+      "refs": [
+        {
+          "source": "A",
+          "section": "13.2 순차 탐색의 시간 복잡도",
+          "pages": [
+            491
+          ]
+        }
+      ]
+    },
+    {
+      "unit": 14,
+      "location": ".concepts[2].items[0]",
+      "text": "자기 구성법은 자주 사용되는 항목을 데이터 앞쪽에 배치하여 순차 검색 효율을 높인다.",
+      "evidence": "자주 사용되는 항목을 데이터 앞쪽에 배치",
+      "refs": [
+        {
+          "source": "B",
+          "section": "6.2 자기 구성법",
+          "pages": [
+            244
+          ]
+        }
+      ]
+    },
+    {
+      "unit": 14,
+      "location": ".concepts[3].items[3]",
+      "text": "이진 탐색은 순환 호출 또는 반복문으로 구현할 수 있다.",
+      "evidence": "반복문을 사용하여 구현",
+      "refs": [
+        {
+          "source": "A",
+          "section": "13.3 이진 탐색 구현",
+          "pages": [
+            494
+          ]
+        }
+      ]
+    },
+    {
+      "unit": 14,
+      "location": ".concepts[3].items[4]",
+      "text": "이진 탐색의 시간 복잡도는 O(log₂n)이다.",
+      "evidence": "O(log₂n)",
+      "refs": [
+        {
+          "source": "A",
+          "section": "13.3 이진 탐색의 시간 복잡도",
+          "pages": [
+            496
+          ]
+        }
+      ]
+    },
+    {
+      "unit": 14,
+      "location": ".concepts[4].items[2]",
+      "text": "인덱스 크기를 줄이면 주 자료 리스트 탐색 시간이 늘고 크게 하면 인덱스 탐색 시간이 는다.",
+      "evidence": "인덱스 테이블의 크기를 줄이면",
+      "refs": [
+        {
+          "source": "A",
+          "section": "13.3 색인 순차 탐색",
+          "pages": [
+            498
+          ]
+        }
+      ]
+    },
+    {
+      "unit": 14,
+      "location": ".concepts[5].items[2]",
+      "text": "보간 탐색으로 계산한 실수 위치는 보통 소수점 이하를 버려 정수로 변환한다.",
+      "evidence": "소수점 이하를 버리는 방법",
+      "refs": [
+        {
+          "source": "A",
+          "section": "13.3 보간 탐색",
+          "pages": [
+            500
+          ]
+        }
+      ]
+    },
+    {
+      "unit": 14,
+      "location": ".concepts[5].items[3]",
+      "text": "A는 비교적 균등하게 분포한 많은 데이터에서 보간 탐색이 이진 탐색보다 우수할 수 있다고 설명한다.",
+      "evidence": "비교적 균등하게 분포",
+      "refs": [
+        {
+          "source": "A",
+          "section": "13.3 보간 탐색",
+          "pages": [
+            500
+          ]
+        }
+      ]
+    },
+    {
+      "unit": 14,
+      "location": ".syntax[0]",
+      "text": "seq_search() 원문 발췌",
+      "evidence": "int seq_search",
+      "refs": [
+        {
+          "source": "A",
+          "section": "13.2 프로그램 13.1",
+          "pages": [
+            488
+          ]
+        }
+      ]
+    },
+    {
+      "unit": 14,
+      "location": ".formulas[1]",
+      "text": "O(m+n/m)",
+      "evidence": "O(m+n/m)",
+      "refs": [
+        {
+          "source": "A",
+          "section": "13.3 색인 순차 탐색",
+          "pages": [
+            498
+          ]
+        }
+      ]
+    },
+    {
+      "unit": 14,
+      "location": ".comparisons[0].rows[0][1]",
+      "text": "순차 탐색은 정렬되지 않은 배열의 처음부터 마지막까지 하나씩 검사하여 원하는 항목을 찾는다.",
+      "evidence": "처음부터 마지막까지 하나씩 검사",
+      "refs": [
+        {
+          "source": "A",
+          "section": "13.2 정렬되지 않은 배열에서의 탐색",
+          "pages": [
+            488
+          ]
+        }
+      ]
+    },
+    {
+      "unit": 14,
+      "location": ".terms[1].definition",
+      "text": "탐색의 단위는 항목이며 항목 안에는 항목을 구별하는 탐색키(search key)가 있다.",
+      "evidence": "탐색키(search key)",
+      "refs": [
+        {
+          "source": "A",
+          "section": "13.1 탐색이란?",
+          "pages": [
+            487
+          ]
+        }
+      ]
+    },
+    {
+      "unit": 14,
+      "location": ".terms[2].definition",
+      "text": "순차 탐색은 정렬되지 않은 배열의 처음부터 마지막까지 하나씩 검사하여 원하는 항목을 찾는다.",
+      "evidence": "처음부터 마지막까지 하나씩 검사",
+      "refs": [
+        {
+          "source": "A",
+          "section": "13.2 정렬되지 않은 배열에서의 탐색",
+          "pages": [
+            488
+          ]
+        }
+      ]
+    },
+    {
+      "unit": 14,
+      "location": ".summary[0]",
+      "text": "탐색은 탐색키와 데이터로 이루어진 항목들 중 원하는 탐색키를 가진 항목을 찾는 것이다.",
+      "evidence": "원하는 탐색키를 가지고 있는 항목",
+      "refs": [
+        {
+          "source": "A",
+          "section": "13.1 탐색이란?",
+          "pages": [
+            487
+          ]
+        }
+      ]
+    },
+    {
+      "unit": 14,
+      "location": ".review[0].answer",
+      "text": "각 키의 탐색 확률이 같으면 순차 탐색 성공 시 평균 비교 횟수는 (n+1)/2이다.",
+      "evidence": "모든 키가 탐색될 확률이 동일",
+      "refs": [
+        {
+          "source": "A",
+          "section": "13.2 순차 탐색의 시간 복잡도",
+          "pages": [
+            491
+          ]
+        }
+      ]
+    },
+    {
+      "unit": 14,
+      "location": ".cheat.formulas[1]",
+      "text": "O(m+n/m)",
+      "evidence": "O(m+n/m)",
+      "refs": [
+        {
+          "source": "A",
+          "section": "13.3 색인 순차 탐색",
+          "pages": [
+            498
+          ]
+        }
+      ]
+    },
+    {
+      "unit": 15,
+      "location": ".learning[0]",
+      "text": "해싱(hashing)은 키에 산술 연산을 적용하여 항목이 저장된 테이블 주소를 계산하고 접근하는 탐색이다.",
+      "evidence": "키(key)에 산술적인 연산",
+      "refs": [
+        {
+          "source": "A",
+          "section": "14.1 해싱이란?",
+          "pages": [
+            525
+          ]
+        }
+      ]
+    },
+    {
+      "unit": 15,
+      "location": ".concepts[0].items[0]",
+      "text": "해싱(hashing)은 키에 산술 연산을 적용하여 항목이 저장된 테이블 주소를 계산하고 접근하는 탐색이다.",
+      "evidence": "키(key)에 산술적인 연산",
+      "refs": [
+        {
+          "source": "A",
+          "section": "14.1 해싱이란?",
+          "pages": [
+            525
+          ]
+        }
+      ]
+    },
+    {
+      "unit": 15,
+      "location": ".concepts[0].items[2]",
+      "text": "사전(dictionary)은 (키, 값) 쌍의 집합이다.",
+      "evidence": "(키, 값) 쌍의 집합",
+      "refs": [
+        {
+          "source": "A",
+          "section": "14.2 추상 자료형 사전",
+          "pages": [
+            526
+          ]
+        }
+      ]
+    },
+    {
+      "unit": 15,
+      "location": ".concepts[0].items[3]",
+      "text": "사전은 항목 위치가 아니라 키에 의하여 관리되며 정렬 여부는 구현할 때 결정한다.",
+      "evidence": "사전은 오직 키에 의해서만 관리",
+      "refs": [
+        {
+          "source": "A",
+          "section": "14.2 추상 자료형 사전",
+          "pages": [
+            527
+          ]
+        }
+      ]
+    },
+    {
+      "unit": 15,
+      "location": ".concepts[1].items[1]",
+      "text": "해시 테이블 ht는 M개 버킷(bucket)으로 이루어지며 하나의 버킷은 여러 슬롯(slot)을 가질 수 있다.",
+      "evidence": "M개의 버킷",
+      "refs": [
+        {
+          "source": "A",
+          "section": "14.3 해싱의 구조",
+          "pages": [
+            528
+          ]
+        }
+      ]
+    },
+    {
+      "unit": 15,
+      "location": ".concepts[2].items[0]",
+      "text": "좋은 해시 함수는 충돌이 적고 주소 영역에 고르게 분포하며 계산이 빨라야 한다.",
+      "evidence": "계산이 빨라야 한다",
+      "refs": [
+        {
+          "source": "A",
+          "section": "14.4 해시함수",
+          "pages": [
+            533
+          ]
+        }
+      ]
+    },
+    {
+      "unit": 15,
+      "location": ".concepts[2].items[2]",
+      "text": "폴딩은 키를 여러 부분으로 나누어 더하거나 비트별 XOR와 같은 연산으로 해시 주소를 만드는 방법이다.",
+      "evidence": "키를 몇 개의 부분으로 나누어",
+      "refs": [
+        {
+          "source": "A",
+          "section": "14.4 폴딩 함수",
+          "pages": [
+            535
+          ]
+        }
+      ]
+    },
+    {
+      "unit": 15,
+      "location": ".concepts[2].items[4]",
+      "text": "중간 제곱 함수는 키를 제곱한 다음 중간의 몇 비트를 해시 주소로 사용한다.",
+      "evidence": "키를 제곱한 다음",
+      "refs": [
+        {
+          "source": "A",
+          "section": "14.4 중간 제곱 함수",
+          "pages": [
+            536
+          ]
+        }
+      ]
+    },
+    {
+      "unit": 15,
+      "location": ".concepts[2].items[8]",
+      "text": "B의 자릿수 접기(Folding)는 숫자를 자릿수별로 더하여 해시값을 만드는 방법이다.",
+      "evidence": "숫자를 각 자릿수별로 더해",
+      "refs": [
+        {
+          "source": "B",
+          "section": "8.2.2 자릿수 접기",
+          "pages": [
+            347
+          ]
+        }
+      ]
+    },
+    {
+      "unit": 15,
+      "location": ".concepts[3].items[0]",
+      "text": "개방 주소법(open addressing)은 충돌이 일어난 항목을 테이블의 다른 위치에 저장한다.",
+      "evidence": "해시 테이블의 다른 위치",
+      "refs": [
+        {
+          "source": "A",
+          "section": "14.5 개방 주소법",
+          "pages": [
+            538
+          ]
+        }
+      ]
+    },
+    {
+      "unit": 15,
+      "location": ".concepts[3].items[4]",
+      "text": "삭제가 있는 선형 조사법의 탐색은 한 번도 사용하지 않은 버킷을 만나야 중단한다.",
+      "evidence": "한 번도 사용이 안 된 버킷",
+      "refs": [
+        {
+          "source": "A",
+          "section": "14.5 선형 조사법",
+          "pages": [
+            545
+          ]
+        }
+      ]
+    },
+    {
+      "unit": 15,
+      "location": ".concepts[3].items[5]",
+      "text": "이차 조사법은 다음 위치를 (h(k)+inc*inc) mod M으로 결정한다.",
+      "evidence": "(h(k)+inc*inc) mod M",
+      "refs": [
+        {
+          "source": "A",
+          "section": "14.5 이차 조사법",
+          "pages": [
+            545
+          ]
+        }
+      ]
+    },
+    {
+      "unit": 15,
+      "location": ".concepts[3].items[6]",
+      "text": "A의 이중 해싱법(double hashing) 또는 재해싱(rehashing)은 다음 저장 위치를 별개의 해시 함수로 결정한다.",
+      "evidence": "재해싱(rehashing)",
+      "refs": [
+        {
+          "source": "A",
+          "section": "14.5 이중 해싱법",
+          "pages": [
+            546
+          ]
+        }
+      ]
+    },
+    {
+      "unit": 15,
+      "location": ".concepts[3].items[9]",
+      "text": "B의 OAHT_Rehash()는 두 배 크기의 새 테이블을 만들고 점유 항목을 옮긴 뒤 이전 테이블을 소멸시킨다.",
+      "evidence": "TableSize * 2",
+      "refs": [
+        {
+          "source": "B",
+          "section": "8.3.2 OAHT_Rehash()",
+          "pages": [
+            375
+          ]
+        }
+      ]
+    },
+    {
+      "unit": 15,
+      "location": ".concepts[4].items[0]",
+      "text": "체이닝(chaining)은 각 버킷에 연결 리스트를 할당하여 오버플로우를 해결한다.",
+      "evidence": "각 버킷에",
+      "refs": [
+        {
+          "source": "A",
+          "section": "14.6 체이닝",
+          "pages": [
+            550
+          ]
+        }
+      ]
+    },
+    {
+      "unit": 15,
+      "location": ".concepts[4].items[2]",
+      "text": "중복 키를 허용하면 리스트 처음에 삽입하는 것이 능률적이며 허용하지 않으면 먼저 리스트를 탐색한다.",
+      "evidence": "키들의 중복을 허용",
+      "refs": [
+        {
+          "source": "A",
+          "section": "14.6 체이닝",
+          "pages": [
+            550
+          ]
+        }
+      ]
+    },
+    {
+      "unit": 15,
+      "location": ".concepts[4].items[3]",
+      "text": "B는 테이블 주소 바깥에 공간을 할당하는 것을 개방 해싱, 테이블 내부 공간에서 해결하는 것을 폐쇄 해싱이라 부른다.",
+      "evidence": "개방 해싱",
+      "refs": [
+        {
+          "source": "B",
+          "section": "8.3 충돌 해결 기법",
+          "pages": [
+            350
+          ]
+        }
+      ]
+    },
+    {
+      "unit": 15,
+      "location": ".concepts[5].items[3]",
+      "text": "체이닝에서 적재 밀도 α는 평균 연결 리스트당 항목 수이며 실패 탐색의 평균 비교 수는 α, 성공 탐색은 1+α/2이다.",
+      "evidence": "1+α/2",
+      "refs": [
+        {
+          "source": "A",
+          "section": "14.7 해싱의 성능 분석",
+          "pages": [
+            556
+          ]
+        }
+      ]
+    },
+    {
+      "unit": 15,
+      "location": ".concepts[5].items[5]",
+      "text": "모든 값이 하나의 버킷으로 집중되는 최악의 해싱 시간 복잡도는 O(n)이다.",
+      "evidence": "시간 복잡도는 O(n)",
+      "refs": [
+        {
+          "source": "A",
+          "section": "14.7 해싱의 성능 분석",
+          "pages": [
+            558
+          ]
+        }
+      ]
+    },
+    {
+      "unit": 15,
+      "location": ".procedures[0].steps[0]",
+      "text": "충돌 위치 ht[k]의 다음 버킷 ht[k+1]을 조사한다.",
+      "evidence": "ht[k+1]",
+      "refs": [
+        {
+          "source": "A",
+          "section": "14.5 선형 조사법",
+          "pages": [
+            538
+          ]
+        }
+      ]
+    },
+    {
+      "unit": 15,
+      "location": ".procedures[0].steps[1]",
+      "text": "빈 버킷이 없으면 ht[k+2] 등으로 계속 조사하며 테이블 끝에서는 처음으로 간다.",
+      "evidence": "ht[k+2]",
+      "refs": [
+        {
+          "source": "A",
+          "section": "14.5 선형 조사법",
+          "pages": [
+            538
+          ]
+        }
+      ]
+    },
+    {
+      "unit": 15,
+      "location": ".procedures[1].steps[0]",
+      "text": "기존 테이블 크기의 두 배인 새 해시 테이블을 만든다.",
+      "evidence": "TableSize * 2",
+      "refs": [
+        {
+          "source": "B",
+          "section": "8.3.2 OAHT_Rehash()",
+          "pages": [
+            375
+          ]
+        }
+      ]
+    },
+    {
+      "unit": 15,
+      "location": ".formulas[0]",
+      "text": "h(k) = k mod M",
+      "evidence": "h(k)=k mod M",
+      "refs": [
+        {
+          "source": "A",
+          "section": "14.4 제산 함수",
+          "pages": [
+            534
+          ]
+        }
+      ]
+    },
+    {
+      "unit": 15,
+      "location": ".formulas[1]",
+      "text": "α = n/M",
+      "evidence": "n/M",
+      "refs": [
+        {
+          "source": "A",
+          "section": "14.7 해싱의 성능 분석",
+          "pages": [
+            555
+          ]
+        }
+      ]
+    },
+    {
+      "unit": 15,
+      "location": ".comparisons[0].rows[0][1]",
+      "text": "개방 주소법(open addressing)은 충돌이 일어난 항목을 테이블의 다른 위치에 저장한다.",
+      "evidence": "해시 테이블의 다른 위치",
+      "refs": [
+        {
+          "source": "A",
+          "section": "14.5 개방 주소법",
+          "pages": [
+            538
+          ]
+        }
+      ]
+    },
+    {
+      "unit": 15,
+      "location": ".comparisons[0].rows[2][1]",
+      "text": "이차 조사법은 다음 위치를 (h(k)+inc*inc) mod M으로 결정한다.",
+      "evidence": "(h(k)+inc*inc) mod M",
+      "refs": [
+        {
+          "source": "A",
+          "section": "14.5 이차 조사법",
+          "pages": [
+            545
+          ]
+        }
+      ]
+    },
+    {
+      "unit": 15,
+      "location": ".comparisons[0].rows[3][1]",
+      "text": "A의 이중 해싱법(double hashing) 또는 재해싱(rehashing)은 다음 저장 위치를 별개의 해시 함수로 결정한다.",
+      "evidence": "재해싱(rehashing)",
+      "refs": [
+        {
+          "source": "A",
+          "section": "14.5 이중 해싱법",
+          "pages": [
+            546
+          ]
+        }
+      ]
+    },
+    {
+      "unit": 15,
+      "location": ".comparisons[0].rows[4][1]",
+      "text": "체이닝(chaining)은 각 버킷에 연결 리스트를 할당하여 오버플로우를 해결한다.",
+      "evidence": "각 버킷에",
+      "refs": [
+        {
+          "source": "A",
+          "section": "14.6 체이닝",
+          "pages": [
+            550
+          ]
+        }
+      ]
+    },
+    {
+      "unit": 15,
+      "location": ".terms[0].definition",
+      "text": "해싱(hashing)은 키에 산술 연산을 적용하여 항목이 저장된 테이블 주소를 계산하고 접근하는 탐색이다.",
+      "evidence": "키(key)에 산술적인 연산",
+      "refs": [
+        {
+          "source": "A",
+          "section": "14.1 해싱이란?",
+          "pages": [
+            525
+          ]
+        }
+      ]
+    },
+    {
+      "unit": 15,
+      "location": ".terms[1].definition",
+      "text": "사전(dictionary)은 (키, 값) 쌍의 집합이다.",
+      "evidence": "(키, 값) 쌍의 집합",
+      "refs": [
+        {
+          "source": "A",
+          "section": "14.2 추상 자료형 사전",
+          "pages": [
+            526
+          ]
+        }
+      ]
+    },
+    {
+      "unit": 15,
+      "location": ".terms[3].definition",
+      "text": "해시 테이블 ht는 M개 버킷(bucket)으로 이루어지며 하나의 버킷은 여러 슬롯(slot)을 가질 수 있다.",
+      "evidence": "M개의 버킷",
+      "refs": [
+        {
+          "source": "A",
+          "section": "14.3 해싱의 구조",
+          "pages": [
+            528
+          ]
+        }
+      ]
+    },
+    {
+      "unit": 15,
+      "location": ".terms[7].definition",
+      "text": "개방 주소법(open addressing)은 충돌이 일어난 항목을 테이블의 다른 위치에 저장한다.",
+      "evidence": "해시 테이블의 다른 위치",
+      "refs": [
+        {
+          "source": "A",
+          "section": "14.5 개방 주소법",
+          "pages": [
+            538
+          ]
+        }
+      ]
+    },
+    {
+      "unit": 15,
+      "location": ".terms[8].definition",
+      "text": "체이닝(chaining)은 각 버킷에 연결 리스트를 할당하여 오버플로우를 해결한다.",
+      "evidence": "각 버킷에",
+      "refs": [
+        {
+          "source": "A",
+          "section": "14.6 체이닝",
+          "pages": [
+            550
+          ]
+        }
+      ]
+    },
+    {
+      "unit": 15,
+      "location": ".summary[3]",
+      "text": "모든 값이 하나의 버킷으로 집중되는 최악의 해싱 시간 복잡도는 O(n)이다.",
+      "evidence": "시간 복잡도는 O(n)",
+      "refs": [
+        {
+          "source": "A",
+          "section": "14.7 해싱의 성능 분석",
+          "pages": [
+            558
+          ]
+        }
+      ]
+    },
+    {
+      "unit": 15,
+      "location": ".review[2].answer",
+      "text": "삭제가 있는 선형 조사법의 탐색은 한 번도 사용하지 않은 버킷을 만나야 중단한다.",
+      "evidence": "한 번도 사용이 안 된 버킷",
+      "refs": [
+        {
+          "source": "A",
+          "section": "14.5 선형 조사법",
+          "pages": [
+            545
+          ]
+        }
+      ]
+    },
+    {
+      "unit": 15,
+      "location": ".cheat.definitions[0].definition",
+      "text": "해싱(hashing)은 키에 산술 연산을 적용하여 항목이 저장된 테이블 주소를 계산하고 접근하는 탐색이다.",
+      "evidence": "키(key)에 산술적인 연산",
+      "refs": [
+        {
+          "source": "A",
+          "section": "14.1 해싱이란?",
+          "pages": [
+            525
+          ]
+        }
+      ]
+    },
+    {
+      "unit": 15,
+      "location": ".cheat.comparison_rows[0][1]",
+      "text": "개방 주소법(open addressing)은 충돌이 일어난 항목을 테이블의 다른 위치에 저장한다.",
+      "evidence": "해시 테이블의 다른 위치",
+      "refs": [
+        {
+          "source": "A",
+          "section": "14.5 개방 주소법",
+          "pages": [
+            538
+          ]
+        }
+      ]
+    },
+    {
+      "unit": 15,
+      "location": ".cheat.comparison_rows[1][1]",
+      "text": "A의 이중 해싱법(double hashing) 또는 재해싱(rehashing)은 다음 저장 위치를 별개의 해시 함수로 결정한다.",
+      "evidence": "재해싱(rehashing)",
+      "refs": [
+        {
+          "source": "A",
+          "section": "14.5 이중 해싱법",
+          "pages": [
+            546
+          ]
+        }
+      ]
+    },
+    {
+      "unit": 15,
+      "location": ".cheat.comparison_rows[2][1]",
+      "text": "체이닝(chaining)은 각 버킷에 연결 리스트를 할당하여 오버플로우를 해결한다.",
+      "evidence": "각 버킷에",
+      "refs": [
+        {
+          "source": "A",
+          "section": "14.6 체이닝",
+          "pages": [
+            550
+          ]
+        }
+      ]
+    },
+    {
+      "unit": 15,
+      "location": ".cheat.formulas[0]",
+      "text": "h(k) = k mod M",
+      "evidence": "h(k)=k mod M",
+      "refs": [
+        {
+          "source": "A",
+          "section": "14.4 제산 함수",
+          "pages": [
+            534
+          ]
+        }
+      ]
+    },
+    {
+      "unit": 15,
+      "location": ".cheat.formulas[1]",
+      "text": "α = n/M",
+      "evidence": "n/M",
+      "refs": [
+        {
+          "source": "A",
+          "section": "14.7 해싱의 성능 분석",
+          "pages": [
+            555
+          ]
+        }
+      ]
+    },
+    {
+      "unit": 16,
+      "location": ".learning[0]",
+      "text": "본문(Text)은 탐색 대상이 되는 문자열이다.",
+      "evidence": "본문Text: 탐색 대상이 되는 문자열을 의미합니다.",
+      "refs": [
+        {
+          "source": "B",
+          "section": "10.1 문자열 탐색 알고리즘의 개요",
+          "pages": [
+            458
+          ]
+        }
+      ]
+    },
+    {
+      "unit": 16,
+      "location": ".concepts[0].items[0]",
+      "text": "본문(Text)은 탐색 대상이 되는 문자열이다.",
+      "evidence": "본문Text: 탐색 대상이 되는 문자열을 의미합니다.",
+      "refs": [
+        {
+          "source": "B",
+          "section": "10.1 문자열 탐색 알고리즘의 개요",
+          "pages": [
+            458
+          ]
+        }
+      ]
+    },
+    {
+      "unit": 16,
+      "location": ".concepts[0].items[1]",
+      "text": "패턴(Pattern)은 탐색어를 의미한다.",
+      "evidence": "패턴Pattern: 탐색어를 의미합니다.",
+      "refs": [
+        {
+          "source": "B",
+          "section": "10.1 문자열 탐색 알고리즘의 개요",
+          "pages": [
+            458
+          ]
+        }
+      ]
+    },
+    {
+      "unit": 16,
+      "location": ".concepts[0].items[2]",
+      "text": "이동(Shift)은 본문에서 탐색 위치를 옮기는 일이다.",
+      "evidence": "이동Shift: 본문에서 탐색 위치를 옮기는 일입니다.",
+      "refs": [
+        {
+          "source": "B",
+          "section": "10.1 문자열 탐색 알고리즘의 개요",
+          "pages": [
+            458
+          ]
+        }
+      ]
+    },
+    {
+      "unit": 16,
+      "location": ".concepts[0].items[3]",
+      "text": "고지식한 탐색은 본문의 앞에서부터 끝까지 차근차근 탐색하는 알고리즘이다.",
+      "evidence": "본문의 앞에서부터 끝까지 차근차근 탐색하는 알고리즘",
+      "refs": [
+        {
+          "source": "B",
+          "section": "10.2 고지식한 탐색 알고리즘",
+          "pages": [
+            459
+          ]
+        }
+      ]
+    },
+    {
+      "unit": 16,
+      "location": ".concepts[0].items[4]",
+      "text": "본문 문자열을 처음부터 끝까지 차례대로 순회하면서 패턴 내 문자들을 일일이 비교한다.",
+      "evidence": "패턴 내 문자들을 일일이 비교하는 방식",
+      "refs": [
+        {
+          "source": "B",
+          "section": "10.2.1 고지식한 탐색의 동작 방식",
+          "pages": [
+            459
+          ]
+        }
+      ]
+    },
+    {
+      "unit": 16,
+      "location": ".concepts[0].items[6]",
+      "text": "본문 길이가 N, 패턴 길이가 M일 때 최악의 경우 N×M번의 비교를 수행한다.",
+      "evidence": "최악의 경우 N×M번의 비교를 수행합니다.",
+      "refs": [
+        {
+          "source": "B",
+          "section": "10.2.1 고지식한 탐색의 동작 방식",
+          "pages": [
+            460
+          ]
+        }
+      ]
+    },
+    {
+      "unit": 16,
+      "location": ".concepts[2].items[0]",
+      "text": "KMP 알고리즘은 탐색 위치를 본문 왼쪽부터 오른쪽으로 옮기며 문자를 직접 비교한다.",
+      "evidence": "탐색 위치를 본문 왼쪽부터 시작해서 오른쪽으로 옮겨가며 문자를 직접 비교",
+      "refs": [
+        {
+          "source": "B",
+          "section": "10.4 KMP 알고리즘",
+          "pages": [
+            472
+          ]
+        }
+      ]
+    },
+    {
+      "unit": 16,
+      "location": ".concepts[2].items[6]",
+      "text": "경계 테이블의 크기는 패턴 크기보다 1만큼 더 크다.",
+      "evidence": "경계 테이블의 크기가 패턴 크기보다 1만큼 더 큽니다.",
+      "refs": [
+        {
+          "source": "B",
+          "section": "10.4.2 경계 정보 사전 계산 방법",
+          "pages": [
+            476
+          ]
+        }
+      ]
+    },
+    {
+      "unit": 16,
+      "location": ".concepts[3].items[1]",
+      "text": "불일치가 발생하면 나쁜 문자 이동과 착한 접미부 이동을 모두 검토해서 더 멀리 옮겨가는 방법을 선택한다.",
+      "evidence": "더 멀리 옮겨가는 이동 방법을 선택",
+      "refs": [
+        {
+          "source": "B",
+          "section": "10.5 보이어–무어 알고리즘",
+          "pages": [
+            481
+          ]
+        }
+      ]
+    },
+    {
+      "unit": 16,
+      "location": ".concepts[3].items[7]",
+      "text": "착한 접미부 이동의 두 경우에 모두 해당하지 않으면 패턴의 전체 길이만큼 오른쪽으로 이동한다.",
+      "evidence": "패턴의 전체 길이만큼 탐색 위치를 오른쪽으로 이동",
+      "refs": [
+        {
+          "source": "B",
+          "section": "10.5.2 착한 접미부 이동",
+          "pages": [
+            484
+          ]
+        }
+      ]
+    },
+    {
+      "unit": 16,
+      "location": ".procedures[0].steps[0]",
+      "text": "본문 문자열을 처음부터 끝까지 차례대로 순회하면서 패턴 내 문자들을 일일이 비교한다.",
+      "evidence": "패턴 내 문자들을 일일이 비교하는 방식",
+      "refs": [
+        {
+          "source": "B",
+          "section": "10.2.1 고지식한 탐색의 동작 방식",
+          "pages": [
+            459
+          ]
+        }
+      ]
+    },
+    {
+      "unit": 16,
+      "location": ".procedures[2].steps[1]",
+      "text": "찾은 패턴의 불일치 문자 위치를 본문의 불일치 문자 위치와 일치하도록 패턴을 이동한다.",
+      "evidence": "패턴을 이동시킵니다.",
+      "refs": [
+        {
+          "source": "B",
+          "section": "10.5.1 나쁜 문자 이동",
+          "pages": [
+            481
+          ]
+        }
+      ]
+    },
+    {
+      "unit": 16,
+      "location": ".syntax[0]",
+      "text": "ReHash() 원문 발췌",
+      "evidence": "int ReHash( char* String, int Start, int Size, int HashPrev, int Coefficient )",
+      "refs": [
+        {
+          "source": "B",
+          "section": "10.3.2 카프–라빈 알고리즘 예제 프로그램",
+          "pages": [
+            470
+          ]
+        }
+      ]
+    },
+    {
+      "unit": 16,
+      "location": ".formulas[0]",
+      "text": "Hᵢ = (S[i]×2^(m−1) + S[i+1]×2^(m−2) + … + S[i+m−2]×2¹ + S[i+m−1]×2⁰) mod q",
+      "evidence": "i=0",
+      "refs": [
+        {
+          "source": "B",
+          "section": "10.3.1 카프–라빈 알고리즘의 동작 방식",
+          "pages": [
+            466
+          ]
+        }
+      ]
+    },
+    {
+      "unit": 16,
+      "location": ".formulas[1]",
+      "text": "Hᵢ = (2(Hᵢ₋₁ − S[i−1]×2^(m−1)) + S[i+m−1]) mod q",
+      "evidence": "i>0",
+      "refs": [
+        {
+          "source": "B",
+          "section": "10.3.1 카프–라빈 알고리즘의 동작 방식",
+          "pages": [
+            466
+          ]
+        }
+      ]
+    },
+    {
+      "unit": 16,
+      "location": ".comparisons[0].rows[0][1]",
+      "text": "본문 문자열을 처음부터 끝까지 차례대로 순회하면서 패턴 내 문자들을 일일이 비교한다.",
+      "evidence": "패턴 내 문자들을 일일이 비교하는 방식",
+      "refs": [
+        {
+          "source": "B",
+          "section": "10.2.1 고지식한 탐색의 동작 방식",
+          "pages": [
+            459
+          ]
+        }
+      ]
+    },
+    {
+      "unit": 16,
+      "location": ".terms[0].definition",
+      "text": "본문(Text)은 탐색 대상이 되는 문자열이다.",
+      "evidence": "본문Text: 탐색 대상이 되는 문자열을 의미합니다.",
+      "refs": [
+        {
+          "source": "B",
+          "section": "10.1 문자열 탐색 알고리즘의 개요",
+          "pages": [
+            458
+          ]
+        }
+      ]
+    },
+    {
+      "unit": 16,
+      "location": ".terms[1].definition",
+      "text": "패턴(Pattern)은 탐색어를 의미한다.",
+      "evidence": "패턴Pattern: 탐색어를 의미합니다.",
+      "refs": [
+        {
+          "source": "B",
+          "section": "10.1 문자열 탐색 알고리즘의 개요",
+          "pages": [
+            458
+          ]
+        }
+      ]
+    },
+    {
+      "unit": 16,
+      "location": ".terms[2].definition",
+      "text": "이동(Shift)은 본문에서 탐색 위치를 옮기는 일이다.",
+      "evidence": "이동Shift: 본문에서 탐색 위치를 옮기는 일입니다.",
+      "refs": [
+        {
+          "source": "B",
+          "section": "10.1 문자열 탐색 알고리즘의 개요",
+          "pages": [
+            458
+          ]
+        }
+      ]
+    },
+    {
+      "unit": 16,
+      "location": ".summary[0]",
+      "text": "고지식한 탐색은 본문의 앞에서부터 끝까지 차근차근 탐색하는 알고리즘이다.",
+      "evidence": "본문의 앞에서부터 끝까지 차근차근 탐색하는 알고리즘",
+      "refs": [
+        {
+          "source": "B",
+          "section": "10.2 고지식한 탐색 알고리즘",
+          "pages": [
+            459
+          ]
+        }
+      ]
+    },
+    {
+      "unit": 16,
+      "location": ".summary[3]",
+      "text": "불일치가 발생하면 나쁜 문자 이동과 착한 접미부 이동을 모두 검토해서 더 멀리 옮겨가는 방법을 선택한다.",
+      "evidence": "더 멀리 옮겨가는 이동 방법을 선택",
+      "refs": [
+        {
+          "source": "B",
+          "section": "10.5 보이어–무어 알고리즘",
+          "pages": [
+            481
+          ]
+        }
+      ]
+    },
+    {
+      "unit": 16,
+      "location": ".review[0].answer",
+      "text": "본문 길이가 N, 패턴 길이가 M일 때 최악의 경우 N×M번의 비교를 수행한다.",
+      "evidence": "최악의 경우 N×M번의 비교를 수행합니다.",
+      "refs": [
+        {
+          "source": "B",
+          "section": "10.2.1 고지식한 탐색의 동작 방식",
+          "pages": [
+            460
+          ]
+        }
+      ]
+    },
+    {
+      "unit": 16,
+      "location": ".review[3].answer",
+      "text": "불일치가 발생하면 나쁜 문자 이동과 착한 접미부 이동을 모두 검토해서 더 멀리 옮겨가는 방법을 선택한다.",
+      "evidence": "더 멀리 옮겨가는 이동 방법을 선택",
+      "refs": [
+        {
+          "source": "B",
+          "section": "10.5 보이어–무어 알고리즘",
+          "pages": [
+            481
+          ]
+        }
+      ]
+    },
+    {
+      "unit": 16,
+      "location": ".cheat.definitions[0].definition",
+      "text": "본문(Text)은 탐색 대상이 되는 문자열이다.",
+      "evidence": "본문Text: 탐색 대상이 되는 문자열을 의미합니다.",
+      "refs": [
+        {
+          "source": "B",
+          "section": "10.1 문자열 탐색 알고리즘의 개요",
+          "pages": [
+            458
+          ]
+        }
+      ]
+    },
+    {
+      "unit": 16,
+      "location": ".cheat.definitions[1].definition",
+      "text": "패턴(Pattern)은 탐색어를 의미한다.",
+      "evidence": "패턴Pattern: 탐색어를 의미합니다.",
+      "refs": [
+        {
+          "source": "B",
+          "section": "10.1 문자열 탐색 알고리즘의 개요",
+          "pages": [
+            458
+          ]
+        }
+      ]
+    },
+    {
+      "unit": 16,
+      "location": ".cheat.comparison_rows[0][1]",
+      "text": "본문 문자열을 처음부터 끝까지 차례대로 순회하면서 패턴 내 문자들을 일일이 비교한다.",
+      "evidence": "패턴 내 문자들을 일일이 비교하는 방식",
+      "refs": [
+        {
+          "source": "B",
+          "section": "10.2.1 고지식한 탐색의 동작 방식",
+          "pages": [
+            459
+          ]
+        }
+      ]
+    },
+    {
+      "unit": 17,
+      "location": ".concepts[0].items[2]",
+      "text": "분할은 문제가 분할 가능한 경우 2개 이상의 하위 문제로 나누는 단계이다.",
+      "evidence": "2개 이상의 하위 문제로 나눕니다.",
+      "refs": [
+        {
+          "source": "B",
+          "section": "12.1.2 분할 정복 알고리즘의 개념",
+          "pages": [
+            525
+          ]
+        }
+      ]
+    },
+    {
+      "unit": 17,
+      "location": ".concepts[0].items[3]",
+      "text": "정복은 하위 문제가 여전히 분할 가능하면 분할을 수행하고, 그렇지 않으면 하위 문제를 푸는 단계이다.",
+      "evidence": "그렇지 않다면 하위 문제를 풉니다.",
+      "refs": [
+        {
+          "source": "B",
+          "section": "12.1.2 분할 정복 알고리즘의 개념",
+          "pages": [
+            525
+          ]
+        }
+      ]
+    },
+    {
+      "unit": 17,
+      "location": ".concepts[1].items[1]",
+      "text": "정렬할 데이터를 반으로 나눈다.",
+      "evidence": "정렬할 데이터를 반으로 나눕니다.",
+      "refs": [
+        {
+          "source": "B",
+          "section": "12.2.1 병합 정렬 동작 방식",
+          "pages": [
+            526
+          ]
+        }
+      ]
+    },
+    {
+      "unit": 17,
+      "location": ".concepts[1].items[3]",
+      "text": "동일 데이터에서 나뉜 하위 데이터 둘을 병합하며 원소를 정렬 기준에 따라 정렬한다.",
+      "evidence": "병합할 때 데이터의 원소는 정렬 기준에 따라 정렬",
+      "refs": [
+        {
+          "source": "B",
+          "section": "12.2.1 병합 정렬 동작 방식",
+          "pages": [
+            526
+          ]
+        }
+      ]
+    },
+    {
+      "unit": 17,
+      "location": ".concepts[1].items[7]",
+      "text": "양쪽 데이터가 빌 때까지 비교와 이동을 반복한다.",
+      "evidence": "양쪽 데이터가 빌 때까지",
+      "refs": [
+        {
+          "source": "B",
+          "section": "12.2.1 병합 정렬 동작 방식",
+          "pages": [
+            527
+          ]
+        }
+      ]
+    },
+    {
+      "unit": 17,
+      "location": ".concepts[2].items[3]",
+      "text": "지수를 반으로 나눠가는 거듭 제곱 알고리즘의 수행 시간은 O(log₂n)이다.",
+      "evidence": "알고리즘의 수행 시간은 O(log₂n)",
+      "refs": [
+        {
+          "source": "B",
+          "section": "12.3.1 거듭 제곱 계산법",
+          "pages": [
+            534
+          ]
+        }
+      ]
+    },
+    {
+      "unit": 17,
+      "location": ".concepts[3].items[1]",
+      "text": "같은 피보나치 호출이 새롭게 생성되는 반복 때문에 원문의 직접 재귀 알고리즘 수행 시간은 Θ(2ⁿ)이다.",
+      "evidence": "수행 시간)은 Θ(2ⁿ)",
+      "refs": [
+        {
+          "source": "B",
+          "section": "12.4.1 피보나치 수를 구하는 방법",
+          "pages": [
+            539
+          ]
+        }
+      ]
+    },
+    {
+      "unit": 17,
+      "location": ".concepts[3].items[2]",
+      "text": "분할 정복 기법으로 피보나치 수를 구하는 수행 시간을 Θ(log₂n) 수준으로 줄일 수 있다.",
+      "evidence": "Θ(log₂n) 수준으로 줄일 수 있습니다.",
+      "refs": [
+        {
+          "source": "B",
+          "section": "12.4.1 피보나치 수를 구하는 방법",
+          "pages": [
+            539
+          ]
+        }
+      ]
+    },
+    {
+      "unit": 17,
+      "location": ".concepts[3].items[5]",
+      "text": "원문의 Fibonacci()는 Matrix2x2 구조체로 행렬을 초기화하고 Matrix2x2_Power()로 N제곱한 뒤 A.Data[0][1]을 반환한다.",
+      "evidence": "return A.Data[0][1];",
+      "refs": [
+        {
+          "source": "B",
+          "section": "12.4.3 분할 정복 기반 피보나치 수 구하기 알고리즘의 구현",
+          "pages": [
+            542
+          ]
+        }
+      ]
+    },
+    {
+      "unit": 17,
+      "location": ".procedures[0].steps[0]",
+      "text": "분할은 문제가 분할 가능한 경우 2개 이상의 하위 문제로 나누는 단계이다.",
+      "evidence": "2개 이상의 하위 문제로 나눕니다.",
+      "refs": [
+        {
+          "source": "B",
+          "section": "12.1.2 분할 정복 알고리즘의 개념",
+          "pages": [
+            525
+          ]
+        }
+      ]
+    },
+    {
+      "unit": 17,
+      "location": ".procedures[0].steps[1]",
+      "text": "정복은 하위 문제가 여전히 분할 가능하면 분할을 수행하고, 그렇지 않으면 하위 문제를 푸는 단계이다.",
+      "evidence": "그렇지 않다면 하위 문제를 풉니다.",
+      "refs": [
+        {
+          "source": "B",
+          "section": "12.1.2 분할 정복 알고리즘의 개념",
+          "pages": [
+            525
+          ]
+        }
+      ]
+    },
+    {
+      "unit": 17,
+      "location": ".procedures[1].steps[0]",
+      "text": "정렬할 데이터를 반으로 나눈다.",
+      "evidence": "정렬할 데이터를 반으로 나눕니다.",
+      "refs": [
+        {
+          "source": "B",
+          "section": "12.2.1 병합 정렬 동작 방식",
+          "pages": [
+            526
+          ]
+        }
+      ]
+    },
+    {
+      "unit": 17,
+      "location": ".procedures[1].steps[2]",
+      "text": "동일 데이터에서 나뉜 하위 데이터 둘을 병합하며 원소를 정렬 기준에 따라 정렬한다.",
+      "evidence": "병합할 때 데이터의 원소는 정렬 기준에 따라 정렬",
+      "refs": [
+        {
+          "source": "B",
+          "section": "12.2.1 병합 정렬 동작 방식",
+          "pages": [
+            526
+          ]
+        }
+      ]
+    },
+    {
+      "unit": 17,
+      "location": ".procedures[2].steps[2]",
+      "text": "양쪽 데이터가 빌 때까지 비교와 이동을 반복한다.",
+      "evidence": "양쪽 데이터가 빌 때까지",
+      "refs": [
+        {
+          "source": "B",
+          "section": "12.2.1 병합 정렬 동작 방식",
+          "pages": [
+            527
+          ]
+        }
+      ]
+    },
+    {
+      "unit": 17,
+      "location": ".comparisons[0].rows[0][0]",
+      "text": "반복 거듭 제곱",
+      "evidence": "반복 거듭 제곱",
+      "refs": [
+        {
+          "source": "B",
+          "section": "12.3.1",
+          "pages": [
+            533
+          ]
+        }
+      ]
+    },
+    {
+      "unit": 17,
+      "location": ".comparisons[0].rows[1][0]",
+      "text": "분할 정복 거듭 제곱",
+      "evidence": "분할 정복 거듭 제곱",
+      "refs": [
+        {
+          "source": "B",
+          "section": "12.3.1",
+          "pages": [
+            534
+          ]
+        }
+      ]
+    },
+    {
+      "unit": 17,
+      "location": ".comparisons[0].rows[1][1]",
+      "text": "지수를 반으로 나눠가는 거듭 제곱 알고리즘의 수행 시간은 O(log₂n)이다.",
+      "evidence": "알고리즘의 수행 시간은 O(log₂n)",
+      "refs": [
+        {
+          "source": "B",
+          "section": "12.3.1 거듭 제곱 계산법",
+          "pages": [
+            534
+          ]
+        }
+      ]
+    },
+    {
+      "unit": 17,
+      "location": ".comparisons[0].rows[2][0]",
+      "text": "직접 재귀 피보나치",
+      "evidence": "직접 재귀 피보나치",
+      "refs": [
+        {
+          "source": "B",
+          "section": "12.4.1",
+          "pages": [
+            539
+          ]
+        }
+      ]
+    },
+    {
+      "unit": 17,
+      "location": ".comparisons[0].rows[2][1]",
+      "text": "같은 피보나치 호출이 새롭게 생성되는 반복 때문에 원문의 직접 재귀 알고리즘 수행 시간은 Θ(2ⁿ)이다.",
+      "evidence": "수행 시간)은 Θ(2ⁿ)",
+      "refs": [
+        {
+          "source": "B",
+          "section": "12.4.1 피보나치 수를 구하는 방법",
+          "pages": [
+            539
+          ]
+        }
+      ]
+    },
+    {
+      "unit": 17,
+      "location": ".comparisons[0].rows[3][0]",
+      "text": "분할 정복 피보나치",
+      "evidence": "분할 정복 피보나치",
+      "refs": [
+        {
+          "source": "B",
+          "section": "12.4.1",
+          "pages": [
+            539
+          ]
+        }
+      ]
+    },
+    {
+      "unit": 17,
+      "location": ".comparisons[0].rows[3][1]",
+      "text": "분할 정복 기법으로 피보나치 수를 구하는 수행 시간을 Θ(log₂n) 수준으로 줄일 수 있다.",
+      "evidence": "Θ(log₂n) 수준으로 줄일 수 있습니다.",
+      "refs": [
+        {
+          "source": "B",
+          "section": "12.4.1 피보나치 수를 구하는 방법",
+          "pages": [
+            539
+          ]
+        }
+      ]
+    },
+    {
+      "unit": 17,
+      "location": ".terms[1].definition",
+      "text": "분할은 문제가 분할 가능한 경우 2개 이상의 하위 문제로 나누는 단계이다.",
+      "evidence": "2개 이상의 하위 문제로 나눕니다.",
+      "refs": [
+        {
+          "source": "B",
+          "section": "12.1.2 분할 정복 알고리즘의 개념",
+          "pages": [
+            525
+          ]
+        }
+      ]
+    },
+    {
+      "unit": 17,
+      "location": ".terms[2].definition",
+      "text": "정복은 하위 문제가 여전히 분할 가능하면 분할을 수행하고, 그렇지 않으면 하위 문제를 푸는 단계이다.",
+      "evidence": "그렇지 않다면 하위 문제를 풉니다.",
+      "refs": [
+        {
+          "source": "B",
+          "section": "12.1.2 분할 정복 알고리즘의 개념",
+          "pages": [
+            525
+          ]
+        }
+      ]
+    },
+    {
+      "unit": 17,
+      "location": ".terms[5].definition",
+      "text": "원문의 Fibonacci()는 Matrix2x2 구조체로 행렬을 초기화하고 Matrix2x2_Power()로 N제곱한 뒤 A.Data[0][1]을 반환한다.",
+      "evidence": "return A.Data[0][1];",
+      "refs": [
+        {
+          "source": "B",
+          "section": "12.4.3 분할 정복 기반 피보나치 수 구하기 알고리즘의 구현",
+          "pages": [
+            542
+          ]
+        }
+      ]
+    },
+    {
+      "unit": 17,
+      "location": ".summary[2]",
+      "text": "지수를 반으로 나눠가는 거듭 제곱 알고리즘의 수행 시간은 O(log₂n)이다.",
+      "evidence": "알고리즘의 수행 시간은 O(log₂n)",
+      "refs": [
+        {
+          "source": "B",
+          "section": "12.3.1 거듭 제곱 계산법",
+          "pages": [
+            534
+          ]
+        }
+      ]
+    },
+    {
+      "unit": 17,
+      "location": ".summary[3]",
+      "text": "분할 정복 기법으로 피보나치 수를 구하는 수행 시간을 Θ(log₂n) 수준으로 줄일 수 있다.",
+      "evidence": "Θ(log₂n) 수준으로 줄일 수 있습니다.",
+      "refs": [
+        {
+          "source": "B",
+          "section": "12.4.1 피보나치 수를 구하는 방법",
+          "pages": [
+            539
+          ]
+        }
+      ]
+    },
+    {
+      "unit": 17,
+      "location": ".review[0].answer",
+      "text": "분할(Divide), 정복(Conquer), 결합(Combine)의 순서이다.",
+      "evidence": "분할Divide",
+      "refs": [
+        {
+          "source": "B",
+          "section": "12.1.2 분할 정복 알고리즘의 개념",
+          "pages": [
+            525
+          ]
+        }
+      ]
+    },
+    {
+      "unit": 17,
+      "location": ".review[2].answer",
+      "text": "지수를 반으로 나눠가는 거듭 제곱 알고리즘의 수행 시간은 O(log₂n)이다.",
+      "evidence": "알고리즘의 수행 시간은 O(log₂n)",
+      "refs": [
+        {
+          "source": "B",
+          "section": "12.3.1 거듭 제곱 계산법",
+          "pages": [
+            534
+          ]
+        }
+      ]
+    },
+    {
+      "unit": 17,
+      "location": ".review[3].answer",
+      "text": "같은 피보나치 호출이 새롭게 생성되는 반복 때문에 원문의 직접 재귀 알고리즘 수행 시간은 Θ(2ⁿ)이다.",
+      "evidence": "수행 시간)은 Θ(2ⁿ)",
+      "refs": [
+        {
+          "source": "B",
+          "section": "12.4.1 피보나치 수를 구하는 방법",
+          "pages": [
+            539
+          ]
+        }
+      ]
+    },
+    {
+      "unit": 17,
+      "location": ".cheat.comparison_rows[0][0]",
+      "text": "반복 거듭 제곱",
+      "evidence": "반복 거듭 제곱",
+      "refs": [
+        {
+          "source": "B",
+          "section": "12.3.1",
+          "pages": [
+            533
+          ]
+        }
+      ]
+    },
+    {
+      "unit": 17,
+      "location": ".cheat.comparison_rows[1][0]",
+      "text": "분할 정복 거듭 제곱",
+      "evidence": "분할 정복 거듭 제곱",
+      "refs": [
+        {
+          "source": "B",
+          "section": "12.3.1",
+          "pages": [
+            534
+          ]
+        }
+      ]
+    },
+    {
+      "unit": 17,
+      "location": ".cheat.comparison_rows[1][1]",
+      "text": "지수를 반으로 나눠가는 거듭 제곱 알고리즘의 수행 시간은 O(log₂n)이다.",
+      "evidence": "알고리즘의 수행 시간은 O(log₂n)",
+      "refs": [
+        {
+          "source": "B",
+          "section": "12.3.1 거듭 제곱 계산법",
+          "pages": [
+            534
+          ]
+        }
+      ]
+    },
+    {
+      "unit": 18,
+      "location": ".learning[1]",
+      "text": "LCS 테이블의 각 요소가 부분 문제이고 가장 오른쪽 아래 모서리 요소가 전체 문제이다.",
+      "evidence": "각 요소가 각 부분 문제",
+      "refs": [
+        {
+          "source": "B",
+          "section": "13.3.2 동적 계획법 기반 LCS 알고리즘의 구현",
+          "pages": [
+            559
+          ]
+        }
+      ]
+    },
+    {
+      "unit": 18,
+      "location": ".concepts[0].items[4]",
+      "text": "최적 부분 구조(Optimal Substructure)는 전체 문제의 최적해가 부분 문제의 최적해로부터 만들어지는 구조이다.",
+      "evidence": "전체 문제의 최적해가 부분 문제의 최적해로부터 만들어지는 구조",
+      "refs": [
+        {
+          "source": "B",
+          "section": "13.1.2 동적 계획법의 개념",
+          "pages": [
+            549
+          ]
+        }
+      ]
+    },
+    {
+      "unit": 18,
+      "location": ".concepts[1].items[2]",
+      "text": "피보나치 알고리즘을 동적 계획법으로 재구성하면 O(2ⁿ)의 성능을 O(n)으로 끌어올릴 수 있다.",
+      "evidence": "O(2ⁿ)의 성능을 O(n)으로",
+      "refs": [
+        {
+          "source": "B",
+          "section": "13.2.1 동적 계획법으로 피보나치 수를 구하는 방법",
+          "pages": [
+            551
+          ]
+        }
+      ]
+    },
+    {
+      "unit": 18,
+      "location": ".concepts[1].items[3]",
+      "text": "Fibonacci(0)과 Fibonacci(1)의 정의된 값을 테이블의 0번과 1번 인덱스에 넣는다.",
+      "evidence": "테이블의 0번과 1번 인덱스에 넣어놓고",
+      "refs": [
+        {
+          "source": "B",
+          "section": "13.2.1 동적 계획법으로 피보나치 수를 구하는 방법",
+          "pages": [
+            552
+          ]
+        }
+      ]
+    },
+    {
+      "unit": 18,
+      "location": ".concepts[1].items[4]",
+      "text": "Fibonacci(2)부터 이전 피보나치 수를 참조하여 계산하고 결과를 해당 인덱스에 저장한다.",
+      "evidence": "이전 피보나치 수를 참조하여 계산을 반복",
+      "refs": [
+        {
+          "source": "B",
+          "section": "13.2.1 동적 계획법으로 피보나치 수를 구하는 방법",
+          "pages": [
+            552
+          ]
+        }
+      ]
+    },
+    {
+      "unit": 18,
+      "location": ".concepts[2].items[2]",
+      "text": "공통 부분 수열은 두 수열 사이에 공통적으로 존재하는 부분 수열이다.",
+      "evidence": "두 수열 사이에 공통적으로 존재하는 부분 수열",
+      "refs": [
+        {
+          "source": "B",
+          "section": "13.3 최장 공통 부분 수열",
+          "pages": [
+            555
+          ]
+        }
+      ]
+    },
+    {
+      "unit": 18,
+      "location": ".concepts[2].items[5]",
+      "text": "두 문자열의 마지막 요소가 같으면 그 마지막 요소를 뺀 두 문자열의 LCS 길이에 1을 더한다.",
+      "evidence": "마지막 요소를 뺀 두 문자열끼리의 LCS 길이",
+      "refs": [
+        {
+          "source": "B",
+          "section": "13.3.1 LCS 알고리즘",
+          "pages": [
+            555
+          ]
+        }
+      ]
+    },
+    {
+      "unit": 18,
+      "location": ".concepts[2].items[8]",
+      "text": "LCS 테이블 크기는 (i+1)×(j+1)이며 아무것도 없는 행과 열을 표현하기 위해 각각 1씩 더 크다.",
+      "evidence": "(i+1)×(j+1)",
+      "refs": [
+        {
+          "source": "B",
+          "section": "13.3.1 LCS 알고리즘",
+          "pages": [
+            556
+          ]
+        }
+      ]
+    },
+    {
+      "unit": 18,
+      "location": ".concepts[3].items[0]",
+      "text": "LCS 테이블의 각 요소가 부분 문제이고 가장 오른쪽 아래 모서리 요소가 전체 문제이다.",
+      "evidence": "각 요소가 각 부분 문제",
+      "refs": [
+        {
+          "source": "B",
+          "section": "13.3.2 동적 계획법 기반 LCS 알고리즘의 구현",
+          "pages": [
+            559
+          ]
+        }
+      ]
+    },
+    {
+      "unit": 18,
+      "location": ".concepts[3].items[5]",
+      "text": "LCS 추적은 i=0 또는 j=0이 될 때까지 반복한다.",
+      "evidence": "i=0 또는 j=0",
+      "refs": [
+        {
+          "source": "B",
+          "section": "13.3.2 동적 계획법 기반 LCS 알고리즘의 구현",
+          "pages": [
+            562
+          ]
+        }
+      ]
+    },
+    {
+      "unit": 18,
+      "location": ".procedures[1].steps[0]",
+      "text": "Fibonacci(0)과 Fibonacci(1)의 정의된 값을 테이블의 0번과 1번 인덱스에 넣는다.",
+      "evidence": "테이블의 0번과 1번 인덱스에 넣어놓고",
+      "refs": [
+        {
+          "source": "B",
+          "section": "13.2.1 동적 계획법으로 피보나치 수를 구하는 방법",
+          "pages": [
+            552
+          ]
+        }
+      ]
+    },
+    {
+      "unit": 18,
+      "location": ".procedures[1].steps[1]",
+      "text": "Fibonacci(2)부터 이전 피보나치 수를 참조하여 계산하고 결과를 해당 인덱스에 저장한다.",
+      "evidence": "이전 피보나치 수를 참조하여 계산을 반복",
+      "refs": [
+        {
+          "source": "B",
+          "section": "13.2.1 동적 계획법으로 피보나치 수를 구하는 방법",
+          "pages": [
+            552
+          ]
+        }
+      ]
+    },
+    {
+      "unit": 18,
+      "location": ".procedures[2].steps[3]",
+      "text": "LCS 추적은 i=0 또는 j=0이 될 때까지 반복한다.",
+      "evidence": "i=0 또는 j=0",
+      "refs": [
+        {
+          "source": "B",
+          "section": "13.3.2 동적 계획법 기반 LCS 알고리즘의 구현",
+          "pages": [
+            562
+          ]
+        }
+      ]
+    },
+    {
+      "unit": 18,
+      "location": ".syntax[0]",
+      "text": "피보나치 테이블 계산 부분",
+      "evidence": "for ( i=2; i<=N; i++ )",
+      "refs": [
+        {
+          "source": "B",
+          "section": "13.2.2 동적 계획법 기반 피보나치 수 구하기 알고리즘의 구현",
+          "pages": [
+            553
+          ]
+        }
+      ]
+    },
+    {
+      "unit": 18,
+      "location": ".comparisons[0].rows[0][0]",
+      "text": "분할 정복의 방향",
+      "evidence": "분할 정복의 방향",
+      "refs": [
+        {
+          "source": "B",
+          "section": "13.1.2",
+          "pages": [
+            549
+          ]
+        }
+      ]
+    },
+    {
+      "unit": 18,
+      "location": ".comparisons[0].rows[1][0]",
+      "text": "동적 계획법의 방향",
+      "evidence": "동적 계획법의 방향",
+      "refs": [
+        {
+          "source": "B",
+          "section": "13.1.2",
+          "pages": [
+            549
+          ]
+        }
+      ]
+    },
+    {
+      "unit": 18,
+      "location": ".comparisons[0].rows[3][0]",
+      "text": "답의 저장",
+      "evidence": "답의 저장",
+      "refs": [
+        {
+          "source": "B",
+          "section": "13.1.2",
+          "pages": [
+            549
+          ]
+        }
+      ]
+    },
+    {
+      "unit": 18,
+      "location": ".terms[1].definition",
+      "text": "최적 부분 구조(Optimal Substructure)는 전체 문제의 최적해가 부분 문제의 최적해로부터 만들어지는 구조이다.",
+      "evidence": "전체 문제의 최적해가 부분 문제의 최적해로부터 만들어지는 구조",
+      "refs": [
+        {
+          "source": "B",
+          "section": "13.1.2 동적 계획법의 개념",
+          "pages": [
+            549
+          ]
+        }
+      ]
+    },
+    {
+      "unit": 18,
+      "location": ".terms[4].definition",
+      "text": "공통 부분 수열은 두 수열 사이에 공통적으로 존재하는 부분 수열이다.",
+      "evidence": "두 수열 사이에 공통적으로 존재하는 부분 수열",
+      "refs": [
+        {
+          "source": "B",
+          "section": "13.3 최장 공통 부분 수열",
+          "pages": [
+            555
+          ]
+        }
+      ]
+    },
+    {
+      "unit": 18,
+      "location": ".summary[2]",
+      "text": "피보나치 알고리즘을 동적 계획법으로 재구성하면 O(2ⁿ)의 성능을 O(n)으로 끌어올릴 수 있다.",
+      "evidence": "O(2ⁿ)의 성능을 O(n)으로",
+      "refs": [
+        {
+          "source": "B",
+          "section": "13.2.1 동적 계획법으로 피보나치 수를 구하는 방법",
+          "pages": [
+            551
+          ]
+        }
+      ]
+    },
+    {
+      "unit": 18,
+      "location": ".review[1].answer",
+      "text": "Fibonacci(0)과 Fibonacci(1)의 정의된 값을 테이블의 0번과 1번 인덱스에 넣는다.",
+      "evidence": "테이블의 0번과 1번 인덱스에 넣어놓고",
+      "refs": [
+        {
+          "source": "B",
+          "section": "13.2.1 동적 계획법으로 피보나치 수를 구하는 방법",
+          "pages": [
+            552
+          ]
+        }
+      ]
+    },
+    {
+      "unit": 18,
+      "location": ".review[2].answer",
+      "text": "LCS 테이블 크기는 (i+1)×(j+1)이며 아무것도 없는 행과 열을 표현하기 위해 각각 1씩 더 크다.",
+      "evidence": "(i+1)×(j+1)",
+      "refs": [
+        {
+          "source": "B",
+          "section": "13.3.1 LCS 알고리즘",
+          "pages": [
+            556
+          ]
+        }
+      ]
+    },
+    {
+      "unit": 18,
+      "location": ".cheat.definitions[1].definition",
+      "text": "최적 부분 구조(Optimal Substructure)는 전체 문제의 최적해가 부분 문제의 최적해로부터 만들어지는 구조이다.",
+      "evidence": "전체 문제의 최적해가 부분 문제의 최적해로부터 만들어지는 구조",
+      "refs": [
+        {
+          "source": "B",
+          "section": "13.1.2 동적 계획법의 개념",
+          "pages": [
+            549
+          ]
+        }
+      ]
+    },
+    {
+      "unit": 18,
+      "location": ".cheat.comparison_rows[0][0]",
+      "text": "분할 정복의 방향",
+      "evidence": "분할 정복의 방향",
+      "refs": [
+        {
+          "source": "B",
+          "section": "13.1.2",
+          "pages": [
+            549
+          ]
+        }
+      ]
+    },
+    {
+      "unit": 18,
+      "location": ".cheat.comparison_rows[1][0]",
+      "text": "동적 계획법의 방향",
+      "evidence": "동적 계획법의 방향",
+      "refs": [
+        {
+          "source": "B",
+          "section": "13.1.2",
+          "pages": [
+            549
+          ]
+        }
+      ]
+    },
+    {
+      "unit": 19,
+      "location": ".learning[0]",
+      "text": "탐욕 알고리즘은 각 단계의 부분 문제를 풀 때 근시안적으로 최적해를 구한다.",
+      "evidence": "근시안적으로 최적해를 구한다고",
+      "refs": [
+        {
+          "source": "B",
+          "section": "14.1 탐욕 알고리즘의 개요",
+          "pages": [
+            571
+          ]
+        }
+      ]
+    },
+    {
+      "unit": 19,
+      "location": ".concepts[0].items[0]",
+      "text": "탐욕 알고리즘은 각 단계의 부분 문제를 풀 때 근시안적으로 최적해를 구한다.",
+      "evidence": "근시안적으로 최적해를 구한다고",
+      "refs": [
+        {
+          "source": "B",
+          "section": "14.1 탐욕 알고리즘의 개요",
+          "pages": [
+            571
+          ]
+        }
+      ]
+    },
+    {
+      "unit": 19,
+      "location": ".concepts[0].items[3]",
+      "text": "해 선택은 현재 상태에서 부분 문제의 최적해를 구하여 부분해 집합에 추가하는 단계이다.",
+      "evidence": "부분해 집합Solution Set",
+      "refs": [
+        {
+          "source": "B",
+          "section": "14.1 탐욕 알고리즘의 개요",
+          "pages": [
+            571
+          ]
+        }
+      ]
+    },
+    {
+      "unit": 19,
+      "location": ".concepts[1].items[2]",
+      "text": "거스름돈이 내줄 액수를 초과하면 마지막 동전을 빼고 한 단계 작은 단위의 동전을 추가한다.",
+      "evidence": "한 단계 작은 단위의 동전을 추가",
+      "refs": [
+        {
+          "source": "B",
+          "section": "14.2 거스름돈 줄이기 문제",
+          "pages": [
+            572
+          ]
+        }
+      ]
+    },
+    {
+      "unit": 19,
+      "location": ".concepts[2].items[1]",
+      "text": "크루스칼 알고리즘은 모든 간선을 가중치 오름차순으로 정렬한 목록을 만든다.",
+      "evidence": "가중치의 오름차순으로 정렬",
+      "refs": [
+        {
+          "source": "B",
+          "section": "14.3 크루스칼 알고리즘 다시 보기",
+          "pages": [
+            578
+          ]
+        }
+      ]
+    },
+    {
+      "unit": 19,
+      "location": ".concepts[2].items[2]",
+      "text": "정렬한 간선 목록을 순회하면서 사이클을 형성하지 않는 간선을 최소 신장 트리에 추가한다.",
+      "evidence": "사이클이 형성되면 안 됩니다.",
+      "refs": [
+        {
+          "source": "B",
+          "section": "14.3 크루스칼 알고리즘 다시 보기",
+          "pages": [
+            578
+          ]
+        }
+      ]
+    },
+    {
+      "unit": 19,
+      "location": ".concepts[2].items[5]",
+      "text": "크루스칼은 모든 정점이 하나의 집합에 들어 있으면 해가 완성되었다고 판단할 수 있다.",
+      "evidence": "모든 정점이 하나의 집합",
+      "refs": [
+        {
+          "source": "B",
+          "section": "14.3 크루스칼 알고리즘 다시 보기",
+          "pages": [
+            580
+          ]
+        }
+      ]
+    },
+    {
+      "unit": 19,
+      "location": ".concepts[4].items[2]",
+      "text": "압축 해제는 압축에 사용한 허프만 트리와 결과 버퍼를 준비하고 뿌리 노드부터 시작한다.",
+      "evidence": "허프만 트리와 압축 해제된 데이터가 담길 버퍼",
+      "refs": [
+        {
+          "source": "B",
+          "section": "14.5.4 데이터 압축 해제",
+          "pages": [
+            589
+          ]
+        }
+      ]
+    },
+    {
+      "unit": 19,
+      "location": ".procedures[0].steps[0]",
+      "text": "해 선택은 현재 상태에서 부분 문제의 최적해를 구하여 부분해 집합에 추가하는 단계이다.",
+      "evidence": "부분해 집합Solution Set",
+      "refs": [
+        {
+          "source": "B",
+          "section": "14.1 탐욕 알고리즘의 개요",
+          "pages": [
+            571
+          ]
+        }
+      ]
+    },
+    {
+      "unit": 19,
+      "location": ".procedures[2].steps[0]",
+      "text": "압축 해제는 압축에 사용한 허프만 트리와 결과 버퍼를 준비하고 뿌리 노드부터 시작한다.",
+      "evidence": "허프만 트리와 압축 해제된 데이터가 담길 버퍼",
+      "refs": [
+        {
+          "source": "B",
+          "section": "14.5.4 데이터 압축 해제",
+          "pages": [
+            589
+          ]
+        }
+      ]
+    },
+    {
+      "unit": 19,
+      "location": ".terms[0].definition",
+      "text": "탐욕 알고리즘은 각 단계의 부분 문제를 풀 때 근시안적으로 최적해를 구한다.",
+      "evidence": "근시안적으로 최적해를 구한다고",
+      "refs": [
+        {
+          "source": "B",
+          "section": "14.1 탐욕 알고리즘의 개요",
+          "pages": [
+            571
+          ]
+        }
+      ]
+    },
+    {
+      "unit": 19,
+      "location": ".terms[1].definition",
+      "text": "해 선택은 현재 상태에서 부분 문제의 최적해를 구하여 부분해 집합에 추가하는 단계이다.",
+      "evidence": "부분해 집합Solution Set",
+      "refs": [
+        {
+          "source": "B",
+          "section": "14.1 탐욕 알고리즘의 개요",
+          "pages": [
+            571
+          ]
+        }
+      ]
+    },
+    {
+      "unit": 19,
+      "location": ".summary[0]",
+      "text": "탐욕 알고리즘은 각 단계의 부분 문제를 풀 때 근시안적으로 최적해를 구한다.",
+      "evidence": "근시안적으로 최적해를 구한다고",
+      "refs": [
+        {
+          "source": "B",
+          "section": "14.1 탐욕 알고리즘의 개요",
+          "pages": [
+            571
+          ]
+        }
+      ]
+    },
+    {
+      "unit": 19,
+      "location": ".cheat.definitions[0].definition",
+      "text": "탐욕 알고리즘은 각 단계의 부분 문제를 풀 때 근시안적으로 최적해를 구한다.",
+      "evidence": "근시안적으로 최적해를 구한다고",
+      "refs": [
+        {
+          "source": "B",
+          "section": "14.1 탐욕 알고리즘의 개요",
+          "pages": [
+            571
+          ]
+        }
+      ]
+    },
+    {
+      "unit": 20,
+      "location": ".concepts[0].items[1]",
+      "text": "백트래킹은 여러 후보해 중 특정 조건을 충족시키는 모든 해를 찾는 알고리즘이다.",
+      "evidence": "특정 조건을 충족시키는 모든 해",
+      "refs": [
+        {
+          "source": "B",
+          "section": "15.1.2 백트래킹의 개념",
+          "pages": [
+            606
+          ]
+        }
+      ]
+    },
+    {
+      "unit": 20,
+      "location": ".concepts[0].items[2]",
+      "text": "후보해는 해가 될 가능성을 가진 부분해의 조합이다.",
+      "evidence": "해가 될 수 있는 가능성을 가진 부분해의 조합",
+      "refs": [
+        {
+          "source": "B",
+          "section": "15.1.2 백트래킹의 개념",
+          "pages": [
+            607
+          ]
+        }
+      ]
+    },
+    {
+      "unit": 20,
+      "location": ".concepts[0].items[6]",
+      "text": "해를 찾는 과정은 뿌리에서 출발하며 뿌리도 하나의 부분해이다.",
+      "evidence": "뿌리도 하나의 부분해",
+      "refs": [
+        {
+          "source": "B",
+          "section": "15.1.2 백트래킹의 개념",
+          "pages": [
+            610
+          ]
+        }
+      ]
+    },
+    {
+      "unit": 20,
+      "location": ".concepts[0].items[7]",
+      "text": "현재 부분해에서 선택 가능한 다음 부분해 목록을 얻고 각 부분해를 하나씩 방문한다.",
+      "evidence": "부분해들을 하나씩 방문",
+      "refs": [
+        {
+          "source": "B",
+          "section": "15.1.2 백트래킹의 개념",
+          "pages": [
+            610
+          ]
+        }
+      ]
+    },
+    {
+      "unit": 20,
+      "location": ".concepts[0].items[8]",
+      "text": "방문한 부분해가 해의 조건을 만족하면 그 자리에서 다음 부분해들을 시도하고 그렇지 않으면 이전 부분해로 돌아와 다른 부분해를 시도한다.",
+      "evidence": "이전 부분해로 돌아 나와 다른 부분해",
+      "refs": [
+        {
+          "source": "B",
+          "section": "15.1.2 백트래킹의 개념",
+          "pages": [
+            610
+          ]
+        }
+      ]
+    },
+    {
+      "unit": 20,
+      "location": ".concepts[0].items[9]",
+      "text": "최종해를 얻거나 모든 경우를 확인해도 해가 없음을 알 때까지 반복한다.",
+      "evidence": "모든 경우의 수를 확인해도 해가 없음을 확인",
+      "refs": [
+        {
+          "source": "B",
+          "section": "15.1.2 백트래킹의 개념",
+          "pages": [
+            610
+          ]
+        }
+      ]
+    },
+    {
+      "unit": 20,
+      "location": ".concepts[1].items[1]",
+      "text": "부분해 계산, 다음 부분 후보해 목록 확인, 각 부분 후보해 계산의 반복을 재귀 호출로 구현할 수 있다.",
+      "evidence": "부분해 계산 → 다음 부분 후보해 목록 확인",
+      "refs": [
+        {
+          "source": "B",
+          "section": "15.2.1 재귀 호출 기반 백트래킹",
+          "pages": [
+            611
+          ]
+        }
+      ]
+    },
+    {
+      "unit": 20,
+      "location": ".concepts[2].items[3]",
+      "text": "현재 위치에서 가려는 방향의 이동 가능 여부를 확인하며 벽과 지나온 길은 이동 가능한 길이 아니다.",
+      "evidence": "벽과 지나왔던 길은 이동 가능한 길이 아닙니다.",
+      "refs": [
+        {
+          "source": "B",
+          "section": "15.2.2 미로 탈출 알고리즘의 구현",
+          "pages": [
+            614
+          ]
+        }
+      ]
+    },
+    {
+      "unit": 20,
+      "location": ".concepts[2].items[4]",
+      "text": "이동이 불가능하면 북→남→동→서 순으로 방향을 바꾸어 시도하고 어느 방향도 가능하지 않으면 이전 위치로 돌아간다.",
+      "evidence": "북→남→동→서 순",
+      "refs": [
+        {
+          "source": "B",
+          "section": "15.2.2 미로 탈출 알고리즘의 구현",
+          "pages": [
+            614
+          ]
+        }
+      ]
+    },
+    {
+      "unit": 20,
+      "location": ".concepts[2].items[7]",
+      "text": "원문 MoveTo()는 현 위치를 MARKED로 표시하고 모든 방향이 실패하면 WAY로 되돌린 뒤 FAIL을 반환한다.",
+      "evidence": "Maze->Data[Current->Y][Current->X] = WAY;",
+      "refs": [
+        {
+          "source": "B",
+          "section": "15.2.3 미로 탈출 알고리즘 예제 프로그램",
+          "pages": [
+            617,
+            618
+          ]
+        }
+      ]
+    },
+    {
+      "unit": 20,
+      "location": ".concepts[3].items[3]",
+      "text": "원문의 4×4 사례에서 [1,2]−[2,4]−[3,1]−[4,3]으로 이어지는 첫 번째 해를 얻는다.",
+      "evidence": "[1,2]-[2,4]-[3,1]-[4,3]",
+      "refs": [
+        {
+          "source": "B",
+          "section": "15.3.1 8개의 퀸이 만드는 해공간과 백트래킹",
+          "pages": [
+            626
+          ]
+        }
+      ]
+    },
+    {
+      "unit": 20,
+      "location": ".concepts[4].items[4]",
+      "text": "IsThreatened()는 이전 퀸과 새 퀸의 열이 같으면 수직 위협으로 판단한다.",
+      "evidence": "열과 같은 것이 있는지 확인",
+      "refs": [
+        {
+          "source": "B",
+          "section": "15.3.2 N개의 퀸 문제 풀이 알고리즘의 구현",
+          "pages": [
+            630
+          ]
+        }
+      ]
+    },
+    {
+      "unit": 20,
+      "location": ".concepts[4].items[6]",
+      "text": "FindSolutionForQueen()이 새 행을 매개 변수로 실행하므로 원문 IsThreatened()에서는 수평 위협을 검사 대상에서 제외한다.",
+      "evidence": "수평 위협은 고려 대상에서 제외",
+      "refs": [
+        {
+          "source": "B",
+          "section": "15.3.2 N개의 퀸 문제 풀이 알고리즘의 구현",
+          "pages": [
+            630
+          ]
+        }
+      ]
+    },
+    {
+      "unit": 20,
+      "location": ".procedures[0].steps[0]",
+      "text": "해를 찾는 과정은 뿌리에서 출발하며 뿌리도 하나의 부분해이다.",
+      "evidence": "뿌리도 하나의 부분해",
+      "refs": [
+        {
+          "source": "B",
+          "section": "15.1.2 백트래킹의 개념",
+          "pages": [
+            610
+          ]
+        }
+      ]
+    },
+    {
+      "unit": 20,
+      "location": ".procedures[0].steps[1]",
+      "text": "현재 부분해에서 선택 가능한 다음 부분해 목록을 얻고 각 부분해를 하나씩 방문한다.",
+      "evidence": "부분해들을 하나씩 방문",
+      "refs": [
+        {
+          "source": "B",
+          "section": "15.1.2 백트래킹의 개념",
+          "pages": [
+            610
+          ]
+        }
+      ]
+    },
+    {
+      "unit": 20,
+      "location": ".procedures[0].steps[2]",
+      "text": "방문한 부분해가 해의 조건을 만족하면 그 자리에서 다음 부분해들을 시도하고 그렇지 않으면 이전 부분해로 돌아와 다른 부분해를 시도한다.",
+      "evidence": "이전 부분해로 돌아 나와 다른 부분해",
+      "refs": [
+        {
+          "source": "B",
+          "section": "15.1.2 백트래킹의 개념",
+          "pages": [
+            610
+          ]
+        }
+      ]
+    },
+    {
+      "unit": 20,
+      "location": ".procedures[0].steps[3]",
+      "text": "최종해를 얻거나 모든 경우를 확인해도 해가 없음을 알 때까지 반복한다.",
+      "evidence": "모든 경우의 수를 확인해도 해가 없음을 확인",
+      "refs": [
+        {
+          "source": "B",
+          "section": "15.1.2 백트래킹의 개념",
+          "pages": [
+            610
+          ]
+        }
+      ]
+    },
+    {
+      "unit": 20,
+      "location": ".procedures[1].steps[1]",
+      "text": "현재 위치에서 가려는 방향의 이동 가능 여부를 확인하며 벽과 지나온 길은 이동 가능한 길이 아니다.",
+      "evidence": "벽과 지나왔던 길은 이동 가능한 길이 아닙니다.",
+      "refs": [
+        {
+          "source": "B",
+          "section": "15.2.2 미로 탈출 알고리즘의 구현",
+          "pages": [
+            614
+          ]
+        }
+      ]
+    },
+    {
+      "unit": 20,
+      "location": ".procedures[1].steps[2]",
+      "text": "이동이 불가능하면 북→남→동→서 순으로 방향을 바꾸어 시도하고 어느 방향도 가능하지 않으면 이전 위치로 돌아간다.",
+      "evidence": "북→남→동→서 순",
+      "refs": [
+        {
+          "source": "B",
+          "section": "15.2.2 미로 탈출 알고리즘의 구현",
+          "pages": [
+            614
+          ]
+        }
+      ]
+    },
+    {
+      "unit": 20,
+      "location": ".formulas[1]",
+      "text": "|행1−행2| = |열1−열2|",
+      "evidence": "|행1−행2|=|열1−열2|",
+      "refs": [
+        {
+          "source": "B",
+          "section": "15.3.2 N개의 퀸 문제 풀이 알고리즘의 구현",
+          "pages": [
+            630
+          ]
+        }
+      ]
+    },
+    {
+      "unit": 20,
+      "location": ".comparisons[0].rows[0][0]",
+      "text": "깊이 우선 탐색·백트래킹",
+      "evidence": "깊이 우선 탐색·백트래킹",
+      "refs": [
+        {
+          "source": "B",
+          "section": "15.1.2",
+          "pages": [
+            609
+          ]
+        }
+      ]
+    },
+    {
+      "unit": 20,
+      "location": ".comparisons[0].rows[1][1]",
+      "text": "이동이 불가능하면 북→남→동→서 순으로 방향을 바꾸어 시도하고 어느 방향도 가능하지 않으면 이전 위치로 돌아간다.",
+      "evidence": "북→남→동→서 순",
+      "refs": [
+        {
+          "source": "B",
+          "section": "15.2.2 미로 탈출 알고리즘의 구현",
+          "pages": [
+            614
+          ]
+        }
+      ]
+    },
+    {
+      "unit": 20,
+      "location": ".comparisons[0].rows[2][0]",
+      "text": "N개의 퀸의 저장",
+      "evidence": "N개의 퀸의 저장",
+      "refs": [
+        {
+          "source": "B",
+          "section": "15.3.2",
+          "pages": [
+            627
+          ]
+        }
+      ]
+    },
+    {
+      "unit": 20,
+      "location": ".comparisons[0].rows[3][0]",
+      "text": "재귀 호출의 되돌아가기",
+      "evidence": "재귀 호출의 되돌아가기",
+      "refs": [
+        {
+          "source": "B",
+          "section": "15.2.1",
+          "pages": [
+            612
+          ]
+        }
+      ]
+    },
+    {
+      "unit": 20,
+      "location": ".terms[0].definition",
+      "text": "백트래킹은 여러 후보해 중 특정 조건을 충족시키는 모든 해를 찾는 알고리즘이다.",
+      "evidence": "특정 조건을 충족시키는 모든 해",
+      "refs": [
+        {
+          "source": "B",
+          "section": "15.1.2 백트래킹의 개념",
+          "pages": [
+            606
+          ]
+        }
+      ]
+    },
+    {
+      "unit": 20,
+      "location": ".terms[1].definition",
+      "text": "후보해는 해가 될 가능성을 가진 부분해의 조합이다.",
+      "evidence": "해가 될 수 있는 가능성을 가진 부분해의 조합",
+      "refs": [
+        {
+          "source": "B",
+          "section": "15.1.2 백트래킹의 개념",
+          "pages": [
+            607
+          ]
+        }
+      ]
+    },
+    {
+      "unit": 20,
+      "location": ".terms[5].definition",
+      "text": "IsThreatened()는 이전 퀸과 새 퀸의 열이 같으면 수직 위협으로 판단한다.",
+      "evidence": "열과 같은 것이 있는지 확인",
+      "refs": [
+        {
+          "source": "B",
+          "section": "15.3.2 N개의 퀸 문제 풀이 알고리즘의 구현",
+          "pages": [
+            630
+          ]
+        }
+      ]
+    },
+    {
+      "unit": 20,
+      "location": ".summary[0]",
+      "text": "백트래킹은 여러 후보해 중 특정 조건을 충족시키는 모든 해를 찾는 알고리즘이다.",
+      "evidence": "특정 조건을 충족시키는 모든 해",
+      "refs": [
+        {
+          "source": "B",
+          "section": "15.1.2 백트래킹의 개념",
+          "pages": [
+            606
+          ]
+        }
+      ]
+    },
+    {
+      "unit": 20,
+      "location": ".summary[1]",
+      "text": "후보해는 해가 될 가능성을 가진 부분해의 조합이다.",
+      "evidence": "해가 될 수 있는 가능성을 가진 부분해의 조합",
+      "refs": [
+        {
+          "source": "B",
+          "section": "15.1.2 백트래킹의 개념",
+          "pages": [
+            607
+          ]
+        }
+      ]
+    },
+    {
+      "unit": 20,
+      "location": ".review[0].answer",
+      "text": "후보해는 해가 될 가능성을 가진 부분해의 조합이다.",
+      "evidence": "해가 될 수 있는 가능성을 가진 부분해의 조합",
+      "refs": [
+        {
+          "source": "B",
+          "section": "15.1.2 백트래킹의 개념",
+          "pages": [
+            607
+          ]
+        }
+      ]
+    },
+    {
+      "unit": 20,
+      "location": ".review[2].answer",
+      "text": "이동이 불가능하면 북→남→동→서 순으로 방향을 바꾸어 시도하고 어느 방향도 가능하지 않으면 이전 위치로 돌아간다.",
+      "evidence": "북→남→동→서 순",
+      "refs": [
+        {
+          "source": "B",
+          "section": "15.2.2 미로 탈출 알고리즘의 구현",
+          "pages": [
+            614
+          ]
+        }
+      ]
+    },
+    {
+      "unit": 20,
+      "location": ".cheat.definitions[0].definition",
+      "text": "백트래킹은 여러 후보해 중 특정 조건을 충족시키는 모든 해를 찾는 알고리즘이다.",
+      "evidence": "특정 조건을 충족시키는 모든 해",
+      "refs": [
+        {
+          "source": "B",
+          "section": "15.1.2 백트래킹의 개념",
+          "pages": [
+            606
+          ]
+        }
+      ]
+    },
+    {
+      "unit": 20,
+      "location": ".cheat.definitions[1].definition",
+      "text": "후보해는 해가 될 가능성을 가진 부분해의 조합이다.",
+      "evidence": "해가 될 수 있는 가능성을 가진 부분해의 조합",
+      "refs": [
+        {
+          "source": "B",
+          "section": "15.1.2 백트래킹의 개념",
+          "pages": [
+            607
+          ]
+        }
+      ]
+    },
+    {
+      "unit": 20,
+      "location": ".cheat.comparison_rows[0][1]",
+      "text": "이동이 불가능하면 북→남→동→서 순으로 방향을 바꾸어 시도하고 어느 방향도 가능하지 않으면 이전 위치로 돌아간다.",
+      "evidence": "북→남→동→서 순",
+      "refs": [
+        {
+          "source": "B",
+          "section": "15.2.2 미로 탈출 알고리즘의 구현",
+          "pages": [
+            614
+          ]
+        }
+      ]
+    },
+    {
+      "unit": 20,
+      "location": ".cheat.comparison_rows[1][0]",
+      "text": "N개의 퀸의 저장",
+      "evidence": "N개의 퀸의 저장",
+      "refs": [
+        {
+          "source": "B",
+          "section": "15.3.2",
+          "pages": [
+            627
+          ]
+        }
+      ]
+    },
+    {
+      "unit": 20,
+      "location": ".cheat.comparison_rows[2][0]",
+      "text": "재귀 호출의 되돌아가기",
+      "evidence": "재귀 호출의 되돌아가기",
+      "refs": [
+        {
+          "source": "B",
+          "section": "15.2.1",
+          "pages": [
+            612
+          ]
+        }
+      ]
+    },
+    {
+      "unit": 20,
+      "location": ".cheat.formulas[0]",
+      "text": "|행1−행2| = |열1−열2|",
+      "evidence": "|행1−행2|=|열1−열2|",
+      "refs": [
+        {
+          "source": "B",
+          "section": "15.3.2 N개의 퀸 문제 풀이 알고리즘의 구현",
+          "pages": [
+            630
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,111 @@
+찾아보기
+가중치 그래프(wetghted graph) 365
+간선(댼ge) 255. 363
+간접참조 연산자 %
+개방 주소법(0喞 addressng) 547
+개선된 순차 탐색 498
+결정 트리(deason tree) 255
+경계 폴ß(boundary foldng) 544
+계층적인 구최herarchcal structure)
+공간 복잡도(space complexlty) 24
+공백 스E4(empty stack) 103
+괄호 검사 문제 119
+구조체(structure) 73
+구조체 태그(tag) 74
+균형 인수(balance factor) 51 1
+그래프(graph) 360
+그래프 추상 데이터 타입 368
+기수 정* sort) 480
+254
+깊이 우선 탐색(DFS: depth first search)
+378
+꼬리 순환(tail recurson) 47
+내림차순(descendng 442
+내부 정* sorting) 445
+너비 우선 탐색(BFS: breath first search)
+378. 385
+널 포인터 91
+네트워크(netwoⅸ) 365
+노드(n馝e) 255
+다항식 76
+단말노드(terminal node) 256
+단순 경로(smple path) 366
+단순 연결 리스트(singly linked list)
+데이터베이스 인덱싱 568
+데이터 필드(data field) 185
+41(deque) 162
+덱의 추상 자료형 163
+186
+동의어(synonym) 538
+동적 메모리 할당(dynamc memory
+allæation) 95
+동적 배열 스택 117
+디렉토리 용량 계산 286
+레벨(level) 256
+레벨 순회(level order) 279
+레코드(rec한d) 443
+루트(r㈜t) 노드 255
+리스트 ADT 177
+리스트(llSt) 176
+리스트의 순차적 표현(sequentjal
+representatton) 178
+링크 표현법 264
+링크 필드(ltnk field) 185
+?!(map) 535
+머리 순환(head recurson) 62
+머쉰 스케줄링(m飇hne schedling) 343
+멤버연산자(membership ogvator) 74
+무방향 그래프(undlrected graph) 364
+미로 문제(maze solving problem) 135
+반복(iteration) 47
+반복적 순회 277
+반복적인 탐색연산 298
+방향 그래프(directed graph) 364
+배열(array) 70
+배열 표현법 263
+버블 정*(bubble sort) 455
+버킷(bucket) 537
+버피 160
+보간 탐색(interpotaton search)
+507
+부모 노드(parent node) 256
+부분 그라!프(subgraph) 365
+분할 äE(drvicie and conquer) 49
+분할 정복(dvide and conquer) 기법 462
+비단말 노드(nonterminal node) 256
+비연결 그래프(unconnected graph) 367
+비트 추출 방법 545
+빅세타(b|9 theta) 32
+빅오메기(blg ornega) 32
+빅오 표기법 28
+사이#(cycle) 366
+사전(dctlonary) 535
+삽입 정B(lnsertlon sort) 450
+색인 순차 탐색(ndexed sequental search)
+5%
+서브 트리(subtree) 255
+선입선출(F|FO: first—ln Ftrst—Out) 146
+선택 정* s이1) 445
+선형 조사법(linear probng) 547
+선형*(linear queue) 14의 150
+수식 트리(expresson tree) 283
+순차 탐색(sequentlal search) 497
+순차 탐색의 시간 복잡도 5%
+순환(recurson) 40
+순환적인 탐색연산 297
+순회(traversal) 267
+숫자 분석 방법 545
+쉘 정* sort) 458
+스레드 이진 트리 2%
+스택(stack) 102
+스택 상단(stack top) 103
+스택 하단(stack 103
+시간 복잡도(time complexlty) 24
+시뮬레이션 168
+신장 트리(spanning tree) 3%
+심볼 테이블 5田
+안정성(stablllty) 445
+알고리즘 15
+알고리즘 복잡도 분<(complexlty arüyss)
+찾아보기
+571

@@ -1,0 +1,27 @@
+P2.pop back();
+return true;
+return false;
+void p1ay0neRound()
+if (compareAndRemove(player1, player2))
+compareAndRemove(player3, player4);
+return;
+else if (compareAndRemove(player1, player3))
+compareAndRemove(p1ayer2, player4);
+return;
+else if (compareAndRemove(pIayer1, pIayer4))
+compareAndRemove(player2, player3);
+return;
+else if (compareAndRemove(player2, player3))
+return;
+else if (compareAndRemove(player2, player4))
+else if (compareAndRemove(player3, player4))
+return;
+unsigned seed = std: :system—clock::now().time_since_epoch().count();
+std:
+std:
+std:
+std:
+:shuffle(playerl .begin(), playerl .end(), std: :default-random-engine(seed));
+:shuffIe(player2.begin(), player2.end(), std: :default-random-engine(seed));
+:shuffIe(player3.begin(), player3.end(), std::default-random-engine(seed));
+:shuffIe(player4.begin(), player4.end(), std::default-random-engine(seed));

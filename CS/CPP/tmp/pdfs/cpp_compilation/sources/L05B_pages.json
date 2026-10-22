@@ -1,0 +1,242 @@
+[
+  {
+    "source": "L05B",
+    "pdf_page": 1,
+    "printed_page": null,
+    "text": "C++ 프로그래밍\n      김형기\n           hk.kim@jbnu.ac.kr"
+  },
+  {
+    "source": "L05B",
+    "pdf_page": 2,
+    "printed_page": 2,
+    "text": " Lecture Plan\n\n OOP 개요\n\n 클래스와객체\n                                  Part 1\n 생성자와소멸자\n\n 생성자오버로딩\n\n 복사생성자\n                                            Part 2\n  this, const, static, friend\n\n\n\n\n\n강의자료무단배포금지                                                                                                                2\n문의사항: hk.kim@jbnu.ac.kr  || diskhkme@gmail.com"
+  },
+  {
+    "source": "L05B",
+    "pdf_page": 3,
+    "printed_page": 3,
+    "text": "복사생성자\n\n\n\n\n\n                                                                                                                          3"
+  },
+  {
+    "source": "L05B",
+    "pdf_page": 4,
+    "printed_page": 4,
+    "text": " Copy Constructor\n\n 복사생성자개요\n\n 기본복사생성자\n\n 얕은복사vs 깊은복사\n\n\n\n\n\n강의자료무단배포금지                                                                                                                4\n문의사항: hk.kim@jbnu.ac.kr  || diskhkme@gmail.com"
+  },
+  {
+    "source": "L05B",
+    "pdf_page": 5,
+    "printed_page": 5,
+    "text": " Object in Memory                 고급\n\n 아래코드의p 메모리주소로가보면, 오른쪽과같음\n\n 즉, 객체를메모리에생성하면멤버변수의값이스택이나힙에저장되는것\n\n  멤버함수는코드공간에존재하며접근제한에따라일반함수처럼호출될뿐임\n\n\n\n\n\n강의자료무단배포금지                                                                                                                5\n문의사항: hk.kim@jbnu.ac.kr  || diskhkme@gmail.com"
+  },
+  {
+    "source": "L05B",
+    "pdf_page": 6,
+    "printed_page": 6,
+    "text": " Copy Constructor                      중요!\n\n 복사생성자\n   객체가복사될때는, 기존객체를기반으로새로운객체가생성됨\n   객체가복사되는경우\n             1. 객체를pass by value 방식으로함수의매개변수로전달할때\n                                          함수강의에서“변수가복사되어\n             2. 함수에서value의형태로결과를반환할때             전달된다”와동일한내용\n             3. 기존객체를기반으로새로운객체를생성할때\n   이와같은상황이발생할때, 객체가“어떻게” 복사될지정의해주어야함\n      왜? 내가만든클래스이기때문에, 잘못복사했다가는어떤일이발생할지모름\n     하지만일단복사가아예안되지는않도록, 컴파일러에서자동으로복사생성자를만들어줌\n\n 왜중요한가?\n   복사과정에서문제가발생할수있음(포인터가존재하는경우)\n   복사비용에대한고려(클래스는많은데이터를포함할수있음)\n\n\n강의자료무단배포금지                                                                                                                6\n문의사항: hk.kim@jbnu.ac.kr  || diskhkme@gmail.com"
+  },
+  {
+    "source": "L05B",
+    "pdf_page": 7,
+    "printed_page": 7,
+    "text": " Copy Constructor\n\n 객체가복사되는경우\n\n       1.  Pass by value로객체전달예시\n\n\n\n\n\n강의자료무단배포금지                                                                                                                7\n문의사항: hk.kim@jbnu.ac.kr  || diskhkme@gmail.com"
+  },
+  {
+    "source": "L05B",
+    "pdf_page": 8,
+    "printed_page": 8,
+    "text": " Copy Constructor\n\n 객체가복사되는경우\n\n       2. Value의형태로결과값반환\n\n\n\n\n\n강의자료무단배포금지                                                                                                                8\n문의사항: hk.kim@jbnu.ac.kr  || diskhkme@gmail.com"
+  },
+  {
+    "source": "L05B",
+    "pdf_page": 9,
+    "printed_page": 9,
+    "text": " Copy Constructor\n\n 객체가복사되는경우\n\n       3. 기존객체를기반으로새로운객체를생성\n\n\n\n\n\n 이와같이복사가일어날때, 정확히어떻게복사본을만들어야하는지를\n 클래스를정의한여러분이알려주어야할필요가있음\n\n   기본데이터타입(int, float 등)은이미정해진방식이있음\n\n\n\n강의자료무단배포금지                                                                                                                9\n문의사항: hk.kim@jbnu.ac.kr  || diskhkme@gmail.com"
+  },
+  {
+    "source": "L05B",
+    "pdf_page": 10,
+    "printed_page": 10,
+    "text": " Copy Constructor                      중요!\n\n 자동생성되는복사생성자\n\n   사용자가복사생성자를구현하지않으면, 기본복사생성자가자동으로만들어져사용됨\n\n   멤버변수들의값을복사하여대입하는방식!\n\n   포인터타입의멤버변수가존재할때는주의!\n\n     기본복사생성자는포인터타입의변수또한복사하여대입됨\n\n       즉, 포인터가가리키는데이터의복사가아닌포인터주소값의복사!\n\n    얕은복사(shallow copy) vs 깊은복사(deep copy)\n\n\n\n\n\n강의자료무단배포금지                                                                                                               10\n문의사항: hk.kim@jbnu.ac.kr  || diskhkme@gmail.com"
+  },
+  {
+    "source": "L05B",
+    "pdf_page": 11,
+    "printed_page": 11,
+    "text": " Declaring Copy Constructor\n\n 복사생성자의선언\n\n   동일한타입의const 참조자가인자인생성자\n\n\n\n\n\n                                    const       참조자\n\n\n\n            동일한타입\n\n                  Inline이라면\n\n\n\n강의자료무단배포금지                                                                                                               11\n문의사항: hk.kim@jbnu.ac.kr  || diskhkme@gmail.com"
+  },
+  {
+    "source": "L05B",
+    "pdf_page": 12,
+    "printed_page": 12,
+    "text": " Implementing Copy Constructor\n\n 얕은복사생성자의구현\n\n   자동생성되는복사생성자는“얕은복사” 수행. 그과정은아래와동일함\n\n   생성자초기화리스트를사용한방법\n\n\n\n\n\n   대입을사용한방법\n\n\n\n                            *자동생성된복사생성자실제명령문\n\n\n\n\n강의자료무단배포금지                                                                                                               12\n문의사항: hk.kim@jbnu.ac.kr  || diskhkme@gmail.com"
+  },
+  {
+    "source": "L05B",
+    "pdf_page": 13,
+    "printed_page": 13,
+    "text": " Shallow vs Deep Copy                   중요!\n\n 얕은복사의문제점\n\n                               클래스정의\n\n\n\n\n\n                                          소멸자                  생성자\n\n\n\n\n\n강의자료무단배포금지                                                                                                               13\n문의사항: hk.kim@jbnu.ac.kr  || diskhkme@gmail.com"
+  },
+  {
+    "source": "L05B",
+    "pdf_page": 14,
+    "printed_page": 14,
+    "text": " Shallow vs Deep Copy\n\n 얕은복사의문제점\n\n   포인터가가리키는데이터가아닌포인터주소값자체가복사됨!\n\n                                                          (얕은) 복사생성자\n\n\n\n                                                                                   Source객체의data에저장된\n                                                       “주소값”이현재객체의data에\n                                           복사됨\n\n\n\n\n\n강의자료무단배포금지                                                                                                               14\n문의사항: hk.kim@jbnu.ac.kr  || diskhkme@gmail.com"
+  },
+  {
+    "source": "L05B",
+    "pdf_page": 15,
+    "printed_page": 15,
+    "text": " Shallow vs Deep Copy\n\n 얕은복사의문제점\n\n   포인터가가리키는데이터가아닌포인터주소값의복사!\n                                사용예시\n\n\n\n\n\n              힙메모리어딘가\n\n           Obj1.data                 100\n\n\n\n\n\n강의자료무단배포금지                                                                                                               15\n문의사항: hk.kim@jbnu.ac.kr  || diskhkme@gmail.com"
+  },
+  {
+    "source": "L05B",
+    "pdf_page": 16,
+    "printed_page": 16,
+    "text": " Shallow vs Deep Copy\n\n 얕은복사의문제점\n\n   포인터가가리키는데이터가아닌포인터주소값의복사!\n                                사용예시\n\n\n\n\n\n              힙메모리어딘가\n\n           Obj1.data                 100\n\n\n         Copy of\n           Obj1.data\n\n   (DisplayShallow함수내부에서복사생성된객체의data멤버변수)\n\n강의자료무단배포금지                                                                                                               16\n문의사항: hk.kim@jbnu.ac.kr  || diskhkme@gmail.com"
+  },
+  {
+    "source": "L05B",
+    "pdf_page": 17,
+    "printed_page": 17,
+    "text": " Shallow vs Deep Copy\n\n 얕은복사의문제점\n\n   포인터가가리키는데이터가아닌포인터주소값의복사!\n                                사용예시\n\n\n\n\n\n              힙메모리어딘가\n\n           Obj1.data                     free\n\n                                  (DisplayShallow함수가끝나면서소멸자자동호출)\n\n         Copy of\n           Obj1.data\n\n강의자료무단배포금지                                                                                                               17\n문의사항: hk.kim@jbnu.ac.kr  || diskhkme@gmail.com"
+  },
+  {
+    "source": "L05B",
+    "pdf_page": 18,
+    "printed_page": 18,
+    "text": " Shallow vs Deep Copy\n\n 얕은복사의문제점\n\n   포인터가가리키는데이터가아닌포인터주소값의복사!\n                                사용예시\n\n\n\n\n\n              힙메모리어딘가\n\n           Obj1.data                     free\n\n                          (main함수가끝나면서obj1의소멸자호출)\n               (해제된공간을다시해제하려시도!에러)\n\n\n\n\n강의자료무단배포금지                                                                                                               18\n문의사항: hk.kim@jbnu.ac.kr  || diskhkme@gmail.com"
+  },
+  {
+    "source": "L05B",
+    "pdf_page": 19,
+    "printed_page": 19,
+    "text": " Shallow vs Deep Copy\n\n 깊은복사\n\n                             클래스정의\n\n\n\n\n\n                생성자                      소멸자\n\n\n\n\n\n강의자료무단배포금지                                                                                                               19\n문의사항: hk.kim@jbnu.ac.kr  || diskhkme@gmail.com"
+  },
+  {
+    "source": "L05B",
+    "pdf_page": 20,
+    "printed_page": 20,
+    "text": " Shallow vs Deep Copy\n\n 깊은복사\n\n   주소값을복사하는것이아니라, 데이터를복사하여복사생성하는방식\n\n    즉, 복사생성자가새로운힙공간을할당한뒤동일한데이터복사\n\n     P.14와의차이점을확인할것\n\n                             깊은복사생성자\n                                      (기본버전)\n\n\n                                      깊은복사생성자\n                                           (생성자위임사용버전)\n\n       복사생성된객체의데이터를저장하기\n      위해새로운힙메모리할당\n\n\n\n강의자료무단배포금지                                                                                                               20\n문의사항: hk.kim@jbnu.ac.kr  || diskhkme@gmail.com"
+  },
+  {
+    "source": "L05B",
+    "pdf_page": 21,
+    "printed_page": 21,
+    "text": " Shallow vs Deep Copy\n\n 깊은복사의경우…\n\n  데이터도복사하므로이중해제의문제해결\n                                사용예시\n\n\n\n\n\n              힙메모리어딘가\n\n           Obj1.data                 100\n\n         Copy of\n                                  100           Obj1.data\n\n             (DisplayDeep함수내부에서복사생성할때,새로운힙공간할당!)\n\n강의자료무단배포금지                                                                                                               21\n문의사항: hk.kim@jbnu.ac.kr  || diskhkme@gmail.com"
+  },
+  {
+    "source": "L05B",
+    "pdf_page": 22,
+    "printed_page": 22,
+    "text": " Copy Constructor\n\n 복사생성자잘사용하는법\n\n   포인터타입의멤버변수가존재할때는(깊은) 복사생성자직접구현\n\n      새로운heap 공간을할당하여값을복사해두어야한다는것을명심\n\n    STL/smartpointer사용\n\n     STL은내부적으로안전한복사생성자가구현되어있음\n\n       Smartpointe는복사를허용하지않거나(unique)참조되는동안은해제하지않음(shared)\n\n\n\n\n\n강의자료무단배포금지                                                                                                               22\n문의사항: hk.kim@jbnu.ac.kr  || diskhkme@gmail.com"
+  },
+  {
+    "source": "L05B",
+    "pdf_page": 23,
+    "printed_page": 23,
+    "text": " (Summary) Copy Constructor\n\n 복사생성자개요\n\n   매개변수전달, value 반환, 기존객체로새객체생성시복사생성자호출\n\n 기본복사생성자\n\n  컴파일러가만들어주는기본복사생성자는멤버변수를그대로대입(얕은복사)할뿐\n\n  얕은복사는이중해제오류발생\n\n 깊은복사\n\n  새로운힙공간을할당하여복사생성\n\n\n\n\n\n강의자료무단배포금지                                                                                                               23\n문의사항: hk.kim@jbnu.ac.kr  || diskhkme@gmail.com"
+  },
+  {
+    "source": "L05B",
+    "pdf_page": 24,
+    "printed_page": 24,
+    "text": "this, const, static, friend\n\n\n\n\n\n                                                                                                                         24"
+  },
+  {
+    "source": "L05B",
+    "pdf_page": 25,
+    "printed_page": 25,
+    "text": " this, const, static, friend\n\n this\n\n const\n\n static\n\n friend\n\n\n\n\n\n강의자료무단배포금지                                                                                                               25\n문의사항: hk.kim@jbnu.ac.kr  || diskhkme@gmail.com"
+  },
+  {
+    "source": "L05B",
+    "pdf_page": 26,
+    "printed_page": 26,
+    "text": " this Pointer\n\n  “this” 포인터\n\n    this는C++ 키워드\n\n  멤버함수를호출한객체의주소값\n\n   사용예\n\n\n\n\n                                     ??명확하지않음\n\n\n\n\n\n                            좌변은멤버변수,우변은인자로명확\n\n\n\n강의자료무단배포금지                                                                                                               26\n문의사항: hk.kim@jbnu.ac.kr  || diskhkme@gmail.com"
+  },
+  {
+    "source": "L05B",
+    "pdf_page": 27,
+    "printed_page": 27,
+    "text": " this Pointer\n\n  “this” 포인터\n\n    This는C++ 키워드\n\n  멤버함수를호출한객체의주소값\n\n   확인해보기\n\n\n\n\n\n강의자료무단배포금지                                                                                                               27\n문의사항: hk.kim@jbnu.ac.kr  || diskhkme@gmail.com"
+  },
+  {
+    "source": "L05B",
+    "pdf_page": 28,
+    "printed_page": 28,
+    "text": " this Pointer\n\n  “this” 포인터\n\n    This는C++ 키워드\n\n  멤버함수를호출한객체의주소값\n\n   사용예\n\n\n\n\n\n   (연산자오버로딩강의에서자주사용됨)\n\n\n강의자료무단배포금지                                                                                                               28\n문의사항: hk.kim@jbnu.ac.kr  || diskhkme@gmail.com"
+  },
+  {
+    "source": "L05B",
+    "pdf_page": 29,
+    "printed_page": 29,
+    "text": " const Object\n\n const 객체\n\n     Const-correctness\n\n     Const 객체의멤버변수의값은변경불가능\n\n\n\n\n\n                      p가const객체이기때문에,멤버변수의\n                       값을바꾸는SetPosition()멤버함수는\n              컴파일러가호출하지못하도록오류를\n              발생시킴강의자료무단배포금지                                                                                                               29\n문의사항: hk.kim@jbnu.ac.kr  || diskhkme@gmail.com"
+  },
+  {
+    "source": "L05B",
+    "pdf_page": 30,
+    "printed_page": 30,
+    "text": " const Object\n\n const 객체\n\n     Const-correctness\n\n     Const 객체의멤버변수의값은변경불가능\n\n   값을변경하지않을때에는?\n\n\n\n\n\n                                          PrintPosition()함수는멤버변수인x와\n                  y의값을바꾸지않으니괜찮은걸까?\n\n\n\n\n\n강의자료무단배포금지                                                                                                               30\n문의사항: hk.kim@jbnu.ac.kr  || diskhkme@gmail.com"
+  },
+  {
+    "source": "L05B",
+    "pdf_page": 31,
+    "printed_page": 31,
+    "text": " const Object                         중요!\n\n const 객체\n\n     Const-correctness\n\n    PrintPosition()이값을변경하지않는다는\n   것을명시적으로알려주어야함\n\n      그래서const로선언된p 객체에서값이\n     바뀌지않는것이보장된함수를선별하여\n      호출이가능함\n\n  값이바뀌지않는것을보장하는법\n\n     멤버함수선언뒤에const를붙인다.\n\n\n\n\n\n강의자료무단배포금지                                                                                                               31\n문의사항: hk.kim@jbnu.ac.kr  || diskhkme@gmail.com"
+  },
+  {
+    "source": "L05B",
+    "pdf_page": 32,
+    "printed_page": 32,
+    "text": " Static Class Members\n\n  static 클래스멤버변수\n\n  객체가아닌클래스에속하는변수\n\n  개별적인객체의데이터가아닌클래스에공통데이터구현이필요할때사용\n\n  static 클래스멤버함수\n\n  객체가아닌클래스에속하는함수\n\n  클래스이름하에서바로호출가능\n\n     Static 클래스멤버함수는static 클래스멤버변수에만접근가능\n\n\n\n\n\n강의자료무단배포금지                                                                                                               32\n문의사항: hk.kim@jbnu.ac.kr  || diskhkme@gmail.com"
+  },
+  {
+    "source": "L05B",
+    "pdf_page": 33,
+    "printed_page": 33,
+    "text": " Static Class Members\n\n  static 클래스멤버\n\n                                                          Player.h\n\n\n\n                                                                                                     Player.cpp\n\n\n\n\n\n강의자료무단배포금지                                                                                                               33\n문의사항: hk.kim@jbnu.ac.kr  || diskhkme@gmail.com"
+  },
+  {
+    "source": "L05B",
+    "pdf_page": 34,
+    "printed_page": 34,
+    "text": " Static Class Members\n\n  static 클래스멤버\n\n   Num_player를증가시키는위치에주의!\n\n    생성자위임등을통해의도하지않는플레이어숫자증가가발생하지않아야함\n\n                                                                          Player.cpp 파일\n\n\n\n\n\n강의자료무단배포금지                                                                                                               34\n문의사항: hk.kim@jbnu.ac.kr  || diskhkme@gmail.com"
+  },
+  {
+    "source": "L05B",
+    "pdf_page": 35,
+    "printed_page": 35,
+    "text": " Static Class Members\n\n  static 클래스멤버\n\n                                                                                  main.cpp\n\n\n\n\n\n강의자료무단배포금지                                                                                                               35\n문의사항: hk.kim@jbnu.ac.kr  || diskhkme@gmail.com"
+  },
+  {
+    "source": "L05B",
+    "pdf_page": 36,
+    "printed_page": 36,
+    "text": " Static Class Members\n\n Static\n                      메모리\n\n\n                    코드공간\n\n                                              Static 변수, 전역변수      Static변수는stack과\n                                        heap이아닌별도메모리\n                                               String 리터럴                                  공간에저장\n\n\n\n\n                                 힙(Heap)\n\n\n\n\n                                  스택(Stack)\n강의자료무단배포금지                                                                                                               36\n문의사항: hk.kim@jbnu.ac.kr  || diskhkme@gmail.com"
+  },
+  {
+    "source": "L05B",
+    "pdf_page": 37,
+    "printed_page": 37,
+    "text": " Friends of a Class\n\n friend 키워드\n\n     Private 멤버에대해접근을허용할특정함수나클래스를선언할때사용\n\n   비대칭\n\n       A가B의friend라고B가A의friend는아님\n\n   전이되지않음\n\n       A가B의friend이고B가C의friend라고, A가C의friend는아님\n\n\n\n\n\n강의자료무단배포금지                                                                                                               37\n문의사항: hk.kim@jbnu.ac.kr  || diskhkme@gmail.com"
+  },
+  {
+    "source": "L05B",
+    "pdf_page": 38,
+    "printed_page": 38,
+    "text": " Friends of a Class\n\n friend 클래스\n\n\n\n\n\n                                                             *Player::DisplayPlayer()가아님!!!\n\n\n\n강의자료무단배포금지                                                                                                               38\n문의사항: hk.kim@jbnu.ac.kr  || diskhkme@gmail.com"
+  },
+  {
+    "source": "L05B",
+    "pdf_page": 39,
+    "printed_page": 39,
+    "text": " Friends of a Class\n\n friend 클래스\n\n\n\n\n\n강의자료무단배포금지                                                                                                               39\n문의사항: hk.kim@jbnu.ac.kr  || diskhkme@gmail.com"
+  },
+  {
+    "source": "L05B",
+    "pdf_page": 40,
+    "printed_page": 40,
+    "text": " (Summary) this, const, static, friend\n\n this\n   현재객체의주소값을명시적으로표현\n\n const\n     Const correctness를위해필요한경우멤버함수뒤에const 명시필요\n\n  static\n   객체가아닌클래스에속하는변수/함수를위한키워드\n     Ex. 플레이어숫자의관리\n\n friend\n   Private에접근을허용해주는키워드\n   꼭필요할때만사용!\n\n\n\n강의자료무단배포금지                                                                                                               40\n문의사항: hk.kim@jbnu.ac.kr  || diskhkme@gmail.com"
+  }
+]

@@ -1,0 +1,21 @@
+else
+return std: :make-pair(true, it-〉second);
+4. 원본 URL과 이에 대응하는 짧은 URL을 합께 등록하는 함수를 작성합니다.
+b001 registerURL(const ActualURL& actualURL, (0碼t TinyURL& tinyURL)
+autO found = 100kup(tinyURL).first;
+if (found)
+return false;
+data(tinyURL] = actualURL;
+return true;
+만약 이미 같은 이름의 짧은 URL이 존재하면 registerlJRL() 함수는 false를 반환합니다. 등
+록이 성공하면 true를 반환합니다.
+5. 등록된 URL을 제거하는 함수도 작성합니다.
+b001 deregisterURL(const TinyURL& tinyURL)
+autO found = lookup(tinyURL) .first;
+if (found)
+data. ;
+return true;
+return false;
+여기서는 검색 기능-을 다시 만드는 대신 앞서 구현한 lookup() 함수를 사음했으며, 덕분에 코
+드가 더 읽기 편해졌습니다.
+따>

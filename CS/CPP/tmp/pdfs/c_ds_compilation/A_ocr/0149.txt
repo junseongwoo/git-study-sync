@@ -1,0 +1,29 @@
+알고리충5.1 원행큐에서의삽입알고리츰
+enqueue(Q,x):
+reare(rear•l) % MAX QUEUE_SIZE;
+Q(rearlex;
+알고리즘 5.2 원형큐에서의 삭제 알고리즘
+dequeue(Q) :
+fronte(front+l) % MAX_QUEUE_SIZE;
+return Q[front] ;
+원형큐의 구현
+원형큐를 C언어를 이용하여 구현한다면 프로그램 5.2과 같다. 나머지 연산자는 C에서는 %에 해
+당됨을 유의하라. 여기서 주의할 것은 front와 rear가 가리기고 있는 위치의 의미이다. 다시 설
+명하면 원형큐에서의 front는 첫 번째 요소 하나 앞을, rear는 마지막 요소를 가리킨다. 따라서
+삽입을 할 때는 rear를 무조건 먼저 하나 증가시기고 증가된 위치에 삽입을 하여야 하고, 삭제를
+할 때도 먼저 front를 증가시킨 다음, 그 위치에서 데이터를 꺼내 와야 한다.
+공백 상태 김출은 front와 rear가 같으면 공백 상태로 판단할 수 있다. 포화 상태 검출은
+(rear+1)%MAX-QUEUE-SIZE이 front와 같으면 포화상태라고 판단한다.
+프로그램 5.2 원형큐프로그램
+#include <stdio.h>
+#include <stdlib.h>
+: 원형큐 코드 시작 =
+#define MAX_QUEUE_SIZE 5
+typedef int element;
+typedef struct { // 큐 타입
+element data[MAX_QUEUE_SIZE] •,
+int front, rear;
+} QueueType;
+// 오류 함수
+VOid error (char *message)
+큐 157

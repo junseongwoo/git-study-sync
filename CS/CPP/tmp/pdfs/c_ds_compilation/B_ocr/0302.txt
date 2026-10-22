@@ -1,0 +1,65 @@
+333
+334
+335
+336
+337
+338
+339
+341
+342
+343
+345
+347
+349
+350
+351
+352
+353
+354
+355
+356
+357
+358
+359
+360
+361
+362
+363
+364
+365
+366
+367
+369
+370
+371
+372
+들.
+Successor-Xolor = BLACK,
+VOid RBT_PrintTree( RBTNode• NOde, int Depth, int BIackCount )
+int i = 0;
+char =
+int V = -1;
+char cnt[1001;
+if ( NOde == NULL || N0de == Ni1)
+return;
+if ( Node-XoIor == BLACK )
+BlackCount++;
+if ( Node-Parent != NULL )
+V = Node-Parent->Data;
+if ( Node-Parent->Left == NOde )
+eIse
+C =
+if ( Node->Left == Ni1 Node-Right == Nil )
+년“, B1ackCount );
+sprintf(cnt,
+else
+, sizeof(cnt));
+strncpy(cnt,
+for ( i=O; iOepth; i++)
+printfC 0;
+printf( “년 [월(,년] S\n•, N0de->Data,
+(Node-Xolor == RED)?"RED•:"BLACK", (, v. cnt);
+RBT_PrintTree( N0de->Left, Depth+1, BlackCount);
+RBT_PrintTree( N0de-Right. Depth+1, BIackCount ),•
+Chapter % • 함책
+297

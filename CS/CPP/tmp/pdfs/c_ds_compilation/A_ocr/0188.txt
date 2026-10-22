@@ -1,0 +1,30 @@
+•- 10
+head •- 10
+pre
+20
+[그림 6-111 단순 연결 리스트에서의 식제연산
+30
+40
+다음과 같은 알고리즘을 이용하여 노-드 “30”을 삭제할 수 있다.
+알고리즘 6.4 연결 리스트 삭제 ll
+delete(head, pre) :
+1.
+2.
+3.
+r에℃v댼 pre->link
+pre->link remved->link
+free(remved)
+return
+196
+알고리즘 설명
+1. 삭제할 노드를 찾는다.
+2. 노드 “10”의 링크 필드가 노드 “30"을 가리키게 한다.
+3. 삭제할 노드의 동적 메모리를 반납한다.
+4. 변경된 헤드 포인터를 반환한다.
+프로그램 6.5 단순 연결 리스트의 삭제함수
+// pre가 가리기는 누c이 다음 노드를 삭제한다.
+ListNode* delete(ListNode *head, ListN0de *pre)
+ListNode •removed;
+removed = pre->link;
+pre->link = rernoved->link;
+C언어로 쉽게 풀어쓴 자료구조

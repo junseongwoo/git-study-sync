@@ -1,0 +1,57 @@
+2.3 • 인터넷 전자에일
+일단 SMTP 클라이언트와 서버가 서로에 대한 소개를 마치면. 클라이언트는 메시지를
+보낸다. SMTP는 서버에 오류 없이 메시지를 전달하기 위해 TCP의 신뢰적인 데이터
+전송 서비스에 의존한다. 그리고 서버에 보-낼 다른 메시지가 있으면. 클라이언트는 이
+과정을 같은 TCP 연결상에서 반복한다. 그렇지 않으면 TCP에기| 연결을 닫을 것을 명
+령한다.
+SMTP 글라이언트(c)와 SMTP 서버(s) 사이의 메시지 전달 과정의 예를 살펴보
+자. 클라이언트의 호스트 네임은 crepes.fr이고 서버의 호스트 네임은 ham-
+burger .edu/다. c: 다음에 나오는 ASCII 텍스트 라인은 클라이언트가 TCP 소
+켓으로 보내는 라인이다. s•. 다음에 나오는 ASCII 텍스트 라인은 서버가 TCP 소켓으
+로 보내는 라인이다. 다음 내용은 TCP 연결이 설정되자마자 시작된다.
+109
+S:
+C:
+S:
+C:
+S:
+C:
+S:
+C:
+S:
+C:
+C:
+C:
+S:
+C:
+S:
+220 hamburger.edu
+HELO crepes . fr
+250 He110 crepes.fr, pleased tO meet 1/ou
+MAIL FROM: <alice@crepes . fr>
+Sender Ok
+250 alice@crepes . fr
+RCPT TO: <bob@hamburger . edu>
+Recipient Ok
+250 bob@hamburger . edu
+DATA
+354 Enter mail, end with
+DO you like ketchup?
+How about pickles?
+on a line by itself
+250 Message accepted for delivery
+QUIT
+221 hamburger . edu closing connection
+이 예에서 클라이언트는 메일 서버 crepes.fr로부터 메일 서버 hamburger•
+edu에게 "DO you like ketchup? HOW about pickles?” 메시지를 보낸
+다. 클라이언트는 5개의 명령, 즉 HELO대ELLO의 약자), MAIL FROM, RCPT TO,
+DATA, QUIT 명령을 내렸다. 또 한 클라이언트는 하나의 점(.)으로 된 라인을 송신하
+며, 그것은 서버에게 메시지의 끝을 나타낸다(ASCII에서 각 메시지는 CRLF.CRLF
+로 끝나며, CR과 LF는 각각 camage return과 lme feed의 약자다). 서버는 각 명령에
+대하여 응답하며, 각 응답은 응답 코드와 옵션으로 문의 설명을 갖고 있다. SMTP는
+지속(persistent) 연결을 A卜&한다는 것을 언급하고자 한다. 송신 메일 서버가 같은 수
+신 메일 서버로 보내는 여러 메시지를 갖고 있다면, 같은 TCP 연결을 통해서 모든 메
+시지를 전달할 수 있다. 각 메시지에 대하여 클라이언트는 새로운 MAIL FROM:
+crepes. fr로 과정을 시작하고 모든 메시지를 전송한 후에 QUIT를 보낸다.
+텔넷을 A卜&하여 SMTP 서버와 직접 대화해 보기 바란다. 이를 위해서 다음의 명
+령을 시용하라.

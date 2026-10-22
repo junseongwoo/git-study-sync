@@ -1,0 +1,80 @@
+[
+  {
+    "source": "L02D",
+    "pdf_page": 1,
+    "printed_page": null,
+    "text": "C++ 프로그래밍\n      김형기\n           hk.kim@jbnu.ac.kr"
+  },
+  {
+    "source": "L02D",
+    "pdf_page": 2,
+    "printed_page": 2,
+    "text": " Today\n\n 디버깅이란\n\n 비주얼스튜디오에서의디버깅\n\n   중단점사용방법\n\n   메모리확인방법\n\n\n\n\n\n강의자료무단배포금지                                                                                                                2\n문의사항: hk.kim@jbnu.ac.kr  || diskhkme@gmail.com"
+  },
+  {
+    "source": "L02D",
+    "pdf_page": 3,
+    "printed_page": 3,
+    "text": " What is debugging?\n\n De”bug”\n\n   버그(=오류)를제거하는것\n\n     (Remind) 오류의종류?\n\n      컴파일/ 링크오류오류의원인이명확하며, 출력창을통해쉽게원인파악가능\n\n     런타임오류\n             괴로운오류… 문제발생원인을찾기어려움\n     논리적오류\n             IDE에서제공하는디버깅기능과테스트를현명하게사용해야문제를빠르게해결가능!\n\n\n 중요! 개발숙련도가높아지더라도오류없는프로그램을단번에개발하는것은불가능\n\n   숙련도가높아짐에따라오류의“확률”이줄고, 디버깅속도가빨라지는것\n\n    즉, 오류를많이내고(?) 스스로디버깅을반복적으로수행하고고민하는경험을쌓는것이중요\n\n\n\n강의자료무단배포금지                                                                                                                3\n문의사항: hk.kim@jbnu.ac.kr  || diskhkme@gmail.com"
+  },
+  {
+    "source": "L02D",
+    "pdf_page": 4,
+    "printed_page": 4,
+    "text": " Preface\n\n 디버깅을하기전현재디버깅이가능한구성인지확인\n\n     Release 모드에서는값을제대로볼수없음\n\n\n\n\n\n   특별한이유가없으면x86 플랫폼으로설정\n\n 디버그모드에들어간후, 디버그탭의창메뉴를보면다양한디버깅관련정보를\n 띄울수있는창을선택가능함\n\n\n\n강의자료무단배포금지                                                                                                                4\n문의사항: hk.kim@jbnu.ac.kr  || diskhkme@gmail.com"
+  },
+  {
+    "source": "L02D",
+    "pdf_page": 5,
+    "printed_page": 5,
+    "text": " Debugging Tool 1 – Break point\n\n 중단점\n\n  임의의위치에서프로그램을정지시킬수있는기능\n\n   정지하고싶은위치의왼쪽끝을클릭하거나F9을통해중단점생성가능\n\n   이후F5(디버깅)을통해프로그램을빌드후실행하면, 해당위치에서프로그램이중단됨\n\n       Ctrl+F5가아님에주의! 솔루션구성이디버그상태여야함에주의!\n\n     현재중단되어있는위치가노란색화살표로표시됨(해당명령문은아직실행되지않은상태)\n\n\n\n\n\n강의자료무단배포금지                                                                                                                5\n문의사항: hk.kim@jbnu.ac.kr  || diskhkme@gmail.com"
+  },
+  {
+    "source": "L02D",
+    "pdf_page": 6,
+    "printed_page": 6,
+    "text": " Debugging Tool 1 – Break point\n\n 중단점, 계속\n\n   이제, 중단위치에서F10과F11을통해디버깅을진행함\n\n        F10  : 해당명령문실행하고다음명령줄로진행(step over)          함수강의이후에꼭다시\n                                                               돌아와확인해보세요!\n        F11  : 명령문내에서호출하는추가코드(ex, 함수)로들어감(step into)\n\n       F5  : 다음중단점까지진행\n\n         Shift+F11  : 현재명령문이호출되는상위stack으로나가기(step out)\n\n\n\n\n\n강의자료무단배포금지                               F11을누르면Mul 계산           F10을누르면해당코드를      6\n            현재중단된상태문의사항: hk.kim@jbnu.ac.kr  || diskhkme@gmail.com           코드안으로들어감            실행하고다음줄로넘어감"
+  },
+  {
+    "source": "L02D",
+    "pdf_page": 7,
+    "printed_page": 7,
+    "text": " Debugging Tool 1 – Break point\n\n 중단점, 계속\n\n   그래서? 이과정에서해야할것은?\n\n   데이터(메모리) 확인!\n\n     변수에마우스를올려값을확인하거나,\n\n    하단창을통해값을확인\n\n\n\n\n\n                                     하단의창을통해서도값을확인할수있음계속진행하면서값이변하는지,\n                                     어떻게변하는지확인해보기\n                                     방금명령줄에의해값이변한변수가빨간색으로표시됨\n                                          로컬/자동/조사식중“로컬”창을주로보기를권장\n\n\n       마우스를값을보기를원하는변수위에올려두면, 현재해당\n       변수에저장되어있는값이표시됨\n\n\n\n강의자료무단배포금지                               호출스택또한자세히살펴보는것이좋음. 추후추가설명   7\n문의사항: hk.kim@jbnu.ac.kr  || diskhkme@gmail.com"
+  },
+  {
+    "source": "L02D",
+    "pdf_page": 8,
+    "printed_page": 8,
+    "text": " Debugging Tool 2 – Memory Window\n\n 메모리윈도우\n\n   실제내가생성한변수가, 메모리상에어떻게저장되어있는지자세히보려고할때사용\n\n   디버그창메모리메모리1 클릭\n\n\n\n\n\n강의자료무단배포금지                                                                                                                8\n문의사항: hk.kim@jbnu.ac.kr  || diskhkme@gmail.com"
+  },
+  {
+    "source": "L02D",
+    "pdf_page": 9,
+    "printed_page": 9,
+    "text": " Debugging Tool 2 – Memory Window\n\n 메모리윈도우, 계속\n\n   변수가메모리에어떻게저장되었는지보기위해주소부분에“&변수이름”을입력\n\n     &는변수의주소를얻어오기위한연산자\n\n   중단점과마찬가지로코드진행에따라서변수값이계속업데이트됨\n\n    &a를입력해서현재a 변수가저장된메모리주소\n     (0x004FF938)의메모리값을살펴봄\n\n\n                                                              A는integer이므로4 byte 메모리공간을차지하고있고, 그\n                                          메모리에저장된값을16진수를통해보여줌\n\n\n\n\n\n강의자료무단배포금지                                                                                                                9\n문의사항: hk.kim@jbnu.ac.kr  || diskhkme@gmail.com"
+  },
+  {
+    "source": "L02D",
+    "pdf_page": 10,
+    "printed_page": 10,
+    "text": "How to debugging?\n\n 디버깅기능을활용해살펴보아야할것\n\n 프로그램의흐름\n\n   내가생각하는순서대로프로그램의명령문들이실행되고있는지확인\n\n 프로그램에서가장중요한것은“데이터”\n\n   메모리에저장된데이터(변수/객체)가, 내가의도한것과같은지확인\n\n\n Tip  : 우클릭“정의로이동” 으로해당문법의정의위치를손쉽게찾을수있음\n\n\n\n\n\n강의자료무단배포금지                                                                                                               10\n문의사항: hk.kim@jbnu.ac.kr  || diskhkme@gmail.com"
+  },
+  {
+    "source": "L02D",
+    "pdf_page": 11,
+    "printed_page": 11,
+    "text": "추가슬라이드\n\n\n\n\n\n                                                                                                                         11"
+  },
+  {
+    "source": "L02D",
+    "pdf_page": 12,
+    "printed_page": 12,
+    "text": " Conditional & Action breakpoint\n\n 중단점우클릭작업창을통해특정조건에서중단점활성화가능\n\n   Loop의디버딩에유용하며, 재컴파일이필요없음\n\n\n\n\n\n강의자료무단배포금지                                                                                                               12\n문의사항: hk.kim@jbnu.ac.kr  || diskhkme@gmail.com"
+  },
+  {
+    "source": "L02D",
+    "pdf_page": 13,
+    "printed_page": 13,
+    "text": " Disassembly & Register\n\n 디버그창디스어셈블리/ 레지스터\n\n\n\n\n\n        명령문의변환된어셈블리코드를볼수있음              현재시점에레지스터에저장된값들을볼수있음\n\n\n\n\n\n강의자료무단배포금지                                                                                                               13\n문의사항: hk.kim@jbnu.ac.kr  || diskhkme@gmail.com"
+  }
+]

@@ -1,0 +1,1477 @@
+
+=== L03 | PDF p.1 | 印刷 p.None ===
+C++ 프로그래밍
+      김형기
+           hk.kim@jbnu.ac.kr
+
+=== L03 | PDF p.2 | 印刷 p.2 ===
+함수
+
+
+
+
+
+                                                                                                                          2
+
+=== L03 | PDF p.3 | 印刷 p.3 ===
+ Today
+
+ 정의
+
+ 프로토타입
+
+ 매개변수(parameter)와pass-by-value☆
+
+ return문
+
+ 기본인수(default argument)
+
+ 오버로딩☆
+
+ 함수호출의동작방식☆
+
+ 포인터와참조자☆
+
+  inline 함수
+
+ 재귀함수(recursive)
+
+
+
+강의자료무단배포금지                                                                                                                3
+문의사항: hk.kim@jbnu.ac.kr  || diskhkme@gmail.com
+
+=== L03 | PDF p.4 | 印刷 p.4 ===
+ Functions
+
+ 정의
+
+ 프로토타입
+
+ 매개변수(parameter)와pass-by-value☆
+
+ return문
+
+ 기본인수(default argument)
+
+ 오버로딩☆
+
+ 함수호출의동작방식☆
+
+ 포인터와참조자☆
+
+  inline 함수
+
+ 재귀함수(recursive)
+
+
+
+강의자료무단배포금지                                                                                                                4
+문의사항: hk.kim@jbnu.ac.kr  || diskhkme@gmail.com
+
+=== L03 | PDF p.5 | 印刷 p.5 ===
+ Functions
+
+ C++프로그램의함수
+
+    C++ 표준라이브러리(함수와클래스)
+
+   써드파티라이브러리(함수와클래스)
+
+   직접구현한함수와클래스
+
+
+ 함수모듈화재사용성!
+
+   코드를독립적인연산으로분할
+
+   연산들을재사용
+
+
+
+
+
+강의자료무단배포금지                                                                                                                5
+문의사항: hk.kim@jbnu.ac.kr  || diskhkme@gmail.com
+
+=== L03 | PDF p.6 | 印刷 p.6 ===
+ Functions
+
+ 가독성비교
+
+
+
+
+
+                                    모듈화
+
+
+
+
+
+강의자료무단배포금지                                                                                                                6
+문의사항: hk.kim@jbnu.ac.kr  || diskhkme@gmail.com
+
+=== L03 | PDF p.7 | 印刷 p.7 ===
+ Functions
+
+ 함수를사용할때알아야하는것
+   함수의기능을알아야함
+   함수에서필요로하는정보를알아야함
+   함수가리턴하는것을알아야함
+   어떤오류가발생하는지알아야함
+   성능상의제약에대해이해해야함
+
+
+                                          언리얼엔진의문서예시
+ 함수를사용할때몰라도되는것                 함수의리턴값, 이름과매개변수, 기능설명만적혀있음
+   함수가내부적으로어떻게동작하는지
+
+ 자동차운전예시
+   액셀을밟으면가속도가붙고, 브레이크를밟으면감속된다. 핸들을돌리면바퀴가돌아간다.
+   액셀을밟았을때연료가어떻게분사되고, 구동장치가어떻게돌아가는지? 몰라도운전가능
+
+
+
+강의자료무단배포금지                                                                                                                7
+문의사항: hk.kim@jbnu.ac.kr  || diskhkme@gmail.com
+
+=== L03 | PDF p.8 | 印刷 p.8 ===
+ Functions
+
+ <cmath> 예시
+
+  수학연산함수들제공
+
+
+
+
+
+ 함수가내부적으로어떻게동작하는지는몰라도사용할수있음
+
+
+
+
+
+강의자료무단배포금지                                                                                                                8
+문의사항: hk.kim@jbnu.ac.kr  || diskhkme@gmail.com
+
+=== L03 | PDF p.9 | 印刷 p.9 ===
+ Functions
+
+ C++ 표준라이브러리
+
+
+
+
+
+강의자료무단배포금지                                                                                                                9
+문의사항: hk.kim@jbnu.ac.kr  || diskhkme@gmail.com
+
+=== L03 | PDF p.10 | 印刷 p.10 ===
+ Function Definition
+
+ 함수의정의에필요한요소
+
+       1. 이름
+
+       2. 매개변수리스트
+
+       3. 리턴타입
+
+       4.  본문(body)
+
+
+
+
+
+강의자료무단배포금지                                                                                                               10
+문의사항: hk.kim@jbnu.ac.kr  || diskhkme@gmail.com
+
+=== L03 | PDF p.11 | 印刷 p.11 ===
+ Function Definition
+
+ 함수의정의에필요한요소
+
+       1. 이름
+
+     함수의이름
+
+     변수의명명규칙과동일
+
+     의미가있는이름이어야함!
+
+       2. 매개변수리스트
+
+       3. 리턴타입
+
+       4.  본문(body)
+
+
+
+
+
+강의자료무단배포금지                                                                                                               11
+문의사항: hk.kim@jbnu.ac.kr  || diskhkme@gmail.com
+
+=== L03 | PDF p.12 | 印刷 p.12 ===
+ Function Definition
+
+ 함수의정의
+
+       1. 이름
+
+       2. 매개변수리스트
+
+     함수에전달되는값(인자)들
+
+     타입이명시되어야함
+
+       3. 리턴타입
+
+     연산결과의반환타입
+
+       4.  본문(body)
+
+     함수가호출되었을때실행되는명령문
+
+       대괄호(“{ }”) 내부
+
+
+
+강의자료무단배포금지                                                                                                               12
+문의사항: hk.kim@jbnu.ac.kr  || diskhkme@gmail.com
+
+=== L03 | PDF p.13 | 印刷 p.13 ===
+ Function Definition
+
+ 함수의정의
+
+
+
+
+
+                      반환값이없는경우void로명시
+
+
+
+
+
+강의자료무단배포금지                                                                                                               13
+문의사항: hk.kim@jbnu.ac.kr  || diskhkme@gmail.com
+
+=== L03 | PDF p.14 | 印刷 p.14 ===
+ Calling a Function
+
+ 함수의호출
+
+
+
+
+
+                                                                        PrintHello()함수정의
+
+
+
+
+
+                                                                        PrintHello()함수호출(사용)
+
+
+
+
+
+강의자료무단배포금지                                                                                                               14
+문의사항: hk.kim@jbnu.ac.kr  || diskhkme@gmail.com
+
+=== L03 | PDF p.15 | 印刷 p.15 ===
+ Calling a Function
+
+ 함수의호출
+
+
+
+
+
+                        콘솔창에어떤순서로출력될까?
+
+
+강의자료무단배포금지                                                                                                               15
+문의사항: hk.kim@jbnu.ac.kr  || diskhkme@gmail.com
+
+=== L03 | PDF p.16 | 印刷 p.16 ===
+ Debugging Function Calls in VS 2017
+
+ 함수의호출
+
+
+
+
+
+                                                      F11
+                              함수를실행할시점에, F11을누
+                             르면함수안으로진입, F10을누
+                            르면함수다음줄로진행
+                                                    F10
+
+
+
+
+강의자료무단배포금지                                                                                                               16
+문의사항: hk.kim@jbnu.ac.kr  || diskhkme@gmail.com
+
+=== L03 | PDF p.17 | 印刷 p.17 ===
+ Calling a function                      중요!
+
+ 컴파일러는함수의호출(사용) 이전에함수의정의를알아야함!
+
+
+
+
+
+강의자료무단배포금지                                                                                                               17
+문의사항: hk.kim@jbnu.ac.kr  || diskhkme@gmail.com
+
+=== L03 | PDF p.18 | 印刷 p.18 ===
+ Functions
+
+ 정의
+
+ 프로토타입
+
+ 매개변수(parameter)와pass-by-value☆
+
+ return문
+
+ 기본인수(default argument)
+
+ 오버로딩☆
+
+ 함수호출의동작방식☆
+
+  배열의전달과pass-by-reference ☆
+
+  inline 함수
+
+ 재귀함수(recursive)
+
+
+
+강의자료무단배포금지                                                                                                               18
+문의사항: hk.kim@jbnu.ac.kr  || diskhkme@gmail.com
+
+=== L03 | PDF p.19 | 印刷 p.19 ===
+ Function Prototypes
+
+ 함수의호출이전에함수의정의를알수있어야함!
+   매개변수가몇개고, 어떤타입의데이터를리턴하는지를알려주어야함
+
+
+   해결방법1: 항상함수의호출보다위쪽라인에함수를정의
+     작은프로그램에서는OK
+     일반적으로는효율적인방법이아님
+
+
+   해결방법2: 함수프로토타입의사용
+     함수의전체정의가아닌컴파일러가알아야할부분만을미리알려주는개념
+       전방선언(forward declaration)이라고도명칭
+     프로그램의초기에위치
+      헤더파일(.h)의활용
+
+
+
+강의자료무단배포금지                                                                                                               19
+문의사항: hk.kim@jbnu.ac.kr  || diskhkme@gmail.com
+
+=== L03 | PDF p.20 | 印刷 p.20 ===
+ Function Prototypes
+
+ 함수프로토타입
+
+  함수를사용하기이전에입력매개변수와반환형을미리알려주는명령문
+
+   함수를사용할시점에, 프로토타입과사용형식이맞지않는다면오류
+
+
+
+
+
+강의자료무단배포금지                                                                                                               20
+문의사항: hk.kim@jbnu.ac.kr  || diskhkme@gmail.com
+
+=== L03 | PDF p.21 | 印刷 p.21 ===
+분산된코드와함수, Compile과Linking      고급
+
+ Compile과Linking, 프로토타입에대한깊은이해
+
+       1. 두개의cpp파일에모두다iostream이필요한가?
+
+       2. 각파일이compile이정상적으로이루어지는이유는?
+
+       3. 만일Log.cpp에Log 함수가없다면어떤오류가발생할까?
+
+      Main.cpp                                         Log.cpp
+
+
+
+
+
+강의자료무단배포금지                                                                                                               21
+문의사항: hk.kim@jbnu.ac.kr  || diskhkme@gmail.com
+
+=== L03 | PDF p.22 | 印刷 p.22 ===
+ Functions
+
+ 정의
+
+ 프로토타입
+
+ 매개변수(parameter)와pass-by-value☆
+
+ return문
+
+ 기본인수(default argument)
+
+ 오버로딩☆
+
+ 함수호출의동작방식☆
+
+  배열의전달과pass-by-reference ☆
+
+  inline 함수
+
+ 재귀함수(recursive)
+
+
+
+강의자료무단배포금지                                                                                                               22
+문의사항: hk.kim@jbnu.ac.kr  || diskhkme@gmail.com
+
+=== L03 | PDF p.23 | 印刷 p.23 ===
+ Function Parameters
+
+ 함수매개변수
+
+   함수를호출할때, 데이터를전달할수있음
+
+      함수의호출에있어서전달하는값은인수(argument)라함
+
+     함수의정의에있어서전달하는값은인자또는매개변수(parameter)라함
+
+   인수와매개변수는개수, 순서와타입이일치해야함
+
+
+
+
+
+강의자료무단배포금지                                                                                                               23
+문의사항: hk.kim@jbnu.ac.kr  || diskhkme@gmail.com
+
+=== L03 | PDF p.24 | 印刷 p.24 ===
+ Function Parameters
+
+ 함수매개변수
+
+
+
+
+
+강의자료무단배포금지                                                                                                               24
+문의사항: hk.kim@jbnu.ac.kr  || diskhkme@gmail.com
+
+=== L03 | PDF p.25 | 印刷 p.25 ===
+ Pass-by-value                        중요!
+
+ 함수에데이터를전달할때는값으로전달(pass-by-value)됨
+
+   데이터의값이복사되어전달
+
+     함수내에서는원본에서복사해서만들어진사본이사용됨
+
+  전달된인수는함수를통해변화되지않음
+
+     사본을바꾼다고원본이바뀌지않음
+
+     실수로값을변화하는것을방지
+
+     원본을변화시키는것이필요하거나, 복사비용이높을때를위한방법존재(포인터/참조자)
+
+
+
+
+
+강의자료무단배포금지                                                                                                               25
+문의사항: hk.kim@jbnu.ac.kr  || diskhkme@gmail.com
+
+=== L03 | PDF p.26 | 印刷 p.26 ===
+ Pass-by-value                        중요!
+
+ 원본과사본
+
+
+
+
+
+강의자료무단배포금지                                                                                                               26
+문의사항: hk.kim@jbnu.ac.kr  || diskhkme@gmail.com
+
+=== L03 | PDF p.27 | 印刷 p.27 ===
+ Functions
+
+ 정의
+
+ 프로토타입
+
+ 매개변수(parameter)와pass-by-value☆
+
+ return문
+
+ 기본인수(default argument)
+
+ 오버로딩☆
+
+ 함수호출의동작방식☆
+
+  배열의전달과pass-by-reference ☆
+
+  inline 함수
+
+ 재귀함수(recursive)
+
+
+
+강의자료무단배포금지                                                                                                               27
+문의사항: hk.kim@jbnu.ac.kr  || diskhkme@gmail.com
+
+=== L03 | PDF p.28 | 印刷 p.28 ===
+ Function Return
+
+ 반환(return)
+
+     return 문을통해서함수의결과값을전달
+
+      Void형반환인경우return문생략가능
+
+   return문은함수내어느곳에서나정의가능
+
+   return문을통해함수는즉각적으로종료
+
+
+
+
+
+강의자료무단배포금지                                                                                                               28
+문의사항: hk.kim@jbnu.ac.kr  || diskhkme@gmail.com
+
+=== L03 | PDF p.29 | 印刷 p.29 ===
+ Default Argument Values
+
+ 기본인수
+
+     (Remind) 함수의선언에서정의한모든매개변수가전달되어야함
+
+  기본인수를사용하면인수가주어지지않을시기본값을사용하도록정의가능
+
+     동일한값을자주사용할경우
+
+   기본값은함수프로토타입또는정의부에선언
+
+     프로토타입에선언하는것이기본
+
+     둘다선언해서는안됨!
+
+  여러개의기본값을사용할경우오른쪽부터선언해야함
+
+
+
+
+
+강의자료무단배포금지                                                                                                               29
+문의사항: hk.kim@jbnu.ac.kr  || diskhkme@gmail.com
+
+=== L03 | PDF p.30 | 印刷 p.30 ===
+ Default Argument Values
+
+ 기본인수
+
+
+
+
+
+강의자료무단배포금지                                                                                                               30
+문의사항: hk.kim@jbnu.ac.kr  || diskhkme@gmail.com
+
+=== L03 | PDF p.31 | 印刷 p.31 ===
+ Functions
+
+ 정의
+
+ 프로토타입
+
+ 매개변수(parameter)와pass-by-value☆
+
+ return문
+
+ 기본인수(default argument)
+
+ 오버로딩☆
+
+ 함수호출의동작방식☆
+
+  배열의전달과pass-by-reference ☆
+
+  inline 함수
+
+ 재귀함수(recursive)
+
+
+
+강의자료무단배포금지                                                                                                               31
+문의사항: hk.kim@jbnu.ac.kr  || diskhkme@gmail.com
+
+=== L03 | PDF p.32 | 印刷 p.32 ===
+ Function Overloading
+
+ 함수오버로딩
+
+  서로다른매개변수리스트를갖는동일한이름의함수를정의하는것
+
+  추상화의한예
+
+  다형성의한예
+
+     유사한개념의함수를다른타입에대해정의
+
+  객체지향프로그램구현을위한중요한기법중하나
+
+  컴파일러는주어진인수와함수들의파라메터정의를기반으로개별적인함수를구분할수
+   있어야함
+
+
+
+
+
+강의자료무단배포금지                                                                                                               32
+문의사항: hk.kim@jbnu.ac.kr  || diskhkme@gmail.com
+
+=== L03 | PDF p.33 | 印刷 p.33 ===
+ Function Overloading
+
+ 함수오버로딩
+
+
+
+
+
+강의자료무단배포금지                                                                                                               33
+문의사항: hk.kim@jbnu.ac.kr  || diskhkme@gmail.com
+
+=== L03 | PDF p.34 | 印刷 p.34 ===
+ Function Overloading
+
+ 함수오버로딩
+
+  반환타입만다른오버로딩은불가능하다는것에주의
+
+
+
+
+
+강의자료무단배포금지                                                                                                               34
+문의사항: hk.kim@jbnu.ac.kr  || diskhkme@gmail.com
+
+=== L03 | PDF p.35 | 印刷 p.35 ===
+ (Summary) Functions
+
+ 정의
+
+ 프로토타입
+
+ 매개변수(parameter)와pass-by-value☆
+
+ return문
+
+ 기본인수(default argument)
+
+ 오버로딩☆
+
+ 함수호출의동작방식☆
+
+  배열의전달과pass-by-reference ☆
+
+  inline 함수
+
+ 재귀함수(recursive)
+
+
+
+강의자료무단배포금지                                                                                                               35
+문의사항: hk.kim@jbnu.ac.kr  || diskhkme@gmail.com
+
+=== L03 | PDF p.36 | 印刷 p.36 ===
+ Local/Global Scope                     중요!
+
+ 지역범위
+
+   블록{ } 내의범위
+
+   함수의매개변수까지함수범위내의지역변수로생각해야함
+
+        For문에서int i=0이블록내범위인것과마찬가지
+
+   따라서함수의(복사된) 인자및지역변수들은함수의실행중에만존재함
+
+  static 지역변수
+
+       static 한정어를사용해예외변수지정가능함
+
+   초기화가필요
+
+ 전역범위
+
+   함수밖에정의된변수는어디서나접근가능
+
+   전역변수는사용하지않는것이좋음
+
+      전역상수는OK
+
+
+강의자료무단배포금지                                                                                                               36
+문의사항: hk.kim@jbnu.ac.kr  || diskhkme@gmail.com
+
+=== L03 | PDF p.37 | 印刷 p.37 ===
+ Local/Global Scope
+
+  static 지역변수
+
+      static 한정어를사용해지역내에정의된변수를지역밖에정의한것처럼활용가능
+
+    단, scope 밖에서접근할수는없음
+
+   초기화가필요
+
+
+
+
+
+강의자료무단배포금지                                                                                                               37
+문의사항: hk.kim@jbnu.ac.kr  || diskhkme@gmail.com
+
+=== L03 | PDF p.38 | 印刷 p.38 ===
+ Function Calls                        중요!
+
+ 메모리레이아웃
+                      메모리
+   지금은스택영역만생각
+                              스택영역은빠르지만작음                                  스택(Stack)
+                                   메모리가자동으로정리(해제)됨
+
+
+
+
+                                 힙(Heap)
+                              힙영역은크지만느림
+                               메모리를직접해제해주어야함
+                                        (다음강의)
+
+
+                                              Static 변수, 전역변수
+                                               String 리터럴
+
+                    코드공간
+
+강의자료무단배포금지                                                                                                               38
+문의사항: hk.kim@jbnu.ac.kr  || diskhkme@gmail.com
+
+=== L03 | PDF p.39 | 印刷 p.39 ===
+ Function Calls                        중요!
+
+ 함수호출의동작방식
+
+     Function call stack
+
+     LIFO(Last in first out)
+
+     Stack Frame (Activation Record)
+
+     함수의호출이발생할때마다일종의구분선이정의됨
+
+    함수의지역변수와매개변수는그구분선영역내에생성됨
+
+     함수의호출이끝나면구분선내의메모리는자동으로해제됨
+
+
+   스택은유한하고작아서, stack overflow 발생할수있음
+
+
+
+
+
+강의자료무단배포금지                                                                                                               39
+문의사항: hk.kim@jbnu.ac.kr  || diskhkme@gmail.com
+
+=== L03 | PDF p.40 | 印刷 p.40 ===
+ Function Calls                        중요!
+
+
+
+
+
+강의자료무단배포금지                                                                                                               40
+문의사항: hk.kim@jbnu.ac.kr  || diskhkme@gmail.com
+
+=== L03 | PDF p.41 | 印刷 p.41 ===
+ Function Calls                        중요!
+
+
+
+
+                                      스택메모리
+
+
+
+                                                                                   Int기때문에
+                                                                실제로는
+                                                                                     4칸씩(4바이트씩)을
+                                                                차지하므로주소가
+                                                   CC는초기화되지            4씩감소함!
+                                              않은쓰레기값을
+                                             표시하기위해사용
+
+
+
+
+                                                                                                                           Int z       CC     0x1000 - 8                                Main함수
+                       지역변수들                                                     Int y       CC     0x1000 - 4
+                                                                                                                           Int x       CC     0x1000
+                                  Main함수시작구분선
+                                                                           …
+
+
+강의자료무단배포금지                                                                                                               41
+문의사항: hk.kim@jbnu.ac.kr  || diskhkme@gmail.com
+
+=== L03 | PDF p.42 | 印刷 p.42 ===
+ Function Calls                        중요!
+
+
+
+
+                                      스택메모리
+
+
+
+
+
+                                                                                                                           Int z       CC     0x1000 - 8
+                                                                                                                           Int y        20     0x1000 - 4
+                                                                                                                           Int x        10     0x1000
+                                  Main함수시작구분선
+                                                                           …
+
+
+강의자료무단배포금지                                                                                                               42
+문의사항: hk.kim@jbnu.ac.kr  || diskhkme@gmail.com
+
+=== L03 | PDF p.43 | 印刷 p.43 ===
+ Function Calls                        중요!
+
+
+
+
+                                      스택메모리
+                                  Func1함수의
+                        지역변수들
+
+
+                                                   a와b에는x와y의
+                                           값이복사되어
+                                           들어감
+
+
+                                                                                                                        Int result     CC     0x1000 – 20
+                                                                                                                           Int b        20     0x1000 – 16
+                                                                                                                           Int a        10     0x1000 – 12
+                                                        Func1 함수시작구분선
+                                                                                                                           Int z       CC     0x1000 – 8
+                                                                                                                           Int y        20     0x1000 – 4
+                                                                                                                           Int x        10     0x1000
+                                  Main함수시작구분선
+                                                                           …
+
+
+강의자료무단배포금지                                                                                                               43
+문의사항: hk.kim@jbnu.ac.kr  || diskhkme@gmail.com
+
+=== L03 | PDF p.44 | 印刷 p.44 ===
+ Function Calls                        중요!
+
+
+
+
+                                      스택메모리
+
+
+
+
+
+                                                                                                                        Int result      30     0x1000 – 20
+                                                                                                                           Int b        20     0x1000 – 16
+                                                                                                                           Int a        10     0x1000 – 12
+                                                        Func1 함수시작구분선
+                                                                                                                           Int z       CC     0x1000 – 8
+                                                                                                                           Int y        20     0x1000 – 4
+                                                                                                                           Int x        10     0x1000
+                                  Main함수시작구분선
+                                                                           …
+
+
+강의자료무단배포금지                                                                                                               44
+문의사항: hk.kim@jbnu.ac.kr  || diskhkme@gmail.com
+
+=== L03 | PDF p.45 | 印刷 p.45 ===
+ Function Calls                        중요!
+
+
+
+
+                             Func2함수의                   스택메모리                     지역변수들
+
+
+
+                                                                                                                           Int z        20
+                                                                                                                           Int y        10
+                                                                                                                           Int x        30    …
+                                                        Func2 함수시작구분선
+                                                                                                                        Int result      30     0x1000 – 20
+                                                                                                                           Int b        20     0x1000 – 16
+                                                                                                                           Int a        10     0x1000 – 12
+                                                        Func1 함수시작구분선
+                                                                                                                           Int z       CC     0x1000 – 8
+                                                                                                                           Int y        20     0x1000 – 4
+                                                                                                                           Int x        10     0x1000
+                                  Main함수시작구분선
+                                                                           …
+
+
+강의자료무단배포금지                                                                                                               45
+문의사항: hk.kim@jbnu.ac.kr  || diskhkme@gmail.com
+
+=== L03 | PDF p.46 | 印刷 p.46 ===
+ Function Calls                        중요!
+
+
+
+
+                                      스택메모리
+
+
+
+
+                                                                                                                           Int z        20
+                                                                                                                           Int y        10
+                                                                                                                           Int x        60    …
+                                                        Func2 함수시작구분선
+                                                                                                                        Int result      30     0x1000 – 20
+                                                                                                                           Int b        20     0x1000 – 16
+                                                                                                                           Int a        10     0x1000 – 12
+                                                        Func1 함수시작구분선
+                                                                                                                           Int z       CC     0x1000 – 8
+                                                                                                                           Int y        20     0x1000 – 4
+                                                                                                                           Int x        10     0x1000
+                                  Main함수시작구분선
+                                                                           …
+
+
+강의자료무단배포금지                                                                                                               46
+문의사항: hk.kim@jbnu.ac.kr  || diskhkme@gmail.com
+
+=== L03 | PDF p.47 | 印刷 p.47 ===
+ Function Calls                        중요!
+
+
+
+
+                                      스택메모리
+
+                                                         Func2가끝났으니
+                                           자동으로사용된
+                                 Func2를호출한             메모리는없어지고
+                        지점으로                      반환값은result로
+                             돌아옵니다.                 복사됩니다.
+
+
+                                                                                …
+                                                                                                                        Int result      60     0x1000 – 20
+                                                                                                                           Int b        20     0x1000 – 16
+                                                                                                                           Int a        10     0x1000 – 12
+                                                        Func1 함수시작구분선
+                                                                                                                           Int z       CC     0x1000 – 8
+                                                                                                                           Int y        20     0x1000 – 4
+                                                                                                                           Int x        10     0x1000
+                                  Main함수시작구분선
+                                                                           …
+
+
+강의자료무단배포금지                                                                                                               47
+문의사항: hk.kim@jbnu.ac.kr  || diskhkme@gmail.com
+
+=== L03 | PDF p.48 | 印刷 p.48 ===
+ Function Calls                        중요!
+
+
+
+
+                                      스택메모리
+
+
+
+
+
+                                                                                …
+                                                                                                                        Int result      60     0x1000 – 20
+                                                                                                                           Int b        20     0x1000 – 16
+                                                                                                                           Int a        10     0x1000 – 12
+                                                        Func1 함수시작구분선
+                                                                                                                           Int z       CC     0x1000 – 8
+                                                                                                                           Int y        20     0x1000 – 4
+                                                                                                                           Int x        10     0x1000
+                                  Main함수시작구분선
+                                                                           …
+
+
+강의자료무단배포금지                                                                                                               48
+문의사항: hk.kim@jbnu.ac.kr  || diskhkme@gmail.com
+
+=== L03 | PDF p.49 | 印刷 p.49 ===
+ Function Calls                        중요!
+
+
+
+
+                                      스택메모리
+
+
+
+
+
+                                                         Func1이끝났으니
+                                            자동으로사용된
+                                            메모리는없어지고
+                                                                                …                                              반환값은z로
+                                                   복사됩니다.                         0x1000 – 20
+                                                                                                                0x1000 – 16
+                                                                                                                0x1000 – 12
+                           Func1를호출한
+                                                                                                                           Int z        60     0x1000 – 8                    지점으로
+                        돌아옵니다.                                                               Int y        20     0x1000 – 4
+                                                                                                                           Int x        10     0x1000
+                                  Main함수시작구분선
+                                                                           …
+
+
+강의자료무단배포금지                                                                                                               49
+문의사항: hk.kim@jbnu.ac.kr  || diskhkme@gmail.com
+
+=== L03 | PDF p.50 | 印刷 p.50 ===
+ Function Calls                        중요!
+
+
+
+
+                                      스택메모리
+
+
+
+
+
+                                                                                …
+                                                    main이끝났으니                                                                                                                0x1000 – 20                                          자동으로사용된
+                                          메모리는없어지고                       0x1000 – 16
+                                           아무일도없던것처럼
+                                                 정리됩니다.                            0x1000 – 12
+                                                                                                                0x1000 – 8
+                                                                                                                0x1000 – 4
+                                                                                                                0x1000
+                                                                           …
+
+
+강의자료무단배포금지                                                                                                               50
+문의사항: hk.kim@jbnu.ac.kr  || diskhkme@gmail.com
+
+=== L03 | PDF p.51 | 印刷 p.51 ===
+ Check Function Calls in VS                중요!
+
+
+
+
+
+   로컬창은현재호출스택에포함된                                  호출스택창은현재시점(중단점이
+    메모리(=지역변수+매개변수)의                                      걸린시점)의호출스택(구분선이
+    상태를보여줍니다.                                             생성된상태)를보여줍니다.
+
+                                                  호출스택창이보이지않으면
+                                                    디버그창호출스택클릭
+                                                                                    (디버깅(F5)상태에서)
+
+
+
+
+강의자료무단배포금지                                                                                                               51
+문의사항: hk.kim@jbnu.ac.kr  || diskhkme@gmail.com
+
+=== L03 | PDF p.52 | 印刷 p.52 ===
+ Check Function Calls in VS 2017             중요!
+
+
+
+
+
+      2)그호출스택에포함된메모리의                                                         1)다른호출스택을더블클릭하면
+    상태를보여줍니다.
+
+
+
+
+
+강의자료무단배포금지                                                                                                               52
+문의사항: hk.kim@jbnu.ac.kr  || diskhkme@gmail.com
+
+=== L03 | PDF p.53 | 印刷 p.53 ===
+ (Summary) Functions
+
+ 정의
+
+ 프로토타입
+
+ 매개변수(parameter)와pass-by-value☆
+
+ return문
+
+ 기본인수(default argument)
+
+ 오버로딩☆
+
+ 함수호출의동작방식☆
+
+ 포인터와참조자☆
+
+  inline 함수
+
+ 재귀함수(recursive)
+
+
+
+강의자료무단배포금지                                                                                                               53
+문의사항: hk.kim@jbnu.ac.kr  || diskhkme@gmail.com
+
+=== L03 | PDF p.54 | 印刷 p.54 ===
+ Pointer & Reference                    중요!
+
+ 범위밖메모리의조작
+
+    Func2()를실행중일때, main() 및Func1()의지역
+                                      스택메모리
+   변수들에대한접근은불가능한것일까?
+
+    No. 하지만이런접근이가능하려면다른타입의변수를                                          Func2()내에서                                                                                             Func1()의지역변수
+                                                                  b값을조작하고
+   사용해야함                                                                                           Int z        20    싶다면?
+                                                                                                                           Int y        10
+            1. 포인터: 메모리주소값을갖는변수                                                    Int x        60    …
+                                                                             Func2()
+                                                                                                                        Int result      30     0x1000 – 20            2. 참조자: 변수에또다른이름(별명)을부여
+                                                                                                                           Int b        20     0x1000 – 16
+                                                                                                                           Int a        10     0x1000 – 12   정확한내용은다음강의에서설명하지만, 우선소개                                                                             Func1()
+                                                                                                                           Int z       CC     0x1000 – 8
+                                                                                                                           Int y        20     0x1000 – 4
+                                                                                                                           Int x        10     0x1000
+                                                                           Main()
+                                                                           …
+
+
+강의자료무단배포금지                                                                                                               54
+문의사항: hk.kim@jbnu.ac.kr  || diskhkme@gmail.com
+
+=== L03 | PDF p.55 | 印刷 p.55 ===
+ Pass-by-address                       중요!
+
+ 포인터를함수로전달하는예시
+
+  주소값을명시하는포인터를활용하여범위밖메모리에접근할수있음
+
+
+
+
+
+                                                      *number는main()의지역
+                                                        변수이지만ChangeValue()
+                                 함수를통해값이바뀌었음
+
+                                              즉,ChangeValue함수는
+                                 자신의범위밖에변수에
+                                      접근한것.
+
+
+
+
+
+강의자료무단배포금지                                                                                                               55
+문의사항: hk.kim@jbnu.ac.kr  || diskhkme@gmail.com
+
+=== L03 | PDF p.56 | 印刷 p.56 ===
+ Pass-by-reference                      중요!
+
+ 참조자로전달
+
+  함수내에서범위밖변수값을바꾸고싶은경우사용하는또다른방법
+
+     값의변환을위해서는매개변수의주소값(포인터)가필요
+
+   배열이아닌경우에도C++에서는참조자(reference)를통해가능
+
+      C 언어를사용한다면포인터를사용할수밖에없음
+
+     C++에서는포인터또는참조자두가지옵션이존재
+
+   형식매개변수를실제매개변수의별명처럼사용하는개념
+
+
+
+
+
+강의자료무단배포금지                                                                                                               56
+문의사항: hk.kim@jbnu.ac.kr  || diskhkme@gmail.com
+
+=== L03 | PDF p.57 | 印刷 p.57 ===
+ Pass-by-reference
+
+ 참조자
+
+   & 기호사용
+
+
+
+
+
+                                                      *numbers는main()의지역
+                                                      변수이지만ScaleNumber()
+                                   함수를통해값이바뀌었음!
+
+
+
+
+
+강의자료무단배포금지                                                                                                               57
+문의사항: hk.kim@jbnu.ac.kr  || diskhkme@gmail.com
+
+=== L03 | PDF p.58 | 印刷 p.58 ===
+ Pass-by-reference
+
+ 참조자
+
+    Swap 예제
+
+
+
+
+
+강의자료무단배포금지                                                                                                               58
+문의사항: hk.kim@jbnu.ac.kr  || diskhkme@gmail.com
+
+=== L03 | PDF p.59 | 印刷 p.59 ===
+ Pass-by-reference              고급
+
+                                                             꼭알아두어야하는내용이지만,
+                                                         지금은참조자에대해자세히 참조자                                                설명하지않았기때문에일단
+                                                                고급으로분류합니다.
+   참조자를사용하지않는경우에는print를위해메모리두배사용
+
+   참조자를사용하되, 값의변경이필요없을시에는const로안정성확보
+
+
+
+
+
+강의자료무단배포금지                                                                                                               59
+문의사항: hk.kim@jbnu.ac.kr  || diskhkme@gmail.com
+
+=== L03 | PDF p.60 | 印刷 p.60 ===
+ (Summary) Functions
+
+ 정의
+
+ 프로토타입
+
+ 매개변수(parameter)와pass-by-value☆
+
+ return문
+
+ 기본인수(default argument)
+
+ 오버로딩☆
+
+ 함수호출의동작방식☆
+
+ 배열의전달과pass-by-reference ☆
+
+  inline 함수
+
+ 재귀함수(recursive)
+
+
+
+강의자료무단배포금지                                                                                                               60
+문의사항: hk.kim@jbnu.ac.kr  || diskhkme@gmail.com
+
+=== L03 | PDF p.61 | 印刷 p.61 ===
+ inline function
+
+ inline 함수
+
+  함수의호출에는어느정도오버헤드가존재
+
+          Activation stack 생성, 파라메터처리, pop stack, 리턴값처리…
+
+   함수를inline으로정의하면컴파일단계에서함수내의명령문으로함수호출이대체
+
+     일반적인함수호출보다빠름
+
+       단, 바이너리파일의용량이커질수있음
+
+     내가명시하지않아도컴파일러에서최적화를위해내부적으로알아서처리하기도함
+
+
+
+
+
+강의자료무단배포금지                                                                                                               61
+문의사항: hk.kim@jbnu.ac.kr  || diskhkme@gmail.com
+
+=== L03 | PDF p.62 | 印刷 p.62 ===
+ (Summary) Functions
+
+ 정의
+
+ 프로토타입
+
+ 매개변수(parameter)와pass-by-value☆
+
+ return문
+
+ 기본인수(default argument)
+
+ 오버로딩☆
+
+ 함수호출의동작방식☆
+
+ 배열의전달과pass-by-reference ☆
+
+  inline 함수
+
+ 재귀함수(recursive)
+
+
+
+강의자료무단배포금지                                                                                                               62
+문의사항: hk.kim@jbnu.ac.kr  || diskhkme@gmail.com
+
+=== L03 | PDF p.63 | 印刷 p.63 ===
+ Recursive Function
+
+ 재귀함수
+
+   스스로를호출하는함수
+
+      Factorial
+
+     재귀호출을끝내는base case가반드시실행되어야함(stack overflow 주의!)
+
+
+
+
+
+강의자료무단배포금지                                                                                                               63
+문의사항: hk.kim@jbnu.ac.kr  || diskhkme@gmail.com
+
+=== L03 | PDF p.64 | 印刷 p.64 ===
+ (Summary) Functions
+
+ 정의(모듈화, 이름+매개변수+본문+리턴)
+
+ 프로토타입(호출전에컴파일러가함수의인자와반환형을알수있도록)
+
+  매개변수(parameter)와pass-by-value (인자는복사하여전달된다)
+
+  Return문
+
+  기본인자(default argument) (기본값, 오른쪽부터선언해준다)
+
+ 오버로딩(동일이름, 유사동작, 다른타입)
+
+ 함수호출동작방식
+
+         1.  함수를호출하면? 구분선이생김
+         2.  구분선안에는? 지역변수공간(매개변수포함)
+         3.  함수가끝나면? 자동으로사라짐
+
+ 포인터와참조자(원래는접근할수없는다른메모리영역의변수를변환하고싶을때사용)
+
+  inline 함수
+
+  재귀함수(recursive)
+강의자료무단배포금지                                                                                                               64
+문의사항: hk.kim@jbnu.ac.kr  || diskhkme@gmail.com
+
+=== L03 | PDF p.65 | 印刷 p.65 ===
+추가슬라이드
+
+
+
+
+
+                                                                                                                         65
+
+=== L03 | PDF p.66 | 印刷 p.66 ===
+ Multiple Return Values
+
+ 참조자/포인터를인자로전달
+
+  인자의전달에복사비용이적어효율적
+
+ 같은타입인경우배열(std 배열, vector 등)을활용
+
+  std::tuple 활용
+
+      Std::make_pair(), std::get()
+
+  struct/class 활용
+
+
+
+
+
+강의자료무단배포금지                                                                                                               66
+문의사항: hk.kim@jbnu.ac.kr  || diskhkme@gmail.com
+
+=== L03 | PDF p.67 | 印刷 p.67 ===
+ Memory Layout Additions
+
+  Release 모드에서컴파일하면지역변수들이연속된메모리공간에할당되나, 디버그모드에서컴
+  파일하면, 중간중간에공백이존재함
+
+
+
+
+ 스택프레임에는지역변수, 인자이외에반환주소값등이포함됨
+
+       http://tcpschool.com/c/c_memory_stackframe
+
+       http://www.cs.uwm.edu/classes/cs315/Bacon/Lecture/HTML/ch10s07.html
+
+
+
+
+
+강의자료무단배포금지                                                                                                               67
+문의사항: hk.kim@jbnu.ac.kr  || diskhkme@gmail.com

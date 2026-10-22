@@ -1,0 +1,51 @@
+// 위상 순서를 생성
+while (!is-envty(&s)) {
+printf("정점 9년 -)", 미; // 정점 출력
+: g->adj-list[w]; //각 정점의 진입 차수를 변경
+vhile (node != NULL) {
+int u = ncxie—>vertex;
+in-degree[u]-
+if (in-degree[u)
+: ruie-〉link;
+free(in-degree) ;
+printf("\n");
+return (i == g->n);
+// 진입 차수를 김소
+= 0) push(&s, 바;
+// 다음 정점
+// 반환값이 1이면 성공, 0이면 실패
+int main(void)
+GraphType g;
+graph-init(&g);
+그 nsert_vertex (&g,
+insert_vertex(&g,
+i nsert_vertex (&g ,
+1 nsert_vertex (&g,
+i nsert_vertex (&g ,
+i nsert_vertex (&g ,
+0);
+1);
+2);
+3);
+4);
+5);
+// 정점 0의 인접 리스트 생성
+insert_edge(&g, 0, 2);
+insert-edge(&g, 0, 3);
+// 정점 1의 인접 리스트 생성
+insert_edge(&g, 1, 3);
+-edge(&g, 1, 4);
+// 정점 2의 인접 리스트 생성
+-edge(&g, 2, 3);
+nnsert
+-edge(&g, 2, 5);
+// 정점 3의 인접 리스트 생성
+-edge(&g, 3, 5);
+// 정점 4의 인접 리스트 생성
+—edge(&g, 4, 5);
+1 nsert
+// 위상 정릴
+topo—sort(&g) ;
+// 동적 메모리 반환 코드 생략
+return 0;
+436 C언어로 쉽게 물어쓴 자료구조

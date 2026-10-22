@@ -1,0 +1,23 @@
+2. reduce-task 구조체를 다음과 같이 구현합니다.
+template〈typename KeyType〉
+struct reduce task : public mapreduce::reduce_task<KeyType, unsigned>
+using typename mapreduce: :reduce task<KeyType, unsigned>: :key_type;
+template〈typename Runtime, typename lt〉
+void operator()(Runtime& runtime, key—type const& key, lt it, lt const ite) const
+runtime.emit(key, std::accumulate(it, ite, 0));
+맵 함수에서 생성된 모든 〈key, value〉 쌍에 리듀스 작업을 수행할 수 있습니다. 앞에서 value 값
+을 1로 설정했으-므로 std: :accumulate() 함수를 시용하여 입력 쌍에서 key에 해당하는 단어가 나
+타나는 총 횟수를 구할 수 있습니다
+-띤드 STRUCTUR ES & ALGO R T HMS ?耳•
+A.5
+5장 그리디 알고리즘
+A.5.1 실습 문제 11: 작업 스케줄링 문제
+이번 실습 문제에서는 완료할 수 있는 작업 개수를 최대로 만드는 최적의 작업 스게수을 구해보겠
+습니다. 다음과 같은 순서로 실습 문제 솔루션을 작성하세요.
+1. 필요한 헤더 파일을 포함하고, 작업 표현을 위한 구조체를 정의합니다.
+#include <list〉
+#include 〈algorithm〉
+#include 〈iostream〉
+#include 〈random〉
+// 모든 작업은 ID와 〈시작 시간, 종료 시간〉 쌍으로 표한4됨
+struct Task

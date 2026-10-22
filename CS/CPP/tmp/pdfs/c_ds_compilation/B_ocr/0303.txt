@@ -1,0 +1,57 @@
+%장 /RedBIackTree/Test—RedBIackTree. (
+01
+02
+03
+05
+07
+09
+10
+12
+13
+14
+16
+17
+20
+22
+23
+24
+25
+26
+27
+28
+29
+30
+32
+33
+34
+35
+36
+37
+•include "RedB1ackTree.h•
+RBTNode• NiI;
+int main( void )
+RBTNode* Tree = NULL;
+NOde = WLL;
+Nil
+NiI-Xolor
+= BLACK;
+while ( 1 )
+int (馝
+int param = 0;
+char buffer[l이;
+printf("Enter command number :Ⅵ“);
+printf("(l) Create a node, (2) Remove a node, (3) Search a Node\n");
+printf("(4) Disp1ay Tree (5) quit\n");
+printf("conmand number:");
+fgets(buffer, sizeof(buffer)-l, stdin);
+sscanf(buffer, &•cmd ):
+if(cmd<l ::cmd>5)
+printf("lnvalid command number \n");
+continue;
+else if ( cmd == 4 )
+RBT_PrintTree( Tree, 0, 0 );
+printf( “\心);
+continue;
+else if ( (馝 == 5 )
+298
+Part 02 • 일고리증

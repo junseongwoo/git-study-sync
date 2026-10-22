@@ -1,0 +1,21 @@
+- 11ij1, DPlilIei - 11);
+7. 알고리즘이 모두 두하한 후. 최창 공통 서-분 시원스의 길이는 DPlA.size())IB.size()l를 참
+조하여 알 수 있습니다. 지금까지 설명한 소스 코-드를 모아 LCS-Tabulation() 함수를 완성하
+면 다음과 같습니다.
+string LCS-TabJIation(stnng 치 string 8)
+vector<vector<int〉〉 DP(A.size() + 1, vector<int>(B.size() + 1));
+for (int i i 〈= A.size(); i++)
+for (int j =€; 〈= B.size(); j++)
+DP[il[ä] =0;
+else if(A[i - 1] == B[j - 11)
+-11+1;
+else
+DPlil[jl =max(DP[i - l][j], DP[i][j - 1]);
+int length
+= DP[A.size()][B.size()];
+지금까지 최장 공통 부분 시퀀스의 길이를 구하는 몇 가지 방법을 소개했지만 만약 실제 시퀀
+스(문자열)를 출력하고 싶다면 어떻게 해야 할까요? 물론 전수 조사 방식은 최장 공통 시
+권스 자체를 출력할 수 있지만, 너무 비효율적입니다. 다행히도 앞서 구한 DP 테이블에 대해
+백트래킹을 수행함으로써 최장 공통 부분 시권스를 쉽게 구할 수 있습니다. 다음 그림은 DP
+테이블에서 최장 공통 부분 시퀀스를 구하기 위해 역으로 이동하는 경로를 표현한 것입니다.
+520

@@ -1,0 +1,33 @@
+4.62 연습 문제 22: C++ 표준 라이브러리를 이용하여 맵과 리듀스 구현하기
+이번 연습 문제에서는 맵과 리듀스 연산을 이해하기 위한 예제 코드를 작성해보겠습니다.
+1. 필요한 헤더 파일을 포함합니다
+#include 〈iostream〉
+#include 〈vector〉
+#include 〈algorithm〉
+#include 〈numeric〉
+#include 〈cmath>
+2. 맵 연산 테스트 함수를 작성합니다 여기서는f(9 = 구 함수를 시용하여 인자로 넘어온 벡터
+의 모든 원소를 제곱합니다.
+VOid transform_test(std: :vector〈int〉 5)
+std.
+• :vector<int〉 Tr;
+:cout 〈〈 "[맵 테스트]" 〈〈 std::endl;
+std:
+std::cout 〈〈 "입력 배열, 5:
+for (aut0 i : 5)
+std::cout 〈〈 i 〈〈 "
+std: :cout 〈〈 std: :endl;
+// std::transform() 함수 사용
+std: :transform(S.begin(), S.end(), std: :back_inserter(Tr),
+[](int x) { return std::pow(x, 2.0); });
+std::cout 〈〈 "std::transform(), Tr:
+for (aut0 i : Tr)
+std::cout 〈〈 i 〈〈 •
+std: :c0Ut 〈〈 std: :endl;
+// std::for-each() 함수 사용
+std: :for—each(S.begin(), S.end(),
+std::cout 〈〈 "std::for-each(), S:
+for (auto i : S)
+std::cout 〈〈 i 〈〈 •
+std: :cout 〈〈 std: :endl;
+192

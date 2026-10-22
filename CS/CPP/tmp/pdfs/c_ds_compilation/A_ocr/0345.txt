@@ -1,0 +1,32 @@
+// 한 단계 아래로 이동
+h-〉heap[parent) = h->heap(chitdJ;
+parent = child;
+child 출= 2;
+h->heap[parent] = t에鬱;
+return 1
+// 이진 트리 생성 함수
+TreeNode* make tree(TreeNode* left, TreeNode* right)
+TreeNode* ncxie
+(TreeNode*)maIloc (si zeof(TreeNode) ) ;
+node->left = left;
+node->right = right;
+return
+// 이진 트리 제거 함수
+void destroy_tree(TreeNode* root)
+if (root == NULL) return;
+destroy-tree(root->left) ;
+destroy_tree ( root->ri ght) ;
+free(root) ;
+int is Ieaf(TreeNode* root)
+return !(root->left)
+void print_array(int codes[], int n)
+for (int i = 0; 〈 n; 5++)
+printf("%d", codes[i));
+printf("\n") ;
+void print_codes(TreeNode* root, int codes[], int top)
+// 1을 저장하고 순환호출한다.
+if (root->teft) {
+codes[top]
+print codes(root—〉left, codes, top + 1)•,
+CHAPTERJ9 우선순위 큐
+353

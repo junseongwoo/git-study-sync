@@ -1,0 +1,37 @@
+312
+전체 소스를 프로그램 8.14에 보였다. 각종 인신에서 1편경된 하,그분은 붉은색으로 표시하있다.
+프로그램 8.14 이진 탐색 트리를 이용한 영어 사전 프로그램
+// 이진 탐색 트리를 사용한 영어 사전
+ginclude <stdio.h>
+#include «stdlib.h>
+#include <String.h>
+#inctude <rnemry.h>
+#define MAX_WORD_SIZE 1㈘
+#define 卜汃x-卜IEANING_SIZE 200
+// 데이터 형식
+typedef struct {
+// 기필드
+char vord[卜IAX_WORD_SIZEJ ;
+char meaning[MAX_MEANING_SIZE] •,
+} ele«ent;
+// 노드의 구조
+typedef struct TreeNode {
+element key;
+TreeNode *teft, *right;
+// 만약 el ( e2 이면 -1 반환
+// 만약 el == e2 이면 0 반환
+// 만약 el > e2 이면 1 반환
+int catpare(element el, element e2)
+return strcmp(el.word, e2.word) ;
+// 이진 탐색 트리 출력 함수
+void display(TreeN0de * p)
+if (p != NULL) {
+printf("(");
+di (p->left) ;
+printf("%s:%s", p->key•word, p->key•meaning);
+di splay(p->right) ;
+printf(")");
+// 이진 탐색 트리 탐색 함수
+TreeNode * search(TreeNode * root, element key)
+TreeNode * p = root;
+C언어로 쉽게 풀어쓴 자료구조

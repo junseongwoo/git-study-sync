@@ -1,0 +1,38 @@
+그림 5-3 평균 대기 시간을 최소로 만들기 위한 대기일 순서
+평균 대기 시간 = 8.875
+,4i
+1
+0
+2
+1
+2
+3
+3
+5
+4 5
+8 12
+8
+17
+9
+25
+처음 대기일 순서에서는 평균 대기 시간이 15.25였지만, 대기열 순서를 조정한 후에는 평균 대기
+시간이 8.875로 줄어들었습니다. 이는 거의 두 배로 성능이 향상된 것으로 볼 수 있습니다.
+52.2 연습 문제 24: 최단 작업 우선 스케줄링
+이번 연습 문제에서는 앞서 설명한 최단 작업 우선 스케줄링 문제를 구현해보겠습니다. 그림 5-2
+와 같은 대기열이 있고, 이때 평균 대기 시간을 최소화하는 방법을 찾으려고 합니다.
+1. 필요한 헤더 파일을 추가하고, 평균 대기 시간 계산 및 출력 함수를 추가합니다.
+#include <iostream〉
+#include 〈vector〉
+#include 〈algorithm〉
+#include <numeric〉
+template〈typename T>
+autO compute_waiting_times(std: :vector<T>& service_times)
+std: :vector〈丁〉 W(service times.size());
+for (autO i = 1 ; i 〈 service_times.size(); i十十)
+w[i] = w[i - 1] + service—times[i - 1];
+return W;
+template〈typename T>
+VOid print—vector(std: :vector<T>& V)
+for (auto&i : V) {
+1
+0)

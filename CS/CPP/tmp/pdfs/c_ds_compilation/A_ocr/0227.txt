@@ -1,0 +1,36 @@
+// 노드 renmedß 스t제한다.
+void ddelete(DListN0de• head, DListNode• remved)
+if (remved == head) return;
+remved->llink->rlink = remved->rlink;
+remved->rlink->llink = remved->ltink;
+free(remved) ;
+// 이중 연결 리스트 테스트 프로그램
+int main(void)
+DListNodet head = (DListN0de *)malloc(sizeof(DListN0de));
+init(head) ;
+printf("추가 단계\n");
+for (int = 0; 5 〈 5; i++) {
+// 헤드 노드의 오른쪽에 삽입
+dinsert(head, 9;
+print_dlist(head) ;
+printf("\næ»제 단계\n");
+for (int = 0; 5 〈 5; i++) {
+(head) •,
+ddelete(head, head->rlink) ;
+free(head) ;
+return 0;
+위의 프로그램의 출력은 다음과 같다.
+실행결과
+추가 단계
+〈리 l이
+〈의 lll l-> 〈리 삐 |-〉
+〈리 |기
+〈의 121 |-) 〈의 lll |-〉 〈리 |이 |-〉
+〈리 131
+삭제 단계
+(리 141
+〈의 131
+〈의 lll l-> 〈-1 |이 |-〉
+〈리 |기
+〈리 |이
+CHAPTER07 연결 리스다 235

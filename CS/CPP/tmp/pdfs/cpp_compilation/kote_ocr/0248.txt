@@ -1,0 +1,36 @@
+5. main() 함수에서는 그래프를 생성하고, DFS 알고리즘을 실행합니다. DFS 알고리즘에서 시
+작 정점은 임의로 1번 정점으로 지정했습니다.
+int main()
+using T = unsigned,
+// 그래프 객체 생성
+autO G = create_reference_graph<T>( );
+cout 〈〈 "[입력 그래프]" 〈〈 endl;
+cout 〈〈 〈〈 endl;
+// 1번 정점부터 DFS 실행 & 방문 순서 출력
+cout 〈〈 "[DFS 방문 순서]" 〈〈 endl;
+autO dfs visit-order = depth_first—search(G, 1);
+for (auto v : dfs visit order)
+cout 〈〈 v 〈〈 endl;
+6. 지금까지 작성한 프로그램을 실행하면 다음과 같은 출력을 확인할 수 있습니다.
+[입력 그래프]
+{2: 0}, {5: 0},
+2:
+3:
+4:
+{1: 0}, {2: 0}, {4: 0}, {8: 0},
+5:
+{4: 0}, {7: 0}, {8: 0},
+6:
+7:
+8:
+[DFS 방문 순서]
+1
+5
+8
+6
+7
+3
+4
+2
+앞서 구현한 DFS에 의한 그래프 정점 방문 순서를 그림 6-13에 나타냈습니다.
+259

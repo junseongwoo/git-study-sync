@@ -1,0 +1,26 @@
+double average = 0;
+int count = 0;
+for (int j j 〈G.V; j*+)
+if (i ==j shortest[jl == UNKNOWN)
+continue;
+shortest(jl += (distance(jl - distance[il);
+average 十= shortest(jl;
+count十十;
+average = average / count;
+result 十= average;
+result = result / G.V;
+11. 마지막으로 result와 최대 가중치의 비율을 계산합니다. 만약 이 비율이 0.5보다 작으면
+INTERESTING을 반환합니다. 그렇지 않으면 VA니D를 반환합니다.
+double ratio = result / G.maxWeight;
+return (ratio 〈 0.5) ? INTERESTING : VA니D;
+12. 다시 main() 함수로 돌아와서 결과를 출력하겠습니다. 이 프로그램은 첫 번째 줄에 유효
+하지 않은 그래프 개수를 출력해야 하므로 invalid 변수 값을 출력합니다. 두 번째 줄에는
+interesting / valid 값에 100을 곱하여 흥미로운 그래프 생성 비율을 퍼센트 단위로 출력합
+니다. 이때 interesting 변수를 실수형으로 형변환하여 계산함으로써 소수점 아래가 잘려나
+가지 않도록 해야 합니다. 화면 출력 시에는 cout 〈〈 fixed 〈〈 setprecision(2) 코드를 이용
+하여 흥미로운 그래프 생성 비을을 소수점 두 번째 자리까지만 출력하도록 합니다.
+double percentlnteresting = (double)interesting / valid * 100;
+cout 〈〈 "유효하지 않은 그래프 개수: " 〈〈 invalid 〈〈 endl;
+cout 〈〈 "흥미로운 그래프 생성 비율: '| 〈〈 fixed 〈〈 setprecision(2) 〈〈 percentlnteresting
+return 0;
+袋1

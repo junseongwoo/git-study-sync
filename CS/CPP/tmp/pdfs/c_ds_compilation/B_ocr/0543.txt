@@ -1,0 +1,47 @@
+다음은 분할 정복으로 피보나치 수를 구하는 알고리즘이 담긴 예제 프로그램입니다.
+12 e/FibonacciDnC/FibonacciDnC. (
+01
+02
+03
+04
+05
+07
+08
+10
+12
+13
+14
+17
+20
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+#include <stdi이h>
+typedef unsigned 10四 ULONG;
+typedef Struct tagMatrix2x2
+ULONG Data[21[기;
+} Matrix2x2;
+Matrix2x2 Matrix2x2 Mu1tip1y(Matrix2x2 치 Matrix2x2 8)
+Matrix2x2 (:
+C.Data[이[0] = A.Data[이[이*B.Data[@l[@l + A.Data[이[II*B Data[11101;
+C.Data[@][11 = A.Data[이[01*B.Data[1][@l + A.Data[@l[11*B.Data[11[11;
+C.Data[1][01 = A.Data[11[0)*B.Data[이[이 + A.Data[11111*B.Data[11[이,•
+C.Data[11[11 = A.Data[1][이*B.Data[11[이 + A.Data[1)[11*B.Data[11[11;
+return (:
+Matrix2x2 Matrix2x2-Power(Matrix2x2 시 int n)
+if( 01)
+A = Matrix2x2-Power( 시 n/2 ),•
+A = Matrix2x2 Mu1tipIy( 시 A );
+if(n&l)
+Matrix2x2 8,
+B.Data[이[이 = 1: DataI@l[11
+Chapter 12• 분할 정복 543

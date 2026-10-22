@@ -1,0 +1,4415 @@
+{
+  "stats": [
+    {
+      "unit": 1,
+      "core": 34,
+      "items": 60,
+      "evidence_misses": 0,
+      "unchecked_K": []
+    },
+    {
+      "unit": 2,
+      "core": 33,
+      "items": 56,
+      "evidence_misses": 0,
+      "unchecked_K": []
+    },
+    {
+      "unit": 3,
+      "core": 38,
+      "items": 57,
+      "evidence_misses": 1,
+      "unchecked_K": []
+    },
+    {
+      "unit": 4,
+      "core": 35,
+      "items": 60,
+      "evidence_misses": 3,
+      "unchecked_K": []
+    },
+    {
+      "unit": 5,
+      "core": 34,
+      "items": 56,
+      "evidence_misses": 4,
+      "unchecked_K": []
+    },
+    {
+      "unit": 6,
+      "core": 29,
+      "items": 52,
+      "evidence_misses": 0,
+      "unchecked_K": []
+    },
+    {
+      "unit": 7,
+      "core": 29,
+      "items": 45,
+      "evidence_misses": 0,
+      "unchecked_K": []
+    },
+    {
+      "unit": 8,
+      "core": 41,
+      "items": 60,
+      "evidence_misses": 4,
+      "unchecked_K": []
+    },
+    {
+      "unit": 9,
+      "core": 22,
+      "items": 35,
+      "evidence_misses": 0,
+      "unchecked_K": []
+    },
+    {
+      "unit": 10,
+      "core": 26,
+      "items": 42,
+      "evidence_misses": 0,
+      "unchecked_K": []
+    },
+    {
+      "unit": 11,
+      "core": 30,
+      "items": 46,
+      "evidence_misses": 0,
+      "unchecked_K": []
+    },
+    {
+      "unit": 12,
+      "core": 39,
+      "items": 51,
+      "evidence_misses": 0,
+      "unchecked_K": []
+    },
+    {
+      "unit": 13,
+      "core": 31,
+      "items": 38,
+      "evidence_misses": 0,
+      "unchecked_K": []
+    },
+    {
+      "unit": 14,
+      "core": 39,
+      "items": 49,
+      "evidence_misses": 0,
+      "unchecked_K": []
+    },
+    {
+      "unit": 15,
+      "core": 31,
+      "items": 42,
+      "evidence_misses": 0,
+      "unchecked_K": []
+    },
+    {
+      "unit": 16,
+      "core": 30,
+      "items": 53,
+      "evidence_misses": 32,
+      "unchecked_K": []
+    },
+    {
+      "unit": 17,
+      "core": 25,
+      "items": 50,
+      "evidence_misses": 21,
+      "unchecked_K": []
+    },
+    {
+      "unit": 18,
+      "core": 26,
+      "items": 49,
+      "evidence_misses": 31,
+      "unchecked_K": []
+    },
+    {
+      "unit": 19,
+      "core": 26,
+      "items": 45,
+      "evidence_misses": 25,
+      "unchecked_K": []
+    },
+    {
+      "unit": 20,
+      "core": 24,
+      "items": 50,
+      "evidence_misses": 18,
+      "unchecked_K": []
+    },
+    {
+      "unit": 21,
+      "core": 24,
+      "items": 56,
+      "evidence_misses": 30,
+      "unchecked_K": []
+    },
+    {
+      "unit": 22,
+      "core": 29,
+      "items": 47,
+      "evidence_misses": 25,
+      "unchecked_K": []
+    },
+    {
+      "unit": 23,
+      "core": 26,
+      "items": 48,
+      "evidence_misses": 21,
+      "unchecked_K": []
+    },
+    {
+      "unit": 24,
+      "core": 24,
+      "items": 46,
+      "evidence_misses": 23,
+      "unchecked_K": []
+    },
+    {
+      "unit": 25,
+      "core": 38,
+      "items": 55,
+      "evidence_misses": 42,
+      "unchecked_K": []
+    }
+  ],
+  "evidence_review": [
+    {
+      "unit": 3,
+      "location": ".review[0].answer",
+      "text": "클래스는 객체 생성의 틀이자 사용자 정의 자료형이고, 객체는 클래스로부터 생성된 실체이다.",
+      "evidence": "객체가생성되기위한틀 / 사용자정의 / 클래스로부터생성된실체",
+      "refs": [
+        {
+          "source": "L05A",
+          "section": "Classes and Objects",
+          "pages": [
+            14,
+            15
+          ]
+        }
+      ]
+    },
+    {
+      "unit": 4,
+      "location": ".concepts[3].items[0]",
+      "text": "오버라이드할 기본 클래스의 함수 앞에 virtual을 붙이면 가상함수가 된다.",
+      "evidence": "기본클래스의함수 / virtual로선언 / 가상함수",
+      "refs": [
+        {
+          "source": "L07",
+          "section": "Virtual Function",
+          "pages": [
+            15
+          ]
+        }
+      ]
+    },
+    {
+      "unit": 4,
+      "location": ".concepts[7].items[2]",
+      "text": "같은 차량 예제의 다중 상속 방식은 환경과 동력원에 해당하는 클래스를 함께 상속받는다.",
+      "evidence": "동력원과환경에해당하는클래스를상속 / GasPoweredEngine 과LandVehicle",
+      "refs": [
+        {
+          "source": "B",
+          "section": "7장·다중 상속은 언제 사용해야 할까?",
+          "pages": [
+            343,
+            344
+          ]
+        }
+      ]
+    },
+    {
+      "unit": 4,
+      "location": ".procedures[1].steps[2]",
+      "text": "실행 시 실제 객체의 가상함수 테이블을 참조하여 오버라이드된 함수를 호출한다.",
+      "evidence": "Child 객체의가상함수테이블 / Child::func1() 을호출",
+      "refs": [
+        {
+          "source": "B",
+          "section": "7장·가상 함수의 구현 원리",
+          "pages": [
+            333,
+            334
+          ]
+        }
+      ]
+    },
+    {
+      "unit": 5,
+      "location": ".concepts[1].items[0]",
+      "text": "멤버함수 방식의 이항 연산자는 왼쪽 객체의 operator 함수에 오른쪽 객체를 인자로 넘긴다.",
+      "evidence": "왼쪽에있는객체(p1)의멤버함수 / 오른쪽객체(p2)를인자로",
+      "refs": [
+        {
+          "source": "L08",
+          "section": "Binary operator, as Member Function",
+          "pages": [
+            14
+          ]
+        }
+      ]
+    },
+    {
+      "unit": 5,
+      "location": ".concepts[1].items[3]",
+      "text": "friend로 선언한 전역 연산자 함수는 클래스의 private 멤버에 접근할 수 있다.",
+      "evidence": "xpos와ypos에쉽게접근하기위해friend선언",
+      "refs": [
+        {
+          "source": "L08",
+          "section": "Binary operator, as Global Function",
+          "pages": [
+            23
+          ]
+        }
+      ]
+    },
+    {
+      "unit": 5,
+      "location": ".comparisons[0].rows[0][1]",
+      "text": "멤버함수 방식의 이항 연산자는 왼쪽 객체의 operator 함수에 오른쪽 객체를 인자로 넘긴다.",
+      "evidence": "왼쪽에있는객체(p1)의멤버함수 / 오른쪽객체(p2)를인자로",
+      "refs": [
+        {
+          "source": "L08",
+          "section": "Binary operator, as Member Function",
+          "pages": [
+            14
+          ]
+        }
+      ]
+    },
+    {
+      "unit": 5,
+      "location": ".terms[1].definition",
+      "text": "멤버함수 방식의 이항 연산자는 왼쪽 객체의 operator 함수에 오른쪽 객체를 인자로 넘긴다.",
+      "evidence": "왼쪽에있는객체(p1)의멤버함수 / 오른쪽객체(p2)를인자로",
+      "refs": [
+        {
+          "source": "L08",
+          "section": "Binary operator, as Member Function",
+          "pages": [
+            14
+          ]
+        }
+      ]
+    },
+    {
+      "unit": 8,
+      "location": ".comparisons[0].rows[0][1]",
+      "text": "연속 저장; 임의 접근 O(1); 임의 위치 추가·제거 O(n)",
+      "evidence": "연속 저장",
+      "refs": [
+        {
+          "source": "B",
+          "section": "벡터(std::vector)",
+          "pages": [
+            500,
+            505
+          ]
+        }
+      ]
+    },
+    {
+      "unit": 8,
+      "location": ".comparisons[0].rows[2][1]",
+      "text": "양 끝 추가·제거 O(1); 임의 접근 O(1); 임의 위치 추가·제거 O(n)",
+      "evidence": "양 끝 추가·제거 O(1)",
+      "refs": [
+        {
+          "source": "B",
+          "section": "덱(deque)",
+          "pages": [
+            522
+          ]
+        }
+      ]
+    },
+    {
+      "unit": 8,
+      "location": ".cheat.comparison_rows[0][1]",
+      "text": "연속 저장; 임의 접근 O(1); 임의 위치 추가·제거 O(n)",
+      "evidence": "연속 저장",
+      "refs": [
+        {
+          "source": "B",
+          "section": "벡터(std::vector)",
+          "pages": [
+            500,
+            505
+          ]
+        }
+      ]
+    },
+    {
+      "unit": 8,
+      "location": ".cheat.comparison_rows[2][1]",
+      "text": "양 끝 추가·제거 O(1); 임의 접근 O(1); 임의 위치 추가·제거 O(n)",
+      "evidence": "양 끝 추가·제거 O(1)",
+      "refs": [
+        {
+          "source": "B",
+          "section": "덱(deque)",
+          "pages": [
+            522
+          ]
+        }
+      ]
+    },
+    {
+      "unit": 16,
+      "location": ".learning[0]",
+      "text": "프로그램에 적합한 자료 구조를 사용하는 것이 얼마나 중요한지 설명한다.",
+      "evidence": "응용 프로그램에 적합한 자료 구조를 사용하는 것이 얼마나 중요한지",
+      "refs": [
+        {
+          "source": "K",
+          "section": "1장 학습 목표",
+          "pages": [
+            11
+          ]
+        }
+      ]
+    },
+    {
+      "unit": 16,
+      "location": ".concepts[0].items[2]",
+      "text": "연속된 자료 구조에서 i번째 원소의 주소는 BA + i * sizeof(type)으로 계산하며 접근 시간은 O(1)이다.",
+      "evidence": "i번째 원소에 접근하려면 BA + i * sizeof(type) 수식을 사용",
+      "refs": [
+        {
+          "source": "K",
+          "section": "1.2.1 연속된 자료 구조",
+          "pages": [
+            13
+          ]
+        }
+      ]
+    },
+    {
+      "unit": 16,
+      "location": ".concepts[0].items[3]",
+      "text": "연결된 자료 구조는 노드라고 하는 여러 메모리 청크에 데이터를 저장한다.",
+      "evidence": "노드(node)라고 하는 여러 개의 메모리 청크에 데이터를 저장",
+      "refs": [
+        {
+          "source": "K",
+          "section": "1.2.2 연결된 자료 구조",
+          "pages": [
+            14
+          ]
+        }
+      ]
+    },
+    {
+      "unit": 16,
+      "location": ".concepts[0].items[4]",
+      "text": "연결 리스트의 노드는 데이터와 다음 노드를 가리키는 next 포인터를 가지며 마지막 노드의 next는 NULL이다.",
+      "evidence": "맨 마지막 노드에서는 ... NULL을 가집니다.",
+      "refs": [
+        {
+          "source": "K",
+          "section": "1.2.2 연결된 자료 구조",
+          "pages": [
+            14
+          ]
+        }
+      ]
+    },
+    {
+      "unit": 16,
+      "location": ".concepts[0].items[5]",
+      "text": "연결 리스트의 원소에 접근하려면 헤드부터 next를 따라 이동하므로 원소 접근은 O(n)이다.",
+      "evidence": "시간 복잡도로 표현하면 O(n)",
+      "refs": [
+        {
+          "source": "K",
+          "section": "1.2.2 연결된 자료 구조",
+          "pages": [
+            14
+          ]
+        }
+      ]
+    },
+    {
+      "unit": 16,
+      "location": ".concepts[1].items[0]",
+      "text": "std::array는 원소 타입과 배열 크기를 매개변수로 사용하는 클래스 템플릿이며 메모리를 자동으로 할당하고 해제한다.",
+      "evidence": "원소의 타입과 배열 크기를 매개변수로 사용하는 클래스 템플릿",
+      "refs": [
+        {
+          "source": "K",
+          "section": "1.3 std::array",
+          "pages": [
+            17
+          ]
+        }
+      ]
+    },
+    {
+      "unit": 16,
+      "location": ".concepts[1].items[4]",
+      "text": "push_back()은 남은 공간이 있으면 O(1), 공간이 부족하여 전체 원소를 복사·이동하면 O(n)이며 평균 시간 복잡도는 O(1)에 가깝다.",
+      "evidence": "평균 시간 복잡도는 O(1)에 가깝습니다.",
+      "refs": [
+        {
+          "source": "K",
+          "section": "1.4.1 std::vector - 가변 크기 배열",
+          "pages": [
+            30
+          ]
+        }
+      ]
+    },
+    {
+      "unit": 16,
+      "location": ".concepts[2].items[1]",
+      "text": "std::forward_list는 push_front()와 insert_after()로 원소를 삽입하며 이들 삽입 함수의 시간 복잡도는 O(1)이다.",
+      "evidence": "시간 복잡도는 O(1)",
+      "refs": [
+        {
+          "source": "K",
+          "section": "1.5.1 std::forward_list에서 원소 삽입과 삭제",
+          "pages": [
+            34
+          ]
+        }
+      ]
+    },
+    {
+      "unit": 16,
+      "location": ".concepts[2].items[2]",
+      "text": "unique()는 인접한 원소끼리 비교하므로 리스트 전체에서 유일한 원소만 남기려면 먼저 정렬한 후 호출한다.",
+      "evidence": "먼저 리스트를 정렬한 후 unique() 함수를 사용",
+      "refs": [
+        {
+          "source": "K",
+          "section": "1.5.2 std::forward_list의 기타 멤버 함수",
+          "pages": [
+            39
+          ]
+        }
+      ]
+    },
+    {
+      "unit": 16,
+      "location": ".concepts[2].items[5]",
+      "text": "std::list는 prev와 next를 가지는 이중 연결 리스트이며 빠른 push_back()과 size()를 지원한다.",
+      "evidence": "이중 연결 리스트(doubly-linked list) 구조",
+      "refs": [
+        {
+          "source": "K",
+          "section": "1.7 std::list",
+          "pages": [
+            48
+          ]
+        }
+      ]
+    },
+    {
+      "unit": 16,
+      "location": ".concepts[2].items[6]",
+      "text": "벡터의 메모리 재할당은 기존 반복자·포인터·참조를 무효화한다.",
+      "evidence": "모든 반복자와 포인터, 참조는 모두 무효화",
+      "refs": [
+        {
+          "source": "K",
+          "section": "1.7.4 반복자 무효화",
+          "pages": [
+            51
+          ]
+        }
+      ]
+    },
+    {
+      "unit": 16,
+      "location": ".concepts[2].items[7]",
+      "text": "std::list와 std::forward_list의 삽입은 반복자의 유효성에 영향을 미치지 않으며 삭제 시에는 삭제된 원소의 반복자가 무효화된다.",
+      "evidence": "삭제되는 원소를 가리키던 반복자는 당연히 무효화",
+      "refs": [
+        {
+          "source": "K",
+          "section": "1.7.4 반복자 무효화",
+          "pages": [
+            51
+          ]
+        }
+      ]
+    },
+    {
+      "unit": 16,
+      "location": ".concepts[3].items[0]",
+      "text": "std::deque은 양방향 큐이며 양 끝의 삽입·삭제와 임의 접근은 O(1), 중간의 삽입·삭제는 O(n)이다.",
+      "evidence": "모든 원소에 대해 임의 접근 동작이 O(1)",
+      "refs": [
+        {
+          "source": "K",
+          "section": "1.8.1 덱의 구조",
+          "pages": [
+            53
+          ]
+        }
+      ]
+    },
+    {
+      "unit": 16,
+      "location": ".concepts[3].items[2]",
+      "text": "스택은 LIFO(Last In First Out, 후입선출) 구조이며 한쪽 끝에서만 데이터 삽입·삭제를 수행한다.",
+      "evidence": "LIFO(Last In First Out, 후입선출)",
+      "refs": [
+        {
+          "source": "K",
+          "section": "1.9 컨테이너 어댑터",
+          "pages": [
+            56
+          ]
+        }
+      ]
+    },
+    {
+      "unit": 16,
+      "location": ".concepts[3].items[3]",
+      "text": "std::queue는 FIFO(First In First Out, 선입선출) 구조이고 std::deque을 기본 컨테이너로 사용한다.",
+      "evidence": "FIFO(First In First Out, 선입선출)",
+      "refs": [
+        {
+          "source": "K",
+          "section": "1.9.2 std::queue",
+          "pages": [
+            58
+          ]
+        }
+      ]
+    },
+    {
+      "unit": 16,
+      "location": ".concepts[3].items[4]",
+      "text": "std::priority_queue는 기본적으로 std::vector와 std::less를 사용하며 최대 힙으로 생성된다.",
+      "evidence": "기본적으로는 최대 힙(max heap)",
+      "refs": [
+        {
+          "source": "K",
+          "section": "1.9.3 std::priority_queue",
+          "pages": [
+            58,
+            59
+          ]
+        }
+      ]
+    },
+    {
+      "unit": 16,
+      "location": ".procedures[0].steps[1]",
+      "text": "새 노드의 next가 다음 노드를 가리키게 한다.",
+      "evidence": "next 포인터가 다음 노드(i = 3)를 가리키게",
+      "refs": [
+        {
+          "source": "K",
+          "section": "1.2.2 연결된 자료 구조",
+          "pages": [
+            15
+          ]
+        }
+      ]
+    },
+    {
+      "unit": 16,
+      "location": ".procedures[0].steps[2]",
+      "text": "이전 노드의 next가 새 노드를 가리키도록 설정한다.",
+      "evidence": "새로운 노드(i = 2)를 가리키도록",
+      "refs": [
+        {
+          "source": "K",
+          "section": "1.2.2 연결된 자료 구조",
+          "pages": [
+            15
+          ]
+        }
+      ]
+    },
+    {
+      "unit": 16,
+      "location": ".syntax[0]",
+      "text": "큐 사용 예제 — 원문 발췌",
+      "evidence": "원문 예제의 q 선언과 push/pop 문장",
+      "refs": [
+        {
+          "source": "K",
+          "section": "1.9.2 std::queue",
+          "pages": [
+            58
+          ]
+        }
+      ]
+    },
+    {
+      "unit": 16,
+      "location": ".comparisons[0].rows[0][1]",
+      "text": "O(1)",
+      "evidence": "O(1)",
+      "refs": [
+        {
+          "source": "K",
+          "section": "1.2.3 비교",
+          "pages": [
+            16
+          ]
+        }
+      ]
+    },
+    {
+      "unit": 16,
+      "location": ".comparisons[0].rows[1][1]",
+      "text": "O(1)",
+      "evidence": "O(1)",
+      "refs": [
+        {
+          "source": "K",
+          "section": "1.2.3 비교",
+          "pages": [
+            16
+          ]
+        }
+      ]
+    },
+    {
+      "unit": 16,
+      "location": ".comparisons[0].rows[1][2]",
+      "text": "O(1)",
+      "evidence": "O(1)",
+      "refs": [
+        {
+          "source": "K",
+          "section": "1.2.3 비교",
+          "pages": [
+            16
+          ]
+        }
+      ]
+    },
+    {
+      "unit": 16,
+      "location": ".comparisons[0].rows[2][2]",
+      "text": "O(1)",
+      "evidence": "O(1)",
+      "refs": [
+        {
+          "source": "K",
+          "section": "1.2.3 비교",
+          "pages": [
+            16
+          ]
+        }
+      ]
+    },
+    {
+      "unit": 16,
+      "location": ".terms[2].definition",
+      "text": "연결 리스트의 노드는 데이터와 다음 노드를 가리키는 next 포인터를 가지며 마지막 노드의 next는 NULL이다.",
+      "evidence": "맨 마지막 노드에서는 ... NULL을 가집니다.",
+      "refs": [
+        {
+          "source": "K",
+          "section": "1.2.2 연결된 자료 구조",
+          "pages": [
+            14
+          ]
+        }
+      ]
+    },
+    {
+      "unit": 16,
+      "location": ".terms[3].definition",
+      "text": "std::array는 원소 타입과 배열 크기를 매개변수로 사용하는 클래스 템플릿이며 메모리를 자동으로 할당하고 해제한다.",
+      "evidence": "원소의 타입과 배열 크기를 매개변수로 사용하는 클래스 템플릿",
+      "refs": [
+        {
+          "source": "K",
+          "section": "1.3 std::array",
+          "pages": [
+            17
+          ]
+        }
+      ]
+    },
+    {
+      "unit": 16,
+      "location": ".terms[6].definition",
+      "text": "스택은 LIFO(Last In First Out, 후입선출) 구조이며 한쪽 끝에서만 데이터 삽입·삭제를 수행한다.",
+      "evidence": "LIFO(Last In First Out, 후입선출)",
+      "refs": [
+        {
+          "source": "K",
+          "section": "1.9 컨테이너 어댑터",
+          "pages": [
+            56
+          ]
+        }
+      ]
+    },
+    {
+      "unit": 16,
+      "location": ".summary[0]",
+      "text": "데이터에 적용할 연산과 사용 빈도에 따라 다양한 자료 구조를 비교한다.",
+      "evidence": "이들 연산의 사용 빈도에 따라 다양한 자료 구조를 비교",
+      "refs": [
+        {
+          "source": "K",
+          "section": "1.11 나가며",
+          "pages": [
+            61
+          ]
+        }
+      ]
+    },
+    {
+      "unit": 16,
+      "location": ".review[0].answer",
+      "text": "연결 리스트의 원소에 접근하려면 헤드부터 next를 따라 이동하므로 원소 접근은 O(n)이다.",
+      "evidence": "시간 복잡도로 표현하면 O(n)",
+      "refs": [
+        {
+          "source": "K",
+          "section": "1.2.2 연결된 자료 구조",
+          "pages": [
+            14
+          ]
+        }
+      ]
+    },
+    {
+      "unit": 16,
+      "location": ".review[2].answer",
+      "text": "벡터의 메모리 재할당은 기존 반복자·포인터·참조를 무효화한다.",
+      "evidence": "모든 반복자와 포인터, 참조는 모두 무효화",
+      "refs": [
+        {
+          "source": "K",
+          "section": "1.7.4 반복자 무효화",
+          "pages": [
+            51
+          ]
+        }
+      ]
+    },
+    {
+      "unit": 16,
+      "location": ".review[3].answer",
+      "text": "std::queue는 FIFO, 스택은 LIFO이다.",
+      "evidence": "LIFO / FIFO",
+      "refs": [
+        {
+          "source": "K",
+          "section": "1.9 컨테이너 어댑터·1.9.2 std::queue",
+          "pages": [
+            56,
+            58
+          ]
+        }
+      ]
+    },
+    {
+      "unit": 16,
+      "location": ".cheat.comparison_rows[0][1]",
+      "text": "LIFO, 한쪽 끝에서 삽입·삭제",
+      "evidence": "LIFO, 한쪽 끝에서 삽입·삭제",
+      "refs": [
+        {
+          "source": "K",
+          "section": "1.9",
+          "pages": [
+            56
+          ]
+        }
+      ]
+    },
+    {
+      "unit": 16,
+      "location": ".cheat.comparison_rows[1][1]",
+      "text": "FIFO, 맨 뒤에 추가·맨 앞에서 제거",
+      "evidence": "FIFO, 맨 뒤에 추가·맨 앞에서 제거",
+      "refs": [
+        {
+          "source": "K",
+          "section": "1.9.2",
+          "pages": [
+            58
+          ]
+        }
+      ]
+    },
+    {
+      "unit": 17,
+      "location": ".learning[0]",
+      "text": "비선형 자료 구조가 필요한 경우를 판별하고 트리 구조를 구현·순회한다.",
+      "evidence": "비선형 자료 구조를 사용해야 하는 경우를 판별",
+      "refs": [
+        {
+          "source": "K",
+          "section": "2장 학습 목표",
+          "pages": [
+            63
+          ]
+        }
+      ]
+    },
+    {
+      "unit": 17,
+      "location": ".learning[1]",
+      "text": "그래프 구조를 구현하고 상황에 맞는 방법으로 그래프를 표현한다.",
+      "evidence": "주어진 상황에 맞게 다양한 방법으로 그래프를 표현",
+      "refs": [
+        {
+          "source": "K",
+          "section": "2장 학습 목표",
+          "pages": [
+            63
+          ]
+        }
+      ]
+    },
+    {
+      "unit": 17,
+      "location": ".concepts[1].items[2]",
+      "text": "BST의 모양은 원소 삽입 순서에 따라 결정되므로 O(log N) 검색이 항상 성립하지는 않는다.",
+      "evidence": "시간 복잡도가 O(log N)이라는 것도 항상 정확하다고 볼 수 없습니다.",
+      "refs": [
+        {
+          "source": "K",
+          "section": "2.4.2 트리 연산의 시간 복잡도",
+          "pages": [
+            78
+          ]
+        }
+      ]
+    },
+    {
+      "unit": 17,
+      "location": ".concepts[1].items[3]",
+      "text": "BST의 레벨 수를 높이(height)라고 하며 원소 검색의 실제 시간 복잡도는 O(높이)이다.",
+      "evidence": "원소 검색의 실제 시간 복잡도는 O(높이)",
+      "refs": [
+        {
+          "source": "K",
+          "section": "2.4.4 균형 트리",
+          "pages": [
+            85
+          ]
+        }
+      ]
+    },
+    {
+      "unit": 17,
+      "location": ".concepts[2].items[0]",
+      "text": "힙은 최대 원소 접근 O(1), 원소 삽입과 최대 원소 삭제 O(log N)을 만족해야 한다.",
+      "evidence": "O(log N): 최대 원소 삭제에 대한 시간 복잡도",
+      "refs": [
+        {
+          "source": "K",
+          "section": "2.5 힙",
+          "pages": [
+            88
+          ]
+        }
+      ]
+    },
+    {
+      "unit": 17,
+      "location": ".concepts[2].items[5]",
+      "text": "힙 생성 알고리즘은 아래쪽 서브 트리부터 위로 올라가며 불변성을 맞추고 O(N) 시간에 힙을 초기화한다.",
+      "evidence": "O(N) 시간에 힙을 초기화",
+      "refs": [
+        {
+          "source": "K",
+          "section": "2.5.1 힙 연산",
+          "pages": [
+            91
+          ]
+        }
+      ]
+    },
+    {
+      "unit": 17,
+      "location": ".procedures[1].steps[1]",
+      "text": "새 원소의 부모 노드가 더 작으면 서로 교환한다.",
+      "evidence": "부모 노드가 더 작으면 서로 교환",
+      "refs": [
+        {
+          "source": "K",
+          "section": "2.5.1 힙 연산",
+          "pages": [
+            89
+          ]
+        }
+      ]
+    },
+    {
+      "unit": 17,
+      "location": ".procedures[1].steps[2]",
+      "text": "전체 트리가 불변 조건을 만족하도록 교환을 반복한다.",
+      "evidence": "불변 조건이 만족하도록 교환 작업을 반복",
+      "refs": [
+        {
+          "source": "K",
+          "section": "2.5.1 힙 연산",
+          "pages": [
+            90
+          ]
+        }
+      ]
+    },
+    {
+      "unit": 17,
+      "location": ".procedures[2].steps[1]",
+      "text": "루트와 두 자식 중 더 큰 노드를 비교·교환한다.",
+      "evidence": "그중 더 큰 노드와 서로 교환",
+      "refs": [
+        {
+          "source": "K",
+          "section": "2.5.1 힙 연산",
+          "pages": [
+            90,
+            91
+          ]
+        }
+      ]
+    },
+    {
+      "unit": 17,
+      "location": ".syntax[0]",
+      "text": "N-항 트리 노드 — 원문 발췌",
+      "evidence": "원문 struct nTree 정의",
+      "refs": [
+        {
+          "source": "K",
+          "section": "2.4.5 N-항 트리",
+          "pages": [
+            86
+          ]
+        }
+      ]
+    },
+    {
+      "unit": 17,
+      "location": ".syntax[1]",
+      "text": "중위 순회 — 원문 발췌",
+      "evidence": "원문 static void inOrder 정의",
+      "refs": [
+        {
+          "source": "K",
+          "section": "2.3.2 트리 순회",
+          "pages": [
+            71
+          ]
+        }
+      ]
+    },
+    {
+      "unit": 17,
+      "location": ".comparisons[0].rows[0][1]",
+      "text": "현재 → 왼쪽 → 오른쪽",
+      "evidence": "현재 → 왼쪽 → 오른쪽",
+      "refs": [
+        {
+          "source": "K",
+          "section": "2.3.2",
+          "pages": [
+            70
+          ]
+        }
+      ]
+    },
+    {
+      "unit": 17,
+      "location": ".comparisons[0].rows[1][1]",
+      "text": "왼쪽 → 현재 → 오른쪽",
+      "evidence": "왼쪽 → 현재 → 오른쪽",
+      "refs": [
+        {
+          "source": "K",
+          "section": "2.3.2",
+          "pages": [
+            71
+          ]
+        }
+      ]
+    },
+    {
+      "unit": 17,
+      "location": ".comparisons[0].rows[2][1]",
+      "text": "왼쪽 → 오른쪽 → 현재",
+      "evidence": "왼쪽 → 오른쪽 → 현재",
+      "refs": [
+        {
+          "source": "K",
+          "section": "2.3.2",
+          "pages": [
+            71
+          ]
+        }
+      ]
+    },
+    {
+      "unit": 17,
+      "location": ".terms[4].definition",
+      "text": "BST의 레벨 수를 높이(height)라고 하며 원소 검색의 실제 시간 복잡도는 O(높이)이다.",
+      "evidence": "원소 검색의 실제 시간 복잡도는 O(높이)",
+      "refs": [
+        {
+          "source": "K",
+          "section": "2.4.4 균형 트리",
+          "pages": [
+            85
+          ]
+        }
+      ]
+    },
+    {
+      "unit": 17,
+      "location": ".review[1].answer",
+      "text": "BST의 모양은 원소 삽입 순서에 따라 결정되므로 O(log N) 검색이 항상 성립하지는 않는다.",
+      "evidence": "시간 복잡도가 O(log N)이라는 것도 항상 정확하다고 볼 수 없습니다.",
+      "refs": [
+        {
+          "source": "K",
+          "section": "2.4.2 트리 연산의 시간 복잡도",
+          "pages": [
+            78
+          ]
+        }
+      ]
+    },
+    {
+      "unit": 17,
+      "location": ".review[2].answer",
+      "text": "힙 생성 알고리즘은 아래쪽 서브 트리부터 위로 올라가며 불변성을 맞추고 O(N) 시간에 힙을 초기화한다.",
+      "evidence": "O(N) 시간에 힙을 초기화",
+      "refs": [
+        {
+          "source": "K",
+          "section": "2.5.1 힙 연산",
+          "pages": [
+            91
+          ]
+        }
+      ]
+    },
+    {
+      "unit": 17,
+      "location": ".cheat.definitions[1].definition",
+      "text": "BST의 레벨 수를 높이(height)라고 하며 원소 검색의 실제 시간 복잡도는 O(높이)이다.",
+      "evidence": "원소 검색의 실제 시간 복잡도는 O(높이)",
+      "refs": [
+        {
+          "source": "K",
+          "section": "2.4.4 균형 트리",
+          "pages": [
+            85
+          ]
+        }
+      ]
+    },
+    {
+      "unit": 17,
+      "location": ".cheat.comparison_rows[0][1]",
+      "text": "현재 → 왼쪽 → 오른쪽",
+      "evidence": "현재 → 왼쪽 → 오른쪽",
+      "refs": [
+        {
+          "source": "K",
+          "section": "2.3.2",
+          "pages": [
+            70
+          ]
+        }
+      ]
+    },
+    {
+      "unit": 17,
+      "location": ".cheat.comparison_rows[1][1]",
+      "text": "왼쪽 → 현재 → 오른쪽",
+      "evidence": "왼쪽 → 현재 → 오른쪽",
+      "refs": [
+        {
+          "source": "K",
+          "section": "2.3.2",
+          "pages": [
+            71
+          ]
+        }
+      ]
+    },
+    {
+      "unit": 17,
+      "location": ".cheat.comparison_rows[2][1]",
+      "text": "왼쪽 → 오른쪽 → 현재",
+      "evidence": "왼쪽 → 오른쪽 → 현재",
+      "refs": [
+        {
+          "source": "K",
+          "section": "2.3.2",
+          "pages": [
+            71
+          ]
+        }
+      ]
+    },
+    {
+      "unit": 18,
+      "location": ".learning[1]",
+      "text": "상황에 맞는 효율적인 룩업과 C++ STL에서 제공되는 솔루션을 구현한다.",
+      "evidence": "C++ STL에서 제공되는 일반적인 솔루션",
+      "refs": [
+        {
+          "source": "K",
+          "section": "3장 학습 목표",
+          "pages": [
+            107
+          ]
+        }
+      ]
+    },
+    {
+      "unit": 18,
+      "location": ".concepts[0].items[0]",
+      "text": "룩업(lookup, 조회)은 특정 원소의 존재를 확인하거나 특정 키에 해당하는 값을 찾는 작업이다.",
+      "evidence": "특정 키(key)에 해당하는 값(value)을 찾는 작업",
+      "refs": [
+        {
+          "source": "K",
+          "section": "3.1 들어가며",
+          "pages": [
+            107
+          ]
+        }
+      ]
+    },
+    {
+      "unit": 18,
+      "location": ".concepts[0].items[3]",
+      "text": "모듈로 함수 x % n은 0부터 n - 1 사이의 정수를 반환한다.",
+      "evidence": "이 값은 0부터 (n - 1) 사이의 정수",
+      "refs": [
+        {
+          "source": "K",
+          "section": "3.2.1 해싱",
+          "pages": [
+            109
+          ]
+        }
+      ]
+    },
+    {
+      "unit": 18,
+      "location": ".concepts[1].items[2]",
+      "text": "부하율은 해시 테이블의 각 리스트에 저장되는 키의 평균 개수이다.",
+      "evidence": "각각의 리스트에 저장되는 키의 평균 개수",
+      "refs": [
+        {
+          "source": "K",
+          "section": "3.3.2 연습 문제 14",
+          "pages": [
+            118
+          ]
+        }
+      ]
+    },
+    {
+      "unit": 18,
+      "location": ".concepts[1].items[5]",
+      "text": "선형 탐색은 충돌한 위치에서 다음 셀로 하나씩 이동하여 빈 셀을 찾는다.",
+      "evidence": "하나씩 다음 셀(cell) 위치로 이동",
+      "refs": [
+        {
+          "source": "K",
+          "section": "3.3.3 열린 주소 지정",
+          "pages": [
+            120
+          ]
+        }
+      ]
+    },
+    {
+      "unit": 18,
+      "location": ".concepts[1].items[6]",
+      "text": "이차함수 탐색은 선형 방정식 대신 이차 방정식을 사용하여 이동 폭을 증가시킨다.",
+      "evidence": "이동 폭을 이차함수 형태로 증가",
+      "refs": [
+        {
+          "source": "K",
+          "section": "3.3.3 열린 주소 지정",
+          "pages": [
+            121
+          ]
+        }
+      ]
+    },
+    {
+      "unit": 18,
+      "location": ".concepts[2].items[0]",
+      "text": "뻐꾸기 해싱은 크기가 같고 해시 함수가 서로 다른 두 해시 테이블을 사용한다.",
+      "evidence": "크기가 같은 두 개의 해시 테이블",
+      "refs": [
+        {
+          "source": "K",
+          "section": "3.3.4 뻐꾸기 해싱",
+          "pages": [
+            122
+          ]
+        }
+      ]
+    },
+    {
+      "unit": 18,
+      "location": ".concepts[2].items[2]",
+      "text": "룩업은 저장 가능한 두 위치만 확인하므로 시간 복잡도가 항상 O(1)이다.",
+      "evidence": "저장 가능한 위치 두 군데만 확인",
+      "refs": [
+        {
+          "source": "K",
+          "section": "3.3.4 뻐꾸기 해싱",
+          "pages": [
+            122
+          ]
+        }
+      ]
+    },
+    {
+      "unit": 18,
+      "location": ".concepts[2].items[4]",
+      "text": "원문은 높은 성능을 보장하려면 부하율을 0.5보다 작게 설정해야 한다고 설명한다.",
+      "evidence": "부하율이 0.5보다 작게끔 설정",
+      "refs": [
+        {
+          "source": "K",
+          "section": "3.3.4 뻐꾸기 해싱",
+          "pages": [
+            123
+          ]
+        }
+      ]
+    },
+    {
+      "unit": 18,
+      "location": ".concepts[3].items[0]",
+      "text": "std::unordered_set은 키만, std::unordered_map은 키와 값을 함께 저장한다.",
+      "evidence": "std::unordered_set은 키만 저장",
+      "refs": [
+        {
+          "source": "K",
+          "section": "3.4 C++ 해시 테이블",
+          "pages": [
+            131
+          ]
+        }
+      ]
+    },
+    {
+      "unit": 18,
+      "location": ".concepts[3].items[1]",
+      "text": "기본 최대 부하율은 1이며 max_load_factor(float)로 최대 한계치를 변경할 수 있다.",
+      "evidence": "기본값이 1로 되어 있는 부하율 최대 한계치",
+      "refs": [
+        {
+          "source": "K",
+          "section": "3.4 C++ 해시 테이블",
+          "pages": [
+            131
+          ]
+        }
+      ]
+    },
+    {
+      "unit": 18,
+      "location": ".concepts[3].items[3]",
+      "text": "std::unordered_set과 std::unordered_map은 중복 키를 허용하지 않으며 중복 저장에는 unordered_multiset 또는 unordered_multimap을 사용한다.",
+      "evidence": "중복된 키를 허용하지 않습니다.",
+      "refs": [
+        {
+          "source": "K",
+          "section": "3.4.1 연습 문제 16",
+          "pages": [
+            135
+          ]
+        }
+      ]
+    },
+    {
+      "unit": 18,
+      "location": ".concepts[4].items[0]",
+      "text": "블룸 필터는 공간 효율이 높지만 거짓-긍정(false positive)이 나올 수 있으며 거짓-부정(false negative)은 없다.",
+      "evidence": "거짓-부정(false negative)이 없다는 것은 보장",
+      "refs": [
+        {
+          "source": "K",
+          "section": "3.5 블룸 필터",
+          "pages": [
+            138
+          ]
+        }
+      ]
+    },
+    {
+      "unit": 18,
+      "location": ".concepts[4].items[3]",
+      "text": "원소가 많아질수록 거짓-긍정이 발생할 가능성이 증가한다.",
+      "evidence": "원소 개수가 많아질수록 거짓-긍정이 발생할 가능성은 증가",
+      "refs": [
+        {
+          "source": "K",
+          "section": "3.5 블룸 필터",
+          "pages": [
+            138
+          ]
+        }
+      ]
+    },
+    {
+      "unit": 18,
+      "location": ".syntax[0]",
+      "text": "블룸 필터의 해시 함수 — 원문 발췌",
+      "evidence": "원문 int hash(int num, int key) 정의",
+      "refs": [
+        {
+          "source": "K",
+          "section": "3.5.1 연습 문제 17",
+          "pages": [
+            140
+          ]
+        }
+      ]
+    },
+    {
+      "unit": 18,
+      "location": ".formulas[0]",
+      "text": "부하율 = 전체 키 개수 / 해시 테이블 크기",
+      "evidence": "그림 3-6 부하율",
+      "refs": [
+        {
+          "source": "K",
+          "section": "3.3.2 연습 문제 14",
+          "pages": [
+            118
+          ]
+        }
+      ]
+    },
+    {
+      "unit": 18,
+      "location": ".comparisons[0].rows[0][0]",
+      "text": "std::unordered_set",
+      "evidence": "std::unordered_set",
+      "refs": [
+        {
+          "source": "K",
+          "section": "3.4",
+          "pages": [
+            131
+          ]
+        }
+      ]
+    },
+    {
+      "unit": 18,
+      "location": ".comparisons[0].rows[0][1]",
+      "text": "키",
+      "evidence": "키",
+      "refs": [
+        {
+          "source": "K",
+          "section": "3.4",
+          "pages": [
+            131
+          ]
+        }
+      ]
+    },
+    {
+      "unit": 18,
+      "location": ".comparisons[0].rows[1][0]",
+      "text": "std::unordered_map",
+      "evidence": "std::unordered_map",
+      "refs": [
+        {
+          "source": "K",
+          "section": "3.4",
+          "pages": [
+            131
+          ]
+        }
+      ]
+    },
+    {
+      "unit": 18,
+      "location": ".comparisons[0].rows[1][1]",
+      "text": "키와 값",
+      "evidence": "키와 값",
+      "refs": [
+        {
+          "source": "K",
+          "section": "3.4",
+          "pages": [
+            131
+          ]
+        }
+      ]
+    },
+    {
+      "unit": 18,
+      "location": ".comparisons[0].rows[2][0]",
+      "text": "unordered_multiset / unordered_multimap",
+      "evidence": "unordered_multiset / unordered_multimap",
+      "refs": [
+        {
+          "source": "K",
+          "section": "3.4.1",
+          "pages": [
+            135
+          ]
+        }
+      ]
+    },
+    {
+      "unit": 18,
+      "location": ".comparisons[0].rows[2][1]",
+      "text": "중복 저장 허용",
+      "evidence": "중복 저장 허용",
+      "refs": [
+        {
+          "source": "K",
+          "section": "3.4.1",
+          "pages": [
+            135
+          ]
+        }
+      ]
+    },
+    {
+      "unit": 18,
+      "location": ".terms[0].definition",
+      "text": "룩업(lookup, 조회)은 특정 원소의 존재를 확인하거나 특정 키에 해당하는 값을 찾는 작업이다.",
+      "evidence": "특정 키(key)에 해당하는 값(value)을 찾는 작업",
+      "refs": [
+        {
+          "source": "K",
+          "section": "3.1 들어가며",
+          "pages": [
+            107
+          ]
+        }
+      ]
+    },
+    {
+      "unit": 18,
+      "location": ".terms[5].definition",
+      "text": "부하율은 해시 테이블의 각 리스트에 저장되는 키의 평균 개수이다.",
+      "evidence": "각각의 리스트에 저장되는 키의 평균 개수",
+      "refs": [
+        {
+          "source": "K",
+          "section": "3.3.2 연습 문제 14",
+          "pages": [
+            118
+          ]
+        }
+      ]
+    },
+    {
+      "unit": 18,
+      "location": ".terms[7].definition",
+      "text": "뻐꾸기 해싱은 크기가 같고 해시 함수가 서로 다른 두 해시 테이블을 사용한다.",
+      "evidence": "크기가 같은 두 개의 해시 테이블",
+      "refs": [
+        {
+          "source": "K",
+          "section": "3.3.4 뻐꾸기 해싱",
+          "pages": [
+            122
+          ]
+        }
+      ]
+    },
+    {
+      "unit": 18,
+      "location": ".terms[8].definition",
+      "text": "블룸 필터는 공간 효율이 높지만 거짓-긍정(false positive)이 나올 수 있으며 거짓-부정(false negative)은 없다.",
+      "evidence": "거짓-부정(false negative)이 없다는 것은 보장",
+      "refs": [
+        {
+          "source": "K",
+          "section": "3.5 블룸 필터",
+          "pages": [
+            138
+          ]
+        }
+      ]
+    },
+    {
+      "unit": 18,
+      "location": ".cheat.definitions[0].definition",
+      "text": "룩업(lookup, 조회)은 특정 원소의 존재를 확인하거나 특정 키에 해당하는 값을 찾는 작업이다.",
+      "evidence": "특정 키(key)에 해당하는 값(value)을 찾는 작업",
+      "refs": [
+        {
+          "source": "K",
+          "section": "3.1 들어가며",
+          "pages": [
+            107
+          ]
+        }
+      ]
+    },
+    {
+      "unit": 18,
+      "location": ".cheat.definitions[2].definition",
+      "text": "블룸 필터는 공간 효율이 높지만 거짓-긍정(false positive)이 나올 수 있으며 거짓-부정(false negative)은 없다.",
+      "evidence": "거짓-부정(false negative)이 없다는 것은 보장",
+      "refs": [
+        {
+          "source": "K",
+          "section": "3.5 블룸 필터",
+          "pages": [
+            138
+          ]
+        }
+      ]
+    },
+    {
+      "unit": 18,
+      "location": ".cheat.comparison_rows[0][1]",
+      "text": "있을 수도 있고 없을 수도 있음",
+      "evidence": "있을 수도 있고 없을 수도 있음",
+      "refs": [
+        {
+          "source": "K",
+          "section": "3.5",
+          "pages": [
+            138
+          ]
+        }
+      ]
+    },
+    {
+      "unit": 18,
+      "location": ".cheat.comparison_rows[1][1]",
+      "text": "확실히 없음",
+      "evidence": "확실히 없음",
+      "refs": [
+        {
+          "source": "K",
+          "section": "3.5",
+          "pages": [
+            138
+          ]
+        }
+      ]
+    },
+    {
+      "unit": 18,
+      "location": ".cheat.formulas[0]",
+      "text": "부하율 = 전체 키 개수 / 해시 테이블 크기",
+      "evidence": "그림 3-6 부하율",
+      "refs": [
+        {
+          "source": "K",
+          "section": "3.3.2 연습 문제 14",
+          "pages": [
+            118
+          ]
+        }
+      ]
+    },
+    {
+      "unit": 19,
+      "location": ".learning[1]",
+      "text": "맵리듀스 모델과 멀티스레드를 사용하는 C++ 맵리듀스 라이브러리를 다룬다.",
+      "evidence": "멀티스레드를 사용하는 C++ 맵리듀스 라이브러리",
+      "refs": [
+        {
+          "source": "K",
+          "section": "4장 학습 목표",
+          "pages": [
+            147
+          ]
+        }
+      ]
+    },
+    {
+      "unit": 19,
+      "location": ".concepts[0].items[2]",
+      "text": "선형 검색은 전체 원소를 방문하여 대상을 찾으며 정렬 여부와 관계없이 동작하고 시간 복잡도는 O(N)이다.",
+      "evidence": "선형 검색 알고리즘의 시간 복잡도는 O(N)",
+      "refs": [
+        {
+          "source": "K",
+          "section": "4.2 이진 검색",
+          "pages": [
+            150
+          ]
+        }
+      ]
+    },
+    {
+      "unit": 19,
+      "location": ".concepts[0].items[3]",
+      "text": "이진 검색은 시퀀스가 정렬되어 있다는 사실을 이용하여 가운데 원소와 대상을 비교하고 검색 범위를 수정한다.",
+      "evidence": "주어진 시퀀스가 정렬되어 있다는 사실",
+      "refs": [
+        {
+          "source": "K",
+          "section": "4.2 이진 검색",
+          "pages": [
+            150
+          ]
+        }
+      ]
+    },
+    {
+      "unit": 19,
+      "location": ".concepts[0].items[4]",
+      "text": "분할 정복은 분할(divide), 정복(conquer), 결합(combine)의 세 단계로 이루어진다.",
+      "evidence": "분할(divide) ... 정복(conquer) ... 결합(combine)",
+      "refs": [
+        {
+          "source": "K",
+          "section": "4.3 분할 정복 이해하기",
+          "pages": [
+            157
+          ]
+        }
+      ]
+    },
+    {
+      "unit": 19,
+      "location": ".concepts[1].items[2]",
+      "text": "병합 정렬은 집합을 작은 부분집합으로 나누어 각각을 정렬한 뒤 순서를 유지하며 합친다.",
+      "evidence": "정렬된 부분집합을 오름차순 또는 내림차순 순서를 유지",
+      "refs": [
+        {
+          "source": "K",
+          "section": "4.4.1 병합 정렬",
+          "pages": [
+            159
+          ]
+        }
+      ]
+    },
+    {
+      "unit": 19,
+      "location": ".concepts[1].items[9]",
+      "text": "선형 시간 선택은 정렬되지 않은 집합에서 i번째로 작은 원소를 O(n)에 찾는 문제를 다룬다.",
+      "evidence": "O(n) 시간 복잡도를 갖는 솔루션",
+      "refs": [
+        {
+          "source": "K",
+          "section": "4.4.6 선형 시간 선택",
+          "pages": [
+            170
+          ]
+        }
+      ]
+    },
+    {
+      "unit": 19,
+      "location": ".concepts[2].items[1]",
+      "text": "std::partial_sort()는 컨테이너의 일부 구간에 대해 정렬한다.",
+      "evidence": "일부 구간에 대해서 정렬",
+      "refs": [
+        {
+          "source": "K",
+          "section": "4.5 그림 4-13",
+          "pages": [
+            178
+          ]
+        }
+      ]
+    },
+    {
+      "unit": 19,
+      "location": ".concepts[3].items[0]",
+      "text": "맵은 컨테이너 C의 모든 원소에 함수 f(x)를 적용하는 연산이다.",
+      "evidence": "컨테이너의 모든 원소에 함수 f(x)를 적용",
+      "refs": [
+        {
+          "source": "K",
+          "section": "4.6.1 맵과 리듀스 추상화",
+          "pages": [
+            180
+          ]
+        }
+      ]
+    },
+    {
+      "unit": 19,
+      "location": ".concepts[3].items[1]",
+      "text": "리듀스는 모든 원소 x에 함수 f(acc,x)를 적용하여 하나의 값으로 축약하는 연산이다.",
+      "evidence": "하나의 값으로 축약하는 연산",
+      "refs": [
+        {
+          "source": "K",
+          "section": "4.6.1 맵과 리듀스 추상화",
+          "pages": [
+            180
+          ]
+        }
+      ]
+    },
+    {
+      "unit": 19,
+      "location": ".concepts[3].items[2]",
+      "text": "맵리듀스 모델은 맵 단계에서 중간 키·값 쌍을 만들고 리듀스 단계에서 결합하여 최종 결과를 생성한다.",
+      "evidence": "중간 단계의 〈키, 값〉 쌍",
+      "refs": [
+        {
+          "source": "K",
+          "section": "4.6.3 맵리듀스 프레임워크를 이용한 부분 통합",
+          "pages": [
+            183
+          ]
+        }
+      ]
+    },
+    {
+      "unit": 19,
+      "location": ".procedures[0].steps[0]",
+      "text": "동일한 방식으로 해결할 수 있는 여러 부분 문제로 분할한다.",
+      "evidence": "동일한 방식으로 해결할 수 있는 여러 부분 문제",
+      "refs": [
+        {
+          "source": "K",
+          "section": "4.3 분할 정복 이해하기",
+          "pages": [
+            157
+          ]
+        }
+      ]
+    },
+    {
+      "unit": 19,
+      "location": ".procedures[0].steps[2]",
+      "text": "각 해답을 결합하여 전체 문제의 해답을 구한다.",
+      "evidence": "각 부분 문제의 해답을 결합",
+      "refs": [
+        {
+          "source": "K",
+          "section": "4.3 분할 정복 이해하기",
+          "pages": [
+            157
+          ]
+        }
+      ]
+    },
+    {
+      "unit": 19,
+      "location": ".procedures[2].steps[0]",
+      "text": "입력 벡터를 다섯 개 이하의 원소를 갖는 부분 벡터들로 나누고 각각 정렬한다.",
+      "evidence": "각각의 Vi를 정렬",
+      "refs": [
+        {
+          "source": "K",
+          "section": "4.4.6 선형 시간 선택",
+          "pages": [
+            170
+          ]
+        }
+      ]
+    },
+    {
+      "unit": 19,
+      "location": ".procedures[2].steps[2]",
+      "text": "q를 피벗으로 전체 벡터를 L과 R로 나눈다.",
+      "evidence": "q를 피벗으로 삼아",
+      "refs": [
+        {
+          "source": "K",
+          "section": "4.4.6 선형 시간 선택",
+          "pages": [
+            171
+          ]
+        }
+      ]
+    },
+    {
+      "unit": 19,
+      "location": ".syntax[0]",
+      "text": "중앙값 위치 찾기 — 원문 발췌",
+      "evidence": "원문 find_median 정의",
+      "refs": [
+        {
+          "source": "K",
+          "section": "4.4.7 연습 문제 21",
+          "pages": [
+            172
+          ]
+        }
+      ]
+    },
+    {
+      "unit": 19,
+      "location": ".comparisons[0].rows[1][3]",
+      "text": "O(n²)",
+      "evidence": "O(n²)",
+      "refs": [
+        {
+          "source": "K",
+          "section": "4.4.4 그림 4-9",
+          "pages": [
+            168
+          ]
+        }
+      ]
+    },
+    {
+      "unit": 19,
+      "location": ".terms[3].definition",
+      "text": "병합 정렬은 집합을 작은 부분집합으로 나누어 각각을 정렬한 뒤 순서를 유지하며 합친다.",
+      "evidence": "정렬된 부분집합을 오름차순 또는 내림차순 순서를 유지",
+      "refs": [
+        {
+          "source": "K",
+          "section": "4.4.1 병합 정렬",
+          "pages": [
+            159
+          ]
+        }
+      ]
+    },
+    {
+      "unit": 19,
+      "location": ".terms[5].definition",
+      "text": "선형 시간 선택은 정렬되지 않은 집합에서 i번째로 작은 원소를 O(n)에 찾는 문제를 다룬다.",
+      "evidence": "O(n) 시간 복잡도를 갖는 솔루션",
+      "refs": [
+        {
+          "source": "K",
+          "section": "4.4.6 선형 시간 선택",
+          "pages": [
+            170
+          ]
+        }
+      ]
+    },
+    {
+      "unit": 19,
+      "location": ".terms[6].definition",
+      "text": "맵은 컨테이너 C의 모든 원소에 함수 f(x)를 적용하는 연산이다.",
+      "evidence": "컨테이너의 모든 원소에 함수 f(x)를 적용",
+      "refs": [
+        {
+          "source": "K",
+          "section": "4.6.1 맵과 리듀스 추상화",
+          "pages": [
+            180
+          ]
+        }
+      ]
+    },
+    {
+      "unit": 19,
+      "location": ".terms[7].definition",
+      "text": "리듀스는 모든 원소 x에 함수 f(acc,x)를 적용하여 하나의 값으로 축약하는 연산이다.",
+      "evidence": "하나의 값으로 축약하는 연산",
+      "refs": [
+        {
+          "source": "K",
+          "section": "4.6.1 맵과 리듀스 추상화",
+          "pages": [
+            180
+          ]
+        }
+      ]
+    },
+    {
+      "unit": 19,
+      "location": ".summary[1]",
+      "text": "분할 연산은 부분 정렬과 선형 시간 선택 같은 문제의 기초가 된다.",
+      "evidence": "부분 정렬과 선형 시간 선택",
+      "refs": [
+        {
+          "source": "K",
+          "section": "4.7 나가며",
+          "pages": [
+            192
+          ]
+        }
+      ]
+    },
+    {
+      "unit": 19,
+      "location": ".review[0].answer",
+      "text": "분할 정복은 분할(divide), 정복(conquer), 결합(combine)의 세 단계로 이루어진다.",
+      "evidence": "분할(divide) ... 정복(conquer) ... 결합(combine)",
+      "refs": [
+        {
+          "source": "K",
+          "section": "4.3 분할 정복 이해하기",
+          "pages": [
+            157
+          ]
+        }
+      ]
+    },
+    {
+      "unit": 19,
+      "location": ".cheat.definitions[1].definition",
+      "text": "맵은 컨테이너 C의 모든 원소에 함수 f(x)를 적용하는 연산이다.",
+      "evidence": "컨테이너의 모든 원소에 함수 f(x)를 적용",
+      "refs": [
+        {
+          "source": "K",
+          "section": "4.6.1 맵과 리듀스 추상화",
+          "pages": [
+            180
+          ]
+        }
+      ]
+    },
+    {
+      "unit": 19,
+      "location": ".cheat.definitions[2].definition",
+      "text": "리듀스는 모든 원소 x에 함수 f(acc,x)를 적용하여 하나의 값으로 축약하는 연산이다.",
+      "evidence": "하나의 값으로 축약하는 연산",
+      "refs": [
+        {
+          "source": "K",
+          "section": "4.6.1 맵과 리듀스 추상화",
+          "pages": [
+            180
+          ]
+        }
+      ]
+    },
+    {
+      "unit": 19,
+      "location": ".cheat.comparison_rows[1][3]",
+      "text": "O(n²)",
+      "evidence": "O(n²)",
+      "refs": [
+        {
+          "source": "K",
+          "section": "4.4.4 그림 4-9",
+          "pages": [
+            168
+          ]
+        }
+      ]
+    },
+    {
+      "unit": 20,
+      "location": ".concepts[1].items[1]",
+      "text": "분할 가능 배낭 문제는 물건을 분할하여 일부만 배낭에 담을 수 있다.",
+      "evidence": "각 물건의 일부분만을 배낭에 담을 수",
+      "refs": [
+        {
+          "source": "K",
+          "section": "5.3.2 분할 가능 배낭 문제",
+          "pages": [
+            201
+          ]
+        }
+      ]
+    },
+    {
+      "unit": 20,
+      "location": ".concepts[1].items[3]",
+      "text": "작업 스케줄링 실습은 종료 시간 순으로 정렬하여 가장 빨리 끝나는 작업을 고르고 겹치는 작업을 제거한다.",
+      "evidence": "종료 시간을 기준으로 전체 작업 리스트를 정렬",
+      "refs": [
+        {
+          "source": "K",
+          "section": "5.3.4 실습 문제 11",
+          "pages": [
+            206
+          ]
+        }
+      ]
+    },
+    {
+      "unit": 20,
+      "location": ".concepts[2].items[3]",
+      "text": "디스조인트-셋의 원소는 숫자 ID, 랭크와 부모 포인터를 가진다.",
+      "evidence": "랭크(rank)와 부모에 대한 포인터",
+      "refs": [
+        {
+          "source": "K",
+          "section": "5.3.7 디스조인트-셋 자료 구조",
+          "pages": [
+            211
+          ]
+        }
+      ]
+    },
+    {
+      "unit": 20,
+      "location": ".concepts[3].items[1]",
+      "text": "그래프 컬러링에서는 에지 가중치를 사용하지 않는다.",
+      "evidence": "에지의 가중치는 사용하지 않으므로",
+      "refs": [
+        {
+          "source": "K",
+          "section": "5.4 그래프 컬러링",
+          "pages": [
+            222
+          ]
+        }
+      ]
+    },
+    {
+      "unit": 20,
+      "location": ".concepts[3].items[2]",
+      "text": "원문은 최소 색상 수를 찾는 그래프 컬러링을 NP-완전 문제로 소개한다.",
+      "evidence": "최소 개수의 색상 수를 찾는 것은 NP-완전",
+      "refs": [
+        {
+          "source": "K",
+          "section": "5.4 그래프 컬러링",
+          "pages": [
+            222
+          ]
+        }
+      ]
+    },
+    {
+      "unit": 20,
+      "location": ".concepts[3].items[4]",
+      "text": "웰시-포웰 알고리즘은 차수가 높은 정점부터 차례대로 그래프 컬러링을 수행한다.",
+      "evidence": "차수(degree)가 높은 정점부터 차례대로",
+      "refs": [
+        {
+          "source": "K",
+          "section": "5.4.2 실습 문제 12",
+          "pages": [
+            227
+          ]
+        }
+      ]
+    },
+    {
+      "unit": 20,
+      "location": ".procedures[1].steps[0]",
+      "text": "그래프의 모든 에지를 최소 힙에 넣고 모든 정점으로 디스조인트-셋을 초기화한다.",
+      "evidence": "그래프 G의 모든 에지를 최소 힙 H에 추가",
+      "refs": [
+        {
+          "source": "K",
+          "section": "5.3.6~5.3.7",
+          "pages": [
+            208,
+            213
+          ]
+        }
+      ]
+    },
+    {
+      "unit": 20,
+      "location": ".procedures[1].steps[2]",
+      "text": "양 끝 정점의 루트가 같으면 버리고 다르면 트리를 병합하고 에지를 MST에 추가한다.",
+      "evidence": "실제로 두 트리가 병합하면 해당 에지를 MST에 추가",
+      "refs": [
+        {
+          "source": "K",
+          "section": "5.3.7 디스조인트-셋 자료 구조",
+          "pages": [
+            213
+          ]
+        }
+      ]
+    },
+    {
+      "unit": 20,
+      "location": ".procedures[2].steps[0]",
+      "text": "모든 정점을 차수 내림차순으로 정렬한다.",
+      "evidence": "모든 정점을 차수에 대한 내림차순",
+      "refs": [
+        {
+          "source": "K",
+          "section": "5.4.2 실습 문제 12",
+          "pages": [
+            227
+          ]
+        }
+      ]
+    },
+    {
+      "unit": 20,
+      "location": ".syntax[0]",
+      "text": "대기 시간 계산 — 원문 발췌",
+      "evidence": "원문 compute_waiting_times 정의",
+      "refs": [
+        {
+          "source": "K",
+          "section": "5.2.2 연습 문제 24",
+          "pages": [
+            198
+          ]
+        }
+      ]
+    },
+    {
+      "unit": 20,
+      "location": ".formulas[0]",
+      "text": "W[0] = 0;  W[i] = W[i - 1] + service_times[i - 1];",
+      "evidence": "W[i] = W[i - 1] + service_times[i - 1];",
+      "refs": [
+        {
+          "source": "K",
+          "section": "5.2.2 연습 문제 24",
+          "pages": [
+            198
+          ]
+        }
+      ]
+    },
+    {
+      "unit": 20,
+      "location": ".comparisons[0].rows[0][1]",
+      "text": "물건들을 선택하여 담음",
+      "evidence": "물건들을 선택하여 담음",
+      "refs": [
+        {
+          "source": "K",
+          "section": "5.3.1",
+          "pages": [
+            200
+          ]
+        }
+      ]
+    },
+    {
+      "unit": 20,
+      "location": ".comparisons[0].rows[1][1]",
+      "text": "물건의 일부분만 담을 수 있음",
+      "evidence": "물건의 일부분만 담을 수 있음",
+      "refs": [
+        {
+          "source": "K",
+          "section": "5.3.2",
+          "pages": [
+            201
+          ]
+        }
+      ]
+    },
+    {
+      "unit": 20,
+      "location": ".terms[2].definition",
+      "text": "분할 가능 배낭 문제는 물건을 분할하여 일부만 배낭에 담을 수 있다.",
+      "evidence": "각 물건의 일부분만을 배낭에 담을 수",
+      "refs": [
+        {
+          "source": "K",
+          "section": "5.3.2 분할 가능 배낭 문제",
+          "pages": [
+            201
+          ]
+        }
+      ]
+    },
+    {
+      "unit": 20,
+      "location": ".review[3].answer",
+      "text": "웰시-포웰 알고리즘은 차수가 높은 정점부터 차례대로 그래프 컬러링을 수행한다.",
+      "evidence": "차수(degree)가 높은 정점부터 차례대로",
+      "refs": [
+        {
+          "source": "K",
+          "section": "5.4.2 실습 문제 12",
+          "pages": [
+            227
+          ]
+        }
+      ]
+    },
+    {
+      "unit": 20,
+      "location": ".cheat.comparison_rows[0][1]",
+      "text": "처리 시간이 짧은 순",
+      "evidence": "처리 시간이 짧은 순",
+      "refs": [
+        {
+          "source": "K",
+          "section": "5.2.1",
+          "pages": [
+            197
+          ]
+        }
+      ]
+    },
+    {
+      "unit": 20,
+      "location": ".cheat.comparison_rows[2][0]",
+      "text": "크루스칼 MST",
+      "evidence": "크루스칼 MST",
+      "refs": [
+        {
+          "source": "K",
+          "section": "5.3.6",
+          "pages": [
+            209
+          ]
+        }
+      ]
+    },
+    {
+      "unit": 20,
+      "location": ".cheat.comparison_rows[2][1]",
+      "text": "사이클을 만들지 않는 최소 가중치 에지",
+      "evidence": "사이클을 만들지 않는 최소 가중치 에지",
+      "refs": [
+        {
+          "source": "K",
+          "section": "5.3.6",
+          "pages": [
+            209
+          ]
+        }
+      ]
+    },
+    {
+      "unit": 21,
+      "location": ".learning[1]",
+      "text": "프림과 크루스칼 알고리즘을 상황에 따라 선택하고, 다익스트라 알고리즘으로 두 정점 사이의 최단 경로를 찾는다.",
+      "evidence": "프림 알고리즘과 크루스칼 알고리즘 중에서 주어진 상황에 적합한 알고리즘을 선택",
+      "refs": [
+        {
+          "source": "K",
+          "section": "6장 학습 목표",
+          "pages": [
+            233
+          ]
+        }
+      ]
+    },
+    {
+      "unit": 21,
+      "location": ".concepts[0].items[0]",
+      "text": "그래프는 정점(vertex)의 집합과 정점들을 서로 잇는 에지(edge)의 집합으로 구성되며, G = 〈V, E〉에서 V는 정점 집합, E는 에지 집합이다.",
+      "evidence": "그래프는 정점(vertex)의 집합과 정점들을 서로 잇는 에지(edge)의 집합으로 구성",
+      "refs": [
+        {
+          "source": "K",
+          "section": "6.1",
+          "pages": [
+            233
+          ]
+        }
+      ]
+    },
+    {
+      "unit": 21,
+      "location": ".concepts[0].items[2]",
+      "text": "에지에 가중치가 있으면 가중 그래프(weighted graph), 가중치가 없으면 비가중 그래프(unweighted graph)이다.",
+      "evidence": "가중치가 있으면 가중 그래프",
+      "refs": [
+        {
+          "source": "K",
+          "section": "6.1",
+          "pages": [
+            233
+          ]
+        }
+      ]
+    },
+    {
+      "unit": 21,
+      "location": ".concepts[1].items[1]",
+      "text": "너비 우선 탐색(BFS, Breadth-First Search)은 시작 정점을 경계(frontier)에 추가한 뒤, 현재 경계에 인접한 정점을 반복적으로 탐색한다.",
+      "evidence": "시작 정점을 경계(frontier)에 추가하는 것으로 시작",
+      "refs": [
+        {
+          "source": "K",
+          "section": "6.2.1",
+          "pages": [
+            236
+          ]
+        }
+      ]
+    },
+    {
+      "unit": 21,
+      "location": ".concepts[2].items[2]",
+      "text": "BFS는 선입선출(FIFO) 큐를 사용하고, DFS는 후입선출(LIFO) 스택을 사용하여 인접한 정점들을 재귀적으로 이동하며 방문한다.",
+      "evidence": "큐 대신에 스택을 사용한다는 점이 다릅니다",
+      "refs": [
+        {
+          "source": "K",
+          "section": "6.2.3",
+          "pages": [
+            245
+          ]
+        }
+      ]
+    },
+    {
+      "unit": 21,
+      "location": ".concepts[4].items[2]",
+      "text": "프림 알고리즘을 구현하려면 각 정점에 경계로부터의 거리(distance)를 기록해야 한다.",
+      "evidence": "각 정점에 경계로부터의 거리(distance) 정보를 기록",
+      "refs": [
+        {
+          "source": "K",
+          "section": "6.3",
+          "pages": [
+            253
+          ]
+        }
+      ]
+    },
+    {
+      "unit": 21,
+      "location": ".concepts[5].items[0]",
+      "text": "단일 시작(single source) 최단 경로 문제(shortest path problem)는 시작 정점에서 목적 정점으로 이어지는 최소 비용 경로를 구하는 문제이다.",
+      "evidence": "시작 정점에서 목적 정점까지 이어지는 최소 비용 경로",
+      "refs": [
+        {
+          "source": "K",
+          "section": "6.4",
+          "pages": [
+            259
+          ]
+        }
+      ]
+    },
+    {
+      "unit": 21,
+      "location": ".concepts[5].items[1]",
+      "text": "다익스트라 알고리즘(Dijkstra's algorithm)은 음수 가중치가 없는 그래프에서 동작하며 프림의 MST 알고리즘을 약간 변경한 형태이다.",
+      "evidence": "음수 가중치가 없는 그래프에서 동작하는 최단 경로 탐색 알고리즘",
+      "refs": [
+        {
+          "source": "K",
+          "section": "6.4",
+          "pages": [
+            260
+          ]
+        }
+      ]
+    },
+    {
+      "unit": 21,
+      "location": ".concepts[5].items[2]",
+      "text": "프림은 경계로부터의 최소 거리를 사용하지만, 다익스트라는 시작 정점으로부터 각 정점까지의 전체 거리를 사용한다.",
+      "evidence": "시작 정점으로부터 각 정점까지의 전체 거리를 사용",
+      "refs": [
+        {
+          "source": "K",
+          "section": "6.4",
+          "pages": [
+            260
+          ]
+        }
+      ]
+    },
+    {
+      "unit": 21,
+      "location": ".concepts[5].items[4]",
+      "text": "다익스트라는 인접 정점의 거리 값이 현재 정점의 거리 값과 연결 에지 가중치의 합보다 크면 그 합으로 거리 값을 바꾼다.",
+      "evidence": "U의 거리 값 + (U, V) 에지 가중치",
+      "refs": [
+        {
+          "source": "K",
+          "section": "6.4",
+          "pages": [
+            261
+          ]
+        }
+      ]
+    },
+    {
+      "unit": 21,
+      "location": ".procedures[0].steps[0]",
+      "text": "모든 정점의 거리 값을 무한대로 초기화하고 시작 정점의 거리만 0으로 설정한 뒤, 모든 거리 값을 최소 힙 H에 추가한다.",
+      "evidence": "모든 거리 값을 최소 힙 H에 추가",
+      "refs": [
+        {
+          "source": "K",
+          "section": "6.3",
+          "pages": [
+            253
+          ]
+        }
+      ]
+    },
+    {
+      "unit": 21,
+      "location": ".procedures[0].steps[2]",
+      "text": "U에 인접한 각 정점 V의 거리 값이 (U, V)의 에지 가중치보다 크면 그 가중치로 설정한다.",
+      "evidence": "V의 거리 값을 (U, V)의 에지 가중치로 설정",
+      "refs": [
+        {
+          "source": "K",
+          "section": "6.3",
+          "pages": [
+            254
+          ]
+        }
+      ]
+    },
+    {
+      "unit": 21,
+      "location": ".procedures[1].steps[2]",
+      "text": "다익스트라는 인접 정점의 거리 값이 현재 정점의 거리 값과 연결 에지 가중치의 합보다 크면 그 합으로 거리 값을 바꾼다.",
+      "evidence": "U의 거리 값 + (U, V) 에지 가중치",
+      "refs": [
+        {
+          "source": "K",
+          "section": "6.4",
+          "pages": [
+            261
+          ]
+        }
+      ]
+    },
+    {
+      "unit": 21,
+      "location": ".procedures[1].steps[3]",
+      "text": "방문하지 않은 정점이 남아 있으면 최소 힙에서 정점을 꺼내는 단계로 돌아가며, 목적 정점을 꺼내면 종료한다.",
+      "evidence": "최소 힙 H로부터 꺼낸 정점이 목적 정점",
+      "refs": [
+        {
+          "source": "K",
+          "section": "6.4",
+          "pages": [
+            261
+          ]
+        }
+      ]
+    },
+    {
+      "unit": 21,
+      "location": ".syntax[0]",
+      "text": "연습 문제 28: Edge 구조체의 원문 발췌",
+      "evidence": "그래프의 에지를 표현하는 Edge 구조체 정의",
+      "refs": [
+        {
+          "source": "K",
+          "section": "6.2.2",
+          "pages": [
+            238
+          ]
+        }
+      ]
+    },
+    {
+      "unit": 21,
+      "location": ".formulas[0]",
+      "text": "O(V + E)",
+      "evidence": "BFS와 DFS의 시간 복잡도는 모두 O(V + E)",
+      "refs": [
+        {
+          "source": "K",
+          "section": "6.2.2·6.2.4",
+          "pages": [
+            243,
+            249
+          ]
+        }
+      ]
+    },
+    {
+      "unit": 21,
+      "location": ".formulas[1]",
+      "text": "O(E log V), O(E + V log V)",
+      "evidence": "이진 최소 힙과 MST 저장을 위해 인접 리스트를 사용",
+      "refs": [
+        {
+          "source": "K",
+          "section": "6.3.1",
+          "pages": [
+            259
+          ]
+        }
+      ]
+    },
+    {
+      "unit": 21,
+      "location": ".formulas[2]",
+      "text": "O(E + V log V)",
+      "evidence": "피보나치 최소 힙을 사용하여 구현한 다익스트라 알고리즘",
+      "refs": [
+        {
+          "source": "K",
+          "section": "6.4.1",
+          "pages": [
+            266
+          ]
+        }
+      ]
+    },
+    {
+      "unit": 21,
+      "location": ".comparisons[0].rows[1][2]",
+      "text": "O(E + V log V) — 피보나치 최소 힙 사용",
+      "evidence": "피보나치 최소 힙(Fibonacci min-heap)",
+      "refs": [
+        {
+          "source": "K",
+          "section": "6.3.1",
+          "pages": [
+            259
+          ]
+        }
+      ]
+    },
+    {
+      "unit": 21,
+      "location": ".terms[0].definition",
+      "text": "그래프는 정점(vertex)의 집합과 정점들을 서로 잇는 에지(edge)의 집합으로 구성되며, G = 〈V, E〉에서 V는 정점 집합, E는 에지 집합이다.",
+      "evidence": "그래프는 정점(vertex)의 집합과 정점들을 서로 잇는 에지(edge)의 집합으로 구성",
+      "refs": [
+        {
+          "source": "K",
+          "section": "6.1",
+          "pages": [
+            233
+          ]
+        }
+      ]
+    },
+    {
+      "unit": 21,
+      "location": ".terms[2].definition",
+      "text": "에지에 가중치가 있으면 가중 그래프(weighted graph), 가중치가 없으면 비가중 그래프(unweighted graph)이다.",
+      "evidence": "가중치가 있으면 가중 그래프",
+      "refs": [
+        {
+          "source": "K",
+          "section": "6.1",
+          "pages": [
+            233
+          ]
+        }
+      ]
+    },
+    {
+      "unit": 21,
+      "location": ".terms[4].definition",
+      "text": "너비 우선 탐색(BFS, Breadth-First Search)은 시작 정점을 경계(frontier)에 추가한 뒤, 현재 경계에 인접한 정점을 반복적으로 탐색한다.",
+      "evidence": "시작 정점을 경계(frontier)에 추가하는 것으로 시작",
+      "refs": [
+        {
+          "source": "K",
+          "section": "6.2.1",
+          "pages": [
+            236
+          ]
+        }
+      ]
+    },
+    {
+      "unit": 21,
+      "location": ".terms[9].definition",
+      "text": "단일 시작(single source) 최단 경로 문제(shortest path problem)는 시작 정점에서 목적 정점으로 이어지는 최소 비용 경로를 구하는 문제이다.",
+      "evidence": "시작 정점에서 목적 정점까지 이어지는 최소 비용 경로",
+      "refs": [
+        {
+          "source": "K",
+          "section": "6.4",
+          "pages": [
+            259
+          ]
+        }
+      ]
+    },
+    {
+      "unit": 21,
+      "location": ".summary[2]",
+      "text": "단일 시작 최단 경로 문제와 다익스트라 알고리즘을 설명하며, 6.4 본문은 음수 가중치가 없는 그래프에서 동작한다고 명시한다.",
+      "evidence": "단일 시작 최단 경로 문제를 소개 / 음수 가중치가 없는 그래프에서 동작",
+      "refs": [
+        {
+          "source": "K",
+          "section": "6.5",
+          "pages": [
+            268
+          ]
+        },
+        {
+          "source": "K",
+          "section": "6.4",
+          "pages": [
+            260
+          ]
+        }
+      ]
+    },
+    {
+      "unit": 21,
+      "location": ".review[0].answer",
+      "text": "BFS는 선입선출(FIFO) 큐를 사용하고, DFS는 후입선출(LIFO) 스택을 사용하여 인접한 정점들을 재귀적으로 이동하며 방문한다.",
+      "evidence": "큐 대신에 스택을 사용한다는 점이 다릅니다",
+      "refs": [
+        {
+          "source": "K",
+          "section": "6.2.3",
+          "pages": [
+            245
+          ]
+        }
+      ]
+    },
+    {
+      "unit": 21,
+      "location": ".review[3].answer",
+      "text": "프림은 경계로부터의 최소 거리를 사용하지만, 다익스트라는 시작 정점으로부터 각 정점까지의 전체 거리를 사용한다.",
+      "evidence": "시작 정점으로부터 각 정점까지의 전체 거리를 사용",
+      "refs": [
+        {
+          "source": "K",
+          "section": "6.4",
+          "pages": [
+            260
+          ]
+        }
+      ]
+    },
+    {
+      "unit": 21,
+      "location": ".cheat.definitions[0].definition",
+      "text": "너비 우선 탐색(BFS, Breadth-First Search)은 시작 정점을 경계(frontier)에 추가한 뒤, 현재 경계에 인접한 정점을 반복적으로 탐색한다.",
+      "evidence": "시작 정점을 경계(frontier)에 추가하는 것으로 시작",
+      "refs": [
+        {
+          "source": "K",
+          "section": "6.2.1",
+          "pages": [
+            236
+          ]
+        }
+      ]
+    },
+    {
+      "unit": 21,
+      "location": ".cheat.comparison_rows[1][0]",
+      "text": "다익스트라 (음수 가중치 없음)",
+      "evidence": "음수 가중치가 없는 그래프에서 동작",
+      "refs": [
+        {
+          "source": "K",
+          "section": "6.4",
+          "pages": [
+            260
+          ]
+        }
+      ]
+    },
+    {
+      "unit": 21,
+      "location": ".cheat.comparison_rows[1][1]",
+      "text": "시작 정점으로부터 전체 거리·목적 정점이 나타나면 종료",
+      "evidence": "시작 정점으로부터 각 정점까지의 전체 거리를 사용",
+      "refs": [
+        {
+          "source": "K",
+          "section": "6.4",
+          "pages": [
+            260
+          ]
+        }
+      ]
+    },
+    {
+      "unit": 21,
+      "location": ".cheat.formulas[0]",
+      "text": "O(V + E)",
+      "evidence": "BFS와 DFS의 시간 복잡도는 모두 O(V + E)",
+      "refs": [
+        {
+          "source": "K",
+          "section": "6.2.2·6.2.4",
+          "pages": [
+            243,
+            249
+          ]
+        }
+      ]
+    },
+    {
+      "unit": 22,
+      "location": ".learning[0]",
+      "text": "다익스트라 알고리즘의 문제를 이해하고, 벨만-포드 알고리즘과 존슨 알고리즘으로 최단 경로를 찾으며 음수 가중치 사이클을 판단한다.",
+      "evidence": "벨만-포드 알고리즘과 존슨 알고리즘을 사용하여 그래프에서 최단 경로",
+      "refs": [
+        {
+          "source": "K",
+          "section": "7장 학습 목표",
+          "pages": [
+            271
+          ]
+        }
+      ]
+    },
+    {
+      "unit": 22,
+      "location": ".concepts[0].items[1]",
+      "text": "벨만-포드 알고리즘(Bellman-Ford algorithm)은 음수 가중치가 있는 그래프에서 사용할 수 있으며, 모든 에지에 대한 선택을 (V - 1)번 반복해 점진적으로 최단 거리를 찾는다.",
+      "evidence": "그래프의 모든 에지에 대해 다익스트라의 그리디 선택 방법을 (V - 1)번 반복",
+      "refs": [
+        {
+          "source": "K",
+          "section": "7.3",
+          "pages": [
+            273
+          ]
+        }
+      ]
+    },
+    {
+      "unit": 22,
+      "location": ".concepts[0].items[2]",
+      "text": "연습 문제 32의 UNKNOWN은 무한대를 표현하는 정수 상수로, 에지 가중치의 합보다 충분히 큰 값을 사용하며 코드에서는 INT_MAX로 정의한다.",
+      "evidence": "UNKNOWN은 정수 상수 값으로, 그래프 에지 가중치의 합보다 충분히 큰 정수",
+      "refs": [
+        {
+          "source": "K",
+          "section": "7.3.1",
+          "pages": [
+            274
+          ]
+        }
+      ]
+    },
+    {
+      "unit": 22,
+      "location": ".concepts[1].items[4]",
+      "text": "실습 문제 15 '욕심쟁이 로봇'은 도착 시 남는 에너지를 최대화하는 경로를 선택하고, 충전소를 반복 방문하여 과충전될 가능성을 예측하는 문제이다.",
+      "evidence": "목적지에 도달할 때 남아 있는 에너지(전력)가 최대",
+      "refs": [
+        {
+          "source": "K",
+          "section": "7.4.2",
+          "pages": [
+            281
+          ]
+        }
+      ]
+    },
+    {
+      "unit": 22,
+      "location": ".concepts[2].items[1]",
+      "text": "새 더미(dummy) 정점을 추가하고 모든 정점에 가중치가 0인 에지를 연결한 뒤, 벨만-포드로 더미 정점에서 각 정점까지의 최단 거리를 기록한다.",
+      "evidence": "새로운 '더미(dummy)' 정점을 추가",
+      "refs": [
+        {
+          "source": "K",
+          "section": "7.5",
+          "pages": [
+            285
+          ]
+        }
+      ]
+    },
+    {
+      "unit": 22,
+      "location": ".concepts[3].items[0]",
+      "text": "방향 그래프를 같은 구역의 정점끼리 서로 이동 가능한 경로를 갖도록 나눌 때, 각 구역이 강한 연결 요소를 나타낸다.",
+      "evidence": "같은 구역 안의 정점끼리는 서로 이동 가능한 경로",
+      "refs": [
+        {
+          "source": "K",
+          "section": "7.6",
+          "pages": [
+            297
+          ]
+        }
+      ]
+    },
+    {
+      "unit": 22,
+      "location": ".concepts[3].items[1]",
+      "text": "무방향 그래프의 연결 요소(connected component)는 모든 정점이 서로 연결된 부분 그래프 중 최대 크기의 부분 그래프 집합이며, 그 안의 두 정점은 상호 접근이 가능하다.",
+      "evidence": "모든 정점이 서로 연결되어 있는 부분 그래프 중에서 최대 크기",
+      "refs": [
+        {
+          "source": "K",
+          "section": "7.6.1",
+          "pages": [
+            297
+          ]
+        }
+      ]
+    },
+    {
+      "unit": 22,
+      "location": ".concepts[4].items[0]",
+      "text": "코사라주 알고리즘(Kosaraju's algorithm)은 강한 연결 요소를 찾기 위해 입력 그래프에 DFS를 한 번, 전치한 그래프에 DFS를 한 번 수행한다.",
+      "evidence": "코사라주 알고리즘은 DFS를 두 번 수행",
+      "refs": [
+        {
+          "source": "K",
+          "section": "7.7",
+          "pages": [
+            300
+          ]
+        }
+      ]
+    },
+    {
+      "unit": 22,
+      "location": ".concepts[4].items[3]",
+      "text": "전치 그래프에서는 스택에서 꺼낸 정점을 아직 방문하지 않았다면 DFS를 시작하며, 각각의 DFS에서 만나는 정점들이 강한 연결 요소를 구성한다.",
+      "evidence": "각각의 DFS에서 만나는 정점들이 강한 연결 요소를 구성",
+      "refs": [
+        {
+          "source": "K",
+          "section": "7.7",
+          "pages": [
+            300
+          ]
+        }
+      ]
+    },
+    {
+      "unit": 22,
+      "location": ".concepts[4].items[4]",
+      "text": "본문은 코사라주 구현에서 인접 행렬을 권장하지 않으며, 각 정점의 이웃을 찾는 데 상당한 반복이 필요하기 때문이라고 설명한다.",
+      "evidence": "각 정점의 이웃을 찾기 위해 상당한 양의 반복문",
+      "refs": [
+        {
+          "source": "K",
+          "section": "7.7",
+          "pages": [
+            301
+          ]
+        }
+      ]
+    },
+    {
+      "unit": 22,
+      "location": ".concepts[5].items[0]",
+      "text": "본문은 모든 정점 사이의 최단 거리에는 존슨 알고리즘을, 하나의 시작 정점에서 나머지 정점까지의 최단 거리에는 존슨보다 벨만-포드를 사용하는 것이 효율적이라고 비교한다.",
+      "evidence": "존슨 알고리즘보다 벨만-포드 알고리즘을 사용하는 것이 더 효율적",
+      "refs": [
+        {
+          "source": "K",
+          "section": "7.8",
+          "pages": [
+            311
+          ]
+        }
+      ]
+    },
+    {
+      "unit": 22,
+      "location": ".concepts[5].items[1]",
+      "text": "그래프 구현 방식은 데이터 특성과 문제 세부 사항에 따라 선택하며, 성능 외에 코드의 가독성과 간결성을 고려할 수도 있다.",
+      "evidence": "구현 코드의 가독성 및 간결성 측면",
+      "refs": [
+        {
+          "source": "K",
+          "section": "7.8",
+          "pages": [
+            311
+          ]
+        }
+      ]
+    },
+    {
+      "unit": 22,
+      "location": ".procedures[1].steps[0]",
+      "text": "새 더미(dummy) 정점을 추가하고 모든 정점에 가중치가 0인 에지를 연결한 뒤, 벨만-포드로 더미 정점에서 각 정점까지의 최단 거리를 기록한다.",
+      "evidence": "새로운 '더미(dummy)' 정점을 추가",
+      "refs": [
+        {
+          "source": "K",
+          "section": "7.5",
+          "pages": [
+            285
+          ]
+        }
+      ]
+    },
+    {
+      "unit": 22,
+      "location": ".procedures[2].steps[2]",
+      "text": "전치 그래프에서는 스택에서 꺼낸 정점을 아직 방문하지 않았다면 DFS를 시작하며, 각각의 DFS에서 만나는 정점들이 강한 연결 요소를 구성한다.",
+      "evidence": "각각의 DFS에서 만나는 정점들이 강한 연결 요소를 구성",
+      "refs": [
+        {
+          "source": "K",
+          "section": "7.7",
+          "pages": [
+            300
+          ]
+        }
+      ]
+    },
+    {
+      "unit": 22,
+      "location": ".comparisons[0].rows[0][1]",
+      "text": "존슨 알고리즘",
+      "evidence": "존슨 알고리즘을 사용하는 것이 가장 좋은 선택",
+      "refs": [
+        {
+          "source": "K",
+          "section": "7.8",
+          "pages": [
+            311
+          ]
+        }
+      ]
+    },
+    {
+      "unit": 22,
+      "location": ".comparisons[0].rows[1][1]",
+      "text": "존슨보다 벨만-포드가 효율적",
+      "evidence": "존슨 알고리즘보다 벨만-포드 알고리즘을 사용하는 것이 더 효율적",
+      "refs": [
+        {
+          "source": "K",
+          "section": "7.8",
+          "pages": [
+            311
+          ]
+        }
+      ]
+    },
+    {
+      "unit": 22,
+      "location": ".terms[0].definition",
+      "text": "벨만-포드 알고리즘(Bellman-Ford algorithm)은 음수 가중치가 있는 그래프에서 사용할 수 있으며, 모든 에지에 대한 선택을 (V - 1)번 반복해 점진적으로 최단 거리를 찾는다.",
+      "evidence": "그래프의 모든 에지에 대해 다익스트라의 그리디 선택 방법을 (V - 1)번 반복",
+      "refs": [
+        {
+          "source": "K",
+          "section": "7.3",
+          "pages": [
+            273
+          ]
+        }
+      ]
+    },
+    {
+      "unit": 22,
+      "location": ".terms[1].definition",
+      "text": "연습 문제 32의 UNKNOWN은 무한대를 표현하는 정수 상수로, 에지 가중치의 합보다 충분히 큰 값을 사용하며 코드에서는 INT_MAX로 정의한다.",
+      "evidence": "UNKNOWN은 정수 상수 값으로, 그래프 에지 가중치의 합보다 충분히 큰 정수",
+      "refs": [
+        {
+          "source": "K",
+          "section": "7.3.1",
+          "pages": [
+            274
+          ]
+        }
+      ]
+    },
+    {
+      "unit": 22,
+      "location": ".terms[5].definition",
+      "text": "방향 그래프를 같은 구역의 정점끼리 서로 이동 가능한 경로를 갖도록 나눌 때, 각 구역이 강한 연결 요소를 나타낸다.",
+      "evidence": "같은 구역 안의 정점끼리는 서로 이동 가능한 경로",
+      "refs": [
+        {
+          "source": "K",
+          "section": "7.6",
+          "pages": [
+            297
+          ]
+        }
+      ]
+    },
+    {
+      "unit": 22,
+      "location": ".terms[6].definition",
+      "text": "무방향 그래프의 연결 요소(connected component)는 모든 정점이 서로 연결된 부분 그래프 중 최대 크기의 부분 그래프 집합이며, 그 안의 두 정점은 상호 접근이 가능하다.",
+      "evidence": "모든 정점이 서로 연결되어 있는 부분 그래프 중에서 최대 크기",
+      "refs": [
+        {
+          "source": "K",
+          "section": "7.6.1",
+          "pages": [
+            297
+          ]
+        }
+      ]
+    },
+    {
+      "unit": 22,
+      "location": ".terms[8].definition",
+      "text": "코사라주 알고리즘(Kosaraju's algorithm)은 강한 연결 요소를 찾기 위해 입력 그래프에 DFS를 한 번, 전치한 그래프에 DFS를 한 번 수행한다.",
+      "evidence": "코사라주 알고리즘은 DFS를 두 번 수행",
+      "refs": [
+        {
+          "source": "K",
+          "section": "7.7",
+          "pages": [
+            300
+          ]
+        }
+      ]
+    },
+    {
+      "unit": 22,
+      "location": ".review[3].answer",
+      "text": "전치 그래프에서는 스택에서 꺼낸 정점을 아직 방문하지 않았다면 DFS를 시작하며, 각각의 DFS에서 만나는 정점들이 강한 연결 요소를 구성한다.",
+      "evidence": "각각의 DFS에서 만나는 정점들이 강한 연결 요소를 구성",
+      "refs": [
+        {
+          "source": "K",
+          "section": "7.7",
+          "pages": [
+            300
+          ]
+        }
+      ]
+    },
+    {
+      "unit": 22,
+      "location": ".cheat.definitions[1].definition",
+      "text": "방향 그래프를 같은 구역의 정점끼리 서로 이동 가능한 경로를 갖도록 나눌 때, 각 구역이 강한 연결 요소를 나타낸다.",
+      "evidence": "같은 구역 안의 정점끼리는 서로 이동 가능한 경로",
+      "refs": [
+        {
+          "source": "K",
+          "section": "7.6",
+          "pages": [
+            297
+          ]
+        }
+      ]
+    },
+    {
+      "unit": 22,
+      "location": ".cheat.comparison_rows[0][1]",
+      "text": "존슨 알고리즘",
+      "evidence": "존슨 알고리즘을 사용하는 것이 가장 좋은 선택",
+      "refs": [
+        {
+          "source": "K",
+          "section": "7.8",
+          "pages": [
+            311
+          ]
+        }
+      ]
+    },
+    {
+      "unit": 22,
+      "location": ".cheat.comparison_rows[1][1]",
+      "text": "존슨보다 벨만-포드가 효율적",
+      "evidence": "존슨 알고리즘보다 벨만-포드 알고리즘을 사용하는 것이 더 효율적",
+      "refs": [
+        {
+          "source": "K",
+          "section": "7.8",
+          "pages": [
+            311
+          ]
+        }
+      ]
+    },
+    {
+      "unit": 23,
+      "location": ".learning[0]",
+      "text": "주어진 문제에 동적 계획법을 적용할 수 있는지 분석하고 메모이제이션과 타뷸레이션을 비교한다.",
+      "evidence": "동적 계획법을 적용할 수 있는지 분석 / 메모이제이션과 타뷸레이션 기법을 서로 비교",
+      "refs": [
+        {
+          "source": "K",
+          "section": "8장 학습 목표",
+          "pages": [
+            315
+          ]
+        }
+      ]
+    },
+    {
+      "unit": 23,
+      "location": ".concepts[0].items[4]",
+      "text": "상태(state)를 정할 때는 각 부분 문제를 다른 부분 문제와 다르다고 판단할 수 있는 기준을 찾아야 한다.",
+      "evidence": "각 부분 문제를 다른 부분 문제와 다르다고 판단할 수 있는 기준",
+      "refs": [
+        {
+          "source": "K",
+          "section": "8.5.2 기저 조건과 상태 정의하기",
+          "pages": [
+            325
+          ]
+        }
+      ]
+    },
+    {
+      "unit": 23,
+      "location": ".concepts[1].items[0]",
+      "text": "메모이제이션(memoization)은 하향식 방식에서 부분 문제의 해를 캐시에 넣어 사용하는 기술이다.",
+      "evidence": "하향식 방식에서 부분 문제의 해를 캐시에 넣어 사용하는 기술",
+      "refs": [
+        {
+          "source": "K",
+          "section": "8.3 메모이제이션: 하향식 접근 방법",
+          "pages": [
+            319
+          ]
+        }
+      ]
+    },
+    {
+      "unit": 23,
+      "location": ".concepts[1].items[1]",
+      "text": "함수가 호출되면 먼저 현재 상태가 캐시에 있는지 확인하고 이미 저장되어 있으면 그 값을 반환한다.",
+      "evidence": "먼저 F(n)의 상태가 이미 캐시에 저장 / 이 값을 반환",
+      "refs": [
+        {
+          "source": "K",
+          "section": "8.3 메모이제이션: 하향식 접근 방법",
+          "pages": [
+            318
+          ]
+        }
+      ]
+    },
+    {
+      "unit": 23,
+      "location": ".concepts[2].items[1]",
+      "text": "타뷸레이션은 앞부분 상태부터 채운 값을 나중 상태에서 재사용한다.",
+      "evidence": "앞부분 상태부터 채워나가며 이 상태 값을 나중에 재사용",
+      "refs": [
+        {
+          "source": "K",
+          "section": "8.6.5 하향식에서 상향식으로 바꾸기",
+          "pages": [
+            367
+          ]
+        }
+      ]
+    },
+    {
+      "unit": 23,
+      "location": ".concepts[3].items[5]",
+      "text": "부분집합 합만 캐시 키로 쓰면 같은 합에 도달한 서로 다른 경우를 구분하지 못하여 잘못된 결과가 생길 수 있다.",
+      "evidence": "같은 sum 값에 도달할 수 있는 여러 가지 경우의 수 / 잘못된 캐시 사용",
+      "refs": [
+        {
+          "source": "K",
+          "section": "8.5.7 메모이제이션·캐시 사용하기",
+          "pages": [
+            338
+          ]
+        }
+      ]
+    },
+    {
+      "unit": 23,
+      "location": ".concepts[4].items[0]",
+      "text": "최장 공통 부분 시퀀스(LCS, Longest Common Subsequence)는 두 데이터 시퀀스에 공통으로 나타나는 가장 긴 부분 시퀀스를 찾는 문제이다.",
+      "evidence": "두 시퀀스에 공통으로 나타나는 가장 긴 부분 시퀀스",
+      "refs": [
+        {
+          "source": "K",
+          "section": "8.6.1 최장 공통 부분 시퀀스 문제",
+          "pages": [
+            355
+          ]
+        }
+      ]
+    },
+    {
+      "unit": 23,
+      "location": ".concepts[4].items[1]",
+      "text": "두 문자열 중 하나라도 빈 문자열이면 LCS 값은 0이다.",
+      "evidence": "두 개의 문자열 중 하나라도 비어 있는 상태이면 LCS 값은 0",
+      "refs": [
+        {
+          "source": "K",
+          "section": "8.6.3 최적 부분 구조 찾기",
+          "pages": [
+            364
+          ]
+        }
+      ]
+    },
+    {
+      "unit": 23,
+      "location": ".concepts[4].items[4]",
+      "text": "LCS 메모이제이션은 두 문자열 길이를 각 차원 크기로 하는 2차원 벡터에 계산 결과를 저장한다.",
+      "evidence": "결과를 2차원 벡터 / 첫 번째 차원의 크기는 A / 두 번째 차원 크기는 B",
+      "refs": [
+        {
+          "source": "K",
+          "section": "8.6.3 최적 부분 구조 찾기",
+          "pages": [
+            364
+          ]
+        }
+      ]
+    },
+    {
+      "unit": 23,
+      "location": ".procedures[0].steps[2]",
+      "text": "하향식 해법에서 부분 문제의 해답을 캐시에 저장하는 메모이제이션을 적용한다.",
+      "evidence": "하향식 방식에서 부분 문제의 해를 캐시에",
+      "refs": [
+        {
+          "source": "K",
+          "section": "8.3 메모이제이션: 하향식 접근 방법",
+          "pages": [
+            319
+          ]
+        }
+      ]
+    },
+    {
+      "unit": 23,
+      "location": ".procedures[1].steps[2]",
+      "text": "같은 상태에서 현재 원소를 추가하면 i+1까지 합 x + set[i]도 만들 수 있다.",
+      "evidence": "i + 1 사이에서 x + set[i]와 같은 부분집합의 합",
+      "refs": [
+        {
+          "source": "K",
+          "section": "8.5.9 타뷸레이션",
+          "pages": [
+            344
+          ]
+        }
+      ]
+    },
+    {
+      "unit": 23,
+      "location": ".syntax[0]",
+      "text": "메모이제이션 피보나치 함수 - 원문 발췌",
+      "evidence": "if (memo[n] != UNKNOWN) return memo[n]; / memo[n] = result;",
+      "refs": [
+        {
+          "source": "K",
+          "section": "8.3 메모이제이션: 하향식 접근 방법",
+          "pages": [
+            319
+          ]
+        }
+      ]
+    },
+    {
+      "unit": 23,
+      "location": ".syntax[0].note",
+      "text": "원문은 UNKNOWN = -1, MAX_SIZE = 100인 상수와 memo(MAX_SIZE, UNKNOWN) 벡터를 함수 앞에 정의한다.",
+      "evidence": "const int UNKNOWN = -1; / const int MAX_SIZE = 100; / vector<int> memo(MAX_SIZE, UNKNOWN);",
+      "refs": [
+        {
+          "source": "K",
+          "section": "8.3 메모이제이션: 하향식 접근 방법",
+          "pages": [
+            319
+          ]
+        }
+      ]
+    },
+    {
+      "unit": 23,
+      "location": ".formulas[0]",
+      "text": "F(0) = 0\nF(1) = 1\nF(n) = F(n-1) + F(n-2)",
+      "evidence": "F(0) = 0 / F(1) = 1 / F(n) = F(n-1) + F(n-2)",
+      "refs": [
+        {
+          "source": "K",
+          "section": "8.2 동적 계획법이란?",
+          "pages": [
+            316
+          ]
+        }
+      ]
+    },
+    {
+      "unit": 23,
+      "location": ".formulas[1]",
+      "text": "i = 0 또는 j = 0: LCS(i, j) = 0\n마지막 문자가 같음: LCS(i, j) = LCS(i - 1, j - 1) + 1\n그렇지 않음: LCS(i - 1, j)와 LCS(i, j - 1) 중 최댓값",
+      "evidence": "LCS(i, j) = 0 / LCS(i - 1, j - 1) + 1 / 둘 중에 최댓값",
+      "refs": [
+        {
+          "source": "K",
+          "section": "8.6.5 하향식에서 상향식으로 바꾸기",
+          "pages": [
+            367
+          ]
+        }
+      ]
+    },
+    {
+      "unit": 23,
+      "location": ".comparisons[0].rows[0][1]",
+      "text": "메모이제이션(memoization)은 하향식 방식에서 부분 문제의 해를 캐시에 넣어 사용하는 기술이다.",
+      "evidence": "하향식 방식에서 부분 문제의 해를 캐시에 넣어 사용하는 기술",
+      "refs": [
+        {
+          "source": "K",
+          "section": "8.3 메모이제이션: 하향식 접근 방법",
+          "pages": [
+            319
+          ]
+        }
+      ]
+    },
+    {
+      "unit": 23,
+      "location": ".terms[3].definition",
+      "text": "상태(state)를 정할 때는 각 부분 문제를 다른 부분 문제와 다르다고 판단할 수 있는 기준을 찾아야 한다.",
+      "evidence": "각 부분 문제를 다른 부분 문제와 다르다고 판단할 수 있는 기준",
+      "refs": [
+        {
+          "source": "K",
+          "section": "8.5.2 기저 조건과 상태 정의하기",
+          "pages": [
+            325
+          ]
+        }
+      ]
+    },
+    {
+      "unit": 23,
+      "location": ".terms[4].definition",
+      "text": "메모이제이션(memoization)은 하향식 방식에서 부분 문제의 해를 캐시에 넣어 사용하는 기술이다.",
+      "evidence": "하향식 방식에서 부분 문제의 해를 캐시에 넣어 사용하는 기술",
+      "refs": [
+        {
+          "source": "K",
+          "section": "8.3 메모이제이션: 하향식 접근 방법",
+          "pages": [
+            319
+          ]
+        }
+      ]
+    },
+    {
+      "unit": 23,
+      "location": ".terms[7].definition",
+      "text": "최장 공통 부분 시퀀스(LCS, Longest Common Subsequence)는 두 데이터 시퀀스에 공통으로 나타나는 가장 긴 부분 시퀀스를 찾는 문제이다.",
+      "evidence": "두 시퀀스에 공통으로 나타나는 가장 긴 부분 시퀀스",
+      "refs": [
+        {
+          "source": "K",
+          "section": "8.6.1 최장 공통 부분 시퀀스 문제",
+          "pages": [
+            355
+          ]
+        }
+      ]
+    },
+    {
+      "unit": 23,
+      "location": ".cheat.comparison_rows[0][1]",
+      "text": "메모이제이션(memoization)은 하향식 방식에서 부분 문제의 해를 캐시에 넣어 사용하는 기술이다.",
+      "evidence": "하향식 방식에서 부분 문제의 해를 캐시에 넣어 사용하는 기술",
+      "refs": [
+        {
+          "source": "K",
+          "section": "8.3 메모이제이션: 하향식 접근 방법",
+          "pages": [
+            319
+          ]
+        }
+      ]
+    },
+    {
+      "unit": 23,
+      "location": ".cheat.formulas[0]",
+      "text": "F(0) = 0\nF(1) = 1\nF(n) = F(n-1) + F(n-2)",
+      "evidence": "F(0) = 0 / F(1) = 1 / F(n) = F(n-1) + F(n-2)",
+      "refs": [
+        {
+          "source": "K",
+          "section": "8.2 동적 계획법이란?",
+          "pages": [
+            316
+          ]
+        }
+      ]
+    },
+    {
+      "unit": 24,
+      "location": ".learning[0]",
+      "text": "0-1 배낭 문제와 무한 개수 배낭 문제를 구현하고 상태 공간 축소를 적용한다.",
+      "evidence": "0-1 배낭 문제와 무한 개수 배낭 문제 / 상태 공간 축소",
+      "refs": [
+        {
+          "source": "K",
+          "section": "9장 학습 목표",
+          "pages": [
+            375
+          ]
+        }
+      ]
+    },
+    {
+      "unit": 24,
+      "location": ".concepts[0].items[4]",
+      "text": "원문은 부분집합 합의 동적 계획법을 의사 다항 시간(pseudo-polynomial time)으로 분류한다.",
+      "evidence": "의사 다항 시간(pseudo-polynomial time)으로 동작",
+      "refs": [
+        {
+          "source": "K",
+          "section": "9.3 부분집합의 합 문제 다시 보기",
+          "pages": [
+            381
+          ]
+        }
+      ]
+    },
+    {
+      "unit": 24,
+      "location": ".concepts[1].items[2]",
+      "text": "원문의 0-1 배낭 DP는 이전 행의 같은 무게 값과 현재 물건을 넣는 경우의 가격 합 중 최댓값을 저장한다.",
+      "evidence": "max(DP[i - 1][totalWeight], DP[i - 1][totalWeight - currentWeight] + currentValue)",
+      "refs": [
+        {
+          "source": "K",
+          "section": "9.4.2 연습 문제 41: 0-1 배낭 문제",
+          "pages": [
+            386
+          ]
+        }
+      ]
+    },
+    {
+      "unit": 24,
+      "location": ".concepts[1].items[4]",
+      "text": "무한 개수 배낭은 상태 전환 조건이 무게에만 의존하여 1차원 DP 테이블로 표현할 수 있다.",
+      "evidence": "오직 무게 weight에만 의존 / 1차원 DP 테이블",
+      "refs": [
+        {
+          "source": "K",
+          "section": "9.4.4 상태 공간 축소",
+          "pages": [
+            394
+          ]
+        }
+      ]
+    },
+    {
+      "unit": 24,
+      "location": ".concepts[2].items[0]",
+      "text": "상태 공간 축소(state space reduction)는 상태를 표현하는 공간의 크기를 최소화하도록 동적 계획법 알고리즘을 재구성하는 작업이다.",
+      "evidence": "상태를 표현하기 위해 사용하는 공간의 크기가 최소화하도록 / 재구성",
+      "refs": [
+        {
+          "source": "K",
+          "section": "9.4.4 상태 공간 축소",
+          "pages": [
+            389
+          ]
+        }
+      ]
+    },
+    {
+      "unit": 24,
+      "location": ".concepts[3].items[0]",
+      "text": "단일 시작 최단 경로 문제(single-source shortest path problem)는 한 정점에서 나머지 모든 정점까지의 최단 경로를 찾는다.",
+      "evidence": "하나의 정점에서 시작하여 나머지 모든 정점까지의 최단 경로",
+      "refs": [
+        {
+          "source": "K",
+          "section": "9.5.2 동적 계획법으로 최단 경로 문제 다루기",
+          "pages": [
+            405
+          ]
+        }
+      ]
+    },
+    {
+      "unit": 24,
+      "location": ".concepts[4].items[1]",
+      "text": "현재 start-end 거리보다 start-mid와 mid-end 거리의 합이 짧으면 그 합으로 갱신한다.",
+      "evidence": "distance[start][mid] + distance[mid][end] < distance[start][end]",
+      "refs": [
+        {
+          "source": "K",
+          "section": "9.5.6 플로이드-워셜 알고리즘 구현하기",
+          "pages": [
+            416
+          ]
+        }
+      ]
+    },
+    {
+      "unit": 24,
+      "location": ".concepts[4].items[2]",
+      "text": "중첩 반복문의 순서는 가장 바깥쪽 mid, 그다음 start, 가장 안쪽 end이다.",
+      "evidence": "가장 바깥쪽 / mid / 가운데 / start / 가장 안쪽 / end",
+      "refs": [
+        {
+          "source": "K",
+          "section": "9.5.6 플로이드-워셜 알고리즘 구현하기",
+          "pages": [
+            416
+          ]
+        }
+      ]
+    },
+    {
+      "unit": 24,
+      "location": ".procedures[1].steps[2]",
+      "text": "대각 원소가 음수인지 확인하여 음수 가중치 사이클을 검사하고 distance를 반환한다.",
+      "evidence": "distance[i][i] < 0 / return distance;",
+      "refs": [
+        {
+          "source": "K",
+          "section": "9.5.6 플로이드-워셜 알고리즘 구현하기",
+          "pages": [
+            416
+          ]
+        }
+      ]
+    },
+    {
+      "unit": 24,
+      "location": ".syntax[0]",
+      "text": "플로이드-워셜 거리 갱신 - 원문 발췌",
+      "evidence": "for (int mid = 0; mid < V; mid++) / distance[start][end] = distance[start][mid] + distance[mid][end];",
+      "refs": [
+        {
+          "source": "K",
+          "section": "9.5.6 연습 문제 44: 플로이드-워셜 알고리즘 구현하기",
+          "pages": [
+            416
+          ]
+        }
+      ]
+    },
+    {
+      "unit": 24,
+      "location": ".formulas[0]",
+      "text": "m = 1, m = n → triangle(n, m) = 1\ntriangle(n, m) = triangle(n-1, m-1) + triangle(n-1, m)",
+      "evidence": "m = 1, m = n / triangle(n, m) = triangle(n-1, m-1) + triangle(n-1, m)",
+      "refs": [
+        {
+          "source": "K",
+          "section": "9.4.4 상태 공간 축소",
+          "pages": [
+            389
+          ]
+        }
+      ]
+    },
+    {
+      "unit": 24,
+      "location": ".formulas[1]",
+      "text": "시간 O(V^3) · 메모리 O(V^2)",
+      "evidence": "O(V³)의 시간 복잡도와 O(V²)의 메모리 사용량",
+      "refs": [
+        {
+          "source": "K",
+          "section": "9.5.4 모든 쌍 최단 경로",
+          "pages": [
+            413
+          ]
+        }
+      ]
+    },
+    {
+      "unit": 24,
+      "location": ".comparisons[0].rows[1][1]",
+      "text": "같은 물건을 중복 포함할 수 있고, 상태 전환은 무게에만 의존하므로 1차원 DP로 표현할 수 있다.",
+      "evidence": "현재 물건을 중복해서 포함 / 오직 무게 weight에만 의존 / 1차원 DP 테이블",
+      "refs": [
+        {
+          "source": "K",
+          "section": "9.4.4 상태 공간 축소",
+          "pages": [
+            394
+          ]
+        }
+      ]
+    },
+    {
+      "unit": 24,
+      "location": ".terms[1].definition",
+      "text": "원문은 부분집합 합의 동적 계획법을 의사 다항 시간(pseudo-polynomial time)으로 분류한다.",
+      "evidence": "의사 다항 시간(pseudo-polynomial time)으로 동작",
+      "refs": [
+        {
+          "source": "K",
+          "section": "9.3 부분집합의 합 문제 다시 보기",
+          "pages": [
+            381
+          ]
+        }
+      ]
+    },
+    {
+      "unit": 24,
+      "location": ".terms[4].definition",
+      "text": "상태 공간 축소(state space reduction)는 상태를 표현하는 공간의 크기를 최소화하도록 동적 계획법 알고리즘을 재구성하는 작업이다.",
+      "evidence": "상태를 표현하기 위해 사용하는 공간의 크기가 최소화하도록 / 재구성",
+      "refs": [
+        {
+          "source": "K",
+          "section": "9.4.4 상태 공간 축소",
+          "pages": [
+            389
+          ]
+        }
+      ]
+    },
+    {
+      "unit": 24,
+      "location": ".terms[5].definition",
+      "text": "단일 시작 최단 경로 문제(single-source shortest path problem)는 한 정점에서 나머지 모든 정점까지의 최단 경로를 찾는다.",
+      "evidence": "하나의 정점에서 시작하여 나머지 모든 정점까지의 최단 경로",
+      "refs": [
+        {
+          "source": "K",
+          "section": "9.5.2 동적 계획법으로 최단 경로 문제 다루기",
+          "pages": [
+            405
+          ]
+        }
+      ]
+    },
+    {
+      "unit": 24,
+      "location": ".review[0].answer",
+      "text": "M은 부분집합 합의 목표치이고, 원문은 해법을 의사 다항 시간으로 분류한다.",
+      "evidence": "M은 부분집합의 합 목표치 / 의사 다항 시간",
+      "refs": [
+        {
+          "source": "K",
+          "section": "9.3 부분집합의 합 문제 다시 보기",
+          "pages": [
+            380,
+            381
+          ]
+        }
+      ]
+    },
+    {
+      "unit": 24,
+      "location": ".review[2].answer",
+      "text": "중간 정점 mid, 시작 정점 start, 목표 정점 end 순서이다.",
+      "evidence": "가장 바깥쪽 / mid / 가운데 / start / 가장 안쪽 / end",
+      "refs": [
+        {
+          "source": "K",
+          "section": "9.5.6 플로이드-워셜 알고리즘 구현하기",
+          "pages": [
+            416
+          ]
+        }
+      ]
+    },
+    {
+      "unit": 24,
+      "location": ".review[3].answer",
+      "text": "distance[i][i]가 0보다 작은지 확인한다.",
+      "evidence": "distance[i][i] < 0",
+      "refs": [
+        {
+          "source": "K",
+          "section": "9.5.6 플로이드-워셜 알고리즘 구현하기",
+          "pages": [
+            416
+          ]
+        }
+      ]
+    },
+    {
+      "unit": 24,
+      "location": ".cheat.definitions[0].definition",
+      "text": "상태 공간 축소(state space reduction)는 상태를 표현하는 공간의 크기를 최소화하도록 동적 계획법 알고리즘을 재구성하는 작업이다.",
+      "evidence": "상태를 표현하기 위해 사용하는 공간의 크기가 최소화하도록 / 재구성",
+      "refs": [
+        {
+          "source": "K",
+          "section": "9.4.4 상태 공간 축소",
+          "pages": [
+            389
+          ]
+        }
+      ]
+    },
+    {
+      "unit": 24,
+      "location": ".cheat.definitions[1].definition",
+      "text": "단일 시작 최단 경로 문제(single-source shortest path problem)는 한 정점에서 나머지 모든 정점까지의 최단 경로를 찾는다.",
+      "evidence": "하나의 정점에서 시작하여 나머지 모든 정점까지의 최단 경로",
+      "refs": [
+        {
+          "source": "K",
+          "section": "9.5.2 동적 계획법으로 최단 경로 문제 다루기",
+          "pages": [
+            405
+          ]
+        }
+      ]
+    },
+    {
+      "unit": 24,
+      "location": ".cheat.comparison_rows[1][1]",
+      "text": "같은 물건을 중복 포함할 수 있고, 상태 전환은 무게에만 의존하므로 1차원 DP로 표현할 수 있다.",
+      "evidence": "현재 물건을 중복해서 포함 / 오직 무게 weight에만 의존 / 1차원 DP 테이블",
+      "refs": [
+        {
+          "source": "K",
+          "section": "9.4.4 상태 공간 축소",
+          "pages": [
+            394
+          ]
+        }
+      ]
+    },
+    {
+      "unit": 24,
+      "location": ".cheat.formulas[0]",
+      "text": "시간 O(V^3) · 메모리 O(V^2)",
+      "evidence": "O(V³)의 시간 복잡도와 O(V²)의 메모리 사용량",
+      "refs": [
+        {
+          "source": "K",
+          "section": "9.5.4 모든 쌍 최단 경로",
+          "pages": [
+            413
+          ]
+        }
+      ]
+    },
+    {
+      "unit": 25,
+      "location": ".learning[1]",
+      "text": "리스트·트리·해시·분할 정복·그리디·그래프·동적 계획법의 실습 풀이를 다룬다.",
+      "evidence": "A.1 1장 리스트, 스택, 큐 / A.9 9장 동적 계획법 II",
+      "refs": [
+        {
+          "source": "K",
+          "section": "부록 A.1~A.9",
+          "pages": [
+            427,
+            441,
+            447,
+            454,
+            463,
+            469,
+            476,
+            494,
+            517
+          ]
+        }
+      ]
+    },
+    {
+      "unit": 25,
+      "location": ".concepts[0].items[3]",
+      "text": "Printer 클래스는 요청된 순서대로 프린트하기 위해 std::queue를 사용하고, 최대 인쇄 요청 개수를 템플릿 인자로 받는다.",
+      "evidence": "요청된 순서대로 프린트를 하기 위해 std::queue를 사용할 것입니다.",
+      "refs": [
+        {
+          "source": "K",
+          "section": "A.1.3 사무실 공유 프린터의 인쇄 대기 목록 시뮬레이션",
+          "pages": [
+            439
+          ]
+        }
+      ]
+    },
+    {
+      "unit": 25,
+      "location": ".concepts[1].items[3]",
+      "text": "병합 풀이의 힙 노드는 데이터, 입력 리스트 인덱스, 해당 리스트에서의 데이터 인덱스를 저장한다.",
+      "evidence": "힙 노드는 데이터와 입력 리스트 인덱스, 그리고 해당 입력 리스트에서의 데이터 인덱스를 저장합니다.",
+      "refs": [
+        {
+          "source": "K",
+          "section": "A.2 트리, 힙, 그래프: 병합 풀이 수록 부분",
+          "pages": [
+            445
+          ]
+        }
+      ]
+    },
+    {
+      "unit": 25,
+      "location": ".concepts[2].items[0]",
+      "text": "URLService는 짧은 URL을 키로, 원본 URL을 데이터 값으로 사용하여 맵에 함께 저장한다.",
+      "evidence": "짧은 URL을 키로 사용하고, 원본 URL을 데이터 값으로 사용할 것입니다.",
+      "refs": [
+        {
+          "source": "K",
+          "section": "A.3.1 긴 URL을 짧은 URL로 매핑하기",
+          "pages": [
+            447
+          ]
+        }
+      ]
+    },
+    {
+      "unit": 25,
+      "location": ".concepts[2].items[2]",
+      "text": "이메일 주소 중복 검사 풀이에서는 BloomFilter 클래스를 추가하고 MD5() 함수로 해시 값을 계산한다.",
+      "evidence": "블룸 필터 클래스를 추가합니다. / MD5() 함수를 사용하여 해시 값을 계산하겠습니다.",
+      "refs": [
+        {
+          "source": "K",
+          "section": "A.3.2 이메일 주소 중복 검사",
+          "pages": [
+            451,
+            452
+          ]
+        }
+      ]
+    },
+    {
+      "unit": 25,
+      "location": ".concepts[3].items[1]",
+      "text": "부분 퀵 정렬은 퀵 정렬 알고리즘을 변형하며, 마지막 피벗 위치가 k보다 작으면 오른쪽 부분 벡터도 정렬한다.",
+      "evidence": "퀵 정렬 알고리즘을 변형하여 / 마지막 피벗 위치가 k보다 작으면 오른쪽 부분 벡터도 정렬",
+      "refs": [
+        {
+          "source": "K",
+          "section": "A.4.2 부분 정렬",
+          "pages": [
+            458,
+            459
+          ]
+        }
+      ]
+    },
+    {
+      "unit": 25,
+      "location": ".concepts[3].items[3]",
+      "text": "리듀스 작업에서는 std::accumulate()로 key에 해당하는 단어가 나타나는 총 횟수를 구한다.",
+      "evidence": "std::accumulate() 함수를 사용하여 / 단어가 나타나는 총 횟수를 구할 수 있습니다.",
+      "refs": [
+        {
+          "source": "K",
+          "section": "A.4.3 맵리듀스를 이용하여 워드카운트 구현하기",
+          "pages": [
+            463
+          ]
+        }
+      ]
+    },
+    {
+      "unit": 25,
+      "location": ".concepts[4].items[1]",
+      "text": "웰시-포웰 구현은 정점의 차수 기준으로 내림차순 정렬하고, 인접 정점에 현재 색상이 없으면 해당 색상을 지정한다.",
+      "evidence": "정점의 차수 기준으로 내림차순 정렬 / 인접한 정점이 color_to_be_assigned 색상을 가지고 있지 않다면",
+      "refs": [
+        {
+          "source": "K",
+          "section": "A.5.2 웰시-포웰 알고리즘",
+          "pages": [
+            467
+          ]
+        }
+      ]
+    },
+    {
+      "unit": 25,
+      "location": ".concepts[6].items[2]",
+      "text": "무작위 그래프 풀이에서는 모든 정점에 들어오거나 나가는 에지가 적어도 하나 존재하는지 인접 행렬의 대각 원소로 확인한다.",
+      "evidence": "모든 정점에서 들어오거나 나가는 에지가 적어도 하나 존재하는지를 확인",
+      "refs": [
+        {
+          "source": "K",
+          "section": "A.7.2 무작위 그래프 통계",
+          "pages": [
+            482
+          ]
+        }
+      ]
+    },
+    {
+      "unit": 25,
+      "location": ".concepts[6].items[4]",
+      "text": "미로-순간이동 게임의 미로·방·순간이동장치·점수는 그래프·정점·에지·가중치로 바꾸어 생각하며, 점수를 무한히 낮출 수 있는 상황은 음수 가중치 사이클이 있는 경우이다.",
+      "evidence": "미로, 방, 순간이동장치, 점수 / 그래프, 정점, 에지, 가중치 / 음수 가중치 사이클",
+      "refs": [
+        {
+          "source": "K",
+          "section": "A.7.3 미로-순간이동 게임",
+          "pages": [
+            489
+          ]
+        }
+      ]
+    },
+    {
+      "unit": 25,
+      "location": ".concepts[7].items[1]",
+      "text": "여행 경로의 추가 점수 풀이에서는 구간 합 배열(prefix sum array)을 사용하여 안쪽 for 반복문으로 계산하던 구간 합을 상수 시간에 계산한다.",
+      "evidence": "구간 합 배열(prefix sum array) / 구간 합을 상수 시간에 계산",
+      "refs": [
+        {
+          "source": "K",
+          "section": "A.8.1 여행 경로",
+          "pages": [
+            499
+          ]
+        }
+      ]
+    },
+    {
+      "unit": 25,
+      "location": ".concepts[7].items[2]",
+      "text": "LCS_Memoization()은 두 문자열의 부분 문자열을 재귀적으로 탐색하며 각 단계에서 memo 테이블에 결과를 저장한다.",
+      "evidence": "두 문자열의 부분 문자열을 재귀적으로 탐색하고, 각 단계에서 memo 테이블에 결과를 저장합니다.",
+      "refs": [
+        {
+          "source": "K",
+          "section": "A.8.2 메모이제이션을 이용하여 최장 공통 부분 시퀀스 찾기",
+          "pages": [
+            501
+          ]
+        }
+      ]
+    },
+    {
+      "unit": 25,
+      "location": ".concepts[7].items[3]",
+      "text": "LCS_Tabulation()은 문자열 A와 B를 인자로 받고 최장 공통 부분 시퀀스 문자열을 반환한다.",
+      "evidence": "두 개의 문자열 A와 B를 인자로 받고, 최장 공통 부분 시퀀스 문자열을 반환합니다.",
+      "refs": [
+        {
+          "source": "K",
+          "section": "A.8.3 타뷸레이션을 이용하여 최장 공통 부분 시퀀스 찾기",
+          "pages": [
+            505
+          ]
+        }
+      ]
+    },
+    {
+      "unit": 25,
+      "location": ".concepts[7].items[5]",
+      "text": "멜로디 순열 풀이의 상태는 지금까지 고려한 멜로디의 길이와, 현재 음을 추가하거나 추가하지 않은 부분집합의 두 차원으로 표현한다.",
+      "evidence": "각각의 상태는 2차원으로 표현 / 지금까지 고려한 멜로디의 길이(length)",
+      "refs": [
+        {
+          "source": "K",
+          "section": "A.8.4 멜로디 순열",
+          "pages": [
+            511
+          ]
+        }
+      ]
+    },
+    {
+      "unit": 25,
+      "location": ".concepts[8].items[1]",
+      "text": "최대 이익의 상향식 상태는 현재 인덱스, 상품 구매 비용, 상품 개수로 정의되며, 구현은 0-1 배낭 문제 풀이에서 차원이 하나 추가된 형태이다.",
+      "evidence": "현재 인덱스, 상품 구매 비용, 상품 개수 / 0-1 배낭 문제 풀이에서 차원이 하나 추가된 형태",
+      "refs": [
+        {
+          "source": "K",
+          "section": "A.9.1 최대 이익",
+          "pages": [
+            519,
+            520
+          ]
+        }
+      ]
+    },
+    {
+      "unit": 25,
+      "location": ".concepts[8].items[2]",
+      "text": "도로 건설에서 모든 집이 단지 입구까지 가장 낮은 비용으로 이동하도록 플로이드-워셜 알고리즘을 사용하고, 경로 재구성을 위한 next 행렬을 둔다.",
+      "evidence": "플로이드-워셜 알고리즘 / 경로 재구성을 위해 N×N 크기의 정수 행렬 next",
+      "refs": [
+        {
+          "source": "K",
+          "section": "A.9.2 도로 건설",
+          "pages": [
+            525
+          ]
+        }
+      ]
+    },
+    {
+      "unit": 25,
+      "location": ".procedures[0].steps[0]",
+      "text": "각 리스트의 가장 작은 원소를 추출하여 최소 힙을 구성한다.",
+      "evidence": "각각의 리스트에서 가장 작은 원소를 추출하여 최소 힙을 구성",
+      "refs": [
+        {
+          "source": "K",
+          "section": "A.2 트리, 힙, 그래프: 병합 풀이 수록 부분",
+          "pages": [
+            445
+          ]
+        }
+      ]
+    },
+    {
+      "unit": 25,
+      "location": ".procedures[0].steps[1]",
+      "text": "힙에서 가장 작은 원소를 꺼내어 출력 벡터에 추가한다.",
+      "evidence": "힙에서 원소 하나를 꺼내어 출력 벡터에 추가",
+      "refs": [
+        {
+          "source": "K",
+          "section": "A.2 트리, 힙, 그래프: 병합 풀이 수록 부분",
+          "pages": [
+            445
+          ]
+        }
+      ]
+    },
+    {
+      "unit": 25,
+      "location": ".procedures[0].steps[2]",
+      "text": "꺼낸 원소가 있던 리스트에 다음 원소가 있으면 힙에 넣고, 힙이 완전히 빌 때까지 반복한다.",
+      "evidence": "다음 원소가 있다면 이를 다시 힙에 넣습니다. 그리고 힙이 완전히 빌 때까지",
+      "refs": [
+        {
+          "source": "K",
+          "section": "A.2 트리, 힙, 그래프: 병합 풀이 수록 부분",
+          "pages": [
+            445
+          ]
+        }
+      ]
+    },
+    {
+      "unit": 25,
+      "location": ".syntax[0]",
+      "text": "파일 시스템 노드 — 원문 발췌",
+      "evidence": "struct n_ary_node / name / is_dir / children",
+      "refs": [
+        {
+          "source": "K",
+          "section": "A.2.1 파일 시스템 자료 구조 만들기",
+          "pages": [
+            441
+          ]
+        }
+      ]
+    },
+    {
+      "unit": 25,
+      "location": ".formulas[0]",
+      "text": "sum[i + 1] = sum[i] + distance[i]\n[L, R] 구간의 원소 합: sum[R+1] - sum[L]",
+      "evidence": "sum[i + 1] = sum[i] + distance[i] / sum[R+1] - sum[L]",
+      "refs": [
+        {
+          "source": "K",
+          "section": "A.8.1 여행 경로",
+          "pages": [
+            499
+          ]
+        }
+      ]
+    },
+    {
+      "unit": 25,
+      "location": ".comparisons[0].rows[0][1]",
+      "text": "int형 LCS 길이; 2차원 정수 벡터 참조형 memo에 결과를 저장한다.",
+      "evidence": "int LCS_Memoization / vector<vector<int>>& memo / 결과를 저장",
+      "refs": [
+        {
+          "source": "K",
+          "section": "A.8.2 메모이제이션을 이용하여 최장 공통 부분 시퀀스 찾기",
+          "pages": [
+            501
+          ]
+        }
+      ]
+    },
+    {
+      "unit": 25,
+      "location": ".comparisons[0].rows[1][0]",
+      "text": "LCS_Tabulation()",
+      "evidence": "string LCS_Tabulation",
+      "refs": [
+        {
+          "source": "K",
+          "section": "A.8.3 타뷸레이션을 이용하여 최장 공통 부분 시퀀스 찾기",
+          "pages": [
+            505
+          ]
+        }
+      ]
+    },
+    {
+      "unit": 25,
+      "location": ".comparisons[0].rows[1][1]",
+      "text": "string형 최장 공통 부분 시퀀스 문자열을 반환한다.",
+      "evidence": "최장 공통 부분 시퀀스 문자열을 반환합니다.",
+      "refs": [
+        {
+          "source": "K",
+          "section": "A.8.3 타뷸레이션을 이용하여 최장 공통 부분 시퀀스 찾기",
+          "pages": [
+            505
+          ]
+        }
+      ]
+    },
+    {
+      "unit": 25,
+      "location": ".terms[1].definition",
+      "text": "URLService는 짧은 URL을 키로, 원본 URL을 데이터 값으로 사용하여 맵에 함께 저장한다.",
+      "evidence": "짧은 URL을 키로 사용하고, 원본 URL을 데이터 값으로 사용할 것입니다.",
+      "refs": [
+        {
+          "source": "K",
+          "section": "A.3.1 긴 URL을 짧은 URL로 매핑하기",
+          "pages": [
+            447
+          ]
+        }
+      ]
+    },
+    {
+      "unit": 25,
+      "location": ".terms[3].definition",
+      "text": "이메일 주소 중복 검사 풀이에서는 BloomFilter 클래스를 추가하고 MD5() 함수로 해시 값을 계산한다.",
+      "evidence": "블룸 필터 클래스를 추가합니다. / MD5() 함수를 사용하여 해시 값을 계산하겠습니다.",
+      "refs": [
+        {
+          "source": "K",
+          "section": "A.3.2 이메일 주소 중복 검사",
+          "pages": [
+            451,
+            452
+          ]
+        }
+      ]
+    },
+    {
+      "unit": 25,
+      "location": ".terms[4].definition",
+      "text": "여행 경로의 추가 점수 풀이에서는 구간 합 배열(prefix sum array)을 사용하여 안쪽 for 반복문으로 계산하던 구간 합을 상수 시간에 계산한다.",
+      "evidence": "구간 합 배열(prefix sum array) / 구간 합을 상수 시간에 계산",
+      "refs": [
+        {
+          "source": "K",
+          "section": "A.8.1 여행 경로",
+          "pages": [
+            499
+          ]
+        }
+      ]
+    },
+    {
+      "unit": 25,
+      "location": ".terms[5].definition",
+      "text": "LCS_Memoization()은 두 문자열의 부분 문자열을 재귀적으로 탐색하며 각 단계에서 memo 테이블에 결과를 저장한다.",
+      "evidence": "두 문자열의 부분 문자열을 재귀적으로 탐색하고, 각 단계에서 memo 테이블에 결과를 저장합니다.",
+      "refs": [
+        {
+          "source": "K",
+          "section": "A.8.2 메모이제이션을 이용하여 최장 공통 부분 시퀀스 찾기",
+          "pages": [
+            501
+          ]
+        }
+      ]
+    },
+    {
+      "unit": 25,
+      "location": ".terms[6].definition",
+      "text": "LCS_Tabulation()은 문자열 A와 B를 인자로 받고 최장 공통 부분 시퀀스 문자열을 반환한다.",
+      "evidence": "두 개의 문자열 A와 B를 인자로 받고, 최장 공통 부분 시퀀스 문자열을 반환합니다.",
+      "refs": [
+        {
+          "source": "K",
+          "section": "A.8.3 타뷸레이션을 이용하여 최장 공통 부분 시퀀스 찾기",
+          "pages": [
+            505
+          ]
+        }
+      ]
+    },
+    {
+      "unit": 25,
+      "location": ".summary[0]",
+      "text": "Printer 클래스는 요청된 순서대로 프린트하기 위해 std::queue를 사용하고, 최대 인쇄 요청 개수를 템플릿 인자로 받는다.",
+      "evidence": "요청된 순서대로 프린트를 하기 위해 std::queue를 사용할 것입니다.",
+      "refs": [
+        {
+          "source": "K",
+          "section": "A.1.3 사무실 공유 프린터의 인쇄 대기 목록 시뮬레이션",
+          "pages": [
+            439
+          ]
+        }
+      ]
+    },
+    {
+      "unit": 25,
+      "location": ".summary[1]",
+      "text": "URLService는 짧은 URL을 키로, 원본 URL을 데이터 값으로 사용하여 맵에 함께 저장한다.",
+      "evidence": "짧은 URL을 키로 사용하고, 원본 URL을 데이터 값으로 사용할 것입니다.",
+      "refs": [
+        {
+          "source": "K",
+          "section": "A.3.1 긴 URL을 짧은 URL로 매핑하기",
+          "pages": [
+            447
+          ]
+        }
+      ]
+    },
+    {
+      "unit": 25,
+      "location": ".summary[2]",
+      "text": "미로-순간이동 게임의 미로·방·순간이동장치·점수는 그래프·정점·에지·가중치로 바꾸어 생각하며, 점수를 무한히 낮출 수 있는 상황은 음수 가중치 사이클이 있는 경우이다.",
+      "evidence": "미로, 방, 순간이동장치, 점수 / 그래프, 정점, 에지, 가중치 / 음수 가중치 사이클",
+      "refs": [
+        {
+          "source": "K",
+          "section": "A.7.3 미로-순간이동 게임",
+          "pages": [
+            489
+          ]
+        }
+      ]
+    },
+    {
+      "unit": 25,
+      "location": ".summary[3]",
+      "text": "최대 이익의 상향식 상태는 현재 인덱스, 상품 구매 비용, 상품 개수로 정의되며, 구현은 0-1 배낭 문제 풀이에서 차원이 하나 추가된 형태이다.",
+      "evidence": "현재 인덱스, 상품 구매 비용, 상품 개수 / 0-1 배낭 문제 풀이에서 차원이 하나 추가된 형태",
+      "refs": [
+        {
+          "source": "K",
+          "section": "A.9.1 최대 이익",
+          "pages": [
+            519,
+            520
+          ]
+        }
+      ]
+    },
+    {
+      "unit": 25,
+      "location": ".review[0].answer",
+      "text": "Printer 클래스는 요청된 순서대로 프린트하기 위해 std::queue를 사용하고, 최대 인쇄 요청 개수를 템플릿 인자로 받는다.",
+      "evidence": "요청된 순서대로 프린트를 하기 위해 std::queue를 사용할 것입니다.",
+      "refs": [
+        {
+          "source": "K",
+          "section": "A.1.3 사무실 공유 프린터의 인쇄 대기 목록 시뮬레이션",
+          "pages": [
+            439
+          ]
+        }
+      ]
+    },
+    {
+      "unit": 25,
+      "location": ".review[3].answer",
+      "text": "최대 이익의 상향식 상태는 현재 인덱스, 상품 구매 비용, 상품 개수로 정의되며, 구현은 0-1 배낭 문제 풀이에서 차원이 하나 추가된 형태이다.",
+      "evidence": "현재 인덱스, 상품 구매 비용, 상품 개수 / 0-1 배낭 문제 풀이에서 차원이 하나 추가된 형태",
+      "refs": [
+        {
+          "source": "K",
+          "section": "A.9.1 최대 이익",
+          "pages": [
+            519,
+            520
+          ]
+        }
+      ]
+    },
+    {
+      "unit": 25,
+      "location": ".cheat.definitions[0].definition",
+      "text": "여행 경로의 추가 점수 풀이에서는 구간 합 배열(prefix sum array)을 사용하여 안쪽 for 반복문으로 계산하던 구간 합을 상수 시간에 계산한다.",
+      "evidence": "구간 합 배열(prefix sum array) / 구간 합을 상수 시간에 계산",
+      "refs": [
+        {
+          "source": "K",
+          "section": "A.8.1 여행 경로",
+          "pages": [
+            499
+          ]
+        }
+      ]
+    },
+    {
+      "unit": 25,
+      "location": ".cheat.definitions[1].definition",
+      "text": "URLService는 짧은 URL을 키로, 원본 URL을 데이터 값으로 사용하여 맵에 함께 저장한다.",
+      "evidence": "짧은 URL을 키로 사용하고, 원본 URL을 데이터 값으로 사용할 것입니다.",
+      "refs": [
+        {
+          "source": "K",
+          "section": "A.3.1 긴 URL을 짧은 URL로 매핑하기",
+          "pages": [
+            447
+          ]
+        }
+      ]
+    },
+    {
+      "unit": 25,
+      "location": ".cheat.definitions[2].definition",
+      "text": "최대 이익의 상향식 상태는 현재 인덱스, 상품 구매 비용, 상품 개수로 정의되며, 구현은 0-1 배낭 문제 풀이에서 차원이 하나 추가된 형태이다.",
+      "evidence": "현재 인덱스, 상품 구매 비용, 상품 개수 / 0-1 배낭 문제 풀이에서 차원이 하나 추가된 형태",
+      "refs": [
+        {
+          "source": "K",
+          "section": "A.9.1 최대 이익",
+          "pages": [
+            519,
+            520
+          ]
+        }
+      ]
+    },
+    {
+      "unit": 25,
+      "location": ".cheat.comparison_rows[0][1]",
+      "text": "int형 LCS 길이; 2차원 정수 벡터 참조형 memo에 결과를 저장한다.",
+      "evidence": "int LCS_Memoization / vector<vector<int>>& memo / 결과를 저장",
+      "refs": [
+        {
+          "source": "K",
+          "section": "A.8.2 메모이제이션을 이용하여 최장 공통 부분 시퀀스 찾기",
+          "pages": [
+            501
+          ]
+        }
+      ]
+    },
+    {
+      "unit": 25,
+      "location": ".cheat.comparison_rows[1][0]",
+      "text": "LCS_Tabulation()",
+      "evidence": "string LCS_Tabulation",
+      "refs": [
+        {
+          "source": "K",
+          "section": "A.8.3 타뷸레이션을 이용하여 최장 공통 부분 시퀀스 찾기",
+          "pages": [
+            505
+          ]
+        }
+      ]
+    },
+    {
+      "unit": 25,
+      "location": ".cheat.comparison_rows[1][1]",
+      "text": "string형 최장 공통 부분 시퀀스 문자열을 반환한다.",
+      "evidence": "최장 공통 부분 시퀀스 문자열을 반환합니다.",
+      "refs": [
+        {
+          "source": "K",
+          "section": "A.8.3 타뷸레이션을 이용하여 최장 공통 부분 시퀀스 찾기",
+          "pages": [
+            505
+          ]
+        }
+      ]
+    },
+    {
+      "unit": 25,
+      "location": ".cheat.formulas[0]",
+      "text": "sum[i + 1] = sum[i] + distance[i]\n[L, R] 구간의 원소 합: sum[R+1] - sum[L]",
+      "evidence": "sum[i + 1] = sum[i] + distance[i] / sum[R+1] - sum[L]",
+      "refs": [
+        {
+          "source": "K",
+          "section": "A.8.1 여행 경로",
+          "pages": [
+            499
+          ]
+        }
+      ]
+    }
+  ]
+}

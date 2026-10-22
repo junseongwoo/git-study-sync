@@ -1,0 +1,13 @@
+P = p->tink;
+q->link = 다 // q의 링크 방향을 바꾼다.
+return q;
+// 테스트 프로그램
+int main(void)
+ListN0de* headl = NULL;
+ListNode* head2 = NULL;
+headl = insert—first(headl, 10);
+headl = insert—first(headl, 20) ;
+headl = insert—first(headl, 30) ;
+head2 = reverse(headl) ;
+return 0;
+208 C언어로 쉽게 불어쓴 자료구조

@@ -1,0 +1,25 @@
+A.9
+9장동적 계획법 11
+A.9.1 실습 문제 22: 최대 이익
+이번 실습 문제에서는 수익을 극대회하기 위해 상품 구매 부록을 최적화할 것입니다.
+1. 헤더 파일을 포함하는 것부터 시작하겠습니다.
+$include 〈`,ec也r〉
+$include <algonthm>
+$include <iostream〉
+iJSing std,
+2. 각 상품 정보를 표현할 Product 구조체를 정의하겠습니다.
+Struct
+int quantity;
+price;
+xnt value,
+Product(int q, int (, int v)
+• quantity(q), price(c), value(v) {}
+3. main() 함수에서 입력 데이터를 처리하는 코드를 추가하겠습니다. 입력된 데이터는 Product
+자료형 벡터에 저장됩니다.
+int main()
+int N, budget, capacity;
+cin 〉〉 N 〉〉 budget 〉〉 capacity;
+vector<Product〉 products;
+for (int i=@; i<N; i++)
+int quantity, cost, value,
+530

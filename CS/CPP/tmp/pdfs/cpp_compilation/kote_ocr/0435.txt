@@ -1,0 +1,28 @@
+return os.str();
+3. 한 벌의 카드를 만들고 잘 섞은 후 네 명의 플레이어에게 나눠줍니다. 이 기능은 game 구조체
+에 구현하고, 나중에 main() 함수에서 호출하여 시용할 것입니다.
+struct game
+std: :array〈card, 52〉 deck;
+std::vector〈card> playerl, player2, player3, pIayer4;
+void buildDeck()
+for (int i =0,• i 〈 13; i++)
+deck[i] = card {1 + 1, card::HEART};
+for (int i = 0; i 〈 13; 1++)
+deck[i + 13] = card {i + 1, card::SPADE};
+for (int i =0,• 〈 13; i*+)
+deck[i + 26] = card {i + 1, card::CLUB};
+for (int i = 0; i 〈 13; i*+)
+deck[i + 39] = card {i + 1, card::DIAMOND};
+void deaICards()
+unsigned seed = std: :chrono: :system_clock: :now( ). time_since_epoch( ) . count( );
+std::shuffle(deck.begin(), deck.end(), std: :default—random—engine(seed));
+playerl = {deck.begin(), deck.begin() + 13};
+player2 = {deck.begin() + 13, deck.begin() + 26};
+player3 = {deck.begin() + 26, deck.begin() + 39};
+player4 = {deck.begin() + 39, deck.end()};
+4. 한 라운드 경기를 진행하는 핵심 로직을 작성합니다. 코드 중혁을 피하기 위해 두 플레이어의
+카드를 비교하여 서로 같으면 제거하는 함수를 따로 만들겠습니다.
+b001 compareAndRemove(std: :vector〈card>& 이, std: :vector〈card>& p2)
+if (이 .back().number == p2.back().number)
+PI .pop-back();
+446

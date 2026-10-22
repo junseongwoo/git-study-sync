@@ -1,0 +1,28 @@
+EIementType BinarySearch( Score ScoreList[I, int Size, ElementType Target )
+int Left, Right, Mid,
+Left = 0;
+Right = Size - 1;
+while ( Left 〈= Right )•
+Mid = (Left + Right) / 2•,•
+탐색 범위의 크기가 0이 될 때까지 whlle문을 반복합니다.
+if ( Target == ScoreList[Midl.score )•
+return &( ScoreList[MidI );
+else if ( Target 〉 ScoreList(Midl.score )
+Left = Mid + 1:
+else
+Right = Mid - 1:
+return NULL;
+중양 요소의 위치를
+중앙 요소가 담고 있는 값과 목표값이
+일치하면 해당 요소를 반환합니다.
+63.3 이진 탐색 예제 프로그램: 두 번째 최종 시험 문제
+5장에서 풀었던 주석이의 최종 입사 시험 문제를 기억하십니까? 3만 명의 구매포인트 데이터에서
+14,142번째 고객 ID를 찾아내야 했던 그 문제 말입니다. 우리는 구매포인트 데이터를 퀵 정렬 알고
+리즘으로 정렬한 후 14,142번째에 있는 고객 데이터를 열어 답을 얻었습니다.
+이번에는 이 문제를 이진 탐색용 버전으로 바꿔보겠습니다. 문제는 다음과 같습니다.
+구매포인트가 671.78점인 고객 IDS 20B-8•q.2.•
+구매포인트가 671.78점인 고객 ID를 찾는 방법은 두 가지입니다. 첫 번째는 처음부터 차례대로 데
+이터의 모든 요소를 검사하는 순차 탐색을 A\히는 방법이고. 두 번째는 데이터를 정열한 후 이진
+탐색을 수행하는 방법입니다.
+물론 제가 어떤 방법을 A卜&할지는 여러분도 잘 알고 있겠지요? 네. 바로 두 번째 방법인 •정별+이
+Chapter % 방책 245

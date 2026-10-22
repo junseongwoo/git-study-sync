@@ -1,0 +1,41 @@
+// 삭제 함수
+elenent delete_min_heap대eaPTYP{?* h)
+int parent, child;
+element *예, tettp;
+item = h-〉heap[l];
+temp : h->heap[(h->heap-size)--) ;
+parent : 1;
+child = 2;
+while (child 〈= h->heap-size) {
+// 현재 노드의 x씩노드중 더 작은 자식노드를 찾는다.
+if ((child 〈 h-〉heap-size) &&
+(h-〉heap[chitd].avail) 〉 h->heap[child + l].avail)
+child++;
+if (tenp.avail 〈 h->heap[child] .avail) break;
+// 한 단계 아래로 이동
+h->heap[parent] = h->heap[child] ;
+parent = child;
+child *= 2;
+h->heap[parent] = temp;
+return 1
+#define JOBS 7
+#define MACHINES 3
+int main(void)
+int jobs[JOBS] = { 8, 7, 6, 5, 3, 2, 1 };
+element m = { 0, 0 };
+HeapType* h;
+h = create();
+init(h);
+// 작업은 정렬되어 있다고 가정
+// 여기서 avail 값은 기계가 사용 기능하게 되는 시간이다.
+for (int i = 0; i<MACHINES; 5++) {
+m.id = + 1;
+m.avait = 0;
+insert min heap(h, m);
+// 최소 하프에서 기계를 꺼내서 작업을 할당하고 사용가능 시간을 증가 시킨 후에
+// 다시 최소 히프에 추가한다.
+for (int = 0; JOBS; 5++) {
+m = delete_min-heap(h) ;
+printf("JOB 9던을 시간=%부터 시간=9던까지 기계 9던번에 할당한다. \n"
+1, m.avail, m.avail + J0bs[i] - 1, m.id);
+346 C언어로 쉽게 불어쓴 자료구조

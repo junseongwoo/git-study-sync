@@ -1,0 +1,26 @@
+std::cout 〈〈 “두 번째 재생 목록
+p12.100四nce(),•
+14. 지금까지 작성한 프로그램을 실행하면 다음과 같은 출력을 확인할 수 있습니다.
+재생 목록 : 2 1
+두 번째 재생 목록 : 3 1
+A.1.2 실습 문제 2: 카드 게임 시뮬레이션
+이번 실습 문제에서는 카드 게임을 시뮬레이션하고 플레이어의 카드 정보를 저장하기에 효과적인
+자료 구조를 구현합니다. 실습 문제를 해결하기 위해 수음 단계를 따라하세요.
+1. 먼저 필요한 헤더 파일을 포함합니다.
+#include 〈iostream〉
+#include 〈vector〉
+#include 〈array〉
+#include 〈sstream〉
+#include 〈algorithm〉
+#include 〈random〉
+#include <chrono〉
+2. 카드를 저장할 클래스를 생성하고 카드 정보를 출력하기 위한 함수를 추가합니다.
+struct card
+int number;
+enum sult
+HEART,
+SPADE,
+CLUB,
+DIAMOND
+}suit;
+std: :string to_string() const

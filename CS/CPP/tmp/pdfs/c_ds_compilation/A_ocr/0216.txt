@@ -1,0 +1,31 @@
+프로그램 7.1 원형 연결 리스트 처음에 삽입하는 함수
+ListN0de* insert_first(ListNode* head, etement data)
+ListNode *node = (ListN0de *)maUoc(sizeof(ListN0de));
+node->data = data;
+if (head == NULL) {
+head -
+node->tink = head;
+else {
+node->tink = head-〉link; // (1)
+head->link = node;
+return head; // 변경된 헤드 포인터를 반환한다.
+원형 리스트의 끝에 삽입
+앞의 코드에 한 문장만 추가하면 원형 연결 리스트의 끝에 삼입할 수 있다. 즉 원형 연결 리스트
+는 어차피 원형으로 연결되어 있으므로 어디가 처음이고 어디가 끝인지는 불분명하다. 따라서
+[그림 7-4]처럼 head의 위치만 새로운 노드로 바꾸어주면 새로운 노드가 마지막 노드가 된다. 프
+로그램 7.2를 참조하라.
+node
+40
+10
+20
+head
+30
+[그림 7-4] 원형 연결 리스트의 끝에 삽입
+프로그램 7.2 원형연결리스트의 끝에 삽입하는 함수
+insert_last(ListNode* head, element data)
+ListN0de *node = (ListNode *)malloc(sizeof(ListNode));
+= data;
+if (head == NULL) {
+head =
+node->link = head;
+224 C언어로 쉽게 물어쓴 자료구조

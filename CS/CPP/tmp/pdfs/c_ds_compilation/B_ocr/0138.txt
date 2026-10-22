@@ -1,0 +1,40 @@
+11
+13
+14
+16
+20
+22
+23
+26
+28
+29
+31
+32
+35
+37
+CQ-Enqueue( Queue. 2 );
+CQ-Enqueue( Queue 3 ):
+CQ-Enm-æue( Queue, 4 ),•
+CQ-Dequeue( Queue ) );
+printf( "Dequeue• 년, •,
+printf( •Front:*d, Rear:*d\n•, Queue->Front, Queue->Rear );
+while ( CQ-IsFull( Queue ) == 0 )
+CQ-Enqueue( i++
+printf( ACapacity: 년, Size: *d\n\n•,
+Queue-XapacitY, CQ-GetSize(Queue ) ),•
+while ( CQ_IsEmptY( Queue ) == 0)
+printf( "Dequeue: 년,
+CQ-Dequeue( Queue ) )•,
+prlntf( •Front:%d, Rear:%d\n", Queue-〉Front, Queue-Rear );
+CQ-DestroyQueue( Queue );
+return 0;
+돈 실행 결과
+mjeue. 1, Front:1, Rear:4
+Dequeue 2, Front:2, Rear:4
+Dequeue 3, Front:3, Rear:4
+Capacity: 10, Size: 10
+4, Front:4, Rear:2
+Dequeue 1%, Front:5, Rear:2
+DeqtJeue 101, Front:6, Rear:2
+130
+Part 01 • 자료구조

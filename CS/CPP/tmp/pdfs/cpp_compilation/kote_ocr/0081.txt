@@ -1,0 +1,33 @@
+inorder-impl(start->left) ;
+std::cout 〈〈 start->data 〈〈 "
+inorder-impl(start-〉right);
+// 왼쪽 서브 트리 방문
+// 현재 노드 출력
+// 오른쪽 서브 트리 방문
+7. 이번에는 후손 노드를 찾는 함수를 작성합니다.
+public:
+node* successor(node* start)
+= start-〉right;
+autO current
+while (current && current->left)
+current = current->left;
+return current,
+위 코-드 구현은 앞서 초T에서 원소 삭제하기' 부쁀에서 자세히 설명했습니다.
+8. 이제 원소 삭제가 구현되어 있는 함수를 살펴보겠습니다. 특정 노드를 삭제하면, 해당 노드의
+부모 노드 포인터를 조정해야 합니다. 그래서 삭제 구현 함수는 부모 노드 포인터가 새로 가
+리켜야 할 노드의 주소를 반환하도록 설정했습니다. 함수 이름을 )로 설정한 것
+은 delete는 C++ 표준에 정의되어 있는 키워드이기 때문입니다.
+void deleteValue(int value)
+root = delete_impl(root, value);
+pnvate:
+node* delete_impl(node* start, int value)
+if (!start)
+return NULL;
+if (value 〈 start->data)
+start->left = delete-impl(start->left, value);
+else if (value 〉 start->data)
+start-〉right = delete-impl(start->right, value);
+else
+if (!start->left)
+// 자식 노드가 전혀 없거나, 왼쪽 자식 노드만 없는 경우
+092

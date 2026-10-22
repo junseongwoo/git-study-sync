@@ -1,0 +1,24 @@
+순자 탐색을 통해 여섯 번째 요소에 담긴 48을 찾으면 이 요소를 뽑아 데이터의 가장 앞으로 이동시
+킵니다.
+그 결과 다음과 같이 데이터가 변경됩니다. 다음 번에 48을 찾고자 할 때 첫 번째 요소에서 해당 값
+을 바로 찾을 수 있습니다.
+전진 이동법이 모든 경우에 최선인 전략은 아닙니다. 항상 특정 항목만 집중적으로 탐색되는 현상이
+모든 데이터에서 발생하지는 않기 때문입니다. 따라서 전진 이동법은 한 번 탐색된 항목이 다음에 또 다
+시 검책넓 가능성이 높은 데이터에 사용해야 합니다.
+다음은 링크드 리스트에 사용할 수 있는 전진 이동 순차 탐색법을 구현한 SLL MoveToFront ( )
+함수입니다. 이 함수의 배열용 버전을 구현하는 일은 여러분의 숙제로 남겨두겠습니다.
+SLL MoveToFront(Node** Head, int Target)
+NO血* Current
+NOde* Previous = NULL;
+No血* Match
+= NULL;
+while ( Current != NULL )
+찾고자6는 값을 해당 노드가 갖고 있으면 ;
+if ( Current->Data == Target )•
+! 노드의 주소를 Match에 저장합니다.
+Match = Current;
+if ( Previous != NULL )
+// 자신의 이전 노드와 다음 노드를 연결
+Previous->NextNode = Current->NextNode,
+// 자신을 리스트의 가장 앞으로 옮기기
+238 Part 02 • 일고리좀

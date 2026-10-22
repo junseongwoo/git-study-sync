@@ -1,0 +1,554 @@
+{
+  "reviewer": "independent content review",
+  "units": [
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    16,
+    17,
+    18,
+    19,
+    20
+  ],
+  "method": "각 단원의 모든 핵심 주제 목록과 출처 위치·전제 보존 여부를 읽고, 까다로운 정의·수식·절차를 단원당 2~3개 골라 원본 스캔 이미지로 독립 대조했다. 전체 참조 객체의 원본면·절·근거 구절·이미지확인 기록 존재를 검사했다. 모든 문장을 새로 독립 검증했다는 의미는 아니다.",
+  "sample_count": 32,
+  "source_image_page_count": 33,
+  "sample_images": [
+    {
+      "source": "A",
+      "pdf_page": 118
+    },
+    {
+      "source": "A",
+      "pdf_page": 129
+    },
+    {
+      "source": "A",
+      "pdf_page": 146
+    },
+    {
+      "source": "A",
+      "pdf_page": 150
+    },
+    {
+      "source": "A",
+      "pdf_page": 184
+    },
+    {
+      "source": "A",
+      "pdf_page": 214
+    },
+    {
+      "source": "A",
+      "pdf_page": 252
+    },
+    {
+      "source": "A",
+      "pdf_page": 283
+    },
+    {
+      "source": "A",
+      "pdf_page": 321
+    },
+    {
+      "source": "A",
+      "pdf_page": 342
+    },
+    {
+      "source": "A",
+      "pdf_page": 502
+    },
+    {
+      "source": "B",
+      "pdf_page": 35
+    },
+    {
+      "source": "B",
+      "pdf_page": 92
+    },
+    {
+      "source": "B",
+      "pdf_page": 132
+    },
+    {
+      "source": "B",
+      "pdf_page": 133
+    },
+    {
+      "source": "B",
+      "pdf_page": 154
+    },
+    {
+      "source": "B",
+      "pdf_page": 281
+    },
+    {
+      "source": "B",
+      "pdf_page": 289
+    },
+    {
+      "source": "B",
+      "pdf_page": 318
+    },
+    {
+      "source": "B",
+      "pdf_page": 466
+    },
+    {
+      "source": "B",
+      "pdf_page": 476
+    },
+    {
+      "source": "B",
+      "pdf_page": 481
+    },
+    {
+      "source": "B",
+      "pdf_page": 534
+    },
+    {
+      "source": "B",
+      "pdf_page": 539
+    },
+    {
+      "source": "B",
+      "pdf_page": 549
+    },
+    {
+      "source": "B",
+      "pdf_page": 556
+    },
+    {
+      "source": "B",
+      "pdf_page": 560
+    },
+    {
+      "source": "B",
+      "pdf_page": 571
+    },
+    {
+      "source": "B",
+      "pdf_page": 585
+    },
+    {
+      "source": "B",
+      "pdf_page": 589
+    },
+    {
+      "source": "B",
+      "pdf_page": 614
+    },
+    {
+      "source": "B",
+      "pdf_page": 623
+    },
+    {
+      "source": "B",
+      "pdf_page": 630
+    }
+  ],
+  "units_reviewed": [
+    {
+      "unit": 5,
+      "title": "연결 리스트",
+      "core_statements_reviewed_for_scope": 31,
+      "reference_objects_checked": 74,
+      "all_topic_reference_structure": "절·PDF면·원본이미지 존재 및 작성자의 이미지확인 기록 검증",
+      "independent_image_samples": [
+        {
+          "source": "A",
+          "pdf_pages": [
+            184
+          ],
+          "check": "insert_first의 할당→data→link→head→반환 순서",
+          "result": "원본 스캔 이미지와 일치",
+          "correction": null
+        },
+        {
+          "source": "A",
+          "pdf_pages": [
+            214
+          ],
+          "check": "head가 마지막 노드를 가리키는 조건에서 처음·끝 상수시간 삽입",
+          "result": "원본 스캔 이미지와 일치",
+          "correction": null
+        },
+        {
+          "source": "B",
+          "pdf_pages": [
+            35
+          ],
+          "check": "노드 삭제와 소멸의 구분",
+          "result": "원본 스캔 이미지와 일치",
+          "correction": null
+        }
+      ]
+    },
+    {
+      "unit": 6,
+      "title": "스택·수식·미로",
+      "core_statements_reviewed_for_scope": 26,
+      "reference_objects_checked": 71,
+      "all_topic_reference_structure": "절·PDF면·원본이미지 존재 및 작성자의 이미지확인 기록 검증",
+      "independent_image_samples": [
+        {
+          "source": "A",
+          "pdf_pages": [
+            118
+          ],
+          "check": "후위식 계산의 second 먼저 pop, first op second 순서",
+          "result": "원본 스캔 이미지와 일치",
+          "correction": null
+        },
+        {
+          "source": "A",
+          "pdf_pages": [
+            129
+          ],
+          "check": "미로의 위·아래·왼쪽·오른쪽 push와 공백 실패 조건",
+          "result": "원본 스캔 이미지와 일치",
+          "correction": null
+        },
+        {
+          "source": "B",
+          "pdf_pages": [
+            92
+          ],
+          "check": "A와 다른 List=head, Top=tail의 연결스택 구현",
+          "result": "원본 스캔 이미지와 일치",
+          "correction": null
+        }
+      ]
+    },
+    {
+      "unit": 7,
+      "title": "큐·덱·시뮬레이션",
+      "core_statements_reviewed_for_scope": 29,
+      "reference_objects_checked": 68,
+      "all_topic_reference_structure": "절·PDF면·원본이미지 존재 및 작성자의 이미지확인 기록 검증",
+      "independent_image_samples": [
+        {
+          "source": "A",
+          "pdf_pages": [
+            146
+          ],
+          "check": "원형큐 front가 첫 요소 직전, rear가 마지막인 전제",
+          "result": "원본 스캔 이미지와 일치",
+          "correction": null
+        },
+        {
+          "source": "A",
+          "pdf_pages": [
+            150
+          ],
+          "check": "한 칸 비우는 구현의 공백·포화 수식",
+          "result": "원본 스캔 이미지와 일치",
+          "correction": null
+        },
+        {
+          "source": "B",
+          "pdf_pages": [
+            132,
+            133
+          ],
+          "check": "B의 Front는 실제전단, Rear는 다음삽입위치이며 wrap처리 확인",
+          "result": "원본 스캔 이미지와 일치",
+          "correction": null
+        }
+      ]
+    },
+    {
+      "unit": 8,
+      "title": "트리·순회·트리 응용",
+      "core_statements_reviewed_for_scope": 38,
+      "reference_objects_checked": 89,
+      "all_topic_reference_structure": "절·PDF면·원본이미지 존재 및 작성자의 이미지확인 기록 검증",
+      "independent_image_samples": [
+        {
+          "source": "A",
+          "pdf_pages": [
+            252
+          ],
+          "check": "루트레벨1 기준 최소·최대 노드수와 높이 올림식",
+          "result": "원본 스캔 이미지와 일치",
+          "correction": null
+        },
+        {
+          "source": "B",
+          "pdf_pages": [
+            154
+          ],
+          "check": "B의 깊이0·레벨집합·높이최대깊이 정의",
+          "result": "원본 스캔 이미지와 일치",
+          "correction": null
+        },
+        {
+          "source": "A",
+          "pdf_pages": [
+            283
+          ],
+          "check": "스레드 포인터·자식 포인터 구분 태그 필요",
+          "result": "원본 스캔 이미지와 일치",
+          "correction": null
+        }
+      ]
+    },
+    {
+      "unit": 9,
+      "title": "이진 탐색 트리·균형 트리",
+      "core_statements_reviewed_for_scope": 66,
+      "reference_objects_checked": 128,
+      "all_topic_reference_structure": "절·PDF면·원본이미지 존재 및 작성자의 이미지확인 기록 검증",
+      "independent_image_samples": [
+        {
+          "source": "A",
+          "pdf_pages": [
+            502
+          ],
+          "check": "AVL 정의·균형인수 부호·O(logn) 조건",
+          "result": "원본 스캔 이미지와 일치",
+          "correction": null
+        },
+        {
+          "source": "B",
+          "pdf_pages": [
+            281
+          ],
+          "check": "부모가 왼쪽자식인 삽입복구의 좌회전과 우회전 분기",
+          "result": "원본 스캔 이미지와 일치",
+          "correction": null
+        },
+        {
+          "source": "B",
+          "pdf_pages": [
+            289
+          ],
+          "check": "왼쪽 이중흑색의 형제 오른쪽 빨간자식 경우 및 루트종료",
+          "result": "원본 스캔 이미지와 일치",
+          "correction": null
+        }
+      ]
+    },
+    {
+      "unit": 10,
+      "title": "우선순위 큐·힙·허프만",
+      "core_statements_reviewed_for_scope": 32,
+      "reference_objects_checked": 87,
+      "all_topic_reference_structure": "절·PDF면·원본이미지 존재 및 작성자의 이미지확인 기록 검증",
+      "independent_image_samples": [
+        {
+          "source": "A",
+          "pdf_pages": [
+            321
+          ],
+          "check": "루트 인덱스1의 자식2i/2i+1·부모i/2",
+          "result": "원본 스캔 이미지와 일치",
+          "correction": null
+        },
+        {
+          "source": "B",
+          "pdf_pages": [
+            318
+          ],
+          "check": "루트 인덱스0의 자식2k+1/2k+2·부모몫",
+          "result": "원본 스캔 이미지와 일치",
+          "correction": null
+        },
+        {
+          "source": "A",
+          "pdf_pages": [
+            342
+          ],
+          "check": "A 허프만 간선은 왼쪽1·오른쪽0임을 그대로 보존",
+          "result": "원본 스캔 이미지와 일치",
+          "correction": null
+        }
+      ]
+    },
+    {
+      "unit": 16,
+      "title": "문자열 탐색",
+      "core_statements_reviewed_for_scope": 32,
+      "reference_objects_checked": 83,
+      "all_topic_reference_structure": "절·PDF면·원본이미지 존재 및 작성자의 이미지확인 기록 검증",
+      "independent_image_samples": [
+        {
+          "source": "B",
+          "pdf_pages": [
+            466
+          ],
+          "check": "카프–라빈 최초·롤링 해시식의 제곱·괄호·mod q",
+          "result": "원본 스캔 이미지와 일치",
+          "correction": null
+        },
+        {
+          "source": "B",
+          "pdf_pages": [
+            476
+          ],
+          "check": "KMP 이동거리=일치접두길이−최대경계너비",
+          "result": "원본 스캔 이미지와 일치",
+          "correction": null
+        },
+        {
+          "source": "B",
+          "pdf_pages": [
+            481
+          ],
+          "check": "보이어–무어 비교방향과 이동방향 및 큰 이동 선택",
+          "result": "원본 스캔 이미지와 일치",
+          "correction": null
+        }
+      ]
+    },
+    {
+      "unit": 17,
+      "title": "분할 정복",
+      "core_statements_reviewed_for_scope": 27,
+      "reference_objects_checked": 72,
+      "all_topic_reference_structure": "절·PDF면·원본이미지 존재 및 작성자의 이미지확인 기록 검증",
+      "independent_image_samples": [
+        {
+          "source": "B",
+          "pdf_pages": [
+            534
+          ],
+          "check": "거듭제곱 짝수·홀수 분기와 O(log₂n)",
+          "result": "원본 스캔 이미지와 일치",
+          "correction": null
+        },
+        {
+          "source": "B",
+          "pdf_pages": [
+            539
+          ],
+          "check": "피보나치 행렬 항의 위치·거듭제곱과 Θ(2ⁿ)/Θ(log₂n)",
+          "result": "원본 스캔 이미지와 일치",
+          "correction": null
+        }
+      ]
+    },
+    {
+      "unit": 18,
+      "title": "동적 계획법",
+      "core_statements_reviewed_for_scope": 31,
+      "reference_objects_checked": 76,
+      "all_topic_reference_structure": "절·PDF면·원본이미지 존재 및 작성자의 이미지확인 기록 검증",
+      "independent_image_samples": [
+        {
+          "source": "B",
+          "pdf_pages": [
+            549
+          ],
+          "check": "최적부분구조·부분문제 의존·Bottom-Up 및 저장",
+          "result": "원본 스캔 이미지와 일치",
+          "correction": null
+        },
+        {
+          "source": "B",
+          "pdf_pages": [
+            556
+          ],
+          "check": "LCS 빈 행열·점화식3경우·(i+1)×(j+1)",
+          "result": "원본 스캔 이미지와 일치",
+          "correction": null
+        },
+        {
+          "source": "B",
+          "pdf_pages": [
+            560
+          ],
+          "check": "왼쪽위→오른쪽아래 채우기와 최악 O(nm)",
+          "result": "원본 스캔 이미지와 일치",
+          "correction": null
+        }
+      ]
+    },
+    {
+      "unit": 19,
+      "title": "탐욕 알고리즘",
+      "core_statements_reviewed_for_scope": 37,
+      "reference_objects_checked": 82,
+      "all_topic_reference_structure": "절·PDF면·원본이미지 존재 및 작성자의 이미지확인 기록 검증",
+      "independent_image_samples": [
+        {
+          "source": "B",
+          "pdf_pages": [
+            571
+          ],
+          "check": "탐욕의 최적해 비보장·최적부분구조 전제·3단계",
+          "result": "원본 스캔 이미지와 일치",
+          "correction": null
+        },
+        {
+          "source": "B",
+          "pdf_pages": [
+            585
+          ],
+          "check": "B 허프만 간선은 왼쪽0·오른쪽1로 A와 구분",
+          "result": "원본 스캔 이미지와 일치",
+          "correction": null
+        },
+        {
+          "source": "B",
+          "pdf_pages": [
+            589
+          ],
+          "check": "aaabaacdd의 72비트→15비트 및 압축해제 비트방향",
+          "result": "원본 스캔 이미지와 일치",
+          "correction": null
+        }
+      ]
+    },
+    {
+      "unit": 20,
+      "title": "백트래킹",
+      "core_statements_reviewed_for_scope": 33,
+      "reference_objects_checked": 80,
+      "all_topic_reference_structure": "절·PDF면·원본이미지 존재 및 작성자의 이미지확인 기록 검증",
+      "independent_image_samples": [
+        {
+          "source": "B",
+          "pdf_pages": [
+            614
+          ],
+          "check": "미로 북→남→동→서 시도 순서",
+          "result": "원본 스캔 이미지와 일치",
+          "correction": null
+        },
+        {
+          "source": "B",
+          "pdf_pages": [
+            623
+          ],
+          "check": "64C8 후보해·실제92해·N크기 설명",
+          "result": "원본 스캔 이미지와 일치",
+          "correction": null
+        },
+        {
+          "source": "B",
+          "pdf_pages": [
+            630
+          ],
+          "check": "퀸 열검사·대각선 절댓값식·수평검사 제외 조건",
+          "result": "원본 스캔 이미지와 일치",
+          "correction": null
+        }
+      ]
+    }
+  ],
+  "reference_structure_errors": [],
+  "substantive_errors_found": [],
+  "direct_json_corrections": [],
+  "result": "검토한 원고와 독립 이미지 표본에서 수정이 필요한 오류를 발견하지 못함",
+  "preserved_distinctions": [
+    "A/B 원형큐의 Front/Rear 정의가 다름",
+    "A/B 트리의 레벨·깊이·높이 정의가 다름",
+    "A/B 히프의 루트 배열 인덱스가 다름",
+    "A 허프만 왼쪽1·오른쪽0, B 허프만 왼쪽0·오른쪽1을 각각 보존",
+    "레드 블랙 회전·색 복구는 부모·형제의 방향 전제 포함"
+  ]
+}

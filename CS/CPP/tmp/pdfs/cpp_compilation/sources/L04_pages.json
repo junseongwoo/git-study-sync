@@ -1,0 +1,362 @@
+[
+  {
+    "source": "L04",
+    "pdf_page": 1,
+    "printed_page": null,
+    "text": "C++ 프로그래밍\n      김형기\n           hk.kim@jbnu.ac.kr"
+  },
+  {
+    "source": "L04",
+    "pdf_page": 2,
+    "printed_page": 2,
+    "text": " Today\n\n 포인터\n\n 참조자\n\n\n\n\n\n강의자료무단배포금지                                                                                                                2\n문의사항: hk.kim@jbnu.ac.kr  || diskhkme@gmail.com"
+  },
+  {
+    "source": "L04",
+    "pdf_page": 3,
+    "printed_page": 3,
+    "text": "포인터\n\n\n\n\n\n                                                                                                                          3"
+  },
+  {
+    "source": "L04",
+    "pdf_page": 4,
+    "printed_page": 4,
+    "text": " (Summary) Pointers\n\n 포인터개요\n\n 포인터의정의\n\n 주소로의접근\n\n 역참조\n\n 동적메모리할당\n\n 포인터와배열\n\n 포인터와const\n\n 포인터의pass-by-reference\n\n 주의사항\n\n\n강의자료무단배포금지                                                                                                                4\n문의사항: hk.kim@jbnu.ac.kr  || diskhkme@gmail.com"
+  },
+  {
+    "source": "L04",
+    "pdf_page": 5,
+    "printed_page": 5,
+    "text": " Pointer\n\n 메모리\n                                       스택메모리\n\n 스택메모리는빠르지만작음                                                    …                               스택(Stack) 메모리가자동으로정리(해제)됨\n\n\n\n 힙메모리는크지만느림                              힙(Heap) 메모리를직접해제해주어야함\n\n\n                                                                                                                               Int z        50      0x1000 - 8\n                                                                                                                               Int y        7      0x1000 - 4\n                                                                                                                               Int x        10     0x1000\n                                          Static 변수, 전역변수                  Main()\n                                                                             …                                           String 리터럴\n\n                  코드공간\n\n강의자료무단배포금지                                                                                                                5\n문의사항: hk.kim@jbnu.ac.kr  || diskhkme@gmail.com"
+  },
+  {
+    "source": "L04",
+    "pdf_page": 6,
+    "printed_page": 6,
+    "text": " Pointer                  고급\n\n 메모리\n\n\n\n\n\n강의자료무단배포금지                                                                                                                6\n문의사항: hk.kim@jbnu.ac.kr  || diskhkme@gmail.com"
+  },
+  {
+    "source": "L04",
+    "pdf_page": 7,
+    "printed_page": 7,
+    "text": " Pointers vs References                   중요!\n\n 간단정리\n\n   *의사용\n\n                                                            int* a     변수를정의할때붙는다? 포인터의정의(포인터변수의생성)\n\n     변수를사용할때붙는다? 포인터의역참조                *a\n\n   &의사용\n\n     변수를정의할때붙는다? 참조자의정의(참조자의생성)                                                            int& b\n     변수를사용할때붙는다? 변수의주소값반환\n                                                            &a\n\n\n\n\n\n강의자료무단배포금지                                                                                                                7\n문의사항: hk.kim@jbnu.ac.kr  || diskhkme@gmail.com"
+  },
+  {
+    "source": "L04",
+    "pdf_page": 8,
+    "printed_page": 8,
+    "text": " Pointer                            중요!\n\n 포인터변수는변수의타입중하나\n   변수의타입: Int, float, double, int*, float*, …\n        Int와int*는다른타입임!\n   포인터타입변수가가질수있는값은메모리의주소(memory address)\n      지금까지사용한변수와포인터변수와의차이: 값을저장하는지, 주소를저장하는지\n   포인터는가리키는주소에저장된데이터의타입을알아야함\n\n\n 포인터를쓰는이유\n   동적할당을통해힙영역의메모리를사용\n   변수의범위문제로접근할수없는곳의데이터를사용(참조자와유사한목적)\n   배열의효율적인사용\n   다형성은포인터를기반으로구현됨\n   시스템응용프로그램/ 임베디드프로그래밍에서는메모리에직접접근이필요함\n\n\n강의자료무단배포금지                                                                                                                8\n문의사항: hk.kim@jbnu.ac.kr  || diskhkme@gmail.com"
+  },
+  {
+    "source": "L04",
+    "pdf_page": 9,
+    "printed_page": 9,
+    "text": " Definition of Pointers\n\n 포인터의정의\n   기존변수타입뒤에“*”를붙여포인터변수정의\n       “int*”까지를타입으로생각\n\n\n 포인터의정의및초기화방법\n\n\n\n\n\n   초기화를하지않으면쓰레기값이들어있는상태이므로방지가필요\n      Nullptr은“nowhere“ 개념\n      임의의메모리주소를가리키고있는상태가아니라, 아무것도가리키지않는상태를의미\n\n\n\n강의자료무단배포금지                                                                                                                9\n문의사항: hk.kim@jbnu.ac.kr  || diskhkme@gmail.com"
+  },
+  {
+    "source": "L04",
+    "pdf_page": 10,
+    "printed_page": 10,
+    "text": " Accessing Pointer Address                중요!\n\n 변수의주소값얻어오기\n\n   포인터변수는주소값을저장하므로, 주소값을얻어올수있어야함\n\n   이를위해주소연산자(“&”)를사용\n\n     연산자가적용되는피연산자의주소값이반환됨, 즉변수의주소값이반환됨\n\n      피연산자는주소값을얻을수있는종류여야함(l-value)\n\n\n\n                                                                                                                                Int num       10     0x1000\n\n                                                        변수이름앞에&를붙여서,그\n                                                  변수가저장된주소를얻을수\n                                                                           있음(&num)\n\n\n\n\n\n강의자료무단배포금지                                                                                                               10\n문의사항: hk.kim@jbnu.ac.kr  || diskhkme@gmail.com"
+  },
+  {
+    "source": "L04",
+    "pdf_page": 11,
+    "printed_page": 11,
+    "text": " Accessing Pointer Address\n\n 변수의주소값얻어오기\n\n   포인터변수는주소값을저장하므로, 주소값을얻어올수있어야함\n\n   이를위해주소연산자(“&”)를사용\n\n     연산자가적용되는피연산자의주소값이반환됨, 즉변수의주소값이반환됨\n\n      피연산자는주소값을얻을수있는종류여야함(l-value)\n\n\n\n\n\n강의자료무단배포금지                                                                                                               11\n문의사항: hk.kim@jbnu.ac.kr  || diskhkme@gmail.com"
+  },
+  {
+    "source": "L04",
+    "pdf_page": 12,
+    "printed_page": 12,
+    "text": " Accessing Pointer Address\n\n 주소값의이해\n\n   “포인터변수의크기”와“포인터가가리키고있는대상의크기”는별개임!\n\n  포인터변수들은모두같은크기\n\n      X86에서는4바이트\n\n     포인터는“주소값”을저장하기때문\n\n   타입은왜필요할까?\n\n     해당주소의값에접근할때몇바이트크기인지알아야함!\n\n\n\n\n                                주소에저장된변수의메모리크기는모두다르지만포인터\n                                 변수가저장하는주소값은모두4바이트크기로동일함\n\n\n\n\n강의자료무단배포금지                                                                                                               12\n문의사항: hk.kim@jbnu.ac.kr  || diskhkme@gmail.com"
+  },
+  {
+    "source": "L04",
+    "pdf_page": 13,
+    "printed_page": 13,
+    "text": " Accessing Pointer Address\n\n 포인터의타입\n\n   컴파일러는포인터가가리키는타입이맞는지확인함\n\n       int*는int가저장된주소만, double*는double이저장된주소만가리킬수있음\n\n\n\n\n\n강의자료무단배포금지                                                                                                               13\n문의사항: hk.kim@jbnu.ac.kr  || diskhkme@gmail.com"
+  },
+  {
+    "source": "L04",
+    "pdf_page": 14,
+    "printed_page": 14,
+    "text": " Accessing Pointer Address          고급\n\n 주소값의이해\n\n   타입은왜필요할까?\n\n     해당주소의값에접근할때몇바이트크기인지알아야함!\n\n\n                                                                 Int를int로올바로        …\n                                             해석하기위해읽어야\n                                          하는범위                   ???\n                                                                                                                           Int num       10     0x1000\n                                                                                                                         ???\n                                                                            …\n                                                                 Int를double로억지로\n                                           해석하는경우읽는범위\n                                                                            …                                           이렇게억지로타입을바꿔\n                                           해석하는경우는거의없음       ???\n                                                                                                                           Int num       10     0x1000\n                                                                                                                         ???\n                                                                            …\n\n강의자료무단배포금지                                                                                                               14\n문의사항: hk.kim@jbnu.ac.kr  || diskhkme@gmail.com"
+  },
+  {
+    "source": "L04",
+    "pdf_page": 15,
+    "printed_page": 15,
+    "text": " Dereferencing a Pointer                  중요!\n\n 포인터의역참조\n\n   포인터의주소에저장된데이터에접근\n\n    * 연산자를사용\n\n\n\n\n\n강의자료무단배포금지                                                                                                               15\n문의사항: hk.kim@jbnu.ac.kr  || diskhkme@gmail.com"
+  },
+  {
+    "source": "L04",
+    "pdf_page": 16,
+    "printed_page": 16,
+    "text": " Dereferencing a Pointer\n\n 포인터의역참조\n\n   포인터의주소에저장된데이터에접근\n\n    * 연산자를사용\n\n\n\n\n\n강의자료무단배포금지                                                                                                               16\n문의사항: hk.kim@jbnu.ac.kr  || diskhkme@gmail.com"
+  },
+  {
+    "source": "L04",
+    "pdf_page": 17,
+    "printed_page": 17,
+    "text": " Memory Debugging             고급\n\n 포인터에대한메모리디버깅\n\n   메모리창에서저장된변수를볼때는&a 와같이변수이름앞에&를붙여주었음\n\n     왜그랬는지생각해보세요.\n\n   포인터가가리키는값을보기위해서는&가필요없겠죠?\n\n     왜그러할지생각해보세요.\n\n   포인터변수가저장된위치를보기위해서는&가필요하겠죠?\n\n     왜그러할지생각해보세요.\n\n\n\n\n\n강의자료무단배포금지                                                                                                               17\n문의사항: hk.kim@jbnu.ac.kr  || diskhkme@gmail.com"
+  },
+  {
+    "source": "L04",
+    "pdf_page": 18,
+    "printed_page": 18,
+    "text": " Dynamic Memory Allocation               중요!\n\n 동적메모리할당\n\n   런타임에“힙메모리”를할당\n\n    프로그램의실행도중얼마나많은메모리가필요한지미리알수없는경우사용\n\n                       • 사용자입력에따라크기가바뀌는경우\n\n                       • 파일을선택하여내용을읽어오는경우등\n\n     큰데이터를저장해야할경우(stack은크기가작음, 몇MB정도)\n\n     객체의생애주기(언제메모리가할당되고해제되어야할지)를직접제어해야할경우\n\n\n   힙메모리는스택과는달리스스로해제되지않음!\n\n   사용이끝나고해제하지않으면메모리누수발생!\n\n\n\n\n강의자료무단배포금지                                                                                                               18\n문의사항: hk.kim@jbnu.ac.kr  || diskhkme@gmail.com"
+  },
+  {
+    "source": "L04",
+    "pdf_page": 19,
+    "printed_page": 19,
+    "text": " Dynamic Memory Allocation               중요!\n\n 동적메모리할당방법\n\n    new 연산자사용\n\n                                                new의역할(C의malloc)\n\n                                                       Heap 메모리공간에int 하나를\n                             담을수있는메모리공간을\n                             할당받은뒤그주소값을리턴\n                                       *5장에서배울클래스객체의경우생성자\n                                     호출까지수행\n\n\n\n\n\n강의자료무단배포금지                                                                                                               19\n문의사항: hk.kim@jbnu.ac.kr  || diskhkme@gmail.com"
+  },
+  {
+    "source": "L04",
+    "pdf_page": 20,
+    "printed_page": 20,
+    "text": " Dynamic Memory Allocation               중요!\n\n                           스택메모리         힙메모리\n 동적메모리할당\n\n    new 연산자사용                                                                                                                                              int     100    0x8000\n\n\n\n\n\n                                                                                    Int* intPtr   0x8000  0x1000\n\n\n\n                                                       …                         …\n\n\n\n                                          모든명령문의실행이끝나고난후메모리의상태\n\n                                                                                         (0x1000,0x8000등은특별한의미를갖는것이아니고,\n                                               그냥“임의의메모리주소”를표현하는숫자임)\n강의자료무단배포금지                                                                                                               20\n문의사항: hk.kim@jbnu.ac.kr  || diskhkme@gmail.com"
+  },
+  {
+    "source": "L04",
+    "pdf_page": 21,
+    "printed_page": 21,
+    "text": " Dynamic Memory Allocation               중요!\n\n 동적메모리의해제\n\n     delete 연산자사용\n\n\n\n\n\n                                        delete의역할(C의free)\n\n                      해당메모리공간의데이터를\n                       삭제하고반납\n                             *5장에서배울클래스객체의경우소멸자\n                            호출까지수행\n\n강의자료무단배포금지                                                                                                               21\n문의사항: hk.kim@jbnu.ac.kr  || diskhkme@gmail.com"
+  },
+  {
+    "source": "L04",
+    "pdf_page": 22,
+    "printed_page": 22,
+    "text": " Dynamic Memory Allocation               중요!\n\n                           스택메모리         힙메모리\n 동적메모리의해제\n\n     delete 연산자사용                                                                                                                       0x2000\n\n\n\n\n\n                                                                                   Int* int_ptr     null    0x1000\n\n\n\n                                                       …                         …\n\n\n\n                                         모든명령문의실행이끝나고난후메모리의상태\n\n\n\n강의자료무단배포금지                                                                                                               22\n문의사항: hk.kim@jbnu.ac.kr  || diskhkme@gmail.com"
+  },
+  {
+    "source": "L04",
+    "pdf_page": 23,
+    "printed_page": 23,
+    "text": " Dynamic Memory Allocation               중요!\n\n 동적할당을이용한배열\n\n     new[], delete[] 연산자사용\n\n\n\n                                                              New[] 의역할(C의malloc)\n\n                                                       Heap 메모리공간에int를\n                                   size개수만큼담을수있는메모리\n                              공간을할당받은뒤주소값을반환\n                                       *5장에서배울클래스객체의경우생성자\n                                     호출까지수행\n\n                                                                          Delete[] 의역할(C의free)\n\n                             해당메모리공간을반납\n                                       *5장에서배울클래스객체의경우소멸자\n                                     호출까지수행\n\n\n강의자료무단배포금지                                                                                                               23\n문의사항: hk.kim@jbnu.ac.kr  || diskhkme@gmail.com"
+  },
+  {
+    "source": "L04",
+    "pdf_page": 24,
+    "printed_page": 24,
+    "text": " Dynamic Memory Allocation               중요!\n\n                           스택메모리         힙메모리\n 동적할당을이용한배열\n\n     new[], delete[] 키워드사용                                                                                                         10    0x2000\n                                                                                                         20    0x2000 + 4\n                                                                                                         30    0x2000 + 8\n\n\n\n\n\n                                                                                   Int* arr_ptr  0x2000  0x1000\n\n\n\n                                                       …                      …\n\n\n\n                                                                                              Delete[] 호출직전의메모리상태\n                                                       (Size에3을입력했다고가정)\n\n\n강의자료무단배포금지                                                                                                               24\n문의사항: hk.kim@jbnu.ac.kr  || diskhkme@gmail.com"
+  },
+  {
+    "source": "L04",
+    "pdf_page": 25,
+    "printed_page": 25,
+    "text": " Dynamic Memory Allocation               중요!\n\n                           스택메모리         힙메모리\n 동적할당을이용한배열\n\n     new[], delete[] 키워드사용                                                                                                                  0x2000\n\n\n\n\n\n                                                                                   Int* arr_ptr  0x2000  0x1000\n\n\n\n                                                       …                      …\n\n\n\n                                                                                                      Delete[] 호출후\n                                                                                         (Nullptr 대입해주지않으면문제가생길지도?)\n\n\n강의자료무단배포금지                                                                                                               25\n문의사항: hk.kim@jbnu.ac.kr  || diskhkme@gmail.com"
+  },
+  {
+    "source": "L04",
+    "pdf_page": 26,
+    "printed_page": 26,
+    "text": " Arrays and Pointers\n\n 배열의이름은배열의첫요소의주소를가리킨다(remind)\n\n 포인터변수의값은주소값이다\n\n 포인터변수와배열이같은주소를가리킨다면, 포인터변수와배열은(거의)동일\n 하게사용가능하다\n\n    (차이점: 배열은주소값을정의이후변경불가. Sizeof() 반환값이다름)\n\n\n\n\n\n강의자료무단배포금지                                                                                                               26\n문의사항: hk.kim@jbnu.ac.kr  || diskhkme@gmail.com"
+  },
+  {
+    "source": "L04",
+    "pdf_page": 27,
+    "printed_page": 27,
+    "text": " Arrays and Pointers\n\n\n\n\n arrayName[index] == pointerName[index]\n\n *(arrayName + index) == *(pointerName + index)\n\n\n\n\n\n강의자료무단배포금지                                                                                                               27\n문의사항: hk.kim@jbnu.ac.kr  || diskhkme@gmail.com"
+  },
+  {
+    "source": "L04",
+    "pdf_page": 28,
+    "printed_page": 28,
+    "text": " Const and Pointers\n\n  1.  const의포인터(pointers to const)\n\n  2.  const인포인터(const pointers)\n\n  3.  const의const인포인터(const pointers to const)\n\n\n\n\n\n강의자료무단배포금지                                                                                                               28\n문의사항: hk.kim@jbnu.ac.kr  || diskhkme@gmail.com"
+  },
+  {
+    "source": "L04",
+    "pdf_page": 29,
+    "printed_page": 29,
+    "text": " Const and Pointers\n\n  1.  const의포인터(pointers to const)\n\n   데이터가const / 포인터는다른데이터를가리킬수있음\n\n  2.  const인포인터(const pointers)\n\n  3.  const의const인포인터(const pointers to const)\n\n\n\n\n\n강의자료무단배포금지                                                                                                               29\n문의사항: hk.kim@jbnu.ac.kr  || diskhkme@gmail.com"
+  },
+  {
+    "source": "L04",
+    "pdf_page": 30,
+    "printed_page": 30,
+    "text": " Const and Pointers\n\n  1.  const의포인터(pointers to const)\n\n  2.  const인포인터(const pointers)\n\n   포인터가const / 데이터는변할수있음\n\n  3.  const의const인포인터(const pointers to const)\n\n\n\n\n\n강의자료무단배포금지                                                                                                               30\n문의사항: hk.kim@jbnu.ac.kr  || diskhkme@gmail.com"
+  },
+  {
+    "source": "L04",
+    "pdf_page": 31,
+    "printed_page": 31,
+    "text": " Const and Pointers\n\n  1.  const의포인터(pointers to const)\n\n  2.  const인포인터(const pointers)\n\n  3.  const의const인포인터(const pointers to const)\n\n    둘다const\n\n\n\n\n\n강의자료무단배포금지                                                                                                               31\n문의사항: hk.kim@jbnu.ac.kr  || diskhkme@gmail.com"
+  },
+  {
+    "source": "L04",
+    "pdf_page": 32,
+    "printed_page": 32,
+    "text": " Passing Pointers to a Function              중요!\n\n 포인터를함수의인자로전달\n\n     Pass-by-address / 변수의주소를전달\n\n\n\n\n\n강의자료무단배포금지                                                                                                               32\n문의사항: hk.kim@jbnu.ac.kr  || diskhkme@gmail.com"
+  },
+  {
+    "source": "L04",
+    "pdf_page": 33,
+    "printed_page": 33,
+    "text": " Passing Pointers to a Function              중요!\n\n                                   스택메모리\n 포인터를함수의인자로전달\n\n     Pass-by-address / 변수의주소를전달\n\n\n\n\n\n                                                                                                        Int* intPtr       0x1000     0x1000-4\n                                    DoubleData()\n                                                                                                          Int value         10        0x1000\n                                                      Main()\n\n\n                                                                      …\n\n                                                                                       DoubleData() 호출시점의\n                                              메모리상태\n\n\n\n\n강의자료무단배포금지                                                                                                               33\n문의사항: hk.kim@jbnu.ac.kr  || diskhkme@gmail.com"
+  },
+  {
+    "source": "L04",
+    "pdf_page": 34,
+    "printed_page": 34,
+    "text": " Passing Pointers to a Function              중요!\n\n                                   스택메모리\n 포인터를함수의인자로전달\n\n     Pass-by-address / 변수의주소를전달\n\n\n\n\n\n                                                                                                        Int* intPtr       0x1000     0x1000-4\n                                    DoubleData()\n                                                                                                          Int value         20        0x1000\n                                                      Main()\n\n\n                                                                      …\n\n                                                                               DoubleData() 호출종료시점의메모리상태\n\n                                  주소를가지고있으니호출Stack 밖의\n                                   값도바꿀수있다!\n강의자료무단배포금지                                                                                                               34\n문의사항: hk.kim@jbnu.ac.kr  || diskhkme@gmail.com"
+  },
+  {
+    "source": "L04",
+    "pdf_page": 35,
+    "printed_page": 35,
+    "text": " Returning a Pointer\n\n 포인터의반환\n\n   인자로전달된데이터(포인터)를반환OK\n\n\n\n\n\n강의자료무단배포금지                                                                                                               35\n문의사항: hk.kim@jbnu.ac.kr  || diskhkme@gmail.com"
+  },
+  {
+    "source": "L04",
+    "pdf_page": 36,
+    "printed_page": 36,
+    "text": " Returning a Pointer\n\n 포인터의반환\n\n   함수내부에서동적으로할당된메모리의주소를반환OK\n\n\n\n\n\n강의자료무단배포금지                                                                                                               36\n문의사항: hk.kim@jbnu.ac.kr  || diskhkme@gmail.com"
+  },
+  {
+    "source": "L04",
+    "pdf_page": 37,
+    "printed_page": 37,
+    "text": " Returning a Pointer                     중요!중요!\n\n                                        힙메모리 포인터의반환                   스택메모리\n\n    (주의!) 지역변수에대한포인터반환안됨!!\n\n\n\n                             어떻게해서문제가발생하는지, 이제부터는\n                                  본인이직접그려보세요!\n\n\n\n\n\n                                                          …                   …\n\n\n\n\n\n강의자료무단배포금지                                                                                                               37\n문의사항: hk.kim@jbnu.ac.kr  || diskhkme@gmail.com"
+  },
+  {
+    "source": "L04",
+    "pdf_page": 38,
+    "printed_page": 38,
+    "text": " Pointer Cautions\n\n 초기화의필요성\n\n\n 허상포인터(dangling pointer)\n\n   두포인터가동일데이터를가리키다, 하나의포인터가메모리를해제할경우\n   지역변수를참조하고, 호출스택이끝나는경우\n\n new의실패\n\n   가끔발생할수있음. 이런경우예외처리필요(후반강의)\n\n 메모리누수(memory leak)\n\n   동적할당으로사용한힙메모리는반드시해제해야함!\n\n\n\n강의자료무단배포금지                                                                                                               38\n문의사항: hk.kim@jbnu.ac.kr  || diskhkme@gmail.com"
+  },
+  {
+    "source": "L04",
+    "pdf_page": 39,
+    "printed_page": 39,
+    "text": " (Summary) Pointers\n\n 포인터의선언(포인터는변수, * 사용, nullptr 초기화)\n\n 주소로의접근(&, 주소의크기와데이터의크기구분)\n\n 역참조(*, 포인터가가리키는데이터접근)\n\n 동적메모리할당(new, delete, 런타임에힙메모리사용)\n\n 포인터와배열(주소값의증감offset)\n\n 포인터와const (3가지case, 주소/값의const)\n\n 포인터의pass-by-address(전달된포인터, 내부에서동적할당한포인터, 지역변수반환\n  금지)\n\n 주의사항(초기화, 허상, new 실패, 메모리누수)\n\n\n\n강의자료무단배포금지                                                                                                               39\n문의사항: hk.kim@jbnu.ac.kr  || diskhkme@gmail.com"
+  },
+  {
+    "source": "L04",
+    "pdf_page": 40,
+    "printed_page": 40,
+    "text": "참조자\n\n\n\n\n\n                                                                                                                         40"
+  },
+  {
+    "source": "L04",
+    "pdf_page": 41,
+    "printed_page": 41,
+    "text": " (Summary) References\n\n 참조자란?\n\n l-value와r-value\n\n 포인터vs 참조자\n\n\n\n\n\n강의자료무단배포금지                                                                                                               41\n문의사항: hk.kim@jbnu.ac.kr  || diskhkme@gmail.com"
+  },
+  {
+    "source": "L04",
+    "pdf_page": 42,
+    "printed_page": 42,
+    "text": " Reference                           중요!\n\n 참조자\n\n   변수의별명\n\n   참조자는(새로운) 변수가아님\n\n     변수가아니라는의미는, 메모리에새로운공간을차지하지않는다는의미\n\n     포인터변수는그자체가주소값을저장하는하나의변수였지만, 참조자는다름\n\n   선언과동시에초기화되어야함(Null일수없음)\n\n   한번초기화되면, 다른변수의참조자가될수없음\n\n    Const인pointer이면서, 사용시자동으로역참조를수행하는개념\n\n     포인터의간단하고편리한버전으로생각\n\n    C++에서, 함수의매개변수로“매우” 자주사용\n\n\n\n강의자료무단배포금지                                                                                                               42\n문의사항: hk.kim@jbnu.ac.kr  || diskhkme@gmail.com"
+  },
+  {
+    "source": "L04",
+    "pdf_page": 43,
+    "printed_page": 43,
+    "text": " Reference\n\n 참조자\n\n     int&, float& 등변수정의시에&를붙인타입을사용\n\n   포인터와마찬가지로, 동일한타입에대해서만참조자생성가능\n\n   참조자를사용할때는마치a인것처럼그냥사용(*,& 붙지않음)\n\n\n\n\n\n                                                                                   Int& b  , Int a        20        0x1000\n\n\n\n                                                                      …\n\n                                       참조자인b는마치a변수인것처럼사용가능\n\n\n\n강의자료무단배포금지                                                                                                               43\n문의사항: hk.kim@jbnu.ac.kr  || diskhkme@gmail.com"
+  },
+  {
+    "source": "L04",
+    "pdf_page": 44,
+    "printed_page": 44,
+    "text": " Reference\n\n 참조자\n\n     int&, float& 등변수정의시에&를붙인타입을사용\n\n   포인터와마찬가지로, 동일한타입에대해서만참조자생성가능\n\n   참조자를사용할때는마치a인것처럼그냥사용(*,& 붙지않음)\n\n\n\n\n                                                                                           Int& b                        -\n                                                                                                                     Int a      20        0x1000\n\n\n\n                                                                      …\n\n                                          참조자인b는마치a인것처럼사용가능.\n                                           그림으로는위와같이표현하겠습니다.\n                                            (b는주소값이따로없는것에유의)\n강의자료무단배포금지                                                                                                               44\n문의사항: hk.kim@jbnu.ac.kr  || diskhkme@gmail.com"
+  },
+  {
+    "source": "L04",
+    "pdf_page": 45,
+    "printed_page": 45,
+    "text": " Reference\n\n                                            2)반면에이val은단지a의\n 참조자                  값을복사해온지역변수이기\n                          때문에a에영향을미치지\n                               못하고,호출이끝나면사라짐\n\n\n\n                                                  1)Int&val자신은지역\n                                  변수이지만,a의참조자기때문에\n                            포인터처럼호출스택밖의\n                             변수의값을바꿀수있음!\n\n                                                                                         Int& val\n                           IncrementByReference()\n                                                                                                                    Int a      6        0x1000\n                                           main()\n\n\n                                                                      …\n\n\n\n\n\n강의자료무단배포금지                                                                                                               45\n문의사항: hk.kim@jbnu.ac.kr  || diskhkme@gmail.com"
+  },
+  {
+    "source": "L04",
+    "pdf_page": 46,
+    "printed_page": 46,
+    "text": " Reference\n\n 참조자\n\n   Copy가필요한경우가아니라면, const &를쓰는것이\n    기본\n\n        Const & rvalue 전달가능\n\n   오른쪽코드는모두a의값인5를그대로출력함\n\n       네개의Print 함수의장/단점은?\n\n\n\n\n\n강의자료무단배포금지                                                                                                               46\n문의사항: hk.kim@jbnu.ac.kr  || diskhkme@gmail.com"
+  },
+  {
+    "source": "L04",
+    "pdf_page": 47,
+    "printed_page": 47,
+    "text": " Reference                 고급\n\n 참조자가새로운변수가아니라는뜻의의미\n\n  메모리디버깅를통해a의주소와b의주소를살펴보면동일한것을알수있음\n\n    즉, b가(포인터와는달리) 메모리공간을차지하는새로운변수는아니라는의미\n\n   (컴파일시에참조자는가리키는원본의메모리주소로대체되는방식)\n\n\n\n\n\n강의자료무단배포금지                                                                                                               47\n문의사항: hk.kim@jbnu.ac.kr  || diskhkme@gmail.com"
+  },
+  {
+    "source": "L04",
+    "pdf_page": 48,
+    "printed_page": 48,
+    "text": " l-values and r-values\n\n l-value\n\n   이름을가지며, 주소를갖는값\n\n   Const가아니라면수정이가능한값\n\n r-value\n\n   주소를갖지않고, 대입의대상이될수없음\n\n    L-value가아닌것들\n\n     대입식의오른쪽에위치\n\n     리터럴등\n\n\n\n\n\n강의자료무단배포금지                                                                                                               48\n문의사항: hk.kim@jbnu.ac.kr  || diskhkme@gmail.com"
+  },
+  {
+    "source": "L04",
+    "pdf_page": 49,
+    "printed_page": 49,
+    "text": " l-values and r-values             고급\n\n 기본적으로는L-value인경우에만참조자를만들수있으나…\n\n     Const reference인경우와\n\n     R-value reference에대한문법또한존재\n\n\n\n\n\n강의자료무단배포금지                                                                                                               49\n문의사항: hk.kim@jbnu.ac.kr  || diskhkme@gmail.com"
+  },
+  {
+    "source": "L04",
+    "pdf_page": 50,
+    "printed_page": 50,
+    "text": " Pointers vs References                   중요!\n\n 간단정리\n\n   *의사용\n\n                                                            int* a     변수를정의할때붙는다? 포인터의정의(포인터변수의생성)\n\n     변수를사용할때붙는다? 포인터의역참조                *a\n\n   &의사용\n\n     변수를정의할때붙는다? 참조자의정의(참조자의생성)                                                            int& b\n     변수를사용할때붙는다? 변수의주소값반환\n                                                            &a\n\n\n\n\n\n강의자료무단배포금지                                                                                                               50\n문의사항: hk.kim@jbnu.ac.kr  || diskhkme@gmail.com"
+  },
+  {
+    "source": "L04",
+    "pdf_page": 51,
+    "printed_page": 51,
+    "text": " Pointers vs References\n\n\n                     void func(int a) Pass-by-value\n\n   함수가실제매개변수(원본)를수정하지않는경우사용\n\n      Int, char, double과같은크기가작은기본자료형의전달\n\n     기본자료형이아닌자료형? string, vector, class\n\n     복사의비용이높기때문\n\n\n\n\n\n강의자료무단배포금지                                                                                                               51\n문의사항: hk.kim@jbnu.ac.kr  || diskhkme@gmail.com"
+  },
+  {
+    "source": "L04",
+    "pdf_page": 52,
+    "printed_page": 52,
+    "text": " Pointers vs References\n\n\n                                         void func(int* a) Pass-by-address(포인터사용)\n\n   함수가실제매개변수(원본)를수정해야하는경우\n\n       즉, 지역범위밖의메모리에저장된값에접근해야하는경우\n\n   복사의오버헤드가클때\n\n   포인터가nullptr이되어도상관없을때\n\n     참조자는null이될수없음\n\n\n\n\n\n강의자료무단배포금지                                                                                                               52\n문의사항: hk.kim@jbnu.ac.kr  || diskhkme@gmail.com"
+  },
+  {
+    "source": "L04",
+    "pdf_page": 53,
+    "printed_page": 53,
+    "text": " Pointers vs References\n\n\n                                                 void func(const int* a) const의포인터를사용한Pass-by-address\n\n  함수가실제매개변수를수정하지않는경우\n\n   복사의오버헤드가클때\n\n   포인터가nullptr이되어도상관없을때\n\n     참조자는null이될수없음\n\n\n\n\n\n강의자료무단배포금지                                                                                                               53\n문의사항: hk.kim@jbnu.ac.kr  || diskhkme@gmail.com"
+  },
+  {
+    "source": "L04",
+    "pdf_page": 54,
+    "printed_page": 54,
+    "text": " Pointers vs References\n\n\n                                                         void func(const int* const a) const의const인포인터를사용한Pass-by-address\n\n  함수가실제매개변수를수정하지않는경우\n\n   복사의오버헤드가클때\n\n   포인터가nullptr이되어도상관없을때\n\n     참조자는null이될수없음\n\n  포인터가바뀌지않아야할때\n\n\n\n\n\n강의자료무단배포금지                                                                                                               54\n문의사항: hk.kim@jbnu.ac.kr  || diskhkme@gmail.com"
+  },
+  {
+    "source": "L04",
+    "pdf_page": 55,
+    "printed_page": 55,
+    "text": " Pointers vs References\n\n\n                                          void func(int& a) Pass-by-reference(참조자사용)\n\n   함수가실제매개변수를수정하는경우\n\n  복사의오버헤드가클때\n\n   매개변수가null이되지않는것이보장될때\n\n\n\n\n\n강의자료무단배포금지                                                                                                               55\n문의사항: hk.kim@jbnu.ac.kr  || diskhkme@gmail.com"
+  },
+  {
+    "source": "L04",
+    "pdf_page": 56,
+    "printed_page": 56,
+    "text": " Pointers vs References\n\n\n                                                      void func(const int& a) const 참조자를사용한Pass-by-const-reference\n\n  함수가실제매개변수를수정하지않는경우\n\n  복사의오버헤드가클때\n\n   매개변수가null이되지않는것이보장될때\n\n\n\n\n\n강의자료무단배포금지                                                                                                               56\n문의사항: hk.kim@jbnu.ac.kr  || diskhkme@gmail.com"
+  },
+  {
+    "source": "L04",
+    "pdf_page": 57,
+    "printed_page": 57,
+    "text": " (Summary) References\n\n 복습(&, 변수의별명, pass-by-reference)\n\n l-value와r-value (주소값을가질수있는변수(l-value)가참조자생성가능)\n\n 포인터vs 참조자\n\n     Pass-by-value\n\n     Pass-by-reference\n\n          Pointer\n\n          Pointer to const\n\n        Const pointer to const\n\n         Reference\n\n        Const reference\n\n\n강의자료무단배포금지                                                                                                               57\n문의사항: hk.kim@jbnu.ac.kr  || diskhkme@gmail.com"
+  },
+  {
+    "source": "L04",
+    "pdf_page": 58,
+    "printed_page": 58,
+    "text": "추가슬라이드\n\n\n\n\n\n                                                                                                                         58"
+  },
+  {
+    "source": "L04",
+    "pdf_page": 59,
+    "printed_page": 59,
+    "text": " Pointer Arithmetic\n\n 포인터연산\n\n   대입표현식\n\n   연산표현식\n\n   비교표현식\n\n\n    int_ptr++; // next array element\n    int_ptr--; // previous array element\n\n    int_ptr += n; // increment n*sizeof(type)\n    int_ptr -= n; // decrement n*sizeof(type)\n\n    int n = int_ptr2 - int_ptr1; // number of element between two pointers\n\n\n\n\n\n강의자료무단배포금지                                                                                                               59\n문의사항: hk.kim@jbnu.ac.kr  || diskhkme@gmail.com"
+  },
+  {
+    "source": "L04",
+    "pdf_page": 60,
+    "printed_page": 60,
+    "text": " Pointer Arithmetic\n\n 포인터연산\n\n   대입표현식\n\n   연산표현식\n\n   비교표현식\n\n     값이아닌주소값의비교(값을비교하고싶다면역참조후비교)\n\n\n    string s1=\"Frank\";                           string s1=\"Hyungki\";\n    string s2=\"Hyungki“;                         string s2=\"Hyungki\";\n\n    string* p1 =&s1;                             string* p1 =&s1;\n    string* p2 =&s2;                             string* p2 =&s2;\n    string* p3 =&s1;                             string* p3 =&s1;\n\n    cout << (p1==p2) << endl; // false           cout << (*p1==*p2) << endl; // true\n    cout << (p1==p3) << endl; //true             cout << (*p1==*p3) << endl; // true\n\n강의자료무단배포금지                                                                                                               60\n문의사항: hk.kim@jbnu.ac.kr  || diskhkme@gmail.com"
+  }
+]

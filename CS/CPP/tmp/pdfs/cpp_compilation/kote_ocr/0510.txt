@@ -1,0 +1,23 @@
+(10(k t timer (10(k():
+switch (i)
+case 2•.
+string 16 = LCS TabuIation(A, 8);
+LCS = lcs.size();
+cout 〈〈 A 〈〈 "와 " 〈〈 8 〈〈 "의 최장 공통 부분 시원스: •• 〈〈 16 〈〈 endl,
+break;
+cout 〈〈 A 〈〈 "와 " 〈〈 〈〈 "의 최장 공통 부분 시퀀스 길이: “ 〈〈 LCS 〈〈 endl;
+GetTime(timer, types[i]);
+cout 〈〈 endl;
+11. 이제 프로그램을 실행하고 두 문자열 ABCABDBEFBA와 ABCBEFBEAB를 입력하면 다음과 같은 출력
+을 확인할 수 있습니다.
+ABCABDBEFBA와 ABCBEFBEAB의 최장 공통 부분 시퀀스 길이: 8
+BRUTE FORCE 방법 경과 시간: 0.00060
+ABCABDBEFBA와 ABCBEFBEAB의 최장 공통 부분 시퀀스 길이: 8
+MEM이ZATION 방법 경과 시간: 0.00005
+ABCABDBEFBA와 ABCBEFBEAB의 최장 공통 부분 시퀀스: ABCBEFBA
+ABCABDBEFBA와 ABCBEFBEAB의 최장 공통 부분 시퀀스 길이: 8
+TABULATION 방법 경과 시간: 0.00009
+No十e三 실제 출력 시간은 사용하고 있는 시스템 성능에 따라 다르게 나타날수 있습니다. 여기서는 시간
+에 주목하기 바랍니다.
+지금까지 서로 다른 기법을 이용하여 같은 문제에 여러 로직을 적용하는 예제를 살펴봤고, 그로
+인해 연산 시간이 얼마나 달라지는지 살펴봤습니다.

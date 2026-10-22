@@ -1,0 +1,31 @@
+fprintf(stderr, "탐색키가 중복되없습니다\n");
+exit(l);
+= (5 + 1) % TABLE_SIZE;
+1
+if (i == hash-value) {
+fprintf(stderr, "테이블이 가득찼습니다\n");
+exit(l);
+ht[i) =
+item;
+다음으로 저장된 항목을 탐색하는 함수를 작성해보자. 담색도 마찬가지로 먼저 기에 해시 함
+수를 적용시켜서 계산된 주소에서 항목을 찾지 못하면 해당 항우을 찾을 때까지 연속된 비것을
+탐색한다. 탐색하다가 시작 주소로 되돌아오면 해당 항목이 테이블에 없다고 결론내릴 수 있다.
+예제 프로그램은 단순히 기만을 찾았으나 실제 응용에서는 기에 관련된 자료를 찾을 것이다. 즉
+영어 사전을 해성을 이용하여 구현한다면 단어의 설명이 테이블에 기와 함께 저장될 것이다.
+프로그램 14.5 선형조사법의 구현 part4
+// 선형조사법을 이용하여 테이블에 저장된 키를 탐색
+void hash_lp—search(element item, element ht[])
+int 1, hash vatue;
+hash value = i = hash_function(item.key);
+`•가lile (!empty(ht[i]))
+if (equal(item, ht[i])) {
+fprintf(stderr, "탐색 %s: 위치 - 9던\n", item.key, 5);
+= (5 + 1) % TABLE_SIZE;
+1
+if (i == hash-value) {
+fprintf(stderr, "찾는 값이 테이블에 없음\n")•,
+return;
+fprintf(stderr, "찾는 값이 테이블에 없음\n");
+위의 함수들을 호출하여 시용하는 main 함수를 만들어 보면 아래와 같다. hash-lp-print 함
+수는 현재 테이블에 저장된 카들을 출력하는 함수이다.
+552 C언어로 쉽게 불어쓴 자료구조

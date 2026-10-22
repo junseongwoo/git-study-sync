@@ -1,0 +1,47 @@
+40
+43
+45
+46
+47
+48
+49
+50
+51
+52
+53
+HashVa1ue = String[il + ( HashVaIue * 2 );
+return HashValue,
+int ReHash( char• String, int Start, int Size, int HashPrev, int Cæfficient )
+if ( Start == 0 )
+return HashPrev;
+return String[ Start + Size - 11 +
+( 대ashPrev - Coefficient * String [Start-11 ) * 2 뉴
+다음은 KarpRabin( ) 함수를 테스트하는 Test KarpRabin.c입니다.
+10장/KarpRabin/Test—Ka Rabin.c
+01
+02
+03
+04
+05
+06
+07
+09
+13
+14
+15
+17
+18
+*include 〈stdio.h〉
+#include <string.h>
+#include "KarpRabin.h•
+$define MAX BUFFER 512
+int main(int argc, char•-* argv)
+char* FilePath;
+FILE* fp;
+char Text[MAX_BUFFERl;
+char* Pattern,
+int PatternSize = 0;
+int Line
+if ( argc<3)
+printf(%age• 쥐IePath〉 Cattern〉Ⅵ•. argv(@) ):
+Chapter 10 • 문자열 탐책 469

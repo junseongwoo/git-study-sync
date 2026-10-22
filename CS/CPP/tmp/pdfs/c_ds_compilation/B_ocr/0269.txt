@@ -1,0 +1,58 @@
+049
+050
+051
+052
+053
+054
+055
+056
+057
+058
+059
+062
+%3
+%5
+%7
+%9
+070
+071
+072
+073
+074
+075
+076
+077
+078
+079
+%1
+085
+%7
+if ( Tree == NULL )
+return NULL;
+if ( Tree->Left == NULL )
+return .•
+else
+return BST_SearchMinNode( Tree->Left );
+void BST_InsertN0de( BSTNode* Tree, BSTNode *ChiId)
+if ( Tree-»ata 〈 ChiId->Data )
+if ( Tree->Right
+= NULL )
+Tree->Right = Child;
+e1se
+BST_InsertNode( Tree->Right, ChiId );
+else if ( Tree->Data 〉 Chi1d->Data )
+if ( Tree->Left == NULL )
+Tree->Left = ChiId;
+else
+BST_InsertNode( Tree->Left, ChiId ):
+BSTNode• BST RemoveNode( BSTNode* Tree,BSTNode* Parent, E1ementType Target )
+BSTNode* Removed = NULL;
+if ( Tree == NULL )
+return NULL;
+if ( Tree->Data 〉 Target )
+Removed = BST-RemoveNode( Tree->Left, Tree, Target );
+else if ( Tree->Data 〈 Target )
+R예ov댼 = BST-RemoveNode( Tree->Right, Tree, Target );
+else // 목표값을 찾은 경우
+262
+Part 02 • 알고리좀

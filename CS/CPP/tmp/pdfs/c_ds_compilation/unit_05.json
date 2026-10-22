@@ -1,0 +1,1150 @@
+{
+  "unit": 5,
+  "title": "연결 리스트",
+  "part": "자료구조",
+  "scope": [
+    {
+      "source": "A",
+      "start": 167,
+      "end": 244
+    },
+    {
+      "source": "B",
+      "start": 29,
+      "end": 77
+    }
+  ],
+  "learning": [
+    {
+      "text": "리스트는 배열과 연결 리스트를 이용하여 구현할 수 있다.",
+      "refs": [
+        {
+          "source": "A",
+          "section": "6.1 리스트 추상 데이터 타입",
+          "pages": [
+            169
+          ]
+        }
+      ],
+      "evidence": "배열과 연결 리스트를 이용하여 구현"
+    },
+    {
+      "text": "이중 연결 리스트(doubly linked list)는 각 노드에 앞 노드와 뒤 노드를 가리키는 2개의 링크가 존재한다.",
+      "refs": [
+        {
+          "source": "A",
+          "section": "6.3 연결 리스트의 종류",
+          "pages": [
+            178
+          ]
+        }
+      ],
+      "evidence": "각 노드마다 2개의 링크"
+    }
+  ],
+  "concepts": [
+    {
+      "title": "리스트 ADT와 배열 구현",
+      "items": [
+        {
+          "text": "리스트의 객체는 n개의 element형으로 구성된 순서 있는 모임이다.",
+          "refs": [
+            {
+              "source": "A",
+              "section": "6.1 리스트 추상 데이터 타입",
+              "pages": [
+                169
+              ]
+            }
+          ],
+          "evidence": "n개의 element형으로 구성된 순서 있는 모임"
+        },
+        {
+          "text": "첫 번째 노드를 헤드(Head), 마지막 노드를 테일(Tail)이라 부르며, 리스트의 길이는 헤드부터 테일까지의 노드 개수이다.",
+          "refs": [
+            {
+              "source": "B",
+              "section": "1.1.1 리스트의 개념",
+              "pages": [
+                31
+              ]
+            }
+          ],
+          "evidence": "첫 번째 노드를 헤드"
+        },
+        {
+          "text": "insert(), delete(), get_entry(), get_length(), is_empty(), is_full() 등의 연산으로 리스트를 다룬다.",
+          "refs": [
+            {
+              "source": "A",
+              "section": "6.1 리스트 추상 데이터 타입",
+              "pages": [
+                169
+              ]
+            }
+          ],
+          "evidence": "get_entry(list, pos)"
+        },
+        {
+          "text": "리스트는 배열과 연결 리스트를 이용하여 구현할 수 있다.",
+          "refs": [
+            {
+              "source": "A",
+              "section": "6.1 리스트 추상 데이터 타입",
+              "pages": [
+                169
+              ]
+            }
+          ],
+          "evidence": "배열과 연결 리스트를 이용하여 구현"
+        },
+        {
+          "text": "배열을 이용한 리스트 구현은 순차적인 메모리 공간을 할당하므로 순차적 표현(sequential representation)이라고도 한다.",
+          "refs": [
+            {
+              "source": "A",
+              "section": "6.2 배열로 구현된 리스트",
+              "pages": [
+                170
+              ]
+            }
+          ],
+          "evidence": "순차적 표현"
+        },
+        {
+          "text": "배열 리스트는 크기가 고정되고, 중간에 삽입하거나 삭제하려면 기존 데이터를 이동하여야 한다.",
+          "refs": [
+            {
+              "source": "A",
+              "section": "6.2 배열로 구현된 리스트",
+              "pages": [
+                170
+              ]
+            }
+          ],
+          "evidence": "기존의 데이터들을 이동"
+        },
+        {
+          "text": "배열 리스트의 get_entry 연산은 인덱스로 항목에 바로 접근하므로 O(1)이다.",
+          "refs": [
+            {
+              "source": "A",
+              "section": "6.2 실행 시간 분석",
+              "pages": [
+                175
+              ]
+            }
+          ],
+          "evidence": "get_entry"
+        },
+        {
+          "text": "배열 리스트의 삽입이나 삭제는 최악의 경우 O(n)이다.",
+          "refs": [
+            {
+              "source": "A",
+              "section": "6.2 실행 시간 분석",
+              "pages": [
+                175
+              ]
+            }
+          ],
+          "evidence": "최악의 경우 O(n)"
+        },
+        {
+          "text": "배열 리스트의 맨 끝에 삽입하는 경우는 O(1)이다.",
+          "refs": [
+            {
+              "source": "A",
+              "section": "6.2 실행 시간 분석",
+              "pages": [
+                175
+              ]
+            }
+          ],
+          "evidence": "맨 끝에 삽입하는 경우는 O(1)"
+        }
+      ]
+    },
+    {
+      "title": "노드·링크·헤드 포인터",
+      "items": [
+        {
+          "text": "연결 리스트의 노드는 데이터 필드(data field)와 링크 필드(link field)로 구성된다.",
+          "refs": [
+            {
+              "source": "A",
+              "section": "6.3 연결 리스트",
+              "pages": [
+                177
+              ]
+            }
+          ],
+          "evidence": "데이터 필드(data field)와 링크 필드(link field)"
+        },
+        {
+          "text": "데이터 필드에는 저장할 데이터가, 링크 필드에는 다른 노드를 가리키는 포인터가 저장된다.",
+          "refs": [
+            {
+              "source": "A",
+              "section": "6.3 연결 리스트",
+              "pages": [
+                177
+              ]
+            }
+          ],
+          "evidence": "링크 필드에는 다른 노드를 가리키는 포인터"
+        },
+        {
+          "text": "헤드 포인터(head pointer)는 연결 리스트의 첫 번째 노드를 가리키는 변수이다.",
+          "refs": [
+            {
+              "source": "A",
+              "section": "6.3 연결 리스트",
+              "pages": [
+                177
+              ]
+            }
+          ],
+          "evidence": "첫 번째 노드를 가리키고 있는 변수"
+        },
+        {
+          "text": "연결 리스트는 포인터도 저장하여야 하므로 메모리 공간을 많이 사용하고, i번째 데이터는 앞에서부터 순차적으로 접근하여야 한다.",
+          "refs": [
+            {
+              "source": "A",
+              "section": "6.3 연결 리스트",
+              "pages": [
+                177
+              ]
+            }
+          ],
+          "evidence": "i번째 데이터를 찾으려면 앞에서부터 순차적으로"
+        },
+        {
+          "text": "자기 참조 구조체는 자기 자신을 참조하는 포인터를 포함하는 구조체이다.",
+          "refs": [
+            {
+              "source": "A",
+              "section": "6.4 노드의 정의",
+              "pages": [
+                180
+              ]
+            }
+          ],
+          "evidence": "자기 자신을 참조하는 포인터"
+        },
+        {
+          "text": "공백인 단순 연결 리스트에서는 헤드 포인터의 값이 NULL이다.",
+          "refs": [
+            {
+              "source": "A",
+              "section": "6.4 공백 리스트의 생성",
+              "pages": [
+                180
+              ]
+            }
+          ],
+          "evidence": "head의 값은 NULL"
+        }
+      ]
+    },
+    {
+      "title": "단순 연결 리스트의 관리",
+      "items": [
+        {
+          "text": "SLL_CreateNode()는 malloc()으로 노드를 생성하고 데이터를 저장한 뒤 NextNode를 NULL로 초기화한다.",
+          "refs": [
+            {
+              "source": "B",
+              "section": "1.2.2 노드 생성/소멸 연산",
+              "pages": [
+                38
+              ]
+            }
+          ],
+          "evidence": "NextNode = NULL"
+        },
+        {
+          "text": "SLL_DestroyNode()는 노드의 주소를 free()에 넘겨 노드를 소멸시킨다.",
+          "refs": [
+            {
+              "source": "B",
+              "section": "1.2.2 노드 생성/소멸 연산",
+              "pages": [
+                38
+              ]
+            }
+          ],
+          "evidence": "free(Node)"
+        },
+        {
+          "text": "노드 삭제는 리스트에서 노드를 제외하는 연산이다.",
+          "refs": [
+            {
+              "source": "B",
+              "section": "1.2.2 링크드 리스트의 주요 연산",
+              "pages": [
+                35
+              ]
+            }
+          ],
+          "evidence": "노드 삭제는 리스트에서 노드를 제외"
+        },
+        {
+          "text": "노드 소멸은 노드를 메모리에서 없애는 연산이다.",
+          "refs": [
+            {
+              "source": "B",
+              "section": "1.2.2 링크드 리스트의 주요 연산",
+              "pages": [
+                35
+              ]
+            }
+          ],
+          "evidence": "노드 소멸은 노드를 메모리에서 없애는"
+        },
+        {
+          "text": "insert_first()는 변경된 헤드 포인터를 반환하므로 반환값을 헤드 포인터에 저장하여야 한다.",
+          "refs": [
+            {
+              "source": "A",
+              "section": "6.5 삽입 연산 insert_first()",
+              "pages": [
+                183
+              ]
+            }
+          ],
+          "evidence": "반환된 값을 헤드포인트에 저장"
+        },
+        {
+          "text": "중간 삽입 insert()는 삽입 위치의 선행 노드를 알아야 가능하다.",
+          "refs": [
+            {
+              "source": "A",
+              "section": "6.5 삽입 연산 insert()",
+              "pages": [
+                184
+              ]
+            }
+          ],
+          "evidence": "선행 노드를 알아야 삽입이 가능"
+        }
+      ]
+    },
+    {
+      "title": "원형·이중 연결 리스트",
+      "items": [
+        {
+          "text": "단순 연결 리스트(singly linked list)는 하나의 방향으로만 연결되며 체인(chain)이라고도 한다.",
+          "refs": [
+            {
+              "source": "A",
+              "section": "6.3 연결 리스트의 종류",
+              "pages": [
+                178
+              ]
+            }
+          ],
+          "evidence": "체인(chain)"
+        },
+        {
+          "text": "단순 연결 리스트의 마지막 노드의 링크는 NULL값을 가진다.",
+          "refs": [
+            {
+              "source": "A",
+              "section": "6.3 연결 리스트의 종류",
+              "pages": [
+                178
+              ]
+            }
+          ],
+          "evidence": "마지막 노드의 링크는 NULL값"
+        },
+        {
+          "text": "원형 연결 리스트(circular linked list)는 마지막 노드의 링크가 첫 번째 노드를 가리킨다.",
+          "refs": [
+            {
+              "source": "A",
+              "section": "6.3 연결 리스트의 종류",
+              "pages": [
+                178
+              ]
+            }
+          ],
+          "evidence": "마지막 노드의 링크가 첫 번째 노드를 가리킨다"
+        },
+        {
+          "text": "이중 연결 리스트(doubly linked list)는 각 노드에 앞 노드와 뒤 노드를 가리키는 2개의 링크가 존재한다.",
+          "refs": [
+            {
+              "source": "A",
+              "section": "6.3 연결 리스트의 종류",
+              "pages": [
+                178
+              ]
+            }
+          ],
+          "evidence": "각 노드마다 2개의 링크"
+        },
+        {
+          "text": "헤드 포인터가 마지막 노드를 가리키도록 구성한 원형 연결 리스트는 상수 시간 안에 처음과 끝에 노드를 삽입할 수 있다.",
+          "refs": [
+            {
+              "source": "A",
+              "section": "7.1 원형 연결 리스트",
+              "pages": [
+                214
+              ]
+            }
+          ],
+          "evidence": "상수 시간 안에 리스트의 처음과 끝"
+        },
+        {
+          "text": "헤드 노드(head node)는 데이터를 가지고 있지 않은 특별한 노드로 삽입·삭제 알고리즘을 간편하게 한다.",
+          "refs": [
+            {
+              "source": "A",
+              "section": "7.3 이중 연결 리스트",
+              "pages": [
+                222
+              ]
+            }
+          ],
+          "evidence": "데이터를 가지고 있지 않는 특별한 노드"
+        },
+        {
+          "text": "이중 연결 리스트는 양방향 검색이 가능하지만 공간을 많이 차지하고 코드가 복잡해진다.",
+          "refs": [
+            {
+              "source": "A",
+              "section": "7.3 이중 연결 리스트",
+              "pages": [
+                222
+              ]
+            }
+          ],
+          "evidence": "공간을 많이 차지하고 코드가 복잡"
+        },
+        {
+          "text": "더블 링크드 리스트를 환형으로 구현하면 헤드의 이전 노드는 테일이고 테일의 다음 노드는 헤드가 된다.",
+          "refs": [
+            {
+              "source": "B",
+              "section": "1.4 환형 링크드 리스트",
+              "pages": [
+                67
+              ]
+            }
+          ],
+          "evidence": "헤드의 이전 노드가 테일"
+        }
+      ]
+    },
+    {
+      "title": "원문 응용과 사용 특성",
+      "items": [
+        {
+          "text": "다항식의 연결 리스트 표현에서는 각 항을 하나의 노드로 표현하며 계수(coef), 지수(exp), 링크(link) 필드를 둔다.",
+          "refs": [
+            {
+              "source": "A",
+              "section": "6.6 연결 리스트의 응용: 다항식",
+              "pages": [
+                201
+              ]
+            }
+          ],
+          "evidence": "각 항을 하나의 노드로 표현"
+        },
+        {
+          "text": "링크드 리스트는 레코드의 추가·삽입·삭제가 잦지만 조회는 드문 곳에서 사용하기 적합하다.",
+          "refs": [
+            {
+              "source": "B",
+              "section": "1.2.4 링크드 리스트의 장단점",
+              "pages": [
+                53
+              ]
+            }
+          ],
+          "evidence": "추가, 삽입, 삭제가 잦지만 조회는 드문"
+        }
+      ]
+    }
+  ],
+  "procedures": [
+    {
+      "title": "insert_first()의 처리 순서",
+      "steps": [
+        {
+          "text": "동적 메모리 할당으로 새로운 노드 p를 생성한다.",
+          "refs": [
+            {
+              "source": "A",
+              "section": "6.5 알고리즘 6.1",
+              "pages": [
+                184
+              ]
+            }
+          ],
+          "evidence": "새로운 노드 p를 생성"
+        },
+        {
+          "text": "p->data에 value를 저장한다.",
+          "refs": [
+            {
+              "source": "A",
+              "section": "6.5 알고리즘 6.1",
+              "pages": [
+                184
+              ]
+            }
+          ],
+          "evidence": "p->data에 value"
+        },
+        {
+          "text": "p->link를 현재의 head값으로 변경한다.",
+          "refs": [
+            {
+              "source": "A",
+              "section": "6.5 알고리즘 6.1",
+              "pages": [
+                184
+              ]
+            }
+          ],
+          "evidence": "p->link를 현재의 head값"
+        },
+        {
+          "text": "head를 p값으로 변경한다.",
+          "refs": [
+            {
+              "source": "A",
+              "section": "6.5 알고리즘 6.1",
+              "pages": [
+                184
+              ]
+            }
+          ],
+          "evidence": "head를 p값"
+        },
+        {
+          "text": "변경된 헤드 포인터를 반환한다.",
+          "refs": [
+            {
+              "source": "A",
+              "section": "6.5 알고리즘 6.1",
+              "pages": [
+                184
+              ]
+            }
+          ],
+          "evidence": "변경된 헤드 포인터 반환"
+        }
+      ]
+    }
+  ],
+  "syntax": [
+    {
+      "label": "단순 연결 리스트 노드 정의",
+      "code": "typedef int element;\ntypedef struct ListNode { // 노드 타입을 구조체로 정의한다.\n    element data;\n    struct ListNode *link;\n} ListNode;",
+      "refs": [
+        {
+          "source": "A",
+          "section": "6.4 노드의 정의",
+          "pages": [
+            180
+          ]
+        }
+      ],
+      "evidence": "typedef struct ListNode",
+      "note": null
+    }
+  ],
+  "formulas": [
+    {
+      "label": "배열 리스트의 접근",
+      "expression": "get_entry: O(1)",
+      "refs": [
+        {
+          "source": "A",
+          "section": "6.2 실행 시간 분석",
+          "pages": [
+            175
+          ]
+        }
+      ],
+      "evidence": "get_entry",
+      "note": "배열의 인덱스로 항목에 바로 접근한다."
+    },
+    {
+      "label": "배열 리스트의 삽입·삭제",
+      "expression": "최악의 경우 O(n); 맨 끝 삽입 O(1)",
+      "refs": [
+        {
+          "source": "A",
+          "section": "6.2 실행 시간 분석",
+          "pages": [
+            175
+          ]
+        }
+      ],
+      "evidence": "최악의 경우 O(n)",
+      "note": "다른 항목을 이동하는 삽입·삭제의 최악 경우와 맨 끝 삽입을 구분한다."
+    }
+  ],
+  "comparisons": [
+    {
+      "title": "연결 리스트의 종류",
+      "headers": [
+        "종류",
+        "원문 구조"
+      ],
+      "rows": [
+        [
+          {
+            "text": "단순 연결 리스트",
+            "refs": [
+              {
+                "source": "A",
+                "section": "6.3 연결 리스트의 종류",
+                "pages": [
+                  178
+                ]
+              }
+            ],
+            "evidence": "단순 연결 리스트"
+          },
+          {
+            "text": "단순 연결 리스트(singly linked list)는 하나의 방향으로만 연결되며 체인(chain)이라고도 한다.",
+            "refs": [
+              {
+                "source": "A",
+                "section": "6.3 연결 리스트의 종류",
+                "pages": [
+                  178
+                ]
+              }
+            ],
+            "evidence": "체인(chain)"
+          }
+        ],
+        [
+          {
+            "text": "원형 연결 리스트",
+            "refs": [
+              {
+                "source": "A",
+                "section": "6.3 연결 리스트의 종류",
+                "pages": [
+                  178
+                ]
+              }
+            ],
+            "evidence": "원형 연결 리스트"
+          },
+          {
+            "text": "원형 연결 리스트(circular linked list)는 마지막 노드의 링크가 첫 번째 노드를 가리킨다.",
+            "refs": [
+              {
+                "source": "A",
+                "section": "6.3 연결 리스트의 종류",
+                "pages": [
+                  178
+                ]
+              }
+            ],
+            "evidence": "마지막 노드의 링크가 첫 번째 노드를 가리킨다"
+          }
+        ],
+        [
+          {
+            "text": "이중 연결 리스트",
+            "refs": [
+              {
+                "source": "A",
+                "section": "6.3 연결 리스트의 종류",
+                "pages": [
+                  178
+                ]
+              }
+            ],
+            "evidence": "이중 연결 리스트"
+          },
+          {
+            "text": "이중 연결 리스트(doubly linked list)는 각 노드에 앞 노드와 뒤 노드를 가리키는 2개의 링크가 존재한다.",
+            "refs": [
+              {
+                "source": "A",
+                "section": "6.3 연결 리스트의 종류",
+                "pages": [
+                  178
+                ]
+              }
+            ],
+            "evidence": "각 노드마다 2개의 링크"
+          }
+        ]
+      ]
+    }
+  ],
+  "terms": [
+    {
+      "term": "리스트",
+      "definition": {
+        "text": "리스트의 객체는 n개의 element형으로 구성된 순서 있는 모임이다.",
+        "refs": [
+          {
+            "source": "A",
+            "section": "6.1 리스트 추상 데이터 타입",
+            "pages": [
+              169
+            ]
+          }
+        ],
+        "evidence": "n개의 element형으로 구성된 순서 있는 모임"
+      }
+    },
+    {
+      "term": "헤드·테일",
+      "definition": {
+        "text": "첫 번째 노드를 헤드(Head), 마지막 노드를 테일(Tail)이라 부르며, 리스트의 길이는 헤드부터 테일까지의 노드 개수이다.",
+        "refs": [
+          {
+            "source": "B",
+            "section": "1.1.1 리스트의 개념",
+            "pages": [
+              31
+            ]
+          }
+        ],
+        "evidence": "첫 번째 노드를 헤드"
+      }
+    },
+    {
+      "term": "순차적 표현",
+      "definition": {
+        "text": "배열을 이용한 리스트 구현은 순차적인 메모리 공간을 할당하므로 순차적 표현(sequential representation)이라고도 한다.",
+        "refs": [
+          {
+            "source": "A",
+            "section": "6.2 배열로 구현된 리스트",
+            "pages": [
+              170
+            ]
+          }
+        ],
+        "evidence": "순차적 표현"
+      }
+    },
+    {
+      "term": "노드",
+      "definition": {
+        "text": "연결 리스트의 노드는 데이터 필드(data field)와 링크 필드(link field)로 구성된다.",
+        "refs": [
+          {
+            "source": "A",
+            "section": "6.3 연결 리스트",
+            "pages": [
+              177
+            ]
+          }
+        ],
+        "evidence": "데이터 필드(data field)와 링크 필드(link field)"
+      }
+    },
+    {
+      "term": "헤드 포인터",
+      "definition": {
+        "text": "헤드 포인터(head pointer)는 연결 리스트의 첫 번째 노드를 가리키는 변수이다.",
+        "refs": [
+          {
+            "source": "A",
+            "section": "6.3 연결 리스트",
+            "pages": [
+              177
+            ]
+          }
+        ],
+        "evidence": "첫 번째 노드를 가리키고 있는 변수"
+      }
+    },
+    {
+      "term": "자기 참조 구조체",
+      "definition": {
+        "text": "자기 참조 구조체는 자기 자신을 참조하는 포인터를 포함하는 구조체이다.",
+        "refs": [
+          {
+            "source": "A",
+            "section": "6.4 노드의 정의",
+            "pages": [
+              180
+            ]
+          }
+        ],
+        "evidence": "자기 자신을 참조하는 포인터"
+      }
+    },
+    {
+      "term": "원형 연결 리스트",
+      "definition": {
+        "text": "원형 연결 리스트(circular linked list)는 마지막 노드의 링크가 첫 번째 노드를 가리킨다.",
+        "refs": [
+          {
+            "source": "A",
+            "section": "6.3 연결 리스트의 종류",
+            "pages": [
+              178
+            ]
+          }
+        ],
+        "evidence": "마지막 노드의 링크가 첫 번째 노드를 가리킨다"
+      }
+    },
+    {
+      "term": "헤드 노드",
+      "definition": {
+        "text": "헤드 노드(head node)는 데이터를 가지고 있지 않은 특별한 노드로 삽입·삭제 알고리즘을 간편하게 한다.",
+        "refs": [
+          {
+            "source": "A",
+            "section": "7.3 이중 연결 리스트",
+            "pages": [
+              222
+            ]
+          }
+        ],
+        "evidence": "데이터를 가지고 있지 않는 특별한 노드"
+      }
+    }
+  ],
+  "summary_basis": "편집 요약",
+  "summary": [
+    {
+      "text": "리스트는 배열과 연결 리스트를 이용하여 구현할 수 있다.",
+      "refs": [
+        {
+          "source": "A",
+          "section": "6.1 리스트 추상 데이터 타입",
+          "pages": [
+            169
+          ]
+        }
+      ],
+      "evidence": "배열과 연결 리스트를 이용하여 구현"
+    },
+    {
+      "text": "연결 리스트는 포인터도 저장하여야 하므로 메모리 공간을 많이 사용하고, i번째 데이터는 앞에서부터 순차적으로 접근하여야 한다.",
+      "refs": [
+        {
+          "source": "A",
+          "section": "6.3 연결 리스트",
+          "pages": [
+            177
+          ]
+        }
+      ],
+      "evidence": "i번째 데이터를 찾으려면 앞에서부터 순차적으로"
+    },
+    {
+      "text": "노드 삭제는 리스트에서 노드를 제외하는 연산이다.",
+      "refs": [
+        {
+          "source": "B",
+          "section": "1.2.2 링크드 리스트의 주요 연산",
+          "pages": [
+            35
+          ]
+        }
+      ],
+      "evidence": "노드 삭제는 리스트에서 노드를 제외"
+    },
+    {
+      "text": "더블 링크드 리스트를 환형으로 구현하면 헤드의 이전 노드는 테일이고 테일의 다음 노드는 헤드가 된다.",
+      "refs": [
+        {
+          "source": "B",
+          "section": "1.4 환형 링크드 리스트",
+          "pages": [
+            67
+          ]
+        }
+      ],
+      "evidence": "헤드의 이전 노드가 테일"
+    }
+  ],
+  "review": [
+    {
+      "question": "노드 삭제와 노드 소멸 중 메모리에서 노드를 없애는 연산은 무엇인가?",
+      "answer": {
+        "text": "노드 소멸은 노드를 메모리에서 없애는 연산이다.",
+        "refs": [
+          {
+            "source": "B",
+            "section": "1.2.2 링크드 리스트의 주요 연산",
+            "pages": [
+              35
+            ]
+          }
+        ],
+        "evidence": "노드 소멸은 노드를 메모리에서 없애는"
+      }
+    },
+    {
+      "question": "공백인 단순 연결 리스트의 헤드 포인터 값은 무엇인가?",
+      "answer": {
+        "text": "공백인 단순 연결 리스트에서는 헤드 포인터의 값이 NULL이다.",
+        "refs": [
+          {
+            "source": "A",
+            "section": "6.4 공백 리스트의 생성",
+            "pages": [
+              180
+            ]
+          }
+        ],
+        "evidence": "head의 값은 NULL"
+      }
+    },
+    {
+      "question": "배열 리스트에서 삽입·삭제의 최악 시간 복잡도는 무엇인가?",
+      "answer": {
+        "text": "배열 리스트의 삽입이나 삭제는 최악의 경우 O(n)이다.",
+        "refs": [
+          {
+            "source": "A",
+            "section": "6.2 실행 시간 분석",
+            "pages": [
+              175
+            ]
+          }
+        ],
+        "evidence": "최악의 경우 O(n)"
+      }
+    },
+    {
+      "question": "헤드 포인터를 마지막 노드에 두는 원형 연결 리스트의 삽입 특성은 무엇인가?",
+      "answer": {
+        "text": "헤드 포인터가 마지막 노드를 가리키도록 구성한 원형 연결 리스트는 상수 시간 안에 처음과 끝에 노드를 삽입할 수 있다.",
+        "refs": [
+          {
+            "source": "A",
+            "section": "7.1 원형 연결 리스트",
+            "pages": [
+              214
+            ]
+          }
+        ],
+        "evidence": "상수 시간 안에 리스트의 처음과 끝"
+      }
+    }
+  ],
+  "cheat": {
+    "definitions": [
+      {
+        "term": "리스트",
+        "definition": {
+          "text": "리스트의 객체는 n개의 element형으로 구성된 순서 있는 모임이다.",
+          "refs": [
+            {
+              "source": "A",
+              "section": "6.1 리스트 추상 데이터 타입",
+              "pages": [
+                169
+              ]
+            }
+          ],
+          "evidence": "n개의 element형으로 구성된 순서 있는 모임"
+        }
+      },
+      {
+        "term": "헤드 포인터",
+        "definition": {
+          "text": "헤드 포인터(head pointer)는 연결 리스트의 첫 번째 노드를 가리키는 변수이다.",
+          "refs": [
+            {
+              "source": "A",
+              "section": "6.3 연결 리스트",
+              "pages": [
+                177
+              ]
+            }
+          ],
+          "evidence": "첫 번째 노드를 가리키고 있는 변수"
+        }
+      },
+      {
+        "term": "헤드 노드",
+        "definition": {
+          "text": "헤드 노드(head node)는 데이터를 가지고 있지 않은 특별한 노드로 삽입·삭제 알고리즘을 간편하게 한다.",
+          "refs": [
+            {
+              "source": "A",
+              "section": "7.3 이중 연결 리스트",
+              "pages": [
+                222
+              ]
+            }
+          ],
+          "evidence": "데이터를 가지고 있지 않는 특별한 노드"
+        }
+      }
+    ],
+    "comparison_title": "연결 리스트 종류",
+    "comparison_headers": [
+      "항목",
+      "원문 설명"
+    ],
+    "comparison_rows": [
+      [
+        {
+          "text": "단순 연결 리스트",
+          "refs": [
+            {
+              "source": "A",
+              "section": "6.3 연결 리스트의 종류",
+              "pages": [
+                178
+              ]
+            }
+          ],
+          "evidence": "단순 연결 리스트"
+        },
+        {
+          "text": "단순 연결 리스트(singly linked list)는 하나의 방향으로만 연결되며 체인(chain)이라고도 한다.",
+          "refs": [
+            {
+              "source": "A",
+              "section": "6.3 연결 리스트의 종류",
+              "pages": [
+                178
+              ]
+            }
+          ],
+          "evidence": "체인(chain)"
+        }
+      ],
+      [
+        {
+          "text": "원형 연결 리스트",
+          "refs": [
+            {
+              "source": "A",
+              "section": "6.3 연결 리스트의 종류",
+              "pages": [
+                178
+              ]
+            }
+          ],
+          "evidence": "원형 연결 리스트"
+        },
+        {
+          "text": "원형 연결 리스트(circular linked list)는 마지막 노드의 링크가 첫 번째 노드를 가리킨다.",
+          "refs": [
+            {
+              "source": "A",
+              "section": "6.3 연결 리스트의 종류",
+              "pages": [
+                178
+              ]
+            }
+          ],
+          "evidence": "마지막 노드의 링크가 첫 번째 노드를 가리킨다"
+        }
+      ],
+      [
+        {
+          "text": "이중 연결 리스트",
+          "refs": [
+            {
+              "source": "A",
+              "section": "6.3 연결 리스트의 종류",
+              "pages": [
+                178
+              ]
+            }
+          ],
+          "evidence": "이중 연결 리스트"
+        },
+        {
+          "text": "이중 연결 리스트(doubly linked list)는 각 노드에 앞 노드와 뒤 노드를 가리키는 2개의 링크가 존재한다.",
+          "refs": [
+            {
+              "source": "A",
+              "section": "6.3 연결 리스트의 종류",
+              "pages": [
+                178
+              ]
+            }
+          ],
+          "evidence": "각 노드마다 2개의 링크"
+        }
+      ]
+    ],
+    "formulas": [
+      {
+        "label": "배열 리스트의 접근",
+        "expression": "get_entry: O(1)",
+        "refs": [
+          {
+            "source": "A",
+            "section": "6.2 실행 시간 분석",
+            "pages": [
+              175
+            ]
+          }
+        ],
+        "evidence": "get_entry",
+        "note": "배열의 인덱스로 항목에 바로 접근한다."
+      },
+      {
+        "label": "배열 리스트의 삽입·삭제",
+        "expression": "최악의 경우 O(n); 맨 끝 삽입 O(1)",
+        "refs": [
+          {
+            "source": "A",
+            "section": "6.2 실행 시간 분석",
+            "pages": [
+              175
+            ]
+          }
+        ],
+        "evidence": "최악의 경우 O(n)",
+        "note": "다른 항목을 이동하는 삽입·삭제의 최악 경우와 맨 끝 삽입을 구분한다."
+      }
+    ],
+    "syntax": []
+  },
+  "checked_images": [
+    {
+      "source": "A",
+      "pages": [
+        169,
+        170,
+        175,
+        177,
+        178,
+        180,
+        183,
+        184,
+        201,
+        214,
+        222
+      ]
+    },
+    {
+      "source": "B",
+      "pages": [
+        31,
+        35,
+        38,
+        53,
+        67
+      ]
+    }
+  ],
+  "editor_notes": [
+    "A는 단순·원형·이중 연결 리스트, B는 링크드·더블 링크드·환형 링크드 리스트라는 표기를 사용한다.",
+    "A 목차에는 연결 스택과 연결 큐가 모두 7.5로 기재되어 있어 해당 단원에서는 절 제목을 함께 적는다."
+  ]
+}

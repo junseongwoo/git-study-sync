@@ -1,0 +1,22 @@
+transpose[next] .push-back(i) ;
+return transpose,
+6. 두 번째 DFS를 수행하기에 앞서 먼저 전치 그래프 transpose를 생성하겠습니다. transpose
+그래프는 Transpose() 함수를 이용하여 생성합니다. 그리고 visited 배열을 다시 false로 초
+기화합니다.
+vector〈vector<int〉〉 transpose = Transpose(V, adj);
+fill(visited.begin(), visited.end(), false);
+7. 알고리즘 후반부에는 두 번째 DFS 함수인 collectconnectedComponents() 함수를 사-추합니
+다. 이 함수는 Fi11Stack() 함수와 비슷한 인자를 받으며, 다만 마지막 인자 component가 정
+수 벡터 참조로 선언되어 있습니다. 이 벡터에 각각의 강한 연결 요소에 속하는 정점 인덱스
+가 저장됩니다. collectConnectedComponents( ) 함수에서 DFS 순회 코드는 Fi11Stack() 함수
+와 거의 비슷하며, 다만 스택에 정점을 추가하는 코-드는 빠져 있습니다. 대신 함수 앞부콭에
+현재 정점 node를 component 벡터에 추가하는 코드가 추가되었습니다.
+void CollectConnectedComponents(int node, vector〈b001>& visited,
+vector〈vector<int〉〉& adj, vector〈int>& component)
+visited[node] = true;
+component. push-back( node) ;
+for (auto next : adj[node])
+if (!visited[next])
+ColIectConnectedComponents(next, visited, adä,
+314
+component) ;

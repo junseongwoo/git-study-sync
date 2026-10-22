@@ -1,0 +1,26 @@
+5. 승자가 누구인지를 판별하는 로지 함수를 만들겠습니다. 이 함수는 플레이어 중 한 명의 카드
+가 모두 없어질 때까지 반복적으로 호출됩니다. 코드 기독성을 높이기 위해 게임이 끝났는지
+를 판별하는 유틸리티 함수도 따로 작성하겠습니다.
+b001 isGameCompIete() const
+retum playerl empty() player2.empty() player3.empty() || player4.empty();
+void playGame()
+while (not isGameCompIete())
+p1ayOneRound( ) ;
+6. 승자를 판별하는 함수를 추가합니다.
+int getWinner() const
+if (playerl .empty())
+return 1 ;
+if (player2.empty())
+return 2;
+if (player3.empty())
+return 3;
+if (p1ayer4.empty())
+return 4;
+7. 마지막으로 ) 함수에서 카드 게임을 수행하는 코드를 작성합니다.
+int main()
+game newGame;
+newGame .buildDeck();
+newGame .dealCards();
+newGame. pIayGame( ) •,
+autO winner = newGame.getWinner( );
+std: :cout 〈〈 winner 〈〈 “번 플레이어가 이겼습니다!" 〈〈 std::endl;

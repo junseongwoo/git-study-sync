@@ -1,0 +1,22 @@
+factorial(3)
+특f(3 〈= 1) return 1;
+else return (3 + factorial(3-1));
+factoria1(2)
+if(2 <= 1) return 1;
+else return (2 * factoria1(2-1));
+factorial (1)
+if(l <= 1) return 1;
+[그림 2-기 factorial(3)에서의 순환호출의 순세 원숫자는 함수 호출과 복귀의 순서를 나타낸다.
+순환 호출이 이루어지는 과정을 알기 위하여 다음과 같이 함수의 이름과 함수의 매개변수를
+출력하는 문상을 factoriat 함수의 처음에 넣어보자.
+프로그램 2.2 출력문이 추가된 순환적인 팩토리얼 계산 프로그램
+int factorial(int n)
+printf("factorial (9'記) 년" ,n) ;
+if( n 〈= 1 ) return(l);
+else return (n * factorial(n-l) )•,
+만약 위의 함수가 factoria1(3)과 같이 호출되었다면 위의 프로그램의 출력은 다음과 같다.
+실행결과
+factoriaI(3)
+factoriaI(2)
+factorial(l)
+CHAPTERJ2 순환 43

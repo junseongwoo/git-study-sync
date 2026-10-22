@@ -1,0 +1,26 @@
+void BFS( Vertext V, Queue )
+Edge• E = WLL;
+printf(*d •. V-»ata);
+V->Visited = Visited,
+LQ-Enqueue( Queue LQ-CreateNode( V ) );
+4 시작 정점을 큐에 십입합니다.
+•나 큐가 비어 있는지 검사합니다.
+while ( !LQ-IsEmpty( Queue ) )••
+• 큐에서 전단을 제거합니다.
+Node•* P0爨 = LQ-Dequeue( Queue
+V = Popped-»ata,
+E = V->AdjacencyList;
+류에서 꺼낸 정점의 인접 정점을 조사합니다.
+while ( E |= NULL )•
+V = E->Target,
+if ( V != NULL V->Visited == NotVisited )•
+견 미방문정점만 방문합니다.
+printf("*d “, V->Data);
+V->Visited = Visited,
+LQ-Enqueue( Queue, LQ-CreateN0de( V ) ):
+E = E->Next;
+93.3 그래프 순회 예제 프로그램
+이번 예제 프로그램을 만들면서 새로 설명할 내용은 없습니다. 이 프로그램의 핵심이 될 깊이 우선
+V4(DFS())과 너비 우선 람색(BFS()) 알고리즘은 앞에서 이미 구현했고. 그래프의 구조를 다
+루는 코드는 인접 리스트 예제 프로그램을 만들면서 작성한 바 있습니다. 큐 코드 또한 3장에서 예
+402 Part 02 • 알고리좀

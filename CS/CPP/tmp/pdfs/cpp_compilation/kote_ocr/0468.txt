@@ -1,0 +1,35 @@
+return assigned (010rs•,
+5. 그래프 길러링 결과를 화면에 출력하기 위한 한수-가 추가합니다,
+template 〈typename T>
+VOid print_colors(vector<T>& (010爲)
+for (autO i = 1; i 〈 colors.size(); i++)
+cout 〈〈 i 〈〈 “
+" 〈〈 color-map[colors[ill 〈〈 endl;
+6. main() 함수에서 그래프를 정의하고, 그래프 걸러링 알고리즘 구현 합뉴를 호출합니다.
+int main()
+using T = unsigned;
+// 그래프 객체 생성
+Graph<T> 6(9);
+vector〈pair<unsigned,
+map〈unsigned,
+edge-map[ 1 ]
+edge—map[21
+edge—map[31
+edge—map[4]
+edge—map[51
+edge—map[6]
+edge-map[71 = {{3, 0}, (6, 0}};
+for (auto& i : edge—map)
+T〉〉〉 edge-map,
+edge-map(81 = {(4, 0}, {54 0}, {6, 0}};
+for (auto& j : i.second)
+cout
+cout
+autO
+cout
+G.add-edge(Edge<T>{ i.first, j.first, j.second }),•
+〈〈 “[입력 그래프]" 〈〈 endl;
+〈〈 6 〈〈 endl;
+C01箕s = welsh—powe11-coloring<T>(G);
+〈〈 endl 〈〈 "[그래프 걸러링]“ 〈〈 endl;
+pnnt_colors( C01箕s ) ;

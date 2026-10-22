@@ -1,0 +1,1115 @@
+{
+  "unit": 6,
+  "title": "스택·수식·미로",
+  "part": "자료구조",
+  "scope": [
+    {
+      "source": "A",
+      "start": 93,
+      "end": 136
+    },
+    {
+      "source": "A",
+      "start": 231,
+      "end": 234
+    },
+    {
+      "source": "B",
+      "start": 78,
+      "end": 120
+    }
+  ],
+  "learning": [
+    {
+      "text": "스택의 입출력 형태는 후입선출(LIFO: Last-In First-Out)이다.",
+      "refs": [
+        {
+          "source": "A",
+          "section": "4.1 스택이란?",
+          "pages": [
+            94
+          ]
+        }
+      ],
+      "evidence": "후입선출(LIFO: Last-In First-Out)"
+    },
+    {
+      "text": "후위(postfix)는 연산자가 피연산자 뒤에 있는 표기법이다.",
+      "refs": [
+        {
+          "source": "A",
+          "section": "4.5 수식의 3가지 표기법",
+          "pages": [
+            116
+          ]
+        }
+      ],
+      "evidence": "피연산자 뒤에 있으면 후위"
+    }
+  ],
+  "concepts": [
+    {
+      "title": "스택 ADT와 함수 호출",
+      "items": [
+        {
+          "text": "스택의 입출력 형태는 후입선출(LIFO: Last-In First-Out)이다.",
+          "refs": [
+            {
+              "source": "A",
+              "section": "4.1 스택이란?",
+              "pages": [
+                94
+              ]
+            }
+          ],
+          "evidence": "후입선출(LIFO: Last-In First-Out)"
+        },
+        {
+          "text": "스택의 입출력은 맨 위에서만 일어나며, 입출력이 이루어지는 부분을 스택 상단(stack top)이라 한다.",
+          "refs": [
+            {
+              "source": "A",
+              "section": "4.1 스택이란?",
+              "pages": [
+                95
+              ]
+            }
+          ],
+          "evidence": "스택 상단(stack top)"
+        },
+        {
+          "text": "스택에 요소가 하나도 없을 때 공백 스택(empty stack)이라고 한다.",
+          "refs": [
+            {
+              "source": "A",
+              "section": "4.1 스택이란?",
+              "pages": [
+                95
+              ]
+            }
+          ],
+          "evidence": "공백 스택(empty stack)"
+        },
+        {
+          "text": "함수 호출 시 시스템 스택에 활성 레코드(activation record)가 만들어지며 복귀주소·매개변수·지역 변수가 저장된다.",
+          "refs": [
+            {
+              "source": "A",
+              "section": "4.1 시스템 스택을 이용한 함수 호출",
+              "pages": [
+                95
+              ]
+            }
+          ],
+          "evidence": "활성 레코드(activation record)"
+        },
+        {
+          "text": "추상 자료형 스택의 객체는 0개 이상의 원소를 가지는 유한 선형 리스트이다.",
+          "refs": [
+            {
+              "source": "A",
+              "section": "4.1 ADT 4.1 Stack",
+              "pages": [
+                97
+              ]
+            }
+          ],
+          "evidence": "0개 이상의 원소를 가지는 유한 선형 리스트"
+        },
+        {
+          "text": "push는 스택의 맨 위에 item을 추가하는 연산이다.",
+          "refs": [
+            {
+              "source": "A",
+              "section": "4.1 ADT 4.1 Stack",
+              "pages": [
+                97
+              ]
+            }
+          ],
+          "evidence": "스택의 맨 위에 item을 추가"
+        },
+        {
+          "text": "pop은 스택의 맨 위의 원소를 제거해서 반환하는 연산이다.",
+          "refs": [
+            {
+              "source": "A",
+              "section": "4.1 ADT 4.1 Stack",
+              "pages": [
+                97
+              ]
+            }
+          ],
+          "evidence": "맨 위의 원소를 제거해서 반환"
+        },
+        {
+          "text": "peek는 스택의 맨 위의 원소를 제거하지 않고 반환하는 연산이다.",
+          "refs": [
+            {
+              "source": "A",
+              "section": "4.1 ADT 4.1 Stack",
+              "pages": [
+                97
+              ]
+            }
+          ],
+          "evidence": "맨 위의 원소를 제거하지 않고 반환"
+        },
+        {
+          "text": "포화 스택의 push와 공백 스택의 pop에서는 오류가 발생한다.",
+          "refs": [
+            {
+              "source": "A",
+              "section": "4.1 추상 자료형 스택",
+              "pages": [
+                97
+              ]
+            }
+          ],
+          "evidence": "스택이 가득차서 입력이 불가능"
+        }
+      ]
+    },
+    {
+      "title": "배열·동적 배열·연결 스택",
+      "items": [
+        {
+          "text": "배열 스택에서 top은 가장 최근에 입력된 자료를 가리키며, 공백일 때 -1이다.",
+          "refs": [
+            {
+              "source": "A",
+              "section": "4.2 스택의 구현",
+              "pages": [
+                98
+              ]
+            }
+          ],
+          "evidence": "top 변수는 스택이 비어 있으면 -1"
+        },
+        {
+          "text": "배열 스택에서 top이 MAX_STACK_SIZE-1이면 포화 상태이다.",
+          "refs": [
+            {
+              "source": "A",
+              "section": "4.2 스택의 is_full 연산",
+              "pages": [
+                99
+              ]
+            }
+          ],
+          "evidence": "포화 상태로 판정"
+        },
+        {
+          "text": "배열 스택의 push는 top을 먼저 증가시킨 후 stack[top]에 요소를 삽입한다.",
+          "refs": [
+            {
+              "source": "A",
+              "section": "4.2 스택의 push 연산",
+              "pages": [
+                100
+              ]
+            }
+          ],
+          "evidence": "먼저 top의 값을 증가"
+        },
+        {
+          "text": "배열 스택의 pop은 공백 여부를 검사한 뒤 top이 가리키는 값을 반환하고 top을 하나 감소시킨다.",
+          "refs": [
+            {
+              "source": "A",
+              "section": "4.2 스택의 pop 연산",
+              "pages": [
+                100
+              ]
+            }
+          ],
+          "evidence": "top을 하나 감소"
+        },
+        {
+          "text": "동적 배열 스택의 push는 공간이 부족하면 capacity를 2배로 늘리고 realloc()으로 메모리를 확보한다.",
+          "refs": [
+            {
+              "source": "A",
+              "section": "4.3 동적 배열 스택",
+              "pages": [
+                109
+              ]
+            }
+          ],
+          "evidence": "공간이 부족하면 메모리를 2배"
+        },
+        {
+          "text": "연결된 스택은 동적 메모리 할당이 가능하면 새로운 요소를 삽입할 수 있으며, top은 노드를 가리키는 포인터이다.",
+          "refs": [
+            {
+              "source": "A",
+              "section": "7.5 연결 리스트로 구현한 스택",
+              "pages": [
+                231
+              ]
+            }
+          ],
+          "evidence": "top은 더 이상 정수가 아니고"
+        },
+        {
+          "text": "A의 연결 스택은 단순 연결 리스트의 맨 앞에 노드를 삽입한다.",
+          "refs": [
+            {
+              "source": "A",
+              "section": "7.5 연결 리스트로 구현한 스택",
+              "pages": [
+                232
+              ]
+            }
+          ],
+          "evidence": "맨 앞에 데이터를 삽입"
+        },
+        {
+          "text": "B의 링크드 리스트 스택은 List가 헤드를 가리키고 Top이 테일을 가리키는 구현을 사용한다.",
+          "refs": [
+            {
+              "source": "B",
+              "section": "2.3.1 링크드 리스트 기반 스택과 스택의 노드 표현",
+              "pages": [
+                92
+              ]
+            }
+          ],
+          "evidence": "Top 포인터는 이 링크드 리스트의 테일"
+        }
+      ]
+    },
+    {
+      "title": "괄호 검사·수식 표기와 변환",
+      "items": [
+        {
+          "text": "올바른 괄호는 좌우 개수가 같고, 같은 종류의 왼쪽 괄호가 먼저 나오며, 서로 다른 종류의 괄호 쌍은 교차하지 않는다.",
+          "refs": [
+            {
+              "source": "A",
+              "section": "4.4 스택의 응용: 괄호 검사 문제",
+              "pages": [
+                111
+              ]
+            }
+          ],
+          "evidence": "괄호의 검사 조건은 다음의 3가지"
+        },
+        {
+          "text": "중위(infix)는 연산자가 피연산자 사이에 있는 표기법이다.",
+          "refs": [
+            {
+              "source": "A",
+              "section": "4.5 수식의 3가지 표기법",
+              "pages": [
+                116
+              ]
+            }
+          ],
+          "evidence": "연산자가 피연산자 사이"
+        },
+        {
+          "text": "후위(postfix)는 연산자가 피연산자 뒤에 있는 표기법이다.",
+          "refs": [
+            {
+              "source": "A",
+              "section": "4.5 수식의 3가지 표기법",
+              "pages": [
+                116
+              ]
+            }
+          ],
+          "evidence": "피연산자 뒤에 있으면 후위"
+        },
+        {
+          "text": "전위(prefix)는 연산자가 피연산자 앞에 있는 표기법이다.",
+          "refs": [
+            {
+              "source": "A",
+              "section": "4.5 수식의 3가지 표기법",
+              "pages": [
+                116
+              ]
+            }
+          ],
+          "evidence": "피연산자 앞에 있으면 전위"
+        },
+        {
+          "text": "A의 후위표기식 계산 프로그램은 피연산자가 한 문자로 된 숫자라고 가정한다.",
+          "refs": [
+            {
+              "source": "A",
+              "section": "4.5 프로그램 4.7 후위표기식 계산",
+              "pages": [
+                119
+              ]
+            }
+          ],
+          "evidence": "피연산자가 한 문자로 된 숫자"
+        },
+        {
+          "text": "중위식을 후위식으로 바꿀 때 스택의 연산자 우선순위가 현재 연산자보다 높거나 같으면 먼저 꺼내어 출력한다.",
+          "refs": [
+            {
+              "source": "A",
+              "section": "4.5 중위표기수식을 후위표기수식으로 변환",
+              "pages": [
+                121
+              ]
+            }
+          ],
+          "evidence": "우선순위가 같은 경우에도"
+        },
+        {
+          "text": "왼쪽 괄호는 무조건 스택에 삽입하고, 스택 안에서는 우선순위가 제일 낮은 연산자로 취급한다.",
+          "refs": [
+            {
+              "source": "A",
+              "section": "4.5 중위표기수식을 후위표기수식으로 변환",
+              "pages": [
+                122
+              ]
+            }
+          ],
+          "evidence": "왼쪽괄호는 무조건 스택에 삽입"
+        },
+        {
+          "text": "오른쪽 괄호를 만나면 왼쪽 괄호가 삭제될 때까지 그 위에 쌓인 모든 연산자를 출력한다.",
+          "refs": [
+            {
+              "source": "A",
+              "section": "4.5 중위표기수식을 후위표기수식으로 변환",
+              "pages": [
+                122
+              ]
+            }
+          ],
+          "evidence": "모든 연산자들을 출력"
+        },
+        {
+          "text": "텍스트 분석에서 토큰은 최소 단위의 기호 또는 단어를 말한다.",
+          "refs": [
+            {
+              "source": "B",
+              "section": "2.4.2 토큰이 알고 싶다",
+              "pages": [
+                105
+              ]
+            }
+          ],
+          "evidence": "토큰은 최소 단위의 기호 또는 단어"
+        }
+      ]
+    }
+  ],
+  "procedures": [
+    {
+      "title": "괄호 검사",
+      "steps": [
+        {
+          "text": "왼쪽 괄호를 만나면 스택에 삽입한다.",
+          "refs": [
+            {
+              "source": "A",
+              "section": "4.4 괄호 검사 알고리즘",
+              "pages": [
+                112
+              ]
+            }
+          ],
+          "evidence": "왼쪽 괄호를 만나면 스택에 삽입"
+        },
+        {
+          "text": "오른쪽 괄호를 만나면 맨 위의 괄호를 꺼내 짝을 검사하며, 스택이 비었거나 짝이 맞지 않으면 오류이다.",
+          "refs": [
+            {
+              "source": "A",
+              "section": "4.4 괄호 검사 알고리즘",
+              "pages": [
+                112
+              ]
+            }
+          ],
+          "evidence": "짝이 맞는지를 검사"
+        },
+        {
+          "text": "문자열을 모두 조사한 뒤 괄호가 남으면 FALSE, 남지 않으면 TRUE를 반환한다.",
+          "refs": [
+            {
+              "source": "A",
+              "section": "4.4 괄호 검사 알고리즘",
+              "pages": [
+                112
+              ]
+            }
+          ],
+          "evidence": "성공이므로 TRUE"
+        }
+      ]
+    },
+    {
+      "title": "후위 표기 수식 계산",
+      "steps": [
+        {
+          "text": "스택을 생성·초기화하고 후위식을 순서대로 읽어 피연산자를 스택에 삽입한다.",
+          "refs": [
+            {
+              "source": "A",
+              "section": "4.5 알고리즘 4.6",
+              "pages": [
+                118
+              ]
+            }
+          ],
+          "evidence": "스택 s를 생성하고 초기화"
+        },
+        {
+          "text": "연산자 op를 만나면 second, first 순서로 pop하고 first op second의 결과를 push한다.",
+          "refs": [
+            {
+              "source": "A",
+              "section": "4.5 알고리즘 4.6",
+              "pages": [
+                118
+              ]
+            }
+          ],
+          "evidence": "result ← first op second"
+        },
+        {
+          "text": "식의 처리가 끝나면 pop한 값을 최종 결과로 얻는다.",
+          "refs": [
+            {
+              "source": "A",
+              "section": "4.5 알고리즘 4.6",
+              "pages": [
+                118
+              ]
+            }
+          ],
+          "evidence": "final_result"
+        }
+      ]
+    },
+    {
+      "title": "미로 탐색",
+      "steps": [
+        {
+          "text": "스택과 출구·현재 위치를 초기화한다.",
+          "refs": [
+            {
+              "source": "A",
+              "section": "4.6 알고리즘 4.8",
+              "pages": [
+                129
+              ]
+            }
+          ],
+          "evidence": "현재 생쥐의 위치를 초기화"
+        },
+        {
+          "text": "현재 위치를 방문 표시하고, 위·아래·왼쪽·오른쪽의 미방문·이동 가능 위치를 스택에 push한다.",
+          "refs": [
+            {
+              "source": "A",
+              "section": "4.6 알고리즘 4.8",
+              "pages": [
+                129
+              ]
+            }
+          ],
+          "evidence": "위, 아래, 왼쪽, 오른쪽"
+        },
+        {
+          "text": "스택이 비면 실패이고, 그렇지 않으면 하나를 꺼내 현재 위치로 정하여 출구에 이를 때까지 반복한다.",
+          "refs": [
+            {
+              "source": "A",
+              "section": "4.6 알고리즘 4.8",
+              "pages": [
+                129
+              ]
+            }
+          ],
+          "evidence": "스택에서 하나의 위치를 꺼내어 현재 위치"
+        }
+      ]
+    }
+  ],
+  "syntax": [
+    {
+      "label": "동적 배열 스택 구조체",
+      "code": "typedef int element;\ntypedef struct {\n    element *data;\n    int capacity;\n    int top;\n} StackType;",
+      "refs": [
+        {
+          "source": "A",
+          "section": "4.3 동적 배열 스택",
+          "pages": [
+            109
+          ]
+        }
+      ],
+      "evidence": "element *data;",
+      "note": null
+    }
+  ],
+  "formulas": [
+    {
+      "label": "A의 배열 스택 상태 조건",
+      "expression": "공백: top == -1; 포화: top >= (MAX_STACK_SIZE-1)",
+      "refs": [
+        {
+          "source": "A",
+          "section": "4.2 알고리즘 4.1·4.2",
+          "pages": [
+            99
+          ]
+        }
+      ],
+      "evidence": "top >= (MAX_STACK_SIZE-1)",
+      "note": "배열 인덱스는 0부터 시작한다."
+    }
+  ],
+  "comparisons": [
+    {
+      "title": "스택의 기본 연산",
+      "headers": [
+        "연산",
+        "책에 나온 정의"
+      ],
+      "rows": [
+        [
+          {
+            "text": "push",
+            "refs": [
+              {
+                "source": "A",
+                "section": "4.1 ADT 4.1 Stack",
+                "pages": [
+                  97
+                ]
+              }
+            ],
+            "evidence": "push(s, item)"
+          },
+          {
+            "text": "push는 스택의 맨 위에 item을 추가하는 연산이다.",
+            "refs": [
+              {
+                "source": "A",
+                "section": "4.1 ADT 4.1 Stack",
+                "pages": [
+                  97
+                ]
+              }
+            ],
+            "evidence": "스택의 맨 위에 item을 추가"
+          }
+        ],
+        [
+          {
+            "text": "pop",
+            "refs": [
+              {
+                "source": "A",
+                "section": "4.1 ADT 4.1 Stack",
+                "pages": [
+                  97
+                ]
+              }
+            ],
+            "evidence": "pop(s)"
+          },
+          {
+            "text": "pop은 스택의 맨 위의 원소를 제거해서 반환하는 연산이다.",
+            "refs": [
+              {
+                "source": "A",
+                "section": "4.1 ADT 4.1 Stack",
+                "pages": [
+                  97
+                ]
+              }
+            ],
+            "evidence": "맨 위의 원소를 제거해서 반환"
+          }
+        ],
+        [
+          {
+            "text": "peek",
+            "refs": [
+              {
+                "source": "A",
+                "section": "4.1 ADT 4.1 Stack",
+                "pages": [
+                  97
+                ]
+              }
+            ],
+            "evidence": "peek(s)"
+          },
+          {
+            "text": "peek는 스택의 맨 위의 원소를 제거하지 않고 반환하는 연산이다.",
+            "refs": [
+              {
+                "source": "A",
+                "section": "4.1 ADT 4.1 Stack",
+                "pages": [
+                  97
+                ]
+              }
+            ],
+            "evidence": "맨 위의 원소를 제거하지 않고 반환"
+          }
+        ]
+      ]
+    }
+  ],
+  "terms": [
+    {
+      "term": "후입선출",
+      "definition": {
+        "text": "스택의 입출력 형태는 후입선출(LIFO: Last-In First-Out)이다.",
+        "refs": [
+          {
+            "source": "A",
+            "section": "4.1 스택이란?",
+            "pages": [
+              94
+            ]
+          }
+        ],
+        "evidence": "후입선출(LIFO: Last-In First-Out)"
+      }
+    },
+    {
+      "term": "스택 상단",
+      "definition": {
+        "text": "스택의 입출력은 맨 위에서만 일어나며, 입출력이 이루어지는 부분을 스택 상단(stack top)이라 한다.",
+        "refs": [
+          {
+            "source": "A",
+            "section": "4.1 스택이란?",
+            "pages": [
+              95
+            ]
+          }
+        ],
+        "evidence": "스택 상단(stack top)"
+      }
+    },
+    {
+      "term": "공백 스택",
+      "definition": {
+        "text": "스택에 요소가 하나도 없을 때 공백 스택(empty stack)이라고 한다.",
+        "refs": [
+          {
+            "source": "A",
+            "section": "4.1 스택이란?",
+            "pages": [
+              95
+            ]
+          }
+        ],
+        "evidence": "공백 스택(empty stack)"
+      }
+    },
+    {
+      "term": "활성 레코드",
+      "definition": {
+        "text": "함수 호출 시 시스템 스택에 활성 레코드(activation record)가 만들어지며 복귀주소·매개변수·지역 변수가 저장된다.",
+        "refs": [
+          {
+            "source": "A",
+            "section": "4.1 시스템 스택을 이용한 함수 호출",
+            "pages": [
+              95
+            ]
+          }
+        ],
+        "evidence": "활성 레코드(activation record)"
+      }
+    },
+    {
+      "term": "중위 표기법",
+      "definition": {
+        "text": "중위(infix)는 연산자가 피연산자 사이에 있는 표기법이다.",
+        "refs": [
+          {
+            "source": "A",
+            "section": "4.5 수식의 3가지 표기법",
+            "pages": [
+              116
+            ]
+          }
+        ],
+        "evidence": "연산자가 피연산자 사이"
+      }
+    },
+    {
+      "term": "후위 표기법",
+      "definition": {
+        "text": "후위(postfix)는 연산자가 피연산자 뒤에 있는 표기법이다.",
+        "refs": [
+          {
+            "source": "A",
+            "section": "4.5 수식의 3가지 표기법",
+            "pages": [
+              116
+            ]
+          }
+        ],
+        "evidence": "피연산자 뒤에 있으면 후위"
+      }
+    },
+    {
+      "term": "전위 표기법",
+      "definition": {
+        "text": "전위(prefix)는 연산자가 피연산자 앞에 있는 표기법이다.",
+        "refs": [
+          {
+            "source": "A",
+            "section": "4.5 수식의 3가지 표기법",
+            "pages": [
+              116
+            ]
+          }
+        ],
+        "evidence": "피연산자 앞에 있으면 전위"
+      }
+    },
+    {
+      "term": "토큰",
+      "definition": {
+        "text": "텍스트 분석에서 토큰은 최소 단위의 기호 또는 단어를 말한다.",
+        "refs": [
+          {
+            "source": "B",
+            "section": "2.4.2 토큰이 알고 싶다",
+            "pages": [
+              105
+            ]
+          }
+        ],
+        "evidence": "토큰은 최소 단위의 기호 또는 단어"
+      }
+    }
+  ],
+  "summary_basis": "편집 요약",
+  "summary": [
+    {
+      "text": "스택의 입출력 형태는 후입선출(LIFO: Last-In First-Out)이다.",
+      "refs": [
+        {
+          "source": "A",
+          "section": "4.1 스택이란?",
+          "pages": [
+            94
+          ]
+        }
+      ],
+      "evidence": "후입선출(LIFO: Last-In First-Out)"
+    },
+    {
+      "text": "peek는 스택의 맨 위의 원소를 제거하지 않고 반환하는 연산이다.",
+      "refs": [
+        {
+          "source": "A",
+          "section": "4.1 ADT 4.1 Stack",
+          "pages": [
+            97
+          ]
+        }
+      ],
+      "evidence": "맨 위의 원소를 제거하지 않고 반환"
+    },
+    {
+      "text": "동적 배열 스택의 push는 공간이 부족하면 capacity를 2배로 늘리고 realloc()으로 메모리를 확보한다.",
+      "refs": [
+        {
+          "source": "A",
+          "section": "4.3 동적 배열 스택",
+          "pages": [
+            109
+          ]
+        }
+      ],
+      "evidence": "공간이 부족하면 메모리를 2배"
+    },
+    {
+      "text": "중위식을 후위식으로 바꿀 때 스택의 연산자 우선순위가 현재 연산자보다 높거나 같으면 먼저 꺼내어 출력한다.",
+      "refs": [
+        {
+          "source": "A",
+          "section": "4.5 중위표기수식을 후위표기수식으로 변환",
+          "pages": [
+            121
+          ]
+        }
+      ],
+      "evidence": "우선순위가 같은 경우에도"
+    }
+  ],
+  "review": [
+    {
+      "question": "스택의 입출력 순서는 무엇인가?",
+      "answer": {
+        "text": "스택의 입출력 형태는 후입선출(LIFO: Last-In First-Out)이다.",
+        "refs": [
+          {
+            "source": "A",
+            "section": "4.1 스택이란?",
+            "pages": [
+              94
+            ]
+          }
+        ],
+        "evidence": "후입선출(LIFO: Last-In First-Out)"
+      }
+    },
+    {
+      "question": "peek와 pop은 원소 제거에서 어떻게 다른가?",
+      "answer": {
+        "text": "peek는 스택의 맨 위의 원소를 제거하지 않고 반환하는 연산이다.",
+        "refs": [
+          {
+            "source": "A",
+            "section": "4.1 ADT 4.1 Stack",
+            "pages": [
+              97
+            ]
+          }
+        ],
+        "evidence": "맨 위의 원소를 제거하지 않고 반환"
+      }
+    },
+    {
+      "question": "A의 후위표기식 계산 프로그램이 두는 피연산자 조건은 무엇인가?",
+      "answer": {
+        "text": "A의 후위표기식 계산 프로그램은 피연산자가 한 문자로 된 숫자라고 가정한다.",
+        "refs": [
+          {
+            "source": "A",
+            "section": "4.5 프로그램 4.7 후위표기식 계산",
+            "pages": [
+              119
+            ]
+          }
+        ],
+        "evidence": "피연산자가 한 문자로 된 숫자"
+      }
+    },
+    {
+      "question": "후위식 변환 시 스택 연산자와 입력 연산자의 우선순위가 같으면 어떻게 하는가?",
+      "answer": {
+        "text": "중위식을 후위식으로 바꿀 때 스택의 연산자 우선순위가 현재 연산자보다 높거나 같으면 먼저 꺼내어 출력한다.",
+        "refs": [
+          {
+            "source": "A",
+            "section": "4.5 중위표기수식을 후위표기수식으로 변환",
+            "pages": [
+              121
+            ]
+          }
+        ],
+        "evidence": "우선순위가 같은 경우에도"
+      }
+    }
+  ],
+  "cheat": {
+    "definitions": [
+      {
+        "term": "스택",
+        "definition": {
+          "text": "스택의 입출력 형태는 후입선출(LIFO: Last-In First-Out)이다.",
+          "refs": [
+            {
+              "source": "A",
+              "section": "4.1 스택이란?",
+              "pages": [
+                94
+              ]
+            }
+          ],
+          "evidence": "후입선출(LIFO: Last-In First-Out)"
+        }
+      },
+      {
+        "term": "후위 표기법",
+        "definition": {
+          "text": "후위(postfix)는 연산자가 피연산자 뒤에 있는 표기법이다.",
+          "refs": [
+            {
+              "source": "A",
+              "section": "4.5 수식의 3가지 표기법",
+              "pages": [
+                116
+              ]
+            }
+          ],
+          "evidence": "피연산자 뒤에 있으면 후위"
+        }
+      },
+      {
+        "term": "토큰",
+        "definition": {
+          "text": "텍스트 분석에서 토큰은 최소 단위의 기호 또는 단어를 말한다.",
+          "refs": [
+            {
+              "source": "B",
+              "section": "2.4.2 토큰이 알고 싶다",
+              "pages": [
+                105
+              ]
+            }
+          ],
+          "evidence": "토큰은 최소 단위의 기호 또는 단어"
+        }
+      }
+    ],
+    "comparison_title": "기본 연산",
+    "comparison_headers": [
+      "항목",
+      "원문 설명"
+    ],
+    "comparison_rows": [
+      [
+        {
+          "text": "push",
+          "refs": [
+            {
+              "source": "A",
+              "section": "4.1 ADT 4.1 Stack",
+              "pages": [
+                97
+              ]
+            }
+          ],
+          "evidence": "push(s, item)"
+        },
+        {
+          "text": "push는 스택의 맨 위에 item을 추가하는 연산이다.",
+          "refs": [
+            {
+              "source": "A",
+              "section": "4.1 ADT 4.1 Stack",
+              "pages": [
+                97
+              ]
+            }
+          ],
+          "evidence": "스택의 맨 위에 item을 추가"
+        }
+      ],
+      [
+        {
+          "text": "pop",
+          "refs": [
+            {
+              "source": "A",
+              "section": "4.1 ADT 4.1 Stack",
+              "pages": [
+                97
+              ]
+            }
+          ],
+          "evidence": "pop(s)"
+        },
+        {
+          "text": "pop은 스택의 맨 위의 원소를 제거해서 반환하는 연산이다.",
+          "refs": [
+            {
+              "source": "A",
+              "section": "4.1 ADT 4.1 Stack",
+              "pages": [
+                97
+              ]
+            }
+          ],
+          "evidence": "맨 위의 원소를 제거해서 반환"
+        }
+      ],
+      [
+        {
+          "text": "peek",
+          "refs": [
+            {
+              "source": "A",
+              "section": "4.1 ADT 4.1 Stack",
+              "pages": [
+                97
+              ]
+            }
+          ],
+          "evidence": "peek(s)"
+        },
+        {
+          "text": "peek는 스택의 맨 위의 원소를 제거하지 않고 반환하는 연산이다.",
+          "refs": [
+            {
+              "source": "A",
+              "section": "4.1 ADT 4.1 Stack",
+              "pages": [
+                97
+              ]
+            }
+          ],
+          "evidence": "맨 위의 원소를 제거하지 않고 반환"
+        }
+      ]
+    ],
+    "formulas": [
+      {
+        "label": "A의 배열 스택 상태 조건",
+        "expression": "공백: top == -1; 포화: top >= (MAX_STACK_SIZE-1)",
+        "refs": [
+          {
+            "source": "A",
+            "section": "4.2 알고리즘 4.1·4.2",
+            "pages": [
+              99
+            ]
+          }
+        ],
+        "evidence": "top >= (MAX_STACK_SIZE-1)",
+        "note": "배열 인덱스는 0부터 시작한다."
+      }
+    ],
+    "syntax": []
+  },
+  "checked_images": [
+    {
+      "source": "A",
+      "pages": [
+        94,
+        95,
+        97,
+        98,
+        99,
+        100,
+        109,
+        111,
+        112,
+        116,
+        118,
+        119,
+        121,
+        122,
+        129,
+        231,
+        232
+      ]
+    },
+    {
+      "source": "B",
+      "pages": [
+        92,
+        105
+      ]
+    }
+  ],
+  "editor_notes": [
+    "연결 스택의 top 위치는 A(리스트 앞)와 B(리스트 테일)의 구현을 구분하여 적었다.",
+    "원문의 수식 표기법 표 중 표·본문이 서로 어긋나는 예시는 발췌하지 않았다."
+  ]
+}

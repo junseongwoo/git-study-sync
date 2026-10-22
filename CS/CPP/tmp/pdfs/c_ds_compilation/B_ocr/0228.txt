@@ -1,0 +1,68 @@
+04
+05
+int Temp = *A,
+06
+07
+馹 = Temp,
+08
+09
+int Partition( int DataSetI), int Left, int Right )
+10
+12
+13
+14
+16
+17
+18
+while( DataSet[LeftI 〈= Pivot Left 〈 Right )•
+20
+22
+23
+24
+25
+26
+27
+28
+29
+30
+32
+33
+34
+35
+36
+37
+38
+39
+40
+42
+43
+int First
+int Pivot
+++Left;
+= Left;
+= DataSet[FirstI;
+Ptvot은 기준 요소입니다.
+while( Left 〈= Right )
+++Left;
+while( DataSet[RightI 〉= Pivot Left 〈= Right )
+--Right;
+if ( Left 〈 Right )
+Swap( OataSet[Leftl, OataSet[Rightl);
+else
+break;
+Swap( OataSet[FirstI, OataSet[Rightl );
+return Right;
+void QuickSort(int DataSet[I, int Left, int Right)
+if ( Left 〈 Right )
+int lndex = Partition(DataSet, Left, Right);
+Left와 Rjght는 양 끝에
+서부터 기준 마상보다 크
+거나 작은 요소를 탐색하
+는 정齬입니다. 이 두 변
+수가 만나면 while 반복
+문은 종료됩니다
+QuickSort( DataSet, Left. lndex - 1 );•
+QuickSort( DataSet. lndex + 1, Right )•,•
+재귀 호출
+Chapter 05 • 정넓
+221

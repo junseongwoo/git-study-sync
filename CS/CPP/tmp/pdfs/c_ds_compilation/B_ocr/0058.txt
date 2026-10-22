@@ -1,0 +1,24 @@
+더블 랑그드 리스트의 DLL-RemoveNode( ) 함수는 다음과 같이 구현합니다.
+Void DLL RemoveNode( Node** Head, NO血* Remove )
+if ( *Head == Remove )
+*Head = Remove->NextNode,
+if ( (*Head) != NULL )
+(*Head)-PrevNode = NULL;
+Remove-PrevNode = NULL;
+Remove->NextNode = NULL;
+else
+NOde* Temp = Remove;
+if ( Remove-PrevNode != NULL )
+Remove-PrevNode->NextNode = Temp->NextNode,
+if ( Remove->NextNode 1= NULL )
+Remove->NextNode-PrevNode = Temp-PrevNode;
+Remove-PrevNode = NULL;
+Remove-»extNode = NULL;
+노드 삽입 연산
+노드를 삭제할 때 일어나는 포인터 교환이 꼬이고 꼬인 아침 드라마의 애정 관계처럼 복잡하지요?
+노드 삽입 연산도 포인터 교환 과정이 복잡하지만삭제 연4쐬1 비할 정도는 아닙니다.
+다음 그림에서처럼 새로운 노-드를 삽입할 때 PrevNode 포인터로는 이전 노-드를, NextNode 포
+인터로는 다음 노-드를 가리기게 합니다. 그리고 이전 노드의 NextNode 포인터와 다음 노드의
+PrevNode 포인터는 새 노-드를 가리기게 합니다. 이렇게 하면 노드 삽입이 이루어집니다.
+48
+Part 01 • 자료구조

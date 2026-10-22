@@ -1,0 +1,69 @@
+022
+023
+024
+025
+026
+027
+028
+029
+030
+031
+032
+033
+034
+035
+0%
+037
+0죠
+039
+041
+042
+043
+045
+046
+047
+048
+049
+050
+051
+052
+053
+054
+055
+0%
+057
+058
+059
+int CurrentPosition = H-XJsedSize,
+int ParentPosition = HEAP GetParent( CurrentPosition ),•
+if ( H-XJsedSize == H-XapacitY )
+H-Xapacity *= 2:
+H->Nodes = 대eapNode*)
+realloc( H->Nodes, sizeof( HeapNode ) * H-XapacitY );
+H->Nodes[CurrentPosition] .Data
+// 후속 처리
+while ( CurrentPosition 〉 0
+NewData,
+〈 H->Nodes[ParentPosition].Data )
+HEAP H, CurrentPosition, ParentPosition );
+CurrentPosition
+ParentPosition
+H->UsedSize++;
+ParentPosition,
+HEAP GetParent( CurrentPosition ):
+VOid
+HEAP_SwapNOdes( Heap* H, int lndexl, int Index2 )
+int CopySize = sizeof( HeapNode );
+HeapNode* Temp = 대eapNode*)ma110c(CopySize);
+memcpy( Temp,
+memcpy( W>Nodes[Index11
+memcpy( u->Nodes(Index21
+free(Temp);
+u->Nodes[Index11. COPYSize);
+十>Nodes[Index기, COPYSize);
+Temp,
+CopySize);
+VOid
+HEAP DeleteMin( Heap* H, HeapNode* ROOt )
+318
+Part 02 • 알고리즘

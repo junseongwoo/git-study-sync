@@ -1,0 +1,22 @@
+4. 실제 데이터를 저장할 graph 구조체를 정의합니다.
+struct graph
+std: :vector〈std: :vector〈int〉〉 data;
+5. 주어진 개수의 노드로 구성된 그래프를 구성하는 생성지를 추가합니다. 이 그래프는 에지가
+전혀 없는, 비어 있는 그래프입니다.
+graph(int n)
+data. reserve(n);
+std: :vector〈int〉 row(n);
+std::fill(row.begin(), row.end(), -1)苳
+for (int i =0,• 〈n; i++)
+data.push-back(row);
+6. 에지를 추가하는 addEdge() 함수를 정의합니다. 이 함수는 두 개의 도시와 에지의 가중치(도
+시 사이의 거래를 인자로 받습니다.
+VOid addEdge(const city (1, const city (2, int dis)
+autO nl = static cast<int>(cl);
+autO n2 = static_cast<int>(c2);
+data[nl][n기 = dis;
+data[n기[nl] = dis;
+7. 이번에는 에지를 제거하는 removeEdge() 함수를 추가합니다.
+void removeEdge(const city cl, const city (2)
+std::cout 〈〈 "에지 삭제: " 〈〈 cl 〈〈 "-" 〈〈 (2 〈〈 std::endl;
+110

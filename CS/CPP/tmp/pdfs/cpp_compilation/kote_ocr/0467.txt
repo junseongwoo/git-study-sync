@@ -1,0 +1,28 @@
+degrees.push-back(make-pair(i, G.edges(i).size()));
+// 정점의 차수 기준으로 내림차순 정렬
+sort(degrees begin(), degrees.end(), [l(const auto& a, const auto& b) {
+return a.second 〉 b.second,
+cout 〈〈 “[색상 지정 순서 (괄호는 차실]” 〈〈 endl;
+for (autO const i : degrees)
+vector〈unsigned〉 assigned_colors(size) ;
+autO color_to_be—assigned = 1;
+while (true)
+for (autO const i : degrees)
+// 이미 색칠이 칠해져 있으면 다음 정점을 검사
+if (assigned-colors[i.first] != 0)
+contlnue;
+autO outgoing—edges = G.edges(i.first);
+// i번째 정점과 인접해 있는 정점들의 현재 색상
+set〈unsigned> neighbours;
+for (autO& e : outgoing—edges)
+neighbours [e. dst] )•,
+// i번째 정점과 인접한 정점이 color-to-be-assigned 색상을 가지고 있지 않다면
+// i번째 정점에 color-to-be-assigned 색상을 지정
+if (neighbours.find(color_to be-assigned) == neighbours.end())
+assigned_colorsli first] = C010r tO be_assigned;
+(010r tO be_assigned++;
+// 모든 정점에 색실이 질해졌으면 종료
+if (find(assigned-colors.begin() + 1, assigned_colors.end(), 0) =
+assigned-colors .end( ))
+break;
+480

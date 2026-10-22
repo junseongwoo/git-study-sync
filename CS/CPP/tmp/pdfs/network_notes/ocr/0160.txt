@@ -1,0 +1,31 @@
+152
+CHAPTER02 • OH폴리케이션 계층
+글라이언트 효부세스
+클라이언트
+바이트
+서버 프로세스
+소켓
+연결
+바이트
+그림 2.28 • TCPServer 프로세스는 2개의 소켓을 가진다
+TCPCIient.py
+다음은 애플리케이션의 클라이언트 쪽 코드이다.
+from socket lmport *
+' servername '
+serverPort = 12000
+c1ientSocket = socket (AF INET, SOCK STREAM)
+cIientSocket . connect ( (serverName, serverPort) )
+raw_input ( ' lnput lowercase sentence : ' )
+sentence
+c1ientSocket . send ( sentence . encode ( ) )
+modifiedSentence = cIientSocket . recv (1024)
+print ( ' From Server: ' , modifiedSentence . decode () )
+c1ientSocket . close ()
+이제 UDP 구현과 차이가 많이 나는 코드들을 살펴보자. 첫 번째는 클라이언트 소켓의
+생성이다.
+c1ientSocket = socket (AF INET, SOCK STREAM)
+이 라인은 clientsocket이라고 하는 클라이언트의 소켓을 생성한다. 첫 번째 파
+라미터는 하위 네트워크가 1Pv4를 사용함을 의미한다. 두 번째 파라미터는 소켓이
+SOCK_STREAM (UDP 소켓이 아닌 TCP 소켓임을 의미) 타입임을 나타낸다. 클라이
+언트의 소켓을 생성할 때 해당 소켓의 포트 번호를 명시하지 않는다. 대신에 운영체제
+가 하도록 내버려둔다. 코드의 나음 라인은 UDPClient에서 본 것과 매우 다르다.

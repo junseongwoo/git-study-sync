@@ -1,0 +1,27 @@
+int hash = hash2(key);
+if (data2[hashI == -1)
+std::cout 〈〈 table 〈〈 "번 테이블에 " 〈〈 key 〈〈 " 삽입" 〈〈 std::endl;
+data2[hash] = key;
+else
+int 01d = data2[hash];
+data2[hash] = key,
+std::cout 〈〈 table 〈〈 "번 테이블에 " 〈〈 key 〈〈 " 삽입: 기존의 " 〈〈 01d
+insert_impl(old, cnt + 1, 1);
+실제 삽입 구현 함수는 세 개의 인지를 받습니다. key는 기를 의미하고, 예t는 재귀 호출 횟수
+이며, table은 카를 삽입할 테이블 번호입니다.
+8. 해시 테이블에 저장된 모든 데이터를 출력하는 print() 함수도 만들겠습니다. 이 함수는 꼭
+만들어야 하는 것은 아니지만, 여기서는 내부 동작을 쉽게 이해하기 위한 용도로 구현하겠습
+니다.
+void print()
+std: :cout 〈〈 "lndex:
+for (int i =0,• i 〈 size; 1++)
+std: :COUt 〈〈 std: :endl,
+std::cout 〈〈 "DataI:
+for (aut0 i : datal)
+std::cout 〈〈 i 〈〈 i\t';
+std: :cout 〈〈 std::endl;
+std: :COut 〈〈 "Data2:
+for (autO : data2)
+std::cout 〈〈 i 〈〈 i\ti;
+std: :cout 〈〈 std: :endl;
+138

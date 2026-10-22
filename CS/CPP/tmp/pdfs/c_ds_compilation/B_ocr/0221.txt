@@ -1,0 +1,47 @@
+12
+13
+14
+15
+16
+17
+20
+21
+22
+23
+24
+25
+26
+28
+29
+32
+34
+35
+36
+37
+39
+40
+42
+43
+44
+for ( i=l; i<Length; i++ )
+if ( DataSet[i-11 〈= DataSet[iJ )
+continue;
+value = DataSet[il;
+if (DataSet[jl 〉 value)
+mer•ve(OataSet[j+11, OataSet[jl,
+DataSet(jl = value,
+break,
+int main( void )
+int DataSet[I = {6, 4, 2, 3, 1, 5};
+sizeof(DataSet[이) * (i-j ));
+int Length = sizeof DataSet / sizeof DataSet[이;
+int i = 0;
+InsertionSort(DataSet, Length);
+for ( i=O; i<Length; i++ )
+printf("%d •, DataSet[iJ);
+printf(•xn");
+return 0:
+돈 실행 결과
+214
+1 2 34 56
+Part 02 • 알고리좀

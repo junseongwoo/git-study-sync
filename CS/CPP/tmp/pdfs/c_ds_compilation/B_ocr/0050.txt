@@ -1,0 +1,46 @@
+097
+1%
+101
+102
+103
+105
+1%
+107
+int Count = 0:
+Node* Current = Head,
+while ( Current != NULL )
+Current = Current->NextNode;
+Count++;
+return Count,
+01 장/LinkedList/Test—LinkedList. (
+01
+03
+05
+08
+09
+12
+14
+17
+20
+22
+23
+40
+tinclude "LinkedList.h"
+int main( void )
+int
+int
+Node* List
+1
+Count
+Current = NULL;
+NOde* NewNode = NULL;
+= NULL;
+// 노드 5개 추가
+for ( i = 0; i<5; i++ )
+NewNode = SLL_CreateNode(i);
+SLL AppendNode(&List, NewNode);
+NewNode = SLL CreateN0de(-I);
+SLL InsertNewHead(&List, NewNode);
+NewNode = SLL_CreateNode(-2);
+SLL-InsertNewHead(&List, NewNode);
+Part 01 • 자료구조

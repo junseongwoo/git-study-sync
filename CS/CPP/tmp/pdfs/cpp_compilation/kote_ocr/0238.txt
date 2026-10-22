@@ -1,0 +1,28 @@
+2. 다음은 그래프의 에지를 표현하는 Edge 구조체 심의입니다. 참고로 여기에 나타낸 Edge 구조
+체 구현 코드는 5상 '연습 문제 26: 그-주신』 MST 알고리츰•에서 구현했던 코드와 기의 같으
+며, 다만 비교 연산자 오버로팅은 A卜%하지 않아서 구현하지 않았습니다.
+template 〈typename T>
+struct Edge
+unsigned src;
+unsigned dst;
+T weight;
+3. 다음은 그래프를 표현하는 Graph 클래스 정의입니다. 이 클래스는 에지 리스트를 이용하여 그
+래프를 표현하고, 표준 스트림 출력을 지원합니다. 참고로 여기에 나타낸 Graph 클래스 구현
+코드는 5장 '연습 문제 26: 크루스칼 MST 알고리즘에서 구현했던 코드와 완전히 같습니다.
+template 〈typename T>
+class Graph
+public:
+// N개의 정점으로 구성된 그래프
+Graph(unsigned N) •• V(N) {}
+// 그래프의 정점 개수 반환
+autO vertices() const { return V; }
+// 전제 에지 리스트 반환
+auto& edges() const { return edge_list; }
+// 정점 v에서 나가는 모든 에지를 반환
+autO edges(unsigned v) const
+vector<Edge<T〉〉 edges_from—v;
+for (auto& e : edge—list)
+if (e.src == v)
+edges_from—v .emplace back(e);
+return edges_from_v ;
+249

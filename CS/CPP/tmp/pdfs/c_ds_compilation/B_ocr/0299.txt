@@ -1,0 +1,62 @@
+133
+134
+135
+1%
+137
+1죠
+139
+140
+141
+142
+143
+144
+145
+146
+147
+148
+149
+1%
+152
+153
+155
+1%
+157
+159
+160
+161
+163
+164
+165
+166
+167
+1圈
+169
+170
+172
+RightChi1d->Parent = Parent-Parent;
+if ( Parent-Parent == NULL )
+(鰍00t) = RightChild;
+else
+if ( Parent == Parent-Parent->Left )
+Parent-Parent->Left = RightChiId;
+else
+Parent-Parent->Right = RightChild;
+RightChild->Left = Parent;
+Parent-Parent = RightChiId;
+void RBT-RebuiIdAfterInsert( RBTNode** ROOt, RBTNode* X )
+while ( X != (*Root) X-Parent-XoIor == RED )
+if ( X->Parent == X-Parent-Parent->Left )
+Uncle = X-Parent-Parent-Right;
+if ( UncIe-XoIor == RED )
+X-Parent-Xolor
+Uncle-Xolor
+= BLACK;
+= BLACK;
+X-Parent-Parent-Xolor = RED;
+X = X-Parent->Parent,
+else
+if ( X == X-Parent->Right )
+X = X-Parent,
+RBT_RotateLeft( ROOt, X );
+292
+Part 02 • 알고리즘

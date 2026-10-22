@@ -1,0 +1,31 @@
+388
+typedef struct { // 큐 타입
+element queue[MAX_QUEUE_SIZE) ;
+int front, rear;
+} QueueType;
+// 오류 함수
+VOid error(char •message)
+fpnntf(stderr, "%s\n", message);
+exit(l);
+// 공백 상태 검출 함수
+VOid queue—init(QueueType *0
+q->front = q->rear = 0;
+// 공백 상태 검출 함수
+int is_enpty(QueueType *q)
+return (q->front == q->rear) ;
+// 포화 상태 검출 함수
+int is_fulI(QueueType *q)
+return ((q->rear + 1) % MAX_QUEUE_SIZE == q->front);
+// 삽입 함수
+void enqueue(QueueType *q, element item)
+if (is-full(q))
+error("큐가 포화상태입니다") ;
+q->rear = (q->rear + 1) % MAX_QUEUE_SIZE;
+q->queue[q->rear] = item;
+// 삭제 함수
+element dequeue(QueueType *q)
+if (is-empty(q))
+error("큐가 공백상태입니다") ;
+q->front = (q->front + 1) % MAX_QUEUE_SIZE;
+return q->queue[q->front] ;
+C언어로 쉽게 물어쓴 자료구조

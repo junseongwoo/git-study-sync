@@ -1,0 +1,24 @@
+5. 이제 0부터 (v - 1)까지 반복하는 세 개의 중첩 for 문-을 작성합니다. 가상 바깥쪽 for 문-은
+중간 정점 mid. 가운데 for 문은 시작 정점 start, 가장 안쪽 for 문은 목표 정점 end를 인덱스
+로 A卜%합니다. 반복문 안에서는 모든 정점들 사이의 거리를 비교하여 더 짧은 거리가 발견되
+면 기리 값을 갱신합니다.
+for (int mid = 0; mid 〈 V; mid++)
+for (int start = 0; start 〈 V; start++)
+for (int end = 0; end 〈 V; end++)
+if (distance[startl[midl + distance[midl[end] 〈 distance[startl[endl)
+distance[start][endl = distance[startl[midl + distance[mid][endl;
+6. 입력 그래프가 음수 가중치를 가질 수 있으므로 벨만-포드 알고리즘처럼 음수 가중치 사이클
+이 있는지를 확인해야 합니다. 다행히도 이 작업은 distance 테이블을 이용하여 쉽게 수행할
+수 있습니다.
+그래프에서 사이클이란 길이가 0보다 길고 시작과 끝 정점이 같은 경로입니다. 모든 정
+점 쌍 사이의 거리가 저장된 테이블에서 특정 정점 인덱스 i에서 자기 자신으로의 거리는
+distance[i][i]에 저장됩니다 양수 가중치만 있는 그래프에서는 distance[i][i] 값이 분명히
+0이 되어야 합니다. 그러나 그래프에 음수 가중치 사이클이 있다면 distance[i][i] 값은 0보다
+작은 음수가 됩니다. 따라서 다음과 같은 방식으로 음수 가중치 사이클 존재 여부를 확인할
+수 있습니다.
+for (int = 0; i 〈 V; i++)
+// 자기 자신으로의 거리가 0보다 작으면 음수 가중치 사이클이 있는 것으로 판단
+if (distance[il[il 〈 0)
+return {},•
+return distance;
+427

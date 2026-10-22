@@ -1,0 +1,38 @@
+프로그램 11.9 Prim의 최소 비용 신장 트리 프로그램
+#include <stdio.h>
+#include <stdtib.h>
+#define TRUE 1
+#define FALSE 0
+#define MAX_VERTICES 1㈚
+#define INF 1圄L
+typedef struct GraphType {
+int
+// 정점의 개수
+int weight[MAX_VERTICES] [MAX_VERTICES] •,
+} GraphType;
+int selected[MAX_VERTICES] ;
+int distance[MAX_VERTICES] ;
+// 최소 dist[v] 값을 갖는 정점을 반환
+int get_min_vertex(int n)
+for (5 = 0; 1 <n; i++)
+if (!selected[i]) {
+break;
+for (i = 0; 〈 마 i++)
+if (!selected[i] && (distance[i] 〈 distance[v])) v -
+return (V) ;
+void prim(GraphType* g, int s)
+int 1, u, v;
+for (u = 0; u<g-〉n; u++)
+distance[u] = INF;
+distance[s] = 0;
+u = get_min_vertex(g->n) ;
+selected[u] = TRUE;
+if (distance[u] == INF) return;
+printf("정점 추가\n", 바;
+for (v = 0; v<g-〉n; V++)
+if (g->weight[u][v] != INF)
+412
+1 ;
+if (!selected[v] && g->weight[u] [v]< distance[v])
+distance[v] = g->weight[u] [회 ;
+C언어로 쉽게 풀어쓴 자료구조

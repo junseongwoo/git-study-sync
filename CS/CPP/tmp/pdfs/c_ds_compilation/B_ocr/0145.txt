@@ -1,0 +1,63 @@
+24
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+Node* LQ_CreateNode( char* NewData )
+Node* NewNode = (No血*)ma110(( sizeof( NOde ) );
+NewNode->Data = (char*)malloc( strlen( NewData) + 1);
+strcpy(NewNode->Data, NewData); // 데이터를 저장한다.
+NewNode->NextNode = NULL; // 다음 노드에 대한 포인터는 NULL로 초기화한다.
+return NewNode; // 노드의 주소를 반환한다.
+void LQ-DestroyNode(Node* NOde )
+free(_Node->Data);
+free( Node );
+void LQ-Enqueue( LinkedQueue* Queue, Node* NewNode )
+if ( Queue->Front == NULL )
+Queue->Front = NewNode,
+Queue->Rear = NewNode;
+Queue-Xount++,•
+else
+- NewNode,
+Queue->Rear->NextN0de
+Queue->Rear = NewNode;
+Queue-Xount++;
+NO血* LQ-Dequeue( LinkedQueue* Queue )
+// LQ-Dequeue() 함수가 반환할 최상위 노드
+NO血* Front = Queue->Front;
+if ( Queue->Front->NextN0de == NULL )
+Chapter 03 • 큐
+137

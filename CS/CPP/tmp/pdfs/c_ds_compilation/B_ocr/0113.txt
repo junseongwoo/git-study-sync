@@ -1,0 +1,57 @@
+039
+041
+042
+043
+國5
+046
+047
+049
+050
+051
+052
+053
+054
+055
+056
+057
+058
+059
+%1
+%2
+%3
+%5
+%7
+%9
+070
+071
+072
+073
+074
+076
+077
+078
+TokenI++iI = '\0'
+return i;
+int GetPriority(char 0perator, int InStack)
+int Priority = -1;
+switch (Operator)
+case LEFT PARENTHESIS:
+if ( InStack )
+Priority = 3;
+else
+Priority = 0:
+break;
+case MULTIPLY:
+case DIVIDE:
+Priority = 1;
+break,
+case PLUS:
+case UINUS:
+Priority = 2;
+break,
+return Priority;
+int IsPrior( char OperatorInStack, char OperatorInToken )
+return ( GetPriority(OperatorInStack, 1) 〉 GetPriority(OgpratorInToken, 0) );
+VOid 6etPostfix( char* InfixExpression, char* PostfixExpression )
+104
+Part 01 • 자료구조

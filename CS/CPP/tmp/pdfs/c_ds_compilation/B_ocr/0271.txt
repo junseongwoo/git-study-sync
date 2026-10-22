@@ -1,0 +1,50 @@
+128
+129
+130
+131
+132
+133
+134
+135
+1%
+137
+1죠
+139
+140
+141
+142
+void BST_InorderPrintTree( BSTNodet NOde )
+if ( NO& == WLL )
+return;
+// 완쪽 하위 트리 출력
+BST_InorderPrintTree( Node->Left );
+// 부리 노드 출력
+printf( •년 • Node-»ata ):
+// 오른쪽 하위 트리 출력
+BST_InorderPrintTree( Node-Right ),•
+%장/BinarySearchTree/Test—BinarySearchTree. (
+01
+03
+04
+07
+09
+12
+14
+16
+18
+20
+264
+#include "BinarySearchTree h"
+void PrintSearchResult(int SearchTarget, BSTNode* Resu1t)
+if(Result != NULL)
+printf("Found : 년 \n", ResuIt-»ata);
+else
+printf("Not Found: %d\n", SearchTarget);
+int main( void )
+// 노드 생성
+BSTNode* Tree = BST_CreateNode(123);
+= MJLL;
+// 트리에 노드 추가
+BST_InsertNode( Tree, BST-CreateNode(22) );
+Tree, BST-CreateNode(9918) ):
+Part 02 • 알고리즘

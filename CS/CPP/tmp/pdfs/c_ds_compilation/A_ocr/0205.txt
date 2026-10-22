@@ -1,0 +1,38 @@
+// 연길 리스트 헤더
+typedef struct ListType ( // 리스다 헤더 타입
+int size;
+ListNOde *head;
+ListNode *tail;
+} ListType;
+// 오류 함수
+VOid error (char *message)
+fprintf(stderr, "%s\n"
+message) ;
+exit(l);
+// 리스트 헤더 생성 함수
+ListType* create()
+LnstType *plist = (ListType *)malIoc(sizeof(ListType));
+plist->size = 0;
+plist->head = plist->tail = NULL;
+return plist;
+// ptist는 연결 리스트의 헤더를 가리기는 포인터, coef는 계수,
+// expon는 지수
+void insert_last(ListType* plist, int coef, int expon)
+ListNode* temp
+(ListNode *)maIIoc(sizeof(ListN0de)) ;
+if (temp == NULL) error("Dfl모리 할당 에러");
+temp->coef = coef;
+= expon;
+temp->link = NULL;
+if (plist->tait == NULL) {
+plist->head = plist->tail - temp;
+else {
+ptist-〉tail->link = temp;
+plist->tail = temp;
+st—>Si ze十十 •,
+// list3 = listl + 155t2
+void p01y_add(ListType* plistl, ListType* plist2, ListType* pIist3)
+ListNode* a = plistl->head;
+ListNode* b = plist2->head;
+CHAPTER06 연결 리스트
+213

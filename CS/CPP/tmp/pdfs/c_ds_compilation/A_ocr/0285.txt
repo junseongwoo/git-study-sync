@@ -1,0 +1,35 @@
+// q는 p의 오른쪽 포인터
+TreeN0de * q = p->right;
+// 만약 오던쪽 포인터가 NULL이기나 스레드이면 오로!4 포인터를 반가
+if (q == NULL || p->is_thread == TRUE)
+return q;
+// 만약 오른쪽 자식이면 다시 가장 왼쪽 노드로 이동
+while (q->left != NULL) q = q-〉left;
+return q;
+void thread inorder(TreeNode * t)
+TreeNode * q;
+while (q->left) q = q->left;
+do {
+printf("%c -〉 ", q->data);
+q = find_successor(q);
+} while (0;
+int main(void)
+// 스레드 설정
+nl.right = &n3;
+n2.right = &n7;
+n4.right = &n6;
+// 중위 순회
+thread inorder(exp) ;
+printf("\n") ;
+return 0;
+실행결과
+// 가장 왼쪽 노드로 간다.
+// 데이터 출력
+// 후속자 함수 호출
+// NULL이 아니면
+스레드 트리는 순회를 빠르게 하는 장점이 있으나 문제는 스레드를 설정하기 위하여 삽입이나
+삭제 함수가 더 많은 일을 하여야 한다.
+01 이진 트리의 노드의 개수가 n개라면 NULL 링크의 개수는?
+02 스레드 이진 트리에서 NULL 링크 필드에 저장되는 것은 무엇인가?
+CHAPTER 트리
+293

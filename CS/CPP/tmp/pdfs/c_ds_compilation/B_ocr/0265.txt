@@ -1,0 +1,29 @@
+13
+1
+23
+139
+67
+20
+15
+다음은 지금까지 설명한 내용을 코드로 구현한 BST-RemoveNode ( ) 함수입니다.
+BSTNode* BST_RemoveNode( BSTNode* Tree,BSTNode* Parent, E1ementType Target )
+BSTNode* Removed = NULL;
+if ( Tree == NULL )
+return NULL;
+if ( Tree-»ata 〉 Target )
+Removed = BST_RemoveNode( Tree->Left, Tree, Target );
+else if ( Tree-»ata 〈 Target )
+Removed = BST RemoveNode( Tree-Right, Tree, Target );
+else // 목표값을 찾은 경우
+Removed = Tree,
+// 잎 노드인 경우 바로 삭제
+if ( Tree->Left == NULL Tree-Right
+if ( Parent->Left == Tree )
+Parent->Left = NULL;
+else
+= NULL )
+else
+Parent->Right = NULL;
+자식이 양쪽 다 있는 경우
+258
+Part 02 • 일고리줍

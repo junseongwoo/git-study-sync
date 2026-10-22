@@ -1,0 +1,23 @@
+그리고 다음 날에 소스 코드를 다음과 같이 변경했습니다.
+b001 doSomething = false;
+void DoStuff()
+if (doSomething == true)
+DoSomething( ) :
+else
+DoSomethingEIse( ) ;
+이 경우, 파일 비교 프로그램은 그림 8-11과 같이 차이점을 표시해줍니다.
+그림 8-11 파일 비교 결과
+void• DOStuff (1多夐}±多%흦결4결;주2多ä?
+DOSomething () :
+DoSomethingE1se () 7
+.쳡,C결
+void DoStuff (Y
+if d0Somethinq - true)
+DoSomething ( )
+DOSomethingE1se ( ) ;
+이와 같은 결과를 보여주기 위해서 파일 비교 프로그램은 두 버전에 공통적인 문자열 시권스가 연
+속적일 필요가 없다는 사실을 고려하여 두 소스 코드의 유사성을 판별해야 합니다. 또한 문자열
+일부가 제거되거나 새로운 문자열이 임의 위치에 추가될 수도 있습니다. 이러한 작업은 근사 문자
+열 매칭(러기»oximate string matching) 또는 퍼지 문자열 매å(fuzzy string matchmg)이 필요하며 이를
+위해 동적 계획법이 사용-됩니다.
+365

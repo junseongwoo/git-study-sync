@@ -1,0 +1,37 @@
+하지만 함수 포인터를 이용하여 호출하는 경우에는 함수의 구현을 미리 알지 않아도 된「나는 장점이 있습니다
+그뿐 아니라 이를 이용하면 같은 논리로 동작하는 함수를 중복해서 만들지 않아도 됩니다. 우리가 다루는
+정릴 알고리즘이 함수 포인터를 응용할 수 있는 좋은 예입니다. 퀵 정렬 알고리즘은 데이터 요소를 비교하는
+루틴을 제외하면 자료형의 영향을 받는 곳이 없습니다. 따라서 비교 루틴을 함수로 분리할 수 있다면 퀵 정렬
+함수 하나로 다양한 자료형의 자료구조를 정릴하는 효과를 얻을 수 있습니다.
+void FunctionA( (int*)pFunction() )
+int a = (*pFunction)();
+FunctionA( VunctionB ); // 내부에서 FunctionB를 호출
+FunctionA( &FunctionC // 내부에서 FunctionC를 호출
+5.5.1 qsort( ) 함수 예제 프로그램
+주석이가 퀵 정렬을 직접 작성하는 것과 qsort() 함수를 활용하는 것, 둘 중 어느 쪽이 더 시7`卜을
+절약하는 방법일까요? 두말할 것도 없이 후자입니다. 우리가 직접 구현한 코드처럼 qsort( ) 함수가
+제대로 정렬을 수행하는지 테스트해봅시다.
+05 장/QuickSort2/QuickSort2. (
+01
+02
+03
+04
+05
+06
+07
+08
+09
+13
+14
+#include <stdlib.h〉
+#include 〈stdio h〉
+#include <string.h〉
+// 리던값이
+// 〈 0 이면, eleml이 elem2보다 작다.
+// = 0 이면, -eleml이 eIem2와 같다.
+// 〉 0 이면, eleml이 elem2보다 크다.
+int ComparePoint( (0舫t void * eleml, const void * elem2 )
+int* eleml = (int*) eleml,
+int* elem2 = (int*) elem2
+if ( 쏘leml 〉 •elem2)
+Chapter 05 • 정렬 229

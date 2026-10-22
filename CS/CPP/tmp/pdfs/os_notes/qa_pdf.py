@@ -105,10 +105,14 @@ cover=text[0].strip().splitlines()
 if norm(''.join(cover))!=norm(build['confirmed_title']+'핵심 개념 및 시험 대비 학습 노트'):errors.append({'type':'extra_or_missing_cover_text','text':cover})
 qa={'pdf':str(pdf),'pages':len(d),'a4_all':True,'searchable_pages':sum(bool(x.strip()) for x in text),'fonts':fonts,'outline_count':len(outlines),'outline':outlines,'cover_text':cover,'errors':errors,'sparse_pages':sparse,'code_count':len(build['code_ids']),'figure_count':len(build.get('figure_ids',[])),'embedded_figure_checks':embedded_figure_checks,'prose_segments_checked':prose_count,'source_code_character_replacements':build['code_character_replacements'],'toc_headings':build['headings']}
 if args.render:
- render_dir=H/'qa_pages';render_dir.mkdir(exist_ok=True)
- subprocess.run(['pdftoppm','-r','85','-png','-thinlinemode','shape',str(pdf),str(render_dir/'page')],check=True,capture_output=True)
+ render_dir=H/f'qa_pages_{len(d)}';render_dir.mkdir(exist_ok=True)
  digits=len(str(len(d)))
  paths=[render_dir/f'page-{i:0{digits}}.png' for i in range(1,len(d)+1)]
+ if not all(p.is_file() and p.stat().st_mtime >= pdf.stat().st_mtime for p in paths):
+  rendered=subprocess.run(['pdftoppm','-r','85','-png','-thinlinemode','shape',str(pdf),str(render_dir/'page')],capture_output=True)
+  if rendered.returncode:
+   print(rendered.stderr.decode('utf-8',errors='replace'))
+   rendered.check_returncode()
  # Build sheets with 12 pages each, annotated with actual PDF page numbers.
  sheets=[];tw=290;th=430
  font=ImageFont.truetype('C:/Windows/Fonts/consola.ttf',14)
@@ -118,7 +122,7 @@ if args.render:
    page=Image.open(pp).convert('RGB');page.thumbnail((tw-12,th-28))
    x=(j%4)*tw+(tw-page.width)//2;y=(j//4)*th+21
    im.paste(page,(x,y));dr.text(((j%4)*tw+8,(j//4)*th+3),f'PDF {k+j+1}',fill='#172635',font=font)
-  sp=H/f'qa_contact_{k//12+1:02}.jpg';im.save(sp,quality=88);sheets.append(str(sp))
+  sp=render_dir/f'contact_{k//12+1:02}.jpg';im.save(sp,quality=88);sheets.append(str(sp))
  qa['rendered_page_images']=len(paths);qa['contact_sheets']=sheets
 (H/'pdf_qa_report.json').write_text(json.dumps(qa,ensure_ascii=False,indent=2),encoding='utf-8')
 print(json.dumps({k:qa[k] for k in ['pdf','pages','searchable_pages','fonts','outline_count','cover_text','errors','sparse_pages']},ensure_ascii=False))

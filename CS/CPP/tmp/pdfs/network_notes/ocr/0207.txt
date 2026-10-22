@@ -1,0 +1,98 @@
+200
+송신자
+send pkt0
+rcv ACKO
+send pktl
+rcv ACKI
+send pktO
+a. 무손실 동작
+송신자
+send pktO
+rcv ACKO
+send pktl
+timeout
+resend pktl
+rcv ACKI
+send pktO •
+(. ACK 손실
+간단한 에를리케이선 계층
+프로토콜에 대한 프로토콜
+과 FSM 표현 개발
+CHAPTER 03 • 트랜스포트 계층
+ktO
+Pkt1
+PktO
+Pkt1
+(loss)X
+Pkt1
+Dkt0
+수신자
+• rcv pkt0
+• send ACKO
+• rcv pktl
+• send ACKI
+.• rcv pktO
+. send ACKO
+수신자
+•. rcv pkt0
+. send ACKO
+• rcv pktl
+: send ACKI
+• rcv pktl
+• (detect
+• duplicate)
+• send ACKI
+• rcv pktO
+• send ACKO
+송신자
+send pktO
+rcv ACKO
+send pktl
+txmeout
+resend pktl
+rcv ACKI
+send pktO
+b. 패킷 손실
+송신자
+send pktO
+rcv ACKO
+send pktl
+timeout
+resend pktl
+rcv ACKI
+send pktO
+rcv ACKI
+do nothing
+수신자
+PktO
+. rcv pktO
+. send ACKO
+0055)
+Pkt1
+ktO
+Pkto
+Pkt1
+Pkt1
+PktO
+. rcv pktl
+. send ACKI
+• rcv pkt0
+• send ACKO
+수신자
+rcv pkt0
+send ACKO
+rcv pktl
+send ACKI
+rcv pkt 1
+(detect duplicate)
+send ACKI
+rcv pkt0
+send ACKO
+d. 조급한 타임0웃
+그림 3.16 • rdt3 . 0의 동작, 일터네이팅 비트 프로토콜
+다루고 있다. 패킷의 순서번호가 0과 1이 번갈아 일어나므로, 프로토콜 rdt3 . 0은 때
+때로 얼터네이팅 비트 프로토*(alternating-bit protocol)이라고 부른다.
+지금까지 데이터 전송 프로토콜의 주요 구성요소를 정리해 봤다. 체크섬, 순서번
+호, 타이머, 그리고 긍정 확인응답과 부정 확인응답 패킷 등은 프로토콜의 동작에서 중
+요한 필수 임무를 수행한다. 이제 신뢰적으로 동작하는 데이터 전송 프로토콜을 갖게
+되었다.

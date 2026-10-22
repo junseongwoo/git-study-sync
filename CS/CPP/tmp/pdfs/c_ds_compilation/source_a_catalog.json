@@ -1,0 +1,912 @@
+{
+  "source": "A",
+  "filename": "(C언어)자료구조 (1).pdf",
+  "path": "C:/Users/user/Downloads/(C언어)자료구조 (1).pdf",
+  "pdf_page_count": 562,
+  "text_layer": false,
+  "embedded_bookmarks": false,
+  "visible_title": "C언어로 쉽게 풀어쓴 자료구조",
+  "title_evidence": "본문 각 쪽 하단의 책 이름",
+  "author": "원문에서 확인 불가",
+  "edition": "원문에서 확인 불가",
+  "publisher": "원문에서 확인 불가",
+  "front_matter": {
+    "pdf_start": 1,
+    "pdf_end": 5,
+    "printed_start": 6,
+    "printed_end": 10,
+    "description": "차례만 수록; 표지·서지 미수록"
+  },
+  "index": {
+    "pdf_start": 562,
+    "pdf_end": 562,
+    "printed_page": 571,
+    "description": "찾아보기 첫 면만 수록"
+  },
+  "chapters": [
+    {
+      "chapter": 1,
+      "title": "자료구조와 알고리즘",
+      "pdf_start": 6,
+      "pdf_end": 32,
+      "first_body_printed_page": 12,
+      "last_included_printed_page": 37,
+      "sections": [
+        {
+          "number": "1.1",
+          "title": "자료구조와 알고리즘",
+          "toc_printed_start": 12,
+          "pdf_start": 7
+        },
+        {
+          "number": "1.2",
+          "title": "추상 자료형",
+          "toc_printed_start": 17,
+          "pdf_start": 12
+        },
+        {
+          "number": "1.3",
+          "title": "알고리즘의 성능 분석",
+          "toc_printed_start": 21,
+          "pdf_start": 16
+        },
+        {
+          "number": "",
+          "title": "연습문제",
+          "toc_printed_start": 36,
+          "pdf_start": 31
+        }
+      ]
+    },
+    {
+      "chapter": 2,
+      "title": "순환",
+      "pdf_start": 33,
+      "pdf_end": 61,
+      "first_body_printed_page": 40,
+      "last_included_printed_page": 67,
+      "sections": [
+        {
+          "number": "2.1",
+          "title": "순환의 소개",
+          "toc_printed_start": 40,
+          "pdf_start": 34
+        },
+        {
+          "number": "2.2",
+          "title": "거듭제곱값 계산",
+          "toc_printed_start": 50,
+          "pdf_start": 44
+        },
+        {
+          "number": "2.3",
+          "title": "피보나치 수열의 계산",
+          "toc_printed_start": 53,
+          "pdf_start": 47
+        },
+        {
+          "number": "2.4",
+          "title": "하노이탑 문제",
+          "toc_printed_start": 56,
+          "pdf_start": 50
+        },
+        {
+          "number": "",
+          "title": "연습문제",
+          "toc_printed_start": 63,
+          "pdf_start": 57
+        }
+      ]
+    },
+    {
+      "chapter": 3,
+      "title": "배열, 구조체, 포인터",
+      "pdf_start": 62,
+      "pdf_end": 92,
+      "first_body_printed_page": 70,
+      "last_included_printed_page": 99,
+      "sections": [
+        {
+          "number": "3.1",
+          "title": "배열",
+          "toc_printed_start": 70,
+          "pdf_start": 63
+        },
+        {
+          "number": "3.2",
+          "title": "구조체",
+          "toc_printed_start": 73,
+          "pdf_start": 66
+        },
+        {
+          "number": "3.3",
+          "title": "배열의 응용: 다항식",
+          "toc_printed_start": 76,
+          "pdf_start": 69
+        },
+        {
+          "number": "3.4",
+          "title": "배열의 응용: 희소행렬",
+          "toc_printed_start": 83,
+          "pdf_start": 76
+        },
+        {
+          "number": "3.5",
+          "title": "포인터",
+          "toc_printed_start": 89,
+          "pdf_start": 82
+        },
+        {
+          "number": "3.6",
+          "title": "동적 메모리 할당",
+          "toc_printed_start": 94,
+          "pdf_start": 87
+        },
+        {
+          "number": "",
+          "title": "연습문제",
+          "toc_printed_start": 98,
+          "pdf_start": 91
+        }
+      ]
+    },
+    {
+      "chapter": 4,
+      "title": "스택",
+      "pdf_start": 93,
+      "pdf_end": 136,
+      "first_body_printed_page": 102,
+      "last_included_printed_page": 144,
+      "sections": [
+        {
+          "number": "4.1",
+          "title": "스택이란?",
+          "toc_printed_start": 102,
+          "pdf_start": 94
+        },
+        {
+          "number": "4.2",
+          "title": "스택의 구현",
+          "toc_printed_start": 106,
+          "pdf_start": 98
+        },
+        {
+          "number": "4.3",
+          "title": "동적 배열 스택",
+          "toc_printed_start": 117,
+          "pdf_start": 109
+        },
+        {
+          "number": "4.4",
+          "title": "스택의 응용: 괄호 검사 문제",
+          "toc_printed_start": 119,
+          "pdf_start": 111
+        },
+        {
+          "number": "4.5",
+          "title": "스택의 응용: 후위 표기 수식의 계산",
+          "toc_printed_start": 124,
+          "pdf_start": 116
+        },
+        {
+          "number": "4.6",
+          "title": "스택의 응용: 미로 문제",
+          "toc_printed_start": 135,
+          "pdf_start": 127
+        },
+        {
+          "number": "",
+          "title": "연습문제",
+          "toc_printed_start": 142,
+          "pdf_start": 134
+        }
+      ]
+    },
+    {
+      "chapter": 5,
+      "title": "큐",
+      "pdf_start": 137,
+      "pdf_end": 166,
+      "first_body_printed_page": 146,
+      "last_included_printed_page": 174,
+      "sections": [
+        {
+          "number": "5.1",
+          "title": "큐 추상 데이터 타입",
+          "toc_printed_start": 146,
+          "pdf_start": 138
+        },
+        {
+          "number": "5.2",
+          "title": "선형큐",
+          "toc_printed_start": 149,
+          "pdf_start": 141
+        },
+        {
+          "number": "5.3",
+          "title": "원형큐",
+          "toc_printed_start": 153,
+          "pdf_start": 145
+        },
+        {
+          "number": "5.4",
+          "title": "큐의 응용: 버퍼",
+          "toc_printed_start": 160,
+          "pdf_start": 152
+        },
+        {
+          "number": "5.5",
+          "title": "덱이란?",
+          "toc_printed_start": 162,
+          "pdf_start": 154
+        },
+        {
+          "number": "5.6",
+          "title": "큐의 응용: 시뮬레이션",
+          "toc_printed_start": 168,
+          "pdf_start": 160
+        },
+        {
+          "number": "",
+          "title": "연습문제",
+          "toc_printed_start": 171,
+          "pdf_start": 163
+        }
+      ]
+    },
+    {
+      "chapter": 6,
+      "title": "연결 리스트 Ⅰ",
+      "pdf_start": 167,
+      "pdf_end": 212,
+      "first_body_printed_page": 176,
+      "last_included_printed_page": 220,
+      "sections": [
+        {
+          "number": "6.1",
+          "title": "리스트 추상 데이터 타입",
+          "toc_printed_start": 176,
+          "pdf_start": 168
+        },
+        {
+          "number": "6.2",
+          "title": "배열로 구현된 리스트",
+          "toc_printed_start": 178,
+          "pdf_start": 170
+        },
+        {
+          "number": "6.3",
+          "title": "연결 리스트",
+          "toc_printed_start": 183,
+          "pdf_start": 175
+        },
+        {
+          "number": "6.4",
+          "title": "단순 연결 리스트",
+          "toc_printed_start": 187,
+          "pdf_start": 179
+        },
+        {
+          "number": "6.5",
+          "title": "단순 연결 리스트의 연산 구현",
+          "toc_printed_start": 190,
+          "pdf_start": 182
+        },
+        {
+          "number": "6.6",
+          "title": "연결 리스트의 응용: 다항식",
+          "toc_printed_start": 209,
+          "pdf_start": 201
+        },
+        {
+          "number": "",
+          "title": "연습문제",
+          "toc_printed_start": 216,
+          "pdf_start": 208
+        }
+      ]
+    },
+    {
+      "chapter": 7,
+      "title": "연결 리스트 Ⅱ",
+      "pdf_start": 213,
+      "pdf_end": 244,
+      "first_body_printed_page": 222,
+      "last_included_printed_page": 252,
+      "sections": [
+        {
+          "number": "7.1",
+          "title": "원형 연결 리스트",
+          "toc_printed_start": 222,
+          "pdf_start": 214
+        },
+        {
+          "number": "7.2",
+          "title": "원형 연결 리스트는 어디에 사용될까?",
+          "toc_printed_start": 227,
+          "pdf_start": 219
+        },
+        {
+          "number": "7.3",
+          "title": "이중 연결 리스트",
+          "toc_printed_start": 230,
+          "pdf_start": 222
+        },
+        {
+          "number": "7.4",
+          "title": "예제: mp3 재생 프로그램 만들기",
+          "toc_printed_start": 236,
+          "pdf_start": 228
+        },
+        {
+          "number": "7.5",
+          "title": "연결 리스트로 구현한 스택",
+          "toc_printed_start": 239,
+          "pdf_start": 231
+        },
+        {
+          "number": "7.5",
+          "title": "연결 리스트로 구현한 큐",
+          "toc_printed_start": 243,
+          "pdf_start": 235
+        },
+        {
+          "number": "",
+          "title": "연습문제",
+          "toc_printed_start": 250,
+          "pdf_start": 242
+        }
+      ]
+    },
+    {
+      "chapter": 8,
+      "title": "트리",
+      "pdf_start": 245,
+      "pdf_end": 312,
+      "first_body_printed_page": 254,
+      "last_included_printed_page": 320,
+      "sections": [
+        {
+          "number": "8.1",
+          "title": "트리의 개념",
+          "toc_printed_start": 254,
+          "pdf_start": 246
+        },
+        {
+          "number": "8.2",
+          "title": "이진 트리 소개",
+          "toc_printed_start": 258,
+          "pdf_start": 250
+        },
+        {
+          "number": "8.3",
+          "title": "이진 트리의 표현",
+          "toc_printed_start": 263,
+          "pdf_start": 255
+        },
+        {
+          "number": "8.4",
+          "title": "이진 트리의 순회",
+          "toc_printed_start": 267,
+          "pdf_start": 259
+        },
+        {
+          "number": "8.5",
+          "title": "반복적 순회",
+          "toc_printed_start": 277,
+          "pdf_start": 269
+        },
+        {
+          "number": "8.6",
+          "title": "레벨 순회",
+          "toc_printed_start": 279,
+          "pdf_start": 271
+        },
+        {
+          "number": "8.7",
+          "title": "트리의 응용: 수식 트리 처리",
+          "toc_printed_start": 283,
+          "pdf_start": 275
+        },
+        {
+          "number": "8.8",
+          "title": "트리의 응용: 디렉토리 용량 계산",
+          "toc_printed_start": 286,
+          "pdf_start": 278
+        },
+        {
+          "number": "8.9",
+          "title": "이진 트리의 추가 연산",
+          "toc_printed_start": 287,
+          "pdf_start": 279
+        },
+        {
+          "number": "8.10",
+          "title": "스레드 이진 트리",
+          "toc_printed_start": 290,
+          "pdf_start": 282
+        },
+        {
+          "number": "8.11",
+          "title": "이진 탐색 트리",
+          "toc_printed_start": 294,
+          "pdf_start": 286
+        },
+        {
+          "number": "8.12",
+          "title": "이진 탐색 트리의 응용: 영어 사전",
+          "toc_printed_start": 310,
+          "pdf_start": 302
+        },
+        {
+          "number": "",
+          "title": "연습문제",
+          "toc_printed_start": 316,
+          "pdf_start": 308
+        }
+      ]
+    },
+    {
+      "chapter": 9,
+      "title": "우선순위 큐",
+      "pdf_start": 313,
+      "pdf_end": 350,
+      "first_body_printed_page": 322,
+      "last_included_printed_page": 358,
+      "sections": [
+        {
+          "number": "9.1",
+          "title": "우선순위 큐 추상 데이터 타입",
+          "toc_printed_start": 322,
+          "pdf_start": 314
+        },
+        {
+          "number": "9.2",
+          "title": "우선순위 큐의 구현 방법",
+          "toc_printed_start": 324,
+          "pdf_start": 316
+        },
+        {
+          "number": "9.3",
+          "title": "히프",
+          "toc_printed_start": 326,
+          "pdf_start": 318
+        },
+        {
+          "number": "9.4",
+          "title": "히프의 구현",
+          "toc_printed_start": 330,
+          "pdf_start": 322
+        },
+        {
+          "number": "9.5",
+          "title": "히프 정렬",
+          "toc_printed_start": 340,
+          "pdf_start": 332
+        },
+        {
+          "number": "9.6",
+          "title": "머신 스케줄링",
+          "toc_printed_start": 343,
+          "pdf_start": 335
+        },
+        {
+          "number": "9.7",
+          "title": "허프만 코드",
+          "toc_printed_start": 347,
+          "pdf_start": 339
+        },
+        {
+          "number": "",
+          "title": "연습문제",
+          "toc_printed_start": 356,
+          "pdf_start": 348
+        }
+      ]
+    },
+    {
+      "chapter": 10,
+      "title": "그래프 Ⅰ",
+      "pdf_start": 351,
+      "pdf_end": 386,
+      "first_body_printed_page": 360,
+      "last_included_printed_page": 394,
+      "sections": [
+        {
+          "number": "10.1",
+          "title": "그래프란?",
+          "toc_printed_start": 360,
+          "pdf_start": 352
+        },
+        {
+          "number": "10.2",
+          "title": "그래프의 정의와 용어",
+          "toc_printed_start": 363,
+          "pdf_start": 355
+        },
+        {
+          "number": "10.3",
+          "title": "그래프의 표현 방법",
+          "toc_printed_start": 369,
+          "pdf_start": 361
+        },
+        {
+          "number": "10.4",
+          "title": "그래프의 탐색",
+          "toc_printed_start": 378,
+          "pdf_start": 370
+        },
+        {
+          "number": "10.5",
+          "title": "깊이 우선 탐색",
+          "toc_printed_start": 379,
+          "pdf_start": 371
+        },
+        {
+          "number": "10.6",
+          "title": "너비 우선 탐색",
+          "toc_printed_start": 385,
+          "pdf_start": 377
+        },
+        {
+          "number": "",
+          "title": "연습문제",
+          "toc_printed_start": 392,
+          "pdf_start": 384
+        }
+      ]
+    },
+    {
+      "chapter": 11,
+      "title": "그래프 Ⅱ",
+      "pdf_start": 387,
+      "pdf_end": 431,
+      "first_body_printed_page": 396,
+      "last_included_printed_page": 439,
+      "sections": [
+        {
+          "number": "11.1",
+          "title": "최소 비용 신장 트리",
+          "toc_printed_start": 396,
+          "pdf_start": 388
+        },
+        {
+          "number": "11.2",
+          "title": "Kruskal의 MST 알고리즘",
+          "toc_printed_start": 398,
+          "pdf_start": 390
+        },
+        {
+          "number": "11.3",
+          "title": "Prim의 MST 알고리즘",
+          "toc_printed_start": 408,
+          "pdf_start": 400
+        },
+        {
+          "number": "11.4",
+          "title": "최단 경로",
+          "toc_printed_start": 414,
+          "pdf_start": 406
+        },
+        {
+          "number": "11.5",
+          "title": "Dijkstra의 최단 경로 알고리즘",
+          "toc_printed_start": 415,
+          "pdf_start": 407
+        },
+        {
+          "number": "11.6",
+          "title": "Floyd의 최단 경로 알고리즘",
+          "toc_printed_start": 425,
+          "pdf_start": 417
+        },
+        {
+          "number": "11.7",
+          "title": "위상 정렬",
+          "toc_printed_start": 430,
+          "pdf_start": 422
+        },
+        {
+          "number": "",
+          "title": "연습문제",
+          "toc_printed_start": 438,
+          "pdf_start": 430
+        }
+      ]
+    },
+    {
+      "chapter": 12,
+      "title": "정렬",
+      "pdf_start": 432,
+      "pdf_end": 485,
+      "first_body_printed_page": 442,
+      "last_included_printed_page": 494,
+      "sections": [
+        {
+          "number": "12.1",
+          "title": "정렬이란?",
+          "toc_printed_start": 442,
+          "pdf_start": 433
+        },
+        {
+          "number": "12.2",
+          "title": "선택 정렬",
+          "toc_printed_start": 445,
+          "pdf_start": 436
+        },
+        {
+          "number": "12.3",
+          "title": "삽입 정렬",
+          "toc_printed_start": 450,
+          "pdf_start": 441
+        },
+        {
+          "number": "12.4",
+          "title": "버블 정렬",
+          "toc_printed_start": 455,
+          "pdf_start": 446
+        },
+        {
+          "number": "12.5",
+          "title": "쉘 정렬",
+          "toc_printed_start": 458,
+          "pdf_start": 449
+        },
+        {
+          "number": "12.6",
+          "title": "합병 정렬",
+          "toc_printed_start": 462,
+          "pdf_start": 453
+        },
+        {
+          "number": "12.7",
+          "title": "퀵 정렬",
+          "toc_printed_start": 470,
+          "pdf_start": 461
+        },
+        {
+          "number": "12.8",
+          "title": "히프 정렬",
+          "toc_printed_start": 479,
+          "pdf_start": 470
+        },
+        {
+          "number": "12.9",
+          "title": "기수 정렬",
+          "toc_printed_start": 480,
+          "pdf_start": 471
+        },
+        {
+          "number": "12.10",
+          "title": "정렬 알고리즘의 비교",
+          "toc_printed_start": 486,
+          "pdf_start": 477
+        },
+        {
+          "number": "12.11",
+          "title": "정렬의 응용: 영어 사전을 위한 정렬",
+          "toc_printed_start": 487,
+          "pdf_start": 478
+        },
+        {
+          "number": "",
+          "title": "연습문제",
+          "toc_printed_start": 490,
+          "pdf_start": 481
+        }
+      ]
+    },
+    {
+      "chapter": 13,
+      "title": "탐색",
+      "pdf_start": 486,
+      "pdf_end": 523,
+      "first_body_printed_page": 496,
+      "last_included_printed_page": 532,
+      "sections": [
+        {
+          "number": "13.1",
+          "title": "탐색이란?",
+          "toc_printed_start": 496,
+          "pdf_start": 487
+        },
+        {
+          "number": "13.2",
+          "title": "정렬되지 않은 배열에서의 탐색",
+          "toc_printed_start": 497,
+          "pdf_start": 488
+        },
+        {
+          "number": "13.3",
+          "title": "정렬된 배열에서의 탐색",
+          "toc_printed_start": 500,
+          "pdf_start": 491
+        },
+        {
+          "number": "13.4",
+          "title": "이진 탐색 트리",
+          "toc_printed_start": 510,
+          "pdf_start": 501
+        },
+        {
+          "number": "13.5",
+          "title": "AVL 트리",
+          "toc_printed_start": 511,
+          "pdf_start": 502
+        },
+        {
+          "number": "13.6",
+          "title": "2-3 트리",
+          "toc_printed_start": 523,
+          "pdf_start": 514
+        },
+        {
+          "number": "13.7",
+          "title": "2-3-4 트리",
+          "toc_printed_start": 528,
+          "pdf_start": 519
+        },
+        {
+          "number": "",
+          "title": "연습문제",
+          "toc_printed_start": 531,
+          "pdf_start": 522
+        }
+      ]
+    },
+    {
+      "chapter": 14,
+      "title": "해싱",
+      "pdf_start": 524,
+      "pdf_end": 561,
+      "first_body_printed_page": 534,
+      "last_included_printed_page": 570,
+      "sections": [
+        {
+          "number": "14.1",
+          "title": "해싱이란?",
+          "toc_printed_start": 534,
+          "pdf_start": 525
+        },
+        {
+          "number": "14.2",
+          "title": "추상 자료형 사전",
+          "toc_printed_start": 535,
+          "pdf_start": 526
+        },
+        {
+          "number": "14.3",
+          "title": "해싱의 구조",
+          "toc_printed_start": 536,
+          "pdf_start": 527
+        },
+        {
+          "number": "14.4",
+          "title": "해시함수",
+          "toc_printed_start": 542,
+          "pdf_start": 533
+        },
+        {
+          "number": "14.5",
+          "title": "개방 주소법",
+          "toc_printed_start": 546,
+          "pdf_start": 537
+        },
+        {
+          "number": "14.6",
+          "title": "체이닝",
+          "toc_printed_start": 558,
+          "pdf_start": 549
+        },
+        {
+          "number": "14.7",
+          "title": "해싱의 성능 분석",
+          "toc_printed_start": 564,
+          "pdf_start": 555
+        },
+        {
+          "number": "14.8",
+          "title": "해싱의 응용 분야",
+          "toc_printed_start": 568,
+          "pdf_start": 559
+        },
+        {
+          "number": "",
+          "title": "연습문제",
+          "toc_printed_start": 569,
+          "pdf_start": 560
+        }
+      ]
+    }
+  ],
+  "printed_mapping_segments": [
+    {
+      "pdf_start": 1,
+      "pdf_end": 32,
+      "printed_equals_pdf_plus": 5
+    },
+    {
+      "pdf_start": 33,
+      "pdf_end": 61,
+      "printed_equals_pdf_plus": 6
+    },
+    {
+      "pdf_start": 62,
+      "pdf_end": 92,
+      "printed_equals_pdf_plus": 7
+    },
+    {
+      "pdf_start": 93,
+      "pdf_end": 431,
+      "printed_equals_pdf_plus": 8
+    },
+    {
+      "pdf_start": 432,
+      "pdf_end": 562,
+      "printed_equals_pdf_plus": 9
+    }
+  ],
+  "missing_printed_pages": [
+    38,
+    68,
+    100,
+    440
+  ],
+  "notes": [
+    "장 표지에는 쪽수가 인쇄되어 있지 않으므로 표지 인쇄쪽수는 부여하지 않았다.",
+    "목차 p.7에서 연결 리스트로 구현한 스택과 큐에 모두 7.5 번호가 붙어 있다. 임의로 7.6으로 고치지 않았다.",
+    "한 가지 고정 오프셋을 전체에 적용하면 인용 오류가 발생한다. 최종 인용은 파일코드·절·PDF면번호 기준을 권장한다.",
+    "프린트 p.38, 68, 100, 440의 수록 면은 파일에서 확인할 수 없다. 내용 유무를 추정하지 않는다."
+  ],
+  "visually_checked_pdf_pages": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    32,
+    33,
+    34,
+    61,
+    62,
+    63,
+    92,
+    93,
+    94,
+    136,
+    137,
+    138,
+    166,
+    167,
+    168,
+    212,
+    213,
+    214,
+    244,
+    245,
+    246,
+    312,
+    313,
+    314,
+    350,
+    351,
+    352,
+    386,
+    387,
+    388,
+    431,
+    432,
+    433,
+    485,
+    486,
+    487,
+    523,
+    524,
+    525,
+    562
+  ],
+  "boundary_images_directory": "C:\\Users\\user\\Desktop\\Obsidian\\git-study-sync\\CS\\CPP\\tmp\\pdfs\\c_ds_compilation\\source_a_catalog_images"
+}

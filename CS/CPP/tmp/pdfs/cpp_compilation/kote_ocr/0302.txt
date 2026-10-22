@@ -1,0 +1,24 @@
+for (int i<V; i++)
+if (!visited[il)
+FiIIStack(i, visited, adj, stack);
+4. DFS를 수행하는 Fi11Stack() 함수는 네 개의 인자를 받습니다. 정수형 node는 현재 정점 인
+텍스이고, 부울형 벡터 visited는 기존에 방문한 정점을 기록한 벡터이고. 2차원 정수형 벡터
+adj는 그래프를 나타내는 인접 리스트입니다. 마지막으로 정수형 스택 stack은 방문 순서에
+따른 정점 인덱스를 기록하고 있습니다. visited, adj. stack 인자는 참조로 전달됩니다. DFS
+는 일반적인 방식으로 구현하되, 현재 정점 인덱스를 스택에 추가하는 작업이 추가되어야 합
+니다.
+void FiIIStack(int node, vector<bool>& visited,
+vector〈vector<int〉〉& adj, stack<int>& stack)
+visited[node]
+- true;
+for (autO next : adj[node])
+if (!visited[nextl)
+FillStack(next, visited, adj, stack);
+stack.push(node);
+5. 새로운 함수 Transpose( )를 추가하겠습니다. 이 함수는 인접 리스트로 표현된 그래프를 인자
+로 받고, 전치된 그래프를 반환합니다.
+vector<vector<int〉〉 Transpose(int V, vector〈vector<int〉〉 adj)
+vector〈vector〈int〉〉 transpose(V);
+for (int i =0; i 〈V; i*+)
+for (autO next : adj[il)
+313

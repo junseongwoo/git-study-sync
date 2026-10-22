@@ -1,0 +1,30 @@
+그림 6-6 연습 문제 28에서 사용할 그래프
+8
+5
+1,
+6
+4
+2
+7
+3
+이제 그림 6-6과 같은 그래프를 생성하여 반환하는 함수를 작성합니다.
+template 〈typename T>
+autO create reference_graph()
+Graph<T> G(9);
+map〈unsigned,
+edge—map[l ]
+edge—map[기
+edge—map[3]
+edge—map[4]
+edge-map[5]
+edge-map[6]
+edge—map[7]
+edge—map[8]
+vector〈pair〈unsigned,
+T〉〉〉 edge-map;
+for (auto& i : edge—map)
+for (autO& : i.second)
+G.add-edge(Edge<T>{ i.first, j.first, j.second });
+return 6;
+BFS에서 에지 가중치를 사용하지 않기 때문에 모든 에지 가중치는 0으로 설정했습니다.
+251

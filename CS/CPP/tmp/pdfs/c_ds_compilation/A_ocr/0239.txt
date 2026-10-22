@@ -1,0 +1,37 @@
+프로그램 7.11 연결된큐스t제연산
+// 삭제 함수
+element dequeue(Link0dQueueTypo 씨)
+QueueN0de *temp =q-> front;
+element data;
+if (is-e«vty(q)) { // 공백상태
+fprintf(stderr, "스택이 비어있|음\n
+exit(l);
+else {
+data = temp->data;
+q->front = q->front->link;
+if (q->front == NULL)
+q->rear = NULL;
+free(temp) ;
+return data;
+연결된 큐 프로그램
+// 데이터를 꺼낸다.
+// front5 다음노드를 가리키도록 한다.
+// 공백 상태
+// 동적에모리 해제
+// 데이터 반환
+다음은 연결된 큐를 시용하는 전체 프로그램이다. 공백 상태 김출은 front나 rear가 NULL이면
+공백 상대로 판단할 수 있다. 연결 리스트의 경우, 메모리 할당과정에서 오류가 있지 않는 한 포화
+상태는 없다고 보아야 한다. 따라서 포화 상태 검출 함수인 is-full 함수는 항상 다를 반환한다
+프로그램 7.12 연결된 큐 프로그램
+#include <stdio.h>
+#include <stdlib.h>
+// 요소의 타입
+typedef int element;
+typedef struct QueueNode { // 큐의 노드의 타입
+element data;
+struct QueueNode *link;
+} QueueNode•
+typedef struct { // 큐 ADT 구현
+QueueNode *front, * rear ;
+} LinkedQueueType;
+CHAPTER07 연결 리스틔| 247

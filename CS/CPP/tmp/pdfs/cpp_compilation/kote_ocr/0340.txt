@@ -1,0 +1,32 @@
+3. 이제 백트래킹 방식과 다르게 코드를 작성해보겠습니다. 기저 조건을 처리한 후, 곧바로 다음
+두 상태를 김사하는 것이 아니라 개시로 久卜%하는 memo 테이블을 김사해야 합니다.
+// 현재 상태가 개시에 있는지 확인
+if (memo[il(suml == UNKNOWN)
+// 현재 상태에 대한 솔루션을 구하여 개시에 저장
+b001 append = SubsetSum Memoization(set, sum - set[i], i + 1,
+b001 ignore = SubsetSum Memoization(set, sum, i 十 1, memo);
+memo[i][sum] = append || ignore;
+// 캐시에 저장된| 값을 반환
+return memo[i][sum];
+memo);
+4. 이제 main() 함수에 subsetSum-Memoization() 함수를 호출하는 코드를 추가합니다. 더불어
+) 함수 앞부분에서 target 값을 6799로 변경하고, tests 값은 3으로 변경합니다.
+int main()
+vector<int〉 set = {16, 1058, 22, 13, 46, 55, 3, 92, 47, 7,
+98, 367, 807, 106, 333, 85, 577, 9, 3059};
+int target = 6799;
+lnt tests = 3;
+sort(set.begin(), set.end());
+for (int i = 0; 〈 tests; i++)
+b001 found;
+clock t timer
+switch (i)
+case 0:
+break;
+case 1 •.
+found
+break;
+= clock();
+found = SubsetSum_BruteForce(set, target);
+= SubsetSum_Backtracking(set, target, 0);
+351

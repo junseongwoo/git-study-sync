@@ -1,0 +1,27 @@
+ValueType 대T_Get( HashTable• HT, KeyType Key )
+// 주소를 해싱한다.
+int Address = CHT Hash( Key, strlen(Key), HT->TableSize );
+// 해싱한 주소에 있는 링크드 리스트를 가져온다.
+List TheList = HT->Table[Addressl;
+List Target = NULL;
+if ( TheList == NULL )
+return NULL;
+// 원하는 값을 찾을 때까지 순자 탐색
+while ( 1 )
+if ( strcmp( TheList->Key, Key )
+Target = TheList;
+= 0 )
+break,
+if ( TheList->Next
+= NULL )
+break,
+TheList
+TheList->Next;
+return Target-〉Value,
+삽입 연산
+체이닝 기반 해시 테이블의 삽입 연산도 탐색 연산과 비슷한 원리로 동작합니다. 먼저 해시 함수를
+이용하여 데이터가 삽입될 링크드 리스트의 주소를 얻어낸 후, 링크드 리스트가 비어 있으면 데이터
+를 바로 삽입하고 그렇지 않다면 링크드 리스트의 헤드 앞에 삽입합니다.
+왜 헤드 앞인지 그 이유를 지금부터 설명하겠습니다. 다음과 같이 주소 10871에 WJLY라는 기를
+가진 데이터가 이미 삼입된 해시 테이블이 있다고 가정해봅시다.
+Chapter 08 • 해시 테이올 349

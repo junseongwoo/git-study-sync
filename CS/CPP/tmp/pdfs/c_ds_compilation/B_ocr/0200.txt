@@ -1,0 +1,30 @@
+소(노드)가 어떤 집힘에 속해 있는지 알려면 이 원소가 속한 트리의 뿌리 노드를 찾으면 됩니다.
+분리 집합의 각 노드는 '부모' 노드를 가리기는 포인터를 갖고 있지요? 이 포인터를 타고 쪽 올라가
+면 부모가 NULL인 뿌리 노-드를 만날 수 있습니다. 이 뿌리 노드는 곧 집합을 나타내므로 이것을 반
+환하면 해당 노드가 소속된 집합을 반환하게 되는 것입니다. 구현은 다음과 같습니다.
+DisjointSet* DS FindSet( DisjointSet* Set )
+while ( Set-Parent != NULL )
+Set = Set->Parent,
+retum Set,
+4.43 분리 집합 예제 프로그램
+이어서 분리 집합 예제 프로그램을 만들어보겠습니다. 이 예제 소스 코드에는 앞서 살펴본 합집합을
+구현한 DS-UnionSet( ) 함수와 집합 탐색을 구현한 DS FindSet( ) 함수 외에도 집합을 생성하
+는 DS MakeSet ( )과 이를 소멸시기는 DS-DestroySet( ) 함수가 구현되어 있습니다.
+國장/Disj0ingSet/Disj0intSet. h
+01
+02
+04
+05
+07
+09
+11
+#ifndef DISJ이NTSET_H
+DISJ이NTSET_H
+$include <stdio.h〉
+$include <stdlib h〉
+typ&f struct tagDisjointSet
+struct tagDisjointSet* Parent,
+void*
+} DisjointSet;
+Data,
+192 Part 01 • 자료구조

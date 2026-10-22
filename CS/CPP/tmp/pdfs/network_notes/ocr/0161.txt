@@ -1,0 +1,44 @@
+2.7 • 소켓 프로그래밍: 네트워크 0H를리게이신1 생성
+153
+서버
+(ServerlP에서 수행)
+입력 요청에 대한
+port-x인 소켓 생성
+serverSocket •
+socket ()
+입력 연결 요청 대기
+TCP 연결 설정
+4-
+connectionSocket =
+serverSocket. accept ( )
+t에서
+요청 읽기
+connectionsocket에
+응답 쓰기
+connectionSocket
+닫기
+그림 2.29 • TCP를 이용한 클라이언트-서버 애플리케이션
+-十
+글라이언트
+ServerIP, port=x에
+연결되는 소켓 생성
+c1ientSocket •
+socket ()
+clientgocket을
+이용하여 요청 보내기
+cIientSocket에서
+응답 읽기
+c1ientSocket
+닫기
+c1ientSocket . connect ( (serverName, severport) )
+클라이언트가 TCP 소켓을 이용하여 서버로 (혹은 그 반대로) 데이터를 보내기 전에
+TCP 연결이 먼저 클라이언트와 서버 사이에 설정되어야 한다. 위의 라인은 클라이언
+트와 서버 간에 TCP 연결을 시작한다. connect () 메소드의 파라미터는 연결의 서
+버 쪽 주소이다. 이 라인이 수행된 후에 세 방향 핸드세이크가 수행되고 클라이언트와
+서버 간에 TCP 연결이 설정된다.
+raw_input ( ' lnput lowercase sentence : ' )
+sentence
+UDPC1ient처럼 위 라인은 사용자로부터 문장을 획득한다. 문자열 sentence는 사
+용자가 리kl(return) 카를 입력하여 문장을 마칠 때까지 문자를 계속해서 모은다. 다음
+라인 또한 UDPC1ient와 매우 다르다.
+cl ientSocket . send ( sentence . encode ( ) )

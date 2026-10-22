@@ -1,0 +1,42 @@
+04장/LCRSTree/LCRSTree .h
+01
+02
+03
+04
+05
+06
+07
+08
+09
+12
+14
+15
+18
+19
+20
+22
+23
+24
+25
+#ifndef LCRS_TREE H
+$define LCRS TREE_H
+#include 〈stdiO h>
+#include <stdlib.h>
+typedef char ElementType,
+typedef struct tagLCRSNode
+struct tagLCRSNode* LeftChiId;
+struct tagLCRSNode* RightSibling;
+ElementType Data;
+} LCRSNode;
+LCRSNode* LCRS_CreateN0de( E1ementType NewData );
+VOid
+VOid
+void
+VOid
+ændif
+LCRS_DestroyNode( LCRSNode* Node ):
+LCRS_DestroyTree( LCRSNode* ROOt );
+LCRS-AddChiIdN0de( LCRSNode* ParentNode, *ChiIdN0de);
+LCRS_PrintTree( LCRSNode* Node, int Depth );
+Chapter 04 • 트리
+155

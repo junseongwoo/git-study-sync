@@ -1,0 +1,38 @@
+96 RED *,951
+98 BLACK [R,971 -
+101 RED *,991
+100 BLACK [L,1011
+102 BLACK [R,1011
+Enter command number
+2
+2
+2
+2
+(1) Create a node, (2) Remove a node, (3) Search a NOde
+(4) Disp1ay Tree (5) quit
+command number : 2
+Enter parameter (1~200) •
+99 •
+Enter command number
+노드 99 삭제
+(1) Create a node, (2) Remove a node, (3) Search a NOde
+(4) Display Tree (5) quit
+command number:4
+100 BLACK [자서]
+97 RED [L,100]
+95 BLACK [L,971
+94 RED [L,95] -
+96 RED [R,95] -
+98 BLACK [R,971
+101 BLACK [R,100]
+102 RED [R,1011
+Enter command number
+2
+2
+2
+2
+(1) Create a node, (2) Remove a node, (3) Search a NOde
+(4) Display Tree (5) quit
+command number:5
+Chapter % •
+3이

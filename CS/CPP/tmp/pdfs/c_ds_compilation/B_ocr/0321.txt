@@ -1,0 +1,34 @@
+LeftPosition = HEAP GetLeftChild(ParentPosition);
+RightPosition = LeftPosition + 1;
+1十 ( H-XJsedSize 〈 ( H-XapacitY / 2 ) )
+H-Xapacity /= 2:
+H-黜0血s =
+대eapNode•) realloc( H-州0血s, sizeof( HeapNode ) * H-XapacitY );
+72.4 예제 프로그램
+지금까지 공부했던 내용을 코드에 쏟아부을 차례입니다. 이번에 만들 힘 예제 프로그램은 3개의 파
+일로 구성되어 있습니다. Heap.h와 Heap.c에서는 힘의 각종 연산 수행 함수들을 선언 및 구현하
+며 Test Heap.c에는 함수들을 테스트하는 코드가 담겨 있습니다.
+07장/Heap/Heap.h
+01
+02
+03
+04
+05
+09
+10
+12
+14
+16
+#ifndef HEAP_H
+HEAP-H
+$include <stdio.h>
+$include <memory .h>
+#include <stdlib.h〉
+typedef int
+typedef struct tageHeapNode {
+EIeæntType Data;
+} HeapNode,
+typedef Struct tagHeap {
+HeapNode* N0des;
+int Capacity;
+316 Part02•일고리중

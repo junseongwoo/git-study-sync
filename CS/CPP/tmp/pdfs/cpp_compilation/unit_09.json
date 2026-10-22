@@ -1,0 +1,982 @@
+{
+  "unit": 9,
+  "title": "예외 처리",
+  "part": "C++",
+  "scope": [
+    {
+      "source": "B",
+      "start": 618,
+      "end": 634
+    }
+  ],
+  "learning": [
+    {
+      "text": "C++에서 예외를 발생시키고 처리하는 방식을 다룬다.",
+      "refs": [
+        {
+          "source": "B",
+          "section": "C++에서의 예외 처리",
+          "pages": [
+            618
+          ]
+        }
+      ],
+      "evidence": "예외처리를어떠한방식"
+    },
+    {
+      "text": "스택 풀기, 여러 종류의 예외, 모든 예외 받기와 noexcept를 다룬다.",
+      "refs": [
+        {
+          "source": "B",
+          "section": "C++에서의 예외 처리",
+          "pages": [
+            623,
+            626,
+            631,
+            632
+          ]
+        }
+      ],
+      "evidence": "스택풀기(stack unwinding)"
+    }
+  ],
+  "concepts": [
+    {
+      "title": "예외와 기존 처리 방식",
+      "items": [
+        {
+          "text": "예외(exception)는 정상적인 상황에서 벗어난 예외적인 상황이다.",
+          "refs": [
+            {
+              "source": "B",
+              "section": "예외란?",
+              "pages": [
+                618
+              ]
+            }
+          ],
+          "evidence": "정상적인상황에서벗어난모든예외적인상황"
+        },
+        {
+          "text": "원문은 범위를 벗어난 vector 접근과 큰 메모리 할당을 실행 중 오류가 발생할 수 있는 예로 든다.",
+          "refs": [
+            {
+              "source": "B",
+              "section": "예외란?",
+              "pages": [
+                618
+              ]
+            }
+          ],
+          "evidence": "실제로실행해보면오류"
+        },
+        {
+          "text": "기존 방식은 작업 후 결과값을 확인하며, 깊은 함수에서 발생한 문제를 바깥에서 확인하려면 각 함수가 처리 결과를 전달해야 한다.",
+          "refs": [
+            {
+              "source": "B",
+              "section": "기존의 예외 처리 방식",
+              "pages": [
+                619,
+                620
+              ]
+            }
+          ],
+          "evidence": "각각의함수들에서처리결과를모두리턴"
+        }
+      ]
+    },
+    {
+      "title": "throw와 표준 예외 객체",
+      "items": [
+        {
+          "text": "C++은 throw로 예외가 발생했다는 사실을 명시적으로 나타낼 수 있다.",
+          "refs": [
+            {
+              "source": "B",
+              "section": "예외 발생시키기 - throw",
+              "pages": [
+                620
+              ]
+            }
+          ],
+          "evidence": "명시적으로나타낼수있습니다."
+        },
+        {
+          "text": "throw 다음에는 예외로 전달할 객체를 쓰며, 원문은 std::out_of_range 객체를 던진다.",
+          "refs": [
+            {
+              "source": "B",
+              "section": "예외 발생시키기 - throw",
+              "pages": [
+                621
+              ]
+            }
+          ],
+          "evidence": "예외로전달하고싶은객체"
+        },
+        {
+          "text": "표준 라이브러리에는 out_of_range·overflow_error·length_error·runtime_error 등의 예외가 정의되어 있다.",
+          "refs": [
+            {
+              "source": "B",
+              "section": "예외 발생시키기 - throw",
+              "pages": [
+                621
+              ]
+            }
+          ],
+          "evidence": "overflow_error, length_error"
+        },
+        {
+          "text": "throw를 실행하면 그 위치에서 즉시 함수를 빠져나가 예외 처리 부분으로 이동하므로 아래 문장들은 실행하지 않는다.",
+          "refs": [
+            {
+              "source": "B",
+              "section": "예외 발생시키기 - throw",
+              "pages": [
+                621
+              ]
+            }
+          ],
+          "evidence": "throw 밑에있는모든문장은실행되지"
+        },
+        {
+          "text": "예외를 처리하는 부분까지 함수를 빠져나가는 동안 스택에 생성된 객체들의 소멸자를 호출한다.",
+          "refs": [
+            {
+              "source": "B",
+              "section": "예외 발생시키기 - throw",
+              "pages": [
+                621
+              ]
+            }
+          ],
+          "evidence": "stack 에생성되었던객체들을빠짐없이소멸"
+        }
+      ]
+    },
+    {
+      "title": "try·catch와 예외 내용",
+      "items": [
+        {
+          "text": "try 안에는 예외가 발생할 만한 코드를 넣으며, 예외가 없으면 catch는 무시한다.",
+          "refs": [
+            {
+              "source": "B",
+              "section": "예외 처리하기 - try와 catch",
+              "pages": [
+                623
+              ]
+            }
+          ],
+          "evidence": "밑에있는catch 문은무시"
+        },
+        {
+          "text": "catch는 던진 예외를 받는 부분이며, 괄호 안에 정의된 예외의 꼴에 맞는 객체를 받는다.",
+          "refs": [
+            {
+              "source": "B",
+              "section": "예외 처리하기 - try와 catch",
+              "pages": [
+                623
+              ]
+            }
+          ],
+          "evidence": "예외의꼴에맞는객체"
+        },
+        {
+          "text": "out_of_range의 what()으로 예외에 관해 저장된 문자열을 확인할 수 있다.",
+          "refs": [
+            {
+              "source": "B",
+              "section": "예외 처리하기 - try와 catch",
+              "pages": [
+                623
+              ]
+            }
+          ],
+          "evidence": "what() 함수로그값을들여다"
+        }
+      ]
+    },
+    {
+      "title": "스택 풀기와 생성자",
+      "items": [
+        {
+          "text": "스택 풀기(stack unwinding)는 catch로 이동하면서 스택상에 정의된 객체들을 소멸시키는 과정이다.",
+          "refs": [
+            {
+              "source": "B",
+              "section": "스택 풀기(stack unwinding)",
+              "pages": [
+                626
+              ]
+            }
+          ],
+          "evidence": "스택상에서정의된객체들을소멸시키는과정"
+        },
+        {
+          "text": "원문의 호출 예에서는 func3에서 던진 예외가 func2·func1을 지나 main의 catch까지 전달된다.",
+          "refs": [
+            {
+              "source": "B",
+              "section": "스택 풀기(stack unwinding)",
+              "pages": [
+                624,
+                625
+              ]
+            }
+          ],
+          "evidence": "main 함수에있는catch"
+        },
+        {
+          "text": "생성자에서 예외가 발생하면 해당 객체의 소멸자가 호출되지 않으므로, 원문은 이전에 획득한 자원을 catch에서 해제하도록 주의시킨다.",
+          "refs": [
+            {
+              "source": "B",
+              "section": "스택 풀기(stack unwinding)",
+              "pages": [
+                626
+              ]
+            }
+          ],
+          "evidence": "생성자에서예외가발생시에소멸자가호출되지"
+        }
+      ]
+    },
+    {
+      "title": "여러 종류와 catch 순서",
+      "items": [
+        {
+          "text": "하나의 try에 여러 catch를 붙여 char·int·string·const char* 등 여러 종류의 예외를 받을 수 있다.",
+          "refs": [
+            {
+              "source": "B",
+              "section": "여러 종류의 예외 받기",
+              "pages": [
+                626,
+                627,
+                628
+              ]
+            }
+          ],
+          "evidence": "여러종류의throw 된객체"
+        },
+        {
+          "text": "catch는 가장 먼저 대입될 수 있는 객체를 받으므로, Parent catch가 앞에 있으면 Child 예외도 먼저 받는다.",
+          "refs": [
+            {
+              "source": "B",
+              "section": "여러 종류의 예외 받기",
+              "pages": [
+                629
+              ]
+            }
+          ],
+          "evidence": "가장먼저대입될수있는객체"
+        },
+        {
+          "text": "원문은 파생 클래스 예외를 받는 catch를 기반 클래스 catch보다 앞에 두어 각각 처리한다.",
+          "refs": [
+            {
+              "source": "B",
+              "section": "여러 종류의 예외 받기",
+              "pages": [
+                629,
+                630
+              ]
+            }
+          ],
+          "evidence": "Parent catch 를Child catch 보다뒤"
+        }
+      ]
+    },
+    {
+      "title": "모든 예외와 noexcept",
+      "items": [
+        {
+          "text": "던진 예외를 받는 catch가 없으면 원문 예제는 프로그램이 비정상 종료된다.",
+          "refs": [
+            {
+              "source": "B",
+              "section": "모든 예외 받기",
+              "pages": [
+                631
+              ]
+            }
+          ],
+          "evidence": "프로그램이비정상적으로종료"
+        },
+        {
+          "text": "catch(...)는 try 안에서 발생한 모든 예외를 받지만 특정 타입의 객체로 받을 수는 없다.",
+          "refs": [
+            {
+              "source": "B",
+              "section": "모든 예외 받기",
+              "pages": [
+                632
+              ]
+            }
+          ],
+          "evidence": "모든예외들을받게"
+        },
+        {
+          "text": "noexcept는 함수가 예외를 발생시키지 않음을 명시하는 키워드이다.",
+          "refs": [
+            {
+              "source": "B",
+              "section": "예외를 발생시키지 않는 함수 - noexcept",
+              "pages": [
+                632
+              ]
+            }
+          ],
+          "evidence": "예외를발생시키지않는다면noexcept"
+        },
+        {
+          "text": "noexcept 함수가 실제 예외를 발생시키면 예외가 제대로 처리되지 않고 프로그램이 종료된다.",
+          "refs": [
+            {
+              "source": "B",
+              "section": "예외를 발생시키지 않는 함수 - noexcept",
+              "pages": [
+                633
+              ]
+            }
+          ],
+          "evidence": "프로그램이종료됩니다."
+        },
+        {
+          "text": "원문은 C++ 11부터 소멸자가 기본적으로 noexcept이므로 소멸자에서 예외를 던지지 않도록 주의시킨다.",
+          "refs": [
+            {
+              "source": "B",
+              "section": "예외를 발생시키지 않는 함수 - noexcept",
+              "pages": [
+                634
+              ]
+            }
+          ],
+          "evidence": "소멸자들은기본적으로noexcept"
+        }
+      ]
+    }
+  ],
+  "procedures": [
+    {
+      "title": "원문의 Vector 예외 처리",
+      "steps": [
+        {
+          "text": "try 안에서 vec.at(index)를 호출한다.",
+          "refs": [
+            {
+              "source": "B",
+              "section": "예외 처리하기 - try와 catch",
+              "pages": [
+                622
+              ]
+            }
+          ],
+          "evidence": "data = vec.at(index);"
+        },
+        {
+          "text": "index가 범위를 벗어나면 std::out_of_range를 throw한다.",
+          "refs": [
+            {
+              "source": "B",
+              "section": "예외 처리하기 - try와 catch",
+              "pages": [
+                622
+              ]
+            }
+          ],
+          "evidence": "throw std::out_of_range"
+        },
+        {
+          "text": "catch(std::out_of_range& e)가 받아 e.what()을 출력한다.",
+          "refs": [
+            {
+              "source": "B",
+              "section": "예외 처리하기 - try와 catch",
+              "pages": [
+                622
+              ]
+            }
+          ],
+          "evidence": "e.what()"
+        }
+      ]
+    },
+    {
+      "title": "원문의 스택 풀기",
+      "steps": [
+        {
+          "text": "func3에서 예외를 던진다.",
+          "refs": [
+            {
+              "source": "B",
+              "section": "스택 풀기(stack unwinding)",
+              "pages": [
+                624
+              ]
+            }
+          ],
+          "evidence": "Exception from 3!"
+        },
+        {
+          "text": "catch가 없는 func2·func1을 빠져나가면서 각 함수의 객체를 소멸시킨다.",
+          "refs": [
+            {
+              "source": "B",
+              "section": "스택 풀기(stack unwinding)",
+              "pages": [
+                624,
+                625,
+                626
+              ]
+            }
+          ],
+          "evidence": "각함수들에정의되어있던객체들이잘소멸"
+        },
+        {
+          "text": "main에 있는 catch에서 전달된 예외를 처리한다.",
+          "refs": [
+            {
+              "source": "B",
+              "section": "스택 풀기(stack unwinding)",
+              "pages": [
+                625
+              ]
+            }
+          ],
+          "evidence": "예외가main 함수에까지잘전달"
+        }
+      ]
+    }
+  ],
+  "syntax": [
+    {
+      "label": "out_of_range 처리: 원문 발췌",
+      "code": "try {\n  data = vec.at(index);\n} catch (std::out_of_range& e) {\n  std::cout << \"예외발생! \" << e.what() << std::endl;\n}",
+      "refs": [
+        {
+          "source": "B",
+          "section": "예외 처리하기 - try와 catch",
+          "pages": [
+            622
+          ]
+        }
+      ],
+      "evidence": "try {\n  data = vec.at(index);\n} catch (std::out_of_range& e) {\n  std::cout << \"예외발생! \" << e.what() << std::endl;\n}",
+      "note": null
+    }
+  ],
+  "formulas": [],
+  "comparisons": [
+    {
+      "title": "예외 처리 구문의 역할",
+      "headers": [
+        "구문",
+        "원문의 역할"
+      ],
+      "rows": [
+        [
+          {
+            "text": "throw",
+            "refs": [
+              {
+                "source": "B",
+                "section": "예외 발생시키기 - throw",
+                "pages": [
+                  621
+                ]
+              }
+            ],
+            "evidence": "throw"
+          },
+          {
+            "text": "예외 객체를 던지고 처리 부분으로 이동한다.",
+            "refs": [
+              {
+                "source": "B",
+                "section": "예외 발생시키기 - throw",
+                "pages": [
+                  621
+                ]
+              }
+            ],
+            "evidence": "예외처리하는부분까지점프"
+          }
+        ],
+        [
+          {
+            "text": "try",
+            "refs": [
+              {
+                "source": "B",
+                "section": "예외 처리하기 - try와 catch",
+                "pages": [
+                  623
+                ]
+              }
+            ],
+            "evidence": "try"
+          },
+          {
+            "text": "try 안에는 예외가 발생할 만한 코드를 넣으며, 예외가 없으면 catch는 무시한다.",
+            "refs": [
+              {
+                "source": "B",
+                "section": "예외 처리하기 - try와 catch",
+                "pages": [
+                  623
+                ]
+              }
+            ],
+            "evidence": "밑에있는catch 문은무시"
+          }
+        ],
+        [
+          {
+            "text": "catch",
+            "refs": [
+              {
+                "source": "B",
+                "section": "예외 처리하기 - try와 catch",
+                "pages": [
+                  623
+                ]
+              }
+            ],
+            "evidence": "catch"
+          },
+          {
+            "text": "catch는 던진 예외를 받는 부분이며, 괄호 안에 정의된 예외의 꼴에 맞는 객체를 받는다.",
+            "refs": [
+              {
+                "source": "B",
+                "section": "예외 처리하기 - try와 catch",
+                "pages": [
+                  623
+                ]
+              }
+            ],
+            "evidence": "예외의꼴에맞는객체"
+          }
+        ]
+      ]
+    }
+  ],
+  "terms": [
+    {
+      "term": "예외(exception)",
+      "definition": {
+        "text": "예외(exception)는 정상적인 상황에서 벗어난 예외적인 상황이다.",
+        "refs": [
+          {
+            "source": "B",
+            "section": "예외란?",
+            "pages": [
+              618
+            ]
+          }
+        ],
+        "evidence": "정상적인상황에서벗어난모든예외적인상황"
+      }
+    },
+    {
+      "term": "throw",
+      "definition": {
+        "text": "throw 다음에는 예외로 전달할 객체를 쓰며, 원문은 std::out_of_range 객체를 던진다.",
+        "refs": [
+          {
+            "source": "B",
+            "section": "예외 발생시키기 - throw",
+            "pages": [
+              621
+            ]
+          }
+        ],
+        "evidence": "예외로전달하고싶은객체"
+      }
+    },
+    {
+      "term": "try",
+      "definition": {
+        "text": "try 안에는 예외가 발생할 만한 코드를 넣으며, 예외가 없으면 catch는 무시한다.",
+        "refs": [
+          {
+            "source": "B",
+            "section": "예외 처리하기 - try와 catch",
+            "pages": [
+              623
+            ]
+          }
+        ],
+        "evidence": "밑에있는catch 문은무시"
+      }
+    },
+    {
+      "term": "catch",
+      "definition": {
+        "text": "catch는 던진 예외를 받는 부분이며, 괄호 안에 정의된 예외의 꼴에 맞는 객체를 받는다.",
+        "refs": [
+          {
+            "source": "B",
+            "section": "예외 처리하기 - try와 catch",
+            "pages": [
+              623
+            ]
+          }
+        ],
+        "evidence": "예외의꼴에맞는객체"
+      }
+    },
+    {
+      "term": "what()",
+      "definition": {
+        "text": "out_of_range의 what()으로 예외에 관해 저장된 문자열을 확인할 수 있다.",
+        "refs": [
+          {
+            "source": "B",
+            "section": "예외 처리하기 - try와 catch",
+            "pages": [
+              623
+            ]
+          }
+        ],
+        "evidence": "what() 함수로그값을들여다"
+      }
+    },
+    {
+      "term": "스택 풀기(stack unwinding)",
+      "definition": {
+        "text": "스택 풀기(stack unwinding)는 catch로 이동하면서 스택상에 정의된 객체들을 소멸시키는 과정이다.",
+        "refs": [
+          {
+            "source": "B",
+            "section": "스택 풀기(stack unwinding)",
+            "pages": [
+              626
+            ]
+          }
+        ],
+        "evidence": "스택상에서정의된객체들을소멸시키는과정"
+      }
+    },
+    {
+      "term": "noexcept",
+      "definition": {
+        "text": "noexcept는 함수가 예외를 발생시키지 않음을 명시하는 키워드이다.",
+        "refs": [
+          {
+            "source": "B",
+            "section": "예외를 발생시키지 않는 함수 - noexcept",
+            "pages": [
+              632
+            ]
+          }
+        ],
+        "evidence": "예외를발생시키지않는다면noexcept"
+      }
+    }
+  ],
+  "summary_basis": "편집 요약",
+  "summary": [
+    {
+      "text": "C++은 throw로 예외가 발생했다는 사실을 명시적으로 나타낼 수 있다.",
+      "refs": [
+        {
+          "source": "B",
+          "section": "예외 발생시키기 - throw",
+          "pages": [
+            620
+          ]
+        }
+      ],
+      "evidence": "명시적으로나타낼수있습니다."
+    },
+    {
+      "text": "catch는 던진 예외를 받는 부분이며, 괄호 안에 정의된 예외의 꼴에 맞는 객체를 받는다.",
+      "refs": [
+        {
+          "source": "B",
+          "section": "예외 처리하기 - try와 catch",
+          "pages": [
+            623
+          ]
+        }
+      ],
+      "evidence": "예외의꼴에맞는객체"
+    },
+    {
+      "text": "스택 풀기(stack unwinding)는 catch로 이동하면서 스택상에 정의된 객체들을 소멸시키는 과정이다.",
+      "refs": [
+        {
+          "source": "B",
+          "section": "스택 풀기(stack unwinding)",
+          "pages": [
+            626
+          ]
+        }
+      ],
+      "evidence": "스택상에서정의된객체들을소멸시키는과정"
+    },
+    {
+      "text": "noexcept 함수가 실제 예외를 발생시키면 예외가 제대로 처리되지 않고 프로그램이 종료된다.",
+      "refs": [
+        {
+          "source": "B",
+          "section": "예외를 발생시키지 않는 함수 - noexcept",
+          "pages": [
+            633
+          ]
+        }
+      ],
+      "evidence": "프로그램이종료됩니다."
+    }
+  ],
+  "review": [
+    {
+      "question": "throw 이후 같은 함수의 문장들이 실행되는가?",
+      "answer": {
+        "text": "throw를 실행하면 그 위치에서 즉시 함수를 빠져나가 예외 처리 부분으로 이동하므로 아래 문장들은 실행하지 않는다.",
+        "refs": [
+          {
+            "source": "B",
+            "section": "예외 발생시키기 - throw",
+            "pages": [
+              621
+            ]
+          }
+        ],
+        "evidence": "throw 밑에있는모든문장은실행되지"
+      }
+    },
+    {
+      "question": "스택 풀기란 무엇인가?",
+      "answer": {
+        "text": "스택 풀기(stack unwinding)는 catch로 이동하면서 스택상에 정의된 객체들을 소멸시키는 과정이다.",
+        "refs": [
+          {
+            "source": "B",
+            "section": "스택 풀기(stack unwinding)",
+            "pages": [
+              626
+            ]
+          }
+        ],
+        "evidence": "스택상에서정의된객체들을소멸시키는과정"
+      }
+    },
+    {
+      "question": "Child와 Parent 예외를 별도로 받으려면 catch 순서를 어떻게 두는가?",
+      "answer": {
+        "text": "원문은 파생 클래스 예외를 받는 catch를 기반 클래스 catch보다 앞에 두어 각각 처리한다.",
+        "refs": [
+          {
+            "source": "B",
+            "section": "여러 종류의 예외 받기",
+            "pages": [
+              629,
+              630
+            ]
+          }
+        ],
+        "evidence": "Parent catch 를Child catch 보다뒤"
+      }
+    },
+    {
+      "question": "noexcept 함수에서 예외가 발생하면 어떻게 되는가?",
+      "answer": {
+        "text": "noexcept 함수가 실제 예외를 발생시키면 예외가 제대로 처리되지 않고 프로그램이 종료된다.",
+        "refs": [
+          {
+            "source": "B",
+            "section": "예외를 발생시키지 않는 함수 - noexcept",
+            "pages": [
+              633
+            ]
+          }
+        ],
+        "evidence": "프로그램이종료됩니다."
+      }
+    }
+  ],
+  "cheat": {
+    "definitions": [
+      {
+        "term": "예외",
+        "definition": {
+          "text": "예외(exception)는 정상적인 상황에서 벗어난 예외적인 상황이다.",
+          "refs": [
+            {
+              "source": "B",
+              "section": "예외란?",
+              "pages": [
+                618
+              ]
+            }
+          ],
+          "evidence": "정상적인상황에서벗어난모든예외적인상황"
+        }
+      },
+      {
+        "term": "스택 풀기",
+        "definition": {
+          "text": "스택 풀기(stack unwinding)는 catch로 이동하면서 스택상에 정의된 객체들을 소멸시키는 과정이다.",
+          "refs": [
+            {
+              "source": "B",
+              "section": "스택 풀기(stack unwinding)",
+              "pages": [
+                626
+              ]
+            }
+          ],
+          "evidence": "스택상에서정의된객체들을소멸시키는과정"
+        }
+      },
+      {
+        "term": "noexcept",
+        "definition": {
+          "text": "noexcept는 함수가 예외를 발생시키지 않음을 명시하는 키워드이다.",
+          "refs": [
+            {
+              "source": "B",
+              "section": "예외를 발생시키지 않는 함수 - noexcept",
+              "pages": [
+                632
+              ]
+            }
+          ],
+          "evidence": "예외를발생시키지않는다면noexcept"
+        }
+      }
+    ],
+    "comparison_title": "예외 처리 구문",
+    "comparison_headers": [
+      "구문",
+      "역할"
+    ],
+    "comparison_rows": [
+      [
+        {
+          "text": "throw",
+          "refs": [
+            {
+              "source": "B",
+              "section": "예외 발생시키기 - throw",
+              "pages": [
+                621
+              ]
+            }
+          ],
+          "evidence": "throw"
+        },
+        {
+          "text": "예외 객체를 던지고 처리 부분으로 이동한다.",
+          "refs": [
+            {
+              "source": "B",
+              "section": "예외 발생시키기 - throw",
+              "pages": [
+                621
+              ]
+            }
+          ],
+          "evidence": "예외처리하는부분까지점프"
+        }
+      ],
+      [
+        {
+          "text": "try",
+          "refs": [
+            {
+              "source": "B",
+              "section": "예외 처리하기 - try와 catch",
+              "pages": [
+                623
+              ]
+            }
+          ],
+          "evidence": "try"
+        },
+        {
+          "text": "try 안에는 예외가 발생할 만한 코드를 넣으며, 예외가 없으면 catch는 무시한다.",
+          "refs": [
+            {
+              "source": "B",
+              "section": "예외 처리하기 - try와 catch",
+              "pages": [
+                623
+              ]
+            }
+          ],
+          "evidence": "밑에있는catch 문은무시"
+        }
+      ],
+      [
+        {
+          "text": "catch",
+          "refs": [
+            {
+              "source": "B",
+              "section": "예외 처리하기 - try와 catch",
+              "pages": [
+                623
+              ]
+            }
+          ],
+          "evidence": "catch"
+        },
+        {
+          "text": "catch는 던진 예외를 받는 부분이며, 괄호 안에 정의된 예외의 꼴에 맞는 객체를 받는다.",
+          "refs": [
+            {
+              "source": "B",
+              "section": "예외 처리하기 - try와 catch",
+              "pages": [
+                623
+              ]
+            }
+          ],
+          "evidence": "예외의꼴에맞는객체"
+        }
+      ]
+    ],
+    "formulas": [],
+    "syntax": [
+      {
+        "label": "out_of_range 처리: 원문 발췌",
+        "code": "try {\n  data = vec.at(index);\n} catch (std::out_of_range& e) {\n  std::cout << \"예외발생! \" << e.what() << std::endl;\n}",
+        "refs": [
+          {
+            "source": "B",
+            "section": "예외 처리하기 - try와 catch",
+            "pages": [
+              622
+            ]
+          }
+        ],
+        "evidence": "try {\n  data = vec.at(index);\n} catch (std::out_of_range& e) {\n  std::cout << \"예외발생! \" << e.what() << std::endl;\n}",
+        "note": null
+      }
+    ]
+  },
+  "checked_images": [
+    {
+      "source": "B",
+      "pages": [
+        621,
+        622,
+        623,
+        632
+      ]
+    }
+  ],
+  "editor_notes": [
+    "별도 요약 절은 확인되지 않아 본문을 편집 요약했다."
+  ]
+}

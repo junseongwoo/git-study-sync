@@ -1,0 +1,43 @@
+Queue -> Rear는 실제 후단의
+위치 값에 1 을 더한 값을 가진다.
+실제후단
+[이 [1]
+실제 후단이 배열 끝에 도달하민
+Queue -> Rear는 0이 된다
+후단
+[이 [1]
+[2]
+[2]
+10 20
+[3] [4] [5]
+'50' 삽입
+전단
+10 20
+[3] [4] [5]
+30
+[6]
+30
+[6]
+40
+[기
+40
+[기
+후단
+[8]
+> 실제후단
+50
+[8]
+if else 블록을 거지고 나면 Nodes 배열에서 Position이 가리기는 곳에 데이터를 저장합니다.
+다음 예시는 순환 큐의 삽입 연산을 구현한 CQ-Enqueue ( ) 함수입니다.
+void CQ-Enqueue( CircularQueue* Queue, E1ementType Data)
+int Position=O;
+if(Queue-Rear= =Queue-XapacitY )
+Position=Queue-Rear;
+Queue->Rear=@;
+else
+POS = Queue—>Rear十十;
+Queue->NodestPositionI Data=Data;
+누= 제거 연산
+노드 삽입 연소뻬서 후단을 나타내는 Rear를 잘 관리하는 일이 중요했던 것처럼, 노드 제거
+124
+Part 01 • 자료구조

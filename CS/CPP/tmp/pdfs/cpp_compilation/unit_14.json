@@ -1,0 +1,1190 @@
+{
+  "unit": 14,
+  "title": "type_traits·정규표현식·난수·시간·파일시스템·유틸리티",
+  "part": "C++",
+  "scope": [
+    {
+      "source": "B",
+      "start": 871,
+      "end": 960
+    }
+  ],
+  "learning": [
+    {
+      "text": "type_traits 는 타입에 대한 여러 연산을 수행하는 메타 함수들을 제공한다.",
+      "refs": [
+        {
+          "source": "B",
+          "section": "20장 / is_void",
+          "pages": [
+            875
+          ]
+        }
+      ],
+      "evidence": "타입들에대해서여러가지"
+    },
+    {
+      "text": "fstream 은 파일 데이터의 입출력을 담당하고, filesystem 은 파일 메타데이타에 대한 접근을 돕는다.",
+      "refs": [
+        {
+          "source": "B",
+          "section": "20장 / 파일시스템 라이브러리 소개",
+          "pages": [
+            926
+          ]
+        }
+      ],
+      "evidence": "파일메타데이타"
+    }
+  ],
+  "concepts": [
+    {
+      "title": "type_traits·SFINAE·enable_if",
+      "items": [
+        {
+          "text": "템플릿 메타 함수는 함수처럼 동작하는 템플릿 클래스이며 타입에 대한 연산을 수행한다.",
+          "refs": [
+            {
+              "source": "B",
+              "section": "20장 / 템플릿 메타 함수",
+              "pages": [
+                872
+              ]
+            }
+          ],
+          "evidence": "타입에대해연산"
+        },
+        {
+          "text": "type_traits 는 타입에 대한 여러 연산을 수행하는 메타 함수들을 제공한다.",
+          "refs": [
+            {
+              "source": "B",
+              "section": "20장 / is_void",
+              "pages": [
+                875
+              ]
+            }
+          ],
+          "evidence": "타입들에대해서여러가지"
+        },
+        {
+          "text": "is_void<void> 는 특수화된 템플릿으로 value 가 true 이고, 다른 타입은 false 이다.",
+          "refs": [
+            {
+              "source": "B",
+              "section": "20장 / is_void",
+              "pages": [
+                875
+              ]
+            }
+          ],
+          "evidence": "value 가false"
+        },
+        {
+          "text": "is_integral 은 정수 타입인지 확인하며, static_assert 는 전달한 식의 참·거짓을 컴파일 타임에 확인한다.",
+          "refs": [
+            {
+              "source": "B",
+              "section": "20장 / static_assert",
+              "pages": [
+                875,
+                876
+              ]
+            }
+          ],
+          "evidence": "컴파일타임에확인"
+        },
+        {
+          "text": "is_class 는 전달받은 타입이 클래스인지 확인하는 메타 함수이다.",
+          "refs": [
+            {
+              "source": "B",
+              "section": "20장 / is_class",
+              "pages": [
+                877
+              ]
+            }
+          ],
+          "evidence": "클래스인지아닌지확인"
+        },
+        {
+          "text": "SFINAE 는 Substitution Failure Is Not An Error 이며, 문법에 맞지 않는 템플릿 인자 치환 결과를 함수 오버로딩 후보에서 제외한다.",
+          "refs": [
+            {
+              "source": "B",
+              "section": "20장 / SFINAE",
+              "pages": [
+                883
+              ]
+            }
+          ],
+          "evidence": "Substitution Failure Is Not An Error"
+        },
+        {
+          "text": "원문은 SFINAE 에서 함수의 인자와 리턴 타입을 확인하며, 함수 내부 전체를 확인하지는 않는다고 설명한다.",
+          "refs": [
+            {
+              "source": "B",
+              "section": "20장 / SFINAE",
+              "pages": [
+                883
+              ]
+            }
+          ],
+          "evidence": "함수의인자들과리턴타입만"
+        },
+        {
+          "text": "enable_if 는 참으로 특수화된 버전에 type 을 정의하고, 나머지에는 type 을 정의하지 않는 방식으로 후보를 제한한다.",
+          "refs": [
+            {
+              "source": "B",
+              "section": "20장 / enable_if",
+              "pages": [
+                887
+              ]
+            }
+          ],
+          "evidence": "type 이정의되어있고"
+        }
+      ]
+    },
+    {
+      "title": "정규표현식 <regex>",
+      "items": [
+        {
+          "text": "정규표현식은 문자열에서 패턴을 찾아 규칙 확인, 검색, 치환에 사용한다.",
+          "refs": [
+            {
+              "source": "B",
+              "section": "20장 / 정규표현식 라이브러리 소개",
+              "pages": [
+                899
+              ]
+            }
+          ],
+          "evidence": "문자열에서패턴을찾는데"
+        },
+        {
+          "text": "regex_match 는 문자열 전체가 정규표현식의 패턴에 부합하면 true 를 리턴한다.",
+          "refs": [
+            {
+              "source": "B",
+              "section": "20장 / 전체 문자열 매칭하기",
+              "pages": [
+                901
+              ]
+            }
+          ],
+          "evidence": "문자열전체가"
+        },
+        {
+          "text": "부분 매칭 결과는 match[i].str() 로 접근하며, regex_match 의 첫 결과는 전체 문자열이고 그 뒤는 () 안의 문자열이다.",
+          "refs": [
+            {
+              "source": "B",
+              "section": "20장 / 부분 매칭 뽑아내기",
+              "pages": [
+                904
+              ]
+            }
+          ],
+          "evidence": "첫번째결과에전체문자"
+        },
+        {
+          "text": "match.suffix() 는 검색된 패턴 바로 뒤부터 원래 문자열 끝까지를 나타내므로 그 뒤에서 다시 검색할 수 있다.",
+          "refs": [
+            {
+              "source": "B",
+              "section": "20장 / 원하는 패턴 검색하기",
+              "pages": [
+                906
+              ]
+            }
+          ],
+          "evidence": "검색된패턴바로뒤부터"
+        },
+        {
+          "text": "regex_iterator 는 생성될 때와 ++ 될 때 regex_search 를 실행하고, 역참조하면 현재 패턴의 match_results 를 얻는다.",
+          "refs": [
+            {
+              "source": "B",
+              "section": "20장 / std::regex_iterator",
+              "pages": [
+                908
+              ]
+            }
+          ],
+          "evidence": "++ 연산자로증감될때마다regex_search"
+        },
+        {
+          "text": "regex_replace 는 패턴에 맞는 문자열을 다른 문자열로 치환한다.",
+          "refs": [
+            {
+              "source": "B",
+              "section": "20장 / 원하는 패턴 치환하기",
+              "pages": [
+                908
+              ]
+            }
+          ],
+          "evidence": "다른문자열로치환"
+        },
+        {
+          "text": "치환 문자열의 $1 은 첫 번째 캡쳐 그룹을 나타내며, 중첩된 그룹의 번호는 괄호가 열리는 순서로 정해진다.",
+          "refs": [
+            {
+              "source": "B",
+              "section": "20장 / 캡쳐 그룹",
+              "pages": [
+                909,
+                911
+              ]
+            }
+          ],
+          "evidence": "괄호가열리는순서대로"
+        }
+      ]
+    },
+    {
+      "title": "<random>·<chrono>",
+      "items": [
+        {
+          "text": "의사 난수(pseudo random number)는 시드(seed)를 기반으로 난수처럼 보이는 수열을 생성하는 방식이다.",
+          "refs": [
+            {
+              "source": "B",
+              "section": "20장 / 난수 생성",
+              "pages": [
+                915
+              ]
+            }
+          ],
+          "evidence": "의사난수(pseudo random number)"
+        },
+        {
+          "text": "원문은 random_device 로 시드값을 얻고, 그 이후의 난수열은 난수 엔진으로 생성하도록 설명한다.",
+          "refs": [
+            {
+              "source": "B",
+              "section": "20장 / random_device",
+              "pages": [
+                917
+              ]
+            }
+          ],
+          "evidence": "시드값처럼난수엔진을초기화"
+        },
+        {
+          "text": "std::mt19937 은 메르센 트위스터 알고리즘을 사용하는 난수 생성 엔진이다.",
+          "refs": [
+            {
+              "source": "B",
+              "section": "20장 / 난수 엔진",
+              "pages": [
+                917
+              ]
+            }
+          ],
+          "evidence": "메르센\n트위스터"
+        },
+        {
+          "text": "uniform_int_distribution<int> 의 생성자에 범위를 지정하고, 그 분포에 난수 엔진을 전달하여 샘플을 뽑는다.",
+          "refs": [
+            {
+              "source": "B",
+              "section": "20장 / 분포",
+              "pages": [
+                918
+              ]
+            }
+          ],
+          "evidence": "생성자에원하는범위"
+        },
+        {
+          "text": "정규분포 예제는 std::normal_distribution<double> dist(0, 1) 로 평균 0, 표준편차 1 을 지정한다.",
+          "refs": [
+            {
+              "source": "B",
+              "section": "20장 / 정규분포",
+              "pages": [
+                918
+              ]
+            }
+          ],
+          "evidence": "평균= */ 0"
+        },
+        {
+          "text": "clock 의 now() 는 해당 clock 에 맞는 time_point 객체를 리턴한다.",
+          "refs": [
+            {
+              "source": "B",
+              "section": "20장 / chrono 에서 지원하는 clock 들",
+              "pages": [
+                922
+              ]
+            }
+          ],
+          "evidence": "time_point 객체를리턴"
+        },
+        {
+          "text": "원문의 end - start 는 duration 객체를 얻고, count() 는 시간 차이 동안의 틱 횟수를 알려준다.",
+          "refs": [
+            {
+              "source": "B",
+              "section": "20장 / duration",
+              "pages": [
+                922
+              ]
+            }
+          ],
+          "evidence": "시간차이동안몇번의틱"
+        },
+        {
+          "text": "실제 시간 단위로 변환하기 위해 duration_cast 를 사용한다.",
+          "refs": [
+            {
+              "source": "B",
+              "section": "20장 / duration_cast",
+              "pages": [
+                922
+              ]
+            }
+          ],
+          "evidence": "duration_cast 를사용"
+        },
+        {
+          "text": "날짜 출력 예제는 system_clock::now, to_time_t, localtime, put_time 의 순서로 변환한다.",
+          "refs": [
+            {
+              "source": "B",
+              "section": "20장 / 현재 시간을 날짜로",
+              "pages": [
+                924
+              ]
+            }
+          ],
+          "evidence": "std::put_time"
+        }
+      ]
+    },
+    {
+      "title": "<filesystem>",
+      "items": [
+        {
+          "text": "fstream 은 파일 데이터의 입출력을 담당하고, filesystem 은 파일 메타데이타에 대한 접근을 돕는다.",
+          "refs": [
+            {
+              "source": "B",
+              "section": "20장 / 파일시스템 라이브러리 소개",
+              "pages": [
+                926
+              ]
+            }
+          ],
+          "evidence": "파일메타데이타"
+        },
+        {
+          "text": "path 는 파일과 폴더의 경로를 다루는 객체이다.",
+          "refs": [
+            {
+              "source": "B",
+              "section": "20장 / 뭘 배웠지?",
+              "pages": [
+                942
+              ]
+            }
+          ],
+          "evidence": "파일과폴더의경로"
+        },
+        {
+          "text": "exists, is_regular_file, is_directory 는 각각 경로의 존재, 파일 여부, 디렉토리 여부를 확인한다.",
+          "refs": [
+            {
+              "source": "B",
+              "section": "20장 / 파일을 찾아보자",
+              "pages": [
+                926
+              ]
+            }
+          ],
+          "evidence": "std::filesystem::is_regular_file"
+        },
+        {
+          "text": "current_path() 는 프로그램 실행 경로를 리턴하며, 상대경로는 이 경로를 기준으로 구한다.",
+          "refs": [
+            {
+              "source": "B",
+              "section": "20장 / 경로",
+              "pages": [
+                930
+              ]
+            }
+          ],
+          "evidence": "프로그램의현재실행경로"
+        },
+        {
+          "text": "directory_iterator 로 디렉토리 안의 파일을 살피고, recursive_directory_iterator 로 안의 모든 파일·폴더를 탐색한다.",
+          "refs": [
+            {
+              "source": "B",
+              "section": "20장 / 뭘 배웠지?",
+              "pages": [
+                942
+              ]
+            }
+          ],
+          "evidence": "recursive_directory_iterator"
+        },
+        {
+          "text": "create_directory 는 디렉토리를 생성하고 copy 와 remove 는 파일·폴더를 복사·삭제한다.",
+          "refs": [
+            {
+              "source": "B",
+              "section": "20장 / 뭘 배웠지?",
+              "pages": [
+                942
+              ]
+            }
+          ],
+          "evidence": "copy, remove"
+        }
+      ]
+    },
+    {
+      "title": "optional·variant·tuple·structured binding",
+      "items": [
+        {
+          "text": "std::optional 은 원하는 값을 보관할 수도, 보관하지 않을 수도 있는 클래스이다.",
+          "refs": [
+            {
+              "source": "B",
+              "section": "20장 / std::optional",
+              "pages": [
+                945
+              ]
+            }
+          ],
+          "evidence": "원하는값을보관할수도"
+        },
+        {
+          "text": "optional 의 has_value() 로 값의 존재를 확인하고, value() 또는 * 로 값에 접근한다.",
+          "refs": [
+            {
+              "source": "B",
+              "section": "20장 / std::optional",
+              "pages": [
+                947
+              ]
+            }
+          ],
+          "evidence": "has_value 함수"
+        },
+        {
+          "text": "값이 없는 optional 은 보관할 타입의 디폴트 객체를 가질 필요가 없다.",
+          "refs": [
+            {
+              "source": "B",
+              "section": "20장 / std::optional",
+              "pages": [
+                947
+              ]
+            }
+          ],
+          "evidence": "디폴트객체를가질필요가없다"
+        },
+        {
+          "text": "std::optional<std::reference_wrapper<A>> 로 A 객체의 레퍼런스를 보관할 수 있으며, std::ref 로 wrapper 를 만들고 get() 으로 참조한 객체를 얻는다.",
+          "refs": [
+            {
+              "source": "B",
+              "section": "20장 / 레퍼런스를 가지는 std::optional",
+              "pages": [
+                950
+              ]
+            }
+          ],
+          "evidence": "std::reference_wrapper"
+        },
+        {
+          "text": "std::variant 는 컴파일 타임에 정한 여러 타입 중 한 타입의 객체를 보관하는 one-of 클래스이다.",
+          "refs": [
+            {
+              "source": "B",
+              "section": "20장 / std::variant",
+              "pages": [
+                951
+              ]
+            }
+          ],
+          "evidence": "one-of"
+        },
+        {
+          "text": "std::monostate 를 사용해 variant 가 아무것도 들고 있지 않은 상태를 표현할 수 있다.",
+          "refs": [
+            {
+              "source": "B",
+              "section": "20장 / std::monostate",
+              "pages": [
+                954
+              ]
+            }
+          ],
+          "evidence": "아무것도들고있지않은상태"
+        },
+        {
+          "text": "std::tuple 은 서로 다른 타입의 객체들을 묶으며, make_tuple 로 만들고 std::get 으로 원소에 접근한다.",
+          "refs": [
+            {
+              "source": "B",
+              "section": "20장 / std::tuple",
+              "pages": [
+                955,
+                956
+              ]
+            }
+          ],
+          "evidence": "std::make_tuple"
+        },
+        {
+          "text": "structured binding 은 auto [age, name, is_male] = student; 처럼 tuple 의 원소들을 받으며, 모든 원소를 받아야 한다.",
+          "refs": [
+            {
+              "source": "B",
+              "section": "20장 / Structured binding",
+              "pages": [
+                958
+              ]
+            }
+          ],
+          "evidence": "모든원소들을반드시받아야"
+        },
+        {
+          "text": "structured binding 에서 auto& 를 사용하면 복사 대신 레퍼런스를 취할 수 있으며, 구조체나 pair 에도 사용할 수 있다.",
+          "refs": [
+            {
+              "source": "B",
+              "section": "20장 / Structured binding",
+              "pages": [
+                958,
+                959
+              ]
+            }
+          ],
+          "evidence": "그냥레퍼런스만"
+        }
+      ]
+    }
+  ],
+  "procedures": [
+    {
+      "title": "원문의 난수 생성 순서",
+      "steps": [
+        {
+          "text": "원문은 random_device 로 시드값을 얻고, 그 이후의 난수열은 난수 엔진으로 생성하도록 설명한다.",
+          "refs": [
+            {
+              "source": "B",
+              "section": "20장 / random_device",
+              "pages": [
+                917
+              ]
+            }
+          ],
+          "evidence": "시드값처럼난수엔진을초기화"
+        },
+        {
+          "text": "std::mt19937 은 메르센 트위스터 알고리즘을 사용하는 난수 생성 엔진이다.",
+          "refs": [
+            {
+              "source": "B",
+              "section": "20장 / 난수 엔진",
+              "pages": [
+                917
+              ]
+            }
+          ],
+          "evidence": "메르센\n트위스터"
+        },
+        {
+          "text": "uniform_int_distribution<int> 의 생성자에 범위를 지정하고, 그 분포에 난수 엔진을 전달하여 샘플을 뽑는다.",
+          "refs": [
+            {
+              "source": "B",
+              "section": "20장 / 분포",
+              "pages": [
+                918
+              ]
+            }
+          ],
+          "evidence": "생성자에원하는범위"
+        }
+      ]
+    },
+    {
+      "title": "원문의 현재 시간을 날짜로 변환하는 순서",
+      "steps": [
+        {
+          "text": "system_clock::now() 로 현재 time_point 를 얻는다.",
+          "refs": [
+            {
+              "source": "B",
+              "section": "20장 / 현재 시간을 날짜로",
+              "pages": [
+                924
+              ]
+            }
+          ],
+          "evidence": "system_clock::now()"
+        },
+        {
+          "text": "system_clock::to_time_t 로 time_t 로 변환한다.",
+          "refs": [
+            {
+              "source": "B",
+              "section": "20장 / 현재 시간을 날짜로",
+              "pages": [
+                924
+              ]
+            }
+          ],
+          "evidence": "to_time_t(now)"
+        },
+        {
+          "text": "localtime 으로 tm 객체를 얻고 put_time 으로 출력 형식을 만든다.",
+          "refs": [
+            {
+              "source": "B",
+              "section": "20장 / 현재 시간을 날짜로",
+              "pages": [
+                924
+              ]
+            }
+          ],
+          "evidence": "std::localtime(&t)"
+        }
+      ]
+    }
+  ],
+  "syntax": [
+    {
+      "label": "원문 정규분포 초기화 발췌",
+      "code": "std::random_device rd;\nstd::mt19937 gen(rd());\nstd::normal_distribution<double> dist(/* 평균= */ 0, /* 표준편차= */ 1);",
+      "refs": [
+        {
+          "source": "B",
+          "section": "20장 / 정규분포",
+          "pages": [
+            918
+          ]
+        }
+      ],
+      "evidence": "std::normal_distribution<double> dist",
+      "note": null
+    }
+  ],
+  "formulas": [],
+  "comparisons": [
+    {
+      "title": "정규표현식 함수 비교",
+      "headers": [
+        "함수",
+        "원문 기능"
+      ],
+      "rows": [
+        [
+          {
+            "text": "regex_match",
+            "refs": [
+              {
+                "source": "B",
+                "section": "20장 / 전체 문자열 매칭하기",
+                "pages": [
+                  901
+                ]
+              }
+            ],
+            "evidence": "regex_match"
+          },
+          {
+            "text": "regex_match 는 문자열 전체가 정규표현식의 패턴에 부합하면 true 를 리턴한다.",
+            "refs": [
+              {
+                "source": "B",
+                "section": "20장 / 전체 문자열 매칭하기",
+                "pages": [
+                  901
+                ]
+              }
+            ],
+            "evidence": "문자열전체가"
+          }
+        ],
+        [
+          {
+            "text": "regex_iterator",
+            "refs": [
+              {
+                "source": "B",
+                "section": "20장 / std::regex_iterator",
+                "pages": [
+                  908
+                ]
+              }
+            ],
+            "evidence": "regex_iterator"
+          },
+          {
+            "text": "regex_iterator 는 생성될 때와 ++ 될 때 regex_search 를 실행하고, 역참조하면 현재 패턴의 match_results 를 얻는다.",
+            "refs": [
+              {
+                "source": "B",
+                "section": "20장 / std::regex_iterator",
+                "pages": [
+                  908
+                ]
+              }
+            ],
+            "evidence": "++ 연산자로증감될때마다regex_search"
+          }
+        ],
+        [
+          {
+            "text": "regex_replace",
+            "refs": [
+              {
+                "source": "B",
+                "section": "20장 / 원하는 패턴 치환하기",
+                "pages": [
+                  908
+                ]
+              }
+            ],
+            "evidence": "regex_replace"
+          },
+          {
+            "text": "regex_replace 는 패턴에 맞는 문자열을 다른 문자열로 치환한다.",
+            "refs": [
+              {
+                "source": "B",
+                "section": "20장 / 원하는 패턴 치환하기",
+                "pages": [
+                  908
+                ]
+              }
+            ],
+            "evidence": "다른문자열로치환"
+          }
+        ]
+      ]
+    }
+  ],
+  "terms": [
+    {
+      "term": "템플릿 메타 함수",
+      "definition": {
+        "text": "템플릿 메타 함수는 함수처럼 동작하는 템플릿 클래스이며 타입에 대한 연산을 수행한다.",
+        "refs": [
+          {
+            "source": "B",
+            "section": "20장 / 템플릿 메타 함수",
+            "pages": [
+              872
+            ]
+          }
+        ],
+        "evidence": "타입에대해연산"
+      }
+    },
+    {
+      "term": "SFINAE",
+      "definition": {
+        "text": "SFINAE 는 Substitution Failure Is Not An Error 이며, 문법에 맞지 않는 템플릿 인자 치환 결과를 함수 오버로딩 후보에서 제외한다.",
+        "refs": [
+          {
+            "source": "B",
+            "section": "20장 / SFINAE",
+            "pages": [
+              883
+            ]
+          }
+        ],
+        "evidence": "Substitution Failure Is Not An Error"
+      }
+    },
+    {
+      "term": "정규표현식",
+      "definition": {
+        "text": "정규표현식은 문자열에서 패턴을 찾아 규칙 확인, 검색, 치환에 사용한다.",
+        "refs": [
+          {
+            "source": "B",
+            "section": "20장 / 정규표현식 라이브러리 소개",
+            "pages": [
+              899
+            ]
+          }
+        ],
+        "evidence": "문자열에서패턴을찾는데"
+      }
+    },
+    {
+      "term": "시드·의사 난수",
+      "definition": {
+        "text": "의사 난수(pseudo random number)는 시드(seed)를 기반으로 난수처럼 보이는 수열을 생성하는 방식이다.",
+        "refs": [
+          {
+            "source": "B",
+            "section": "20장 / 난수 생성",
+            "pages": [
+              915
+            ]
+          }
+        ],
+        "evidence": "의사난수(pseudo random number)"
+      }
+    },
+    {
+      "term": "path",
+      "definition": {
+        "text": "path 는 파일과 폴더의 경로를 다루는 객체이다.",
+        "refs": [
+          {
+            "source": "B",
+            "section": "20장 / 뭘 배웠지?",
+            "pages": [
+              942
+            ]
+          }
+        ],
+        "evidence": "파일과폴더의경로"
+      }
+    },
+    {
+      "term": "std::optional",
+      "definition": {
+        "text": "std::optional 은 원하는 값을 보관할 수도, 보관하지 않을 수도 있는 클래스이다.",
+        "refs": [
+          {
+            "source": "B",
+            "section": "20장 / std::optional",
+            "pages": [
+              945
+            ]
+          }
+        ],
+        "evidence": "원하는값을보관할수도"
+      }
+    },
+    {
+      "term": "std::variant",
+      "definition": {
+        "text": "std::variant 는 컴파일 타임에 정한 여러 타입 중 한 타입의 객체를 보관하는 one-of 클래스이다.",
+        "refs": [
+          {
+            "source": "B",
+            "section": "20장 / std::variant",
+            "pages": [
+              951
+            ]
+          }
+        ],
+        "evidence": "one-of"
+      }
+    },
+    {
+      "term": "std::tuple",
+      "definition": {
+        "text": "std::tuple 은 서로 다른 타입의 객체들을 묶으며, make_tuple 로 만들고 std::get 으로 원소에 접근한다.",
+        "refs": [
+          {
+            "source": "B",
+            "section": "20장 / std::tuple",
+            "pages": [
+              955,
+              956
+            ]
+          }
+        ],
+        "evidence": "std::make_tuple"
+      }
+    }
+  ],
+  "summary_basis": "편집 요약",
+  "summary": [
+    {
+      "text": "type_traits 는 타입에 대한 여러 연산을 수행하는 메타 함수들을 제공한다.",
+      "refs": [
+        {
+          "source": "B",
+          "section": "20장 / is_void",
+          "pages": [
+            875
+          ]
+        }
+      ],
+      "evidence": "타입들에대해서여러가지"
+    },
+    {
+      "text": "정규표현식은 문자열에서 패턴을 찾아 규칙 확인, 검색, 치환에 사용한다.",
+      "refs": [
+        {
+          "source": "B",
+          "section": "20장 / 정규표현식 라이브러리 소개",
+          "pages": [
+            899
+          ]
+        }
+      ],
+      "evidence": "문자열에서패턴을찾는데"
+    },
+    {
+      "text": "fstream 은 파일 데이터의 입출력을 담당하고, filesystem 은 파일 메타데이타에 대한 접근을 돕는다.",
+      "refs": [
+        {
+          "source": "B",
+          "section": "20장 / 파일시스템 라이브러리 소개",
+          "pages": [
+            926
+          ]
+        }
+      ],
+      "evidence": "파일메타데이타"
+    },
+    {
+      "text": "std::tuple 은 서로 다른 타입의 객체들을 묶으며, make_tuple 로 만들고 std::get 으로 원소에 접근한다.",
+      "refs": [
+        {
+          "source": "B",
+          "section": "20장 / std::tuple",
+          "pages": [
+            955,
+            956
+          ]
+        }
+      ],
+      "evidence": "std::make_tuple"
+    }
+  ],
+  "review": [
+    {
+      "question": "SFINAE 는 치환 오류를 어떻게 처리하는가?",
+      "answer": {
+        "text": "SFINAE 는 Substitution Failure Is Not An Error 이며, 문법에 맞지 않는 템플릿 인자 치환 결과를 함수 오버로딩 후보에서 제외한다.",
+        "refs": [
+          {
+            "source": "B",
+            "section": "20장 / SFINAE",
+            "pages": [
+              883
+            ]
+          }
+        ],
+        "evidence": "Substitution Failure Is Not An Error"
+      }
+    },
+    {
+      "question": "regex_match 의 매칭 범위는?",
+      "answer": {
+        "text": "regex_match 는 문자열 전체가 정규표현식의 패턴에 부합하면 true 를 리턴한다.",
+        "refs": [
+          {
+            "source": "B",
+            "section": "20장 / 전체 문자열 매칭하기",
+            "pages": [
+              901
+            ]
+          }
+        ],
+        "evidence": "문자열전체가"
+      }
+    },
+    {
+      "question": "filesystem 과 fstream 은 무엇을 담당하는가?",
+      "answer": {
+        "text": "fstream 은 파일 데이터의 입출력을 담당하고, filesystem 은 파일 메타데이타에 대한 접근을 돕는다.",
+        "refs": [
+          {
+            "source": "B",
+            "section": "20장 / 파일시스템 라이브러리 소개",
+            "pages": [
+              926
+            ]
+          }
+        ],
+        "evidence": "파일메타데이타"
+      }
+    },
+    {
+      "question": "structured binding 은 원소 일부만 받을 수 있는가?",
+      "answer": {
+        "text": "structured binding 은 auto [age, name, is_male] = student; 처럼 tuple 의 원소들을 받으며, 모든 원소를 받아야 한다.",
+        "refs": [
+          {
+            "source": "B",
+            "section": "20장 / Structured binding",
+            "pages": [
+              958
+            ]
+          }
+        ],
+        "evidence": "모든원소들을반드시받아야"
+      }
+    }
+  ],
+  "cheat": {
+    "definitions": [
+      {
+        "term": "SFINAE",
+        "definition": {
+          "text": "SFINAE 는 Substitution Failure Is Not An Error 이며, 문법에 맞지 않는 템플릿 인자 치환 결과를 함수 오버로딩 후보에서 제외한다.",
+          "refs": [
+            {
+              "source": "B",
+              "section": "20장 / SFINAE",
+              "pages": [
+                883
+              ]
+            }
+          ],
+          "evidence": "Substitution Failure Is Not An Error"
+        }
+      },
+      {
+        "term": "optional",
+        "definition": {
+          "text": "std::optional 은 원하는 값을 보관할 수도, 보관하지 않을 수도 있는 클래스이다.",
+          "refs": [
+            {
+              "source": "B",
+              "section": "20장 / std::optional",
+              "pages": [
+                945
+              ]
+            }
+          ],
+          "evidence": "원하는값을보관할수도"
+        }
+      },
+      {
+        "term": "variant",
+        "definition": {
+          "text": "std::variant 는 컴파일 타임에 정한 여러 타입 중 한 타입의 객체를 보관하는 one-of 클래스이다.",
+          "refs": [
+            {
+              "source": "B",
+              "section": "20장 / std::variant",
+              "pages": [
+                951
+              ]
+            }
+          ],
+          "evidence": "one-of"
+        }
+      }
+    ],
+    "comparison_title": "값의 묶음",
+    "comparison_headers": [
+      "클래스",
+      "원문 기능"
+    ],
+    "comparison_rows": [
+      [
+        {
+          "text": "optional",
+          "refs": [
+            {
+              "source": "B",
+              "section": "20장 / std::optional",
+              "pages": [
+                945
+              ]
+            }
+          ],
+          "evidence": "std::optional"
+        },
+        {
+          "text": "std::optional 은 원하는 값을 보관할 수도, 보관하지 않을 수도 있는 클래스이다.",
+          "refs": [
+            {
+              "source": "B",
+              "section": "20장 / std::optional",
+              "pages": [
+                945
+              ]
+            }
+          ],
+          "evidence": "원하는값을보관할수도"
+        }
+      ],
+      [
+        {
+          "text": "variant",
+          "refs": [
+            {
+              "source": "B",
+              "section": "20장 / std::variant",
+              "pages": [
+                951
+              ]
+            }
+          ],
+          "evidence": "std::variant"
+        },
+        {
+          "text": "std::variant 는 컴파일 타임에 정한 여러 타입 중 한 타입의 객체를 보관하는 one-of 클래스이다.",
+          "refs": [
+            {
+              "source": "B",
+              "section": "20장 / std::variant",
+              "pages": [
+                951
+              ]
+            }
+          ],
+          "evidence": "one-of"
+        }
+      ],
+      [
+        {
+          "text": "tuple",
+          "refs": [
+            {
+              "source": "B",
+              "section": "20장 / std::tuple",
+              "pages": [
+                955
+              ]
+            }
+          ],
+          "evidence": "std::tuple"
+        },
+        {
+          "text": "std::tuple 은 서로 다른 타입의 객체들을 묶으며, make_tuple 로 만들고 std::get 으로 원소에 접근한다.",
+          "refs": [
+            {
+              "source": "B",
+              "section": "20장 / std::tuple",
+              "pages": [
+                955,
+                956
+              ]
+            }
+          ],
+          "evidence": "std::make_tuple"
+        }
+      ]
+    ],
+    "formulas": [],
+    "syntax": []
+  },
+  "checked_images": [
+    {
+      "source": "B",
+      "pages": [
+        900,
+        918
+      ]
+    }
+  ],
+  "editor_notes": []
+}

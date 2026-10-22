@@ -1,0 +1,32 @@
+q->data[++(q->rear)] = item;
+int dequeue(QueueType *q)
+if (is empty(q)) {
+error("큐가 공백상태입니다. ") ;
+return -1;
+int item = q->data[++(q->front)];
+return
+int main(void)
+int ntem = 0;
+QueueType q;
+init-queue(&q) ;
+enqueue(&q, 10); queue-print(&q) ;
+enqueue(&q, 20); queue—print(&q) •,
+enqueue(&q, 30); queue-print(&q) ;
+= dequeue(&q) ; queue-print(&q) ;
+= dequeue(&q); queue-print(&q);
+= dequeue(&q) ; queue-print(&q) ;
+item
+item
+item
+return
+실행결과
+1이2이
+0;
+1이 2이3이
+|2이 3이
+I | I
+선형 큐의 응용: 작업 스케줄링
+위는 운영 체제에서도 시용된다. 운영 체제는 많은 작업들을 동시에 실행해야 한다. 만약 CPU가
+하나뿐이고 모든 작업들은 우선순위를 가지지 않는다고 가정하면 작업들은 운영 체제에 들어간
+순서대로 처리될 것이다. 이럴 때는 큐를 시용하여서 작업들을 처리할 수 있다.
+152 C언어로 쉽게 풀어쓴 자료구조

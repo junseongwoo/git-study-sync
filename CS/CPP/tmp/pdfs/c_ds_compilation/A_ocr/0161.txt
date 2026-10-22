@@ -1,0 +1,42 @@
+을 하나 감소시킨다. 만약 service-time이 0이면 현재 서비스 받는 고객이 없다는 것을
+의미한다. 따라시 큐에서 고개 구조체를 하나 끼내이 서비스를 시작한다. 측 서비스를 시
+작한다는 의미는 전역 변수 service-timeoll 고객의 서비스 시간을 지상한다는 것이다. 보
+다 복잡한 처리를 시뮬레이션하려면 고드를 추가해야 한다.
+(4) 60분의 시간이 지나면 고객들이 기다린 시간을 전부 합하여 화면에 출력한다.
+프로그램 5.5 은행 서비스 시뮬레이션 프로그램
+#include <stdio.h>
+#include 〈stdlib.h>
+// 프로그램 5.2에서 다음과 같은 부분을 복사한다.
+typedef struct
+int id;
+5 nt arrival
+servnce
+} element;
+int main(void)
+1 nt minutes
+= 원형큐 코드 시작 =
+{ // 요소 타입
+time;
+time;
+// 교체!
+= 원형큐 코드 종료 =
+= 60;
+int total_wait = 0;
+int total customers = 0;
+= 0;
+servnce custmer;
+QueueType queue;
+ni t_queue (&queue) ;
+srand(time(NULL)) ;
+for (int clock = 0; ctock 〈 minutes; clock++) {
+printf("현재시각=%d\n", clock);
+customer ;
+customer. id = total_cust에lers++;
+custorner. = CIOCk;
+customer. = rand()
+enqueue (&queue, customer) ;
+printf("고객 팬이 9'건분에 들어옵니다. 업무처리시간= 9던분\n",
+customer customer time, custorner .service tl爬) •,
+if (service_time > 0) {
+printf("고객 업무처리중입니다. 년", service-customer);
+큐 169

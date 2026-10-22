@@ -1,0 +1,33 @@
+No十e= std: :transform() 함수는 입력 벡터를 바꾸지 않고. 별도의 벡터를 만들어서 반환합니다. 반면에
+std: :for-each( ) 함수는 입력 벡터 자체를 변경합니다. 이 두 함수의 또 다른 차이점으로 std: :transform( ) 함수
+는 입력 함수 f가 컨테이너의 첫 번째 원소부터 마지막 원소까지 순서대로 적용된다는 것이 보장되지 않습니다. C++17
+부터는 std: :transform( ) 함수도 ExecutiönP01icyS 첫 번째 인자로 받아 병렬 처리를 수행할 수 있습니다.
+3. 리듀스 연산 테스트 함수를 작성합니다.
+void reduce test(std: :vector〈int〉 5)
+std::cout 〈〈 std::endl 〈〈 "[리듀스 테스트]" 〈〈 std::endl;
+:cout 〈〈 "입력 배열, 5:
+std:
+for
+(aut0 i : 5)
+std::cout 〈〈 i 〈〈 "
+std: :cout 〈〈 std: :endl;
+// std::accumulate() 함수 사용
+= std::accumulate(S.begin(), S.end(), 0,
+autO ans
+[](int acc, int x) { return acc + x; });
+std::cout 〈〈 "std::accumulate(), ans: " 〈〈 ans 〈〈 std::endl;
+4. main() 함수를 작성하고, 두 테스트 함수를 호출합니다.
+int main()
+std: :vector<int> {1,
+transform_test(S) ;
+reduce_test(S) ;
+10, 4, 7, 3, 5, 6, 9, 8, 2};
+5. 지금까지 작성한 프로그램을 실행하면 다음과 같은 결과를 확인할 수 있습니다.
+[맵 테스트]
+입력 배열, 91 1047356982
+std::transform(), Tr: 1 100 16 49 9 25 36 81 64 4
+std::for_each(), 5: 1 100 16 49 9 25 36 81 64 4
+[리듀스 테스트]
+입력 배열, 도• 1 1047356982
+std: :accumulate(), ans: 55
+193

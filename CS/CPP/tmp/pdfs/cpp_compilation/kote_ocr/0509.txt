@@ -1,0 +1,18 @@
+retum
+return ReconstÄRtLCS(DP. A, 8, i - 1, - 1) 十 Ali - 11:
+else if (P(i - 1Ⅱil 〉 DPIillä - 11)
+return ReconstructLCS(DP, A, 8, i - 1, j);
+else
+return ReconstructLCS(DP, A, 8, i, j - 1):
+9. LCS-Tabulation() 함수 뒷부분 코드를 ReconstructLCS() 함수 시용 방식으로 변경하면 다음
+과 같습니다.
+stnng LCS_TabJIation(stnng A, string B)
+stnng lcs = ReconstructLCS(DP, A, B, A.size(), B.size());
+return 16;
+10. main() 함수를 수정하여 LCS-Tabulation() 함수를 호출하고, 연산 시간을 출력하도록 합니다.
+int main()
+string A, B;
+int tests = 3;
+for (int i = 0; 〈 tests; i++)
+int LCS;
+522

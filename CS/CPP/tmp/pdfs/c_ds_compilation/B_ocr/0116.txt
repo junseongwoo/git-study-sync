@@ -1,0 +1,72 @@
+159
+160
+161
+162
+163
+165
+166
+167
+168
+169
+170
+171
+172
+173
+174
+175
+176
+177
+178
+179
+180
+181
+182
+183
+185
+186
+187
+188
+189
+190
+191
+192
+193
+194
+195
+196
+197
+1%
+Read += GetNextToken( &PostfixExpression[Readl, Token, &Type );
+if ( Type == SPACE )
+continue;
+if ( Type == OPERAND )
+Node* NewNode = LLS-CreateNode( Token );
+LLS-Push( Stack, NewNode );
+else
+char ResultString[3기,•
+double 0perator1, 0perator2, TempResult;
+Node* OperatorNode,
+0peratorNode = LLS_Pop( Stack );
+Operator2 = atOf( OperatorNode->Data );
+LLS_DestroyNode( OperatorNode );
+OperatorNode = LLS_POP( Stack ):
+Operator1 = atof( 0peratorNode->Data );
+LLS_DestroyNode( OperatorNode );
+switch (Type)
+case PLUS:
+case MINUS:
+TempResu1t
+TempResu1t
+case MULTIPLY: TempResuIt
+Operator1 + Operator2; break,
+0perator1 - Operator2; break,
+Operator1 * Operator2; break,
+case DIVIDE: TempResu1t = 0perator1 / Operator2; break,
+gcvt( TempResu1t, 10, Resu1tString );•
+LLS Push( Stack, LLS-CreateNode( ResuItString ) );
+ResultNode = LLS PO여 Stack );
+Resu1t = atOf( ResuItNode->Data ),••
+문자열로 되어 있는 자산 결과를 소수로 변환
+소수로 되어 있는 계산 결과를 문자열로 변환
+Chapter 02 • 스택
+107

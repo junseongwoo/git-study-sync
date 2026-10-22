@@ -1,0 +1,23 @@
+void add—edge(Edge〈T>&& e)
+// 에지 양 끝 정점 ID가 유효한지 검사
+if (e.src 〉= 1 && e.src 〈= V && e.dst 〉= 1 && e.dst 〈= V)
+edge—list.emplace-back(e);
+else
+cerr 〈〈 "에러: 유효 범위를 벗어난 정점!" 〈〈 endl;
+// 표준 출력 스트림 지원
+template 〈typename U〉
+friend ostream& operator〈〈 (ostream& 05, const Graph<U>& 6);
+private:
+unsigned V;
+// 정점 개수
+vector〈Edge〈丫〉〉 edge-list;
+template 〈typename U>
+ostream& operator〈〈 (ostream& 05, const Graph<U>& 6)
+for (unsigned i = 1; i 〈 G.vertices(); 1++)
+autO edges = G.edges(i);
+for (auto& e : edges)
+05 〈〈 endl,
+return 05 ;
+" 〈〈 e.weight 〈〈 '가,
+4. 이번 연습 문제에서는 그림 6-6에 나타난 형태의 그래프를 사용합니다. BFS 알고리즘은 에
+지 가중치를 시용하지 않기 때문에 그림 6-6에서 에지 가중치를 표현하지 않았습니다.

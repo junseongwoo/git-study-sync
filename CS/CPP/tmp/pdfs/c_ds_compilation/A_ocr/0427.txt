@@ -1,0 +1,36 @@
+// 포화 상태 검출 함수
+*화
+int is_full(StackType
+return (s->top -= (MAX_STACK_SIZE
+// 삽입함수
+void push(StackType *5, element item)
+if (is-full(s)) {
+fprintf(stderr, "스택 포화 에러\n");
+return;
+else s->stack[++(s->top)]
+// 식제함수
+element pop(StackType *9
+if (is-empty(s)) {
+item;
+fprintf(stderr, "스택 공백 에러\n");
+exit(l);
+else return s->stackC(s-〉t0P)¯J;
+// 위상정릴을 수행한다.
+int topo_sort(GraphType *0
+StackType s;
+GraphNode
+// 모든 정점의 진입 차수를 계산
+int *in—degree = (int *)malloc(g->n * sizeof(int));
+for (i = 0; i 〈 g—>n; i++)
+in-degree[i] = 0;
+GraphN0de *node =
+while != NULL) {
+n_degree [node—>vertex] ++ •,
+node = node->link;
+// 진입 차수가 0인 정점을 스택에 삽입
+init(&s) ;
+// 초기화
+// 정점 i에서 나오는 간선들
+if (in-degree[i] == 0) push(&s, 5);
+CHAPTERII 그래프 ||
+435

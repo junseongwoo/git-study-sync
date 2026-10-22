@@ -1,0 +1,24 @@
+1.7.2 연습 문제 6: std::list의 삽입 또는 삭제 함수 사용하기
+이번 연습 문제에서는 std: :list를 이용하여 정수를 저장하는 리스트를 생성하고, 원소를 삽입하
+고 삭제하는 다양한 방법을 알아보겠습니다.
+1. 필요한 헤더 파일을 포함합니다.
+#include <iostream〉
+#include 〈list〉
+int main()
+2. 초것값을 갖는 리스트를 생성하고, 새로운 원소를 몇 개 추가합니다.
+std::list<int〉 listl = {1, 2, 3, 4, 5};
+listl .push—back(6);
+listl.insert(next(listl .begin()), 0);
+listl.insert(listl .end(), 7);
+이 코드에서는 push-back() 함수를 이용하여 리스트 맨 뒤에 원소 6을 삽입했습니다. 그다음
+라인에서는 insert() 함수와 next(listl .begin()) 코드를 이용하여 리스트 맨 처음 원소 다
+음 위치에 0을 삽입했습니다. 마지막 줄에서는 1i5t1 end() 코드를 이용하여 리스트 맨 뒤에
+7을 추가했습니 다.
+3. 이번에는 pop-back() 함수를 이용하여 리스트 맨 뒤 원소를 제거해보겠습니다. pop-back( )은
+5%: :forward-list에서는 제공하지 않는 함수입니다.
+listl .pop-back();
+std::cout 〈〈 "삽입 & 삭제 후 리스트:
+for (auto i •• listl)
+std::cout 〈〈 i 〈〈 “
+4. 지금까지 작성한 프로그램을 실행하면 다음과 같은 출력이 나타납니다.
+삽입 & 삭제 후 리스트: 1 023456

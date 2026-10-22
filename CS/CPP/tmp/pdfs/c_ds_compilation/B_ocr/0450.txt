@@ -1,0 +1,50 @@
+그러면 다음 코드를 따라 작성하고 컴파일하여 결과를 확인해보세요.
+09장/Dij tra/ShortestPath. h
+01
+02
+03
+05
+07
+09
+10
+11
+•ifndef S}•mTESTPATH_H
+SHORTESTPATH_H
+•include %raph.he
+•in(1血 QriorityQueue.h"
+«iefine UAX_WEIGHT %267
+void Dijkstra(Graph* 6, Vertex* StartVertex, Graph* MST ),•
+ærdif
+09장/Dijkstra/ShortestPath. (
+01
+02
+03
+07
+09
+12
+14
+16
+18
+#include •ShortestPath.h"
+void Dijkstra(Graph* 6, Vertex* StartVertex, Graph* ShortestPath )
+int i = 0;
+PQNode
+PriorityQueue*
+Vertex* CurrentVertex = NULL;
+Edge* CurrentEdge
+Weights
+int*
+Vertex** ShortestPathVertices =
+StartNode = { 0, StartVertex };
+= PQ-Create(1@);
+= NULL;
+- (int*) ma110(( sizeof(int) * 6-〉VertexCount );
+Vertex** Fnnges
+(Vertex**) malloc( sizeof(Vertex*) * G->VertexCount )•,
+(Vertex**) malloc( sizeof(Vertex*) * G->VertexC01Jnt ):
+Vertex** Precedences = (Vertex**) ma110(( sizeof(Vertex*) * G->VertexCount );
+CurrentVertex = 6-〉Vertices;
+vhile ( CurrentVertex != MJLL )
+20
+448
+Part 02 • 알고리증

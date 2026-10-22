@@ -1,0 +1,56 @@
+// 정침 생성
+Vertex• A = CreateVertex( );
+Vertex• 8 = CreateVertex( 'B' ):
+Vertex• ( = CreateVertex( 'C' ),•
+Vertex• 0 = CreateVertex( '0• ),•
+Vertex• E = CreateVertex( 또•
+18
+Vertex• F = CreateVertex( 뚜• ):
+Vertex• 6 = CreateVertex( 'G'
+20
+Vertex• H = CreateVertex( 'H' );
+22
+// 그래프에 경정을 추가
+23
+AddVertex( graph, A ):
+AddVertex( graph, B
+25
+AddVertex( graph, ( );
+26
+AddVertex( graph, D );
+27
+AddVertex( graph, E
+28
+AddVertex( graph, F );
+29
+AddVertex( graph. 6 ),•
+표
+ßElertex( graph, H
+31
+32
+// 정점과 정점을 간선으로 잇기
+시 CreateEdge( 시 (, 0 ) );
+34
+AddEdge(
+AddEdge( 치 CreateEdge( A, 0, 0 ) )
+35
+AddE#e( B. CreateEdge( B, (, 0 ) )
+37
+AddE#e( B. B, 타 0 ) )
+39
+AddEdge〈 (, CreateEdge( (, F, 0 ) )
+40
+AddEdge( 0, CreateEdge( D, F, 0 ) )
+AddE#e( 0, CreateEdge( 0, 6, 0 ) )
+43
+44
+45
+AddE#e( E, CreateEdge( 티 6, 0 ) )•,
+46
+47
+AddEd9e( 티 CreateEdge( F, H, 0 ) )
+48
+AddEd9e( 6, CreateEdge( 6, H, 0 ) )
+Part 02 • 일고리좀
+416
+1

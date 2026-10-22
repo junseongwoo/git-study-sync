@@ -1,0 +1,49 @@
+141
+142
+143
+145
+146
+147
+148
+149
+1%
+151
+153
+155
+1%
+157
+1駟
+159
+1碼
+161
+162
+163
+164
+165
+Uaze-*ovSIze • RowSize,
+uaze-XoIumnSize • ColumnSize;
+Uaze-»ata (char**)malloc(sizeof(char*) * RowSize );
+for ( i=@; iGowSize; i++ )
+Maze-»ata[i) = (char*)malloc(sizeof(char) * CoIumnSize);
+rewind( fp ):
+for ( i=@; iGowSize; i++ )
+fgets( buffer, MAX_BUFFER, fp ):
+for ( j=O; j<C01umnSize; j++ )
+Maze->Data[il(jl = buffer[jl;
+fclose( fp
+return SUCCEED;
+152/IazeSoIver/Test—NazeSoIver.c
+01
+02
+03
+07
+09
+10
+•incllJde <stdi이h>
+•iⅨ1血 •uazeS01ver.h•
+int nain(int argc, char* argv[l)
+int i = 0:
+int j = 0;
+MazeInfo Uaze.
+622
+Part 03 • 알고리즘 설계 기법

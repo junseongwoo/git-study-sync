@@ -1,0 +1,25 @@
+// 두 문자열이 부분 문자열에 대해 결과가 저,가되이 있으면 반한
+// Have we found a result for the prefixes of the t벏0 strings?
+if (memo(i - 11[j - 11 UNKNOWN)
+return memo(i - 11[j - 11:
+// A와 B의 두 부분 문자열에서 맨 마지막 문자가 같은지 확인
+// 이 경우 A와 B의 부분 문자열에서 구한 LCS 길이는 각 부분 문자열에서
+// 마지막 한 문자를 제외한 문자열로부터 구한 LCS 길이에 1을 더한 것과 같음
+memo[i - ll[j - 1] =1 + LCS Memoization(A, 8, i - 1, j - 1, memo);
+// 테이블에 서장된 결과를 반환
+return memo[i - l][j - 1];
+// A와 B의 두 부분 문자열에서 맨 마지막 문자가 같지 않다면
+// A의 부분 문자열에서 마지막 문자를 제외한 것과 B의 부분 문자열에서 구한 LCS 길이,
+// B의 부분 문자열에서 마지막 문자를 제외한 것과 A의 부분 문자열에서 구한 LCS 길이 중
+// 최댓값을 선택하여 지정
+memo[i - l](j - 1] = max(LCS_Memoization(A, B, i - 1, j, memo),
+LCS_Memoization(A, 8, i, j - 1, memo));
+return memo[i - l][j - 1];
+4. 이제 main( ) 함수에 각각의 함수 호출 코드를 작성하고, 연산 시간을 화면에 출력합니다.
+int main()
+string A, B;
+cin 〉〉 A 〉〉 8;
+int tests = 2;
+for (int i = 0; i 〈 tests; i十十)
+따>
+515

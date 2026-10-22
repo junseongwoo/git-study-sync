@@ -1,0 +1,21 @@
+두 공부한 후에 설명하겠습니다.
+링크드 리스트에 대한 소개는 이 정도로 하고 이제부터 본격적으로 링그드 리스트의 구현 방법을 알
+아보겠습니다
+12.1 링크드 리人E의 노드 표현
+링크드 리스트의 기본 연소卜을 배우기 전에 노드를 표현하는 방법을 먼저 알아보겠습니다. 링크드 리
+스트의 노-드를 c 언어로 표현하면 다음과 같은 구조체로 나타낼 수 있습니다.
+typedef int EIementType,
+struct NOde
+Data; // 데이터
+Struct N馝한 NextNode; // 다음 1”c
+이 코드에서는 ElementType을 int로 지정했지만, 나중에 링크드 리스트를 공부한 후 프로그램을
+작성할 때는 여러분에게 필요한 자료형으로 바꿔서 사용하면 됩니다. 한편 이렇게 정의된 Node 구
+조제의 인스턴스를 만들려면 항상 귀찮은 struct 기워드를 동반해야 합니다. 다음과 같이 말입니다.
+struct NOde MyNode
+따라서 우리는 다음과 같이 별칭을 이용해서 Node 구조체를 선언하겠습니다.
+typedef struct tagNode
+ElementType Data; // 데이터
+struct tagNode• NextNode; // 다음 노 c
+} Node,
+24
+Part 01 • 자료구조

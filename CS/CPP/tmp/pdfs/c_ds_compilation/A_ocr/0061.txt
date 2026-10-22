@@ -1,0 +1,15 @@
+ßdefine YELLO,•/ 2
+5『ft screen(WIDTHl [HEIGHTI ;
+char read-pixel(int x, int y)
+return screen(x] [회 ;
+VOid wrnte_pixel(int X, int y, int C010r)
+screen[x] [회 = c010r;
+// 영역 채우기 알고리즘
+void flood_fill(int x, int y)
+if (read—pixel(x, y) == WHITE)
+write_pixel(x, Y, BLACK) ;
+; // 순환 호출
+; // 순환 호출
+•, // 순환 호출
+; // 순환 호출
+CHAPTER02 순환 67

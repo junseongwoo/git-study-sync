@@ -1,0 +1,31 @@
+typedef struct tagCircularQueue
+int Capacity;
+int Front,
+int Rear,
+Nodes,
+} CircularQueue
+Circula1Queue 구조체의 Nodes 포인터가 가리기는 배열은 다음 그림과 같이 자유 저장소에 생
+성됩니다. capacity는 순환 큐의 용량, 즉 Nodes 배열의 크기를 나타내는데 실제로 Nodes를 메
+모리에 할당할 때는 'capacity+l'만큼의 크기를 할당합니다. 노드 하나를 공백/포화 상태 구분-일
+더미 노-드*로 시용하기 때문입니다.
+Front는 전단 위치를. Rear는 후단 위치를 가리킵니다. 이들이 갖는 값은 실제 메모리 주소가 아니
+라 배열 내의 인덱스입니다. Rear는 실제 후단보다 1 더 큰 값을 갖는다는 사실을 잊지 마세요.
+typedef struct tagCircularQueue
+int Capacity;
+xnt Front;
+lnt Rear,
+N馝한 Nodes;
+} CircularQueue
+Nodes 포인터는 자유 저장소에 일당한
+배열의 첫 번째 Q恥를 가리,“다.
+순환 큐 생성/소열 연산
+30
+자유 저장소에
+20
+할당한 Node 배열
+자유 저장소
+이번에는 순환 큐 구조체를 자유 저장소에 생성하는 CQ-CreateQueue ( ) 함수를 작성해보겠습니
+다. CQ는 CircularQueue의 약자입니다. CQ-CreateQueue ( )는 순환 큐에 대한 포인터 (의 포
+인터 )인 Queue와 용꾸을 결정하는 capacity를 매개 변수로 받습니다.
+CQ-CreateQueue( ) 함수는 매개 변수를 입력 받아 순환 큐를 자유 저장소에 생성한 다음, 배열
+122 Part 01 • 자료구조

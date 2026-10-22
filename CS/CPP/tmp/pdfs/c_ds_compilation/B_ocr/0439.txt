@@ -1,0 +1,26 @@
+CreateEdge( MSTVerticesIFromIndexJ,
+MSTVertices[ToIndexl.
+CurrentEdge->Weight ) );
+AddEdge( MSTVertices(T이ndexl,
+CreateEdge( MSTVertices[T이ndexl,
+MSTVertices[FromIndexl,
+CurrentEdge->Weight ) );
+DS_UnionSet( VertexSet[FromIndexI, VertexSet[T이ndexl );
+for ( i=O; i<G->VertexCount; i++ )
+DS_DestroySet( VertexSet(il );
+free( VertexSet );
+free( MSTVertices );
+9.53 최* 신장 트리 예제 프로그램
+최소 신장 트리 예제 프로그램을 구성하는 파일은 꽤 많습니다. 프림 알고리즘에서는 우선순위 큐를
+이용하고 크루스칼 알고리즘에서는 분리 집훼을 이용하기 때문입니다. 그 덕분에 이 예제 프로그램
+의 소스 코-드 파일은 다음과 같이 9개나 됩니다.
+• Disj01ntSet.c
+• DisjointSet.h
+• PnontyQueue.C
+• PnorityQueue.h
+• Graph.c
+• Graph.h
+• MST.c
+• MST.h
+• Test-MST.c
+Chapter • 그래프 437

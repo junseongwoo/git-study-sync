@@ -1,0 +1,55 @@
+119
+120
+121
+122
+123
+124
+125
+126
+127
+128
+129
+130
+131
+132
+133
+134
+135
+136
+137
+138
+139
+140
+141
+142
+143
+145
+146
+147
+return HashValue + 1;
+VOid OAHT Rehash( HashTable** HT )
+int i = 0;
+EIementType• 01dTable = (*HT)->Table,
+// 새 해시 테이블을 만들고,
+HashTabIe* NewHT = OAHT CreateHashTable( (*HT)->Tab1eSize * 2 );
+printfC\nRehashed. New table size is • %d\nxn•, NewHT->TableSize ):
+// 이전의 해시 테이블에 있던 데이터를 새 해시 테이블로 옮긴다.
+for ( i=0; i<(*HT)->TabIeSize; i++ )
+if ( 01dTabIe[il.Status == OCCUPIED )
+OAHT Set( ÜIewHT, 01dTab1e[iI Key. 01dTabIe(il.Value );
+// 이전의 해시 테이블은 소열시킨다.
+OAHT DestroyHashTabIe( (*HT) );
+// HT 포인터에는 새로 해시 테이블의 주소를 대입한다.
+(*HT) = NewHT;
+08장/OpenAddressing/Test-OpenAddressing.c
+01
+02
+03
+04
+05
+06
+#include •OpenAddressing.h•
+int main( void )
+HashTabIe* HT = OAHT CreateHashTabIe( 11 );
+Chapter 08 • 해시 테이를
+371

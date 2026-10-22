@@ -1,0 +1,27 @@
+1. 우선 필요한 라이브러리를 포함하고, 소인수분해를 이용하여 주어진 정수가 소수인지를 확인
+하는 함수를 작성합니다.4
+#include <iostream>
+#include "mapreduce.hpp
+namespace prime_calculator {
+// 주어진 number가 소수인지를 확인
+b001 const is_prime(long (0舫t number)
+if (number 〉 2)
+if (number % 2 == 0)
+return false;
+long const n = std: :abs(number);
+long const sqrt_number = static—cast〈long>(std: :sqrt(
+static-cast<double>(n) )) ;
+for (long i = 3; i 〈= sqrt_number; i += 2)
+return false;
+else if (number =
+return false;
+return true;
+0 number =
+2. 지정한 범위 안에서 일정 간격의 정수를 생성하는 클래스를 정의합니다.
+// 정수 생성 클래스. first부터 last까지 step 간격의 정수를 생성
+template〈typename MapTask>
+class number source : mapreduce: :detail: :noncopyable
+public:
+이 예제는 https://github.com/cdmh/mapreduce에서 제공하는 맵리듀스 프레임워크 라이브러리를 사용합니다. 이 중 연습 문제 실
+4
+행에 필요한 파일은 예제 프로젝트 폴더 중 mapreduce 폴더 아래에서 찾을 수 있습니다.

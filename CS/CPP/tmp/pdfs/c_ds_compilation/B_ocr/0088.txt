@@ -1,0 +1,54 @@
+05
+07
+08
+09
+13
+16
+20
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+36
+37
+39
+40
+42
+43
+44
+// 스택을 자유 저장소에 생성
+(*Stack)
+= (ArrayStack*)ma110c(sizeof(ArrayStack));
+// 입력된 Capacity만큼의 노드를 자유 저장소에 생성
+(Node*)maIIoc(sizeof(Node)*CapacitY);
+(*Stack)->Nodes
+// Capacity 및 Top 초기화
+(*Stack)-XapacitY = Capacity;
+(*Stack)->Top = -1;
+void AS_DestroyStack(ArrayStack* Stack)
+// 노드를 자유 저장소에서 해제
+free(Stack->Nodes);
+// 스택을 자유 저장소에서 해제
+free(Stack);
+void AS Push(ArrayStack* Stack, E1ementType Data)
+Stack->Top++;
+Stack->Nodes[Stack->Top) .Data
+Data;
+E1ementType AS_Pop(ArrayStack* Stack)
+int Position = Stack->Top--
+return Stack->Nodes(PositionI.Data;
+ElementType AS-Top(ArrayStack* Stack)
+return Stack->Nodes[Stack->Topl.Data;
+int AS-GetSize(ArrayStack* Stack)
+return Stack->Top+1 ;
+Chapter 02 • 스택
+79

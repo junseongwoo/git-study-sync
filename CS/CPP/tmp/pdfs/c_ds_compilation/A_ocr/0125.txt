@@ -1,0 +1,45 @@
+break,
+case 오르혹 괄호:
+POP(S);
+while( e , 완쪽괗호 ) do
+eß 출력
+e pop(s)
+break;
+case 피연산자:
+chS 출력
+break;
+vhile ( not is_empty(s) ) dO
+e pop(s)
+eS 출력
+프로그램 4.8 중위 표기 수식을 후위 표기 수식으로 변환하는 프로그램
+#include <stdio.h>
+#include <stdlib.h>
+#define MAX_STACK_SIZE 100
+// 프로그램 4.3에서 스택 코드 추가
+typedef char element,
+// 교체!
+// 프로그램 4.3에서 스택 코드 추가 끝
+// 연산자의 우선순위를 반환한다.
+int prec(char op)
+switch (op) {
+case ' (' : case
+return
+case |十' : case
+return
+case '*' : case
+return
+0;
+1;
+2;
+return
+// 중위 표기 수식 -〉 후위 표기 수식
+_to-postfix(char exp[])
+VOid infix
+char ch, top—op;
+int len = strlen(exp);
+StackType s;
+init_stack(&s) ;
+for (i = 0; i<len; 5++) {
+// 스택 초기화
+CHAPTER04 스택
+133

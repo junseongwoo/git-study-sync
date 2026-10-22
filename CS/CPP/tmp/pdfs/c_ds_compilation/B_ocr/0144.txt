@@ -1,0 +1,50 @@
+21
+22
+23
+24
+25
+26
+27
+28
+29
+31
+32
+LQ-CreateQueue( LinkedQueue** Queue
+VOid
+LQ-DestroyQueue( LinkedQueue* Queue );
+VOid
+NOde* LQ-CreateNode(char* Data);
+LC&stroyNode(Node• NOde );
+void
+LQ-Enqueue( LinkedQueue* Queue, Node* NewNode
+void
+Node* LQ-Dequeue( LinkedQueue* Queue );
+int LQ_IsEmpty( LinkedQueue* Queue );
+ærdif
+De/LinkedQueue/LinkedQueue. (
+01
+03
+04
+09
+12
+14
+18
+20
+22
+23
+136
+*include "LinkedQueue.h"
+void LQ-CreateQueue( LinkedQueue** Queue )
+// 큐를 자유 저장소에 생성
+(Queue )
+( LinkedQueue*)ma110c(sizeof( LinkedQueue ) );
+(•Queue )->Front = NULL;
+(*Queue )-Rear = NULL;
+(*Queue )-Xount = 0;
+void LQ-DestroyQueue( LinkedQueue* Queue )
+while ( !LQ-IsEmptY( Queue ) )
+No血* Popped = LQ-Dequeue( Queue );
+LQ-DestroyNode (Popped );
+// 큐를 자유 저장소에서 할당 해제
+free( Queue )•,
+Part 01 • 자료구조

@@ -1,0 +1,58 @@
+if ( 믈oveTo ( Maze, uext, NORTH ) == SUCCEED )
+return SUCCEED;
+%3
+%5
+%7
+%9
+070
+072
+073
+074
+075
+076
+077
+078
+079
+%1
+083
+085
+087
+091
+092
+093
+097
+1%
+Uaze-»ata[Current->YIICurrent->Xl = WAY;•
+return FAIL;
+모든 방힝℃| FAIL을 반환했으므로
+이 위치는 해가 아니다. 원래대로
+길(WAY)로 표시하고 이전 위치로
+백트래킹합니다.
+int
+GetNextStep( UazeInf0* Maze. Position* Current, int Direction, Position* Next )
+Current의 다음 위치가 미로의 경계를
+switch ( Direction )•
+넘어서면 FAIL을 반환합니다
+case NORTH:
+Next十〉X = Current•〉X;
+Next->Y = Current->Y - 1:
+if ( Next->Y =
+break,
+case SOUTH
+-1 ) return FAIL;
+Next十〉X = Current-〉X;
+Next->Y = Current->Y + 1;
+if ( Next->Y
+break,
+case EAST:
+= Maze-RowSIze ) return FAIL;
+Next十〉X = Current•〉X + 1,
+Next->Y = Current->Y;
+if ( Next->X == Maze-XoIumnSize ) return FAIL;
+break.
+case WEST:
+Next十〉X = Current->X - 1;
+Next->Y = Current->Y;
+620
+if ( Next->X == -1 ) return FAIL;
+Part 03 • 알고리즘 설계 기법

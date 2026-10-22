@@ -1,0 +1,26 @@
+malloc( ) 함수로 자유 저장소에 SBTNode 구조체의 크기만큼 메모리 공간을 할당하고, 이렇게
+할당한 메모리 공간을 NewNode 포인터에 저장합니다.
+이어서 NewNode의 Left 필드와 R1ght 필드를 NtJLL로 초기화하고 Data 필드에 매개 변수로 입
+력 받은 NewData를 저장합니다. 함수의 마지막 라인에서는 이렇게 생성한 노드의 포인터를 반환
+합니다.
+SBTNode• SBT_CreateNode( ElementType NewData )
+SBTNode* NewNode = (SBTNode*)ma110c( sizeof(SBTNode) ),•
+NewNode->Left
+= NULL;
+= NULL;
+NewNode-Right
+NewData,
+NewNode->Data
+return NewNode,
+자유 저장소에 공간을 할당하면 언젠가는 할당 해제해야 하므로 SBT-CreateNode ( ) 함수의 짝인
+SBT Destroy Node( ) 함수를 선언해주겠습니다. 이 함수는 free( ) 함수를 이용하여 노-드가 할
+당되어 있던 공간을 할당 해제합니다.
+void SBT_DestroyNode( SBTNode* NOde )
+free(Node);
+전위 순회를 응용한 이진 트리 출력
+전위 순회는 뿌리 노드부터 잎 노드까지, 즉 위에서 아래로 타고 내려오는 순회 규칙입니다. 다음의
+SBT PreorderPrintTree( ) 함수는 이 순회 규칙을 이용하여 이진 트리 전체를 출력합니다.
+void SBT PreorderPrintTree( SBTNode• NOde )
+if ( Node == NULL )
+Chapter 04 • 트리
+167

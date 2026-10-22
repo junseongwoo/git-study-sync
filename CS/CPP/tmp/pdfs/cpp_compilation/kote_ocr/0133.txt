@@ -1,0 +1,31 @@
+void find(const std::unordered set<int>& container, const int element)
+if (container.find(element) == container.end())
+std::cout 〈〈 element 〈〈 " 검색: 실패" 〈〈 std::endl,
+else
+std::cout 〈〈 element 〈〈 " 검색: 성공" 〈〈 std::endl;
+void find(const std::unordered map<int, int>& container, const int element)
+autO it = container.find(element);
+if (it == container.end())
+std::cout 〈〈 element 〈〈 " 검색: 실패" 〈〈 std::endl;
+else
+std::cout 〈〈 element 〈〈 " 검색: 성공, 값= " 〈〈 it-〉second 〈〈 std::endl,
+4. main() 함수를 만들고, 이 안에 unordered-set과 unordered-map을 시용하여 원소 삽입, 삭제
+검색을 수행하는 코드를 작성합니다.
+int main()
+std::cout 〈〈 "*** std::unordered-set 예제 ***" 〈〈 std::endl;
+std::unordered_set<int〉 setl = {1, 2, 3, 4, 5};
+std::cout 〈〈 "setl 초것값: '; print(setl);
+setl .insert(2);
+std::cout 〈〈 "2 삽입:
+setl.insert(l@);
+setl .insert(3@@);
+; print(setl);
+std::cout 〈〈 "10, 300 삽입:
+, print(setl);
+find(setl, 4);
+find(setl, 100);
+s아1 .erase(2);
+std::cout 〈〈 "2 삭제:
+find(setl, 2);
+, print(setl);
+std::cout 〈〈 "*** std::unordered-map 예제 ***|| 〈〈 std: :endl:

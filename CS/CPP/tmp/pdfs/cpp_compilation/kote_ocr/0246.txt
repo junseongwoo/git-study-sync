@@ -1,0 +1,30 @@
+2. 그래프의 에지를 표현하는 Edge 구조체를 정의하고, 에지 리스트로 그래프를 표현하는 Graph
+클래스를 정의합니다. Edge 구조체와 Graph 클래스 정의는 •연습 문제 조: 1正s 구현하기'의
+2단계와 3단계에서 작성한 코드를 그대로 A卜%하겠습니다.
+3. 이번 연습 문제에서는 앞서 연습 문제 28에서 A卜%했던 그래프를 똑같이 A卜몸합니다. 그러므
+로 그래프 생성 함수 코드-도 완전히 똑같습니다. 다만 이해의 편의를 위해 해당 그래프를 그
+림 6-12에 다시 한 번 나타냈으며, 해당 그래프를 생성하는 함수 소스 코드-도 아래에 나타냈
+습니다.
+그림 6-12 연습 문제 29에서 사용할 그래프
+5
+6
+4
+2
+3
+template 〈typename T>
+autO create_reference_graph()
+Graph<T> 6(9);
+map<unsigned, vector<pair〈unsigned,
+edge—map[l ]
+edge—map[2]
+edge_map[3]
+edge-map[41
+edge-map[5]
+edge-map[6]
+edge-map[기
+edge-map[8]
+for (auto& i : edge—map)
+for (auto& j : i.second)
+8
+T〉〉〉 edge-map;
+257

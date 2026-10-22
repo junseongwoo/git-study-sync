@@ -1,0 +1,74 @@
+093
+if ( Tree
+= NULL )
+094
+return 0,
+095
+096
+switch ( Tree->Data )
+097
+098
+// 연산자인 경우
+099
+case 노••. case • /•
+case '+|: case
+100
+101
+102
+103
+104
+else if ( Tree->Data
+105
+106
+else if ( Tree->Data
+107
+108
+109
+110
+111
+112
+113
+114
+115
+116
+117
+118
+Left
+Right
+else if
+break,
+ET Evaluate( Tree->Left );
+ET_Eva1uate( Tree->Right );
+if ( Tree->Data
+( Tree->Data
+// 피연산자인 경우
+default
+나• ) Result
+• ) Resu1t
+• ) Resu1t
+7• ) Resu1t
+Left + Right;
+Left - Right,
+Left * Right;
+Left / Right;
+memset(Temp, 0, sizeof(Temp));
+Temp[@I = Tree-»ata;
+ResuIt = atof(Temp);
+break,
+return ResuIt,
+04장/ExpressionTree/Test—ExpressionTree.c
+01
+02
+03
+04
+05
+06
+07
+08
+#include "ExpressionTree.h"
+int main( VOid )
+ETNode* ROOt = NULL;
+char PostfixExpression(20) = “71*52-/“;
+ET BuildExpressionTree( PostfixExpression. 鰍㈀t);
+Chapter 04 • 트리
+185

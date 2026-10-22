@@ -1,0 +1,33 @@
+단순 연결 리스-나처럼 해드 포인터가 필요 없다. 즉 헤드 노드만 알고 있으면 어떤 노t=궐1류 집
+근할 수 있다. 헤드 노드는 main 함수 인에 변수로 head리는 이름으로 생성되어 있다. heacR: 포
+인터 변수가 아니고 구조체 변수임을 유의해야 한다. 이중 연결 리스트는 시용하기 전에 반드시
+초기화를 해야 된다는 점을 유의하라. 즉 헤더 노드의 링크필드들이 자기 자신을 가리키도록 초
+기회를 하여야 한다.
+프로그램 7.7 이중 연결 리스트에서의 삭제함수
+#inctude <stdio.h>
+#include <stdlib.h>
+typedef int element;
+typedef struct DListNode { // 이중연결 노드 타입
+element data;
+Struct DListNode* llink;
+Struct DListNode* rtnnk;
+} DListNode;
+// 이중 연결 리스트를 초기화
+void init(DListNode* phead)
+phead->ttink = phead;
+phead->rlink = phead;
+// 이중 연결 리스트의 노드를 출력
+void print_dtist(DListNode* phead)
+DListNode* p;
+for (p = phead->rlink; P != phead; p = p->rlink) {
+printf("<-l l%dl |-> ", p->data);
+printf("\n");
+// 새로운 데이터를 노드 before의 오른쪽에 삽입한다.
+void dinsert(DListNode *before, element data)
+DListN0de *newnode = (DListNode *)malloc(sizeof(DListNode)) ,•
+newnode->data=data ;
+newnode->llink = before;
+neunode->rlink = before->rtink;
+before->rlink->llink = newnode;
+before->rlink = newnode;
+234 C언어로 쉽게 물어쓴 자료구조

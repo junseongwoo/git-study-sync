@@ -1,0 +1,17 @@
+before
+new node
+(2)
+[그림 7-9] 이중 연결 리스트에서의 삽입순서
+프로그램 7.5 이중 연결 리스트에서의 삽입함수
+// 새로운 데이터를 노드 before의 오른쪽에 삽입한다.
+void dinsert(DListNode *before, element data)
+DListN0de = (DListNode *)malIoc(sizeof(DListN0de)) •,
+strcpy(newnode->data, data) ;
+newnode->llink = before;
+newnode->rlink = before->rlink,
+before->rlink->ttink = newnode;
+before—>rlink = newnode;
+삭제연산
+삭제 연산은 [그림 7-1이의 순서로 링크들의 값을 변화시기면 된다.
+[그림 7-1이 이중 연결 리스트에서의 삭제순서
+232 C언어로 쉽게 물어쓴 자료구조

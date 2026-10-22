@@ -1,0 +1,34 @@
+306
+전체 프로그램
+프로그램 8.13 이진 탐색 트리
+#include <stdio.h〉
+#include <stdtib.h>
+typedef int ele•nent;
+typedef struct TreeN0de {
+element key;
+struct TreeNode *left, *right;
+} TreeNode;
+// 순환적인 탐색 함수
+TreeNode * search(TreeNode * node, int key)
+if (node == NULL) return NULL;
+if (key == return node;
+else if (key 〈 node->key)
+return search(node->left, key) ;
+else
+return search(node->right, key) ;
+TreeNode * new item)
+TreeNode * temp = (TreeNode *)malIoc(sizeof(TreeN0de));
+temp->key = item;
+temp-〉left = temp->right = NULL;
+return temp;
+Treet&e * insert * node, int key)
+// 트리가 공백이면 새로운 노드를 반환한다.
+if (node == NULL) return new node(key);
+// 그렇지 않으면 순환적으로 트리를 내려간다.
+if (key 〈 node->key)
+node->left = insert_node(node->left, key) ;
+else if (key >
+node->right = insert_node(node->right, key) ;
+// 변경된 루트 포인터를 반환한다.
+return node;
+C언어로 쉽게 불어쓴 자료구조

@@ -1,0 +1,22 @@
+정렬 애플릿을 이용하여 다음의 실험을 수행하라
+)쯔」그 - I—E-J
+가상 실습 12.5
+쮁정일
+1
+슛자S역 1수
+까4넓ㆍa
+4簒k-,“颯 대• 1%
+스)屬
+(1) 퀵 정렬에서 입력의 개수가 ,1일 때, 이동의 횟수와 비교의 횟수를 예측하여 보라.
+(기 퀵 정렬에서 최선의 경우와 최악의 경우는? 아니면 항상 수행시간은 일정한가? 실험을 통하여 살피보라
+퀵 정렬 알고리즘
+앞에서 설명한 퀵 정렬을 c언어로 작성하여 보면 다음과 같다. 정렬 대상은 배열 lis로서 정렬하
+여야 할 범위는 left에서 fight까지라고 가정하자.
+프로그램 12.6 퀵정릴
+void quick-sort(int list[], int left, int nght)
+if (left<right) {
+int q = partitnon(list, left, right);
+quick_sort(list, left, q - 1);
+quick-sort(list, q + 1, right);
+CHAPTER12 정렬
+471

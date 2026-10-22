@@ -1,0 +1,31 @@
+1
+os 〈〈 "[" 〈〈 obj.id 〈〈 "1 가격: •• 〈〈 obj.value
+〈〈 •• \t무게: •• 〈〈 obj weight
+〈〈 •• kg\t단위 무게 당 가격: " 〈〈 obj.value-per-unit weight;
+return OS,•
+0bject 객체는 int 타입으로 무게와 가격 정보를 저장하고, 이로부터 단위 무게당 가격을 구
+하여 double 타입으로 저장합니다.
+2. 다음은 분할 가능 배낭 문제의 솔루션을 구하는 함수입니다.
+// 분할 가능 배낭 문제 알고리즘 구현 함수
+auto fi11—knapsack(std::vector<Object>& objects, int knapsack—capacity)
+std: :vector<0bject〉 knapsack_contents;
+knapsack_contents. reserve(obj ects. size( ) ) ;
+// 물건들을 내림차순으로 정렬(단위 무게 당 가격 기준)
+std: :sort(objects.begin(), objects end());
+std: :reverse(objects.begin(), objects .end( ));
+// 가장 가치 있는' 물건들 먼저 배낭에 추가
+autO current_object = objects.begin();
+int current total_weight = 0;
+while (current total_weight 〈 knapsack_capacity && current_object != objects.end())
+knapsack_contents.push back(*current-object);
+current_total_weight 十= current_object-〉weight;
+current object十十;
+// 마지막 추가한 물건에 의해 배낭 최대 허용 무게가 초과된 경우
+knapsack—capaclty;
+int weight_of_last obj_to_remove = current_total weight
+Object& last object = knapsack-contents.back();
+if (weight_of—last-obj-to-remove 〉 0)
+last_object.weight -= weight_of_last_obj—to—remove;
+last—object.value -= last_object.value—per—unit_weight ,년 weight_of_last_obj—
+tO remove;
+214

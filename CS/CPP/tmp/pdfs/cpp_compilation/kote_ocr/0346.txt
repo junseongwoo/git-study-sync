@@ -1,0 +1,25 @@
+DP(il[01 =
+true;
+3. DP 테이블 원소 값을 설정하기 위해 이중 for 반복문을 시용합니다.
+for (int i = 1: i 〈= set.size(); i++)
+for (int sum = 1; sum 〈= maxSum; sum十十)
+4. 실제 DP 테이블 원소 값을 설정하는 코드는 다음과 같습니다.
+for (int i = 1; i 〈= set.size(); i十+)
+for (int sum = 1; sum 〈= maxSum; sum十十)
+if (sum 〈 set[i
+DP[il[sum]
+= DP[i
+eIse
+DP[i][sum]
+= DP[i
+ålDP[i
+return DP;
+-l][suml;
+- l][sum - set[i - 1]];
+5. 이제 main( ) 함수에 subsetSum-Tabulation() 함수를 호출하는 코드를 추가합니다.
+int main()
+vector〈int〉 set = {16, 1058, 22, 13, 46, 55, 3, 92, 47, 7,
+int target = 6076;
+int tests = 4,•
+98, 367, 807, 106, 333, 85, 577, 9, 3059};
+357

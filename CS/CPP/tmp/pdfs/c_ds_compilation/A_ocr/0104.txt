@@ -1,0 +1,36 @@
+typede struct {
+int student_no;
+char narne[MAX_STRING) ;
+char address[MAX_STRING] ;
+} element;
+element stack[MAX_STACK_SIZE] ;
+int top
+// 공백 상태 검출 함수
+int is-empty()
+return (top == -1);
+// 포화 상태 검출 함수
+int is_full()
+return (top -= (MAX_STACK_SIZE
+// 삽입 함수
+void push(element item)
+if (is-futl()) {
+fprintf(stderr, "스택 포화 에러\n") ;
+스택에 지장되는 데이터를
+구조체로 정의된다.
+return;
+else stack[++top]
+// 삭제 함수
+element pop()
+if (is-empty()) {
+fprintf(stderr,
+exit(l);
+item;
+"스택 공백 에러\n")•,
+else return stack[top-—] ;
+// 피크함수
+element peek()
+if (is-empty()) {
+fprintf(stderr, "스택 공백 에러\n");
+exit(l);
+else return stack[top] ;
+112 C언어로 쉽게 불어쓴 자료구조

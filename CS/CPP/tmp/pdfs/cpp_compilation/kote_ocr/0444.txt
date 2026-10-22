@@ -1,0 +1,27 @@
+return child-〉name == next dir && child->is dir;
+if (found != directory->children.end())
+return add impl(*found, path.substr(sep + 1), is-dir);
+// path에 디렉터리 이름이 포함되어 있지만, 해당 디렉터리가 없는 경우
+std::cout 〈〈 directory-〉name 〈〈 "에 " 〈〈 next dir 〈〈 “ 이름의 디렉터리가 없습니
+다." 〈〈 std::endl;
+return false;
+7. 디렉터리를 이동하는 change-dir() 함수를추가합니다. 이미 앞에서 find() 함수를 구현했기
+때문에 change-dir() 함수는 쉽게 구현할 수 있습니다.
+public:
+b001 change_dir(const std: :string& path)
+auto found = find(path);
+if (found && found->is-dir)
+cwd = found,
+std::cout 〈〈 "현재 디렉터리를 " 〈〈 cwd-〉name 〈〈 "로 이동합니다." 〈〈 std::endl;
+return true,
+std::cout 〈〈 path 〈〈 •
+return false,
+경로를 찾을 수 없습니다." 〈〈 std::endl;
+8. 이번에는 디렉터리와 파일 목록을 출력하는 show-path() 함수를 추가합니다. 함수 인자로 파
+일이 전달되면 단순히 파일 이름을 출력하고, 디렉터리가 인자로 전달되면 해당 디렉터리의
+하위 디렉터 리와 파일을 모두 출력합니다.
+public:
+VOid show_path(const std: :string& path)
+auto found = find(path);
+if (not found)
+455

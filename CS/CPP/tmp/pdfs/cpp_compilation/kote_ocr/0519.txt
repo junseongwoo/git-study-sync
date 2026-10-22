@@ -1,0 +1,30 @@
+기저 조건:
+만학 i N이연: return total
+만학 cost 〉 budget이면: tTtum 0
+한학 count 〉 caoacity이면: retum 0
+순환식:
+F(i. count. cost. total) = 다음 중 최댓값:
+- F(i 十 1. count + quantityli), cost + price[il, tOtal 十 value[iJ) - 현재 상품
+포함하기
+- F(i + 1, count, cost, total) - 그대로 놔두기
+앞에 나은 코드처럼 순환의은 i. count. cost. total 값에 의해 결정됩니다. 이러한 하향식 로직
+을 상향식으로 변경하면 수음과 같습니다.
+기저 조건:
+DP(@, 0, 0) = 0 [아무 상품도 선택되지 않은 상대]
+For i=l to N:
+Product -〉 quantity, price, value
+For (05t = 0 tO budget:
+For count = 0 tO capacity:
+만약 pnce가 (ost보다 크거나 또는 quantity가 count보다 크면:
+DP(i, cost, count) = DP(i - 1, COSt, count)
+그렇지 않으면:
+DP(i, cost, count)
+= 다음 중 최댓값:
+DP(i - 1, COSt, count)
+DP(i - 1, COSt - prlce, count - quantity) 十 value
+즉, 각각의 상태는 현재 인덱스, 상품 구매 비용, 상품 개수에 의해 정의됩니다. 유효한 (05t
+와 count 값에 대해 i번째 상품에서의 이익은 같은 cost와 count 값에 대한 i - 1 번째 상품에
+서의 이익(DP[i - 1][cost] [count])과 같거나 또는 i번째 상품을 추가할 경우에 나타날 수
+있는 이익(DP[i - l][cost - price][count - quantity] + value)과 같습니다.
+5. 지금까지 설명한 로직을 구현하면 다음과 같습니다.
+532

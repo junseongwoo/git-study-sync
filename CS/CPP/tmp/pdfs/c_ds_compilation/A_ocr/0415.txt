@@ -1,0 +1,32 @@
+printf("\n");
+printf(" found: ");
+for (int i : 0; i<g->n; 1++)
+printf("%2d ", found[iJ);
+printf("\n\n");
+void shortest_path(GraphType* g, int start)
+for (i = 0; i<g->n; 5++) /* 초기화 */
+distance[i] = g->weight[start][i];
+found[i] = FALSE;
+found[start] = TRUE; /* 시작 정정 방문 표시 */
+distance[start] = 0;
+for (1 = 0; i〈g-〉n-11 i++) {
+pri (0 ;
+u = choose(distance, g->n, found);
+found[u] = TRUE;
+for (w = 0; w<g->n; ₩++)
+if (!found[wl)
+if (distance[uJ + g->weight[u] [w]<distance[w])
+distance[w] = distance[u] + g->weight[uJ[w];
+int main(void)
+GraphType g = { 7,
+{{ 0, 7, INF, INF, 3, 10, INF },
+{ 7, 0, 4, 10, 2, 6, INF },
+{ INF, 4, 0, 2, INF, INF, INF },
+{ INF, 10, 2, 0, 11, 9, 4 },
+{ 3, 2, INF, 11, 0, INF, 5 },
+{ 10, 6, INF, 9, INF, 0, INF },
+{ INF, INF, INF, 4, 5, INF, 0 }}
+shortest-path(&g, 0) ;
+return 0;
+CHAPTERII 그래프 ||
+423

@@ -1,0 +1,28 @@
+4. 투 번해아 세 번에 조건은 지도상의 좌표 a에서 좌표 b로 단순미 이동하tl편서 처리할 수 있습
+니다. 측. 이통 경로를 따라 지반 강도 행럼 •terrain에 들이 있는 값의 후b올 누적하이 비핑-을
+• 문자
+기1산합니다. 이와 동시에 grid(a.yl(a.xl 행릴에 들이 있는 문자가 EMPTY-SPACE.
+인지를 김사하여. •. • 문자가 아니면 이동을 즉시 종료합니다. 최종적으로 좌표 a가 좌표 b와
+같아지면 지반 강도의 합 cost를 반한합니다. 만약 a와 b가 같지 않으면 경로- 중간에 장애물
+이 있는 것으로 간주할 수 있고. 이 경우에는 IJNKNOWN을 반환합니다. 이러한 작업을 )
+함수로 구현하겠습니다. 이 함수는 두 주택의 인데스를 나타내는 정수 start와 end를 인자로
+받고. 하나의 정수 값을 반환합니다.
+int GetCost(int start, int end)
+POint a = houses[start];
+Point b = houses[endl;
+dir = 0,
+1nt X
+int y_dir = 0;
+if
+if
+(a
+xdir=(a.x<b.x)?l
+(a
+y_dir
+int (05t = 0;
+a.X 十= X dir,
+a.Y 十= Y dir;
+cost += terrain[a.yl[a.xl;
+} while (grid[a.yl[a.x] == EMPTY_SPACE);
+return (a != b) ? UNKNOWN •
+cost;

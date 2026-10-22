@@ -1,0 +1,25 @@
+개수 세기 연산
+노드의 개수를 세는 연산(리스트의 길이를 재는 연산)도 구현해봅시다. 다음의 SLL GetNode
+count ( ) 함수는 링그드 리스트 내에 존재하는 노드의 개수를 세어 그 결과를 반환합니다.
+int SLL GetNodeCount(Node* Head)
+int Count = 0:
+Current = Head;
+while ( Current != NULL )
+Current = Current->NextNode,
+Count++,•
+return Count,
+12.3 링크드 리스트 예제 프로그램
+지금까지 연마해온 링크드 리스트 초식들을 종합하여 예제 프로그램을 만들어보겠습니다. 이 예제
+프로그램은 3개의 파일로 구성됩니다. 하나는 링크드 리스트의 기본 연산을 수행하는 함수가 선언
+된 LinkedList.h, 다른 하나는 이 함수-들을 구현하는 LinkedList.c, 그리고 마지막 하나는 구현된
+내용을 테스트하는 Test LinkedList.c입니다. 그럼 시작해봅시다.
+(”제 소스는 https//www hanbtco.kr/src/11 %3에서 내려받을 수 있습니다
+NOT
+01 장/LinkedList/LinkedList. h
+01 •ifndef 니NKEDLIST-H
+02 LINKED니ST-H
+03
+04 tinclude <stdio.h>
+05 tinclude <stdlib.h〉
+36
+Part 01 • 자료구조

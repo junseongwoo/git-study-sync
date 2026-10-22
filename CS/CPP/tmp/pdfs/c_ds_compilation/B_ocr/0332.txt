@@ -1,0 +1,57 @@
+123
+124
+125
+126
+int PQ-IsEmpty( PriorityQueuet )
+return ( PQ->UsedSize == 0
+07 장/PriorityQueue/Test—PrioritYQueue. (
+01
+02
+03
+04
+05
+06
+07
+08
+09
+10
+12
+13
+14
+16
+17
+18
+20
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+#include "PriorityQueue.h•
+void PrintNode( PQN0de* N0de )
+printf("작업명 : (우선순위:년)\n“, N0de-»ata, Node-Priority);
+int main( VOid )
+PriorityQueuet PQ - PQ-Create(
+PQNode Popped;
+N0血s[7] =
+{34, (void*)"코닝“},
+{12, (void*)“고객미팅“},
+{87, (void*)꺼피타기“},
+{45, (void*까문서작성•},
+{35, (void*)“디버킹“},
+(66, (void*)“이닦기“}
+PQ-Enqueue(PQ, Nodes[01 ):
+PQ-Enqueue(PQ, Nodes(11 );
+PQ-Enqueue(PQ. Nodes[기 );
+PQ-Enqueue(PQ, Node회31 ):
+PQ-Enqueue(PQ, No血s[4]
+PQ-Enqueue(PQ, Nodes[51);
+3 );
+printf( “큐에 남아 있는 작업의 수 : 년Ⅵ•, m-XJsedSize );
+Chapter 07 • 우선순위 큐와
+327

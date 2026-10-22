@@ -1,0 +1,26 @@
+number—source(long first, long last, 1예g step)
+: sequence-(@), first_(first), last—(last), step-(step) {}
+b001 const setup_key(typename MapTask: :key—type& key)
+key = sequence 卄,•
+return (key * Step_ 〈= last_);
+b001 const get_data(typename MapTask: :key—type const& key,
+typename MapTask: :value type& value)
+typename MapTask: :value—type val;
+val.first = first_ + (key * Step );
+val.second = std::min(val.first 十 step— - 1, last_);
+std::swap(val, value);
+return true;
+private:
+long sequence
+long const step_
+long const last
+long const first_
+3. 맵 연산을 수행하는 함수를 정의합니다.
+struct map—task : public mapreduce::map_task〈long, std: :pair<long, long〉〉
+template〈typename Runtime〉
+VOid operator()(Runtime& runtime, key_type const& /*key*/, value_type const&
+value) const
+for (key-type 100p = value.first; 100p 〈= value.second: ++1009)
+runtime.emit_intermediate(is—prime(loop), 100p);
+4. 리듀스 연산을 수행하는 함수를 정의합니다.
+196

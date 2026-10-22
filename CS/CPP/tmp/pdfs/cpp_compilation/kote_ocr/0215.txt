@@ -1,0 +1,27 @@
+다음 연습 문제에서 디스조인트-셋 자료 구조를 이용하여 크루스칼 최소 신장 트리 알고리즘을
+구현 해보겠습니다.
+53.8 연습 문제 26: 크루스칼 MST 알고리즘
+이번 연습 문제에서는 디스조인트-셋 자료 구조를 구현하고, 이를 이용하여 최소 신장 트리를 구
+하는 크루스칼 알고리즘까지 구현해보겠습니다
+1. 필요한 헤더 파일을 포함합니다. 그리고 코팅 편의를 위해 using namespace std• 부장으 八
+′ 1- 근 丁
+가합니다.
+#include 〈iostream〉
+#include 〈vector〉
+#include 〈algorithm〉
+#include 〈queue〉
+#include 〈map〉
+uslng namespace Std;
+2. 디스조인트-셋 자료 구조를 구현한 SimpleDisjointSet 클래스를 정의합니다.
+class SimpleDisjointSet
+pnvate:
+struct NOde
+unsigned
+id;
+unsigned rank;
+unslgned parent;
+Node(unsigned id) : id(-id), rank(@), parent(-id) {}
+b001 operator != ((0舫t Node& n) const
+return this->id != n.id;
+// 디스조인트-셋 포레스트
+vector<Node〉 nodes,

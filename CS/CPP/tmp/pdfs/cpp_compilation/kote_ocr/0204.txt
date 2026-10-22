@@ -1,0 +1,30 @@
+return knapsack_contents;
+이 함수에서는 단위 무게당 가격을 기준으로 물건들을 내림차순 정렬한 후, 배당 최대 용량이
+될 때까지 물건을 재위 넣습니다. 만약 배당에 넣은 물건의 무게 합이 배당 최대 무게를 초과
+할 경우 마지막에 넣은 물건을 일부 덜어내어 배당 최대 무게에 맞도록 설정합니다.
+3. main( ) 함수에 테스트를 위한 코드를 추가합니다.
+int main(int argc, char* argv[])
+std: :vector〈0bject〉 objects;
+objects. reserve(7);
+std::vector<int〉 weights {1, 2, 5, 9, 2, 3, 4};
+std::vector<double〉 values {10, 7, 15, 10, 12, 11, 5};
+for (aut0 i =0; i 〈 7; i++)
+0bjects.push-back(Object(i + 1, weights(i], values[i]));
+// 사용할 수 있는 물건 정보 출력
+std::cout 〈〈 "[사용할 수 있는 물건 정보]" 〈〈 std::endl;
+for (auto& 0 : objects)
+std::cout 〈〈 0 〈〈 std: :endl;
+std::cout 〈〈 std::endl,
+// 분할 가능 배낭 문제 알고리즘 실행, 배낭의 최대 허용 무게는 7로 지정
+int knapsack_capacity = 7;
+autO solution = fill knapsack(objects, knapsack—capacity);
+// 배낭에 넣을 물건 정보 출력
+std::cout 〈〈 "[배낭에 넣을 물건들 (최대 용량= " 〈〈 knapsack-capacity 〈〈 ")]" 〈〈
+std::endl;
+for (auto& 0 : solution)
+std: :cout 〈〈 0 〈〈 std::endl;
+std: :cout 〈〈 std: :endl;
+main() 함수에서는 그림 5-5에 나타난 것과 같이 일곱 개의 물건 객체를 생성합니다. 그리고
+앞서 구현한 분할 가능 배당 문제 알고리즘 함수 ) 함수를 호출하여 문제를 해
+미까
+215

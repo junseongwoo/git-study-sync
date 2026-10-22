@@ -1,0 +1,25 @@
+vector〈vector<int>> edge-map (
+{2, 4, 2}
+for (auto& e : edge map)
+// {시작 정점, 목표 정점, 가중치}
+edges.emplace-back(Edge {해에, e[ll, 하기});
+int start = 0;
+vector<int〉 distance = BellmanFord(edges, V, start);
+7. 벨모卜포드 알고리즘 구현 함수는 각 정점의 최단 거리 값 배열을 반환합니다. 이 값을 화면에
+출력하여 결괴를 확인할 수 있습니다.
+cout 〈〈 "[" 〈〈 start 〈〈 "번 정점으로부터 최소 거리]” 〈〈 endl;
+for (int = 0; i 〈 distance.size(); i++)
+if (distance[i] == UNKNOWN)
+cout 〈〈 i 〈〈 "번 정점: 방문하지 않음!" 〈〈 endl;
+else
+cout 〈〈 i 〈〈 "번 정점: " 〈〈 distance[i] 〈〈 endl;
+8. 지금까지 작성한 프로그램을 실행하면 다음과 같은 출력을 확인할 수 있습니다.
+[0번 정점으로부터 최소 거리]
+0번 정점: 0
+1번 정점: 3
+2번 정점: 6
+3번 정점: 13
+4번 정점: 8
+실행 결과에서 벨닣卜포드 알고리즘은 다익스트라 알고리즘이 제대로 계산하지 못한 최단 거리를
+정화하게 구하는 것을 확인할 수 있습니다. 그러나 여기서 한 가지 더 고려해야 할 사항이 있으며,
+이 전에 대해서는 다음 절에서 이어서 설명하겠습니다.

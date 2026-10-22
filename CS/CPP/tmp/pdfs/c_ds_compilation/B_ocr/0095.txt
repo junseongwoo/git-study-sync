@@ -1,0 +1,21 @@
+노드 삽입 연산
+삽입 연산은 스택의 최상위 노드 T叩에 새 노드를 얹도록 구현하면 됩니다. 이렇게 하면 새 노드가
+최상위 노-드가 되지요? 마지막으로 새로운 최상위 노드의 주소를 LinkedListStack 구조체의 Top
+필드에 등록하면 니S-Push ( ) 함수가 할 일은 끝납니다.
+void LLS Push( LinkedListStack* Stack, NOde* NewNode )
+if ( Stack->List == NULL )
+Stack->List = NewNode,
+else
+// 스택의 Top 위에 새 노드를 얹는다.
+Stack->Top->NextNode = NewNode,
+// 스택의 Top 필드에 새 노c이 주소를 등록한다.
+Stack->Top = NewNode,
+노드 제거 연산
+링크드 리스트 기반 스택에서 제거 연산은 다음 네 단계로 이루어집니다.
+0 현재 최,장위 노드(Top )의 주소를 다른 포인터에 복사한다.
+새로운 최상위 노드(현재 최상위 노드)의 바로 아래(이전) 노드를 찾는다
+0 UnkedLJStStack 구조체의 Top 필드에 새로운 최상위 노드의 주소를 등록한다
+0 단계 0에서 포인터에 저장했던 예전 최상위 c이 주소를 반환한다.
+다음 코드는 0~0 단계를 수행하는 LLS-Pop ( ) 함수의 구현 예입니다.
+86
+Part 01 • 자료구조

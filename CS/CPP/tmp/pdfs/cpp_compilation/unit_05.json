@@ -1,0 +1,1140 @@
+{
+  "unit": 5,
+  "title": "연산자 오버로딩·N차원 배열 프로젝트",
+  "part": "C++",
+  "scope": [
+    {
+      "source": "B",
+      "start": 193,
+      "end": 274
+    },
+    {
+      "source": "L08",
+      "start": 1,
+      "end": 48
+    }
+  ],
+  "learning": [
+    {
+      "text": "멤버함수·전역함수·스트림·대입·첨자 연산자의 오버로딩을 다룬다.",
+      "refs": [
+        {
+          "source": "L08",
+          "section": "Operator Overloading",
+          "pages": [
+            4
+          ]
+        }
+      ],
+      "evidence": "멤버함수 / 전역함수 / 스트림삽입및추출 / 대입 / 첨자"
+    },
+    {
+      "text": "N차원 배열 프로젝트는 연산자 오버로딩을 종합하여 []로 원소에 접근하는 배열 클래스를 구현한다.",
+      "refs": [
+        {
+          "source": "B",
+          "section": "6장·N 차원 배열 만들기 프로젝트",
+          "pages": [
+            244,
+            245
+          ]
+        }
+      ],
+      "evidence": "N 차원배열을제공하는클래스 / [] 를이용해서원소에접근"
+    }
+  ],
+  "concepts": [
+    {
+      "title": "연산자 오버로딩의 규칙",
+      "items": [
+        {
+          "text": "연산자 오버로딩은 +, =, * 등의 연산자를 사용자 정의 타입에 대해 사용할 수 있게 하는 기능이다.",
+          "refs": [
+            {
+              "source": "L08",
+              "section": "Operator Overloading",
+              "pages": [
+                6
+              ]
+            }
+          ],
+          "evidence": "연산자를유저정의타입(ex. 클래스)에대해사용할수있도록"
+        },
+        {
+          "text": "연산자 오버로딩은 연산 우선순위나 단항·이항·삼항 구분을 바꾸지 못하며, 기본 타입의 연산자나 새 연산자를 정의할 수 없다.",
+          "refs": [
+            {
+              "source": "L08",
+              "section": "Operator Overloading",
+              "pages": [
+                11
+              ]
+            }
+          ],
+          "evidence": "우선순위를바꿀수는없음 / 교체는불가능 / 기본타입 / 새로운연산자의정의불가"
+        },
+        {
+          "text": "[ ], ( ), ->, = 등은 멤버함수로만 오버로딩할 수 있다.",
+          "refs": [
+            {
+              "source": "L08",
+              "section": "Operator Overloading",
+              "pages": [
+                11
+              ]
+            }
+          ],
+          "evidence": "[ ], ( ), ->, = / 멤버함수로만오버로딩가능"
+        },
+        {
+          "text": "operator+와 operator=를 정의해도 operator+=는 자동 생성되지 않으므로 별도로 구현해야 한다.",
+          "refs": [
+            {
+              "source": "B",
+              "section": "6장·연산자 오버로딩",
+              "pages": [
+                206
+              ]
+            }
+          ],
+          "evidence": "자동으로a = a + b; 로바꾸어주지않습니다 / operator+= 를따로"
+        }
+      ]
+    },
+    {
+      "title": "멤버함수·전역함수·friend",
+      "items": [
+        {
+          "text": "멤버함수 방식의 이항 연산자는 왼쪽 객체의 operator 함수에 오른쪽 객체를 인자로 넘긴다.",
+          "refs": [
+            {
+              "source": "L08",
+              "section": "Binary operator, as Member Function",
+              "pages": [
+                14
+              ]
+            }
+          ],
+          "evidence": "왼쪽에있는객체(p1)의멤버함수 / 오른쪽객체(p2)를인자로"
+        },
+        {
+          "text": "전역함수 방식의 이항 연산자는 왼쪽 피연산자도 매개변수로 전달한다.",
+          "refs": [
+            {
+              "source": "L08",
+              "section": "Binary operator, as Global Function",
+              "pages": [
+                22
+              ]
+            }
+          ],
+          "evidence": "Lhs도매개변수로써전달"
+        },
+        {
+          "text": "멤버함수만으로는 p1*3이 가능해도 3*p1을 처리할 수 없는 경우가 있어 전역함수를 추가 구현한다.",
+          "refs": [
+            {
+              "source": "L08",
+              "section": "Limitation of Member Function·Binary operator, as Global Function",
+              "pages": [
+                20,
+                27
+              ]
+            }
+          ],
+          "evidence": "p1*3은함수호출가능, 3*p1은함수호출불가 / 전역함수를추가구현"
+        },
+        {
+          "text": "friend로 선언한 전역 연산자 함수는 클래스의 private 멤버에 접근할 수 있다.",
+          "refs": [
+            {
+              "source": "L08",
+              "section": "Binary operator, as Global Function",
+              "pages": [
+                23
+              ]
+            }
+          ],
+          "evidence": "xpos와ypos에쉽게접근하기위해friend선언"
+        },
+        {
+          "text": "클래스 내부에 friend 함수의 코드가 있어도 그 함수가 멤버함수인 것은 아니다.",
+          "refs": [
+            {
+              "source": "L08",
+              "section": "Binary operator, as Global Function",
+              "pages": [
+                24,
+                25
+              ]
+            }
+          ],
+          "evidence": "무조건멤버함수가아닙니다 / operator+는전역함수"
+        }
+      ]
+    },
+    {
+      "title": "비교·사칙연산·대입",
+      "items": [
+        {
+          "text": "MyString의 operator==는 compare의 결과를 논리 부정하여 같을 때 true를 반환하도록 한다.",
+          "refs": [
+            {
+              "source": "B",
+              "section": "6장·MyString 의 == 연산자 오버로딩",
+              "pages": [
+                194
+              ]
+            }
+          ],
+          "evidence": "return !compare(str); / 같으면true 를리턴"
+        },
+        {
+          "text": "책의 Complex 사칙연산 함수는 원래 객체를 바꾸지 않고 계산 결과의 값을 반환한다.",
+          "refs": [
+            {
+              "source": "B",
+              "section": "6장·복소수 클래스 만들기",
+              "pages": [
+                201
+              ]
+            }
+          ],
+          "evidence": "Complex& 가아닌Complex 를리턴 / real += c.real / 이러한문제를막기"
+        },
+        {
+          "text": "자동 생성된 대입 연산자는 얕은 복사를 수행하므로 깊은 복사가 필요한 경우 직접 정의해야 한다.",
+          "refs": [
+            {
+              "source": "L08",
+              "section": "Assignment Operator Overloading",
+              "pages": [
+                37
+              ]
+            }
+          ],
+          "evidence": "자동생성된대입연산자는얕은복사 / 깊은복사를통한대입연산자직접정의"
+        },
+        {
+          "text": "대입 연산자는 자기 대입을 검사하고, 포인터 멤버의 데이터가 배열이면 해제 후 재할당을 고려한다.",
+          "refs": [
+            {
+              "source": "L08",
+              "section": "Assignment Operator Overloading",
+              "pages": [
+                39
+              ]
+            }
+          ],
+          "evidence": "Self-assignmentchecking이필요 / 해제(delete [])후재할당"
+        },
+        {
+          "text": "유도 클래스의 대입 연산자는 기본 클래스의 대입 연산자를 호출한 다음 유도 클래스 속성을 대입한다.",
+          "refs": [
+            {
+              "source": "L08",
+              "section": "Copy/Move Constructor & Overloaded Operator =",
+              "pages": [
+                40
+              ]
+            }
+          ],
+          "evidence": "기본클래스에대한대입연산자를호출하고난뒤 / 유도클래스의속성"
+        }
+      ]
+    },
+    {
+      "title": "스트림 삽입·추출과 첨자",
+      "items": [
+        {
+          "text": "<<는 cout 객체(ostream 클래스)의 오버로딩된 연산자이다.",
+          "refs": [
+            {
+              "source": "L08",
+              "section": "OStream",
+              "pages": [
+                30
+              ]
+            }
+          ],
+          "evidence": "<<은cout 객체(ostream 클래스)의오버로딩된연산자"
+        },
+        {
+          "text": "스트림 삽입 연산자는 전역함수로 선언하고 ostream의 참조자를 반환하여 chain insertion을 가능하게 한다.",
+          "refs": [
+            {
+              "source": "L08",
+              "section": "Stream Insertion and Extraction Overloading",
+              "pages": [
+                31
+              ]
+            }
+          ],
+          "evidence": "ostream의참조자를반환 / chain insertion / 전역함수로선언"
+        },
+        {
+          "text": "스트림 추출 연산자의 오른쪽 매개변수는 const가 아니다.",
+          "refs": [
+            {
+              "source": "L08",
+              "section": "Stream Insertion and Extraction Operators Overloading",
+              "pages": [
+                32
+              ]
+            }
+          ],
+          "evidence": "우측매개변수(rhs)는const가아님"
+        },
+        {
+          "text": "첨자 연산자는 멤버함수로 오버로딩하여 경계 검사 등의 기능을 확장할 수 있다.",
+          "refs": [
+            {
+              "source": "L08",
+              "section": "Subscript([ ]) operator overloading",
+              "pages": [
+                43
+              ]
+            }
+          ],
+          "evidence": "멤버함수로오버로딩 / 경계검사등기능확장"
+        },
+        {
+          "text": "첨자 연산자로 배열 내부 값을 수정하려면 참조형을 반환하고, const 객체를 위한 접근도 제공한다.",
+          "refs": [
+            {
+              "source": "L08",
+              "section": "Subscript([ ]) operator overloading",
+              "pages": [
+                45,
+                46
+              ]
+            }
+          ],
+          "evidence": "참조형으로반환해야만 / const PointArr 사용에있어서데이터에접근"
+        }
+      ]
+    },
+    {
+      "title": "Wrapper·타입 변환·전위/후위",
+      "items": [
+        {
+          "text": "Wrapper 클래스는 기본 자료형을 클래스로 포장하여 각 자료형을 객체로 사용하는 클래스이다.",
+          "refs": [
+            {
+              "source": "B",
+              "section": "6장·int Wrapper 클래스 - 타입 변환 연산자",
+              "pages": [
+                238
+              ]
+            }
+          ],
+          "evidence": "기본자료형들(int, float 등등) 을클래스로포장"
+        },
+        {
+          "text": "타입 변환 연산자는 operator 뒤에 변환할 타입을 쓰며 생성자처럼 반환 타입을 따로 쓰지 않는다.",
+          "refs": [
+            {
+              "source": "B",
+              "section": "6장·int Wrapper 클래스 - 타입 변환 연산자",
+              "pages": [
+                239
+              ]
+            }
+          ],
+          "evidence": "operator (변환하고자하는타입) () / 함수의리턴타입을써주시면안됩니다"
+        },
+        {
+          "text": "전위 증감은 매개변수 없는 operator++()/operator--()로, 후위 증감은 의미 없는 int 매개변수를 가진 형태로 구분한다.",
+          "refs": [
+            {
+              "source": "B",
+              "section": "6장·전위/후위 증감 연산자",
+              "pages": [
+                241
+              ]
+            }
+          ],
+          "evidence": "operator++(); / operator--(); / 전위와후위를구별하기위해int 인자"
+        },
+        {
+          "text": "전위 증감 연산자는 값을 바꾼 자기 자신을 반환한다.",
+          "refs": [
+            {
+              "source": "B",
+              "section": "6장·전위/후위 증감 연산자",
+              "pages": [
+                241
+              ]
+            }
+          ],
+          "evidence": "전위증감연산의경우값이바뀐자기자신을리턴"
+        },
+        {
+          "text": "후위 증감 연산자는 값이 바뀌기 이전의 객체를 반환한다.",
+          "refs": [
+            {
+              "source": "B",
+              "section": "6장·전위/후위 증감 연산자",
+              "pages": [
+                241
+              ]
+            }
+          ],
+          "evidence": "후위증감의경우값이바뀌기이전의객체를리턴"
+        }
+      ]
+    },
+    {
+      "title": "C++ 스타일의 캐스팅",
+      "items": [
+        {
+          "text": "static_cast는 언어가 지원하는 일반적인 타입 변환이고, const_cast는 객체의 상수성(const)을 없애는 타입 변환이다.",
+          "refs": [
+            {
+              "source": "B",
+              "section": "6장·C++ 스타일의 캐스팅",
+              "pages": [
+                246
+              ]
+            }
+          ],
+          "evidence": "static_cast : / 일반적인타입변환 / const_cast : / 상수성(const) 를없애는"
+        },
+        {
+          "text": "책은 dynamic_cast를 파생 클래스 사이의 다운캐스팅으로 소개하고, reinterpret_cast는 서로 관련 없는 포인터 사이의 캐스팅 등에 사용한다고 설명한다.",
+          "refs": [
+            {
+              "source": "B",
+              "section": "6장·C++ 스타일의 캐스팅",
+              "pages": [
+                246
+              ]
+            }
+          ],
+          "evidence": "dynamic_cast : 파생클래스사이에서의다운캐스팅 / reinterpret_cast / 서로관련이없는포인터"
+        }
+      ]
+    },
+    {
+      "title": "N차원 배열의 데이터 구조와 재귀",
+      "items": [
+        {
+          "text": "프로젝트의 Array는 차원 수 dim, 각 차원의 크기 size, 시작 Address 포인터 top을 보관한다.",
+          "refs": [
+            {
+              "source": "B",
+              "section": "6장·N 차원 배열 만들기",
+              "pages": [
+                251
+              ]
+            }
+          ],
+          "evidence": "몇차원 / dim / size 배열 / Address * / top"
+        },
+        {
+          "text": "Address는 level과 void* next를 가지며, 마지막 레벨에서는 int 배열을, 그 앞 레벨에서는 다음 Address 배열을 가리킨다.",
+          "refs": [
+            {
+              "source": "B",
+              "section": "6장·N 차원 배열 만들기",
+              "pages": [
+                248,
+                249
+              ]
+            }
+          ],
+          "evidence": "int level; / void* next; / int / Address 배열"
+        },
+        {
+          "text": "initialize_address는 마지막 레벨이면 int 배열을 만들고, 그 전이면 다음 Address 배열을 만들어 각 원소를 재귀적으로 초기화한다.",
+          "refs": [
+            {
+              "source": "B",
+              "section": "6장·N 차원 배열 만들기",
+              "pages": [
+                252,
+                253
+              ]
+            }
+          ],
+          "evidence": "현재처리하고있는Address 배열의레벨이(dim - 1) / 다음레벨 / initialize_address"
+        },
+        {
+          "text": "생성은 위에서 아래로 메모리를 확장하고, 소멸은 아래에서 위로 메모리를 해제한다.",
+          "refs": [
+            {
+              "source": "B",
+              "section": "6장·N 차원 배열 만들기",
+              "pages": [
+                254
+              ]
+            }
+          ],
+          "evidence": "생성자는’위에서아래로’ / 소멸자는’아래에서위로’"
+        }
+      ]
+    },
+    {
+      "title": "중간 객체·타입 변환·반복자",
+      "items": [
+        {
+          "text": "연속된 []의 중간 단계는 Int Wrapper 객체로 표현하고, 실제 데이터에 도달하면 int처럼 읽거나 대입하도록 한다.",
+          "refs": [
+            {
+              "source": "B",
+              "section": "6장·N 차원 배열 만들기·operator[] 문제",
+              "pages": [
+                256,
+                257,
+                260
+              ]
+            }
+          ],
+          "evidence": "Wrapper 클래스객체를리턴 / 중간단계의정보 / 타입변환연산자"
+        },
+        {
+          "text": "반복자(iterator)는 배열의 모든 원소를 순차적으로 접근할 수 있게 하며, ++로 다음 원소를 가리킨다.",
+          "refs": [
+            {
+              "source": "B",
+              "section": "6장·N 차원 배열 만들기 프로젝트·반복자",
+              "pages": [
+                265
+              ]
+            }
+          ],
+          "evidence": "모든원소들을순차적으로접근 / itr ++ 을하면그다음원소"
+        },
+        {
+          "text": "Iterator는 location 배열로 현재 원소의 좌표를 보관한다.",
+          "refs": [
+            {
+              "source": "B",
+              "section": "6장·N 차원 배열 만들기·반복자",
+              "pages": [
+                265
+              ]
+            }
+          ],
+          "evidence": "현재Iterator 가어떤원소를가리키고있는지 / int * location 에배열로보관"
+        },
+        {
+          "text": "begin은 첫 원소, end는 마지막 원소 바로 다음을 뜻하므로 end의 값을 참조하려 하면 오류가 발생한다.",
+          "refs": [
+            {
+              "source": "B",
+              "section": "6장·N 차원 배열 만들기·반복자",
+              "pages": [
+                266
+              ]
+            }
+          ],
+          "evidence": "시작(begin)은맨첫번째원소 / 마지막(end)은맨마지막원소바로다음 / 마지막의값을참조하려고하면오류"
+        }
+      ]
+    }
+  ],
+  "procedures": [
+    {
+      "title": "후위 증가 연산자의 원문 처리 순서",
+      "steps": [
+        {
+          "text": "증가 전 자기 자신으로 임시 객체를 복사 생성한다.",
+          "refs": [
+            {
+              "source": "B",
+              "section": "6장·전위/후위 증감 연산자",
+              "pages": [
+                243
+              ]
+            }
+          ],
+          "evidence": "Test temp(*this);"
+        },
+        {
+          "text": "현재 객체의 값을 증가시킨다.",
+          "refs": [
+            {
+              "source": "B",
+              "section": "6장·전위/후위 증감 연산자",
+              "pages": [
+                243
+              ]
+            }
+          ],
+          "evidence": "x++;"
+        },
+        {
+          "text": "증가 전 상태를 보관한 임시 객체를 반환한다.",
+          "refs": [
+            {
+              "source": "B",
+              "section": "6장·전위/후위 증감 연산자",
+              "pages": [
+                243
+              ]
+            }
+          ],
+          "evidence": "return temp;"
+        }
+      ]
+    },
+    {
+      "title": "N차원 Address 초기화 순서",
+      "steps": [
+        {
+          "text": "현재 Address가 마지막 레벨이면 해당 크기의 int 배열을 할당하고 재귀를 끝낸다.",
+          "refs": [
+            {
+              "source": "B",
+              "section": "6장·N 차원 배열 만들기",
+              "pages": [
+                252
+              ]
+            }
+          ],
+          "evidence": "current->level == dim - 1 / new int[size[current->level]] / return;"
+        },
+        {
+          "text": "마지막 레벨이 아니면 다음 Address 배열을 할당한다.",
+          "refs": [
+            {
+              "source": "B",
+              "section": "6장·N 차원 배열 만들기",
+              "pages": [
+                252
+              ]
+            }
+          ],
+          "evidence": "current->next = new Address[size[current->level]];"
+        },
+        {
+          "text": "새 각 원소의 level을 다음 단계로 정하고 initialize_address를 재귀 호출한다.",
+          "refs": [
+            {
+              "source": "B",
+              "section": "6장·N 차원 배열 만들기",
+              "pages": [
+                253
+              ]
+            }
+          ],
+          "evidence": "current->level + 1 / initialize_address"
+        }
+      ]
+    }
+  ],
+  "syntax": [
+    {
+      "label": "대입 연산자 - 원문 발췌",
+      "code": "Complex& Complex::operator=(const Complex& c)\n\n{\n  real = c.real;\n  img = c.img;\n  return *this;\n}",
+      "refs": [
+        {
+          "source": "B",
+          "section": "6장·대입 연산자 함수",
+          "pages": [
+            202
+          ]
+        }
+      ],
+      "evidence": "Complex& Complex::operator=(const Complex& c) / return *this;",
+      "note": null
+    },
+    {
+      "label": "후위 증가 연산자 - 원문 발췌",
+      "code": "Test operator++(int) {\n  Test temp(*this);\n  x++;\n  std::cout << \"후위 증감 연산자\" << std::endl;\n  return temp;\n}",
+      "refs": [
+        {
+          "source": "B",
+          "section": "6장·전위/후위 증감 연산자",
+          "pages": [
+            243
+          ]
+        }
+      ],
+      "evidence": "Test operator++(int) / Test temp(*this); / return temp;",
+      "note": null
+    }
+  ],
+  "formulas": [
+    {
+      "label": "N차원 배열을 하나의 1차원 배열로 할당하는 크기",
+      "expression": "x1 * x2 * ... * xn",
+      "refs": [
+        {
+          "source": "B",
+          "section": "6장·N 차원 배열 만들기",
+          "pages": [
+            247
+          ]
+        }
+      ],
+      "evidence": "x1 * x2 * ... * xn 크기의일차원배열을할당",
+      "note": "원문에서 사용자가 원하는 배열을 arr[x1][x2]...[xn]으로 두었을 때의 크기."
+    }
+  ],
+  "comparisons": [
+    {
+      "title": "이항 연산자의 피연산자 전달 방식",
+      "headers": [
+        "구현 형태",
+        "피연산자 전달"
+      ],
+      "rows": [
+        [
+          {
+            "text": "멤버함수",
+            "refs": [
+              {
+                "source": "L08",
+                "section": "Binary operator, as Member Function",
+                "pages": [
+                  14
+                ]
+              }
+            ],
+            "evidence": "멤버함수"
+          },
+          {
+            "text": "멤버함수 방식의 이항 연산자는 왼쪽 객체의 operator 함수에 오른쪽 객체를 인자로 넘긴다.",
+            "refs": [
+              {
+                "source": "L08",
+                "section": "Binary operator, as Member Function",
+                "pages": [
+                  14
+                ]
+              }
+            ],
+            "evidence": "왼쪽에있는객체(p1)의멤버함수 / 오른쪽객체(p2)를인자로"
+          }
+        ],
+        [
+          {
+            "text": "전역함수",
+            "refs": [
+              {
+                "source": "L08",
+                "section": "Binary operator, as Global Function",
+                "pages": [
+                  22
+                ]
+              }
+            ],
+            "evidence": "전역함수"
+          },
+          {
+            "text": "전역함수 방식의 이항 연산자는 왼쪽 피연산자도 매개변수로 전달한다.",
+            "refs": [
+              {
+                "source": "L08",
+                "section": "Binary operator, as Global Function",
+                "pages": [
+                  22
+                ]
+              }
+            ],
+            "evidence": "Lhs도매개변수로써전달"
+          }
+        ]
+      ]
+    }
+  ],
+  "terms": [
+    {
+      "term": "연산자 오버로딩",
+      "definition": {
+        "text": "연산자 오버로딩은 +, =, * 등의 연산자를 사용자 정의 타입에 대해 사용할 수 있게 하는 기능이다.",
+        "refs": [
+          {
+            "source": "L08",
+            "section": "Operator Overloading",
+            "pages": [
+              6
+            ]
+          }
+        ],
+        "evidence": "연산자를유저정의타입(ex. 클래스)에대해사용할수있도록"
+      }
+    },
+    {
+      "term": "멤버 연산자 함수",
+      "definition": {
+        "text": "멤버함수 방식의 이항 연산자는 왼쪽 객체의 operator 함수에 오른쪽 객체를 인자로 넘긴다.",
+        "refs": [
+          {
+            "source": "L08",
+            "section": "Binary operator, as Member Function",
+            "pages": [
+              14
+            ]
+          }
+        ],
+        "evidence": "왼쪽에있는객체(p1)의멤버함수 / 오른쪽객체(p2)를인자로"
+      }
+    },
+    {
+      "term": "전역 연산자 함수",
+      "definition": {
+        "text": "전역함수 방식의 이항 연산자는 왼쪽 피연산자도 매개변수로 전달한다.",
+        "refs": [
+          {
+            "source": "L08",
+            "section": "Binary operator, as Global Function",
+            "pages": [
+              22
+            ]
+          }
+        ],
+        "evidence": "Lhs도매개변수로써전달"
+      }
+    },
+    {
+      "term": "대입 연산자",
+      "definition": {
+        "text": "자동 생성된 대입 연산자는 얕은 복사를 수행하므로 깊은 복사가 필요한 경우 직접 정의해야 한다.",
+        "refs": [
+          {
+            "source": "L08",
+            "section": "Assignment Operator Overloading",
+            "pages": [
+              37
+            ]
+          }
+        ],
+        "evidence": "자동생성된대입연산자는얕은복사 / 깊은복사를통한대입연산자직접정의"
+      }
+    },
+    {
+      "term": "Wrapper 클래스",
+      "definition": {
+        "text": "Wrapper 클래스는 기본 자료형을 클래스로 포장하여 각 자료형을 객체로 사용하는 클래스이다.",
+        "refs": [
+          {
+            "source": "B",
+            "section": "6장·int Wrapper 클래스 - 타입 변환 연산자",
+            "pages": [
+              238
+            ]
+          }
+        ],
+        "evidence": "기본자료형들(int, float 등등) 을클래스로포장"
+      }
+    },
+    {
+      "term": "타입 변환 연산자",
+      "definition": {
+        "text": "타입 변환 연산자는 operator 뒤에 변환할 타입을 쓰며 생성자처럼 반환 타입을 따로 쓰지 않는다.",
+        "refs": [
+          {
+            "source": "B",
+            "section": "6장·int Wrapper 클래스 - 타입 변환 연산자",
+            "pages": [
+              239
+            ]
+          }
+        ],
+        "evidence": "operator (변환하고자하는타입) () / 함수의리턴타입을써주시면안됩니다"
+      }
+    },
+    {
+      "term": "전위 증감",
+      "definition": {
+        "text": "전위 증감 연산자는 값을 바꾼 자기 자신을 반환한다.",
+        "refs": [
+          {
+            "source": "B",
+            "section": "6장·전위/후위 증감 연산자",
+            "pages": [
+              241
+            ]
+          }
+        ],
+        "evidence": "전위증감연산의경우값이바뀐자기자신을리턴"
+      }
+    },
+    {
+      "term": "후위 증감",
+      "definition": {
+        "text": "후위 증감 연산자는 값이 바뀌기 이전의 객체를 반환한다.",
+        "refs": [
+          {
+            "source": "B",
+            "section": "6장·전위/후위 증감 연산자",
+            "pages": [
+              241
+            ]
+          }
+        ],
+        "evidence": "후위증감의경우값이바뀌기이전의객체를리턴"
+      }
+    },
+    {
+      "term": "반복자(iterator)",
+      "definition": {
+        "text": "반복자(iterator)는 배열의 모든 원소를 순차적으로 접근할 수 있게 하며, ++로 다음 원소를 가리킨다.",
+        "refs": [
+          {
+            "source": "B",
+            "section": "6장·N 차원 배열 만들기 프로젝트·반복자",
+            "pages": [
+              265
+            ]
+          }
+        ],
+        "evidence": "모든원소들을순차적으로접근 / itr ++ 을하면그다음원소"
+      }
+    }
+  ],
+  "summary_basis": "원문 정리: B 인쇄 p.238~239(PDF243~244) 및 L08 슬라이드 48",
+  "summary": [
+    {
+      "text": "책은 동등한 두 객체의 이항 연산자는 외부함수로, 한 객체만 바뀌는 이항 연산자와 단항 연산자는 멤버함수로 구현하는 것을 권한다.",
+      "refs": [
+        {
+          "source": "B",
+          "section": "6장·잡다한 연산자들의 오버로딩·정리",
+          "pages": [
+            243,
+            244
+          ]
+        }
+      ],
+      "evidence": "동등한객체 / 외부함수 / 한객체만값이바뀐다 / 단항연산자는멤버함수"
+    },
+    {
+      "text": "스트림 연산자는 연속 삽입을 위해 참조자를 반환하며, 깊은 복사가 필요한 대입 연산자는 직접 오버로딩한다.",
+      "refs": [
+        {
+          "source": "L08",
+          "section": "(Summary)Operator Overloading",
+          "pages": [
+            48
+          ]
+        }
+      ],
+      "evidence": "Chain insertion을위해참조자반환 / 깊은복사가필요한경우 / 직접오버로딩"
+    },
+    {
+      "text": "첨자 연산자는 일반적으로 const 멤버와 참조 반환 함수를 각각 오버로딩한다.",
+      "refs": [
+        {
+          "source": "L08",
+          "section": "(Summary)Operator Overloading",
+          "pages": [
+            48
+          ]
+        }
+      ],
+      "evidence": "const 멤버와참조반환함수두개를오버로딩"
+    }
+  ],
+  "review": [
+    {
+      "question": "연산자 오버로딩으로 연산 우선순위를 바꾸거나 새로운 연산자를 정의할 수 있는가?",
+      "answer": {
+        "text": "연산 우선순위를 바꿀 수 없고 새로운 연산자를 정의할 수도 없다.",
+        "refs": [
+          {
+            "source": "L08",
+            "section": "Operator Overloading",
+            "pages": [
+              11
+            ]
+          }
+        ],
+        "evidence": "우선순위를바꿀수는없음 / 새로운연산자의정의불가"
+      }
+    },
+    {
+      "question": "전위와 후위 증가 연산자는 어떻게 구분하여 선언하는가?",
+      "answer": {
+        "text": "전위는 operator++(), 후위는 의미 없는 int 매개변수를 둔 operator++(int) 형태로 구분한다.",
+        "refs": [
+          {
+            "source": "B",
+            "section": "6장·전위/후위 증감 연산자",
+            "pages": [
+              241
+            ]
+          }
+        ],
+        "evidence": "operator++(); / operator++(int); / 전위와후위를구별"
+      }
+    },
+    {
+      "question": "스트림 삽입 연산자가 ostream 참조자를 반환하는 이유는 무엇인가?",
+      "answer": {
+        "text": "cout << p1 << p2 같은 chain insertion을 가능하게 하기 위해서이다.",
+        "refs": [
+          {
+            "source": "L08",
+            "section": "Stream Insertion and Extraction Overloading",
+            "pages": [
+              31
+            ]
+          }
+        ],
+        "evidence": "참조자를반환하지않으면cout << p1 << p2 와같은연산불가"
+      }
+    },
+    {
+      "question": "N차원 Array의 반복자는 무엇을 위해 추가하며 end는 어디를 뜻하는가?",
+      "answer": {
+        "text": "반복자는 모든 원소를 순차 접근하기 위해 추가하며, end는 마지막 원소 바로 다음을 뜻한다.",
+        "refs": [
+          {
+            "source": "B",
+            "section": "6장·N 차원 배열 만들기·반복자",
+            "pages": [
+              265,
+              266
+            ]
+          }
+        ],
+        "evidence": "모든원소들을순차적으로접근 / 맨마지막원소바로다음"
+      }
+    }
+  ],
+  "cheat": {
+    "definitions": [
+      {
+        "term": "연산자 오버로딩",
+        "definition": {
+          "text": "연산자 오버로딩은 +, =, * 등의 연산자를 사용자 정의 타입에 대해 사용할 수 있게 하는 기능이다.",
+          "refs": [
+            {
+              "source": "L08",
+              "section": "Operator Overloading",
+              "pages": [
+                6
+              ]
+            }
+          ],
+          "evidence": "연산자를유저정의타입(ex. 클래스)에대해사용할수있도록"
+        }
+      },
+      {
+        "term": "Wrapper 클래스",
+        "definition": {
+          "text": "Wrapper 클래스는 기본 자료형을 클래스로 포장하여 각 자료형을 객체로 사용하는 클래스이다.",
+          "refs": [
+            {
+              "source": "B",
+              "section": "6장·int Wrapper 클래스 - 타입 변환 연산자",
+              "pages": [
+                238
+              ]
+            }
+          ],
+          "evidence": "기본자료형들(int, float 등등) 을클래스로포장"
+        }
+      },
+      {
+        "term": "반복자",
+        "definition": {
+          "text": "반복자(iterator)는 배열의 모든 원소를 순차적으로 접근할 수 있게 하며, ++로 다음 원소를 가리킨다.",
+          "refs": [
+            {
+              "source": "B",
+              "section": "6장·N 차원 배열 만들기 프로젝트·반복자",
+              "pages": [
+                265
+              ]
+            }
+          ],
+          "evidence": "모든원소들을순차적으로접근 / itr ++ 을하면그다음원소"
+        }
+      }
+    ],
+    "comparison_title": "전위·후위 증가",
+    "comparison_headers": [
+      "구분 형식",
+      "반환 내용"
+    ],
+    "comparison_rows": [
+      [
+        {
+          "text": "전위: operator++()",
+          "refs": [
+            {
+              "source": "B",
+              "section": "6장·전위/후위 증감 연산자",
+              "pages": [
+                241
+              ]
+            }
+          ],
+          "evidence": "operator++();"
+        },
+        {
+          "text": "전위 증감 연산자는 값을 바꾼 자기 자신을 반환한다.",
+          "refs": [
+            {
+              "source": "B",
+              "section": "6장·전위/후위 증감 연산자",
+              "pages": [
+                241
+              ]
+            }
+          ],
+          "evidence": "전위증감연산의경우값이바뀐자기자신을리턴"
+        }
+      ],
+      [
+        {
+          "text": "후위: operator++(int)",
+          "refs": [
+            {
+              "source": "B",
+              "section": "6장·전위/후위 증감 연산자",
+              "pages": [
+                241
+              ]
+            }
+          ],
+          "evidence": "operator++(int);"
+        },
+        {
+          "text": "후위 증감 연산자는 값이 바뀌기 이전의 객체를 반환한다.",
+          "refs": [
+            {
+              "source": "B",
+              "section": "6장·전위/후위 증감 연산자",
+              "pages": [
+                241
+              ]
+            }
+          ],
+          "evidence": "후위증감의경우값이바뀌기이전의객체를리턴"
+        }
+      ]
+    ],
+    "formulas": [],
+    "syntax": []
+  },
+  "checked_images": [
+    {
+      "source": "B",
+      "pages": [
+        202,
+        241,
+        243,
+        247,
+        252
+      ]
+    },
+    {
+      "source": "L08",
+      "pages": [
+        14,
+        22
+      ]
+    }
+  ],
+  "editor_notes": [
+    "Complex 문자열 분석·전체 Array·Iterator 프로그램은 클래스 역할과 핵심 처리 순서로 줄였다.",
+    "원문의 N차원 배열 메모리 크기 계산을 일반적인 바이트 공식으로 보충하지 않았다.",
+    "타입 변환·캐스팅은 첨부에서 설명한 범위만 남겼으며 오류 가능성이 있는 원문 코드를 수정하거나 실행하지 않았다."
+  ]
+}

@@ -1,0 +1,25 @@
+98
+98
+- 삽입
+12
+넓젤넓
+87
+87
+( ) 함수는 다음과 같이 구현합니다.
+// 노드 삽입
+void DLL_InsertAfter( Node* Current, Node* NewNode )
+NewNode->NextNode = Current->NextNode,
+NewNode->PrevNode = Current;
+if ( Current->NextNode != NULL )
+Current->NextNode->PrevNode
+Current->NextNode = NewNode;
+개수 세기 연산
+NewNode;
+더블 링크드 리스트의 노드 개수를 세는 DLL-GetNodeCount( )는 링크드 리스트의 SLL-Get
+NodeCount ( )와 이름만 빼고 동일합니다.
+lnt DLL_GetNodeCount( NO血* Head )
+unsigned int Count = 0:
+Node*
+Current = Head,
+Chapter 01 • 리스트
+49

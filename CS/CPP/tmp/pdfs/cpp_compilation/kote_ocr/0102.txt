@@ -1,0 +1,39 @@
+LONDON,
+SEOUL,
+SEATTLE,
+DUBAI,
+SYDNEY
+3. city enum에 대해 〈〈 연산자를 정의합니다.
+std: :ostream& operator〈〈(std: :ostream& 05, const city ()
+switch (()
+case city•
+•:LONDON:
+return
+case city:
+:MOSCOW:
+05 〈〈 "모스크바",
+return
+05 ;
+case city•
+•:SEOUL:
+return
+05,
+case city:
+:SEATTLE:
+os 〈〈 "시애틀
+return 05 ;
+case city: :DUBAI:
+05 〈〈 "두바이"
+return
+05 ;
+case city:
+:SYDNEY:
+05 〈〈 "시드니"•
+return os;
+default:
+return
+09
+4. 실제 데이터를 저장할 graph 구조체를 정의합니다.
+struct graph
+std: :vector〈std: :vector〈std: :pair<int, int〉〉〉 data;
+113

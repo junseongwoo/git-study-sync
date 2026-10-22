@@ -1,0 +1,27 @@
+unsigned ID;
+unsigned start—time;
+unsigned end time;
+2. 임의의 시작 시간과 종료 시간을 갖는 N기1의 작업을 생성합니다.
+autO initialize tasks(int num tasks, int max end time)
+std: :random device rd;
+std: :mt19937 rand(rd());
+std: :uniform int distribution〈std: :mt19937:
+time);
+std: :Iist<Task> tasks;
+:result type〉 uniform dist(l,
+max_end
+for (unsigned i = 0; i 〈 num tasks; i++)
+autO start_time = uniform dist(rand);
+autO end_time = uniform_dist(rand);
+if (start_time == end_time) end_time++;
+if (start_time 〉 end_time) std: :swap(start_time, end_time);
+tasks.push—back({i + 1, start_time, end_time});
+return tasks;
+3. 작업 스케줄링 알고리즘을 다음과 같이 구현합니다.
+aut0 job—scheduling(std: :list<Task〉 tasks)
+// 작업 종료 시간을 기준으로 정렬
+tasks.sort([l(const auto& lhs, const auto& rhs) {
+return lhs.end_time 〈 rhs.end time;
+for (autO curr task = tasks.begin(); curr_task != tasks end(); curr task++)
+auto next_task = std::next(curr task, 1);
+「40

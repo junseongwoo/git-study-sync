@@ -1,0 +1,32 @@
+166
+) `햅hite (5 1= q->front);
+printf("\n");
+// 십입 함수
+void add_rear(DequeType *여 element item)
+if (is-full(q))
+error("ö가 포화상태입니다") •,
+q->rear = (q->rear + 1) % MAX_QUEUE_SIZE;
+q-〉data[q—>rear] = item;
+// 삭제 함수
+element delete front(DequeType *q)
+if (is-empty(q))
+error("*가 공백상태입니다") ;
+q->front = (q—>front + 1) % MAX_QUEUE_SIZE;
+return q-〉data[q->front] ;
+// 삭제 함수
+element get_front(DequeType *q)
+if (is-empty(q))
+error("*가 공백상태입니다") ;
+return q—>data[(q->front + 1) % MAX_QUEUE_SIZE] •,
+void add_front(DequeType *q, element val)
+if (is-full(q))
+error("큐가 포화상태입니다") ;
+q->data[q->front] = val;
+q->front = (q->front - 1 + MAX_QUEUE_SIZE) % MAX_QUEUE_SIZE;
+element delete rear(DequeType *q)
+int prev = q—>rear;
+if (is-empty(q))
+error("#가 공백상태입니다") ;
+q->rear = (q->rear - 1 + MAX_QUEUE_SIZE) % MAX_QUEUE_SIZE;
+return q->data[prev] ;
+C언어로 쉽게 물어쓴 자료구조

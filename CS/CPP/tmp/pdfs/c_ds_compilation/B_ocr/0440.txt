@@ -1,0 +1,33 @@
+DisjointSet.h와 DisiointSet.c는 분리 집합을 공부할 때, PrrontyQueue.h와 PriorityQueue.
+c는 우선순위 큐를 공-부할 때 이미 만들었고 Graph.h와 Graph.c는 이번 장에서 계속 사용하고
+있으므로 따로 작성할 필요가 없습니다. 이번에도 새로 작성해야 할 소스 코드는 MST.h. MST.c.
+Test-MST.c 이렇게 모두 3개입니다.
+09장/MininunSpanningTree/NST. h
+01
+02
+03
+04
+05
+07
+08
+@9
+10
+11
+13
+•ifndef MST H
+MST_H
+$incll-Jde ÄGraph.h•
+$incllße QrioritYQueue.h•
+$include •DisjointSet.h"
+MAX WEIGHT 36267
+void Prim(Graph* 6, Vertex* StartVertex, Graph* MST );
+void Kruska1(Graph* 6, Graph* MST );
+ændif
+09&/EininunSpanningTree/MST. (
+%1 $include "MST .h•
+%2
+%3 void Prim(Graph* 6, Vertex* StartVertex, Graph* MST )
+중략. 본문의 Prim() 구현 내용 참조
+%9 void Kruskal(Graph* 6, Graph* MST )
+중략. 본문의 KruskaI() 구현 내용 참조
+438 Part 02 • 일고리좀

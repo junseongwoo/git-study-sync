@@ -1,0 +1,75 @@
+14
+16
+17
+18
+19
+20
+대T-Get( HT, •MSFT" ) );
+대T_Get( HT, •REDH• ) );
+22
+대T Get( HT, "APAC* ) ),•
+23
+대T-Get( HT, •ZYUZZ" ) )•,
+24
+대T-Get( HT, •JAVA• )
+25
+26
+대T_Get( HT, ) );
+27
+대T_Get( HT. •CSCO" ) );
+28
+대T_Get( HT, ) );
+29
+대T Get( HT, •YHW ) );
+30
+대T_Get( HT, •NOVL" )
+32
+33
+34
+대T_Set( HT, “(5(0“,
+대T_Set( HT, “6皬“
+대T Set( HT,
+대T_Set( HT, "NOVL",
+"Cisco Systems, lnc.");
+•GO예le lnc.");
+"Yah001 lnc.");
+•N예e11, lnc.");
+printf("\n");
+printf("Key:%s, Value:*s\n"
+printf("Key:S, VaIue:%sxn"
+printf("Key:%s, VaIue:*s\n"
+printf("Key:%s, VaIue:%s\n"
+printf("Key:S, Va1ue:%s\n"
+printf("Key:*s, VaIue:%s\n",
+printf("Key:%s, Va1ue:%s\n"
+printf("Key:ts, Value:%s\n", "MSFT",
+printf("Key:S, VaIue:%sxn•, "APAC,
+printf("Key:*s, Value:%s\n", "ZYMZZ"
+printf("Key:b Value:%s\n", "YHW
+"REDH"
+"JAVA",
+"IBM",
+"ORCL",
+"CSCO",
+"GWG"
+"NOVL",
+대T_DestroyHashTabIe( HT ):
+return 0:
+35 }
+실행 결과
+C011ision occured . Key(ZYMZZ), Address(212@)
+Key.MSFT, Value:Microsoft Corporation
+Key:REDH, Va1ue:Red Hat Linux
+Key:APAC, Va1ue:Apache Org
+Key:ZYMZZ, VaIue:Unisys Ops Check
+Key:JAVA, Value:Sun Microsystems
+Key:IBM, VaIue:IBM Ltd
+Key:ORCL, VaIue:0racle Corporation
+Key:CSCO, Value:Cisco Systems, lnc.
+Value:Google lnc.
+Key:G00G
+Value:Yah00! lnc.
+Key:NOVL, Value:Novell, lnc.
+대T_Get( HT, "IBM" ) ),•
+Chapter % • 해시 테이올
+357

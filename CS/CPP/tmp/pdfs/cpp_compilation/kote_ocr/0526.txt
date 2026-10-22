@@ -1,0 +1,19 @@
+void GetShOrtestPaths( )
+vector〈vector<int>> dist(N, vector<int>(N, UNKNOWN));
+vector〈vector<int>> next(N, vector<int>(N, UNKNOWN));
+for (int i<N; i++)
+for (intj=0;j<N; j++)
+dist[il[jl = cost(i](jl;
+if (dist[il(jl != UNKNOWN)
+next[i](j]
+dist[i][i]
+next[i](i] =
+8. 그런 다음 일반적인 플로이드-워설 알고리즘을 구현합니다. 이때 가장 안쪽 for 문에서 start
+와 end 사이의 최단 거리가 갱신될 때마다 next[start][end] 값도 next[start][mid] 값으로
+갱신합니다.
+for (int mid = 0; mid 〈 N; mid++)
+for (int start = 0; start 〈 N; start++)
+for (int end = 0; end 〈 N; end++)
+if (dist[start][endl 〉 dist[startl[midl + dist[midl[endl)
+dist[startl[end] = dist[start][mid] + dist[midl[endl;
+next[start][end] = next[startl[midl;

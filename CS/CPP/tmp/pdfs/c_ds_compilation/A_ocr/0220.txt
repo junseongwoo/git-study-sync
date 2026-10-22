@@ -1,0 +1,40 @@
+A[이 A[N-I]
+죈夕
+배열을 이용한 원형큐
+멀티 플레이어 게임
+세 번째로 원형 연결 리스트는 원형 큐를 만드는데도 A卜음할 수 있다. 우리는 4장에서 배열을
+시용하여 원형 큐를 구현하였지만 원형 연결 리스트를 이용하여 원형 큐를 구현할 수 있다는 것
+은 너무 명백하다. 원형 큐에서는 두 개의 포인터, front와 rear가 있어야 한다.
+차례=KIM
+현재 차례=
+차례=PARK
+차례=KIM
+FRONT
+REAR
+FRONT
+~口과-
+REAR
+연결 리스트를 이용한 원형큐
+3명의 플레이어가 보드 게임을 한다고 하자. 게임에 빠지면 누구 순서인지도 잊어버릴 수 있다.
+프로그램을 작성하여서 현재 누구 순서인지를 알리도록 하자.
+실행결과
+현재
+현재
+현재
+현재
+현재 차례=C滯I
+현재 차례=PARK
+현재 차례=KIM
+현재 차례=CH이
+현재 차례=KIM
+차례=PARK
+CHOI
+프로그램 7.4 multigame.c
+#include <stdio.h>
+#include <stdlib.h〉
+#include <string.h>
+typedef char element[l@@] ;
+typedef struct ListN0de { // 노드 타입
+element data;
+Struct ListNode *link;
+228 C언어로 쉽게 물0`쓴 자료구조

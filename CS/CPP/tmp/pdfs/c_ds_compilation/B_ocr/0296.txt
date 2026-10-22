@@ -1,0 +1,65 @@
+013
+014
+015
+016
+017
+018
+019
+020
+021
+022
+023
+024
+025
+026
+027
+028
+029
+030
+031
+032
+033
+034
+035
+036
+037
+038
+039
+040
+041
+042
+043
+044
+045
+047
+048
+049
+050
+051
+052
+NewNode-XoIor
+return NewNode,
+= BLACK;
+void RBT DestroyNode( RBTNode* NOde )
+free(N0de);
+void RBT DestroyTree( RBTNode* Tree )
+if ( Tree->Right != Ni1 )
+RBT_DestroyTree( Tree-Right );
+if ( Tree->Left != Nil )
+RBT_DestroyTree( Tree->Left ):
+Tree->Left = Ni1;
+Tree->Right = Nil,
+RBT_DestroyNode( Tree ):
+RBTNode* RBT_SearchNode( RBTNode* Tree. Target )
+if ( Tree == Ni1 )
+return NULL;
+if ( Tree->Data 〉 Target )
+return RBT SearchNode ( Tree->Left, Target );
+else if ( Tree->Data 〈 Target )
+return RBT SearchNode ( Tree-Right, Target );
+else
+return Tree;
+RBTNode* RBT_SearchMinNode( RBTNode• Tree )
+if ( Tree == Ni1 )
+Chapter % • 탐색
+289

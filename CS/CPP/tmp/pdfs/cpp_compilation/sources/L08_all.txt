@@ -1,0 +1,1050 @@
+
+=== L08 | PDF p.1 | 印刷 p.None ===
+C++ 프로그래밍
+      김형기
+           hk.kim@jbnu.ac.kr
+
+=== L08 | PDF p.2 | 印刷 p.2 ===
+ Today
+
+ 연산자오버로딩
+
+
+
+
+
+강의자료무단배포금지                                                                                                                2
+문의사항: hk.kim@jbnu.ac.kr  || diskhkme@gmail.com
+
+=== L08 | PDF p.3 | 印刷 p.3 ===
+연산자오버로딩
+
+
+
+
+
+                                                                                                                          3
+
+=== L08 | PDF p.4 | 印刷 p.4 ===
+ Operator Overloading
+
+ 연산자오버로딩개요
+
+ 멤버함수인연산자오버로딩
+                                이번주
+ 전역함수인연산자오버로딩
+
+ 스트림삽입및추출연산자오버로딩
+
+ 대입연산자오버로딩                                다음주
+
+ 첨자연산자오버로딩
+
+
+
+
+
+강의자료무단배포금지                                                                                                                4
+문의사항: hk.kim@jbnu.ac.kr  || diskhkme@gmail.com
+
+=== L08 | PDF p.5 | 印刷 p.5 ===
+ Operator Overloading
+
+ 연산자오버로딩개요
+
+ 멤버함수인연산자오버로딩
+
+ 전역함수인연산자오버로딩
+
+ 스트림삽입및추출연산자오버로딩
+
+ 대입연산자오버로딩
+
+ 첨자연산자오버로딩
+
+
+
+
+
+강의자료무단배포금지                                                                                                                5
+문의사항: hk.kim@jbnu.ac.kr  || diskhkme@gmail.com
+
+=== L08 | PDF p.6 | 印刷 p.6 ===
+ Operator Overloading                   중요!
+
+ 연산자오버로딩
+
+   +,=,*등등의연산자를유저정의타입(ex. 클래스)에대해사용할수있도록하는기능
+
+         player1 + player2
+
+   유저정의타입을기본타입(int, float, etc)과유사하게동작하게할수있음
+
+   코드를보다이해하기쉽고, 작성하기쉽게만듬
+
+     항상좋은것은아님. 직관성과가독성을높인다고판단될경우활용
+
+   대입연산자(=)를제외하면자동생성되지않으며, 사용자가구현해주어야함
+
+
+ 연산자오버로딩기능자체도의미가있지만, 지금까지배운모든내용이
+ 종합적으로적용되므로이해하지못한내용이없는지점검해봅시다.
+
+
+강의자료무단배포금지                                                                                                                6
+문의사항: hk.kim@jbnu.ac.kr  || diskhkme@gmail.com
+
+=== L08 | PDF p.7 | 印刷 p.7 ===
+ Operator Overloading
+
+ 연산자오버로딩
+
+    예) 숫자하나를갖는Number 클래스를작성하고, 클래스객체끼리의사칙연산기능이필요하
+    다고가정. 만일(a+b) * (c/d)를계산해야한다면,
+
+    (전역) 함수를사용하여구현
+
+       Number result = multiply(add(a,b),divide(c,d));
+
+
+  멤버함수를사용해구현
+
+
+       Number result = (a.add(b)).multiply(c.divide(d));
+
+
+
+
+
+강의자료무단배포금지                                                                                                                7
+문의사항: hk.kim@jbnu.ac.kr  || diskhkme@gmail.com
+
+=== L08 | PDF p.8 | 印刷 p.8 ===
+ Operator Overloading
+
+ 연산자오버로딩
+
+    예) 숫자하나를갖는Number 클래스를작성하고, 클래스객체끼리의사칙연산기능이필요하
+    다고가정. 만일(a+b) * (c/d)를계산해야한다면,
+
+    (전역) 함수를사용하여구현
+
+       Number result = multiply(add(a,b),divide(c,d));
+
+
+  멤버함수를사용해구현
+
+
+       Number result = (a.add(b)).multiply(c.divide(d));
+
+
+   연산자오버로딩을하면,
+
+       Number result = (a+b)*(c/d);
+강의자료무단배포금지                                                                                                                8
+문의사항: hk.kim@jbnu.ac.kr  || diskhkme@gmail.com
+
+=== L08 | PDF p.9 | 印刷 p.9 ===
+ Operator Overloading
+
+ 연산자오버로딩, 예제클래스
+
+
+
+
+
+강의자료무단배포금지                                                                                                                9
+문의사항: hk.kim@jbnu.ac.kr  || diskhkme@gmail.com
+
+=== L08 | PDF p.10 | 印刷 p.10 ===
+ Operator Overloading
+
+ 연산자오버로딩, 사용목적
+
+   Point는기본자료형이아닌사용자정의자료형(클래스)임
+
+  연산자오버로딩을통해연산자에의한객체의동작정의가능
+
+
+
+
+
+                              현재는불가능하지만,이런식으로
+                           사용하고싶음
+
+                            연산자오버로딩을하면가능해짐
+
+
+
+
+
+강의자료무단배포금지                                                                                                               10
+문의사항: hk.kim@jbnu.ac.kr  || diskhkme@gmail.com
+
+=== L08 | PDF p.11 | 印刷 p.11 ===
+ Operator Overloading
+
+ 연산자오버로딩, 기본규칙
+
+   연산의우선순위를바꿀수는없음(*는+보다먼저계산)
+
+   단항, 이항, 삼항연산의교체는불가능
+
+    기본타입(int, float, etc)에대한연산자는오버로딩불가능
+
+   새로운연산자의정의불가
+
+ 연산자는멤버함수또는전역함수로오버로딩가능!
+
+    단, [ ], ( ), ->, = 등몇몇연산자는멤버함수로만오버로딩가능
+
+
+
+
+
+강의자료무단배포금지                                                                                                               11
+문의사항: hk.kim@jbnu.ac.kr  || diskhkme@gmail.com
+
+=== L08 | PDF p.12 | 印刷 p.12 ===
+ Operator Overloading
+
+ 연산자오버로딩개요: 클래스에대한연산자의적용방식을사용자가직접오버로딩하여구현할
+  수있음
+
+ 멤버함수인연산자오버로딩
+
+ 전역함수인연산자오버로딩
+
+ 스트림삽입및추출연산자오버로딩
+
+ 대입연산자오버로딩
+
+ 첨자연산자오버로딩
+
+
+
+
+
+강의자료무단배포금지                                                                                                               12
+문의사항: hk.kim@jbnu.ac.kr  || diskhkme@gmail.com
+
+=== L08 | PDF p.13 | 印刷 p.13 ===
+ Operator Overloading as Member Function
+
+ 이항(binary) 연산자의멤버함수로의선언(+,-,==,!=,>,<, etc)
+
+   선언형태
+
+
+
+
+
+   사용예시
+
+
+
+
+
+강의자료무단배포금지                                                                                                               13
+문의사항: hk.kim@jbnu.ac.kr  || diskhkme@gmail.com
+
+=== L08 | PDF p.14 | 印刷 p.14 ===
+ Binary operator, as Member Function          중요!
+
+ 이항(binary) 연산자의멤버함수로의선언(+,-,==,!=,>,<, etc)
+
+   + 연산자의오버로딩동작방식의이해
+
+
+
+                                      우리가이러한명령문을작성하면,컴파일러는
+                                    오른쪽주석과같이변환한후,적절한함수가있고,
+                                      호출이가능한지찾습니다.
+
+                                      변환된결과를보면,+의왼쪽에있는객체(p1)의
+                           p1     +      p2        멤버함수인operator+에오른쪽객체(p2)를인자로
+                                       넘겨주고있습니다.
+
+                                                즉,p1객체(Point클래스)에operator+멤버함수가
+                                      있어야한다는이야기입니다.그리고그멤버함수는
+                                            Point객체를인자로받아야합니다.
+                        p1       .operator+      p2
+
+
+
+
+
+강의자료무단배포금지                                                                                                               14
+문의사항: hk.kim@jbnu.ac.kr  || diskhkme@gmail.com
+
+=== L08 | PDF p.15 | 印刷 p.15 ===
+ Binary operator, as Member Function
+
+ 이항(binary) 연산자의멤버함수로의선언(+,-,==,!=,>,<, etc)
+
+   + 연산자의오버로딩동작방식의이해
+
+
+
+
+
+                                                       p1의값은변하지않으므로const
+                           p1     +      p2
+                                            p2의값은변하지않으므로const
+
+
+                        p1       .operator+      p2
+
+
+
+
+
+강의자료무단배포금지                                                                                                               15
+문의사항: hk.kim@jbnu.ac.kr  || diskhkme@gmail.com
+
+=== L08 | PDF p.16 | 印刷 p.16 ===
+ Binary operator, as Member Function
+
+ 이항(binary) 연산자의멤버함수로의선언(+,-,==,!=,>,<, etc)
+
+   + 연산자의오버로딩구현
+
+
+
+
+
+                   위멤버함수가호출되었으므로,p1과p2의xpos,
+                      ypos를더한값을가지고있는Point객체가
+                     반환되고,그객체는p3에복사됩니다.
+
+
+
+
+
+강의자료무단배포금지                                                                                                               16
+문의사항: hk.kim@jbnu.ac.kr  || diskhkme@gmail.com
+
+=== L08 | PDF p.17 | 印刷 p.17 ===
+ Binary operator, as Member Function          중요!
+
+ 이항(binary) 연산자의멤버함수로의선언(+,-,==,!=,>,<, etc)
+
+   비교연산자의오버로딩
+
+
+
+
+
+                                                      p1은변하지않으므로const
+                                                      p2도변하지않으므로const
+
+
+
+
+
+강의자료무단배포금지                                                                                                               17
+문의사항: hk.kim@jbnu.ac.kr  || diskhkme@gmail.com
+
+=== L08 | PDF p.18 | 印刷 p.18 ===
+ Unary operator, as Member Function
+
+ 단항(Unary) 연산자의멤버함수로의선언(++,--,-,!)
+
+   선언형태
+
+
+
+
+
+   사용예시
+
+
+
+
+
+강의자료무단배포금지                                                                                                               18
+문의사항: hk.kim@jbnu.ac.kr  || diskhkme@gmail.com
+
+=== L08 | PDF p.19 | 印刷 p.19 ===
+ Unary operator, as Member Function
+
+ 단항(Unary) 연산자의멤버함수로의선언(++,--,-,!)
+
+   단항- 연산자의오버로딩동작방식의이해
+
+
+
+
+
+                                                 -      p2
+
+
+
+                        p2        .operator-
+
+
+
+
+
+강의자료무단배포금지                                                                                                               19
+문의사항: hk.kim@jbnu.ac.kr  || diskhkme@gmail.com
+
+=== L08 | PDF p.20 | 印刷 p.20 ===
+ Limitation of Member Function             중요!
+
+ 멤버함수로선언시한계점
+
+  교환법칙이성립하도록구현이불가능할수있음
+
+   예를들어자료형이다른경우, 3(int), p1(Point)를가정해보면,
+
+   p1*3은함수호출가능, 3*p1은함수호출불가!
+
+
+
+
+
+강의자료무단배포금지                                                                                                               20
+문의사항: hk.kim@jbnu.ac.kr  || diskhkme@gmail.com
+
+=== L08 | PDF p.21 | 印刷 p.21 ===
+ Operator Overloading
+
+ 연산자오버로딩개요: 클래스에대한연산자의적용방식을사용자가직접오버로딩하여구현할
+  수있음
+
+ 멤버함수인연산자오버로딩: 클래스의멤버함수로operatorX() 라는이름을갖는함수를구현
+  하여연산자를오버로딩할수있음. 이때이항연산자의경우우측피연산자는인자로넘어옴
+
+ 전역함수인연산자오버로딩
+
+ 스트림삽입및추출연산자오버로딩
+
+ 대입연산자오버로딩
+
+ 첨자연산자오버로딩
+
+
+
+강의자료무단배포금지                                                                                                               21
+문의사항: hk.kim@jbnu.ac.kr  || diskhkme@gmail.com
+
+=== L08 | PDF p.22 | 印刷 p.22 ===
+ Binary operator, as Global Function
+
+ 이항(binary) 연산자의전역함수로의선언(+,-,==,!=,>,<, etc)
+
+     Operator 오버로딩을전역함수로선언(Point::operator가아님!)
+
+   Lhs도매개변수로써전달
+
+     이러한구현을위해서는함수를friend로선언하는것이일반적
+
+
+
+
+
+                                              우리가이러한명령문을작성하면,
+                                          컴파일러는사실오른쪽주석두개
+                                            후보중호출가능한것을찾습니다.
+
+
+
+
+강의자료무단배포금지                                                                                                               22
+문의사항: hk.kim@jbnu.ac.kr  || diskhkme@gmail.com
+
+=== L08 | PDF p.23 | 印刷 p.23 ===
+ Binary operator, as Global Function           중요!
+
+ 이항(binary) 연산자의전역함수로의선언(+,-,==,!=,>,<, etc)
+
+   + 연산자의오버로딩
+
+   아래함수는
+
+
+
+
+
+                                   위전역함수가호출되었으므로,p1과p2의xpos,
+                                    ypos를더한값을가지고있는객체가반환되고,그
+                                     객체는p3에저장됩니다.      operator+함수는Point클래스의멤버함수가
+    아니기때문에,xpos와ypos에쉽게접근하기
+                                                    위의operator+함수는Point클래스의멤버함수가     위해friend선언합니다.
+                                 아님을다시한번말씀드립니다.
+
+
+
+강의자료무단배포금지                                                                                                               23
+문의사항: hk.kim@jbnu.ac.kr  || diskhkme@gmail.com
+
+=== L08 | PDF p.24 | 印刷 p.24 ===
+ Binary operator, as Global Function
+
+ Friend 유의사항
+
+
+
+
+
+                                                                                   operator+함수코드가classPoint{…};안에
+                                           있다고해서무조건멤버함수가아닙니다!
+
+
+
+
+
+강의자료무단배포금지                                                                                                               24
+문의사항: hk.kim@jbnu.ac.kr  || diskhkme@gmail.com
+
+=== L08 | PDF p.25 | 印刷 p.25 ===
+ Binary operator, as Global Function
+
+ Friend 유의사항
+
+
+
+
+
+                                         이전페이지의코드는단지왼쪽의코드를
+                                           줄여쓴것일뿐입니다.operator+는전역
+                                                 함수이고,class는이함수를friend선언한
+                                           것을축약해서쓴것입니다.
+
+
+
+
+
+강의자료무단배포금지                                                                                                               25
+문의사항: hk.kim@jbnu.ac.kr  || diskhkme@gmail.com
+
+=== L08 | PDF p.26 | 印刷 p.26 ===
+ Binary operator, as Global Function
+
+ 이항(binary) 연산자의전역함수로의선언(+,-,==,!=,>,<, etc)
+
+   + 연산자의오버로딩동작방식의이해
+
+
+
+
+
+                           p1     +      p2
+
+
+
+                          .operator+         lhs        rhs
+
+
+
+
+
+강의자료무단배포금지                                                                                                               26
+문의사항: hk.kim@jbnu.ac.kr  || diskhkme@gmail.com
+
+=== L08 | PDF p.27 | 印刷 p.27 ===
+ Binary operator, as Global Function
+
+ 이항(binary) 연산자의전역함수로의선언(+,-,==,!=,>,<, etc)
+
+    * 연산자의구현
+
+     3*p1도가능하도록하기위해전역함수를추가구현
+
+   마찬가지로, 함수의friend를가정함
+
+        Friend가아닌경우lhs.xpos, rhs.xpos 접근불가
+
+
+
+
+                                                                           p1*3이진입하는멤버함수
+
+
+
+
+
+                                                  3*p1이진입하는전역함수
+
+
+
+
+강의자료무단배포금지                                                                                                               27
+문의사항: hk.kim@jbnu.ac.kr  || diskhkme@gmail.com
+
+=== L08 | PDF p.28 | 印刷 p.28 ===
+ Operator Overloading
+
+ 연산자오버로딩개요: 클래스에대한연산자의적용방식을사용자가직접오버로딩하여구현할
+  수있음
+
+ 멤버함수인연산자오버로딩: 클래스의멤버함수로operatorX() 라는이름을갖는함수를구현
+  하여해당클래스에대한연산자를오버로딩할수있음. 이때다른피연산자는인자로넘어옴
+
+ 전역함수인연산자오버로딩: 멤버함수로구현시교환법칙문제가발생할수있고, 이러
+  한경우전역함수로오버로딩하며, 이때friend 키워드를사용하면편리함
+
+ 스트림삽입및추출연산자오버로딩
+
+ 대입연산자오버로딩
+
+ 첨자연산자오버로딩
+
+
+강의자료무단배포금지                                                                                                               28
+문의사항: hk.kim@jbnu.ac.kr  || diskhkme@gmail.com
+
+=== L08 | PDF p.29 | 印刷 p.29 ===
+ Stream Insertion and Extraction Overloading
+
+ 스트림삽입및추출연산자오버로딩
+
+   구현하고자하는예시
+
+
+
+
+
+                              복잡한멤버함수대신,
+
+
+
+                                      기본자료형처럼stream출력가능하도록!
+
+
+
+
+
+                                      기본자료형처럼stream입력도가능하도록!
+
+
+
+
+강의자료무단배포금지                                                                                                               29
+문의사항: hk.kim@jbnu.ac.kr  || diskhkme@gmail.com
+
+=== L08 | PDF p.30 | 印刷 p.30 ===
+ OStream                           중요!
+
+ cout에대한간단한이해
+
+    <<은cout 객체(ostream 클래스)의오버로딩된연산자이다
+
+
+
+
+
+                                       아주간단한버전의cout객체
+                                              생성을위한MyOstream클래스
+
+
+
+
+
+                                 위에서만든클래스객체
+                                              (mycout)을사용한콘솔출력
+
+
+
+강의자료무단배포금지                                                                                                               30
+문의사항: hk.kim@jbnu.ac.kr  || diskhkme@gmail.com
+
+=== L08 | PDF p.31 | 印刷 p.31 ===
+ Stream Insertion and Extraction Overloading     중요!
+
+ 스트림삽입연산자오버로딩, 구현
+
+    ostream의참조자를반환하여chain insertion이가능하도록구현해야함
+
+     참조자를반환하지않으면cout << p1 << p2 와같은연산불가
+
+      또한기본적으로cout 객체는복사가불가
+
+
+
+
+
+   전역함수로선언필요!
+
+     멤버함수로선언하면아래와같이사용해야함…
+
+
+
+강의자료무단배포금지                                                                                                               31
+문의사항: hk.kim@jbnu.ac.kr  || diskhkme@gmail.com
+
+=== L08 | PDF p.32 | 印刷 p.32 ===
+ Stream Insertion and Extraction Operators Overloading
+
+ 스트림추출연산자오버로딩, 구현
+
+   우측매개변수(rhs)는const가아님에유의
+
+
+
+
+
+   전역함수로선언!
+
+     삽입연산자와마찬가지
+
+
+
+
+
+강의자료무단배포금지                                                                                                               32
+문의사항: hk.kim@jbnu.ac.kr  || diskhkme@gmail.com
+
+=== L08 | PDF p.33 | 印刷 p.33 ===
+ Operator Overloading
+
+ 연산자오버로딩개요: 클래스에대한연산자의적용방식을사용자가직접오버로딩하여구현할수있음
+
+ 멤버함수인연산자오버로딩: 클래스의멤버함수로operatorX() 라는이름을갖는함수를구현하여해
+  당클래스에대한연산자를오버로딩할수있음. 이때다른피연산자는인자로넘어옴
+
+ 전역함수인연산자오버로딩: 멤버함수로구현시교환법칙문제가발생할수있고, 이러한경우
+  전역함수로오버로딩하며friend 키워드를사용하면편리함
+
+ 스트림삽입및추출연산자오버로딩: <<, >>도연산자이며, cout/cin 객체에대해오버라이딩
+  하면됨. Chain insertion, extraction을위해참조자반환필요
+
+ 대입연산자오버로딩
+
+ 첨자연산자오버로딩
+
+
+강의자료무단배포금지                                                                                                               33
+문의사항: hk.kim@jbnu.ac.kr  || diskhkme@gmail.com
+
+=== L08 | PDF p.34 | 印刷 p.34 ===
+ Assignment Operator Overloading           중요!
+
+ 대입연산자오버로딩
+
+   C++는대입연산자를자동생성해줌
+
+   대입연산과복사생성의구분(아래코드)
+
+  자동생성된대입연산자는얕은복사를수행
+
+
+
+
+
+                               대입연산이아닌복사생성!
+
+
+
+
+                                여기는대입연산이맞음!
+
+
+
+강의자료무단배포금지                                                                                                               34
+문의사항: hk.kim@jbnu.ac.kr  || diskhkme@gmail.com
+
+=== L08 | PDF p.35 | 印刷 p.35 ===
+ Assignment Operator Overloading
+
+ 대입연산자오버로딩, 선언
+
+   기본패턴
+
+
+
+                                          참조형으로반환하지않으면어떤일이  참조형으로반환하여추가적인복사연산을하지않도록함
+                                               벌어질까?
+
+
+   사용예
+
+
+
+
+
+강의자료무단배포금지                                                                                                               35
+문의사항: hk.kim@jbnu.ac.kr  || diskhkme@gmail.com
+
+=== L08 | PDF p.36 | 印刷 p.36 ===
+ Assignment Operator Overloading
+
+ 대입연산자오버로딩, 구현
+
+   대입연산자의구현
+                                            어떤경우에필요할까?(Hint:멤버변수가
+                                            포인터라면어떤문제가발생할수있을까?)
+
+
+
+                                          //왼쪽객체의주소(this)가오른쪽객체의주소와같은경우(p1=p1)
+                                          //왼쪽객체의주소(this)를역참조하여반환
+
+
+                                          //그렇지않으면인자로넘어온객체(=우변)의멤버변수
+                       값을복사해왼쪽객체의멤버변수에대입
+
+
+
+
+
+강의자료무단배포금지                                                                                                               36
+문의사항: hk.kim@jbnu.ac.kr  || diskhkme@gmail.com
+
+=== L08 | PDF p.37 | 印刷 p.37 ===
+ Assignment Operator Overloading           중요!
+
+ 대입연산자오버로딩, 깊은복사
+
+   C++는대입연산자도자동생성해줌
+
+  자동생성된대입연산자는얕은복사를수행
+
+   포인터타입의멤버변수가존재하면, 깊은복사를통한대입연산자직접정의필요!
+
+
+   “복사생성자” 내용복습
+
+     복사생성자는자동생성됨
+
+    자동생성된복사생성자는얕은복사수행
+
+     포인터타입의멤버변수가존재하는경우, 깊은복사의직접정의가필요
+
+
+
+
+
+강의자료무단배포금지                                                                                                               37
+문의사항: hk.kim@jbnu.ac.kr  || diskhkme@gmail.com
+
+=== L08 | PDF p.38 | 印刷 p.38 ===
+ Assignment Operator Overloading
+
+ 대입연산자오버로딩, 깊은복사
+
+  예제를위해임시변경된클래스
+
+
+
+
+
+강의자료무단배포금지                                                                                                               38
+문의사항: hk.kim@jbnu.ac.kr  || diskhkme@gmail.com
+
+=== L08 | PDF p.39 | 印刷 p.39 ===
+ Assignment Operator Overloading           중요!
+
+ 대입연산자오버로딩, 깊은복사
+
+   대입연산자의구현
+
+
+
+
+                                                                   *Self-assignmentchecking이필요함!
+                                    (하지않았을때,a=a를작성하면어떻게될까?)
+
+
+
+
+
+                                      *데이터를배열로가지고있을경우에는해제(delete
+                                                                      [])후재할당이필요
+
+                                 *데이터의길이가변할수있기때문!
+
+
+
+
+강의자료무단배포금지                                                                                                               39
+문의사항: hk.kim@jbnu.ac.kr  || diskhkme@gmail.com
+
+=== L08 | PDF p.40 | 印刷 p.40 ===
+ Copy/Move Constructor & Overloaded Operator =
+
+ (참고) 상속에서의대입연산자오버로딩
+
+
+
+
+
+                                   *기본클래스에대한대입연산자를호출하고난뒤,유도
+                                  클래스의속성에대한대입연산을처리하도록구현
+
+                                    *만일기본클래스연산자를호출하지않는다면,value값에
+                                 대한대입연산은수행되지않음
+
+
+강의자료무단배포금지                                                                                                               40
+문의사항: hk.kim@jbnu.ac.kr  || diskhkme@gmail.com
+
+=== L08 | PDF p.41 | 印刷 p.41 ===
+ Copy/Move Constructor & Overloaded Operator =
+
+ (참고) 상속에서의복사/이동생성자와오버로딩된대입연산자
+
+   유도클래스에서사용자가이를구현하지않은경우,
+
+     컴파일러가자동으로생성하며, 기본클래스를위한복사/이동생성자를호출
+
+   유도클래스에서사용자가이를구현한경우,
+
+     기본클래스를위한복사/이동생성자를사용자가반드시호출해주어야만함!
+
+
+   따라서, 포인터형멤버변수를가지고있는경우, 기본클래스의복사/이동생성자를호출하는
+   방법에대해반드시숙지해두어야함
+
+    유도클래스멤버변수에대한깊은복사고려
+
+
+
+
+
+강의자료무단배포금지                                                                                                               41
+문의사항: hk.kim@jbnu.ac.kr  || diskhkme@gmail.com
+
+=== L08 | PDF p.42 | 印刷 p.42 ===
+ Operator Overloading
+
+ 연산자오버로딩개요: 클래스에대한연산자의적용방식을사용자가직접오버로딩하여구현할수있음
+
+ 멤버함수인연산자오버로딩: 클래스의멤버함수로operatorX() 라는이름을갖는함수를구현하여해
+  당클래스에대한연산자를오버로딩할수있음. 이때다른피연산자는인자로넘어옴
+
+ 전역함수인연산자오버로딩: 멤버함수로구현시교환법칙문제가발생할수있고, 이러한경우
+  전역함수로오버로딩하며friend 키워드를사용하면편리함
+
+ 스트림삽입및추출연산자오버로딩: <<, >>도연산자이며, cout/cin 객체에대해오버라이딩
+  하면됨. Chain insertion을위해참조자반환
+
+ 대입연산자오버로딩: 기본대입연산자는얕은복사를수행하기때문에, 깊은복사가필요한경우
+  대입연산자직접오버로딩이반드시필요
+
+ 첨자연산자오버로딩
+
+
+강의자료무단배포금지                                                                                                               42
+문의사항: hk.kim@jbnu.ac.kr  || diskhkme@gmail.com
+
+=== L08 | PDF p.43 | 印刷 p.43 ===
+ Subscript([ ]) operator overloading
+
+ 첨자연산자오버로딩
+
+    [ ] 연산자
+
+   멤버함수로오버로딩필요
+
+       (복습) [ ], ( ), ->, = 와같은몇몇연산자는멤버함수로만오버로딩가능
+
+  경계검사등기능확장을위해용이하게사용됨
+
+
+
+
+
+강의자료무단배포금지                                                                                                               43
+문의사항: hk.kim@jbnu.ac.kr  || diskhkme@gmail.com
+
+=== L08 | PDF p.44 | 印刷 p.44 ===
+ Subscript([ ]) operator overloading
+
+ 첨자연산자오버로딩
+
+  첨자연산자오버로딩예제를위한클래스정의
+
+   Point의동적할당된배열과그크기를멤버함수로갖는PointArr 클래스정의
+
+
+
+
+
+강의자료무단배포금지                                                                                                               44
+문의사항: hk.kim@jbnu.ac.kr  || diskhkme@gmail.com
+
+=== L08 | PDF p.45 | 印刷 p.45 ===
+ Subscript([ ]) operator overloading           중요!
+
+ 첨자연산자오버로딩
+
+   첨자연산자오버로딩의구현
+
+
+
+
+
+   참조형으로반환해야만arr[0] = Point{10,20}과같이배열내부데이터에접근가능
+
+     참조형으로반환하지않으면복사된값이반환된다는것을기억해야함
+
+
+강의자료무단배포금지                                                                                                               45
+문의사항: hk.kim@jbnu.ac.kr  || diskhkme@gmail.com
+
+=== L08 | PDF p.46 | 印刷 p.46 ===
+ Subscript([ ]) operator overloading           중요!
+
+ 첨자연산자오버로딩
+
+   첨자연산자오버로딩의구현, 계속
+
+
+
+
+
+     const PointArr 사용에있어서데이터에접근가능해야하기때문
+
+
+
+
+
+강의자료무단배포금지                                                                                                               46
+문의사항: hk.kim@jbnu.ac.kr  || diskhkme@gmail.com
+
+=== L08 | PDF p.47 | 印刷 p.47 ===
+ Subscript([ ]) operator overloading
+
+ 첨자연산자오버로딩에서고려해야할점
+
+  첨자연산자오버로딩에서배열에대한복사생성허용여부의결정이필요
+
+     허용하지않고싶을경우아래와같이해상생성자를private 선언또는delete로접근불가능하게함
+
+
+
+
+
+              or
+
+
+
+
+
+강의자료무단배포금지                                                                                                               47
+문의사항: hk.kim@jbnu.ac.kr  || diskhkme@gmail.com
+
+=== L08 | PDF p.48 | 印刷 p.48 ===
+ (Summary)Operator Overloading
+
+ 연산자오버로딩개요: 클래스에대한연산자의적용방식을사용자가직접오버로딩하여구현할수있음
+
+ 멤버함수인연산자오버로딩: 클래스의멤버함수로operatorX() 라는이름을갖는함수를구현하여해
+  당클래스에대한연산자를오버로딩할수있음. 이때다른피연산자는인자로넘어옴
+
+ 전역함수인연산자오버로딩: 멤버함수로구현시교환법칙문제가발생할수있고, 이러한경우
+  전역함수로오버로딩하며friend 키워드를사용하면편리함
+
+ 스트림삽입및추출연산자오버로딩: <<, >>도연산자이며, cout/cin 객체에대해오버라이딩
+  하면됨. Chain insertion을위해참조자반환
+
+ 대입연산자오버로딩: 기본대입연산자는얕은복사를수행하기때문에, 깊은복사가필요한경우
+  대입연산자직접오버로딩이반드시필요
+
+ 첨자연산자오버로딩: 일반적으로const 멤버와참조반환함수두개를오버로딩하여구현
+
+
+강의자료무단배포금지                                                                                                               48
+문의사항: hk.kim@jbnu.ac.kr  || diskhkme@gmail.com

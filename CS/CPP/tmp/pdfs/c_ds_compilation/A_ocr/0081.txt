@@ -1,0 +1,24 @@
+b.terms = a.terms;
+if (a.terms > 0) {
+bindex = 0;
+for (int = 0; c < a.cols; C++) {
+for (int = 0; 〈 a.terms; 5++) {
+if (a.data[i].col == c) {
+b.data[bindex] = a.data[i] .C01;
+b.data[bindex].col = .row;
+b.data[bindex) .vatue = a.data[i] .value;
+bindex++;
+return 구,
+void matrix_print(SparseMatrix a)
+printf("=
+for (int = 0; i<a.terms; i++) {
+printf("(%d, 법, 법) 년", a.data[i].col, a.data[i].value);
+printf("=
+int main(void)
+SparseMatrix m = {
+7
+SparseMatrix result;
+result = matrix_transpose2(m) ;
+matri x_pri nt( result) ;
+return 0;
+88 C언어로 쉽게 물어쓴 자료구조

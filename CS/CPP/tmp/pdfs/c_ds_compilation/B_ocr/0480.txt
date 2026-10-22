@@ -1,0 +1,41 @@
+28
+29
+30
+32
+33
+34
+35
+36
+37
+38
+39
+40
+43
+44
+45
+46
+47
+48
+49
+50
+실행 결과
+if ( (fp = fopen( FilePath, •r")) == NULL )
+printf("Cannot 0卯n file:%s\n", FilePath);
+return 1;
+while ( fgets( Text, MAX_BUFFER. fp ) != NULL )
+int Position =
+KnuthMorrisPratt( Text, strlen(Text), 0, Pattern, PattemSize )•.
+Line++;
+if ( Position 〉= 0 )
+printf("line:u, column:%d
+fclo교( fp );
+return 0;
+占•, Line, Position+1, Text);
+>KnuthMorrisPratt kjv.txt • The Prince 0十 P1eace
+Line:17838, (Olumn:200 : 1%9:6 For untO us a child is born, untO us a 5% is given
+and government shall be upon his shoulder: and his name shall (괴ed 넓혜亟rful
+Counsellor, The mighty 60d, The everlasting Father, The Prince 0十 Peace
+10.5 보이어-무어 알고리즘
+고지식한 탐색부터 KMP 알고리즘까지 우리가 살펴본 문자열 탐색 알고리즘은 모두 문자열의 왼쪽
+부터 오른쪽으로 비교해나가는 방식이었습니다. 그러나 보이어-무어“,렛~x~ 알고리즘은 독특하
+10 • 문자열 탐책 479

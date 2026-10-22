@@ -1,0 +1,67 @@
+079
+080
+081
+082
+083
+084
+085
+086
+087
+088
+089
+090
+091
+092
+093
+094
+095
+096
+097
+098
+099
+100
+101
+102
+103
+104
+105
+106
+107
+108
+109
+110
+112
+113
+114
+115
+116
+117
+118
+LinkedListStack* Stack,
+char Token[32J;
+int Type = -1;
+unsigned int Position = 0:
+unsigned int Length = strlen( InfixExpression ):
+LLS-CreateStack(&Stack);
+while ( Position 〈 Length )
+Position += GetNextToken( &InfixExpression[PositionJ.
+Token, &Type );
+if ( Type
+= OPERAND )
+strcat( PostfixExpression, Token ),•
+strcat( PostfixExpression,
+else if ( Type == RIGHT_PARENTHESIS )
+while ( !LLS-IsEmptY(Stack) )
+Node* Popped = LLS_Pop( Stack ):
+if ( Popped->Data[01
+LEFT PARENTHESIS )
+LLS_DestroyNode( Popped ),•
+break,
+else
+strcat( PostfixExpression, Popped—»ata );
+LLS-DestroyNode( POPped )•,
+else
+while ( lLLS-IsEmpty( Stack )
+lIsPrior( LLS-Top( Stack )-»ata[이. Token[@) ) )
+Chapter 02 • 스택
+105

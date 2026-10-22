@@ -1,0 +1,28 @@
+알고리줍6.3 연결 리스트스t제|
+delete-fi rst(head) :
+1.
+2.
+3.
+4.
+removed
+head head->link
+free(remved)
+return head
+알고리즘 설명
+1. 헤드 포인터의 값을 removed에 복사한다.
+2. 헤드 포인터의 값을 head->link로 변경한다.
+3. removed가 가리기는 동적 메모리를 반환한다.
+4. 변경된 헤드 포인터를 반환한다.
+프로그램 6.4 단순 연결 리스트의 삭제함수
+ListNode* delete_first(ListNode *head)
+ListNode *remved;
+if (head == NULL) return NULL;
+r에℃v댼 = head;
+head = removed->link; // (2)
+free(remved) ;
+return head;
+삭제 연산 delete()
+리스트의 중간에서 삭제하는 알고리즘을 살펴보자. 다음과 같은 단순 연결 리스트에서 노드
+“30”을 삭제한다고 하자.
+대AP표R06 연결 리스트 |
+195

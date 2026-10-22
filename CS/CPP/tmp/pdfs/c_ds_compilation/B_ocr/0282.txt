@@ -1,0 +1,25 @@
+- 힗0}버지 노드를 기준으로
+㉭의 경유를 처리하고 나면 0번 규칙이 위반되지 않습니다. 새로 삽입한 노드 B의 부모 D가 검은,펴
+이기 때문입니다. D에게 부모가 있었다고 간주해봅시다. 그 부모 노드의 색이 빨간색이든 검은색이
+든 여전히 0번 규칙은 위반되지 않습니다. 드디어 0번 규칙의 굴레를 벗어날 수 있게 되었습니다!
+지금까지 살펴본 세 가지 경우의 처리를 담은 RBT-RebuildAfter1nsen( ) 함수는 다음과 같습니다.
+void RBT_RebuildAfterInsert( RBTNode** ROOt, RBTNode* X )
+while ( X != (*Root) X->Parent-X010r == RED ) •
+if ( X->Parent == X-Parent-Parent->Left )•
+RBTNode* UncIe = X->Parent-Parent-Right,
+if ( UncIe-XOIor == RED )•
+X-Parent-Xolor
+= BLACK,
+Uncle-X010r
+= BLACK,
+X-Parent-Parent-X010r = RED;
+X = X->Parent-Parent,
+else
+O번 규칙을 위반6는 동인에
+는 계속 반복합니다.
+부모 노드가 할아버지 노드의
+왼쪽 지식인 경우
+•-養 삼촌이 할간•뽶|경우
+if ( X == X-Parent->Right )•
+삼촌이 검은색이고 X가 오른쪽 x식인 경우
+Chapter06 담석 275

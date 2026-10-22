@@ -1,0 +1,38 @@
+Count = List );
+54
+55
+for ( i = 0: i<Count; i++ )
+Current = CDLL-GetNodeAt( List, 0 );
+59
+if ( Current != NULL )
+60
+CDLL RemoveNode( &List, Current
+62
+CDLL-DestroyNode( Current );
+63
+64
+65
+67
+return 0;
+돈 실행 결과
+List[@J : 0
+List[1J : 1
+List[21 •. 2
+List13J : 3
+List[4J : 4
+lnserting 30% After [기..
+Removing NO血 at 2.
+List[이 : 0
+List(1J
+: 1
+List[기 : 3000
+List[3J : 3
+List[4J : 4
+List[5J .• 0
+List[6) : 1
+List(7) : %%
+List(8) : 3
+List(9J : 4
+Destroying LiSt
+66
+Part 01 • 자료구조

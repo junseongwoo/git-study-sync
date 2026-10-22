@@ -1,0 +1,28 @@
+int main()
+std: :fonvard list〈citizen〉 citizens = {
+{"Kim", 22}, {"Lee", 25}, {"Park", 18}, {"Jin"
+16}
+autO citizens_copy = citizens;
+std::cout 〈〈 "전제 시민들: 한;
+for (const autO : citizens)
+std::cout 〈〈 ( 〈〈
+std: :cout 〈〈 std: :endl;
+// 깊은 복사
+3. 나이 정보를 이용하여 투표권이 없는 시민을 리스트에서 제거하겠습니다.
+citizens.remove_if([](const citizen &c) {
+// 나이가 19세보다 작으면 리스트에서 제거합니다.
+return (c.age 〈 19);
+std::cout 〈〈 “투표권이 있는 시민들: ";
+for (const autO &c : citizens)
+std: :cout 〈〈 std: :endl;
+remove-if() 함수는 주어진 조건에 대해 참을 만족히는 원소를 모두 제거합니다. 이 예제에서
+는 조건이 간단하므로 람다 표현식을 시용했습니다. 복잡한 조건이라면 리스트에 저장된 원
+소를 인자로 받아서 b001 값을 반환하는 일반 함수를 시용해도 됩니다.
+4. 이번에는 내년에 새로 투표권이 생기는 사람을 알아보겠습니다.
+citizens_copy.remove if([J(const citizen 요) {
+return (c.age != 18);
+std::cout 〈〈 "내년에 투표권이 생기는 시민들: ";
+for (const autO &c : citizens_copy)
+std: :cout 〈〈 std: :endl,
+이 코드에서는 나이가 18세인 사람을 제외한 나머지 시민들은 모두 리스트에서 삭제됩니다.
+048

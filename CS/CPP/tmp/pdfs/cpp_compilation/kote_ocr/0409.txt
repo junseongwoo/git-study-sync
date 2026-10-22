@@ -1,0 +1,22 @@
+adj[ul.push-back(v);
+weight[ul(vl =
+4. 새로운 함수 Sing1eSourceShortestPaths()를 정의하겠습니디1 이 함수는 시작 정점 인덱스를
+나타내는 source를 인자로 받고, 정수형 벡터를 반환합니다.
+vector<int〉 SingleSourceShortestPaths(int source)
+5. 입력 그래프에 대해 몇 가지 미리 수정할 것이 있습니다. 시작 정점에서 그래프의 다른 정점
+으로 이동하는 것 대신, 역으로 각각의 정점에서 시작 정점으로 이동하는 최단 경로를 계산할
+것입니다. 입력 그래프가 방향 그래프이기 때문에 입력 그래프의 전치 그래프를 생성하여 사
+용합니다.
+vector〈vector〈int〉〉 adj-t(V);
+vector〈vector〈int〉〉 weight_t(V, vector<int>(V, UNKNOWN));
+memo.clear();
+for (int 1=0; i 〈V; i++)
+// 전치 그래프 생성
+for (auto j •• adj[i])
+adj—t[jl.push-back(i);
+weight-t[j][i] = weight[il[jl;
+// 기저 조건 - 시작 정점에서 자기 자신까지의 최단 거리는 항상 0
+memo[{source, 과]
+if (i != source)
+// V-I 반복 후 소스 이외의 노드에 도달한 경우,
+// 경로가 존재하지 않음

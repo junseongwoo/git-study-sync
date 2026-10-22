@@ -1,0 +1,73 @@
+01
+02
+03
+04
+06
+07
+08
+09
+10
+12
+13
+14
+16
+17
+18
+19
+20
+22
+23
+24
+25
+26
+27
+28
+29
+30
+32
+33
+34
+35
+36
+37
+38
+09장/MinimunSpanningTree/Test—MST.c
+// 그래프에 정점을 추가
+•include "Gra$1.h•
+#include "MST.h•
+int main( void )
+// 그래프 생성
+Graph* graph
+Graph* PrimMST
+= CreateGraph();
+= CreateGraph();
+Graph* KruskalMST = CreateGraph();
+// 정점 생성
+Vertex* A = CreateVertex(
+Vertex* B = CreateVertex( );
+Vertex* ( = CreateVertex( |(' );
+Vertex* D = CreateVertex( ℃• ),•
+CreateVertex( 'E' ),•
+Vertex* E
+Vertex* F - CreateVertex( 'F' );
+Vertex* 6 = CreateVertex( '6• );
+CreateVertex( 'H' );
+Vertex* H
+= CreateVertex(
+Vertex*
+AddVertex( graph, A ):
+AddVertex( graph, );
+AddVertex( graph. ( );
+AddVertex( graph, D );
+AddVertex( graph, E );
+AddVertex( graph, F ):
+AddVertex( graph, 6 );
+AddVertex( graph, H ):
+AddVertex( graph, 1 );
+// 정점과 정점을 간선으로 잇기
+AddEdge( 시 CreateEdge(A, 하 35)
+AddEdge( A, CreateEdge(A, 타 247)
+AddEdge( 하 CreateEdge(B, A. 35 ) );
+• 그최프
+1
+439

@@ -1,0 +1,29 @@
+3. Graph 구조체 생성자에서는 인접 행릴올 활용하여 새로운 에지 정보를 생성할 때마다 유효성
+을 판단합니다. 이미 에지가 존재하는 두 정점 사이에 다시 에지를 만들려고 하면 무시하고
+새로 만듭니다. 모든 정점에서 들어오기나 나기는 에지가 적어도 하나 존재하는지를 확인하
+기 위하여 유효한 에지의 양 끝 정점 번호에 해당하는 인접 행렬 대각 원소도 true로 설정합
+니다. E개의 에지를 생성한 후, 만약 인접 행렬의 대각 원소가 하나라도 false로 설정되어 있
+다면 이 그래프는 유효하지 않은 그래프입니다. 이러한 경우 Graph 구조체의 멤버 변수 v를
+로 설정합니다.
+Graph(int v, int e) •• V(v), E(e)
+v豇tor<vector〈b001〉〉 used(V, vector〈b001※v, false));
+adj .resize(V);
+weight.resize(V, vector<int>(V, UNKNOWN));
+while (e)
+// 에지 정보 생성
+int u = rand() % V;
+int v = rand() % V;
+int = rand() % 100;
+if (rand() % 3== 0)
+// 유효한 에지인지 확인
+if (u==v used[ultvl)
+contlnue;
+// 에지 정보를 추가하고 used 배열 값을 설정
+띠〉
+「40
+edges.push—back(Edge {바 v, 아);
+adj [회 .push—back(v);
+weight[ul[vl = 빏;
+maxWeight = max(maxWeight, w);
+used[ul[u] = used[vl[vl = used[ul[vl = used[vl[ul =
+true;

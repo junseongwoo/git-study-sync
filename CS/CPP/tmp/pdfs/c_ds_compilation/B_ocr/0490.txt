@@ -1,0 +1,58 @@
+17
+19
+20
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+42
+43
+45
+46
+47
+49
+50
+52
+53
+54
+55
+while (i 〈= TextSize - PatternSize)
+= PatternSize - 1;
+while ( j 〉= 0 Pattern[jl == Text(i+j] )
+if (j<O)
+Position = 1;
+break;
+else
+i+= Max( GoodSuffTabIe[j+11, Textti+j) 1)
+free ( Pos0fBorder ):
+free ( GoodSuffTabIe
+return Position;
+void BuildBST( char* Pattern, int PatternSize, int* BadCharTabIe )
+int
+1:
+int
+for ( i=@; i<128; i++ )
+BadCharTabIe(il=-1 ;
+for
+( j=0; jCatternSize; j++ )
+BadCharTabIe[ Pattern[jl l=j;
+1
+void BuiIdGST( char* Pattern, int PattemSize,
+int* GoodSuffTable )
+int• Pos0fBorder.
+10• 문자열 탐책 489

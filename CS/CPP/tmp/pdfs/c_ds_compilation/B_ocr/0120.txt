@@ -1,0 +1,9 @@
+03 02번 문제는 잘 풀었습니까? 만약 배열 기반 스택 예제 프로그램의 AS Push() 함수만 용
+량이 늘어나도록 수정한다면 스택이 커지기만 하고 줄어들지 않아 결국 메모리를 당비하게
+됩니다. 따라서 AS-Pop( ) 함수도 실제 사용량이 줄어들면 용량을 줄이도록 개선해야 합니
+다. 이번 문제는 사용량이 스택 용량의 70% 미만으로 내려가면 용근추을 줄이도록 다음의 AS-
+pop( ) 함수를 수정言는 것입니다.
+EIementType AS Pop(ArrayStack* Stack)
+int Position = -( Stack->Top );
+return Stack->Nodes[Position) Data,
+02 • 스력 1 11

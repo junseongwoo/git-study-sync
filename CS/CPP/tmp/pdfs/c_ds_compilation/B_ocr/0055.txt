@@ -1,0 +1,24 @@
+링크드 리스트 노드 추가 함수와 비교해보면 생성한 노드의 PrevNode에 NULL을 대입하여 초기
+화하는 부분만 추가됐을 뿐입니다.
+이 함수의 접미사 DLL은 Doubly Ljnked LJSt를 줄인 일입니다.
+Node* DLL_CreateNode( EIementType NewData )
+Node• NewNode = (Node*)malloc(sizeof(Node));
+NewNode-»ata = NewData,
+NewNode-PrevNode = NULL;
+NewNode->NextNode = NULL;
+return NewNode,
+노드를 자유 저장소에서 제거하는 DLL DestroyNode( ) 함수는 아예 랑크드 리스트의 버전과 동
+일합니다. 하는 일이라고는 free( ) 함수를 호출하는 것뿐이니 당연합니다.
+VOid DLL DestroyNode( NOde* NOde )
+free(Node);
+노드 추가 연산
+링그드 리스트에서 SLL-AppendNode() 함수는 기존 테일의 NextNode 포인터가 새로 추가
+된 테일을 가리기도록 하면 모든 일을 끝낼 수 있었지만. 더블 랑그드 리스트에서는 새로운 테일의
+PrevNode 포인터도 기존 테일의 주소를 가리기도록 해야 합니다.
+• > 테일
+재로 추가된 테일은
+12,”c이 주소를 저장한따.
+노드 추가
+> 테일
+Chapter 01 • 리스트
+45

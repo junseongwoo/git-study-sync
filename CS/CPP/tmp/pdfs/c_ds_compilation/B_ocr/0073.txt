@@ -1,0 +1,64 @@
+%3
+065
+066
+067
+068
+069
+070
+071
+072
+073
+074
+075
+076
+077
+078
+079
+080
+081
+082
+083
+085
+087
+088
+089
+090
+091
+092
+093
+094
+095
+0%
+097
+098
+099
+100
+101
+102
+(*Head)->NextNode-PrevNode = Remove->PrevN0de
+*Head = Remove->NextNode,
+Remove-PrevNode = NULL;
+Remove->NextNode = NULL;
+else
+Remove->PrevNode->NextNode
+Remove->NextNode-PrevNode
+Remove-PrevNode = NULL;
+Remove->NextNode = NULL;
+Remove->NextNode ,
+Remove-PrevNode
+// 노드 탐색
+NOde* CDLL-GetNodeAt(Node* Head, int Location)
+N馝안 Current = Head;
+while ( Current != NULL (--Location) 〉= 0)
+Current = Current->NextNode;
+return Current;
+노드 개수 세기
+int CDLL-GetNodeCount(Node* Head)
+unsigned int Count = 0;
+Node*
+Current = Head;
+while ( Current != NULL )
+Current = Current->NextNode
+Count++,
+Chapter 01 • 리스트
+63

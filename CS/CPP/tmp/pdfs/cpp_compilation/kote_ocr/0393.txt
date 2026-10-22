@@ -1,0 +1,23 @@
+if(M*2>N)M=N-M+1,•
+results[{N, 마] =
+maxRow = max(maxRow, N);
+vector<int〉 prev = {0, 1};
+for (int row = 1,• row 〈= maxRow; row++)
+int width = (row / 2) + (row 2);
+vector<int〉 curr(width + 2);
+for (int (01 = 1,• (01 〈= width; C01++)
+curr[col] = prev[col - 1] + prev[col];
+if (results.find({row, 교}) != results.end())
+(01}] = curr[col];
+results[{row,
+if (row % 2 == 0)
+curr[width + 1] = curr[width];
+prev = move(curr);
+for (autO query : queries)
+int N = query.first, M = query.second;
+if(M*2>N)M=N-M+1;
+c이효 〈〈 results[{N, 파] 〈〈 endl;
+이제 다시 무한 개수 배당 문제로 돌아오겠습니다.
+용량 -〉 12
+6, 3, 4}
+404

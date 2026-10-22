@@ -1,0 +1,31 @@
+4. 다음 함수는 예방 접종이 필요한지를 판별하여 true 또는 fal교를 만한합니다.
+b001 needs vaccination(Student P, std::vector<Student>& people)
+aut0 first = people.begin();
+auto last = people.end();
+while (true)
+autO range_length = std: :distance(first, last);
+aut0 mid element-index = std::floor(range-length / 2);
+autO mid element = *(first + mid element_index);
+// 목록에 해당 학생이 있고, 예방 접종을 받지 않았다면 true를 반한
+if (mid element == P && mid element.is-vaccinated() == false)
+return true;
+// 목록에 해당 학생이 있는데 이미 예방 접종을 받았다면 false를 반환
+else if (mid_element == P && mid element.is-vaccinated() == true)
+return false;
+else if (mid_element 〉 P)
+std: :advance(last, -mid-element-index);
+if (mid_element 〈 P)
+std: :advance(first, mid_element_index);
+// 목록에 해당 학생이 없다면 true를 반환
+if (range—length == 1)
+return true ,
+5. 다음 코드는 임의의 학생 목록을 생성하고, 특정 학생의 예방 접종 필요 여부를 테스트하는
+함수입니다.
+VOid search_test(int size, Student p)
+std: :vector〈Student〉 people,
+// 임의의 학생 정보 목록 생성
+for (autO i = 0; i 〈 size; i++)
+people. push—back( generate_random Student ( size) ) ;
+std: : sort(people.begin(), people.end( ));
+「40
+469

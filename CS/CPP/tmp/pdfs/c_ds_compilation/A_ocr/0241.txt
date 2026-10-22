@@ -1,0 +1,38 @@
+void print-queue(LinkedQueucType 씨)
+QueueN0de *아
+for (p= q->front; P != NULL; P = p->link)
+printf(t'%d->", p->data);
+pnntf("NULL\n") ;
+// 연결된 큐 테스트 함수
+int main(void)
+Li nkedQueueType
+init(&queue) ;
+enqueue (&queue ,
+enqueue (&queue ,
+enqueue ( &queue
+dequeue(&queue) ;
+dequeue(&queue) •,
+dequeue (&queue) •,
+return 0;
+실행결과
+I->NULL
+1—>2->NULL
+1->2—>3->NULL
+2->3->NULL
+3—>NULL
+NULL
+queue ;
+// 큐 초기화
+1);
+print_queue(&queue) •,
+2) ; print—queue(&queue) ;
+3);
+pri nt-queue (&queue) ;
+pri nt-queue (&queue) ;
+pnnt—queue (&queue) ;
+pri nt_queue (&queue) ;
+01 연결된 큐에서 다음과 같은 연산 후의 상태를 그림으로 그러라
+enqueue(a), enqueue(b), enqueue(c), dequeue(), enqueue(d)
+02 연결된 큐가 공백 상태일 때 front와 rear의 값은?
+CHAPTER07 연결 리스트 ||
+249

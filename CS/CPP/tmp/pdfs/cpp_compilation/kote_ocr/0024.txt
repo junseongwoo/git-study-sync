@@ -1,0 +1,25 @@
+friend dynamic—array<T〉 operator+(const dynamic-array〈昑& arrl,
+dynamic array<T>& arr2)
+dynamic-array〈了〉 result(arrl .size() + arr2.size());
+std::copy(arrl begin(), arrl end(), result.begin());
+std::copy(arr2.begin(), arr2 end(), result.begin() + arrl.
+return result,
+size());
+8. 배열에 저장된 모든 데이터를 문자열로 반환하는 to-string() 멤버 함수를 작성합니다. 이 함
+수는 데이터 구분을 위한 문자열 sep를 인자로 받으며, sep의 기본값은 쉽표(", ")로 지정합
+니다.
+std::string to_string(const std: :string& sep =
+if(n == 0)
+return
+std: :ostringstream 05;
+05 〈〈 data[@];
+for (int 1=1,• i<n; i++)
+05 〈〈 sep 〈〈 data[il;
+return os.str();
+9. 학생 정보를 저장할 구조체 student를 정의합니다. 이 구조체는 학생의 이름 name과 학생의
+학급 정보를 담고 있는 standard 멤버를 가지고 있고, 〈〈 연산자를 이용한 표준 출력을 지원
+합니다.
+struct student
+std: :string name;
+int standard,
+std: :ostream& operator<<(std: :ostream& 05, const student& s)

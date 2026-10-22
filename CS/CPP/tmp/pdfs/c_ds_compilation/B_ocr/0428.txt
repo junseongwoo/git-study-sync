@@ -1,0 +1,37 @@
+'정점이 추가될 때마다 조사 대상 간선 정렬하기'와 '이진 탐색 트리에 조사 대상 간선 입력하기•를
+문제 해결사 후보로 생각해볼 수 있지만. 삽입과 삭제가 빠르고 최솟값을 찾는 데 비용도 거의 들지
+않는 우선순위 큐를 이용하는 것이 가장 적절합니다.
+이 두 문제 말고는 골칫거리가 없습니다. 다음 예제 코드는 프림 알고리즘을 구현한 Prim ( ) 함수입
+니다. 이 함수가 받아들이는 첫 번째 매개 변수 G는 원본 그래프. 두 번째 매개 변수 StanVertex는
+그래프의 시작 정점, 마지막 매개 변수 MST는 최소 신장 트리가 될 그래프입니다.
+void Prim(Graph• 6, Vertex* StartVertex, Graph* MST )
+int i = 0;
+StartNode = { 0, StartVertex };
+PQNode
+- PQ_Create(10);
+PriontyQueue• 國
+Vertex* CurrentVertex = NULL;
+Edge* CurrentEdge
+= NULL;
+- (int*) ma110(( sizeof(int) * G->VertexCount );
+Weights
+= (Vertex**) ma110(( sizeof(Vertex*) * G->VertexCount );
+Vertex** MSTVertices
+(Vertex**) malloc( sizeof(Vertex*) * G->VertexCount );
+Vertex** Fringes
+Vertex•• Precedences = (Vertex**) malloc( sizeof(Vertex*) * G-〉VertexCount );
+CurrentVertex = 6-〉Vertices;
+while ( CurrentVertex != NULL )
+Vertext NewVertex = CreateVertex( CurrentVertex->Data );
+AddVertex( MST, NewVertex);
+Fringes(il
+= NULL;
+Precedences(il = NULL;
+MSTVertices(il = NewVertex,
+MAX_WEIGHT,
+Weightslil
+= CurrentVertex->Next;
+CurrentVertex
+426
+PQ-ErKlueue ( PQ, StartNode );
+Part 02 • 말고리중

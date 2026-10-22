@@ -1,0 +1,36 @@
+// 스t제학수
+elcment pop(StackType *화
+if (is-empty(s)) {
+fprintf(stderr, "스택 공백 에리\n")•,
+exit(l);
+else return s->data((s->top)--] ;
+// 피크함수
+element peek(StackType *외
+if (is-empty(s)) {
+fprintf(stderr, "스택 공백 에러\n");
+exit(l);
+else return s—>data[s->top] •,
+: 스택 구c이 끝
+int main(void)
+StackType
+init_stack(&s) ;
+PJSh(&s, 1);
+push(&s, 2);
+push(&s, 3);
+printf("%d\n'% POP(&S));
+printf("%d\n", POP(&S));
+printf("%d\n'% POP(&S));
+실행결과
+3
+2
+1
+스택을 정적으로 생성한다.
+함수를 호출할 때 스택의
+주소를 전달한다.
+위의 코드에서 약간 복잡해지는 요인은 구조체의 포인터를 각 함수에 전달하여야 한다는 점이
+다. 각 함수에서는 구조체의 포인터를 이용하여 스택을 조작한다. 이것은 C언어에서의 함수 매
+개변수 전달 방식이 기본적으로 값 전달 방식(call by value)이기 때문이다. 즉 구조체를 함수의
+매개변수로 전달하였을 경우, 구조체의 원본이 전달되는 것이 아니라 구조체의 복사본이 함수에
+전달된다. 따라서 함수 안에서는 복사본을 수정하여도 원본에는 영형닐을 주지 못한다. 그러나 원
+CHAPTER04 스택
+115

@@ -1,0 +1,26 @@
+2. 선형 검색 함수를 추가합니다.
+b001 linear search(int N, std::vector<int>& 5)
+for (auto i : S)
+if(i==N)
+return true;
+return false;
+// 원소를 찾음!
+3. 이진 검색 함수를 추가합니다.
+b001 binary—search(int N, std: :vector<int>& 5)
+aut0 first = S.begin();
+auto last = S.end();
+while (true)
+// 현재 검색 범위의 중간 원소를 mid-element에 저장
+autO range_length = std: :distance(first, last);
+autO mid_element_index = first + std: :floor(range—length / 2);
+autO mid_element = *(first + mid element_index);
+// mid-element와 N 값을 비교
+if (mid-element == N)
+return true;
+else if (mid-element 〉 N)
+std: :advance(last, -mid element_index);
+if (mid-element 〈 N)
+std: :advance(first, mid_element_index);
+// 현재 검색 범위에 하나의 원소만 남아 있다면 false를 반환
+if (range—length == 1)
+return false;

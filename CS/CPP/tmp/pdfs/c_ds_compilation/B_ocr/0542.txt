@@ -1,0 +1,27 @@
+ULONG Fibonacci( int N )
+Uatrix2x2 A.
+// 행렬 초기화
+AData[이[이 = 1; AData(이[11 = 1:
+AData[1)I이 = 1; A.Data[1J111 = 0;
+// 행렬 제곱 계산
+A = Matrix2x2-Power(A, N);
+// 타 반환
+retum A.Data[@J[1J;
+Matrix2x2-Power( ) 함수는 우리가 앞에서 살펴본 분할 정복 알고리즘을 그대로 구현합니다.
+Matrix2x2 Matrix2x2 Power(Matrix2x2 시 int n)
+if( 01)
+제급수를 반으로 나눠 다시 Matnx2x2-Power( )
+A = Matrix2x2_Power( 시 n/2 ),•••
+함수를 재귀 호출합니다.
+A = Matrix2x2_Mu1tiply( 시 A );
+if(n&l)
+Matrix2x2 B;
+B.Data(@l[@l = 1; BData[01[11 = 1;
+B.Data[11[이 = 1; B.Data[11[11 = 0
+저꼽수 n이 홀수인 경우 n/2을 수행할 때 / 연산
+A = Matrix2x2 MuItip1y( A, B );• 나 지에 의해 나머지 1이 버려집니다. 따라서 A에
+[1 공1을급하여 버려진 나머지를보완합니다.
+return A,
+Matrix2x2-Multiply() 함수가 무엇이냐고요? 별 것 없습니다. 그냥 다음 식대로 행릴곱을 구할
+뿐입니다. 구현은 전체 코드에서 확인하세요.
+542 Part 03 • 알고리즘 설계 기법

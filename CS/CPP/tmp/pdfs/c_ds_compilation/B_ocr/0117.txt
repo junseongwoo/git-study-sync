@@ -1,0 +1,47 @@
+1叨
+201
+202
+203
+204
+LLS-DestroyNode( ResuItNode ):
+Stack );
+return Result;
+e22/Calcuiator/Test—Calculator.c
+01
+02
+03
+04
+05
+08
+09
+10
+17
+20
+22
+23
+24
+25
+26
+27
+28
+29
+108
+•include 〈stdio.h>
+•include <string.h〉
+•include "Calculator.h"
+int main( void )
+char InfixExpression(100J;
+char PostfixExpression[10@J;
+double Resu1t = 이야
+memset( InfixExpression, 0, sizeof(InfixExpression) ):
+memset( PostfixExpression, 0, sizeof(PostfixExpression) ):
+printf( "Enter lnfix Expression:• ):
+scanf( •占•, InfixExpression );
+GetPostfix( InfixExpression. PostfixExpression ):
+printf( "Infix:E\nPostfix:S\n",
+InfixExpression.
+PostfixExpression ):
+ResuIt = CaIculate( PostfixExpression );
+printf( •CaIcuIation ResuIt : *f\n•, ResuIt ),•
+return 0:
+Part 01 • 자료구조

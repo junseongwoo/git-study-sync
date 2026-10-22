@@ -1,0 +1,38 @@
+프로그램&1 링크법으로생성된 이진트리
+#inctude <stdio.h>
+#inctude <stdtib.h>
+#include <ttpmry.h>
+typedef struct TreeNode {
+int data;
+Struct TrecWe *left, *right;
+} TreeN0de;
+nl
+n2 n3
+int main(void)
+*nl, *n2, •n3;
+(TreeN0de *)maIIoc(sizeof(TreeN0de)) ;
+nl
+n2 = (TreeNode *)maIIoc(sizeof(TreeN0de));
+n3 = (TreeN0de *)maIIoc(sizeof(TreeNode));
+nl->data = 10;
+nl->left = n2;
+nl—>right = n3;
+n2->data = 20;
+n2->teft = NULL;
+n2—>right
+n3->data = 30;
+n3->left = NULL;
+n3->right = NULL;
+// 첫 번째 노드를 설정한다.
+// 두 번째 노드를 설정한다.
+// 세 번째 노드를 설정한다.
+= NULL;
+free(nl); free(n2); free(n3);
+266
+return 0;
+01 다음과 같은 트리를 배열 표현법으로 저장된 모습을 그러라. 각 노드는 어떤 인덱스에 저장되는가?
+10
+30
+25
+위의 트리가 링크 표현법으로 저장된 모습을 그러라.
+C언어로 쉽게 불어쓴 자료구조

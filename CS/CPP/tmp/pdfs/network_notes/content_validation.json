@@ -1,0 +1,1343 @@
+{
+  "1": {
+    "facts": 120,
+    "checked_images": 45,
+    "low_ocr_match": [],
+    "unchecked_citations": []
+  },
+  "2": {
+    "facts": 186,
+    "checked_images": 69,
+    "low_ocr_match": [
+      {
+        "path": ".concepts[0].items[0]",
+        "text": "클라이언트-서버 구조에서 항상 켜져 있는 서버는 클라이언트의 요청에 응답한다.",
+        "pages": [
+          78
+        ],
+        "evidence": "클라이언트-서버 구조에서 항상 켜져 있는 호스트를 서버라고 부르며, 서버는 클라이언트라는 다른 많은 호스트의 요청을 받는다.",
+        "ocr_match": 0.308,
+        "image_checked": true
+      },
+      {
+        "path": ".concepts[0].items[3]",
+        "text": "P2P 애플리케이션은 피어가 작업부하를 만들면서 다른 피어에게 파일을 분배하여 서비스 능력도 추가하는 자가 확장성을 갖는다.",
+        "pages": [
+          79
+        ],
+        "evidence": "각 피어들은 파일을 요구함으로써 작업부하를 만들어 내지만 각 피어들은 또한 다른 피어들에게 파일을 분배함으로써 그 시스템에 서비스 능력을 추가한다.",
+        "ocr_match": 0.429,
+        "image_checked": true
+      },
+      {
+        "path": ".concepts[2].items[1]",
+        "text": "신뢰적 데이터 전송은 데이터가 오류 없이 정확하게 전달되도록 보장한다.",
+        "pages": [
+          83
+        ],
+        "evidence": "데이터가 오류 없이 정확하게 전달되는 것을 보장",
+        "ocr_match": 0.4,
+        "image_checked": true
+      },
+      {
+        "path": ".concepts[2].items[3]",
+        "text": "탄력적 애플리케이션은 가용한 처리율을 많든 적든 이용할 수 있다.",
+        "pages": [
+          83
+        ],
+        "evidence": "탄력적 애플리케이션은 가용한 처리율을 많든 적든 이용할 수 있다.",
+        "ocr_match": 0.333,
+        "image_checked": true
+      },
+      {
+        "path": ".concepts[3].items[2]",
+        "text": "UDP는 핸드셰이킹 과정이 없는 비연결형 서비스이다.",
+        "pages": [
+          86
+        ],
+        "evidence": "UDP는 비연결형이므로 두 프로세스가 통신하기 전에 핸드셰이킹 과정이 없다.",
+        "ocr_match": 0.273,
+        "image_checked": true
+      },
+      {
+        "path": ".concepts[4].items[1]",
+        "text": "애플리케이션 계층 프로토콜은 네트워크 애플리케이션의 한 요소이다.",
+        "pages": [
+          87
+        ],
+        "evidence": "애플리케이션 계층 프로토콜은 네트워크 애플리케이션의 한 요소일 뿐이다.",
+        "ocr_match": 0.419,
+        "image_checked": true
+      },
+      {
+        "path": ".concepts[7].items[2]",
+        "text": "HTTP/1.1 지속 연결에서 서버는 응답을 보낸 후에도 TCP 연결을 그대로 유지한다.",
+        "pages": [
+          94
+        ],
+        "evidence": "HTTP1.1 지속 연결에서 서버는 응답을 보낸 후에 TCP 연결을 그대로 유지한다.",
+        "ocr_match": 0.343,
+        "image_checked": true
+      },
+      {
+        "path": ".concepts[8].items[2]",
+        "text": "HTTP 응답 메시지는 상태 라인, 헤더 라인, 개체 몸체로 구성된다.",
+        "pages": [
+          96
+        ],
+        "evidence": "상태 라인(status line) ... 헤더 라인(header line) ... 개체 몸체(entity body)",
+        "ocr_match": 0.333,
+        "image_checked": true
+      },
+      {
+        "path": ".concepts[9].items[0]",
+        "text": "쿠키 기술은 HTTP 응답 메시지의 쿠키 헤더 라인, HTTP 요청 메시지의 쿠키 헤더 라인, 사용자 브라우저가 관리하는 쿠키 파일, 웹 사이트의 백엔드 데이터베이스의 네 요소를 갖는다.",
+        "pages": [
+          98
+        ],
+        "evidence": "쿠키 기술은 다음 4가지 요소를 갖고 있다.",
+        "ocr_match": 0.294,
+        "image_checked": true
+      },
+      {
+        "path": ".concepts[10].items[0]",
+        "text": "웹 캐시(Web cache; 프록시 서버(proxy server)라고도 함)는 원출처의 웹 서버를 대신하여 HTTP 요구를 충족시키는 네트워크 개체이다.",
+        "pages": [
+          100
+        ],
+        "evidence": "원출처의 웹 서버(origin Web server)를 대신하여 HTTP 요구를 충족시키는 네트워크 개체이다.",
+        "ocr_match": 0.362,
+        "image_checked": true
+      },
+      {
+        "path": ".concepts[11].items[0]",
+        "text": "인터넷 전자메일은 사용자 에이전트, 메일 서버, SMTP의 세 주요 요소로 구성된다.",
+        "pages": [
+          106
+        ],
+        "evidence": "인터넷 메일 시스템이 다음과 같은 세 가지 주요 요소를 갖고 있다. 사용자 에이전트, 메일 서버, SMTP",
+        "ocr_match": 0.195,
+        "image_checked": true
+      },
+      {
+        "path": ".concepts[12].items[1]",
+        "text": "SMTP는 각 메시지의 헤더뿐만 아니라 몸체도 7비트 ASCII로 제한한다.",
+        "pages": [
+          107
+        ],
+        "evidence": "SMTP는 모든 메일 메시지의 몸체(단순한 헤더만이 아니라)를 단순한 7비트 ASCII로 제한한다.",
+        "ocr_match": 0.262,
+        "image_checked": true
+      },
+      {
+        "path": ".concepts[12].items[2]",
+        "text": "SMTP 클라이언트는 서버의 25번 포트로 TCP 연결을 설정한다.",
+        "pages": [
+          108
+        ],
+        "evidence": "SMTP 클라이언트는 포트 25에서 서버와의 TCP 연결을 설정한다.",
+        "ocr_match": 0.333,
+        "image_checked": true
+      },
+      {
+        "path": ".concepts[12].items[3]",
+        "text": "SMTP는 지속 연결을 사용하여 같은 TCP 연결로 여러 메시지를 전송할 수 있다.",
+        "pages": [
+          109
+        ],
+        "evidence": "SMTP가 지속 연결을 사용한다는 것을 주목하자.",
+        "ocr_match": 0.238,
+        "image_checked": true
+      },
+      {
+        "path": ".concepts[14].items[2]",
+        "text": "메일 메시지의 헤더 라인은 SMTP 명령과 다르다.",
+        "pages": [
+          111
+        ],
+        "evidence": "이들 헤더 라인들은 ... SMTP 명령과는 ... 다르다.",
+        "ocr_match": 0.421,
+        "image_checked": true
+      },
+      {
+        "path": ".concepts[15].items[0]",
+        "text": "POP3, IMAP, HTTP는 수신자의 메일 서버에서 사용자 에이전트로 메시지를 가져오는 데 사용된다.",
+        "pages": [
+          112
+        ],
+        "evidence": "POP3나 IMAP 같은 메일 접속 프로토콜(혹은 HTTP)은 수신자의 메일 서버에서 수신자의 사용자 에이전트로 메시지를 전달하는 데 이용된다.",
+        "ocr_match": 0.18,
+        "image_checked": true
+      },
+      {
+        "path": ".concepts[15].items[1]",
+        "text": "POP3는 110번 포트의 서버로 TCP 연결을 설정한다.",
+        "pages": [
+          112
+        ],
+        "evidence": "110번 포트로 메일 서버(서버)에 대한 TCP 연결을 설정하는 것으로 시작된다.",
+        "ocr_match": 0.182,
+        "image_checked": true
+      },
+      {
+        "path": ".concepts[15].items[2]",
+        "text": "POP3 세션은 인증, 트랜잭션, 갱신의 세 단계로 진행한다.",
+        "pages": [
+          112
+        ],
+        "evidence": "인증(authorization), 트랜잭션(transaction), 갱신(update)",
+        "ocr_match": 0.079,
+        "image_checked": true
+      },
+      {
+        "path": ".concepts[15].items[4]",
+        "text": "IMAP 서버는 폴더의 이름과 메시지의 폴더 관계 정보를 포함하여 IMAP 세션 간의 사용자 상태 정보를 유지한다.",
+        "pages": [
+          115
+        ],
+        "evidence": "IMAP 서버는 IMAP 세션 간의 사용자 상태 정보를 유지한다.",
+        "ocr_match": 0.37,
+        "image_checked": true
+      },
+      {
+        "path": ".concepts[16].items[3]",
+        "text": "DNS는 호스트 앨리어싱, 메일 서버 앨리어싱, 부하 분산도 제공한다.",
+        "pages": [
+          117
+        ],
+        "evidence": "호스트 앨리어싱 ... 메일 서버 앨리어싱 ... 부하 분산",
+        "ocr_match": 0.211,
+        "image_checked": true
+      },
+      {
+        "path": ".concepts[17].items[0]",
+        "text": "DNS 서버의 계층은 루트 DNS 서버, 최상위 레벨 도메인(TLD) DNS 서버, 책임 DNS 서버의 세 유형으로 구성된다.",
+        "pages": [
+          119
+        ],
+        "evidence": "루트(root) DNS 서버, 최상위 레벨 도메인(top-level domain, TLD) DNS 서버, 책임(authoritative) DNS 서버",
+        "ocr_match": 0.311,
+        "image_checked": true
+      },
+      {
+        "path": ".concepts[17].items[2]",
+        "text": "그림 2.19에서 호스트가 로컬 DNS 서버로 보낸 질의는 재귀적 질의이고 나머지 질의는 반복적 질의이다.",
+        "pages": [
+          122
+        ],
+        "evidence": "호스트 ... 로부터 로컬 DNS 서버 ... 로 보내는 질의는 재귀적 질의이고 나머지 세 질의는 반복적 질의이다.",
+        "ocr_match": 0.317,
+        "image_checked": true
+      },
+      {
+        "path": ".concepts[17].items[3]",
+        "text": "DNS 서버는 질의 사슬에서 응답을 받았을 때 그 정보를 로컬 메모리에 저장할 수 있다.",
+        "pages": [
+          122
+        ],
+        "evidence": "DNS 서버는 응답에 있는 정보를 자신의 로컬 메모리에 저장할 수 있다.",
+        "ocr_match": 0.207,
+        "image_checked": true
+      },
+      {
+        "path": ".concepts[18].items[4]",
+        "text": "Type=CNAME은 별칭 호스트 네임의 정식 호스트 네임을, Type=MX는 별칭 호스트 네임을 갖는 메일 서버의 정식 이름을 제공한다.",
+        "pages": [
+          124
+        ],
+        "evidence": "Type=CNAME이면 ... 정식 호스트 네임 ... Type=MX이면 ... 메일 서버의 정식 이름",
+        "ocr_match": 0.314,
+        "image_checked": true
+      },
+      {
+        "path": ".concepts[19].items[3]",
+        "text": "가장 드문 것 먼저(rarest first) 기법은 이웃 중 가장 드문, 아직 없는 청크를 먼저 요청한다.",
+        "pages": [
+          133
+        ],
+        "evidence": "이웃 중에서 가장 드문 청크를 결정하고 ... 가장 드문 청크를 먼저 요구한다.",
+        "ocr_match": 0.241,
+        "image_checked": true
+      },
+      {
+        "path": ".concepts[19].items[4]",
+        "text": "비트토렌트는 자신에게 가장 빠르게 데이터를 공급하는 이웃 피어에게 높은 우선순위로 응답하는 TFT(tit-for-tat) 교역 알고리즘을 사용한다.",
+        "pages": [
+          133,
+          134
+        ],
+        "evidence": "가장 빠른 속도로 데이터를 공급하는 이웃 피어에게 높은 우선순위로 응답한다.",
+        "ocr_match": 0.219,
+        "image_checked": true
+      },
+      {
+        "path": ".concepts[20].items[0]",
+        "text": "비디오는 일반적으로 초당 24개 또는 30개의 일정한 속도로 표시되는 이미지의 연속이다.",
+        "pages": [
+          135
+        ],
+        "evidence": "비디오는 일반적으로 초당 24개 또는 30개의 일정한 속도로 표시되는 이미지의 연속이다.",
+        "ocr_match": 0.421,
+        "image_checked": true
+      },
+      {
+        "path": ".concepts[20].items[1]",
+        "text": "중단 없는 재생을 위해 네트워크는 압축된 비디오의 비트율 이상인 평균 처리율을 스트리밍 애플리케이션에 제공해야 한다.",
+        "pages": [
+          135
+        ],
+        "evidence": "중단 없는 재생을 제공하기 위해 네트워크는 ... 비디오의 비트율 이상의 평균 처리율을 제공해야 한다.",
+        "ocr_match": 0.35,
+        "image_checked": true
+      },
+      {
+        "path": ".concepts[21].items[2]",
+        "text": "매니페스트 파일(manifest file)은 각 비디오 버전에 대한 URL을 제공한다.",
+        "pages": [
+          136
+        ],
+        "evidence": "매니페스트 파일(manifest file) ... 각 버전에 대한 URL",
+        "ocr_match": 0.286,
+        "image_checked": true
+      },
+      {
+        "path": ".concepts[24].items[1]",
+        "text": "소스 호스트의 IP 주소와 소스 소켓의 포트 번호를 패킷에 붙이는 일은 하부 운영체제가 자동으로 실행한다.",
+        "pages": [
+          146
+        ],
+        "evidence": "대신 하부 운영체제가 자동으로 실행한다.",
+        "ocr_match": 0.412,
+        "image_checked": true
+      },
+      {
+        "path": ".procedures[0].steps[0]",
+        "text": "HTTP 클라이언트가 서버의 80번 포트로 TCP 연결을 시도한다.",
+        "pages": [
+          92
+        ],
+        "evidence": "HTTP 클라이언트는 ... 80번 포트로 ... TCP 연결을 시도한다.",
+        "ocr_match": 0.423,
+        "image_checked": true
+      },
+      {
+        "path": ".procedures[1].steps[0]",
+        "text": "브라우저가 웹 캐시에 TCP 연결을 설정하고 HTTP 요청을 보낸다.",
+        "pages": [
+          101
+        ],
+        "evidence": "브라우저는 웹 캐시에 대한 TCP 연결을 설정하고 웹 캐시에 있는 객체에 대한 HTTP 요청을 보낸다.",
+        "ocr_match": 0.357,
+        "image_checked": true
+      },
+      {
+        "path": ".procedures[1].steps[2]",
+        "text": "사본이 없으면 웹 캐시가 원출처 서버로 TCP 연결을 설정하여 객체를 요청한다.",
+        "pages": [
+          101
+        ],
+        "evidence": "웹 캐시가 객체를 갖고 있지 않다면 ... 원출처 서버로 TCP 연결을 설정한다.",
+        "ocr_match": 0.367,
+        "image_checked": true
+      },
+      {
+        "path": ".procedures[1].steps[3]",
+        "text": "웹 캐시가 객체를 수신하면 복사본을 로컬 저장장치에 저장하고 브라우저로 보낸다.",
+        "pages": [
+          101
+        ],
+        "evidence": "캐시는 로컬 저장장치에 그 객체의 복사본을 저장하고 ... 클라이언트 브라우저에 ... 보낸다.",
+        "ocr_match": 0.343,
+        "image_checked": true
+      },
+      {
+        "path": ".procedures[2].steps[0]",
+        "text": "송신자의 사용자 에이전트가 메시지를 메일 서버로 보내면 메시지 큐에 놓인다.",
+        "pages": [
+          108
+        ],
+        "evidence": "사용자 에이전트는 메시지를 ... 메일 서버로 보내고 ... 메시지 큐에 놓인다.",
+        "ocr_match": 0.429,
+        "image_checked": true
+      },
+      {
+        "path": ".procedures[2].steps[1]",
+        "text": "송신 메일 서버의 SMTP 클라이언트가 수신 메일 서버의 SMTP 서버와 TCP 연결을 설정한다.",
+        "pages": [
+          108
+        ],
+        "evidence": "SMTP 클라이언트는 SMTP 서버와 TCP 연결을 설정한다.",
+        "ocr_match": 0.37,
+        "image_checked": true
+      },
+      {
+        "path": ".procedures[2].steps[3]",
+        "text": "수신 메일 서버가 수신자의 메일박스에 메시지를 저장한다.",
+        "pages": [
+          108
+        ],
+        "evidence": "수신자의 메일 서버는 그 메시지를 수신자의 메일박스에 놓는다.",
+        "ocr_match": 0.423,
+        "image_checked": true
+      },
+      {
+        "path": ".procedures[2].steps[4]",
+        "text": "수신자가 사용자 에이전트를 이용하여 메시지를 읽는다.",
+        "pages": [
+          108
+        ],
+        "evidence": "수신자는 ... 사용자 에이전트를 시동하여 메시지를 읽는다.",
+        "ocr_match": 0.435,
+        "image_checked": true
+      },
+      {
+        "path": ".procedures[3].steps[0]",
+        "text": "인증 단계에서 사용자 이름과 비밀번호를 보내 사용자를 인증한다.",
+        "pages": [
+          112
+        ],
+        "evidence": "인증 단계에서 사용자 에이전트는 사용자 이름과 비밀번호를 보내 사용자를 인증한다.",
+        "ocr_match": 0.343,
+        "image_checked": true
+      },
+      {
+        "path": ".procedures[3].steps[2]",
+        "text": "클라이언트가 quit 명령을 보내면 갱신 단계에서 삭제 표시된 메시지를 삭제한다.",
+        "pages": [
+          112,
+          114
+        ],
+        "evidence": "갱신 단계에서 메일 서버는 삭제 표시된 메시지를 삭제한다.",
+        "ocr_match": 0.333,
+        "image_checked": true
+      },
+      {
+        "path": ".procedures[5].steps[2]",
+        "text": "클라이언트가 조각을 받는 동안 수신 대역폭을 측정하여 다음 조각의 버전을 선택한다.",
+        "pages": [
+          136
+        ],
+        "evidence": "조각 단위의 데이터를 다운로드하는 동안 수신 대역폭을 측정하고 ... 다음에 요청할 ... 버전을 선택한다.",
+        "ocr_match": 0.3,
+        "image_checked": true
+      },
+      {
+        "path": ".procedures[6].steps[0]",
+        "text": "서버가 환영 소켓을 만들고 클라이언트 연결 요청을 기다린다.",
+        "pages": [
+          151,
+          153
+        ],
+        "evidence": "입력 요청에 대한 ... 소켓 생성 ... 입력 연결 요청 대기",
+        "ocr_match": 0.421,
+        "image_checked": true
+      },
+      {
+        "path": ".formulas[1]",
+        "text": "d_min = min{d_1, d_2, ... , d_N}",
+        "pages": [
+          130
+        ],
+        "evidence": "d_min = min{d_1, d_2, ... , d_N}",
+        "ocr_match": 0.308,
+        "image_checked": true
+      },
+      {
+        "path": ".formulas[2]",
+        "text": "D_cs = max{NF/u_s, F/d_min}",
+        "pages": [
+          129,
+          130
+        ],
+        "evidence": "D_cs = max{NF/u_s, F/d_min}",
+        "ocr_match": 0.267,
+        "image_checked": true
+      },
+      {
+        "path": ".terms[5].definition",
+        "text": "가용한 처리율을 많든 적든 이용할 수 있는 애플리케이션이다.",
+        "pages": [
+          83
+        ],
+        "evidence": "탄력적 애플리케이션은 가용한 처리율을 많든 적든 이용할 수 있다.",
+        "ocr_match": 0.333,
+        "image_checked": true
+      },
+      {
+        "path": ".terms[9].definition",
+        "text": "원출처의 웹 서버를 대신하여 HTTP 요구를 충족시키는 네트워크 개체이다.",
+        "pages": [
+          100
+        ],
+        "evidence": "원출처의 웹 서버(origin Web server)를 대신하여 HTTP 요구를 충족시키는 네트워크 개체이다.",
+        "ocr_match": 0.362,
+        "image_checked": true
+      },
+      {
+        "path": ".terms[13].definition",
+        "text": "자원 레코드의 생존기간으로 자원이 캐시에서 제거되는 시간을 결정한다.",
+        "pages": [
+          124
+        ],
+        "evidence": "TTL은 자원 레코드의 생존기간이다(자원이 캐시에서 제거되는 시간을 결정).",
+        "ocr_match": 0.375,
+        "image_checked": true
+      },
+      {
+        "path": ".terms[15].definition",
+        "text": "토렌트에 참여하는 피어들을 추적하는 인프라구조 노드이다.",
+        "pages": [
+          132
+        ],
+        "evidence": "토렌트에 있는 피어들을 추적하는 트래커(tracker)라는 인프라구조 노드",
+        "ocr_match": 0.273,
+        "image_checked": true
+      },
+      {
+        "path": ".terms[16].definition",
+        "text": "서로 다른 비트율의 비디오 버전에 대한 URL을 제공하는 파일이다.",
+        "pages": [
+          136
+        ],
+        "evidence": "매니페스트 파일(manifest file) ... 각 버전에 대한 URL",
+        "ocr_match": 0.286,
+        "image_checked": true
+      },
+      {
+        "path": ".protocols[0].header",
+        "text": "요청 라인은 방식(method), URL, HTTP 버전 필드로 구성된다.",
+        "pages": [
+          94
+        ],
+        "evidence": "요청 라인은 3개의 필드 ... 방식(method) ... URL ... HTTP 버전",
+        "ocr_match": 0.37,
+        "image_checked": true
+      },
+      {
+        "path": ".protocols[2].features",
+        "text": "각 메시지를 몸체까지 포함하여 7비트 ASCII로 제한한다.",
+        "pages": [
+          107
+        ],
+        "evidence": "모든 메일 메시지의 몸체 ... 를 단순한 7비트 ASCII로 제한한다.",
+        "ocr_match": 0.407,
+        "image_checked": true
+      },
+      {
+        "path": ".protocols[3].layer",
+        "text": "애플리케이션 계층",
+        "pages": [
+          155
+        ],
+        "evidence": "중요한 애플리케이션 계층 프로토콜 ... POP3",
+        "ocr_match": 0.421,
+        "image_checked": true
+      },
+      {
+        "path": ".protocols[3].role",
+        "text": "수신자의 메일 서버에서 사용자 에이전트로 메시지를 전달한다.",
+        "pages": [
+          112
+        ],
+        "evidence": "POP3나 IMAP 같은 메일 접속 프로토콜 ... 수신자의 사용자 에이전트로 메시지를 전달",
+        "ocr_match": 0.297,
+        "image_checked": true
+      },
+      {
+        "path": ".protocols[4].role",
+        "text": "수신자의 메일 서버에서 사용자 에이전트로 메시지를 전달한다.",
+        "pages": [
+          112
+        ],
+        "evidence": "POP3나 IMAP 같은 메일 접속 프로토콜 ... 수신자의 사용자 에이전트로 메시지를 전달",
+        "ocr_match": 0.297,
+        "image_checked": true
+      },
+      {
+        "path": ".protocols[4].features",
+        "text": "세션 간에 사용자 상태 정보를 유지한다.",
+        "pages": [
+          115
+        ],
+        "evidence": "IMAP 서버는 IMAP 세션 간의 사용자 상태 정보를 유지한다.",
+        "ocr_match": 0.37,
+        "image_checked": true
+      },
+      {
+        "path": ".review[3].answer",
+        "text": "POP3는 세션 간 상태 정보를 유지하지 않지만 IMAP은 사용자 상태 정보를 유지한다.",
+        "pages": [
+          114,
+          115
+        ],
+        "evidence": "POP3 서버는 POP3 세션 간에 상태 정보를 유지하지 않는다. ... IMAP 서버는 IMAP 세션 간의 사용자 상태 정보를 유지한다.",
+        "ocr_match": 0.241,
+        "image_checked": true
+      },
+      {
+        "path": ".cheat.definitions[1].definition",
+        "text": "원출처의 웹 서버를 대신하여 HTTP 요구를 충족시키는 네트워크 개체이다.",
+        "pages": [
+          100
+        ],
+        "evidence": "원출처의 웹 서버(origin Web server)를 대신하여 HTTP 요구를 충족시키는 네트워크 개체이다.",
+        "ocr_match": 0.362,
+        "image_checked": true
+      },
+      {
+        "path": ".cheat.formulas[0]",
+        "text": "D_cs = max{NF/u_s, F/d_min}",
+        "pages": [
+          129,
+          130
+        ],
+        "evidence": "D_cs = max{NF/u_s, F/d_min}",
+        "ocr_match": 0.267,
+        "image_checked": true
+      }
+    ],
+    "unchecked_citations": []
+  },
+  "3": {
+    "facts": 128,
+    "checked_images": 64,
+    "low_ocr_match": [
+      {
+        "path": ".concepts[0].items[0]",
+        "text": "트랜스포트 계층 프로토콜은 서로 다른 호스트에서 동작하는 애플리케이션 프로세스들 간의 논리적 통신(logical communication)을 제공한다.",
+        "pages": [
+          172
+        ],
+        "evidence": "서로 다른 호스트에서 동작하는 애플리케이션 프로세스들 간의 논리적 통신(logical communication)을 제공한다.",
+        "ocr_match": 0.375,
+        "image_checked": true
+      },
+      {
+        "path": ".concepts[4].items[5]",
+        "text": "TCP 세그먼트의 확인응답 번호는 상대 호스트로부터 기대하는 다음 바이트의 순서번호이며 TCP는 누적 확인응답을 제공한다.",
+        "pages": [
+          218
+        ],
+        "evidence": "기대하는 다음 바이트의 순서번호이다. ... TCP는 누적 확인응답(cumulative acknowledgment)을 제공한다고 한다.",
+        "ocr_match": 0.431,
+        "image_checked": true
+      },
+      {
+        "path": ".concepts[6].items[1]",
+        "text": "타임아웃 또는 수신자로부터 3개의 중복 ACK를 받으면 TCP 송신자 측에 손실 이벤트(loss event)가 발생했다고 정의한다.",
+        "pages": [
+          247
+        ],
+        "evidence": "타임아웃 또는 수신자로부터 3개의 중복 ACK들의 수신이 발생했을 때 ... “손실 이벤트(loss event)”",
+        "ocr_match": 0.318,
+        "image_checked": true
+      },
+      {
+        "path": ".concepts[6].items[5]",
+        "text": "초기 슬로 스타트를 무시하고 손실이 3개의 중복 ACK로 표시된다고 가정하면 TCP는 가법적 증가, 승법적 감소(additive-increase, multiplicative-decrease, AIMD)를 수행한다.",
+        "pages": [
+          253
+        ],
+        "evidence": "초기 슬로 스타트 기간을 무시하고 ... 3개의 중복 ACK로 표시된다고 가정한다면 ... 가법적 증가, 승법적 감소",
+        "ocr_match": 0.372,
+        "image_checked": true
+      },
+      {
+        "path": ".concepts[6].items[7]",
+        "text": "명시적 혼잡 표시(Explicit Congestion Notification, ECN)는 TCP와 IP가 관련된 네트워크-지원 혼잡제어 형식이다.",
+        "pages": [
+          259
+        ],
+        "evidence": "네트워크-지원 혼잡제어의 형식을 명시적 혼잡 표시 ... TCP와 IP 프로토콜이 관련되어 있다.",
+        "ocr_match": 0.447,
+        "image_checked": true
+      },
+      {
+        "path": ".procedures[3].steps[1]",
+        "text": "타임아웃에는 해당 패킷만 전송하며 각 패킷은 자신의 논리 타이머를 가진다.",
+        "pages": [
+          209
+        ],
+        "evidence": "오직 한 패킷만이 타임아웃에 전송되기 때문에, 각 패킷은 자신의 논리 타이머를 가져야 한다.",
+        "ocr_match": 0.405,
+        "image_checked": true
+      },
+      {
+        "path": ".procedures[4].steps[1]",
+        "text": "서버는 버퍼와 변수를 할당하고 SYN = 1, 확인응답 번호 client_isn + 1, 최초 순서번호 server_isn을 갖는 SYNACK 세그먼트를 보낸다.",
+        "pages": [
+          234,
+          235
+        ],
+        "evidence": "SYN 비트는 1로 설정된다. ... 확인응답 필드는 client_isn+1 ... 최초의 순서번호(server_isn)",
+        "ocr_match": 0.267,
+        "image_checked": true
+      },
+      {
+        "path": ".procedures[4].steps[2]",
+        "text": "클라이언트는 버퍼와 변수를 할당하고 확인응답 번호 server_isn + 1과 SYN = 0인 세그먼트를 보낸다.",
+        "pages": [
+          235
+        ],
+        "evidence": "확인응답 필드 안에 server_isn+1 값을 넣는 것으로 ... SYN 비트는 0으로 설정된다.",
+        "ocr_match": 0.447,
+        "image_checked": true
+      },
+      {
+        "path": ".formulas[0]",
+        "text": "U_sender = (L/R) / (RTT + L/R)",
+        "pages": [
+          201,
+          202
+        ],
+        "evidence": "U_sender = (L/R)/(RTT + L/R) = 0.008/30.008 = 0.00027",
+        "ocr_match": 0.345,
+        "image_checked": true
+      },
+      {
+        "path": ".formulas[1]",
+        "text": "EstimatedRTT = (1 − α) · EstimatedRTT + α · SampleRTT",
+        "pages": [
+          222
+        ],
+        "evidence": "EstimatedRTT = (1 − α) · EstimatedRTT + α · SampleRTT",
+        "ocr_match": 0.382,
+        "image_checked": true
+      },
+      {
+        "path": ".terms[0].definition",
+        "text": "트랜스포트 계층 프로토콜은 서로 다른 호스트에서 동작하는 애플리케이션 프로세스들 간의 논리적 통신(logical communication)을 제공한다.",
+        "pages": [
+          172
+        ],
+        "evidence": "서로 다른 호스트에서 동작하는 애플리케이션 프로세스들 간의 논리적 통신(logical communication)을 제공한다.",
+        "ocr_match": 0.375,
+        "image_checked": true
+      },
+      {
+        "path": ".terms[16].definition",
+        "text": "타임아웃 또는 수신자로부터 3개의 중복 ACK를 받으면 TCP 송신자 측에 손실 이벤트(loss event)가 발생했다고 정의한다.",
+        "pages": [
+          247
+        ],
+        "evidence": "타임아웃 또는 수신자로부터 3개의 중복 ACK들의 수신이 발생했을 때 ... “손실 이벤트(loss event)”",
+        "ocr_match": 0.318,
+        "image_checked": true
+      },
+      {
+        "path": ".terms[17].definition",
+        "text": "명시적 혼잡 표시(Explicit Congestion Notification, ECN)는 TCP와 IP가 관련된 네트워크-지원 혼잡제어 형식이다.",
+        "pages": [
+          259
+        ],
+        "evidence": "네트워크-지원 혼잡제어의 형식을 명시적 혼잡 표시 ... TCP와 IP 프로토콜이 관련되어 있다.",
+        "ocr_match": 0.447,
+        "image_checked": true
+      },
+      {
+        "path": ".protocols[1].features",
+        "text": "연결지향형이며 전이중·점대점 서비스를 제공하고 흐름제어와 혼잡제어를 수행한다.",
+        "pages": [
+          213,
+          214,
+          231,
+          247
+        ],
+        "evidence": "연결지향형 ... 전이중(full-duplex) ... 점대점(point-to-point) ... 흐름제어 서비스 ... 혼잡제어 메커니즘",
+        "ocr_match": 0.312,
+        "image_checked": true
+      },
+      {
+        "path": ".cheat.formulas[0]",
+        "text": "EstimatedRTT = (1 − α) · EstimatedRTT + α · SampleRTT",
+        "pages": [
+          222
+        ],
+        "evidence": "EstimatedRTT = (1 − α) · EstimatedRTT + α · SampleRTT",
+        "ocr_match": 0.382,
+        "image_checked": true
+      }
+    ],
+    "unchecked_citations": []
+  },
+  "4": {
+    "facts": 125,
+    "checked_images": 47,
+    "low_ocr_match": [
+      {
+        "path": ".learning[1]",
+        "text": "라우터의 내부 스위칭 구조, 패킷 큐잉과 스케줄링, IP 어드레싱, IPv4와 IPv6, 일반적인 포워딩을 공부한다.",
+        "pages": [
+          287
+        ],
+        "evidence": "내부 스위칭 구조, 그리고 패킷 큐잉과 스케줄링 ... IP 어드레싱, 그 유명한 IPv4와 IPv6 ... 일반적인 포워딩",
+        "ocr_match": 0.422,
+        "image_checked": true
+      },
+      {
+        "path": ".concepts[0].items[4]",
+        "text": "인터넷 네트워크 계층의 최선형 서비스(best-effort service)는 전달, 순서, 지연 및 최소 대역폭을 보장하지 않는다.",
+        "pages": [
+          287
+        ],
+        "evidence": "순서대로 수신됨을 보장할 수 없을 뿐 아니라, 목적지까지의 전송 자체도 보장될 수 없다. ... 지연 또한 보장되지 않으며, 보장된 최소 대역폭 또한 없다.",
+        "ocr_match": 0.397,
+        "image_checked": true
+      },
+      {
+        "path": ".concepts[1].items[0]",
+        "text": "라우터의 네 가지 요소는 입력 포트, 스위칭 구조, 출력 포트, 라우팅 프로세서이다.",
+        "pages": [
+          288,
+          289
+        ],
+        "evidence": "라우터의 네가지 요소 ... 입력 포트 ... 스위칭 구조 ... 출력 포트 ... 라우팅 프로세서",
+        "ocr_match": 0.31,
+        "image_checked": true
+      },
+      {
+        "path": ".concepts[2].items[2]",
+        "text": "TTL(Time-to-live)은 데이터그램이 네트워크에서 무한히 순환하지 않도록 하며 라우터가 처리할 때마다 감소하고 0이면 폐기된다.",
+        "pages": [
+          304
+        ],
+        "evidence": "이 필드 값은 라우터가 데이터그램을 처리할 때마다 감소한다. TTL 필드가 0이 되면 라우터가 데이터그램을 폐기한다.",
+        "ocr_match": 0.449,
+        "image_checked": true
+      },
+      {
+        "path": ".concepts[3].items[1]",
+        "text": "출력 링크의 MTU가 데이터그램 길이보다 작으면 페이로드를 더 작은 데이터그램으로 나누며 각각을 조각(fragment, 단편)이라고 한다.",
+        "pages": [
+          305,
+          306
+        ],
+        "evidence": "페이로드를 두 개 이상의 더 작은 IP 데이터그램으로 분할 ... 조각(fragment, 단편)",
+        "ocr_match": 0.417,
+        "image_checked": true
+      },
+      {
+        "path": ".concepts[6].items[2]",
+        "text": "IPv6는 간소화된 고정 길이 40바이트 헤더를 사용하며 버전, 트래픽 클래스, 흐름 라벨, 페이로드 길이, 다음 헤더, 홉 제한, 출발지·목적지 주소를 포함한다.",
+        "pages": [
+          320,
+          321
+        ],
+        "evidence": "40바이트 고정 길이 헤더 ... 그림 4.26 IPv6 데이터그램 포맷",
+        "ocr_match": 0.407,
+        "image_checked": true
+      },
+      {
+        "path": ".concepts[7].items[5]",
+        "text": "주요 액션은 포워딩(Forwarding), 드롭핑(Dropping), 수정필드(Modify-field)이다.",
+        "pages": [
+          327
+        ],
+        "evidence": "포워딩(Forwarding) ... 드롭핑(Dropping) ... 수정필드(Modify-field)",
+        "ocr_match": 0.385,
+        "image_checked": true
+      },
+      {
+        "path": ".concepts[7].items[6]",
+        "text": "책의 OpenFlow 예는 간단한 포워딩, 부하 균등화(Load Balancing), 방화벽을 플로우 테이블 항목으로 구현한다.",
+        "pages": [
+          328,
+          329
+        ],
+        "evidence": "첫 번째 예: 간단한 포워딩 ... 두 번째 예: 부하 균등화(Load Balancing) ... 세 번째 예: 방화벽",
+        "ocr_match": 0.205,
+        "image_checked": true
+      },
+      {
+        "path": ".procedures[0].steps[2]",
+        "text": "출력 포트가 결정되면 패킷을 스위칭 구조로 보내며 차단되면 입력 포트에서 기다린다.",
+        "pages": [
+          292
+        ],
+        "evidence": "출력 포트가 결정되면 패킷을 스위칭 구조로 보낼 수 있다. ... 차단된 패킷은 입력 포트에 대기",
+        "ocr_match": 0.444,
+        "image_checked": true
+      },
+      {
+        "path": ".procedures[1].steps[2]",
+        "text": "목적지 호스트는 식별자 번호를 검사하여 원본의 조각을 판단하고 오프셋에 따라 재결합한다.",
+        "pages": [
+          306
+        ],
+        "evidence": "어느 원본의 데이터그램 조각인지 결정하기 위해 ... 식별자 번호를 검사한다. ... 적절한 순서로 조각을 재결합",
+        "ocr_match": 0.286,
+        "image_checked": true
+      },
+      {
+        "path": ".procedures[2].steps[0]",
+        "text": "새 호스트는 DHCP 발견 메시지(DHCP discover message)를 UDP 포트 67로 보내며 목적지 IP 주소는 255.255.255.255, 출발지 IP 주소는 0.0.0.0으로 설정한다.",
+        "pages": [
+          315
+        ],
+        "evidence": "포트 67번으로 UDP 패킷 ... 브로드캐스팅 IP 주소 255.255.255.255 ... 출발지 IP 주소는 0.0.0.0",
+        "ocr_match": 0.391,
+        "image_checked": true
+      },
+      {
+        "path": ".procedures[3].steps[1]",
+        "text": "출발지 IP 주소를 WAN 쪽 IP 주소로 바꾸고 출발지 포트 번호를 새 포트 번호로 바꾼 뒤 NAT 변환 테이블에 엔트리를 추가한다.",
+        "pages": [
+          318
+        ],
+        "evidence": "WAN 쪽 IP 주소 ... 출발지 IP 주소를 변경 ... 원래 출발지 포트 번호 ... 변경 ... 엔트리를 추가",
+        "ocr_match": 0.286,
+        "image_checked": true
+      },
+      {
+        "path": ".procedures[4].steps[1]",
+        "text": "IPv4 데이터그램의 목적지를 터널 수신 측 IPv6 노드로 적고 터널의 첫 번째 노드로 보낸다.",
+        "pages": [
+          322
+        ],
+        "evidence": "목적지 주소를 터널의 수신 측에 IPv6 노드 ... 로 적어서 터널의 첫 번째 노드 ... 에 보낸다.",
+        "ocr_match": 0.371,
+        "image_checked": true
+      },
+      {
+        "path": ".procedures[4].steps[2]",
+        "text": "터널 내부 IPv4 라우터들은 일반 IPv4 데이터그램처럼 처리하고 수신 측 IPv6 노드는 IPv6 데이터그램을 꺼내 다음 IPv6 노드로 보낸다.",
+        "pages": [
+          322,
+          323
+        ],
+        "evidence": "다른 데이터그램을 처리하는 방식으로 ... 이 노드는 IPv6 데이터그램으로 만든 다음 IPv6 데이터그램을 IPv6 노드에 보낸다.",
+        "ocr_match": 0.345,
+        "image_checked": true
+      },
+      {
+        "path": ".terms[4].definition",
+        "text": "인터넷 네트워크 계층의 최선형 서비스(best-effort service)는 전달, 순서, 지연 및 최소 대역폭을 보장하지 않는다.",
+        "pages": [
+          287
+        ],
+        "evidence": "순서대로 수신됨을 보장할 수 없을 뿐 아니라, 목적지까지의 전송 자체도 보장될 수 없다. ... 지연 또한 보장되지 않으며, 보장된 최소 대역폭 또한 없다.",
+        "ocr_match": 0.397,
+        "image_checked": true
+      },
+      {
+        "path": ".summary[1]",
+        "text": "라우터의 내부 동작에는 입력·출력 포트 기능, 목적지 기반 포워딩, 내부 스위칭 메커니즘, 패킷 대기열 관리가 포함된다.",
+        "pages": [
+          330
+        ],
+        "evidence": "입력 및 출력 포트 기능 및 목적지 기반 포워딩, 라우터의 내부 스위칭 메커니즘, 패킷 대기열 관리",
+        "ocr_match": 0.447,
+        "image_checked": true
+      },
+      {
+        "path": ".protocols[0].role",
+        "text": "송신 호스트에서 수신 호스트로 패킷을 전달한다.",
+        "pages": [
+          282
+        ],
+        "evidence": "송신 호스트에서 수신 호스트로 패킷을 전달하는 것이다.",
+        "ocr_match": 0.391,
+        "image_checked": true
+      },
+      {
+        "path": ".protocols[1].layer",
+        "text": "네트워크 계층",
+        "pages": [
+          303,
+          320
+        ],
+        "evidence": "IP (Internet Protocol) 네트워크 계층 ... IP 버전 6 (IPv6)",
+        "ocr_match": 0.424,
+        "image_checked": true
+      },
+      {
+        "path": ".protocols[1].role",
+        "text": "송신 호스트에서 수신 호스트로 패킷을 전달한다.",
+        "pages": [
+          282
+        ],
+        "evidence": "송신 호스트에서 수신 호스트로 패킷을 전달하는 것이다.",
+        "ocr_match": 0.391,
+        "image_checked": true
+      },
+      {
+        "path": ".protocols[1].features",
+        "text": "128비트 주소와 고정 길이 40바이트 헤더를 사용하며 라우터에서 단편화하지 않고 헤더 체크섬을 두지 않는다.",
+        "pages": [
+          320,
+          321,
+          322
+        ],
+        "evidence": "128비트로 확장 ... 40바이트 고정 길이 헤더 ... 단편화와 재결합을 출발지와 목적지만이 수행 ... 헤더 체크섬",
+        "ocr_match": 0.442,
+        "image_checked": true
+      },
+      {
+        "path": ".review[6].answer",
+        "text": "주요 액션은 포워딩(Forwarding), 드롭핑(Dropping), 수정필드(Modify-field)이다.",
+        "pages": [
+          327
+        ],
+        "evidence": "포워딩(Forwarding) ... 드롭핑(Dropping) ... 수정필드(Modify-field)",
+        "ocr_match": 0.385,
+        "image_checked": true
+      }
+    ],
+    "unchecked_citations": []
+  },
+  "5": {
+    "facts": 96,
+    "checked_images": 35,
+    "low_ocr_match": [
+      {
+        "path": ".concepts[1].items[1]",
+        "text": "링크 상태(LS) 알고리즘은 네트워크 내 각 링크의 비용에 대한 전체 상태 정보를 가진다.",
+        "pages": [
+          346
+        ],
+        "evidence": "전체 상태 정보를 가지는 알고리즘을 링크 상태(link-state, LS) 알고리즘",
+        "ocr_match": 0.412,
+        "image_checked": true
+      },
+      {
+        "path": ".concepts[6].items[1]",
+        "text": "피관리 장치 내의 피관리 객체들에 관련된 정보는 MIB(Management Information Base)에 저장된다.",
+        "pages": [
+          386
+        ],
+        "evidence": "피관리 장치 내의 피관리 객체들에 관련된 정보는 MIB (Management Information Base)에 저장된다.",
+        "ocr_match": 0.358,
+        "image_checked": true
+      },
+      {
+        "path": ".formulas[1]",
+        "text": "D(v) = min(D(v), D(w) + c(w,v))",
+        "pages": [
+          347
+        ],
+        "evidence": "D(v) = min(D(v), D(w) + c(w,v))",
+        "ocr_match": 0.25,
+        "image_checked": true
+      },
+      {
+        "path": ".terms[2].definition",
+        "text": "링크 상태(LS) 알고리즘은 네트워크 내 각 링크의 비용에 대한 전체 상태 정보를 가진다.",
+        "pages": [
+          346
+        ],
+        "evidence": "전체 상태 정보를 가지는 알고리즘을 링크 상태(link-state, LS) 알고리즘",
+        "ocr_match": 0.412,
+        "image_checked": true
+      },
+      {
+        "path": ".terms[14].definition",
+        "text": "피관리 장치 내의 피관리 객체들에 관련된 정보는 MIB(Management Information Base)에 저장된다.",
+        "pages": [
+          386
+        ],
+        "evidence": "피관리 장치 내의 피관리 객체들에 관련된 정보는 MIB (Management Information Base)에 저장된다.",
+        "ocr_match": 0.358,
+        "image_checked": true
+      },
+      {
+        "path": ".cheat.formulas[0]",
+        "text": "D(v) = min(D(v), D(w) + c(w,v))",
+        "pages": [
+          347
+        ],
+        "evidence": "D(v) = min(D(v), D(w) + c(w,v))",
+        "ocr_match": 0.25,
+        "image_checked": true
+      }
+    ],
+    "unchecked_citations": []
+  },
+  "6": {
+    "facts": 118,
+    "checked_images": 44,
+    "low_ocr_match": [
+      {
+        "path": ".learning[0]",
+        "text": "종단 간 경로의 개별 링크를 통해 패킷을 전송하는 방법을 살펴본다.",
+        "pages": [
+          403
+        ],
+        "evidence": "종단 간 경로의 개별 링크를 통해 어떻게 패킷들이 전송되는지",
+        "ocr_match": 0.24,
+        "image_checked": true
+      },
+      {
+        "path": ".learning[1]",
+        "text": "오류 검출 및 정정 기술과 다중 접속 프로토콜을 살펴본다.",
+        "pages": [
+          403,
+          404
+        ],
+        "evidence": "오류를 검출하고 정정하는 기술 / 다중 접속 프로토콜",
+        "ocr_match": 0.154,
+        "image_checked": true
+      },
+      {
+        "path": ".concepts[0].items[2]",
+        "text": "링크 계층의 기본 서비스는 하나의 노드에서 인접한 노드로 단일 통신 링크상으로 데이터그램을 이동시키는 것이다.",
+        "pages": [
+          404
+        ],
+        "evidence": "하나의 노드에서 인접한 노드로 단일 통신 링크상으로 데이터그램을 이동시키는 것이다.",
+        "ocr_match": 0.417,
+        "image_checked": true
+      },
+      {
+        "path": ".concepts[1].items[2]",
+        "text": "2차원 패리티는 단일 비트 오류를 검출하고 정정할 수 있다.",
+        "pages": [
+          411
+        ],
+        "evidence": "단일 비트 오류를 검출할 뿐만 아니라 실제로 오류를 정정할 수도 있다.",
+        "ocr_match": 0.357,
+        "image_checked": true
+      },
+      {
+        "path": ".concepts[1].items[3]",
+        "text": "체크섬 방법은 d비트의 데이터를 k비트 정수들로 다루고 이 정수들을 더한 값을 오류 검출 비트들로 사용한다.",
+        "pages": [
+          411
+        ],
+        "evidence": "d비트의 데이터를 k비트의 정수들로 다루는 것이다. / 정수들을 더하고 그 결과를 오류 검출 비트들로 사용한다.",
+        "ocr_match": 0.273,
+        "image_checked": true
+      },
+      {
+        "path": ".concepts[1].items[4]",
+        "text": "순환중복검사(cyclic redundancy check, CRC)는 결과 d+r비트 패턴이 모듈로 2 연산으로 G로 정확히 나누어지게 하는 r개의 추가 비트 R을 선택한다.",
+        "pages": [
+          412
+        ],
+        "evidence": "순환중복검사(cyclic redundancy check, CRC) / 결과 d+r비트 패턴이 모듈로 2 연산을 이용하여 G로 정확히 나누어지도록",
+        "ocr_match": 0.323,
+        "image_checked": true
+      },
+      {
+        "path": ".concepts[2].items[1]",
+        "text": "다중 접속 프로토콜은 채널 분할 프로토콜, 랜덤 접속 프로토콜, 순번 프로토콜로 분류된다.",
+        "pages": [
+          416
+        ],
+        "evidence": "채널 분할 프로토콜(channel partitioning protocol), 랜덤 접속 프로토콜(random access protocol), 순번 프로토콜(taking-turns protocol)",
+        "ocr_match": 0.386,
+        "image_checked": true
+      },
+      {
+        "path": ".concepts[2].items[2]",
+        "text": "랜덤 접속 프로토콜에서 충돌을 겪은 노드는 프레임을 재전송하기 전에 랜덤 지연 시간 동안 기다린다.",
+        "pages": [
+          418
+        ],
+        "evidence": "충돌을 겪으면 / 랜덤 지연 시간(random delay) 동안 기다린다.",
+        "ocr_match": 0.261,
+        "image_checked": true
+      },
+      {
+        "path": ".concepts[2].items[3]",
+        "text": "CSMA/CD에서는 충돌이 감지되면 노드가 전송을 즉시 취소한다.",
+        "pages": [
+          423
+        ],
+        "evidence": "충돌이 감지되면 노드가 전송을 즉시 취소",
+        "ocr_match": 0.176,
+        "image_checked": true
+      },
+      {
+        "path": ".concepts[2].items[4]",
+        "text": "DOCSIS(Data-Over-Cable Service Interface Specifications)는 케이블 데이터망의 구조와 프로토콜들을 정의한다.",
+        "pages": [
+          427
+        ],
+        "evidence": "DOCSIS(Data-Over-Cable Service Interface Specifications)는 케이블 데이터망의 구조와 프로토콜들을 정의한다.",
+        "ocr_match": 0.366,
+        "image_checked": true
+      },
+      {
+        "path": ".concepts[3].items[0]",
+        "text": "ARP(Address Resolution Protocol)는 IP 주소와 MAC 주소 간의 변환을 수행한다.",
+        "pages": [
+          431
+        ],
+        "evidence": "네트워크 계층 주소(예: 인터넷의 IP 주소)와 링크 계층 주소(즉, MAC 주소) 간의 변환",
+        "ocr_match": 0.382,
+        "image_checked": true
+      },
+      {
+        "path": ".procedures[0].steps[0]",
+        "text": "송신자와 수신자는 생성기(generator)라고 하는 r+1비트 패턴 G에 합의한다.",
+        "pages": [
+          412
+        ],
+        "evidence": "송신자와 수신자는 먼저 생성기(generator)라고 알려진 r+1비트 패턴에 대해서 합의해야 한다.",
+        "ocr_match": 0.349,
+        "image_checked": true
+      },
+      {
+        "path": ".procedures[0].steps[1]",
+        "text": "송신자는 D 뒤에 덧붙일 r개의 비트 R을 선택하여 결과 d+r비트 패턴이 G로 정확히 나누어지게 한다.",
+        "pages": [
+          412
+        ],
+        "evidence": "D에 r개의 추가 비트 R을 덧붙이는데 / G로 정확히 나누어지도록",
+        "ocr_match": 0.438,
+        "image_checked": true
+      },
+      {
+        "path": ".procedures[0].steps[2]",
+        "text": "수신자는 수신된 d+r비트를 G로 나누고 나머지가 0이 아니면 오류가 발생한 것으로 판단한다.",
+        "pages": [
+          412
+        ],
+        "evidence": "수신된 d+r비트를 G로 나눈다. / 나머지가 0이 아니면 수신자는 오류가 발생한 것으로 판단한다.",
+        "ocr_match": 0.346,
+        "image_checked": true
+      },
+      {
+        "path": ".procedures[1].steps[1]",
+        "text": "채널이 유휴하면 프레임 전송을 시작하고, 사용 중이면 신호 에너지가 감지되지 않을 때까지 기다린 후 전송한다.",
+        "pages": [
+          424
+        ],
+        "evidence": "채널이 유휴 상태인 경우에 / 채널이 사용 중이면 / 신호 에너지가 감지되지 않을 때까지 기다린 후",
+        "ocr_match": 0.375,
+        "image_checked": true
+      },
+      {
+        "path": ".procedures[1].steps[2]",
+        "text": "어댑터는 전송하는 동안 다른 어댑터들로부터 오는 신호 에너지의 존재를 감시한다.",
+        "pages": [
+          424
+        ],
+        "evidence": "전송하는 동안에 다른 어댑터들로부터 오는 신호 에너지의 존재를 감시한다.",
+        "ocr_match": 0.226,
+        "image_checked": true
+      },
+      {
+        "path": ".procedures[1].steps[4]",
+        "text": "전송을 취소한 후 랜덤 시간만큼 기다린 뒤 채널 감지 단계로 돌아간다.",
+        "pages": [
+          424
+        ],
+        "evidence": "전송을 취소한 후에 어댑터는 랜덤 시간만큼 기다린 뒤에 2단계로 돌아간다.",
+        "ocr_match": 0.29,
+        "image_checked": true
+      },
+      {
+        "path": ".formulas[2]",
+        "text": "Np(1 − p)ᴺ⁻¹",
+        "pages": [
+          420
+        ],
+        "evidence": "노드가 N개 있으므로 슬롯의 성공적 전송 확률은 Np(1−p)ᴺ⁻¹이다.",
+        "ocr_match": 0.393,
+        "image_checked": true
+      },
+      {
+        "path": ".formulas[5]",
+        "text": "효율 = 1 / (1 + 5d_prop/d_trans)",
+        "pages": [
+          425
+        ],
+        "evidence": "다음과 같은 근사식을 유도할 수 있다 / 효율 = 1 / 1 + 5d_prop/d_trans",
+        "ocr_match": 0.267,
+        "image_checked": true
+      },
+      {
+        "path": ".terms[3].definition",
+        "text": "프레임을 링크로 전송하는 규칙을 명시한다.",
+        "pages": [
+          406
+        ],
+        "evidence": "매체 접속 제어(medium access control, MAC) 프로토콜은 프레임을 링크로 전송하는 규칙을 명시한다.",
+        "ocr_match": 0.412,
+        "image_checked": true
+      },
+      {
+        "path": ".terms[7].definition",
+        "text": "충돌 검출을 포함하는 CSMA이다.",
+        "pages": [
+          423
+        ],
+        "evidence": "충돌 검출을 포함하는 CSMA(Carrier Sense Multiple Access with Collision Detection, CSMA/CD)",
+        "ocr_match": 0.209,
+        "image_checked": true
+      },
+      {
+        "path": ".terms[8].definition",
+        "text": "마스터 노드가 라운드 로빈 방식으로 각 노드를 폴링하는 순번 프로토콜이다.",
+        "pages": [
+          426
+        ],
+        "evidence": "폴링 프로토콜 / 마스터 노드는 라운드 로빈 방식으로 각 노드를 폴링한다.",
+        "ocr_match": 0.391,
+        "image_checked": true
+      },
+      {
+        "path": ".terms[9].definition",
+        "text": "정해진 순서에 따라 노드 간에 교환되는 작고 특수한 목적의 프레임이다.",
+        "pages": [
+          426
+        ],
+        "evidence": "토큰(token)이라고 알려진 작고 특수한 목적의 프레임을 정해진 순서에 따라 노드 간에 교환한다.",
+        "ocr_match": 0.341,
+        "image_checked": true
+      },
+      {
+        "path": ".review[0].answer",
+        "text": "하나의 노드에서 인접한 노드로 단일 통신 링크상으로 데이터그램을 이동시키는 것이다.",
+        "pages": [
+          404
+        ],
+        "evidence": "하나의 노드에서 인접한 노드로 단일 통신 링크상으로 데이터그램을 이동시키는 것이다.",
+        "ocr_match": 0.417,
+        "image_checked": true
+      },
+      {
+        "path": ".review[1].answer",
+        "text": "수신된 d+r비트를 G로 나누었을 때 나머지가 0이 아니면 오류가 발생한 것으로 판단한다.",
+        "pages": [
+          412
+        ],
+        "evidence": "나머지가 0이 아니면 수신자는 오류가 발생한 것으로 판단한다.",
+        "ocr_match": 0.346,
+        "image_checked": true
+      },
+      {
+        "path": ".cheat.comparison_rows[1][0]",
+        "text": "랜덤 접속 방법",
+        "pages": [
+          465
+        ],
+        "evidence": "랜덤 접속 방법(알로하 프로토콜과 CSMA 프로토콜)",
+        "ocr_match": 0.409,
+        "image_checked": true
+      },
+      {
+        "path": ".cheat.formulas[1]",
+        "text": "Np(1 − p)ᴺ⁻¹",
+        "pages": [
+          420
+        ],
+        "evidence": "노드가 N개 있으므로 슬롯의 성공적 전송 확률은 Np(1−p)ᴺ⁻¹이다.",
+        "ocr_match": 0.393,
+        "image_checked": true
+      },
+      {
+        "path": ".cheat.formulas[2]",
+        "text": "효율 = 1 / (1 + 5d_prop/d_trans)",
+        "pages": [
+          425
+        ],
+        "evidence": "다음과 같은 근사식을 유도할 수 있다 / 효율 = 1 / 1 + 5d_prop/d_trans",
+        "ocr_match": 0.267,
+        "image_checked": true
+      }
+    ],
+    "unchecked_citations": []
+  }
+}

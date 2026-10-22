@@ -1,0 +1,32 @@
+=(size+4)/5;
+autO num Vi
+size_t j = 0;
+// 각각의 Vi에서 중앙값을 찾아 벡터 M에 저장
+std: :vector〈丫〉 M,
+for (;j 〈size / 5; j++)
+autO b = begin + (j * 5);
+autO 1 = begin + (j * 5) + 5;
+M.push_back(*find median〈T>(b, 1));
+if (j*5< size)
+aut0 b = begin + (j * 5);
+autO 1 = begin + (j * 5) + (size % 5);
+M.push—back(*find_median〈T>(b, 1));
+// Vi의 중양값으로 구성된 벡터 M에서 다시 중앙값 q를 찾음
+autO median_of medians = (M.size() == 1) ? M.begin()
+linear—time—select〈T>(M.begin(), M.end() - 1, M.size() / 2);
+// 분할 연산을 적용하고 피벗 q의 위치 k를 찾음
+autO partition_iter = partition—us1ng—g1ven_pivot<T>(begin, last,
+medians ) ;
+autO k = std: :distance(begin, partition_iter) + 1;
+if(i==k)
+return partition iter;
+else if (1 〈 k)
+linear_time_select<T>(begin, partition_iter - 1, i);
+return
+else if (i 〉 k)
+return
+else
+median Of
+linear time_se1ect<T>(partition_iter 十 1, last, i - k);
+return begin;
+185

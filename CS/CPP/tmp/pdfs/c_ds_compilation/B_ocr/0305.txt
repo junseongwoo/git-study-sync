@@ -1,0 +1,37 @@
+80
+82
+83
+84
+RBT_DestroyTree( Tree );
+return 이•
+실행 결과
+PS C:\Users\seanl\sourceVrepos\ThisIsAIgorithm\@7\RedBlackTree> \RedB1ackTree
+Enter number
+(1) Create a node, (2) Remove a node (3) Search a NOde
+(4) Display Tree (5) quit
+number:l
+Enter parameter (1-200) :
+1%
+Enter number
+(1) Create a node (2) Remove a node, (3) Search a Node
+(4) Display Tree (5) quit
+connand number:4
+1% BLACK [X,-11
+Enter number
+부리 노드는 부모 노드가 없으므로 -1 을 출력합니다
+(1) Create a node, (2) Remove a node, (3) Search a NOde
+(4) Display Tree (5) quit
+comand number:l
+Enter parameter (1~200) •
+(중략)
+Enter cmmand number
+(1) Create a node (2) Remove a node. (3) Search a NOde
+(4) Disp1ay Tree (5) quit
+nurnber:4
+BLACK [자-11
+2
+300
+97 RED [L,991
+95 BLACK [L,971
+94 RED [L,951
+Part 02 • 알고리즘

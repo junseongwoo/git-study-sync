@@ -1,0 +1,42 @@
+194
+CHAPTER 03 • 트랜스포트 계층
+rdt—send (da ta)
+sndpk ke—pkt (da ta, checksum)
+udt—send (sndpkt)
+상위로부터
+호출을
+기다림
+ACK 또는
+NAK 용담을
+기다림
+rdt—rcv (rcvpkt) && isNAK (rcvpkt)
+udt—send (sndpkt)
+rdt—rcv (rcvpkt) && isACK (rcvpkt)
+(하 rdt2.O: 송신 흑
+rdt—rcv (rcvpkt) && corrupt (rcvpkt)
+sndpkt=ma ke—pkt (NAK)
+udt—send (sndpk t)
+하위로부터
+호출을
+기다림
+rdt_rcv (rcvpkt) && notcorrupt (rcvpkt)
+extract (rcvpkt, data)
+deliver—da ta (da ta )
+sndpkt=make—pkt (ACK)
+udt—send (sndpkt)
+(비 rdt2.O: 수신 측
+그림 3.10 • rdt2. 0 - 비트 오류가 있는 채널에서의 프로토콜
+달하지 않을 것이다. 이러한 행동 때문에 rdt2 . 0과 같은 프로토콜은 전송-후-대기
+(stop-and-wait) 프로토콜로 알려져 있다.
+rdt2.0에 대한 수신자 측 FSM은 아직 단일 상태를 갖는다. 패킷이 도착했을
+때, 수신자는 수신된 패킷이 손상되었는지 아닌지에 따라 ACK 또는 NAK로 응답한
+다. 그림 3.10에서 rdt_rcv(rcvpkt) && corrupt (rcvpkt)는 패킷이 수신
+되고 오류가 검출되는 이벤트에 대응된다.
+프로토콜 rdt2 .0은 잘 동작되는 것 같지만 실제로는 지명적인 결함이 있다. 특
+별히 여기서 는 ACK 또는 NAK 패킷이 손상될 수 있다는 기능성을 고려하지 않았다
+(진행을 계속하기 전 에 이 문제가 어떻게 해결될 수 있는지에 대해 생각해 보라). 불
+행하게도 이러한 사소한 실수는 생각보다 간단치 않다. 최소한 그러한 오류를 검출하
+기 위해서 ACK와 NAK 패것들에 대한 체크섬 비트들을 추가할 필요가 있다. 좀 더
+어려운 문제는 어떻게 프로토콜이 ACK 또는 NAK 패킷 오류로부터 복구되는가 이다.
+여기에서 어려운 점은 만약 ACK 또는 NAK가 손상된다면, 송신자는 수신자가 전송된
+데이터의 마지막 부분을 올바르게 수신했는지를 알 방법이 없다는 것이다.

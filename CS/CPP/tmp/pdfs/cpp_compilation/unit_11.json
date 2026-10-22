@@ -1,0 +1,1126 @@
+{
+  "unit": 11,
+  "title": "스마트 포인터·함수 객체",
+  "part": "C++",
+  "scope": [
+    {
+      "source": "B",
+      "start": 676,
+      "end": 723
+    }
+  ],
+  "learning": [
+    {
+      "text": "C++의 자원 관리와 unique_ptr·shared_ptr·weak_ptr를 다룬다.",
+      "refs": [
+        {
+          "source": "B",
+          "section": "스마트 포인터",
+          "pages": [
+            676,
+            679,
+            708
+          ]
+        }
+      ],
+      "evidence": "자원을관리하는방법"
+    },
+    {
+      "text": "호출 가능한 모든 것을 포괄하는 Callable과 function·mem_fn·bind를 다룬다.",
+      "refs": [
+        {
+          "source": "B",
+          "section": "함수 객체",
+          "pages": [
+            710,
+            723
+          ]
+        }
+      ],
+      "evidence": "Callable 에대해서"
+    }
+  ],
+  "concepts": [
+    {
+      "title": "자원 관리와 RAII",
+      "items": [
+        {
+          "text": "원문은 할당한 메모리와 연 파일을 자원(resource)으로 들며, 사용이 끝난 자원은 반환해야 한다고 설명한다.",
+          "refs": [
+            {
+              "source": "B",
+              "section": "자원(resource) 관리의 중요성",
+              "pages": [
+                676
+              ]
+            }
+          ],
+          "evidence": "사용이끝난자원은반드시반환"
+        },
+        {
+          "text": "메모리를 사용한 뒤 해제하지 않는 경우를 메모리 누수(memory leak)라고 한다.",
+          "refs": [
+            {
+              "source": "B",
+              "section": "객체의 유일한 소유권 - unique_ptr",
+              "pages": [
+                679
+              ]
+            }
+          ],
+          "evidence": "메모리누수(memory leak)"
+        },
+        {
+          "text": "예외로 인해 delete가 있는 문장까지 실행되지 않으면 자원 해제를 놓칠 수 있다.",
+          "refs": [
+            {
+              "source": "B",
+              "section": "자원(resource) 관리의 중요성",
+              "pages": [
+                678,
+                679
+              ]
+            }
+          ],
+          "evidence": "delete pa 가실행되지않고"
+        },
+        {
+          "text": "RAII(Resource Acquisition Is Initialization)는 자원 관리를 스택에 할당한 객체를 통해 수행하는 방식이다.",
+          "refs": [
+            {
+              "source": "B",
+              "section": "Resource Acquisition Is Initialization - RAII",
+              "pages": [
+                679
+              ]
+            }
+          ],
+          "evidence": "자원관리를스택에할당한객체를통해"
+        },
+        {
+          "text": "스마트 포인터(smart pointer)는 자신이 소멸할 때 가리키는 자원도 해제하도록 하는 포인터 객체이다.",
+          "refs": [
+            {
+              "source": "B",
+              "section": "Resource Acquisition Is Initialization - RAII",
+              "pages": [
+                679
+              ]
+            }
+          ],
+          "evidence": "자신이소멸될때자신이가리키고있는데이터도같이delete"
+        },
+        {
+          "text": "double free는 이미 소멸한 객체를 다시 소멸시켜 발생하는 버그이다.",
+          "refs": [
+            {
+              "source": "B",
+              "section": "객체의 유일한 소유권 - unique_ptr",
+              "pages": [
+                680
+              ]
+            }
+          ],
+          "evidence": "이미소멸된객체를다시소멸"
+        }
+      ]
+    },
+    {
+      "title": "unique_ptr의 소유권·이동·생성",
+      "items": [
+        {
+          "text": "unique_ptr는 특정 객체의 유일한 소유권을 나타내며, 자신이 소멸할 때 가리키던 객체도 소멸한다.",
+          "refs": [
+            {
+              "source": "B",
+              "section": "객체의 유일한 소유권 - unique_ptr",
+              "pages": [
+                680,
+                687
+              ]
+            }
+          ],
+          "evidence": "객체의유일한소유권"
+        },
+        {
+          "text": "unique_ptr는 -> 연산자를 오버로드하여 일반 포인터처럼 사용할 수 있다.",
+          "refs": [
+            {
+              "source": "B",
+              "section": "객체의 유일한 소유권 - unique_ptr",
+              "pages": [
+                681
+              ]
+            }
+          ],
+          "evidence": "-> 연산자를오버로드"
+        },
+        {
+          "text": "= delete는 함수 사용을 명시적으로 금지하며, unique_ptr의 복사 생성자는 유일한 소유권을 위해 삭제되어 있다.",
+          "refs": [
+            {
+              "source": "B",
+              "section": "삭제된 함수",
+              "pages": [
+                683
+              ]
+            }
+          ],
+          "evidence": "복사생성자가명시적으로삭제"
+        },
+        {
+          "text": "unique_ptr는 이동 생성이 가능하며, std::move로 소유권을 옮기면 원래 포인터는 아무것도 가리키지 않는다.",
+          "refs": [
+            {
+              "source": "B",
+              "section": "unique_ptr 소유권 이전하기",
+              "pages": [
+                684,
+                685
+              ]
+            }
+          ],
+          "evidence": "pa 는아무것도가리키고있지"
+        },
+        {
+          "text": "get은 실제 객체의 주소를 반환하며, 원문은 소유권을 옮기지 않고 잠시 접근할 함수에는 그 주소를 전달한다.",
+          "refs": [
+            {
+              "source": "B",
+              "section": "unique_ptr를 함수 인자로 전달하기",
+              "pages": [
+                687
+              ]
+            }
+          ],
+          "evidence": "실제객체의주소값을리턴"
+        },
+        {
+          "text": "make_unique는 클래스 생성자에 인자를 완벽하게 전달하여 unique_ptr를 생성한다.",
+          "refs": [
+            {
+              "source": "B",
+              "section": "unique_ptr를 쉽게 생성하기",
+              "pages": [
+                688
+              ]
+            }
+          ],
+          "evidence": "생성자에인자들에직접완벽한전달"
+        },
+        {
+          "text": "unique_ptr를 vector에 넣는 원문 예는 push_back(std::move(pa)) 또는 내부에서 직접 생성하는 emplace_back을 사용한다.",
+          "refs": [
+            {
+              "source": "B",
+              "section": "unique_ptr를 원소로 가지는 컨테이너",
+              "pages": [
+                690,
+                691,
+                692
+              ]
+            }
+          ],
+          "evidence": "명시적으로pa 를vector 안으로이동"
+        }
+      ]
+    },
+    {
+      "title": "shared_ptr와 제어 블록",
+      "items": [
+        {
+          "text": "shared_ptr는 여러 스마트 포인터가 같은 객체를 소유할 수 있게 하며, 참조 개수가 0이 되면 객체를 해제한다.",
+          "refs": [
+            {
+              "source": "B",
+              "section": "shared_ptr",
+              "pages": [
+                693,
+                694
+              ]
+            }
+          ],
+          "evidence": "참조개수가0 이되어야"
+        },
+        {
+          "text": "use_count는 현재 shared_ptr의 참조 개수를 알려준다.",
+          "refs": [
+            {
+              "source": "B",
+              "section": "shared_ptr",
+              "pages": [
+                696
+              ]
+            }
+          ],
+          "evidence": "use_count 함수를통해"
+        },
+        {
+          "text": "shared_ptr들은 동적으로 할당한 제어 블록(control block)을 공유하여 참조 개수 등의 정보를 공유한다.",
+          "refs": [
+            {
+              "source": "B",
+              "section": "shared_ptr",
+              "pages": [
+                697
+              ]
+            }
+          ],
+          "evidence": "제어블록(control block)"
+        },
+        {
+          "text": "make_shared는 객체와 shared_ptr의 제어 블록을 한 번에 동적 할당하여 shared_ptr를 반환한다.",
+          "refs": [
+            {
+              "source": "B",
+              "section": "make_shared로 생성하자",
+              "pages": [
+                698
+              ]
+            }
+          ],
+          "evidence": "제어블록까지한번에동적할당"
+        },
+        {
+          "text": "같은 일반 포인터 주소로 shared_ptr를 각각 생성하면 제어 블록이 따로 만들어져 같은 객체를 중복 해제할 수 있다.",
+          "refs": [
+            {
+              "source": "B",
+              "section": "shared_ptr 생성 시 주의할 점",
+              "pages": [
+                698,
+                699,
+                700
+              ]
+            }
+          ],
+          "evidence": "두개의제어블록이따로생성"
+        },
+        {
+          "text": "enable_shared_from_this를 상속한 클래스의 shared_from_this는 이미 있는 제어 블록을 사용하며, 그 객체를 가리키는 shared_ptr가 먼저 있어야 한다.",
+          "refs": [
+            {
+              "source": "B",
+              "section": "enable_shared_from_this",
+              "pages": [
+                701,
+                702
+              ]
+            }
+          ],
+          "evidence": "이미정의되어있는제어블록"
+        }
+      ]
+    },
+    {
+      "title": "순환 참조와 weak_ptr",
+      "items": [
+        {
+          "text": "shared_ptr가 서로를 소유하는 순환 참조에서는 참조 개수가 0이 되지 않아 소멸자가 호출되지 않는 문제가 생긴다.",
+          "refs": [
+            {
+              "source": "B",
+              "section": "서로 참조하는 shared_ptr",
+              "pages": [
+                703,
+                704
+              ]
+            }
+          ],
+          "evidence": "순환참조"
+        },
+        {
+          "text": "weak_ptr는 객체를 참조하지만 shared_ptr의 참조 개수를 늘리지 않아 순환 참조 문제를 해결하는 데 사용한다.",
+          "refs": [
+            {
+              "source": "B",
+              "section": "weak_ptr",
+              "pages": [
+                704,
+                705
+              ]
+            }
+          ],
+          "evidence": "참조개수를늘리지는않습니다."
+        },
+        {
+          "text": "weak_ptr는 shared_ptr 또는 다른 weak_ptr로 생성하며 일반 포인터 주소로 만들 수 없다.",
+          "refs": [
+            {
+              "source": "B",
+              "section": "weak_ptr",
+              "pages": [
+                707
+              ]
+            }
+          ],
+          "evidence": "평범한포인터주소값으로weak_ptr 를생성할수는없습니다."
+        },
+        {
+          "text": "weak_ptr의 lock은 객체가 살아 있으면 그 객체의 shared_ptr, 이미 해제되었으면 빈 shared_ptr를 반환한다.",
+          "refs": [
+            {
+              "source": "B",
+              "section": "weak_ptr",
+              "pages": [
+                707
+              ]
+            }
+          ],
+          "evidence": "아무것도가리키지않는shared_ptr"
+        },
+        {
+          "text": "제어 블록은 weak_ptr도 더 이상 가리키지 않을 때 해제할 수 있으므로 참조 개수와 약한 참조 개수(weak count)를 기록한다.",
+          "refs": [
+            {
+              "source": "B",
+              "section": "weak_ptr",
+              "pages": [
+                708
+              ]
+            }
+          ],
+          "evidence": "약한참조개수(weak count)"
+        }
+      ]
+    },
+    {
+      "title": "Callable과 function",
+      "items": [
+        {
+          "text": "Callable은 ()를 붙여 호출할 수 있는 모든 것을 뜻하며, 함수·함수 객체·람다가 예로 나온다.",
+          "refs": [
+            {
+              "source": "B",
+              "section": "Callable",
+              "pages": [
+                710,
+                711
+              ]
+            }
+          ],
+          "evidence": "() 를붙여서호출할수있는모든것"
+        },
+        {
+          "text": "std::function은 Callable을 객체 형태로 보관하며, 템플릿 인자로 반환형과 함수 인자를 나타내는 함수 타입을 받는다.",
+          "refs": [
+            {
+              "source": "B",
+              "section": "std::function",
+              "pages": [
+                711,
+                712
+              ]
+            }
+          ],
+          "evidence": "리턴값과함수의인자들"
+        },
+        {
+          "text": "멤버 함수를 std::function으로 보관할 때 원래 인자에 호출할 객체를 받는 인자를 더하고 &로 멤버 함수 주소를 명시한다.",
+          "refs": [
+            {
+              "source": "B",
+              "section": "멤버 함수를 가지는 std::function",
+              "pages": [
+                714,
+                715
+              ]
+            }
+          ],
+          "evidence": "추가적으로객체를받는인자"
+        }
+      ]
+    },
+    {
+      "title": "mem_fn·bind·ref",
+      "items": [
+        {
+          "text": "mem_fn은 전달한 멤버 함수를 함수 객체로 만들어 반환하며, 원문은 transform에 사용한다.",
+          "refs": [
+            {
+              "source": "B",
+              "section": "멤버 함수들을 함수 객체로 - mem_fn",
+              "pages": [
+                719
+              ]
+            }
+          ],
+          "evidence": "전달된멤버함수를function 객체로"
+        },
+        {
+          "text": "std::bind는 원래 함수의 인자를 특정 값으로 붙이고, placeholders로 새 함수 객체의 인자를 전달하거나 순서를 바꾼다.",
+          "refs": [
+            {
+              "source": "B",
+              "section": "std::bind",
+              "pages": [
+                720,
+                721
+              ]
+            }
+          ],
+          "evidence": "첫번째인자와두번째인자의순서를바꿔"
+        },
+        {
+          "text": "bind에 전달한 값은 복사되므로 참조 전달이 필요하면 std::ref를 사용하고, const 레퍼런스에는 std::cref를 사용한다.",
+          "refs": [
+            {
+              "source": "B",
+              "section": "std::bind",
+              "pages": [
+                722,
+                723
+              ]
+            }
+          ],
+          "evidence": "const 레퍼런스의경우cref"
+        }
+      ]
+    }
+  ],
+  "procedures": [
+    {
+      "title": "unique_ptr 소유권 이전",
+      "steps": [
+        {
+          "text": "unique_ptr가 객체의 유일한 소유권을 갖게 한다.",
+          "refs": [
+            {
+              "source": "B",
+              "section": "객체의 유일한 소유권 - unique_ptr",
+              "pages": [
+                680
+              ]
+            }
+          ],
+          "evidence": "유일한소유권"
+        },
+        {
+          "text": "원문은 std::move로 다른 unique_ptr에 이동 생성한다.",
+          "refs": [
+            {
+              "source": "B",
+              "section": "unique_ptr 소유권 이전하기",
+              "pages": [
+                684
+              ]
+            }
+          ],
+          "evidence": "std::unique_ptr<A> pb = std::move(pa);"
+        },
+        {
+          "text": "이전 후 원래 unique_ptr는 nullptr이므로 그 객체에 접근하지 않는다.",
+          "refs": [
+            {
+              "source": "B",
+              "section": "unique_ptr 소유권 이전하기",
+              "pages": [
+                685
+              ]
+            }
+          ],
+          "evidence": "이동시킨이후에기존의unique_ptr 을접근하지"
+        }
+      ]
+    },
+    {
+      "title": "weak_ptr로 객체 접근",
+      "steps": [
+        {
+          "text": "lock으로 shared_ptr를 얻는다.",
+          "refs": [
+            {
+              "source": "B",
+              "section": "weak_ptr",
+              "pages": [
+                707
+              ]
+            }
+          ],
+          "evidence": "other.lock()"
+        },
+        {
+          "text": "반환값을 if로 확인한다.",
+          "refs": [
+            {
+              "source": "B",
+              "section": "weak_ptr",
+              "pages": [
+                707,
+                708
+              ]
+            }
+          ],
+          "evidence": "false 로형변환"
+        },
+        {
+          "text": "객체가 살아 있으면 접근하고, 빈 shared_ptr이면 이미 소멸된 것으로 처리한다.",
+          "refs": [
+            {
+              "source": "B",
+              "section": "weak_ptr",
+              "pages": [
+                707
+              ]
+            }
+          ],
+          "evidence": "이미해제가되었다면아무것도가리키지"
+        }
+      ]
+    }
+  ],
+  "syntax": [
+    {
+      "label": "weak_ptr의 lock과 확인: 원문 발췌",
+      "code": "void access_other() {\n  std::shared_ptr<A> o = other.lock();\n  if (o) {\n    std::cout << \"접근: \" << o->name() << std::endl;\n  } else {\n    std::cout << \"이미소멸됨ㅠ\" << std::endl;\n  }\n}",
+      "refs": [
+        {
+          "source": "B",
+          "section": "weak_ptr",
+          "pages": [
+            706
+          ]
+        }
+      ],
+      "evidence": "void access_other() {\n  std::shared_ptr<A> o = other.lock();\n  if (o) {\n    std::cout << \"접근: \" << o->name() << std::endl;\n  } else {\n    std::cout << \"이미소멸됨ㅠ\" << std::endl;\n  }\n}",
+      "note": null
+    },
+    {
+      "label": "Callable을 std::function에 보관: 원문 발췌",
+      "code": "std::function<int(const std::string&)> f1 = some_func1;\nstd::function<void(char)> f2 = S();\nstd::function<void()> f3 = []() { std::cout << \"Func3 호출! \" << std::endl; };\n\nf1(\"hello\");\nf2('c');\nf3();",
+      "refs": [
+        {
+          "source": "B",
+          "section": "std::function",
+          "pages": [
+            712
+          ]
+        }
+      ],
+      "evidence": "std::function<int(const std::string&)> f1 = some_func1;\nstd::function<void(char)> f2 = S();\nstd::function<void()> f3 = []() { std::cout << \"Func3 호출! \" << std::endl; };\n\nf1(\"hello\");\nf2('c');\nf3();",
+      "note": null
+    }
+  ],
+  "formulas": [],
+  "comparisons": [
+    {
+      "title": "스마트 포인터의 소유·참조 방식",
+      "headers": [
+        "종류",
+        "원문의 설명"
+      ],
+      "rows": [
+        [
+          {
+            "text": "unique_ptr",
+            "refs": [
+              {
+                "source": "B",
+                "section": "객체의 유일한 소유권 - unique_ptr",
+                "pages": [
+                  680
+                ]
+              }
+            ],
+            "evidence": "unique_ptr"
+          },
+          {
+            "text": "특정 객체의 유일한 소유권",
+            "refs": [
+              {
+                "source": "B",
+                "section": "객체의 유일한 소유권 - unique_ptr",
+                "pages": [
+                  680
+                ]
+              }
+            ],
+            "evidence": "유일한소유권"
+          }
+        ],
+        [
+          {
+            "text": "shared_ptr",
+            "refs": [
+              {
+                "source": "B",
+                "section": "shared_ptr",
+                "pages": [
+                  693
+                ]
+              }
+            ],
+            "evidence": "shared_ptr"
+          },
+          {
+            "text": "여러 포인터가 같은 객체를 소유",
+            "refs": [
+              {
+                "source": "B",
+                "section": "shared_ptr",
+                "pages": [
+                  693
+                ]
+              }
+            ],
+            "evidence": "다른shared_ptr 역시그객체"
+          }
+        ],
+        [
+          {
+            "text": "weak_ptr",
+            "refs": [
+              {
+                "source": "B",
+                "section": "weak_ptr",
+                "pages": [
+                  705
+                ]
+              }
+            ],
+            "evidence": "weak_ptr"
+          },
+          {
+            "text": "참조 개수를 늘리지 않으며 shared_ptr로 변환하여 접근",
+            "refs": [
+              {
+                "source": "B",
+                "section": "weak_ptr",
+                "pages": [
+                  705
+                ]
+              }
+            ],
+            "evidence": "참조개수를늘리지는않습니다."
+          }
+        ]
+      ]
+    }
+  ],
+  "terms": [
+    {
+      "term": "자원(resource)",
+      "definition": {
+        "text": "원문은 할당한 메모리와 연 파일을 자원(resource)으로 들며, 사용이 끝난 자원은 반환해야 한다고 설명한다.",
+        "refs": [
+          {
+            "source": "B",
+            "section": "자원(resource) 관리의 중요성",
+            "pages": [
+              676
+            ]
+          }
+        ],
+        "evidence": "사용이끝난자원은반드시반환"
+      }
+    },
+    {
+      "term": "RAII",
+      "definition": {
+        "text": "RAII(Resource Acquisition Is Initialization)는 자원 관리를 스택에 할당한 객체를 통해 수행하는 방식이다.",
+        "refs": [
+          {
+            "source": "B",
+            "section": "Resource Acquisition Is Initialization - RAII",
+            "pages": [
+              679
+            ]
+          }
+        ],
+        "evidence": "자원관리를스택에할당한객체를통해"
+      }
+    },
+    {
+      "term": "unique_ptr",
+      "definition": {
+        "text": "unique_ptr는 특정 객체의 유일한 소유권을 나타내며, 자신이 소멸할 때 가리키던 객체도 소멸한다.",
+        "refs": [
+          {
+            "source": "B",
+            "section": "객체의 유일한 소유권 - unique_ptr",
+            "pages": [
+              680,
+              687
+            ]
+          }
+        ],
+        "evidence": "객체의유일한소유권"
+      }
+    },
+    {
+      "term": "제어 블록(control block)",
+      "definition": {
+        "text": "shared_ptr들은 동적으로 할당한 제어 블록(control block)을 공유하여 참조 개수 등의 정보를 공유한다.",
+        "refs": [
+          {
+            "source": "B",
+            "section": "shared_ptr",
+            "pages": [
+              697
+            ]
+          }
+        ],
+        "evidence": "제어블록(control block)"
+      }
+    },
+    {
+      "term": "shared_ptr",
+      "definition": {
+        "text": "shared_ptr는 여러 스마트 포인터가 같은 객체를 소유할 수 있게 하며, 참조 개수가 0이 되면 객체를 해제한다.",
+        "refs": [
+          {
+            "source": "B",
+            "section": "shared_ptr",
+            "pages": [
+              693,
+              694
+            ]
+          }
+        ],
+        "evidence": "참조개수가0 이되어야"
+      }
+    },
+    {
+      "term": "weak_ptr",
+      "definition": {
+        "text": "weak_ptr는 객체를 참조하지만 shared_ptr의 참조 개수를 늘리지 않아 순환 참조 문제를 해결하는 데 사용한다.",
+        "refs": [
+          {
+            "source": "B",
+            "section": "weak_ptr",
+            "pages": [
+              704,
+              705
+            ]
+          }
+        ],
+        "evidence": "참조개수를늘리지는않습니다."
+      }
+    },
+    {
+      "term": "Callable",
+      "definition": {
+        "text": "Callable은 ()를 붙여 호출할 수 있는 모든 것을 뜻하며, 함수·함수 객체·람다가 예로 나온다.",
+        "refs": [
+          {
+            "source": "B",
+            "section": "Callable",
+            "pages": [
+              710,
+              711
+            ]
+          }
+        ],
+        "evidence": "() 를붙여서호출할수있는모든것"
+      }
+    },
+    {
+      "term": "std::function",
+      "definition": {
+        "text": "std::function은 Callable을 객체 형태로 보관하며, 템플릿 인자로 반환형과 함수 인자를 나타내는 함수 타입을 받는다.",
+        "refs": [
+          {
+            "source": "B",
+            "section": "std::function",
+            "pages": [
+              711,
+              712
+            ]
+          }
+        ],
+        "evidence": "리턴값과함수의인자들"
+      }
+    }
+  ],
+  "summary_basis": "편집 요약",
+  "summary": [
+    {
+      "text": "unique_ptr는 특정 객체의 유일한 소유권을 나타내며, 자신이 소멸할 때 가리키던 객체도 소멸한다.",
+      "refs": [
+        {
+          "source": "B",
+          "section": "객체의 유일한 소유권 - unique_ptr",
+          "pages": [
+            680,
+            687
+          ]
+        }
+      ],
+      "evidence": "객체의유일한소유권"
+    },
+    {
+      "text": "shared_ptr는 여러 스마트 포인터가 같은 객체를 소유할 수 있게 하며, 참조 개수가 0이 되면 객체를 해제한다.",
+      "refs": [
+        {
+          "source": "B",
+          "section": "shared_ptr",
+          "pages": [
+            693,
+            694
+          ]
+        }
+      ],
+      "evidence": "참조개수가0 이되어야"
+    },
+    {
+      "text": "weak_ptr는 객체를 참조하지만 shared_ptr의 참조 개수를 늘리지 않아 순환 참조 문제를 해결하는 데 사용한다.",
+      "refs": [
+        {
+          "source": "B",
+          "section": "weak_ptr",
+          "pages": [
+            704,
+            705
+          ]
+        }
+      ],
+      "evidence": "참조개수를늘리지는않습니다."
+    },
+    {
+      "text": "std::function은 Callable을 객체 형태로 보관하며, 템플릿 인자로 반환형과 함수 인자를 나타내는 함수 타입을 받는다.",
+      "refs": [
+        {
+          "source": "B",
+          "section": "std::function",
+          "pages": [
+            711,
+            712
+          ]
+        }
+      ],
+      "evidence": "리턴값과함수의인자들"
+    }
+  ],
+  "review": [
+    {
+      "question": "RAII는 자원 관리를 무엇을 통해 수행하는가?",
+      "answer": {
+        "text": "RAII(Resource Acquisition Is Initialization)는 자원 관리를 스택에 할당한 객체를 통해 수행하는 방식이다.",
+        "refs": [
+          {
+            "source": "B",
+            "section": "Resource Acquisition Is Initialization - RAII",
+            "pages": [
+              679
+            ]
+          }
+        ],
+        "evidence": "자원관리를스택에할당한객체를통해"
+      }
+    },
+    {
+      "question": "unique_ptr의 소유권을 옮긴 뒤 원래 포인터는 어떤 상태인가?",
+      "answer": {
+        "text": "unique_ptr는 이동 생성이 가능하며, std::move로 소유권을 옮기면 원래 포인터는 아무것도 가리키지 않는다.",
+        "refs": [
+          {
+            "source": "B",
+            "section": "unique_ptr 소유권 이전하기",
+            "pages": [
+              684,
+              685
+            ]
+          }
+        ],
+        "evidence": "pa 는아무것도가리키고있지"
+      }
+    },
+    {
+      "question": "weak_ptr의 lock은 객체 소멸 여부에 따라 무엇을 반환하는가?",
+      "answer": {
+        "text": "weak_ptr의 lock은 객체가 살아 있으면 그 객체의 shared_ptr, 이미 해제되었으면 빈 shared_ptr를 반환한다.",
+        "refs": [
+          {
+            "source": "B",
+            "section": "weak_ptr",
+            "pages": [
+              707
+            ]
+          }
+        ],
+        "evidence": "아무것도가리키지않는shared_ptr"
+      }
+    },
+    {
+      "question": "bind에 복사 대신 참조를 전달하려면 무엇을 사용하는가?",
+      "answer": {
+        "text": "bind에 전달한 값은 복사되므로 참조 전달이 필요하면 std::ref를 사용하고, const 레퍼런스에는 std::cref를 사용한다.",
+        "refs": [
+          {
+            "source": "B",
+            "section": "std::bind",
+            "pages": [
+              722,
+              723
+            ]
+          }
+        ],
+        "evidence": "const 레퍼런스의경우cref"
+      }
+    }
+  ],
+  "cheat": {
+    "definitions": [
+      {
+        "term": "RAII",
+        "definition": {
+          "text": "RAII(Resource Acquisition Is Initialization)는 자원 관리를 스택에 할당한 객체를 통해 수행하는 방식이다.",
+          "refs": [
+            {
+              "source": "B",
+              "section": "Resource Acquisition Is Initialization - RAII",
+              "pages": [
+                679
+              ]
+            }
+          ],
+          "evidence": "자원관리를스택에할당한객체를통해"
+        }
+      },
+      {
+        "term": "Callable",
+        "definition": {
+          "text": "Callable은 ()를 붙여 호출할 수 있는 모든 것을 뜻하며, 함수·함수 객체·람다가 예로 나온다.",
+          "refs": [
+            {
+              "source": "B",
+              "section": "Callable",
+              "pages": [
+                710,
+                711
+              ]
+            }
+          ],
+          "evidence": "() 를붙여서호출할수있는모든것"
+        }
+      },
+      {
+        "term": "std::function",
+        "definition": {
+          "text": "std::function은 Callable을 객체 형태로 보관하며, 템플릿 인자로 반환형과 함수 인자를 나타내는 함수 타입을 받는다.",
+          "refs": [
+            {
+              "source": "B",
+              "section": "std::function",
+              "pages": [
+                711,
+                712
+              ]
+            }
+          ],
+          "evidence": "리턴값과함수의인자들"
+        }
+      }
+    ],
+    "comparison_title": "스마트 포인터",
+    "comparison_headers": [
+      "종류",
+      "소유·참조"
+    ],
+    "comparison_rows": [
+      [
+        {
+          "text": "unique_ptr",
+          "refs": [
+            {
+              "source": "B",
+              "section": "객체의 유일한 소유권 - unique_ptr",
+              "pages": [
+                680
+              ]
+            }
+          ],
+          "evidence": "unique_ptr"
+        },
+        {
+          "text": "특정 객체의 유일한 소유권",
+          "refs": [
+            {
+              "source": "B",
+              "section": "객체의 유일한 소유권 - unique_ptr",
+              "pages": [
+                680
+              ]
+            }
+          ],
+          "evidence": "유일한소유권"
+        }
+      ],
+      [
+        {
+          "text": "shared_ptr",
+          "refs": [
+            {
+              "source": "B",
+              "section": "shared_ptr",
+              "pages": [
+                693
+              ]
+            }
+          ],
+          "evidence": "shared_ptr"
+        },
+        {
+          "text": "여러 포인터가 같은 객체를 소유",
+          "refs": [
+            {
+              "source": "B",
+              "section": "shared_ptr",
+              "pages": [
+                693
+              ]
+            }
+          ],
+          "evidence": "다른shared_ptr 역시그객체"
+        }
+      ],
+      [
+        {
+          "text": "weak_ptr",
+          "refs": [
+            {
+              "source": "B",
+              "section": "weak_ptr",
+              "pages": [
+                705
+              ]
+            }
+          ],
+          "evidence": "weak_ptr"
+        },
+        {
+          "text": "참조 개수를 늘리지 않으며 shared_ptr로 변환하여 접근",
+          "refs": [
+            {
+              "source": "B",
+              "section": "weak_ptr",
+              "pages": [
+                705
+              ]
+            }
+          ],
+          "evidence": "참조개수를늘리지는않습니다."
+        }
+      ]
+    ],
+    "formulas": [],
+    "syntax": []
+  },
+  "checked_images": [
+    {
+      "source": "B",
+      "pages": [
+        680,
+        693,
+        705,
+        706,
+        712,
+        723
+      ]
+    }
+  ],
+  "editor_notes": [
+    "unique_ptr 부분의 원문 정리 문단은 소유권·get·move를 확인하는 데 사용했고 통합 단원 전체는 편집 요약했다.",
+    "긴 스마트 포인터 및 함수 객체 예제는 핵심 발췌만 수록했다."
+  ]
+}

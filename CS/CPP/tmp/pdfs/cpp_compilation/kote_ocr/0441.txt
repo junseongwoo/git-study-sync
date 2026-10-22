@@ -1,0 +1,26 @@
+S R U R ES & A LG 0 R | T H MS
+2장트리, 힘, 그래프
+A.2.1 실습 문제 4: 파일 시스템 자료 구조 만들기
+이번 실습 문제에서는 N-항 트리를 이용하여 파일 시스템 표현을 위한 자료 구조를 만들어보겠습
+니다. 실습 문제를 해결하기 위해 다음 단계를 따라하세요.
+1. 필요한 헤더 파일을 포함합니다.
+#include 〈iostream〉
+#include 〈vector〉
+#include 〈algorithm〉
+2. 디렉터리/파일 정보를 저장할 노드 구조체를 작성합니다.
+struct n_ary_node
+std::string name;
+b001 is dir;
+std: : vector〈n—ary_node*〉 children;
+3. 사용하기 편리하도록 n-ary-node를 사용하여 트리를 구성합니다. 그리고 현재 디렉터리를 저
+장할 변수를 추가합니다.
+struct file_system
+using node = n_ary_node;
+using node_ptr = node*;
+private:
+node_ptr root;
+node_ptr cwd;
+4. 생성자에서는 루트 디렉터리를 만들고, 이를 현재 디렉터리로 설정합니다.
+public:
+file-system()
+452

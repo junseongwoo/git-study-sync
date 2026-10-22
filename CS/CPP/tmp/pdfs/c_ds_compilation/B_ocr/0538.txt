@@ -1,0 +1,22 @@
+0,
+4 1+Fn 2,
+다음과 같이 말이지요.
+ULONG Fibonacci( int n )
+if ( n== 0)
+return 이•
+return 1;
+Ⅱ>1
+return Fibonacci( n - 1 ) + Fibonacci( n - 2 ):
+구현이 참 싱겁지요? 하지만 잠깐 시간을 내서 이 코드를 조금 더 살펴보기 바랍니다. 그중에서도
+Fibonacci( ) 함수의 재귀 호출을 전개해서 몇 번의 호출이 이루어지는지 확인해보세요. 그러다 보
+면 이 코드의 문제가 보일지도 모릅니다.
+여러분도 문제가 무엇인지 보이나요? 문제는 바로 이 코드가 분할 정복Dtv靈 andConquer이 아니라 곱빼기
+정복[hJbleandConquer 방식으로 피보나치 수를 구한다는 점입니다. 재귀 호출을 같이 전개해봅시다.
+Fibonacci (n)을 호출하면 2개의 재귀 호출 Fibonacci (n-l ), Fibonacci (n-2)가 발생합니다.
+Fibonacci(n)
+Fibonacci(n-I )
+Fibonacci(n—2)
+Fibonacci (n—l )은 Fibonacci (n-2)와 Fibonacci (n-3)의 호픑 생성하고 Fibonacci
+(n-2)는 Fibonacci (n-3)과 Fibonacci (n-4)의 호출을 생성합니다. 따라서 두 번째 단계에서
+는 Fibonacci ( ) 호출이 4개로 늘어납니다.
+538 Part 03 • 알고리즘 설계 기법

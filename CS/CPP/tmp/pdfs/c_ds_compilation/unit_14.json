@@ -1,0 +1,1197 @@
+{
+  "unit": 14,
+  "title": "탐색",
+  "part": "알고리즘",
+  "scope": [
+    {
+      "source": "A",
+      "start": 487,
+      "end": 500
+    },
+    {
+      "source": "B",
+      "start": 242,
+      "end": 256
+    }
+  ],
+  "learning": [
+    {
+      "text": "탐색(search)은 여러 자료 중에서 원하는 자료를 찾는 작업이다.",
+      "refs": [
+        {
+          "source": "A",
+          "section": "13.1 탐색이란?",
+          "pages": [
+            487
+          ]
+        }
+      ],
+      "evidence": "원하는 자료를 찾는 작업"
+    },
+    {
+      "text": "이진 탐색을 적용하기 전에 배열이 반드시 정렬되어 있어야 한다.",
+      "refs": [
+        {
+          "source": "A",
+          "section": "13.3 정렬된 배열에서의 탐색",
+          "pages": [
+            492
+          ]
+        }
+      ],
+      "evidence": "배열이 반드시 정렬되어 있어야"
+    }
+  ],
+  "concepts": [
+    {
+      "title": "탐색과 탐색키",
+      "items": [
+        {
+          "text": "탐색(search)은 여러 자료 중에서 원하는 자료를 찾는 작업이다.",
+          "refs": [
+            {
+              "source": "A",
+              "section": "13.1 탐색이란?",
+              "pages": [
+                487
+              ]
+            }
+          ],
+          "evidence": "원하는 자료를 찾는 작업"
+        },
+        {
+          "text": "탐색의 단위는 항목이며 항목 안에는 항목을 구별하는 탐색키(search key)가 있다.",
+          "refs": [
+            {
+              "source": "A",
+              "section": "13.1 탐색이란?",
+              "pages": [
+                487
+              ]
+            }
+          ],
+          "evidence": "탐색키(search key)"
+        },
+        {
+          "text": "탐색은 탐색키와 데이터로 이루어진 항목들 중 원하는 탐색키를 가진 항목을 찾는 것이다.",
+          "refs": [
+            {
+              "source": "A",
+              "section": "13.1 탐색이란?",
+              "pages": [
+                487
+              ]
+            }
+          ],
+          "evidence": "원하는 탐색키를 가지고 있는 항목"
+        }
+      ]
+    },
+    {
+      "title": "순차 탐색과 끝 검사 개선",
+      "items": [
+        {
+          "text": "순차 탐색은 정렬되지 않은 배열의 처음부터 마지막까지 하나씩 검사하여 원하는 항목을 찾는다.",
+          "refs": [
+            {
+              "source": "A",
+              "section": "13.2 정렬되지 않은 배열에서의 탐색",
+              "pages": [
+                488
+              ]
+            }
+          ],
+          "evidence": "처음부터 마지막까지 하나씩 검사"
+        },
+        {
+          "text": "A의 순차 탐색 함수는 성공하면 발견 위치를, 실패하면 -1을 반환한다.",
+          "refs": [
+            {
+              "source": "A",
+              "section": "13.2 프로그램 13.1",
+              "pages": [
+                488
+              ]
+            }
+          ],
+          "evidence": "그 항목이 발견된 위치를 반환"
+        },
+        {
+          "text": "A의 개선된 순차 탐색은 리스트 끝에 탐색키를 저장하여 끝 도달 여부를 매번 비교하지 않는다.",
+          "refs": [
+            {
+              "source": "A",
+              "section": "13.2 개선된 순차 탐색",
+              "pages": [
+                489
+              ]
+            }
+          ],
+          "evidence": "리스트의 끝에 찾고자 하는 키 값을 저장"
+        },
+        {
+          "text": "개선된 순차 탐색에서 발견 인덱스가 high+1이면 탐색 실패이다.",
+          "refs": [
+            {
+              "source": "A",
+              "section": "13.2 프로그램 13.2",
+              "pages": [
+                490
+              ]
+            }
+          ],
+          "evidence": "high+1"
+        },
+        {
+          "text": "각 키의 탐색 확률이 같으면 순차 탐색 성공 시 평균 비교 횟수는 (n+1)/2이다.",
+          "refs": [
+            {
+              "source": "A",
+              "section": "13.2 순차 탐색의 시간 복잡도",
+              "pages": [
+                491
+              ]
+            }
+          ],
+          "evidence": "모든 키가 탐색될 확률이 동일"
+        },
+        {
+          "text": "순차 탐색은 실패 시 n번 비교하고 시간 복잡도는 O(n)이다.",
+          "refs": [
+            {
+              "source": "A",
+              "section": "13.2 순차 탐색의 시간 복잡도",
+              "pages": [
+                491
+              ]
+            }
+          ],
+          "evidence": "탐색이 실패한 경우 n번"
+        }
+      ]
+    },
+    {
+      "title": "B의 자기 구성법",
+      "items": [
+        {
+          "text": "자기 구성법은 자주 사용되는 항목을 데이터 앞쪽에 배치하여 순차 검색 효율을 높인다.",
+          "refs": [
+            {
+              "source": "B",
+              "section": "6.2 자기 구성법",
+              "pages": [
+                244
+              ]
+            }
+          ],
+          "evidence": "자주 사용되는 항목을 데이터 앞쪽에 배치"
+        },
+        {
+          "text": "전진 이동법(Move To Front Method)은 탐색된 항목을 데이터의 가장 앞으로 옮긴다.",
+          "refs": [
+            {
+              "source": "B",
+              "section": "6.2.1 전진 이동법",
+              "pages": [
+                244
+              ]
+            }
+          ],
+          "evidence": "데이터의 가장 앞"
+        },
+        {
+          "text": "전위법(Transpose Method)은 탐색된 항목을 바로 이전 항목과 교환한다.",
+          "refs": [
+            {
+              "source": "B",
+              "section": "6.2.2 전위법",
+              "pages": [
+                246
+              ]
+            }
+          ],
+          "evidence": "바로 이전 항목과 교환"
+        },
+        {
+          "text": "계수법(Frequency Count Method)은 각 요소의 탐색 횟수를 별도 공간에 저장하고 횟수가 높은 순으로 재구성한다.",
+          "refs": [
+            {
+              "source": "B",
+              "section": "6.2.3 계수법",
+              "pages": [
+                248
+              ]
+            }
+          ],
+          "evidence": "탐색된 횟수가 높은 순"
+        },
+        {
+          "text": "계수법에는 계수 결과를 저장하는 별도 공간과 결과에 따른 데이터 재배치 비용이 든다.",
+          "refs": [
+            {
+              "source": "B",
+              "section": "6.2.3 계수법",
+              "pages": [
+                248
+              ]
+            }
+          ],
+          "evidence": "별도의 공간을 유지"
+        }
+      ]
+    },
+    {
+      "title": "이진 탐색",
+      "items": [
+        {
+          "text": "이진 탐색(binary search)은 중앙값을 조사하여 탐색 범위를 왼쪽 또는 오른쪽 절반으로 줄인다.",
+          "refs": [
+            {
+              "source": "A",
+              "section": "13.3 정렬된 배열에서의 탐색",
+              "pages": [
+                491
+              ]
+            }
+          ],
+          "evidence": "탐색의 범위를 반으로 줄인다"
+        },
+        {
+          "text": "이진 탐색을 적용하기 전에 배열이 반드시 정렬되어 있어야 한다.",
+          "refs": [
+            {
+              "source": "A",
+              "section": "13.3 정렬된 배열에서의 탐색",
+              "pages": [
+                492
+              ]
+            }
+          ],
+          "evidence": "배열이 반드시 정렬되어 있어야"
+        },
+        {
+          "text": "A는 이진 탐색이 삽입·삭제가 빈번한 데이터보다 주로 고정된 데이터에 적합하다고 설명한다.",
+          "refs": [
+            {
+              "source": "A",
+              "section": "13.3 정렬된 배열에서의 탐색",
+              "pages": [
+                492
+              ]
+            }
+          ],
+          "evidence": "주로 고정된 데이터"
+        },
+        {
+          "text": "이진 탐색은 순환 호출 또는 반복문으로 구현할 수 있다.",
+          "refs": [
+            {
+              "source": "A",
+              "section": "13.3 이진 탐색 구현",
+              "pages": [
+                494
+              ]
+            }
+          ],
+          "evidence": "반복문을 사용하여 구현"
+        },
+        {
+          "text": "이진 탐색의 시간 복잡도는 O(log₂n)이다.",
+          "refs": [
+            {
+              "source": "A",
+              "section": "13.3 이진 탐색의 시간 복잡도",
+              "pages": [
+                496
+              ]
+            }
+          ],
+          "evidence": "O(log₂n)"
+        }
+      ]
+    },
+    {
+      "title": "색인 순차 탐색",
+      "items": [
+        {
+          "text": "색인 순차 탐색은 주 자료 리스트에서 일정 간격으로 발췌한 자료를 가진 인덱스 테이블을 이용한다.",
+          "refs": [
+            {
+              "source": "A",
+              "section": "13.3 정렬된 배열에서의 색인 순차 탐색",
+              "pages": [
+                497
+              ]
+            }
+          ],
+          "evidence": "일정 간격으로 발췌"
+        },
+        {
+          "text": "색인 순차 탐색에서는 주 자료 리스트와 인덱스 테이블이 모두 정렬되어 있어야 한다.",
+          "refs": [
+            {
+              "source": "A",
+              "section": "13.3 정렬된 배열에서의 색인 순차 탐색",
+              "pages": [
+                497
+              ]
+            }
+          ],
+          "evidence": "모두 정렬되어 있어야"
+        },
+        {
+          "text": "인덱스 크기를 줄이면 주 자료 리스트 탐색 시간이 늘고 크게 하면 인덱스 탐색 시간이 는다.",
+          "refs": [
+            {
+              "source": "A",
+              "section": "13.3 색인 순차 탐색",
+              "pages": [
+                498
+              ]
+            }
+          ],
+          "evidence": "인덱스 테이블의 크기를 줄이면"
+        },
+        {
+          "text": "데이터 수 증가로 1차 인덱스가 커지면 2차 인덱스를 사용할 수 있다.",
+          "refs": [
+            {
+              "source": "A",
+              "section": "13.3 색인 순차 탐색",
+              "pages": [
+                498
+              ]
+            }
+          ],
+          "evidence": "2차 인덱스 테이블"
+        }
+      ]
+    },
+    {
+      "title": "보간 탐색",
+      "items": [
+        {
+          "text": "보간 탐색(interpolation search)은 탐색키가 존재할 위치를 예측하여 탐색하는 방법이다.",
+          "refs": [
+            {
+              "source": "A",
+              "section": "13.3 보간 탐색",
+              "pages": [
+                498
+              ]
+            }
+          ],
+          "evidence": "존재할 위치를 예측"
+        },
+        {
+          "text": "보간 탐색은 리스트를 불균등하게 분할하고 값과 위치가 비례한다고 가정한다.",
+          "refs": [
+            {
+              "source": "A",
+              "section": "13.3 보간 탐색",
+              "pages": [
+                499
+              ]
+            }
+          ],
+          "evidence": "값과 위치는 비례한다는 가정"
+        },
+        {
+          "text": "보간 탐색으로 계산한 실수 위치는 보통 소수점 이하를 버려 정수로 변환한다.",
+          "refs": [
+            {
+              "source": "A",
+              "section": "13.3 보간 탐색",
+              "pages": [
+                500
+              ]
+            }
+          ],
+          "evidence": "소수점 이하를 버리는 방법"
+        },
+        {
+          "text": "A는 비교적 균등하게 분포한 많은 데이터에서 보간 탐색이 이진 탐색보다 우수할 수 있다고 설명한다.",
+          "refs": [
+            {
+              "source": "A",
+              "section": "13.3 보간 탐색",
+              "pages": [
+                500
+              ]
+            }
+          ],
+          "evidence": "비교적 균등하게 분포"
+        }
+      ]
+    },
+    {
+      "title": "표준 함수 bsearch()",
+      "items": [
+        {
+          "text": "bsearch()는 C 언어 표준 라이브러리의 이진 탐색 함수이다.",
+          "refs": [
+            {
+              "source": "B",
+              "section": "6.3.4 C 언어 표준 라이브러리의 이진 탐색 함수: bsearch()",
+              "pages": [
+                255
+              ]
+            }
+          ],
+          "evidence": "이진 탐색을 구현한"
+        },
+        {
+          "text": "bsearch()의 매개 변수는 목표값 주소 key, 배열 주소 base, 요소 수 num, 요소 바이트 크기 width, 비교 함수 포인터이다.",
+          "refs": [
+            {
+              "source": "B",
+              "section": "6.3.4 bsearch()",
+              "pages": [
+                255
+              ]
+            }
+          ],
+          "evidence": "찾고자 하는 목표값 데이터의 주소"
+        }
+      ]
+    }
+  ],
+  "procedures": [
+    {
+      "title": "이진 탐색 — B의 처리 순서",
+      "steps": [
+        {
+          "text": "데이터 중앙의 요소를 고른다.",
+          "refs": [
+            {
+              "source": "B",
+              "section": "6.3 이진 탐색",
+              "pages": [
+                249
+              ]
+            }
+          ],
+          "evidence": "데이터 중앙에 있는 요소"
+        },
+        {
+          "text": "중앙 요소값과 목표값을 비교한다.",
+          "refs": [
+            {
+              "source": "B",
+              "section": "6.3 이진 탐색",
+              "pages": [
+                249
+              ]
+            }
+          ],
+          "evidence": "목표값을 비교"
+        },
+        {
+          "text": "목표값이 작으면 왼편, 크면 오른편 데이터에 이진 탐색을 새로 수행한다.",
+          "refs": [
+            {
+              "source": "B",
+              "section": "6.3 이진 탐색",
+              "pages": [
+                249
+              ]
+            }
+          ],
+          "evidence": "데이터 왼편"
+        },
+        {
+          "text": "찾고자 하는 값을 찾을 때까지 앞 단계를 반복한다.",
+          "refs": [
+            {
+              "source": "B",
+              "section": "6.3 이진 탐색",
+              "pages": [
+                249
+              ]
+            }
+          ],
+          "evidence": "단계를 반복"
+        }
+      ]
+    },
+    {
+      "title": "색인 순차 탐색 — A",
+      "steps": [
+        {
+          "text": "인덱스에서 index[i] <= key < index[i+1]을 만족하는 항목을 찾는다.",
+          "refs": [
+            {
+              "source": "A",
+              "section": "13.3 색인 순차 탐색",
+              "pages": [
+                497
+              ]
+            }
+          ],
+          "evidence": "index[i] <= key"
+        },
+        {
+          "text": "해당 인덱스가 가리키는 주 자료 리스트의 구간을 순차 탐색한다.",
+          "refs": [
+            {
+              "source": "A",
+              "section": "13.3 색인 순차 탐색",
+              "pages": [
+                497
+              ]
+            }
+          ],
+          "evidence": "주 자료 리스트에서 순차 탐색"
+        }
+      ]
+    }
+  ],
+  "syntax": [
+    {
+      "label": "seq_search() 원문 발췌",
+      "code": "int seq_search(int key, int low, int high)\n{\n    int i;\n    for (i = low; i <= high; i++)\n        if (list[i] == key)\n            return i; // 탐색에 성공하면 키 값의 인덱스 반환\n    return -1;        // 탐색에 실패하면 -1 반환\n}",
+      "refs": [
+        {
+          "source": "A",
+          "section": "13.2 프로그램 13.1",
+          "pages": [
+            488
+          ]
+        }
+      ],
+      "evidence": "int seq_search",
+      "note": null
+    }
+  ],
+  "formulas": [
+    {
+      "label": "성공 시 순차 탐색 평균 비교 횟수",
+      "expression": "(1+2+3+...+n)/n = (n+1)/2",
+      "refs": [
+        {
+          "source": "A",
+          "section": "13.2 순차 탐색의 시간 복잡도",
+          "pages": [
+            491
+          ]
+        }
+      ],
+      "evidence": "(n+1)/2",
+      "note": "모든 키가 탐색될 확률이 같다고 가정한다."
+    },
+    {
+      "label": "색인 순차 탐색의 복잡도",
+      "expression": "O(m+n/m)",
+      "refs": [
+        {
+          "source": "A",
+          "section": "13.3 색인 순차 탐색",
+          "pages": [
+            498
+          ]
+        }
+      ],
+      "evidence": "O(m+n/m)",
+      "note": "m은 인덱스 테이블 크기, n은 주 자료 리스트 크기이다."
+    },
+    {
+      "label": "보간 탐색 위치",
+      "expression": "(k-list[low])/(list[high]-list[low]) × (high-low) + low",
+      "refs": [
+        {
+          "source": "A",
+          "section": "13.3 보간 탐색",
+          "pages": [
+            499
+          ]
+        }
+      ],
+      "evidence": "탐색 위치",
+      "note": "k는 탐색키, low와 high는 탐색 범위의 최소·최대 인덱스이다."
+    }
+  ],
+  "comparisons": [
+    {
+      "title": "배열 탐색 방법",
+      "headers": [
+        "방법",
+        "원문 설명"
+      ],
+      "rows": [
+        [
+          {
+            "text": "순차 탐색",
+            "refs": [
+              {
+                "source": "A",
+                "section": "13.2 정렬되지 않은 배열에서의 탐색",
+                "pages": [
+                  488
+                ]
+              }
+            ],
+            "evidence": "순차 탐색"
+          },
+          {
+            "text": "순차 탐색은 정렬되지 않은 배열의 처음부터 마지막까지 하나씩 검사하여 원하는 항목을 찾는다.",
+            "refs": [
+              {
+                "source": "A",
+                "section": "13.2 정렬되지 않은 배열에서의 탐색",
+                "pages": [
+                  488
+                ]
+              }
+            ],
+            "evidence": "처음부터 마지막까지 하나씩 검사"
+          }
+        ],
+        [
+          {
+            "text": "이진 탐색",
+            "refs": [
+              {
+                "source": "A",
+                "section": "13.3 정렬된 배열에서의 탐색",
+                "pages": [
+                  491
+                ]
+              }
+            ],
+            "evidence": "이진 탐색"
+          },
+          {
+            "text": "이진 탐색(binary search)은 중앙값을 조사하여 탐색 범위를 왼쪽 또는 오른쪽 절반으로 줄인다.",
+            "refs": [
+              {
+                "source": "A",
+                "section": "13.3 정렬된 배열에서의 탐색",
+                "pages": [
+                  491
+                ]
+              }
+            ],
+            "evidence": "탐색의 범위를 반으로 줄인다"
+          }
+        ],
+        [
+          {
+            "text": "색인 순차 탐색",
+            "refs": [
+              {
+                "source": "A",
+                "section": "13.3 정렬된 배열에서의 색인 순차 탐색",
+                "pages": [
+                  497
+                ]
+              }
+            ],
+            "evidence": "색인 순차 탐색"
+          },
+          {
+            "text": "색인 순차 탐색은 주 자료 리스트에서 일정 간격으로 발췌한 자료를 가진 인덱스 테이블을 이용한다.",
+            "refs": [
+              {
+                "source": "A",
+                "section": "13.3 정렬된 배열에서의 색인 순차 탐색",
+                "pages": [
+                  497
+                ]
+              }
+            ],
+            "evidence": "일정 간격으로 발췌"
+          }
+        ],
+        [
+          {
+            "text": "보간 탐색",
+            "refs": [
+              {
+                "source": "A",
+                "section": "13.3 보간 탐색",
+                "pages": [
+                  498
+                ]
+              }
+            ],
+            "evidence": "보간 탐색"
+          },
+          {
+            "text": "보간 탐색(interpolation search)은 탐색키가 존재할 위치를 예측하여 탐색하는 방법이다.",
+            "refs": [
+              {
+                "source": "A",
+                "section": "13.3 보간 탐색",
+                "pages": [
+                  498
+                ]
+              }
+            ],
+            "evidence": "존재할 위치를 예측"
+          }
+        ]
+      ]
+    }
+  ],
+  "terms": [
+    {
+      "term": "탐색",
+      "definition": {
+        "text": "탐색(search)은 여러 자료 중에서 원하는 자료를 찾는 작업이다.",
+        "refs": [
+          {
+            "source": "A",
+            "section": "13.1 탐색이란?",
+            "pages": [
+              487
+            ]
+          }
+        ],
+        "evidence": "원하는 자료를 찾는 작업"
+      }
+    },
+    {
+      "term": "탐색키",
+      "definition": {
+        "text": "탐색의 단위는 항목이며 항목 안에는 항목을 구별하는 탐색키(search key)가 있다.",
+        "refs": [
+          {
+            "source": "A",
+            "section": "13.1 탐색이란?",
+            "pages": [
+              487
+            ]
+          }
+        ],
+        "evidence": "탐색키(search key)"
+      }
+    },
+    {
+      "term": "순차 탐색",
+      "definition": {
+        "text": "순차 탐색은 정렬되지 않은 배열의 처음부터 마지막까지 하나씩 검사하여 원하는 항목을 찾는다.",
+        "refs": [
+          {
+            "source": "A",
+            "section": "13.2 정렬되지 않은 배열에서의 탐색",
+            "pages": [
+              488
+            ]
+          }
+        ],
+        "evidence": "처음부터 마지막까지 하나씩 검사"
+      }
+    },
+    {
+      "term": "전진 이동법",
+      "definition": {
+        "text": "전진 이동법(Move To Front Method)은 탐색된 항목을 데이터의 가장 앞으로 옮긴다.",
+        "refs": [
+          {
+            "source": "B",
+            "section": "6.2.1 전진 이동법",
+            "pages": [
+              244
+            ]
+          }
+        ],
+        "evidence": "데이터의 가장 앞"
+      }
+    },
+    {
+      "term": "전위법",
+      "definition": {
+        "text": "전위법(Transpose Method)은 탐색된 항목을 바로 이전 항목과 교환한다.",
+        "refs": [
+          {
+            "source": "B",
+            "section": "6.2.2 전위법",
+            "pages": [
+              246
+            ]
+          }
+        ],
+        "evidence": "바로 이전 항목과 교환"
+      }
+    },
+    {
+      "term": "계수법",
+      "definition": {
+        "text": "계수법(Frequency Count Method)은 각 요소의 탐색 횟수를 별도 공간에 저장하고 횟수가 높은 순으로 재구성한다.",
+        "refs": [
+          {
+            "source": "B",
+            "section": "6.2.3 계수법",
+            "pages": [
+              248
+            ]
+          }
+        ],
+        "evidence": "탐색된 횟수가 높은 순"
+      }
+    },
+    {
+      "term": "이진 탐색",
+      "definition": {
+        "text": "이진 탐색(binary search)은 중앙값을 조사하여 탐색 범위를 왼쪽 또는 오른쪽 절반으로 줄인다.",
+        "refs": [
+          {
+            "source": "A",
+            "section": "13.3 정렬된 배열에서의 탐색",
+            "pages": [
+              491
+            ]
+          }
+        ],
+        "evidence": "탐색의 범위를 반으로 줄인다"
+      }
+    },
+    {
+      "term": "보간 탐색",
+      "definition": {
+        "text": "보간 탐색(interpolation search)은 탐색키가 존재할 위치를 예측하여 탐색하는 방법이다.",
+        "refs": [
+          {
+            "source": "A",
+            "section": "13.3 보간 탐색",
+            "pages": [
+              498
+            ]
+          }
+        ],
+        "evidence": "존재할 위치를 예측"
+      }
+    }
+  ],
+  "summary_basis": "편집 요약",
+  "summary": [
+    {
+      "text": "탐색은 탐색키와 데이터로 이루어진 항목들 중 원하는 탐색키를 가진 항목을 찾는 것이다.",
+      "refs": [
+        {
+          "source": "A",
+          "section": "13.1 탐색이란?",
+          "pages": [
+            487
+          ]
+        }
+      ],
+      "evidence": "원하는 탐색키를 가지고 있는 항목"
+    },
+    {
+      "text": "순차 탐색은 실패 시 n번 비교하고 시간 복잡도는 O(n)이다.",
+      "refs": [
+        {
+          "source": "A",
+          "section": "13.2 순차 탐색의 시간 복잡도",
+          "pages": [
+            491
+          ]
+        }
+      ],
+      "evidence": "탐색이 실패한 경우 n번"
+    },
+    {
+      "text": "이진 탐색을 적용하기 전에 배열이 반드시 정렬되어 있어야 한다.",
+      "refs": [
+        {
+          "source": "A",
+          "section": "13.3 정렬된 배열에서의 탐색",
+          "pages": [
+            492
+          ]
+        }
+      ],
+      "evidence": "배열이 반드시 정렬되어 있어야"
+    },
+    {
+      "text": "색인 순차 탐색에서는 주 자료 리스트와 인덱스 테이블이 모두 정렬되어 있어야 한다.",
+      "refs": [
+        {
+          "source": "A",
+          "section": "13.3 정렬된 배열에서의 색인 순차 탐색",
+          "pages": [
+            497
+          ]
+        }
+      ],
+      "evidence": "모두 정렬되어 있어야"
+    }
+  ],
+  "review": [
+    {
+      "question": "동일 확률로 각 키를 탐색할 때 순차 탐색 성공 시 평균 비교 횟수는?",
+      "answer": {
+        "text": "각 키의 탐색 확률이 같으면 순차 탐색 성공 시 평균 비교 횟수는 (n+1)/2이다.",
+        "refs": [
+          {
+            "source": "A",
+            "section": "13.2 순차 탐색의 시간 복잡도",
+            "pages": [
+              491
+            ]
+          }
+        ],
+        "evidence": "모든 키가 탐색될 확률이 동일"
+      }
+    },
+    {
+      "question": "이진 탐색의 적용 전 배열에 필요한 조건은?",
+      "answer": {
+        "text": "이진 탐색을 적용하기 전에 배열이 반드시 정렬되어 있어야 한다.",
+        "refs": [
+          {
+            "source": "A",
+            "section": "13.3 정렬된 배열에서의 탐색",
+            "pages": [
+              492
+            ]
+          }
+        ],
+        "evidence": "배열이 반드시 정렬되어 있어야"
+      }
+    },
+    {
+      "question": "전진 이동법과 달리 전위법은 탐색 항목을 어디로 옮기는가?",
+      "answer": {
+        "text": "전위법(Transpose Method)은 탐색된 항목을 바로 이전 항목과 교환한다.",
+        "refs": [
+          {
+            "source": "B",
+            "section": "6.2.2 전위법",
+            "pages": [
+              246
+            ]
+          }
+        ],
+        "evidence": "바로 이전 항목과 교환"
+      }
+    },
+    {
+      "question": "보간 탐색은 값과 위치에 어떤 가정을 두는가?",
+      "answer": {
+        "text": "보간 탐색은 리스트를 불균등하게 분할하고 값과 위치가 비례한다고 가정한다.",
+        "refs": [
+          {
+            "source": "A",
+            "section": "13.3 보간 탐색",
+            "pages": [
+              499
+            ]
+          }
+        ],
+        "evidence": "값과 위치는 비례한다는 가정"
+      }
+    }
+  ],
+  "cheat": {
+    "definitions": [
+      {
+        "term": "탐색",
+        "definition": {
+          "text": "탐색(search)은 여러 자료 중에서 원하는 자료를 찾는 작업이다.",
+          "refs": [
+            {
+              "source": "A",
+              "section": "13.1 탐색이란?",
+              "pages": [
+                487
+              ]
+            }
+          ],
+          "evidence": "원하는 자료를 찾는 작업"
+        }
+      },
+      {
+        "term": "이진 탐색 전제",
+        "definition": {
+          "text": "이진 탐색을 적용하기 전에 배열이 반드시 정렬되어 있어야 한다.",
+          "refs": [
+            {
+              "source": "A",
+              "section": "13.3 정렬된 배열에서의 탐색",
+              "pages": [
+                492
+              ]
+            }
+          ],
+          "evidence": "배열이 반드시 정렬되어 있어야"
+        }
+      },
+      {
+        "term": "보간 탐색",
+        "definition": {
+          "text": "보간 탐색(interpolation search)은 탐색키가 존재할 위치를 예측하여 탐색하는 방법이다.",
+          "refs": [
+            {
+              "source": "A",
+              "section": "13.3 보간 탐색",
+              "pages": [
+                498
+              ]
+            }
+          ],
+          "evidence": "존재할 위치를 예측"
+        }
+      }
+    ],
+    "comparison_title": "B의 자기 구성법",
+    "comparison_headers": [
+      "방법",
+      "처리"
+    ],
+    "comparison_rows": [
+      [
+        {
+          "text": "전진 이동법",
+          "refs": [
+            {
+              "source": "B",
+              "section": "6.2.1 전진 이동법",
+              "pages": [
+                244
+              ]
+            }
+          ],
+          "evidence": "전진 이동법"
+        },
+        {
+          "text": "전진 이동법(Move To Front Method)은 탐색된 항목을 데이터의 가장 앞으로 옮긴다.",
+          "refs": [
+            {
+              "source": "B",
+              "section": "6.2.1 전진 이동법",
+              "pages": [
+                244
+              ]
+            }
+          ],
+          "evidence": "데이터의 가장 앞"
+        }
+      ],
+      [
+        {
+          "text": "전위법",
+          "refs": [
+            {
+              "source": "B",
+              "section": "6.2.2 전위법",
+              "pages": [
+                246
+              ]
+            }
+          ],
+          "evidence": "전위법"
+        },
+        {
+          "text": "전위법(Transpose Method)은 탐색된 항목을 바로 이전 항목과 교환한다.",
+          "refs": [
+            {
+              "source": "B",
+              "section": "6.2.2 전위법",
+              "pages": [
+                246
+              ]
+            }
+          ],
+          "evidence": "바로 이전 항목과 교환"
+        }
+      ],
+      [
+        {
+          "text": "계수법",
+          "refs": [
+            {
+              "source": "B",
+              "section": "6.2.3 계수법",
+              "pages": [
+                248
+              ]
+            }
+          ],
+          "evidence": "계수법"
+        },
+        {
+          "text": "계수법(Frequency Count Method)은 각 요소의 탐색 횟수를 별도 공간에 저장하고 횟수가 높은 순으로 재구성한다.",
+          "refs": [
+            {
+              "source": "B",
+              "section": "6.2.3 계수법",
+              "pages": [
+                248
+              ]
+            }
+          ],
+          "evidence": "탐색된 횟수가 높은 순"
+        }
+      ]
+    ],
+    "formulas": [
+      {
+        "label": "성공 시 순차 탐색 평균 비교 횟수",
+        "expression": "(1+2+3+...+n)/n = (n+1)/2",
+        "refs": [
+          {
+            "source": "A",
+            "section": "13.2 순차 탐색의 시간 복잡도",
+            "pages": [
+              491
+            ]
+          }
+        ],
+        "evidence": "(n+1)/2",
+        "note": "모든 키가 탐색될 확률이 같다고 가정한다."
+      },
+      {
+        "label": "색인 순차 탐색의 복잡도",
+        "expression": "O(m+n/m)",
+        "refs": [
+          {
+            "source": "A",
+            "section": "13.3 색인 순차 탐색",
+            "pages": [
+              498
+            ]
+          }
+        ],
+        "evidence": "O(m+n/m)",
+        "note": "m은 인덱스 테이블 크기, n은 주 자료 리스트 크기이다."
+      }
+    ],
+    "syntax": []
+  },
+  "checked_images": [
+    {
+      "source": "A",
+      "pages": [
+        487,
+        488,
+        489,
+        490,
+        491,
+        492,
+        494,
+        495,
+        496,
+        497,
+        498,
+        499,
+        500
+      ]
+    },
+    {
+      "source": "B",
+      "pages": [
+        244,
+        246,
+        248,
+        249,
+        255
+      ]
+    }
+  ],
+  "editor_notes": [
+    "이진 탐색 트리와 균형 트리는 통합 단원 09에서 다룬다.",
+    "보간 탐색의 전제와 계산식은 A의 설명을 그대로 따른다."
+  ]
+}

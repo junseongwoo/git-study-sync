@@ -1,0 +1,33 @@
+int list[卜IAX_SIZEJ;
+int partition(int list[] ,
+int pivot, temp;
+int low, high;
+10년』 = left;
+high = right + 1;
+pivot = list[left];
+do {
+do
+int left, int right)
+while (list[low]<pivot);
+do
+while (list[high]>pivot) ;
+if (low<high) SWAP(Iist[low], list[high], temp);
+} while (10W<high);
+SWAP(list[leftJ, list[high], temp);
+return high;
+void quick_sort(int list[], int left, int rnght)
+if (left<right) {
+int q = partntion(list, left, right);
+quick-sort(list, left, q - 1);
+quick_sort(list, q + 1, right);
+int main(void)
+n = 卜IAX_SIZE;
+srand(time(NULL)) ;
+for (5 = 0; i<n; i++) // 난수 생성 및 출력
+list[i] = rand() % 100;
+quick-sort(list, 0, n-l); // 퀵정릴 호출
+for (1 = 0; i<n; i++)
+printf("?d ", list[i]);
+printf("\fi't);
+return 0;
+CWTER12 정렬 475

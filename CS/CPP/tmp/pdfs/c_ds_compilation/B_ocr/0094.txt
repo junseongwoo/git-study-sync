@@ -1,0 +1,23 @@
+니s DestroyStack () 함수는 먼저 각 노드를 제거하고 자유 저장소에서 LinkedListStack 구조체
+를 할당 해제합니다. 노드 제거는 함수 앞부뿐에 있는 while 블록이 담당하는데요. 여기에서 사용되
+는 LLS-IsEmpty() 함수는 스택이 비어 있는지 점검하고, 11 s pop() 함수는 스택의 최상위 노드
+를 제거하며, 니5 DestroyNode() 함수는 자유 저장소에 할당된 노드를 메모리에서 해제합니다.
+노드 생성/소열 연산
+스택의 노드를 생성하는 LLS-CreateNode( ) 구현은 약간 복잡합니다. 앞에서도 이야기 했듯이. 노
+드를 자유 저장소에 생성할 때 문자열을 저장할 공간도 함께 생성해야 하기 때문입니다. 다음 니S—
+CreateNode( ) 함수 코드를 보면 malloc( ) 함수가 Node 구조체를 할당하기 위해 한 번, Node
+구조체의 Data 필드를 할당하기 위해 또 한 번, 모두 2번 호출된다는 사실을 알 수 있습니다.
+NO血* LLS_CreateNode( char* NewData )
+No血* NewNode = ( Node*)malloc(sizeof( Node ) );
+NewNode->Data = ( char*)malloc(strlen( NewData ) + 1):
+strcpy( NewNode->Data, NewData // 데이터를 저장한다.
+NewNode->NextN0de = NULL; // 다음 노드에 대한 포인터는 NULL로 초기화한다.
+return NewNode; // 노드의 주소를 반환한다.
+다음은 노드를 메모리에서 깨끗하게 제거하는 LLS-DestroyNode()입니다. 이 함수 안에서도
+free ( ) 함수가 2번 호출됩니다. 한 번은 노드의 자유 저장소에서 Data 필드를 할당 해제하기 위해,
+또 한 번은 노드를 할당 해제하기 위해서입니다.
+void LLS DestroyNode( NOde* Node )
+free(-Node->Data );
+free( NOde );
+Chapter 02 • 스택
+85

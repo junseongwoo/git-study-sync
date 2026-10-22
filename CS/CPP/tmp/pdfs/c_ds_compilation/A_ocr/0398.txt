@@ -1,0 +1,39 @@
+typedef struct GraphType (
+// 간선의 개수
+struct Edge edges[2 * MAX VERTICES];
+) GraphType;
+// 그래프 초기화
+void graph-init(GraphType• g)
+for (int i = 0; 5 〈 2 * MAX_VERTICES; 5++) {
+g-〉edges[i].start = 0;
+g->edges[i].end = 0;
+g->edges[i)•weight = INF;
+// 간선 삽입 연산
+void insert—edge(GraphType* g, nnt start, int end, int w)
+g-〉댼꾸s[g-〉n〕 .start = start;
+g->edges(g->n] = end;
+g->edges[g->n] .weight = w;
+// 덕뾰rt()에 사용되는 함수
+int convare(const void* a, const void* b)
+struct Edge* X = (struct Edge*)a;
+struct Edge* y = (struct Edge*)b;
+return (x->weight - y->weight);
+// kruskal의 최소 비용 신장 트리 프로그램
+void kruskaI(GraphType *0
+int edge-accepted = 0; // 현재까지 선택된 간선의 수
+int uset, vset;
+struct Edge e;
+set_init(g—>n) •,
+// 정점 u와 정점 v의 집합 번호
+// 집합 초기화
+qsort(g->edges, g->n, sizeof(struct Edge), compare) ;
+printf("크루스칼 최소 신장 트리 알고리즘 \n");
+int i = 0;
+while (edge-accepted 〈 (g->n - 1)) // 간선의 수 〈 (n-l)
+406
+e = g->edges[i];
+uset = set_find(e.start) ;
+vset = set_find(e.end);
+C언어로 쉽게 물어쓴 자료구조
+// 정점 u의 집합 번호
+// 정점 v의 집합 번호

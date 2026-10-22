@@ -1,0 +1,56 @@
+15.23 미로 탈출 알고리즘 예제 프로그램
+이제 미로 탈출 알고리즘을 실행하는 예제 프로그램을 작성해보겠습니다. 이번 예제 프로그램은 3
+개의 파일로 이루어집니다. 자료구조와 함수 원형을 선언하는 MazeSolver.h, 여기서 선언된 함수
+를 구현하는 MazeSolver.c. 그리고 여기에 구현된 코드를 실행하는 main ( void ) 함수를 포함한
+Test MazeSolver.c가 그것입니다.
+이 프로그램은 미로 데이터를 파일로 받도록 구성되어 있습니다. '되 'G'. '#' ' ' 등으로 표시되어 있
+는 미로 데이터 파일을 입력 받으면 그것을 읽어 들여 solve() 함수에 매개 변수로 넘깁니다. 미로
+데이터를 읽는 함수의 이름은 GetMaze ( )입니다. 그러면 코드 에디터를 열어 코-드를 작성해보세요
+15장/MazeSoIver/NazeS01ver.h
+#define MARKED
+01
+02
+03
+04
+05
+06
+07
+08
+09
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+#ifndef MAZESOLVER_H
+«iefine MAZESOLVER_H
+#include <stdi이h>
+#include <stdlib.h>
+#include 〈string.h>
+«jefine MAX BUFFER 1024
+$define INIT_VALUE -1
+START
+*define GOAL
+$define WAY
+«iefine WALL
+// 시작점
+// 탈출구
+// 탈출구로 향하는 길 표식
+enum DIRECTION { NORTH, SOUTH, EAST, WEST };
+{ FAIL, SUCCEED }:
+enum RESULT
+typedef struct tagPosition
+int X;
+int 발,
+} Position;
+Chapter 15• 백트래킹 617

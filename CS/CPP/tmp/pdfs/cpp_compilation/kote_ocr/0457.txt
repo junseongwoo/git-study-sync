@@ -1,0 +1,26 @@
+// 이진 검색 실행 및 시간 측정
+autO begin = std: :chrono: :steady—clock: :now( ),•
+而01 search result = needs-vaccination(p, people);
+aut0 end = std: :chrono: :steady-clock: :now();
+autO diff = std: :chrono: :duration_cast〈std: :chrono: :microseconds>(end - begin);
+std::cout 〈〈 “이진 검색 소요 시간: " 〈〈 diff.count() 〈〈 "us" 〈〈 std::endl;
+if (search result)
+std::cout 〈〈 "(" 〈〈 p.get-name().first 〈〈 " " 〈〈 p.get-name().second 〈〈 ") "
+〈〈 “학생은 예방 접종이 필요합니다." 〈〈 std::endl;
+else
+std::cout 〈〈 "(" 〈〈 p.get-name().first 〈〈 " " 〈〈 p.get-name().second 〈〈 ") ••
+〈〈 “학생은 예방 접종이 필요하지 않습니다." 〈〈 std::endl;
+6. 마지막으로 main( ) 함수를 작성하고 테스트 코드를 추가합니다.
+int main()
+// 임의의 학생 경보 생성
+autO P = generate_random_Student(1@@0);
+search_test(l@@@, p);
+-test(10000, p);
+search
+-test(100000, p);
+search
+0;
+return
+No匕三
+됩니다.
+이번 실습 문제에서는 임의의 학생 정보를 생성하여 사용하기 때문에 출력 결과는 매번 다르게 나타나게

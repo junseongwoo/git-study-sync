@@ -1,0 +1,38 @@
+while (child 〈= h->heap-size) (
+// 현재 니c이 자식노드 중 더 큰 자식노드를 찾는다.
+if ((child 〈 h->heap-size) &&
+(h->heap[child] .key) 〈 h->heap[child + 11 .key)
+child++;
+if (temp.key 〉= h->heap(child] .key) break;
+// 한 단계 아래로 이동
+h->heap[parent] = h->heap[chitd];
+parent = child;
+child *= 2;
+h->heap[parent] = temp;
+return item;
+int main(void)
+element el = { 10 }, e2
+element 예, e5, e6;
+={5},e3={30};
+HeapType* heap;
+heap = create();
+init(heap) ;
+// 삽입
+// 히프 생성
+// 초기화
+insert_max_heap(heap, el);
+insert_max—heap(heap, e2) ;
+insert_max_heap(heap, e3) ;
+// 삭제
+= delete_max_heap(heap) ;
+printf("< 9류d 〉 ", e4.key);
+e5 = delete_max_heap(heap) ;
+printf("< 9던 〉 ", e5.key);
+e6 = delete_max_heap(heap) ;
+printf("< 9경d > \n", e6.key);
+free(heap) ,•
+return 0;
+위 프로그램의 출력은 다음과 같다.
+실행결과
+〈 30 〉 〈 10 〉 〈 5 〉
+CHAPTER09 우선순위큐 339

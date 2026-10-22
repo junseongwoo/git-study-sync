@@ -1,0 +1,28 @@
+34
+35
+37
+39
+40
+42
+45
+46
+47
+5•0
+while ( fgets( Text, MAX_BUFFER, fp ) |= NULL )
+int Position =
+BoyerMoore( Text, strlen(Text), 0, Pattern, PatternSize );
+Line++
+if ( Position 〉= 0 )
+printfCIine:8d, column:u
+fclose( fp
+return 0;
+岳“
+Line, Position+1, Text);
+돈 실행 결과
+〉 BoyerMcx)re kjv.txt • Get wisdon
+line:164%, coIunn:8 : Prv4:5 Get wisdom
+decline from the words Of my mouth.
+get understanding.
+forget it not; neither
+492
+Part 02 • 일고리줍

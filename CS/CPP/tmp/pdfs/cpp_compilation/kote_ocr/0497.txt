@@ -1,0 +1,22 @@
+2. 이 문제의 출력은 32비트로 표현할 수 있는 범위를 벗어날 수 있으므로 결괴 저장* 위해
+long long int 자료형을 사용해야 합니다. typedef 문정을 이•용최여 건 지로형 이름을 다이
+리는 이름으로 줄여서 시용하겠습니다.
+typedef long long LL,
+3. 나머지 연산을 위한 상수 "0D를 지정합니다.
+const LL MOD = 1000000007:
+4. main() 함수에서는 입력을 처리하고 문제를 해결한 후, 결괴를 출력합니다.
+int main()
+int n;
+cin 〉〉 마•
+vector<int〉 distance(n);
+for(int i = 0; i 〈 마• i++)
+cin 〉〉 distance[i];
+LL result = TravelItinerary(n, distance);
+cout 〈〈 result 〈〈 endl;
+5. Trave11tinerary() 함수를 새로 정의하겠습니다. 이 함수는 정수 n과 거리 값 벡터 distance
+를 인자로 받고, long 10四 타입의 정수를 반환합니다.
+LL TravelItinerary(int n, vector<int〉 distance)
+6. 이제 앞에서 제시했던 재귀 반복식을 상향식 접근 형태로 변환해야 합니다. 의사 코드는 다음
+과 같습니다.
+DP -〉 N+I 크기의 배열
+510

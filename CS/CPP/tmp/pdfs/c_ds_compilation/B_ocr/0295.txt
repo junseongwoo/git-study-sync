@@ -1,0 +1,76 @@
+17
+18
+19
+20
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+37
+39
+ElementType Data;
+) RBTNode;
+VOid
+RBTNode*
+VOid
+RBTNode•
+RBTNode•
+VOid
+VOid
+RBTNode*
+VOid
+VOid
+VOid
+VOid
+VOid
+ændif
+RBT DestroyTree( RBTNode* Tree );
+ElementType NewData );
+RBT DestroyNode( RBTNode* NOde );
+RBT SearchNode( RBTNode* Tree, ElementType Target ),•
+RBT_SearchMinNode( RBTNode* Tree ):
+RBT_InsertNode( RBTNode** Tree, RBTNode *NewNode );
+RBT_InsertNodeHelper( RBTNode** Tree, RBTNode *NewNode );
+RBT_RemoveNode( RBTNode** ROOt, ElementType Target ):
+RBT RebuildAfterInsert( RBTNode** Tree, RBTNode* NewNode );
+RBT RebuiIdAfterRemove( RBTNode** ROOt, RBTNode* X );
+RBT PrintTree( RBTNode* NOde, int Depth, int BIackCount );
+RBT_RotateLeft( RBTNode** ROOt, RBTNode* Parent ):
+RBT RotateRight( RBTNode** ROOt, RBTNode* Parent ):
+06장/RedBlackTree/RedBIackTree. (
+%1
+%2
+003
+004
+%5
+%6
+%7
+010
+011
+012
+#include "RedBIackTree.h"
+$include 〈string.h〉
+extern RBTNode• Nil;
+RBTNode• RBT_CreateNode( ElementType NewData )
+RBTNode• NewNode = (RBTNode*)maIloc( sizeof(RBTNode) );
+NewNode-Parent
+NewNode->Left
+NewNode->Right
+NewNode-»ata
+288
+Part 02 • 알고리증
+= NULL;
+= NULL;
+= NULL;
+= NewData;
+1

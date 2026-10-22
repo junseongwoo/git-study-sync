@@ -1,0 +1,1421 @@
+{
+  "source": "B",
+  "path": "C:/Users/user/Downloads/C언어_자료구조_알고리즘.pdf",
+  "pdf_pages": 636,
+  "text_layer": false,
+  "bookmarks": false,
+  "visible_running_title": "이것이 자료구조+알고리즘이다",
+  "bibliography": {
+    "cover": "원문에서 확인 불가",
+    "author": "원문에서 확인 불가",
+    "edition": "원문에서 확인 불가",
+    "publisher": "원문에서 확인 불가"
+  },
+  "front_matter": {
+    "pdf_pages": [
+      1,
+      11
+    ],
+    "contents_only": true,
+    "printed_pages": "x–xx",
+    "missing": "목차에 나오는 지은이의 말, 이 책의 구성, 학습 로드맵과 표지·판권은 첨부본 앞부분에 없음"
+  },
+  "chapter_ranges": [
+    {
+      "chapter": 0,
+      "title": "알아두면 쓸 데 있는 자료구조와 알고리즘",
+      "pdf_start": 12,
+      "pdf_end": 26,
+      "first_section_printed_page": 3,
+      "sections": [
+        {
+          "section": "0.1",
+          "title": "자료구조",
+          "printed_page": 3
+        },
+        {
+          "section": "0.2",
+          "title": "알고리즘",
+          "printed_page": 6
+        },
+        {
+          "section": "0.3",
+          "title": "C 언어로 메모리를 다루는 방법",
+          "printed_page": 7
+        },
+        {
+          "section": "0.3.1",
+          "title": "포인터 복습",
+          "printed_page": 7
+        },
+        {
+          "section": "0.3.2",
+          "title": "구조체 복습",
+          "printed_page": 9
+        },
+        {
+          "section": "0.3.3",
+          "title": "메모리 레이아웃 복습",
+          "printed_page": 10
+        },
+        {
+          "section": "0.3.4",
+          "title": "스택에서 데이터를 다루는 방법",
+          "printed_page": 11
+        },
+        {
+          "section": "0.3.5",
+          "title": "힙에서 데이터를 다루는 방법",
+          "printed_page": 12
+        }
+      ]
+    },
+    {
+      "chapter": 1,
+      "title": "리스트",
+      "pdf_start": 29,
+      "pdf_end": 77,
+      "first_section_printed_page": 21,
+      "sections": [
+        {
+          "section": "1.1",
+          "title": "리스트 ADT",
+          "printed_page": 21
+        },
+        {
+          "section": "1.1.1",
+          "title": "리스트의 개념",
+          "printed_page": 21
+        },
+        {
+          "section": "1.1.2",
+          "title": "리스트와 배열 비교",
+          "printed_page": 22
+        },
+        {
+          "section": "1.2",
+          "title": "링크드 리스트",
+          "printed_page": 23
+        },
+        {
+          "section": "1.2.1",
+          "title": "링크드 리스트의 노드 표현",
+          "printed_page": 24
+        },
+        {
+          "section": "1.2.2",
+          "title": "링크드 리스트의 주요 연산",
+          "printed_page": 25
+        },
+        {
+          "section": "1.2.3",
+          "title": "링크드 리스트 예제 프로그램",
+          "printed_page": 36
+        },
+        {
+          "section": "1.2.4",
+          "title": "링크드 리스트의 장단점",
+          "printed_page": 42
+        },
+        {
+          "section": "1.3",
+          "title": "더블 링크드 리스트",
+          "printed_page": 43
+        },
+        {
+          "section": "1.3.1",
+          "title": "더블 링크드 리스트의 주요 연산",
+          "printed_page": 44
+        },
+        {
+          "section": "1.3.2",
+          "title": "더블 링크드 리스트 예제 프로그램",
+          "printed_page": 50
+        },
+        {
+          "section": "1.4",
+          "title": "환형 링크드 리스트",
+          "printed_page": 56
+        },
+        {
+          "section": "1.4.1",
+          "title": "환형 더블 링크드 리스트의 주요 연산",
+          "printed_page": 58
+        },
+        {
+          "section": "1.4.2",
+          "title": "환형 더블 링크드 리스트 예제 프로그램",
+          "printed_page": 60
+        }
+      ]
+    },
+    {
+      "chapter": 2,
+      "title": "스택",
+      "pdf_start": 78,
+      "pdf_end": 120,
+      "first_section_printed_page": 71,
+      "sections": [
+        {
+          "section": "2.1",
+          "title": "스택 ADT",
+          "printed_page": 71
+        },
+        {
+          "section": "2.1.1",
+          "title": "스택의 개념",
+          "printed_page": 71
+        },
+        {
+          "section": "2.1.2",
+          "title": "스택의 핵심 기능: 삽입과 제거 연산",
+          "printed_page": 72
+        },
+        {
+          "section": "2.2",
+          "title": "배열로 구현하는 스택",
+          "printed_page": 73
+        },
+        {
+          "section": "2.2.1",
+          "title": "배열 기반 스택과 스택의 노드 표현",
+          "printed_page": 74
+        },
+        {
+          "section": "2.2.2",
+          "title": "배열 기반 스택의 기본 연산",
+          "printed_page": 75
+        },
+        {
+          "section": "2.2.3",
+          "title": "배열 기반 스택 예제 프로그램",
+          "printed_page": 77
+        },
+        {
+          "section": "2.3",
+          "title": "링크드 리스트로 구현하는 스택",
+          "printed_page": 81
+        },
+        {
+          "section": "2.3.1",
+          "title": "링크드 리스트 기반 스택과 스택의 노드 표현",
+          "printed_page": 81
+        },
+        {
+          "section": "2.3.2",
+          "title": "링크드 리스트 기반 스택의 기본 연산",
+          "printed_page": 83
+        },
+        {
+          "section": "2.3.3",
+          "title": "링크드 리스트 기반 스택 예제 프로그램",
+          "printed_page": 87
+        },
+        {
+          "section": "2.4",
+          "title": "스택의 응용: 사칙 연산 계산기",
+          "printed_page": 93
+        },
+        {
+          "section": "2.4.1",
+          "title": "수식의 중위 표기법과 후위 표기법",
+          "printed_page": 94
+        },
+        {
+          "section": "2.4.2",
+          "title": "후위 표기식을 계산하는 알고리즘",
+          "printed_page": 95
+        },
+        {
+          "section": "2.4.3",
+          "title": "중위 표기식을 후위 표기식으로 바꾸는 알고리즘",
+          "printed_page": 98
+        },
+        {
+          "section": "2.4.4",
+          "title": "사칙 연산 계산기 예제 프로그램",
+          "printed_page": 101
+        }
+      ]
+    },
+    {
+      "chapter": 3,
+      "title": "큐",
+      "pdf_start": 121,
+      "pdf_end": 148,
+      "first_section_printed_page": 115,
+      "sections": [
+        {
+          "section": "3.1",
+          "title": "큐 ADT",
+          "printed_page": 115
+        },
+        {
+          "section": "3.1.1",
+          "title": "큐의 개념",
+          "printed_page": 115
+        },
+        {
+          "section": "3.1.2",
+          "title": "큐의 핵심 기능: 삽입과 제거 연산",
+          "printed_page": 116
+        },
+        {
+          "section": "3.2",
+          "title": "순환 큐",
+          "printed_page": 117
+        },
+        {
+          "section": "3.2.1",
+          "title": "공백 상태와 포화 상태",
+          "printed_page": 120
+        },
+        {
+          "section": "3.2.2",
+          "title": "순환 큐의 기본 연산",
+          "printed_page": 121
+        },
+        {
+          "section": "3.2.3",
+          "title": "순환 큐 예제 프로그램",
+          "printed_page": 126
+        },
+        {
+          "section": "3.3",
+          "title": "링크드 큐",
+          "printed_page": 131
+        },
+        {
+          "section": "3.3.1",
+          "title": "링크드 큐의 기본 연산",
+          "printed_page": 132
+        },
+        {
+          "section": "3.3.2",
+          "title": "링크드 큐 예제 프로그램",
+          "printed_page": 135
+        }
+      ]
+    },
+    {
+      "chapter": 4,
+      "title": "트리",
+      "pdf_start": 149,
+      "pdf_end": 203,
+      "first_section_printed_page": 143,
+      "sections": [
+        {
+          "section": "4.1",
+          "title": "트리 ADT",
+          "printed_page": 143
+        },
+        {
+          "section": "4.1.1",
+          "title": "트리의 개념",
+          "printed_page": 143
+        },
+        {
+          "section": "4.1.2",
+          "title": "트리의 구성 요소",
+          "printed_page": 144
+        },
+        {
+          "section": "4.1.3",
+          "title": "트리 표현 방법",
+          "printed_page": 147
+        },
+        {
+          "section": "4.1.4",
+          "title": "노드 표현 방법",
+          "printed_page": 148
+        },
+        {
+          "section": "4.1.5",
+          "title": "트리의 기본 연산",
+          "printed_page": 150
+        },
+        {
+          "section": "4.1.6",
+          "title": "트리 예제 프로그램",
+          "printed_page": 154
+        },
+        {
+          "section": "4.2",
+          "title": "이진 트리",
+          "printed_page": 159
+        },
+        {
+          "section": "4.2.1",
+          "title": "이진 트리의 종류",
+          "printed_page": 160
+        },
+        {
+          "section": "4.2.2",
+          "title": "이진 트리의 순회",
+          "printed_page": 162
+        },
+        {
+          "section": "4.2.3",
+          "title": "이진 트리의 기본 연산",
+          "printed_page": 166
+        },
+        {
+          "section": "4.2.4",
+          "title": "이진 트리 예제 프로그램",
+          "printed_page": 170
+        },
+        {
+          "section": "4.3",
+          "title": "수식 트리",
+          "printed_page": 175
+        },
+        {
+          "section": "4.3.1",
+          "title": "수식 트리 구축 방법",
+          "printed_page": 176
+        },
+        {
+          "section": "4.3.2",
+          "title": "수식 트리의 구현",
+          "printed_page": 179
+        },
+        {
+          "section": "4.3.3",
+          "title": "수식 트리 예제 프로그램",
+          "printed_page": 181
+        },
+        {
+          "section": "4.4",
+          "title": "분리 집합",
+          "printed_page": 187
+        },
+        {
+          "section": "4.4.1",
+          "title": "분리 집합 표현",
+          "printed_page": 189
+        },
+        {
+          "section": "4.4.2",
+          "title": "분리 집합의 기본 연산",
+          "printed_page": 190
+        },
+        {
+          "section": "4.4.3",
+          "title": "분리 집합 예제 프로그램",
+          "printed_page": 192
+        }
+      ]
+    },
+    {
+      "chapter": 5,
+      "title": "정렬",
+      "pdf_start": 206,
+      "pdf_end": 239,
+      "first_section_printed_page": 201,
+      "sections": [
+        {
+          "section": "5.1",
+          "title": "정렬 알고리즘의 개요",
+          "printed_page": 201
+        },
+        {
+          "section": "5.2",
+          "title": "버블 정렬",
+          "printed_page": 202
+        },
+        {
+          "section": "5.2.1",
+          "title": "버블 정렬의 성능 측정",
+          "printed_page": 205
+        },
+        {
+          "section": "5.2.2",
+          "title": "버블 정렬 예제 프로그램",
+          "printed_page": 208
+        },
+        {
+          "section": "5.3",
+          "title": "삽입 정렬",
+          "printed_page": 210
+        },
+        {
+          "section": "5.3.1",
+          "title": "삽입 정렬의 성능 측정",
+          "printed_page": 212
+        },
+        {
+          "section": "5.3.2",
+          "title": "삽입 정렬 예제 프로그램",
+          "printed_page": 213
+        },
+        {
+          "section": "5.4",
+          "title": "퀵 정렬",
+          "printed_page": 215
+        },
+        {
+          "section": "5.4.1",
+          "title": "퀵 정렬 사용 전 해결해야 하는 2가지 문제",
+          "printed_page": 219
+        },
+        {
+          "section": "5.4.2",
+          "title": "퀵 정렬 예제 프로그램",
+          "printed_page": 220
+        },
+        {
+          "section": "5.4.3",
+          "title": "퀵 정렬의 성능 측정",
+          "printed_page": 223
+        },
+        {
+          "section": "5.5",
+          "title": "C 언어 표준 라이브러리의 퀵 정렬 함수: qsort()",
+          "printed_page": 227
+        },
+        {
+          "section": "5.5.1",
+          "title": "qsort() 함수 예제 프로그램",
+          "printed_page": 229
+        },
+        {
+          "section": "5.5.2",
+          "title": "qsort() 응용 문제",
+          "printed_page": 231
+        }
+      ]
+    },
+    {
+      "chapter": 6,
+      "title": "탐색",
+      "pdf_start": 240,
+      "pdf_end": 307,
+      "first_section_printed_page": 235,
+      "sections": [
+        {
+          "section": "6.1",
+          "title": "탐색 알고리즘의 개요",
+          "printed_page": 235
+        },
+        {
+          "section": "6.2",
+          "title": "순차 탐색",
+          "printed_page": 235
+        },
+        {
+          "section": "6.2.1",
+          "title": "전진 이동법",
+          "printed_page": 237
+        },
+        {
+          "section": "6.2.2",
+          "title": "전위법",
+          "printed_page": 239
+        },
+        {
+          "section": "6.2.3",
+          "title": "계수법",
+          "printed_page": 241
+        },
+        {
+          "section": "6.3",
+          "title": "이진 탐색",
+          "printed_page": 242
+        },
+        {
+          "section": "6.3.1",
+          "title": "이진 탐색의 성능 측정",
+          "printed_page": 243
+        },
+        {
+          "section": "6.3.2",
+          "title": "이진 탐색의 구현",
+          "printed_page": 244
+        },
+        {
+          "section": "6.3.3",
+          "title": "이진 탐색 예제 프로그램: 두 번째 최종 시험 문제",
+          "printed_page": 245
+        },
+        {
+          "section": "6.3.4",
+          "title": "C 언어 표준 라이브러리의 이진 탐색 함수: bsearch()",
+          "printed_page": 248
+        },
+        {
+          "section": "6.3.5",
+          "title": "bsearch() 함수 예제 프로그램",
+          "printed_page": 249
+        },
+        {
+          "section": "6.4",
+          "title": "이진 탐색 트리",
+          "printed_page": 250
+        },
+        {
+          "section": "6.4.1",
+          "title": "이진 탐색 트리 표현",
+          "printed_page": 251
+        },
+        {
+          "section": "6.4.2",
+          "title": "이진 탐색 트리의 기본 연산",
+          "printed_page": 252
+        },
+        {
+          "section": "6.4.3",
+          "title": "이진 탐색 트리 예제 프로그램",
+          "printed_page": 259
+        },
+        {
+          "section": "6.4.4",
+          "title": "이진 탐색 트리의 문제점",
+          "printed_page": 266
+        },
+        {
+          "section": "6.5",
+          "title": "레드 블랙 트리",
+          "printed_page": 267
+        },
+        {
+          "section": "6.5.1",
+          "title": "레드 블랙 트리 구현 규칙",
+          "printed_page": 268
+        },
+        {
+          "section": "6.5.2",
+          "title": "레드 블랙 트리의 기본 연산",
+          "printed_page": 269
+        },
+        {
+          "section": "6.5.3",
+          "title": "레드 블랙 트리 예제 프로그램",
+          "printed_page": 286
+        }
+      ]
+    },
+    {
+      "chapter": 7,
+      "title": "우선순위 큐와 힙",
+      "pdf_start": 308,
+      "pdf_end": 334,
+      "first_section_printed_page": 305,
+      "sections": [
+        {
+          "section": "7.1",
+          "title": "우선순위 큐",
+          "printed_page": 305
+        },
+        {
+          "section": "7.1.1",
+          "title": "우선순위 큐의 삽입/제거 연산",
+          "printed_page": 305
+        },
+        {
+          "section": "7.1.2",
+          "title": "우선순위 큐의 구현",
+          "printed_page": 306
+        },
+        {
+          "section": "7.2",
+          "title": "힙",
+          "printed_page": 307
+        },
+        {
+          "section": "7.2.1",
+          "title": "힙의 삽입 연산",
+          "printed_page": 308
+        },
+        {
+          "section": "7.2.2",
+          "title": "힙의 최솟값 삭제 연산",
+          "printed_page": 310
+        },
+        {
+          "section": "7.2.3",
+          "title": "힙의 구현",
+          "printed_page": 312
+        },
+        {
+          "section": "7.2.4",
+          "title": "힙 예제 프로그램",
+          "printed_page": 316
+        },
+        {
+          "section": "7.3",
+          "title": "힙 기반 우선순위 큐의 구현",
+          "printed_page": 322
+        }
+      ]
+    },
+    {
+      "chapter": 8,
+      "title": "해시 테이블",
+      "pdf_start": 335,
+      "pdf_end": 378,
+      "first_section_printed_page": 333,
+      "sections": [
+        {
+          "section": "8.1",
+          "title": "해시 테이블의 개요",
+          "printed_page": 333
+        },
+        {
+          "section": "8.1.1",
+          "title": "해시",
+          "printed_page": 333
+        },
+        {
+          "section": "8.1.2",
+          "title": "해시 테이블",
+          "printed_page": 335
+        },
+        {
+          "section": "8.2",
+          "title": "해시 함수",
+          "printed_page": 337
+        },
+        {
+          "section": "8.2.1",
+          "title": "나눗셈법",
+          "printed_page": 337
+        },
+        {
+          "section": "8.2.2",
+          "title": "자릿수 접기",
+          "printed_page": 343
+        },
+        {
+          "section": "8.2.3",
+          "title": "해시 함수의 한계: 충돌",
+          "printed_page": 346
+        },
+        {
+          "section": "8.3",
+          "title": "충돌 해결 기법",
+          "printed_page": 346
+        },
+        {
+          "section": "8.3.1",
+          "title": "체이닝",
+          "printed_page": 347
+        },
+        {
+          "section": "8.3.2",
+          "title": "개방 주소법",
+          "printed_page": 358
+        }
+      ]
+    },
+    {
+      "chapter": 9,
+      "title": "그래프",
+      "pdf_start": 379,
+      "pdf_end": 455,
+      "first_section_printed_page": 377,
+      "sections": [
+        {
+          "section": "9.1",
+          "title": "그래프의 개요",
+          "printed_page": 377
+        },
+        {
+          "section": "9.1.1",
+          "title": "그래프의 탄생 배경: 오일러의 문제 해결 도구",
+          "printed_page": 377
+        },
+        {
+          "section": "9.1.2",
+          "title": "그래프의 정의",
+          "printed_page": 380
+        },
+        {
+          "section": "9.2",
+          "title": "그래프 표현 방법",
+          "printed_page": 382
+        },
+        {
+          "section": "9.2.1",
+          "title": "인접 행렬",
+          "printed_page": 382
+        },
+        {
+          "section": "9.2.2",
+          "title": "인접 리스트",
+          "printed_page": 384
+        },
+        {
+          "section": "9.3",
+          "title": "그래프 순회 기법",
+          "printed_page": 394
+        },
+        {
+          "section": "9.3.1",
+          "title": "깊이 우선 탐색",
+          "printed_page": 395
+        },
+        {
+          "section": "9.3.2",
+          "title": "너비 우선 탐색",
+          "printed_page": 398
+        },
+        {
+          "section": "9.3.3",
+          "title": "그래프 순회 예제 프로그램",
+          "printed_page": 402
+        },
+        {
+          "section": "9.4",
+          "title": "위상 정렬",
+          "printed_page": 407
+        },
+        {
+          "section": "9.4.1",
+          "title": "위상 정렬의 동작 방식",
+          "printed_page": 408
+        },
+        {
+          "section": "9.4.2",
+          "title": "위상 정렬 예제 프로그램",
+          "printed_page": 414
+        },
+        {
+          "section": "9.5",
+          "title": "최소 신장 트리",
+          "printed_page": 418
+        },
+        {
+          "section": "9.5.1",
+          "title": "프림 알고리즘",
+          "printed_page": 420
+        },
+        {
+          "section": "9.5.2",
+          "title": "크루스칼 알고리즘",
+          "printed_page": 428
+        },
+        {
+          "section": "9.5.3",
+          "title": "최소 신장 트리 예제 프로그램",
+          "printed_page": 437
+        },
+        {
+          "section": "9.6",
+          "title": "최단 경로 탐색: 데이크스트라 알고리즘",
+          "printed_page": 442
+        },
+        {
+          "section": "9.6.1",
+          "title": "데이크스트라 알고리즘의 개념",
+          "printed_page": 442
+        },
+        {
+          "section": "9.6.2",
+          "title": "데이크스트라 알고리즘 예제 프로그램",
+          "printed_page": 447
+        }
+      ]
+    },
+    {
+      "chapter": 10,
+      "title": "문자열 탐색",
+      "pdf_start": 456,
+      "pdf_end": 494,
+      "first_section_printed_page": 457,
+      "sections": [
+        {
+          "section": "10.1",
+          "title": "문자열 탐색 알고리즘의 개요",
+          "printed_page": 457
+        },
+        {
+          "section": "10.2",
+          "title": "고지식한 탐색 알고리즘",
+          "printed_page": 458
+        },
+        {
+          "section": "10.2.1",
+          "title": "고지식한 탐색의 동작 방식",
+          "printed_page": 458
+        },
+        {
+          "section": "10.2.2",
+          "title": "고지식한 탐색 알고리즘 예제 프로그램",
+          "printed_page": 459
+        },
+        {
+          "section": "10.3",
+          "title": "카프–라빈 알고리즘",
+          "printed_page": 463
+        },
+        {
+          "section": "10.3.1",
+          "title": "카프–라빈 알고리즘의 동작 방식",
+          "printed_page": 463
+        },
+        {
+          "section": "10.3.2",
+          "title": "카프–라빈 알고리즘 예제 프로그램",
+          "printed_page": 467
+        },
+        {
+          "section": "10.4",
+          "title": "KMP 알고리즘",
+          "printed_page": 471
+        },
+        {
+          "section": "10.4.1",
+          "title": "KMP 알고리즘의 동작 방식",
+          "printed_page": 471
+        },
+        {
+          "section": "10.4.2",
+          "title": "경계 정보 사전 계산 방법",
+          "printed_page": 473
+        },
+        {
+          "section": "10.4.3",
+          "title": "KMP 알고리즘 예제 프로그램",
+          "printed_page": 476
+        },
+        {
+          "section": "10.5",
+          "title": "보이어–무어 알고리즘",
+          "printed_page": 479
+        },
+        {
+          "section": "10.5.1",
+          "title": "나쁜 문자 이동",
+          "printed_page": 480
+        },
+        {
+          "section": "10.5.2",
+          "title": "착한 접미부 이동",
+          "printed_page": 482
+        },
+        {
+          "section": "10.5.3",
+          "title": "보이어–무어 알고리즘의 전처리 과정",
+          "printed_page": 483
+        },
+        {
+          "section": "10.5.4",
+          "title": "보이어–무어 알고리즘 예제 프로그램",
+          "printed_page": 487
+        }
+      ]
+    },
+    {
+      "chapter": 11,
+      "title": "알고리즘 성능 분석",
+      "pdf_start": 497,
+      "pdf_end": 520,
+      "first_section_printed_page": 499,
+      "sections": [
+        {
+          "section": "11.1",
+          "title": "알고리즘 성능 측정 기준과 수행 시간",
+          "printed_page": 499
+        },
+        {
+          "section": "11.1.1",
+          "title": "알고리즘 성능 측정 기준",
+          "printed_page": 499
+        },
+        {
+          "section": "11.1.2",
+          "title": "알고리즘 수행 시간 분석",
+          "printed_page": 500
+        },
+        {
+          "section": "11.2",
+          "title": "점근 표기법",
+          "printed_page": 501
+        },
+        {
+          "section": "11.2.1",
+          "title": "O 표기법",
+          "printed_page": 503
+        },
+        {
+          "section": "11.2.2",
+          "title": "Ω 표기법",
+          "printed_page": 506
+        },
+        {
+          "section": "11.2.3",
+          "title": "Θ 표기법",
+          "printed_page": 507
+        },
+        {
+          "section": "11.3",
+          "title": "재귀 알고리즘 성능 분석",
+          "printed_page": 508
+        },
+        {
+          "section": "11.3.1",
+          "title": "재귀 방정식과 재귀 알고리즘",
+          "printed_page": 508
+        },
+        {
+          "section": "11.3.2",
+          "title": "퀵 정렬의 성능 분석",
+          "printed_page": 511
+        },
+        {
+          "section": "11.3.3",
+          "title": "마스터 정리",
+          "printed_page": 517
+        }
+      ]
+    },
+    {
+      "chapter": 12,
+      "title": "분할 정복",
+      "pdf_start": 521,
+      "pdf_end": 545,
+      "first_section_printed_page": 523,
+      "sections": [
+        {
+          "section": "12.1",
+          "title": "분할 정복 기법의 개요",
+          "printed_page": 523
+        },
+        {
+          "section": "12.1.1",
+          "title": "분할 정복 전술의 탄생 배경: 아우스터리츠 전투",
+          "printed_page": 523
+        },
+        {
+          "section": "12.1.2",
+          "title": "분할 정복 알고리즘의 개념",
+          "printed_page": 524
+        },
+        {
+          "section": "12.2",
+          "title": "병합 정렬",
+          "printed_page": 525
+        },
+        {
+          "section": "12.2.1",
+          "title": "병합 정렬 동작 방식",
+          "printed_page": 526
+        },
+        {
+          "section": "12.2.2",
+          "title": "병합 정렬 알고리즘의 구현",
+          "printed_page": 529
+        },
+        {
+          "section": "12.3",
+          "title": "거듭 제곱 계산",
+          "printed_page": 532
+        },
+        {
+          "section": "12.3.1",
+          "title": "거듭 제곱 계산법",
+          "printed_page": 532
+        },
+        {
+          "section": "12.3.2",
+          "title": "거듭 제곱 계산 알고리즘의 구현",
+          "printed_page": 534
+        },
+        {
+          "section": "12.4",
+          "title": "분할 정복 기반 피보나치 수 구하기",
+          "printed_page": 536
+        },
+        {
+          "section": "12.4.1",
+          "title": "피보나치 수를 구하는 방법",
+          "printed_page": 537
+        },
+        {
+          "section": "12.4.2",
+          "title": "분할 정복으로 피보나치 수를 구하는 방법",
+          "printed_page": 539
+        },
+        {
+          "section": "12.4.3",
+          "title": "분할 정복 기반 피보나치 수 구하기 알고리즘의 구현",
+          "printed_page": 541
+        }
+      ]
+    },
+    {
+      "chapter": 13,
+      "title": "동적 계획법",
+      "pdf_start": 546,
+      "pdf_end": 568,
+      "first_section_printed_page": 549,
+      "sections": [
+        {
+          "section": "13.1",
+          "title": "동적 계획법의 개요",
+          "printed_page": 549
+        },
+        {
+          "section": "13.1.1",
+          "title": "동적 계획법의 탄생 배경",
+          "printed_page": 549
+        },
+        {
+          "section": "13.1.2",
+          "title": "동적 계획법의 개념",
+          "printed_page": 550
+        },
+        {
+          "section": "13.2",
+          "title": "동적 계획법 기반 피보나치 수 구하기",
+          "printed_page": 551
+        },
+        {
+          "section": "13.2.1",
+          "title": "동적 계획법으로 피보나치 수를 구하는 방법",
+          "printed_page": 551
+        },
+        {
+          "section": "13.2.2",
+          "title": "동적 계획법 기반 피보나치 수 구하기 알고리즘의 구현",
+          "printed_page": 553
+        },
+        {
+          "section": "13.3",
+          "title": "최장 공통 부분 수열",
+          "printed_page": 555
+        },
+        {
+          "section": "13.3.1",
+          "title": "LCS 알고리즘",
+          "printed_page": 556
+        },
+        {
+          "section": "13.3.2",
+          "title": "동적 계획법 기반 LCS 알고리즘의 구현",
+          "printed_page": 559
+        }
+      ]
+    },
+    {
+      "chapter": 14,
+      "title": "탐욕 알고리즘",
+      "pdf_start": 569,
+      "pdf_end": 602,
+      "first_section_printed_page": 573,
+      "sections": [
+        {
+          "section": "14.1",
+          "title": "탐욕 알고리즘의 개요",
+          "printed_page": 573
+        },
+        {
+          "section": "14.2",
+          "title": "거스름돈 줄이기 문제",
+          "printed_page": 574
+        },
+        {
+          "section": "14.2.1",
+          "title": "거스름돈 계산 예제 프로그램",
+          "printed_page": 575
+        },
+        {
+          "section": "14.2.2",
+          "title": "탐욕 알고리즘의 중요한 속성",
+          "printed_page": 578
+        },
+        {
+          "section": "14.3",
+          "title": "크루스칼 알고리즘 다시 보기",
+          "printed_page": 579
+        },
+        {
+          "section": "14.4",
+          "title": "데이크스트라 알고리즘 다시 보기",
+          "printed_page": 582
+        },
+        {
+          "section": "14.5",
+          "title": "허프만 코딩",
+          "printed_page": 585
+        },
+        {
+          "section": "14.5.1",
+          "title": "고정 길이 코드와 접두어 코드",
+          "printed_page": 585
+        },
+        {
+          "section": "14.5.2",
+          "title": "허프만 트리 구축",
+          "printed_page": 587
+        },
+        {
+          "section": "14.5.3",
+          "title": "데이터 압축",
+          "printed_page": 591
+        },
+        {
+          "section": "14.5.4",
+          "title": "데이터 압축 해제",
+          "printed_page": 591
+        },
+        {
+          "section": "14.5.5",
+          "title": "허프만 코딩 예제 프로그램",
+          "printed_page": 595
+        }
+      ]
+    },
+    {
+      "chapter": 15,
+      "title": "백트래킹",
+      "pdf_start": 603,
+      "pdf_end": 636,
+      "first_section_printed_page": 607,
+      "sections": [
+        {
+          "section": "15.1",
+          "title": "백트래킹의 개요",
+          "printed_page": 607
+        },
+        {
+          "section": "15.1.1",
+          "title": "백트래킹의 사례: 테세우스 이야기",
+          "printed_page": 607
+        },
+        {
+          "section": "15.1.2",
+          "title": "백트래킹의 개념",
+          "printed_page": 608
+        },
+        {
+          "section": "15.2",
+          "title": "미로 탈출로 찾기",
+          "printed_page": 612
+        },
+        {
+          "section": "15.2.1",
+          "title": "재귀 호출 기반 백트래킹",
+          "printed_page": 612
+        },
+        {
+          "section": "15.2.2",
+          "title": "미로 탈출 알고리즘의 구현",
+          "printed_page": 614
+        },
+        {
+          "section": "15.2.3",
+          "title": "미로 탈출 알고리즘 예제 프로그램",
+          "printed_page": 617
+        },
+        {
+          "section": "15.3",
+          "title": "8개의 퀸 문제",
+          "printed_page": 624
+        },
+        {
+          "section": "15.3.1",
+          "title": "8개의 퀸이 만드는 해공간과 백트래킹",
+          "printed_page": 626
+        },
+        {
+          "section": "15.3.2",
+          "title": "N개의 퀸 문제 풀이 알고리즘의 구현",
+          "printed_page": 629
+        },
+        {
+          "section": "15.3.3",
+          "title": "N개의 퀸 문제 풀이 예제 프로그램",
+          "printed_page": 633
+        }
+      ]
+    }
+  ],
+  "parts": [
+    {
+      "part": 1,
+      "title": "자료구조",
+      "divider_pdf_pages": [
+        27,
+        28
+      ],
+      "chapters": [
+        1,
+        2,
+        3,
+        4
+      ]
+    },
+    {
+      "part": 2,
+      "title": "알고리즘",
+      "divider_pdf_pages": [
+        204,
+        205
+      ],
+      "chapters": [
+        5,
+        6,
+        7,
+        8,
+        9,
+        10
+      ]
+    },
+    {
+      "part": 3,
+      "title": "알고리즘 설계 기법",
+      "divider_pdf_pages": [
+        495,
+        496
+      ],
+      "chapters": [
+        11,
+        12,
+        13,
+        14,
+        15
+      ]
+    }
+  ],
+  "warnings": [
+    "인쇄 쪽수와 PDF면의 차이가 일정하지 않음. 전체 고정 offset 인용 금지.",
+    "첨부 마지막 PDF636은 인쇄 p.638 연습문제. 목차의 찾아보기 p.639 이후는 첨부되지 않음.",
+    "첨부본에는 인쇄 p.16, 68, 112, 196, 294–295, 330, 406–407, 454, 494, 546, 570이 수록되지 않음. 없는 면은 외부 정보로 보충하지 않음.",
+    "이 파일의 절 시작 인쇄 쪽수는 목차 이미지 PDF1–11에서 직접 확인하였으며 절 PDF면은 별도 대조 필요."
+  ],
+  "visual_checks": [
+    "source_b_catalog/p001.png–p011.png",
+    "source_b_catalog/chapter_covers.jpg",
+    "source_b_catalog/boundary_00.jpg",
+    "source_b_catalog/boundary_24.jpg",
+    "source_b_catalog/boundary_48.jpg",
+    "source_b_catalog/boundary_72.jpg"
+  ],
+  "printed_page_mapping": [
+    {
+      "pdf_start": 12,
+      "pdf_end": 26,
+      "printed_equals_pdf_minus": 11,
+      "printed_start": 1,
+      "printed_end": 15
+    },
+    {
+      "pdf_start": 27,
+      "pdf_end": 77,
+      "printed_equals_pdf_minus": 10,
+      "printed_start": 17,
+      "printed_end": 67
+    },
+    {
+      "pdf_start": 78,
+      "pdf_end": 120,
+      "printed_equals_pdf_minus": 9,
+      "printed_start": 69,
+      "printed_end": 111
+    },
+    {
+      "pdf_start": 121,
+      "pdf_end": 203,
+      "printed_equals_pdf_minus": 8,
+      "printed_start": 113,
+      "printed_end": 195
+    },
+    {
+      "pdf_start": 204,
+      "pdf_end": 300,
+      "printed_equals_pdf_minus": 7,
+      "printed_start": 197,
+      "printed_end": 293
+    },
+    {
+      "pdf_start": 301,
+      "pdf_end": 334,
+      "printed_equals_pdf_minus": 5,
+      "printed_start": 296,
+      "printed_end": 329
+    },
+    {
+      "pdf_start": 335,
+      "pdf_end": 409,
+      "printed_equals_pdf_minus": 4,
+      "printed_start": 331,
+      "printed_end": 405
+    },
+    {
+      "pdf_start": 410,
+      "pdf_end": 455,
+      "printed_equals_pdf_minus": 2,
+      "printed_start": 408,
+      "printed_end": 453
+    },
+    {
+      "pdf_start": 456,
+      "pdf_end": 494,
+      "printed_equals_pdf_minus": 1,
+      "printed_start": 455,
+      "printed_end": 493
+    },
+    {
+      "pdf_start": 495,
+      "pdf_end": 545,
+      "printed_equals_pdf_minus": 0,
+      "printed_start": 495,
+      "printed_end": 545
+    },
+    {
+      "pdf_start": 546,
+      "pdf_end": 568,
+      "printed_equals_pdf_minus": -1,
+      "printed_start": 547,
+      "printed_end": 569
+    },
+    {
+      "pdf_start": 569,
+      "pdf_end": 636,
+      "printed_equals_pdf_minus": -2,
+      "printed_start": 571,
+      "printed_end": 638
+    }
+  ],
+  "missing_printed_pages": [
+    16,
+    68,
+    112,
+    196,
+    294,
+    295,
+    330,
+    406,
+    407,
+    454,
+    494,
+    546,
+    570
+  ],
+  "visually_confirmed_content_gaps": [
+    {
+      "before_pdf": 300,
+      "before_printed": 293,
+      "after_pdf": 301,
+      "after_printed": 296,
+      "missing": [
+        294,
+        295
+      ],
+      "effect": "6.5.3 레드 블랙 트리 예제 프로그램의 코드 일부가 수록되지 않음"
+    },
+    {
+      "before_pdf": 409,
+      "before_printed": 405,
+      "after_pdf": 410,
+      "after_printed": 408,
+      "missing": [
+        406,
+        407
+      ],
+      "effect": "9.3.3 예제 프로그램의 코드 뒷부분과 9.4 위상 정렬 첫 면이 수록되지 않음"
+    }
+  ],
+  "mapping_verification": "OCR 하단 쪽번호 후보 571면의 offset가 12개 연속구간 안에서 모두 일치. 변경구간 양끝 면을 이미지로 확인. 번호 없는 장·파트 표지는 인접 본문에서 연속성으로 대응."
+}

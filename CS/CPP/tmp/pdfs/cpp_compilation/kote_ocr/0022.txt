@@ -1,0 +1,25 @@
+13.1 연습 문제 1: 동적 크기 배열 구현하기
+학교에서 학생 정보를 관리하는 간단한 우우 프로그램을 만들어보겠습니다. 한 반의 학생 수와 학
+생 정보는 프로그램 실행 시 입력으로 받을 것입니다. 학생 데이터를 관리하기 위해 배열과 유사
+한 자료 구조를 A卜우할 것이고, 이 배열은 다양한 그기를 지원해야 합니다. 또한 여러 반을 하나로
+합치는 기능도 지원할 것입니다.
+다음 순서로 연습 문제를 구현해보겠습니다.
+1. 필요한 헤더 파일을 포함합니다.
+#include <iostream〉
+#include 〈sstream〉
+#include 〈algorithm〉
+2. dynamic-array라는 이름의 클래스 템플릿을 작성하고, 주요 멤버 변수를 선언합니다.
+template 〈typename T>
+class dynamic_array
+T* data;
+S1ze t n;
+3. 배열 크기를 인자로 받는 생성자(constmctor)와 복사 생성자를 추가합니다.
+public:
+dynamic_array(int n)
+this-〉n =
+data = new T[nl;
+dynamic_array(const dynamic_array〈T>& other)
+n = other.n;
+data = new T[n];
+for (int i =0; 〈n; 1++)
+data[il = other[il;

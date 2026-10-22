@@ -1,0 +1,50 @@
+207
+송신자
+send pkt0
+send pktl
+send pkt2
+send pkt3
+(wait)
+(105S)
+rCV
+rcv
+send
+ACKO
+pkt4
+ACKI
+pkt5
+pkt2 timeout
+send pkt2
+send pkt3
+send pkt4
+send pkt5
+그림 3.22 • Go-Back-N에서의 동작
+3.4 • 신뢰성 있는 데이터 전송의 원리
+수신자
+• rcv pktO
+. send ACKO
+• rcv pktl
+• send ACKI
+. rcv pkt3, discard
+• send ACKI
+• rcv pkt4, dascard
+. send ACKI
+• rcv pkt5, discard
+. send ACKI
+• rcv pkt2, deliver
+. send ACK2
+rcv pkt3, deliver
+• send ACK3
+는 하나의 새로운 패것(pkt4와 pkt5, 각각)을 전송한다. 수신 측에서 패것 2가 손실되
+있으므로 패킷 3, 4, 5는 순서가 잘못된 패킷으로 발견되어 제거된다.
+GBN에 대한 논의를 끝내기 전에, 어떤 한 프로토콜 스택에서 이러한 프로토콜의
+구현은 그림 3.20의 확장된 FSM의 구현과 유사한 구조를 가진다는 것에 주목하라. 또
+한 이 구현은 발생할 수 있는 다양한 이벤트에 대한 대응으로 취할 수 있는 동작을 구
+현하는 다양한 프로시저 (procedure)들과 유사하다. 이러한 이벤트-기반 프로그래밍
+(event-based 다양한 프로시저들은 프로토콜 스택에서 다른
+프로시저에 의해서 야기되거나 인터럽트의 결과로 요청될 것이다. 송신자에서 이러한
+이벤트는 (1) rdt_send () 를 호출하기 위한 상위 계층 개체로부터의 호출, (2) 타이
+머 인터럽트, (3) 패킷이 도착했을 때 rdt rcv()를 호출하기 위한 하위 계층으로부
+터의 호출이다. 이 장의 끝에 있는 프로그래밍 연습문제들은 이러한 루틴들을 시뮬레
+이선이지만 실제와 같은 네트워크 세팅으로 구현할 기회를 줄 것이다
+여기에서 GBN 프로토콜이 3.5절에서 TCP의 신뢰적인 데이터 전송 구성요소를

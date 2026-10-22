@@ -1,0 +1,22 @@
+void SBT DestroyTree( Node )
+if ( Node == WLL )
+return;
+// 왼쪽 하위 트리 소일
+SBT DestroyTree( Node->Left );
+t/ 오른쪽 하위 트리 소일
+SBT DestroyTree( Node->Right );
+// 부리 노드 소일
+SBT_DestroyNode( N0de );
+42.4 이진 트리 예제 프로그램
+지금까지 다룬 내펑들을 모두 모아서 c 언어 코드로 만들어보겠습니다. 이번 예제 프로그램에서 사
+용되는 파일은 모두 3개로 BinaryTree.h와 BinaryTree.c는 이진 트리의 생성과 소멸, 여러 가지
+순회 기법을 응용한 이진 트리 출력 함수들을 정의하고 Test-BinaryTree.c는 BinaryTree.h와
+BinaryTree.c에서 선언 및 구현된 여러 함수를 테스트합니다.
+이 예제에서 구축할 이진 트리는 다음과 같은 모습입니다 이제 코딩을 시작하겠습니다.
+D
+F
+G
+u2/BinaryTree/BinaryTree. h
+01 tifrdef BINARY TREE-H
+02 BINARY TREE-H
+170 Part 01 • 자료구조

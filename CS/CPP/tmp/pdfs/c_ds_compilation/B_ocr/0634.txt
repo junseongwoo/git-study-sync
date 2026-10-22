@@ -1,0 +1,38 @@
+05
+09
+10
+12
+13
+14
+16
+17
+19
+20
+22
+23
+24
+25
+26
+27
+29
+30
+int main(int argc, char• argv(l)
+int i
+int • 0;
+int SolutionCount = 0:
+int• (01曰s.
+if ( (2 )
+printf(llsage 아 Queens〉•, argv[0J);
+return 1;
+NumberOfQueens atoi(argv(ll);
+(01-5 (int•)calloc( NumberOfQueens, sizeof(int) );
+for ( i=0; i++ )
+(01″s[이 = i;
+FindSolutionForQueen(C01umns, 0, NumberOfQueens, &SolutionCount);
+free ( CoIumns );
+return 0;
+돈 실행 결과
+>NQueens 8
+Solution
+636
+Part 03 • 알고리즘 설계 기법

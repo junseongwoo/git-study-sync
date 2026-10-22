@@ -1,0 +1,36 @@
+StackType 되
+char ch, open-ch;
+int 5, strten(in); // n- 문자열의 길이
+init stack(&s) ;
+ch= in[iJ;
+svntch (ch) (
+case ' (': case [|
+push(&s, ch);
+break;
+case ')' : case '] '
+// 스택의 *기하
+// : 다음 문자
+case ' {'
+case '} '
+if (is-empty(&s)) return 0;
+else {
+open-ch : pop(&s) ;
+if ((open-ch =
+(open_ch =
+(open-ch =
+return 0;
+break;
+if (!is_empty(&s)) return 0;
+return 1;
+int main(void)
+if (check_matching(p) == 1)
+// 스택에 님아있으면 오류
+printf("%s 괄호검사성공\n", p);
+printf("%s 괄호검사실패\n", p);
+return 0;
+실행결과
+{ A[(i+1)]=@; } 괄호검사성공
+01 다음과 같은 수식이 스택을 이용하여서 어떻게 처리되는지 그림으로 그러서 실명하라.
+{(a+b)*k[2+3*nl}
+CHAPTER04 스택
+123

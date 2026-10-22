@@ -1,0 +1,21 @@
+G.edges.push-back(Edge {되 i, 0)):
+distance[sl
+for (int i =@; i <G.V; i++)
+for (auto& e •• 6 edges)
+if (distance[e.srcl == UNKNOWN)
+continue;
+if (distance[e dstl 〉 distance[e.src] + e.weight)
+distance[e.dst] = distance[e.src] 十 e.weight;
+for (auto& e : G.edges)
+if (distance[e.src]
+continue,
+= UNKNOWN)
+if (distance[e.dst] 〉 distance[e.src] + e.weight)
+return 0;
+return distance;
+8. 연습 문제 34에서 했던 것처럼 Be11manFord() 함수가 거리 벡터를 반환하면, 이 벡터가 비어
+있는지를 확인합니다. 만약 반환된 벡터가 비어 있다면 VA니D를 반환합니다. 이는 주어진 그
+래프가 유효하지만, 흥미로운 그래프는 아니라는 의미입니다. 반환된 벡터가 비어 있지 않다
+면 존슨 알고리즘을 계속 수행합니다. 즉, 에지 가중치를 재설정하고 각각의 정점에서 다익스
+트라 알고리즘을 수행합니다.
+RESULT TestGraph(Graph 6)

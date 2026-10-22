@@ -1,0 +1,67 @@
+091
+092
+093
+094
+095
+096
+097
+098
+099
+100
+101
+102
+103
+104
+105
+106
+107
+108
+109
+110
+112
+114
+115
+116
+117
+118
+120
+122
+123
+124
+125
+126
+127
+128
+129
+130
+HuffmanNode* BitNode = Huffman-CreateN0de( Symb011nfoTabIe[il ):
+NewNode.Priority = SymbolInfoTable[iJ.Frequency;
+= BitNode;
+NewNode .Data
+PQ-Enqueue( 國, NewNode ):
+while ( PQ-YJsedSize 〉 1 )
+NewData = { 0, 0 };
+SymboIInfo
+HuffmanNode* BitNode = Huffman CreateNode( NewData );
+HuffmanNode* Left;
+HuffmanNode* Right;
+PQNode QLeft;
+PQNode QRight;
+PQNode NewNode;
+PQ-Dequeue( PQ, QLeft );
+PQ-Dequeue( PQ, QRight );
+Left = 대uffmanNode*)QLeft Data;
+Right = 대uffmanNode*)QRight.Data;
+BitNode->Data.Symb01 = 0:
+Bi tNode->Data .Frequency
+Left->Data.Frequency + Right-»ata.Frequency;
+BitNode->Left = Left;
+BitNode->Right = Right,
+NewNode.Priority = BitNode->Data.Frequency,
+= BitNode,
+NewNode Data
+PQ-Enqueue( PQ, NewNode ):
+PQ-Dequeue( PQ, aesult ),•
+*Tree = 대uffmanNode*)Result Data;
+Chapter 14 • 탐욕 알고리중
+599

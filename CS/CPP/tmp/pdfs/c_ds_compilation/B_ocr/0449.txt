@@ -1,0 +1,20 @@
+120
+1%
+9.62 데이크스트라 알고리즘 예제 프로그램
+이제 데이크스트라 알고리즘을 코-드로 구현해볼 차례입니다. 이 예제 프로그램은 다음과 같이 7개
+의 파일로 구성됩니다.
+• PnorityQueue.c
+• PnorityQueue.h
+• Graph.c
+• Graphh
+• ShortestPath.c
+• ShortestPath.h
+• Test_ShortestPath.c
+이 중에서 PnorityQueue.h, PriorityQueue.c, Graph.h. Graph.c 4개 파일은 이미 작성해
+둔 것이 있으므로 새로 민들 필요가 없습니다. 새로 작성해야 하는 소스 코드는 ShortestPath.h.
+ShortestPath.c, Test ShortestPath.c, 모두 3개입니다.
+ShortestPath.h와 shortestpath.c에서 정의하는 Dijkstra()가 바로 데이크스트라의 최단 경로
+알고리즘을 구현한 함수입니다. 앞에서 데이크스트라 알고리즘이 프림 알고리즘과 비슷한 방식으로
+동작한다고 설명했는데. Dijksua() 함수의 내용도 이전 절에서 구현한 pnm( ) 함수와 거의 비슷합
+니다. 따라서 PHm() 함수의 내핑을 이해했다면 Dijkstra() 코드도 어렵지 않게 이해할수 있습니다.
+Chapter 09 • 그래프 447

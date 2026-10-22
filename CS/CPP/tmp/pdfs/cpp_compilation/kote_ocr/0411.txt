@@ -1,0 +1,21 @@
+8. 다시 SingleSourceShortestPaths() 함수로 돌아와서, 크기가 v인 정수 벡터 distance를 정의
+하겠습니다. 그리고 이 벡터를 ShortestPath-Memoization() 함수 반환값으로 채웁니다.
+vector<int〉 distance(V);
+for (int i =0; i 〈V; i++)
+distance[il = ShortestPath_Memoization(V
+return distance;
+1, 1, adj—t, weight t);
+9. 다시 main() 함수로 돌아와서, 2치원 정수 벡터 paths를 정의하겠습니다. 그리고 0번부터 v - 1
+번 정점에 대해 SingleSourceShortestPaths() 함수를 호출한 결괴를 이용하여 paths 벡터를
+채웁니다.
+vector<vector<int〉〉 paths(V);
+for (int i=@; i 〈V; i++)
+paths[i] = SingleSourceShortestPaths(i);
+10. 이제 paths 테이블을 이용하여 모든 정점 사이의 거리 값을 출력합니다.
+cout 〈〈 "각 정점 사이의 최단 거리:" 〈〈 endl;
+for (int i=@; i 〈v; i*+)
+for (int j =0; j 〈v; j++)
+(paths[i][j] == UNKNOWN) ? cout 〈〈 "
+: cout 〈〈 paths[i][j] 〈〈 "
+cout 〈〈 endl;
+11. 지-금까지 차성한 프로그램을 실행한 후, 다음 숫지들을 입력하세요.

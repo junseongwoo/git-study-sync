@@ -1,0 +1,32 @@
+는 파일과 패턴을 입력빋아서 패턴과 일치하는 본문의 줄 번호와 열 번호를 출력합니다. 다시 말에
+UNIX의 grep 유틸리티와 비슷한 기능을 구현하는 것입니다. 앞으로 10장에서 구현할 문자열 탐
+색 프로그램들은 모두 이 프로그램과 같은 기능을 가집니다. 물론 내부적으로 久卜우하는 알고리즘은
+다르지 만의
+BruteForce.h에 정의되어 있는 것처럼 고지식한 탐색을 수행하는 ( ) 함수는 매개 변
+수를 5개 받습니다. Text와 TextSize는 본문과 본문의 크기, start는 탐색을 시작할 본문의 위치.
+pattern과 PattemSize는 패턴과 패턴의 크기를 나타냅니다. 이 함수가 반환하는 값은 패턴과 일치
+하는 본문의 위치입니다. 본문에 패턴과 일치하는 부분이 없으면 이 함수는 -1을 반환합니다.
+1 ee/BruteForce/BruteForce .h
+1
+2
+3
+4
+5
+6
+7
+•ifndef BRUTEFRCE_H
+BRUTEFORCE_H
+int BruteForce(char* Text, int TextSize, int Start,
+char* Pattern, int PatternSize )•,
+ændif
+BruteForce( ) 함수는 Text를 위치에서 'TextSize - PattemSize' 위지까지 차례대로 순
+회합니다. 그리고 다시 pattemSize만큼 Pattern 내의 문지를 Text 내의 문자와 비교합니다. Text
+내에 pattem과 일치하는 부분이 있는지 확인하려고 말입니다. Text에서 Pattern과 일치하는 부분
+을 참으면 그 위치를 반환하고 함수를 종료합니다.
+1e?/BruteForce/BruteForce. (
+01 tinclude "BruteForce.hø
+03 int BruteForce(char* Text, int TextSize, int Start,
+char* Pattern, int PatternSize )
+int = 0:
+int j = 0;
+460 Part 02 • 알고리즘

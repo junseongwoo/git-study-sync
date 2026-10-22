@@ -1,0 +1,30 @@
+5. ,지터의 모든 원소를 출러하는 함수와 임의의 성수 나,l터를 생성하는 함수를 작성합니다.
+template 〈typename T>
+VOid print—vector(std: :vector<T> arr)
+for (autO i : arr)
+std::cout 〈〈 i 〈〈 ••
+std: :cout 〈〈 std: :endl;
+// [1, size] 범위에 속하는 임의의 정수를 생성합니다.
+template <typename T>
+autO generate random vector(T size)
+std: :vector<T> V;
+std: :random device rd;
+std: :mt19937 rand(rd());
+std: :uniform int_distribution<std: :mt19937: :result_type〉 uniform dist(l ,
+for (T i = 0; i 〈 size; i++)
+V. push—back(uniform-dist(rand));
+return std: :move(V);
+size);
+6. 부분 퀵 정렬과 전체 퀵 정렬을 실행하고 성능을 평가하는 테스트 함수를 작성합니다.
+template 〈typename T>
+VOid test_partial_quicksort(size_t size, size_t k)
+// 임의의 벡터를 생성하고, 복사본을 만들어 두 알고리즘에 각각 테스트 진행
+autO random_vec = generate random vector<T>(size);
+autO random vec_copy(random vec);
+std::cout 〈〈 "입력 벡터: " 〈〈 std::endl;
+prlnt_vector〈丁〉 ( random—vec ) ;
+// 부분 퀵 정렬 알고리즘 수행 시간 측정
+auto beginl = std::chrono: :steady-clock::now();
+따>
+「케0
+473

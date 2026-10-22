@@ -1,0 +1,27 @@
+- x가 s아[i]보다 크거나 같고, (DP(i
+- 1, sum)
+= true 또는 DP(i
+- 1,
+true)
+그렇지 않으면 DP(i, x)
+= false
+sum
+- set[il) =
+즉. 인덱스가 0에서 i 사이일 때 부분집합의 합이 x가 될 수 있다면 인덱스가 0에서 i + 1 사이일
+때에는 부분집합의 합이 x 또는x + set[i)가 될 수 있습니다. 이러한 속성을 다음 연습 문제에서
+구현 해보겠습니다.
+8.5.10 연습 문제 39: 타뷸레이션을 이용하여 부분집합의 합 문제 풀기
+이번 연습 문제에서는 '연습 문제 38: 메모이제이션을 이용하여 부분집합의 합 문제 풀기'에서 구
+현했던 하향식 접근 방법을 상향식 접근 방법으로 변환한 티불레이션 방법을 구현해보겠습니다.
+1. 새로운 함수 SubsetSum-Tabu1ation()을 추가하겠습니다. 이 함수는 정수 벡터 set을 인자로
+받고, 2자원 부울형 벡터를 반환합니다.
+vector〈vector〈而飜〉〉 SubsetSum TabuIation(vector<int>& set)
+2. SubsetSum-Tabulation() 함수에서는 dp라는 이름의 2자원 부울형 벡터를 선언하여 시용합니
+다. dp의 첫 번째 자원 크기는 입력 집합의 크기와 같고, 두 번째 자원의 크기는 입력 집합의
+모든 원소 합보다 1만큼 크게 설정합니다. dp의 모든 원소는 false로 초기화하되, 부분집합의
+합이 0인 기저 조건에 대해서는 true로 설정합니다.
+int maxSum = 0;
+for (int i =0; i 〈 set.size(); i++)
+maxSum += set[i];
+\℃ctor〈vector〈b001〉〉 DP(set.size() + 1, vector<b001>(maxSum + 1
+(int i =0; i 〈 set.size(); i++)

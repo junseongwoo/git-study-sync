@@ -1,0 +1,41 @@
+프로그램 12.6 merge 알고리즘의 구현
+int sorted[MAX-SIZE]; // 추가 공간이 필요
+/• i는 정일된 원폭 리스트에 대한 인멕스
+j는 정렬된| 오른쪽 리스트에 대한 인덱스
+k는 정릴될 리스트에 대한 인덱스 */
+void merge(int tist[), int left, int mid, int right)
+inti, j, k, 1;
+= left; j = mid + 1; k = left;
+1
+/* 분할 정릴된 list의 합병 */
+`ⅵ151e (i 〈= mid && j <= right) {
+if (list[i) <= list[j])
+sorted[k++] = list[i++];
+sorted[k++] = list[j++];
+if (i>mid) /* 남아 있는 레코드의 일괄 복사 */
+for (1 = 〕; 1 〈= right; 1++)
+sorted[k++] = list[1];
+else
+/* 남아 있는 레罸亡이 일괄 복사 */
+for (1 = i; 1 〈= mid; 1++)
+sorted[k++] = list[1];
+/* 배열 sorted[]의 리스트를 배열 list[]로 재복사 */
+for (1 = left; 1 <= right; 1++)
+list[l] = sorted[l];
+void merge-sort(int list[], int left, int right)
+int mid;
+if (left<right) {
+mid = (left + right) /
+2;
+merge-sort(list, left, mid);
+merge—sort(list, mid + 1, right);
+right);
+merge(tist, left, mid,
+합병 정렬의 복잡도 분석
+/* 리스트의 균등 분할 */
+/* 부분 리스트 정릴 */
+/* 부분 리스트 정렬 */
+합병 정렬에서 叩고 연산과 이동 연산이 몇 번이나 수행되는 지를 분석하여 보자. 합병 정렬
+은 순환 호출 구조로 되어 있다. 따라서 레코드의 개수 n이 2의 거듭제곱이라고 가정하고 순
+환 호출의 깊이가 얼마나 되는지를 분석하여 보자. 만약 ,?=23인 경우에는 부콭 배열의 크기
+468 C언어로 쉽게 불어쓴 자료구조

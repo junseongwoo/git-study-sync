@@ -1,0 +1,26 @@
+VITAMIN QUIZ 1•1
+sizeof(Node)와 sizeof(Node*)의 결과는 어떻게 다를까요?
+노드 추가 연산
+노드 추가는 링크드 리쓰트의 데일 노드 뒤에 새로운 노드를 만들어 연결하는 연산입니다. 꼬리를
+덧붙이는 것이지요.
+> 테일
+12
+노드 추가
+12
+> 새로운 테일
+87
+SLL-CreateNode( ) 함수를 이용하여 자유 저장소에 노드를 생성한 다음. 새로 생성한 노드의 주
+소를 데일의 NextNode 포인터에 저장하면 되겠군요. 노드 추가 연산을 처리亏는 SLL-Append
+Node ( ) 함수는 다음과 같이 구현할 수 있습니다.
+void SLL AppendN0de(Node** Head, NO血* NewNode)
+// 헤드 노드가 NULL이라면 새로운 노드가 Head가 된다.
+if ( (*Head) == NULL )
+*Head = NewNode,
+else
+// 테일을 찾아 NewNode를 연결한다.
+Node* TaiI = (*Head);
+while ( |= NULL )
+Tail = TaiI->NextNode,
+= NewNode
+Chapter 01 • 리스트
+29

@@ -1,0 +1,23 @@
+return INVALID,
+vector<int> distance = BeIlmanFord(G);
+if (distance.empty())
+return VALID;
+for (auto& e : G.edges)
+G weight[e.srcl(e.dstl += (distance(e.srcl - distance(e.dst]);
+double result = 0;
+for (int =0•, i 〈 G.v; i++)
+vector<int〉 shortest = Dijkstra(i, 6);
+9. 다익스트라 알고리즘의 효율적인 동작을 위해 최소 힘을 사-공하겠습니다. 힘에 추가할 정보
+는 정점 번호와 거리 값입니다. 이를 위해 std::pair<int, int〉를 사용할 수 있으며, 이를
+state리는 이름으로 재정의하겠습니다. 최소 힘이 거리 값을 기준으로 동작해야 하기 때문에
+state의 첫 번째 정수에는 거리 값을 지정해야 합니다. 최소 힘은 std: :priority-queue를 이
+용하여 구현할수 있고, 이때 데이터 타입, 컨테이너, 비교자를 각각 지정해야 합니다.
+vector<int〉 Dijkstra(int src, Graph 6)
+typedef pair<int, int〉 State;
+// {distance, id}
+priority—queue<State, vector<State〉, greater〈State〉〉 heap,
+vector<bool> visited(G.V, false);
+vector<int〉 distance(G.V, UNKNOWN);
+heap.push({@, src));
+distance[src]
+while (!heap.empty())

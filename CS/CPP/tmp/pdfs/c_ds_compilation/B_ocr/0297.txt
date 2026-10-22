@@ -1,0 +1,54 @@
+053
+054
+055
+056
+057
+058
+059
+%1
+%3
+%5
+%9
+070
+071
+072
+073
+074
+if ( (*Tree) == NULL )
+(*Tree) = NewNode,
+075
+076
+if ( (*Tree)->Data 〈 NewNode-»ata )
+077
+078
+if ( (*Tree)-Right == NiI )
+079
+(*Tree)->Right = NewNode,
+081
+NewNode-Parent = (*Tree);
+083
+else
+RBT_InsertNodeHelper(&(*Tree)-Right, NewNode);
+085
+%7
+else if ( (*Tree)->Data 〉 NewNode->Data )
+叨1
+092
+return Nil;
+if ( Tree->Left == Nil )
+return Tree,
+else
+return RBT_SearchUinNode( Tree->Left );
+void RBT_InsertNode( RBTNode** Tree, RBTNode* NewNode)
+RBT_InsertNodeHeIper( Tree. );
+NewNode-Xolor = RED;
+NewNode->Left = Nil;
+NewNode->Right = Nil;
+RBT_RebuildAfterInsert( Tree, NewNode );
+void RBT InsertNodeHe1per( RBTNode** Tree, RBTNode* NewNode)
+if ( (*Tree)->Left
+(*Tree)->Left
+Part 02 • 일고리좀
+= Ni1 )
+= NewNode,
+290

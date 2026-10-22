@@ -1,0 +1,33 @@
+프로그램 73 mp3폴래이어 프로그램
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+typedef char element[100J;
+typedef struct DListN0de { //
+element data;
+struct DListNode* llink;
+struct DListNode* rlink;
+} DListNode;
+DListNode* current;
+// 이중 연결 리스트를 초기화
+void init(DListNode* phead)
+phead->llink = phead;
+phead->rlink = phead;
+// 이중 연결 리스트의 노드를 출력
+이중인걸 노드 타입
+void print_dlist(DListNode* phead)
+DListNode* 아,
+for (p = phead->rlink; p != phead; p = p->rlink) {
+if (p == current)
+printfC'\n") ;
+// 노드 newnode를 노드 before의 오른쪽에 삽입한다.
+void dinsert(DListNode *before, element data)
+DListNode *newnode = (DListNode *)malloc(sizeof(DListNode));
+strcpy(newnode->data, data) ;
+newnode->llink = before;
+*〉rlink = before->rlink;
+before->rlink->llink = ne,vnode;
+before->rlink = newnode;
+// 노드 removed를 식제한다.
+void ddeIete(DListNode* head, DListNode* remved)
+CHAPTER07 연결 리스틔| 237

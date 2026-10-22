@@ -1,0 +1,27 @@
+LAb
+두개의 리스트를 하나로 합치는 함수 작성
+두 개의 리스트를 합치려면 먼저 첫 번째 리스트의 맨 끝으로 간 디음, 마지막 노드의 링크가 두
+번째 리스트의 첫 번째 노드를 가리기도록 변경하면 된다. 주의할 점은 hstl이나 hst2가 NULL인
+경우를 반드시 처리해주어야 한다.
+飇괸1 •- 10
+20
+30 NULL
+ListNode* concat-tist(ListNode *headl, ListN0de
+if == NULL) return head2;
+else if (head2 == NULL) return headl;
+else {
+ListN0de *P;
+P = headl;
+while (p->link != NULL)
+p = p->link;
+p->tink = head2;
+return
+실행결과
+30->20-〉10-〉 NULL
+50->4@->NULL
+30-)20->10->50-)40->NULL
+Solution
+두개의 리스트를 하나로 합치는 함수 작성
+#include <stdio.h>
+#inctude <stdlib.h>
+204 C언어로 쉽게 풀어쓴 자료구조

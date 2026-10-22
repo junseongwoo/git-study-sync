@@ -1,0 +1,49 @@
+09
+10
+12
+13
+14
+17
+18
+19
+20
+22
+for ( i=Start; i<=TextSize - PatternSize ; i++ )•
+for ( j=0; jCatternSize; j++ )•
+if ( Text[i+jl |= Pattern[jl )
+break;
+if ( j 〉= PatternSize )
+return i;
+return -1 ;
+. Textg Start 위치부터 'TextS1ze -
+Pattern8ze' 위치까지 차례대로 순회
+PattemSze만큼 Pattern을 순회하며
+• Text와 Pattem 내 문자 비교
+다음은 BruteForce ( ) 함수를 테스트하는 Test BruteForce.c의 내용입니다. marn( ) 함수를 통
+해 파일 경로와 패턴을 입력받고. 파일을 열어 각 줄을 읽으면서 BruteForce() 함수를 호출하는
+내용이 전부입니다.
+10장/BruteForce/Test—BruteForce. c
+01
+02
+03
+04
+05
+06
+07
+10
+12
+13
+14
+16
+#include <stdio.h>
+#include <string.h〉
+#include "BruteForce.hø
+#define MAX_BUFFER 512
+int main(int argc, char** argv)
+char* FilePath;
+FILE* fp;
+char Text(MAX_BUFFERl;
+char* Pattern,
+int PatternSize = 0;
+int Line
+Chapter 10• 문자열 탐책 461

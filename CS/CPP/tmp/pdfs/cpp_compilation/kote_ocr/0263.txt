@@ -1,0 +1,30 @@
+template 〈typename T>
+autO create_reference_graph( )
+Graph<T> 6(9);
+map〈unsigned, vector〈pair〈unsigned,
+edge—map[ 1
+edge—map[기
+edge map[3]
+edge—map(4]
+edge—map[5J
+edge—map[6]
+edge—map[7]
+edge-map[8]
+for (auto& : edge_map)
+for (auto& j : l.second)
+G.add_edge(Edge〈T>{ i.first,
+return 6;
+T〉〉〉 edge-map;
+J.first,
+j.second });
+4. 이번에는 시작 정점으로부터의 각 정점까지의 최소 거리 정보를 저장하기 위해 八卜음할 Labe1
+구조체를 정의하겠습니다. 앞서 '연습 문제 30: 프림 알고리즘 구현하기'에서는 distance 멤버
+에 경계에서 ID번 정점까지의 최소 거리를 저장했지만, 다익스트라 알고리즘 구현에서는 시
+작 정점에서 ID번 정점까지의 최소 거리가 저장됩니다.
+template 〈typename T>
+struct Label
+unsigned ID;
+T distance;
+// LabeI 객체 비교는 거리(distance) 값을 이용
+inline b001 operator〉 (const LabeI<T>& 1) const
+return this->distance 〉 l.distance;

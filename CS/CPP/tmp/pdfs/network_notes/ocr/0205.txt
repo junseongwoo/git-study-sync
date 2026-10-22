@@ -1,0 +1,54 @@
+198
+rdt—rcv (rcvpkt) &&
+(corrupt (rcvpkt) | |
+has—seql (rcvpkt) )
+CHAPTER 03 • 트랜스포트 계층
+rdt—rcv (rcvpkt) && notcorrupt (rcvpkt)
+&& has—seqO (rcvpkt)
+extract (rcvpkt, data)
+deliver—data (data)
+sndpktemake—pkt (ÄCK, 0, checksum)
+udt—send (sndpkt)
+하위로부터
+0번 호출을
+기다림
+rdt—rcv (rcvpkt) &&
+(corrupt (rcvpkt) | |
+has—seqO (rcvpkt) )
+sndpkt=make—pkt (ACK, 0, checksum)
+udt—send (sndpkt)
+하위로부터
+1
+1번호출을
+기다림
+sndpkt=make—pkt (ACK, 1, checksum)
+udt—send (sndpkt)
+rdt—rcv (rcvpkt) && notcorrupt (rcvpkt)
+&& has—seql (rcvpkt)
+extract (rcvpkt, data)
+deliver_da ta (data)
+sndpkt=make—pkt (ACK, 1, checksum)
+udt—send (sndpkt)
+그림 3.14 • rdt2 . 2 수신자
+했을 때 어떤 행동을 할 것인가 이다. 체크섬, 순서번호, ACK 패킷, 재전송의 시원이
+미 rdt2 .2에서 개발된 기술)은 후자의 관심사에 답할 수 있게 해 준다. 첫 번째 관심
+수를 해결하기 위해서는 새로운 프로토콜 메커니즘을 추가해야 한다.
+패킷 손실을 다룸에 있어 다양한 접근이 기능하다(이 장의 끝 예제에서 더 많은 것
+들 을 다룬다). 여기서는 송신자에게 손실된 패킷의 검출과 회복 책임을 부여할 것이다.
+송신자가 데이터 패킷을 전송하고 패것 또는 수신자의 패킷에 대한 ACK를 손실했다
+고 가정하자. 어느 경우에나 송신자에게는 어떠한 응답도 없다. 만약 송신자가 패킷을
+잃어버렸다는 것을 확신할 정도로 충분한 시간을 기다릴 수만 있다면, 데이터 패킷은
+간단하게 재전송될 수 있다. 여러분은 이 프로토콜이 실제로 동작한다는 것을 믿어도
+좋다.
+그러나 송신자가 어떤 패킷을 손실했다는 것을 확신하기 위해 얼마나 오랫동안 기
+다려야 할까? 송신자는 적어도 송신자와 수신자 사이의 왕복시간 지연(중간 라우터에
+서의 버퍼링을 포함)에 수신 측에서 패킷을 처리하는 데 필요한 시간을 더한 만큼 기
+다린다. 많은 네트워크들에서는, 이 최악의 최대 지연 시간은 예측하기조차도 매우 어
+렵다. 더욱이, 이상적으로는 프로토콜이 패것 손실을 기능한 한 빨리 복구해야 한다.
+최악의 지연을 기다린다는 것은 오류 뚜구가 시작될 때까지 오래 기다려야 한다는 뜻이
+된다. 실제 상횡에서 채택한 접근 방법으로는 송신자가 패킷 손실이 일어났다는 보장
+은 없지만, 손실이 일어났을 만한 그런 시간을 현명하게 선택하는 것이다. 만일 ACK
+가 이 시간 안에 수신되지 않는다면 패킷은 재전송된다. 만일 패킷이 유별나게 큰 지연
+을 가진다면, 송신자는 비록 데이터 패킷이나 그 패킷에 대한 ACK가 손실되지는 않았
+다 하더라도 패킷을 재전송할 수 있다. 이것은 송신자 대 수신자 채널에서 중복 데이터
+ü(duplicate data packet)의 기능성을 포함한다. 다행히 프로토콜 rdt2 .2는 이

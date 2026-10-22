@@ -1,0 +1,62 @@
+170
+172
+173
+174
+175
+176
+177
+178
+179
+180
+181
+182
+183
+184
+185
+186
+187
+188
+189
+190
+191
+192
+193
+194
+195
+1%
+198
+199
+200
+201
+202
+203
+204
+205
+206
+207
+int i;
+int lndex = 0;
+HuffmanNode* Current = Tree,
+for ( i=O; i<=Encoded->Size; i++ )
+U대AR Mask = 0x80; // 1000 0000
+if ( Current->Left
+Decoded[Index++l
+Current = Tree;
+Mask 〉〉= i 8;
+if ( (Encoded-Buffer[i/81 & Mask) != Mask )
+Current = Current->Left;
+else
+Current = Current-Right,
+Decoded[Indexl =
+void Huffman PrintBinary( BitBuffer• Buffer )
+int i;
+for ( i=@; i<Buffer->Size; i++ )
+UCHAR Mask = 0x80; // 1000 0000
+Mask 》= i 8:
+printf("Ü, (Buffer->Buffer(i/81 & Mask) =-
+= NULL )
+NULL Current->Right
+Current->Data.Symb01,
+- Mask );
+Chapter 14 • 탐욕 일고리증
+6이

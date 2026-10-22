@@ -1,0 +1,25 @@
+// 현재 작업과 시간이 겹치는 작업은 제거
+while (next-task != tasks.end() &&
+next—task-〉start-time 〈 curr—task-〉end_time)
+next_task = tasks erase(next_task);
+return tasks;
+4. main() 함수를 작성하고, 작업 스케줄링 테스트 코드를 추가합니다. 더불어 작업 목 록 을 출력
+하는 함수도 작성합니다.
+void print(std::list<Task>& tasks, int max—end_time)
+for (autO t : tasks) {
+lnt i=0;
+for (; i 〈 t.start_time; 1++) std::cout 〈〈
+for (; 〈 t.end-time; i++) std::cout 〈〈
+for (,• i 〈 max-end-time; i++) std::cout 〈〈
+std::cout 〈〈 "|" 〈〈 std::endl;
+int main()
+int num
+_tasks = 10;
+end_time = 20;
+1nt max
+autO tasks = initialize tasks(num_tasks, max_end_time);
+std::cout 〈〈 "[전제 작업]" 〈〈 std::endl;
+print(tasks, max end_time);
+autO scheduled_tasks = job-scheduling(tasks);
+std: :cout 〈〈 "\n[스케쥴 조정한 작업]" 〈〈 std: :endl;
+print(scheduled-tasks, max end time);

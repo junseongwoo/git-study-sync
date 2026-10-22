@@ -1,0 +1,60 @@
+039
+040
+041
+예2
+043
+045
+047
+049
+050
+051
+052
+053
+054
+055
+056
+057
+058
+059
+%1
+062
+063
+065
+%6
+067
+069
+070
+071
+072
+073
+074
+075
+076
+077
+078
+void LCS-TraceBack( char* X, char• Y.
+return;
+int m, int n,
+LCSTable• Table, char* LCS)
+if ( Table->Data(m)Inl 〉 Table->Data[ml[n-11
+Table->Data[ml[nl 〉 Table->Data[m-11[nl
+TabIe->DataIml[nl 〉 TabIe->Data[m-1 Ⅱn-11 )
+char TempLCS11@@I;
+strcpy( TempLCS, LCS );
+sprintf(LCS, 가(岳“, 지m-1], TempLCS );
+LCS_TraceBack( 자 Y, m-l, n-l, TabIe, LCS ):
+else if ( Tab1e->Data[ml[nl 〉 Tab1e->Data[m-1 )[nJ
+Table->Data[ml[nJ == TabIe->Data[m)[n-11)
+LCS_TraceBack( X, Y, m, n-l, Tab1e, LCS );
+e1se
+LCS TraceBack( 자 Y, m-l, 바 Tab1e, LCS );
+void LCS PrintTable( LCSTable* Tab1e, char* X, char* Y, int LEN-X, int LEN_Y )
+int i = 0;
+int j = 0;
+printf("84s" ““)•,
+for ( i=O; i<LEN Y+I; i++ )
+printf("%c •. Y(i));
+printf("\n");
+for ( i=@; i<LEN_X+1; i++ )
+566
+Part 03 • 알고리즘 설계 기법

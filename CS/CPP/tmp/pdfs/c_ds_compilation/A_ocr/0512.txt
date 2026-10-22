@@ -1,0 +1,33 @@
+int height = 0;
+if (node != NULL)
+height = 1 + max(get-height(node->left) ,
+get—hei ght) ) ;
+return height;
+// 노드의 균형인수를 반환
+int get—balance(AVLNode* node)
+if (node == NULL) return 0;
+return get—height(node->left)
+- get—height(node->right) ;
+// 노드를 동적으로 생성하는 함수
+AVLNode* create node(int key)
+AVLN0de* node = (AVLNode*)maIIoc(sizeof(AVLNode));
+node->key = key;
+node->left = NULL;
+node—>nght = NULL;
+return (node) ;
+// 오른쪽으로 회전시카는 함수
+AVLNode *rotate_right(AVLNode *parent)
+AVLN0de* child = parent->left;
+parent—>teft = child->right;
+child->right = parent;
+// 새로운 루트를 반환
+return child;
+// 왼쪽으로 회전시카는 함수
+AVLNode *rotate_Ieft(AVLNode *parent)
+AVLNode *child = parent->right;
+parent->right = child->left;
+child->left = parent;
+// 새로운 루트 반환
+return child;
+CHPTER13 탐색
+521

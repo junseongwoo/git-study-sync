@@ -1,0 +1,28 @@
+다음 코드는 동적 계획법으로 설계한 새로운 LCS( ) 함수입니다.
+int LCS( char• X, char* Y, int i, int j, LCSTable* Table )
+int m = 0:
+int n = 0;
+TabIe->Data[ml[@l = 0;
+TabIe->Data(이[nl
+for ( m=l; m〈=17 m++ )
+if ( 지m-1] == Y[n-11 )
+else
+• i=0또는j=0일때는
+Table[i. j]를 0으로 초7
+이••
+테이블의 왼쪽 위부터 시작해서
+오른쪽 아래까지 답을 구합니다.
+•• 문자열 내의 두 요소가 같은 경우
+Tab1e-»ata[ml[nl = TabIe->Data[m-11[n-11 + 1:
+4 i,j >0이며문자열 내의두요소가서로다른경우
+if ( Tab1e-»ata[ml(n-II 〉= Table->Data[m-Il[nl )
+Tab1e->Data[ml[nl = Tab1e->Data(ml(n-1];
+else
+Tab1e->Data[ml[nl = Tab1e->Data[m-1)[n);
+return TabIe->Data[il[jl;
+자, 이제 우리는 엄청나게 개선된 새 LCS( ) 함수를 갖게 되었습니다. 두 문자열의 LCS 길이를 무려
+O(nm) 시간 인에 알아낼 수 있게 된 것이지의 하지만 아직 남은 과제가 있습니다. 우리는 LCS 길
+이를 구하려던 것이 아니라 LCS 자체를 구하려고 했으니까외 지금부터는 LCS를 구하는 과정을 알
+아보겠습니다.
+562
+Part 03 • 알고리즘 설계 기법

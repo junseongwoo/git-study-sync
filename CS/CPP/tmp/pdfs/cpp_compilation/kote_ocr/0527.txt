@@ -1,0 +1,22 @@
+4단계: 경로 재구성
+LCS 또는 0-1 배당 문제에서 사용되있던 재구성 방식과 next 행럼에 처장된 값을 이청 하여 각 경
+로상의 좌표를 재구성할 수 있습니다. 이를 위해 세로운 함수 GetPath()ß 정의하겠습니다. 이 한
+수는 두 개의 정수 start94end. 그리고 next 행렬 참조를 인자로 받고. 경로상의 정점 인덱스를
+저장한 정수형 벡터를 반환합니다.
+vector<int〉 GetPath(int start, int end, vector〈vector<int〉〉& next)
+vector<int〉 path {start);
+do{
+start = nextlstartl[endl;
+path.push-back(start);
+} while (next[startl[end) != end);
+return path;
+9. 다시 GetShortestPaths() 함수로 돌아와서 플로이드-워설 알고리즘 구현 코드 아래에
+GetPath() 함수를 호출하고 이동 경로상의 두 지점을 잇는 선을 그리는 반혁문 코드를 추가합
+니다.
+for (int i =0; i <N; i++)
+vector<int〉 path = GetPath(i, N - 1, next);
+lnt curr = 1 ;
+for (aut0 neighbor : path)
+DrawPath(curr, neighbor);
+curr = neighbor;
+540

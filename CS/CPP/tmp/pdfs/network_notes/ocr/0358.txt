@@ -1,0 +1,52 @@
+352
+CHAPTEROS • 네트위크 계층. 제어 평면
+추정한다 = [의한): .`, in NI을 노드 `에서부터 N에 속한 모든 다른 노드 y까지의
+비용 추정값의 벡터라고 하자. DV 알고리즘으로 각 노드 x는 다음과 같은 라우팅 정보
+유지한다.
+각 이웃 노드 1, 중에서 `쇠1 직접 접속된 이웃 노드까지의 비용 41, 1,)
+노드 1의 거리 벡터, 즉 .x로부터 N에 있는 모든 목적지 )로의 비용 예측값을 포함
+하는 벡터D = yinNl
+이웃 노드들의 거리 벡터들, 즉 `,가ⅹ의 이웃이라고 하면 Dv = [책한): Y in 세
+분산적이고 비동기적으로 동작하는 알고리즘에서는 때때로 각 노드가 자신의 거리 벡
+터를 이웃-들에게 보낸다. 노드 ⅹ가 이웃 w에게서 새로운 거리 벡터를 수신하면, `4
+의 거리 벡터를 저장하고 벨만-포드 식을 시용하여 다음처럼 자신의 거리 벡터를 업
+데이트한다.
+Dx(9 = {c(x, v) + DvO)} (N에 속하는 각 노드y에 대해서)
+만약 이 업데이트로 인해 노드ⅹ의 거리 벡터가 변경된다면, 노드 ⅹ는 이 수정된 거리
+벡터를 자신의 이웃들에게 보내괴 그에 따라 이웃들도 자신의 거리 벡터를 수정한다.
+신기하게도 모든 노드가 자신의 거리 벡터를 비동기적으로 교환하는 동작을 계속하다
+보면, 비용 추정값 /기㈌는 노드 x에서 노드 파지의 실제 최소 비용 경로의 비용인
+dxO,)로 수렴하게 된다[Bertsekas 1991]!
+거리 벡터(DV) 알고리즘
+각 노드 Ⅹ에서
+1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+lnitializatxon
+for a11 destxnations Y in N:
+Dx(y) = c(x,y) / * if Y IS not a neighbor then
+c(x,y)
+for each nexghbor w
+Dw(y) = ? for a11 destlnations Y in N
+for each neighbor w
+send distance vector D
+[Dx(Y): Y in N] to w
+LOOP
+wait
+bor
+for
+(until 1 see a link cost change tO some neigh-
+W or
+until 1 recexve a dIStance vector from some
+neighbor 미
+each y in N:

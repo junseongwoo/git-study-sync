@@ -1,0 +1,1148 @@
+{
+  "unit": 4,
+  "title": "순환과 재귀",
+  "part": "기초",
+  "scope": [
+    {
+      "source": "A",
+      "start": 34,
+      "end": 56
+    }
+  ],
+  "learning": [
+    {
+      "text": "순환(recursion)은 어떤 알고리즘이나 함수가 자기 자신을 호출하여 문제를 해결하는 프로그래밍 기법이다.",
+      "refs": [
+        {
+          "source": "A",
+          "section": "2.1 순환의 소개",
+          "pages": [
+            34
+          ]
+        }
+      ],
+      "evidence": "자기 자신을 호출"
+    },
+    {
+      "text": "순환 알고리즘은 자기 자신을 순환적으로 호출하는 부분과 순환 호출을 멈추는 부분으로 구성된다.",
+      "refs": [
+        {
+          "source": "A",
+          "section": "2.1 순환 알고리즘의 구조",
+          "pages": [
+            40
+          ]
+        }
+      ],
+      "evidence": "멈추는 부분"
+    },
+    {
+      "text": "순환적인 거듭제곱 계산은 호출할 때마다 문제 크기가 약 절반으로 줄어 시간 복잡도가 O(log₂n)이다.",
+      "refs": [
+        {
+          "source": "A",
+          "section": "2.2 거듭제곱값 계산",
+          "pages": [
+            46,
+            47
+          ]
+        }
+      ],
+      "evidence": "절반"
+    }
+  ],
+  "concepts": [
+    {
+      "title": "순환의 정의와 구조",
+      "items": [
+        {
+          "text": "순환(recursion)은 어떤 알고리즘이나 함수가 자기 자신을 호출하여 문제를 해결하는 프로그래밍 기법이다.",
+          "refs": [
+            {
+              "source": "A",
+              "section": "2.1 순환의 소개",
+              "pages": [
+                34
+              ]
+            }
+          ],
+          "evidence": "자기 자신을 호출"
+        },
+        {
+          "text": "순환은 본질적으로 순환적인 문제나 그러한 자료구조를 다루는 프로그램에 적합하다.",
+          "refs": [
+            {
+              "source": "A",
+              "section": "2.1 순환의 소개",
+              "pages": [
+                34
+              ]
+            }
+          ],
+          "evidence": "본질적으로 순환적인 문제"
+        },
+        {
+          "text": "순환 알고리즘은 자기 자신을 순환적으로 호출하는 부분과 순환 호출을 멈추는 부분으로 구성된다.",
+          "refs": [
+            {
+              "source": "A",
+              "section": "2.1 순환 알고리즘의 구조",
+              "pages": [
+                40
+              ]
+            }
+          ],
+          "evidence": "멈추는 부분"
+        },
+        {
+          "text": "순환 호출을 멈추는 부분이 없으면 시스템 스택을 다 사용할 때까지 호출되다가 오류를 내며 멈춘다.",
+          "refs": [
+            {
+              "source": "A",
+              "section": "2.1 순환 알고리즘의 구조",
+              "pages": [
+                40
+              ]
+            }
+          ],
+          "evidence": "시스템 스택을 다 사용"
+        },
+        {
+          "text": "반복(iteration)은 for나 while 등의 반복 구조로 되풀이하는 방법이다.",
+          "refs": [
+            {
+              "source": "A",
+              "section": "2.1 순환 ↔ 반복",
+              "pages": [
+                41
+              ]
+            }
+          ],
+          "evidence": "for나 while"
+        },
+        {
+          "text": "반복과 순환은 기본적으로 문제 해결 능력이 같으며, 많은 경우 서로 바꾸어 쓸 수 있다.",
+          "refs": [
+            {
+              "source": "A",
+              "section": "2.1 순환 ↔ 반복",
+              "pages": [
+                41
+              ]
+            }
+          ],
+          "evidence": "문제 해결 능력이 같으며"
+        },
+        {
+          "text": "순환은 문제의 일부를 해결한 뒤 나머지 문제에 대해 순환 호출을 한다.",
+          "refs": [
+            {
+              "source": "A",
+              "section": "2.1 순환의 원리",
+              "pages": [
+                42
+              ]
+            }
+          ],
+          "evidence": "문제의 일부를 해결"
+        },
+        {
+          "text": "주어진 문제를 더 작은 동일한 문제들로 분해하여 해결하는 방법을 분할정복(divide and conquer)이라 한다.",
+          "refs": [
+            {
+              "source": "A",
+              "section": "2.1 순환의 원리",
+              "pages": [
+                43
+              ]
+            }
+          ],
+          "evidence": "더 작은 동일한 문제"
+        },
+        {
+          "text": "순환 호출이 일어날 때마다 문제의 크기가 작아지며, 결국 쉽게 풀 수 있는 문제가 된다.",
+          "refs": [
+            {
+              "source": "A",
+              "section": "2.1 순환의 원리",
+              "pages": [
+                43
+              ]
+            }
+          ],
+          "evidence": "문제의 크기가 작아진다"
+        }
+      ]
+    },
+    {
+      "title": "시스템 스택과 팩토리얼",
+      "items": [
+        {
+          "text": "함수를 호출하면 복귀주소를 시스템 스택에 저장하고, 호출되는 함수의 매개변수와 지역 변수를 스택에서 할당받는다.",
+          "refs": [
+            {
+              "source": "A",
+              "section": "2.1 순환 호출의 내부적인 구현",
+              "pages": [
+                38
+              ]
+            }
+          ],
+          "evidence": "복귀주소가 시스템 스택"
+        },
+        {
+          "text": "활성 레코드(activation record)는 함수를 위해 시스템 스택에서 사용하는 공간이다.",
+          "refs": [
+            {
+              "source": "A",
+              "section": "2.1 순환 호출의 내부적인 구현",
+              "pages": [
+                38
+              ]
+            }
+          ],
+          "evidence": "활성 레코드"
+        },
+        {
+          "text": "호출된 함수가 끝나면 시스템 스택에서 복귀주소를 추출하여 호출한 함수로 돌아가며, 순환 호출이 중첩될수록 활성 레코드가 쌓인다.",
+          "refs": [
+            {
+              "source": "A",
+              "section": "2.1 순환 호출의 내부적인 구현",
+              "pages": [
+                38
+              ]
+            }
+          ],
+          "evidence": "활성 레코드들이 쌓이게"
+        },
+        {
+          "text": "순환적인 factorial(n)은 n≤1이면 1을 반환하고, 그렇지 않으면 n*factorial(n−1)을 반환한다.",
+          "refs": [
+            {
+              "source": "A",
+              "section": "2.1 프로그램 2.1",
+              "pages": [
+                35
+              ]
+            }
+          ],
+          "evidence": "n * factorial"
+        },
+        {
+          "text": "factorial(3)은 factorial(2), factorial(1)을 차례로 호출하고 반환값 1, 2, 6을 차례로 전달한다.",
+          "refs": [
+            {
+              "source": "A",
+              "section": "2.1 순환의 예",
+              "pages": [
+                36
+              ]
+            }
+          ],
+          "evidence": "6을 반환"
+        },
+        {
+          "text": "팩토리얼의 반복 알고리즘과 순환 알고리즘은 모두 시간 복잡도가 O(n)이다.",
+          "refs": [
+            {
+              "source": "A",
+              "section": "2.1 순환 알고리즘의 성능",
+              "pages": [
+                44
+              ]
+            }
+          ],
+          "evidence": "역시 O(n)"
+        },
+        {
+          "text": "순환적인 팩토리얼은 호출 상태를 기억할 여분의 기억 공간과 함수 호출의 사전 작업이 필요하다.",
+          "refs": [
+            {
+              "source": "A",
+              "section": "2.1 순환 알고리즘의 성능",
+              "pages": [
+                44
+              ]
+            }
+          ],
+          "evidence": "여분의 기억공간"
+        }
+      ]
+    },
+    {
+      "title": "거듭제곱과 피보나치 수열",
+      "items": [
+        {
+          "text": "순환적인 power(x,n)은 n=0이면 1, n이 짝수이면 power(x²,n/2), 홀수이면 x*power(x²,(n−1)/2)를 반환한다.",
+          "refs": [
+            {
+              "source": "A",
+              "section": "2.2 알고리즘 2.1",
+              "pages": [
+                45
+              ]
+            }
+          ],
+          "evidence": "n이 짝수"
+        },
+        {
+          "text": "순환적인 거듭제곱 계산은 호출할 때마다 문제 크기가 약 절반으로 줄어 시간 복잡도가 O(log₂n)이다.",
+          "refs": [
+            {
+              "source": "A",
+              "section": "2.2 거듭제곱값 계산",
+              "pages": [
+                46,
+                47
+              ]
+            }
+          ],
+          "evidence": "절반"
+        },
+        {
+          "text": "반복적인 slow_power()는 루프마다 한 번의 곱셈이 필요하고 루프 횟수가 n이므로 시간 복잡도는 O(n)이다.",
+          "refs": [
+            {
+              "source": "A",
+              "section": "2.2 거듭제곱값 계산",
+              "pages": [
+                47
+              ]
+            }
+          ],
+          "evidence": "루프의 개수는 정확히"
+        },
+        {
+          "text": "피보나치 수열은 앞의 두 숫자를 더해 뒤의 숫자를 만들며, fib(0)=0, fib(1)=1이다.",
+          "refs": [
+            {
+              "source": "A",
+              "section": "2.3 피보나치 수열의 계산",
+              "pages": [
+                48
+              ]
+            }
+          ],
+          "evidence": "앞의 두 개의 숫자를 더해서"
+        },
+        {
+          "text": "순환적인 fib(n)은 fib(n−1)+fib(n−2)를 반환하며, 같은 값을 여러 번 계산할 수 있다.",
+          "refs": [
+            {
+              "source": "A",
+              "section": "2.3 피보나치 수열의 계산",
+              "pages": [
+                48,
+                49
+              ]
+            }
+          ],
+          "evidence": "fib(n-1)"
+        },
+        {
+          "text": "순환적인 피보나치 계산이 비효율적인 근본 이유는 중간에 계산한 값을 기억하지 않고 다시 계산하기 때문이다.",
+          "refs": [
+            {
+              "source": "A",
+              "section": "2.3 피보나치 수열의 계산",
+              "pages": [
+                49
+              ]
+            }
+          ],
+          "evidence": "기억하지 않고 다시 계산"
+        },
+        {
+          "text": "A가 제시한 순환적인 피보나치 알고리즘의 대략적인 시간 복잡도 상한은 O(2ⁿ)이다.",
+          "refs": [
+            {
+              "source": "A",
+              "section": "2.3 피보나치 수열의 계산",
+              "pages": [
+                49
+              ]
+            }
+          ],
+          "evidence": "상한"
+        },
+        {
+          "text": "반복적인 fib_iter()는 pp와 p에 앞의 두 값을 두고 result=p+pp를 계산한 뒤 pp=p, p=result로 갱신한다.",
+          "refs": [
+            {
+              "source": "A",
+              "section": "2.3 프로그램 2.7",
+              "pages": [
+                50
+              ]
+            }
+          ],
+          "evidence": "result = p + pp"
+        }
+      ]
+    },
+    {
+      "title": "하노이 탑과 순환의 형태",
+      "items": [
+        {
+          "text": "하노이 탑은 한 번에 하나의 원판만, 맨 위 원판만 이동하며, 작은 원판 위에 큰 원판을 쌓을 수 없다.",
+          "refs": [
+            {
+              "source": "A",
+              "section": "2.4 하노이탑 문제",
+              "pages": [
+                51
+              ]
+            }
+          ],
+          "evidence": "한 번에 하나의 원판"
+        },
+        {
+          "text": "하노이 탑은 중간 막대를 임시로 사용할 수 있으나 원판 이동 조건을 지켜야 한다.",
+          "refs": [
+            {
+              "source": "A",
+              "section": "2.4 하노이탑 문제",
+              "pages": [
+                51
+              ]
+            }
+          ],
+          "evidence": "중간의 막대를 임시적으로"
+        },
+        {
+          "text": "n개 원판을 옮길 때 문제의 크기는 이동해야 하는 원판의 개수이며, 순환할수록 작아진다.",
+          "refs": [
+            {
+              "source": "A",
+              "section": "2.4 하노이탑 문제",
+              "pages": [
+                52
+              ]
+            }
+          ],
+          "evidence": "문제의 크기는 이동"
+        },
+        {
+          "text": "꼬리 순환(tail recursion)은 순환 호출이 순환 함수의 맨 끝에서 이루어지는 형태이며, 쉽게 반복 형태로 변환할 수 있다.",
+          "refs": [
+            {
+              "source": "A",
+              "section": "2.1·2.4 반복적인 형태로 바꾸기 어려운 순환",
+              "pages": [
+                41,
+                56
+              ]
+            }
+          ],
+          "evidence": "꼬리 순환"
+        },
+        {
+          "text": "머리 순환(head recursion)이나 여러 군데에서 자기 자신을 호출하는 경우(multi recursion)는 쉽게 반복 코드로 바꿀 수 없지만, 명시적인 스택으로 순환을 시뮬레이션할 수 있다.",
+          "refs": [
+            {
+              "source": "A",
+              "section": "2.4 반복적인 형태로 바꾸기 어려운 순환",
+              "pages": [
+                56
+              ]
+            }
+          ],
+          "evidence": "명시적인 스택"
+        }
+      ]
+    }
+  ],
+  "procedures": [
+    {
+      "title": "factorial(3)의 호출과 복귀",
+      "steps": [
+        {
+          "text": "factorial(3)이 factorial(2)를 호출한다.",
+          "refs": [
+            {
+              "source": "A",
+              "section": "2.1 순환의 예",
+              "pages": [
+                36
+              ]
+            }
+          ],
+          "evidence": "factorial(2)를 호출"
+        },
+        {
+          "text": "factorial(2)가 factorial(1)을 호출하고, factorial(1)은 더 호출하지 않고 1을 반환한다.",
+          "refs": [
+            {
+              "source": "A",
+              "section": "2.1 순환의 예",
+              "pages": [
+                36
+              ]
+            }
+          ],
+          "evidence": "1을 반환"
+        },
+        {
+          "text": "factorial(2)가 2를 곱해 2를 반환하고, factorial(3)이 3을 곱해 6을 반환한다.",
+          "refs": [
+            {
+              "source": "A",
+              "section": "2.1 순환의 예",
+              "pages": [
+                36
+              ]
+            }
+          ],
+          "evidence": "6을 반환"
+        }
+      ]
+    },
+    {
+      "title": "n개 원판의 하노이 탑",
+      "steps": [
+        {
+          "text": "A에 쌓인 n개 원판 중 위의 n−1개 원판을 B로 옮긴다.",
+          "refs": [
+            {
+              "source": "A",
+              "section": "2.4 그림 2-15",
+              "pages": [
+                53
+              ]
+            }
+          ],
+          "evidence": "B로 옮긴"
+        },
+        {
+          "text": "A의 제일 밑 원판을 C로 옮긴다.",
+          "refs": [
+            {
+              "source": "A",
+              "section": "2.4 그림 2-15",
+              "pages": [
+                53
+              ]
+            }
+          ],
+          "evidence": "제일 밑에 있는 원판"
+        },
+        {
+          "text": "B의 n−1개 원판을 C로 옮긴다.",
+          "refs": [
+            {
+              "source": "A",
+              "section": "2.4 그림 2-15",
+              "pages": [
+                53
+              ]
+            }
+          ],
+          "evidence": "C로 옮긴다"
+        }
+      ]
+    }
+  ],
+  "syntax": [
+    {
+      "label": "프로그램 2.1 순환적인 팩토리얼",
+      "code": "int factorial(int n)\n{\n    if( n <= 1 ) return(1);\n    else return (n * factorial(n-1) );\n}",
+      "refs": [
+        {
+          "source": "A",
+          "section": "2.1 프로그램 2.1",
+          "pages": [
+            35
+          ]
+        }
+      ],
+      "evidence": "n * factorial",
+      "note": null
+    },
+    {
+      "label": "프로그램 2.5 순환적인 거듭제곱",
+      "code": "double power(double x, int n)\n{\n    if( n==0 ) return 1;\n    else if ( (n%2)==0 )\n        return power(x*x, n/2);\n    else return x*power(x*x, (n-1)/2);\n}",
+      "refs": [
+        {
+          "source": "A",
+          "section": "2.2 프로그램 2.5",
+          "pages": [
+            46
+          ]
+        }
+      ],
+      "evidence": "double power",
+      "note": null
+    }
+  ],
+  "formulas": [
+    {
+      "label": "팩토리얼의 순환적 정의",
+      "expression": "n!=1 (n=0)\nn!=n×(n−1)! (n≥1)",
+      "refs": [
+        {
+          "source": "A",
+          "section": "2.1 순환의 소개",
+          "pages": [
+            34
+          ]
+        }
+      ],
+      "evidence": "팩토리얼",
+      "note": "A의 수학적 정의. 프로그램 2.1의 종료 조건은 n≤1이다."
+    },
+    {
+      "label": "피보나치 수열의 정의",
+      "expression": "fib(n)=0 (n=0)\nfib(n)=1 (n=1)\nfib(n)=fib(n−2)+fib(n−1) (otherwise)",
+      "refs": [
+        {
+          "source": "A",
+          "section": "2.3 피보나치 수열의 계산",
+          "pages": [
+            48
+          ]
+        }
+      ],
+      "evidence": "앞의 두 개의 숫자를 더해서",
+      "note": ""
+    },
+    {
+      "label": "순환적인 피보나치 계산의 상한",
+      "expression": "O(2ⁿ)",
+      "refs": [
+        {
+          "source": "A",
+          "section": "2.3 피보나치 수열의 계산",
+          "pages": [
+            49
+          ]
+        }
+      ],
+      "evidence": "상한",
+      "note": ""
+    }
+  ],
+  "comparisons": [
+    {
+      "title": "원문의 계산 방법별 시간 복잡도",
+      "headers": [
+        "계산 방법",
+        "원문 결과"
+      ],
+      "rows": [
+        [
+          {
+            "text": "팩토리얼: 반복·순환",
+            "refs": [
+              {
+                "source": "A",
+                "section": "2.1 순환 알고리즘의 성능",
+                "pages": [
+                  44
+                ]
+              }
+            ],
+            "evidence": "팩토리얼"
+          },
+          {
+            "text": "팩토리얼의 반복 알고리즘과 순환 알고리즘은 모두 시간 복잡도가 O(n)이다.",
+            "refs": [
+              {
+                "source": "A",
+                "section": "2.1 순환 알고리즘의 성능",
+                "pages": [
+                  44
+                ]
+              }
+            ],
+            "evidence": "역시 O(n)"
+          }
+        ],
+        [
+          {
+            "text": "거듭제곱: 반복",
+            "refs": [
+              {
+                "source": "A",
+                "section": "2.2 표 2-1",
+                "pages": [
+                  47
+                ]
+              }
+            ],
+            "evidence": "반복적인 함수"
+          },
+          {
+            "text": "반복적인 slow_power()는 루프마다 한 번의 곱셈이 필요하고 루프 횟수가 n이므로 시간 복잡도는 O(n)이다.",
+            "refs": [
+              {
+                "source": "A",
+                "section": "2.2 거듭제곱값 계산",
+                "pages": [
+                  47
+                ]
+              }
+            ],
+            "evidence": "루프의 개수는 정확히"
+          }
+        ],
+        [
+          {
+            "text": "거듭제곱: 순환",
+            "refs": [
+              {
+                "source": "A",
+                "section": "2.2 표 2-1",
+                "pages": [
+                  47
+                ]
+              }
+            ],
+            "evidence": "순환적인 함수"
+          },
+          {
+            "text": "순환적인 거듭제곱 계산은 호출할 때마다 문제 크기가 약 절반으로 줄어 시간 복잡도가 O(log₂n)이다.",
+            "refs": [
+              {
+                "source": "A",
+                "section": "2.2 거듭제곱값 계산",
+                "pages": [
+                  46,
+                  47
+                ]
+              }
+            ],
+            "evidence": "절반"
+          }
+        ]
+      ]
+    }
+  ],
+  "terms": [
+    {
+      "term": "순환(recursion)",
+      "definition": {
+        "text": "순환(recursion)은 어떤 알고리즘이나 함수가 자기 자신을 호출하여 문제를 해결하는 프로그래밍 기법이다.",
+        "refs": [
+          {
+            "source": "A",
+            "section": "2.1 순환의 소개",
+            "pages": [
+              34
+            ]
+          }
+        ],
+        "evidence": "자기 자신을 호출"
+      }
+    },
+    {
+      "term": "반복(iteration)",
+      "definition": {
+        "text": "반복(iteration)은 for나 while 등의 반복 구조로 되풀이하는 방법이다.",
+        "refs": [
+          {
+            "source": "A",
+            "section": "2.1 순환 ↔ 반복",
+            "pages": [
+              41
+            ]
+          }
+        ],
+        "evidence": "for나 while"
+      }
+    },
+    {
+      "term": "활성 레코드",
+      "definition": {
+        "text": "활성 레코드(activation record)는 함수를 위해 시스템 스택에서 사용하는 공간이다.",
+        "refs": [
+          {
+            "source": "A",
+            "section": "2.1 순환 호출의 내부적인 구현",
+            "pages": [
+              38
+            ]
+          }
+        ],
+        "evidence": "활성 레코드"
+      }
+    },
+    {
+      "term": "분할정복",
+      "definition": {
+        "text": "주어진 문제를 더 작은 동일한 문제들로 분해하여 해결하는 방법을 분할정복(divide and conquer)이라 한다.",
+        "refs": [
+          {
+            "source": "A",
+            "section": "2.1 순환의 원리",
+            "pages": [
+              43
+            ]
+          }
+        ],
+        "evidence": "더 작은 동일한 문제"
+      }
+    },
+    {
+      "term": "꼬리 순환",
+      "definition": {
+        "text": "꼬리 순환(tail recursion)은 순환 호출이 순환 함수의 맨 끝에서 이루어지는 형태이며, 쉽게 반복 형태로 변환할 수 있다.",
+        "refs": [
+          {
+            "source": "A",
+            "section": "2.1·2.4 반복적인 형태로 바꾸기 어려운 순환",
+            "pages": [
+              41,
+              56
+            ]
+          }
+        ],
+        "evidence": "꼬리 순환"
+      }
+    },
+    {
+      "term": "머리 순환·multi recursion",
+      "definition": {
+        "text": "머리 순환(head recursion)이나 여러 군데에서 자기 자신을 호출하는 경우(multi recursion)는 쉽게 반복 코드로 바꿀 수 없지만, 명시적인 스택으로 순환을 시뮬레이션할 수 있다.",
+        "refs": [
+          {
+            "source": "A",
+            "section": "2.4 반복적인 형태로 바꾸기 어려운 순환",
+            "pages": [
+              56
+            ]
+          }
+        ],
+        "evidence": "명시적인 스택"
+      }
+    },
+    {
+      "term": "피보나치 수열",
+      "definition": {
+        "text": "피보나치 수열은 앞의 두 숫자를 더해 뒤의 숫자를 만들며, fib(0)=0, fib(1)=1이다.",
+        "refs": [
+          {
+            "source": "A",
+            "section": "2.3 피보나치 수열의 계산",
+            "pages": [
+              48
+            ]
+          }
+        ],
+        "evidence": "앞의 두 개의 숫자를 더해서"
+      }
+    }
+  ],
+  "summary_basis": "편집 요약",
+  "summary": [
+    {
+      "text": "순환 알고리즘은 자기 자신을 순환적으로 호출하는 부분과 순환 호출을 멈추는 부분으로 구성된다.",
+      "refs": [
+        {
+          "source": "A",
+          "section": "2.1 순환 알고리즘의 구조",
+          "pages": [
+            40
+          ]
+        }
+      ],
+      "evidence": "멈추는 부분"
+    },
+    {
+      "text": "순환 호출이 일어날 때마다 문제의 크기가 작아지며, 결국 쉽게 풀 수 있는 문제가 된다.",
+      "refs": [
+        {
+          "source": "A",
+          "section": "2.1 순환의 원리",
+          "pages": [
+            43
+          ]
+        }
+      ],
+      "evidence": "문제의 크기가 작아진다"
+    },
+    {
+      "text": "순환적인 팩토리얼은 호출 상태를 기억할 여분의 기억 공간과 함수 호출의 사전 작업이 필요하다.",
+      "refs": [
+        {
+          "source": "A",
+          "section": "2.1 순환 알고리즘의 성능",
+          "pages": [
+            44
+          ]
+        }
+      ],
+      "evidence": "여분의 기억공간"
+    },
+    {
+      "text": "순환적인 피보나치 계산이 비효율적인 근본 이유는 중간에 계산한 값을 기억하지 않고 다시 계산하기 때문이다.",
+      "refs": [
+        {
+          "source": "A",
+          "section": "2.3 피보나치 수열의 계산",
+          "pages": [
+            49
+          ]
+        }
+      ],
+      "evidence": "기억하지 않고 다시 계산"
+    }
+  ],
+  "review": [
+    {
+      "question": "순환 알고리즘을 구성하는 두 부분은?",
+      "answer": {
+        "text": "순환 알고리즘은 자기 자신을 순환적으로 호출하는 부분과 순환 호출을 멈추는 부분으로 구성된다.",
+        "refs": [
+          {
+            "source": "A",
+            "section": "2.1 순환 알고리즘의 구조",
+            "pages": [
+              40
+            ]
+          }
+        ],
+        "evidence": "멈추는 부분"
+      }
+    },
+    {
+      "question": "함수 호출을 위해 시스템 스택에서 사용하는 공간을 무엇이라 하는가?",
+      "answer": {
+        "text": "활성 레코드(activation record)는 함수를 위해 시스템 스택에서 사용하는 공간이다.",
+        "refs": [
+          {
+            "source": "A",
+            "section": "2.1 순환 호출의 내부적인 구현",
+            "pages": [
+              38
+            ]
+          }
+        ],
+        "evidence": "활성 레코드"
+      }
+    },
+    {
+      "question": "순환적인 거듭제곱 계산의 시간 복잡도와 이유는?",
+      "answer": {
+        "text": "순환적인 거듭제곱 계산은 호출할 때마다 문제 크기가 약 절반으로 줄어 시간 복잡도가 O(log₂n)이다.",
+        "refs": [
+          {
+            "source": "A",
+            "section": "2.2 거듭제곱값 계산",
+            "pages": [
+              46,
+              47
+            ]
+          }
+        ],
+        "evidence": "절반"
+      }
+    },
+    {
+      "question": "순환적인 피보나치 계산이 비효율적인 근본 이유는?",
+      "answer": {
+        "text": "순환적인 피보나치 계산이 비효율적인 근본 이유는 중간에 계산한 값을 기억하지 않고 다시 계산하기 때문이다.",
+        "refs": [
+          {
+            "source": "A",
+            "section": "2.3 피보나치 수열의 계산",
+            "pages": [
+              49
+            ]
+          }
+        ],
+        "evidence": "기억하지 않고 다시 계산"
+      }
+    }
+  ],
+  "cheat": {
+    "definitions": [
+      {
+        "term": "순환",
+        "definition": {
+          "text": "순환(recursion)은 어떤 알고리즘이나 함수가 자기 자신을 호출하여 문제를 해결하는 프로그래밍 기법이다.",
+          "refs": [
+            {
+              "source": "A",
+              "section": "2.1 순환의 소개",
+              "pages": [
+                34
+              ]
+            }
+          ],
+          "evidence": "자기 자신을 호출"
+        }
+      },
+      {
+        "term": "활성 레코드",
+        "definition": {
+          "text": "활성 레코드(activation record)는 함수를 위해 시스템 스택에서 사용하는 공간이다.",
+          "refs": [
+            {
+              "source": "A",
+              "section": "2.1 순환 호출의 내부적인 구현",
+              "pages": [
+                38
+              ]
+            }
+          ],
+          "evidence": "활성 레코드"
+        }
+      },
+      {
+        "term": "꼬리 순환",
+        "definition": {
+          "text": "꼬리 순환(tail recursion)은 순환 호출이 순환 함수의 맨 끝에서 이루어지는 형태이며, 쉽게 반복 형태로 변환할 수 있다.",
+          "refs": [
+            {
+              "source": "A",
+              "section": "2.1·2.4 반복적인 형태로 바꾸기 어려운 순환",
+              "pages": [
+                41,
+                56
+              ]
+            }
+          ],
+          "evidence": "꼬리 순환"
+        }
+      }
+    ],
+    "comparison_title": "원문의 계산 방법별 시간 복잡도",
+    "comparison_headers": [
+      "계산 방법",
+      "원문 결과"
+    ],
+    "comparison_rows": [
+      [
+        {
+          "text": "팩토리얼: 반복·순환",
+          "refs": [
+            {
+              "source": "A",
+              "section": "2.1 순환 알고리즘의 성능",
+              "pages": [
+                44
+              ]
+            }
+          ],
+          "evidence": "팩토리얼"
+        },
+        {
+          "text": "팩토리얼의 반복 알고리즘과 순환 알고리즘은 모두 시간 복잡도가 O(n)이다.",
+          "refs": [
+            {
+              "source": "A",
+              "section": "2.1 순환 알고리즘의 성능",
+              "pages": [
+                44
+              ]
+            }
+          ],
+          "evidence": "역시 O(n)"
+        }
+      ],
+      [
+        {
+          "text": "거듭제곱: 반복",
+          "refs": [
+            {
+              "source": "A",
+              "section": "2.2 표 2-1",
+              "pages": [
+                47
+              ]
+            }
+          ],
+          "evidence": "반복적인 함수"
+        },
+        {
+          "text": "반복적인 slow_power()는 루프마다 한 번의 곱셈이 필요하고 루프 횟수가 n이므로 시간 복잡도는 O(n)이다.",
+          "refs": [
+            {
+              "source": "A",
+              "section": "2.2 거듭제곱값 계산",
+              "pages": [
+                47
+              ]
+            }
+          ],
+          "evidence": "루프의 개수는 정확히"
+        }
+      ],
+      [
+        {
+          "text": "거듭제곱: 순환",
+          "refs": [
+            {
+              "source": "A",
+              "section": "2.2 표 2-1",
+              "pages": [
+                47
+              ]
+            }
+          ],
+          "evidence": "순환적인 함수"
+        },
+        {
+          "text": "순환적인 거듭제곱 계산은 호출할 때마다 문제 크기가 약 절반으로 줄어 시간 복잡도가 O(log₂n)이다.",
+          "refs": [
+            {
+              "source": "A",
+              "section": "2.2 거듭제곱값 계산",
+              "pages": [
+                46,
+                47
+              ]
+            }
+          ],
+          "evidence": "절반"
+        }
+      ]
+    ],
+    "formulas": [
+      {
+        "label": "순환적인 피보나치 계산의 상한",
+        "expression": "O(2ⁿ)",
+        "refs": [
+          {
+            "source": "A",
+            "section": "2.3 피보나치 수열의 계산",
+            "pages": [
+              49
+            ]
+          }
+        ],
+        "evidence": "상한",
+        "note": ""
+      }
+    ],
+    "syntax": []
+  },
+  "checked_images": [
+    {
+      "source": "A",
+      "pages": [
+        34,
+        35,
+        36,
+        38,
+        40,
+        41,
+        42,
+        43,
+        44,
+        45,
+        46,
+        47,
+        48,
+        49,
+        50,
+        51,
+        52,
+        53,
+        56
+      ]
+    }
+  ],
+  "editor_notes": []
+}

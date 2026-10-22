@@ -1,0 +1,40 @@
+#define MAX-DEGREE 101 // 다항식아 최대차수
++ 1
+struct (
+int degree;
+float coef(MAX-DEGREEj ;
+} polynomial;
+匹lyn에lial a { 5, {10, 0, 0, 0, 6, 3) 뉴
+위의 방법은 간단하고 쉽게 이해가 되는 방법이다. 하지만 이 방법의 문제점은 대부-분의 항의
+계수가 0인 희소 다항식의 경우에는 공간의 당비가 심하다는 것이다. 예를 들어 10T1厠+6의 회
+소 다항식의 경우 101개의 공간 중에서 오직 까만 시용된다. 그러나 이 방법의 최대 장점은 다
+항식의 덧셈이나 뺄셈 시에 같은 치수의 계수를 쉽게 찾을 수 있으므로 알고리즘이 간단해진다
+는 것이다.
+이 방법으로 표현된 2개의 다항식을 받아서 덧셈을 하는 프로그램을 프로그램 3.2에 보였다.
+최고자항부터 배열에 차례대로 저장되어 있음-을 유의해야 한다. 구조체 B의 coef 배열을 스
+캔하면서 지수가 큰 항을 구조체 C로 이동하였다. 자수가 같으면 구조체 A, B의 coef 값을 더하
+여 C의 coef에 대입한다. 두개의 다항식 모두 자수가 최고자항에서 0까지 존재하므로 white 루
+프가 끝나면 모든 형틀이 처리되는 것이 보장된다.
+프로그램 3.2 polynomiall.c 다항식 덧셈 프로그램 #1
+#include <stdio.h>
+#define MAX_DEGREE 101
+typedef struct {
+int degree;
+float coef[MAX_DEGREEJ ;
+} polynomial,
+// 다항식 구조체 타입 선언
+// 다항식의 차수
+// 다항식의 계수
+// C = A+B 여기서 A와 다항식이다. 구조체가 반환된다.
+polynomial poly—addl(polynomial A, polynomial 8)
+polynomial C;
+// 결과 다항식
+-int Apos = 0, Bpos = 0, Cpos = 0; // 배열 인덱스 변수
+int degree—a = A.degree;
+int degree_b = B.degree;
+C.degree = MAX(A.degree, B.degree); // 결과 다항식 차수
+while (Apos <= A.degree && Bpos <= B.degree) {
+if (degree-a 〉 degree-b) {
+C.coef[Cpos++] = A.coef[Apos++] ;
+degree—a-
+CHAPTERd3 배열, 구조체, 포인터 77

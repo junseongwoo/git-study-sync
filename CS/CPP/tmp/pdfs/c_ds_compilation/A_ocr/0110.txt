@@ -1,0 +1,36 @@
+pop() 코드는 변경이 없다. realtoc()은 동적 메모리의 크기를 변경히는 힘수로서 현재 내용
+은 유지하면서 주어진 그기로 동적 메모리를 다시 할팅한다. 배열의 그기는 2비|씩 늘어난다. 현
+재는 소스를 간단하게 만들기 위하여 matloc()에서 반환되는 값을 김사히는 코드는 생략하있다
+실제로는 반드시 반환되는 값이 NULL이 아닌지 김시하여야 한다. 간단하게 테스트 코드를 작성
+해보면 수음과 같다.
+프로그램 4.5 동적 배열 스택 프로그램
+#include <stdio.h>
+#include <stdtib.h>
+#define MAX_STACK_SIZE 100
+typedef int element;
+typedef struct {
+element *data;
+int capacity;
+int tO아
+} StackType;
+// 스택 생성 함수
+// data은 포인터로 정의된다.
+// 현재 크기
+void init_stack(StackType *5)
+s—>top
+s—>capacity = 1;
+(element *)malloc(s->capacity * sizeof(element));
+s—>data
+// 공백 상태 검출 함수
+int is—empty(StackType *5)
+return (s—>top == -1) ;
+// 포화 상태 검출 함수
+int is_fu11(StackType *9
+return (s->top == (s—>capacity - 1)) ;
+VOid push(StackType *5, element item)
+if (is-full(s)) {
+s—>capacity *= 2;
+s->data
+(element *)reatloc(s->data, s->capacity * sizeof(etement));
+s->data[++(s->top)] = item;
+118 C언어로 쉽게 불어쓴 자료구조

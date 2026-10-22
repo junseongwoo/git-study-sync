@@ -1,0 +1,1177 @@
+{
+  "unit": 6,
+  "title": "표준 입출력·파일·엑셀 프로젝트",
+  "part": "C++",
+  "scope": [
+    {
+      "source": "B",
+      "start": 345,
+      "end": 414
+    }
+  ],
+  "learning": [
+    {
+      "text": "C++ 입출력 라이브러리의 클래스와 표준 스트림·파일 스트림을 다룬다.",
+      "refs": [
+        {
+          "source": "B",
+          "section": "C++ 표준 입출력 라이브러리 / C++ 파일 입출력",
+          "pages": [
+            345,
+            361
+          ]
+        }
+      ],
+      "evidence": "파일스트림과의입출력을다루어"
+    },
+    {
+      "text": "배운 내용을 바탕으로 콘솔용 Excel을 만들고, 셀과 표를 확장한다.",
+      "refs": [
+        {
+          "source": "B",
+          "section": "엑셀 만들기 프로젝트",
+          "pages": [
+            379,
+            399
+          ]
+        }
+      ],
+      "evidence": "콘솔로Excel 을만드는것"
+    }
+  ],
+  "concepts": [
+    {
+      "title": "입출력 클래스와 스트림",
+      "items": [
+        {
+          "text": "ios_base는 스트림의 입출력 형식 관련 데이터를 처리하고, ios는 스트림 버퍼를 초기화하며 입출력 작업의 상태를 처리한다.",
+          "refs": [
+            {
+              "source": "B",
+              "section": "C++ 입출력 라이브러리",
+              "pages": [
+                346
+              ]
+            }
+          ],
+          "evidence": "스트림의입출력형식관련데이터를처리합니다."
+        },
+        {
+          "text": "스트림 버퍼는 데이터를 내보내거나 받아들이기 전에 임시로 저장하는 곳이다.",
+          "refs": [
+            {
+              "source": "B",
+              "section": "C++ 입출력 라이브러리",
+              "pages": [
+                346
+              ]
+            }
+          ],
+          "evidence": "데이터를내보내거나받아들이기전에임시로저장하는곳"
+        },
+        {
+          "text": "istream은 실제로 입력을 수행하며, operator>>가 정의되어 있고 cin은 istream 클래스의 객체 중 하나이다.",
+          "refs": [
+            {
+              "source": "B",
+              "section": "istream 클래스",
+              "pages": [
+                347
+              ]
+            }
+          ],
+          "evidence": "istream 은실제로입력을수행하는클래스"
+        },
+        {
+          "text": "operator>>로 문자열을 입력하면 공백문자에 따라 분리해서 입력받는다.",
+          "refs": [
+            {
+              "source": "B",
+              "section": "istream 클래스",
+              "pages": [
+                348,
+                349
+              ]
+            }
+          ],
+          "evidence": "공백문자에따라서각각을분리해서입력"
+        }
+      ]
+    },
+    {
+      "title": "상태 플래그와 입력 복구",
+      "items": [
+        {
+          "text": "타입에 맞지 않는 값을 넣어 오류가 발생하면 failbit가 켜지고, 입력값을 받지 않고 리턴한다.",
+          "refs": [
+            {
+              "source": "B",
+              "section": "istream 클래스",
+              "pages": [
+                351
+              ]
+            }
+          ],
+          "evidence": "타입에맞지않는값을넣어서오류가발생하는경우에는failbit"
+        },
+        {
+          "text": "fail 함수는 failbit가 true이거나 badbit가 true이면 true를 리턴한다.",
+          "refs": [
+            {
+              "source": "B",
+              "section": "istream 클래스",
+              "pages": [
+                353
+              ]
+            }
+          ],
+          "evidence": "failbit 가true 거나badbit 가true 면true"
+        },
+        {
+          "text": "clear()에 인자를 주지 않으면 플래그를 goodbit으로 초기화하고, ignore는 최대 첫 번째 인자만큼, 두 번째 인자가 나올 때까지 그 문자를 포함하여 버퍼에서 무시한다.",
+          "refs": [
+            {
+              "source": "B",
+              "section": "istream 클래스",
+              "pages": [
+                353
+              ]
+            }
+          ],
+          "evidence": "플래그를goodbit 으로초기화"
+        }
+      ]
+    },
+    {
+      "title": "형식 플래그·조작자·스트림 버퍼",
+      "items": [
+        {
+          "text": "인자 두 개를 취하는 setf는 두 번째 인자의 내용을 초기화하고 첫 번째 인자의 형식 플래그를 적용한다.",
+          "refs": [
+            {
+              "source": "B",
+              "section": "형식 플래그(format flag) 와 조작자(Manipulator)",
+              "pages": [
+                355
+              ]
+            }
+          ],
+          "evidence": "두번째인자(위에서basefield) 의내용을초기화"
+        },
+        {
+          "text": "조작자는 스트림을 조작하여 입력 혹은 출력 방식을 바꾸는 함수이다.",
+          "refs": [
+            {
+              "source": "B",
+              "section": "형식 플래그(format flag) 와 조작자(Manipulator)",
+              "pages": [
+                356
+              ]
+            }
+          ],
+          "evidence": "입력혹은출력방식을바꿔주는함수를조작자"
+        },
+        {
+          "text": "std::endl은 개행문자를 출력하고 버퍼를 모두 내보내는 flush를 수행한다.",
+          "refs": [
+            {
+              "source": "B",
+              "section": "형식 플래그(format flag) 와 조작자(Manipulator)",
+              "pages": [
+                357
+              ]
+            }
+          ],
+          "evidence": "개행문자를출력하는것말고도, 버퍼를모두내보내는"
+        },
+        {
+          "text": "streambuf는 입력 버퍼와 출력 버퍼를 각각 get area와 put area라고 부르며, 버퍼의 시작·다음으로 읽을 문자·끝을 가리키는 포인터를 둔다.",
+          "refs": [
+            {
+              "source": "B",
+              "section": "스트림 버퍼에 대해",
+              "pages": [
+                358
+              ]
+            }
+          ],
+          "evidence": "각각get area 와put area"
+        },
+        {
+          "text": "rdbuf는 입력을 수행하던 streambuf 객체의 포인터를 반환하고, snextc는 위치지정자를 한 칸 전진시킨 후 해당 문자를 엿본다.",
+          "refs": [
+            {
+              "source": "B",
+              "section": "스트림 버퍼에 대해",
+              "pages": [
+                359
+              ]
+            }
+          ],
+          "evidence": "스트림위치지정자를한칸전진시킨후"
+        }
+      ]
+    },
+    {
+      "title": "파일 연결과 읽기",
+      "items": [
+        {
+          "text": "ifstream과 ofstream은 각각 istream과 ostream을 상속받으며 fstream 라이브러리에 포함된다.",
+          "refs": [
+            {
+              "source": "B",
+              "section": "C++ 파일 입출력 / fstream",
+              "pages": [
+                361
+              ]
+            }
+          ],
+          "evidence": "각각을상속받은것이ifstream 과ofstream"
+        },
+        {
+          "text": "ifstream 생성자에 파일 경로를 전달해 파일을 열고, is_open으로 파일이 열렸는지 확인한다.",
+          "refs": [
+            {
+              "source": "B",
+              "section": "C++ 파일 입출력 / fstream",
+              "pages": [
+                362,
+                363
+              ]
+            }
+          ],
+          "evidence": "파일이열렸는지의유무를리턴"
+        },
+        {
+          "text": "ifstream 소멸자는 자동으로 close를 수행하며, 같은 객체를 다른 파일에 연결할 때는 close 후 open을 사용한다.",
+          "refs": [
+            {
+              "source": "B",
+              "section": "C++ 파일 입출력 / fstream",
+              "pages": [
+                363,
+                364
+              ]
+            }
+          ],
+          "evidence": "기존파일스트림과의연결을종료하고, 새로운파일과연결"
+        },
+        {
+          "text": "binary 옵션은 이진 그대로의 값을 받는 설정이며, read의 두 번째 인자로 읽을 바이트 수를 전달한다.",
+          "refs": [
+            {
+              "source": "B",
+              "section": "C++ 파일 입출력 / fstream",
+              "pages": [
+                365,
+                366
+              ]
+            }
+          ],
+          "evidence": "두번째인자로반드시몇바이트를읽을지"
+        },
+        {
+          "text": "seekg는 파일 위치지정자를 옮기며, tellg는 시작지점으로부터 위치지정자의 위치를 반환한다.",
+          "refs": [
+            {
+              "source": "B",
+              "section": "파일 전체 읽기",
+              "pages": [
+                367
+              ]
+            }
+          ],
+          "evidence": "tellg 함수는위치지정자의위치"
+        },
+        {
+          "text": "ifstream의 getline은 개행문자나 지정한 문자가 나올 때까지 최대 지정한 크기-1만큼 읽고, 버퍼가 먼저 차면 failbit를 켠다.",
+          "refs": [
+            {
+              "source": "B",
+              "section": "파일 전체를 한 줄씩 읽기",
+              "pages": [
+                368,
+                369
+              ]
+            }
+          ],
+          "evidence": "최대지정한크기- 1 만큼읽게"
+        },
+        {
+          "text": "getline(in, s)은 istream 객체와 string 객체를 받아 버퍼 크기를 지정하지 않고 개행문자 혹은 파일 끝까지 입력받는다.",
+          "refs": [
+            {
+              "source": "B",
+              "section": "파일 전체를 한 줄씩 읽기",
+              "pages": [
+                370
+              ]
+            }
+          ],
+          "evidence": "굳이버퍼의크기를지정하지않아도"
+        }
+      ]
+    },
+    {
+      "title": "출력 모드와 문자열 스트림",
+      "items": [
+        {
+          "text": "ofstream은 파일이 없으면 생성하고, 특별한 설정 없이 기존 파일을 열면 내용을 지우고 새 내용으로 덮어쓴다.",
+          "refs": [
+            {
+              "source": "B",
+              "section": "파일에 쓰기",
+              "pages": [
+                371
+              ]
+            }
+          ],
+          "evidence": "해당파일내용이다지워지고새로운내용으로덮어"
+        },
+        {
+          "text": "ios::app은 기존 파일의 뒤에 새 내용을 붙여 쓰고, ios::ate는 파일을 열 때 위치지정자를 파일 끝에 둔다.",
+          "refs": [
+            {
+              "source": "B",
+              "section": "파일에 쓰기",
+              "pages": [
+                372
+              ]
+            }
+          ],
+          "evidence": "파일을열때위치지정자가파일끝"
+        },
+        {
+          "text": "std::istringstream은 문자열을 입력 스트림처럼 사용하고, std::ostringstream에 출력한 값은 str 함수로 불러온다.",
+          "refs": [
+            {
+              "source": "B",
+              "section": "문자열 스트림(std::stringstream)",
+              "pages": [
+                375,
+                376
+              ]
+            }
+          ],
+          "evidence": "str 함수로현재문자열스트림에쓰여있는값"
+        }
+      ]
+    },
+    {
+      "title": "엑셀 프로젝트의 자료구조와 클래스",
+      "items": [
+        {
+          "text": "프로젝트의 Vector는 가변 길이 배열로 임의 위치의 원소에 접근하며, Stack은 항상 최상단의 데이터에만 접근한다.",
+          "refs": [
+            {
+              "source": "B",
+              "section": "엑셀 만들기 프로젝트",
+              "pages": [
+                379
+              ]
+            }
+          ],
+          "evidence": "항상최상단에있는데이터에만접근"
+        },
+        {
+          "text": "Cell은 한 칸을 뜻하고, Table은 필요할 때 동적으로 생성한 Cell 객체의 포인터를 2차원 배열로 보관한다.",
+          "refs": [
+            {
+              "source": "B",
+              "section": "엑셀 만들기 프로젝트",
+              "pages": [
+                388,
+                389,
+                390
+              ]
+            }
+          ],
+          "evidence": "객체에대한포인터를2차원배열"
+        },
+        {
+          "text": "Table의 print_table은 순수 가상함수이며, TxtTable·CSVTable·HtmlTable은 각 형식의 문자열로 표를 출력한다.",
+          "refs": [
+            {
+              "source": "B",
+              "section": "엑셀 만들기 프로젝트",
+              "pages": [
+                392,
+                395,
+                396
+              ]
+            }
+          ],
+          "evidence": "virtual string print_table() = 0;"
+        },
+        {
+          "text": "확장한 Cell은 stringify와 to_numeric을 순수 가상함수로 두며, StringCell·NumberCell·DateCell은 문자열·정수·시간 정보를 보관한다.",
+          "refs": [
+            {
+              "source": "B",
+              "section": "엑셀 만들기 프로젝트 2부 / Cell 클래스 확장",
+              "pages": [
+                399,
+                400
+              ]
+            }
+          ],
+          "evidence": "문자열, 정수, 시간정보를보관"
+        }
+      ]
+    },
+    {
+      "title": "수식과 명령 처리",
+      "items": [
+        {
+          "text": "ExprCell 예제는 숫자를 한 자리 정수로, 셀 이름을 두 글자로 제한한다.",
+          "refs": [
+            {
+              "source": "B",
+              "section": "엑셀 만들기 프로젝트 2부 / parse_expression 함수",
+              "pages": [
+                407
+              ]
+            }
+          ],
+          "evidence": "숫자는1 자리정수이고, 셀이름역시2자로제한"
+        },
+        {
+          "text": "중위 표기법은 피연산자 사이에 연산자를 넣으며, 후위 표기법은 연산자를 피연산자 뒤에 두고 괄호 없이 표현한다.",
+          "refs": [
+            {
+              "source": "B",
+              "section": "엑셀 만들기 프로젝트 2부 / 중위 표기법과 후위 표기법",
+              "pages": [
+                403
+              ]
+            }
+          ],
+          "evidence": "연산자들이피연산자뒤쪽에위치"
+        },
+        {
+          "text": "Excel 클래스는 사용자 입력을 받아 테이블을 생성·관리하며, sets·setn·setd·sete·out·exit 명령을 처리한다.",
+          "refs": [
+            {
+              "source": "B",
+              "section": "엑셀 만들기 프로젝트 2부 / 엑셀 프로그램",
+              "pages": [
+                410,
+                411,
+                412
+              ]
+            }
+          ],
+          "evidence": "사용자의입력을받아서실제테이블을생성하고이를관리"
+        }
+      ]
+    }
+  ],
+  "procedures": [
+    {
+      "title": "파일 전체를 한 번에 읽기",
+      "steps": [
+        {
+          "text": "seekg로 위치지정자를 파일 끝으로 옮기고 tellg로 크기를 읽는다.",
+          "refs": [
+            {
+              "source": "B",
+              "section": "파일 전체를 한 번에 읽기",
+              "pages": [
+                366,
+                367
+              ]
+            }
+          ],
+          "evidence": "위치지정자를파일끝으로옮긴다."
+        },
+        {
+          "text": "문자열을 그 크기로 resize한 뒤 위치지정자를 파일 맨 앞으로 옮긴다.",
+          "refs": [
+            {
+              "source": "B",
+              "section": "파일 전체를 한 번에 읽기",
+              "pages": [
+                366,
+                367
+              ]
+            }
+          ],
+          "evidence": "그크기의문자열을할당한다."
+        },
+        {
+          "text": "read로 파일 전체 내용을 문자열에 저장한다.",
+          "refs": [
+            {
+              "source": "B",
+              "section": "파일 전체를 한 번에 읽기",
+              "pages": [
+                368
+              ]
+            }
+          ],
+          "evidence": "파일전체에내용을문자열에저장"
+        }
+      ]
+    },
+    {
+      "title": "후위 표기법의 계산",
+      "steps": [
+        {
+          "text": "피연산자를 만나면 스택에 push한다.",
+          "refs": [
+            {
+              "source": "B",
+              "section": "엑셀 만들기 프로젝트 2부 / 중위 표기법과 후위 표기법",
+              "pages": [
+                403
+              ]
+            }
+          ],
+          "evidence": "피연산자를만나면스택에push"
+        },
+        {
+          "text": "연산자를 만나면 두 개를 pop하여 연산하고 결과를 다시 push한다.",
+          "refs": [
+            {
+              "source": "B",
+              "section": "엑셀 만들기 프로젝트 2부 / 중위 표기법과 후위 표기법",
+              "pages": [
+                403
+              ]
+            }
+          ],
+          "evidence": "스택에서두개를pop 한뒤"
+        },
+        {
+          "text": "모든 계산이 끝나면 스택의 최종 결과값을 pop하여 리턴한다.",
+          "refs": [
+            {
+              "source": "B",
+              "section": "엑셀 만들기 프로젝트 2부 / to_numeric",
+              "pages": [
+                406
+              ]
+            }
+          ],
+          "evidence": "최종결과값을pop"
+        }
+      ]
+    },
+    {
+      "title": "중위 표기법을 후위 표기법으로 변환",
+      "steps": [
+        {
+          "text": "피연산자는 exp_vec에 넣고, 여는 괄호는 스택에 push한다.",
+          "refs": [
+            {
+              "source": "B",
+              "section": "엑셀 만들기 프로젝트 2부 / parse_expression 함수",
+              "pages": [
+                406
+              ]
+            }
+          ],
+          "evidence": "피연산자(셀이름이나숫자) 일경우그냥exp_vec"
+        },
+        {
+          "text": "닫는 괄호를 만나면 여는 괄호가 나올 때까지 pop되는 연산자를 exp_vec에 넣는다.",
+          "refs": [
+            {
+              "source": "B",
+              "section": "엑셀 만들기 프로젝트 2부 / parse_expression 함수",
+              "pages": [
+                406
+              ]
+            }
+          ],
+          "evidence": "여는괄호가pop 될때까지"
+        },
+        {
+          "text": "연산자는 자신보다 우선순위가 낮은 연산자가 최상단에 오거나 스택이 빌 때까지 pop하여 exp_vec에 넣고, 자신을 push한다.",
+          "refs": [
+            {
+              "source": "B",
+              "section": "엑셀 만들기 프로젝트 2부 / parse_expression 함수",
+              "pages": [
+                406
+              ]
+            }
+          ],
+          "evidence": "자기보다우선순위가낮은연산자"
+        },
+        {
+          "text": "원문 구현은 수식 전체를 괄호로 감싸 마지막 괄호를 처리할 때 남은 연산자를 pop한다.",
+          "refs": [
+            {
+              "source": "B",
+              "section": "엑셀 만들기 프로젝트 2부 / parse_expression 함수",
+              "pages": [
+                409
+              ]
+            }
+          ],
+          "evidence": "수식전체를( ) 로한번감싸는것"
+        }
+      ]
+    }
+  ],
+  "syntax": [
+    {
+      "label": "파일 전체 읽기: 원문 발췌",
+      "code": "in.seekg(0, std::ios::end);\nint size = in.tellg();\ns.resize(size);\nin.seekg(0, std::ios::beg);\nin.read(&s[0], size);",
+      "refs": [
+        {
+          "source": "B",
+          "section": "파일 전체를 한 번에 읽기",
+          "pages": [
+            366
+          ]
+        }
+      ],
+      "evidence": "in.seekg(0, std::ios::end);\nint size = in.tellg();\ns.resize(size);\nin.seekg(0, std::ios::beg);\nin.read(&s[0], size);",
+      "note": null
+    }
+  ],
+  "formulas": [
+    {
+      "label": "원문의 중위·후위 표기 예",
+      "expression": "3 + 4 * 5 + 4 * (7 - 2)  →  3 4 5 * + 4 7 2 - * +",
+      "refs": [
+        {
+          "source": "B",
+          "section": "엑셀 만들기 프로젝트 2부 / 중위 표기법과 후위 표기법",
+          "pages": [
+            403
+          ]
+        }
+      ],
+      "evidence": "3 + 4 * 5 + 4 * (7 - 2)",
+      "note": "원문은 두 표기가 정확히 동일한 수식이라고 설명한다."
+    }
+  ],
+  "comparisons": [
+    {
+      "title": "스트림 상태 플래그: 원문 설명",
+      "headers": [
+        "플래그",
+        "원문의 설명"
+      ],
+      "rows": [
+        [
+          {
+            "text": "goodbit",
+            "refs": [
+              {
+                "source": "B",
+                "section": "istream 클래스",
+                "pages": [
+                  350
+                ]
+              }
+            ],
+            "evidence": "goodbit"
+          },
+          {
+            "text": "스트림에 입출력 작업이 가능할 때",
+            "refs": [
+              {
+                "source": "B",
+                "section": "istream 클래스",
+                "pages": [
+                  350
+                ]
+              }
+            ],
+            "evidence": "goodbit"
+          }
+        ],
+        [
+          {
+            "text": "badbit",
+            "refs": [
+              {
+                "source": "B",
+                "section": "istream 클래스",
+                "pages": [
+                  350
+                ]
+              }
+            ],
+            "evidence": "badbit"
+          },
+          {
+            "text": "스트림에 복구 불가능한 오류 발생 시",
+            "refs": [
+              {
+                "source": "B",
+                "section": "istream 클래스",
+                "pages": [
+                  350
+                ]
+              }
+            ],
+            "evidence": "badbit"
+          }
+        ],
+        [
+          {
+            "text": "failbit",
+            "refs": [
+              {
+                "source": "B",
+                "section": "istream 클래스",
+                "pages": [
+                  350
+                ]
+              }
+            ],
+            "evidence": "failbit"
+          },
+          {
+            "text": "스트림에 복구 가능한 오류 발생 시",
+            "refs": [
+              {
+                "source": "B",
+                "section": "istream 클래스",
+                "pages": [
+                  350
+                ]
+              }
+            ],
+            "evidence": "failbit"
+          }
+        ],
+        [
+          {
+            "text": "eofbit",
+            "refs": [
+              {
+                "source": "B",
+                "section": "istream 클래스",
+                "pages": [
+                  350
+                ]
+              }
+            ],
+            "evidence": "eofbit"
+          },
+          {
+            "text": "입력 작업 시에 EOF 도달 시",
+            "refs": [
+              {
+                "source": "B",
+                "section": "istream 클래스",
+                "pages": [
+                  350
+                ]
+              }
+            ],
+            "evidence": "eofbit"
+          }
+        ]
+      ]
+    }
+  ],
+  "terms": [
+    {
+      "term": "스트림 버퍼",
+      "definition": {
+        "text": "스트림 버퍼는 데이터를 내보내거나 받아들이기 전에 임시로 저장하는 곳이다.",
+        "refs": [
+          {
+            "source": "B",
+            "section": "C++ 입출력 라이브러리",
+            "pages": [
+              346
+            ]
+          }
+        ],
+        "evidence": "데이터를내보내거나받아들이기전에임시로저장하는곳"
+      }
+    },
+    {
+      "term": "조작자(Manipulator)",
+      "definition": {
+        "text": "조작자는 스트림을 조작하여 입력 혹은 출력 방식을 바꾸는 함수이다.",
+        "refs": [
+          {
+            "source": "B",
+            "section": "형식 플래그(format flag) 와 조작자(Manipulator)",
+            "pages": [
+              356
+            ]
+          }
+        ],
+        "evidence": "입력혹은출력방식을바꿔주는함수를조작자"
+      }
+    },
+    {
+      "term": "streambuf",
+      "definition": {
+        "text": "streambuf는 입력 버퍼와 출력 버퍼를 각각 get area와 put area라고 부르며, 버퍼의 시작·다음으로 읽을 문자·끝을 가리키는 포인터를 둔다.",
+        "refs": [
+          {
+            "source": "B",
+            "section": "스트림 버퍼에 대해",
+            "pages": [
+              358
+            ]
+          }
+        ],
+        "evidence": "각각get area 와put area"
+      }
+    },
+    {
+      "term": "is_open",
+      "definition": {
+        "text": "ifstream 생성자에 파일 경로를 전달해 파일을 열고, is_open으로 파일이 열렸는지 확인한다.",
+        "refs": [
+          {
+            "source": "B",
+            "section": "C++ 파일 입출력 / fstream",
+            "pages": [
+              362,
+              363
+            ]
+          }
+        ],
+        "evidence": "파일이열렸는지의유무를리턴"
+      }
+    },
+    {
+      "term": "Vector",
+      "definition": {
+        "text": "프로젝트의 Vector는 가변 길이 배열로 임의 위치의 원소에 접근하며, Stack은 항상 최상단의 데이터에만 접근한다.",
+        "refs": [
+          {
+            "source": "B",
+            "section": "엑셀 만들기 프로젝트",
+            "pages": [
+              379
+            ]
+          }
+        ],
+        "evidence": "항상최상단에있는데이터에만접근"
+      }
+    },
+    {
+      "term": "후위 표기법(postfix notation)",
+      "definition": {
+        "text": "중위 표기법은 피연산자 사이에 연산자를 넣으며, 후위 표기법은 연산자를 피연산자 뒤에 두고 괄호 없이 표현한다.",
+        "refs": [
+          {
+            "source": "B",
+            "section": "엑셀 만들기 프로젝트 2부 / 중위 표기법과 후위 표기법",
+            "pages": [
+              403
+            ]
+          }
+        ],
+        "evidence": "연산자들이피연산자뒤쪽에위치"
+      }
+    }
+  ],
+  "summary_basis": "편집 요약",
+  "summary": [
+    {
+      "text": "ios_base는 스트림의 입출력 형식 관련 데이터를 처리하고, ios는 스트림 버퍼를 초기화하며 입출력 작업의 상태를 처리한다.",
+      "refs": [
+        {
+          "source": "B",
+          "section": "C++ 입출력 라이브러리",
+          "pages": [
+            346
+          ]
+        }
+      ],
+      "evidence": "스트림의입출력형식관련데이터를처리합니다."
+    },
+    {
+      "text": "clear()에 인자를 주지 않으면 플래그를 goodbit으로 초기화하고, ignore는 최대 첫 번째 인자만큼, 두 번째 인자가 나올 때까지 그 문자를 포함하여 버퍼에서 무시한다.",
+      "refs": [
+        {
+          "source": "B",
+          "section": "istream 클래스",
+          "pages": [
+            353
+          ]
+        }
+      ],
+      "evidence": "플래그를goodbit 으로초기화"
+    },
+    {
+      "text": "std::istringstream은 문자열을 입력 스트림처럼 사용하고, std::ostringstream에 출력한 값은 str 함수로 불러온다.",
+      "refs": [
+        {
+          "source": "B",
+          "section": "문자열 스트림(std::stringstream)",
+          "pages": [
+            375,
+            376
+          ]
+        }
+      ],
+      "evidence": "str 함수로현재문자열스트림에쓰여있는값"
+    },
+    {
+      "text": "확장한 Cell은 stringify와 to_numeric을 순수 가상함수로 두며, StringCell·NumberCell·DateCell은 문자열·정수·시간 정보를 보관한다.",
+      "refs": [
+        {
+          "source": "B",
+          "section": "엑셀 만들기 프로젝트 2부 / Cell 클래스 확장",
+          "pages": [
+            399,
+            400
+          ]
+        }
+      ],
+      "evidence": "문자열, 정수, 시간정보를보관"
+    }
+  ],
+  "review": [
+    {
+      "question": "ios_base와 ios가 각각 처리하는 내용은 무엇인가?",
+      "answer": {
+        "text": "ios_base는 스트림의 입출력 형식 관련 데이터를 처리하고, ios는 스트림 버퍼를 초기화하며 입출력 작업의 상태를 처리한다.",
+        "refs": [
+          {
+            "source": "B",
+            "section": "C++ 입출력 라이브러리",
+            "pages": [
+              346
+            ]
+          }
+        ],
+        "evidence": "스트림의입출력형식관련데이터를처리합니다."
+      }
+    },
+    {
+      "question": "fail 상태의 입력을 복구할 때 clear와 ignore는 각각 무엇을 하는가?",
+      "answer": {
+        "text": "clear()에 인자를 주지 않으면 플래그를 goodbit으로 초기화하고, ignore는 최대 첫 번째 인자만큼, 두 번째 인자가 나올 때까지 그 문자를 포함하여 버퍼에서 무시한다.",
+        "refs": [
+          {
+            "source": "B",
+            "section": "istream 클래스",
+            "pages": [
+              353
+            ]
+          }
+        ],
+        "evidence": "플래그를goodbit 으로초기화"
+      }
+    },
+    {
+      "question": "파일 전체를 읽을 때 seekg와 tellg는 어떤 역할을 하는가?",
+      "answer": {
+        "text": "seekg는 파일 위치지정자를 옮기며, tellg는 시작지점으로부터 위치지정자의 위치를 반환한다.",
+        "refs": [
+          {
+            "source": "B",
+            "section": "파일 전체 읽기",
+            "pages": [
+              367
+            ]
+          }
+        ],
+        "evidence": "tellg 함수는위치지정자의위치"
+      }
+    },
+    {
+      "question": "후위 표기법에서 연산자를 만나면 스택을 어떻게 처리하는가?",
+      "answer": {
+        "text": "두 피연산자를 pop하여 연산하고 결과를 다시 push한다.",
+        "refs": [
+          {
+            "source": "B",
+            "section": "엑셀 만들기 프로젝트 2부 / 중위 표기법과 후위 표기법",
+            "pages": [
+              403
+            ]
+          }
+        ],
+        "evidence": "그결과를다시스택에push"
+      }
+    }
+  ],
+  "cheat": {
+    "definitions": [
+      {
+        "term": "스트림 버퍼",
+        "definition": {
+          "text": "스트림 버퍼는 데이터를 내보내거나 받아들이기 전에 임시로 저장하는 곳이다.",
+          "refs": [
+            {
+              "source": "B",
+              "section": "C++ 입출력 라이브러리",
+              "pages": [
+                346
+              ]
+            }
+          ],
+          "evidence": "데이터를내보내거나받아들이기전에임시로저장하는곳"
+        }
+      },
+      {
+        "term": "조작자",
+        "definition": {
+          "text": "조작자는 스트림을 조작하여 입력 혹은 출력 방식을 바꾸는 함수이다.",
+          "refs": [
+            {
+              "source": "B",
+              "section": "형식 플래그(format flag) 와 조작자(Manipulator)",
+              "pages": [
+                356
+              ]
+            }
+          ],
+          "evidence": "입력혹은출력방식을바꿔주는함수를조작자"
+        }
+      },
+      {
+        "term": "후위 표기법",
+        "definition": {
+          "text": "중위 표기법은 피연산자 사이에 연산자를 넣으며, 후위 표기법은 연산자를 피연산자 뒤에 두고 괄호 없이 표현한다.",
+          "refs": [
+            {
+              "source": "B",
+              "section": "엑셀 만들기 프로젝트 2부 / 중위 표기법과 후위 표기법",
+              "pages": [
+                403
+              ]
+            }
+          ],
+          "evidence": "연산자들이피연산자뒤쪽에위치"
+        }
+      }
+    ],
+    "comparison_title": "스트림 오류 상태",
+    "comparison_headers": [
+      "플래그",
+      "내용"
+    ],
+    "comparison_rows": [
+      [
+        {
+          "text": "badbit",
+          "refs": [
+            {
+              "source": "B",
+              "section": "istream 클래스",
+              "pages": [
+                350
+              ]
+            }
+          ],
+          "evidence": "badbit"
+        },
+        {
+          "text": "스트림에 복구 불가능한 오류 발생 시",
+          "refs": [
+            {
+              "source": "B",
+              "section": "istream 클래스",
+              "pages": [
+                350
+              ]
+            }
+          ],
+          "evidence": "badbit"
+        }
+      ],
+      [
+        {
+          "text": "failbit",
+          "refs": [
+            {
+              "source": "B",
+              "section": "istream 클래스",
+              "pages": [
+                350
+              ]
+            }
+          ],
+          "evidence": "failbit"
+        },
+        {
+          "text": "스트림에 복구 가능한 오류 발생 시",
+          "refs": [
+            {
+              "source": "B",
+              "section": "istream 클래스",
+              "pages": [
+                350
+              ]
+            }
+          ],
+          "evidence": "failbit"
+        }
+      ],
+      [
+        {
+          "text": "eofbit",
+          "refs": [
+            {
+              "source": "B",
+              "section": "istream 클래스",
+              "pages": [
+                350
+              ]
+            }
+          ],
+          "evidence": "eofbit"
+        },
+        {
+          "text": "입력 작업 시에 EOF 도달 시",
+          "refs": [
+            {
+              "source": "B",
+              "section": "istream 클래스",
+              "pages": [
+                350
+              ]
+            }
+          ],
+          "evidence": "eofbit"
+        }
+      ]
+    ],
+    "formulas": [],
+    "syntax": [
+      {
+        "label": "파일 전체 읽기: 원문 발췌",
+        "code": "in.seekg(0, std::ios::end);\nint size = in.tellg();\ns.resize(size);\nin.seekg(0, std::ios::beg);\nin.read(&s[0], size);",
+        "refs": [
+          {
+            "source": "B",
+            "section": "파일 전체를 한 번에 읽기",
+            "pages": [
+              366
+            ]
+          }
+        ],
+        "evidence": "in.seekg(0, std::ios::end);\nint size = in.tellg();\ns.resize(size);\nin.seekg(0, std::ios::beg);\nin.read(&s[0], size);",
+        "note": null
+      }
+    ]
+  },
+  "checked_images": [
+    {
+      "source": "B",
+      "pages": [
+        350,
+        353,
+        366,
+        372,
+        379,
+        400,
+        403,
+        406
+      ]
+    }
+  ],
+  "editor_notes": [
+    "긴 프로젝트 전체 코드는 재수록하지 않고 클래스 역할·처리 순서·원문 제약만 정리했다.",
+    "독립적인 장 요약 절은 확인되지 않아 본문을 편집 요약했다."
+  ]
+}

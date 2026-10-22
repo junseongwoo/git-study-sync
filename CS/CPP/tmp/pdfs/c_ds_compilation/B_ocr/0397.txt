@@ -1,0 +1,65 @@
+09장/Graph/Test—Graph. (
+01
+02
+03
+05
+07
+08
+09
+10
+12
+14
+16
+17
+18
+20
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+#include "Graph.h"
+int main( void )
+// 그래프 생성
+Graph* 6 - CreateGraph( );
+// 정점 생성
+CreateVertex(
+Vertex* VI
+Vertex* V2 = CreateVertex(
+Vertex* V3 = CreateVertex(
+Vertex* V4 = CreateVertex(
+Vertex* V5 = CreateVertex(
+// 그래프에 정점을 추가
+AddVertex( 6, VI
+AddVertex( 6, V2 );
+AddVertex( 6, V3 );
+AddVertex( G, V4 ):
+AddVertex( 6, V5 );
+// 정점과 정점을 간선으로 잇기
+AddEdge( VI, CreateEdge(V1, V2, 0) )•,
+AddEdge( VI, CreateEdge(V1, V3, 0) );
+AddEdge( VI, CreateEdge(V1, V4, 0) );
+AddEdge( VI, CreateEdge(V1, V5, 0) );
+AddEdge( V2, CreateEdge(V2, VI, 0) )•,
+AddEdge( V2, CreateEdge(V2, V3, 0) ),•
+AddEdge( V2, CreateEdge(V2, V5, 0) );
+AddEdge( V3, CreateEdge(V3, Ⅵ, 0) )
+AddEdge( V3, CreateEdge(V3, V2, 0) );
+AddEdge( V4, CreateEdge(V4, Ⅵ, 0)
+AddEdge( V4, CreateEdge(V4
+V5, 0) ):
+AddEdge( V5, CreateEdge(V5, VI, 0) );
+Chapter • 그래프
+393

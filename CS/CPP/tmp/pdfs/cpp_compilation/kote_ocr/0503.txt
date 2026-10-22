@@ -1,0 +1,46 @@
+int LCS;
+clock-t timer * (10(\•():
+suitch (i)
+case e:
+LCS = LCS BÄ1teForce(A, 8, 0,
+$if DEBUG
+PnntSubsequences(A, 8):
+$endif
+break;
+case 1:
+vector<vector<int〉〉 memo(A.size(), vector<int〉(B.size(), UNKNOWN));
+LCS
+= LCS Memoization(A, 8, A.size(), B.size(), memo);
+break;
+cout 〈〈A 〈〈 “와 〈〈B〈〈 "의 최장 공통 부분 시퀀스 길이: " 〈〈 LCS 〈〈 endl;
+GetTime(timer, types[i]);
+cout 〈〈 endl;
+5. 이제 프로그램을 실행하고, 두 문자열 ABCABDBEFBA와 ABCBEFBEAB를 입력하세요. 그러면 다음
+과 같은 출력을 확인할 수 있습니다.
+SIZE = 3
+SIZE = 4
+ABC_
+ABC_B
+ABC_B
+ABC_B
+ABC
+ABC_
+ABC_
+ABC_
+ABC_
+B
+E
+B
+B
+ABC_
+ABCB
+ABC
+ABC
+ABC
+ABC
+ABC
+ABC_
+AABC_
+8
+8
+516

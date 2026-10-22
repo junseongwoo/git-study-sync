@@ -1,0 +1,44 @@
+222
+CHAPTER 03 • 트랜스포트 계층
+EstimatedRTT = (1 - (1) • EstimatedRTT + (1 • Samp1eRTT
+앞 공식은 프로그래1101 언어 문장의 형대로 표기된 것이다. EstimatedRTT의
+로운 값은 F*timatcdRTT의 이전 값과 SampleRTT에 대한 새로운 값의 가중된 로
+합이다. 권장되는 (1의 값은 (1 = 0.125(즉
+, l/8)[RFC 6298]이며, 이러한 경우에 앞의
+공식은 다음과 같다.
+EstimatedRTT = 0.875 • EstimatedRTT + 0.125 • Samp1eRTT
+EstimatedRTT는 SampIeRTT7uk의 기중평균(weighted average)임을 유념하라.
+이 장 끝의 연습문제에서 볼 수 있듯이, 이 기중평균은 예전 샘플보다 최근 샘플에 놈
+은 가중치를 준다. 더 최근의 샘플들이 네트워크상의 현재 혼잡을 더 잘 반영한다. 통
+계에서 이런 평균은 지수적 기중 이동 평균(exponential weighted moving average,
+EWMA)이라고 부른다. 주어진 Samp1eRTT의 가중치가 갱신 절차가 진행됨에 따라
+빠르게 지수적으로 감소하므로 EWMA에서 “지수적(exponential)”이라는 용어가 쓰
+인다. 문제를 통해 EstimatedRTT에서 지수 부분을 유도하도록 요구할 것이다.
+그림 3.32는 gaia.cs•umass.edu/매사추세츠 주의 애머스트에 있음)와
+fantasia.eurecom.fr(프랑스 남부에 있음) 사이의 TCP 연결에 대해서 (1
+1/8의 값에 대한 Samp1eRTT값들과 EstimatedRTT를 보여 준다. Samp1eRTT
+의 변화&(vanation)은 EstimatedRTT 계산에 의해서 완만하게 된다.
+RI丁의 예측 외에도 RTT의 변회을을 측정하는 것도 매우 유용하다. [RFC 6298]
+은 RTT 변화율을 의미하는 DevRTT를 Samp1eRTT가 EstimatedRTT로부터 일
+마나 많이 벗어나는지에 대한 예측으로 정의한다.
+350
+300
+생플 RTT
+200
+추정된 RTT
+150
+100
+1
+8 15 22 29
+그림 3.32 • RTT 샘플과 RTT 추정치
+36
+43
+50 57
+시간(초)
+64
+71
+78
+85
+92
+99
+106

@@ -1,0 +1,30 @@
+따르는 SBT-PostorderPrintTree ( ) 함수는 다음과 같이 구현됩니다. 왼쪽 하위 트리-오른쪽 하
+위 트리-뿌리 노드 순으로 각 노드에 담긴 값들을 출력합니다.
+void SBT PostorderPrintTree( SBTNode* NOde )
+if ( NOde == NULL )
+return;
+// 완|쪽 하위 트리 출력
+58T PostorderPrintTree( Node->Left );
+// 오른쪽 하위 트리 출력
+SBT PostorderPrintTree( Node->Right )•,
+// 뿌리 노드 출력
+printf( • %c" Node->Data );
+후위 순화를 응용한 트리 소열
+트리를 구축할 때는 노드들이 어떤 순서로 생성되든 별로 문제되지 않지만, 트리를 파괴할 때는 반
+드시 잎 노드부터 자유 저장소에서 제거해야 합니다. 따라서 잎 노드부터 방문하여 뿌리 노드까지 거슬
+러 올라가며 방문하는 후위 순회를 이용하면 이진 트리 전체를 문제없이 소멸시길 수 있습니다.
+(티
+D
+F
+G
+㉦ ㉦`
+D
+F
+G
+F
+4
+F
+Chapter 04 • 트리
+G
+G
+169

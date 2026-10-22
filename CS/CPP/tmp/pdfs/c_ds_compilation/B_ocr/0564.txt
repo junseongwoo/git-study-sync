@@ -1,0 +1,63 @@
+001
+002
+003
+004
+005
+006
+007
+008
+009
+010
+012
+013
+014
+015
+016
+017
+018
+019
+020
+021
+022
+023
+024
+025
+026
+027
+028
+029
+030
+031
+032
+033
+034
+035
+036
+037
+038
+13장/L(S卯/L(S卯.(
+Tab1e->Data[ml[nl = TabIe->Data[mltn-11;
+TabIe->Data[ml[nl = Table->Data[m-11[nl;
+#include <stdio h〉
+tinclude <string.h>
+#include <stdlib h〉
+typedef struct structLCSTabIe
+int** Data,
+} LCSTab1e,
+int LCS( char* X, char* Y,
+int m = 0;
+int n = 0;
+int i,
+int j,
+LCSTab1e* TabIe )
+TabIe->Data[ml[@l = 0;
+TabIe->Data[@l[nl = 0;
+for ( m=l; m〈=i; 渺+ )
+if ( 지m-1] == Y(n-11 )
+Tab1e->Data[ml(nl = Tab1e->Data[m-11[n-11 + 1:
+else
+if ( Table->Data[ml[n-11 〉= Table->Data(m-11tnI )
+else
+return TabIe->Data(il[jl;
+Chapter 13 • 동적 계획법
+565

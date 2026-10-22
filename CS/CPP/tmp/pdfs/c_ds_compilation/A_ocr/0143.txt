@@ -1,0 +1,31 @@
+int rear;
+element data(MAX_QUEUE_SIZE];
+} QucueType;
+// 오류 함수
+VOid error(char wmessage)
+fprintf(stderr, "%s\n'% message);
+exit(l);
+void init_queue(QueueType *q)
+q->rear = -1;
+q-〉front =
+void queue-print(QueueType *q)
+for (int = 0; i<MAX_QUEUE_SIZE; 5++) {
+if (서 〈= q->front || 5〉 q->rear)
+printf("%d | ", q->data[i]);
+printf("\n");
+int is_full(QueueType *q)
+if (q->rear == MAX_QUEUE_SIZE
+return 1;
+return 0;
+int is empty(QueueType *q)
+if (q->front == q->rear)
+return 1;
+else
+return 0;
+- 1)
+`7이d enqueue(QueueType *q, int item)
+if (is-full(q)) {
+error("큐가 포화상태입니다. ") ;
+return;
+CHAPTER05 큐
+151

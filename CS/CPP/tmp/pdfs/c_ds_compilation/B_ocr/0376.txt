@@ -1,0 +1,92 @@
+07
+09
+10
+12
+13
+14
+15
+16
+17
+18
+19
+22
+23
+25
+26
+27
+28
+29
+OAHT_Get( HT, "NOVL"
+31
+32
+33
+OAHT_Set( O{T
+OAHT Set( MT
+OAHT Set( O{T
+OAHT-Set( &{T
+OAHT_Set( &{T
+OAHT Set( &{T
+OAHT-Set( &{T
+OAHT-Set( &{T. •CSCO",
+OAHT_Set( &{T
+OAHT Set( &{T
+OAHT_Set( OåT, "NOVL•,
+printfC\n•);
+printfCKey:S, Value:S\n"
+printfCKey:S, Value:%s\ne
+printf("Key:*S, VaIl.æ:*sxn•
+printfCKey:S, Va1ue:*s\n•
+printf("Key:*s, Va1ue:*s\n"
+printf("Key:*s, Va1ue:%s\n•
+printfCKey:*s,
+,MSFT"
+"JAVA"
+•REDH•
+•APAC"
+•ZYMZZØ
+•ORCL",
+"Microsoft Corporation");
+•Sun Microsystems");
+"Red Hat Linux");
+•Apache Org");
+üisys Ops Check"); //
+"IBM Ltd.");
+"0rac1e Corporation");
+"Cisco Systems, lnc.");
+“60091e lnc.");
+•yatm! lnc.");
+•而vell, lnc.");
+APAC와 충돌
+printfCKey:*s, Va1tæ:*s\nø. "MSFT"
+printf(•Key:S, Va1ue:%s\n", ℃RCL",
+Va1ue:%s\n•
+printf(•Key:S, Va1ue:S\n", "NOVLØ,
+"REDH"
+"APAC",
+"ZYMZZ"
+"JAVA",
+"IBM"
+"CSCO",
+“6006•
+OAHT-Get( HT, "MSFT" ) );
+OAHT-Get( HT, "REDH" ) );
+OAHT Get( HT, "APAC" ) );
+OAHT—Get( HT, "ZYMZZ" ) );
+OAHT Get( HT, "JAVA" ) ):
+OAHT_Get( HT, "IBM" ) );
+OAHT_Get( HT, "ORCL" ) );
+OAHT_Get( HT, "CSCO" ) );
+OAHT_Get( HT, “60%“ )
+OAHT Get( HT, "YHOO" ) );
+OAHT_DestroyHashTabIe( HT ):
+return 0;
+돈 실행 결과
+Key(USFT) entered at address(5)
+Key(JAVA) entered at address(O)
+Key(REDH) entered at address(2)
+Key(APAC) entered at address(3)
+Key(ZYUZZ) entered at address(l@)
+Key(IBM) entered at address(8)
+Rehashed New table size is : 22
+372
+Part 02 • 알고리즘

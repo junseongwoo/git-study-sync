@@ -1,0 +1,27 @@
+STRUCTURES & ALGORITHMS
+A.3
+3장 해시 테이블과 필터
+A.3.1 실습 문제 6: 긴 URL을 짧은 URL로 매핑하기
+이번 실습 문제에서는 짧은 길이의 URL과 긴 URL을 서로 매핑하는 프로그램을 만들어보겠습니
+다. 실습 문제를 해결하기 위해 다음 단계를 따라하세요.
+1. 필요한 헤더 파일을 포함합니다.
+#include 〈string〉
+#include <iostream〉
+#include 〈unordered-map〉
+2. URLService 구조체를 만들어서 필요한 기능을 구현하겠습니다.
+struct URLService
+using Actua1URL = std: :string;
+using TinyURL = std: :string;
+private•
+std: :unordered_map<TinyURL, ActuaIURL> data;
+짧은 URL과 원본 URL을 함께 저장할 맵을 생성합니다. 이 예제에서는 짧은 URL을 이용하여
+긴 원본 URL을 찾을 것입니다. 맵은 카를 기반으로 매우 빠른 룩업 연산을 수행합니다. 그러
+프로 짧은 URL을 카로 사용하고, 원본 URL을 데이터 값으로 시용할 것입니다. 코드 기독성
+을 높이기 위해 문자열 타입을 Actua11JRL과 TinyURL로 이름 재정의하여 시용하겠습니다.
+3. 룩업 함수를 추가합니다.
+public:
+std: :pair〈而01, ActuaIURL> lookup(const TinyURL& url) const
+auto it = data.find(url);
+if (it == data.end()) // 단축 URL이 등록되어 있지 않은 경우
+return std: pair(false, std::string());
+460

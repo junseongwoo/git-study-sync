@@ -1,0 +1,37 @@
+Node• NewNode
+Node• List
+자동 메모리
+117
+자유 저장소
+문제는 그다음입니다. SLL-AppendNode( ) 함수를 호출할 때 SLL-AppendNode( )의 매개 변수들(-H曰
+와 -NewNode)이 자동 메모리에 생성되고 니st는 Head어L NewNode는-NewNode에 자신!O| 가리기
+는 메모리의 주소를 •복사•해 넣습니다. 바로 이곳. 포인터 복시에서 비극이 시작됩니다.
+Node• NewNode
+Node• Head
+Node• NewNode
+Node* List
+자동 메모리
+117
+자유 저장소
+SLL-AppendNode( ) 함수는 LlSt의 헤드가 NIJLL일 때 새 노드를 헤드로 만들지요? 따라서 매개 변수
+-Head는 117 노드가 존재하는 자유 저장木이 메모리를 가리키게 됩니다. 하天만 LGt는 우리의 기대를 저버
+리고 -Head가 가리키는 곳을 가리키지 않습니다 그냥 NULL로 님아 있습니다.
+Node* NewNode
+Node* Head
+Node* NewNode
+Node• List
+자동 메모리
+117
+자유 저장소
+이제 왜 이런 일이 벌어졌는지 정리해봅시다. 포인터는 •에모리 주소를 담는 •변수•입니다 SLL-
+Node( ) 함수를 호출할 때 List 포인터가 담고 있는 •주소값•만 -Head에 복사되과 정작 List 포인터 변수
+의 주소는 전달되지 않은 것입니다. SLL-AppendNode( ) 함수가 호출된 후에는 매개 변수 —Head와
+-NewNode는 자동 메모리에 의해 제거되고 LlSt는 여전히 NULL인 치로 남습니다. 함수를 실爨미 전과
+같은 상태가 되는 것이지요
+Node•
+Node• List
+자동 메모리
+117
+자유 저장소
+Chapter 01 • 리스트
+3t

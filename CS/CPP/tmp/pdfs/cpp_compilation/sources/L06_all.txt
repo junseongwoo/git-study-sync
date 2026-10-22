@@ -1,0 +1,1075 @@
+
+=== L06 | PDF p.1 | 印刷 p.None ===
+C++ 프로그래밍
+      김형기
+           hk.kim@jbnu.ac.kr
+
+=== L06 | PDF p.2 | 印刷 p.2 ===
+상속
+
+
+
+
+
+                                                                                                                          2
+
+=== L06 | PDF p.3 | 印刷 p.3 ===
+ Example
+
+ 상속이필요한이유
+
+     Player 클래스
+
+
+
+
+
+강의자료무단배포금지                                                                                                                3
+문의사항: hk.kim@jbnu.ac.kr  || diskhkme@gmail.com
+
+=== L06 | PDF p.4 | 印刷 p.4 ===
+ Example
+
+ 상속이필요한이유
+
+     Player 관리를위한클래스
+
+     컨트롤/매니저클래스라부름
+
+
+
+
+
+강의자료무단배포금지                                                                                                                4
+문의사항: hk.kim@jbnu.ac.kr  || diskhkme@gmail.com
+
+=== L06 | PDF p.5 | 印刷 p.5 ===
+ Example
+
+ 상속이필요한이유
+
+    main함수
+
+
+
+
+
+강의자료무단배포금지                                                                                                                5
+문의사항: hk.kim@jbnu.ac.kr  || diskhkme@gmail.com
+
+=== L06 | PDF p.6 | 印刷 p.6 ===
+ Example
+
+ 상속이필요한이유, 시나리오
+
+     Player 이외에Enemy와NPC가추가된다면?
+
+   Enemy와NPC의이동방식이다르다면?
+
+        Enemy  : dx * speed * 1.5f;
+
+       NPC  : 이동불가능
+
+
+    Enemy 및NPC 클래스를추가구현했을때, 컨트롤클래스를얼마나수정해야하는가?
+
+
+
+
+
+강의자료무단배포금지                                                                                                                6
+문의사항: hk.kim@jbnu.ac.kr  || diskhkme@gmail.com
+
+=== L06 | PDF p.7 | 印刷 p.7 ===
+ Example
+
+ 상속이필요한이유, 시나리오예상
+
+
+
+    - 멤버변수추가필요
+    - 클래스별정보추가
+   기능필요
+    - 클래스별위치정보
+   출력반복문필요
+    - 클래스별해제필요
+   등등…
+
+
+  상속과다형성을활용한다면적은수정으로기능
+  추가가능하도록설계가가능!
+강의자료무단배포금지                                                                                                                7
+문의사항: hk.kim@jbnu.ac.kr  || diskhkme@gmail.com
+
+=== L06 | PDF p.8 | 印刷 p.8 ===
+ Inheritance
+
+ 상속의정의
+
+ 유도클래스
+
+ protected 멤버
+
+ 상속에서의생성자와소멸자
+
+ 기본클래스의생성자와의관계
+
+ 상속과멤버함수
+
+
+
+
+
+강의자료무단배포금지                                                                                                                8
+문의사항: hk.kim@jbnu.ac.kr  || diskhkme@gmail.com
+
+=== L06 | PDF p.9 | 印刷 p.9 ===
+ Inheritance
+
+ 상속의정의
+
+ 유도클래스
+
+ protected 멤버
+
+ 상속에서의생성자와소멸자
+
+ 기본클래스의생성자와의관계
+
+ 상속과멤버함수
+
+
+
+
+
+강의자료무단배포금지                                                                                                                9
+문의사항: hk.kim@jbnu.ac.kr  || diskhkme@gmail.com
+
+=== L06 | PDF p.10 | 印刷 p.10 ===
+ Inheritance                          중요!
+
+ 상속
+
+  기존클래스를활용하여새로운클래스를생성하는방법
+
+   새로운클래스는기존클래스의데이터와행동(함수)를포함
+
+  기존클래스를재사용가능하게함
+
+  클래스들간의공통속성에집중하는설계방법
+
+   기존클래스의행동(함수)을수정하여, 새로운클래스의행동을새로정의가능
+                               확장된새로운클래스     기존클래스의행동을수정할필요는없음
+                                          (유도클래스)
+
+
+              새로운기능과데이터를추가하여확장.            만들어둔
+             이때이미만들어둔클래스의기능과          만들어둔클래스기존클래스             데이터는모두포함됨
+                                          (기본클래스)
+
+
+강의자료무단배포금지                                                                                                               10
+문의사항: hk.kim@jbnu.ac.kr  || diskhkme@gmail.com
+
+=== L06 | PDF p.11 | 印刷 p.11 ===
+ Inheritance
+
+ 관련된클래스의예시
+
+      Player, Enemy, NPC, Boss, Hero, Super Hero, etc.
+
+     Account, Saving Account, Checking Account, Trust Account, etc.
+
+     Shape, Line, Oval, Circle, Square, etc.
+
+     Person, Employee, Student, Faculty, Staff, Administrator, etc.
+
+
+
+
+
+강의자료무단배포금지                                                                                                               11
+문의사항: hk.kim@jbnu.ac.kr  || diskhkme@gmail.com
+
+=== L06 | PDF p.12 | 印刷 p.12 ===
+ Inheritance
+
+ Player 예시설계                                       Player        Enemy        NonPlayer
+
+     Player                                             X              X              X
+                                                              Y               Y               Y
+         x, y, speed, hp, xp, Talk(), Move()                   Speed           Speed            Dialog
+                                                     Hp           HP                 Talk( )
+    Enemy                                             XP             Gold
+                                                                                     Talk( )               Talk( )
+         x, y, speed, hp, gold, Talk(), Move()                Move( )         Move( )
+
+     NonPlayer
+
+         x, y, dialog, Talk()
+
+
+   행동(함수)은클래스마다다를수있음
+
+
+
+
+
+강의자료무단배포금지                                                                                                               12
+문의사항: hk.kim@jbnu.ac.kr  || diskhkme@gmail.com
+
+=== L06 | PDF p.13 | 印刷 p.13 ===
+ Inheritance
+
+ Player 예시설계                                       Player        Enemy        NonPlayer
+
+   상속을사용하지않은예(코드의중복작성)          X              X              X
+                                                              Y               Y               Y
+                                                             Speed           Speed            Dialog
+                                                     Hp           HP                 Talk( )
+                                                           XP             Gold
+                                                                                     Talk( )               Talk( )
+                                                           Move( )         Move( )
+
+
+
+
+
+강의자료무단배포금지                                                                                                               13
+문의사항: hk.kim@jbnu.ac.kr  || diskhkme@gmail.com
+
+=== L06 | PDF p.14 | 印刷 p.14 ===
+ Inheritance
+
+ Player 예시설계                                       Player        Enemy        NonPlayer
+
+   상속을사용한예(코드의재사용)                    X              X              X                         공통데이터
+                                                              Y               Y               Y
+                                                             Speed           Speed            Dialog
+                                                     Hp           HP
+                                                           XP             Gold
+                      공통기능           Talk( )               Talk( )               Talk( )
+                                                           Move( )         Move( )
+
+
+                                                                                          Entity
+                                공통기능을추려
+                                                                            Entity클래스정의       X, Y
+                                                                                                                Talk()
+
+
+                                                                  Player        Enemy        NonPlayer
+
+                                                             Speed           Speed            Dialog
+                                                                  Hp, XP            HP, Gold                                  Entity를확장하여Player,
+강의자료무단배포금지                                                 Move()           Move()                     14                                    Enemy,NonPlayer클래스정의문의사항: hk.kim@jbnu.ac.kr  || diskhkme@gmail.com
+
+=== L06 | PDF p.15 | 印刷 p.15 ===
+ Inheritance                          중요!
+
+ Player 예시설계
+
+   상속을사용한예(코드의재사용)
+
+   우측과같이Entity의모든데이터와기능이                                                                    Player        Enemy        NonPlayer
+    Entity를상속한클래스들에포함됨
+                                                                          Entity            EntityEntity            EntityEntity
+     Player 객체는두가지타입을모두가진
+                                                                                   X, Y              X,X, YY              X,X, YY
+   상태가됨                                                                  Talk()                 Talk()                 Talk()
+                                                              Speed           Speed            Dialog
+           i.e. Player 객체는Player 타입이기도하지만                                                                    Hp, XP            HP, Gold
+                                                                  Move()           Move()              Entity 타입이기도함!
+
+      강의마지막Is-A 관계부분에서다시설명
+
+
+
+
+
+강의자료무단배포금지                                                                                                               15
+문의사항: hk.kim@jbnu.ac.kr  || diskhkme@gmail.com
+
+=== L06 | PDF p.16 | 印刷 p.16 ===
+ Terminology
+
+ 기본클래스(base class/parent class/super class)
+
+   상속의대상이되는클래스                                      기본클래스
+                                                                                                           (ex. Entity)
+ 유도클래스(derived class/child class/sub class)
+
+   기본클래스로부터생성되는클래스
+
+   데이터와행동을기본클래스로부터상속함
+
+                                      유도클래스
+                                                                                                           (ex. Player,
+                                                                           Enemy)
+
+                                                  UML 표현형식으로나타낸상속관계
+                    SFML라이브러리문서에나타난상속관계.
+                            sf::Shape기본클래스를바탕으로
+                               sf::CircleShape,sf::RectangleShape등유도
+             클래스가정의되었음을나타냄
+강의자료무단배포금지                                                                                                               16
+문의사항: hk.kim@jbnu.ac.kr  || diskhkme@gmail.com
+
+=== L06 | PDF p.17 | 印刷 p.17 ===
+ Inheritance
+
+ 상속의정의: 기본클래스를기반으로새클래스를만드는기능
+
+ 유도클래스
+
+ protected 멤버
+
+ 상속에서의생성자와소멸자
+
+ 기본클래스의생성자와의관계
+
+ 상속과멤버함수
+
+
+
+
+
+강의자료무단배포금지                                                                                                               17
+문의사항: hk.kim@jbnu.ac.kr  || diskhkme@gmail.com
+
+=== L06 | PDF p.18 | 印刷 p.18 ===
+ Deriving classes from existing class           중요!
+
+ C++ 상속문법
+
+
+
+
+
+                                                                *Public위치에private,protected키워드를넣게되면다른방식으로동작
+                                    하지만,잘사용하지않으므로설명하지않습니다.
+
+ 예시
+
+
+
+
+
+강의자료무단배포금지                                                                                                               18
+문의사항: hk.kim@jbnu.ac.kr  || diskhkme@gmail.com
+
+=== L06 | PDF p.19 | 印刷 p.19 ===
+ Deriving classes from existing class
+
+ Public 상속
+   가장흔히사용되는상속방식
+      “is-a” 관계의정의와가장일치하는상속방식
+
+
+  Private과protected 상속
+   “has-a”와유사한관계를정의하는상속
+   소유와는차이가존재
+
+
+ 본강의에서는public 상속에집중
+     타언어에서protected/private 상속을아예지원하지않는경우가많음
+      Protected/private 상속은public 상속만큼활용도가높지않음(다른방식으로구현함)
+
+
+
+강의자료무단배포금지                                                                                                               19
+문의사항: hk.kim@jbnu.ac.kr  || diskhkme@gmail.com
+
+=== L06 | PDF p.20 | 印刷 p.20 ===
+ Deriving classes from existing class
+
+ Player 예제
+
+
+
+
+
+                                                                                                         x,y,speed와Talk(),
+                                                                     ShowPosition을모두포함하고
+                                             Player에는x,y도없고,Talk(),      있는것을알수있음
+                                             ShowPosition()도없어보이지만,
+
+
+
+
+
+강의자료무단배포금지                                                                                                               20
+문의사항: hk.kim@jbnu.ac.kr  || diskhkme@gmail.com
+
+=== L06 | PDF p.21 | 印刷 p.21 ===
+ Deriving classes from existing class
+
+ Player 예제                                                                                         Entity
+
+                                                                                                          x,y
+
+                                                                                                          Talk()
+                                                                                 ShowPosition()
+
+
+                                                                                    Player
+
+                                                                                          Entity
+
+                                                                                            X,y
+
+                                                                                  BalanceTalk()
+                                                                                  ShowPosition()Name
+
+                                                                           speed
+                                                                                       hp, xp
+                                                                             Move()강의자료무단배포금지                                                                                                               21
+문의사항: hk.kim@jbnu.ac.kr  || diskhkme@gmail.com
+
+=== L06 | PDF p.22 | 印刷 p.22 ===
+ Inheritance
+
+ 상속의정의: 기본클래스를기반으로새클래스만드는기능
+
+ 유도클래스: 그렇게만들어진클래스를유도클래스라하며, 기본클래스의모든것이포함되어있음
+
+ protected 멤버
+
+ 상속에서의생성자와소멸자
+
+ 기본클래스의생성자와의관계
+
+ 상속과멤버함수
+
+
+
+
+
+강의자료무단배포금지                                                                                                               22
+문의사항: hk.kim@jbnu.ac.kr  || diskhkme@gmail.com
+
+=== L06 | PDF p.23 | 印刷 p.23 ===
+ Protected Member
+
+ protected 멤버
+
+   기본클래스에서접근가능
+
+   유도클래스에서접근가능
+
+   기본또는유도클래스의객체로부터는접근불가능!
+
+       Private을생각해보자. 클래스에서는접근가능하고, 객체로부터는접근이불가능하였음
+
+      Protected는“상속이이루어지는private”라고생각하면편함
+
+     Private은유도클래스에서접근이불가능함에유의
+
+                       • private은상속과관계없이무조건(자신) 클래스내부에서만접근가능함
+
+
+
+
+
+강의자료무단배포금지                                                                                                               23
+문의사항: hk.kim@jbnu.ac.kr  || diskhkme@gmail.com
+
+=== L06 | PDF p.24 | 印刷 p.24 ===
+ Protected Member                     중요!
+
+ protected 멤버변수
+
+
+                       기본클래스         유도클래스에서의접근
+
+                                                       Public  : a                                 Public  : a
+                                                  Protected  : b                           Protected  : b
+                                                         Private  : c              c는접근불가
+                                                                         Public 상속일때
+
+
+
+
+
+강의자료무단배포금지                                                                                                               24
+문의사항: hk.kim@jbnu.ac.kr  || diskhkme@gmail.com
+
+=== L06 | PDF p.25 | 印刷 p.25 ===
+ Protected Member
+
+ protected 멤버변수
+
+
+
+
+
+                                              접근할수없는것이지,값이메모리에
+                                           저장되지않는것은아님
+
+
+강의자료무단배포금지                                                                                                               25
+문의사항: hk.kim@jbnu.ac.kr  || diskhkme@gmail.com
+
+=== L06 | PDF p.26 | 印刷 p.26 ===
+ Inheritance
+
+ 상속의정의: 기본클래스를기반으로새클래스만드는기능
+
+ 유도클래스: 그렇게만들어진클래스를유도클래스라하며, 기본클래스의모든것이포함되어있음
+
+ protected 멤버: 상속에서public은그대로public, private은여전히private이므로, 정보를숨기되
+  상속계층의하위로데이터를상속하고싶을때는protected를사용
+
+ 상속에서의생성자와소멸자
+
+ 기본클래스의생성자와의관계
+
+ 상속과멤버함수
+
+
+
+
+
+강의자료무단배포금지                                                                                                               26
+문의사항: hk.kim@jbnu.ac.kr  || diskhkme@gmail.com
+
+=== L06 | PDF p.27 | 印刷 p.27 ===
+ Constructors and Destructors              중요!
+
+ 상속에서의생성자
+
+   유도클래스는기본클래스의멤버를포함하므로, 유도클래스가초기화되기이전에기본
+   클래스에서상속된부분이반드시초기화되어야함
+
+   유도클래스객체가생성될때,
+
+     먼저기본클래스의생성자가호출되고,
+
+     그이후유도클래스의생성자가호출됨
+
+
+
+
+                 기본             기본
+                클래스            클래스
+
+
+
+                안쪽(기본클래스)을먼저만든뒤,   바깥쪽(유도클래스)이만들어집니다.
+강의자료무단배포금지                                                                                                               27
+문의사항: hk.kim@jbnu.ac.kr  || diskhkme@gmail.com
+
+=== L06 | PDF p.28 | 印刷 p.28 ===
+ Constructors and Destructors
+
+ 상속에서의생성자
+
+
+
+
+
+강의자료무단배포금지                                                                                                               28
+문의사항: hk.kim@jbnu.ac.kr  || diskhkme@gmail.com
+
+=== L06 | PDF p.29 | 印刷 p.29 ===
+ Constructors and Destructors
+
+ 상속에서의생성자
+
+
+
+
+
+                                                                             2)기본클래스의생성자가호출된후
+
+
+
+
+
+                                                                             3)유도클래스의생성자가호출된다.
+
+
+
+
+
+                                  1)유도클래스객체를생성하면,
+
+
+강의자료무단배포금지                                                                                                               29
+문의사항: hk.kim@jbnu.ac.kr  || diskhkme@gmail.com
+
+=== L06 | PDF p.30 | 印刷 p.30 ===
+ Constructors and Destructors
+
+ 상속에서의생성자
+
+
+
+
+
+강의자료무단배포금지                                                                                                               30
+문의사항: hk.kim@jbnu.ac.kr  || diskhkme@gmail.com
+
+=== L06 | PDF p.31 | 印刷 p.31 ===
+ Constructors and Destructors              중요!
+
+ 상속에서의소멸자
+
+   소멸자는생성자와반대순서로호출됨
+
+    즉, 유도클래스가소멸될때,
+
+     먼저유도클래스의소멸자가호출되고,
+
+     그이후기본클래스의소멸자가호출됨
+
+
+
+
+
+                기본              기본
+               클래스             클래스
+
+
+
+               바깥쪽(유도클래스)이먼저소멸되고,    안쪽(기본클래스)이소멸됩니다.
+강의자료무단배포금지                                                                                                               31
+문의사항: hk.kim@jbnu.ac.kr  || diskhkme@gmail.com
+
+=== L06 | PDF p.32 | 印刷 p.32 ===
+ Constructors and Destructors
+
+ 상속에서의소멸자
+
+
+
+
+
+강의자료무단배포금지                                                                                                               32
+문의사항: hk.kim@jbnu.ac.kr  || diskhkme@gmail.com
+
+=== L06 | PDF p.33 | 印刷 p.33 ===
+ Constructors and Destructors
+
+ 상속에서의소멸자
+
+
+
+
+
+강의자료무단배포금지                                                                                                               33
+문의사항: hk.kim@jbnu.ac.kr  || diskhkme@gmail.com
+
+=== L06 | PDF p.34 | 印刷 p.34 ===
+ Constructors and Destructors
+
+ 생성자와소멸자의상속
+
+   유도클래스는기본클래스의생성자, 소멸자및오버로딩된대입연산자를상속하지않음
+
+   대신, 기본클래스의생성자, 소멸자및오버로딩된대입연산자를유도클래스로부터호출이
+    가능함
+
+     다음페이지에서설명
+
+   따라서, 생성자오버로딩이되어있는경우어떤생성자를사용할지명시해주는것이좋음
+
+
+
+
+
+강의자료무단배포금지                                                                                                               34
+문의사항: hk.kim@jbnu.ac.kr  || diskhkme@gmail.com
+
+=== L06 | PDF p.35 | 印刷 p.35 ===
+ Constructors and Destructors
+
+
+
+
+
+강의자료무단배포금지                                                                                                               35
+문의사항: hk.kim@jbnu.ac.kr  || diskhkme@gmail.com
+
+=== L06 | PDF p.36 | 印刷 p.36 ===
+ Constructors and Destructors              중요!
+
+
+
+
+
+강의자료무단배포금지                                                                                                               36
+문의사항: hk.kim@jbnu.ac.kr  || diskhkme@gmail.com
+
+=== L06 | PDF p.37 | 印刷 p.37 ===
+ Inheritance
+
+ 상속의정의: 기본클래스를기반으로새클래스만드는기능
+
+ 유도클래스: 그렇게만들어진클래스를유도클래스라하며, 기본클래스의모든것이포함되어있음
+
+ protected 멤버: 상속에서public은그대로public, private은여전히private이므로, 정보를숨기되
+  상속계층의하위로데이터를상속하고싶을때는protected를사용
+
+ 상속에서의생성자와소멸자: 기본생성-유도생성/ 유도소멸-기본소멸순서
+
+ 기본클래스생성자와의관계
+
+ 상속과멤버함수
+
+
+
+
+
+강의자료무단배포금지                                                                                                               37
+문의사항: hk.kim@jbnu.ac.kr  || diskhkme@gmail.com
+
+=== L06 | PDF p.38 | 印刷 p.38 ===
+ Passing Arguments to Base Class Constructor
+
+ 기본클래스의생성자로인자전달
+
+  기본클래스의어떤생성자를호출할지결정해줄수있어야함
+
+   유도클래스의생성자에, 초기화리스트를활용해사용자가원하는기본클래스의생성자호출
+    가능
+
+
+
+
+
+                                        Base{x}이므로인자가하나인이생성자가호출됨.
+                                 (만약Base{}였으면위의생성자가호출되었을것)
+
+
+
+
+                                         *p.36의예제에서보인바와같이,만일초기화리스트를
+                                   활용해어떤기본클래스생성자를호출할지명시하지않으면,
+                                    기본클래스에대해서는기본생성자(인자가없는생성자)가
+                                               호출되는것이default동작.
+
+강의자료무단배포금지                                                                                                               38
+문의사항: hk.kim@jbnu.ac.kr  || diskhkme@gmail.com
+
+=== L06 | PDF p.39 | 印刷 p.39 ===
+ Passing Arguments to Base Class Constructor
+
+ 기본클래스의생성자로인자전달
+
+
+
+
+
+강의자료무단배포금지                                                                                                               39
+문의사항: hk.kim@jbnu.ac.kr  || diskhkme@gmail.com
+
+=== L06 | PDF p.40 | 印刷 p.40 ===
+ Passing Arguments to Base Class Constructor     중요!
+
+ 기본클래스의생성자로인자전달
+
+
+
+
+
+                        기본클래스의인자를받지않는생성자를호출하라
+
+
+
+                                기본클래스의인자를하나받는생성자를호출하라
+
+
+
+
+
+강의자료무단배포금지                                                                                                               40
+문의사항: hk.kim@jbnu.ac.kr  || diskhkme@gmail.com
+
+=== L06 | PDF p.41 | 印刷 p.41 ===
+ Passing Arguments to Base Class Constructor     중요!
+
+ 기본클래스의생성자로인자전달
+
+     P.36 결과와비교!
+
+
+
+
+
+강의자료무단배포금지                                                                                                               41
+문의사항: hk.kim@jbnu.ac.kr  || diskhkme@gmail.com
+
+=== L06 | PDF p.42 | 印刷 p.42 ===
+ Copy Constructor
+
+ 복사생성자의상속
+
+   마찬가지로, 기본클래스로부터상속되지않음
+
+   (상속전과마찬가지로,) 컴파일러가자동생성하지만, 필요한경우직접구현해야함
+
+  기본클래스에서구현한복사생성자호출가능
+
+
+
+
+
+강의자료무단배포금지                                                                                                               42
+문의사항: hk.kim@jbnu.ac.kr  || diskhkme@gmail.com
+
+=== L06 | PDF p.43 | 印刷 p.43 ===
+ Copy Constructor
+
+ 유도클래스의복사생성자
+
+  기본클래스의복사생성자를직접호출가능
+
+      Slice 과정을거침
+
+   (이동생성자도동일하게동작)
+
+
+
+
+
+                            *other은유도클래스이지만,slice를통해기본클래스의복사
+                     생성자에인수로넘겨줄수있다.유도클래스isa기본클래스
+                      관계를준수하기때문!
+
+
+강의자료무단배포금지                                                                                                               43
+문의사항: hk.kim@jbnu.ac.kr  || diskhkme@gmail.com
+
+=== L06 | PDF p.44 | 印刷 p.44 ===
+ Copy Constructor
+
+ 유도클래스의복사생성자, 예시
+
+
+
+                           Other에는어떤데이터가
+                        들어있을까?
+
+
+
+
+
+강의자료무단배포금지                                                                                                               44
+문의사항: hk.kim@jbnu.ac.kr  || diskhkme@gmail.com
+
+=== L06 | PDF p.45 | 印刷 p.45 ===
+ Copy Constructor                      중요!
+
+ 복사생성자의구현가이드
+
+   유도클래스에서사용자가복사생성자를구현하지않은경우,
+
+     컴파일러가자동으로생성하며, 기본클래스의복사생성자를호출
+
+   유도클래스에서사용자가복사생성자를구현한경우,
+
+     명시하지않으면기본클래스의인자를받지않는생성자를호출
+
+     기본클래스를위한복사/이동생성자를명시적으로호출해주어야함
+
+
+   따라서, 포인터형멤버변수를가지고있는경우, 기본클래스의복사/이동생성자를호출하는
+   방법에대해반드시숙지해두어야함
+
+    유도클래스멤버변수에대한깊은복사고려
+
+
+
+강의자료무단배포금지                                                                                                               45
+문의사항: hk.kim@jbnu.ac.kr  || diskhkme@gmail.com
+
+=== L06 | PDF p.46 | 印刷 p.46 ===
+ Inheritance
+
+ 상속의정의: 기본클래스를기반으로새클래스만드는기능
+
+ 유도클래스: 그렇게만들어진클래스를유도클래스라하며, 기본클래스의모든것이포함되어있음
+
+ protected 멤버: 상속에서public은그대로public, private은여전히private이므로, 정보를숨기되
+  상속계층의하위로데이터를상속하고싶을때는protected를사용
+
+ 상속에서의생성자와소멸자: 기본생성-유도생성/ 유도소멸-기본소멸순서
+
+ 기본클래스생성자와의관계: 유도클래스(복사)생성시에, 기본클래스를어떻게
+  (복사)생성할지를초기화리스트를사용해명시해주어야함
+
+ 상속과멤버함수
+
+
+
+강의자료무단배포금지                                                                                                               46
+문의사항: hk.kim@jbnu.ac.kr  || diskhkme@gmail.com
+
+=== L06 | PDF p.47 | 印刷 p.47 ===
+ Using Member Function of Base Class         중요!
+
+ 기본클래스의멤버함수사용
+
+  유도클래스는기본클래스의멤버함수를직접호출가능
+
+         Public / protected인멤버함수의경우에
+
+  유도클래스는기본클래스의멤버함수를오버라이드또는재정의가능
+
+  다형성의구현을위해중요한기능
+
+
+ 재정의로인해기본클래스함수가가려질경우,
+
+   Base::Member()와같은형식으로호출가능
+
+
+
+
+
+강의자료무단배포금지                                                                                                               47
+문의사항: hk.kim@jbnu.ac.kr  || diskhkme@gmail.com
+
+=== L06 | PDF p.48 | 印刷 p.48 ===
+ Using Member Function of Base Class
+
+ 기본클래스의멤버함수사용
+
+     Player 예제
+
+
+
+
+
+                           기본클래스의Talk함수를
+                       유도클래스에서재정의함!
+
+
+
+
+
+강의자료무단배포금지                                                                                                               48
+문의사항: hk.kim@jbnu.ac.kr  || diskhkme@gmail.com
+
+=== L06 | PDF p.49 | 印刷 p.49 ===
+ Using Member Function of Base Class
+
+ 정적바인딩
+
+   이전그림대로라면, 유도클래스와기본클래스에같은이름과인자를갖는함수가2개존재
+
+   어떤기준으로호출할함수를결정할까? 타입을기준호출!
+
+                    Player
+
+                     Entity
+
+                       X,y
+
+                   BalanceTalk()                                                             p.53코드를보면,동일한
+                ShowPosition()Name                            함수가Player객체안에2개
+                                존재하는상태임
+                         Talk()
+                  speed
+               Hp
+                   xp
+
+강의자료무단배포금지                                                                                                               49
+문의사항: hk.kim@jbnu.ac.kr  || diskhkme@gmail.com
+
+=== L06 | PDF p.50 | 印刷 p.50 ===
+ Using Member Function of Base Class
+
+ 정적바인딩과그한계
+
+   정적바인딩은, 컴파일시어떤함수가호출될지를결정하는방식
+
+   C++의기본은정적바인딩
+
+         *가장아래의경우, 동적바인딩을사용하여기능의확장가능(다음강의)
+
+
+
+                                                   e는Entity타입이므로,e.Talk()는
+                                                        Entity의Talk함수호출
+
+
+                                                p는Player타입이므로,p.Talk()는
+                                                       Player의Talk함수호출
+
+                                                               //1)왼쪽이가능한가?
+                                                               //2)가능한경우어떤Talk함수가호출될것인가?
+
+
+
+
+강의자료무단배포금지                                                                                                               50
+문의사항: hk.kim@jbnu.ac.kr  || diskhkme@gmail.com
+
+=== L06 | PDF p.51 | 印刷 p.51 ===
+ Using Member Function of Base Class         중요!
+
+ “Is-A” 관계
+
+  기본클래스객체를사용하는곳에는항상유도클래스객체를사용가능
+
+     유도클래스에기본클래스의멤버가모두포함되기때문(superset)
+
+         Player 객체는두가지타입을모두가진상태가됨!
+
+
+
+
+
+                                                                            *Entity타입이,Player타입을가리켜도오류없음
+                                      *반대는안될까?
+
+
+강의자료무단배포금지*Entity대신,p를인자로넣어도오류없음                                                                           51
+문의사항: hk.kim@jbnu.ac.kr  || diskhkme@gmail.com
+
+=== L06 | PDF p.52 | 印刷 p.52 ===
+ Using Member Function of Base Class
+
+ 기본클래스의멤버함수사용
+
+     Player 예제
+
+
+
+
+
+                              “가려진”기본클래스
+                       멤버를유도클래스에서
+                       접근하고싶다면오른쪽과
+                     같이호출가능
+
+
+
+
+
+강의자료무단배포금지                                                                                                               52
+문의사항: hk.kim@jbnu.ac.kr  || diskhkme@gmail.com
+
+=== L06 | PDF p.53 | 印刷 p.53 ===
+ (Summary) Inheritance
+
+ 상속의정의: 기본클래스를기반으로새클래스만드는기능
+
+ 유도클래스: 그렇게만들어진클래스를유도클래스라하며, 기본클래스의모든것이포함되어있음
+
+ protected 멤버: 상속에서public은그대로public, private은여전히private이므로, 정보를숨기되
+  상속계층의하위로데이터를상속하고싶을때는protected를사용
+
+ 상속에서의생성자와소멸자: 기본생성-유도생성/ 유도소멸-기본소멸순서
+
+ 기본클래스생성자와의관계: 유도클래스(복사)생성시에, 기본클래스를어떻게
+  (복사)생성할지를초기화리스트를사용해명시해주어야함
+
+ 상속과멤버함수: 유도클래스에서, 기본클래스의함수재정의가능. 호출은정적바인딩기준으로
+  이루어짐. “Is-A” 관계철학에따라기본클래스가사용되는곳에는유도클래스사용가능
+
+
+강의자료무단배포금지                                                                                                               53
+문의사항: hk.kim@jbnu.ac.kr  || diskhkme@gmail.com

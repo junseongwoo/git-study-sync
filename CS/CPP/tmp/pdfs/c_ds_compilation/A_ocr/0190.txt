@@ -1,0 +1,36 @@
+198
+// 오류 처리 함수
+void error(char •npssage)
+fprintf(stderr, "%s\n", message);
+exit(l);
+ListNode• insert_first(ListNode *head, int value)
+ListN0de *P : (ListN0de *)malIoc(sizeof(ListN0de)); // (1)
+p->data = value;
+p->link = head; // 헤드 포인터의 값을 복사
+// 헤드 포인터 변경
+return head; // 변경된 헤드 포인터 반환
+// 노드 pre 뒤에 새로운 노드 삽입
+insert(ListNode *head, ListNode *pre, element value)
+ListN0de *P = (ListN0de *)maIIoc(sizeof(ListN0de)); // (1)
+p->data = value;
+p->tink = pre->link;
+pre->link = 아
+return head;
+ListNOde* delete_first(ListN0de *head)
+ListNode ;
+if (head == NULL) return NULL;
+remved = head;
+= remved->link; // (2)
+free(remved) •,
+return head;
+// pre가 가리기는 누c이 다음 노드를 삭제한다.
+ListN0de* delete(ListN0de *head, ListNode *pre)
+ListNode *remved;
+r에℃v댼 = pre->link;
+pre->link = remved-〉link;
+free(remved) ;
+return
+void print_list(ListN0de *head)
+for (ListN0de *P = head; P != NULL; P = p->link)
+printf("9Z->", p->data);
+C언어로 쉽게 불어쓴 자료구조

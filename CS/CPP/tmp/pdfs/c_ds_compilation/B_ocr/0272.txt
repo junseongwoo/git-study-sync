@@ -1,0 +1,66 @@
+Tree, BST_CreateNode(424) );
+BST_InsertNode( Tree, BST_CreateNode(17) );
+22
+BST_InsertNode( Tree, BST_CreateNode(3) ):
+23
+24
+BST_InsertN0de( Tree, BST_CreateNode(98) ):
+25
+BST_InsertNode( Tree, BST CreateNode(34) );
+26
+27
+BST_InsertN0de( Tree, BST_CreateNode(760) );
+28
+Tree, BST CreateNode(317) );
+29
+BST_InsertNode( Tree, BST_CreateNode(1) );
+30
+int SearchTarget = 17:
+32
+Node = BST_SearchNode(Tree, SearchTarget ):
+33
+PrintSearchResuIt(SearchTarget, NOde);
+34
+35
+SearchTarget = 117;
+36
+NOde = BST SearchNode(Tree, SearchTarget );
+37
+PrintSearchResuIt(SearchTarget, Node);
+38
+39
+40
+// 트리 출력
+BST_InorderPrintTree( Tree );
+42
+printf( "\n");
+43
+// 특정 노드 삭제
+45
+printf( "Removing 98...\n“);
+46
+47
+N0de = BST_RemoveN0de( Tree, NULL, 98 );
+BST DestroyN0de( NOde );
+49
+50
+BST_InorderPrintTree( Tree ):
+printf( "\n");
+51
+52
+53
+// 새 노드 삽입
+printf( "lnserting 111. \n");
+54
+55
+BST_InsertNode( Tree, BST_CreateNode(111) );
+56
+57
+BST InorderPrintTree( Tree );
+58
+printf( "\n");
+59
+60
+// 트리 소일
+Chapter % • 탐책
+265

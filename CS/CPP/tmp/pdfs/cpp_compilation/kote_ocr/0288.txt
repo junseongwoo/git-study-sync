@@ -1,0 +1,22 @@
+2. 연습 문제 33에서 작성했던 벨모卜포드 알고리즘 구현 함수를 조금 수정해서 시용하겠습니다.
+수정된 Be11manFord() 함수는 에지 리스트 edges와 정점 개수 v를 인자로 받고. 시작 정점 번
+호 start는 久卜%하지 않습니다.
+vector<int〉 BeIImanFord(vector〈Edge〉 edges, int V)
+3. 먼저 더미 정점 s를 추가하겠습니다. 더미 정점 s를 추가하므로 거리 배열은 (v + 1) 크기로
+준비하고, s 정점과 나머지 정점 사이에 가중치가 0인 에지를 추가합니다.
+vector<int〉 distance(V 十 1, UNKNOWN);
+int = V;
+for (int i〈V; i++)
+edges.push-back(Edge {5, i, 0});
+distance[s]
+4. s를 시작 정점으로 사용하여 벨만-포드 알고리즘을 수행합니다.
+// 정점 개수가 V + 1개이므로 V번 반복
+for (int i =0•, i 〈V; i+)
+for (auto& e : edges)
+// 에지의 시작 정점의 거리 값이 UNKNOWN이면 스킵
+if (distance[e.src] == UNKNOWN)
+continue;
+// 인접한 정점의 거리 값이 새로운 경로에 의한 거리 값보다 크면
+// 거리 값을 업데이트함
+if (distance(e.dstl 〉 distance(e.srcl + e.weight)
+distance[e dstl = distance[e.srcl 十 e.weight;

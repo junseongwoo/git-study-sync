@@ -1,0 +1,1130 @@
+{
+  "unit": 15,
+  "title": "Visual Studio 디버깅·Make",
+  "part": "C++",
+  "scope": [
+    {
+      "source": "L02D",
+      "start": 1,
+      "end": 13
+    },
+    {
+      "source": "B",
+      "start": 961,
+      "end": 983
+    }
+  ],
+  "learning": [
+    {
+      "text": "중단점은 임의의 위치에서 프로그램을 정지시키는 기능이다.",
+      "refs": [
+        {
+          "source": "L02D",
+          "section": "Debugging Tool 1 - Break point",
+          "pages": [
+            5
+          ]
+        }
+      ],
+      "evidence": "임의의위치에서프로그램을정지"
+    },
+    {
+      "text": "make 는 주어진 쉘 명령어를 조건에 맞게 실행하며, 조건을 담은 파일을 Makefile 이라고 한다.",
+      "refs": [
+        {
+          "source": "B",
+          "section": "22장 / make",
+          "pages": [
+            969
+          ]
+        }
+      ],
+      "evidence": "조건에맞게실행"
+    }
+  ],
+  "concepts": [
+    {
+      "title": "Visual Studio 디버깅",
+      "items": [
+        {
+          "text": "디버깅은 버그(오류)를 제거하는 것이다.",
+          "refs": [
+            {
+              "source": "L02D",
+              "section": "What is debugging?",
+              "pages": [
+                3
+              ]
+            }
+          ],
+          "evidence": "버그(=오류)를제거"
+        },
+        {
+          "text": "강의 자료는 디버깅 가능한 Debug 구성을 확인하며, Release 모드에서는 값을 제대로 볼 수 없다고 설명한다.",
+          "refs": [
+            {
+              "source": "L02D",
+              "section": "Preface",
+              "pages": [
+                4
+              ]
+            }
+          ],
+          "evidence": "Release 모드에서는값을제대로볼수없음"
+        },
+        {
+          "text": "중단점은 임의의 위치에서 프로그램을 정지시키는 기능이다.",
+          "refs": [
+            {
+              "source": "L02D",
+              "section": "Debugging Tool 1 - Break point",
+              "pages": [
+                5
+              ]
+            }
+          ],
+          "evidence": "임의의위치에서프로그램을정지"
+        },
+        {
+          "text": "중단할 위치의 왼쪽 끝 클릭 또는 F9 으로 중단점을 만들고, Debug 구성에서 Ctrl+F5 가 아닌 F5 로 빌드 후 디버깅을 실행한다.",
+          "refs": [
+            {
+              "source": "L02D",
+              "section": "Debugging Tool 1 - Break point",
+              "pages": [
+                5
+              ]
+            }
+          ],
+          "evidence": "F9을통해중단점생성"
+        },
+        {
+          "text": "노란 화살표는 현재 중단된 위치를 표시하며, 그 명령문은 아직 실행되지 않은 상태이다.",
+          "refs": [
+            {
+              "source": "L02D",
+              "section": "Debugging Tool 1 - Break point",
+              "pages": [
+                5
+              ]
+            }
+          ],
+          "evidence": "해당명령문은아직실행되지않은상태"
+        },
+        {
+          "text": "F10 은 명령문을 실행하고 다음 줄로 진행하는 step over 이고, F11 은 호출되는 추가 코드로 들어가는 step into 이다.",
+          "refs": [
+            {
+              "source": "L02D",
+              "section": "Debugging Tool 1 - Break point",
+              "pages": [
+                6
+              ]
+            }
+          ],
+          "evidence": "step over"
+        },
+        {
+          "text": "F5 는 다음 중단점까지 진행하고 Shift+F11 은 상위 stack 으로 나가는 step out 이다.",
+          "refs": [
+            {
+              "source": "L02D",
+              "section": "Debugging Tool 1 - Break point",
+              "pages": [
+                6
+              ]
+            }
+          ],
+          "evidence": "step out"
+        },
+        {
+          "text": "변수 위에 마우스를 올리거나 하단 창에서 값을 확인하며, 방금 명령줄로 값이 변한 변수는 빨간색으로 표시된다.",
+          "refs": [
+            {
+              "source": "L02D",
+              "section": "Debugging Tool 1 - Break point",
+              "pages": [
+                7
+              ]
+            }
+          ],
+          "evidence": "값이변한변수가빨간색"
+        },
+        {
+          "text": "메모리 윈도우는 변수가 메모리에 저장된 모습을 살피며, 주소 부분에 &변수이름 을 입력한다.",
+          "refs": [
+            {
+              "source": "L02D",
+              "section": "Debugging Tool 2 - Memory Window",
+              "pages": [
+                8,
+                9
+              ]
+            }
+          ],
+          "evidence": "주소부분에"
+        },
+        {
+          "text": "디버깅에서 의도한 명령 실행 순서와 메모리 데이터가 맞는지 확인한다.",
+          "refs": [
+            {
+              "source": "L02D",
+              "section": "How to debugging?",
+              "pages": [
+                10
+              ]
+            }
+          ],
+          "evidence": "내가생각하는순서대로"
+        },
+        {
+          "text": "Conditional & Action breakpoint 는 특정 조건에서 중단점을 활성화할 수 있고 재컴파일이 필요 없다.",
+          "refs": [
+            {
+              "source": "L02D",
+              "section": "Conditional & Action breakpoint",
+              "pages": [
+                12
+              ]
+            }
+          ],
+          "evidence": "재컴파일이필요없음"
+        },
+        {
+          "text": "디스어셈블리 창은 변환된 어셈블리 코드를, 레지스터 창은 현재 레지스터에 저장된 값을 보여준다.",
+          "refs": [
+            {
+              "source": "L02D",
+              "section": "Disassembly & Register",
+              "pages": [
+                13
+              ]
+            }
+          ],
+          "evidence": "레지스터에저장된값"
+        }
+      ]
+    },
+    {
+      "title": "컴파일·링킹·Makefile",
+      "items": [
+        {
+          "text": "컴파일은 소스코드를 컴퓨터가 이해할 어셈블리어로 변환하는 과정이다.",
+          "refs": [
+            {
+              "source": "B",
+              "section": "22장 / 컴파일(Compile)",
+              "pages": [
+                965
+              ]
+            }
+          ],
+          "evidence": "어셈블리어로변환"
+        },
+        {
+          "text": "링킹은 서로 다른 파일에 흩어진 함수나 클래스들을 묶어 연결하는 과정이다.",
+          "refs": [
+            {
+              "source": "B",
+              "section": "22장 / 링킹(Linking)",
+              "pages": [
+                967
+              ]
+            }
+          ],
+          "evidence": "한데묶어서링크"
+        },
+        {
+          "text": "make 는 주어진 쉘 명령어를 조건에 맞게 실행하며, 조건을 담은 파일을 Makefile 이라고 한다.",
+          "refs": [
+            {
+              "source": "B",
+              "section": "22장 / make",
+              "pages": [
+                969
+              ]
+            }
+          ],
+          "evidence": "조건에맞게실행"
+        },
+        {
+          "text": "Makefile 은 target, recipe, prerequisites 의 세 요소로 구성된다.",
+          "refs": [
+            {
+              "source": "B",
+              "section": "22장 / make",
+              "pages": [
+                969
+              ]
+            }
+          ],
+          "evidence": "3 가지요소"
+        },
+        {
+          "text": "target 은 make 할 대상으로 전달하는 이름이며, recipe 는 그 타겟을 만들 때 실행할 명령어의 나열이다.",
+          "refs": [
+            {
+              "source": "B",
+              "section": "22장 / target·recipes",
+              "pages": [
+                969
+              ]
+            }
+          ],
+          "evidence": "명령어들의나열"
+        },
+        {
+          "text": "recipe 의 명령어는 반드시 탭으로 한 번 들여쓴다.",
+          "refs": [
+            {
+              "source": "B",
+              "section": "22장 / 실행할 명령어(recipes)",
+              "pages": [
+                969
+              ]
+            }
+          ],
+          "evidence": "반드시탭한번"
+        },
+        {
+          "text": "prerequisites 는 타겟에 사용할 파일의 목록이며 의존 파일(dependency)이라고도 한다.",
+          "refs": [
+            {
+              "source": "B",
+              "section": "22장 / 필요조건들(prerequisites)",
+              "pages": [
+                969
+              ]
+            }
+          ],
+          "evidence": "의존파일(dependency)"
+        },
+        {
+          "text": "타겟이 의존 파일들의 수정 시점보다 나중에 수정되었다면 그 타겟의 명령어를 실행하지 않는다.",
+          "refs": [
+            {
+              "source": "B",
+              "section": "22장 / 필요조건들(prerequisites)",
+              "pages": [
+                969
+              ]
+            }
+          ],
+          "evidence": "명령어를실행하\n지않습니다"
+        }
+      ]
+    },
+    {
+      "title": "Makefile 변수·패턴·의존 목록",
+      "items": [
+        {
+          "text": "변수는 $(CC) 와 같이 $() 안에 이름을 써서 사용하며, 정의하지 않은 변수는 빈 문자열로 치환된다.",
+          "refs": [
+            {
+              "source": "B",
+              "section": "22장 / 변수",
+              "pages": [
+                971,
+                972
+              ]
+            }
+          ],
+          "evidence": "빈문자열로치환"
+        },
+        {
+          "text": "원문의 = 는 참조 변수가 나중에 정의될 때까지 결정을 미루고, := 는 정의하는 시점의 값만 확인한다.",
+          "refs": [
+            {
+              "source": "B",
+              "section": "22장 / 변수를 정의하는 두 가지 방법",
+              "pages": [
+                972
+              ]
+            }
+          ],
+          "evidence": "해당시점에의변수의값만"
+        },
+        {
+          "text": ".PHONY: clean 으로 등록하면 clean 파일의 존재와 관계없이 타겟의 명령을 실행한다.",
+          "refs": [
+            {
+              "source": "B",
+              "section": "22장 / PHONY",
+              "pages": [
+                974
+              ]
+            }
+          ],
+          "evidence": "clean 파일의유무와상관없이"
+        },
+        {
+          "text": "%.o: %.cc %.h 패턴은 대응하는 파일의 규칙을 나타내며, 패턴은 target 과 prerequisite 부분에 사용한다.",
+          "refs": [
+            {
+              "source": "B",
+              "section": "22장 / 패턴 사용하기",
+              "pages": [
+                975
+              ]
+            }
+          ],
+          "evidence": "패턴은타겟과prerequisite 부분에만"
+        },
+        {
+          "text": "$@ 는 타겟 이름, $< 는 첫 의존 파일, $^ 는 의존 파일 목록 전체에 대응한다.",
+          "refs": [
+            {
+              "source": "B",
+              "section": "22장 / 자동 변수",
+              "pages": [
+                976
+              ]
+            }
+          ],
+          "evidence": "$@ : 타겟이름"
+        },
+        {
+          "text": "$? 는 타겟보다 최신인 의존 파일이며, $+ 는 중복된 파일 이름도 포함한 의존 파일 목록이다.",
+          "refs": [
+            {
+              "source": "B",
+              "section": "22장 / 자동 변수",
+              "pages": [
+                976
+              ]
+            }
+          ],
+          "evidence": "중복된파일이름들까지"
+        },
+        {
+          "text": "-MD 옵션으로 컴파일하면 의존 파일 목록을 담은 .d 파일이 생성된다.",
+          "refs": [
+            {
+              "source": "B",
+              "section": "22장 / 자동으로 prerequisite 만들기",
+              "pages": [
+                976,
+                977
+              ]
+            }
+          ],
+          "evidence": "-MD 옵션"
+        },
+        {
+          "text": "include main.d 는 해당 파일 내용을 포함하고, -include 는 포함할 파일이 없어도 make 메시지를 출력하지 않는다.",
+          "refs": [
+            {
+              "source": "B",
+              "section": "22장 / 자동으로 prerequisite 만들기",
+              "pages": [
+                977,
+                978
+              ]
+            }
+          ],
+          "evidence": "파일이\n존재하지않아도"
+        },
+        {
+          "text": "patsubst 는 $(patsubst 패턴,치환후형태,변수) 꼴로 패턴을 치환한다.",
+          "refs": [
+            {
+              "source": "B",
+              "section": "22장 / 최종 정리",
+              "pages": [
+                981
+              ]
+            }
+          ],
+          "evidence": "patsubst 패턴,치환후형태,변수"
+        },
+        {
+          "text": "원문의 분리된 헤더 파일 경로 예제는 컴파일러 옵션에 -Iinclude/ 를 추가한다.",
+          "refs": [
+            {
+              "source": "B",
+              "section": "22장 / 헤더 파일들을 따로 뽑는 경우",
+              "pages": [
+                983
+              ]
+            }
+          ],
+          "evidence": "-Iinclude/"
+        },
+        {
+          "text": "원문은 make 의 -j 뒤에 사용할 쓰레드 수를 적고 make -j8 을 예로 든다.",
+          "refs": [
+            {
+              "source": "B",
+              "section": "22장 / 멀티코어를 활용해서 Make 속도를 올리자",
+              "pages": [
+                983
+              ]
+            }
+          ],
+          "evidence": "make -j8"
+        }
+      ]
+    }
+  ],
+  "procedures": [
+    {
+      "title": "강의 자료의 디버깅 진행 순서",
+      "steps": [
+        {
+          "text": "강의 자료는 디버깅 가능한 Debug 구성을 확인하며, Release 모드에서는 값을 제대로 볼 수 없다고 설명한다.",
+          "refs": [
+            {
+              "source": "L02D",
+              "section": "Preface",
+              "pages": [
+                4
+              ]
+            }
+          ],
+          "evidence": "Release 모드에서는값을제대로볼수없음"
+        },
+        {
+          "text": "중단할 위치의 왼쪽 끝 클릭 또는 F9 으로 중단점을 만들고, Debug 구성에서 Ctrl+F5 가 아닌 F5 로 빌드 후 디버깅을 실행한다.",
+          "refs": [
+            {
+              "source": "L02D",
+              "section": "Debugging Tool 1 - Break point",
+              "pages": [
+                5
+              ]
+            }
+          ],
+          "evidence": "F9을통해중단점생성"
+        },
+        {
+          "text": "F10 은 명령문을 실행하고 다음 줄로 진행하는 step over 이고, F11 은 호출되는 추가 코드로 들어가는 step into 이다.",
+          "refs": [
+            {
+              "source": "L02D",
+              "section": "Debugging Tool 1 - Break point",
+              "pages": [
+                6
+              ]
+            }
+          ],
+          "evidence": "step over"
+        },
+        {
+          "text": "변수 위에 마우스를 올리거나 하단 창에서 값을 확인하며, 방금 명령줄로 값이 변한 변수는 빨간색으로 표시된다.",
+          "refs": [
+            {
+              "source": "L02D",
+              "section": "Debugging Tool 1 - Break point",
+              "pages": [
+                7
+              ]
+            }
+          ],
+          "evidence": "값이변한변수가빨간색"
+        },
+        {
+          "text": "디버깅에서 의도한 명령 실행 순서와 메모리 데이터가 맞는지 확인한다.",
+          "refs": [
+            {
+              "source": "L02D",
+              "section": "How to debugging?",
+              "pages": [
+                10
+              ]
+            }
+          ],
+          "evidence": "내가생각하는순서대로"
+        }
+      ]
+    },
+    {
+      "title": "원문 make main 의 최초 빌드 순서",
+      "steps": [
+        {
+          "text": "Makefile 에서 main 타겟을 찾고 의존 파일 foo.o, bar.o, main.o 의 타겟을 찾는다.",
+          "refs": [
+            {
+              "source": "B",
+              "section": "22장 / Makefile 처리 순서",
+              "pages": [
+                970
+              ]
+            }
+          ],
+          "evidence": "타겟이main"
+        },
+        {
+          "text": "foo.o 가 없으므로 컴파일 명령을 실행하고, bar.o 와 main.o 도 컴파일한다.",
+          "refs": [
+            {
+              "source": "B",
+              "section": "22장 / Makefile 처리 순서",
+              "pages": [
+                970,
+                971
+              ]
+            }
+          ],
+          "evidence": "마찬가지로bar.o, main.o 도컴파일"
+        },
+        {
+          "text": "마지막으로 g++ foo.o bar.o main.o -o main 을 실행한다.",
+          "refs": [
+            {
+              "source": "B",
+              "section": "22장 / Makefile 처리 순서",
+              "pages": [
+                971
+              ]
+            }
+          ],
+          "evidence": "g++ foo.o bar.o main.o -o main"
+        }
+      ]
+    }
+  ],
+  "syntax": [
+    {
+      "label": "원문 Makefile 일부 발췌",
+      "code": "foo.o : foo.h foo.cc\n\tg++ -c foo.cc\n\nbar.o : bar.h bar.cc\n\tg++ -c bar.cc",
+      "refs": [
+        {
+          "source": "B",
+          "section": "22장 / Makefile",
+          "pages": [
+            970
+          ]
+        }
+      ],
+      "evidence": "foo.o : foo.h foo.cc",
+      "note": {
+        "text": "원문 주의사항에 따라 recipe 앞의 들여쓰기는 탭이다.",
+        "refs": [
+          {
+            "source": "B",
+            "section": "22장 / 주의사항",
+            "pages": [
+              970
+            ]
+          }
+        ],
+        "evidence": "탭으로바꾸어서"
+      }
+    }
+  ],
+  "formulas": [],
+  "comparisons": [
+    {
+      "title": "강의의 디버깅 진행 키",
+      "headers": [
+        "키",
+        "동작"
+      ],
+      "rows": [
+        [
+          {
+            "text": "F10",
+            "refs": [
+              {
+                "source": "L02D",
+                "section": "Break point",
+                "pages": [
+                  6
+                ]
+              }
+            ],
+            "evidence": "F10"
+          },
+          {
+            "text": "step over: 해당 명령문 실행 후 다음 명령줄로 진행",
+            "refs": [
+              {
+                "source": "L02D",
+                "section": "Break point",
+                "pages": [
+                  6
+                ]
+              }
+            ],
+            "evidence": "다음명령줄로진행"
+          }
+        ],
+        [
+          {
+            "text": "F11",
+            "refs": [
+              {
+                "source": "L02D",
+                "section": "Break point",
+                "pages": [
+                  6
+                ]
+              }
+            ],
+            "evidence": "F11"
+          },
+          {
+            "text": "step into: 명령문에서 호출하는 추가 코드로 들어감",
+            "refs": [
+              {
+                "source": "L02D",
+                "section": "Break point",
+                "pages": [
+                  6
+                ]
+              }
+            ],
+            "evidence": "추가코드"
+          }
+        ],
+        [
+          {
+            "text": "Shift+F11",
+            "refs": [
+              {
+                "source": "L02D",
+                "section": "Break point",
+                "pages": [
+                  6
+                ]
+              }
+            ],
+            "evidence": "Shift+F11"
+          },
+          {
+            "text": "step out: 상위 stack 으로 나가기",
+            "refs": [
+              {
+                "source": "L02D",
+                "section": "Break point",
+                "pages": [
+                  6
+                ]
+              }
+            ],
+            "evidence": "상위stack으로나가기"
+          }
+        ]
+      ]
+    }
+  ],
+  "terms": [
+    {
+      "term": "디버깅",
+      "definition": {
+        "text": "디버깅은 버그(오류)를 제거하는 것이다.",
+        "refs": [
+          {
+            "source": "L02D",
+            "section": "What is debugging?",
+            "pages": [
+              3
+            ]
+          }
+        ],
+        "evidence": "버그(=오류)를제거"
+      }
+    },
+    {
+      "term": "중단점",
+      "definition": {
+        "text": "중단점은 임의의 위치에서 프로그램을 정지시키는 기능이다.",
+        "refs": [
+          {
+            "source": "L02D",
+            "section": "Debugging Tool 1 - Break point",
+            "pages": [
+              5
+            ]
+          }
+        ],
+        "evidence": "임의의위치에서프로그램을정지"
+      }
+    },
+    {
+      "term": "메모리 윈도우",
+      "definition": {
+        "text": "메모리 윈도우는 변수가 메모리에 저장된 모습을 살피며, 주소 부분에 &변수이름 을 입력한다.",
+        "refs": [
+          {
+            "source": "L02D",
+            "section": "Debugging Tool 2 - Memory Window",
+            "pages": [
+              8,
+              9
+            ]
+          }
+        ],
+        "evidence": "주소부분에"
+      }
+    },
+    {
+      "term": "컴파일",
+      "definition": {
+        "text": "컴파일은 소스코드를 컴퓨터가 이해할 어셈블리어로 변환하는 과정이다.",
+        "refs": [
+          {
+            "source": "B",
+            "section": "22장 / 컴파일(Compile)",
+            "pages": [
+              965
+            ]
+          }
+        ],
+        "evidence": "어셈블리어로변환"
+      }
+    },
+    {
+      "term": "링킹",
+      "definition": {
+        "text": "링킹은 서로 다른 파일에 흩어진 함수나 클래스들을 묶어 연결하는 과정이다.",
+        "refs": [
+          {
+            "source": "B",
+            "section": "22장 / 링킹(Linking)",
+            "pages": [
+              967
+            ]
+          }
+        ],
+        "evidence": "한데묶어서링크"
+      }
+    },
+    {
+      "term": "make",
+      "definition": {
+        "text": "make 는 주어진 쉘 명령어를 조건에 맞게 실행하며, 조건을 담은 파일을 Makefile 이라고 한다.",
+        "refs": [
+          {
+            "source": "B",
+            "section": "22장 / make",
+            "pages": [
+              969
+            ]
+          }
+        ],
+        "evidence": "조건에맞게실행"
+      }
+    },
+    {
+      "term": "prerequisites",
+      "definition": {
+        "text": "prerequisites 는 타겟에 사용할 파일의 목록이며 의존 파일(dependency)이라고도 한다.",
+        "refs": [
+          {
+            "source": "B",
+            "section": "22장 / 필요조건들(prerequisites)",
+            "pages": [
+              969
+            ]
+          }
+        ],
+        "evidence": "의존파일(dependency)"
+      }
+    },
+    {
+      "term": "PHONY",
+      "definition": {
+        "text": ".PHONY: clean 으로 등록하면 clean 파일의 존재와 관계없이 타겟의 명령을 실행한다.",
+        "refs": [
+          {
+            "source": "B",
+            "section": "22장 / PHONY",
+            "pages": [
+              974
+            ]
+          }
+        ],
+        "evidence": "clean 파일의유무와상관없이"
+      }
+    }
+  ],
+  "summary_basis": "편집 요약",
+  "summary": [
+    {
+      "text": "디버깅에서 의도한 명령 실행 순서와 메모리 데이터가 맞는지 확인한다.",
+      "refs": [
+        {
+          "source": "L02D",
+          "section": "How to debugging?",
+          "pages": [
+            10
+          ]
+        }
+      ],
+      "evidence": "내가생각하는순서대로"
+    },
+    {
+      "text": "make 는 주어진 쉘 명령어를 조건에 맞게 실행하며, 조건을 담은 파일을 Makefile 이라고 한다.",
+      "refs": [
+        {
+          "source": "B",
+          "section": "22장 / make",
+          "pages": [
+            969
+          ]
+        }
+      ],
+      "evidence": "조건에맞게실행"
+    },
+    {
+      "text": "recipe 의 명령어는 반드시 탭으로 한 번 들여쓴다.",
+      "refs": [
+        {
+          "source": "B",
+          "section": "22장 / 실행할 명령어(recipes)",
+          "pages": [
+            969
+          ]
+        }
+      ],
+      "evidence": "반드시탭한번"
+    },
+    {
+      "text": "$? 는 타겟보다 최신인 의존 파일이며, $+ 는 중복된 파일 이름도 포함한 의존 파일 목록이다.",
+      "refs": [
+        {
+          "source": "B",
+          "section": "22장 / 자동 변수",
+          "pages": [
+            976
+          ]
+        }
+      ],
+      "evidence": "중복된파일이름들까지"
+    }
+  ],
+  "review": [
+    {
+      "question": "F10 과 F11 은 어떤 차이가 있는가?",
+      "answer": {
+        "text": "F10 은 명령문을 실행하고 다음 줄로 진행하는 step over 이고, F11 은 호출되는 추가 코드로 들어가는 step into 이다.",
+        "refs": [
+          {
+            "source": "L02D",
+            "section": "Debugging Tool 1 - Break point",
+            "pages": [
+              6
+            ]
+          }
+        ],
+        "evidence": "step over"
+      }
+    },
+    {
+      "question": "중단점의 노란 화살표 명령문은 실행되었는가?",
+      "answer": {
+        "text": "노란 화살표는 현재 중단된 위치를 표시하며, 그 명령문은 아직 실행되지 않은 상태이다.",
+        "refs": [
+          {
+            "source": "L02D",
+            "section": "Debugging Tool 1 - Break point",
+            "pages": [
+              5
+            ]
+          }
+        ],
+        "evidence": "해당명령문은아직실행되지않은상태"
+      }
+    },
+    {
+      "question": "recipe 의 들여쓰기 조건은?",
+      "answer": {
+        "text": "recipe 의 명령어는 반드시 탭으로 한 번 들여쓴다.",
+        "refs": [
+          {
+            "source": "B",
+            "section": "22장 / 실행할 명령어(recipes)",
+            "pages": [
+              969
+            ]
+          }
+        ],
+        "evidence": "반드시탭한번"
+      }
+    },
+    {
+      "question": ".PHONY: clean 은 왜 등록하는가?",
+      "answer": {
+        "text": ".PHONY: clean 으로 등록하면 clean 파일의 존재와 관계없이 타겟의 명령을 실행한다.",
+        "refs": [
+          {
+            "source": "B",
+            "section": "22장 / PHONY",
+            "pages": [
+              974
+            ]
+          }
+        ],
+        "evidence": "clean 파일의유무와상관없이"
+      }
+    }
+  ],
+  "cheat": {
+    "definitions": [
+      {
+        "term": "디버깅",
+        "definition": {
+          "text": "디버깅은 버그(오류)를 제거하는 것이다.",
+          "refs": [
+            {
+              "source": "L02D",
+              "section": "What is debugging?",
+              "pages": [
+                3
+              ]
+            }
+          ],
+          "evidence": "버그(=오류)를제거"
+        }
+      },
+      {
+        "term": "make",
+        "definition": {
+          "text": "make 는 주어진 쉘 명령어를 조건에 맞게 실행하며, 조건을 담은 파일을 Makefile 이라고 한다.",
+          "refs": [
+            {
+              "source": "B",
+              "section": "22장 / make",
+              "pages": [
+                969
+              ]
+            }
+          ],
+          "evidence": "조건에맞게실행"
+        }
+      },
+      {
+        "term": "prerequisites",
+        "definition": {
+          "text": "prerequisites 는 타겟에 사용할 파일의 목록이며 의존 파일(dependency)이라고도 한다.",
+          "refs": [
+            {
+              "source": "B",
+              "section": "22장 / 필요조건들(prerequisites)",
+              "pages": [
+                969
+              ]
+            }
+          ],
+          "evidence": "의존파일(dependency)"
+        }
+      }
+    ],
+    "comparison_title": "강의의 디버깅 진행 키",
+    "comparison_headers": [
+      "키",
+      "동작"
+    ],
+    "comparison_rows": [
+      [
+        {
+          "text": "F10",
+          "refs": [
+            {
+              "source": "L02D",
+              "section": "Break point",
+              "pages": [
+                6
+              ]
+            }
+          ],
+          "evidence": "F10"
+        },
+        {
+          "text": "step over: 해당 명령문 실행 후 다음 명령줄로 진행",
+          "refs": [
+            {
+              "source": "L02D",
+              "section": "Break point",
+              "pages": [
+                6
+              ]
+            }
+          ],
+          "evidence": "다음명령줄로진행"
+        }
+      ],
+      [
+        {
+          "text": "F11",
+          "refs": [
+            {
+              "source": "L02D",
+              "section": "Break point",
+              "pages": [
+                6
+              ]
+            }
+          ],
+          "evidence": "F11"
+        },
+        {
+          "text": "step into: 명령문에서 호출하는 추가 코드로 들어감",
+          "refs": [
+            {
+              "source": "L02D",
+              "section": "Break point",
+              "pages": [
+                6
+              ]
+            }
+          ],
+          "evidence": "추가코드"
+        }
+      ],
+      [
+        {
+          "text": "Shift+F11",
+          "refs": [
+            {
+              "source": "L02D",
+              "section": "Break point",
+              "pages": [
+                6
+              ]
+            }
+          ],
+          "evidence": "Shift+F11"
+        },
+        {
+          "text": "step out: 상위 stack 으로 나가기",
+          "refs": [
+            {
+              "source": "L02D",
+              "section": "Break point",
+              "pages": [
+                6
+              ]
+            }
+          ],
+          "evidence": "상위stack으로나가기"
+        }
+      ]
+    ],
+    "formulas": [],
+    "syntax": []
+  },
+  "checked_images": [
+    {
+      "source": "B",
+      "pages": [
+        970,
+        976
+      ]
+    },
+    {
+      "source": "L02D",
+      "pages": [
+        5,
+        6,
+        10,
+        12,
+        13
+      ]
+    }
+  ],
+  "editor_notes": [
+    "B 21장은 회고·외부 학습 안내이므로 추가 설명을 끌어오지 않았다. 디버깅의 환경과 단축키는 첨부 강의 자료의 설명이다."
+  ]
+}

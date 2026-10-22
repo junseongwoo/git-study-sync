@@ -1,0 +1,37 @@
+236
+CHAPTER 03
+트랜스포트 계층
+종료 .•
+대기 시간
+종료됨
+시간
+그림 3.40 • TCP 연결 종료
+30초간 대기
+(CTIME_WAIT
+FIN 수신,
+ACK 송신
+FIN_WAIT_2
+ACK 수신
+추가 전송 없음
+FIN
+ACK
+FiN
+ACR
+CLOSED
+FIN_WAIT_I
+서버
+• 종료
+시간
+클라이언트 애플리케이션은
+TCP 연결을 시작
+SYN 전송
+SYN_SENT
+SYN과 ACK 수신
+ACK 전송
+ESTABLISHED>
+FIN 전송
+클라이언트 애플리케이션은
+연결 종료를 시작
+그림 3.41 • 클라이언트 TCP에서 TCP 상태 전이의 일반적인 순서
+TCP 상태들을 두루 전이한다. 그림 3.41은 클라이언트 TCP에서 TCP 상태 변이의 반
+순서를 나타낸 것이다. 클라이언트 TCP는 종료상태 (CLOSED state)에서 시작한다.

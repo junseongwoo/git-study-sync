@@ -1,0 +1,25 @@
+= data.size();
+lnt n
+data[value nl
+= value;
+std::cout 〈〈 value 〈〈 "을(를) 삽입했습니다." 〈〈 std: :endl;
+위 코드를 보면 계산된 해시 값 위치에 이미 다른 값이 존재하는지를 확인하지 않습니다. 즉,
+특정 위치에 이미 다른 값이 존재하더라도 단순히 덮어쓰게 됩니다. 결국 해시 값이 중복될
+경우 나중에 삽입한 값만 저장됩니다.
+5. 특정 원소가 맵에 있는지를 확인하는 룩업 함수를 추가합니다.
+b001 find(uint value)
+int n = data.size();
+return (data[value n] == value);
+해시 값 위치에 저장된 값이 value와 같은지를 검사합니다.
+6. 삭제 함수를 구현합니다.
+VOid erase(uint value)
+int n = data.size();
+if (data[value % n] == value)
+data[value n] = -1;
+std::cout 〈〈 value 〈〈 "을(를) 삭제했습니다." 〈〈 std::endl;
+7. main( ) 함수 내부에 룩업 결괴를 출력하는 람다 함수(lambda function)를 정의하여 사용하겠습
+니다.
+int main()
+hash-map map(7);
+auto print = [&](int value) {
+if (map.find(value))

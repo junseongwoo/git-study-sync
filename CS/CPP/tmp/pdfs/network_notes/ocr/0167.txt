@@ -1,0 +1,45 @@
+연습문제
+P3. 브라우저를 일고 주소 부분에 http: //yourbuginegg . com/about •
+html을 입력하라. 웹 페이지가 출러될 따1까지 어떤 일이 생기는가? 사용되는
+프로토콜(들)에 대해서 자세히 설명하고 교환되는 메시지에 대해 상위 수준에서
+기술하라.
+P4. 다음은 브라우저가 HTTP GET 메시지를 보내는 화면을 와이어샤그로 7법쳐한
+ASCII 문자열이다(즉, HITP GET 메시지의 실제 내용이다). 문자 〈cr〉〈주〉는
+개리지 리던과 라인 피드 문자이다(즉, 아래 문자 텍스트의 이탤릭체 문자열
+〈cr〉은 HTTP 헤더의 해당 위치에 포함된 개리지 리던 문자를 나타낸다). 아래
+HTTP GET 메시지에서 답이 있는 곳에 표시를 하여 다음 질문에 답하라.
+GET /cs453/index.html HTTP/1.I<cr><If>Host: gai
+a.cs.umass .edu/cr><1f>User—Agent: MoziIIa/5.0 (
+Windows;U; Windows NT 5.1; en-US; rv:1.7.2) Gec
+ko/20040804 Netscape/7.2 (ax) <cr><If>Accept:ex
+t/xml, application/xml, application/xhtml+xml, text
+/html;q=O.9, text/p1ain;q=O.8,image/png,*/*;q=0.5
+<cr><If>Accept—Language: en;q=O .5<cr><1f>Accept—
+Encoding: zip, deflate<cr><1f>Accept—Charset: ISO
+-8859-1,utf—8;q=0.7,*;q=0.7<cr><1f>Keep-A1ive: 300<cr>
+<1 f>Connec tion : keep—al ive <cr><l f><cr><l f>
+a. 브라우저가 요청한문서의 URL은 무엇인가?
+b. 브라우저가 수행하는 HTTP의 버전은?
+c. 브라우저는 비지속 혹은 지속 연결 중 무엇을 요청했는가?
+d. 브라우저가 수행되고 있는 호스트의 IP 주소는 무엇인가?
+어떤 유형의 브라우저가 이 메시지를 시작하는가? 왜 브라우저 유형이
+e.
+HITP 요청 메시지에서 필요한가?
+P5. 다음 텍스트는 위 문제의 HTTP GET 메시지에 대한 서버로부터의 응답이다. 답
+을 아래 메시지에 표시하여 다음 질문에 답하라.
+HTTP/I.1 200 OK<cr><lf>Date: Tue, 07 Mar 2008
+12:39:45GMT<cr><1f>Server: Apache/2.0.52 (Fedora)
+<cr><1f>Last-M0dified: Sat, 10 Dec2005 18:27:46
+GMT<cr><If>ETag: "526c3-f22-a88a4c80"<cr><1f>Accept-
+Ranges: bytes<cr><1f>Content-Length: 3874<cr><If>
+Keep—AIive: timeout=max=100<cr><1f>Connection:
+Keep—A1ive<cr><If>Content—Type: text/html; charset=
+ISO-8859—I<cr><1f><cr><If><!doctype html public
+//w3c//dtd html 4.Otransitional//en"><If><htmI><If>
+<head><lf> <meta http—equiv="Content-Type"
+content="text/html; charset=is0-8859-1"><1f> <meta
+name="GENERATOR" content="MoziIIa/4.79 [enl (Windows NT
+5.07 U) Netscape]"><If> <titIe>CMPSCI 453 / 591 /
+NTU—ST550ASpring 2005 homepage</title><lf></head><lf>
+<much more document text following here (not shown) >
+159

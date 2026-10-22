@@ -1,0 +1,29 @@
+class singly—ll
+public:
+using node = singly—ll—node;
+using node_ptr = node*;
+pnvate:
+node—ptr head,
+3. std: :forward-list 클래스에도 있는 push-front( )와 pop-front( ) 함수를 구현합니다.
+public:
+void push—front(int val)
+autO new_node = new node {val,
+if (head != NULL)
+new node-〉next = head;
+head = new node,
+void pop-front()
+autO first = head;
+if (head)
+head = head-〉next;
+delete first;
+NULL};
+4. singly-ll 클래스의 기본 반복자를 구현합니다. 이 반복자는 생성자(constructor)와 접근자
+(accessor)를 가집니 다.
+struct singly_ll_iterator
+private:
+node_ptr ptr;
+public:
+singly-ll-iterator(node-ptr P) : ptr(p) {}
+int& operator*() { return ptr->data; }
+node—ptr get() { return ptr; }
+054

@@ -1,0 +1,41 @@
+34
+35
+36
+37
+39
+40
+43
+45
+46
+47
+48
+49
+50
+52
+53
+54
+56
+57
+58
+59
+60
+62
+BData[11[이 = 1; B.Data[11(11 = 0;
+A = Matrix2x2 MuItip1y( 시 ):
+return A;
+ULONG Fibonacci( int N )
+Matrix2x2 A;
+A.Data[01[@l = 1; A.Data[이[1] = 1:
+A.Data111[01 = 1; A.Data[Il[Il = 0;
+A = Matrix2x2 Power(A, N);
+return A Data(이[11;
+int main( void )
+int N
+ULONG ResuIt = Fibonacci( N );
+printf("Fibonacci(%d) = Uu\n", N, Resu1t );
+return 0;
+실행 결과
+Fibonacci (46)
+- 1836311903
+544
+Par1 03 • 알고리즘 설계 기법

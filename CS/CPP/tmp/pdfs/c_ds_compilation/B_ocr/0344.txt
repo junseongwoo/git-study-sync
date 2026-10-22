@@ -1,0 +1,50 @@
+다시 한번 짚고 넘어가겠습니다. 혹시 Key가 직접 주소로 A卜우될 것이라고 생각하는 분은 없겠지
+요? Key를 주소로 사용하는 것이 아니라 해시 함수에 Keyß 넣어 계산된 결과를 주소로 사용하*는 것 입
+니다.
+이것으로 예제 코드 작성에 필요한 사전 지식은 다 설명한 것 같으므로 이제 코드를 작성해보겠
+습니다. 이 프로그램을 구성하는 소스 코드 파일은 모두 3개이며, 그중 SimpleHashTable.h와
+SimpleHashTable.c는 해시 테이블에 필요한 구조체와 함수를 정의하고 Test—SimpleHash
+TabIe.c는 이 함수들을 테스트하는 코드를 담고 있습니다. 그리고 예제 프로그램에서 A卜일하는 함
+수 이름의 접두사SHT는 Simple Hash TabIe의 약자입니다. 참고하기 바랍니다.
+08 &/Si»IeHashTabIe/SinpIeHashTabIe .h
+01
+02
+03
+05
+07
+@9
+10
+12
+14
+16
+20
+22
+23
+24
+25
+26
+•ifrdef SIMPLE HASHTABLE_H
+«iefine SIMPLE HASHTABLE_H
+tincllße <stdio.h〉
+$include <stdlib.h〉
+int KeyTygp,
+typedef int ValueType,
+tycpdef struct
+KeyType Key,
+VaIueType Value,
+} Node,
+typedef struct tagHashTabIe
+int TableSize;
+Node• Table;
+} HashTab1e,
+HashTab1e• SHT-CreateHashTable( int TabIeSize );
+SHT_Set( HashTable* HT, KeyType Key, VaIueType Va1ue ):
+void
+SHT Get( HashTabIe• HT, KeyType Key );
+ValueType
+SHT-DestroyHashTable( HashTable* HT);
+void
+SHT_Hash( KeyType Key, int TabIeSize );
+int
+340
+Part 02 • 알고리좀

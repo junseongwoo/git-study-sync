@@ -1,0 +1,36 @@
+프로그뱸5.4 원형뎩프로그램
+#include 〈stdio.h>
+#include <stdlib.h>
+#define MAX QUEUE_SIZE 5
+typedef int elcment;
+typedef struct ( // 규 타입
+element data[MAX_QUEUE_SIZE] •,
+int front, rear;
+} DequeType;
+// 오류 함수
+VOid error(char *message)
+fprintf(stderr, "%s\n", message);
+exit(l);
+// 초기화
+void init_deque(DequeType *0
+q->front = q->rear = 0;
+// 공백 상태 검출 함수
+int is—empty(DequeType *q)
+return (q—>front == q->rear) •,
+// 포화 상태 검출 함수
+int is fulI(DequeType *q)
+return ((q->rear + 1) % MAX_QUEUE_SIZE == q->front);
+// 원형큐 출력 함수
+void deque-print(DequeType *q)
+printf("DEQUE(front=%d rear=%d)
+if (!is-empty(q)) {
+int i = q—>front;
+do {
+", q—>front, q—>rear);
+= (i + 1) % (MAX-QUEUE-SIZE);
+그
+printf("%d | ", q->data[i]);
+if (1 == q->rear)
+break;
+CHAPTERÜ5 규
+165

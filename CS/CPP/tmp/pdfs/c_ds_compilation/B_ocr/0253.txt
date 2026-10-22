@@ -1,0 +1,47 @@
+진 탐색'입니다. 5징에서 문제의 답을 구하기 위해 데이터를 이미 정렬해놨으-므로 우리는 이진 탐색
+코드만 구현하면 됩니다.
+다음 예제 프로그램은 point.h와 BinalYSearch.c. 모두 2개의 파일로 구성됩니다. point.h는 여
+러분이 직접 작성하지 마세요. 05장/lnterview/Point.h 파일을 복사해서 시용하면 됩니다.
+06장/BinarySearch/P0int .h
+″1
+″2
+禰3
+″5
+″7
+鸞10
+甓11
+鸞12
+甓13
+″7
+弼10
+typedef struct tagPoint
+int id;
+double point,
+} Point;
+Point DataSetll =
+ID,
+(Point){1
+(Point){2
+(Point){3
+(Point){4
+(Point){29997
+(Point){29998
+(Point){29999
+(Point){30000
+구매포인트
+877.88},
+176.23},
+365.92},
+162 44},
+148.86},
+89.74},
+342.52},
+811.02}
+%장 /BinarySearch/BinarySearch. (
+01 tinclude <stdlib.h〉
+02 tinclude <stdio.h>
+03 •include "Point.h•
+04
+05 Point* BinarySearch( Point PointList[l, int Size, double Target )
+246
+Part 02 • 알고리즘

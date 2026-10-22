@@ -1,0 +1,41 @@
+새로운 노드가 왼쪽 자식의 왼쪽에
+추가되었으면 LL 타입이다.
+새로운 노드가 오른쪽 자식의 오른
+폭에 추가되었으면 RR 타입이다.
+새로운 노드가 왼쪽 자식의 오른쪽
+에 추가되었으면 LR 타입이다.
+이중회전시킨다.
+새로운 노드가 오른쪽 자식의 완쪽
+에 추가되었으면 RL 타입이다.
+이중회전시킨다.
+520
+// LL 타입 처리
+if (balance 〉 1 key 〈 醵-〉teft->key)
+return ;
+// RR 타입 처리
+if (balance 〈 -1 key 〉 *〉right->key)
+return rotate-teft(node);
+// LR 타입 처리
+if (batance > 1 key 〉 *〉teft->key)
+= rotate-left(node->left) ;
+return rotate—right(node) ;
+// RL 타입 처리
+if (balance 〈 -1 key 〈 node->right->key)
+= rotate—right(node->right) •,
+return rotate_left(node) •,
+return
+전체 프로그램
+전체 프로그램은 다음과 같다.
+프로그램 13.11 AVL트리 전제 프로그램
+#5 nclude<stdio. h>
+#include<stdlib. h>
+#define MAX(a, 바 (삐
+// AVL 트리 노드 정의
+typedef struct AVLNode
+int key;
+struct AVLNode *left;
+struct AVLNode *right;
+} AVLNode;
+// 트리의 높이를 반환
+int get—height(AVLN0de *node)
+C언어로 쉽게 불어쓴 자료구조

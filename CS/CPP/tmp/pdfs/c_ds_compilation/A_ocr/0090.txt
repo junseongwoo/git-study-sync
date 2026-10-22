@@ -1,0 +1,35 @@
+보자. 동적으로 생성된 구조체는 포인터를 통해서만이 접근할 수 있다. 프로그램 3.11에서는
+mattoc() 함수를 이용하여 Student 구조체를 동적으로 생성한다.
+프로그램 33 malloc2.c 동적 메모리 할당 사용 예제
+#include 〈stdio.h>
+#include <stdtib.h>
+#include 〈string.h>
+typedef struct studentTag {
+char na爬[10]•,
+int age;
+double gpa;
+} student
+int main(void)
+student *로,
+// 문자배열로 된 이름
+// 나이를 나타내는 정수값
+// 평균평점을 나타내는 실수값
+(student *)maltoc(sizeof(student));
+S
+if (s == NULL) {
+fprintf(stderr, "메모리가 부족해서 할당할 수 없습니다.\n");
+exit(l);
+strcpy (s—>name,
+s->age = 20;
+free(s);
+return 0;
+"Park");
+위의 코드에서 s는 구조체를 가리기는 포인터로 선언되었다. (*S) .name이라고 할 수도 있지
+만 s->name이 더 편리하다.
+01 다음 프로그램의 오류를 모두 지적하시오.
+int main(void)
+double *야;
+pl = (int *)malloc(double);
+= 23.92;
+QuiZ
+CHAPTER03 배열, 구조체, 포인터 97

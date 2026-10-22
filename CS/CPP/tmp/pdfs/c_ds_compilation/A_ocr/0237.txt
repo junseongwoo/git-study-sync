@@ -1,0 +1,30 @@
+rear 모두 새로운 노드를 가리기도록 해야 한다. 만약 [그림 7-151 (b)와 같이 *,하상태가 아니고
+기존의 노드가 있는 경우라면 rear가 가리기고 있는 노드의 링크 필드와 rear% 새로운 노드를
+가리기도록 변경하면 된다.
+front rear
+A
+4
+front rear
+A MJLL
+MJLL
+front
+front
+(기 연결된 큐가 공백상태 일 때의 삽입 연산
+rear
+4
+rear
+(회 연결된 큐가 공백상태가 아닐 때의 삽입 연산
+[그림 7-15] 연결된 큐에서 삽입 연산
+프로그램 7.10 연결된큐삽입 연산
+// 삽입 함수
+void enqueue(LinkedQueueType *q, element data)
+QueueN0de *temp = (QueueNode *)maIIoc(sizeof(QueueN0de));
+temp->data = data;
+temp->link = NULL;
+if (is-empty(q)) {
+q->front = temp;
+q—>rear = temp;
+// 데이터 저장
+// 링크 필드를 NULL
+// 큐가 공백이면
+CHAPTER07 연결 리스틔| 245

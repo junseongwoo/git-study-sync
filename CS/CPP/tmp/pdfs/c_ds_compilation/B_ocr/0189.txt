@@ -1,0 +1,30 @@
+default
+memset(Temp, 0, sizeof(Temp));
+Temp[@I = Tree-»ata,
+Resu1t = atof(Temp);
+break,
+return Result,
+I 여기서장깐
+토큰 분리 대해 여러분의 ~ 구et-l다
+수식 트리를 만드는 함수가 토큰을 분리하는 과정에는 약간의 문제가 있습니다. 매개 변수로 입력 받은 후위
+표기식 문자열이 뒤에서 한 자리 잘린 것을 토큰으로 사용하거든요 연산자 기호는 +. -. •. 같이 어차피 문
+자 하나로 처리되7 | 때문에 문제되지 않습니다. 하지만 두 지리 이상의 숫자를 토큰으로 분리할 때는 당연하
+문제가 됩니다.
+한 자리 숫자만 사용할 수 있다는 점이 웃기기는 하지만. 토큰 자처를 분리하는 과정보다 수식 트리를 구축하
+고 이 트리를 이용한 계산 수행 고정에 초점을 맞춰 설명하기 위함이므로 이해 비랍니다. 그 대신 두 자리 이
+상의 숫자 토큰 분리 기능을 구현6는 일은 여러분에게 숙제로 내드리겠습니다.
+43.3 수식 트리 예제 프로그램
+수식 트리를 프로그램으로 만들어보겠습니다. 이번 예제 프로그램은 모두 3개의 파일로 구성됩니
+다. 수식 트리가 제대로 기능할 수 있게 하는 함수들을 선언하고 정의하는 ExpressionTree.h와
+ExpressionTree.c. 수식 트리의 기능-을 테스트하는 Test_ExpressionTree.c입니다.
+04장/ExpressionTree/ExpressionTree.h
+01
+02
+04
+05
+$ifndef EXPRESSION TREE H
+EXPRESSION TREE H
+$include 〈stdio.h〉
+$include <stdlib.h〉
+Chapter 04 • 트리
+181

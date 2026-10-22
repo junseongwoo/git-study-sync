@@ -1,0 +1,30 @@
+이러한 문제는 색인ondextng) 작업에서 지주 발생합니다. 즉, 대용량의 텍스트에 대해 내뗭을 인
+데성해야 추후 텍스트에 대한 검색이 빠르게 동작할 수 있습니다. 구글(G()()函) 또는 HJ(Bing)과
+같은 인터넷 검색 엔진에서 이러한 색인을 많이 八장합니다.
+이번 실습 문제에서는 워드기운트 문제 해결을 위해 1법과 리듀스 기능을 구현해야 합니다. 이 실
+습 문제에서는 오픈 소스 맵리듀스 라이브러리를 시용하며, 이 라이브러리를 시용하기 위해 필요
+한 기본 뼈대 코드를 mapreduce wordcount skeleton.cpp 파일로 제공합니다.
+다음의 가이드라인을 통해 문제를 해결하세요.
+1. 먼저 mapreduce wordcount skeleton.cpp 파일을 충분히 읽고 이해해야 합니다.
+mapreduce.hpp 해더 파일을 보면 Boost 라이브러리를 시용한다는 점을 확인할 수 있습니
+다. 제공되는 코드를 보면 단계에서 구, v〉 쌍을 생성한다는 것을 확인할 수 있습니다. 여
+기서 k는 문자열이고, v는 1로 설정되어 있습니다. 예를 들어 입력 파일에 임의의 단어 뼈,
+따이 저장되어 있다고 가정해보겠습니다. 이 경우 맵 단계는k = {바, 1뜨,
+1十' 11'
+wn}인 구, 1〉 쌍을 출력으로 내보내야 합니다. 이를 그림 4-17에 나타냈습니다.
+그림 4-17 맵 단계
+텍스트 파일
+맵 단계
+<1M1, 1>
+<W2, 1>
+<W3, 1>
+<WI, 1>
+<Wn, 1>
+2. 맵 단계에서 필요한 코드의 골격은 다음과 같습니다.
+struct map—task : public mapreduce: :map_task〈
+std: :string,
+// MapKey (filename)
+std::pair<char const*, std: :uintmax t〉〉 // MapVaIue (memovy 「「:毋)활ed 쥐le contents)
+template〈typename Runtime〉
+void operator()(Runtime& runtime, key_type const& key, value) const
+200

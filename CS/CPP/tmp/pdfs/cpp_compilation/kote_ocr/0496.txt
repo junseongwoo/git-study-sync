@@ -1,0 +1,25 @@
+5번 도시에 도달하는 방법 수 = 6
+1"2"3"4“5
+1 " 2" 4 •• 5
+그러므로 다음과 같은 수식을 유도할 수 있습니다.
+• 기저 조건.F(1)= 1(목적지에도착완료)
+• 재귀 관계: F(i) EF(力 if j+distance(j)2i
+7• 특정 도시에 도착할 수 있는 방법의 수는 해당 도시로 이동할 수 있는 도시들에 도착할 수 있
+는 방법의 수를 모두 합한 것과 같습니다. 이러한 논리를 이용하여 문제 해결을 위한 재귀 함수를
+다음과 같이 작성할 수 있습니다.
+F(n) -〉 n번째 도시에 도착하는 방법의 수
+if i= N:
+return 1
+0therwise:
+result = 0
+1 tO distance[i]:
+for j
+result = result + F(i + j)
+return result
+주어진 문제의 상태 전이 함수를 정의했으니, 이제 실제 프로그램 코드를 작성하겠습니다.
+1. 필요한 헤더 파일을 포함하고 std 네임스페이스를 사용하도록 선언합니다.
+#include 〈vector〉
+#include 〈algorithm〉
+#include <iostream〉
+using namespace Std;
+「서0

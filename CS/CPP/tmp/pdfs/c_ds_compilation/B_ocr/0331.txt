@@ -1,0 +1,50 @@
+圈7
+091
+092
+093
+095
+097
+1%
+101
+102
+103
+104
+105
+106
+107
+108
+109
+110
+112
+113
+115
+117
+118
+120
+122
+else {
+if ( PQ->Nodes[LeftPositionl.Priority
+〉 m->NodesIRightPositionI PrioritY)
+SeIectedChiId = RightPosition;
+else
+Se1ectedChild = LeftPosition;
+if ( PQ->Nodes[SelectedChi1dl PrioritY
+〈 PQ->Nodes[ParentPosition).Priority)
+PQ-SwapNodes(PQ, ParentPosition, SeIectedChi1d);
+ParentPosition = Se1ectedChiId,
+else
+break,
+LeftPosition
+RightPosition
+PQ_GetLeftChi1d(ParentPosition);
+LeftPosition + 1:
+if ( PQ-NsedSize 〈 ( PQ-XapacitY / 2 ) )
+PQ-Xapacity 7= 2,
+자가lodes =
+(昶No血*) realloc( PQ->Nodes, sizeof( PQNode ) * PQ-XapacitY );
+int PQ_GetParent( int lndex )
+return (int) ((lndex - 1) / 2);
+int PQ_GetLeftChi1d( int lndex )
+return (2 * lndex) + 1;
+326
+Part 02 • 알고리즘

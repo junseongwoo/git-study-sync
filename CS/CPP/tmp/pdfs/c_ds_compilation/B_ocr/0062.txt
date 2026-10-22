@@ -1,0 +1,58 @@
+027
+028
+029
+€30
+031
+032
+033
+034
+035
+036
+037
+0죠
+039
+041
+042
+043
+044
+045
+047
+049
+050
+051
+052
+053
+054
+055
+057
+058
+059
+%3
+%5
+러e馝 = NewNode
+else
+// 테일을 찾아 NewNode를 연결한다.
+Node• Tai1 = (•Head);
+while ( TaiI->NextNode != NULL )
+Tail = Tail->NextN0de,
+Tail->NextNode = NewNode,
+= TaiI; //
+// 노드 삽입
+기존 테일을 새로운 테일의 PrevNode가 가리킨다.
+VOid DLL_InsertAfter( NOde* Current, NOde* NewNode )
+NewNode->NextNode = Current->NextNode;
+NewNode-PrevNode = Current;
+if ( Current->NextNode != NULL )
+Current->NextNode-PrevNode
+Current->NextNode = NewNode,
+NewNode,
+// 노드 제거
+void DLL-RemveNode( Node** Head, Node* Remove )
+if ( *Head == Remove )
+러e刁 = Remove->NextNode;
+if ( (*Head) != NULL )
+(*Head)-PrevNode = NULL;
+Remove-PrevNode = NULL;
+Remove->NextNode = NULL;
+52
+Part 01 • 자료구조

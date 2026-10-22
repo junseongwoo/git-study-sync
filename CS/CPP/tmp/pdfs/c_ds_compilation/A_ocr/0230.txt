@@ -1,0 +1,31 @@
+if (remved == head) return;
+removed->llink->rtink = r예尠v댼-〉rlink;
+remved->rlink->tlink = removed->tlink;
+free(remved) ;
+// 이중 연결 리스트 테스트 프로그램
+int main(void)
+char ch;
+DListNodeå head
+init(head);
+(DListN0de *)maItoc(sizeof(DListNode) ) •,
+238
+dinsert(head, "Mamamia");
+dinsert(head, "Dancing Queen");
+dinsert(head, "Fernand0");
+current = head->rlink;
+print-dlist(head) ;
+do {
+printf("\n명령어를 입력하시오(<,
+ch = getchar();
+current = current—>ltink;
+if (current == head)
+current = current—>llink;
+else if (ch == '되) {
+current = current—>rlink;
+if (current == head)
+current = current—>rtink;
+print_dlist (head) ;
+getchar() •,
+} while (ch != 격');
+// 동적 메모리 해제 코드를 여기에
+C언어로 쉽게 불어쓴 자료구조

@@ -11,14 +11,12 @@
             "id": "3d5939434b10fcf7",
             "type": "leaf",
             "state": {
-              "type": "markdown",
+              "type": "pdf",
               "state": {
-                "file": "CS/CPP/03.Mutex와 Condition Variable.md",
-                "mode": "source",
-                "source": false
+                "file": "공기업_학습관리/02_과목별PDF/01.프로그래밍.pdf"
               },
-              "icon": "lucide-file",
-              "title": "03.Mutex와 Condition Variable"
+              "icon": "lucide-file-text",
+              "title": "01.프로그래밍"
             }
           }
         ]
@@ -197,27 +195,30 @@
   },
   "active": "6ab1c6578c2926a1",
   "lastOpenFiles": [
-    "CS/CPP/tmp/pdfs/os_notes/qa_contact_19.jpg",
-    "CS/CPP/tmp/pdfs/os_notes/qa_contact_18.jpg",
-    "CS/CPP/tmp/pdfs/os_notes/qa_contact_17.jpg",
-    "CS/CPP/tmp/pdfs/os_notes/qa_contact_16.jpg",
-    "CS/CPP/tmp/pdfs/os_notes/qa_contact_15.jpg",
-    "CS/CPP/tmp/pdfs/os_notes/qa_contact_14.jpg",
-    "CS/CPP/tmp/pdfs/os_notes/qa_contact_13.jpg",
-    "CS/CPP/tmp/pdfs/os_notes/qa_contact_12.jpg",
-    "CS/CPP/tmp/pdfs/os_notes/qa_contact_11.jpg",
-    "CS/CPP/tmp/pdfs/os_notes/qa_contact_10.jpg",
-    "CS/CPP/tmp/pdfs/os_notes/qa_contact_09.jpg",
-    "CS/CPP/output/pdf/운영체제 요약 정리.build_report.json",
-    "CS/CPP/output/pdf/운영체제 요약 정리.pdf",
-    "CS/CPP/tmp/pdfs/os_notes/finalize_structure.py",
-    "CS/CPP/tmp/pdfs/os_notes/mid_validation.json",
-    "CS/CPP/tmp/pdfs/os_notes/check_mid.py",
-    "CS/CPP/tmp/pdfs/os_notes/chapters/10.json",
-    "CS/CPP/tmp/pdfs/os_notes/late_final_patch.py",
-    "CS/CPP/tmp/pdfs/os_notes/chapters/13.json",
-    "CS/CPP/tmp/pdfs/os_notes/chapters/14.json",
-    "CS/CPP/tmp/pdfs/os_notes/chapters/15.json",
+    "CS/CPP/03.Mutex와 Condition Variable.md",
+    "CS/CPP/tmp/pdfs/c_ds_compilation/final_manifest.json",
+    "CS/CPP/tmp/pdfs/c_ds_compilation/QA_notes_001_072.json",
+    "CS/CPP/tmp/pdfs/c_ds_compilation/changed_final_pages.json",
+    "CS/CPP/tmp/pdfs/c_ds_compilation/QA_notes_073_144.json",
+    "CS/CPP/tmp/pdfs/c_ds_compilation/QA_root.json",
+    "CS/CPP/tmp/pdfs/c_ds_compilation/before_final_fix_hashes.json",
+    "CS/CPP/tmp/pdfs/c_ds_compilation/QA_audit_001_060.json",
+    "CS/CPP/tmp/pdfs/c_ds_compilation/render/audit/contact_113_114.jpg",
+    "CS/CPP/tmp/pdfs/c_ds_compilation/render/audit/114.png",
+    "CS/CPP/tmp/pdfs/c_ds_compilation/render/cheat/contact_021_022.jpg",
+    "CS/CPP/tmp/pdfs/c_ds_compilation/render/cheat/022.png",
+    "CS/CPP/tmp/pdfs/c_ds_compilation/render/cheat/021.png",
+    "CS/CPP/tmp/pdfs/c_ds_compilation/toc_problem_3.png",
+    "CS/CPP/tmp/pdfs/c_ds_compilation/toc_problem_2.png",
+    "CS/CPP/tmp/pdfs/c_ds_compilation/independent_source_3.jpg",
+    "CS/CPP/tmp/pdfs/c_ds_compilation/independent_source_2.jpg",
+    "CS/CPP/tmp/pdfs/c_ds_compilation/independent_source_1.jpg",
+    "CS/CPP/tmp/pdfs/c_ds_compilation/independent_content_review.json",
+    "CS/CPP/tmp/pdfs/c_ds_compilation/write_independent_review.py",
+    "CS/CPP/tmp/pdfs/c_ds_compilation/root_03_04_review.json",
+    "CS/CPP/tmp/pdfs/c_ds_compilation/CONTENT_CONTRACT.md",
+    "CS/CPP/tmp/pdfs/cpp_compilation/CONTENT_CONTRACT.md",
+    "CS/CPP/tmp/pdfs/network_notes/CONTENT_CONTRACT.md",
     "CS/CPP/tmp/pdfs/os_notes/content_contract.md",
     "CS/CPP/tmp/pdfs/cpp_tour/content_contract.md",
     "공기업_학습관리/00_시작하기.md",
@@ -239,9 +240,6 @@
     "공기업_학습관리/04_실습과NCS/매일15분/기록/M128 CX08 SX08.md",
     "공기업_학습관리/04_실습과NCS/매일15분/기록/M125 CX08 SX08.md",
     "공기업_학습관리/04_실습과NCS/매일15분/기록/M127 CX08 SX08.md",
-    "공기업_학습관리/04_실습과NCS/매일15분/기록/M126 CX08 SX08.md",
-    "공기업_학습관리/04_실습과NCS/매일15분/기록/M118 CX06 SX06.md",
-    "공기업_학습관리/04_실습과NCS/매일15분/기록/M124 CX07 SX07.md",
-    "공기업_학습관리/04_실습과NCS/매일15분/기록/M123 CX07 SX07.md"
+    "공기업_학습관리/04_실습과NCS/매일15분/기록/M126 CX08 SX08.md"
   ]
 }

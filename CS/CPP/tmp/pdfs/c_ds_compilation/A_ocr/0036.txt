@@ -1,0 +1,24 @@
+int factoriaI(3)
+if( 3 <= 1 ) return(l);
+else return (3 * factoriaI(3-1) );
+factorial(3)을 수행하는 도중에 factorial(2)를 호출하게 되고 factoria1(2)는 다시
+factorial(l)을 호출하게 된다.
+int factoriaI(2)
+if( 2 수 1 ) return(l);
+else return (2 * factoria1(2-1) );
+factorial(l)은 매개 변수 n이 1이므로 첫 번째 if 문장이 참이 되고 따라서 더 이상의 순환
+호출없이 1을 반환하게 된다.
+int factoriat(l)
+if( 1 <= 1 ) return(l);
+이 반환값 1은 factoria1(2)로 전달되고 factoria1(2)는 여기에 2를 곱한 값인 2를
+factoria1(3)으로 전달한다. factorial(3)은 이 값에 3을 곱하여 6을 반환한다 다시 이 과정
+을 한 번에 살펴보면 다음과 같다.
+factoriat(3) = 3 * factoriaI(2)
+* 2 * factorial(l)
+= 3
+= 3
+* 2 * 1
+= 3
+* 2
+[그림 2-기에서 factorial(3)을 호출하였을 경우의 순환호출의 순서를 보여준다.
+42 C언어로 쉽게 불어쓴 자료구조

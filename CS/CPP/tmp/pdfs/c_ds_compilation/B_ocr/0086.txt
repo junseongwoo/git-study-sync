@@ -1,0 +1,21 @@
+void AS Push(ArrayStack* Stack, EIementType Data)
+Stack->Top++;
+Stack->Nodes(Stack->TopJ.Data = Data,
+노드 제거 연산
+이번에는 제거Pop 연산을 살펴볼까요? 삽입 연산에서는 최상위 노드의 인덱스(Top) 값을 1만큼
+올리도록 구현했던 것에 반해, 제거 연산은 이 값을 1만큼 낮추도록 구현하면 됩니다. 여기서 한 가
+지 주의할 점은 제거 연산에서는 최상위 노드에 있던 데이터를 호출지에게 반환해야 한다는 사실입
+니다. 다음은 제거 연산을 수행하는 AS-Pop ( ) 함수입니다.
+ElementType AS Pop(ArrayStack* Stack)
+int Position = Stack->Top--
+return Stack->Nodes(PositionI.Data,
+이어서 이 구현들을 소스 코드에 옮기고 컴파일하여 프로그램을 만들어보겠습니다.
+2.23 배열 기반 스택 예제 프로그램
+코-드 에디터를 열었습니까? 이 예제 그 그램 코드에는 앞에서 설명하지 않은 몇 가지 함수가 추가
+되어 있습니다. 예를 들어 제거는 하지 않고 최상위 노드의 데이터만 반환하는 Top( ) 함수, 스택이
+비어 있는지 검사하는 1sEmpty( ) 함수 등이 바로 그것입니다. 이 함수들은 구현이 간단하므로 따
+로 설명하지 않겠습니다. 다음 소스 코드를 따라 예제 프로그램을 만들어보세요.
+프로그램을 구성하는 소스 코드 파일은 모두 3개입니다. 그중 둘은 스택 연산을 구현6는 Array
+stack.h와 ArrayStack.c이고 나머지 하나는 이들을 테스트하는 Test ArrayStack.c입니다.
+Chapter 02 • 스택
+77

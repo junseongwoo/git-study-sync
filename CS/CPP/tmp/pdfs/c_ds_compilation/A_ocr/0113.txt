@@ -1,0 +1,26 @@
+비교
+오류
+14
+同훼回
+[그림 4-1이 괄호 검사 과정
+괄호 검사 알고리즘을 의사 코-드로 만들어보면 다음과 같다.
+알고리즘 4.5 괄호검사 알고리즘
+check_matching(expr) :
+b,hile (입력 expr의 끝이 아니면)
+ch 수 expr의 다음 글자
+smtch(ch)
+case ' (': case [|: case |{|
+ch를 스택에 삽입
+break
+case |기•. case case '}'
+if ( 스택이 비어 있으면 )
+then 오류
+etse 스택에서 open-ch* 꺼낸다
+if (ch와 open-ch가 같은 짝이 아니면)
+then 오류 보고
+break
+if( 스택이 비어 있지 않으면 )
+then 오류
+이상의 알고리즘을 더욱 확실하게 이해하기 위하여 다음의 가상 실습 소프트웨어를 이용하여
+실습을 해보자.
+CHAPTER04 스택 121

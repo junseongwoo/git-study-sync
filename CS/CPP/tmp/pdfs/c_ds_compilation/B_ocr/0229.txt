@@ -1,0 +1,33 @@
+44
+45
+46
+47
+48
+52
+53
+54
+55
+57
+62
+63
+int main( void )
+int DataSet[I = {6, 4, 2, 3, 1, 5};
+int Length = sizeof DataSet / sizeof DataSet(이:
+int i = 0;
+QuickSort( DataSet, 0, Length-1
+for ( i=9; i<Length; i++ )
+printf('*d •, DataSet[il);
+pnntf("\n•);
+return 0;
+실형 결과
+1 2 3 4 5 6
+자. 코드를 같이 분석해봅시다.
+Qurck&)fl.c에는 mam( void ) 함수를 제외하고 3개의 함수가 있습니다. swap( ), Part1t10n ( ),
+QuickSort() 함수가 그것입니다. swap( ) 함수의 구조는 간단합니다. 입력된 두 포인터의 값을
+맞교환할 뿐이거든요. 이 예제에서 중요한 것은 Partition ( )과 QuickSort( ) 함수입니다.
+36~45행의 QuickSort() 함수는 자료구조인 DataSet 배열과, DataSet 내의 정렬 대상 범위
+값 Left. Right를 매개 변수로 받습니다. Left와 Right는 수색 섬멸을 수행하는 두 정찰병의 위치
+를 나타냅니다. QuickSort( ) 함수는 Left가 Right보다 크거나 같으면 이 둘이 만났다는 뜻이므
+로 실행을 종료합니다. 반대로 Left가 Rjght보다 작으면 내부 코-드 블록(39~44행)으로 들어가서
+Parution() 함수를 실행한 후 자기 자신, 즉 QuickSort( )를 재귀 호출합니다. 42행의 Quick
+222 Part 02 • 알고리즘

@@ -1,0 +1,28 @@
+8. 지금까지 작성한 프로그램을 실행하면 다음과 같은 출력을 확인할 수 있습니다.
+https://py-dojang 등록
+https://c d0jang 등록
+https://opencv4 등록
+https://py-dojang 원본 URL: https://www.gilbut.co.kr/b00k/view?bookcode=BN0@2245
+https://cpp-dojang 원본 URL을 찾을 수 없습니다.
+c-dojang 책 URL 등록 해제
+https://c-dojang 원본 URL을 찾을 수 없습니다.
+등록된 URL 리스트:
+https : //py-dojang -〉 https : //www.gilbut.(0.kr/b00k/view?b00kcode=BN@02245
+https://opencv4 -〉 https : //www.gilbut.(0.kr/b00k/view?bookcode=BN@@2402
+출력 결과에서 등록이 해제된 URL은 제외되었고. 현재 등록되어 있는 URL은 모두 출력된 것을
+볼 수 있습니다.
+A.3.2 실습 문제 7: 이메일 주소 중복 검사
+이번 실습 문제에서는 사용자가 입력한 이메일 주소가 이미 시용 중인지를 검사하는 그램을
+만들어보겠습니다. 실습 문제를 해결하기 위해 다음 단계를 따라하세요.
+1. 필요한 헤더 파일을 포함합니다.
+#include 〈iostream〉
+#include 〈vector〉
+#include 〈openssl/md5.h〉
+2. 볼룸 필터 클래스를 추가합니다.
+class BloomFilter
+int nHashes;
+std: :v豇tor<b001〉 bits;
+static constexpr int hashSize = 128 / 8;
+unsigned char hashValue[hashSize];
+464
+// 128비트(16바이트)

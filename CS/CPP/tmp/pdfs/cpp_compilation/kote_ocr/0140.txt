@@ -1,0 +1,25 @@
+3.5.1 연습 문제 17: 블룸필터 만들기
+이번 연습 문제에서는 블룸 필터를 만들고 몇 가지 기본 연산을 수행해보겠습니다. 특히 거짓-긍
+정에 대한 테스트도 진행하겠습니다.
+1. 필요한 헤더 파일을 포함합니다.
+#include 〈iostream〉
+#include 〈vector〉
+2. 블룸 필터 구현 클래스를 정의하고 필요한 멤버를 추가합니다.
+class b100m filter
+std: :vector<bool> data;
+int nBits;
+3. 해시 함수를 추가합니다. 여기서는 매우 단순한 해시 함수를 시용하겠습니다.
+int hash(int num, int key)
+switch (num)
+case 0: return key % nBits;
+case 1: return (key / 7) % nBits;
+case 2: return (key / 11) % nBits;
+return 0:
+이 함수의 인자 num은 내부에서 어떤 해시 함수를 사우할지 결정하는 역할을 합니다. 이렇게
+함으로써 여러 개의 해시 함수를 따로 만들지 않아도 됩니다. 이 방법은 더 많은 해시 함수를
+시용해야 하는 경우에도 쉽게 확장할 수 있습니다.
+4. 볼룸 필터의 생성지를 추가합니다.
+public:
+bloom_filter(int n) : nBits(n)
+data = std: :vector<booI>(nBits, false);
+151

@@ -1,0 +1,56 @@
+107
+108
+109
+110
+111
+113
+114
+116
+117
+118
+119
+120
+122
+123
+124
+return Count,
+void PrintNode( NO血* NOde )
+if ( Node->PrevN0de == NULL )
+printfCPrev: WLL");
+else
+pnntf("Prev: *d•, Node-PrevNode-»ata);
+printf("Current: 년• Node->Data);
+if ( Node->NextNode == NULL )
+printf("Next: NULL\n");
+else
+printf("Next: %d\n", Node->NextNode-»ata);
+01 장/DoubIyLinkedList/Test—Doub1YLinkedList. (
+01
+03
+04
+07
+08
+10
+12
+13
+14
+16
+54
+#include
+int main(
+int
+int
+Node* List
+• DoublyLinkedList.h •
+void )
+1
+Count
+N馝안 NewNode = NULL;
+Current
+= NULL;
+= NULL;
+// 노드 5개 추가
+for ( i = 0; i<5; i++ )
+NewNode = DLL-CreateNode( i );
+DLL-AppendNode( &List, NewNode );
+Part 01 • 자료구조

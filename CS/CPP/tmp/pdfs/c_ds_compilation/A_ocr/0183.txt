@@ -1,0 +1,20 @@
+삽입 연산 insert-first()
+단순 연결 리스트의 경우, 리스트의 처음이나 끝에 새로운 노드를 추가하는 경우가 많다. 여기서
+는 리스트의 첫 부분에 새로운 노드를 추가하는 함수 insert-first()# 작성해보자. 여기서 매
+개 변수 head는 헤드 포인터이고 vatue는 새롭게 추가되는 데이터이다.
+ListNode* insert_first(ListNode *head, element value);
+head가 첫 번째 노드를 가리키기 때문에 리스트의 시작 부분에 노드를 추가하는 것은 비교적
+쉽다. 새로운 노드를 하나 생성하고 새로운 노드의 link에 현재의 head 값을 저장한 후에, head
+를 변경하여 새로 만든 노드를 가리기도록 하면 된다. insert-first()은 변경된 헤드 포인터를
+반환한다. 따라서 반환된 값을 헤드포인트에 저장하여야 한다.
+head - 10
+- 10
+NULL
+NULL
+20
+이것을 알고리즘으로 만들면 다음과 같다.
+알고리즘 6.1 연결 리스트삽입|
+nnsert_first(head, value):
+1. p malloc()
+// L: 연결 리스트, value: 추가할 값
+CHAPTER06 연결 리스트 | 191

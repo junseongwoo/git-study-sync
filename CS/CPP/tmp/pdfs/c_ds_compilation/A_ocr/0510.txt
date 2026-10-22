@@ -1,0 +1,35 @@
+프로그램 13.10 AVL트리 구현 #3
+// 트리의 높이를 반환
+int get—height(AVLN0de *node)
+int height = 0;
+if (node != NULL)
+height = 1 + max(get-height(node->left) ,
+get-hei ght ght) ) ;
+return height;
+// 노드의 균형인수를 반환
+int get—baIance(AVLNode*
+if (node == NULL) return 0;
+return get-height(node->left)
+- get-height(node->right) ;
+새로운 노드 추가 함수
+새로운 노드가 추가되면 트리의 균형이 깨질 수 있다. 이때 오른쪽 회전과 왼쪽 회전을 이용하여
+트리의 균형을 맞춘다. 이중 회전은 rotate-left()와 rotate-right()를 이어서 부르면 된다.
+소스의 주석을 참조하여 이해해보자.
+// AVL 트리에 새로운 노드 추가 함수
+// 새로운 루트를 반환한다.
+AVLN0de* insert(AVLNode* node, int key)
+// 이진 탐색 트리의 노드 추가 수행
+if (node == NULL)
+return (create—node (key) ) ;
+if (key 〈 node->key)
+= insert(node->left, key) ;
+else if (key > node->key)
+node-〉right = insert(node->right, key);
+else // 동일한 기는 허용되지 않음
+return node;
+// 노드-들의 균형인수 재계산
+int balance = get-batance(node) ;
+이진 탐색 트리와 같이 탐색이 실
+패한 위치가 삽입 위치가 된다.
+균형 인수를 계산한다.
+대期표R13 탐책 519

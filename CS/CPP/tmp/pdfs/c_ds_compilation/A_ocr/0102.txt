@@ -1,0 +1,38 @@
+전역 변수로 구현하는 방법
+미원 배열과 top 변수를 모두 전역 변수로 구현한다. 전역 변수로 구현되기 때문에 배열이나
+top 변수를 함수의 매개 변수로 전달할 필요가 없다. 스택에 저장되는 데이터의 타입은 typedef
+을 이용하여 element로 정의되었다. 현재는 정수형으로 정의되어 있다. push 연산은 top을 먼
+저 증가시킨 다음, 증가된 위치에 데이터를 저장한다. 연산은 먼저 top이 가리기는 위치에
+서 데이터를 꺼내온 디음. top을 하나 감소한다.
+프로그램 4.1 정수 배열 스택 프로그램
+#include <stdio.h>
+#include <stdlib.h>
+#define MAX_STACK_SIZE 100
+typedef int element;
+element stack[MAX_STACK_SIZE] ;
+int top
+// 공백 상태 검출 함수
+int is-empty()
+return (top == -1) ,•
+// 포화 상태 검출 함수
+// 스택의 최대 크기
+// 데이터의 자료형
+스택이 전역 변수로 구현된다.
+// 1차원 배열
+int is_futl()
+return (top
+// 삽입 함수
+(MAX_STACK_SIZE
+void push(element item)
+if (is-fult()) {
+fprintf(stderr, "스택 포화 에러\n");
+return;
+else stack[++top]
+item;
+// 삭제 함수
+element pop()
+if (is-empty()) {
+fprintf(stderr, "스택 공백 에러\n");
+exit(l);
+else return stack[top--] ;
+110 C언어로 쉽게 풀어쓴 자료구조

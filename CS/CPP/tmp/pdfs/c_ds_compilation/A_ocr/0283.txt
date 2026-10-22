@@ -1,0 +1,28 @@
+[그림 8-36] 스레드 이진 트리
+그러나 만약 이런 식으로 NULL 링크에 스레드가 저장되면 링크에 자식을 가리기는 포인터가
+저장되어 있는지 아니면 NULL이 저장되어야 하는데 대신 스레드가 저장되어 있는지를 구별해주
+는 태그 필드가 필요하다. 따라서 노드의 구조가 다음과 같이 변경되어야 한다.
+typedef struct TreeNode {
+int data;
+struct TReeNode *left, *right•
+int // 만약 오른쪽 링크가 스레드이면 TRUE
+} TreeNode;
+따라서 is-thread가 TRUE이면 right는 중위 후속자이고 is-thread가 FALSE이면 오른쪽 자식
+을 가리기는 포인터가 된다. 만약 스레드 이진 트리가 구성되었다고 가정하였을 경우, 중위 순회
+연산은 어떻게 변경되어야 할까? 먼저 노드 p의 중위 후속지를 반환하는 함수 find-successor
+를 제작하자. find-successor는 p의 is-thread가 TRUE로 되어 있으면 바로 오른쪽 자식이 중
+위 후속자가 되므로 오른쪽 자식을 반환한다. 만약 오른쪽 자식이 NULL이면 더 이상 후속자가 없
+다는 것이므로 NIJLL를 반환한다.
+만약 is-thread가 TRUE가 아닌 경우는 서브 트리의 가장 왼쪽 노드로 가야한다. 따라서 왼쪽
+자식이 NULL이 될 때까지 왼쪽 링크를 타고 이동한다
+TreeNode * find—successor(TreeNcxIe * p)
+// q는 p의 오른쪽 포인터
+TreeN0de * q = p—>nght;
+// 만약 오른쪽 포인터가 NULL이거나 스레드이면 오른쪽 포인터를 반환
+if (q == NULL || p—>is—thread == TRUE)
+return q;
+// 만약 오른-쪽 자식이면 다시 가장 왼쪽 노드로 이동
+while (q->left != NULL) q = q-〉left;
+return q;
+스레드 이진 트리에서 중위 순회를 하는 함수 thread-inorder를 제작하여 보자. 먼저 중위
+트리 291

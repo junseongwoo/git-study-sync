@@ -1,0 +1,28 @@
+07 다음 함수를 sum(5)로 호출하였을 때, 화면에 출력되는 내용과 함수의 반환값을 구하라.
+int sum(int n)
+printf("96d\nt', n);
+if( n<l) return 1;
+else return( n+sum(n-l) );
+% 다음 함수를 recursive(5)로 호출하였을 때. 화면에 출력되는 내용과 함수의 반환값을 구하라.
+recursive(int n)
+printf("%d\n", n);
+if( n<l) return 2;
+else return( 2*recursive(n-1)+1 );
+09 다음 함수를 recursive(l@)로 호출하였을 때, 화면에 출력되는 내용과 함수의 반환값을 구
+하라.
+int recursive(int n)
+printf("%\n'% n);
+if( n<l) return -1;
+else return( recursive(n-3)+1 );
+10 다음 함수를 recursive(5)로 호출하였을 때, 화면에 출력되는 내용을 쓰시요.
+int recursive(int n)
+if(n != 1) recursive(n-l);
+printf("%d\n", n);
+11
+다음 함수에서 asterisk(5)를 호출할 때 출력되는 *의 갯수는?
+void asterisk(int i)
+if(i>l){
+asterisk(i /2) •,
+asterisk(i/2) ;
+printf("*");
+64 C언어로 쉽게 풀어쓴 자료구조

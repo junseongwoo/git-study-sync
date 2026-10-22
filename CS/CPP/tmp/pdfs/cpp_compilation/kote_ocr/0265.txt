@@ -1,0 +1,27 @@
+위 함수는 두 개의 부분으로 나눌 수 있습니다. 앞-부룬에서는 시작 정점부터 목적 정점까지
+탐색을 수행하고, 탐색 결괴를 목적 정점에서 시작 정점까지 백트래%l(backuacking) 방식으로
+되짚어가면서 최단 경로를 구합니다.
+6. main() 함수에서는 그래프를 생성하고, 1 번 정점과 6번 정점 사이의 최단 경로를 찾는 다익스
+트라 알고리즘을 실행합니다. 그리고 찾아낸 최단 경로를 화면에 출력합니다.
+int main()
+= unsigned;
+using T
+= create reference_graph<T>( ) :
+autO
+heap.emplace(LabeI<T>{neighbor, new distance));
+parent[neighborl = current vertex.ID;
+distance[neighbor]
+new distance;
+visited. insert( current_vertex. 10) ;
+// 백트래킹 방식으로 시작 정점부터 목적 정점까지의 경로 구성
+vector〈unsigned> shortest—path;
+autO current_vertex = dst;
+while (current_vertex != src)
+shortest_path. push_back( current_vertex) ;
+= parent[current_vertex];
+current vertex
+// 그래프 객체 생성
+shortest-path. push-back(src);
+reverse( shortest—path. begin( ) ,
+return shortest_path;
+shortest-path. end( ));

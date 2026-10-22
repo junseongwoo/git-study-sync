@@ -1,0 +1,34 @@
+fprintf(stderr,
+exit(l);
+// 공백 상태 검출 함수
+void init-queue(QueueType *q)
+q->front = q->rear = 0;
+// 공백 상태 검출 함수
+int is-empty(QueueType *q)
+return (q->front == q->rear) ;
+// 포화 상태 검출 함수
+int is fuII(QueueType *0
+return ((q->rear + 1) % MAX_QUEUE_SIZE
+q->front) ;
+// 원형큐 출력 함수
+VOid queue-print(QueueType *q)
+printf("QUEUE(front=%d rear=%d)
+if (!is-empty(q)) {
+q->front;
+do {
+", q—>front, q->rear) ,
+158
+= (5 + 1) % (MAX_QUEUE-SIZE);
+1
+printf("96d | ", q->data[i]);
+if (5 == q->rear)
+break;
+} while (i != q->front);
+printf("\n");
+// 삽입 함수
+void enqueue(QueueType *q, element item)
+if (is-full(q))
+error("큐가 포화상태입니다") ;
+q->rear = (q->rear + 1) % MAX_QUEUE_SIZE;
+q->data[q->rear] = item;
+C언어로 쉽게 풀어쓴 자료구조

@@ -1,0 +1,49 @@
+051
+052
+053
+054
+055
+0%
+057
+059
+%2
+%3
+%5
+%7
+%9
+070
+071
+072
+073
+074
+075
+076
+077
+078
+079
+083
+%5
+%7
+0圈
+if ( Tree == WLL )
+return;
+if ( Tree->Left |= NULL )
+Code(SizeJ = 이•
+Huffman BuildCodeTabIe( Tree->Left, CodeTabIe, COde
+Size+1 ):
+if ( Tree->Right 1= WLL )
+Huffman-BuiIdCodeTabIe( Tree->Right, CodeTabIe, COde, Size + 1 );
+if ( Tree->Left == NULL Tree->Right == NULL )
+int i;
+for ( i=@; i6ize; i++ )
+C0deTab1e[Tree->Data.Symb01).Code[i] =
+C0deTab1eITree->Data.Symb011.Size = Size;
+void Huffman BuildPrefixTree( HuffmanN0de** Tree,
+Symb011nfo SymbolInfoTable(MAX:대ARI)
+int
+PQN0de ResuIt,
+PriorityQueue• PQ = PQ_Create(0);
+for ( i=O; iOAX_,대AR; i++ )
+if ( SymbolInfoTable[il.Frequency 〉 0 )
+598
+Part 03 • 알고리즘 설계 기법

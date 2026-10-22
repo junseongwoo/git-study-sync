@@ -1,0 +1,58 @@
+29
+31
+32
+33
+34
+35
+37
+40
+41
+42
+43
+44
+45
+47
+48
+49
+50
+51
+53
+IJCHAR* Buffer;
+UINT Size,
+} BitBuffer;
+typedef struct TagHuffmanCode
+UCHAR
+int Size,
+} HuffnanCode,
+HuffmanNode• Huffman-CreateN0de( SymboIInfo NewData );
+void Huffman DestroyNode( HuffmanNode* N0de );
+void Mfman DestroyTree( HuffrnanNode* NOde ):
+void Huffman AddBit( BitBuffer* Buffer, char value );
+void Huffman Encode( HuffmanNode** Tree, U대AR* Source, BitBuffer* Encoded,
+HuffmanCode CodeTab1e(MAX-CHARJ );
+HuffmanNode* Tree, BitBuffer* Encoded, U대AR* Decoded );
+VOid
+Huffman BuiIdPrefixTree( HuffmanNode** Tree,
+VOid
+SymboIInfo Symb011nfoTabIe[MAX2대ARI ):
+Huffman-Bui1dCodeTabIe( HuffmanNode* Tree, HuffmanCode CodeTable[MAX CHARI,
+VOid
+U대AR C0de[MAX_BIT], int Size );
+Huffman PrintBinary( BitBuffer* Buffer );
+VOid
+ændif
+14장/Huffnan/Huffnan.c
+%1 •include "Huffman h•
+%3 Huffman-CreateN0de( SymboIInfo NewData )
+%5
+007
+010
+NewNode = 대uffmanNode*)ma110c( sizeof대uffmanNcxie) ):
+NewNode->Left
+NewN0de->Ri ght
+return NewNode
+= NULL;
+= WLL;
+NewData;
+596
+Part 03 • 알고리즘 설계 기법

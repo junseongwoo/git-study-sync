@@ -1,0 +1,57 @@
+07
+08
+10
+12
+14
+16
+17
+18
+19
+20
+22
+23
+24
+25
+26
+27
+28
+tinclude <string.h>
+typedef char EIementType,
+typedef struct tagETNode
+struct tagETNode•* Left;
+struct tagETNode* Right;
+E1ementType Data.
+} ETNode,
+ETNode•
+void
+VOid
+VOid
+VOid
+VOid
+VOid
+double
+ærdif
+ET_CreateNode( EIementType NewData );
+ET_DestroyNode( ETNode* NOde );
+ET-DestroyTree( ETNode* Root );
+ET_PreorderPrintTree( ETNode* Node );
+ET InorderPrintTree( ETNode* NOde );
+ET_PostorderPrintTree( ETNode* NOde ):
+ET_BuildExpressionTree( char* PostfixExpression, ETNode** NOde );
+ET_EvaIuate( ETNode* Tree );
+04장/ExpressionTree/ExpressionTree. (
+%1 tinc11Jde "ExpressionTree.hø
+%2
+%3 ETNode* ET—CreateNode( E1ementType NewData )
+%5
+%7
+008
+010
+012
+ETNode• NewNode = (ETNode*)ma110c( sizeof(ETNode) );
+NewNode->Left = NULL;
+NewN0de->Right = NULL;
+NewNode->Data = NewData,
+return
+182
+Part 01 • 자료구조

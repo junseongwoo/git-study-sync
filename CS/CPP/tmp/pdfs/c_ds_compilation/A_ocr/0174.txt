@@ -1,0 +1,41 @@
+A
+(이
+8
+[11
+4
+[21
+(31
+[41
+etemnt detete(ArrayListType *나 int
+etetnent it예;
+if 〈 0 || 〉= L->size)
+error('t위치 오류");
+for (int i = i<(L-〉size - 1); 5++)
+L->array[i] = L->array[i + 1];
+L—>Size—
+return
+테스트 프로그램
+지금까지 작성된 ArrayListType을 테스트해보자.
+프로그램 6.1 배열 리스트
+쒸nclude <stdio.h>
+#include <stdlib.h>
+// 앞의 코드를 여기에 추가한다.
+int main(void)
+// ArrayListType를 정적으로 생성하고 ArrayListTypeS
+// 가리키는 포인터를 함수의 매개변수로 전달한다.
+// 0번째 위치에 10 추가
+// 0번째 위치에 20 추가
+// 0번패 위치에 30 추가
+// 맨 끝에 40 추가
+// 0번째 항목 삭제
+182
+ArrayListType tist;
+init(&list) ;
+insert(&list, 0, 10); print_list(&list) ;
+insert(&list, 0, 20); print_list(&list) ;
+insert(&list, 0, 30); print—list(&list) ;
+nnsert_last(&list, 40);print_list(&list);
+delete(&list, 0);
+print_tist(&list) ;
+return 0;
+C언어로 쉽게 물어쓴 자료구조

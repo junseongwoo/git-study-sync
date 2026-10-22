@@ -1,0 +1,35 @@
+가상 실습 11.4
+최단 경로
+FIoyd 알고리즘
+최단 경로 Floyd 이|불릿을 이용하여 다음과 같이 실습을 진행한다.
+1느-회
+0
+0
+(峠>새n • Nü)
+口
+0
+4
+口
+艶RS
+모돈 찾1
+2
+0
+기ㆍ夐
+(1) 정점을 더블 클릭하여 생성한다
+(기 간선을 생성할때는 먼저 가중치를 입력한 다음, 정점과 정점 사이를 드래그하여 생성한다.
+(3) 정점을 이동하고자 하는 경우에는 컨트롤 기를 누른채로 마우스로 원하는 정점을 드래그하면 된다
+(4) •시작• 버튼과 •다음• 버튼을 클릭하여 프로그램을 단계적으로 실행하여 본다.
+Floyd 최단 경로 알고리즘의 구현
+FIoyd의 최단 경로 알고리즘의 C언어 구현을 프로그램 11.11에 보였다.
+프로그램 11.11 FIoyd의 최단 경로 프로그램
+#include 〈stdio.h>
+#include <stdlib.h>
+#define TRUE 1
+#define FALSE 0
+#define MAX_VERTICES 1%
+#define INF 1%00% /* 무한대 (연결이 없는 경우) */
+typedef struct GraphType {
+// 정점의 개수
+int weight[MAX_VERTICESJ [MAX_VERTICES] •,
+} GraphType,
+428 C언어로 쉽게 불어쓴 자료구조

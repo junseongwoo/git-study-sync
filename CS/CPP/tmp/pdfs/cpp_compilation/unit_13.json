@@ -1,0 +1,1068 @@
+{
+  "unit": 13,
+  "title": "유니폼 초기화·constexpr·decltype",
+  "part": "C++",
+  "scope": [
+    {
+      "source": "B",
+      "start": 831,
+      "end": 870
+    }
+  ],
+  "learning": [
+    {
+      "text": "유니폼 초기화는 {} 를 이용한 생성자 호출이며, 인자 없는 생성자가 함수의 정의로 오해되는 일을 막는다.",
+      "refs": [
+        {
+          "source": "B",
+          "section": "17장 / 뭘 배웠지?",
+          "pages": [
+            841
+          ]
+        }
+      ],
+      "evidence": "유니폼초기화({} 를이용한생성자호출)"
+    },
+    {
+      "text": "decltype 는 전달된 식의 타입으로 치환된다.",
+      "refs": [
+        {
+          "source": "B",
+          "section": "19장 / decltype",
+          "pages": [
+            857
+          ]
+        }
+      ],
+      "evidence": "식의타입으로치환"
+    }
+  ],
+  "concepts": [
+    {
+      "title": "유니폼 초기화·initializer_list",
+      "items": [
+        {
+          "text": "A a(); 는 객체 a 를 만드는 대신, A 를 리턴하고 인자를 받지 않는 함수 a 로 해석된다.",
+          "refs": [
+            {
+              "source": "B",
+              "section": "17장 / C++ 유니폼 초기화",
+              "pages": [
+                831
+              ]
+            }
+          ],
+          "evidence": "인자를받지않는함수"
+        },
+        {
+          "text": "유니폼 초기화는 {} 를 이용한 생성자 호출이며, 인자 없는 생성자가 함수의 정의로 오해되는 일을 막는다.",
+          "refs": [
+            {
+              "source": "B",
+              "section": "17장 / 뭘 배웠지?",
+              "pages": [
+                841
+              ]
+            }
+          ],
+          "evidence": "유니폼초기화({} 를이용한생성자호출)"
+        },
+        {
+          "text": "중괄호 초기화는 데이터 손실이 있는 Narrowing 변환을 불허하며, 원문의 A b{3.5}; 는 double 에서 int 로 변환할 수 없어 오류가 난다.",
+          "refs": [
+            {
+              "source": "B",
+              "section": "17장 / 유니폼 초기화",
+              "pages": [
+                834
+              ]
+            }
+          ],
+          "evidence": "데이터손실이있는(Narrowing) 변환"
+        },
+        {
+          "text": "함수의 리턴 시 {} 를 사용하면 생성하는 객체의 타입을 다시 명시하지 않아도 된다.",
+          "refs": [
+            {
+              "source": "B",
+              "section": "17장 / 유니폼 초기화",
+              "pages": [
+                834
+              ]
+            }
+          ],
+          "evidence": "객체의타입을다시명시하지"
+        },
+        {
+          "text": "map 의 초기화 리스트는 pair<Key, Value> 원소를 받으며, pair 의 첫 원소는 키이고 두 번째 원소는 값이다.",
+          "refs": [
+            {
+              "source": "B",
+              "section": "17장 / initializer_list",
+              "pages": [
+                837
+              ]
+            }
+          ],
+          "evidence": "pair 의첫번째원소로키"
+        },
+        {
+          "text": "{} 로 객체를 생성할 때 initializer_list 를 받는 생성자가 있으면 오버로딩에서 최우선으로 고려한다.",
+          "refs": [
+            {
+              "source": "B",
+              "section": "17장 / initializer_list 사용시 주의할 점",
+              "pages": [
+                837
+              ]
+            }
+          ],
+          "evidence": "최우선으로"
+        },
+        {
+          "text": "원문에서 vector v{10}; 은 10 을 보관한 원소 한 개를 만들고, vector v(10); 은 count 생성자를 호출한다.",
+          "refs": [
+            {
+              "source": "B",
+              "section": "17장 / initializer_list 사용시 주의할 점",
+              "pages": [
+                837,
+                838
+              ]
+            }
+          ],
+          "evidence": "10 을보관하고있는벡터"
+        },
+        {
+          "text": "C++ 17 기준 auto x = {arg1, arg2...} 는 인자들이 같은 타입이면 std::initializer_list<T> 로 추론된다.",
+          "refs": [
+            {
+              "source": "B",
+              "section": "17장 / initializer_list 와 auto",
+              "pages": [
+                840
+              ]
+            }
+          ],
+          "evidence": "모두같은타입이라면"
+        },
+        {
+          "text": "C++ 17 기준 auto x {arg1, arg2, ...} 는 인자 한 개이면 그 타입으로 추론하고 여러 개이면 오류가 난다.",
+          "refs": [
+            {
+              "source": "B",
+              "section": "17장 / initializer_list 와 auto",
+              "pages": [
+                840
+              ]
+            }
+          ],
+          "evidence": "인자가단1 개라면"
+        },
+        {
+          "text": "auto list = {\"a\", \"b\", \"cc\"}; 의 타입은 initializer_list<const char*> 이다.",
+          "refs": [
+            {
+              "source": "B",
+              "section": "17장 / initializer_list 와 auto",
+              "pages": [
+                841
+              ]
+            }
+          ],
+          "evidence": "initializer_list\n<const char*>"
+        }
+      ]
+    },
+    {
+      "title": "컴파일 타임 상수 constexpr",
+      "items": [
+        {
+          "text": "constexpr 은 식이 상수식이라고 명시하는 키워드이며, 객체 정의에 붙이면 그 객체를 상수식에 사용할 수 있다.",
+          "refs": [
+            {
+              "source": "B",
+              "section": "18장 / constexpr",
+              "pages": [
+                843
+              ]
+            }
+          ],
+          "evidence": "어떠한식이상수식이라고명시"
+        },
+        {
+          "text": "const 로 정의된 상수는 컴파일 타임에 값을 알 필요가 없지만, constexpr 변수의 초기화에는 다른 상수식이 와야 한다.",
+          "refs": [
+            {
+              "source": "B",
+              "section": "18장 / constexpr vs const",
+              "pages": [
+                843,
+                844
+              ]
+            }
+          ],
+          "evidence": "반드시오른쪽에다른상수식"
+        },
+        {
+          "text": "constexpr 함수는 조건이 맞을 때 반환값을 컴파일 타임 상수로 만들 수 있다.",
+          "refs": [
+            {
+              "source": "B",
+              "section": "18장 / constexpr 함수",
+              "pages": [
+                847
+              ]
+            }
+          ],
+          "evidence": "조건이맞을때"
+        },
+        {
+          "text": "원문의 Factorial(10) 은 컴파일 타임에 계산되어 클래스 A 의 템플릿 인자로 들어가며 출력은 3628800 이다.",
+          "refs": [
+            {
+              "source": "B",
+              "section": "18장 / constexpr 함수",
+              "pages": [
+                847
+              ]
+            }
+          ],
+          "evidence": "3628800"
+        },
+        {
+          "text": "원문은 C++ 14 에서 constexpr 함수의 제약이 완화되었다고 설명하며, goto·리터럴 타입이 아닌 변수·초기화되지 않은 변수 등의 제한을 열거한다.",
+          "refs": [
+            {
+              "source": "B",
+              "section": "18장 / constexpr 함수",
+              "pages": [
+                848
+              ]
+            }
+          ],
+          "evidence": "C++ 14 부터위와같은제약조건들이완화"
+        },
+        {
+          "text": "리터럴(Literal) 타입은 컴파일러가 컴파일 타임에 정의할 수 있는 타입이다.",
+          "refs": [
+            {
+              "source": "B",
+              "section": "18장 / 리터럴 타입?",
+              "pages": [
+                850
+              ]
+            }
+          ],
+          "evidence": "컴파일타임에정의할수있는타입"
+        },
+        {
+          "text": "constexpr 생성자의 인자는 리터럴 타입이어야 하며, 해당 클래스는 다른 클래스를 가상 상속받을 수 없다.",
+          "refs": [
+            {
+              "source": "B",
+              "section": "18장 / constexpr 생성자",
+              "pages": [
+                850
+              ]
+            }
+          ],
+          "evidence": "다른클래스를가상상속받을수없습니다"
+        },
+        {
+          "text": "if constexpr 의 조건은 bool 로 변환될 수 있는 컴파일 타임 상수식이어야 한다.",
+          "refs": [
+            {
+              "source": "B",
+              "section": "18장 / if constexpr",
+              "pages": [
+                855
+              ]
+            }
+          ],
+          "evidence": "컴파일타임상수식이어야"
+        },
+        {
+          "text": "if constexpr 이 참이면 else 문은 컴파일되지 않고, 거짓이면 else 부분만 컴파일된다.",
+          "refs": [
+            {
+              "source": "B",
+              "section": "18장 / if constexpr",
+              "pages": [
+                855
+              ]
+            }
+          ],
+          "evidence": "완전히무시"
+        }
+      ]
+    },
+    {
+      "title": "decltype·값 카테고리·std::declval",
+      "items": [
+        {
+          "text": "decltype 는 전달된 식의 타입으로 치환된다.",
+          "refs": [
+            {
+              "source": "B",
+              "section": "19장 / decltype",
+              "pages": [
+                857
+              ]
+            }
+          ],
+          "evidence": "식의타입으로치환"
+        },
+        {
+          "text": "괄호로 둘러싸이지 않은 식별자 표현식을 decltype 에 전달하면 해당 식의 타입을 얻는다.",
+          "refs": [
+            {
+              "source": "B",
+              "section": "19장 / decltype",
+              "pages": [
+                858
+              ]
+            }
+          ],
+          "evidence": "괄호로둘러쌓이지않은식별자표현식"
+        },
+        {
+          "text": "식별자 표현식이 아닌 경우, 식의 타입이 T 이고 값 카테고리가 xvalue 이면 T&&, lvalue 이면 T&, prvalue 이면 T 가 된다.",
+          "refs": [
+            {
+              "source": "B",
+              "section": "19장 / decltype",
+              "pages": [
+                858
+              ]
+            }
+          ],
+          "evidence": "decltype 는T&&"
+        },
+        {
+          "text": "모든 C++ 식에는 타입과 값 카테고리(value category)가 따른다.",
+          "refs": [
+            {
+              "source": "B",
+              "section": "19장 / Value Category",
+              "pages": [
+                858
+              ]
+            }
+          ],
+          "evidence": "식의타입과값카테고리"
+        },
+        {
+          "text": "정체를 알 수 있는 식들을 glvalue 라고 하며, 이동시킬 수 있는 식들을 rvalue 라고 한다.",
+          "refs": [
+            {
+              "source": "B",
+              "section": "19장 / Value Category",
+              "pages": [
+                859
+              ]
+            }
+          ],
+          "evidence": "정체를알수있는모든식들을glvalue"
+        },
+        {
+          "text": "이름을 가진 대부분의 객체는 lvalue 이며, 우측값 레퍼런스 인자 a 도 식 a 의 값 카테고리는 lvalue 이다.",
+          "refs": [
+            {
+              "source": "B",
+              "section": "19장 / lvalue",
+              "pages": [
+                860
+              ]
+            }
+          ],
+          "evidence": "식a 의\n값카테고리는lvalue"
+        },
+        {
+          "text": "prvalue 는 우측값 레퍼런스와 상수 좌측값 레퍼런스의 초기화에 사용할 수 있다.",
+          "refs": [
+            {
+              "source": "B",
+              "section": "19장 / prvalue",
+              "pages": [
+                862
+              ]
+            }
+          ],
+          "evidence": "상수좌측값레퍼런스를초기화"
+        },
+        {
+          "text": "우측값 레퍼런스를 리턴하는 함수의 호출식은 xvalue 의 대표적인 경우이며 std::move(x) 가 예이다.",
+          "refs": [
+            {
+              "source": "B",
+              "section": "19장 / xvalue",
+              "pages": [
+                862
+              ]
+            }
+          ],
+          "evidence": "대표적으로std::move(x)"
+        },
+        {
+          "text": "원문에서 decltype((a)) 는 lvalue 에 대한 타입 추론이므로 int& 가 된다.",
+          "refs": [
+            {
+              "source": "B",
+              "section": "19장 / decltype 의 쓰임새",
+              "pages": [
+                863
+              ]
+            }
+          ],
+          "evidence": "int& 로추론"
+        },
+        {
+          "text": "원문의 auto j = i; 는 const 를 없애지만, decltype(i) 는 const 를 보존하며 배열 타입도 그대로 전달한다.",
+          "refs": [
+            {
+              "source": "B",
+              "section": "19장 / decltype 의 쓰임새",
+              "pages": [
+                863,
+                864
+              ]
+            }
+          ],
+          "evidence": "decltype 의경우이를그대로보존"
+        },
+        {
+          "text": "decltype 안의 식은 런타임에 실행되지 않는다.",
+          "refs": [
+            {
+              "source": "B",
+              "section": "19장 / std::declval",
+              "pages": [
+                865
+              ]
+            }
+          ],
+          "evidence": "런타임시에실행되는것이아닙니다"
+        },
+        {
+          "text": "std::declval<T>() 는 T 의 생성자를 직접 호출하지 않고 타입 연산에 객체를 나타낼 수 있으며, 런타임에서 사용하면 오류가 난다.",
+          "refs": [
+            {
+              "source": "B",
+              "section": "19장 / std::declval",
+              "pages": [
+                868
+              ]
+            }
+          ],
+          "evidence": "실제로런타임에사용하면오류"
+        }
+      ]
+    }
+  ],
+  "procedures": [
+    {
+      "title": "원문의 decltype 판별 순서",
+      "steps": [
+        {
+          "text": "괄호로 둘러싸이지 않은 식별자 표현식을 decltype 에 전달하면 해당 식의 타입을 얻는다.",
+          "refs": [
+            {
+              "source": "B",
+              "section": "19장 / decltype",
+              "pages": [
+                858
+              ]
+            }
+          ],
+          "evidence": "괄호로둘러쌓이지않은식별자표현식"
+        },
+        {
+          "text": "식별자 표현식이 아닌 경우, 식의 타입이 T 이고 값 카테고리가 xvalue 이면 T&&, lvalue 이면 T&, prvalue 이면 T 가 된다.",
+          "refs": [
+            {
+              "source": "B",
+              "section": "19장 / decltype",
+              "pages": [
+                858
+              ]
+            }
+          ],
+          "evidence": "decltype 는T&&"
+        }
+      ]
+    },
+    {
+      "title": "원문의 if constexpr 처리",
+      "steps": [
+        {
+          "text": "if constexpr 의 조건은 bool 로 변환될 수 있는 컴파일 타임 상수식이어야 한다.",
+          "refs": [
+            {
+              "source": "B",
+              "section": "18장 / if constexpr",
+              "pages": [
+                855
+              ]
+            }
+          ],
+          "evidence": "컴파일타임상수식이어야"
+        },
+        {
+          "text": "if constexpr 이 참이면 else 문은 컴파일되지 않고, 거짓이면 else 부분만 컴파일된다.",
+          "refs": [
+            {
+              "source": "B",
+              "section": "18장 / if constexpr",
+              "pages": [
+                855
+              ]
+            }
+          ],
+          "evidence": "완전히무시"
+        }
+      ]
+    }
+  ],
+  "syntax": [
+    {
+      "label": "원문 constexpr 함수 발췌",
+      "code": "constexpr int Factorial(int n) {\n  int total = 1;\n  for (int i = 1; i <= n; i++) {\n    total *= i;\n  }\n  return total;\n}",
+      "refs": [
+        {
+          "source": "B",
+          "section": "18장 / constexpr 함수",
+          "pages": [
+            847
+          ]
+        }
+      ],
+      "evidence": "constexpr int Factorial(int n)",
+      "note": null
+    }
+  ],
+  "formulas": [],
+  "comparisons": [
+    {
+      "title": "식별자 표현식이 아닌 식의 decltype",
+      "headers": [
+        "값 카테고리",
+        "decltype 결과 (식의 타입 T)"
+      ],
+      "rows": [
+        [
+          {
+            "text": "xvalue",
+            "refs": [
+              {
+                "source": "B",
+                "section": "19장 / decltype",
+                "pages": [
+                  858
+                ]
+              }
+            ],
+            "evidence": "xvalue"
+          },
+          {
+            "text": "T&&",
+            "refs": [
+              {
+                "source": "B",
+                "section": "19장 / decltype",
+                "pages": [
+                  858
+                ]
+              }
+            ],
+            "evidence": "T&&"
+          }
+        ],
+        [
+          {
+            "text": "lvalue",
+            "refs": [
+              {
+                "source": "B",
+                "section": "19장 / decltype",
+                "pages": [
+                  858
+                ]
+              }
+            ],
+            "evidence": "lvalue"
+          },
+          {
+            "text": "T&",
+            "refs": [
+              {
+                "source": "B",
+                "section": "19장 / decltype",
+                "pages": [
+                  858
+                ]
+              }
+            ],
+            "evidence": "T&"
+          }
+        ],
+        [
+          {
+            "text": "prvalue",
+            "refs": [
+              {
+                "source": "B",
+                "section": "19장 / decltype",
+                "pages": [
+                  858
+                ]
+              }
+            ],
+            "evidence": "prvalue"
+          },
+          {
+            "text": "T",
+            "refs": [
+              {
+                "source": "B",
+                "section": "19장 / decltype",
+                "pages": [
+                  858
+                ]
+              }
+            ],
+            "evidence": "T 가됩니다"
+          }
+        ]
+      ]
+    }
+  ],
+  "terms": [
+    {
+      "term": "유니폼 초기화",
+      "definition": {
+        "text": "유니폼 초기화는 {} 를 이용한 생성자 호출이며, 인자 없는 생성자가 함수의 정의로 오해되는 일을 막는다.",
+        "refs": [
+          {
+            "source": "B",
+            "section": "17장 / 뭘 배웠지?",
+            "pages": [
+              841
+            ]
+          }
+        ],
+        "evidence": "유니폼초기화({} 를이용한생성자호출)"
+      }
+    },
+    {
+      "term": "initializer_list",
+      "definition": {
+        "text": "{} 로 객체를 생성할 때 initializer_list 를 받는 생성자가 있으면 오버로딩에서 최우선으로 고려한다.",
+        "refs": [
+          {
+            "source": "B",
+            "section": "17장 / initializer_list 사용시 주의할 점",
+            "pages": [
+              837
+            ]
+          }
+        ],
+        "evidence": "최우선으로"
+      }
+    },
+    {
+      "term": "constexpr",
+      "definition": {
+        "text": "constexpr 은 식이 상수식이라고 명시하는 키워드이며, 객체 정의에 붙이면 그 객체를 상수식에 사용할 수 있다.",
+        "refs": [
+          {
+            "source": "B",
+            "section": "18장 / constexpr",
+            "pages": [
+              843
+            ]
+          }
+        ],
+        "evidence": "어떠한식이상수식이라고명시"
+      }
+    },
+    {
+      "term": "const·constexpr",
+      "definition": {
+        "text": "const 로 정의된 상수는 컴파일 타임에 값을 알 필요가 없지만, constexpr 변수의 초기화에는 다른 상수식이 와야 한다.",
+        "refs": [
+          {
+            "source": "B",
+            "section": "18장 / constexpr vs const",
+            "pages": [
+              843,
+              844
+            ]
+          }
+        ],
+        "evidence": "반드시오른쪽에다른상수식"
+      }
+    },
+    {
+      "term": "리터럴 타입",
+      "definition": {
+        "text": "리터럴(Literal) 타입은 컴파일러가 컴파일 타임에 정의할 수 있는 타입이다.",
+        "refs": [
+          {
+            "source": "B",
+            "section": "18장 / 리터럴 타입?",
+            "pages": [
+              850
+            ]
+          }
+        ],
+        "evidence": "컴파일타임에정의할수있는타입"
+      }
+    },
+    {
+      "term": "if constexpr",
+      "definition": {
+        "text": "if constexpr 의 조건은 bool 로 변환될 수 있는 컴파일 타임 상수식이어야 한다.",
+        "refs": [
+          {
+            "source": "B",
+            "section": "18장 / if constexpr",
+            "pages": [
+              855
+            ]
+          }
+        ],
+        "evidence": "컴파일타임상수식이어야"
+      }
+    },
+    {
+      "term": "decltype",
+      "definition": {
+        "text": "decltype 는 전달된 식의 타입으로 치환된다.",
+        "refs": [
+          {
+            "source": "B",
+            "section": "19장 / decltype",
+            "pages": [
+              857
+            ]
+          }
+        ],
+        "evidence": "식의타입으로치환"
+      }
+    },
+    {
+      "term": "glvalue·rvalue",
+      "definition": {
+        "text": "정체를 알 수 있는 식들을 glvalue 라고 하며, 이동시킬 수 있는 식들을 rvalue 라고 한다.",
+        "refs": [
+          {
+            "source": "B",
+            "section": "19장 / Value Category",
+            "pages": [
+              859
+            ]
+          }
+        ],
+        "evidence": "정체를알수있는모든식들을glvalue"
+      }
+    },
+    {
+      "term": "std::declval",
+      "definition": {
+        "text": "std::declval<T>() 는 T 의 생성자를 직접 호출하지 않고 타입 연산에 객체를 나타낼 수 있으며, 런타임에서 사용하면 오류가 난다.",
+        "refs": [
+          {
+            "source": "B",
+            "section": "19장 / std::declval",
+            "pages": [
+              868
+            ]
+          }
+        ],
+        "evidence": "실제로런타임에사용하면오류"
+      }
+    }
+  ],
+  "summary_basis": "편집 요약",
+  "summary": [
+    {
+      "text": "유니폼 초기화는 {} 를 이용한 생성자 호출이며, 인자 없는 생성자가 함수의 정의로 오해되는 일을 막는다.",
+      "refs": [
+        {
+          "source": "B",
+          "section": "17장 / 뭘 배웠지?",
+          "pages": [
+            841
+          ]
+        }
+      ],
+      "evidence": "유니폼초기화({} 를이용한생성자호출)"
+    },
+    {
+      "text": "constexpr 은 식이 상수식이라고 명시하는 키워드이며, 객체 정의에 붙이면 그 객체를 상수식에 사용할 수 있다.",
+      "refs": [
+        {
+          "source": "B",
+          "section": "18장 / constexpr",
+          "pages": [
+            843
+          ]
+        }
+      ],
+      "evidence": "어떠한식이상수식이라고명시"
+    },
+    {
+      "text": "decltype 는 전달된 식의 타입으로 치환된다.",
+      "refs": [
+        {
+          "source": "B",
+          "section": "19장 / decltype",
+          "pages": [
+            857
+          ]
+        }
+      ],
+      "evidence": "식의타입으로치환"
+    },
+    {
+      "text": "std::declval<T>() 는 T 의 생성자를 직접 호출하지 않고 타입 연산에 객체를 나타낼 수 있으며, 런타임에서 사용하면 오류가 난다.",
+      "refs": [
+        {
+          "source": "B",
+          "section": "19장 / std::declval",
+          "pages": [
+            868
+          ]
+        }
+      ],
+      "evidence": "실제로런타임에사용하면오류"
+    }
+  ],
+  "review": [
+    {
+      "question": "A a(); 는 어떻게 해석되는가?",
+      "answer": {
+        "text": "A a(); 는 객체 a 를 만드는 대신, A 를 리턴하고 인자를 받지 않는 함수 a 로 해석된다.",
+        "refs": [
+          {
+            "source": "B",
+            "section": "17장 / C++ 유니폼 초기화",
+            "pages": [
+              831
+            ]
+          }
+        ],
+        "evidence": "인자를받지않는함수"
+      }
+    },
+    {
+      "question": "const 와 constexpr 의 차이는?",
+      "answer": {
+        "text": "const 로 정의된 상수는 컴파일 타임에 값을 알 필요가 없지만, constexpr 변수의 초기화에는 다른 상수식이 와야 한다.",
+        "refs": [
+          {
+            "source": "B",
+            "section": "18장 / constexpr vs const",
+            "pages": [
+              843,
+              844
+            ]
+          }
+        ],
+        "evidence": "반드시오른쪽에다른상수식"
+      }
+    },
+    {
+      "question": "decltype((a)) 가 int& 가 되는 이유는?",
+      "answer": {
+        "text": "원문에서 decltype((a)) 는 lvalue 에 대한 타입 추론이므로 int& 가 된다.",
+        "refs": [
+          {
+            "source": "B",
+            "section": "19장 / decltype 의 쓰임새",
+            "pages": [
+              863
+            ]
+          }
+        ],
+        "evidence": "int& 로추론"
+      }
+    },
+    {
+      "question": "std::declval 을 런타임에서 사용할 수 있는가?",
+      "answer": {
+        "text": "std::declval<T>() 는 T 의 생성자를 직접 호출하지 않고 타입 연산에 객체를 나타낼 수 있으며, 런타임에서 사용하면 오류가 난다.",
+        "refs": [
+          {
+            "source": "B",
+            "section": "19장 / std::declval",
+            "pages": [
+              868
+            ]
+          }
+        ],
+        "evidence": "실제로런타임에사용하면오류"
+      }
+    }
+  ],
+  "cheat": {
+    "definitions": [
+      {
+        "term": "유니폼 초기화",
+        "definition": {
+          "text": "유니폼 초기화는 {} 를 이용한 생성자 호출이며, 인자 없는 생성자가 함수의 정의로 오해되는 일을 막는다.",
+          "refs": [
+            {
+              "source": "B",
+              "section": "17장 / 뭘 배웠지?",
+              "pages": [
+                841
+              ]
+            }
+          ],
+          "evidence": "유니폼초기화({} 를이용한생성자호출)"
+        }
+      },
+      {
+        "term": "constexpr",
+        "definition": {
+          "text": "constexpr 은 식이 상수식이라고 명시하는 키워드이며, 객체 정의에 붙이면 그 객체를 상수식에 사용할 수 있다.",
+          "refs": [
+            {
+              "source": "B",
+              "section": "18장 / constexpr",
+              "pages": [
+                843
+              ]
+            }
+          ],
+          "evidence": "어떠한식이상수식이라고명시"
+        }
+      },
+      {
+        "term": "std::declval",
+        "definition": {
+          "text": "std::declval<T>() 는 T 의 생성자를 직접 호출하지 않고 타입 연산에 객체를 나타낼 수 있으며, 런타임에서 사용하면 오류가 난다.",
+          "refs": [
+            {
+              "source": "B",
+              "section": "19장 / std::declval",
+              "pages": [
+                868
+              ]
+            }
+          ],
+          "evidence": "실제로런타임에사용하면오류"
+        }
+      }
+    ],
+    "comparison_title": "식별자 표현식이 아닌 식의 decltype",
+    "comparison_headers": [
+      "값 카테고리",
+      "decltype 결과 (식의 타입 T)"
+    ],
+    "comparison_rows": [
+      [
+        {
+          "text": "xvalue",
+          "refs": [
+            {
+              "source": "B",
+              "section": "19장 / decltype",
+              "pages": [
+                858
+              ]
+            }
+          ],
+          "evidence": "xvalue"
+        },
+        {
+          "text": "T&&",
+          "refs": [
+            {
+              "source": "B",
+              "section": "19장 / decltype",
+              "pages": [
+                858
+              ]
+            }
+          ],
+          "evidence": "T&&"
+        }
+      ],
+      [
+        {
+          "text": "lvalue",
+          "refs": [
+            {
+              "source": "B",
+              "section": "19장 / decltype",
+              "pages": [
+                858
+              ]
+            }
+          ],
+          "evidence": "lvalue"
+        },
+        {
+          "text": "T&",
+          "refs": [
+            {
+              "source": "B",
+              "section": "19장 / decltype",
+              "pages": [
+                858
+              ]
+            }
+          ],
+          "evidence": "T&"
+        }
+      ],
+      [
+        {
+          "text": "prvalue",
+          "refs": [
+            {
+              "source": "B",
+              "section": "19장 / decltype",
+              "pages": [
+                858
+              ]
+            }
+          ],
+          "evidence": "prvalue"
+        },
+        {
+          "text": "T",
+          "refs": [
+            {
+              "source": "B",
+              "section": "19장 / decltype",
+              "pages": [
+                858
+              ]
+            }
+          ],
+          "evidence": "T 가됩니다"
+        }
+      ]
+    ],
+    "formulas": [],
+    "syntax": []
+  },
+  "checked_images": [
+    {
+      "source": "B",
+      "pages": [
+        833,
+        840,
+        847,
+        858
+      ]
+    }
+  ],
+  "editor_notes": [
+    "원문 19장 제목의 std::decval 표기와 본문 코드의 std::declval 표기를 구분했다. 본문 설명에는 원문 코드 표기 std::declval 을 사용했다."
+  ]
+}

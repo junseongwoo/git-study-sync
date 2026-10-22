@@ -1,0 +1,17 @@
+int main(void)
+char ch-list[] : { '로
+int freq() = { 4, 6, 8, 12, 15 };
+huffman_tree(freq, ch-list, 5);
+return 0;
+실행결과
+4+6->10
+8+10-)18
+12+15->27
+18+27->45
+n: 11
+5: 101
+1: 100
+t: 01
+e: 00
+CHAPTER09 우선순위 큐
+355

@@ -1,0 +1,26 @@
+return add-impl(root, path.substr(l), is dir);
+else
+return add impl(cwd, path, is dir);
+private:
+b001 add_impl(node—ptr directory, const std::string& path, b001 is dir)
+if (not directory->is—dir)
+std::cout 〈〈 directory-〉name 〈〈 "위는) 파일입니다." 〈〈 std: :endl;
+return false;
+aut0 sep = path.findC/i);
+// path에 '/|가 없는 경우
+if (sep == std::string::npos)
+autO found = std::find if(directory-〉children.begin(), directory-
+〉children.end(), [&](const node-ptr child) {
+return child-〉name == path;
+if (found != directory-〉children.end())
+std::cout 〈〈 directory-〉name 〈〈 "에 이미 " 〈〈 path 〈〈 " 이름의 파일/디렉
+터리가 있습니다." 〈〈 std::endl;
+return false;
+directory->children.push_back(new node {path,
+return true;
+is_dir
+// path에 |/'가 있는 경우, 즉, 디렉터리 이름을 포함하고 있는 경우
+std::string next dir = path.substr(@, sep);
+aut0 f01」nd = std::find if(directory->children.begin(), directory-〉children
+end(), [&](const node-ptr child) {
+454

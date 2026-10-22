@@ -1,0 +1,59 @@
+016
+017
+018
+019
+020
+021
+022
+023
+024
+025
+026
+027
+028
+0꾜
+031
+032
+033
+034
+035
+036
+037
+0%
+039
+041
+예2
+043
+045
+046
+047
+048
+049
+051
+052
+053
+054
+055
+free(Node);
+// 노드 추가
+void SLL—AppendNode(N0de** Head, No血* NewN0de)
+// 헤드 노드가 NULL이라면 새로운 노드가 Head가 된다.
+if ( (*Head) == NULL )
+*Head = NewNode,
+else
+// 테일을 찾아 NewN0de를 연결한다.
+Node* Tail = (*Head);
+while ( Tail->NextNode != NULL )
+Tai1 = TaiI->NextNode;
+TaiI->NextN0de - NewNode,
+// 노드 삽입
+void SLL_InsertAfter(Node* Current, Node* NewNode)
+NewNode->NextNode = Current->NextNode;
+Current->NextNode = NewNode,
+void SLL-InsertNewHead(Node** Head, Node* NewHead)
+if ( Head
+= NULL )
+(•Head) = NewHead,
+else
+38
+Part 01 • 자료구조

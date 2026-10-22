@@ -1,0 +1,53 @@
+3.4 • 신리성 있는 데이터 전송의 원리
+197
+rdt—send (data)
+sndpkt-make—pkt (O,data, checkgum)
+udt—send (gntlpkt)
+상위로부터
+0번 호출을
+기다림
+rdt—rcv (rcvpkt)
+&& notcorrupt (rcvpkt)
+0에대한
+ACK 용담을
+기다림
+상위로부터
+1 번 호출을
+기다림
+rdt—rcv (rcvpkt) &&
+(corrupt (rcvpkt) | |
+i3ACK (rcvpkt, 1))
+udt_gend (sndpkt)
+rdt—rcv ( rcvpkt)
+&& notcorrupt (rcvpkt)
+&& isACK 0)
+&& isACK 1)
+rdt—rcv(rcvpkt) &&
+(corrupt (rcvpkt) | |
+isACK (rcvpkt, 0) )
+udt—send (sndpkt)
+1에대한
+ACK 응답을
+기다림
+rdt—send (data)
+sndpkt-make—pkt (1, da ta, checksum)
+udt—send (sndpkt)
+그림 3.13 • rdt2.2 송신자
+프로로콜 rdt2 .1은 수신자로부터 송신자까지의 긍정 확인응답과 부정 확인응답
+을 모두 포함한다. 순서가 바뀐 패킷이 수신되면, 수신자는 이미 전에 수신한 패것에
+대한 긍정 확인응답을 전송한다. 손상된 패것이 수신되면, 수신자는 부정 확인응답을
+전송한다. NAK를 송신하는 것 대신에, 가장 최근에 정확하게 수신된 패킷에 대해
+ACK를 송신함으로써 NAK를 송신한 것과 같은 효과를 얻을 수 있다. 같은 패킷에 대
+해 2개의 ACK를 수신한[즉, 중복(duplicate) ACK를 수신] 송신자는 수신자가 두 번
+ACK한 패킷의 다음 패킷을 정확하게 수신하지 못했다는 것을 안다. 비트 오류를 갖는
+채널을 위한 NAK 없는 신뢰적인 데이터 전송 프로토콜은 그림 3.13과3.14에서 나타
+내는 rdt2.2이다. rtd2 .1과 rtd2 . 2 사이의 미묘한 차이는 수신자가 반드시
+ACK 메시지에 의해서 확인응답하는 패킷의 순서번호를 포함해야 한다는 것이다(이것
+은 수신자 FSM의 make-pkt () 에 ACK, 0 또는 ACK, 1인 인수를 포함하는 것에
+의해서 수행된다). 그리고 송신자는 수신된 ACK 메시지에 의해 확인응답된 패것의 순
+서번호를 반드시 검사해야만 한다(이것은 송신자 FSM의 isACK () 에 0 또는 1 인 인
+수를 넣어서 수행한다).
+비트 오류와 손실 있는재널 상에서의 신뢰적 데이터 전수 rdt3.0
+비트가 손상되는 것 외에도 인터넷을 포함하는 오늘날 컴퓨터 네트워크처럼 하위 채널
+이 패킷을 손실하는 경우를 생각해 보자. 다음처럼 두 가지 부가 내용이 프로토콜에 의
+해서 다루어져야 한다. 어떻게 패킷 손실을 검출할 것인가? 그리고 패킷 손실이 발생

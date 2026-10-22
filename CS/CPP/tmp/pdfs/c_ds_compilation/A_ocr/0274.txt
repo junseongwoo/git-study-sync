@@ -1,0 +1,35 @@
+enqueue(&q, ptr);
+Ptr : dequeue(&q);
+printf(" [법] ", ptr->data);
+if (ptr->left)
+enqueue(&q, ptr->teft) ;
+if (ptr->right)
+enqueue(&q, ptr->right);
+15
+20
+nl : { 1, NULL, NULL }•,
+TreeNode n2 = { 4, &nl, NULL };
+TreeN0de n5 = { 20, &n3, &n4 };
+TreeNode n6 = { 15, &n2, &n5 }•,
+// 1 16
+TreeNode n3
+TreeNode n4
+25
+= { 16, NULL, NULL };
+= { 25, NULL, NULL }•,
+TreeNode
+int main(void)
+printf("레벨 순회=") ;
+level_order(root) ;
+pnntf("\n");
+return 0;
+실행결과
+레벨 순회= [15] [4] [2이 [1] [16] [25]
+어떤 순회를 선택하여야 할까?
+트리를 순회하기만 하면 해결되는 문제도 많다. 이런 경우에 어떤 순회 방법을 사우하여야 할까?
+만일 순서는 중요치 않고 노드를 전부 방문하면 된다면 3가지의 방법 중에 어느 것을 시용하여도
+된다. 그러나 자식 노드를 처리한 다음에 부모 노드를 처리해야 한다면 후위순회를 시용하여야
+하고, 부모 노드를 처리한 다음에 자식 노드를 처리해야 한다면 전위순회를 시용하여야 한다. 예
+를 들면 디렉토리의 용량을 계산하려면 후위순회를 시용하여야 한다. 왜냐하면 하위 디렉토리의
+용량이 계산되어야 만이 현재의 디렉토리 용량을 계산할 수 있기 때문이다.
+282 C언어로 쉽게 물어쓴 자료구조

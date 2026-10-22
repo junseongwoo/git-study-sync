@@ -1,0 +1,59 @@
+012
+013
+014
+015
+016
+017
+018
+019
+020
+021
+022
+023
+024
+025
+026
+027
+028
+029
+030
+031
+032
+033
+034
+035
+036
+037
+038
+039
+041
+042
+043
+045
+047
+049
+050
+void Huffman DestroyNode( HuffmanNode* NOde )
+free(Node);
+void Huffman-DestroyTree( HuffmanNode* NOde )
+if ( NOde == NULL )
+return;
+Huffman-DestroyTree( Node->Left );
+Huffman DestroyTree( Node->Right );
+Huffman DestroyNode( NOde );
+void Huffman Huffman AddBit( BitBuffer* Buffer, char Bit )
+U대AR Mask = 0x80:
+if ( Buffer->Size 8
+Buffer->Buffer =
+reaIloc(Buffer->Buffer, sizeof(UCHAR) * ((Buffer->Size / 8) + 1) ):
+Buffer->Buffer[Buffer->Size / 8 = 0x00;
+Mask 〉〉= Buffer->Size 8;
+if( Bit ==1 )
+Buffer->Buffer[Buffer->Size / 8] 1= Mask;
+else
+Buffer->Buffer[Buffer->Size / 81 &= -Mask,
+Buffer->Size++;
+void Huffman BuiIdCodeTable( HuffmanNode* Tree. HuffmanCode CodeTabIe[MAX_대AR),
+UCHAR Code[MAX_BITI, int Size )
+Chapter 14 • 탐욕 알고리즘
+597

@@ -1,0 +1,793 @@
+
+=== L02 | PDF p.1 | 印刷 p.None ===
+C++ 프로그래밍
+      김형기
+           hk.kim@jbnu.ac.kr
+
+=== L02 | PDF p.2 | 印刷 p.2 ===
+ Today
+
+ 배열
+
+ 명령문과연산자
+
+ 제어문
+
+
+
+
+
+강의자료무단배포금지                                                                                                                2
+문의사항: hk.kim@jbnu.ac.kr  || diskhkme@gmail.com
+
+=== L02 | PDF p.3 | 印刷 p.3 ===
+배열
+
+
+
+
+
+                                                                                                                          3
+
+=== L02 | PDF p.4 | 印刷 p.4 ===
+ Array
+
+ 배열
+
+   개요
+
+  선언과초기화
+
+   접근
+
+
+
+
+
+강의자료무단배포금지                                                                                                                4
+문의사항: hk.kim@jbnu.ac.kr  || diskhkme@gmail.com
+
+=== L02 | PDF p.5 | 印刷 p.5 ===
+ Array
+
+ 배열
+
+    복합(compound) 데이터타입
+
+   동일한타입인요소들의집합
+
+ 개별요소들에직접적인접근이가능
+
+ 사용목적
+
+  아래와같은코드를효율적으로바꿀수있음
+
+
+
+
+
+강의자료무단배포금지                                                                                                                5
+문의사항: hk.kim@jbnu.ac.kr  || diskhkme@gmail.com
+
+=== L02 | PDF p.6 | 印刷 p.6 ===
+ Arrays                             중요!
+
+ 특징
+                                                                                      scores                                                                                                  index   고정된(정해진) 길이
+                                                                          100              [0]   연속된메모리주소에저장
+
+  인덱스를통해접근가능                                             85               [1]
+
+   인덱스는0부터시작하며, 마지막인덱스는size-1                                                                           21               [2]
+    out of bound 체크하지않음
+                                                                           56               [3]
+   초기화필요
+                                                                           70                                                                                                                            [4]   효율적인데이터구조
+
+                                                                           95                                                                                                                            [5]
+
+                                     길이가6인배열
+
+
+강의자료무단배포금지                                                                                                                6
+문의사항: hk.kim@jbnu.ac.kr  || diskhkme@gmail.com
+
+=== L02 | PDF p.7 | 印刷 p.7 ===
+ Arrays
+
+ 직접확인해보세요!
+
+
+
+
+
+                          0x 00 00 00 64
+
+                          0x 00 00 00 55
+
+                          0x 00 00 00 15
+
+                          0x 00 00 00 38
+
+                          0x 00 00 00 46
+
+                                    쓰여있는값이맞는지                   연속된(붙어있는층)
+                                    계산기로확인가능강의자료무단배포금지         메모리에값이쓰여있음                                                        7
+문의사항: hk.kim@jbnu.ac.kr  || diskhkme@gmail.com
+
+=== L02 | PDF p.8 | 印刷 p.8 ===
+ Defining Arrays
+
+ 배열의정의
+
+   기본형
+
+         요소타입배열이름[요소개수];
+
+   정의예
+
+
+
+
+
+강의자료무단배포금지                                                                                                                8
+문의사항: hk.kim@jbnu.ac.kr  || diskhkme@gmail.com
+
+=== L02 | PDF p.9 | 印刷 p.9 ===
+ Initializing Arrays
+
+ 배열의초기화
+
+
+
+
+
+강의자료무단배포금지                                                                                                                9
+문의사항: hk.kim@jbnu.ac.kr  || diskhkme@gmail.com
+
+=== L02 | PDF p.10 | 印刷 p.10 ===
+ Accessing Array Elements
+
+ 배열내의요소들을사용(= 읽고쓰기)
+
+
+
+
+
+ 요소들은개별적인주소를갖고있으므로변수와동일하게값수정가능
+
+
+
+
+
+강의자료무단배포금지                                                                                                               10
+문의사항: hk.kim@jbnu.ac.kr  || diskhkme@gmail.com
+
+=== L02 | PDF p.11 | 印刷 p.11 ===
+ (Summary) Arrays
+
+ 배열(동일한타입요소들의집합, 고정된길이)
+
+   개요
+
+  정의와초기화– (고정크기선언, 리스트초기화“{ }”)
+
+   사용– (인덱스로개별요소에접근하여사용)
+
+
+
+
+
+강의자료무단배포금지                                                                                                               11
+문의사항: hk.kim@jbnu.ac.kr  || diskhkme@gmail.com
+
+=== L02 | PDF p.12 | 印刷 p.12 ===
+명령문과연산자
+
+
+
+
+
+                                                                                                                         12
+
+=== L02 | PDF p.13 | 印刷 p.13 ===
+ Statements and Operators
+
+ 표현식
+
+ 명령문
+
+ 연산자
+
+   대입연산자
+
+   산술연산자
+
+   증감연산자
+
+   관계연산자
+
+   논리연산자
+
+   멤버접근연산자
+
+   기타
+
+
+
+강의자료무단배포금지                                                                                                               13
+문의사항: hk.kim@jbnu.ac.kr  || diskhkme@gmail.com
+
+=== L02 | PDF p.14 | 印刷 p.14 ===
+ Expressions
+
+ 표현식
+
+   코드의가장작은구성요소
+
+         Ex, 연산을통해값을계산
+
+
+
+
+
+강의자료무단배포금지                                                                                                               14
+문의사항: hk.kim@jbnu.ac.kr  || diskhkme@gmail.com
+
+=== L02 | PDF p.15 | 印刷 p.15 ===
+ Statements
+
+ 명령문
+
+   명령을수행하는코드단위
+
+    세미콜론(“;”) 으로끝나는문장
+
+   표현식의집합
+
+
+
+
+
+강의자료무단배포금지                                                                                                               15
+문의사항: hk.kim@jbnu.ac.kr  || diskhkme@gmail.com
+
+=== L02 | PDF p.16 | 印刷 p.16 ===
+ Operations (1)
+
+ 연산자
+
+     단항(unary), 이항(binary), 삼항(ternary) 연산자
+
+ 대입연산자
+
+       lhs = rhs
+      l-value & r-value
+   오른쪽의값을계산하여왼쪽에대입
+   컴파일러가대입이가능한지체크함
+
+
+
+   왼쪽은대입이가능해야함(ex, 리터럴, 상수는될수없음)
+
+
+
+강의자료무단배포금지                                                                                                               16
+문의사항: hk.kim@jbnu.ac.kr  || diskhkme@gmail.com
+
+=== L02 | PDF p.17 | 印刷 p.17 ===
+ Operations (2)
+
+ 산술연산자
+
+    +, -, *, /, %(mod)
+
+ 증감연산자
+
+      Prefix (++num, --num) (대입전증감)
+
+      Postfix (num++, num--) (대입후증감)
+
+ 비교연산자
+
+    ==, !=
+
+    결과는Boolean 타입의true or false
+
+
+
+
+
+강의자료무단배포금지                                                                                                               17
+문의사항: hk.kim@jbnu.ac.kr  || diskhkme@gmail.com
+
+=== L02 | PDF p.18 | 印刷 p.18 ===
+ Operations (3)
+
+ 관계연산자
+
+    <, >, <=, >=
+
+ 논리연산자
+
+      !, &&, || (not, and, or)
+
+      Short-circuit evaluation
+
+     결과파악이가능한경우나머지연산을하지않음(최적화)
+
+
+
+
+
+강의자료무단배포금지                                                                                                               18
+문의사항: hk.kim@jbnu.ac.kr  || diskhkme@gmail.com
+
+=== L02 | PDF p.19 | 印刷 p.19 ===
+ Operations (4)
+
+ 복합연산자
+
+
+
+
+
+   연산자   의미
+     =     첫번째피연산자에서지정한개체에두번째피연산자의값을저장합니다(단순할당).
+      *=    첫번째피연산자의값과두번째피연산자의값을곱하여첫번째피연산자가지정한개체에결과를저장합니다.
+      /=    첫번째피연산자의값을두번째피연산자의값으로나누어첫번째피연산자가지정한개체에결과를저장합니
+               다.
+    %=    두번째피연산자의값에서지정한첫번째피연산자의모듈러스를가져와서첫번째피연산자가지정한개체에
+          결과를저장합니다.
+     +=    두번째연산자의값과첫번째연산자의값을더하여첫번째피연산자가지정한개체에결과를저장합니다.
+     –=    첫번째피연산자의값에서두번째피연산자의값을빼서첫번째피연산자가지정한개체에결과를저장합니다.
+     <<=    두번째피연산자의값에서지정한비트수만큼첫번째피연산자의값을왼쪽으로이동하여첫번째피연산자가
+         지정한개체에결과를저장합니다.
+     >>=    두번째피연산자의값에서지정한비트수만큼첫번째피연산자의값을오른쪽으로이동하여첫번째피연산자
+         가지정한개체에결과를저장합니다.
+    &=    첫번째및두번째피연산자의비트AND를구하여첫번째피연산자가지정한개체에결과를저장합니다.
+
+강의자료무단배포금지                                                                                                               19
+문의사항: hk.kim@jbnu.ac.kr  || diskhkme@gmail.com
+
+=== L02 | PDF p.20 | 印刷 p.20 ===
+ Operations (5)
+
+ 연산자우선순위
+
+   혼동을없애기위해우선순위괄호표기하는것이좋은코드!
+
+
+     순위   연산자               결합순서
+
+        1            ( ) [ ] -> .             왼쪽우선
+                                 ! ~ ++ -- + -(부호) *(포인터) &        2                    오른쪽우선                     sizeof 캐스트
+        3      *(곱셈) / %            왼쪽우선
+        4       + -(덧셈, 뺄셈)          왼쪽우선
+        5       << >>              왼쪽우선
+        6       < <= > >=            왼쪽우선
+        7       == !=              왼쪽우선
+        8      &                왼쪽우선
+        9        ^                왼쪽우선
+        10             |                왼쪽우선
+         11     &&               왼쪽우선
+        12             ||                왼쪽우선
+        13      ? :               오른쪽우선
+        14      = 복합대입            오른쪽우선
+        15            ,                왼쪽우선
+
+
+강의자료무단배포금지                                                                                                               20
+문의사항: hk.kim@jbnu.ac.kr  || diskhkme@gmail.com
+
+=== L02 | PDF p.21 | 印刷 p.21 ===
+ (Summary) Statements and Operators
+
+ 표현식(가장작은단위, 리터럴, 변수등등)
+
+ 명령문(코드의구성단위, 세미콜론으로끝을표기)
+
+ 연산자
+
+    대입연산자(l-value = r-value)
+
+   산술연산자(사칙연산)
+
+   증감연산자(++, --)
+
+   관계연산자(>, <, >=, <=)
+
+   논리연산자(!, &&, ||)
+
+   멤버접근연산자(., ->)
+
+   기타
+
+
+
+강의자료무단배포금지                                                                                                               21
+문의사항: hk.kim@jbnu.ac.kr  || diskhkme@gmail.com
+
+=== L02 | PDF p.22 | 印刷 p.22 ===
+제어문
+
+
+
+
+
+                                                                                                                         22
+
+=== L02 | PDF p.23 | 印刷 p.23 ===
+ Controlling flow
+
+ 조건문
+
+    If-else문(블록, nested)
+
+    Switch문
+
+     ?: 연산자
+
+ 반복문
+
+    For문
+
+    While, do-while문
+
+    Continue, break
+
+
+
+
+강의자료무단배포금지                                                                                                               23
+문의사항: hk.kim@jbnu.ac.kr  || diskhkme@gmail.com
+
+=== L02 | PDF p.24 | 印刷 p.24 ===
+ Controlling flow
+
+ 조건문
+
+    If-else문(블록, nested)
+
+    Switch문
+
+     ?: 연산자
+
+ 반복문
+
+    For문
+
+    While, do-while문
+
+    Continue, break
+
+
+
+
+강의자료무단배포금지                                                                                                               24
+문의사항: hk.kim@jbnu.ac.kr  || diskhkme@gmail.com
+
+=== L02 | PDF p.25 | 印刷 p.25 ===
+ Conditional statement
+
+ if문
+
+   표현식이참일경우에만실행하는명령문
+
+
+
+
+
+                                                                                 true
+                                      num > 10
+
+
+                                                                 ++num;
+                                                             false
+
+
+
+
+
+강의자료무단배포금지                                                                                                               25
+문의사항: hk.kim@jbnu.ac.kr  || diskhkme@gmail.com
+
+=== L02 | PDF p.26 | 印刷 p.26 ===
+ Conditional statement
+
+ if문과블록
+
+  조건문내에서하나이상의명령문을실행하기위해서는블록내에명령문을작성
+
+   블록은“{“로시작해서“}”로끝남
+
+   블록내에서선언된변수는“지역변수”라하며, 블록내에서만접근가능
+
+
+
+
+
+                                  꼭if에만해당되는이야기가아님! 블록안에서
+                              정의한변수는블록안에서만사용가능
+
+
+
+강의자료무단배포금지                                                                                                               26
+문의사항: hk.kim@jbnu.ac.kr  || diskhkme@gmail.com
+
+=== L02 | PDF p.27 | 印刷 p.27 ===
+ Conditional statement
+
+ if – else 문
+
+   표현문의참/거짓여부에따라명령문실행분기
+
+     else if 키워드를통해다양한조건을기술가능
+
+
+
+
+
+강의자료무단배포금지                                                                                                               27
+문의사항: hk.kim@jbnu.ac.kr  || diskhkme@gmail.com
+
+=== L02 | PDF p.28 | 印刷 p.28 ===
+ Conditional statement
+
+ nested if문
+
+   블록과if-else문을중첩하여복잡한조건을효율적으로기술가능
+
+
+                                                                   “!=“ 로작성
+
+
+
+
+
+강의자료무단배포금지                                                                                                               28
+문의사항: hk.kim@jbnu.ac.kr  || diskhkme@gmail.com
+
+=== L02 | PDF p.29 | 印刷 p.29 ===
+ Conditional statement
+
+ switch문
+
+      switch, case, default를사용한분기문
+
+     Switch 표현문의결과는정수형리터럴이어야함(정수, char, 열거형)
+
+
+
+
+
+강의자료무단배포금지                                                                                                               29
+문의사항: hk.kim@jbnu.ac.kr  || diskhkme@gmail.com
+
+=== L02 | PDF p.30 | 印刷 p.30 ===
+ Conditional statement
+
+ ?: 연산자
+
+
+                    (conditional_expr) ? expr1 : expr2
+
+
+     conditional_expr은boolean 표현식
+
+     표현식이참이라면expr1의값을리턴
+
+     표현식이거짓이라면expr2의값을리턴
+
+      If-else 문의사용과유사함
+
+   삼항연산자
+
+
+
+
+
+강의자료무단배포금지                                                                                                               30
+문의사항: hk.kim@jbnu.ac.kr  || diskhkme@gmail.com
+
+=== L02 | PDF p.31 | 印刷 p.31 ===
+ Conditional statement
+
+ ?: 연산자예시
+
+
+
+
+
+강의자료무단배포금지                                                                                                               31
+문의사항: hk.kim@jbnu.ac.kr  || diskhkme@gmail.com
+
+=== L02 | PDF p.32 | 印刷 p.32 ===
+ Controlling flow
+
+ 조건문
+
+    If-else문(블록, nested)
+
+    Switch문
+
+     ?: 연산자
+
+ 반복문
+
+    For문
+
+    While, do-while문
+
+    Continue, break
+
+
+
+
+강의자료무단배포금지                                                                                                               32
+문의사항: hk.kim@jbnu.ac.kr  || diskhkme@gmail.com
+
+=== L02 | PDF p.33 | 印刷 p.33 ===
+ Looping statement
+
+ 반복문(iteration / repetition)
+
+   반복조건+ 명령문
+
+
+ 사용예
+
+  특정횟수만큼반복이필요할때
+  집합의각요소에대한연산이필요할때
+  특정조건이참일동안명령의수행이필요할때
+  입력스트림의끝까지반복을수행해야할때
+  무한반복이필요할때
+   등등…
+
+
+
+강의자료무단배포금지                                                                                                               33
+문의사항: hk.kim@jbnu.ac.kr  || diskhkme@gmail.com
+
+=== L02 | PDF p.34 | 印刷 p.34 ===
+ Looping Statement
+
+ for문
+
+
+
+
+
+                                                                                             Local initialization 스타일
+강의자료무단배포금지                                                                                                               34                                     초기화부분에서변수를생성해서사용문의사항: hk.kim@jbnu.ac.kr  || diskhkme@gmail.com
+
+=== L02 | PDF p.35 | 印刷 p.35 ===
+ Looping Statement
+
+ for문
+
+   배열루프
+
+
+
+
+
+   콤마연산자
+
+
+
+
+
+강의자료무단배포금지                                                                                                               35
+문의사항: hk.kim@jbnu.ac.kr  || diskhkme@gmail.com
+
+=== L02 | PDF p.36 | 印刷 p.36 ===
+ Looping Statement
+
+ for문, 모든조건이항상존재해야할필요는없음
+
+
+
+
+
+                                                     “<=“ 로작성
+
+
+
+
+
+강의자료무단배포금지                                                                                                               36
+문의사항: hk.kim@jbnu.ac.kr  || diskhkme@gmail.com
+
+=== L02 | PDF p.37 | 印刷 p.37 ===
+ Looping Statement
+
+ while문
+
+
+
+
+
+강의자료무단배포금지                                             Boolean flag 사용예                     37
+문의사항: hk.kim@jbnu.ac.kr  || diskhkme@gmail.com
+
+=== L02 | PDF p.38 | 印刷 p.38 ===
+ Looping Statement
+
+ do while문
+
+
+
+
+
+강의자료무단배포금지                                                                                                               38
+문의사항: hk.kim@jbnu.ac.kr  || diskhkme@gmail.com
+
+=== L02 | PDF p.39 | 印刷 p.39 ===
+ Looping Statement
+
+ continue
+
+   Continue문이후의문장은실행되지않음
+
+   다음iteration으로곧바로넘어가기위해사용
+
+ break
+
+   Break문이후의문장은실행되지않음
+
+  루프밖으로바로빠져나가기위해사용
+
+
+
+
+
+강의자료무단배포금지                                                                                                               39
+문의사항: hk.kim@jbnu.ac.kr  || diskhkme@gmail.com
+
+=== L02 | PDF p.40 | 印刷 p.40 ===
+ Looping Statement                     중요!
+
+ continue
+
+   Continue문이후의문장은실행되지않음
+
+   다음iteration으로곧바로넘어가기위해사용
+
+ break
+
+   Break문이후의문장은실행되지않음
+
+  루프밖으로바로빠져나가기위해사용
+
+
+
+
+
+강의자료무단배포금지                                                                                                               40
+문의사항: hk.kim@jbnu.ac.kr  || diskhkme@gmail.com
+
+=== L02 | PDF p.41 | 印刷 p.41 ===
+ (Summary) Controlling flow
+
+ 조건문
+
+    If-else문(블록, nested)
+
+    Switch문
+
+     ?: 연산자
+
+ 반복문
+
+    For문
+
+    While, do-while문
+
+    Continue, break
+
+
+
+
+강의자료무단배포금지                                                                                                               41
+문의사항: hk.kim@jbnu.ac.kr  || diskhkme@gmail.com

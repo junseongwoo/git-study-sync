@@ -1,0 +1,59 @@
+39
+42
+43
+45
+47
+49
+50
+52
+53
+54
+55
+57
+58
+59
+62
+63
+65
+67
+69
+70
+73
+75
+76
+AddEdge( 하 CreateEdge(B, (, 126 ) );
+AddEdge( 8, CreateEdge(B, 타 150 ) )
+AddEdge( C. CreateEdge(C, B, 126 ) )
+AddEdge( C. CreateEdge(C, D, 117 ) )
+AdiEdge( (, CreateEdge(C. 타 162 ) )
+AddEdge( (, CreateEdge(C, 6, 220 ) )
+AddEdge( 0, CreateEdge(D, C, 117 ) )
+AddEdge( 티 CreateEdge(E, A, 247 ) ),•
+AddEdge( 티 CreateEdge(E, F, 82 ) )
+AddEdge( 티 CreateEdge(E, H, 98 ) ),•
+AddEdge( F, CreateEdge(F. 8, 150 ) )
+F, CreateEdge(F, C, 162 ) )
+AddEdge( F, CreateEdge(F, 티 82
+F. CreateEdge(F. 6, 154 ) )
+AddEdge(
+AddEdge( F, CreateEdge(F. H, 120 ) )
+6, CreateEdge(G, C, 220 ) )
+AddEdge( 6, CreateEdge(G, F, 154 ) )
+AddEdge( 6, CreateEdge(G, 1, 1% ) ),•
+AcßEdge( H, CreateEdge대, 티 98
+AddEdge( H, CreateEdge대, F, 120 ) )
+AddEdge( 1, CreateEdge(I, 6, 1% ) ),•
+// 정점 B를 시작 정점으로 하는 최소 신장 트리
+printf(*Prim•s Algorithm\n");
+Prim(graph, B, PrimMST);
+PrintGraph ( PrimUST
+printfCKruskaI's A1gorithm...\n");
+KruskaIMST);
+PrintGraph ( KruskaIMST );
+// 그래프 소일
+DestroyGraph( PrimMST );
+4
+77
+78
+440
+Part 02 • 알고리중

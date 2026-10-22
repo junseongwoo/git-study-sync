@@ -1,0 +1,27 @@
+partial quick-sort<T>(random vec.begin(), random-vec end() - 1, k);
+aut0 endl = std: :chrono: :steady-clock: •now();
+auto diffl = std: :chrono: :duration-cast〈std: :chrono: :microseconds>(endl - beginl ):
+std: :cout 〈〈 std: :endl;
+std::cout 〈〈 "부분 퀵 정렬 수행 시간: •• 〈〈 diffl.count() 〈〈 "us" 〈〈 std::endl,
+std::cout 〈〈 "(처음 •• 〈〈k 〈〈 "개 원소만) 부분 정렬된 벡터: ";
+print-vector<T>(random vec);
+// 전체 퀵 정렬 알고리즘 수행 시간 측정
+autO begin2 = std: :chrono: :steady—clock: :now( );
+quick—sort<T>(random—vec-copy begin(), random—vec—copy.end() - 1);
+aut0 end2 = std: :chrono: :steady-clock: :now( );
+auto diff2 = std: :chrono: :duration—cast〈std: :chrono: :microseconds>(end2 - begin2);
+std: :cout 〈〈 std: :endl;
+std::cout 〈〈 "전제 퀵 정렬 수행 시간: •• 〈〈 diff2.count() 〈〈 "us" 〈〈 std::endl;
+std::cout 〈〈 “전체 정렬된 벡터:
+print_vector<T〉 ( random_vec—copy ) ;
+7. 마지막으로 main() 함수를 작성하고, 테스트 함수를 호출합니다.
+int main()
+test—partial-quicksort〈unsigned>(l@@, 10);
+return 0;
+A.4.3 실습 문제 10: 맵리듀스를 이용하여 워드카운트 구현하기
+이번 실습 문제에서는 맵리듀스 모델을 이용하여 워드가운트 문제를 풀어보겠습니다.
+1. map-task 구조체를 다음과 같이 구현합니다.
+struct map_task : public mapreduce: :map_task<
+std: :string,
+// MapKey (filename)
+std::pair<char const*, std::uintmax_t〉〉 // MapVaIue (memory mapped file contents)

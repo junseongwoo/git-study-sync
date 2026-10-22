@@ -1,0 +1,22 @@
+부모 노드를 기준으로
+좌회전한 후.
+, 부리 노드에
+검은색을 넘긴다.
+부모 노드의 색을
+형제 노드에 입한다.
+4
+형제 노 오른쪽 자의 노드를 검은씩으로 잘한다
+자. 이렇게 삭제 연산에서 발생하는 이중 혹색 노드의 네 가지 처리 과정에 대해 모두 알아봤습니다.
+다음 코드에 있는 RBT-RebuildAfterRemove( ) 함수는 이중 혹-액 노드를 처리呑는 네 가지 경
+우를 모두 담고 있습니다. 물론 잘 알고 있는 것처럼 '이중 흑색을 표시하기 위한 장치는 따로 없습
+니다. 다만 이 함수가 매개 변수로 넘겨받는 successor, 즉 대체 노드가 이중 흑색 노드입니다. 코
+드를 읽을 때 Successor 위에 검은색이 하나 더 있다고 생각하면 이해하기 쉬울 것입니다
+void RBT Rebui1dAfterRemove( RBTNode** Root, RBTNode* Successor )
+부리 뜨이거나 할간책 노드로
+RBTNode* SibIing = NULL;
+검은색이 넘어가면 루프 종료
+while ( Successor-Parent != NULL Successor-XoIor == BLACK)
+if ( Successor == Successor-Parent->Left )
+// 이중 흑색 노드가 부모 노드의 완|쪽 자식인 경우
+SibIing = Successor->Parent->Right;
+Q1apter % • 탐책 283

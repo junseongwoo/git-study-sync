@@ -1,0 +1,1166 @@
+
+=== L01 | PDF p.1 | 印刷 p.None ===
+C++ 프로그래밍
+      김형기
+           hk.kim@jbnu.ac.kr
+
+=== L01 | PDF p.2 | 印刷 p.2 ===
+C++ 프로그램의구조
+
+
+
+
+
+                                                                                                                          2
+
+=== L01 | PDF p.3 | 印刷 p.3 ===
+ (Summary) C++ Program Structure
+
+ 빌드프로세스
+
+ 오류의종류
+
+ 기본구조, 기능과용어
+
+   키워드/ 지시자/ 연산자
+  전처리지시문
+     main() 함수
+   주석
+    Namespace
+  표준입출력
+
+
+
+강의자료무단배포금지                                                                                                                3
+문의사항: hk.kim@jbnu.ac.kr  || diskhkme@gmail.com
+
+=== L01 | PDF p.4 | 印刷 p.4 ===
+ (Summary) C++ Program Structure
+
+ 빌드프로세스
+
+ 오류의종류
+
+ 기본구조, 기능과용어
+
+   키워드/ 지시자/ 연산자
+  전처리지시문
+     main() 함수
+   주석
+    Namespace
+  표준입출력
+
+
+
+강의자료무단배포금지                                                                                                                4
+문의사항: hk.kim@jbnu.ac.kr  || diskhkme@gmail.com
+
+=== L01 | PDF p.5 | 印刷 p.5 ===
+ Terminologies
+
+ 프로그래밍언어: 고수준의소스코드작성에사용, Human-readable
+
+ 오브젝트코드: Machine-readable, 컴퓨터가실행할수있는코드
+
+ 컴파일러: 소스코드를오브젝트코드로변환하는도구
+
+ 링커: 오브젝트코드를실행파일(exe)로변환하는도구
+
+ 테스트& 디버깅: 프로그램에존재하는오류를찾고, 수정하는과정
+
+
+
+ IDE (Integrated Development Environment)
+
+   텍스트에디터+ 컴파일러+ 링커+ (디버거)
+
+   텍스트에디터: .cpp 소스코드/ .h 헤더파일의편집기
+
+
+
+강의자료무단배포금지                                                                                                                5
+문의사항: hk.kim@jbnu.ac.kr  || diskhkme@gmail.com
+
+=== L01 | PDF p.6 | 印刷 p.6 ===
+ C++ Build Process
+
+
+
+
+    소스코드         오브젝트코드
+
+            컴파일러                  링커
+           File1.cpp                          File1.obj                          C++ 표준라이브러리
+
+
+           File2.cpp                          File2.obj          실행프로그램(.exe)
+
+
+                                         기타라이브러리            File3.cpp                          File3.obj
+
+
+
+
+
+강의자료무단배포금지                                                                                                                6
+문의사항: hk.kim@jbnu.ac.kr  || diskhkme@gmail.com
+
+=== L01 | PDF p.7 | 印刷 p.7 ===
+ Writing code using VS 2022
+
+                                                                                                                                                                                    : 여러분이스스로의문을가지면좋겠을사항에대해붙입니다.
+  1. 새프로젝트만들기빈프로젝트                                    (ex, 체크하고만들면어떻게될까? 검색또는직접해보기)
+
+  2. 프로젝트/솔루션생성할위치와프로젝트이름을작성하고확인클릭
+
+   (솔루션및프로젝트를같은디텍터리에배치는체크해제상태로두기권장)
+
+ 주의사항
+
+      (꼭!) 프로젝트생성위치는디폴트로선택되어있는곳말고,
+
+    본인이코드를관리할수있는곳으로선택하세요.
+
+     (권고) 프로젝트이름, 파일이름등에한글사용하지마세요.
+
+
+
+
+
+                                                      2번의새프로젝트창
+강의자료무단배포금지                                                                                                                7
+문의사항: hk.kim@jbnu.ac.kr  || diskhkme@gmail.com
+
+=== L01 | PDF p.8 | 印刷 p.8 ===
+ Writing code using VS 2022, cont’d
+
+  4. 오른쪽솔루션탐색기의프로젝트이름
+  부분을우클릭하여추가새항목선택
+
+  5. 새항목추가창에서C++파일(.cpp) 선택
+
+  6. 아래쪽파일이름을main.cpp로바꾸고
+                                우클릭  추가클릭
+
+  7. 왼쪽편집기에main.cpp가열려있는지확인
+  후코드작성
+                                                      5번의새항목추가창
+
+
+ 주의사항
+
+   파일이름에한글사용하지마세요.
+
+
+강의자료무단배포금지                                                          7번의편집기에main.cpp가열려있는지확인방법8
+문의사항: hk.kim@jbnu.ac.kr  || diskhkme@gmail.com
+
+=== L01 | PDF p.9 | 印刷 p.9 ===
+ First program                        중요!
+
+ 입출력
+
+
+
+
+
+                                               *따라서직접타이핑하세요.
+                                   *첫단계부터따라하지않으면평생안합니다…
+
+
+
+강의자료무단배포금지                                                                                                                9
+문의사항: hk.kim@jbnu.ac.kr  || diskhkme@gmail.com
+
+=== L01 | PDF p.10 | 印刷 p.10 ===
+ First program
+
+ 입출력in C style
+
+
+
+
+
+강의자료무단배포금지                                                                                                               10
+문의사항: hk.kim@jbnu.ac.kr  || diskhkme@gmail.com
+
+=== L01 | PDF p.11 | 印刷 p.11 ===
+ Build code using VS 2017
+
+ (컴파일) Ctrl+F7
+
+   각소스(cpp)에대해obj 파일을생성하는과정
+
+   아래쪽출력창에서성공했는지확인
+
+     오류가있다면실패하고, 오류메시지를보여줌
+
+
+ (빌드) 프로젝트우클릭후빌드클릭: Build (Compile + Linking)
+
+    Obj 파일들을링크하여실행가능한exe 생성
+
+
+
+
+
+강의자료무단배포금지                                                                                                               11
+문의사항: hk.kim@jbnu.ac.kr  || diskhkme@gmail.com
+
+=== L01 | PDF p.12 | 印刷 p.12 ===
+ Build code using VS 2017, cont’d            중요!
+
+ (실행, 디버깅) F5
+
+   코드를빌드(=컴파일+링크)하고exe를실행
+
+       즉, F5만누르면컴파일+링크과정이통합적으로실행됨
+
+   출력을보여주는콘솔창이나타남
+
+     프로그램이종료된후, 아무키나누르면콘솔창이닫힘
+
+     창을닫지않고다시빌드하려고하면문제발생하는경우있으므로주의!
+
+     Ctrl+F5 기능은정확히뭘하는건지알기전에는그냥사용하지마세요!
+
+
+
+
+
+강의자료무단배포금지                               빌드과정에서오류가없는지출력창을항상살펴볼것!     12
+문의사항: hk.kim@jbnu.ac.kr  || diskhkme@gmail.com
+
+=== L01 | PDF p.13 | 印刷 p.13 ===
+ (Summary) C++ Program Structure
+
+ 빌드프로세스
+
+ 오류의종류
+
+ 기본구조, 기능과용어
+
+   키워드/ 지시자/ 연산자
+  전처리지시문
+     main() 함수
+   주석
+    Namespace
+  표준입출력
+
+
+
+강의자료무단배포금지                                                                                                               13
+문의사항: hk.kim@jbnu.ac.kr  || diskhkme@gmail.com
+
+=== L01 | PDF p.14 | 印刷 p.14 ===
+ Compiler Errors
+
+ 프로그래밍언어의규칙을위반하는경우
+
+ 문법적오류– 코드자체오류
+
+
+
+
+ 의미오류
+
+
+
+
+
+강의자료무단배포금지                                                                                                               14
+문의사항: hk.kim@jbnu.ac.kr  || diskhkme@gmail.com
+
+=== L01 | PDF p.15 | 印刷 p.15 ===
+ Compiler Warnings
+
+ 코드에잠재적인문제가있을것으로예상될때
+
+ 빌드는가능하지만, 무시하면안됨!
+
+
+
+
+
+   *위코드의경우VS2022(MSVC컴파일러기본설정)에서는오류(Error)로처리
+   *컴파일러마다동작이약간씩다를수있음
+
+
+
+
+
+강의자료무단배포금지                                                                                                               15
+문의사항: hk.kim@jbnu.ac.kr  || diskhkme@gmail.com
+
+=== L01 | PDF p.16 | 印刷 p.16 ===
+ Linker Errors / Runtime Errors
+
+ 링크에러
+
+     obj 파일의링크과정에서오류가있을경우
+
+   주로라이브러리또는obj 파일을(어떤이유에서) 찾을수없는경우
+
+
+ 런타임에러
+
+   프로그램의실행도중발생하는오류
+
+     Divided by zero, file not found, out of memory, etc…
+
+   프로그램의crash
+
+  예외처리를통해문제발생에따르는처리를할수있음!
+
+
+
+
+강의자료무단배포금지                                                                                                               16
+문의사항: hk.kim@jbnu.ac.kr  || diskhkme@gmail.com
+
+=== L01 | PDF p.17 | 印刷 p.17 ===
+ Logical Errors
+
+ 프로그램의동작에관한논리적오류
+
+ 프로그램작성자의실수가원인
+
+ 테스트과정을통해찾아내고, 수정해야함!
+
+
+
+
+
+강의자료무단배포금지                                                                                                               17
+문의사항: hk.kim@jbnu.ac.kr  || diskhkme@gmail.com
+
+=== L01 | PDF p.18 | 印刷 p.18 ===
+ (Summary) C++ Program Structure
+
+ 빌드프로세스
+
+ 오류의종류
+
+ 기본구조, 기능과용어
+
+   키워드/ 지시자/ 연산자
+  전처리지시문
+     main() 함수
+   주석
+    Namespace
+  표준입출력
+
+
+
+강의자료무단배포금지                                                                                                               18
+문의사항: hk.kim@jbnu.ac.kr  || diskhkme@gmail.com
+
+=== L01 | PDF p.19 | 印刷 p.19 ===
+ C++ Programming Structure
+
+ 구성요소– keyword, identifier, operator
+
+ 전처리기지시문- #include,…
+
+ main() 함수
+
+ 네임스페이스
+
+ 주석- //, /* */
+
+ 입출력– cin/cout
+
+
+
+
+
+강의자료무단배포금지                                                                                                               19
+문의사항: hk.kim@jbnu.ac.kr  || diskhkme@gmail.com
+
+=== L01 | PDF p.20 | 印刷 p.20 ===
+ C++ Keyword, Identifier, Operator
+
+ 키워드
+
+   약90개의키워드(변수타입, if, for 등)
+
+   언어자체에서예약된단어들
+
+ 식별자
+
+   변수, 함수, 타입등개발자가지정하는부분
+
+   대소문자구분!
+
+ 연산자
+
+    +, -, *, /, >>, <<,  ::, …
+
+ 이러한요소들이모여“문법”을이룸
+
+
+강의자료무단배포금지                                                                                                               20
+문의사항: hk.kim@jbnu.ac.kr  || diskhkme@gmail.com
+
+=== L01 | PDF p.21 | 印刷 p.21 ===
+ C++ preprocessor
+
+ 전처리기
+
+   컴파일이전에처리됨
+
+     “#” 으로시작
+
+
+
+
+
+강의자료무단배포금지                                                                                                               21
+문의사항: hk.kim@jbnu.ac.kr  || diskhkme@gmail.com
+
+=== L01 | PDF p.22 | 印刷 p.22 ===
+ C++ preprocessor              고급
+
+ #include ?
+
+   단순한복사붙여넣기!
+
+   프로젝트속성C/C++ 전처리기파일로전처리를통해확인
+
+
+
+
+
+                              이위쪽으로약
+                                         54000줄의코드는
+                                                iostream에서복사
+                              붙여넣기한것
+
+
+
+
+
+강의자료무단배포금지                                                                                                               22
+문의사항: hk.kim@jbnu.ac.kr  || diskhkme@gmail.com
+
+=== L01 | PDF p.23 | 印刷 p.23 ===
+ C++ preprocessor              고급
+
+ #define ?
+
+   단순한복사붙여넣기!
+
+     Platform independency 구현, 코드단축, debug 목적등으로다양하게활용
+
+
+                                       *3번라인의#define…이
+                        있는경우와없는경우
+                         동작을비교
+
+
+
+
+
+강의자료무단배포금지                                                                                                               23
+문의사항: hk.kim@jbnu.ac.kr  || diskhkme@gmail.com
+
+=== L01 | PDF p.24 | 印刷 p.24 ===
+ C++ Comments
+
+ 주석
+
+   프로그래머가읽을수있는정보를제공하기위함(협업, 유지보수목적)
+
+   전처리단계에서무시(삭제)되기때문에프로그램의동작과는무관
+
+      “//”  , “/* */”
+
+
+
+
+
+강의자료무단배포금지                                                                                                               24
+문의사항: hk.kim@jbnu.ac.kr  || diskhkme@gmail.com
+
+=== L01 | PDF p.25 | 印刷 p.25 ===
+ main() function                       중요!
+
+ 모든C++ 프로그램은하나의main()함수를가져야함
+
+     main() 함수는프로그램의진입점(=프로그램이실행되면가장먼저실행되는함수)
+
+   리턴값0이올바른프로그램실행을의미함(지금은생략해도무방)
+
+ 두가지버전
+
+  이번학기강의에서는간단한왼쪽형태만사용할것
+
+
+
+
+
+      >> program.exe                 >> program.exe argument1 argument2
+강의자료무단배포금지                                                                                                               25
+문의사항: hk.kim@jbnu.ac.kr  || diskhkme@gmail.com
+
+=== L01 | PDF p.26 | 印刷 p.26 ===
+ main() function                       중요!
+
+ 모든C++ 프로그램은하나의main()함수를가져야함
+
+   동일프로젝트에cpp파일을계속추가하여작성하면오류발생하나의프로그램에2개
+    이상의main함수가존재하기때문
+
+   해결법1) 솔루션을우클릭하여추가새프로젝트로별도의프로젝트를만들어사용
+
+      이때, 현재빌드하고자하는프로젝트를우클릭하여“시작프로젝트로설정” 필요
+
+   해결법2) 현재빌드하고자하는cpp이외의코드는전체주석처리하고빌드
+
+   해결법3)
+
+
+
+
+
+                                                                                                                                                                      • 프로젝트안의“모든” cpp 파일이
+                                                              하나의“프로그램”을구성
+                                                                                                                                                                      • 즉cpp 파일여러개에main이존재하면
+                                                                   하나의“프로그램”에여러main이 각cpp파일에모두main함수가존재하면,        이와같은오류가발생하고빌드실패
+                                                           존재하여오류가발생!
+강의자료무단배포금지                                                                                                               26
+문의사항: hk.kim@jbnu.ac.kr  || diskhkme@gmail.com
+
+=== L01 | PDF p.27 | 印刷 p.27 ===
+ C++ namespace
+
+ std::cout
+
+ 충돌방지를위함
+
+  외부라이브러리와구현한소스코드간의이름충돌가능성
+
+   또는코드가커지면, 내가만든함수들사이에서도실수로충돌가능
+
+ 코드의“그룹화” 로이해
+
+   서로다른namespace로그룹화하여충돌을방지할수있음
+
+  “::”  : scope resolution operator                                                                 std namespace     myprogram namespace
+
+                                                                                  print()                        print()
+
+
+
+강의자료무단배포금지                                                                                                               27
+문의사항: hk.kim@jbnu.ac.kr  || diskhkme@gmail.com
+
+=== L01 | PDF p.28 | 印刷 p.28 ===
+ C++ namespace                       중요!
+
+ using namespace
+
+    특정namespace 내의함수들을사용하겠다는선언
+
+   남용은금물!
+
+        Using namespace를모든코드에넣는다면namespace의기능을상실함…
+
+     강의자료에서는지면의한계로인해, 단축표현을위해사용
+
+
+
+
+
+                 `Std::`로인해길어지기때문에                        강의자료에서만이와같이씁니다.
+
+강의자료무단배포금지                                                                                                               28
+문의사항: hk.kim@jbnu.ac.kr  || diskhkme@gmail.com
+
+=== L01 | PDF p.29 | 印刷 p.29 ===
+ Basic I/O
+
+ cout과<<
+
+   C++의표준출력스트림, 삽입연산자
+
+ cin과>>
+
+   C++의표준입력스트림, 추출연산자
+
+
+
+
+                                                           "Hello World!"     모니터                               cout <<
+
+                                 Stream
+
+
+                                                           favoriteNumber     키보드                        cin >>
+
+
+강의자료무단배포금지                                                                                                               29
+문의사항: hk.kim@jbnu.ac.kr  || diskhkme@gmail.com
+
+=== L01 | PDF p.30 | 印刷 p.30 ===
+ Basic I/O, Output
+
+ cout과<<
+
+   C++의표준출력스트림, 삽입연산자
+
+   순차적인출력이가능
+
+
+
+
+  줄바꿈은필요한경우명시해주어야함
+
+
+
+
+
+강의자료무단배포금지                                                                                                               30
+문의사항: hk.kim@jbnu.ac.kr  || diskhkme@gmail.com
+
+=== L01 | PDF p.31 | 印刷 p.31 ===
+ Basic I/O, Input
+
+ cin과>>
+
+   C++의표준입력스트림, 추출연산자
+
+   순차적인입력이가능
+
+
+
+
+   변수의타입에맞게해석이불가능한입력이주어질땐undetermined behavior
+
+
+
+
+
+강의자료무단배포금지                                                                                                               31
+문의사항: hk.kim@jbnu.ac.kr  || diskhkme@gmail.com
+
+=== L01 | PDF p.32 | 印刷 p.32 ===
+변수와상수
+
+
+
+
+
+                                                                                                                         32
+
+=== L01 | PDF p.33 | 印刷 p.33 ===
+ C++ Program Structure
+
+ 변수와메모리
+
+      Bit, byte와Hex 표현
+
+   메모리
+
+   변수
+
+     변수의정의, 초기화, 사용
+
+ 변수의타입
+
+ 상수
+
+
+
+
+
+강의자료무단배포금지                                                                                                               33
+문의사항: hk.kim@jbnu.ac.kr  || diskhkme@gmail.com
+
+=== L01 | PDF p.34 | 印刷 p.34 ===
+ C++ Program Structure
+
+ 변수와메모리
+
+      Bit, byte와Hex 표현
+
+   메모리
+
+   변수
+
+     변수의정의, 초기화, 사용
+
+ 변수의타입
+
+ 상수
+
+
+
+
+
+강의자료무단배포금지                                                                                                               34
+문의사항: hk.kim@jbnu.ac.kr  || diskhkme@gmail.com
+
+=== L01 | PDF p.35 | 印刷 p.35 ===
+ Bit, Byte, Hex
+
+ 0.5 byte = 4 bit = 24 = 16개의숫자표현가능(양수범위0~15)                Bit 표현  10진수   16진수
+                                                                                                                            (0.5 byte)               (Hex)
+ 1 byte = 8 bit = 28 = 256개의숫자표현가능(양수범위0~255)            0000       0        0
+                                                                                             0001       1        1
+  Hexadecimal(Hex, 16진수)                                                         0010       2        2
+                                                                                             0011       3        3
+   16진수2개로1 byte를보기쉽게표현Hex 사용이유                         0100       4        4
+                                                                                             0101       5        5
+    Hex 표현임을알리기위해앞에0x를붙임
+                                                                                             0110       6        6
+        0x 부분은값으로써의의미는없음                                               0111       7        7
+                                                                                             1000       8        8
+                 Bit 표현        16진수        10진수
+                                                                                             1001       9        9                (1 byte)             (Hex)
+                                                                                             1010      10      A           0000 0000           0x 00              0
+                                                                                             1011      11       B           0000 0001           0x 01              1
+                                                                                             1100      12       C           0000 1010           0x 0A             10
+                                                                                             1101      13      D           1010 0000           0x A0             160
+                                                                                             1110      14        E           1010 1011           0x AB             171
+                             몇몇수만예시로                                                                                             1111      15         F           1111 0000           0x F0             240                                        표시함. 0~255 사이값
+강의자료무단배포금지1111 1111           0x FF             255    모두표현가능                                                 35
+문의사항: hk.kim@jbnu.ac.kr  || diskhkme@gmail.com
+
+=== L01 | PDF p.36 | 印刷 p.36 ===
+ Memory
+
+ 프로그래밍을할때사용하는가장중요한자원!            …
+
+         CPU가가장중요한게아닙니다!                                                                                                                    0x 00 00 00 00
+                                                                                                                    0x 00 00 00 01 메모리는읽고쓸수있는바이트공간의집합
+                                                                                                                    0x 00 00 00 02
+   메모리에는다양한종류가있으나여기서는메인메모리(RAM)를지칭                                                                                                                    0x 00 00 00 03
+    층하나(byte)마다8개의방(bit)이있는커다란호텔이라고생각                                 …
+                                                       오른쪽에는각
+      각방은0 또는1인상태                                                       칸의주소를
+                                                           적어놓았음       우리는방(bit)단위로는생각할필요가없음, 따라서보기좋게Hex로표현함
+
+                                                                                   … 각층에는번호가붙어있고, 이를“주소“라고함
+                                                                                                                    0x 00 00 00 09
+   주소또한Hex로표현함                      각칸은1 바이트의                            0x 00 00 00 0A
+                                         데이터를저장할수있음.
+                                          (즉한칸에8개비트저장)            0x 0A        0x 00 00 00 0B
+                                                                                                                    0x 00 00 00 0C
+                                   예를들어이칸에                                  0x 00 00 00 0D
+                                               10진수로10이라는                                                                                                                    0x 00 00 00 0E                                     값이저장되어있다면
+
+                                                                                                     0   0   0   0   1   0   1   0
+                               …
+강의자료무단배포금지                           RAM에는이런상태가기록                                        36
+문의사항: hk.kim@jbnu.ac.kr  || diskhkme@gmail.com
+
+=== L01 | PDF p.37 | 印刷 p.37 ===
+ Memory and Variables
+
+ 우리개발환경에서, 정수를저장할때타입에따라아래와    …
+ 같은바이트용량을사용하도록되어있음                                                     0x 00 00 00 00
+                                                                                        0A         0x 00 00 00 01
+     Char: 1 바이트
+                                                                                                00         0x 00 00 00 02
+      Short: 2 바이트                                                                      00         0x 00 00 00 03                                               int로저장된10은
+                                                                                                00           …                                    네칸을사용
+      Int:   4 바이트
+                                                       오른쪽에는각
+                                                       칸의주소를
+                                                           적어놓았음 따라서10이라는값을저장하는경우
+                                                                                        0A
+     Char: 0A 로저장                              short로저장된               00           …
+                                       10은두칸을사용                           0x 00 00 00 09
+      Short: 00 0A 로저장                                                                                                                    0x 00 00 00 0A
+      Int:   00 00 00 0A 로저장                     Char로저장된            0A         0x 00 00 00 0B
+                                       10은한칸만사용                                                                                                                    0x 00 00 00 0C
+      (*당연히Hex지만,0x는생략했습니다.)
+                                                                                                                    0x 00 00 00 0D
+    (*왜그림에서는순서가반대인지궁금하신분은추가슬라이드참고)
+                                                                                                                    0x 00 00 00 0E
+
+
+                               …
+강의자료무단배포금지                                                                                                               37
+문의사항: hk.kim@jbnu.ac.kr  || diskhkme@gmail.com
+
+=== L01 | PDF p.38 | 印刷 p.38 ===
+ Memory Window in VS2022
+
+ 직접눈으로확인할수있음!
+
+       1. 아래와같이코드를작성한뒤, main함수끝부분왼쪽을
+    클릭하여중단점을걸어놓음
+
+     (중단점이무엇인지는다음시간에설명)
+
+       2. F5를눌러디버깅을시작
+
+       3. 디버그창메모리메모리1을눌러오른쪽과같은창이
+    나오도록함
+
+
+
+
+   끝부분을클릭하면
+   빨간동그라미로
+    중단점이표시
+                                                  무섭게생긴창이등장!
+
+
+강의자료무단배포금지                                                                                                               38
+문의사항: hk.kim@jbnu.ac.kr  || diskhkme@gmail.com
+
+=== L01 | PDF p.39 | 印刷 p.39 ===
+ Memory Window in VS2022
+
+  4. 오른쪽위버튼을눌러메모리가1열로표시되게수정(1줄에1 byte만표시)
+
+  5. 위쪽“주소:” 오른쪽에“&a”를입력해a가저장된위치의메모리관찰
+
+  &를변수앞에붙이면주소를의미
+
+   실제주소는여러분PC에서는다를수있고,프로그램을실행할때마다도다릅니다.
+
+                                                      여기에&a를입력하면
+                                                   변수a가저장되어있는
+                                                주소값으로자동변경됨
+
+
+
+
+                                                  변수a가저장된주소는
+                                                                         0x00D9FA9F이며거기에“0a”가
+                                                    저장된것을확인가능!
+
+
+
+
+
+강의자료무단배포금지                                                                                                               39
+문의사항: hk.kim@jbnu.ac.kr  || diskhkme@gmail.com
+
+=== L01 | PDF p.40 | 印刷 p.40 ===
+ Memory Window in VS2022
+
+  6. 위쪽주소에다시&c를입력하고창길이를확장해보면, 37페이지그림과동일
+
+
+
+                                         0A         0x 00 D9 FA 84                                       0x FA 84
+                                             00         0x 00 D9 FA 85                                       0x FA 85
+                                                     10                                             00         0x 00 D9 FA 86                                       0x FA 86
+                                             00         0x 00 D9 FA 87                                       0x FA 87
+                                  …                                 …
+                                  …                                 …
+                                         0A         0x 00 D9 FA 90                                       0x FA 90
+                                                     10                                             00         0x 00 D9 FA 91                                       0x FA 90
+                                  …                                 …
+                                  …                                 …
+                                         0A         0x 00 D9 FA 9F                       10            0x FA 9F
+
+                              앞으로는위와같이값은10진법으로쓰고,
+                              주소값은4자리로줄여서그릴겁니다!
+                                  (저장된주소도,맨앞칸의주소만표시)
+강의자료무단배포금지                                                                                                               40
+문의사항: hk.kim@jbnu.ac.kr  || diskhkme@gmail.com
+
+=== L01 | PDF p.41 | 印刷 p.41 ===
+ Variable                            중요!
+
+ 따라서변수란…
+
+   메모리의주소에붙이는이름!
+                                                                                                                         0x FA 84
+   변수를만들면, 메모리에변수를위한공간(바이트)이확보됨
+                                                           10
+     공간의크기(몇칸)는변수의타입에따라결정
+
+   변수에값을대입하면, 그메모리주소에값이기록됨                       …                                                     int c = 10;
+                                                                            …
+      물리적으로는0101010…로
+                                                                                                                         0x FA 90
+                                                           10  변수를만든다변수를정의한다고표현                                                     short b = 10;
+                                                                            …
+ 변수라는개념이없다면                                               …
+                                                                                                      10         0x FA 9F
+  아래와같이불편하게코드를작성해야했을것       char a = 10;
+
+
+
+
+강의자료무단배포금지                                                                                                               41
+문의사항: hk.kim@jbnu.ac.kr  || diskhkme@gmail.com
+
+=== L01 | PDF p.42 | 印刷 p.42 ===
+ Definition and Initialization
+
+ 변수의정의
+
+    (C++에서) 변수를정의할때는반드시타입을명시해야함
+
+    바이트를몇칸이나확보해야하는지미리알아야하기때문
+
+
+
+
+
+                                                             *파이썬과같이미리타입을명시하지않아도되는 변수의초기화                                                            언어들은얼마나큰데이터가들어올지모르기
+                                                              때문에일단크게확보해놓습니다.
+   변수를정의하면서초기값을설정하는것을초기화라고함           (효율성저하.대신편의성증가)
+
+     변수를생성하는시점부터, 메모리에값이저장되어있음
+
+
+
+
+
+강의자료무단배포금지                                                                                                               42
+문의사항: hk.kim@jbnu.ac.kr  || diskhkme@gmail.com
+
+=== L01 | PDF p.43 | 印刷 p.43 ===
+ Using a Variable
+
+ 변수의사용
+
+  변수이름은변수가확보한그메모리에접근하기위해사용됨
+
+  메모리에값을읽고쓰는것이변수의사용임
+
+
+
+
+
+ 간단한규칙
+
+   이름앞에타입(ex, int, float)이붙어있다? 변수의정의(& 초기화)
+
+   이름앞에아무것도없다? 변수의사용
+
+
+
+
+강의자료무단배포금지                                                                                                               43
+문의사항: hk.kim@jbnu.ac.kr  || diskhkme@gmail.com
+
+=== L01 | PDF p.44 | 印刷 p.44 ===
+ C++ Program Structure
+
+ 변수와메모리
+
+      Bit, byte와Hex 표현
+
+   메모리
+
+   변수
+
+     변수의정의, 초기화, 사용
+
+ 변수의타입
+
+ 상수
+
+
+
+
+
+강의자료무단배포금지                                                                                                               44
+문의사항: hk.kim@jbnu.ac.kr  || diskhkme@gmail.com
+
+=== L01 | PDF p.45 | 印刷 p.45 ===
+ Primitive Data Types
+
+ Integer                  형식이름     바이트기타이름            값의범위
+                                                   int                 4      signed                              –2,147,483,648 ~ 2,147,483,647
+   정수를표현                                      unsigned int         4      unsigned                        0 ~ 4,294,967,295
+                                               __int8              1      char                              -128 ~ 127
+                                      unsigned __int8      1      unsigned char                    0 ~ 255
+                                             __int16             2       short, short int 및signed short int   –32,768 ~ 32,767
+                                      unsigned __int16     2      unsigned short, unsigned short int   0 ~ 65,535
+                                             __int32             4       signed, signed int 및int             –2,147,483,648 ~ 2,147,483,647
+                                      unsigned __int32     4      unsigned, unsigned int            0 ~ 4,294,967,295
+                                             __int64             8      long long, signed long long          –9,223,372,036,854,775,808 ~
+                                                                                                             9,223,372,036,854,775,807
+                                      unsigned __int64     8      unsigned long long               0 ~ 18,446,744,073,709,551,615
+                                           short               2      short int, signed short int           –32,768 ~ 32,767
+                                      unsigned short      2      unsigned short int                0 ~ 65,535
+                                       long               4      long int, signed long int             –2,147,483,648 ~ 2,147,483,647
+                                      unsigned long       4      unsigned long int                 0 ~ 4,294,967,295
+                                       long long           8    없음(그러나__int64와동일)          –9,223,372,036,854,775,808 ~
+                                                                                                             9,223,372,036,854,775,807
+                                      unsigned long long   8    없음(그러나unsigned __int64와동일) 0 ~ 18,446,744,073,709,551,615
+
+강의자료무단배포금지                                                                                                               45
+문의사항: hk.kim@jbnu.ac.kr  || diskhkme@gmail.com
+
+=== L01 | PDF p.46 | 印刷 p.46 ===
+ Primitive Data Types
+
+
+                  형식이름      바이트      기타이름      값의범위 Floating point
+                                                  float               4         없음               3.4E+/-38(7개의자릿수)
+   실수를표현
+                                       double             8         없음               1.7E+/-308(15개의자릿수)
+
+                                        long double       double과동일   없음             double과동일
+
+   실수는메모리에어떻게저장되나요2학년“컴퓨터구조“ 강의에서배움
+
+
+ Boolean          형식이름      바이트      기타이름      값의범위
+                                        bool               1         없음                       false 또는true
+     true / false
+
+
+
+
+
+강의자료무단배포금지                                                                                                               46
+문의사항: hk.kim@jbnu.ac.kr  || diskhkme@gmail.com
+
+=== L01 | PDF p.47 | 印刷 p.47 ===
+ Using the sizeof operator
+
+ sizeof 연산자
+
+  타입또는변수의바이트단위크기를리턴
+
+
+
+
+
+ 변수의최대/최소값
+
+
+
+
+
+강의자료무단배포금지                                                                                                               47
+문의사항: hk.kim@jbnu.ac.kr  || diskhkme@gmail.com
+
+=== L01 | PDF p.48 | 印刷 p.48 ===
+ C++ Program Structure
+
+ 변수와메모리
+
+      Bit, byte와Hex 표현
+
+   메모리
+
+   변수
+
+     변수의정의, 초기화, 사용
+
+ 변수의타입
+
+ 상수
+
+
+
+
+
+강의자료무단배포금지                                                                                                               48
+문의사항: hk.kim@jbnu.ac.kr  || diskhkme@gmail.com
+
+=== L01 | PDF p.49 | 印刷 p.49 ===
+ Constant
+
+ 상수
+
+   변수와유사하지만, 초기화이후변할수없는값
+
+   사용목적실수방지, 프로그램의견고함
+
+      실제현장에서, 그리고다른사람과협업을할때매우중요한매너!
+
+
+ 상수의종류
+
+   리터럴상수: 12, 3.14, “Hyungki” (r-values)
+
+   선언상수: const int favoriteNumber = 50;
+
+   상수표현: constexpr int age = 20;
+
+   열거형
+
+     Defined  : #define pi 3.1415926
+
+
+강의자료무단배포금지                                                                                                               49
+문의사항: hk.kim@jbnu.ac.kr  || diskhkme@gmail.com
+
+=== L01 | PDF p.50 | 印刷 p.50 ===
+추가슬라이드
+
+
+
+
+
+                                                                                                                         50
+
+=== L01 | PDF p.51 | 印刷 p.51 ===
+ Solution and Project
+
+ 비주얼스튜디오의솔루션은단순한폴더개념
+
+   관련있는여러프로젝트를하나로묶어서관리하기위함
+
+ 프로젝트는개별적인빌드결과(exe, lib, dll)를만드는단위
+
+   프로젝트내소스파일들로개별적인exe, lib, dll을빌드하여생성함
+
+ “시작프로젝트” 설정은F5를눌렀을때실행할결과물을        솔루션
+                                                 프로젝트1
+   해당프로젝트의결과물(exe)로설정함
+
+
+
+
+                                                 프로젝트2
+
+
+
+
+
+강의자료무단배포금지                                                                                                               51
+문의사항: hk.kim@jbnu.ac.kr  || diskhkme@gmail.com
+
+=== L01 | PDF p.52 | 印刷 p.52 ===
+ Endianness
+
+ 메모리에바이트를저장하는순서는프로세서에따라다름
+
+ 높은자리수를낮은메모리주소에저장하는것을Big endian
+
+ 낮은자리수를낮은메모리주소에저장하는것을Little endian이라함
+
+ Big endian은보기엔헷갈리지만효율성이높아주로사용됨
+
+      https://ko.wikipedia.org/wiki/%EC%97%94%EB%94%94%EC%96%B8
+
+
+   00 00 00 0A                                        0A         0x 00 00 00 08                 00         0x 00 00 00 08
+높은자리수 낮은자리수                00         0x 00 00 00 09                 00         0x 00 00 00 09
+                                            00         0x 00 00 00 A0                00         0x 00 00 00 A0
+                                            00         0x 00 00 00 A1               0A         0x 00 00 00 A1
+                                                  Little endian의경우                 Big endian의경우
+
+
+
+
+강의자료무단배포금지                                                                                                               52
+문의사항: hk.kim@jbnu.ac.kr  || diskhkme@gmail.com
+
+=== L01 | PDF p.53 | 印刷 p.53 ===
+ Casting
+
+  Implicit vs Explicit type cast
+
+
+
+
+
+강의자료무단배포금지                                                                                                               53
+문의사항: hk.kim@jbnu.ac.kr  || diskhkme@gmail.com

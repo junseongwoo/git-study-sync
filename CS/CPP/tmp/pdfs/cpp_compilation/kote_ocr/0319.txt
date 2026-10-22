@@ -1,0 +1,26 @@
+const int UNKNOWN = -1,•
+const int MAX_SIZE = 100;
+vector<int〉 memo(MAX—SIZE, UNKNOWN);
+int Fibonacci(int n)
+if(n<2)
+return n;
+if (memo[n] != UNKNOWN)
+return ;
+int result = Fibonacci(n
+memo[n] = result;
+return result;
+- 1) 十 Fibonacci(n
+위에 기술한 함수를 이용하여 Fibonacci(5)를 구하는 재귀 트리 구조를 그림 8-2에 나타냈습니다.
+그림 8-2 개시를 사용하여 피보나치 수열에서 n번째 원소 계산하기(n = 5)
+F(5)
+F(3)
+F(I)
+다시
+F(3)
+F(O)
+이러한 방식을 통해 상당히 많은 중복 작업을 제거할 수 있습니다. 이처럼 하향식 방식에서 부분
+문제의 해를 개시에 넣어 시용하는 기술을 메모이제이션이라고 하며, 이 방법은 모든 동적 계획법
+문제에 적용할 수 있습니다. 이때 다음 조건을 만족한다고 가정합니다”
+1. 고유한 특성은 유지하면서 서로 다른 상태의 유사2`경을 훨용하는 개시 사용 방식을 고안할 수
+있습니다.
+2. 시용 기능한 스택 공간을 초과하기 전에 필요한 모든 부분 문제의 해답을 누적할 수 있습니다.

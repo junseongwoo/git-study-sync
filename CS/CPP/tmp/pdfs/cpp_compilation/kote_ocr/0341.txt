@@ -1,0 +1,24 @@
+case 2:
+// 메모이제이션 테이블 초기화
+vector<vector<int〉〉 memo(set.size(), vector〈int>(7000, UNKNOWN));
+= SubsetSum Memoization(set, target, 0, memo);
+found
+break;
+if (found)
+cout 〈〈 "원소 합이 " 〈〈 target 〈〈 "인 부분집합이 있습니다." 〈〈 endl;
+else
+cout 〈〈 "원소 합이 " 〈〈 target 〈〈 "인 부분집합이 없습니다." 〈〈 endl;
+GetTime(timer, types[i]);
+cout 〈〈 endl;
+5. 지금까지 작성한 프로그램을 실행하면 다음과 같은 출력을 확인할 수 있습니다.
+원소 합이 6799인 부분집합이 없습니다.
+BRUTE FORCE 방법 경과 시간: 0.38700
+원소 합이 6799인 부분집합이 없습니다.
+BACKTRACKING 방법 경과 시간: 0.10400
+원소 합이 6799인 부분집합이 없습니다.
+MEM이ZATION 방법 경과 시간: 0.00200
+No十e三 실제 출력 시간은 사용하고 있는 시스템 성능에 따라 다르게 나타날수 있습니다. 여기서는 시간 차이
+에 주목하기 바랍니다.
+연습 문제 38 실행 결과에서 개시를 시용한 메모이제이션 방법이 문제를 극적으로 최적화했음을
+확인할 수 있습니다.
+352

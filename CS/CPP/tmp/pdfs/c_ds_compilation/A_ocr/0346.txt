@@ -1,0 +1,37 @@
+354
+// 0을 저장하고 순환호출한다.
+if (root->right) {
+codes, tOP + 1);
+// 단일노드이면 코드를 출력한다.
+if {
+printf("%c: ",
+// 허프만 코드 생성 함수
+void huffman_tree(int freq[], char ch_list[], int n)
+TreeNode •x;
+HeapType* heap;
+element e, el, e2;
+int c전es[100];
+int top = 0;
+heap = create();
+init(heap) ;
+for (특 = 0; i<n; i++) {
+= make—tree(NULL, NULL) •,
+e.ch = node->ch = ch_list[i];
+e.key = node->weight = freq[i];
+e.ptree = node;
+insert_min_heap(heap, e);
+for (5 = 1; i<n; i++) {
+// 최소값을 가지는 두개의 노드를 삭제
+el = delete_min-heap(heap) ;
+e2 = delete min-heap(heap) ;
+// 두개의 노드를 합친다.
+X = make_tree(el.ptree, e2.ptree);
+e.key = x->weight = el.key + e2.key;
+e.ptree = x;
+printf("%d+%d->%d \n", el.key, e2.key, e.key);
+nnsert—min-heap(heap, e),
+e = detete min_heap(heap); // 최종 트리
+print_des(e.ptree, codes, top);
+destroy-tree (e. ptree) •,
+free(heap) ;
+C언어로 쉽게 풀어쓴 자료구조

@@ -1,0 +1,28 @@
+vector<int〉 BelImanFord(vector<Edge> edges, int V, int start)
+vector<int〉 distance(V, UNKNOWN);
+distance[start]
+5. 알고리즘의 대부분-은 다음 단계에서 수행됩니다. 이 단계에서는 (v - 1)번 반복되는 루프를
+정의하고, 각 루프에서는 전체 에지를 검토하면서 각 정점의 거리 값을 업데이트합니다. 구체
+적으로 설명하면 각각의 에지 중에서 시작 정점의 거리 값이 UNKNOWN이 아닌 경우에 대해서만
+거리 값을 업데이트하며, 이때 (시작 정점 거리 값 + 에지 가중치) 계산 결과가 목적지 정점
+의 거리 값보다 작으면 목적지 정점의 거리 값을 (시작 정점 거리 값 + 에지 가중치)로 교제
+합니다.
+// (V - 1)번 반복
+for (int i =0; i 〈V- 1; i++)
+// 전제 에지에 대해 반복
+for (autO& e : edges)
+// 에지의 시작 정점의 거리 값이 UNKNOWN이면 스킵
+if (distance[e.src] == UNKNOWN)
+continue;
+// 인접한 정점의 거리 값이 새로운 경로에 의한 거리 값보다 크면
+// 거리 값을 업데이트함
+if (distance[e.dst] 〉 distance[e.src] + e weight)
+distance[e.dst] = distance[e.src] 十 e.weight;
+return distance;
+6. main() 함수에서 그래프 객체를 생성하는 코드를 살펴보겠습니다. 여기서는 그림 7-1에 표현
+된 그래프 객체를 만들어 시용하겠습니다.
+int main()
+int V = 5;
+vector<Edge〉 edges;
+// 정점 개수
+// 에지 포인터의 벡터

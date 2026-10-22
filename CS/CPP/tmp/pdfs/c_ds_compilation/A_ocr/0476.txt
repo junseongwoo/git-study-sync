@@ -1,0 +1,35 @@
+#define BUCKETS 10
+#define DIGITS 4
+void radix_sort(int list[], int n)
+int 5, b, d, factor = 1;
+QueueType queues [BUCKETS] ;
+for (b = 0; b<BUCKETS; b++) init_queue(&queues[b]);
+// 큐들의 초기화
+for (d = 0; d<DIGITS; d++) {
+for (5 = 0; i<n; 5++)
+// 데이터들을 자리수에 따라 큐에 삽입
+enqueue(&queues[(list[i] / factor) % 10], list[i]);
+for (b = 특 = 0; b<BUCKETS; b++) // 버킷에서 꺼내어 list로 합친다.
+while (!is-empty(&queues[b]))
+list[i++] = dequeue(&queues[b]);
+factor *= 10;
+#define SIZE 10
+int main(void)
+int listCSIZE] ;
+srand(time(NULL)) •,
+// 그 다음 자리수로 간다.
+for (int = 0; i<SIZE; 서++) // 난수 생성 및 출력
+list[i] = rand() % 100;
+radix_sort(tist, SIZE) ;
+for (int = 0; i<SIZE; i++)
+printf("%d ", list[i]);
+printf("\n");
+return 0;
+실행결과
+22 38 71 76 81 83 89 94 97 98
+기수 정렬의 분석
+// 기수정릴 호출
+만약 입력 리스트가 ,l개의 정수를 가지고 있다고 하면 알고리즘의 내부 루프는 n번 반복될 것이
+다. 만약 각 정수가 d개의 자리수를 가지고 있다고 하면 외부 루프는 d번 반복된다. 따라서 기수
+정렬은 O(d • n)의 시간 복잡도를 가진다. 시간 복잡도가 d에 비례하기 때문에 기수 정렬의 수행
+CHAPTER12 정렬 485

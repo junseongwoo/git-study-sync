@@ -1,0 +1,60 @@
+LinkedLtstStack.c는 스택 연산 함수를 선언하고 정의하며 Test LinkedlnstStack.c에서는 이 두
+파일에서 선언하고 정의한 함수를 테스트합니다.
+02 &/LinkedListStack/LinkedListStack. h
+01
+02
+03
+04
+05
+06
+07
+08
+09
+12
+14
+17
+18
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+31
+32
+33
+$ifndef LINKEDLIST_STACK_H
+•define LINKEDLIST_STACK H
+$include <stdio.h〉
+•include <string.h>
+$include 〈stdlib.h〉
+typedef struct tagNode
+char* Data,
+struct tagNode* NextNode;
+} Node
+typedef struct tagLinkedListStack
+Node• List,
+N0de* Top;
+} LinkedListStack,
+LLS-CreateStack( LinkedListStack** Stack );
+VOid
+LLS DestroyStack( LinkedListStack* Stack );
+VOid
+Node* LLS-CreateNode( char* Data );
+LLS-DestroyNode( NO血* NOde );
+VOid
+LLS-Push( LinkedListStack* Stack, NO血* NewNode );
+VOid
+NOde* LLS POP( LinkedListStack* Stack ):
+NOde* LLS-Top( LinkedListStack* Stack );
+int
+LLS GetSize( LinkedListStack* Stack );
+int
+LLS-IsEmpty( LinkedListStack* Stack );
+ændif
+88
+Part 01 • 자료구조

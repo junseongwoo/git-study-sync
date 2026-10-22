@@ -1,0 +1,46 @@
+DATA
+DATA
+Sibling
+Child
+Parent
+DATA
+Child
+Right
+Sibling
+Child
+Right
+SibIing
+DATA
+Right
+Child
+Sibling
+Parent
+DATA
+NULL
+DATA
+Right
+Sibling
+7 함 오른쪽 자식의 RlghtSlbljng
+포인터에 새 자식 노드를 연결한다
+DATA
+Left
+Child
+Right
+Sibling
+Left
+Child
+Left
+Child
+Right
+Sibling
+이 내펑은 다음 코드에 그대로 구현되어 있습니다.
+void LCRS AddChildNode( LCRSNode* Parent, LCRSNode *Chi1d)
+if ( Parent->LeftChild == NULL )
+Parent->LeftChild = Child;
+else
+LCRSNode* TempNode = Parent->LeftChild;
+while ( TempNode->RightSibIing != NULL )
+TempNode = TempNode->RightSib1ing,
+TempN0de-RightSibling = Chi1d;
+Chapter 04 • 트리
+153

@@ -1,0 +1,27 @@
+if (arr.size() 〉 1)
+autO mid = size-t(arr.size() / 2);
+aut0 left_half = merge-sort(std::vector〈T>(arr.begin(), arr.begin() + mid));
+aut0 right_half = merge-sort(std: :vector<T>(arr.begin() + mid, arr.end()));
+return merge〈T>(Ieft-haIf, right_half);
+return arr;
+6. 마지막으로 실제 테스트를 수행하는 함수를 작성합니다.
+VOid run linear select_test()
+std::vector<int〉 51 {45, 1, 3, 1, 2, 3, 45, 5, 1, 2, 44, 5, 가;
+std::cout 〈〈 "입력 벡터:" 〈〈 std::endl;
+print—vector<int>( SI ) ;
+std::cout 〈〈 "정렬된 벡터:" 〈〈 std::endl;
+print_vector〈int>(merge_sort〈int>( 51 ) ) ;
+std::cout 〈〈 |3번째 원소: " 〈〈 *linear-time-select<int>(S1.begin(), S1.end()
+3) 〈〈 std::endl;
+"5번째 원소: " 〈〈 *linear-time-select<int>(S1.begin(), S1.end()
+std: :cout 〈〈
+5) 〈〈 std::endl;
+std::cout 〈〈 "11번째 원소: " 〈〈 *linear—time select<int>(SI.begin(), S1.end()
+11) 〈〈 std::endl,
+int main()
+run_linear select_test();
+return 0;
+7. 지금까지 작성한 프로그램을 빌드하여 실행하면 다음과 같은 출력을 확인할 수 있습니다.
+입력 벡터:
+451 31 23455124457
+187

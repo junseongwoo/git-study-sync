@@ -1,0 +1,29 @@
+RBT RebuiIdAfterRemove( ) 함수는 노드를 삭제한 후, 그것도 삭제한 노드가 검은색일 때만
+호출된다고 했지요? 다음은 BST RemoveNode() 함수를 개선한 RBT-RemoveNode( ) 함
+수입니다. BST RemoveNode ( ) 함수와 달리 재귀 호출을 사우하지 않습니다. 노-드를 찾는 일은
+RBT SearchNode() 함수에게 위임하고, RBT SearchNode()가 찾아낸 노드(RBTNode 구조
+체)는 부모 노드를 갖고 있기 때문에 부모 노드의 포인터를 매개 변수로 받지 않는다는 것 또한 다
+릅니다. 사실 이러한 차이는 별로 중요하지 않습니다. 여기까지는 둘 다 똑같은 일을 하고 있기 때문
+입니다. 중요한 차이는 무너진 레드 블랙 트리의 규칙을 복원하는 RBT RebuildAfterRemove( )
+를 호출한다는 사실에 있습니다.
+RBTNode* RBT RemoveNode( RBTNode** ROOt, ElementType Data )
+RBTNode* Removed
+= NULL;
+RBTNode* Successor = NULL;
+= RBT_SearchNode( (*Root), Data );
+RBTNode* Target
+if ( Target == NULL )
+return NULL;
+if ( Target->Left == Ni1 Target-Right == Ni1 )
+Removed = Target;
+else
+Removed = RBT_SearchMinNode( Target-Right );
+Target->Data = Removed->Data,
+if ( Removed->Left != NiI )
+Successor = Removed->Left;
+else
+Successor = Removed-Right;
+Successor->Parent = Rernoved-Parent,
+if ( Removed-Parent == NULL )
+(*Root) = Successor.
+• 탐책 285

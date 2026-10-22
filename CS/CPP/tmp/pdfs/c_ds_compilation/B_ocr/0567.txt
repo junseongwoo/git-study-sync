@@ -1,0 +1,89 @@
+119
+size-t TabIeSize • sizeof( TabIe Data[LEN-XI[LEN-YI + 1 ) •
+120
+ResuIt • (char*)ma110c(TabIeSize);
+121
+æmset( Result, 0, TabIeSize );
+122
+123
+LCS-TraceBack(X, Y, LEN_X, LEN_Y, &Tab1e, ResuIt);
+124
+125
+printfcxn');
+126
+printf("LCS:\*s\" (Length:u)\n", Resu1t, Length);
+127
+128
+129
+return 0;
+돈 실행 결과
+믈 0 R 6 E N
+1 1
+1 1 2 2 2 2 2 2
+1 1 2 2 2 2 2 2
+0 1
+12 2 34 5 5 5 6 6
+1 2 2 3 4 5 5 5 6 6
+1 2 2 345 5 566
+1 2 2 3 4 5 6 6 6 6
+0 1
+1 2 2 3 4 5 6 6 6 7
+6 0 1
+0 0 1
+0 0 1
+D 0 1
+믈 0 1
+0 0 1
+R 0 1
+N 0 1
+1 0 1
+N 0 1
+6 0 1
+6 U T E N
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1 1 1
+1
+1
+1
+1
+1 2 3 3 3 3 3 3 3
+1 2 3 4 4 4 4 4 4
+12 34 5 5 5 5 5
+1
+1
+1 1 1
+568
+LCS:"G MORN.- (Length:7)
+Part 03 • 알고리즘 설계 기법

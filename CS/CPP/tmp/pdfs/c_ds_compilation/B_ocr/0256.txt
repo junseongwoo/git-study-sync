@@ -1,0 +1,59 @@
+63.5 bsearch( ) 함수 예제 프로그램
+표준 라이브러리의 bsearch( ) 함수는 우리가 직접 구현한 BinarySearch( ) 함수를 완전히 대체
+합니다. 다음 코드를 통해 직접 느껴보기 바랍니다.
+06장/BinarySearch2/BinarySearch2.c
+01
+02
+03
+05
+06
+07
+08
+09
+10
+12
+13
+14
+17
+18
+19
+20
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+•include <stdlib h>
+#include <stdi이h〉
+#include "Point h"
+int ComparePoint( const void * eleml, const void * e1em2 )
+Point* eleml = (Point*) eleml;
+Point* e1em2 = (Point*) eIem2;
+if ( eleml-»oint 〉 elem2->point )
+return 1:
+else if ( eleml->point 〈 elem2->P0int )
+return -1;
+else
+return 0;
+int main( void )
+int Length = sizeof DataSet / sizeof DataSet[이;
+Point target;
+Point* found = NULL;
+// 구매포인트의 오름차순으로 정렬
+qsort( (void*)DataSet, Length, sizeof (Point), ComparePoint ),•
+// 구매포인트가 671.78점인 고객 찾기
+target id
+target point
+=671.78,
+found = bsearch( •
+BnarySearch() 함수 대신 bsearch( )를 호출畢|다
+(void*)&target,
+Chapter % • 탐책
+249

@@ -1,0 +1,67 @@
+067
+068
+069
+070
+071
+072
+073
+074
+075
+076
+077
+078
+079
+080
+081
+082
+083
+084
+085
+086
+087
+088
+089
+090
+091
+092
+093
+094
+095
+096
+097
+098
+099
+100
+101
+102
+103
+104
+105
+106
+else
+Node* Temp Remove;
+if ( Remove-PrevNode != NULL )
+Remove->PrevNode->NextNode
+if ( Remove->NextNode != NULL )
+Remove->NextNode->PrevNode
+Remove-PrevNode = NULL;
+Remove->NextNode
+= NULL;
+// 노드 탐색
+Temp—>NextNode,
+Temp-PrevNode,
+Node* DLL GetNodeAt( Node* Head, int Location )
+Node* Current = Head;
+while ( Current != NULL (--Location) 〉= 0)
+Current = Current->NextNode,
+return Current;
+노드 개수 세기
+int DLL GetNodeCount( Node* Head )
+unsigned int Count = 0:
+Node*
+Current = Head,
+while ( Current != NULL )
+Current = Current->NextNode,
+Count++;
+Chapter 01 • 리스트
+53

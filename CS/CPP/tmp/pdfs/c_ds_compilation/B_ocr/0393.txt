@@ -1,0 +1,64 @@
+28
+29
+30
+32
+33
+35
+36
+37
+38
+39
+41
+42
+43
+44
+45
+46
+47
+48
+typedef struct tagGraph
+Vertex* Vertices;
+int
+VertexCount;
+} Graph;
+Graph* CreateGraph( ):
+VOid DestroyGraph( Graph* 6 );
+Vertex* CreateVertex( Data ):
+VOid
+Edge*
+VOid
+VOid
+VOid
+VOid
+ændif
+DestroyVertex( Vertex* V )•,
+CreateEdge( Vertex* From, Vertex* Target, int Weight );
+DestroyEdge( Edge* E
+AddVertex( Graph* 6, Vertex* V ):
+AddEdge( Vertex* V, Edge* E ):
+PrintGraph ( Graph* G );
+09장/Graph/Graph. (
+001
+002
+003
+004
+005
+006
+007
+008
+009
+010
+011
+012
+013
+014
+#include "Graph.h"
+Graph* CreateGraph()
+Graph* graph = (Graph*)malloc( sizeof( Gra하1 ) );
+graph-〉Vertices = NULL;
+graph-〉VertexCount = 0;
+return graph;
+void DestroyGraph( Graph* 6 )
+while ( G->Vertices 1= NULL )
+Chapter • 그래프
+389

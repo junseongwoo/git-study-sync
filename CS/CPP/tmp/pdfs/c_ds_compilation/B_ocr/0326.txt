@@ -1,0 +1,54 @@
+06
+07
+09
+10
+12
+13
+14
+15
+16
+17
+18
+20
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+실행 결과
+S1ze : 4
+87 111
+HeapN0de MinN0de
+HEAP lnsert( H, 12 );
+HEAP lnsert( H, 87 );
+HEAP_Insert( H, 111 );
+HEAP lnsert( H, 34 );
+HEAP lnsert( H, 16 );
+HEAP-Insert( H, 75 );
+HEAP PrintNodes( H
+HEAP DeleteMin( H, uinNode );
+HEAP_PrintNodes( H );
+HEAP_De1eteMin( H, UinNode );
+HEAP PrintNodes( H );
+HEAP De1eteMin( H, VinNode
+HEAP PrintNodes( H );
+HEAP De1eteMin( H, mnNode ):
+HEAP PrintNodes( H );
+HEAP De1eteMin( H, uinNode );
+HEAP PrintNodes( H );
+HEAP DeleteMin( H, UinNode ):
+HEAP PrintNodes( H ):
+return 0;
+12 16 75 87 34 111
+16 34 75 87 111
+34 87 75 111
+75 87 111
+07 • 우선순위 류와 힘
+321

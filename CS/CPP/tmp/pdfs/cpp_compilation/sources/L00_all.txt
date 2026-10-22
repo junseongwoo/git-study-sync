@@ -1,0 +1,482 @@
+
+=== L00 | PDF p.1 | 印刷 p.None ===
+C++ 프로그래밍
+      김형기
+           hk.kim@jbnu.ac.kr
+
+=== L00 | PDF p.2 | 印刷 p.2 ===
+ Welcome!
+
+ 담당교수: 김형기
+
+   연구분야: 가상현실, 컴퓨터그래픽스, 3D 딥러닝
+
+   공학7호관625호, 063-270-3385
+
+     hk.kim@jbnu.ac.kr
+
+
+
+
+
+강의자료무단배포금지                                                                                                                2
+문의사항: hk.kim@jbnu.ac.kr  || diskhkme@gmail.com
+
+=== L00 | PDF p.3 | 印刷 p.3 ===
+학부연구생및대학원생모집
+
+ VCLab에서학부연구생및대학원생을모집합니다!
+       https://sites.google.com/view/vclab-jbnu
+   과제연구및업무보조+ 개인프로젝트
+   학술활동/인건비/교육지원
+   모집분야
+         VR/AR 비대칭협업환경구축기술연구
+                          • 360도카메라기반의Teleoperation이가능한원격협업환경구축기술연구
+                          • 게임엔진(Unity3D), 임베디드프로그래밍교육지원
+       AR 기반철도유지보수지원시스템구축기술연구
+                          • 공간컴퓨팅기반의유지보수지원시스템구축기술연구
+                          • 게임엔진, MS 홀로렌즈관련교육지원
+       3D 형상생성기술연구
+                          • 인공지능기술을활용한3D 모델생성기술연구
+                          • 3D 딥러닝관련교육지원
+
+
+강의자료무단배포금지                                                                                                                3
+문의사항: hk.kim@jbnu.ac.kr  || diskhkme@gmail.com
+
+=== L00 | PDF p.4 | 印刷 p.4 ===
+Course Introduction
+
+
+
+
+
+                                                                                                                          4
+
+=== L00 | PDF p.5 | 印刷 p.5 ===
+ Course introduction
+
+ C++ 프로그래밍
+
+    C 언어기초이수학생을대상으로함
+
+   메모리레이아웃과명령어에따른메모리의변화이해초반부주요목표
+
+   객체지향프로그래밍기법의이해중/후반부주요목표
+
+   실습을통한구체적인이해
+
+        Modern C++을기준으로한기능이해
+
+
+ 이강의의중요성
+
+   자료구조/ JAVA프로그래밍/ 윈도우즈프로그래밍/ 알고리즘/ 컴퓨터그래픽스등강의의기반
+
+   제대로이해하면학교생활이편하고재미있어집니다.
+
+
+강의자료무단배포금지                                                                                                                5
+문의사항: hk.kim@jbnu.ac.kr  || diskhkme@gmail.com
+
+=== L00 | PDF p.6 | 印刷 p.6 ===
+ Course introduction
+
+ 프로그래밍이어려우신가요?
+
+   (1학년수준에서) 코딩이어렵다고하시는분들을분석해본결과…
+
+   가장많이보이는유형은아래와같았습니다.
+
+    들을때는이해가되는것같은데직접해보려고하면안돼요ㅜㅜ
+
+     예제랑비슷하게코드를작성했는데제가생각한것과다르게동작해요ㅜㅜ
+
+   원인은?
+
+     명령문이어떤일을하는지정확히모르고외워서, 또는느낌적으로(?)만이해했기때문
+
+      즉, 실제로(메모리에서) 발생하는일을정확히모르는상태에서모호하게사용하기때문!
+
+
+
+
+
+강의자료무단배포금지                                                                                                                6
+문의사항: hk.kim@jbnu.ac.kr  || diskhkme@gmail.com
+
+=== L00 | PDF p.7 | 印刷 p.7 ===
+ Course introduction
+
+ 강의초반부의목표
+
+  메모리레이아웃과명령어에의한메모리변화이해+ 디버거를사용한관찰방법을배운다!
+
+   질문) 아래3번라인의명령문을실행하면어떻게될까요?
+
+
+
+
+
+      답변) a라는정수형변수를
+     10으로초기화하여생성한다.
+
+
+
+       현재
+
+
+강의자료무단배포금지                                                                                                                7
+문의사항: hk.kim@jbnu.ac.kr  || diskhkme@gmail.com
+
+=== L00 | PDF p.8 | 印刷 p.8 ===
+ Course introduction
+
+ 강의초반부의목표
+
+  메모리레이아웃과명령어에의한메모리변화이해+ 디버거를사용한관찰방법을배운다!
+
+   질문) 아래3번라인의명령문을실행하면어떻게될까요?
+
+                                                                                              Stack
+
+
+                              답변) 스택메모리의어떤
+                                        주소(ex, 0x1000) 에4                 main()       Int a     10    0x1000
+                      바이트메모리가할당되고      답변) a라는정수형변수를
+                         10이라는값이저장된다.     10으로초기화하여생성한다.
+                      해당주소에a라는이름이
+                                                      머리속에떠올라야하는그림                       붙는다
+
+                                            *”스택메모리”,“주소”,“바이트”
+                                 에겁먹을필요가전혀없습니다.
+       현재              4주차까지강의를들은후
+
+
+강의자료무단배포금지                                                                                                                8
+문의사항: hk.kim@jbnu.ac.kr  || diskhkme@gmail.com
+
+=== L00 | PDF p.9 | 印刷 p.9 ===
+ Keep in mind
+
+ 여러분이기억해야할세가지
+
+   강의를“구경”하지마세요!
+
+     피아노를치는법을본다고피아노를잘치게되는것이아닙니다. 본인이쳐봐야합니다.
+
+     제가타이핑하는내용을따라서모두타이핑하고, 수정하고, 실행해보세요.
+   스스로를너무믿지마세요!
+
+     제가강의에서“직접해보세요/따라해보세요“ 라고말하는내용은꼭해보세요.
+
+     “나는다이해했으니안해봐도됨ㅋ”, “딱보니까이렇게되겠네“하고넘어가면안됩니다.
+   질문하세요!
+
+     익명도좋습니다. 이해가안되는내용은바로바로질문하세요.
+
+      강의는100% 완벽할수없습니다. 저는여러분의머리속을볼수없습니다.
+
+     여러분의질문과그에대한답변까지완료되어야강의가100% 완성됩니다.
+
+
+강의자료무단배포금지                                                                                                                9
+문의사항: hk.kim@jbnu.ac.kr  || diskhkme@gmail.com
+
+=== L00 | PDF p.10 | 印刷 p.10 ===
+ Keep in mind
+
+ Long way to go
+
+       1. 기술의빠른변화
+
+    기본개념이해가없다면새로운내용을배울때처음부터다시시작해야함
+       2. 학점이냐실력이냐: 장기적으로필요한것은실력임
+
+     편안한강의를원하는분은다른분반으로…
+
+     학점은비율에맞추어부여하나, 쉽게높은점수를얻는것은제강의의목적과는다릅니다.
+       3. 재능을탄다? 대부분은오해입니다.
+
+     옆의친구가엄청난재능러같나요?
+                                             엄청난재능러인
+                                                         엄청난재능러인                       • 갈길과비교하면미미한차이                친구의실제위치                                                    친구의상상속위치                                                     (약6개월앞서있음)
+     강의에서배울내용을그친구는이미알고있다?
+                                        현재나의위치
+                       • 길어야고작한학기차이일뿐
+                                                             여러분이가야할곳
+                                                                (사실끝은정해져있지않지만…)
+
+강의자료무단배포금지                                                                                                               10
+문의사항: hk.kim@jbnu.ac.kr  || diskhkme@gmail.com
+
+=== L00 | PDF p.11 | 印刷 p.11 ===
+Why do we learn C++?
+
+ C++ 사용분야
+
+   아마존, 인텔, 구글, IBM, MS, Apple…
+
+   윈도우, 리눅스, 포토샵, DB, 게임엔진…
+
+   컴퓨터그래픽스, 머신러닝, …
+
+ 빠르고, 유연하며높은확장성보유
+
+ 절차적& 객체지향프로그래밍
+
+ 복잡하다어렵다Blue ocean (상대적으로…)
+
+
+
+
+
+강의자료무단배포금지                                                                                                               11
+문의사항: hk.kim@jbnu.ac.kr  || diskhkme@gmail.com
+
+=== L00 | PDF p.12 | 印刷 p.12 ===
+ C++ History
+
+ C
+
+    Ken Tompson and Dennis Ritchie, 1972
+
+   빠르게동작하고, 간단하며플랫폼독립적인코드작성을위해탄생
+
+   단점
+
+     대규모프로그램의작성및유지보수의어려움
+                                                                                                          Ken Tompson and Dennis Ritchie
+ C++
+
+     Bjarne Stroustrup, 1983
+
+   빠르게동작하고, 간단하며플랫폼독립적인코드작성여전히가능
+
+   + 고수준의프로그래밍기능(클래스, 다형성, 제네릭…)
+
+   단점
+     직접경험해봅시다!                                                                                        Bjarne Stroustrup
+
+
+강의자료무단배포금지                                                                                                               12
+문의사항: hk.kim@jbnu.ac.kr  || diskhkme@gmail.com
+
+=== L00 | PDF p.13 | 印刷 p.13 ===
+ IDE – Visual Studio Community 2022
+
+ 실습에사용할기준IDE
+
+    이전버전의Visual Studio를사용해도무방합니다.
+
+      https://visualstudio.microsoft.com/vs/community/
+
+
+
+
+
+*DevC,VSCode사용하면안되나요?
+
+정본인이원하시면사용해도되지만,
+ 디버깅툴을사용해자주설명드릴
+ 것이므로추천하지않습니다.
+변화에적응을하는것도능력
+강의자료무단배포금지DevC는실무에서사용안함                                                                                                13
+문의사항: hk.kim@jbnu.ac.kr  || diskhkme@gmail.com
+
+=== L00 | PDF p.14 | 印刷 p.14 ===
+ DevC 사용하는경우설정
+
+  ToolsCompiler Options 메뉴클릭
+
+ 아래사진과같이–std=c14 추가한뒤, OK 클릭
+
+     다른IDE(ex, VSCode) 에서GCC / G++ 컴파일러사용하는경우에도마찬가지로설정바람
+
+
+
+
+
+강의자료무단배포금지                                                                                                               14
+https://kkikkodev.tistory.com/451문의사항: hk.kim@jbnu.ac.kr  || diskhkme@gmail.com
+
+=== L00 | PDF p.15 | 印刷 p.15 ===
+Syllabus & Grading
+
+
+
+
+
+                                                                                                                         15
+
+=== L00 | PDF p.16 | 印刷 p.16 ===
+ Syllabus – up to midterm
+
+ 1주: 강의소개, C++ 프로그래밍개요와변수
+
+ 2주: 디버깅과C++ 기본문법
+
+ 3주: 함수
+
+ 4주: 포인터와참조자
+
+ 5주: 객체지향프로그래밍개요, 클래스와객체Part 1
+
+ 6주: 클래스와객체Part 2
+
+ 7주: 상속Part 1
+
+ 8주: 중간평가
+
+
+강의자료무단배포금지                                                                                                               16
+문의사항: hk.kim@jbnu.ac.kr  || diskhkme@gmail.com
+
+=== L00 | PDF p.17 | 印刷 p.17 ===
+ Syllabus – up to final
+
+ 9주: 상속Part 2
+
+ 10주: 다형성
+
+ 11주: 연산자오버로딩Part 1
+
+ 12주: 연산자오버로딩Part 2
+
+ 13주: 템플릿과Generic Programming
+
+ 14주: 표준템플릿라이브러리(STL)
+
+ 15주: 기말평가
+
+
+
+
+
+강의자료무단배포금지                                                                                                               17
+문의사항: hk.kim@jbnu.ac.kr  || diskhkme@gmail.com
+
+=== L00 | PDF p.18 | 印刷 p.18 ===
+How to ask a question?
+
+ 나쁜질문
+
+   “비주얼스튜디오설치하는데오류가나요ㅜㅜ”
+   “상속이잘이해가안돼요…”
+
+ 좋은질문
+
+   답변자가추가적인질문을하지않도록최대한상세히(스크린샷등)
+  문제를해결하기위해시도해본방법들은모두설명
+    중요!! 구글링해보기전에는절대질문하지말것!
+
+ 좋은질문하는방법
+
+    문서를못쓰면주니어(https://www.youtube.com/watch?v=2yxUkrCvNa8)
+
+      https://ppt21.com/pb/pb.php?id=freedom&no=74476&page=29
+
+
+강의자료무단배포금지                                                                                                               18
+문의사항: hk.kim@jbnu.ac.kr  || diskhkme@gmail.com
+
+=== L00 | PDF p.19 | 印刷 p.19 ===
+Materials & Resources
+
+
+
+
+
+                                                                                                                         19
+
+=== L00 | PDF p.20 | 印刷 p.20 ===
+ Textbook & Resources
+
+ 윤성우의열혈C++ 프로그래밍(구매추천)
+
+  강의에서다루는내용수준과유사
+
+   강의순서는약간의차이가존재(이해에문제X)
+
+ The C++ Programming Language
+
+   번역본있음
+
+     Advanced
+
+
+  https://boycoding.tistory.com/
+
+ https://modoocode.com/
+
+
+강의자료무단배포금지                                                                                                               20
+문의사항: hk.kim@jbnu.ac.kr  || diskhkme@gmail.com
+
+=== L00 | PDF p.21 | 印刷 p.21 ===
+ Textbook & Resources
+
+ 홍정모교수님유튜브채널
+
+   따라하며배우는C++
+
+     https://www.youtube.com/channel/UCg6IlhycdYiK_nWB3spjIqA/playlists
+
+
+
+
+
+강의자료무단배포금지                                                                                                               21
+문의사항: hk.kim@jbnu.ac.kr  || diskhkme@gmail.com
+
+=== L00 | PDF p.22 | 印刷 p.22 ===
+ Textbook & Resources
+
+ The Cherno 유튜브채널
+
+    C++ series
+
+      https://www.youtube.com/watch?v=18c3MTX0PK0&list=PLlrATfBNZ98dudnM48yfGUldqGD0S4FFb
+
+
+
+
+
+강의자료무단배포금지                                                                                                               22
+문의사항: hk.kim@jbnu.ac.kr  || diskhkme@gmail.com
+
+=== L00 | PDF p.23 | 印刷 p.23 ===
+ Textbook & Resources
+
+ 제이전강의영상
+
+      https://youtube.com/playlist?list=PLMcUoebWMS1nzhlx-NbD4KBGEP1UCUDF_
+
+
+
+
+
+강의자료무단배포금지                                                                                                               23
+문의사항: hk.kim@jbnu.ac.kr  || diskhkme@gmail.com
+
+=== L00 | PDF p.24 | 印刷 p.24 ===
+ Recommendation
+
+ 강의중
+
+   강의에서는이해에집중! 중간중간꼭따라서타이핑해볼것!
+  복습시필기없이이해가어려울것같은부분만필기
+   코드를집중해서이해
+
+ 복습
+
+  각섹션끝
+   강의끝
+  다음강의하루전
+  다음강의시작전
+   8번복습90% 기억!
+
+
+
+강의자료무단배포금지                                                                                                               24
+문의사항: hk.kim@jbnu.ac.kr  || diskhkme@gmail.com

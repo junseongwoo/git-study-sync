@@ -1,0 +1,29 @@
+새로운 정점 u가 S에 추가되면. S에 있지 않은 다른 정심들의 distanceåk을 수성한다. 새
+로 추가된 정점 u를 기쳐서 정점까지 가는 기리와 기존의 기리를 비교하여 디 작은 거리로
+distance{k을 수정한다. 즉 다음과 같은 수식을 이용한다.
+distance[w]- min(distance(w] ,distance[u]+weight[u] [미)
+새롭
+추가된
+닙 distance[w]:min(distance(wl, [미)
+4
+weight[u][w]
+, distance[w]
+di [u
+시작 노드
+[그림 11-11] 최단 경로 알고리즘에서의 distance값 갱신
+이상과 같은 최단 거리 알고리즘을 의사 코-드로 정리하면 다음과 같다.
+알고리즘 11.6 최단거리 알고리즘
+// 입력: 가중치 그래프 G, 가중치는 음수가 아님.
+// 출력: distance 배열, distance[u]는 v에서 피지의 최단 거리이다.
+shortest—path(G, v) :
+Sé{v}
+for 각 정점 wGG do
+distance[w]ewei ght[v] [미 ;
+while 모든 정점이 S에 포함되지 않으면 do
+*집합 S에 속하지 않는 정점 중에서 최소 distance 정점;
+S+SU {u}
+for u에 인접하고 S에 있는 각 정점 z do
+if distance[ul+weightCul[zJ 〈 distance[z]
+then distance[z]+distance[u]+weight[u] [기 ;
+CHAPTER 11 그래프 ||
+417

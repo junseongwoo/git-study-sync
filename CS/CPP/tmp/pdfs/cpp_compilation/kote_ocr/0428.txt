@@ -1,0 +1,26 @@
+head = new node {NULL, NULL, NULL};
+head-〉next = head;
+head-〉prev = head;
+size_t size() const
+return n;
+// 모두 NULL로 구성된 더미 노드
+첫 번째 노드와 마지막 노드 사이에 더미(dummy) 노드가 필요한 이유는 나중에 반복자를 사
+용할 때 설명하겠습니다.
+3. insert( )와 erase() 함수를 작성합니다. 이 함수들은 삽입 또는 삭제할 인자를 하나 받습니다.
+VOid insert(const T& value)
+node_ptr newN0de = new node {new T(value), NULL, NULL};
+autO dummy = head-〉prev;
+dummy-〉next = newNode,
+newNode-〉prev = dummy;
+if (head == dummy)
+dummy—〉prev = newNode;
+newNode—〉next = dummy;
+head = newNode;
+return;
+newNode-〉next = head;
+head-〉prev = newNode,
+head = newNode,
+void erase(const T& value)
+autO cur = head, dummy = head¯〉prev;
+while (cur != dummy)
+if (*(cur->data) == value)

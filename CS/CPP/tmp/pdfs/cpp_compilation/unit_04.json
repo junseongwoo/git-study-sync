@@ -1,0 +1,1251 @@
+{
+  "unit": 4,
+  "title": "상속·다형성",
+  "part": "C++",
+  "scope": [
+    {
+      "source": "B",
+      "start": 275,
+      "end": 344
+    },
+    {
+      "source": "L06",
+      "start": 1,
+      "end": 53
+    },
+    {
+      "source": "L07",
+      "start": 1,
+      "end": 47
+    }
+  ],
+  "learning": [
+    {
+      "text": "상속·유도 클래스·protected·생성자와 소멸자·기본 클래스 생성자와 멤버함수의 관계를 다룬다.",
+      "refs": [
+        {
+          "source": "L06",
+          "section": "Inheritance",
+          "pages": [
+            8
+          ]
+        }
+      ],
+      "evidence": "상속의정의 / 유도클래스 / protected / 생성자와소멸자 / 기본클래스의생성자 / 멤버함수"
+    },
+    {
+      "text": "다형성·동적 바인딩·가상함수·override/final·순수가상함수·추상클래스·인터페이스를 다룬다.",
+      "refs": [
+        {
+          "source": "L07",
+          "section": "Polymorphism",
+          "pages": [
+            4
+          ]
+        }
+      ],
+      "evidence": "다형성과동적바인딩 / 가상함수 / override/final / 추상클래스 / 인터페이스"
+    }
+  ],
+  "concepts": [
+    {
+      "title": "상속과 클래스 관계",
+      "items": [
+        {
+          "text": "상속은 기본 클래스를 기반으로 새 클래스를 만드는 기능이다.",
+          "refs": [
+            {
+              "source": "L06",
+              "section": "(Summary) Inheritance",
+              "pages": [
+                53
+              ]
+            }
+          ],
+          "evidence": "기본클래스를기반으로새클래스만드는기능"
+        },
+        {
+          "text": "기본 클래스(base class/parent class/super class)는 상속의 대상이 되는 클래스이다.",
+          "refs": [
+            {
+              "source": "L06",
+              "section": "Terminology",
+              "pages": [
+                16
+              ]
+            }
+          ],
+          "evidence": "상속의대상이되는클래스"
+        },
+        {
+          "text": "유도 클래스(derived class/child class/sub class)는 기본 클래스로부터 생성되며 데이터와 행동을 상속받는 클래스이다.",
+          "refs": [
+            {
+              "source": "L06",
+              "section": "Terminology",
+              "pages": [
+                16
+              ]
+            }
+          ],
+          "evidence": "기본클래스로부터생성 / 데이터와행동을기본클래스로부터상속"
+        },
+        {
+          "text": "Manager는 Employee라는 is-a 관계이고, EmployeeList가 Employee를 포함하는 관계는 has-a이다.",
+          "refs": [
+            {
+              "source": "B",
+              "section": "7장·가상 함수와 다형성·is-a와 has-a",
+              "pages": [
+                303,
+                305
+              ]
+            }
+          ],
+          "evidence": "Manager is a Employee / EmployeeList 는Employee 들과has - a 관계"
+        },
+        {
+          "text": "protected 멤버는 기본·유도 클래스 내부에서 접근 가능하지만 그 객체를 통한 외부 접근은 불가능하며, private은 유도 클래스에서 직접 접근할 수 없다.",
+          "refs": [
+            {
+              "source": "L06",
+              "section": "Protected Member",
+              "pages": [
+                23
+              ]
+            }
+          ],
+          "evidence": "기본클래스에서접근가능 / 유도클래스에서접근가능 / 객체로부터는접근불가능 / Private은유도클래스에서접근이불가능"
+        }
+      ]
+    },
+    {
+      "title": "상속에서의 생성·복사·소멸",
+      "items": [
+        {
+          "text": "유도 클래스 객체 생성 시 기본 클래스 생성자가 먼저 호출되고 유도 클래스 생성자가 뒤에 호출된다.",
+          "refs": [
+            {
+              "source": "L06",
+              "section": "Constructors and Destructors",
+              "pages": [
+                27
+              ]
+            }
+          ],
+          "evidence": "먼저기본클래스의생성자 / 그이후유도클래스의생성자"
+        },
+        {
+          "text": "소멸자는 유도 클래스, 기본 클래스 순서로 호출되어 생성자와 반대 순서이다.",
+          "refs": [
+            {
+              "source": "L06",
+              "section": "Constructors and Destructors",
+              "pages": [
+                31
+              ]
+            }
+          ],
+          "evidence": "먼저유도클래스의소멸자 / 그이후기본클래스의소멸자"
+        },
+        {
+          "text": "유도 클래스의 초기화 리스트에서 원하는 기본 클래스 생성자를 호출하며, 명시하지 않으면 기본 클래스의 인자 없는 생성자가 호출된다.",
+          "refs": [
+            {
+              "source": "L06",
+              "section": "Passing Arguments to Base Class Constructor",
+              "pages": [
+                38
+              ]
+            }
+          ],
+          "evidence": "초기화리스트를활용 / 기본생성자(인자가없는생성자)가호출"
+        },
+        {
+          "text": "사용자가 유도 클래스의 복사 생성자를 구현한 경우 기본 클래스의 복사 생성자를 명시적으로 호출해야 하며, 명시하지 않으면 기본 클래스의 인자 없는 생성자가 호출된다.",
+          "refs": [
+            {
+              "source": "L06",
+              "section": "Copy Constructor",
+              "pages": [
+                45
+              ]
+            }
+          ],
+          "evidence": "명시하지않으면기본클래스의인자를받지않는생성자 / 복사/이동생성자를명시적으로호출"
+        }
+      ]
+    },
+    {
+      "title": "정적·동적 바인딩과 다형성",
+      "items": [
+        {
+          "text": "정적 바인딩은 컴파일 시 타입을 기준으로 호출 함수를 결정한다.",
+          "refs": [
+            {
+              "source": "L07",
+              "section": "Polymorphism",
+              "pages": [
+                13
+              ]
+            }
+          ],
+          "evidence": "정적바인딩은컴파일시타입을기준으로호출함수를결정"
+        },
+        {
+          "text": "동적 바인딩은 런타임에 실제 메모리에 저장된 타입을 기준으로 호출 함수를 결정한다.",
+          "refs": [
+            {
+              "source": "L07",
+              "section": "Polymorphism",
+              "pages": [
+                13
+              ]
+            }
+          ],
+          "evidence": "런타임시실제메모리에저장된타입을기준으로호출함수를결정"
+        },
+        {
+          "text": "다형성(polymorphism)은 하나의 메소드를 호출했음에도 여러 가지 다른 작업을 하는 것이다.",
+          "refs": [
+            {
+              "source": "B",
+              "section": "7장·가상 함수와 다형성",
+              "pages": [
+                326
+              ]
+            }
+          ],
+          "evidence": "하나의메소드를호출했음에도불구하고여러가지다른작업들을하는것"
+        },
+        {
+          "text": "C++의 런타임 다형성 구현에는 상속, 기본 클래스 포인터 또는 참조자, 가상함수가 필요하다.",
+          "refs": [
+            {
+              "source": "L07",
+              "section": "Polymorphism",
+              "pages": [
+                6
+              ]
+            }
+          ],
+          "evidence": "상속 / 기본클래스포인터또는참조자 / 가상함수"
+        },
+        {
+          "text": "재정의로 가려진 기본 클래스의 멤버함수는 Base::Member() 형식으로 호출할 수 있다.",
+          "refs": [
+            {
+              "source": "L06",
+              "section": "Using Member Function of Base Class",
+              "pages": [
+                47
+              ]
+            }
+          ],
+          "evidence": "Base::Member()와같은형식으로호출가능"
+        }
+      ]
+    },
+    {
+      "title": "virtual·override·final",
+      "items": [
+        {
+          "text": "오버라이드할 기본 클래스의 함수 앞에 virtual을 붙이면 가상함수가 된다.",
+          "refs": [
+            {
+              "source": "L07",
+              "section": "Virtual Function",
+              "pages": [
+                15
+              ]
+            }
+          ],
+          "evidence": "기본클래스의함수 / virtual로선언 / 가상함수"
+        },
+        {
+          "text": "유도 클래스를 기본 클래스 포인터로 해제하는 강의 예제는 기본 소멸자를 가상으로 선언하면 유도·기본 소멸자가 모두 호출된다.",
+          "refs": [
+            {
+              "source": "L07",
+              "section": "Virtual Destructor",
+              "pages": [
+                18
+              ]
+            }
+          ],
+          "evidence": "Entity의소멸자를가상으로선언 / Player의소멸자와Entity의소멸자가모두호출"
+        },
+        {
+          "text": "override 지정자는 오버라이딩 의도를 표시하고, 함수 원형이 맞지 않는 실수를 컴파일 단계에서 찾도록 한다.",
+          "refs": [
+            {
+              "source": "L07",
+              "section": "override Specifier",
+              "pages": [
+                25,
+                28
+              ]
+            }
+          ],
+          "evidence": "오버라이딩시실수를방지 / 함수원형이일치하지않는다는컴파일에러"
+        },
+        {
+          "text": "클래스의 final은 추가 상속을 막고, 멤버함수의 final은 유도 클래스에서 가상함수를 오버라이드하지 못하게 한다.",
+          "refs": [
+            {
+              "source": "L07",
+              "section": "final Specifier",
+              "pages": [
+                29
+              ]
+            }
+          ],
+          "evidence": "클래스를더이상상속하지못하도록 / 가상함수를오버라이드하지못하도록"
+        }
+      ]
+    },
+    {
+      "title": "추상 클래스·순수가상함수·인터페이스",
+      "items": [
+        {
+          "text": "추상 클래스(Abstract Class)는 객체를 생성할 수 없으며 상속 계층에서 기본 클래스로 사용되는 클래스이다.",
+          "refs": [
+            {
+              "source": "L07",
+              "section": "Pure Virtual Functions and Abstract Classes",
+              "pages": [
+                33
+              ]
+            }
+          ],
+          "evidence": "객체를생성할수없는클래스 / 기본클래스로사용"
+        },
+        {
+          "text": "가상 멤버함수의 선언 뒤에 =0을 붙이면 순수가상함수가 되며, 이를 하나 이상 갖는 클래스는 추상 클래스이다.",
+          "refs": [
+            {
+              "source": "L07",
+              "section": "Pure Virtual Functions and Abstract Classes",
+              "pages": [
+                34
+              ]
+            }
+          ],
+          "evidence": "하나이상의“순수가상함수” / 선언뒤에“=0”"
+        },
+        {
+          "text": "순수가상함수를 오버라이드하지 않는 유도 클래스도 추상 클래스로 간주된다.",
+          "refs": [
+            {
+              "source": "L07",
+              "section": "Pure Virtual Functions and Abstract Classes",
+              "pages": [
+                35
+              ]
+            }
+          ],
+          "evidence": "오버라이드하지않는경우, 유도클래스도추상클래스"
+        },
+        {
+          "text": "추상 클래스 자체의 객체를 만들 수 없어도 그 포인터·참조자로 오버라이드된 함수를 동적 바인딩할 수 있다.",
+          "refs": [
+            {
+              "source": "L07",
+              "section": "Pure Virtual Functions and Abstract Classes",
+              "pages": [
+                38
+              ]
+            }
+          ],
+          "evidence": "추상(기본) 클래스의포인터/참조자를사용해 / 동적바인딩"
+        },
+        {
+          "text": "강의는 순수가상함수만 가진 추상 클래스를 인터페이스 클래스라고 부른다.",
+          "refs": [
+            {
+              "source": "L07",
+              "section": "Abstract Classes and Interface",
+              "pages": [
+                40
+              ]
+            }
+          ],
+          "evidence": "순수가상함수”만”을가진추상클래스를인터페이스클래스"
+        }
+      ]
+    },
+    {
+      "title": "가상함수 테이블과 캐스팅",
+      "items": [
+        {
+          "text": "가상함수 테이블(vtable)은 함수 이름과 실제로 대응하는 함수를 테이블로 저장한다.",
+          "refs": [
+            {
+              "source": "B",
+              "section": "7장·상속에 관련된 잡다한 내용들·가상 함수의 구현 원리",
+              "pages": [
+                332
+              ]
+            }
+          ],
+          "evidence": "함수의이름 / 실제로어떤함수 / 테이블로저장"
+        },
+        {
+          "text": "강의의 구현 설명에서는 객체가 호출 정보를 가진 vtable을 가리키는 포인터(vptr)를 포함한다.",
+          "refs": [
+            {
+              "source": "L07",
+              "section": "vtable",
+              "pages": [
+                44
+              ]
+            }
+          ],
+          "evidence": "가상함수테이블(vtable)을가리키는포인터(vptr)를객체에포함"
+        },
+        {
+          "text": "책은 작동이 보장되지 않는 강제 다운캐스팅을 권장하지 않으며, dynamic_cast를 상속 관계의 포인터 사이 캐스팅 수단으로 소개한다.",
+          "refs": [
+            {
+              "source": "B",
+              "section": "7장·가상 함수와 다형성·dyanmic_cast",
+              "pages": [
+                312
+              ]
+            }
+          ],
+          "evidence": "다운캐스팅은작동이보장되지않는한 / dynamic_cast / 상속관계에있는두포인터들간"
+        }
+      ]
+    },
+    {
+      "title": "다중 상속·이름 충돌·가상 상속",
+      "items": [
+        {
+          "text": "다중 상속(multiple inheritance)은 한 클래스가 여러 클래스를 상속받는 것이다.",
+          "refs": [
+            {
+              "source": "B",
+              "section": "7장·상속에 관련된 잡다한 내용들·다중 상속",
+              "pages": [
+                337
+              ]
+            }
+          ],
+          "evidence": "한클래스가다른여러개의클래스들을상속 / 다중상속"
+        },
+        {
+          "text": "다중 상속에서 기반 클래스 생성자의 호출 순서는 상속하는 순서에 따른다.",
+          "refs": [
+            {
+              "source": "B",
+              "section": "7장·상속에 관련된 잡다한 내용들·다중 상속",
+              "pages": [
+                339
+              ]
+            }
+          ],
+          "evidence": "오직상속하는순서에만좌우"
+        },
+        {
+          "text": "두 기반 클래스에 같은 이름의 멤버가 있으면 파생 객체에서 그 이름으로 접근할 때 모호성 오류가 발생할 수 있다.",
+          "refs": [
+            {
+              "source": "B",
+              "section": "7장·상속에 관련된 잡다한 내용들·다중 상속 시 주의할 점",
+              "pages": [
+                340
+              ]
+            }
+          ],
+          "evidence": "B 의a 인지, A 의a 인지구분할수없다는오류"
+        },
+        {
+          "text": "다이아몬드 상속은 상속되는 두 클래스가 공통 기반 클래스를 포함하여 그 내용이 중복되는 형태이다.",
+          "refs": [
+            {
+              "source": "B",
+              "section": "7장·상속에 관련된 잡다한 내용들·다중 상속 시 주의할 점",
+              "pages": [
+                341
+              ]
+            }
+          ],
+          "evidence": "공통의베이스클래스를포함 / Human 의모든내용이중복"
+        },
+        {
+          "text": "공통 기반 Human을 virtual로 상속하면 Me에 Human을 한 번만 포함하도록 할 수 있으며 Me 생성자에서 Human 생성자도 호출해야 한다.",
+          "refs": [
+            {
+              "source": "B",
+              "section": "7장·상속에 관련된 잡다한 내용들·가상 상속",
+              "pages": [
+                342
+              ]
+            }
+          ],
+          "evidence": "Human 을virtual 로상속 / Human 을한번만포함 / Human 의생성자또한호출"
+        }
+      ]
+    },
+    {
+      "title": "책의 사원 관리와 설계 방식 비교",
+      "items": [
+        {
+          "text": "사원 관리 예제는 Employee와 Manager를 Employee*로 관리하고 calculate_pay와 print_info를 가상함수로 만들어 실제 종류에 맞게 호출한다.",
+          "refs": [
+            {
+              "source": "B",
+              "section": "7장·가상 함수와 다형성·Employee 문제",
+              "pages": [
+                323,
+                324,
+                326
+              ]
+            }
+          ],
+          "evidence": "calculate_pay 함수와print_info 함수앞에virtual / Employee* / Manager 면Manager 의함수"
+        },
+        {
+          "text": "차량 예제의 브리지 패턴은 하나의 범주를 Engine* 같은 멤버 포인터로 두고, 중첩된 일반화는 한 계층 아래 다른 계층의 파생 클래스를 둔다.",
+          "refs": [
+            {
+              "source": "B",
+              "section": "7장·다중 상속은 언제 사용해야 할까?",
+              "pages": [
+                343
+              ]
+            }
+          ],
+          "evidence": "한가지카테고리를아예멤버포인터 / 한가지계층을먼저골라서 / 다른계층에해당하는파생클래스"
+        },
+        {
+          "text": "같은 차량 예제의 다중 상속 방식은 환경과 동력원에 해당하는 클래스를 함께 상속받는다.",
+          "refs": [
+            {
+              "source": "B",
+              "section": "7장·다중 상속은 언제 사용해야 할까?",
+              "pages": [
+                343,
+                344
+              ]
+            }
+          ],
+          "evidence": "동력원과환경에해당하는클래스를상속 / GasPoweredEngine 과LandVehicle"
+        },
+        {
+          "text": "책은 브리지 패턴·중첩된 일반화·다중 상속 중 절대적으로 우월한 방식은 없으며 상황에 맞게 고른다고 정리한다.",
+          "refs": [
+            {
+              "source": "B",
+              "section": "7장·다중 상속은 언제 사용해야 할까?",
+              "pages": [
+                344
+              ]
+            }
+          ],
+          "evidence": "절대적으로우월한방식은없 / 상황에맞게최선의방식을"
+        }
+      ]
+    }
+  ],
+  "procedures": [
+    {
+      "title": "유도 클래스의 생성과 소멸 순서",
+      "steps": [
+        {
+          "text": "생성 시 기본 클래스 생성자를 먼저 호출한다.",
+          "refs": [
+            {
+              "source": "L06",
+              "section": "Constructors and Destructors",
+              "pages": [
+                27
+              ]
+            }
+          ],
+          "evidence": "먼저기본클래스의생성자가호출"
+        },
+        {
+          "text": "이후 유도 클래스 생성자를 호출한다.",
+          "refs": [
+            {
+              "source": "L06",
+              "section": "Constructors and Destructors",
+              "pages": [
+                27
+              ]
+            }
+          ],
+          "evidence": "그이후유도클래스의생성자"
+        },
+        {
+          "text": "소멸 시에는 유도 클래스 소멸자를 먼저 호출한다.",
+          "refs": [
+            {
+              "source": "L06",
+              "section": "Constructors and Destructors",
+              "pages": [
+                31
+              ]
+            }
+          ],
+          "evidence": "먼저유도클래스의소멸자가호출"
+        },
+        {
+          "text": "이후 기본 클래스 소멸자를 호출한다.",
+          "refs": [
+            {
+              "source": "L06",
+              "section": "Constructors and Destructors",
+              "pages": [
+                31
+              ]
+            }
+          ],
+          "evidence": "그이후기본클래스의소멸자"
+        }
+      ]
+    },
+    {
+      "title": "가상함수 호출의 원문 설명 순서",
+      "steps": [
+        {
+          "text": "포인터의 기반 클래스에서 함수의 정의를 찾는다.",
+          "refs": [
+            {
+              "source": "B",
+              "section": "7장·가상 함수의 구현 원리",
+              "pages": [
+                333
+              ]
+            }
+          ],
+          "evidence": "func1() 의정의를Parent 클래스에서찾아"
+        },
+        {
+          "text": "가상함수이면 직접 실행하는 대신 가상함수 테이블에서 대응 함수를 선택한다.",
+          "refs": [
+            {
+              "source": "B",
+              "section": "7장·가상 함수의 구현 원리",
+              "pages": [
+                333
+              ]
+            }
+          ],
+          "evidence": "직접실행하는게아니라, 가상함수테이블에서"
+        },
+        {
+          "text": "실행 시 실제 객체의 가상함수 테이블을 참조하여 오버라이드된 함수를 호출한다.",
+          "refs": [
+            {
+              "source": "B",
+              "section": "7장·가상 함수의 구현 원리",
+              "pages": [
+                333,
+                334
+              ]
+            }
+          ],
+          "evidence": "Child 객체의가상함수테이블 / Child::func1() 을호출"
+        }
+      ]
+    }
+  ],
+  "syntax": [
+    {
+      "label": "순수가상함수와 가상 소멸자 - 원문 발췌",
+      "code": "class Animal {\n public:\n  Animal() {}\n  virtual ~Animal() {}\n  virtual void speak() = 0;\n};",
+      "refs": [
+        {
+          "source": "B",
+          "section": "7장·순수 가상 함수와 추상 클래스",
+          "pages": [
+            334
+          ]
+        }
+      ],
+      "evidence": "virtual ~Animal() {} / virtual void speak() = 0;",
+      "note": null
+    },
+    {
+      "label": "순수가상함수의 오버라이딩 - 원문 발췌",
+      "code": "class Dog : public Animal {\n public:\n  Dog() : Animal() {}\n  void speak() override { std::cout << \"왈왈\" << std::endl; }\n};",
+      "refs": [
+        {
+          "source": "B",
+          "section": "7장·순수 가상 함수와 추상 클래스",
+          "pages": [
+            334
+          ]
+        }
+      ],
+      "evidence": "class Dog : public Animal / void speak() override",
+      "note": null
+    }
+  ],
+  "formulas": [
+    {
+      "label": "차량 예제: 브리지 패턴의 클래스 수",
+      "expression": "N + M",
+      "refs": [
+        {
+          "source": "B",
+          "section": "7장·다중 상속은 언제 사용해야 할까?",
+          "pages": [
+            342,
+            343
+          ]
+        }
+      ],
+      "evidence": "총N + M 개의클래스만생성",
+      "note": "N: 차량이 작동하는 환경의 수, M: 동력원의 종류."
+    },
+    {
+      "label": "차량 예제: 중첩된 일반화·다중 상속의 조합",
+      "expression": "N × M",
+      "refs": [
+        {
+          "source": "B",
+          "section": "7장·다중 상속은 언제 사용해야 할까?",
+          "pages": [
+            343
+          ]
+        }
+      ],
+      "evidence": "최대N × M 가지의파생클래스 / 파생클래스들을최대N × M 개",
+      "note": "각 환경과 동력원의 모든 조합에 해당하는 파생 클래스의 최대 수."
+    }
+  ],
+  "comparisons": [
+    {
+      "title": "바인딩의 결정 시점과 기준",
+      "headers": [
+        "구분",
+        "시점",
+        "기준"
+      ],
+      "rows": [
+        [
+          {
+            "text": "정적 바인딩",
+            "refs": [
+              {
+                "source": "L07",
+                "section": "Polymorphism",
+                "pages": [
+                  13
+                ]
+              }
+            ],
+            "evidence": "정적바인딩"
+          },
+          {
+            "text": "컴파일 시",
+            "refs": [
+              {
+                "source": "L07",
+                "section": "Polymorphism",
+                "pages": [
+                  13
+                ]
+              }
+            ],
+            "evidence": "컴파일시"
+          },
+          {
+            "text": "타입을 기준으로 호출 함수를 결정한다.",
+            "refs": [
+              {
+                "source": "L07",
+                "section": "Polymorphism",
+                "pages": [
+                  13
+                ]
+              }
+            ],
+            "evidence": "타입을기준으로호출함수를결정"
+          }
+        ],
+        [
+          {
+            "text": "동적 바인딩",
+            "refs": [
+              {
+                "source": "L07",
+                "section": "Polymorphism",
+                "pages": [
+                  13
+                ]
+              }
+            ],
+            "evidence": "동적바인딩"
+          },
+          {
+            "text": "런타임",
+            "refs": [
+              {
+                "source": "L07",
+                "section": "Polymorphism",
+                "pages": [
+                  13
+                ]
+              }
+            ],
+            "evidence": "런타임시"
+          },
+          {
+            "text": "실제 메모리에 저장된 타입을 기준으로 결정한다.",
+            "refs": [
+              {
+                "source": "L07",
+                "section": "Polymorphism",
+                "pages": [
+                  13
+                ]
+              }
+            ],
+            "evidence": "실제메모리에저장된타입을기준"
+          }
+        ]
+      ]
+    }
+  ],
+  "terms": [
+    {
+      "term": "상속",
+      "definition": {
+        "text": "상속은 기본 클래스를 기반으로 새 클래스를 만드는 기능이다.",
+        "refs": [
+          {
+            "source": "L06",
+            "section": "(Summary) Inheritance",
+            "pages": [
+              53
+            ]
+          }
+        ],
+        "evidence": "기본클래스를기반으로새클래스만드는기능"
+      }
+    },
+    {
+      "term": "기본 클래스",
+      "definition": {
+        "text": "기본 클래스(base class/parent class/super class)는 상속의 대상이 되는 클래스이다.",
+        "refs": [
+          {
+            "source": "L06",
+            "section": "Terminology",
+            "pages": [
+              16
+            ]
+          }
+        ],
+        "evidence": "상속의대상이되는클래스"
+      }
+    },
+    {
+      "term": "유도 클래스",
+      "definition": {
+        "text": "유도 클래스(derived class/child class/sub class)는 기본 클래스로부터 생성되며 데이터와 행동을 상속받는 클래스이다.",
+        "refs": [
+          {
+            "source": "L06",
+            "section": "Terminology",
+            "pages": [
+              16
+            ]
+          }
+        ],
+        "evidence": "기본클래스로부터생성 / 데이터와행동을기본클래스로부터상속"
+      }
+    },
+    {
+      "term": "정적 바인딩",
+      "definition": {
+        "text": "정적 바인딩은 컴파일 시 타입을 기준으로 호출 함수를 결정한다.",
+        "refs": [
+          {
+            "source": "L07",
+            "section": "Polymorphism",
+            "pages": [
+              13
+            ]
+          }
+        ],
+        "evidence": "정적바인딩은컴파일시타입을기준으로호출함수를결정"
+      }
+    },
+    {
+      "term": "동적 바인딩",
+      "definition": {
+        "text": "동적 바인딩은 런타임에 실제 메모리에 저장된 타입을 기준으로 호출 함수를 결정한다.",
+        "refs": [
+          {
+            "source": "L07",
+            "section": "Polymorphism",
+            "pages": [
+              13
+            ]
+          }
+        ],
+        "evidence": "런타임시실제메모리에저장된타입을기준으로호출함수를결정"
+      }
+    },
+    {
+      "term": "다형성",
+      "definition": {
+        "text": "다형성(polymorphism)은 하나의 메소드를 호출했음에도 여러 가지 다른 작업을 하는 것이다.",
+        "refs": [
+          {
+            "source": "B",
+            "section": "7장·가상 함수와 다형성",
+            "pages": [
+              326
+            ]
+          }
+        ],
+        "evidence": "하나의메소드를호출했음에도불구하고여러가지다른작업들을하는것"
+      }
+    },
+    {
+      "term": "추상 클래스",
+      "definition": {
+        "text": "추상 클래스(Abstract Class)는 객체를 생성할 수 없으며 상속 계층에서 기본 클래스로 사용되는 클래스이다.",
+        "refs": [
+          {
+            "source": "L07",
+            "section": "Pure Virtual Functions and Abstract Classes",
+            "pages": [
+              33
+            ]
+          }
+        ],
+        "evidence": "객체를생성할수없는클래스 / 기본클래스로사용"
+      }
+    },
+    {
+      "term": "순수가상함수",
+      "definition": {
+        "text": "가상 멤버함수의 선언 뒤에 =0을 붙이면 순수가상함수가 되며, 이를 하나 이상 갖는 클래스는 추상 클래스이다.",
+        "refs": [
+          {
+            "source": "L07",
+            "section": "Pure Virtual Functions and Abstract Classes",
+            "pages": [
+              34
+            ]
+          }
+        ],
+        "evidence": "하나이상의“순수가상함수” / 선언뒤에“=0”"
+      }
+    },
+    {
+      "term": "다중 상속",
+      "definition": {
+        "text": "다중 상속(multiple inheritance)은 한 클래스가 여러 클래스를 상속받는 것이다.",
+        "refs": [
+          {
+            "source": "B",
+            "section": "7장·상속에 관련된 잡다한 내용들·다중 상속",
+            "pages": [
+              337
+            ]
+          }
+        ],
+        "evidence": "한클래스가다른여러개의클래스들을상속 / 다중상속"
+      }
+    }
+  ],
+  "summary_basis": "편집 요약 (상속 부분은 L06 슬라이드 53의 원문 Summary 기준)",
+  "summary": [
+    {
+      "text": "상속은 기본 클래스를 기반으로 새 클래스를 만들고, 유도 클래스의 초기화 리스트로 기본 클래스를 어떻게 생성할지 명시하는 기능이다.",
+      "refs": [
+        {
+          "source": "L06",
+          "section": "(Summary) Inheritance",
+          "pages": [
+            53
+          ]
+        }
+      ],
+      "evidence": "기본클래스를기반으로새클래스 / 초기화리스트를사용해명시"
+    },
+    {
+      "text": "동적 바인딩은 런타임에 실제 메모리에 저장된 타입을 기준으로 호출 함수를 결정한다.",
+      "refs": [
+        {
+          "source": "L07",
+          "section": "Polymorphism",
+          "pages": [
+            13
+          ]
+        }
+      ],
+      "evidence": "런타임시실제메모리에저장된타입을기준으로호출함수를결정"
+    },
+    {
+      "text": "가상 멤버함수의 선언 뒤에 =0을 붙이면 순수가상함수가 되며, 이를 하나 이상 갖는 클래스는 추상 클래스이다.",
+      "refs": [
+        {
+          "source": "L07",
+          "section": "Pure Virtual Functions and Abstract Classes",
+          "pages": [
+            34
+          ]
+        }
+      ],
+      "evidence": "하나이상의“순수가상함수” / 선언뒤에“=0”"
+    },
+    {
+      "text": "다중 상속은 이름 충돌과 기반 클래스 중복에 주의하며, 설계 방식은 상황에 맞게 선택한다.",
+      "refs": [
+        {
+          "source": "B",
+          "section": "7장·상속에 관련된 잡다한 내용들",
+          "pages": [
+            340,
+            341,
+            344
+          ]
+        }
+      ],
+      "evidence": "구분할수없다는오류 / 모든내용이중복 / 상황에맞게최선의방식"
+    }
+  ],
+  "review": [
+    {
+      "question": "유도 클래스 객체의 생성자와 소멸자는 어떤 순서로 호출되는가?",
+      "answer": {
+        "text": "생성은 기본-유도, 소멸은 유도-기본 순서이다.",
+        "refs": [
+          {
+            "source": "L06",
+            "section": "(Summary) Inheritance",
+            "pages": [
+              53
+            ]
+          }
+        ],
+        "evidence": "기본생성-유도생성/ 유도소멸-기본소멸순서"
+      }
+    },
+    {
+      "question": "정적 바인딩과 동적 바인딩은 호출 함수를 언제 결정하는가?",
+      "answer": {
+        "text": "정적 바인딩은 컴파일 시, 동적 바인딩은 런타임에 결정한다.",
+        "refs": [
+          {
+            "source": "L07",
+            "section": "Polymorphism",
+            "pages": [
+              13
+            ]
+          }
+        ],
+        "evidence": "정적바인딩은컴파일시 / 동적바인딩 / 런타임시"
+      }
+    },
+    {
+      "question": "순수가상함수를 오버라이드하지 않은 유도 클래스는 객체를 만들 수 있는가?",
+      "answer": {
+        "text": "그 유도 클래스도 추상 클래스로 간주되므로 객체를 생성할 수 없다.",
+        "refs": [
+          {
+            "source": "L07",
+            "section": "Pure Virtual Functions and Abstract Classes",
+            "pages": [
+              33,
+              35
+            ]
+          }
+        ],
+        "evidence": "객체를생성할수없는클래스 / 유도클래스도추상클래스"
+      }
+    },
+    {
+      "question": "다이아몬드 상속에서 Human의 중복 포함을 원문은 어떻게 해결하는가?",
+      "answer": {
+        "text": "HandsomeHuman과 SmartHuman이 Human을 virtual로 상속하도록 하여 Me에 Human을 한 번만 포함시킨다.",
+        "refs": [
+          {
+            "source": "B",
+            "section": "7장·상속에 관련된 잡다한 내용들·가상 상속",
+            "pages": [
+              342
+            ]
+          }
+        ],
+        "evidence": "public virtual Human / Human 을한번만포함"
+      }
+    }
+  ],
+  "cheat": {
+    "definitions": [
+      {
+        "term": "상속",
+        "definition": {
+          "text": "상속은 기본 클래스를 기반으로 새 클래스를 만드는 기능이다.",
+          "refs": [
+            {
+              "source": "L06",
+              "section": "(Summary) Inheritance",
+              "pages": [
+                53
+              ]
+            }
+          ],
+          "evidence": "기본클래스를기반으로새클래스만드는기능"
+        }
+      },
+      {
+        "term": "다형성",
+        "definition": {
+          "text": "다형성(polymorphism)은 하나의 메소드를 호출했음에도 여러 가지 다른 작업을 하는 것이다.",
+          "refs": [
+            {
+              "source": "B",
+              "section": "7장·가상 함수와 다형성",
+              "pages": [
+                326
+              ]
+            }
+          ],
+          "evidence": "하나의메소드를호출했음에도불구하고여러가지다른작업들을하는것"
+        }
+      },
+      {
+        "term": "추상 클래스",
+        "definition": {
+          "text": "추상 클래스(Abstract Class)는 객체를 생성할 수 없으며 상속 계층에서 기본 클래스로 사용되는 클래스이다.",
+          "refs": [
+            {
+              "source": "L07",
+              "section": "Pure Virtual Functions and Abstract Classes",
+              "pages": [
+                33
+              ]
+            }
+          ],
+          "evidence": "객체를생성할수없는클래스 / 기본클래스로사용"
+        }
+      }
+    ],
+    "comparison_title": "바인딩",
+    "comparison_headers": [
+      "구분",
+      "시점",
+      "기준"
+    ],
+    "comparison_rows": [
+      [
+        {
+          "text": "정적 바인딩",
+          "refs": [
+            {
+              "source": "L07",
+              "section": "Polymorphism",
+              "pages": [
+                13
+              ]
+            }
+          ],
+          "evidence": "정적바인딩"
+        },
+        {
+          "text": "컴파일 시",
+          "refs": [
+            {
+              "source": "L07",
+              "section": "Polymorphism",
+              "pages": [
+                13
+              ]
+            }
+          ],
+          "evidence": "컴파일시"
+        },
+        {
+          "text": "타입을 기준으로 호출 함수를 결정한다.",
+          "refs": [
+            {
+              "source": "L07",
+              "section": "Polymorphism",
+              "pages": [
+                13
+              ]
+            }
+          ],
+          "evidence": "타입을기준으로호출함수를결정"
+        }
+      ],
+      [
+        {
+          "text": "동적 바인딩",
+          "refs": [
+            {
+              "source": "L07",
+              "section": "Polymorphism",
+              "pages": [
+                13
+              ]
+            }
+          ],
+          "evidence": "동적바인딩"
+        },
+        {
+          "text": "런타임",
+          "refs": [
+            {
+              "source": "L07",
+              "section": "Polymorphism",
+              "pages": [
+                13
+              ]
+            }
+          ],
+          "evidence": "런타임시"
+        },
+        {
+          "text": "실제 메모리에 저장된 타입을 기준으로 결정한다.",
+          "refs": [
+            {
+              "source": "L07",
+              "section": "Polymorphism",
+              "pages": [
+                13
+              ]
+            }
+          ],
+          "evidence": "실제메모리에저장된타입을기준"
+        }
+      ]
+    ],
+    "formulas": [],
+    "syntax": []
+  },
+  "checked_images": [
+    {
+      "source": "B",
+      "pages": [
+        334,
+        339,
+        342,
+        343
+      ]
+    },
+    {
+      "source": "L07",
+      "pages": [
+        13
+      ]
+    }
+  ],
+  "editor_notes": [
+    "원문의 기본/유도 클래스와 기반/파생 클래스라는 표현은 각 출처의 용어를 따랐다.",
+    "책의 dyanmic_cast 절 제목과 코드에 철자 불일치가 있어 해당 코드를 복사하지 않고 설명만 인용했다.",
+    "vptr의 바이트 수 등 특정 개발환경의 수치를 일반화하지 않았다."
+  ]
+}

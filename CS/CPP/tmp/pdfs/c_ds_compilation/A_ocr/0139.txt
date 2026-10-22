@@ -1,0 +1,28 @@
+전단(fr예t)
+후단(rear)
+[그림 유기 큐의 구조
+ADT5.1 큐
+•객체: 0개 이상의 요소들로 구성된 선형 리스트
+create (max_s ze)
+최대 크기가 max-size인 공백큐를 생성한다.
+init(q)
+큐를 초기화한다.
+is-empty(q) •
+if(size == 0) return TRUE;
+else return FALSE;
+is_full(q) •
+if(size == max_size) return TRUE;
+else return FALSE;
+enqueue(q, e)
+if( is_full(q) ) queue-fult 오류;
+else q의 끝에 e를 추가한다.
+dequeue(q) •
+if( is_empty(q) ) queue-empty 오류;
+else q의 맨 앞에 있는 e를 제거하여 반환한다.
+peek(q) •
+if( is-empty(q) ) queue-emptY 오류;
+else q의 맨 앞에 있는 eS 읽어서 반환한다.
+추상 자료형 큐의 연산들은 추상 자료형 스택과 아주 유사하다. is-empty 연산은 큐가 비어
+있으면 TRUE를 반환하고 그렇지 않으면 FALSE를 반환한다. is-full 연산은 큐가 기득 찼으면
+TRIJE를, 그렇지 않으면 FALSE를 반환한다.
+큐 147

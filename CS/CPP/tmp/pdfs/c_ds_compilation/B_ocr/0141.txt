@@ -1,0 +1,24 @@
+링크드 큐 생성/소열 연산
+링크드 큐 생성을 담당하는 함수의 이름은 LQ—CreateQueue ( )이고, 소멸을 담당하는 함수의 이
+름은 LQ—DestroyQueue( )입니다. 이 책에서 링크드 큐와 관련된 함수의 이름은 모두 Linked
+Queue를 뜻하는 LQ- 접두사를 사우합니다.
+먼저 링크드 큐를 생성하는 LQ-CreateQueue( ) 함수를 살펴봅시다. LQ—CreateQueue( )는
+LinkedQueue 구조체를 자유 저장소에 생성하고 이 구조체의 각 필드를 초기화합니다.
+void LQ-CreateQueue( LinkedQueue** Queue )
+// 큐를 자유 저장소에 생성
+(*Queue )->Rear
+(*Queue )
+(*Queue )->Front = NULL;
+(*Queue )-Xount = 0;
+링크드 큐의 소멸을 담당하는 LQ-DestroyQueue ( ) 함수는 큐 내부에 있는 모든 노-드를 자유 저
+( LinkedQueue*)malloc(sizeof( LinkedQueue ) );
+= NULL;
+장소에서 제거하고, 마지막에는 큐마저 자유 저장소에서 제거합니다.
+VOid LQ_DestroyQueue( LinkedQueue* Queue )
+while ( !LQ-IsEmpty( Queue ) )
+Node* Popped = LQ-Dequeue( Queue );
+LQ-DestroyNode(Popped);
+// 큐를 자유 저장소에서 할당 해제
+free( Queue );
+Chapter 03 • 큐
+133

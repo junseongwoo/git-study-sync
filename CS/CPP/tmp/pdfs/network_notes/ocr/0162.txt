@@ -1,0 +1,37 @@
+154
+CHAPTER02 • 애를리케이신1 계층
+위 라인은 문자열 sentence를 클라이언트 소켓을 통해 TCP 연결로 보낸다. UDp
+소켓처럼 프로그램이 패킷을 명시적으로 생성하지 않으며 패킷에 목적지 주소를 붙이
+지 않는다. 대신에 클라이언트 프로그램은 단순히 문자열 sentence에 있는 바이트
+를 TCP 연결에게 제공한다. 그리고 클라이언트는 서버로부터 바이트를 수신하기를 기
+다린다.
+modifiedSentence = cIientSocket . recv (2048)
+서버로부터 온 문자를 문자열 modifiedSentence에 모은다. 라인이 리던 기로 끝
+날 때까지 modifiedSentence에 문자가 계속해서 쌓인다. 대문자로 변환된 문장
+을 출력한 후 클라이언트 소켓을 닫는다.
+c1ientSocket . close ( )
+마지막 라인은 소켓을 닫고 클라이언트와 서버 간의 TCP 연결을 닫는다. 이는 클라이
+언트의 TCP가 서버의 TCP에게 TCP 메시지를 보내도록 한다(3.5절 참조).
+TCPServer.py
+이제 서버 프로그램을 살펴보자.
+from socket import *
+12000
+serverPort
+serverSocket = socket (AF INET, SOCK STREAM)
+serverSocket . bind ( ( '
+serverPort) )
+serverSocket . listen ( 1 )
+print ( ' The server IS ready tO receive' )
+while True •.
+connectionSocket, addr = severSocket . accept ( )
+connectionSocket . recv ( 1024) . decode ( )
+sentence
+capita1izedSentence = sentence . upper ( )
+connectionSocket . send ( capita1izedSentence . encode ( ) )
+connectionSocket . close ( )
+이제 UDPServer 및 TCPC1ient와 차이가 많이 나는 라인들을 살펴보자. TCPClient와
+마찬가지로, 서버는 TCP 소켓을 만든다:
+serverSocket = socket (AF INET, SOCK STREAM)
+UDPServer처럼 서버 포트 번호 serverport를 소켓과 연관시킨다.
+serverSocket . bind ( (' ' , serverPort) )
+그러나 TCP에서는 serversocket이 대기하는 소켓이 된다. 출입문을 설정한 후에

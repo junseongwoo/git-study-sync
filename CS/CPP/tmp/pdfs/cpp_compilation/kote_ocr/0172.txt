@@ -1,0 +1,26 @@
+7. 이러한 방식으로 분할하면 부분 벡터 L은 7보다 작은 원소만을 가지고. 부분 벡터 R은 q보다
+큰 원소만을 포함하게 됩니다. 이때 L에 (k - 1)개의 원소가 있다고 가정하겠습니다.
+- 만약i = k이면, q는 v의 i번째 원소입니다.
+- 만약 i < k이면, v = L로 설정하고 1단계로 이동합니다.
+- 만약 > k이면. v = R로 설정하고 1단계로 이동합니다.
+연습 문제 21에서 이 알고리즘을 C++로 구현해보겠습니다.
+4.4.7 연습 문제 21: 선형 시간 선택
+이번 연습 문제에서는 선형 시간 선택 알고리즘을 구현해보겠습니다.
+1. 필요한 헤더 파일을 포함합니다.
+#include 〈iostream〉
+#include 〈vector>
+2. 두 반복자 사이의 중간 값을 찾는 함수를 작성합니다.
+template〈typename T>
+autO find median(typename std: :vector<T>: :iterator begin,
+typename std: :vector〈주〉: :iterator last)
+// 정렬
+quick-sort〈T>(begin, last);
+// 가운ql(median) 원소 반복자를 반환
+return begin + (std::distance(begin, last) / 2);
+3. '연습 문제 20: 퀵 정렬'에서는 분할 과정에서 주어진 벡터의 첫 번째 원소를 피벗으로 시용
+했습니다. 여기서는 피벗 위치 반복자를 인자로 받는 형태의 분할 함수를 만들어 시용하겠습
+니다.
+template 〈typename T>
+autO partition_using—glven_pivot(typename std: :vector<T>: :iterator begin,
+typename std: :vector<T〉.• :iterator end,
+typename std: :vector<T〉: :iterator piVOt)

@@ -1,0 +1,51 @@
+039
+國1
+043
+045
+047
+049
+050
+051
+052
+053
+054
+055
+057
+0馹
+059
+%3
+%5
+%7
+%9
+070
+071
+072
+073
+074
+075
+076
+077
+078
+void LLS Push( LinkedListStack* Stack, NewNode )
+if ( Stack->List == NULL )
+Stack->List = NewNode.
+else
+// 스택의 T예에 신규 노드를 연결한다.
+Stack->Top->NextNode = NewNode,
+// 스택의 Top 필드에 새 노드의 주소를 등록한다.
+Stack->Top = NewN0de
+LLS POP( LinkedListStack* Stack )
+// LLS-POP() 함수가 반환할 최상위 노드 저장
+Node* TopN0de = Stack->Top,
+if ( Stack->List == Stack->Top )
+Stack->List = NULL;
+Stack->Top = NULL;
+else
+// Top 아래에 있던 노드를 새로운 CurrentTop에 저장
+Node* CurrentTop = Stack->List;
+while ( CurrentTop != NULL CurrentTop->NextNode != Stack->Top )
+CurrentTop = CurrentTop->NextNode,
+// CurrentTop* T예에 저장
+Stack->Top = CurrentTop,
+90
+Part 01 • 자료구조
