@@ -159,7 +159,7 @@ def build_audit():
         entries=[r for r in m.REGISTRY if r['unit']==u]
         if not entries:continue
         story.extend([PB(),H(label,0,True)])
-        rows=[[r['id'],P(r['text'],'cell'),ref_text(r['refs'],include_pdf=True)] for r in entries]
+        rows=[[r['id'],P(r['text'],'cell'),P(ref_text(r['refs'],compact=True,include_pdf=True),'small')] for r in entries]
         story.extend(m.table(['번호','문장·표 항목·원문 코드·수식','원문 위치'],rows,[54,m.WIDTH-177,123],max_height=570))
     d=Document(m.FILES['audit'],CFG['title']+' - 근거 및 인쇄 점검표','audit');d.multiBuild(story);d.save_layout();print(CFG['name'],'AUDIT',d.page,flush=True)
 def main():

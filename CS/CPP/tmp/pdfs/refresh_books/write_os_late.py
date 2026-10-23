@@ -3,7 +3,7 @@ import json
 R=Path(__file__).resolve().parent
 OLD=R.parent/'os_notes'
 OUT=R/'os/overlays';OUT.mkdir(parents=True,exist_ok=True)
-VIEWED={338,363,364,423,424,457,458,469,470,479,485,493,496,498,513,514,522,528,529,551,562,564,566,567,571,587,588,593,598,604,605,612,613,615}
+VIEWED={338,363,364,377,423,424,457,458,469,470,479,485,493,496,498,511,513,514,522,528,529,546,551,562,564,566,567,569,570,571,587,588,593,598,604,605,612,613,615}
 def f(text,p,section,evidence):return {'text':text,'refs':[{'source':'O','section':section,'pages':p if isinstance(p,list) else [p]}],'evidence':evidence}
 def form(label,expr,note,p,sec,ev):return {'label':label,'expression':expr,'note':note,'refs':[{'source':'O','section':sec,'pages':p if isinstance(p,list) else [p]}],'evidence':ev}
 def term(t,definition):return {'term':t,'definition':definition}
@@ -132,3 +132,26 @@ authorized=f('보호는 파일 접근 유형을 제한하여 제어된 접근을
 specify=f('보호 기법은 부과할 제어를 지정하는 방법과 시행하는 방법을 제공해야 한다.',615,'제7부 보안과 보호 도입','제어를 지정하는 방법과 시행하는 방법')
 x['editor_notes']=['이 단원은 제공 PDF의 마지막 한 면인 제7부 도입이다. 제16장·제17장 본문 및 별도 요약 절은 제공되지 않아 도입 본문만 정리한다.']
 finish(x,[('보안',security),('보호',protection)],[security,protection],[prevent,authorized,specify],'제7부 도입 본문 기준 편집 요약(별도 요약 절 미제공)',[('보안은 사용자 인증을 통해 무엇을 보호하는가?',security),('보호 기법에는 제어와 관련하여 어떤 두 방법이 필요한가?',specify)],[('보안',security),('보호',protection)],[[f('보안',615,'제7부 보안과 보호 도입','보안'),security],[f('보호',615,'제7부 보안과 보호 도입','보호'),authorized]],'도입에 제시된 역할')
+
+# 원문 대조에서 확인한 문구·근거 범위만 복사본에 적용할 수 있도록 기록한다.
+def add_correction(n,path,after,pages,section,reason):
+ old=json.loads((OLD/f'chapters/{n:02}.json').read_text('utf-8-sig'))
+ before=old
+ for k in path:before=before[k]
+ path_out=OUT/f'{n:02}.json';overlay=json.loads(path_out.read_text('utf-8'))
+ overlay['corrections'].append({'path':path,'before':before,'after':after,'refs':[{'source':'O','section':section,'pages':pages}],'reason':reason})
+ overlay['checked_images']=sorted(set(overlay['checked_images'])|set(pages))
+ assert set(pages)<=VIEWED
+ path_out.write_text(json.dumps(overlay,ensure_ascii=False,indent=2),'utf-8')
+add_correction(12,['sections',25,'blocks',1,'items',0],
+ '문맥 교환·복사·인터럽트 빈도를 줄인다. 큰 전송·지능형 컨트롤러를 사용하거나, 바쁜 대기를 최소화할 수 있다면 폴링을 지혜롭게 사용한다.',
+ [511],'12.7 성능','인쇄 p.572의 폴링 조건은 “바쁜 대기를 최소화할 수 있다면”이다. 기존 “바쁜 대기가 작은 폴링” 문구의 의미를 원문의 조건으로 복원한다.')
+sm=json.loads((OLD/'source_map.json').read_text('utf-8-sig'))
+pm={r['pdf']:r['printed'] for r in sm['pages']}
+summary_pages=[546,551,552,553]
+add_correction(13,['sections',23,'blocks',0,'source'],
+ {'pdf':summary_pages,'printed':[pm[p] for p in summary_pages]},
+ [546,551],'13.4.3 다른 보호 방법·13.6 요약','기존 요약의 경로·디렉터리 접근 보호 문장은 인쇄 p.608에서 확인된다. 내용은 유지하고 누락된 근거 면만 추가한다.')
+add_correction(14,['sections',11,'blocks',0,'rows',0,1],
+ '시작 주소로 i번째 블록의 주소를 즉시 계산하여 한 번의 접근으로 읽는다.',
+ [569,570],'14.4.4 성능','기존 셀의 성장·외부 단편화 설명은 앞의 14.4.1절 내용이다. 해당 표의 인용 면인 인쇄 p.632~633에서 직접 확인되는 접근 성능으로 정리하며, 성장·단편화 상세 본문은 기존 14.4.1절에 유지된다.')

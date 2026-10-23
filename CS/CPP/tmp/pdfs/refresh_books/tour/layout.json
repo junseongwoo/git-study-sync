@@ -17308,77 +17308,77 @@
       },
       {
         "title": "제2장. 사용자 정의 타입",
-        "page": 21,
+        "page": 19,
         "level": 0
       },
       {
         "title": "제3장. 모듈화",
-        "page": 29,
+        "page": 27,
         "level": 0
       },
       {
         "title": "제4장. 클래스",
-        "page": 46,
+        "page": 42,
         "level": 0
       },
       {
         "title": "제5장. 필수적인 연산",
-        "page": 65,
+        "page": 58,
         "level": 0
       },
       {
         "title": "제6장. 템플릿",
-        "page": 83,
+        "page": 73,
         "level": 0
       },
       {
         "title": "제7장. 컨셉과 제네릭 프로그래밍",
-        "page": 97,
+        "page": 85,
         "level": 0
       },
       {
         "title": "제8장. 라이브러리의 개요",
-        "page": 109,
+        "page": 95,
         "level": 0
       },
       {
         "title": "제9장. 문자열과 정규 표현식",
-        "page": 115,
+        "page": 99,
         "level": 0
       },
       {
         "title": "제10장. 입력과 출력",
-        "page": 130,
+        "page": 110,
         "level": 0
       },
       {
         "title": "제11장. 컨테이너",
-        "page": 148,
+        "page": 124,
         "level": 0
       },
       {
         "title": "제12장. 알고리즘",
-        "page": 163,
+        "page": 136,
         "level": 0
       },
       {
         "title": "제13장. 유틸리티",
-        "page": 181,
+        "page": 149,
         "level": 0
       },
       {
         "title": "제14장. 수치",
-        "page": 204,
+        "page": 167,
         "level": 0
       },
       {
         "title": "제15장. 동시성",
-        "page": 215,
+        "page": 176,
         "level": 0
       },
       {
         "title": "제16장. 역사와 호환성",
-        "page": 232,
+        "page": 190,
         "level": 0
       }
     ],
@@ -17449,631 +17449,631 @@
       {
         "page": 4,
         "kind": "table",
-        "bottom": 190.01574803149617,
-        "height": 520.0,
+        "bottom": 152.01574803149617,
+        "height": 558.0,
         "title": ""
       },
       {
         "page": 5,
         "kind": "table",
-        "bottom": 229.01574803149617,
-        "height": 525.0,
+        "bottom": 223.01574803149617,
+        "height": 531.0,
         "title": ""
       },
       {
         "page": 6,
         "kind": "table",
-        "bottom": 299.0157480314962,
-        "height": 455.0,
+        "bottom": 188.01574803149617,
+        "height": 566.0,
         "title": ""
       },
       {
         "page": 7,
         "kind": "table",
-        "bottom": 229.01574803149617,
-        "height": 525.0,
+        "bottom": 193.01574803149617,
+        "height": 561.0,
         "title": ""
       },
       {
         "page": 8,
         "kind": "table",
-        "bottom": 209.01574803149617,
-        "height": 545.0,
+        "bottom": 216.01574803149617,
+        "height": 538.0,
         "title": ""
       },
       {
         "page": 9,
-        "kind": "table",
-        "bottom": 204.01574803149617,
-        "height": 550.0,
-        "title": ""
-      },
-      {
-        "page": 10,
-        "kind": "table",
-        "bottom": 209.01574803149617,
-        "height": 545.0,
-        "title": ""
-      },
-      {
-        "page": 11,
-        "kind": "table",
-        "bottom": 264.0157480314962,
-        "height": 490.0,
-        "title": ""
-      },
-      {
-        "page": 12,
-        "kind": "table",
-        "bottom": 199.01574803149617,
-        "height": 555.0,
-        "title": ""
-      },
-      {
-        "page": 13,
-        "kind": "table",
-        "bottom": 204.01574803149617,
-        "height": 550.0,
-        "title": ""
-      },
-      {
-        "page": 14,
-        "kind": "table",
-        "bottom": 189.01574803149617,
-        "height": 565.0,
-        "title": ""
-      },
-      {
-        "page": 15,
         "kind": "table",
         "bottom": 184.01574803149617,
         "height": 570.0,
         "title": ""
       },
       {
+        "page": 10,
+        "kind": "table",
+        "bottom": 350.0157480314962,
+        "height": 404.0,
+        "title": ""
+      },
+      {
+        "page": 11,
+        "kind": "table",
+        "bottom": 212.01574803149617,
+        "height": 542.0,
+        "title": ""
+      },
+      {
+        "page": 12,
+        "kind": "table",
+        "bottom": 347.0157480314962,
+        "height": 407.0,
+        "title": ""
+      },
+      {
+        "page": 13,
+        "kind": "table",
+        "bottom": 198.01574803149617,
+        "height": 556.0,
+        "title": ""
+      },
+      {
+        "page": 14,
+        "kind": "table",
+        "bottom": 199.01574803149617,
+        "height": 555.0,
+        "title": ""
+      },
+      {
+        "page": 15,
+        "kind": "table",
+        "bottom": 206.01574803149617,
+        "height": 548.0,
+        "title": ""
+      },
+      {
         "page": 16,
         "kind": "table",
-        "bottom": 194.01574803149617,
-        "height": 560.0,
+        "bottom": 199.01574803149617,
+        "height": 555.0,
         "title": ""
       },
       {
         "page": 17,
         "kind": "table",
-        "bottom": 209.01574803149617,
-        "height": 545.0,
+        "bottom": 207.01574803149617,
+        "height": 547.0,
         "title": ""
       },
       {
         "page": 18,
         "kind": "table",
-        "bottom": 224.01574803149617,
-        "height": 530.0,
+        "bottom": 404.0157480314962,
+        "height": 350.0,
         "title": ""
       },
       {
         "page": 19,
-        "kind": "table",
-        "bottom": 214.01574803149617,
-        "height": 540.0,
-        "title": ""
-      },
-      {
-        "page": 20,
-        "kind": "table",
-        "bottom": 514.0157480314962,
-        "height": 240.0,
-        "title": ""
-      },
-      {
-        "page": 21,
         "kind": "heading",
         "bottom": 710.0157480314962,
         "height": 31.0,
         "title": "제2장. 사용자 정의 타입"
       },
       {
+        "page": 19,
+        "kind": "table",
+        "bottom": 211.01574803149617,
+        "height": 499.0,
+        "title": ""
+      },
+      {
+        "page": 20,
+        "kind": "table",
+        "bottom": 197.01574803149617,
+        "height": 557.0,
+        "title": ""
+      },
+      {
         "page": 21,
         "kind": "table",
-        "bottom": 205.01574803149617,
-        "height": 505.0,
+        "bottom": 206.01574803149617,
+        "height": 548.0,
         "title": ""
       },
       {
         "page": 22,
         "kind": "table",
-        "bottom": 194.01574803149617,
-        "height": 560.0,
+        "bottom": 222.01574803149617,
+        "height": 532.0,
         "title": ""
       },
       {
         "page": 23,
         "kind": "table",
-        "bottom": 194.01574803149617,
-        "height": 560.0,
+        "bottom": 232.01574803149617,
+        "height": 522.0,
         "title": ""
       },
       {
         "page": 24,
-        "kind": "table",
-        "bottom": 204.01574803149617,
-        "height": 550.0,
-        "title": ""
-      },
-      {
-        "page": 25,
-        "kind": "table",
-        "bottom": 229.01574803149617,
-        "height": 525.0,
-        "title": ""
-      },
-      {
-        "page": 26,
         "kind": "table",
         "bottom": 199.01574803149617,
         "height": 555.0,
         "title": ""
       },
       {
+        "page": 25,
+        "kind": "table",
+        "bottom": 190.01574803149617,
+        "height": 564.0,
+        "title": ""
+      },
+      {
+        "page": 26,
+        "kind": "table",
+        "bottom": 349.0157480314962,
+        "height": 405.0,
+        "title": ""
+      },
+      {
         "page": 27,
-        "kind": "table",
-        "bottom": 189.01574803149617,
-        "height": 565.0,
-        "title": ""
-      },
-      {
-        "page": 28,
-        "kind": "table",
-        "bottom": 219.01574803149617,
-        "height": 535.0,
-        "title": ""
-      },
-      {
-        "page": 28,
-        "kind": "table",
-        "bottom": 146.01574803149617,
-        "height": 65.0,
-        "title": ""
-      },
-      {
-        "page": 29,
         "kind": "heading",
         "bottom": 710.0157480314962,
         "height": 31.0,
         "title": "제3장. 모듈화"
       },
       {
+        "page": 27,
+        "kind": "table",
+        "bottom": 211.01574803149617,
+        "height": 499.0,
+        "title": ""
+      },
+      {
+        "page": 28,
+        "kind": "table",
+        "bottom": 184.01574803149617,
+        "height": 570.0,
+        "title": ""
+      },
+      {
         "page": 29,
         "kind": "table",
-        "bottom": 205.01574803149617,
-        "height": 505.0,
+        "bottom": 203.01574803149617,
+        "height": 551.0,
         "title": ""
       },
       {
         "page": 30,
         "kind": "table",
-        "bottom": 184.01574803149617,
-        "height": 570.0,
+        "bottom": 200.01574803149617,
+        "height": 554.0,
         "title": ""
       },
       {
         "page": 31,
         "kind": "table",
-        "bottom": 194.01574803149617,
-        "height": 560.0,
+        "bottom": 203.01574803149617,
+        "height": 551.0,
         "title": ""
       },
       {
         "page": 32,
         "kind": "table",
-        "bottom": 234.01574803149617,
-        "height": 520.0,
+        "bottom": 261.0157480314962,
+        "height": 493.0,
         "title": ""
       },
       {
         "page": 33,
         "kind": "table",
-        "bottom": 474.0157480314962,
-        "height": 280.0,
+        "bottom": 208.01574803149617,
+        "height": 546.0,
         "title": ""
       },
       {
         "page": 34,
         "kind": "table",
-        "bottom": 219.01574803149617,
-        "height": 535.0,
+        "bottom": 220.01574803149617,
+        "height": 534.0,
         "title": ""
       },
       {
         "page": 35,
         "kind": "table",
-        "bottom": 199.01574803149617,
-        "height": 555.0,
+        "bottom": 200.01574803149617,
+        "height": 554.0,
         "title": ""
       },
       {
         "page": 36,
         "kind": "table",
-        "bottom": 214.01574803149617,
-        "height": 540.0,
+        "bottom": 206.01574803149617,
+        "height": 548.0,
         "title": ""
       },
       {
         "page": 37,
         "kind": "table",
-        "bottom": 184.01574803149617,
-        "height": 570.0,
+        "bottom": 403.0157480314962,
+        "height": 351.0,
         "title": ""
       },
       {
         "page": 38,
         "kind": "table",
-        "bottom": 214.01574803149617,
-        "height": 540.0,
+        "bottom": 215.01574803149617,
+        "height": 539.0,
         "title": ""
       },
       {
         "page": 39,
         "kind": "table",
-        "bottom": 204.01574803149617,
-        "height": 550.0,
+        "bottom": 196.01574803149617,
+        "height": 558.0,
         "title": ""
       },
       {
         "page": 40,
         "kind": "table",
-        "bottom": 334.0157480314962,
-        "height": 420.0,
+        "bottom": 211.01574803149617,
+        "height": 543.0,
         "title": ""
       },
       {
         "page": 41,
         "kind": "table",
-        "bottom": 204.01574803149617,
-        "height": 550.0,
+        "bottom": 262.0157480314962,
+        "height": 492.0,
         "title": ""
       },
       {
         "page": 42,
-        "kind": "table",
-        "bottom": 234.01574803149617,
-        "height": 520.0,
-        "title": ""
-      },
-      {
-        "page": 43,
-        "kind": "table",
-        "bottom": 234.01574803149617,
-        "height": 520.0,
-        "title": ""
-      },
-      {
-        "page": 44,
-        "kind": "table",
-        "bottom": 194.01574803149617,
-        "height": 560.0,
-        "title": ""
-      },
-      {
-        "page": 45,
-        "kind": "table",
-        "bottom": 249.01574803149617,
-        "height": 505.0,
-        "title": ""
-      },
-      {
-        "page": 46,
         "kind": "heading",
         "bottom": 710.0157480314962,
         "height": 31.0,
         "title": "제4장. 클래스"
       },
       {
+        "page": 42,
+        "kind": "table",
+        "bottom": 159.01574803149617,
+        "height": 551.0,
+        "title": ""
+      },
+      {
+        "page": 43,
+        "kind": "table",
+        "bottom": 575.0157480314962,
+        "height": 179.0,
+        "title": ""
+      },
+      {
+        "page": 44,
+        "kind": "table",
+        "bottom": 199.01574803149617,
+        "height": 555.0,
+        "title": ""
+      },
+      {
+        "page": 45,
+        "kind": "table",
+        "bottom": 230.01574803149617,
+        "height": 524.0,
+        "title": ""
+      },
+      {
         "page": 46,
         "kind": "table",
-        "bottom": 150.01574803149617,
-        "height": 560.0,
+        "bottom": 187.01574803149617,
+        "height": 567.0,
         "title": ""
       },
       {
         "page": 47,
         "kind": "table",
-        "bottom": 569.0157480314962,
-        "height": 185.0,
+        "bottom": 223.01574803149617,
+        "height": 531.0,
         "title": ""
       },
       {
         "page": 48,
         "kind": "table",
-        "bottom": 199.01574803149617,
-        "height": 555.0,
+        "bottom": 210.01574803149617,
+        "height": 544.0,
         "title": ""
       },
       {
         "page": 49,
         "kind": "table",
-        "bottom": 209.01574803149617,
-        "height": 545.0,
+        "bottom": 185.01574803149617,
+        "height": 569.0,
         "title": ""
       },
       {
         "page": 50,
         "kind": "table",
-        "bottom": 184.01574803149617,
-        "height": 570.0,
+        "bottom": 191.01574803149617,
+        "height": 563.0,
         "title": ""
       },
       {
         "page": 51,
         "kind": "table",
-        "bottom": 229.01574803149617,
-        "height": 525.0,
+        "bottom": 215.01574803149617,
+        "height": 539.0,
         "title": ""
       },
       {
         "page": 52,
         "kind": "table",
-        "bottom": 289.0157480314962,
-        "height": 465.0,
+        "bottom": 210.01574803149617,
+        "height": 544.0,
         "title": ""
       },
       {
         "page": 53,
         "kind": "table",
-        "bottom": 334.0157480314962,
-        "height": 420.0,
+        "bottom": 215.01574803149617,
+        "height": 539.0,
         "title": ""
       },
       {
         "page": 54,
-        "kind": "table",
-        "bottom": 209.01574803149617,
-        "height": 545.0,
-        "title": ""
-      },
-      {
-        "page": 55,
-        "kind": "table",
-        "bottom": 234.01574803149617,
-        "height": 520.0,
-        "title": ""
-      },
-      {
-        "page": 56,
-        "kind": "table",
-        "bottom": 234.01574803149617,
-        "height": 520.0,
-        "title": ""
-      },
-      {
-        "page": 57,
-        "kind": "table",
-        "bottom": 234.01574803149617,
-        "height": 520.0,
-        "title": ""
-      },
-      {
-        "page": 58,
-        "kind": "table",
-        "bottom": 184.01574803149617,
-        "height": 570.0,
-        "title": ""
-      },
-      {
-        "page": 59,
-        "kind": "table",
-        "bottom": 214.01574803149617,
-        "height": 540.0,
-        "title": ""
-      },
-      {
-        "page": 60,
-        "kind": "table",
-        "bottom": 234.01574803149617,
-        "height": 520.0,
-        "title": ""
-      },
-      {
-        "page": 61,
-        "kind": "table",
-        "bottom": 234.01574803149617,
-        "height": 520.0,
-        "title": ""
-      },
-      {
-        "page": 62,
-        "kind": "table",
-        "bottom": 194.01574803149617,
-        "height": 560.0,
-        "title": ""
-      },
-      {
-        "page": 63,
         "kind": "table",
         "bottom": 199.01574803149617,
         "height": 555.0,
         "title": ""
       },
       {
-        "page": 64,
+        "page": 55,
         "kind": "table",
-        "bottom": 194.01574803149617,
-        "height": 560.0,
+        "bottom": 211.01574803149617,
+        "height": 543.0,
         "title": ""
       },
       {
-        "page": 65,
+        "page": 56,
+        "kind": "table",
+        "bottom": 204.01574803149617,
+        "height": 550.0,
+        "title": ""
+      },
+      {
+        "page": 57,
+        "kind": "table",
+        "bottom": 439.0157480314962,
+        "height": 315.0,
+        "title": ""
+      },
+      {
+        "page": 58,
         "kind": "heading",
         "bottom": 710.0157480314962,
         "height": 31.0,
         "title": "제5장. 필수적인 연산"
       },
       {
+        "page": 58,
+        "kind": "table",
+        "bottom": 153.01574803149617,
+        "height": 557.0,
+        "title": ""
+      },
+      {
+        "page": 59,
+        "kind": "table",
+        "bottom": 195.01574803149617,
+        "height": 559.0,
+        "title": ""
+      },
+      {
+        "page": 60,
+        "kind": "table",
+        "bottom": 223.01574803149617,
+        "height": 531.0,
+        "title": ""
+      },
+      {
+        "page": 61,
+        "kind": "table",
+        "bottom": 245.01574803149617,
+        "height": 509.0,
+        "title": ""
+      },
+      {
+        "page": 62,
+        "kind": "table",
+        "bottom": 240.01574803149617,
+        "height": 514.0,
+        "title": ""
+      },
+      {
+        "page": 63,
+        "kind": "table",
+        "bottom": 212.01574803149617,
+        "height": 542.0,
+        "title": ""
+      },
+      {
+        "page": 64,
+        "kind": "table",
+        "bottom": 449.0157480314962,
+        "height": 305.0,
+        "title": ""
+      },
+      {
         "page": 65,
         "kind": "table",
-        "bottom": 320.0157480314962,
-        "height": 390.0,
+        "bottom": 197.01574803149617,
+        "height": 557.0,
         "title": ""
       },
       {
         "page": 66,
         "kind": "table",
-        "bottom": 209.01574803149617,
-        "height": 545.0,
+        "bottom": 188.01574803149617,
+        "height": 566.0,
         "title": ""
       },
       {
         "page": 67,
         "kind": "table",
-        "bottom": 194.01574803149617,
-        "height": 560.0,
+        "bottom": 307.0157480314962,
+        "height": 447.0,
         "title": ""
       },
       {
         "page": 68,
         "kind": "table",
-        "bottom": 204.01574803149617,
-        "height": 550.0,
+        "bottom": 189.01574803149617,
+        "height": 565.0,
         "title": ""
       },
       {
         "page": 69,
         "kind": "table",
-        "bottom": 289.0157480314962,
-        "height": 465.0,
+        "bottom": 208.01574803149617,
+        "height": 546.0,
         "title": ""
       },
       {
         "page": 70,
         "kind": "table",
-        "bottom": 204.01574803149617,
-        "height": 550.0,
+        "bottom": 231.01574803149617,
+        "height": 523.0,
         "title": ""
       },
       {
         "page": 71,
         "kind": "table",
-        "bottom": 204.01574803149617,
-        "height": 550.0,
+        "bottom": 197.01574803149617,
+        "height": 557.0,
         "title": ""
       },
       {
         "page": 72,
         "kind": "table",
-        "bottom": 234.01574803149617,
-        "height": 520.0,
+        "bottom": 599.0157480314962,
+        "height": 155.0,
         "title": ""
       },
       {
         "page": 73,
-        "kind": "table",
-        "bottom": 229.01574803149617,
-        "height": 525.0,
-        "title": ""
-      },
-      {
-        "page": 74,
-        "kind": "table",
-        "bottom": 194.01574803149617,
-        "height": 560.0,
-        "title": ""
-      },
-      {
-        "page": 75,
-        "kind": "table",
-        "bottom": 234.01574803149617,
-        "height": 520.0,
-        "title": ""
-      },
-      {
-        "page": 76,
-        "kind": "table",
-        "bottom": 234.01574803149617,
-        "height": 520.0,
-        "title": ""
-      },
-      {
-        "page": 77,
-        "kind": "table",
-        "bottom": 214.01574803149617,
-        "height": 540.0,
-        "title": ""
-      },
-      {
-        "page": 78,
-        "kind": "table",
-        "bottom": 184.01574803149617,
-        "height": 570.0,
-        "title": ""
-      },
-      {
-        "page": 79,
-        "kind": "table",
-        "bottom": 234.01574803149617,
-        "height": 520.0,
-        "title": ""
-      },
-      {
-        "page": 80,
-        "kind": "table",
-        "bottom": 234.01574803149617,
-        "height": 520.0,
-        "title": ""
-      },
-      {
-        "page": 81,
-        "kind": "table",
-        "bottom": 199.01574803149617,
-        "height": 555.0,
-        "title": ""
-      },
-      {
-        "page": 82,
-        "kind": "table",
-        "bottom": 394.0157480314962,
-        "height": 360.0,
-        "title": ""
-      },
-      {
-        "page": 83,
         "kind": "heading",
         "bottom": 710.0157480314962,
         "height": 31.0,
         "title": "제6장. 템플릿"
       },
       {
-        "page": 83,
+        "page": 73,
         "kind": "table",
-        "bottom": 265.0157480314962,
-        "height": 445.0,
+        "bottom": 361.0157480314962,
+        "height": 349.0,
         "title": ""
       },
       {
-        "page": 84,
+        "page": 74,
         "kind": "table",
         "bottom": 239.01574803149617,
         "height": 515.0,
         "title": ""
       },
       {
+        "page": 75,
+        "kind": "table",
+        "bottom": 193.01574803149617,
+        "height": 561.0,
+        "title": ""
+      },
+      {
+        "page": 76,
+        "kind": "table",
+        "bottom": 194.01574803149617,
+        "height": 560.0,
+        "title": ""
+      },
+      {
+        "page": 77,
+        "kind": "table",
+        "bottom": 304.0157480314962,
+        "height": 450.0,
+        "title": ""
+      },
+      {
+        "page": 78,
+        "kind": "table",
+        "bottom": 220.01574803149617,
+        "height": 534.0,
+        "title": ""
+      },
+      {
+        "page": 79,
+        "kind": "table",
+        "bottom": 197.01574803149617,
+        "height": 557.0,
+        "title": ""
+      },
+      {
+        "page": 80,
+        "kind": "table",
+        "bottom": 212.01574803149617,
+        "height": 542.0,
+        "title": ""
+      },
+      {
+        "page": 81,
+        "kind": "table",
+        "bottom": 195.01574803149617,
+        "height": 559.0,
+        "title": ""
+      },
+      {
+        "page": 82,
+        "kind": "table",
+        "bottom": 195.51574803149617,
+        "height": 558.5,
+        "title": ""
+      },
+      {
+        "page": 83,
+        "kind": "table",
+        "bottom": 206.51574803149617,
+        "height": 547.5,
+        "title": ""
+      },
+      {
+        "page": 84,
+        "kind": "table",
+        "bottom": 599.0157480314962,
+        "height": 155.0,
+        "title": ""
+      },
+      {
+        "page": 85,
+        "kind": "heading",
+        "bottom": 710.0157480314962,
+        "height": 31.0,
+        "title": "제7장. 컨셉과 제네릭 프로그래밍"
+      },
+      {
         "page": 85,
         "kind": "table",
-        "bottom": 219.01574803149617,
-        "height": 535.0,
+        "bottom": 184.01574803149617,
+        "height": 526.0,
         "title": ""
       },
       {
         "page": 86,
         "kind": "table",
-        "bottom": 184.01574803149617,
-        "height": 570.0,
+        "bottom": 207.01574803149617,
+        "height": 547.0,
         "title": ""
       },
       {
         "page": 87,
         "kind": "table",
-        "bottom": 219.01574803149617,
-        "height": 535.0,
+        "bottom": 221.01574803149617,
+        "height": 533.0,
         "title": ""
       },
       {
@@ -18086,218 +18086,232 @@
       {
         "page": 89,
         "kind": "table",
-        "bottom": 204.01574803149617,
-        "height": 550.0,
+        "bottom": 202.01574803149617,
+        "height": 552.0,
         "title": ""
       },
       {
         "page": 90,
         "kind": "table",
-        "bottom": 214.01574803149617,
-        "height": 540.0,
+        "bottom": 275.0157480314962,
+        "height": 479.0,
         "title": ""
       },
       {
         "page": 91,
         "kind": "table",
-        "bottom": 234.01574803149617,
-        "height": 520.0,
+        "bottom": 264.0157480314962,
+        "height": 490.0,
         "title": ""
       },
       {
         "page": 92,
         "kind": "table",
-        "bottom": 209.01574803149617,
-        "height": 545.0,
+        "bottom": 217.01574803149617,
+        "height": 537.0,
         "title": ""
       },
       {
         "page": 93,
         "kind": "table",
-        "bottom": 194.01574803149617,
-        "height": 560.0,
+        "bottom": 211.01574803149617,
+        "height": 543.0,
         "title": ""
       },
       {
         "page": 94,
         "kind": "table",
-        "bottom": 234.01574803149617,
-        "height": 520.0,
+        "bottom": 190.01574803149617,
+        "height": 564.0,
+        "title": ""
+      },
+      {
+        "page": 94,
+        "kind": "table",
+        "bottom": 117.01574803149617,
+        "height": 65.0,
         "title": ""
       },
       {
         "page": 95,
-        "kind": "table",
-        "bottom": 199.01574803149617,
-        "height": 555.0,
-        "title": ""
-      },
-      {
-        "page": 96,
-        "kind": "table",
-        "bottom": 434.0157480314962,
-        "height": 320.0,
-        "title": ""
-      },
-      {
-        "page": 97,
-        "kind": "heading",
-        "bottom": 710.0157480314962,
-        "height": 31.0,
-        "title": "제7장. 컨셉과 제네릭 프로그래밍"
-      },
-      {
-        "page": 97,
-        "kind": "table",
-        "bottom": 165.01574803149617,
-        "height": 545.0,
-        "title": ""
-      },
-      {
-        "page": 98,
-        "kind": "table",
-        "bottom": 224.01574803149617,
-        "height": 530.0,
-        "title": ""
-      },
-      {
-        "page": 99,
-        "kind": "table",
-        "bottom": 234.01574803149617,
-        "height": 520.0,
-        "title": ""
-      },
-      {
-        "page": 100,
-        "kind": "table",
-        "bottom": 194.01574803149617,
-        "height": 560.0,
-        "title": ""
-      },
-      {
-        "page": 101,
-        "kind": "table",
-        "bottom": 184.01574803149617,
-        "height": 570.0,
-        "title": ""
-      },
-      {
-        "page": 102,
-        "kind": "table",
-        "bottom": 219.01574803149617,
-        "height": 535.0,
-        "title": ""
-      },
-      {
-        "page": 103,
-        "kind": "table",
-        "bottom": 194.01574803149617,
-        "height": 560.0,
-        "title": ""
-      },
-      {
-        "page": 104,
-        "kind": "table",
-        "bottom": 299.0157480314962,
-        "height": 455.0,
-        "title": ""
-      },
-      {
-        "page": 105,
-        "kind": "table",
-        "bottom": 184.01574803149617,
-        "height": 570.0,
-        "title": ""
-      },
-      {
-        "page": 106,
-        "kind": "table",
-        "bottom": 219.01574803149617,
-        "height": 535.0,
-        "title": ""
-      },
-      {
-        "page": 107,
-        "kind": "table",
-        "bottom": 184.01574803149617,
-        "height": 570.0,
-        "title": ""
-      },
-      {
-        "page": 108,
-        "kind": "table",
-        "bottom": 314.0157480314962,
-        "height": 440.0,
-        "title": ""
-      },
-      {
-        "page": 109,
         "kind": "heading",
         "bottom": 710.0157480314962,
         "height": 31.0,
         "title": "제8장. 라이브러리의 개요"
       },
       {
-        "page": 109,
+        "page": 95,
         "kind": "table",
-        "bottom": 190.01574803149617,
-        "height": 520.0,
+        "bottom": 178.01574803149617,
+        "height": 532.0,
         "title": ""
       },
       {
-        "page": 110,
+        "page": 96,
         "kind": "table",
-        "bottom": 204.01574803149617,
-        "height": 550.0,
+        "bottom": 215.01574803149617,
+        "height": 539.0,
         "title": ""
       },
       {
-        "page": 111,
+        "page": 97,
         "kind": "table",
-        "bottom": 244.01574803149617,
-        "height": 510.0,
+        "bottom": 194.01574803149617,
+        "height": 560.0,
         "title": ""
       },
       {
-        "page": 112,
+        "page": 98,
         "kind": "table",
-        "bottom": 199.01574803149617,
-        "height": 555.0,
+        "bottom": 524.0157480314962,
+        "height": 230.0,
         "title": ""
       },
       {
-        "page": 113,
-        "kind": "table",
-        "bottom": 229.01574803149617,
-        "height": 525.0,
-        "title": ""
-      },
-      {
-        "page": 114,
-        "kind": "table",
-        "bottom": 564.0157480314962,
-        "height": 190.0,
-        "title": ""
-      },
-      {
-        "page": 115,
+        "page": 99,
         "kind": "heading",
         "bottom": 710.0157480314962,
         "height": 31.0,
         "title": "제9장. 문자열과 정규 표현식"
       },
       {
+        "page": 99,
+        "kind": "table",
+        "bottom": 288.0157480314962,
+        "height": 422.0,
+        "title": ""
+      },
+      {
+        "page": 100,
+        "kind": "table",
+        "bottom": 193.01574803149617,
+        "height": 561.0,
+        "title": ""
+      },
+      {
+        "page": 101,
+        "kind": "table",
+        "bottom": 197.01574803149617,
+        "height": 557.0,
+        "title": ""
+      },
+      {
+        "page": 102,
+        "kind": "table",
+        "bottom": 204.01574803149617,
+        "height": 550.0,
+        "title": ""
+      },
+      {
+        "page": 103,
+        "kind": "table",
+        "bottom": 239.01574803149617,
+        "height": 515.0,
+        "title": ""
+      },
+      {
+        "page": 104,
+        "kind": "table",
+        "bottom": 195.01574803149617,
+        "height": 559.0,
+        "title": ""
+      },
+      {
+        "page": 105,
+        "kind": "table",
+        "bottom": 208.01574803149617,
+        "height": 546.0,
+        "title": ""
+      },
+      {
+        "page": 106,
+        "kind": "table",
+        "bottom": 209.01574803149617,
+        "height": 545.0,
+        "title": ""
+      },
+      {
+        "page": 107,
+        "kind": "table",
+        "bottom": 196.01574803149617,
+        "height": 558.0,
+        "title": ""
+      },
+      {
+        "page": 108,
+        "kind": "table",
+        "bottom": 219.01574803149617,
+        "height": 535.0,
+        "title": ""
+      },
+      {
+        "page": 109,
+        "kind": "table",
+        "bottom": 211.01574803149617,
+        "height": 543.0,
+        "title": ""
+      },
+      {
+        "page": 110,
+        "kind": "heading",
+        "bottom": 710.0157480314962,
+        "height": 31.0,
+        "title": "제10장. 입력과 출력"
+      },
+      {
+        "page": 110,
+        "kind": "table",
+        "bottom": 140.01574803149617,
+        "height": 570.0,
+        "title": ""
+      },
+      {
+        "page": 111,
+        "kind": "table",
+        "bottom": 208.01574803149617,
+        "height": 546.0,
+        "title": ""
+      },
+      {
+        "page": 112,
+        "kind": "table",
+        "bottom": 193.01574803149617,
+        "height": 561.0,
+        "title": ""
+      },
+      {
+        "page": 113,
+        "kind": "table",
+        "bottom": 615.0157480314962,
+        "height": 139.0,
+        "title": ""
+      },
+      {
+        "page": 113,
+        "kind": "table",
+        "bottom": 82.01574803149617,
+        "height": 525.0,
+        "title": ""
+      },
+      {
+        "page": 114,
+        "kind": "table",
+        "bottom": 195.01574803149617,
+        "height": 551.0,
+        "title": ""
+      },
+      {
         "page": 115,
         "kind": "table",
-        "bottom": 180.01574803149617,
-        "height": 530.0,
+        "bottom": 217.01574803149617,
+        "height": 537.0,
         "title": ""
       },
       {
         "page": 116,
         "kind": "table",
-        "bottom": 214.01574803149617,
-        "height": 540.0,
+        "bottom": 232.01574803149617,
+        "height": 522.0,
         "title": ""
       },
       {
@@ -18310,169 +18324,176 @@
       {
         "page": 118,
         "kind": "table",
-        "bottom": 209.01574803149617,
-        "height": 545.0,
+        "bottom": 219.01574803149617,
+        "height": 535.0,
         "title": ""
       },
       {
         "page": 119,
         "kind": "table",
-        "bottom": 209.01574803149617,
-        "height": 545.0,
+        "bottom": 187.01574803149617,
+        "height": 567.0,
         "title": ""
       },
       {
         "page": 120,
         "kind": "table",
-        "bottom": 234.01574803149617,
-        "height": 520.0,
+        "bottom": 206.01574803149617,
+        "height": 548.0,
         "title": ""
       },
       {
         "page": 121,
         "kind": "table",
-        "bottom": 184.01574803149617,
-        "height": 570.0,
+        "bottom": 219.01574803149617,
+        "height": 535.0,
         "title": ""
       },
       {
         "page": 122,
         "kind": "table",
-        "bottom": 194.01574803149617,
-        "height": 560.0,
+        "bottom": 214.51574803149617,
+        "height": 539.5,
         "title": ""
       },
       {
         "page": 123,
         "kind": "table",
-        "bottom": 234.01574803149617,
-        "height": 520.0,
+        "bottom": 615.0157480314962,
+        "height": 139.0,
         "title": ""
       },
       {
         "page": 124,
+        "kind": "heading",
+        "bottom": 710.0157480314962,
+        "height": 31.0,
+        "title": "제11장. 컨테이너"
+      },
+      {
+        "page": 124,
         "kind": "table",
-        "bottom": 234.01574803149617,
-        "height": 520.0,
+        "bottom": 150.01574803149617,
+        "height": 560.0,
         "title": ""
       },
       {
         "page": 125,
         "kind": "table",
-        "bottom": 289.0157480314962,
-        "height": 465.0,
+        "bottom": 215.01574803149617,
+        "height": 539.0,
         "title": ""
       },
       {
         "page": 126,
         "kind": "table",
-        "bottom": 199.01574803149617,
-        "height": 555.0,
+        "bottom": 381.0157480314962,
+        "height": 373.0,
         "title": ""
       },
       {
         "page": 127,
         "kind": "table",
-        "bottom": 234.01574803149617,
-        "height": 520.0,
+        "bottom": 204.01574803149617,
+        "height": 550.0,
         "title": ""
       },
       {
         "page": 128,
         "kind": "table",
-        "bottom": 234.01574803149617,
-        "height": 520.0,
+        "bottom": 205.01574803149617,
+        "height": 549.0,
         "title": ""
       },
       {
         "page": 129,
         "kind": "table",
-        "bottom": 564.0157480314962,
-        "height": 190.0,
+        "bottom": 187.01574803149617,
+        "height": 567.0,
         "title": ""
       },
       {
         "page": 130,
-        "kind": "heading",
-        "bottom": 710.0157480314962,
-        "height": 31.0,
-        "title": "제10장. 입력과 출력"
-      },
-      {
-        "page": 130,
         "kind": "table",
-        "bottom": 190.01574803149617,
-        "height": 520.0,
+        "bottom": 217.01574803149617,
+        "height": 537.0,
         "title": ""
       },
       {
         "page": 131,
         "kind": "table",
-        "bottom": 234.01574803149617,
-        "height": 520.0,
+        "bottom": 202.01574803149617,
+        "height": 552.0,
         "title": ""
       },
       {
         "page": 132,
         "kind": "table",
-        "bottom": 189.01574803149617,
-        "height": 565.0,
+        "bottom": 204.01574803149617,
+        "height": 550.0,
         "title": ""
       },
       {
         "page": 133,
         "kind": "table",
-        "bottom": 189.01574803149617,
-        "height": 565.0,
+        "bottom": 185.01574803149617,
+        "height": 569.0,
         "title": ""
       },
       {
         "page": 134,
         "kind": "table",
-        "bottom": 564.0157480314962,
-        "height": 190.0,
+        "bottom": 205.01574803149617,
+        "height": 549.0,
         "title": ""
       },
       {
         "page": 135,
         "kind": "table",
-        "bottom": 214.01574803149617,
-        "height": 540.0,
+        "bottom": 535.0157480314962,
+        "height": 219.0,
         "title": ""
       },
       {
         "page": 136,
+        "kind": "heading",
+        "bottom": 710.0157480314962,
+        "height": 31.0,
+        "title": "제12장. 알고리즘"
+      },
+      {
+        "page": 136,
         "kind": "table",
-        "bottom": 234.01574803149617,
-        "height": 520.0,
+        "bottom": 171.01574803149617,
+        "height": 539.0,
         "title": ""
       },
       {
         "page": 137,
         "kind": "table",
-        "bottom": 234.01574803149617,
-        "height": 520.0,
+        "bottom": 220.01574803149617,
+        "height": 534.0,
         "title": ""
       },
       {
         "page": 138,
         "kind": "table",
-        "bottom": 214.01574803149617,
-        "height": 540.0,
+        "bottom": 350.0157480314962,
+        "height": 404.0,
         "title": ""
       },
       {
         "page": 139,
         "kind": "table",
-        "bottom": 209.01574803149617,
-        "height": 545.0,
+        "bottom": 198.01574803149617,
+        "height": 556.0,
         "title": ""
       },
       {
         "page": 140,
         "kind": "table",
-        "bottom": 184.01574803149617,
-        "height": 570.0,
+        "bottom": 189.01574803149617,
+        "height": 565.0,
         "title": ""
       },
       {
@@ -18485,421 +18506,435 @@
       {
         "page": 142,
         "kind": "table",
-        "bottom": 234.01574803149617,
-        "height": 520.0,
+        "bottom": 217.01574803149617,
+        "height": 537.0,
         "title": ""
       },
       {
         "page": 143,
         "kind": "table",
-        "bottom": 234.01574803149617,
-        "height": 520.0,
+        "bottom": 202.01574803149617,
+        "height": 552.0,
         "title": ""
       },
       {
         "page": 144,
         "kind": "table",
-        "bottom": 209.01574803149617,
-        "height": 545.0,
+        "bottom": 184.01574803149617,
+        "height": 570.0,
         "title": ""
       },
       {
         "page": 145,
         "kind": "table",
-        "bottom": 234.01574803149617,
-        "height": 520.0,
+        "bottom": 195.01574803149617,
+        "height": 559.0,
         "title": ""
       },
       {
         "page": 146,
         "kind": "table",
-        "bottom": 194.01574803149617,
-        "height": 560.0,
+        "bottom": 252.01574803149617,
+        "height": 502.0,
         "title": ""
       },
       {
         "page": 147,
         "kind": "table",
-        "bottom": 279.0157480314962,
-        "height": 475.0,
+        "bottom": 185.01574803149617,
+        "height": 569.0,
         "title": ""
       },
       {
         "page": 148,
-        "kind": "heading",
-        "bottom": 710.0157480314962,
-        "height": 31.0,
-        "title": "제11장. 컨테이너"
-      },
-      {
-        "page": 148,
         "kind": "table",
-        "bottom": 140.01574803149617,
-        "height": 570.0,
+        "bottom": 313.0157480314962,
+        "height": 441.0,
         "title": ""
       },
       {
         "page": 149,
-        "kind": "table",
-        "bottom": 209.01574803149617,
-        "height": 545.0,
-        "title": ""
-      },
-      {
-        "page": 150,
-        "kind": "table",
-        "bottom": 234.01574803149617,
-        "height": 520.0,
-        "title": ""
-      },
-      {
-        "page": 151,
-        "kind": "table",
-        "bottom": 234.01574803149617,
-        "height": 520.0,
-        "title": ""
-      },
-      {
-        "page": 152,
-        "kind": "table",
-        "bottom": 209.01574803149617,
-        "height": 545.0,
-        "title": ""
-      },
-      {
-        "page": 153,
-        "kind": "table",
-        "bottom": 204.01574803149617,
-        "height": 550.0,
-        "title": ""
-      },
-      {
-        "page": 154,
-        "kind": "table",
-        "bottom": 194.01574803149617,
-        "height": 560.0,
-        "title": ""
-      },
-      {
-        "page": 155,
-        "kind": "table",
-        "bottom": 209.01574803149617,
-        "height": 545.0,
-        "title": ""
-      },
-      {
-        "page": 156,
-        "kind": "table",
-        "bottom": 234.01574803149617,
-        "height": 520.0,
-        "title": ""
-      },
-      {
-        "page": 157,
-        "kind": "table",
-        "bottom": 234.01574803149617,
-        "height": 520.0,
-        "title": ""
-      },
-      {
-        "page": 158,
-        "kind": "table",
-        "bottom": 234.01574803149617,
-        "height": 520.0,
-        "title": ""
-      },
-      {
-        "page": 159,
-        "kind": "table",
-        "bottom": 199.01574803149617,
-        "height": 555.0,
-        "title": ""
-      },
-      {
-        "page": 160,
-        "kind": "table",
-        "bottom": 234.01574803149617,
-        "height": 520.0,
-        "title": ""
-      },
-      {
-        "page": 161,
-        "kind": "table",
-        "bottom": 234.01574803149617,
-        "height": 520.0,
-        "title": ""
-      },
-      {
-        "page": 162,
-        "kind": "table",
-        "bottom": 234.01574803149617,
-        "height": 520.0,
-        "title": ""
-      },
-      {
-        "page": 162,
-        "kind": "table",
-        "bottom": 146.01574803149617,
-        "height": 80.0,
-        "title": ""
-      },
-      {
-        "page": 163,
-        "kind": "heading",
-        "bottom": 710.0157480314962,
-        "height": 31.0,
-        "title": "제12장. 알고리즘"
-      },
-      {
-        "page": 163,
-        "kind": "table",
-        "bottom": 155.01574803149617,
-        "height": 555.0,
-        "title": ""
-      },
-      {
-        "page": 164,
-        "kind": "table",
-        "bottom": 399.0157480314962,
-        "height": 355.0,
-        "title": ""
-      },
-      {
-        "page": 165,
-        "kind": "table",
-        "bottom": 234.01574803149617,
-        "height": 520.0,
-        "title": ""
-      },
-      {
-        "page": 166,
-        "kind": "table",
-        "bottom": 334.0157480314962,
-        "height": 420.0,
-        "title": ""
-      },
-      {
-        "page": 167,
-        "kind": "table",
-        "bottom": 224.01574803149617,
-        "height": 530.0,
-        "title": ""
-      },
-      {
-        "page": 168,
-        "kind": "table",
-        "bottom": 194.01574803149617,
-        "height": 560.0,
-        "title": ""
-      },
-      {
-        "page": 169,
-        "kind": "table",
-        "bottom": 204.01574803149617,
-        "height": 550.0,
-        "title": ""
-      },
-      {
-        "page": 170,
-        "kind": "table",
-        "bottom": 209.01574803149617,
-        "height": 545.0,
-        "title": ""
-      },
-      {
-        "page": 171,
-        "kind": "table",
-        "bottom": 224.01574803149617,
-        "height": 530.0,
-        "title": ""
-      },
-      {
-        "page": 172,
-        "kind": "table",
-        "bottom": 224.01574803149617,
-        "height": 530.0,
-        "title": ""
-      },
-      {
-        "page": 173,
-        "kind": "table",
-        "bottom": 234.01574803149617,
-        "height": 520.0,
-        "title": ""
-      },
-      {
-        "page": 174,
-        "kind": "table",
-        "bottom": 184.01574803149617,
-        "height": 570.0,
-        "title": ""
-      },
-      {
-        "page": 175,
-        "kind": "table",
-        "bottom": 204.01574803149617,
-        "height": 550.0,
-        "title": ""
-      },
-      {
-        "page": 176,
-        "kind": "table",
-        "bottom": 234.01574803149617,
-        "height": 520.0,
-        "title": ""
-      },
-      {
-        "page": 177,
-        "kind": "table",
-        "bottom": 234.01574803149617,
-        "height": 520.0,
-        "title": ""
-      },
-      {
-        "page": 178,
-        "kind": "table",
-        "bottom": 219.01574803149617,
-        "height": 535.0,
-        "title": ""
-      },
-      {
-        "page": 179,
-        "kind": "table",
-        "bottom": 184.01574803149617,
-        "height": 570.0,
-        "title": ""
-      },
-      {
-        "page": 180,
-        "kind": "table",
-        "bottom": 359.0157480314962,
-        "height": 395.0,
-        "title": ""
-      },
-      {
-        "page": 181,
         "kind": "heading",
         "bottom": 710.0157480314962,
         "height": 31.0,
         "title": "제13장. 유틸리티"
       },
       {
-        "page": 181,
+        "page": 149,
         "kind": "table",
-        "bottom": 165.01574803149617,
-        "height": 545.0,
+        "bottom": 180.01574803149617,
+        "height": 530.0,
         "title": ""
       },
       {
-        "page": 182,
+        "page": 150,
         "kind": "table",
-        "bottom": 244.01574803149617,
-        "height": 510.0,
+        "bottom": 192.01574803149617,
+        "height": 562.0,
         "title": ""
       },
       {
-        "page": 183,
+        "page": 151,
         "kind": "table",
-        "bottom": 184.01574803149617,
-        "height": 570.0,
+        "bottom": 213.01574803149617,
+        "height": 541.0,
         "title": ""
       },
       {
-        "page": 184,
+        "page": 152,
         "kind": "table",
-        "bottom": 219.01574803149617,
-        "height": 535.0,
+        "bottom": 212.01574803149617,
+        "height": 542.0,
         "title": ""
       },
       {
-        "page": 185,
+        "page": 153,
         "kind": "table",
-        "bottom": 229.01574803149617,
-        "height": 525.0,
+        "bottom": 221.01574803149617,
+        "height": 533.0,
         "title": ""
       },
       {
-        "page": 186,
+        "page": 154,
         "kind": "table",
-        "bottom": 239.01574803149617,
-        "height": 515.0,
+        "bottom": 256.0157480314962,
+        "height": 498.0,
         "title": ""
       },
       {
-        "page": 187,
+        "page": 155,
         "kind": "table",
-        "bottom": 209.01574803149617,
-        "height": 545.0,
+        "bottom": 206.01574803149617,
+        "height": 548.0,
         "title": ""
       },
       {
-        "page": 188,
+        "page": 156,
         "kind": "table",
-        "bottom": 199.01574803149617,
-        "height": 555.0,
+        "bottom": 203.01574803149617,
+        "height": 551.0,
         "title": ""
       },
       {
-        "page": 189,
+        "page": 157,
         "kind": "table",
-        "bottom": 189.01574803149617,
-        "height": 565.0,
+        "bottom": 216.01574803149617,
+        "height": 538.0,
         "title": ""
       },
       {
-        "page": 190,
+        "page": 158,
         "kind": "table",
-        "bottom": 229.01574803149617,
-        "height": 525.0,
+        "bottom": 201.01574803149617,
+        "height": 553.0,
         "title": ""
       },
       {
-        "page": 191,
+        "page": 159,
+        "kind": "table",
+        "bottom": 245.01574803149617,
+        "height": 509.0,
+        "title": ""
+      },
+      {
+        "page": 160,
+        "kind": "table",
+        "bottom": 195.01574803149617,
+        "height": 559.0,
+        "title": ""
+      },
+      {
+        "page": 161,
         "kind": "table",
         "bottom": 194.01574803149617,
         "height": 560.0,
         "title": ""
       },
       {
-        "page": 192,
+        "page": 162,
+        "kind": "table",
+        "bottom": 208.01574803149617,
+        "height": 546.0,
+        "title": ""
+      },
+      {
+        "page": 163,
+        "kind": "table",
+        "bottom": 215.01574803149617,
+        "height": 539.0,
+        "title": ""
+      },
+      {
+        "page": 164,
+        "kind": "table",
+        "bottom": 224.01574803149617,
+        "height": 530.0,
+        "title": ""
+      },
+      {
+        "page": 165,
+        "kind": "table",
+        "bottom": 234.51574803149617,
+        "height": 519.5,
+        "title": ""
+      },
+      {
+        "page": 166,
+        "kind": "table",
+        "bottom": 480.0157480314962,
+        "height": 274.0,
+        "title": ""
+      },
+      {
+        "page": 167,
+        "kind": "heading",
+        "bottom": 710.0157480314962,
+        "height": 31.0,
+        "title": "제14장. 수치"
+      },
+      {
+        "page": 167,
+        "kind": "table",
+        "bottom": 149.01574803149617,
+        "height": 561.0,
+        "title": ""
+      },
+      {
+        "page": 168,
+        "kind": "table",
+        "bottom": 204.01574803149617,
+        "height": 550.0,
+        "title": ""
+      },
+      {
+        "page": 169,
+        "kind": "table",
+        "bottom": 198.01574803149617,
+        "height": 556.0,
+        "title": ""
+      },
+      {
+        "page": 170,
+        "kind": "table",
+        "bottom": 205.01574803149617,
+        "height": 549.0,
+        "title": ""
+      },
+      {
+        "page": 171,
         "kind": "table",
         "bottom": 209.01574803149617,
         "height": 545.0,
         "title": ""
       },
       {
+        "page": 172,
+        "kind": "table",
+        "bottom": 194.01574803149617,
+        "height": 560.0,
+        "title": ""
+      },
+      {
+        "page": 173,
+        "kind": "table",
+        "bottom": 210.51574803149617,
+        "height": 543.5,
+        "title": ""
+      },
+      {
+        "page": 174,
+        "kind": "table",
+        "bottom": 224.01574803149617,
+        "height": 530.0,
+        "title": ""
+      },
+      {
+        "page": 175,
+        "kind": "table",
+        "bottom": 429.5157480314962,
+        "height": 324.5,
+        "title": ""
+      },
+      {
+        "page": 176,
+        "kind": "heading",
+        "bottom": 710.0157480314962,
+        "height": 31.0,
+        "title": "제15장. 동시성"
+      },
+      {
+        "page": 176,
+        "kind": "table",
+        "bottom": 245.01574803149617,
+        "height": 465.0,
+        "title": ""
+      },
+      {
+        "page": 177,
+        "kind": "table",
+        "bottom": 223.01574803149617,
+        "height": 531.0,
+        "title": ""
+      },
+      {
+        "page": 178,
+        "kind": "table",
+        "bottom": 207.01574803149617,
+        "height": 547.0,
+        "title": ""
+      },
+      {
+        "page": 178,
+        "kind": "table",
+        "bottom": 134.01574803149617,
+        "height": 65.0,
+        "title": ""
+      },
+      {
+        "page": 179,
+        "kind": "table",
+        "bottom": 209.01574803149617,
+        "height": 545.0,
+        "title": ""
+      },
+      {
+        "page": 180,
+        "kind": "table",
+        "bottom": 205.01574803149617,
+        "height": 549.0,
+        "title": ""
+      },
+      {
+        "page": 181,
+        "kind": "table",
+        "bottom": 267.0157480314962,
+        "height": 487.0,
+        "title": ""
+      },
+      {
+        "page": 182,
+        "kind": "table",
+        "bottom": 220.01574803149617,
+        "height": 534.0,
+        "title": ""
+      },
+      {
+        "page": 183,
+        "kind": "table",
+        "bottom": 363.0157480314962,
+        "height": 391.0,
+        "title": ""
+      },
+      {
+        "page": 184,
+        "kind": "table",
+        "bottom": 392.0157480314962,
+        "height": 362.0,
+        "title": ""
+      },
+      {
+        "page": 185,
+        "kind": "table",
+        "bottom": 204.01574803149617,
+        "height": 550.0,
+        "title": ""
+      },
+      {
+        "page": 186,
+        "kind": "table",
+        "bottom": 234.01574803149617,
+        "height": 520.0,
+        "title": ""
+      },
+      {
+        "page": 187,
+        "kind": "table",
+        "bottom": 215.01574803149617,
+        "height": 539.0,
+        "title": ""
+      },
+      {
+        "page": 188,
+        "kind": "table",
+        "bottom": 224.01574803149617,
+        "height": 530.0,
+        "title": ""
+      },
+      {
+        "page": 189,
+        "kind": "table",
+        "bottom": 207.01574803149617,
+        "height": 547.0,
+        "title": ""
+      },
+      {
+        "page": 189,
+        "kind": "table",
+        "bottom": 100.01574803149617,
+        "height": 99.0,
+        "title": ""
+      },
+      {
+        "page": 190,
+        "kind": "heading",
+        "bottom": 710.0157480314962,
+        "height": 31.0,
+        "title": "제16장. 역사와 호환성"
+      },
+      {
+        "page": 190,
+        "kind": "table",
+        "bottom": 171.01574803149617,
+        "height": 539.0,
+        "title": ""
+      },
+      {
+        "page": 191,
+        "kind": "table",
+        "bottom": 218.01574803149617,
+        "height": 536.0,
+        "title": ""
+      },
+      {
+        "page": 192,
+        "kind": "table",
+        "bottom": 215.01574803149617,
+        "height": 539.0,
+        "title": ""
+      },
+      {
         "page": 193,
         "kind": "table",
-        "bottom": 184.01574803149617,
-        "height": 570.0,
+        "bottom": 207.01574803149617,
+        "height": 547.0,
         "title": ""
       },
       {
         "page": 194,
         "kind": "table",
-        "bottom": 289.0157480314962,
-        "height": 465.0,
+        "bottom": 221.01574803149617,
+        "height": 533.0,
         "title": ""
       },
       {
         "page": 195,
         "kind": "table",
-        "bottom": 214.01574803149617,
-        "height": 540.0,
+        "bottom": 200.01574803149617,
+        "height": 554.0,
         "title": ""
       },
       {
         "page": 196,
         "kind": "table",
-        "bottom": 189.01574803149617,
-        "height": 565.0,
+        "bottom": 200.01574803149617,
+        "height": 554.0,
         "title": ""
       },
       {
         "page": 197,
         "kind": "table",
-        "bottom": 199.01574803149617,
-        "height": 555.0,
+        "bottom": 215.01574803149617,
+        "height": 539.0,
         "title": ""
       },
       {
@@ -18912,410 +18947,46 @@
       {
         "page": 199,
         "kind": "table",
-        "bottom": 194.01574803149617,
-        "height": 560.0,
+        "bottom": 197.01574803149617,
+        "height": 557.0,
         "title": ""
       },
       {
         "page": 200,
         "kind": "table",
-        "bottom": 234.01574803149617,
-        "height": 520.0,
+        "bottom": 210.01574803149617,
+        "height": 544.0,
         "title": ""
       },
       {
         "page": 201,
         "kind": "table",
-        "bottom": 234.01574803149617,
-        "height": 520.0,
+        "bottom": 187.01574803149617,
+        "height": 567.0,
         "title": ""
       },
       {
         "page": 202,
-        "kind": "table",
-        "bottom": 219.01574803149617,
-        "height": 535.0,
-        "title": ""
-      },
-      {
-        "page": 203,
-        "kind": "table",
-        "bottom": 454.0157480314962,
-        "height": 300.0,
-        "title": ""
-      },
-      {
-        "page": 204,
-        "kind": "heading",
-        "bottom": 710.0157480314962,
-        "height": 31.0,
-        "title": "제14장. 수치"
-      },
-      {
-        "page": 204,
-        "kind": "table",
-        "bottom": 180.01574803149617,
-        "height": 530.0,
-        "title": ""
-      },
-      {
-        "page": 205,
-        "kind": "table",
-        "bottom": 194.01574803149617,
-        "height": 560.0,
-        "title": ""
-      },
-      {
-        "page": 206,
-        "kind": "table",
-        "bottom": 219.01574803149617,
-        "height": 535.0,
-        "title": ""
-      },
-      {
-        "page": 207,
-        "kind": "table",
-        "bottom": 189.01574803149617,
-        "height": 565.0,
-        "title": ""
-      },
-      {
-        "page": 208,
-        "kind": "table",
-        "bottom": 219.01574803149617,
-        "height": 535.0,
-        "title": ""
-      },
-      {
-        "page": 209,
-        "kind": "table",
-        "bottom": 214.01574803149617,
-        "height": 540.0,
-        "title": ""
-      },
-      {
-        "page": 210,
-        "kind": "table",
-        "bottom": 214.01574803149617,
-        "height": 540.0,
-        "title": ""
-      },
-      {
-        "page": 211,
-        "kind": "table",
-        "bottom": 219.01574803149617,
-        "height": 535.0,
-        "title": ""
-      },
-      {
-        "page": 212,
-        "kind": "table",
-        "bottom": 234.01574803149617,
-        "height": 520.0,
-        "title": ""
-      },
-      {
-        "page": 213,
-        "kind": "table",
-        "bottom": 234.01574803149617,
-        "height": 520.0,
-        "title": ""
-      },
-      {
-        "page": 214,
-        "kind": "table",
-        "bottom": 429.0157480314962,
-        "height": 325.0,
-        "title": ""
-      },
-      {
-        "page": 215,
-        "kind": "heading",
-        "bottom": 710.0157480314962,
-        "height": 31.0,
-        "title": "제15장. 동시성"
-      },
-      {
-        "page": 215,
-        "kind": "table",
-        "bottom": 190.01574803149617,
-        "height": 520.0,
-        "title": ""
-      },
-      {
-        "page": 216,
-        "kind": "table",
-        "bottom": 219.01574803149617,
-        "height": 535.0,
-        "title": ""
-      },
-      {
-        "page": 217,
         "kind": "table",
         "bottom": 184.01574803149617,
         "height": 570.0,
         "title": ""
       },
       {
-        "page": 218,
+        "page": 203,
         "kind": "table",
-        "bottom": 399.0157480314962,
-        "height": 355.0,
+        "bottom": 195.01574803149617,
+        "height": 559.0,
         "title": ""
       },
       {
-        "page": 219,
+        "page": 204,
         "kind": "table",
-        "bottom": 209.01574803149617,
-        "height": 545.0,
-        "title": ""
-      },
-      {
-        "page": 220,
-        "kind": "table",
-        "bottom": 204.01574803149617,
-        "height": 550.0,
-        "title": ""
-      },
-      {
-        "page": 221,
-        "kind": "table",
-        "bottom": 224.01574803149617,
-        "height": 530.0,
-        "title": ""
-      },
-      {
-        "page": 222,
-        "kind": "table",
-        "bottom": 219.01574803149617,
-        "height": 535.0,
-        "title": ""
-      },
-      {
-        "page": 223,
-        "kind": "table",
-        "bottom": 209.01574803149617,
-        "height": 545.0,
-        "title": ""
-      },
-      {
-        "page": 224,
-        "kind": "table",
-        "bottom": 379.0157480314962,
-        "height": 375.0,
-        "title": ""
-      },
-      {
-        "page": 225,
-        "kind": "table",
-        "bottom": 344.0157480314962,
-        "height": 410.0,
-        "title": ""
-      },
-      {
-        "page": 226,
-        "kind": "table",
-        "bottom": 229.01574803149617,
-        "height": 525.0,
-        "title": ""
-      },
-      {
-        "page": 227,
-        "kind": "table",
-        "bottom": 219.01574803149617,
-        "height": 535.0,
-        "title": ""
-      },
-      {
-        "page": 228,
-        "kind": "table",
-        "bottom": 209.01574803149617,
-        "height": 545.0,
-        "title": ""
-      },
-      {
-        "page": 229,
-        "kind": "table",
-        "bottom": 234.01574803149617,
-        "height": 520.0,
-        "title": ""
-      },
-      {
-        "page": 230,
-        "kind": "table",
-        "bottom": 234.01574803149617,
-        "height": 520.0,
-        "title": ""
-      },
-      {
-        "page": 231,
-        "kind": "table",
-        "bottom": 204.01574803149617,
-        "height": 550.0,
-        "title": ""
-      },
-      {
-        "page": 231,
-        "kind": "table",
-        "bottom": 116.01574803149617,
-        "height": 80.0,
-        "title": ""
-      },
-      {
-        "page": 232,
-        "kind": "heading",
-        "bottom": 710.0157480314962,
-        "height": 31.0,
-        "title": "제16장. 역사와 호환성"
-      },
-      {
-        "page": 232,
-        "kind": "table",
-        "bottom": 190.01574803149617,
-        "height": 520.0,
-        "title": ""
-      },
-      {
-        "page": 233,
-        "kind": "table",
-        "bottom": 234.01574803149617,
-        "height": 520.0,
-        "title": ""
-      },
-      {
-        "page": 234,
-        "kind": "table",
-        "bottom": 234.01574803149617,
-        "height": 520.0,
-        "title": ""
-      },
-      {
-        "page": 235,
-        "kind": "table",
-        "bottom": 234.01574803149617,
-        "height": 520.0,
-        "title": ""
-      },
-      {
-        "page": 236,
-        "kind": "table",
-        "bottom": 234.01574803149617,
-        "height": 520.0,
-        "title": ""
-      },
-      {
-        "page": 237,
-        "kind": "table",
-        "bottom": 219.01574803149617,
-        "height": 535.0,
-        "title": ""
-      },
-      {
-        "page": 238,
-        "kind": "table",
-        "bottom": 234.01574803149617,
-        "height": 520.0,
-        "title": ""
-      },
-      {
-        "page": 239,
-        "kind": "table",
-        "bottom": 234.01574803149617,
-        "height": 520.0,
-        "title": ""
-      },
-      {
-        "page": 240,
-        "kind": "table",
-        "bottom": 224.01574803149617,
-        "height": 530.0,
-        "title": ""
-      },
-      {
-        "page": 241,
-        "kind": "table",
-        "bottom": 234.01574803149617,
-        "height": 520.0,
-        "title": ""
-      },
-      {
-        "page": 242,
-        "kind": "table",
-        "bottom": 234.01574803149617,
-        "height": 520.0,
-        "title": ""
-      },
-      {
-        "page": 243,
-        "kind": "table",
-        "bottom": 219.01574803149617,
-        "height": 535.0,
-        "title": ""
-      },
-      {
-        "page": 244,
-        "kind": "table",
-        "bottom": 234.01574803149617,
-        "height": 520.0,
-        "title": ""
-      },
-      {
-        "page": 245,
-        "kind": "table",
-        "bottom": 234.01574803149617,
-        "height": 520.0,
-        "title": ""
-      },
-      {
-        "page": 246,
-        "kind": "table",
-        "bottom": 224.01574803149617,
-        "height": 530.0,
-        "title": ""
-      },
-      {
-        "page": 247,
-        "kind": "table",
-        "bottom": 214.01574803149617,
-        "height": 540.0,
-        "title": ""
-      },
-      {
-        "page": 248,
-        "kind": "table",
-        "bottom": 234.01574803149617,
-        "height": 520.0,
-        "title": ""
-      },
-      {
-        "page": 249,
-        "kind": "table",
-        "bottom": 199.01574803149617,
-        "height": 555.0,
-        "title": ""
-      },
-      {
-        "page": 250,
-        "kind": "table",
-        "bottom": 219.01574803149617,
-        "height": 535.0,
-        "title": ""
-      },
-      {
-        "page": 251,
-        "kind": "table",
-        "bottom": 214.01574803149617,
-        "height": 540.0,
-        "title": ""
-      },
-      {
-        "page": 252,
-        "kind": "table",
-        "bottom": 249.01574803149617,
-        "height": 505.0,
+        "bottom": 235.01574803149617,
+        "height": 519.0,
         "title": ""
       }
     ],
-    "page_count": 252
+    "page_count": 204
   }
 }

@@ -1,0 +1,325 @@
+{
+  "reviewer": "refresh_os_early",
+  "status": "content_review_complete",
+  "date": "2026-10-23",
+  "source": {
+    "code": "O",
+    "path": "C:/Users/user/Downloads/ocs.pdf",
+    "total_pdf_pages": 615,
+    "page_mapping": "tmp/pdfs/os_notes/source_map.json 개별 대응표"
+  },
+  "scope": {
+    "chapters": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8
+    ],
+    "existing_sections_read": 172,
+    "existing_body_blocks_read": 411,
+    "new_fact_occurrences": 193
+  },
+  "method": [
+    "기존 01~08.json 본문 전체를 읽고 대응 원문 OCR의 정의·조건·절차·수치·절 번호를 중심으로 대조하였다.",
+    "신규 항목의 모든 인용 PDF면 25개를 원본 스캔 이미지로 직접 확인하였다. 각 파일의 refs 인용면 집합과 checked_images 집합이 일치한다.",
+    "OCR 판독이 불확실한 조건·식은 원본 이미지를 우선하였다. 기존 본문의 모든 원본 PDF면을 이번 보완 작업에서 새로 이미지 열람했다는 의미는 아니다.",
+    "원문에 있는 장말 요약 절을 새 장 요약의 근거로 사용하였다. 원문에 없는 실행 결과·예제·최신 정보·코드는 추가하지 않았다."
+  ],
+  "new_cited_pdf_images_checked": [
+    60,
+    61,
+    116,
+    117,
+    122,
+    125,
+    126,
+    128,
+    161,
+    162,
+    201,
+    220,
+    221,
+    230,
+    231,
+    259,
+    263,
+    264,
+    266,
+    285,
+    288,
+    289,
+    307,
+    310,
+    320
+  ],
+  "additional_existing_body_check_images": [
+    68,
+    72,
+    167,
+    170,
+    203,
+    204
+  ],
+  "validation": {
+    "schema_issues": [],
+    "new_cited_images_complete": true,
+    "source_page_and_chapter_mapping_valid": true,
+    "source_images_exist": true,
+    "corrections_total": 0
+  },
+  "chapters": [
+    {
+      "chapter": 1,
+      "title": "제1장. 서론",
+      "source_available": true,
+      "old_sections_reviewed": 43,
+      "old_body_blocks_reviewed": 68,
+      "new_fact_occurrences": 27,
+      "new_cited_pdf_pages": [
+        60,
+        61
+      ],
+      "new_cited_printed_pages": [
+        56,
+        57
+      ],
+      "checked_images_complete": true,
+      "summary_basis": "1.12 요약",
+      "corrections_count": 0
+    },
+    {
+      "chapter": 2,
+      "title": "제2장. 운영체제 구조",
+      "source_available": false,
+      "old_sections_reviewed": 1,
+      "old_body_blocks_reviewed": 2,
+      "new_fact_occurrences": 0,
+      "new_cited_pdf_pages": [],
+      "new_cited_printed_pages": [],
+      "checked_images_complete": true,
+      "summary_basis": "본문 미제공",
+      "corrections_count": 0
+    },
+    {
+      "chapter": 3,
+      "title": "제3장. 프로세스",
+      "source_available": true,
+      "old_sections_reviewed": 29,
+      "old_body_blocks_reviewed": 68,
+      "new_fact_occurrences": 27,
+      "new_cited_pdf_pages": [
+        116,
+        117
+      ],
+      "new_cited_printed_pages": [
+        169,
+        170
+      ],
+      "checked_images_complete": true,
+      "summary_basis": "3.9 요약",
+      "corrections_count": 0
+    },
+    {
+      "chapter": 4,
+      "title": "제4장. 스레드와 병행성",
+      "source_available": true,
+      "old_sections_reviewed": 26,
+      "old_body_blocks_reviewed": 52,
+      "new_fact_occurrences": 28,
+      "new_cited_pdf_pages": [
+        122,
+        125,
+        126,
+        128,
+        161,
+        162
+      ],
+      "new_cited_printed_pages": [
+        176,
+        179,
+        180,
+        182,
+        215,
+        216
+      ],
+      "checked_images_complete": true,
+      "summary_basis": "4.8 요약",
+      "corrections_count": 0
+    },
+    {
+      "chapter": 5,
+      "title": "제5장. CPU 스케줄링",
+      "source_available": true,
+      "old_sections_reviewed": 39,
+      "old_body_blocks_reviewed": 99,
+      "new_fact_occurrences": 28,
+      "new_cited_pdf_pages": [
+        201,
+        220,
+        221
+      ],
+      "new_cited_printed_pages": [
+        255,
+        274,
+        275
+      ],
+      "checked_images_complete": true,
+      "summary_basis": "5.9 요약",
+      "corrections_count": 0
+    },
+    {
+      "chapter": 6,
+      "title": "제6장. 동기화 도구들",
+      "source_available": true,
+      "old_sections_reviewed": 13,
+      "old_body_blocks_reviewed": 47,
+      "new_fact_occurrences": 27,
+      "new_cited_pdf_pages": [
+        230,
+        231,
+        259
+      ],
+      "new_cited_printed_pages": [
+        286,
+        287,
+        315
+      ],
+      "checked_images_complete": true,
+      "summary_basis": "6.10 요약",
+      "corrections_count": 0
+    },
+    {
+      "chapter": 7,
+      "title": "제7장. 동기화 예제",
+      "source_available": true,
+      "old_sections_reviewed": 9,
+      "old_body_blocks_reviewed": 37,
+      "new_fact_occurrences": 28,
+      "new_cited_pdf_pages": [
+        263,
+        264,
+        266,
+        285,
+        288,
+        289
+      ],
+      "new_cited_printed_pages": [
+        320,
+        321,
+        323,
+        342,
+        345,
+        346
+      ],
+      "checked_images_complete": true,
+      "summary_basis": "7.6 요약",
+      "corrections_count": 0
+    },
+    {
+      "chapter": 8,
+      "title": "제8장. 교착 상태",
+      "source_available": true,
+      "old_sections_reviewed": 12,
+      "old_body_blocks_reviewed": 38,
+      "new_fact_occurrences": 28,
+      "new_cited_pdf_pages": [
+        307,
+        310,
+        320
+      ],
+      "new_cited_printed_pages": [
+        365,
+        368,
+        378
+      ],
+      "checked_images_complete": true,
+      "summary_basis": "8.9 요약",
+      "corrections_count": 0
+    }
+  ],
+  "material_conditions_preserved": [
+    {
+      "chapter": 4,
+      "pdf_pages": [
+        126
+      ],
+      "printed_pages": [
+        180
+      ],
+      "detail": "Amdahl 식의 ≤ 및 S·N 정의를 보존하였다. 원문 내부의 순차 40%/최대 2.0배 서술 불일치는 외부 계산으로 임의 교정하지 않았다."
+    },
+    {
+      "chapter": 5,
+      "pdf_pages": [
+        201
+      ],
+      "printed_pages": [
+        255
+      ],
+      "detail": "Rate-monotonic의 N(2^(1/N) − 1) 경계, 69%·약 83%와 원문 반올림 수치를 보존하였다."
+    },
+    {
+      "chapter": 6,
+      "pdf_pages": [
+        230,
+        231
+      ],
+      "printed_pages": [
+        286,
+        287
+      ],
+      "detail": "진행 조건의 참여 대상 및 무한 연기 금지와 한정된 대기의 다른 프로세스 진입 허용 횟수 조건을 보존하였다."
+    },
+    {
+      "chapter": 7,
+      "pdf_pages": [
+        263,
+        266
+      ],
+      "printed_pages": [
+        320,
+        323
+      ],
+      "detail": "유한 버퍼 초기값 mutex=1, empty=n, full=0을 보존하였다. 철학자가 젓가락을 한 번에 하나씩 집을 수도 있는 원문에 맞춰 두 젓가락의 동시 획득을 필수 절차로 추가하지 않았다."
+    },
+    {
+      "chapter": 8,
+      "pdf_pages": [
+        307,
+        310,
+        320
+      ],
+      "printed_pages": [
+        365,
+        368,
+        378
+      ],
+      "detail": "안전 순서의 존재, 불안전 상태와 교착 상태의 구별, 네 필요조건의 동시 존재 및 Need=Max−Allocation 관계를 보존하였다."
+    }
+  ],
+  "preserved_existing_source_notes": [
+    "3.7.1 공유 메모리 예제의 shm_open O_RDONLY와 mmap 보호 플래그에 관한 원문 내 표기 차이 안내",
+    "4.2 Amdahl 예제 수치에 관한 기존 원문 불일치 안내",
+    "5.4.2 PTHREAD_SCOPE_PROCESS 본문과 PTHREAD_SCOPE_SYSTEM 코드의 표기 차이 안내",
+    "5.5.4 처리기 친화성이 원문에는 5.5.2로 중복 인쇄된 절 번호 안내"
+  ],
+  "overlay_adjustments": [
+    {
+      "chapter": 4,
+      "location": "cheat.formulas[0].refs[0].section",
+      "before": "4.2 Amdahl의 법칙",
+      "after": "4.2 다중 코어 프로그래밍",
+      "reason": "Amdahl 박스가 포함된 실제 소속 절 제목을 인용에 사용하였다. 식과 수치는 변경하지 않았다."
+    }
+  ],
+  "limitations": [
+    "제2장은 목차 제목·절 구조만 제공되어 지식 항목은 모두 빈 배열이며 본문 미제공 안내를 유지하였다.",
+    "인쇄 품질 점검은 최종 생성 PDF의 페이지 이미지로 별도 진행해야 한다."
+  ],
+  "original_chapter_files_modified": false,
+  "ready_for_pdf_render": true
+}

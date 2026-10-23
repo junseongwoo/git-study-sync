@@ -409,10 +409,7 @@
     ],
     "formulas": []
   },
-  "checked_images": [],
-  "editor_notes": [],
-  "corrections": [],
-  "pending_image_pages": [
+  "checked_images": [
     321,
     322,
     323,
@@ -427,5 +424,7 @@
     337,
     338,
     339
-  ]
+  ],
+  "editor_notes": [],
+  "corrections": []
 }
