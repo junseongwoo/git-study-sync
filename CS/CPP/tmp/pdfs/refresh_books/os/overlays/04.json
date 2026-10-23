@@ -429,7 +429,7 @@
         "refs": [
           {
             "source": "O",
-            "section": "4.2 Amdahl의 법칙",
+            "section": "4.2 다중 코어 프로그래밍",
             "pages": [
               126
             ]

@@ -1,0 +1,174 @@
+{
+  "issues": [],
+  "unique_checked_image_count": 25,
+  "chapters": [
+    {
+      "chapter": 1,
+      "title": "제1장. 서론",
+      "source_available": true,
+      "old_sections_reviewed": 43,
+      "old_body_blocks_reviewed": 68,
+      "new_fact_occurrences": 27,
+      "new_cited_pdf_pages": [
+        60,
+        61
+      ],
+      "new_cited_printed_pages": [
+        56,
+        57
+      ],
+      "checked_images_complete": true,
+      "summary_basis": "1.12 요약",
+      "corrections_count": 0
+    },
+    {
+      "chapter": 2,
+      "title": "제2장. 운영체제 구조",
+      "source_available": false,
+      "old_sections_reviewed": 1,
+      "old_body_blocks_reviewed": 2,
+      "new_fact_occurrences": 0,
+      "new_cited_pdf_pages": [],
+      "new_cited_printed_pages": [],
+      "checked_images_complete": true,
+      "summary_basis": "본문 미제공",
+      "corrections_count": 0
+    },
+    {
+      "chapter": 3,
+      "title": "제3장. 프로세스",
+      "source_available": true,
+      "old_sections_reviewed": 29,
+      "old_body_blocks_reviewed": 68,
+      "new_fact_occurrences": 27,
+      "new_cited_pdf_pages": [
+        116,
+        117
+      ],
+      "new_cited_printed_pages": [
+        169,
+        170
+      ],
+      "checked_images_complete": true,
+      "summary_basis": "3.9 요약",
+      "corrections_count": 0
+    },
+    {
+      "chapter": 4,
+      "title": "제4장. 스레드와 병행성",
+      "source_available": true,
+      "old_sections_reviewed": 26,
+      "old_body_blocks_reviewed": 52,
+      "new_fact_occurrences": 28,
+      "new_cited_pdf_pages": [
+        122,
+        125,
+        126,
+        128,
+        161,
+        162
+      ],
+      "new_cited_printed_pages": [
+        176,
+        179,
+        180,
+        182,
+        215,
+        216
+      ],
+      "checked_images_complete": true,
+      "summary_basis": "4.8 요약",
+      "corrections_count": 0
+    },
+    {
+      "chapter": 5,
+      "title": "제5장. CPU 스케줄링",
+      "source_available": true,
+      "old_sections_reviewed": 39,
+      "old_body_blocks_reviewed": 99,
+      "new_fact_occurrences": 28,
+      "new_cited_pdf_pages": [
+        201,
+        220,
+        221
+      ],
+      "new_cited_printed_pages": [
+        255,
+        274,
+        275
+      ],
+      "checked_images_complete": true,
+      "summary_basis": "5.9 요약",
+      "corrections_count": 0
+    },
+    {
+      "chapter": 6,
+      "title": "제6장. 동기화 도구들",
+      "source_available": true,
+      "old_sections_reviewed": 13,
+      "old_body_blocks_reviewed": 47,
+      "new_fact_occurrences": 27,
+      "new_cited_pdf_pages": [
+        230,
+        231,
+        259
+      ],
+      "new_cited_printed_pages": [
+        286,
+        287,
+        315
+      ],
+      "checked_images_complete": true,
+      "summary_basis": "6.10 요약",
+      "corrections_count": 0
+    },
+    {
+      "chapter": 7,
+      "title": "제7장. 동기화 예제",
+      "source_available": true,
+      "old_sections_reviewed": 9,
+      "old_body_blocks_reviewed": 37,
+      "new_fact_occurrences": 28,
+      "new_cited_pdf_pages": [
+        263,
+        264,
+        266,
+        285,
+        288,
+        289
+      ],
+      "new_cited_printed_pages": [
+        320,
+        321,
+        323,
+        342,
+        345,
+        346
+      ],
+      "checked_images_complete": true,
+      "summary_basis": "7.6 요약",
+      "corrections_count": 0
+    },
+    {
+      "chapter": 8,
+      "title": "제8장. 교착 상태",
+      "source_available": true,
+      "old_sections_reviewed": 12,
+      "old_body_blocks_reviewed": 38,
+      "new_fact_occurrences": 28,
+      "new_cited_pdf_pages": [
+        307,
+        310,
+        320
+      ],
+      "new_cited_printed_pages": [
+        365,
+        368,
+        378
+      ],
+      "checked_images_complete": true,
+      "summary_basis": "8.9 요약",
+      "corrections_count": 0
+    }
+  ]
+}
