@@ -1,0 +1,64 @@
+{
+  "files": {
+    "notes": {
+      "path": "C:\\Users\\user\\Desktop\\Obsidian\\git-study-sync\\CS\\CPP\\output\\pdf\\운영체제_정리_및_요약.pdf",
+      "pages": 270,
+      "boundary_issues": [],
+      "replacement_glyph_pages": [],
+      "empty_pages": [],
+      "orphan_headings": [],
+      "table_errors": [],
+      "fonts": [
+        "Consolas",
+        "NanumGothic",
+        "NanumGothicBold",
+        "SegoeUISymbol"
+      ],
+      "font_embedded": true,
+      "clipping_status": "이상 없음",
+      "font_status": "이상 없음",
+      "orphan_status": "이상 없음",
+      "table_status": "분리 없음"
+    },
+    "cheat": {
+      "path": "C:\\Users\\user\\Desktop\\Obsidian\\git-study-sync\\CS\\CPP\\output\\pdf\\운영체제_확인_및_시험.pdf",
+      "pages": 18,
+      "boundary_issues": [],
+      "replacement_glyph_pages": [],
+      "empty_pages": [],
+      "orphan_headings": [],
+      "table_errors": [],
+      "fonts": [
+        "NanumGothic",
+        "NanumGothicBold",
+        "SegoeUISymbol"
+      ],
+      "font_embedded": true,
+      "clipping_status": "이상 없음",
+      "font_status": "이상 없음",
+      "orphan_status": "이상 없음",
+      "table_status": "분리 없음"
+    },
+    "audit": {
+      "path": "C:\\Users\\user\\Desktop\\Obsidian\\git-study-sync\\CS\\CPP\\output\\pdf\\운영체제_근거_및_인쇄점검표.pdf",
+      "pages": 266,
+      "boundary_issues": [],
+      "replacement_glyph_pages": [],
+      "empty_pages": [],
+      "orphan_headings": [],
+      "table_errors": [],
+      "fonts": [
+        "Consolas",
+        "NanumGothic",
+        "NanumGothicBold",
+        "SegoeUISymbol"
+      ],
+      "font_embedded": true,
+      "clipping_status": "이상 없음",
+      "font_status": "이상 없음",
+      "orphan_status": "이상 없음",
+      "table_status": "분리 없음"
+    }
+  },
+  "visual_review_complete": false
+}

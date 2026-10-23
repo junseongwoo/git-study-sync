@@ -114,16 +114,22 @@ def build_notes():
             for comp in c['comparisons']:
                 story.append(H(comp['title'],2));story.extend(compare(comp,u,comp.get('source',c['source']),comp['title']))
         if o['terms']:
-            story.append(H('핵심 용어 표',1));story.extend(m.table(['용어','원문 정의·설명'],[[P('<b>'+m.esc(t['term'])+'</b>','cell',True),FP(t['definition'],u,'핵심 용어','cell')] for t in o['terms']],[108,m.WIDTH-108],max_height=500))
+            story.append(H('핵심 용어 표',1))
+            definition_tables=m.table(['용어','원문 정의·설명'],[[P('<b>'+m.esc(t['term'])+'</b>','cell',True),FP(t['definition'],u,'핵심 용어','cell')] for t in o['terms']],[108,m.WIDTH-108],max_height=500)
+            for item in definition_tables:
+                if isinstance(item,m.Table):item.setStyle(m.TableStyle([('BACKGROUND',(0,0),(-1,-1),m.PALE)]))
+            story.extend(definition_tables)
         if o['summary']:
             fs=[FP(f,u,'장 요약') for f in o['summary']];story.append(KT([H('장 요약',1),P('요약 기준: '+o['summary_basis'],'small'),fs[0]]));story.extend(fs[1:])
         if c.get('limitations') or o.get('editor_notes'):
             story.append(H('원문 확인 메모',1));story.extend(P(clean(t),'small') for t in c.get('limitations',[])+o.get('editor_notes',[]))
     story.extend([PB(),H('원문 기반 복습 질문과 정답',0,True)])
+    first_review=True
     for c in CHAPTERS:
         u=int(c['order']);o=OVERLAYS[u]
         if not o['review']:continue
-        story.extend([PB(),H(c['title'],1,True)])
+        if not first_review:story.append(PB())
+        story.append(H(c['title'],1,True));first_review=False
         for i,q in enumerate(o['review'],1):story.append(P(f'{u:02}-{i}. '+q['question']+' '+ref_text(q['answer']['refs'])))
         story.append(H('정답과 원문 근거',1));story.extend(FP(q['answer'],u,'복습 정답',number=i) for i,q in enumerate(o['review'],1))
     d=Document(m.FILES['notes'],CFG['title']+' - 정리 및 요약','notes');d.multiBuild(story);d.save_layout();print(CFG['name'],'NOTES',d.page,flush=True)
@@ -137,7 +143,7 @@ def build_cheat():
         cheat=o['cheat']
         if not cheat.get('definitions'):
             story.append(P('본문은 원문에서 확인 불가입니다. 이 면은 미제공 범위를 알리는 안내이며, 해당 장의 학습 내용을 요약하지 않았습니다. '+ref_text(source_ref(c['source'],'원문 목차'))));continue
-        story.append(H('핵심 정의',2));story.extend(FP(t['definition'],u,'치트 정의','cheat',term=t['term'],compact=True) for t in cheat['definitions'])
+        story.append(H('핵심 정의',2));story.extend([m.box([FP(t['definition'],u,'치트 정의','cheat',term=t['term'],compact=True) for t in cheat['definitions']]),SP(1,8)])
         if cheat.get('comparison_rows'):
             story.append(H(cheat['comparison_title'],2));story.extend(m.comparison(dict(headers=cheat['comparison_headers'],rows=cheat['comparison_rows']),u,True))
         if cheat.get('formulas'):

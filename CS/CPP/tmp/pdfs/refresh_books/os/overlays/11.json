@@ -401,5 +401,60 @@
     470
   ],
   "editor_notes": [],
-  "corrections": []
+  "corrections": [
+    {
+      "path": [
+        "figures",
+        3,
+        "file"
+      ],
+      "before": "C:\\Users\\user\\Desktop\\Obsidian\\git-study-sync\\CS\\CPP\\tmp\\pdfs\\os_notes\\assets\\O11-F04.png",
+      "after": "C:\\Users\\user\\Desktop\\Obsidian\\git-study-sync\\CS\\CPP\\tmp\\pdfs\\refresh_books\\os\\assets\\O11-F04.png",
+      "refs": [
+        {
+          "source": "O",
+          "section": "11.8.4 RAID 수준",
+          "pages": [
+            463
+          ]
+        }
+      ],
+      "reason": "원문 그림 오른쪽 mirror와 캡션 1+0을 보존하도록 발췌 범위를 확장했다."
+    },
+    {
+      "path": [
+        "figures",
+        3,
+        "crop"
+      ],
+      "before": {
+        "image": "C:\\Users\\user\\Desktop\\Obsidian\\git-study-sync\\CS\\CPP\\tmp\\pdfs\\os_notes\\images\\0463.jpg",
+        "bbox": [
+          350,
+          189,
+          1268,
+          1281
+        ]
+      },
+      "after": {
+        "image": "C:\\Users\\user\\Desktop\\Obsidian\\git-study-sync\\CS\\CPP\\tmp\\pdfs\\os_notes\\images\\0463.jpg",
+        "bbox": [
+          350,
+          189,
+          1340,
+          1281
+        ]
+      },
+      "refs": [
+        {
+          "source": "O",
+          "section": "11.8.4 RAID 수준",
+          "pages": [
+            463
+          ]
+        }
+      ],
+      "reason": "원문 그림 오른쪽 mirror와 캡션 1+0을 보존하도록 발췌 범위를 확장했다."
+    }
+  ]
 }

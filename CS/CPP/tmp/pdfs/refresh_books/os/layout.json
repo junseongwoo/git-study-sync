@@ -93,77 +93,77 @@
       },
       {
         "title": "제1장. 서론",
-        "page": 257,
+        "page": 256,
         "level": 0
       },
       {
         "title": "제3장. 프로세스",
-        "page": 258,
+        "page": 257,
         "level": 0
       },
       {
         "title": "제4장. 스레드와 병행성",
-        "page": 259,
+        "page": 258,
         "level": 0
       },
       {
         "title": "제5장. CPU 스케줄링",
-        "page": 260,
+        "page": 259,
         "level": 0
       },
       {
         "title": "제6장. 동기화 도구들",
-        "page": 261,
+        "page": 260,
         "level": 0
       },
       {
         "title": "제7장. 동기화 예제",
-        "page": 262,
+        "page": 261,
         "level": 0
       },
       {
         "title": "제8장. 교착 상태",
-        "page": 263,
+        "page": 262,
         "level": 0
       },
       {
         "title": "제9장. 메인 메모리",
-        "page": 264,
+        "page": 263,
         "level": 0
       },
       {
         "title": "제10장. 가상 메모리",
-        "page": 265,
+        "page": 264,
         "level": 0
       },
       {
         "title": "제11장. 대용량 저장장치 구조",
-        "page": 266,
+        "page": 265,
         "level": 0
       },
       {
         "title": "제12장. 입출력 시스템",
-        "page": 267,
+        "page": 266,
         "level": 0
       },
       {
         "title": "제13장. 파일 시스템 인터페이스",
-        "page": 268,
+        "page": 267,
         "level": 0
       },
       {
         "title": "제14장. 파일 시스템 구현",
-        "page": 269,
+        "page": 268,
         "level": 0
       },
       {
         "title": "제15장. 파일 시스템 내부구조",
-        "page": 270,
+        "page": 269,
         "level": 0
       },
       {
         "title": "제7부 도입. 보안과 보호",
-        "page": 271,
+        "page": 270,
         "level": 0
       }
     ],
@@ -23150,1029 +23150,1029 @@
         "title": "원문 기반 복습 질문과 정답"
       },
       {
-        "page": 257,
+        "page": 256,
         "kind": "heading",
-        "bottom": 725.0157480314962,
+        "bottom": 681.0157480314962,
         "height": 22.0,
         "title": "제1장. 서론"
       },
       {
-        "page": 257,
+        "page": 256,
         "kind": "text",
-        "bottom": 703.7157480314962,
+        "bottom": 659.7157480314962,
         "height": 15.3,
         "title": ""
       },
       {
-        "page": 257,
+        "page": 256,
         "kind": "text",
-        "bottom": 682.4157480314963,
+        "bottom": 638.4157480314963,
         "height": 15.3,
         "title": ""
       },
       {
-        "page": 257,
+        "page": 256,
         "kind": "text",
-        "bottom": 661.1157480314963,
+        "bottom": 617.1157480314963,
         "height": 15.3,
         "title": ""
       },
       {
-        "page": 257,
+        "page": 256,
         "kind": "text",
-        "bottom": 639.8157480314964,
+        "bottom": 595.8157480314964,
         "height": 15.3,
         "title": ""
       },
       {
-        "page": 257,
+        "page": 256,
         "kind": "heading",
-        "bottom": 604.8157480314964,
+        "bottom": 560.8157480314964,
         "height": 22.0,
         "title": "정답과 원문 근거"
       },
       {
-        "page": 257,
+        "page": 256,
         "kind": "text",
-        "bottom": 568.2157480314963,
+        "bottom": 524.2157480314963,
         "height": 30.6,
         "title": ""
       },
       {
-        "page": 257,
+        "page": 256,
         "kind": "text",
-        "bottom": 531.6157480314963,
+        "bottom": 487.6157480314963,
         "height": 30.6,
         "title": ""
       },
       {
-        "page": 257,
+        "page": 256,
         "kind": "text",
-        "bottom": 510.31574803149635,
+        "bottom": 466.3157480314963,
         "height": 15.3,
         "title": ""
       },
       {
-        "page": 257,
+        "page": 256,
         "kind": "text",
-        "bottom": 473.71574803149633,
+        "bottom": 429.7157480314963,
         "height": 30.6,
         "title": ""
       },
       {
-        "page": 258,
+        "page": 257,
         "kind": "heading",
         "bottom": 725.0157480314962,
         "height": 22.0,
         "title": "제3장. 프로세스"
       },
       {
-        "page": 258,
+        "page": 257,
         "kind": "text",
         "bottom": 703.7157480314962,
         "height": 15.3,
         "title": ""
       },
       {
-        "page": 258,
+        "page": 257,
         "kind": "text",
         "bottom": 682.4157480314963,
         "height": 15.3,
         "title": ""
       },
       {
-        "page": 258,
+        "page": 257,
         "kind": "text",
         "bottom": 661.1157480314963,
         "height": 15.3,
         "title": ""
       },
       {
-        "page": 258,
+        "page": 257,
         "kind": "text",
         "bottom": 639.8157480314964,
         "height": 15.3,
         "title": ""
       },
       {
-        "page": 258,
+        "page": 257,
         "kind": "heading",
         "bottom": 604.8157480314964,
         "height": 22.0,
         "title": "정답과 원문 근거"
       },
       {
-        "page": 258,
+        "page": 257,
         "kind": "text",
         "bottom": 568.2157480314963,
         "height": 30.6,
         "title": ""
       },
       {
-        "page": 258,
+        "page": 257,
         "kind": "text",
         "bottom": 531.6157480314963,
         "height": 30.6,
         "title": ""
       },
       {
-        "page": 258,
+        "page": 257,
         "kind": "text",
         "bottom": 495.0157480314963,
         "height": 30.6,
         "title": ""
       },
       {
-        "page": 258,
+        "page": 257,
         "kind": "text",
         "bottom": 458.41574803149626,
         "height": 30.6,
         "title": ""
       },
       {
-        "page": 259,
+        "page": 258,
         "kind": "heading",
         "bottom": 725.0157480314962,
         "height": 22.0,
         "title": "제4장. 스레드와 병행성"
       },
       {
-        "page": 259,
+        "page": 258,
         "kind": "text",
         "bottom": 703.7157480314962,
         "height": 15.3,
         "title": ""
       },
       {
-        "page": 259,
+        "page": 258,
         "kind": "text",
         "bottom": 682.4157480314963,
         "height": 15.3,
         "title": ""
       },
       {
-        "page": 259,
+        "page": 258,
         "kind": "text",
         "bottom": 661.1157480314963,
         "height": 15.3,
         "title": ""
       },
       {
-        "page": 259,
+        "page": 258,
         "kind": "text",
         "bottom": 639.8157480314964,
         "height": 15.3,
         "title": ""
       },
       {
-        "page": 259,
+        "page": 258,
         "kind": "heading",
         "bottom": 604.8157480314964,
         "height": 22.0,
         "title": "정답과 원문 근거"
       },
       {
-        "page": 259,
+        "page": 258,
         "kind": "text",
         "bottom": 568.2157480314963,
         "height": 30.6,
         "title": ""
       },
       {
-        "page": 259,
+        "page": 258,
         "kind": "text",
         "bottom": 531.6157480314963,
         "height": 30.6,
         "title": ""
       },
       {
-        "page": 259,
+        "page": 258,
         "kind": "text",
         "bottom": 495.0157480314963,
         "height": 30.6,
         "title": ""
       },
       {
-        "page": 259,
+        "page": 258,
         "kind": "text",
         "bottom": 458.41574803149626,
         "height": 30.6,
         "title": ""
       },
       {
-        "page": 260,
+        "page": 259,
         "kind": "heading",
         "bottom": 725.0157480314962,
         "height": 22.0,
         "title": "제5장. CPU 스케줄링"
       },
       {
-        "page": 260,
+        "page": 259,
         "kind": "text",
         "bottom": 703.7157480314962,
         "height": 15.3,
         "title": ""
       },
       {
-        "page": 260,
+        "page": 259,
         "kind": "text",
         "bottom": 682.4157480314963,
         "height": 15.3,
         "title": ""
       },
       {
-        "page": 260,
+        "page": 259,
         "kind": "text",
         "bottom": 661.1157480314963,
         "height": 15.3,
         "title": ""
       },
       {
-        "page": 260,
+        "page": 259,
         "kind": "text",
         "bottom": 639.8157480314964,
         "height": 15.3,
         "title": ""
       },
       {
-        "page": 260,
+        "page": 259,
         "kind": "heading",
         "bottom": 604.8157480314964,
         "height": 22.0,
         "title": "정답과 원문 근거"
       },
       {
-        "page": 260,
+        "page": 259,
         "kind": "text",
         "bottom": 568.2157480314963,
         "height": 30.6,
         "title": ""
       },
       {
-        "page": 260,
+        "page": 259,
         "kind": "text",
         "bottom": 531.6157480314963,
         "height": 30.6,
         "title": ""
       },
       {
-        "page": 260,
+        "page": 259,
         "kind": "text",
         "bottom": 495.0157480314963,
         "height": 30.6,
         "title": ""
       },
       {
-        "page": 260,
+        "page": 259,
         "kind": "text",
         "bottom": 458.41574803149626,
         "height": 30.6,
         "title": ""
       },
       {
-        "page": 261,
+        "page": 260,
         "kind": "heading",
         "bottom": 725.0157480314962,
         "height": 22.0,
         "title": "제6장. 동기화 도구들"
       },
       {
-        "page": 261,
+        "page": 260,
         "kind": "text",
         "bottom": 703.7157480314962,
         "height": 15.3,
         "title": ""
       },
       {
-        "page": 261,
+        "page": 260,
         "kind": "text",
         "bottom": 682.4157480314963,
         "height": 15.3,
         "title": ""
       },
       {
-        "page": 261,
+        "page": 260,
         "kind": "text",
         "bottom": 661.1157480314963,
         "height": 15.3,
         "title": ""
       },
       {
-        "page": 261,
+        "page": 260,
         "kind": "text",
         "bottom": 639.8157480314964,
         "height": 15.3,
         "title": ""
       },
       {
-        "page": 261,
+        "page": 260,
         "kind": "heading",
         "bottom": 604.8157480314964,
         "height": 22.0,
         "title": "정답과 원문 근거"
       },
       {
-        "page": 261,
+        "page": 260,
         "kind": "text",
         "bottom": 568.2157480314963,
         "height": 30.6,
         "title": ""
       },
       {
-        "page": 261,
+        "page": 260,
         "kind": "text",
         "bottom": 531.6157480314963,
         "height": 30.6,
         "title": ""
       },
       {
-        "page": 261,
+        "page": 260,
         "kind": "text",
         "bottom": 495.0157480314963,
         "height": 30.6,
         "title": ""
       },
       {
-        "page": 261,
+        "page": 260,
         "kind": "text",
         "bottom": 458.41574803149626,
         "height": 30.6,
         "title": ""
       },
       {
-        "page": 262,
+        "page": 261,
         "kind": "heading",
         "bottom": 725.0157480314962,
         "height": 22.0,
         "title": "제7장. 동기화 예제"
       },
       {
-        "page": 262,
+        "page": 261,
         "kind": "text",
         "bottom": 703.7157480314962,
         "height": 15.3,
         "title": ""
       },
       {
-        "page": 262,
+        "page": 261,
         "kind": "text",
         "bottom": 667.1157480314962,
         "height": 30.6,
         "title": ""
       },
       {
-        "page": 262,
+        "page": 261,
         "kind": "text",
         "bottom": 645.8157480314962,
         "height": 15.3,
         "title": ""
       },
       {
-        "page": 262,
+        "page": 261,
         "kind": "text",
         "bottom": 624.5157480314963,
         "height": 15.3,
         "title": ""
       },
       {
-        "page": 262,
+        "page": 261,
         "kind": "heading",
         "bottom": 589.5157480314963,
         "height": 22.0,
         "title": "정답과 원문 근거"
       },
       {
-        "page": 262,
+        "page": 261,
         "kind": "text",
         "bottom": 552.9157480314963,
         "height": 30.6,
         "title": ""
       },
       {
-        "page": 262,
+        "page": 261,
         "kind": "text",
         "bottom": 516.3157480314962,
         "height": 30.6,
         "title": ""
       },
       {
-        "page": 262,
+        "page": 261,
         "kind": "text",
         "bottom": 479.7157480314962,
         "height": 30.6,
         "title": ""
       },
       {
-        "page": 262,
+        "page": 261,
         "kind": "text",
         "bottom": 443.1157480314962,
         "height": 30.6,
         "title": ""
       },
       {
-        "page": 263,
+        "page": 262,
         "kind": "heading",
         "bottom": 725.0157480314962,
         "height": 22.0,
         "title": "제8장. 교착 상태"
       },
       {
-        "page": 263,
+        "page": 262,
         "kind": "text",
         "bottom": 703.7157480314962,
         "height": 15.3,
         "title": ""
       },
       {
-        "page": 263,
+        "page": 262,
         "kind": "text",
         "bottom": 682.4157480314963,
         "height": 15.3,
         "title": ""
       },
       {
-        "page": 263,
+        "page": 262,
         "kind": "text",
         "bottom": 661.1157480314963,
         "height": 15.3,
         "title": ""
       },
       {
-        "page": 263,
+        "page": 262,
         "kind": "text",
         "bottom": 639.8157480314964,
         "height": 15.3,
         "title": ""
       },
       {
-        "page": 263,
+        "page": 262,
         "kind": "heading",
         "bottom": 604.8157480314964,
         "height": 22.0,
         "title": "정답과 원문 근거"
       },
       {
-        "page": 263,
+        "page": 262,
         "kind": "text",
         "bottom": 568.2157480314963,
         "height": 30.6,
         "title": ""
       },
       {
-        "page": 263,
+        "page": 262,
         "kind": "text",
         "bottom": 531.6157480314963,
         "height": 30.6,
         "title": ""
       },
       {
-        "page": 263,
+        "page": 262,
         "kind": "text",
         "bottom": 495.0157480314963,
         "height": 30.6,
         "title": ""
       },
       {
-        "page": 263,
+        "page": 262,
         "kind": "text",
         "bottom": 458.41574803149626,
         "height": 30.6,
         "title": ""
       },
       {
-        "page": 264,
+        "page": 263,
         "kind": "heading",
         "bottom": 725.0157480314962,
         "height": 22.0,
         "title": "제9장. 메인 메모리"
       },
       {
-        "page": 264,
+        "page": 263,
         "kind": "text",
         "bottom": 703.7157480314962,
         "height": 15.3,
         "title": ""
       },
       {
-        "page": 264,
+        "page": 263,
         "kind": "text",
         "bottom": 682.4157480314963,
         "height": 15.3,
         "title": ""
       },
       {
-        "page": 264,
+        "page": 263,
         "kind": "text",
         "bottom": 661.1157480314963,
         "height": 15.3,
         "title": ""
       },
       {
-        "page": 264,
+        "page": 263,
         "kind": "text",
         "bottom": 639.8157480314964,
         "height": 15.3,
         "title": ""
       },
       {
-        "page": 264,
+        "page": 263,
         "kind": "heading",
         "bottom": 604.8157480314964,
         "height": 22.0,
         "title": "정답과 원문 근거"
       },
       {
-        "page": 264,
+        "page": 263,
         "kind": "text",
         "bottom": 568.2157480314963,
         "height": 30.6,
         "title": ""
       },
       {
-        "page": 264,
+        "page": 263,
         "kind": "text",
         "bottom": 531.6157480314963,
         "height": 30.6,
         "title": ""
       },
       {
-        "page": 264,
+        "page": 263,
         "kind": "text",
         "bottom": 495.0157480314963,
         "height": 30.6,
         "title": ""
       },
       {
-        "page": 264,
+        "page": 263,
         "kind": "text",
         "bottom": 458.41574803149626,
         "height": 30.6,
         "title": ""
       },
       {
-        "page": 265,
+        "page": 264,
         "kind": "heading",
         "bottom": 725.0157480314962,
         "height": 22.0,
         "title": "제10장. 가상 메모리"
       },
       {
-        "page": 265,
+        "page": 264,
         "kind": "text",
         "bottom": 703.7157480314962,
         "height": 15.3,
         "title": ""
       },
       {
-        "page": 265,
+        "page": 264,
         "kind": "text",
         "bottom": 682.4157480314963,
         "height": 15.3,
         "title": ""
       },
       {
-        "page": 265,
+        "page": 264,
         "kind": "text",
         "bottom": 661.1157480314963,
         "height": 15.3,
         "title": ""
       },
       {
-        "page": 265,
+        "page": 264,
         "kind": "text",
         "bottom": 639.8157480314964,
         "height": 15.3,
         "title": ""
       },
       {
-        "page": 265,
+        "page": 264,
         "kind": "heading",
         "bottom": 604.8157480314964,
         "height": 22.0,
         "title": "정답과 원문 근거"
       },
       {
-        "page": 265,
+        "page": 264,
         "kind": "text",
         "bottom": 568.2157480314963,
         "height": 30.6,
         "title": ""
       },
       {
-        "page": 265,
+        "page": 264,
         "kind": "text",
         "bottom": 531.6157480314963,
         "height": 30.6,
         "title": ""
       },
       {
-        "page": 265,
+        "page": 264,
         "kind": "text",
         "bottom": 495.0157480314963,
         "height": 30.6,
         "title": ""
       },
       {
-        "page": 265,
+        "page": 264,
         "kind": "text",
         "bottom": 458.41574803149626,
         "height": 30.6,
         "title": ""
       },
       {
-        "page": 266,
+        "page": 265,
         "kind": "heading",
         "bottom": 725.0157480314962,
         "height": 22.0,
         "title": "제11장. 대용량 저장장치 구조"
       },
       {
-        "page": 266,
+        "page": 265,
         "kind": "text",
         "bottom": 703.7157480314962,
         "height": 15.3,
         "title": ""
       },
       {
-        "page": 266,
+        "page": 265,
         "kind": "text",
         "bottom": 682.4157480314963,
         "height": 15.3,
         "title": ""
       },
       {
-        "page": 266,
+        "page": 265,
         "kind": "text",
         "bottom": 661.1157480314963,
         "height": 15.3,
         "title": ""
       },
       {
-        "page": 266,
+        "page": 265,
         "kind": "text",
         "bottom": 639.8157480314964,
         "height": 15.3,
         "title": ""
       },
       {
-        "page": 266,
+        "page": 265,
         "kind": "heading",
         "bottom": 604.8157480314964,
         "height": 22.0,
         "title": "정답과 원문 근거"
       },
       {
-        "page": 266,
+        "page": 265,
         "kind": "text",
         "bottom": 568.2157480314963,
         "height": 30.6,
         "title": ""
       },
       {
-        "page": 266,
+        "page": 265,
         "kind": "text",
         "bottom": 531.6157480314963,
         "height": 30.6,
         "title": ""
       },
       {
-        "page": 266,
+        "page": 265,
         "kind": "text",
         "bottom": 495.0157480314963,
         "height": 30.6,
         "title": ""
       },
       {
-        "page": 266,
+        "page": 265,
         "kind": "text",
         "bottom": 458.41574803149626,
         "height": 30.6,
         "title": ""
       },
       {
-        "page": 267,
+        "page": 266,
         "kind": "heading",
         "bottom": 725.0157480314962,
         "height": 22.0,
         "title": "제12장. 입출력 시스템"
       },
       {
-        "page": 267,
+        "page": 266,
         "kind": "text",
         "bottom": 703.7157480314962,
         "height": 15.3,
         "title": ""
       },
       {
-        "page": 267,
+        "page": 266,
         "kind": "text",
         "bottom": 682.4157480314963,
         "height": 15.3,
         "title": ""
       },
       {
-        "page": 267,
+        "page": 266,
         "kind": "text",
         "bottom": 645.8157480314962,
         "height": 30.6,
         "title": ""
       },
       {
-        "page": 267,
+        "page": 266,
         "kind": "text",
         "bottom": 624.5157480314963,
         "height": 15.3,
         "title": ""
       },
       {
-        "page": 267,
+        "page": 266,
         "kind": "heading",
         "bottom": 589.5157480314963,
         "height": 22.0,
         "title": "정답과 원문 근거"
       },
       {
-        "page": 267,
+        "page": 266,
         "kind": "text",
         "bottom": 552.9157480314963,
         "height": 30.6,
         "title": ""
       },
       {
-        "page": 267,
+        "page": 266,
         "kind": "text",
         "bottom": 516.3157480314962,
         "height": 30.6,
         "title": ""
       },
       {
-        "page": 267,
+        "page": 266,
         "kind": "text",
         "bottom": 479.7157480314962,
         "height": 30.6,
         "title": ""
       },
       {
-        "page": 267,
+        "page": 266,
         "kind": "text",
         "bottom": 443.1157480314962,
         "height": 30.6,
         "title": ""
       },
       {
-        "page": 268,
+        "page": 267,
         "kind": "heading",
         "bottom": 725.0157480314962,
         "height": 22.0,
         "title": "제13장. 파일 시스템 인터페이스"
       },
       {
-        "page": 268,
+        "page": 267,
         "kind": "text",
         "bottom": 703.7157480314962,
         "height": 15.3,
         "title": ""
       },
       {
-        "page": 268,
+        "page": 267,
         "kind": "text",
         "bottom": 682.4157480314963,
         "height": 15.3,
         "title": ""
       },
       {
-        "page": 268,
+        "page": 267,
         "kind": "text",
         "bottom": 661.1157480314963,
         "height": 15.3,
         "title": ""
       },
       {
-        "page": 268,
+        "page": 267,
         "kind": "text",
         "bottom": 639.8157480314964,
         "height": 15.3,
         "title": ""
       },
       {
-        "page": 268,
+        "page": 267,
         "kind": "heading",
         "bottom": 604.8157480314964,
         "height": 22.0,
         "title": "정답과 원문 근거"
       },
       {
-        "page": 268,
+        "page": 267,
         "kind": "text",
         "bottom": 568.2157480314963,
         "height": 30.6,
         "title": ""
       },
       {
-        "page": 268,
+        "page": 267,
         "kind": "text",
         "bottom": 531.6157480314963,
         "height": 30.6,
         "title": ""
       },
       {
-        "page": 268,
+        "page": 267,
         "kind": "text",
         "bottom": 495.0157480314963,
         "height": 30.6,
         "title": ""
       },
       {
-        "page": 268,
+        "page": 267,
         "kind": "text",
         "bottom": 458.41574803149626,
         "height": 30.6,
         "title": ""
       },
       {
-        "page": 269,
+        "page": 268,
         "kind": "heading",
         "bottom": 725.0157480314962,
         "height": 22.0,
         "title": "제14장. 파일 시스템 구현"
       },
       {
-        "page": 269,
+        "page": 268,
         "kind": "text",
         "bottom": 688.4157480314962,
         "height": 30.6,
         "title": ""
       },
       {
-        "page": 269,
+        "page": 268,
         "kind": "text",
         "bottom": 667.1157480314962,
         "height": 15.3,
         "title": ""
       },
       {
-        "page": 269,
+        "page": 268,
         "kind": "text",
         "bottom": 645.8157480314962,
         "height": 15.3,
         "title": ""
       },
       {
-        "page": 269,
+        "page": 268,
         "kind": "text",
         "bottom": 624.5157480314963,
         "height": 15.3,
         "title": ""
       },
       {
-        "page": 269,
+        "page": 268,
         "kind": "heading",
         "bottom": 589.5157480314963,
         "height": 22.0,
         "title": "정답과 원문 근거"
       },
       {
-        "page": 269,
+        "page": 268,
         "kind": "text",
         "bottom": 552.9157480314963,
         "height": 30.6,
         "title": ""
       },
       {
-        "page": 269,
+        "page": 268,
         "kind": "text",
         "bottom": 516.3157480314962,
         "height": 30.6,
         "title": ""
       },
       {
-        "page": 269,
+        "page": 268,
         "kind": "text",
         "bottom": 479.7157480314962,
         "height": 30.6,
         "title": ""
       },
       {
-        "page": 269,
+        "page": 268,
         "kind": "text",
         "bottom": 443.1157480314962,
         "height": 30.6,
         "title": ""
       },
       {
-        "page": 270,
+        "page": 269,
         "kind": "heading",
         "bottom": 725.0157480314962,
         "height": 22.0,
         "title": "제15장. 파일 시스템 내부구조"
       },
       {
-        "page": 270,
+        "page": 269,
         "kind": "text",
         "bottom": 703.7157480314962,
         "height": 15.3,
         "title": ""
       },
       {
-        "page": 270,
+        "page": 269,
         "kind": "text",
         "bottom": 682.4157480314963,
         "height": 15.3,
         "title": ""
       },
       {
-        "page": 270,
+        "page": 269,
         "kind": "text",
         "bottom": 661.1157480314963,
         "height": 15.3,
         "title": ""
       },
       {
-        "page": 270,
+        "page": 269,
         "kind": "text",
         "bottom": 639.8157480314964,
         "height": 15.3,
         "title": ""
       },
       {
-        "page": 270,
+        "page": 269,
         "kind": "heading",
         "bottom": 604.8157480314964,
         "height": 22.0,
         "title": "정답과 원문 근거"
       },
       {
-        "page": 270,
+        "page": 269,
         "kind": "text",
         "bottom": 568.2157480314963,
         "height": 30.6,
         "title": ""
       },
       {
-        "page": 270,
+        "page": 269,
         "kind": "text",
         "bottom": 531.6157480314963,
         "height": 30.6,
         "title": ""
       },
       {
-        "page": 270,
+        "page": 269,
         "kind": "text",
         "bottom": 495.0157480314963,
         "height": 30.6,
         "title": ""
       },
       {
-        "page": 270,
+        "page": 269,
         "kind": "text",
         "bottom": 458.41574803149626,
         "height": 30.6,
         "title": ""
       },
       {
-        "page": 271,
+        "page": 270,
         "kind": "heading",
         "bottom": 725.0157480314962,
         "height": 22.0,
         "title": "제7부 도입. 보안과 보호"
       },
       {
-        "page": 271,
+        "page": 270,
         "kind": "text",
         "bottom": 703.7157480314962,
         "height": 15.3,
         "title": ""
       },
       {
-        "page": 271,
+        "page": 270,
         "kind": "text",
         "bottom": 682.4157480314963,
         "height": 15.3,
         "title": ""
       },
       {
-        "page": 271,
+        "page": 270,
         "kind": "heading",
         "bottom": 647.4157480314963,
         "height": 22.0,
         "title": "정답과 원문 근거"
       },
       {
-        "page": 271,
+        "page": 270,
         "kind": "text",
         "bottom": 610.8157480314962,
         "height": 30.6,
         "title": ""
       },
       {
-        "page": 271,
+        "page": 270,
         "kind": "text",
         "bottom": 574.2157480314962,
         "height": 30.6,
         "title": ""
       }
     ],
-    "page_count": 271
+    "page_count": 270
   },
   "cheat": {
     "entries": [
@@ -24302,36 +24302,22 @@
       },
       {
         "page": 3,
-        "kind": "text",
-        "bottom": 665.9157480314962,
-        "height": 30.0,
-        "title": ""
-      },
-      {
-        "page": 3,
-        "kind": "text",
-        "bottom": 631.9157480314962,
-        "height": 30.0,
-        "title": ""
-      },
-      {
-        "page": 3,
-        "kind": "text",
-        "bottom": 597.9157480314962,
-        "height": 30.0,
+        "kind": "box",
+        "bottom": 585.9157480314962,
+        "height": 114.0,
         "title": ""
       },
       {
         "page": 3,
         "kind": "heading",
-        "bottom": 570.8157480314961,
+        "bottom": 546.8157480314961,
         "height": 17.1,
         "title": "다중 프로그래밍과 다중 태스킹"
       },
       {
         "page": 3,
         "kind": "table",
-        "bottom": 450.8157480314961,
+        "bottom": 426.8157480314961,
         "height": 120.0,
         "title": ""
       },
@@ -24365,36 +24351,22 @@
       },
       {
         "page": 5,
-        "kind": "text",
-        "bottom": 665.9157480314962,
-        "height": 30.0,
-        "title": ""
-      },
-      {
-        "page": 5,
-        "kind": "text",
-        "bottom": 631.9157480314962,
-        "height": 30.0,
-        "title": ""
-      },
-      {
-        "page": 5,
-        "kind": "text",
-        "bottom": 597.9157480314962,
-        "height": 30.0,
+        "kind": "box",
+        "bottom": 585.9157480314962,
+        "height": 114.0,
         "title": ""
       },
       {
         "page": 5,
         "kind": "heading",
-        "bottom": 570.8157480314961,
+        "bottom": 546.8157480314961,
         "height": 17.1,
         "title": "프로세스 간 통신"
       },
       {
         "page": 5,
         "kind": "table",
-        "bottom": 465.8157480314961,
+        "bottom": 441.8157480314961,
         "height": 105.0,
         "title": ""
       },
@@ -24414,50 +24386,36 @@
       },
       {
         "page": 6,
-        "kind": "text",
-        "bottom": 665.9157480314962,
-        "height": 30.0,
-        "title": ""
-      },
-      {
-        "page": 6,
-        "kind": "text",
-        "bottom": 646.9157480314962,
-        "height": 15.0,
-        "title": ""
-      },
-      {
-        "page": 6,
-        "kind": "text",
-        "bottom": 627.9157480314962,
-        "height": 15.0,
+        "kind": "box",
+        "bottom": 615.9157480314962,
+        "height": 84.0,
         "title": ""
       },
       {
         "page": 6,
         "kind": "heading",
-        "bottom": 600.8157480314961,
+        "bottom": 576.8157480314961,
         "height": 17.1,
         "title": "병렬 실행의 두 유형"
       },
       {
         "page": 6,
         "kind": "table",
-        "bottom": 480.8157480314961,
+        "bottom": 456.8157480314961,
         "height": 120.0,
         "title": ""
       },
       {
         "page": 6,
         "kind": "heading",
-        "bottom": 441.7157480314961,
+        "bottom": 417.7157480314961,
         "height": 17.1,
         "title": "주요 수식·조건"
       },
       {
         "page": 6,
         "kind": "text",
-        "bottom": 407.7157480314961,
+        "bottom": 383.7157480314961,
         "height": 30.0,
         "title": ""
       },
@@ -24477,50 +24435,36 @@
       },
       {
         "page": 7,
-        "kind": "text",
-        "bottom": 665.9157480314962,
-        "height": 30.0,
-        "title": ""
-      },
-      {
-        "page": 7,
-        "kind": "text",
-        "bottom": 631.9157480314962,
-        "height": 30.0,
-        "title": ""
-      },
-      {
-        "page": 7,
-        "kind": "text",
-        "bottom": 597.9157480314962,
-        "height": 30.0,
+        "kind": "box",
+        "bottom": 585.9157480314962,
+        "height": 114.0,
         "title": ""
       },
       {
         "page": 7,
         "kind": "heading",
-        "bottom": 570.8157480314961,
+        "bottom": 546.8157480314961,
         "height": 17.1,
         "title": "실시간 스케줄링의 우선순위"
       },
       {
         "page": 7,
         "kind": "table",
-        "bottom": 450.8157480314961,
+        "bottom": 426.8157480314961,
         "height": 120.0,
         "title": ""
       },
       {
         "page": 7,
         "kind": "heading",
-        "bottom": 411.7157480314961,
+        "bottom": 387.7157480314961,
         "height": 17.1,
         "title": "주요 수식·조건"
       },
       {
         "page": 7,
         "kind": "text",
-        "bottom": 377.7157480314961,
+        "bottom": 353.7157480314961,
         "height": 30.0,
         "title": ""
       },
@@ -24540,36 +24484,22 @@
       },
       {
         "page": 8,
-        "kind": "text",
-        "bottom": 665.9157480314962,
-        "height": 30.0,
-        "title": ""
-      },
-      {
-        "page": 8,
-        "kind": "text",
-        "bottom": 631.9157480314962,
-        "height": 30.0,
-        "title": ""
-      },
-      {
-        "page": 8,
-        "kind": "text",
-        "bottom": 597.9157480314962,
-        "height": 30.0,
+        "kind": "box",
+        "bottom": 585.9157480314962,
+        "height": 114.0,
         "title": ""
       },
       {
         "page": 8,
         "kind": "heading",
-        "bottom": 570.8157480314961,
+        "bottom": 546.8157480314961,
         "height": 17.1,
         "title": "동기화 도구"
       },
       {
         "page": 8,
         "kind": "table",
-        "bottom": 465.8157480314961,
+        "bottom": 441.8157480314961,
         "height": 105.0,
         "title": ""
       },
@@ -24589,50 +24519,36 @@
       },
       {
         "page": 9,
-        "kind": "text",
-        "bottom": 665.9157480314962,
-        "height": 30.0,
-        "title": ""
-      },
-      {
-        "page": 9,
-        "kind": "text",
-        "bottom": 631.9157480314962,
-        "height": 30.0,
-        "title": ""
-      },
-      {
-        "page": 9,
-        "kind": "text",
-        "bottom": 597.9157480314962,
-        "height": 30.0,
+        "kind": "box",
+        "bottom": 585.9157480314962,
+        "height": 114.0,
         "title": ""
       },
       {
         "page": 9,
         "kind": "heading",
-        "bottom": 570.8157480314961,
+        "bottom": 546.8157480314961,
         "height": 17.1,
         "title": "POSIX 세마포의 두 형태"
       },
       {
         "page": 9,
         "kind": "table",
-        "bottom": 465.8157480314961,
+        "bottom": 441.8157480314961,
         "height": 105.0,
         "title": ""
       },
       {
         "page": 9,
         "kind": "heading",
-        "bottom": 426.7157480314961,
+        "bottom": 402.7157480314961,
         "height": 17.1,
         "title": "주요 수식·조건"
       },
       {
         "page": 9,
         "kind": "text",
-        "bottom": 392.7157480314961,
+        "bottom": 368.7157480314961,
         "height": 30.0,
         "title": ""
       },
@@ -24652,50 +24568,36 @@
       },
       {
         "page": 10,
-        "kind": "text",
-        "bottom": 665.9157480314962,
-        "height": 30.0,
-        "title": ""
-      },
-      {
-        "page": 10,
-        "kind": "text",
-        "bottom": 631.9157480314962,
-        "height": 30.0,
-        "title": ""
-      },
-      {
-        "page": 10,
-        "kind": "text",
-        "bottom": 597.9157480314962,
-        "height": 30.0,
+        "kind": "box",
+        "bottom": 585.9157480314962,
+        "height": 114.0,
         "title": ""
       },
       {
         "page": 10,
         "kind": "heading",
-        "bottom": 570.8157480314961,
+        "bottom": 546.8157480314961,
         "height": 17.1,
         "title": "예방과 회피"
       },
       {
         "page": 10,
         "kind": "table",
-        "bottom": 450.8157480314961,
+        "bottom": 426.8157480314961,
         "height": 120.0,
         "title": ""
       },
       {
         "page": 10,
         "kind": "heading",
-        "bottom": 411.7157480314961,
+        "bottom": 387.7157480314961,
         "height": 17.1,
         "title": "주요 수식·조건"
       },
       {
         "page": 10,
         "kind": "text",
-        "bottom": 377.7157480314961,
+        "bottom": 353.7157480314961,
         "height": 30.0,
         "title": ""
       },
@@ -24715,50 +24617,36 @@
       },
       {
         "page": 11,
-        "kind": "text",
-        "bottom": 680.9157480314962,
-        "height": 15.0,
-        "title": ""
-      },
-      {
-        "page": 11,
-        "kind": "text",
-        "bottom": 661.9157480314962,
-        "height": 15.0,
-        "title": ""
-      },
-      {
-        "page": 11,
-        "kind": "text",
-        "bottom": 627.9157480314962,
-        "height": 30.0,
+        "kind": "box",
+        "bottom": 615.9157480314962,
+        "height": 84.0,
         "title": ""
       },
       {
         "page": 11,
         "kind": "heading",
-        "bottom": 600.8157480314961,
+        "bottom": 576.8157480314961,
         "height": 17.1,
         "title": "물리 메모리와 논리 메모리의 블록"
       },
       {
         "page": 11,
         "kind": "table",
-        "bottom": 495.8157480314961,
+        "bottom": 471.8157480314961,
         "height": 105.0,
         "title": ""
       },
       {
         "page": 11,
         "kind": "heading",
-        "bottom": 456.7157480314961,
+        "bottom": 432.7157480314961,
         "height": 17.1,
         "title": "주요 수식·조건"
       },
       {
         "page": 11,
         "kind": "text",
-        "bottom": 422.7157480314961,
+        "bottom": 398.7157480314961,
         "height": 30.0,
         "title": ""
       },
@@ -24778,50 +24666,36 @@
       },
       {
         "page": 12,
-        "kind": "text",
-        "bottom": 665.9157480314962,
-        "height": 30.0,
-        "title": ""
-      },
-      {
-        "page": 12,
-        "kind": "text",
-        "bottom": 631.9157480314962,
-        "height": 30.0,
-        "title": ""
-      },
-      {
-        "page": 12,
-        "kind": "text",
-        "bottom": 597.9157480314962,
-        "height": 30.0,
+        "kind": "box",
+        "bottom": 585.9157480314962,
+        "height": 114.0,
         "title": ""
       },
       {
         "page": 12,
         "kind": "heading",
-        "bottom": 570.8157480314961,
+        "bottom": 546.8157480314961,
         "height": 17.1,
         "title": "페이지 교체 대상 범위"
       },
       {
         "page": 12,
         "kind": "table",
-        "bottom": 465.8157480314961,
+        "bottom": 441.8157480314961,
         "height": 105.0,
         "title": ""
       },
       {
         "page": 12,
         "kind": "heading",
-        "bottom": 426.7157480314961,
+        "bottom": 402.7157480314961,
         "height": 17.1,
         "title": "주요 수식·조건"
       },
       {
         "page": 12,
         "kind": "text",
-        "bottom": 407.7157480314961,
+        "bottom": 383.7157480314961,
         "height": 15.0,
         "title": ""
       },
@@ -24841,50 +24715,36 @@
       },
       {
         "page": 13,
-        "kind": "text",
-        "bottom": 680.9157480314962,
-        "height": 15.0,
-        "title": ""
-      },
-      {
-        "page": 13,
-        "kind": "text",
-        "bottom": 646.9157480314962,
-        "height": 30.0,
-        "title": ""
-      },
-      {
-        "page": 13,
-        "kind": "text",
-        "bottom": 627.9157480314962,
-        "height": 15.0,
+        "kind": "box",
+        "bottom": 600.9157480314962,
+        "height": 99.0,
         "title": ""
       },
       {
         "page": 13,
         "kind": "heading",
-        "bottom": 600.8157480314961,
+        "bottom": 561.8157480314961,
         "height": 17.1,
         "title": "오류 감지와 수정"
       },
       {
         "page": 13,
         "kind": "table",
-        "bottom": 495.8157480314961,
+        "bottom": 456.8157480314961,
         "height": 105.0,
         "title": ""
       },
       {
         "page": 13,
         "kind": "heading",
-        "bottom": 456.7157480314961,
+        "bottom": 417.7157480314961,
         "height": 17.1,
         "title": "주요 수식·조건"
       },
       {
         "page": 13,
         "kind": "text",
-        "bottom": 407.7157480314961,
+        "bottom": 368.7157480314961,
         "height": 45.0,
         "title": ""
       },
@@ -24904,36 +24764,22 @@
       },
       {
         "page": 14,
-        "kind": "text",
-        "bottom": 665.9157480314962,
-        "height": 30.0,
-        "title": ""
-      },
-      {
-        "page": 14,
-        "kind": "text",
-        "bottom": 631.9157480314962,
-        "height": 30.0,
-        "title": ""
-      },
-      {
-        "page": 14,
-        "kind": "text",
-        "bottom": 612.9157480314962,
-        "height": 15.0,
+        "kind": "box",
+        "bottom": 600.9157480314962,
+        "height": 99.0,
         "title": ""
       },
       {
         "page": 14,
         "kind": "heading",
-        "bottom": 585.8157480314961,
+        "bottom": 561.8157480314961,
         "height": 17.1,
         "title": "호출의 반환과 입출력 완료"
       },
       {
         "page": 14,
         "kind": "table",
-        "bottom": 440.8157480314961,
+        "bottom": 416.8157480314961,
         "height": 145.0,
         "title": ""
       },
@@ -24953,50 +24799,36 @@
       },
       {
         "page": 15,
-        "kind": "text",
-        "bottom": 665.9157480314962,
-        "height": 30.0,
-        "title": ""
-      },
-      {
-        "page": 15,
-        "kind": "text",
-        "bottom": 646.9157480314962,
-        "height": 15.0,
-        "title": ""
-      },
-      {
-        "page": 15,
-        "kind": "text",
-        "bottom": 612.9157480314962,
-        "height": 30.0,
+        "kind": "box",
+        "bottom": 600.9157480314962,
+        "height": 99.0,
         "title": ""
       },
       {
         "page": 15,
         "kind": "heading",
-        "bottom": 585.8157480314961,
+        "bottom": 561.8157480314961,
         "height": 17.1,
         "title": "파일 접근 순서"
       },
       {
         "page": 15,
         "kind": "table",
-        "bottom": 480.8157480314961,
+        "bottom": 456.8157480314961,
         "height": 105.0,
         "title": ""
       },
       {
         "page": 15,
         "kind": "heading",
-        "bottom": 441.7157480314961,
+        "bottom": 417.7157480314961,
         "height": 17.1,
         "title": "주요 수식·조건"
       },
       {
         "page": 15,
         "kind": "text",
-        "bottom": 407.7157480314961,
+        "bottom": 383.7157480314961,
         "height": 30.0,
         "title": ""
       },
@@ -25016,50 +24848,36 @@
       },
       {
         "page": 16,
-        "kind": "text",
-        "bottom": 665.9157480314962,
-        "height": 30.0,
-        "title": ""
-      },
-      {
-        "page": 16,
-        "kind": "text",
-        "bottom": 631.9157480314962,
-        "height": 30.0,
-        "title": ""
-      },
-      {
-        "page": 16,
-        "kind": "text",
-        "bottom": 597.9157480314962,
-        "height": 30.0,
+        "kind": "box",
+        "bottom": 585.9157480314962,
+        "height": 114.0,
         "title": ""
       },
       {
         "page": 16,
         "kind": "heading",
-        "bottom": 570.8157480314961,
+        "bottom": 546.8157480314961,
         "height": 17.1,
         "title": "파일 블록 할당 방식"
       },
       {
         "page": 16,
         "kind": "table",
-        "bottom": 425.8157480314961,
+        "bottom": 401.8157480314961,
         "height": 145.0,
         "title": ""
       },
       {
         "page": 16,
         "kind": "heading",
-        "bottom": 386.7157480314961,
+        "bottom": 362.7157480314961,
         "height": 17.1,
         "title": "주요 수식·조건"
       },
       {
         "page": 16,
         "kind": "text",
-        "bottom": 352.7157480314961,
+        "bottom": 328.7157480314961,
         "height": 30.0,
         "title": ""
       },
@@ -25079,36 +24897,22 @@
       },
       {
         "page": 17,
-        "kind": "text",
-        "bottom": 665.9157480314962,
-        "height": 30.0,
-        "title": ""
-      },
-      {
-        "page": 17,
-        "kind": "text",
-        "bottom": 646.9157480314962,
-        "height": 15.0,
-        "title": ""
-      },
-      {
-        "page": 17,
-        "kind": "text",
-        "bottom": 612.9157480314962,
-        "height": 30.0,
+        "kind": "box",
+        "bottom": 600.9157480314962,
+        "height": 99.0,
         "title": ""
       },
       {
         "page": 17,
         "kind": "heading",
-        "bottom": 585.8157480314961,
+        "bottom": 561.8157480314961,
         "height": 17.1,
         "title": "공유 파일의 일관성 의미"
       },
       {
         "page": 17,
         "kind": "table",
-        "bottom": 440.8157480314961,
+        "bottom": 416.8157480314961,
         "height": 145.0,
         "title": ""
       },
@@ -25128,29 +24932,22 @@
       },
       {
         "page": 18,
-        "kind": "text",
-        "bottom": 665.9157480314962,
-        "height": 30.0,
-        "title": ""
-      },
-      {
-        "page": 18,
-        "kind": "text",
-        "bottom": 631.9157480314962,
-        "height": 30.0,
+        "kind": "box",
+        "bottom": 619.9157480314962,
+        "height": 80.0,
         "title": ""
       },
       {
         "page": 18,
         "kind": "heading",
-        "bottom": 604.8157480314961,
+        "bottom": 580.8157480314961,
         "height": 17.1,
         "title": "도입에 제시된 역할"
       },
       {
         "page": 18,
         "kind": "table",
-        "bottom": 469.8157480314961,
+        "bottom": 445.8157480314961,
         "height": 135.0,
         "title": ""
       }
@@ -25302,8 +25099,15 @@
       },
       {
         "page": 3,
+        "kind": "table",
+        "bottom": 521.5157480314962,
+        "height": 100.0,
+        "title": ""
+      },
+      {
+        "page": 3,
         "kind": "text",
-        "bottom": 600.2157480314962,
+        "bottom": 492.21574803149616,
         "height": 15.3,
         "title": ""
       },
