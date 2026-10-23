@@ -1,0 +1,430 @@
+{
+  "chapter": 10,
+  "title": "제10장. 입력과 출력",
+  "source_code": "T",
+  "learning": [
+    {
+      "text": "입출력 스트림 라이브러리는 텍스트와 수치 값의 형식화·비형식화 및 버퍼링된 입출력을 지원한다.",
+      "refs": [
+        {
+          "source": "T",
+          "section": "10.1 소개",
+          "pages": [
+            207,
+            208
+          ]
+        }
+      ],
+      "evidence": "입출력 스트림"
+    },
+    {
+      "text": "cout은 표준 출력, cerr은 에러 보고 스트림이다.",
+      "refs": [
+        {
+          "source": "T",
+          "section": "10.2 출력",
+          "pages": [
+            208,
+            210
+          ]
+        }
+      ],
+      "evidence": "cout·cerr"
+    }
+  ],
+  "terms": [
+    {
+      "term": "입출력 스트림",
+      "definition": {
+        "text": "입출력 스트림 라이브러리는 텍스트와 수치 값의 형식화·비형식화 및 버퍼링된 입출력을 지원한다.",
+        "refs": [
+          {
+            "source": "T",
+            "section": "10.1 소개",
+            "pages": [
+              207,
+              208
+            ]
+          }
+        ],
+        "evidence": "입출력 스트림"
+      }
+    },
+    {
+      "term": "cout·cerr",
+      "definition": {
+        "text": "cout은 표준 출력, cerr은 에러 보고 스트림이다.",
+        "refs": [
+          {
+            "source": "T",
+            "section": "10.2 출력",
+            "pages": [
+              208,
+              210
+            ]
+          }
+        ],
+        "evidence": "cout·cerr"
+      }
+    },
+    {
+      "term": "cin",
+      "definition": {
+        "text": "cin은 표준 입력 스트림이며, >>는 istream에서 값을 가져오는 연산이다.",
+        "refs": [
+          {
+            "source": "T",
+            "section": "10.3 입력",
+            "pages": [
+              210,
+              212
+            ]
+          }
+        ],
+        "evidence": "cin"
+      }
+    },
+    {
+      "term": "조정자",
+      "definition": {
+        "text": "조정자는 입력·출력 형식을 제어한다.",
+        "refs": [
+          {
+            "source": "T",
+            "section": "10.6 형식화",
+            "pages": [
+              216,
+              218
+            ]
+          }
+        ],
+        "evidence": "조정자"
+      }
+    },
+    {
+      "term": "파일 스트림",
+      "definition": {
+        "text": "<fstream>의 ifstream은 읽기, ofstream은 쓰기, fstream은 읽기와 쓰기용이다.",
+        "refs": [
+          {
+            "source": "T",
+            "section": "10.7 파일 스트림",
+            "pages": [
+              218,
+              219
+            ]
+          }
+        ],
+        "evidence": "파일 스트림"
+      }
+    },
+    {
+      "term": "문자열 스트림",
+      "definition": {
+        "text": "<sstream>의 istringstream은 string에서 읽고 ostringstream은 string에 쓰며 stringstream은 둘 다 한다.",
+        "refs": [
+          {
+            "source": "T",
+            "section": "10.8 문자열 스트림",
+            "pages": [
+              219,
+              220
+            ]
+          }
+        ],
+        "evidence": "문자열 스트림"
+      }
+    },
+    {
+      "term": "path",
+      "definition": {
+        "text": "path는 운영체제의 기본 문자 집합과 관례를 다루는 경로 표현이다.",
+        "refs": [
+          {
+            "source": "T",
+            "section": "10.10 파일 시스템",
+            "pages": [
+              222,
+              226
+            ]
+          }
+        ],
+        "evidence": "path"
+      }
+    }
+  ],
+  "summary_basis": "10.11 조언",
+  "summary": [
+    {
+      "text": "일반 출력은 cout, 에러 보고는 cerr을 사용하고 <<와 >>를 연결해 의도를 명확하게 한다.",
+      "refs": [
+        {
+          "source": "T",
+          "section": "10.11 조언",
+          "pages": [
+            227,
+            228,
+            229
+          ]
+        }
+      ],
+      "evidence": "일반 출력은 cout, 에러 보고는 cerr"
+    },
+    {
+      "text": "형식이 잘못된 입력을 고려하고 회복 가능한 입력 실패는 스트림 상태로 처리한다.",
+      "refs": [
+        {
+          "source": "T",
+          "section": "10.11 조언",
+          "pages": [
+            227,
+            228,
+            229
+          ]
+        }
+      ],
+      "evidence": "형식이 잘못된 입력을 고려하고 회복 가능한 "
+    },
+    {
+      "text": "문자 수준 입력은 꼭 필요할 때만 사용한다. 원문은 endl을 피하라고 조언한다.",
+      "refs": [
+        {
+          "source": "T",
+          "section": "10.11 조언",
+          "pages": [
+            227,
+            228,
+            229
+          ]
+        }
+      ],
+      "evidence": "문자 수준 입력은 꼭 필요할 때만 사용한다."
+    },
+    {
+      "text": "사용자 정의 타입에 의미 있는 텍스트 표현이 있으면 입출력 연산자를 제공한다.",
+      "refs": [
+        {
+          "source": "T",
+          "section": "10.11 조언",
+          "pages": [
+            227,
+            228,
+            229
+          ]
+        }
+      ],
+      "evidence": "사용자 정의 타입에 의미 있는 텍스트 표현이"
+    }
+  ],
+  "review": [
+    {
+      "question": "입출력 스트림 라이브러리가 지원하는 작업은?",
+      "answer": {
+        "text": "입출력 스트림 라이브러리는 텍스트와 수치 값의 형식화·비형식화 및 버퍼링된 입출력을 지원한다.",
+        "refs": [
+          {
+            "source": "T",
+            "section": "10.1 소개",
+            "pages": [
+              207,
+              208
+            ]
+          }
+        ],
+        "evidence": "입출력 스트림"
+      }
+    },
+    {
+      "question": "cout과 cerr은 각각 어떤 스트림인가?",
+      "answer": {
+        "text": "cout은 표준 출력, cerr은 에러 보고 스트림이다.",
+        "refs": [
+          {
+            "source": "T",
+            "section": "10.2 출력",
+            "pages": [
+              208,
+              210
+            ]
+          }
+        ],
+        "evidence": "cout·cerr"
+      }
+    },
+    {
+      "question": "파일 스트림 세 종류의 용도는?",
+      "answer": {
+        "text": "<fstream>의 ifstream은 읽기, ofstream은 쓰기, fstream은 읽기와 쓰기용이다.",
+        "refs": [
+          {
+            "source": "T",
+            "section": "10.7 파일 스트림",
+            "pages": [
+              218,
+              219
+            ]
+          }
+        ],
+        "evidence": "파일 스트림"
+      }
+    },
+    {
+      "question": "문자열 스트림 세 종류의 용도는?",
+      "answer": {
+        "text": "<sstream>의 istringstream은 string에서 읽고 ostringstream은 string에 쓰며 stringstream은 둘 다 한다.",
+        "refs": [
+          {
+            "source": "T",
+            "section": "10.8 문자열 스트림",
+            "pages": [
+              219,
+              220
+            ]
+          }
+        ],
+        "evidence": "문자열 스트림"
+      }
+    }
+  ],
+  "cheat": {
+    "definitions": [
+      {
+        "term": "입출력 스트림",
+        "definition": {
+          "text": "입출력 스트림 라이브러리는 텍스트와 수치 값의 형식화·비형식화 및 버퍼링된 입출력을 지원한다.",
+          "refs": [
+            {
+              "source": "T",
+              "section": "10.1 소개",
+              "pages": [
+                207,
+                208
+              ]
+            }
+          ],
+          "evidence": "입출력 스트림"
+        }
+      },
+      {
+        "term": "cout·cerr",
+        "definition": {
+          "text": "cout은 표준 출력, cerr은 에러 보고 스트림이다.",
+          "refs": [
+            {
+              "source": "T",
+              "section": "10.2 출력",
+              "pages": [
+                208,
+                210
+              ]
+            }
+          ],
+          "evidence": "cout·cerr"
+        }
+      },
+      {
+        "term": "cin",
+        "definition": {
+          "text": "cin은 표준 입력 스트림이며, >>는 istream에서 값을 가져오는 연산이다.",
+          "refs": [
+            {
+              "source": "T",
+              "section": "10.3 입력",
+              "pages": [
+                210,
+                212
+              ]
+            }
+          ],
+          "evidence": "cin"
+        }
+      }
+    ],
+    "comparison_title": "원문에서 설명한 역할·특징",
+    "comparison_headers": [
+      "항목",
+      "책의 설명"
+    ],
+    "comparison_rows": [
+      [
+        {
+          "text": "파일 스트림",
+          "refs": [
+            {
+              "source": "T",
+              "section": "10.7 파일 스트림",
+              "pages": [
+                218,
+                219
+              ]
+            }
+          ],
+          "evidence": "파일 스트림"
+        },
+        {
+          "text": "<fstream>의 ifstream은 읽기, ofstream은 쓰기, fstream은 읽기와 쓰기용이다.",
+          "refs": [
+            {
+              "source": "T",
+              "section": "10.7 파일 스트림",
+              "pages": [
+                218,
+                219
+              ]
+            }
+          ],
+          "evidence": "파일 스트림"
+        }
+      ],
+      [
+        {
+          "text": "문자열 스트림",
+          "refs": [
+            {
+              "source": "T",
+              "section": "10.8 문자열 스트림",
+              "pages": [
+                219,
+                220
+              ]
+            }
+          ],
+          "evidence": "문자열 스트림"
+        },
+        {
+          "text": "<sstream>의 istringstream은 string에서 읽고 ostringstream은 string에 쓰며 stringstream은 둘 다 한다.",
+          "refs": [
+            {
+              "source": "T",
+              "section": "10.8 문자열 스트림",
+              "pages": [
+                219,
+                220
+              ]
+            }
+          ],
+          "evidence": "문자열 스트림"
+        }
+      ]
+    ],
+    "formulas": []
+  },
+  "checked_images": [],
+  "editor_notes": [],
+  "corrections": [],
+  "pending_image_pages": [
+    207,
+    208,
+    210,
+    212,
+    216,
+    218,
+    219,
+    220,
+    222,
+    226,
+    227,
+    228,
+    229
+  ]
+}

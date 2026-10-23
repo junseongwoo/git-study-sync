@@ -1,0 +1,427 @@
+{
+  "chapter": 13,
+  "title": "제13장. 유틸리티",
+  "source_code": "T",
+  "learning": [
+    {
+      "text": "자원은 획득한 후 언젠가 해제해야 하는 것으로 메모리·소켓·스레드 핸들·파일 핸들이 예다.",
+      "refs": [
+        {
+          "source": "T",
+          "section": "13.2 자원 관리",
+          "pages": [
+            273,
+            274
+          ]
+        }
+      ],
+      "evidence": "자원"
+    },
+    {
+      "text": "unique_ptr은 유일한 소유권을, shared_ptr은 공유된 소유권을 표현한다.",
+      "refs": [
+        {
+          "source": "T",
+          "section": "13.2.1 unique_ptr과 shared_ptr",
+          "pages": [
+            274,
+            278
+          ]
+        }
+      ],
+      "evidence": "unique_ptr·shared_ptr"
+    }
+  ],
+  "terms": [
+    {
+      "term": "자원",
+      "definition": {
+        "text": "자원은 획득한 후 언젠가 해제해야 하는 것으로 메모리·소켓·스레드 핸들·파일 핸들이 예다.",
+        "refs": [
+          {
+            "source": "T",
+            "section": "13.2 자원 관리",
+            "pages": [
+              273,
+              274
+            ]
+          }
+        ],
+        "evidence": "자원"
+      }
+    },
+    {
+      "term": "unique_ptr·shared_ptr",
+      "definition": {
+        "text": "unique_ptr은 유일한 소유권을, shared_ptr은 공유된 소유권을 표현한다.",
+        "refs": [
+          {
+            "source": "T",
+            "section": "13.2.1 unique_ptr과 shared_ptr",
+            "pages": [
+              274,
+              278
+            ]
+          }
+        ],
+        "evidence": "unique_ptr·shared_ptr"
+      }
+    },
+    {
+      "term": "gsl::span",
+      "definition": {
+        "text": "gsl::span은 요소 시퀀스의 포인터와 길이를 함께 표현하는 구간 참조이며, 그 요소를 소유하지 않는다.",
+        "refs": [
+          {
+            "source": "T",
+            "section": "13.3 구간 검사: gsl::span",
+            "pages": [
+              281,
+              283
+            ]
+          }
+        ],
+        "evidence": "gsl::span"
+      }
+    },
+    {
+      "term": "optional<A>",
+      "definition": {
+        "text": "optional<A>는 A 또는 아무것도 없음을 나타낸다.",
+        "refs": [
+          {
+            "source": "T",
+            "section": "13.5.2 optional",
+            "pages": [
+              293,
+              294
+            ]
+          }
+        ],
+        "evidence": "optional<A>"
+      }
+    },
+    {
+      "term": "any",
+      "definition": {
+        "text": "any는 임의의 타입을 저장하며 저장된 객체가 있으면 그 타입을 기억한다.",
+        "refs": [
+          {
+            "source": "T",
+            "section": "13.5.3 any",
+            "pages": [
+              294,
+              295
+            ]
+          }
+        ],
+        "evidence": "any"
+      }
+    },
+    {
+      "term": "function",
+      "definition": {
+        "text": "function 객체는 ()로 호출할 수 있는 대상을 저장한다.",
+        "refs": [
+          {
+            "source": "T",
+            "section": "13.8.3 function()",
+            "pages": [
+              300
+            ]
+          }
+        ],
+        "evidence": "function"
+      }
+    },
+    {
+      "term": "타입 함수",
+      "definition": {
+        "text": "타입 함수는 타입 자체를 인자로 받거나 타입을 반환하며 컴파일 시간에 평가된다.",
+        "refs": [
+          {
+            "source": "T",
+            "section": "13.9 타입 함수",
+            "pages": [
+              301
+            ]
+          }
+        ],
+        "evidence": "타입 함수"
+      }
+    }
+  ],
+  "summary_basis": "13.10 조언",
+  "summary": [
+    {
+      "text": "자원에는 RAII 자원 핸들을 사용한다. 포인터가 필요하면 unique_ptr를 우선하고, 소유권을 공유해야 할 때만 shared_ptr를 쓴다. 생성에는 make_unique·make_shared를 사용한다.",
+      "refs": [
+        {
+          "source": "T",
+          "section": "13.10 조언",
+          "pages": [
+            307,
+            308,
+            309
+          ]
+        }
+      ],
+      "evidence": "자원에는 RAII 자원 핸들을 사용한다. 포"
+    },
+    {
+      "text": "move를 남용하지 않으며 forward는 포워딩에만 사용한다. 이동·포워딩한 객체를 나중에 읽지 않는다.",
+      "refs": [
+        {
+          "source": "T",
+          "section": "13.10 조언",
+          "pages": [
+            307,
+            308,
+            309
+          ]
+        }
+      ],
+      "evidence": "move를 남용하지 않으며 forward는 "
+    },
+    {
+      "text": "포인터와 개수를 별도로 전달하기보다 span을 사용한다. 고정 크기에는 array, N비트에는 bitset을 고려한다.",
+      "refs": [
+        {
+          "source": "T",
+          "section": "13.10 조언",
+          "pages": [
+            307,
+            308,
+            309
+          ]
+        }
+      ],
+      "evidence": "포인터와 개수를 별도로 전달하기보다 span"
+    },
+    {
+      "text": "pair·tuple보다 이름 있는 struct가 읽기 쉬운 경우를 구별한다. union을 직접 쓰기보다 variant를 고려한다.",
+      "refs": [
+        {
+          "source": "T",
+          "section": "13.10 조언",
+          "pages": [
+            307,
+            308,
+            309
+          ]
+        }
+      ],
+      "evidence": "pair·tuple보다 이름 있는 struc"
+    }
+  ],
+  "review": [
+    {
+      "question": "책에서 자원은 무엇을 뜻하는가?",
+      "answer": {
+        "text": "자원은 획득한 후 언젠가 해제해야 하는 것으로 메모리·소켓·스레드 핸들·파일 핸들이 예다.",
+        "refs": [
+          {
+            "source": "T",
+            "section": "13.2 자원 관리",
+            "pages": [
+              273,
+              274
+            ]
+          }
+        ],
+        "evidence": "자원"
+      }
+    },
+    {
+      "question": "unique_ptr과 shared_ptr의 소유권 차이는?",
+      "answer": {
+        "text": "unique_ptr은 유일한 소유권을, shared_ptr은 공유된 소유권을 표현한다.",
+        "refs": [
+          {
+            "source": "T",
+            "section": "13.2.1 unique_ptr과 shared_ptr",
+            "pages": [
+              274,
+              278
+            ]
+          }
+        ],
+        "evidence": "unique_ptr·shared_ptr"
+      }
+    },
+    {
+      "question": "optional<A>가 나타내는 두 상태는?",
+      "answer": {
+        "text": "optional<A>는 A 또는 아무것도 없음을 나타낸다.",
+        "refs": [
+          {
+            "source": "T",
+            "section": "13.5.2 optional",
+            "pages": [
+              293,
+              294
+            ]
+          }
+        ],
+        "evidence": "optional<A>"
+      }
+    },
+    {
+      "question": "function 객체는 무엇을 저장하는가?",
+      "answer": {
+        "text": "function 객체는 ()로 호출할 수 있는 대상을 저장한다.",
+        "refs": [
+          {
+            "source": "T",
+            "section": "13.8.3 function()",
+            "pages": [
+              300
+            ]
+          }
+        ],
+        "evidence": "function"
+      }
+    }
+  ],
+  "cheat": {
+    "definitions": [
+      {
+        "term": "자원",
+        "definition": {
+          "text": "자원은 획득한 후 언젠가 해제해야 하는 것으로 메모리·소켓·스레드 핸들·파일 핸들이 예다.",
+          "refs": [
+            {
+              "source": "T",
+              "section": "13.2 자원 관리",
+              "pages": [
+                273,
+                274
+              ]
+            }
+          ],
+          "evidence": "자원"
+        }
+      },
+      {
+        "term": "unique_ptr·shared_ptr",
+        "definition": {
+          "text": "unique_ptr은 유일한 소유권을, shared_ptr은 공유된 소유권을 표현한다.",
+          "refs": [
+            {
+              "source": "T",
+              "section": "13.2.1 unique_ptr과 shared_ptr",
+              "pages": [
+                274,
+                278
+              ]
+            }
+          ],
+          "evidence": "unique_ptr·shared_ptr"
+        }
+      },
+      {
+        "term": "gsl::span",
+        "definition": {
+          "text": "gsl::span은 요소 시퀀스의 포인터와 길이를 함께 표현하는 구간 참조이며, 그 요소를 소유하지 않는다.",
+          "refs": [
+            {
+              "source": "T",
+              "section": "13.3 구간 검사: gsl::span",
+              "pages": [
+                281,
+                283
+              ]
+            }
+          ],
+          "evidence": "gsl::span"
+        }
+      }
+    ],
+    "comparison_title": "원문에서 설명한 역할·특징",
+    "comparison_headers": [
+      "항목",
+      "책의 설명"
+    ],
+    "comparison_rows": [
+      [
+        {
+          "text": "optional<A>",
+          "refs": [
+            {
+              "source": "T",
+              "section": "13.5.2 optional",
+              "pages": [
+                293,
+                294
+              ]
+            }
+          ],
+          "evidence": "optional<A>"
+        },
+        {
+          "text": "optional<A>는 A 또는 아무것도 없음을 나타낸다.",
+          "refs": [
+            {
+              "source": "T",
+              "section": "13.5.2 optional",
+              "pages": [
+                293,
+                294
+              ]
+            }
+          ],
+          "evidence": "optional<A>"
+        }
+      ],
+      [
+        {
+          "text": "any",
+          "refs": [
+            {
+              "source": "T",
+              "section": "13.5.3 any",
+              "pages": [
+                294,
+                295
+              ]
+            }
+          ],
+          "evidence": "any"
+        },
+        {
+          "text": "any는 임의의 타입을 저장하며 저장된 객체가 있으면 그 타입을 기억한다.",
+          "refs": [
+            {
+              "source": "T",
+              "section": "13.5.3 any",
+              "pages": [
+                294,
+                295
+              ]
+            }
+          ],
+          "evidence": "any"
+        }
+      ]
+    ],
+    "formulas": []
+  },
+  "checked_images": [],
+  "editor_notes": [],
+  "corrections": [],
+  "pending_image_pages": [
+    273,
+    274,
+    278,
+    281,
+    283,
+    293,
+    294,
+    295,
+    300,
+    301,
+    307,
+    308,
+    309
+  ]
+}

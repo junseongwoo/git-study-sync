@@ -1,0 +1,409 @@
+{
+  "chapter": 1,
+  "title": "제1장. 기초",
+  "source_code": "T",
+  "learning": [
+    {
+      "text": "타입은 객체가 취할 수 있는 값과 연산의 집합을 정의한다.",
+      "refs": [
+        {
+          "source": "T",
+          "section": "1.4 타입과 변수, 산술 연산",
+          "pages": [
+            25
+          ]
+        }
+      ],
+      "evidence": "취할 수 있는 값과 연산의 집합"
+    },
+    {
+      "text": "constexpr는 이 값을 컴파일 시간에 평가한다는 의미이며, constexpr의 값은 반드시 컴파일 시간에 계산된다.",
+      "refs": [
+        {
+          "source": "T",
+          "section": "1.6 상수",
+          "pages": [
+            32
+          ]
+        }
+      ],
+      "evidence": "constexpr의 값은 반드시 컴파일 시간에 계산된다"
+    }
+  ],
+  "terms": [
+    {
+      "term": "타입",
+      "definition": {
+        "text": "타입은 객체가 취할 수 있는 값과 연산의 집합을 정의한다.",
+        "refs": [
+          {
+            "source": "T",
+            "section": "1.4 타입과 변수, 산술 연산",
+            "pages": [
+              25
+            ]
+          }
+        ],
+        "evidence": "취할 수 있는 값과 연산의 집합"
+      }
+    },
+    {
+      "term": "객체",
+      "definition": {
+        "text": "객체는 어떤 타입의 값을 갖는 메모리다.",
+        "refs": [
+          {
+            "source": "T",
+            "section": "1.4 타입과 변수, 산술 연산",
+            "pages": [
+              25
+            ]
+          }
+        ],
+        "evidence": "어떤 타입의 값을 갖는 메모리"
+      }
+    },
+    {
+      "term": "값",
+      "definition": {
+        "text": "값은 타입에 따라 해석되는 비트의 집합이다.",
+        "refs": [
+          {
+            "source": "T",
+            "section": "1.4 타입과 변수, 산술 연산",
+            "pages": [
+              25
+            ]
+          }
+        ],
+        "evidence": "타입에 따라 해석되는 비트의 집합"
+      }
+    },
+    {
+      "term": "변수",
+      "definition": {
+        "text": "변수는 명명된 객체다.",
+        "refs": [
+          {
+            "source": "T",
+            "section": "1.4 타입과 변수, 산술 연산",
+            "pages": [
+              25
+            ]
+          }
+        ],
+        "evidence": "변수는 명명된 객체"
+      }
+    },
+    {
+      "term": "지역 스코프",
+      "definition": {
+        "text": "지역 이름의 유효 스코프는 선언 지점부터 선언을 포함하는 블록의 끝까지다.",
+        "refs": [
+          {
+            "source": "T",
+            "section": "1.5 스코프와 수명",
+            "pages": [
+              30
+            ]
+          }
+        ],
+        "evidence": "선언 지점부터 선언이 포함된 블록의 끝까지"
+      }
+    },
+    {
+      "term": "new로 생성한 객체의 수명",
+      "definition": {
+        "text": "new로 생성한 객체는 delete로 소멸할 때까지 유효하다.",
+        "refs": [
+          {
+            "source": "T",
+            "section": "1.5 스코프와 수명",
+            "pages": [
+              31
+            ]
+          }
+        ],
+        "evidence": "delete로 소멸할 때까지 유효"
+      }
+    },
+    {
+      "term": "const",
+      "definition": {
+        "text": "const는 이 값을 바꾸지 않는다고 약속하며, const의 값은 실행 시간에 계산할 수 있다.",
+        "refs": [
+          {
+            "source": "T",
+            "section": "1.6 상수",
+            "pages": [
+              32
+            ]
+          }
+        ],
+        "evidence": "const의 값은 실행 시간에 계산할 수 있다"
+      }
+    },
+    {
+      "term": "constexpr",
+      "definition": {
+        "text": "constexpr는 이 값을 컴파일 시간에 평가한다는 의미이며, constexpr의 값은 반드시 컴파일 시간에 계산된다.",
+        "refs": [
+          {
+            "source": "T",
+            "section": "1.6 상수",
+            "pages": [
+              32
+            ]
+          }
+        ],
+        "evidence": "constexpr의 값은 반드시 컴파일 시간에 계산된다"
+      }
+    }
+  ],
+  "summary_basis": "1.10 조언",
+  "summary": [
+    {
+      "text": "함수 하나는 논리적인 연산 하나를 수행하게 하고 짧게 유지한다.",
+      "refs": [
+        {
+          "source": "T",
+          "section": "1.10 조언 [7]~[8]",
+          "pages": [
+            46
+          ]
+        }
+      ],
+      "evidence": "함수 하나는 논리적인 연산 하나를 수행하라"
+    },
+    {
+      "text": "변수는 반드시 초기화하고 스코프는 작게 유지한다.",
+      "refs": [
+        {
+          "source": "T",
+          "section": "1.10 조언 [24]~[25]",
+          "pages": [
+            46
+          ]
+        }
+      ],
+      "evidence": "변수는 반드시 초기화하라"
+    },
+    {
+      "text": "명명된 타입에는 초깃값 목록 {}를 사용하고 auto로 타입 이름의 반복을 피한다.",
+      "refs": [
+        {
+          "source": "T",
+          "section": "1.10 조언 [22]~[23]",
+          "pages": [
+            46
+          ]
+        }
+      ],
+      "evidence": "auto를 이용해서 타입 이름의 반복을 피하자"
+    },
+    {
+      "text": "0이나 NULL 대신 nullptr를 사용한다.",
+      "refs": [
+        {
+          "source": "T",
+          "section": "1.10 조언 [29]",
+          "pages": [
+            46
+          ]
+        }
+      ],
+      "evidence": "0이나 NULL 대신 nullptr"
+    }
+  ],
+  "review": [
+    {
+      "question": "타입·객체·값·변수를 원문은 각각 어떻게 정의하는가?",
+      "answer": {
+        "text": "타입은 값과 연산의 집합을 정의하고, 객체는 타입의 값을 갖는 메모리이며, 값은 타입에 따라 해석되는 비트의 집합이고 변수는 명명된 객체다.",
+        "refs": [
+          {
+            "source": "T",
+            "section": "1.4 타입과 변수, 산술 연산",
+            "pages": [
+              25
+            ]
+          }
+        ],
+        "evidence": "변수는 명명된 객체"
+      }
+    },
+    {
+      "question": "지역 이름은 어디부터 어디까지 유효한가?",
+      "answer": {
+        "text": "지역 이름의 유효 스코프는 선언 지점부터 선언을 포함하는 블록의 끝까지다.",
+        "refs": [
+          {
+            "source": "T",
+            "section": "1.5 스코프와 수명",
+            "pages": [
+              30
+            ]
+          }
+        ],
+        "evidence": "선언 지점부터 선언이 포함된 블록의 끝까지"
+      }
+    },
+    {
+      "question": "const 값과 constexpr 값은 언제 계산될 수 있는가?",
+      "answer": {
+        "text": "const 값은 실행 시간에 계산할 수 있지만 constexpr 값은 반드시 컴파일 시간에 계산된다.",
+        "refs": [
+          {
+            "source": "T",
+            "section": "1.6 상수",
+            "pages": [
+              32
+            ]
+          }
+        ],
+        "evidence": "반드시 컴파일 시간에 계산된다"
+      }
+    },
+    {
+      "question": "new로 생성한 객체는 언제까지 유효한가?",
+      "answer": {
+        "text": "new로 생성한 객체는 delete로 소멸할 때까지 유효하다.",
+        "refs": [
+          {
+            "source": "T",
+            "section": "1.5 스코프와 수명",
+            "pages": [
+              31
+            ]
+          }
+        ],
+        "evidence": "delete로 소멸할 때까지 유효"
+      }
+    }
+  ],
+  "cheat": {
+    "definitions": [
+      {
+        "term": "타입",
+        "definition": {
+          "text": "타입은 객체가 취할 수 있는 값과 연산의 집합을 정의한다.",
+          "refs": [
+            {
+              "source": "T",
+              "section": "1.4 타입과 변수, 산술 연산",
+              "pages": [
+                25
+              ]
+            }
+          ],
+          "evidence": "취할 수 있는 값과 연산의 집합"
+        }
+      },
+      {
+        "term": "객체",
+        "definition": {
+          "text": "객체는 어떤 타입의 값을 갖는 메모리다.",
+          "refs": [
+            {
+              "source": "T",
+              "section": "1.4 타입과 변수, 산술 연산",
+              "pages": [
+                25
+              ]
+            }
+          ],
+          "evidence": "어떤 타입의 값을 갖는 메모리"
+        }
+      },
+      {
+        "term": "변수",
+        "definition": {
+          "text": "변수는 명명된 객체다.",
+          "refs": [
+            {
+              "source": "T",
+              "section": "1.4 타입과 변수, 산술 연산",
+              "pages": [
+                25
+              ]
+            }
+          ],
+          "evidence": "변수는 명명된 객체"
+        }
+      }
+    ],
+    "comparison_title": "상수의 원문 구분",
+    "comparison_headers": [
+      "구분",
+      "책의 설명"
+    ],
+    "comparison_rows": [
+      [
+        {
+          "text": "const",
+          "refs": [
+            {
+              "source": "T",
+              "section": "1.6 상수",
+              "pages": [
+                32
+              ]
+            }
+          ],
+          "evidence": "const의 값은 실행 시간에 계산할 수 있다"
+        },
+        {
+          "text": "const는 이 값을 바꾸지 않는다고 약속하며, const의 값은 실행 시간에 계산할 수 있다.",
+          "refs": [
+            {
+              "source": "T",
+              "section": "1.6 상수",
+              "pages": [
+                32
+              ]
+            }
+          ],
+          "evidence": "const의 값은 실행 시간에 계산할 수 있다"
+        }
+      ],
+      [
+        {
+          "text": "constexpr",
+          "refs": [
+            {
+              "source": "T",
+              "section": "1.6 상수",
+              "pages": [
+                32
+              ]
+            }
+          ],
+          "evidence": "constexpr의 값은 반드시 컴파일 시간에 계산된다"
+        },
+        {
+          "text": "constexpr는 이 값을 컴파일 시간에 평가한다는 의미이며, constexpr의 값은 반드시 컴파일 시간에 계산된다.",
+          "refs": [
+            {
+              "source": "T",
+              "section": "1.6 상수",
+              "pages": [
+                32
+              ]
+            }
+          ],
+          "evidence": "constexpr의 값은 반드시 컴파일 시간에 계산된다"
+        }
+      ]
+    ],
+    "formulas": []
+  },
+  "checked_images": [
+    25,
+    30,
+    31,
+    32,
+    46
+  ],
+  "editor_notes": [],
+  "corrections": []
+}

@@ -1,0 +1,383 @@
+{
+  "chapter": 3,
+  "title": "제3장. 모듈화",
+  "source_code": "T",
+  "learning": [
+    {
+      "text": "네임스페이스는 일부 선언을 함께 묶고 다른 이름과 충돌하지 않게 하는 메커니즘이다.",
+      "refs": [
+        {
+          "source": "T",
+          "section": "3.4 네임스페이스",
+          "pages": [
+            67
+          ]
+        }
+      ],
+      "evidence": "일부 선언을 함께 묶고 다른 이름과 충돌하지 않게"
+    },
+    {
+      "text": "어써션은 기대되는 조건을 나타내는 구문이며, static_assert는 상수 표현식으로 표현할 수 있는 속성을 확인한다.",
+      "refs": [
+        {
+          "source": "T",
+          "section": "3.5.5 정적 어써션",
+          "pages": [
+            79
+          ]
+        }
+      ],
+      "evidence": "기대되는 조건을 나타내는 구문"
+    }
+  ],
+  "terms": [
+    {
+      "term": "네임스페이스",
+      "definition": {
+        "text": "네임스페이스는 일부 선언을 함께 묶고 다른 이름과 충돌하지 않게 하는 메커니즘이다.",
+        "refs": [
+          {
+            "source": "T",
+            "section": "3.4 네임스페이스",
+            "pages": [
+              67
+            ]
+          }
+        ],
+        "evidence": "일부 선언을 함께 묶고 다른 이름과 충돌하지 않게"
+      }
+    },
+    {
+      "term": "예외 전달",
+      "definition": {
+        "text": "throw는 해당 타입의 예외 핸들러에 제어권을 넘기며, 필요한 만큼 스코프와 함수를 종료하는 과정에서 소멸자를 호출한다.",
+        "refs": [
+          {
+            "source": "T",
+            "section": "3.5.1 예외",
+            "pages": [
+              71
+            ]
+          }
+        ],
+        "evidence": "예외 핸들러에 제어권을 넘긴다"
+      }
+    },
+    {
+      "term": "noexcept",
+      "definition": {
+        "text": "절대로 예외를 던지지 않는 함수는 noexcept로 선언할 수 있으며, 그래도 예외를 던지면 std::terminate()가 호출된다.",
+        "refs": [
+          {
+            "source": "T",
+            "section": "3.5.1 예외",
+            "pages": [
+              72
+            ]
+          }
+        ],
+        "evidence": "std::terminate()가 호출돼"
+      }
+    },
+    {
+      "term": "사전 조건",
+      "definition": {
+        "text": "사전 조건은 함수 작동의 기본적인 가정이다.",
+        "refs": [
+          {
+            "source": "T",
+            "section": "3.5.2 불변 조건",
+            "pages": [
+              72
+            ]
+          }
+        ],
+        "evidence": "기본적인 가정, 즉 사전 조건"
+      }
+    },
+    {
+      "term": "클래스 불변 조건",
+      "definition": {
+        "text": "클래스 수준에서 보장돼야 할 조건을 클래스 불변 조건이라고 한다.",
+        "refs": [
+          {
+            "source": "T",
+            "section": "3.5.2 불변 조건",
+            "pages": [
+              73
+            ]
+          }
+        ],
+        "evidence": "클래스 수준에서 보장돼야 할 조건"
+      }
+    },
+    {
+      "term": "어써션·static_assert",
+      "definition": {
+        "text": "어써션은 기대되는 조건을 나타내는 구문이며, static_assert는 상수 표현식으로 표현할 수 있는 속성을 확인한다.",
+        "refs": [
+          {
+            "source": "T",
+            "section": "3.5.5 정적 어써션",
+            "pages": [
+              79
+            ]
+          }
+        ],
+        "evidence": "기대되는 조건을 나타내는 구문"
+      }
+    }
+  ],
+  "summary_basis": "3.7 조언",
+  "summary": [
+    {
+      "text": "선언과 정의를 구별하고 인터페이스를 표현하기 위해 헤더 파일을 사용한다.",
+      "refs": [
+        {
+          "source": "T",
+          "section": "3.7 조언 [1]~[3]",
+          "pages": [
+            87
+          ]
+        }
+      ],
+      "evidence": "선언(인터페이스)과 정의(구현)를 구별하라"
+    },
+    {
+      "text": "설계 초기부터 에러 처리 전략을 세우고, 생성자는 불변 조건을 지키거나 예외를 던진다.",
+      "refs": [
+        {
+          "source": "T",
+          "section": "3.7 조언 [14]·[19]",
+          "pages": [
+            87,
+            88
+          ]
+        }
+      ],
+      "evidence": "생성자가 불변 조건을 지키게 하고"
+    },
+    {
+      "text": "컴파일 시간에 확인할 수 있는 것은 그때 확인하며, 작은 것은 값으로 큰 것은 참조로 전달한다.",
+      "refs": [
+        {
+          "source": "T",
+          "section": "3.7 조언 [21]~[22]",
+          "pages": [
+            88
+          ]
+        }
+      ],
+      "evidence": "컴파일 시간에 확인할 수 있는 것은"
+    },
+    {
+      "text": "값을 반환할 때는 함수 반환 값을 사용하고 출력 파라미터는 피한다.",
+      "refs": [
+        {
+          "source": "T",
+          "section": "3.7 조언 [24]",
+          "pages": [
+            88
+          ]
+        }
+      ],
+      "evidence": "함수 반환 값으로"
+    }
+  ],
+  "review": [
+    {
+      "question": "네임스페이스의 목적은 무엇인가?",
+      "answer": {
+        "text": "네임스페이스는 일부 선언을 함께 묶고 다른 이름과 충돌하지 않게 하는 메커니즘이다.",
+        "refs": [
+          {
+            "source": "T",
+            "section": "3.4 네임스페이스",
+            "pages": [
+              67
+            ]
+          }
+        ],
+        "evidence": "일부 선언을 함께 묶고 다른 이름과 충돌하지 않게"
+      }
+    },
+    {
+      "question": "사전 조건과 클래스 불변 조건을 원문은 어떻게 구별하는가?",
+      "answer": {
+        "text": "사전 조건은 함수 작동의 기본 가정이고 클래스 불변 조건은 클래스 수준에서 보장돼야 할 조건이다.",
+        "refs": [
+          {
+            "source": "T",
+            "section": "3.5.2 불변 조건",
+            "pages": [
+              72,
+              73
+            ]
+          }
+        ],
+        "evidence": "클래스 수준에서 보장돼야 할 조건"
+      }
+    },
+    {
+      "question": "noexcept 함수에서 예외를 던지면 어떻게 되는가?",
+      "answer": {
+        "text": "절대로 예외를 던지지 않는 함수는 noexcept로 선언할 수 있으며, 그래도 예외를 던지면 std::terminate()가 호출된다.",
+        "refs": [
+          {
+            "source": "T",
+            "section": "3.5.1 예외",
+            "pages": [
+              72
+            ]
+          }
+        ],
+        "evidence": "std::terminate()가 호출돼"
+      }
+    },
+    {
+      "question": "static_assert(A,S)에서 A가 true가 아니면 어떻게 되는가?",
+      "answer": {
+        "text": "static_assert(A,S)는 A가 true가 아니면 S를 컴파일러 에러 메시지로 출력한다.",
+        "refs": [
+          {
+            "source": "T",
+            "section": "3.5.5 정적 어써션",
+            "pages": [
+              79
+            ]
+          }
+        ],
+        "evidence": "A가 true가 아니면"
+      }
+    }
+  ],
+  "cheat": {
+    "definitions": [
+      {
+        "term": "네임스페이스",
+        "definition": {
+          "text": "네임스페이스는 일부 선언을 함께 묶고 다른 이름과 충돌하지 않게 하는 메커니즘이다.",
+          "refs": [
+            {
+              "source": "T",
+              "section": "3.4 네임스페이스",
+              "pages": [
+                67
+              ]
+            }
+          ],
+          "evidence": "일부 선언을 함께 묶고 다른 이름과 충돌하지 않게"
+        }
+      },
+      {
+        "term": "사전 조건",
+        "definition": {
+          "text": "사전 조건은 함수 작동의 기본적인 가정이다.",
+          "refs": [
+            {
+              "source": "T",
+              "section": "3.5.2 불변 조건",
+              "pages": [
+                72
+              ]
+            }
+          ],
+          "evidence": "기본적인 가정, 즉 사전 조건"
+        }
+      },
+      {
+        "term": "클래스 불변 조건",
+        "definition": {
+          "text": "클래스 수준에서 보장돼야 할 조건을 클래스 불변 조건이라고 한다.",
+          "refs": [
+            {
+              "source": "T",
+              "section": "3.5.2 불변 조건",
+              "pages": [
+                73
+              ]
+            }
+          ],
+          "evidence": "클래스 수준에서 보장돼야 할 조건"
+        }
+      }
+    ],
+    "comparison_title": "에러 확인 시점의 구분",
+    "comparison_headers": [
+      "구분",
+      "책의 설명"
+    ],
+    "comparison_rows": [
+      [
+        {
+          "text": "예외",
+          "refs": [
+            {
+              "source": "T",
+              "section": "3.5.5 정적 어써션",
+              "pages": [
+                79
+              ]
+            }
+          ],
+          "evidence": "실행 시간에 발생하는 에러를 보고"
+        },
+        {
+          "text": "예외는 실행 시간에 발생하는 에러를 보고하는 용도로 사용한다.",
+          "refs": [
+            {
+              "source": "T",
+              "section": "3.5.5 정적 어써션",
+              "pages": [
+                79
+              ]
+            }
+          ],
+          "evidence": "실행 시간에 발생하는 에러를 보고"
+        }
+      ],
+      [
+        {
+          "text": "static_assert",
+          "refs": [
+            {
+              "source": "T",
+              "section": "3.5.5 정적 어써션",
+              "pages": [
+                79
+              ]
+            }
+          ],
+          "evidence": "A가 true가 아니면"
+        },
+        {
+          "text": "static_assert(A,S)는 A가 true가 아니면 S를 컴파일러 에러 메시지로 출력한다.",
+          "refs": [
+            {
+              "source": "T",
+              "section": "3.5.5 정적 어써션",
+              "pages": [
+                79
+              ]
+            }
+          ],
+          "evidence": "A가 true가 아니면"
+        }
+      ]
+    ],
+    "formulas": []
+  },
+  "checked_images": [
+    67,
+    71,
+    72,
+    73,
+    79,
+    87,
+    88
+  ],
+  "editor_notes": [
+    "모듈·계약의 표준화 상태는 원문 시점의 설명을 유지한다."
+  ],
+  "corrections": []
+}

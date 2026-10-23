@@ -1,0 +1,397 @@
+{
+  "chapter": 14,
+  "title": "제14장. 수치",
+  "source_code": "T",
+  "learning": [
+    {
+      "text": "<numeric>은 시퀀스의 합·내적·부분합·이웃한 차이 등을 일반화한다.",
+      "refs": [
+        {
+          "source": "T",
+          "section": "14.3 수치 알고리즘",
+          "pages": [
+            313,
+            314
+          ]
+        }
+      ],
+      "evidence": "수치 알고리즘"
+    },
+    {
+      "text": "reduce는 accumulate와 달리 요소 연산의 순서가 정해지지 않는다.",
+      "refs": [
+        {
+          "source": "T",
+          "section": "14.3.1 병렬 알고리즘",
+          "pages": [
+            314,
+            315
+          ]
+        }
+      ],
+      "evidence": "reduce"
+    }
+  ],
+  "terms": [
+    {
+      "term": "수치 알고리즘",
+      "definition": {
+        "text": "<numeric>은 시퀀스의 합·내적·부분합·이웃한 차이 등을 일반화한다.",
+        "refs": [
+          {
+            "source": "T",
+            "section": "14.3 수치 알고리즘",
+            "pages": [
+              313,
+              314
+            ]
+          }
+        ],
+        "evidence": "수치 알고리즘"
+      }
+    },
+    {
+      "term": "reduce",
+      "definition": {
+        "text": "reduce는 accumulate와 달리 요소 연산의 순서가 정해지지 않는다.",
+        "refs": [
+          {
+            "source": "T",
+            "section": "14.3.1 병렬 알고리즘",
+            "pages": [
+              314,
+              315
+            ]
+          }
+        ],
+        "evidence": "reduce"
+      }
+    },
+    {
+      "term": "complex<Scalar>",
+      "definition": {
+        "text": "<complex>의 complex<Scalar>는 실수부와 허수부 타입을 매개변수로 받는 복소수 템플릿이다.",
+        "refs": [
+          {
+            "source": "T",
+            "section": "14.4 복소수",
+            "pages": [
+              315,
+              316
+            ]
+          }
+        ],
+        "evidence": "complex<Scalar>"
+      }
+    },
+    {
+      "term": "난수 엔진·분포",
+      "definition": {
+        "text": "엔진은 난수 또는 의사 난수 시퀀스를 만들고, 분포는 그 값을 수학적 분포의 특정 구간으로 매핑한다.",
+        "refs": [
+          {
+            "source": "T",
+            "section": "14.5 난수",
+            "pages": [
+              316,
+              318
+            ]
+          }
+        ],
+        "evidence": "난수 엔진·분포"
+      }
+    },
+    {
+      "term": "valarray",
+      "definition": {
+        "text": "<valarray>의 valarray는 일반성이 다소 낮은 대신 수치 계산 최적화에 더 적합하도록 제공되는 배열 템플릿이다.",
+        "refs": [
+          {
+            "source": "T",
+            "section": "14.6 벡터 산술",
+            "pages": [
+              318,
+              319
+            ]
+          }
+        ],
+        "evidence": "valarray"
+      }
+    },
+    {
+      "term": "numeric_limits",
+      "definition": {
+        "text": "<limits>의 numeric_limits는 내장 수치 타입의 속성을 기술한다.",
+        "refs": [
+          {
+            "source": "T",
+            "section": "14.7 수치 한계",
+            "pages": [
+              319
+            ]
+          }
+        ],
+        "evidence": "numeric_limits"
+      }
+    }
+  ],
+  "summary_basis": "14.8 조언",
+  "summary": [
+    {
+      "text": "수치 문제를 수학적으로 확신할 수 없다면 전문적인 조언과 실험을 활용한다. 기본 언어 기능만으로 직접 만들기보다 라이브러리를 사용한다.",
+      "refs": [
+        {
+          "source": "T",
+          "section": "14.8 조언",
+          "pages": [
+            320
+          ]
+        }
+      ],
+      "evidence": "수치 문제를 수학적으로 확신할 수 없다면 전"
+    },
+    {
+      "text": "시퀀스를 계산하는 루프 전에 accumulate·inner_product·partial_sum·adjacent_difference를 고려한다.",
+      "refs": [
+        {
+          "source": "T",
+          "section": "14.8 조언",
+          "pages": [
+            320
+          ]
+        }
+      ],
+      "evidence": "시퀀스를 계산하는 루프 전에 accumula"
+    },
+    {
+      "text": "복소수에는 std::complex를 사용한다. 난수 생성은 엔진과 분포를 결합하고 무작위성에 주의를 기울인다.",
+      "refs": [
+        {
+          "source": "T",
+          "section": "14.8 조언",
+          "pages": [
+            320
+          ]
+        }
+      ],
+      "evidence": "복소수에는 std::complex를 사용한다"
+    },
+    {
+      "text": "수치 효율에 우선순위가 있으면 valarray를 고려한다. numeric_limits로 수치 타입이 용도에 맞는지 검사한다.",
+      "refs": [
+        {
+          "source": "T",
+          "section": "14.8 조언",
+          "pages": [
+            320
+          ]
+        }
+      ],
+      "evidence": "수치 효율에 우선순위가 있으면 valarra"
+    }
+  ],
+  "review": [
+    {
+      "question": "<numeric>이 일반화하는 작업은?",
+      "answer": {
+        "text": "<numeric>은 시퀀스의 합·내적·부분합·이웃한 차이 등을 일반화한다.",
+        "refs": [
+          {
+            "source": "T",
+            "section": "14.3 수치 알고리즘",
+            "pages": [
+              313,
+              314
+            ]
+          }
+        ],
+        "evidence": "수치 알고리즘"
+      }
+    },
+    {
+      "question": "reduce의 연산 순서는 accumulate와 어떻게 다른가?",
+      "answer": {
+        "text": "reduce는 accumulate와 달리 요소 연산의 순서가 정해지지 않는다.",
+        "refs": [
+          {
+            "source": "T",
+            "section": "14.3.1 병렬 알고리즘",
+            "pages": [
+              314,
+              315
+            ]
+          }
+        ],
+        "evidence": "reduce"
+      }
+    },
+    {
+      "question": "난수 엔진과 분포는 각각 무엇을 하는가?",
+      "answer": {
+        "text": "엔진은 난수 또는 의사 난수 시퀀스를 만들고, 분포는 그 값을 수학적 분포의 특정 구간으로 매핑한다.",
+        "refs": [
+          {
+            "source": "T",
+            "section": "14.5 난수",
+            "pages": [
+              316,
+              318
+            ]
+          }
+        ],
+        "evidence": "난수 엔진·분포"
+      }
+    },
+    {
+      "question": "numeric_limits는 무엇을 기술하는가?",
+      "answer": {
+        "text": "<limits>의 numeric_limits는 내장 수치 타입의 속성을 기술한다.",
+        "refs": [
+          {
+            "source": "T",
+            "section": "14.7 수치 한계",
+            "pages": [
+              319
+            ]
+          }
+        ],
+        "evidence": "numeric_limits"
+      }
+    }
+  ],
+  "cheat": {
+    "definitions": [
+      {
+        "term": "수치 알고리즘",
+        "definition": {
+          "text": "<numeric>은 시퀀스의 합·내적·부분합·이웃한 차이 등을 일반화한다.",
+          "refs": [
+            {
+              "source": "T",
+              "section": "14.3 수치 알고리즘",
+              "pages": [
+                313,
+                314
+              ]
+            }
+          ],
+          "evidence": "수치 알고리즘"
+        }
+      },
+      {
+        "term": "reduce",
+        "definition": {
+          "text": "reduce는 accumulate와 달리 요소 연산의 순서가 정해지지 않는다.",
+          "refs": [
+            {
+              "source": "T",
+              "section": "14.3.1 병렬 알고리즘",
+              "pages": [
+                314,
+                315
+              ]
+            }
+          ],
+          "evidence": "reduce"
+        }
+      },
+      {
+        "term": "complex<Scalar>",
+        "definition": {
+          "text": "<complex>의 complex<Scalar>는 실수부와 허수부 타입을 매개변수로 받는 복소수 템플릿이다.",
+          "refs": [
+            {
+              "source": "T",
+              "section": "14.4 복소수",
+              "pages": [
+                315,
+                316
+              ]
+            }
+          ],
+          "evidence": "complex<Scalar>"
+        }
+      }
+    ],
+    "comparison_title": "원문에서 설명한 역할·특징",
+    "comparison_headers": [
+      "항목",
+      "책의 설명"
+    ],
+    "comparison_rows": [
+      [
+        {
+          "text": "reduce",
+          "refs": [
+            {
+              "source": "T",
+              "section": "14.3.1 병렬 알고리즘",
+              "pages": [
+                314,
+                315
+              ]
+            }
+          ],
+          "evidence": "reduce"
+        },
+        {
+          "text": "reduce는 accumulate와 달리 요소 연산의 순서가 정해지지 않는다.",
+          "refs": [
+            {
+              "source": "T",
+              "section": "14.3.1 병렬 알고리즘",
+              "pages": [
+                314,
+                315
+              ]
+            }
+          ],
+          "evidence": "reduce"
+        }
+      ],
+      [
+        {
+          "text": "valarray",
+          "refs": [
+            {
+              "source": "T",
+              "section": "14.6 벡터 산술",
+              "pages": [
+                318,
+                319
+              ]
+            }
+          ],
+          "evidence": "valarray"
+        },
+        {
+          "text": "<valarray>의 valarray는 일반성이 다소 낮은 대신 수치 계산 최적화에 더 적합하도록 제공되는 배열 템플릿이다.",
+          "refs": [
+            {
+              "source": "T",
+              "section": "14.6 벡터 산술",
+              "pages": [
+                318,
+                319
+              ]
+            }
+          ],
+          "evidence": "valarray"
+        }
+      ]
+    ],
+    "formulas": []
+  },
+  "checked_images": [],
+  "editor_notes": [],
+  "corrections": [],
+  "pending_image_pages": [
+    313,
+    314,
+    315,
+    316,
+    318,
+    319,
+    320
+  ]
+}

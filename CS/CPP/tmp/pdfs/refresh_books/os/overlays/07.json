@@ -1,0 +1,452 @@
+{
+  "chapter": 7,
+  "title": "제7장. 동기화 예제",
+  "source_code": "O",
+  "learning": [
+    {
+      "text": "고전적인 프로세스 동기화 문제에는 유한 버퍼, reader-writer 및 식사하는 철학자 문제가 포함된다.",
+      "refs": [
+        {
+          "source": "O",
+          "section": "7.6 요약",
+          "pages": [
+            288
+          ]
+        }
+      ],
+      "evidence": "유한 버퍼, reader-writer 및 식사하는 철학자"
+    },
+    {
+      "text": "POSIX API는 mutex 락, 세마포 및 조건 변수를 제공한다.",
+      "refs": [
+        {
+          "source": "O",
+          "section": "7.6 요약",
+          "pages": [
+            288
+          ]
+        }
+      ],
+      "evidence": "mutex 락, 세마포 및 조건 변수를 제공"
+    },
+    {
+      "text": "임계구역 문제를 해결하기 위한 대안으로 트랜잭션 메모리, OpenMP 및 함수형 언어가 있다.",
+      "refs": [
+        {
+          "source": "O",
+          "section": "7.6 요약",
+          "pages": [
+            289
+          ]
+        }
+      ],
+      "evidence": "트랜잭션 메모리, OpenMP 및 함수형 언어"
+    }
+  ],
+  "terms": [
+    {
+      "term": "유한 버퍼",
+      "definition": {
+        "text": "유한 버퍼 문제에서는 n개의 버퍼로 구성된 풀을 가정하며 각 버퍼는 한 항목을 저장할 수 있다.",
+        "refs": [
+          {
+            "source": "O",
+            "section": "7.1.1 유한 버퍼 문제",
+            "pages": [
+              263
+            ]
+          }
+        ],
+        "evidence": "각 버퍼는 한 항목(item)을 저장"
+      }
+    },
+    {
+      "term": "Readers-Writers 문제",
+      "definition": {
+        "text": "Readers-Writers 문제는 writer가 쓰기 작업 동안 공유 데이터베이스에 대한 배타적 접근 권한을 갖도록 보장하는 동기화 문제이다.",
+        "refs": [
+          {
+            "source": "O",
+            "section": "7.1.2 Readers-Writers 문제",
+            "pages": [
+              264
+            ]
+          }
+        ],
+        "evidence": "배타적 접근 권한"
+      }
+    },
+    {
+      "term": "식사하는 철학자들 문제",
+      "definition": {
+        "text": "식사하는 철학자들 문제의 다섯 철학자는 생각과 식사를 반복하며, 식사하려면 자신에게 가장 가까운 두 젓가락을 모두 집어야 한다.",
+        "refs": [
+          {
+            "source": "O",
+            "section": "7.1.3 식사하는 철학자들 문제",
+            "pages": [
+              266
+            ]
+          }
+        ],
+        "evidence": "가장 가까이 있는 두 개의 젓가락"
+      }
+    },
+    {
+      "term": "기명 세마포",
+      "definition": {
+        "text": "POSIX의 기명 세마포는 관련 없는 여러 프로세스가 단순히 이름을 참조하여 같은 세마포에 액세스할 수 있다.",
+        "refs": [
+          {
+            "source": "O",
+            "section": "7.6 요약",
+            "pages": [
+              288
+            ]
+          }
+        ],
+        "evidence": "관련이 없는 여러 프로세스가 단순히 이름을 참조"
+      }
+    },
+    {
+      "term": "무명 세마포",
+      "definition": {
+        "text": "POSIX의 무명 세마포를 공유하려면 공유 메모리 영역에 세마포를 배치해야 한다.",
+        "refs": [
+          {
+            "source": "O",
+            "section": "7.6 요약",
+            "pages": [
+              288
+            ]
+          }
+        ],
+        "evidence": "공유 메모리 영역에 세마포를 배치"
+      }
+    },
+    {
+      "term": "메모리 트랜잭션",
+      "definition": {
+        "text": "메모리 트랜잭션은 메모리 읽기와 쓰기 연산의 원자적인 연속적 순서이다.",
+        "refs": [
+          {
+            "source": "O",
+            "section": "7.5.1 트랜잭션 메모리",
+            "pages": [
+              285
+            ]
+          }
+        ],
+        "evidence": "원자적인 연속적 순서"
+      }
+    },
+    {
+      "term": "명령형·절차형 언어",
+      "definition": {
+        "text": "명령형 혹은 절차형 언어는 상태에 기반을 둔 알고리즘을 구현하는 데 사용되며 상태는 변수와 다른 자료구조를 통해 표현된다.",
+        "refs": [
+          {
+            "source": "O",
+            "section": "7.5.3 함수형 프로그래밍 언어",
+            "pages": [
+              288
+            ]
+          }
+        ],
+        "evidence": "상태는 변수와 다른 자료구조"
+      }
+    },
+    {
+      "term": "함수형 언어",
+      "definition": {
+        "text": "함수형 언어에서는 변수가 정의되어 값을 배정받으면 그 값은 변경될 수 없어 상태가 변하지 않는다.",
+        "refs": [
+          {
+            "source": "O",
+            "section": "7.5.3 함수형 프로그래밍 언어",
+            "pages": [
+              288
+            ]
+          }
+        ],
+        "evidence": "그 값은 변경될 수 없기 때문에"
+      }
+    }
+  ],
+  "summary_basis": "7.6 요약",
+  "summary": [
+    {
+      "text": "고전적인 프로세스 동기화 문제에는 유한 버퍼, reader-writer 및 식사하는 철학자 문제가 포함된다.",
+      "refs": [
+        {
+          "source": "O",
+          "section": "7.6 요약",
+          "pages": [
+            288
+          ]
+        }
+      ],
+      "evidence": "유한 버퍼, reader-writer 및 식사하는 철학자"
+    },
+    {
+      "text": "Windows는 dispatcher 객체와 event를 사용하여 프로세스 동기화 도구를 구현한다.",
+      "refs": [
+        {
+          "source": "O",
+          "section": "7.6 요약",
+          "pages": [
+            288
+          ]
+        }
+      ],
+      "evidence": "dispatcher 객체와 event"
+    },
+    {
+      "text": "Linux는 경쟁 조건을 방지하기 위해 원자적 변수, 스핀락 및 mutex 락을 포함한 다양한 접근 방식을 사용한다.",
+      "refs": [
+        {
+          "source": "O",
+          "section": "7.6 요약",
+          "pages": [
+            288
+          ]
+        }
+      ],
+      "evidence": "원자적 변수, 스핀락 및 mutex 락"
+    },
+    {
+      "text": "POSIX API는 mutex 락, 세마포 및 조건 변수를 제공한다.",
+      "refs": [
+        {
+          "source": "O",
+          "section": "7.6 요약",
+          "pages": [
+            288
+          ]
+        }
+      ],
+      "evidence": "mutex 락, 세마포 및 조건 변수를 제공"
+    },
+    {
+      "text": "임계구역 문제를 해결하기 위한 대안으로 트랜잭션 메모리, OpenMP 및 함수형 언어가 있다.",
+      "refs": [
+        {
+          "source": "O",
+          "section": "7.6 요약",
+          "pages": [
+            289
+          ]
+        }
+      ],
+      "evidence": "트랜잭션 메모리, OpenMP 및 함수형 언어"
+    }
+  ],
+  "review": [
+    {
+      "question": "고전적인 세 가지 프로세스 동기화 문제는?",
+      "answer": {
+        "text": "고전적인 프로세스 동기화 문제에는 유한 버퍼, reader-writer 및 식사하는 철학자 문제가 포함된다.",
+        "refs": [
+          {
+            "source": "O",
+            "section": "7.6 요약",
+            "pages": [
+              288
+            ]
+          }
+        ],
+        "evidence": "유한 버퍼, reader-writer 및 식사하는 철학자"
+      }
+    },
+    {
+      "question": "Readers-Writers 문제에서 writer가 쓰기 동안 가져야 하는 접근 권한은?",
+      "answer": {
+        "text": "Readers-Writers 문제는 writer가 쓰기 작업 동안 공유 데이터베이스에 대한 배타적 접근 권한을 갖도록 보장하는 동기화 문제이다.",
+        "refs": [
+          {
+            "source": "O",
+            "section": "7.1.2 Readers-Writers 문제",
+            "pages": [
+              264
+            ]
+          }
+        ],
+        "evidence": "배타적 접근 권한"
+      }
+    },
+    {
+      "question": "POSIX의 무명 세마포는 공유를 위해 어디에 배치해야 하는가?",
+      "answer": {
+        "text": "POSIX의 무명 세마포를 공유하려면 공유 메모리 영역에 세마포를 배치해야 한다.",
+        "refs": [
+          {
+            "source": "O",
+            "section": "7.6 요약",
+            "pages": [
+              288
+            ]
+          }
+        ],
+        "evidence": "공유 메모리 영역에 세마포를 배치"
+      }
+    },
+    {
+      "question": "메모리 트랜잭션은 어떤 연산 순서인가?",
+      "answer": {
+        "text": "메모리 트랜잭션은 메모리 읽기와 쓰기 연산의 원자적인 연속적 순서이다.",
+        "refs": [
+          {
+            "source": "O",
+            "section": "7.5.1 트랜잭션 메모리",
+            "pages": [
+              285
+            ]
+          }
+        ],
+        "evidence": "원자적인 연속적 순서"
+      }
+    }
+  ],
+  "cheat": {
+    "definitions": [
+      {
+        "term": "유한 버퍼",
+        "definition": {
+          "text": "유한 버퍼 문제에서는 n개의 버퍼로 구성된 풀을 가정하며 각 버퍼는 한 항목을 저장할 수 있다.",
+          "refs": [
+            {
+              "source": "O",
+              "section": "7.1.1 유한 버퍼 문제",
+              "pages": [
+                263
+              ]
+            }
+          ],
+          "evidence": "각 버퍼는 한 항목(item)을 저장"
+        }
+      },
+      {
+        "term": "Readers-Writers 문제",
+        "definition": {
+          "text": "Readers-Writers 문제는 writer가 쓰기 작업 동안 공유 데이터베이스에 대한 배타적 접근 권한을 갖도록 보장하는 동기화 문제이다.",
+          "refs": [
+            {
+              "source": "O",
+              "section": "7.1.2 Readers-Writers 문제",
+              "pages": [
+                264
+              ]
+            }
+          ],
+          "evidence": "배타적 접근 권한"
+        }
+      },
+      {
+        "term": "메모리 트랜잭션",
+        "definition": {
+          "text": "메모리 트랜잭션은 메모리 읽기와 쓰기 연산의 원자적인 연속적 순서이다.",
+          "refs": [
+            {
+              "source": "O",
+              "section": "7.5.1 트랜잭션 메모리",
+              "pages": [
+                285
+              ]
+            }
+          ],
+          "evidence": "원자적인 연속적 순서"
+        }
+      }
+    ],
+    "comparison_title": "POSIX 세마포의 두 형태",
+    "comparison_headers": [
+      "구분",
+      "원문 설명"
+    ],
+    "comparison_rows": [
+      [
+        {
+          "text": "기명 세마포",
+          "refs": [
+            {
+              "source": "O",
+              "section": "7.6 요약",
+              "pages": [
+                288
+              ]
+            }
+          ],
+          "evidence": "관련이 없는 여러 프로세스가 단순히 이름을 참조"
+        },
+        {
+          "text": "POSIX의 기명 세마포는 관련 없는 여러 프로세스가 단순히 이름을 참조하여 같은 세마포에 액세스할 수 있다.",
+          "refs": [
+            {
+              "source": "O",
+              "section": "7.6 요약",
+              "pages": [
+                288
+              ]
+            }
+          ],
+          "evidence": "관련이 없는 여러 프로세스가 단순히 이름을 참조"
+        }
+      ],
+      [
+        {
+          "text": "무명 세마포",
+          "refs": [
+            {
+              "source": "O",
+              "section": "7.6 요약",
+              "pages": [
+                288
+              ]
+            }
+          ],
+          "evidence": "공유 메모리 영역에 세마포를 배치"
+        },
+        {
+          "text": "POSIX의 무명 세마포를 공유하려면 공유 메모리 영역에 세마포를 배치해야 한다.",
+          "refs": [
+            {
+              "source": "O",
+              "section": "7.6 요약",
+              "pages": [
+                288
+              ]
+            }
+          ],
+          "evidence": "공유 메모리 영역에 세마포를 배치"
+        }
+      ]
+    ],
+    "formulas": [
+      {
+        "label": "유한 버퍼의 초기값",
+        "expression": "mutex = 1, empty = n, full = 0",
+        "note": "n개의 버퍼가 있으며 각 버퍼는 한 항목을 저장한다.",
+        "refs": [
+          {
+            "source": "O",
+            "section": "7.1.1 유한 버퍼 문제",
+            "pages": [
+              263
+            ]
+          }
+        ],
+        "evidence": "semaphore mutex = 1"
+      }
+    ]
+  },
+  "checked_images": [
+    263,
+    264,
+    266,
+    285,
+    288,
+    289
+  ],
+  "editor_notes": [],
+  "corrections": []
+}

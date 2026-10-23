@@ -1,0 +1,438 @@
+{
+  "chapter": 12,
+  "title": "제12장. 알고리즘",
+  "source_code": "T",
+  "learning": [
+    {
+      "text": "입력 시퀀스는 첫 요소를 포함하고 끝 위치는 포함하지 않는 반개구간 [begin:end)이며, 첫 요소와 마지막 요소 다음을 가리키는 반복자 쌍으로 나타낸다.",
+      "refs": [
+        {
+          "source": "T",
+          "section": "12.1 소개",
+          "pages": [
+            251,
+            252
+          ]
+        }
+      ],
+      "evidence": "반개구간"
+    },
+    {
+      "text": "반복자는 특정 타입의 객체이며 저장 구조에 맞는 정보를 가진다.",
+      "refs": [
+        {
+          "source": "T",
+          "section": "12.3 반복자 타입",
+          "pages": [
+            256,
+            257
+          ]
+        }
+      ],
+      "evidence": "반복자"
+    }
+  ],
+  "terms": [
+    {
+      "term": "반개구간",
+      "definition": {
+        "text": "입력 시퀀스는 첫 요소를 포함하고 끝 위치는 포함하지 않는 반개구간 [begin:end)이며, 첫 요소와 마지막 요소 다음을 가리키는 반복자 쌍으로 나타낸다.",
+        "refs": [
+          {
+            "source": "T",
+            "section": "12.1 소개",
+            "pages": [
+              251,
+              252
+            ]
+          }
+        ],
+        "evidence": "반개구간"
+      }
+    },
+    {
+      "term": "반복자",
+      "definition": {
+        "text": "반복자는 특정 타입의 객체이며 저장 구조에 맞는 정보를 가진다.",
+        "refs": [
+          {
+            "source": "T",
+            "section": "12.3 반복자 타입",
+            "pages": [
+              256,
+              257
+            ]
+          }
+        ],
+        "evidence": "반복자"
+      }
+    },
+    {
+      "term": "술어",
+      "definition": {
+        "text": "술어는 알고리즘이 각 요소에 적용할 조건을 전달하는 수단이다.",
+        "refs": [
+          {
+            "source": "T",
+            "section": "12.5 술어",
+            "pages": [
+              260,
+              261
+            ]
+          }
+        ],
+        "evidence": "술어"
+      }
+    },
+    {
+      "term": "ostream_iterator",
+      "definition": {
+        "text": "ostream_iterator는 스트림과 출력 타입을 지정해 만들며, 역참조 위치에 대입하면 스트림으로 출력한다.",
+        "refs": [
+          {
+            "source": "T",
+            "section": "12.4 스트림 반복자",
+            "pages": [
+              258,
+              260
+            ]
+          }
+        ],
+        "evidence": "ostream_iterator"
+      }
+    },
+    {
+      "term": "표준 알고리즘",
+      "definition": {
+        "text": "표준 알고리즘은 요소 시퀀스에 적용되는 함수 템플릿 연산이며, std에 정의되고 <algorithm>에서 제공된다.",
+        "refs": [
+          {
+            "source": "T",
+            "section": "12.6 알고리즘 요약",
+            "pages": [
+              262,
+              263
+            ]
+          }
+        ],
+        "evidence": "표준 알고리즘"
+      }
+    },
+    {
+      "term": "병렬 실행·SIMD",
+      "definition": {
+        "text": "병렬 실행은 여러 스레드에서 작업하고 벡터화된 실행(SIMD)은 한 스레드에서 벡터화로 작업한다.",
+        "refs": [
+          {
+            "source": "T",
+            "section": "12.9 병렬 알고리즘",
+            "pages": [
+              270,
+              271
+            ]
+          }
+        ],
+        "evidence": "병렬 실행·SIMD"
+      }
+    },
+    {
+      "term": "find",
+      "definition": {
+        "text": "find는 찾은 요소의 반복자를 반환하고, 찾지 못하면 입력 구간의 end()를 반환한다.",
+        "refs": [
+          {
+            "source": "T",
+            "section": "12.2 반복자의 사용",
+            "pages": [
+              252,
+              253
+            ]
+          }
+        ],
+        "evidence": "find"
+      }
+    },
+    {
+      "term": "find_if",
+      "definition": {
+        "text": "find_if는 전달된 술어가 참이 되는 첫 요소를 찾는다.",
+        "refs": [
+          {
+            "source": "T",
+            "section": "12.5 술어",
+            "pages": [
+              260,
+              261
+            ]
+          }
+        ],
+        "evidence": "find_if"
+      }
+    }
+  ],
+  "summary_basis": "12.10 조언",
+  "summary": [
+    {
+      "text": "알고리즘의 입력은 반복자로 정의한 반개구간이며, 검색 실패는 일반적으로 입력 끝으로 표시한다.",
+      "refs": [
+        {
+          "source": "T",
+          "section": "12.10 조언",
+          "pages": [
+            271
+          ]
+        }
+      ],
+      "evidence": "알고리즘의 입력은 반복자로 정의한 반개구간이"
+    },
+    {
+      "text": "알고리즘은 전달된 시퀀스 자체에 요소를 추가·제거하지 않는다.",
+      "refs": [
+        {
+          "source": "T",
+          "section": "12.10 조언",
+          "pages": [
+            271
+          ]
+        }
+      ],
+      "evidence": "알고리즘은 전달된 시퀀스 자체에 요소를 추가"
+    },
+    {
+      "text": "직접 루프를 만들기 전에 표준 제네릭 알고리즘을 고려한다. 함수 객체와 술어로 동작을 확장하되 술어가 인자를 바꾸지 않게 한다.",
+      "refs": [
+        {
+          "source": "T",
+          "section": "12.10 조언",
+          "pages": [
+            271
+          ]
+        }
+      ],
+      "evidence": "직접 루프를 만들기 전에 표준 제네릭 알고리"
+    },
+    {
+      "text": "반복자 쌍 방식이 번거로우면 컨테이너/구간 알고리즘을 사용한다.",
+      "refs": [
+        {
+          "source": "T",
+          "section": "12.10 조언",
+          "pages": [
+            271
+          ]
+        }
+      ],
+      "evidence": "반복자 쌍 방식이 번거로우면 컨테이너/구간 "
+    }
+  ],
+  "review": [
+    {
+      "question": "알고리즘 입력의 반개구간은 어떻게 표현하는가?",
+      "answer": {
+        "text": "입력 시퀀스는 첫 요소를 포함하고 끝 위치는 포함하지 않는 반개구간 [begin:end)이며, 첫 요소와 마지막 요소 다음을 가리키는 반복자 쌍으로 나타낸다.",
+        "refs": [
+          {
+            "source": "T",
+            "section": "12.1 소개",
+            "pages": [
+              251,
+              252
+            ]
+          }
+        ],
+        "evidence": "반개구간"
+      }
+    },
+    {
+      "question": "술어의 역할은?",
+      "answer": {
+        "text": "술어는 알고리즘이 각 요소에 적용할 조건을 전달하는 수단이다.",
+        "refs": [
+          {
+            "source": "T",
+            "section": "12.5 술어",
+            "pages": [
+              260,
+              261
+            ]
+          }
+        ],
+        "evidence": "술어"
+      }
+    },
+    {
+      "question": "find가 검색에 실패하면 무엇을 반환하는가?",
+      "answer": {
+        "text": "find는 찾은 요소의 반복자를 반환하고, 찾지 못하면 입력 구간의 end()를 반환한다.",
+        "refs": [
+          {
+            "source": "T",
+            "section": "12.2 반복자의 사용",
+            "pages": [
+              252,
+              253
+            ]
+          }
+        ],
+        "evidence": "find"
+      }
+    },
+    {
+      "question": "find_if는 어떤 요소를 찾는가?",
+      "answer": {
+        "text": "find_if는 전달된 술어가 참이 되는 첫 요소를 찾는다.",
+        "refs": [
+          {
+            "source": "T",
+            "section": "12.5 술어",
+            "pages": [
+              260,
+              261
+            ]
+          }
+        ],
+        "evidence": "find_if"
+      }
+    }
+  ],
+  "cheat": {
+    "definitions": [
+      {
+        "term": "반개구간",
+        "definition": {
+          "text": "입력 시퀀스는 첫 요소를 포함하고 끝 위치는 포함하지 않는 반개구간 [begin:end)이며, 첫 요소와 마지막 요소 다음을 가리키는 반복자 쌍으로 나타낸다.",
+          "refs": [
+            {
+              "source": "T",
+              "section": "12.1 소개",
+              "pages": [
+                251,
+                252
+              ]
+            }
+          ],
+          "evidence": "반개구간"
+        }
+      },
+      {
+        "term": "반복자",
+        "definition": {
+          "text": "반복자는 특정 타입의 객체이며 저장 구조에 맞는 정보를 가진다.",
+          "refs": [
+            {
+              "source": "T",
+              "section": "12.3 반복자 타입",
+              "pages": [
+                256,
+                257
+              ]
+            }
+          ],
+          "evidence": "반복자"
+        }
+      },
+      {
+        "term": "술어",
+        "definition": {
+          "text": "술어는 알고리즘이 각 요소에 적용할 조건을 전달하는 수단이다.",
+          "refs": [
+            {
+              "source": "T",
+              "section": "12.5 술어",
+              "pages": [
+                260,
+                261
+              ]
+            }
+          ],
+          "evidence": "술어"
+        }
+      }
+    ],
+    "comparison_title": "원문에서 설명한 역할·특징",
+    "comparison_headers": [
+      "항목",
+      "책의 설명"
+    ],
+    "comparison_rows": [
+      [
+        {
+          "text": "find",
+          "refs": [
+            {
+              "source": "T",
+              "section": "12.2 반복자의 사용",
+              "pages": [
+                252,
+                253
+              ]
+            }
+          ],
+          "evidence": "find"
+        },
+        {
+          "text": "find는 찾은 요소의 반복자를 반환하고, 찾지 못하면 입력 구간의 end()를 반환한다.",
+          "refs": [
+            {
+              "source": "T",
+              "section": "12.2 반복자의 사용",
+              "pages": [
+                252,
+                253
+              ]
+            }
+          ],
+          "evidence": "find"
+        }
+      ],
+      [
+        {
+          "text": "find_if",
+          "refs": [
+            {
+              "source": "T",
+              "section": "12.5 술어",
+              "pages": [
+                260,
+                261
+              ]
+            }
+          ],
+          "evidence": "find_if"
+        },
+        {
+          "text": "find_if는 전달된 술어가 참이 되는 첫 요소를 찾는다.",
+          "refs": [
+            {
+              "source": "T",
+              "section": "12.5 술어",
+              "pages": [
+                260,
+                261
+              ]
+            }
+          ],
+          "evidence": "find_if"
+        }
+      ]
+    ],
+    "formulas": []
+  },
+  "checked_images": [],
+  "editor_notes": [],
+  "corrections": [],
+  "pending_image_pages": [
+    251,
+    252,
+    253,
+    256,
+    257,
+    258,
+    260,
+    261,
+    262,
+    263,
+    270,
+    271
+  ]
+}

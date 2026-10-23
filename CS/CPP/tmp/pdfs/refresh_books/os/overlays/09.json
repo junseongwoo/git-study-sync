@@ -1,0 +1,437 @@
+{
+  "chapter": 9,
+  "title": "제9장. 메인 메모리",
+  "source_code": "O",
+  "learning": [
+    {
+      "text": "메모리 관리 장치(MMU)는 논리 주소를 메모리의 물리 주소로 변환한다.",
+      "refs": [
+        {
+          "source": "O",
+          "section": "9.8 요약",
+          "pages": [
+            364
+          ]
+        }
+      ],
+      "evidence": "메모리 관리 장치(MMU)"
+    },
+    {
+      "text": "페이징의 논리 주소는 페이지 번호와 페이지 오프셋으로 나뉘며, 페이지 번호는 프로세스별 페이지 테이블의 인덱스이다.",
+      "refs": [
+        {
+          "source": "O",
+          "section": "9.8 요약",
+          "pages": [
+            364
+          ]
+        }
+      ],
+      "evidence": "페이지 번호와 페이지 오프셋"
+    }
+  ],
+  "terms": [
+    {
+      "term": "기준 레지스터",
+      "definition": {
+        "text": "기준 레지스터는 가장 작은 유효한 물리 메모리 주소를 저장한다.",
+        "refs": [
+          {
+            "source": "O",
+            "section": "9.8 요약",
+            "pages": [
+              363
+            ]
+          }
+        ],
+        "evidence": "가장 작은 유효한 물리 메모리 주소"
+      }
+    },
+    {
+      "term": "상한 레지스터",
+      "definition": {
+        "text": "상한 레지스터는 메모리 범위의 크기를 지정한다.",
+        "refs": [
+          {
+            "source": "O",
+            "section": "9.8 요약",
+            "pages": [
+              363
+            ]
+          }
+        ],
+        "evidence": "메모리 범위의 크기"
+      }
+    },
+    {
+      "term": "논리 주소",
+      "definition": {
+        "text": "논리 주소는 CPU가 생성한 주소이다.",
+        "refs": [
+          {
+            "source": "O",
+            "section": "9.8 요약",
+            "pages": [
+              364
+            ]
+          }
+        ],
+        "evidence": "CPU가 생성한 주소를 논리 주소"
+      }
+    },
+    {
+      "term": "MMU",
+      "definition": {
+        "text": "메모리 관리 장치(MMU)는 논리 주소를 메모리의 물리 주소로 변환한다.",
+        "refs": [
+          {
+            "source": "O",
+            "section": "9.8 요약",
+            "pages": [
+              364
+            ]
+          }
+        ],
+        "evidence": "메모리 관리 장치(MMU)"
+      }
+    },
+    {
+      "term": "프레임",
+      "definition": {
+        "text": "프레임은 물리 메모리를 나눈 고정 크기 블록이다.",
+        "refs": [
+          {
+            "source": "O",
+            "section": "9.8 요약",
+            "pages": [
+              364
+            ]
+          }
+        ],
+        "evidence": "프레임이라는 고정 크기 블록"
+      }
+    },
+    {
+      "term": "페이지",
+      "definition": {
+        "text": "페이지는 논리 메모리를 나눈 프레임과 같은 크기의 블록이다.",
+        "refs": [
+          {
+            "source": "O",
+            "section": "9.8 요약",
+            "pages": [
+              364
+            ]
+          }
+        ],
+        "evidence": "페이지라는 같은 크기의 블록"
+      }
+    },
+    {
+      "term": "TLB",
+      "definition": {
+        "text": "TLB(translation look-aside buffer)는 페이지 테이블의 하드웨어 캐시이며, 각 항목은 페이지 번호와 상응하는 프레임을 저장한다.",
+        "refs": [
+          {
+            "source": "O",
+            "section": "9.8 요약",
+            "pages": [
+              364
+            ]
+          }
+        ],
+        "evidence": "페이지 테이블의 하드웨어 캐시"
+      }
+    },
+    {
+      "term": "페이지 오프셋",
+      "definition": {
+        "text": "페이지 오프셋은 참조되는 프레임의 특정 위치이다.",
+        "refs": [
+          {
+            "source": "O",
+            "section": "9.8 요약",
+            "pages": [
+              364
+            ]
+          }
+        ],
+        "evidence": "참조되는 프레임의 특정 위치"
+      }
+    }
+  ],
+  "summary_basis": "9.8 요약",
+  "summary": [
+    {
+      "text": "심볼릭 주소 참조를 실제 물리 주소에 바인딩하는 작업은 컴파일·적재·실행시간에 발생할 수 있다.",
+      "refs": [
+        {
+          "source": "O",
+          "section": "9.8 요약",
+          "pages": [
+            363,
+            364
+          ]
+        }
+      ],
+      "evidence": "컴파일"
+    },
+    {
+      "text": "다양한 크기의 연속 메모리 파티션은 최초 적합·최적 적합·최악 적합 전략에 따라 할당될 수 있다.",
+      "refs": [
+        {
+          "source": "O",
+          "section": "9.8 요약",
+          "pages": [
+            364
+          ]
+        }
+      ],
+      "evidence": "최초 적합"
+    },
+    {
+      "text": "페이징의 논리 주소는 페이지 번호와 페이지 오프셋으로 나뉘며, 페이지 번호는 프로세스별 페이지 테이블의 인덱스이다.",
+      "refs": [
+        {
+          "source": "O",
+          "section": "9.8 요약",
+          "pages": [
+            364
+          ]
+        }
+      ],
+      "evidence": "페이지 번호와 페이지 오프셋"
+    },
+    {
+      "text": "TLB(translation look-aside buffer)는 페이지 테이블의 하드웨어 캐시이며, 각 항목은 페이지 번호와 상응하는 프레임을 저장한다.",
+      "refs": [
+        {
+          "source": "O",
+          "section": "9.8 요약",
+          "pages": [
+            364
+          ]
+        }
+      ],
+      "evidence": "페이지 테이블의 하드웨어 캐시"
+    },
+    {
+      "text": "계층적 페이징은 논리 주소를 여러 부분으로 나누며, 계층 수가 커지는 문제를 해결하는 전략으로 해시 페이지 테이블과 역 페이지 테이블이 있다.",
+      "refs": [
+        {
+          "source": "O",
+          "section": "9.8 요약",
+          "pages": [
+            364
+          ]
+        }
+      ],
+      "evidence": "해시 페이지 테이블과 역 페이지 테이블"
+    }
+  ],
+  "review": [
+    {
+      "question": "CPU가 생성한 주소와 이를 물리 주소로 변환하는 장치는?",
+      "answer": {
+        "text": "CPU가 생성한 주소는 논리 주소이며, MMU가 이를 메모리의 물리 주소로 변환한다.",
+        "refs": [
+          {
+            "source": "O",
+            "section": "9.8 요약",
+            "pages": [
+              364
+            ]
+          }
+        ],
+        "evidence": "CPU가 생성한 주소"
+      }
+    },
+    {
+      "question": "기준·상한 레지스터는 각각 무엇을 저장·지정하는가?",
+      "answer": {
+        "text": "기준 레지스터는 가장 작은 유효 물리 주소를 저장하고 상한은 메모리 범위의 크기를 지정한다.",
+        "refs": [
+          {
+            "source": "O",
+            "section": "9.8 요약",
+            "pages": [
+              363
+            ]
+          }
+        ],
+        "evidence": "기준 레지스터"
+      }
+    },
+    {
+      "question": "페이징의 논리 주소는 어떤 두 부분인가?",
+      "answer": {
+        "text": "페이징의 논리 주소는 페이지 번호와 페이지 오프셋으로 나뉘며, 페이지 번호는 프로세스별 페이지 테이블의 인덱스이다.",
+        "refs": [
+          {
+            "source": "O",
+            "section": "9.8 요약",
+            "pages": [
+              364
+            ]
+          }
+        ],
+        "evidence": "페이지 번호와 페이지 오프셋"
+      }
+    },
+    {
+      "question": "TLB 항목에는 무엇이 저장되는가?",
+      "answer": {
+        "text": "TLB(translation look-aside buffer)는 페이지 테이블의 하드웨어 캐시이며, 각 항목은 페이지 번호와 상응하는 프레임을 저장한다.",
+        "refs": [
+          {
+            "source": "O",
+            "section": "9.8 요약",
+            "pages": [
+              364
+            ]
+          }
+        ],
+        "evidence": "페이지 테이블의 하드웨어 캐시"
+      }
+    }
+  ],
+  "cheat": {
+    "definitions": [
+      {
+        "term": "논리 주소",
+        "definition": {
+          "text": "논리 주소는 CPU가 생성한 주소이다.",
+          "refs": [
+            {
+              "source": "O",
+              "section": "9.8 요약",
+              "pages": [
+                364
+              ]
+            }
+          ],
+          "evidence": "CPU가 생성한 주소를 논리 주소"
+        }
+      },
+      {
+        "term": "MMU",
+        "definition": {
+          "text": "메모리 관리 장치(MMU)는 논리 주소를 메모리의 물리 주소로 변환한다.",
+          "refs": [
+            {
+              "source": "O",
+              "section": "9.8 요약",
+              "pages": [
+                364
+              ]
+            }
+          ],
+          "evidence": "메모리 관리 장치(MMU)"
+        }
+      },
+      {
+        "term": "TLB",
+        "definition": {
+          "text": "TLB(translation look-aside buffer)는 페이지 테이블의 하드웨어 캐시이며, 각 항목은 페이지 번호와 상응하는 프레임을 저장한다.",
+          "refs": [
+            {
+              "source": "O",
+              "section": "9.8 요약",
+              "pages": [
+                364
+              ]
+            }
+          ],
+          "evidence": "페이지 테이블의 하드웨어 캐시"
+        }
+      }
+    ],
+    "comparison_title": "물리 메모리와 논리 메모리의 블록",
+    "comparison_headers": [
+      "구분",
+      "책의 설명"
+    ],
+    "comparison_rows": [
+      [
+        {
+          "text": "프레임",
+          "refs": [
+            {
+              "source": "O",
+              "section": "9.8 요약",
+              "pages": [
+                364
+              ]
+            }
+          ],
+          "evidence": "프레임"
+        },
+        {
+          "text": "프레임은 물리 메모리를 나눈 고정 크기 블록이다.",
+          "refs": [
+            {
+              "source": "O",
+              "section": "9.8 요약",
+              "pages": [
+                364
+              ]
+            }
+          ],
+          "evidence": "프레임이라는 고정 크기 블록"
+        }
+      ],
+      [
+        {
+          "text": "페이지",
+          "refs": [
+            {
+              "source": "O",
+              "section": "9.8 요약",
+              "pages": [
+                364
+              ]
+            }
+          ],
+          "evidence": "페이지"
+        },
+        {
+          "text": "페이지는 논리 메모리를 나눈 프레임과 같은 크기의 블록이다.",
+          "refs": [
+            {
+              "source": "O",
+              "section": "9.8 요약",
+              "pages": [
+                364
+              ]
+            }
+          ],
+          "evidence": "페이지라는 같은 크기의 블록"
+        }
+      ]
+    ],
+    "formulas": [
+      {
+        "label": "페이징 논리 주소의 비트 구분",
+        "expression": "논리 주소 공간 2^m, 페이지 크기 2^n바이트 → 페이지 번호 m−n비트 / 페이지 오프셋 n비트",
+        "note": "페이지 크기는 2의 거듭제곱이다.",
+        "refs": [
+          {
+            "source": "O",
+            "section": "9.3.1 기본 방법",
+            "pages": [
+              338
+            ]
+          }
+        ],
+        "evidence": "상위 m"
+      }
+    ]
+  },
+  "checked_images": [
+    338,
+    363,
+    364
+  ],
+  "editor_notes": [],
+  "corrections": []
+}

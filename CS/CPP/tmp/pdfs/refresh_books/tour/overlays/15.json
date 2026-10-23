@@ -1,0 +1,431 @@
+{
+  "chapter": 15,
+  "title": "제15장. 동시성",
+  "source_code": "T",
+  "learning": [
+    {
+      "text": "동시성은 여러 태스크를 동시에 실행하는 것이다.",
+      "refs": [
+        {
+          "source": "T",
+          "section": "15.1 소개",
+          "pages": [
+            321,
+            322
+          ]
+        }
+      ],
+      "evidence": "동시성"
+    },
+    {
+      "text": "태스크는 다른 계산과 동시에 실행할 수 있는 작업이며, thread는 이를 표현하는 시스템 수준 개념이다.",
+      "refs": [
+        {
+          "source": "T",
+          "section": "15.2 태스크와 thread",
+          "pages": [
+            322,
+            323
+          ]
+        }
+      ],
+      "evidence": "태스크·thread"
+    }
+  ],
+  "terms": [
+    {
+      "term": "동시성",
+      "definition": {
+        "text": "동시성은 여러 태스크를 동시에 실행하는 것이다.",
+        "refs": [
+          {
+            "source": "T",
+            "section": "15.1 소개",
+            "pages": [
+              321,
+              322
+            ]
+          }
+        ],
+        "evidence": "동시성"
+      }
+    },
+    {
+      "term": "태스크·thread",
+      "definition": {
+        "text": "태스크는 다른 계산과 동시에 실행할 수 있는 작업이며, thread는 이를 표현하는 시스템 수준 개념이다.",
+        "refs": [
+          {
+            "source": "T",
+            "section": "15.2 태스크와 thread",
+            "pages": [
+              322,
+              323
+            ]
+          }
+        ],
+        "evidence": "태스크·thread"
+      }
+    },
+    {
+      "term": "mutex",
+      "definition": {
+        "text": "mutex는 상호 배제 객체이며 lock()으로 획득하고 unlock()으로 해제한다.",
+        "refs": [
+          {
+            "source": "T",
+            "section": "15.5 데이터 공유",
+            "pages": [
+              327,
+              329
+            ]
+          }
+        ],
+        "evidence": "mutex"
+      }
+    },
+    {
+      "term": "condition_variable",
+      "definition": {
+        "text": "condition_variable은 다른 태스크의 행동으로 조건이나 이벤트가 생기기를 기다리는 수단이다.",
+        "refs": [
+          {
+            "source": "T",
+            "section": "15.6 이벤트 대기",
+            "pages": [
+              330,
+              331
+            ]
+          }
+        ],
+        "evidence": "condition_variable"
+      }
+    },
+    {
+      "term": "future·promise",
+      "definition": {
+        "text": "promise에 값을 넣으면 연결된 future에서 그 값을 볼 수 있으며, future<X>::get()은 필요한 경우 계산이 끝날 때까지 기다린다.",
+        "refs": [
+          {
+            "source": "T",
+            "section": "15.7.1 future와 promise",
+            "pages": [
+              333,
+              334
+            ]
+          }
+        ],
+        "evidence": "future·promise"
+      }
+    },
+    {
+      "term": "packaged_task",
+      "definition": {
+        "text": "packaged_task는 태스크의 반환값이나 예외를 promise에 넣는 래퍼를 제공하고, get_future()로 대응 future를 돌려준다.",
+        "refs": [
+          {
+            "source": "T",
+            "section": "15.7.2 packaged_task",
+            "pages": [
+              334,
+              335
+            ]
+          }
+        ],
+        "evidence": "packaged_task"
+      }
+    },
+    {
+      "term": "async()",
+      "definition": {
+        "text": "async()는 잠재적으로 비동기 실행할 태스크를 함수 호출과 유사하게 시작한다.",
+        "refs": [
+          {
+            "source": "T",
+            "section": "15.7.3 async()",
+            "pages": [
+              336,
+              337
+            ]
+          }
+        ],
+        "evidence": "async()"
+      }
+    }
+  ],
+  "summary_basis": "15.8 조언",
+  "summary": [
+    {
+      "text": "처리량·반응성에 동시성이 필요한지 살피고 가능한 높은 추상화 수준에서 작업한다. 순차 해법과 병렬 알고리즘을 먼저 고려한다.",
+      "refs": [
+        {
+          "source": "T",
+          "section": "15.8 조언",
+          "pages": [
+            337,
+            338,
+            339
+          ]
+        }
+      ],
+      "evidence": "처리량·반응성에 동시성이 필요한지 살피고 가"
+    },
+    {
+      "text": "공유 데이터와 데이터 경합을 가능한 피한다. thread의 종료는 join으로 기다린다.",
+      "refs": [
+        {
+          "source": "T",
+          "section": "15.8 조언",
+          "pages": [
+            337,
+            338,
+            339
+          ]
+        }
+      ],
+      "evidence": "공유 데이터와 데이터 경합을 가능한 피한다."
+    },
+    {
+      "text": "mutex는 보호하는 데이터와 가까이 두고 RAII 핸들로 관리한다. 여러 락은 scoped_lock으로 함께 획득한다.",
+      "refs": [
+        {
+          "source": "T",
+          "section": "15.8 조언",
+          "pages": [
+            337,
+            338,
+            339
+          ]
+        }
+      ],
+      "evidence": "mutex는 보호하는 데이터와 가까이 두고 "
+    },
+    {
+      "text": "이벤트 통신에는 condition_variable과 unique_lock을 쓰고 조건 없이 기다리지 않는다. 임계 영역 시간을 최소화한다.",
+      "refs": [
+        {
+          "source": "T",
+          "section": "15.8 조언",
+          "pages": [
+            337,
+            338,
+            339
+          ]
+        }
+      ],
+      "evidence": "이벤트 통신에는 condition_varia"
+    }
+  ],
+  "review": [
+    {
+      "question": "태스크와 thread의 관계는?",
+      "answer": {
+        "text": "태스크는 다른 계산과 동시에 실행할 수 있는 작업이며, thread는 이를 표현하는 시스템 수준 개념이다.",
+        "refs": [
+          {
+            "source": "T",
+            "section": "15.2 태스크와 thread",
+            "pages": [
+              322,
+              323
+            ]
+          }
+        ],
+        "evidence": "태스크·thread"
+      }
+    },
+    {
+      "question": "mutex의 획득·해제 연산은?",
+      "answer": {
+        "text": "mutex는 상호 배제 객체이며 lock()으로 획득하고 unlock()으로 해제한다.",
+        "refs": [
+          {
+            "source": "T",
+            "section": "15.5 데이터 공유",
+            "pages": [
+              327,
+              329
+            ]
+          }
+        ],
+        "evidence": "mutex"
+      }
+    },
+    {
+      "question": "promise와 future는 결과를 어떻게 전달하는가?",
+      "answer": {
+        "text": "promise에 값을 넣으면 연결된 future에서 그 값을 볼 수 있으며, future<X>::get()은 필요한 경우 계산이 끝날 때까지 기다린다.",
+        "refs": [
+          {
+            "source": "T",
+            "section": "15.7.1 future와 promise",
+            "pages": [
+              333,
+              334
+            ]
+          }
+        ],
+        "evidence": "future·promise"
+      }
+    },
+    {
+      "question": "packaged_task는 어떤 래퍼를 제공하는가?",
+      "answer": {
+        "text": "packaged_task는 태스크의 반환값이나 예외를 promise에 넣는 래퍼를 제공하고, get_future()로 대응 future를 돌려준다.",
+        "refs": [
+          {
+            "source": "T",
+            "section": "15.7.2 packaged_task",
+            "pages": [
+              334,
+              335
+            ]
+          }
+        ],
+        "evidence": "packaged_task"
+      }
+    }
+  ],
+  "cheat": {
+    "definitions": [
+      {
+        "term": "동시성",
+        "definition": {
+          "text": "동시성은 여러 태스크를 동시에 실행하는 것이다.",
+          "refs": [
+            {
+              "source": "T",
+              "section": "15.1 소개",
+              "pages": [
+                321,
+                322
+              ]
+            }
+          ],
+          "evidence": "동시성"
+        }
+      },
+      {
+        "term": "태스크·thread",
+        "definition": {
+          "text": "태스크는 다른 계산과 동시에 실행할 수 있는 작업이며, thread는 이를 표현하는 시스템 수준 개념이다.",
+          "refs": [
+            {
+              "source": "T",
+              "section": "15.2 태스크와 thread",
+              "pages": [
+                322,
+                323
+              ]
+            }
+          ],
+          "evidence": "태스크·thread"
+        }
+      },
+      {
+        "term": "mutex",
+        "definition": {
+          "text": "mutex는 상호 배제 객체이며 lock()으로 획득하고 unlock()으로 해제한다.",
+          "refs": [
+            {
+              "source": "T",
+              "section": "15.5 데이터 공유",
+              "pages": [
+                327,
+                329
+              ]
+            }
+          ],
+          "evidence": "mutex"
+        }
+      }
+    ],
+    "comparison_title": "원문에서 설명한 역할·특징",
+    "comparison_headers": [
+      "항목",
+      "책의 설명"
+    ],
+    "comparison_rows": [
+      [
+        {
+          "text": "future·promise",
+          "refs": [
+            {
+              "source": "T",
+              "section": "15.7.1 future와 promise",
+              "pages": [
+                333,
+                334
+              ]
+            }
+          ],
+          "evidence": "future·promise"
+        },
+        {
+          "text": "promise에 값을 넣으면 연결된 future에서 그 값을 볼 수 있으며, future<X>::get()은 필요한 경우 계산이 끝날 때까지 기다린다.",
+          "refs": [
+            {
+              "source": "T",
+              "section": "15.7.1 future와 promise",
+              "pages": [
+                333,
+                334
+              ]
+            }
+          ],
+          "evidence": "future·promise"
+        }
+      ],
+      [
+        {
+          "text": "packaged_task",
+          "refs": [
+            {
+              "source": "T",
+              "section": "15.7.2 packaged_task",
+              "pages": [
+                334,
+                335
+              ]
+            }
+          ],
+          "evidence": "packaged_task"
+        },
+        {
+          "text": "packaged_task는 태스크의 반환값이나 예외를 promise에 넣는 래퍼를 제공하고, get_future()로 대응 future를 돌려준다.",
+          "refs": [
+            {
+              "source": "T",
+              "section": "15.7.2 packaged_task",
+              "pages": [
+                334,
+                335
+              ]
+            }
+          ],
+          "evidence": "packaged_task"
+        }
+      ]
+    ],
+    "formulas": []
+  },
+  "checked_images": [],
+  "editor_notes": [],
+  "corrections": [],
+  "pending_image_pages": [
+    321,
+    322,
+    323,
+    327,
+    329,
+    330,
+    331,
+    333,
+    334,
+    335,
+    336,
+    337,
+    338,
+    339
+  ]
+}

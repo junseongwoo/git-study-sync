@@ -4,19 +4,17 @@
     "type": "split",
     "children": [
       {
-        "id": "942d3fffc692ff85",
+        "id": "a8957ac244be303e",
         "type": "tabs",
         "children": [
           {
-            "id": "3d5939434b10fcf7",
+            "id": "8e2d3ba6846420fe",
             "type": "leaf",
             "state": {
-              "type": "pdf",
-              "state": {
-                "file": "공기업_학습관리/02_과목별PDF/01.프로그래밍.pdf"
-              },
-              "icon": "lucide-file-text",
-              "title": "01.프로그래밍"
+              "type": "empty",
+              "state": {},
+              "icon": "lucide-file",
+              "title": "새 탭"
             }
           }
         ]

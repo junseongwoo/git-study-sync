@@ -1,0 +1,395 @@
+{
+  "chapter": 2,
+  "title": "제2장. 사용자 정의 타입",
+  "source_code": "T",
+  "learning": [
+    {
+      "text": "클래스는 데이터·함수·타입을 멤버로 가질 수 있으며, 인터페이스는 public 멤버로 정의된다.",
+      "refs": [
+        {
+          "source": "T",
+          "section": "2.3 클래스",
+          "pages": [
+            52
+          ]
+        }
+      ],
+      "evidence": "데이터나 함수, 타입을 멤버로 가질 수 있다"
+    },
+    {
+      "text": "enum class는 독립된 타입이며 열거자의 스코프를 해당 enum class로 제한한다.",
+      "refs": [
+        {
+          "source": "T",
+          "section": "2.5 열거형",
+          "pages": [
+            57
+          ]
+        }
+      ],
+      "evidence": "열거자의 스코프는 해당 enum class로 제한"
+    }
+  ],
+  "terms": [
+    {
+      "term": "class",
+      "definition": {
+        "text": "클래스는 데이터·함수·타입을 멤버로 가질 수 있으며, 인터페이스는 public 멤버로 정의된다.",
+        "refs": [
+          {
+            "source": "T",
+            "section": "2.3 클래스",
+            "pages": [
+              52
+            ]
+          }
+        ],
+        "evidence": "데이터나 함수, 타입을 멤버로 가질 수 있다"
+      }
+    },
+    {
+      "term": "생성자",
+      "definition": {
+        "text": "해당 클래스와 이름이 동일한 멤버 함수를 생성자라고 하며, 클래스를 객체화할 때 사용한다.",
+        "refs": [
+          {
+            "source": "T",
+            "section": "2.3 클래스",
+            "pages": [
+              53
+            ]
+          }
+        ],
+        "evidence": "이름이 동일한 멤버 함수를 생성자"
+      }
+    },
+    {
+      "term": "핸들",
+      "definition": {
+        "text": "원문의 Vector 객체는 요소 포인터 elem과 요소 개수 sz를 포함하는 핸들이며, Vector 객체 자체의 크기는 항상 같다.",
+        "refs": [
+          {
+            "source": "T",
+            "section": "2.3 클래스",
+            "pages": [
+              53
+            ]
+          }
+        ],
+        "evidence": "Vector 객체 자체의 크기는 항상 같다"
+      }
+    },
+    {
+      "term": "struct",
+      "definition": {
+        "text": "struct는 멤버가 기본적으로 public인 class이며, struct에도 생성자를 포함한 멤버 함수를 정의할 수 있다.",
+        "refs": [
+          {
+            "source": "T",
+            "section": "2.3 클래스",
+            "pages": [
+              54
+            ]
+          }
+        ],
+        "evidence": "struct는 멤버가 기본적으로 public인 class"
+      }
+    },
+    {
+      "term": "union",
+      "definition": {
+        "text": "union은 모든 멤버가 같은 메모리 주소에 할당되는 struct이며, 공용체의 크기는 가장 큰 멤버의 크기와 같다.",
+        "refs": [
+          {
+            "source": "T",
+            "section": "2.4 공용체",
+            "pages": [
+              54
+            ]
+          }
+        ],
+        "evidence": "모든 멤버가 같은 메모리 주소"
+      }
+    },
+    {
+      "term": "variant",
+      "definition": {
+        "text": "variant는 대안적인 여러 타입의 값 중 하나를 제공하며, 대부분의 상황에서 공용체를 대체할 수 있다.",
+        "refs": [
+          {
+            "source": "T",
+            "section": "2.4 공용체",
+            "pages": [
+              56
+            ]
+          }
+        ],
+        "evidence": "대안적인 여러 타입의 값 중 하나"
+      }
+    },
+    {
+      "term": "enum class",
+      "definition": {
+        "text": "enum class는 독립된 타입이며 열거자의 스코프를 해당 enum class로 제한한다.",
+        "refs": [
+          {
+            "source": "T",
+            "section": "2.5 열거형",
+            "pages": [
+              57
+            ]
+          }
+        ],
+        "evidence": "열거자의 스코프는 해당 enum class로 제한"
+      }
+    }
+  ],
+  "summary_basis": "2.6 조언",
+  "summary": [
+    {
+      "text": "관련된 데이터는 struct나 class로 구조화하고 class로 인터페이스와 구현을 분리한다.",
+      "refs": [
+        {
+          "source": "T",
+          "section": "2.6 조언 [2]~[3]",
+          "pages": [
+            58
+          ]
+        }
+      ],
+      "evidence": "인터페이스와 구현을 분리하라"
+    },
+    {
+      "text": "클래스의 초기화를 보장하고 단순화하도록 생성자를 정의한다.",
+      "refs": [
+        {
+          "source": "T",
+          "section": "2.6 조언 [5]",
+          "pages": [
+            59
+          ]
+        }
+      ],
+      "evidence": "초기화를 보장하고 단순화"
+    },
+    {
+      "text": "벌거벗은 union은 피하고 공용체와 타입 필드를 클래스로 감싼다.",
+      "refs": [
+        {
+          "source": "T",
+          "section": "2.6 조언 [6]",
+          "pages": [
+            59
+          ]
+        }
+      ],
+      "evidence": "공용체와 타입 필드를 클래스로 감싸라"
+    },
+    {
+      "text": "명명된 상수 집합은 열거형으로 표현하며, 예상하지 못한 에러를 줄이기 위해 enum class를 사용한다.",
+      "refs": [
+        {
+          "source": "T",
+          "section": "2.6 조언 [7]~[8]",
+          "pages": [
+            59
+          ]
+        }
+      ],
+      "evidence": "enum보다는 enum class"
+    }
+  ],
+  "review": [
+    {
+      "question": "클래스 인터페이스는 어떤 멤버로 정의되는가?",
+      "answer": {
+        "text": "클래스는 데이터·함수·타입을 멤버로 가질 수 있으며, 인터페이스는 public 멤버로 정의된다.",
+        "refs": [
+          {
+            "source": "T",
+            "section": "2.3 클래스",
+            "pages": [
+              52
+            ]
+          }
+        ],
+        "evidence": "데이터나 함수, 타입을 멤버로 가질 수 있다"
+      }
+    },
+    {
+      "question": "생성자란 무엇이며 언제 사용하는가?",
+      "answer": {
+        "text": "해당 클래스와 이름이 동일한 멤버 함수를 생성자라고 하며, 클래스를 객체화할 때 사용한다.",
+        "refs": [
+          {
+            "source": "T",
+            "section": "2.3 클래스",
+            "pages": [
+              53
+            ]
+          }
+        ],
+        "evidence": "이름이 동일한 멤버 함수를 생성자"
+      }
+    },
+    {
+      "question": "struct와 class 사이에 원문이 설명하는 차이는 무엇인가?",
+      "answer": {
+        "text": "struct는 멤버가 기본적으로 public인 class이며, struct에도 생성자를 포함한 멤버 함수를 정의할 수 있다.",
+        "refs": [
+          {
+            "source": "T",
+            "section": "2.3 클래스",
+            "pages": [
+              54
+            ]
+          }
+        ],
+        "evidence": "struct는 멤버가 기본적으로 public인 class"
+      }
+    },
+    {
+      "question": "enum class는 열거자의 스코프와 타입을 어떻게 다루는가?",
+      "answer": {
+        "text": "enum class는 독립된 타입이며 열거자의 스코프를 해당 enum class로 제한한다.",
+        "refs": [
+          {
+            "source": "T",
+            "section": "2.5 열거형",
+            "pages": [
+              57
+            ]
+          }
+        ],
+        "evidence": "열거자의 스코프는 해당 enum class로 제한"
+      }
+    }
+  ],
+  "cheat": {
+    "definitions": [
+      {
+        "term": "생성자",
+        "definition": {
+          "text": "해당 클래스와 이름이 동일한 멤버 함수를 생성자라고 하며, 클래스를 객체화할 때 사용한다.",
+          "refs": [
+            {
+              "source": "T",
+              "section": "2.3 클래스",
+              "pages": [
+                53
+              ]
+            }
+          ],
+          "evidence": "이름이 동일한 멤버 함수를 생성자"
+        }
+      },
+      {
+        "term": "union",
+        "definition": {
+          "text": "union은 모든 멤버가 같은 메모리 주소에 할당되는 struct이며, 공용체의 크기는 가장 큰 멤버의 크기와 같다.",
+          "refs": [
+            {
+              "source": "T",
+              "section": "2.4 공용체",
+              "pages": [
+                54
+              ]
+            }
+          ],
+          "evidence": "모든 멤버가 같은 메모리 주소"
+        }
+      },
+      {
+        "term": "enum class",
+        "definition": {
+          "text": "enum class는 독립된 타입이며 열거자의 스코프를 해당 enum class로 제한한다.",
+          "refs": [
+            {
+              "source": "T",
+              "section": "2.5 열거형",
+              "pages": [
+                57
+              ]
+            }
+          ],
+          "evidence": "열거자의 스코프는 해당 enum class로 제한"
+        }
+      }
+    ],
+    "comparison_title": "원문의 데이터 표현 구분",
+    "comparison_headers": [
+      "구분",
+      "책의 설명"
+    ],
+    "comparison_rows": [
+      [
+        {
+          "text": "struct",
+          "refs": [
+            {
+              "source": "T",
+              "section": "2.3 클래스",
+              "pages": [
+                54
+              ]
+            }
+          ],
+          "evidence": "struct는 멤버가 기본적으로 public인 class"
+        },
+        {
+          "text": "struct는 멤버가 기본적으로 public인 class이며, struct에도 생성자를 포함한 멤버 함수를 정의할 수 있다.",
+          "refs": [
+            {
+              "source": "T",
+              "section": "2.3 클래스",
+              "pages": [
+                54
+              ]
+            }
+          ],
+          "evidence": "struct는 멤버가 기본적으로 public인 class"
+        }
+      ],
+      [
+        {
+          "text": "variant",
+          "refs": [
+            {
+              "source": "T",
+              "section": "2.4 공용체",
+              "pages": [
+                56
+              ]
+            }
+          ],
+          "evidence": "대안적인 여러 타입의 값 중 하나"
+        },
+        {
+          "text": "variant는 대안적인 여러 타입의 값 중 하나를 제공하며, 대부분의 상황에서 공용체를 대체할 수 있다.",
+          "refs": [
+            {
+              "source": "T",
+              "section": "2.4 공용체",
+              "pages": [
+                56
+              ]
+            }
+          ],
+          "evidence": "대안적인 여러 타입의 값 중 하나"
+        }
+      ]
+    ],
+    "formulas": []
+  },
+  "checked_images": [
+    52,
+    53,
+    54,
+    56,
+    57,
+    58,
+    59
+  ],
+  "editor_notes": [],
+  "corrections": []
+}

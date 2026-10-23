@@ -1,0 +1,401 @@
+{
+  "chapter": 16,
+  "title": "제16장. 역사와 호환성",
+  "source_code": "T",
+  "learning": [
+    {
+      "text": "ISO C++ 위원회는 WG21로 불린다.",
+      "refs": [
+        {
+          "source": "T",
+          "section": "16.1.3 ISO C++ 표준",
+          "pages": [
+            348,
+            350
+          ]
+        }
+      ],
+      "evidence": "WG21"
+    },
+    {
+      "text": "두 번째 표준 C++11은 2011년 8월 21:0으로 승인됐다.",
+      "refs": [
+        {
+          "source": "T",
+          "section": "16.1.3 ISO C++ 표준",
+          "pages": [
+            347,
+            348
+          ]
+        }
+      ],
+      "evidence": "C++11"
+    }
+  ],
+  "terms": [
+    {
+      "term": "WG21",
+      "definition": {
+        "text": "ISO C++ 위원회는 WG21로 불린다.",
+        "refs": [
+          {
+            "source": "T",
+            "section": "16.1.3 ISO C++ 표준",
+            "pages": [
+              348,
+              350
+            ]
+          }
+        ],
+        "evidence": "WG21"
+      }
+    },
+    {
+      "term": "C++11",
+      "definition": {
+        "text": "두 번째 표준 C++11은 2011년 8월 21:0으로 승인됐다.",
+        "refs": [
+          {
+            "source": "T",
+            "section": "16.1.3 ISO C++ 표준",
+            "pages": [
+              347,
+              348
+            ]
+          }
+        ],
+        "evidence": "C++11"
+      }
+    },
+    {
+      "term": "표준과 스타일",
+      "definition": {
+        "text": "표준은 기능의 동작을 규정하지만 효과적인 사용법을 모두 알려주지는 않는다.",
+        "refs": [
+          {
+            "source": "T",
+            "section": "16.1.4 표준과 스타일",
+            "pages": [
+              350,
+              351
+            ]
+          }
+        ],
+        "evidence": "표준과 스타일"
+      }
+    },
+    {
+      "term": "지원 중단",
+      "definition": {
+        "text": "지원 중단은 해당 기능을 피하라는 강한 신호이지만 즉시 제거와 동일하지 않다.",
+        "refs": [
+          {
+            "source": "T",
+            "section": "16.2.7 제거되거나 지원 중단된 기능",
+            "pages": [
+              6,
+              7
+            ]
+          }
+        ],
+        "evidence": "지원 중단"
+      }
+    },
+    {
+      "term": "void*",
+      "definition": {
+        "text": "C에서 void*를 다른 포인터 타입의 대입 우측이나 초깃값으로 사용할 수 있는 경우에도 C++에서는 항상 허용되지 않는다.",
+        "refs": [
+          {
+            "source": "T",
+            "section": "16.3.2.2 void*",
+            "pages": [
+              11,
+              12
+            ]
+          }
+        ],
+        "evidence": "void*"
+      }
+    },
+    {
+      "term": "C 링크",
+      "definition": {
+        "text": "C 함수와 C++ 코드 사이에서 호출할 수 있게 하려면 C 링크를 명시한다.",
+        "refs": [
+          {
+            "source": "T",
+            "section": "16.3.2.3 링크",
+            "pages": [
+              12
+            ]
+          }
+        ],
+        "evidence": "C 링크"
+      }
+    }
+  ],
+  "summary_basis": "편집 요약: 16.1~16.3의 수록 본문. 16.5 조언 본문은 원문에서 확인 불가.",
+  "summary": [
+    {
+      "text": "두 번째 표준 C++11은 2011년 8월 21:0으로 승인됐다.",
+      "refs": [
+        {
+          "source": "T",
+          "section": "16.1.3 ISO C++ 표준",
+          "pages": [
+            347,
+            348
+          ]
+        }
+      ],
+      "evidence": "C++11"
+    },
+    {
+      "text": "표준은 기능의 동작을 규정하지만 효과적인 사용법을 모두 알려주지는 않는다.",
+      "refs": [
+        {
+          "source": "T",
+          "section": "16.1.4 표준과 스타일",
+          "pages": [
+            350,
+            351
+          ]
+        }
+      ],
+      "evidence": "표준과 스타일"
+    },
+    {
+      "text": "지원 중단은 해당 기능을 피하라는 강한 신호이지만 즉시 제거와 동일하지 않다.",
+      "refs": [
+        {
+          "source": "T",
+          "section": "16.2.7 제거되거나 지원 중단된 기능",
+          "pages": [
+            6,
+            7
+          ]
+        }
+      ],
+      "evidence": "지원 중단"
+    },
+    {
+      "text": "C 함수와 C++ 코드 사이에서 호출할 수 있게 하려면 C 링크를 명시한다.",
+      "refs": [
+        {
+          "source": "T",
+          "section": "16.3.2.3 링크",
+          "pages": [
+            12
+          ]
+        }
+      ],
+      "evidence": "C 링크"
+    }
+  ],
+  "review": [
+    {
+      "question": "ISO C++ 위원회의 이름은?",
+      "answer": {
+        "text": "ISO C++ 위원회는 WG21로 불린다.",
+        "refs": [
+          {
+            "source": "T",
+            "section": "16.1.3 ISO C++ 표준",
+            "pages": [
+              348,
+              350
+            ]
+          }
+        ],
+        "evidence": "WG21"
+      }
+    },
+    {
+      "question": "원문에서 C++11의 승인 시점과 표결은?",
+      "answer": {
+        "text": "두 번째 표준 C++11은 2011년 8월 21:0으로 승인됐다.",
+        "refs": [
+          {
+            "source": "T",
+            "section": "16.1.3 ISO C++ 표준",
+            "pages": [
+              347,
+              348
+            ]
+          }
+        ],
+        "evidence": "C++11"
+      }
+    },
+    {
+      "question": "지원 중단은 즉시 제거와 같은가?",
+      "answer": {
+        "text": "지원 중단은 해당 기능을 피하라는 강한 신호이지만 즉시 제거와 동일하지 않다.",
+        "refs": [
+          {
+            "source": "T",
+            "section": "16.2.7 제거되거나 지원 중단된 기능",
+            "pages": [
+              6,
+              7
+            ]
+          }
+        ],
+        "evidence": "지원 중단"
+      }
+    },
+    {
+      "question": "C와 C++ 코드 사이의 호출을 위해 무엇을 명시하는가?",
+      "answer": {
+        "text": "C 함수와 C++ 코드 사이에서 호출할 수 있게 하려면 C 링크를 명시한다.",
+        "refs": [
+          {
+            "source": "T",
+            "section": "16.3.2.3 링크",
+            "pages": [
+              12
+            ]
+          }
+        ],
+        "evidence": "C 링크"
+      }
+    }
+  ],
+  "cheat": {
+    "definitions": [
+      {
+        "term": "WG21",
+        "definition": {
+          "text": "ISO C++ 위원회는 WG21로 불린다.",
+          "refs": [
+            {
+              "source": "T",
+              "section": "16.1.3 ISO C++ 표준",
+              "pages": [
+                348,
+                350
+              ]
+            }
+          ],
+          "evidence": "WG21"
+        }
+      },
+      {
+        "term": "C++11",
+        "definition": {
+          "text": "두 번째 표준 C++11은 2011년 8월 21:0으로 승인됐다.",
+          "refs": [
+            {
+              "source": "T",
+              "section": "16.1.3 ISO C++ 표준",
+              "pages": [
+                347,
+                348
+              ]
+            }
+          ],
+          "evidence": "C++11"
+        }
+      },
+      {
+        "term": "표준과 스타일",
+        "definition": {
+          "text": "표준은 기능의 동작을 규정하지만 효과적인 사용법을 모두 알려주지는 않는다.",
+          "refs": [
+            {
+              "source": "T",
+              "section": "16.1.4 표준과 스타일",
+              "pages": [
+                350,
+                351
+              ]
+            }
+          ],
+          "evidence": "표준과 스타일"
+        }
+      }
+    ],
+    "comparison_title": "원문에서 설명한 역할·특징",
+    "comparison_headers": [
+      "항목",
+      "책의 설명"
+    ],
+    "comparison_rows": [
+      [
+        {
+          "text": "표준과 스타일",
+          "refs": [
+            {
+              "source": "T",
+              "section": "16.1.4 표준과 스타일",
+              "pages": [
+                350,
+                351
+              ]
+            }
+          ],
+          "evidence": "표준과 스타일"
+        },
+        {
+          "text": "표준은 기능의 동작을 규정하지만 효과적인 사용법을 모두 알려주지는 않는다.",
+          "refs": [
+            {
+              "source": "T",
+              "section": "16.1.4 표준과 스타일",
+              "pages": [
+                350,
+                351
+              ]
+            }
+          ],
+          "evidence": "표준과 스타일"
+        }
+      ],
+      [
+        {
+          "text": "지원 중단",
+          "refs": [
+            {
+              "source": "T",
+              "section": "16.2.7 제거되거나 지원 중단된 기능",
+              "pages": [
+                6,
+                7
+              ]
+            }
+          ],
+          "evidence": "지원 중단"
+        },
+        {
+          "text": "지원 중단은 해당 기능을 피하라는 강한 신호이지만 즉시 제거와 동일하지 않다.",
+          "refs": [
+            {
+              "source": "T",
+              "section": "16.2.7 제거되거나 지원 중단된 기능",
+              "pages": [
+                6,
+                7
+              ]
+            }
+          ],
+          "evidence": "지원 중단"
+        }
+      ]
+    ],
+    "formulas": []
+  },
+  "checked_images": [],
+  "editor_notes": [],
+  "corrections": [],
+  "pending_image_pages": [
+    6,
+    7,
+    11,
+    12,
+    347,
+    348,
+    350,
+    351
+  ]
+}

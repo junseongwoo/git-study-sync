@@ -1,0 +1,407 @@
+{
+  "chapter": 9,
+  "title": "제9장. 문자열과 정규 표현식",
+  "source_code": "T",
+  "learning": [
+    {
+      "text": "string은 문자 시퀀스를 저장하고 조작하는 Regular 타입이다.",
+      "refs": [
+        {
+          "source": "T",
+          "section": "9.2 문자열",
+          "pages": [
+            187,
+            189
+          ]
+        }
+      ],
+      "evidence": "string"
+    },
+    {
+      "text": "짧은 문자열 최적화는 짧은 값을 객체 자체에 두고 긴 값에만 자유 저장소를 이용한다.",
+      "refs": [
+        {
+          "source": "T",
+          "section": "9.2.1 string 구현",
+          "pages": [
+            190,
+            191
+          ]
+        }
+      ],
+      "evidence": "짧은 문자열 최적화"
+    }
+  ],
+  "terms": [
+    {
+      "term": "string",
+      "definition": {
+        "text": "string은 문자 시퀀스를 저장하고 조작하는 Regular 타입이다.",
+        "refs": [
+          {
+            "source": "T",
+            "section": "9.2 문자열",
+            "pages": [
+              187,
+              189
+            ]
+          }
+        ],
+        "evidence": "string"
+      }
+    },
+    {
+      "term": "짧은 문자열 최적화",
+      "definition": {
+        "text": "짧은 문자열 최적화는 짧은 값을 객체 자체에 두고 긴 값에만 자유 저장소를 이용한다.",
+        "refs": [
+          {
+            "source": "T",
+            "section": "9.2.1 string 구현",
+            "pages": [
+              190,
+              191
+            ]
+          }
+        ],
+        "evidence": "짧은 문자열 최적화"
+      }
+    },
+    {
+      "term": "string_view",
+      "definition": {
+        "text": "string_view는 연속된 문자 시퀀스를 나타내는 포인터와 길이의 쌍으로 볼 수 있으며, 문자를 소유하지 않는다.",
+        "refs": [
+          {
+            "source": "T",
+            "section": "9.3 문자열 뷰",
+            "pages": [
+              191,
+              192
+            ]
+          }
+        ],
+        "evidence": "string_view"
+      }
+    },
+    {
+      "term": "정규 표현식",
+      "definition": {
+        "text": "정규 표현식은 텍스트 안의 패턴을 간단히 기술하고 찾는 도구다.",
+        "refs": [
+          {
+            "source": "T",
+            "section": "9.4 정규 표현식",
+            "pages": [
+              194,
+              195
+            ]
+          }
+        ],
+        "evidence": "정규 표현식"
+      }
+    },
+    {
+      "term": "smatch",
+      "definition": {
+        "text": "smatch는 string의 매치 결과들을 저장하는 컨테이너다.",
+        "refs": [
+          {
+            "source": "T",
+            "section": "9.4.1 검색",
+            "pages": [
+              195,
+              196
+            ]
+          }
+        ],
+        "evidence": "smatch"
+      }
+    },
+    {
+      "term": "regex_iterator",
+      "definition": {
+        "text": "regex_iterator는 시퀀스에서 패턴을 차례로 찾아 순회한다.",
+        "refs": [
+          {
+            "source": "T",
+            "section": "9.4.3 반복자",
+            "pages": [
+              203,
+              204
+            ]
+          }
+        ],
+        "evidence": "regex_iterator"
+      }
+    }
+  ],
+  "summary_basis": "9.5 조언",
+  "summary": [
+    {
+      "text": "문자 시퀀스를 저장할 때 string을 사용하고 C 스타일 함수 대신 문자열 연산을 사용한다.",
+      "refs": [
+        {
+          "source": "T",
+          "section": "9.5 조언",
+          "pages": [
+            204,
+            205
+          ]
+        }
+      ],
+      "evidence": "문자 시퀀스를 저장할 때 string을 사용"
+    },
+    {
+      "text": "부분 문자열의 복사는 substr(), 교체는 replace()로 표현한다.",
+      "refs": [
+        {
+          "source": "T",
+          "section": "9.5 조언",
+          "pages": [
+            204,
+            205
+          ]
+        }
+      ],
+      "evidence": "부분 문자열의 복사는 substr(), 교체"
+    },
+    {
+      "text": "구간 검사가 필요할 때 at()을 사용한다.",
+      "refs": [
+        {
+          "source": "T",
+          "section": "9.5 조언",
+          "pages": [
+            204,
+            205
+          ]
+        }
+      ],
+      "evidence": "구간 검사가 필요할 때 at()을 사용한다."
+    },
+    {
+      "text": "여러 저장 형태의 문자 시퀀스를 읽는 함수는 string_view를 사용하고 소유·수명 문제를 기억한다.",
+      "refs": [
+        {
+          "source": "T",
+          "section": "9.5 조언",
+          "pages": [
+            204,
+            205
+          ]
+        }
+      ],
+      "evidence": "여러 저장 형태의 문자 시퀀스를 읽는 함수는"
+    }
+  ],
+  "review": [
+    {
+      "question": "string의 주된 역할은?",
+      "answer": {
+        "text": "string은 문자 시퀀스를 저장하고 조작하는 Regular 타입이다.",
+        "refs": [
+          {
+            "source": "T",
+            "section": "9.2 문자열",
+            "pages": [
+              187,
+              189
+            ]
+          }
+        ],
+        "evidence": "string"
+      }
+    },
+    {
+      "question": "string_view가 문자를 소유하는가?",
+      "answer": {
+        "text": "string_view는 연속된 문자 시퀀스를 나타내는 포인터와 길이의 쌍으로 볼 수 있으며, 문자를 소유하지 않는다.",
+        "refs": [
+          {
+            "source": "T",
+            "section": "9.3 문자열 뷰",
+            "pages": [
+              191,
+              192
+            ]
+          }
+        ],
+        "evidence": "string_view"
+      }
+    },
+    {
+      "question": "smatch는 무엇을 저장하는가?",
+      "answer": {
+        "text": "smatch는 string의 매치 결과들을 저장하는 컨테이너다.",
+        "refs": [
+          {
+            "source": "T",
+            "section": "9.4.1 검색",
+            "pages": [
+              195,
+              196
+            ]
+          }
+        ],
+        "evidence": "smatch"
+      }
+    },
+    {
+      "question": "regex_iterator의 역할은?",
+      "answer": {
+        "text": "regex_iterator는 시퀀스에서 패턴을 차례로 찾아 순회한다.",
+        "refs": [
+          {
+            "source": "T",
+            "section": "9.4.3 반복자",
+            "pages": [
+              203,
+              204
+            ]
+          }
+        ],
+        "evidence": "regex_iterator"
+      }
+    }
+  ],
+  "cheat": {
+    "definitions": [
+      {
+        "term": "string",
+        "definition": {
+          "text": "string은 문자 시퀀스를 저장하고 조작하는 Regular 타입이다.",
+          "refs": [
+            {
+              "source": "T",
+              "section": "9.2 문자열",
+              "pages": [
+                187,
+                189
+              ]
+            }
+          ],
+          "evidence": "string"
+        }
+      },
+      {
+        "term": "string_view",
+        "definition": {
+          "text": "string_view는 연속된 문자 시퀀스를 나타내는 포인터와 길이의 쌍으로 볼 수 있으며, 문자를 소유하지 않는다.",
+          "refs": [
+            {
+              "source": "T",
+              "section": "9.3 문자열 뷰",
+              "pages": [
+                191,
+                192
+              ]
+            }
+          ],
+          "evidence": "string_view"
+        }
+      },
+      {
+        "term": "정규 표현식",
+        "definition": {
+          "text": "정규 표현식은 텍스트 안의 패턴을 간단히 기술하고 찾는 도구다.",
+          "refs": [
+            {
+              "source": "T",
+              "section": "9.4 정규 표현식",
+              "pages": [
+                194,
+                195
+              ]
+            }
+          ],
+          "evidence": "정규 표현식"
+        }
+      }
+    ],
+    "comparison_title": "원문에서 설명한 역할·특징",
+    "comparison_headers": [
+      "항목",
+      "책의 설명"
+    ],
+    "comparison_rows": [
+      [
+        {
+          "text": "string",
+          "refs": [
+            {
+              "source": "T",
+              "section": "9.2 문자열",
+              "pages": [
+                187,
+                189
+              ]
+            }
+          ],
+          "evidence": "string"
+        },
+        {
+          "text": "string은 문자 시퀀스를 저장하고 조작하는 Regular 타입이다.",
+          "refs": [
+            {
+              "source": "T",
+              "section": "9.2 문자열",
+              "pages": [
+                187,
+                189
+              ]
+            }
+          ],
+          "evidence": "string"
+        }
+      ],
+      [
+        {
+          "text": "string_view",
+          "refs": [
+            {
+              "source": "T",
+              "section": "9.3 문자열 뷰",
+              "pages": [
+                191,
+                192
+              ]
+            }
+          ],
+          "evidence": "string_view"
+        },
+        {
+          "text": "string_view는 연속된 문자 시퀀스를 나타내는 포인터와 길이의 쌍으로 볼 수 있으며, 문자를 소유하지 않는다.",
+          "refs": [
+            {
+              "source": "T",
+              "section": "9.3 문자열 뷰",
+              "pages": [
+                191,
+                192
+              ]
+            }
+          ],
+          "evidence": "string_view"
+        }
+      ]
+    ],
+    "formulas": []
+  },
+  "checked_images": [],
+  "editor_notes": [],
+  "corrections": [],
+  "pending_image_pages": [
+    187,
+    189,
+    190,
+    191,
+    192,
+    194,
+    195,
+    196,
+    203,
+    204,
+    205
+  ]
+}

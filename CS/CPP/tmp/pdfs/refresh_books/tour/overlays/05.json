@@ -1,0 +1,413 @@
+{
+  "chapter": 5,
+  "title": "제5장. 필수적인 연산",
+  "source_code": "T",
+  "learning": [
+    {
+      "text": "생성자와 소멸자, 복사와 이동은 논리적으로 서로 구분되지 않는 관련 연산이다.",
+      "refs": [
+        {
+          "source": "T",
+          "section": "5.1.1 필수적인 연산",
+          "pages": [
+            118
+          ]
+        }
+      ],
+      "evidence": "생성자와 소멸자, 복사, 이동 연산은 논리적으로 서로 구분되지 않는데"
+    },
+    {
+      "text": "move()는 아무것도 이동시키지 않고 앞으로 이동시킬 인자의 rvalue 참조를 반환하는 일종의 타입 변환이다.",
+      "refs": [
+        {
+          "source": "T",
+          "section": "5.2.2 컨테이너 이동",
+          "pages": [
+            128
+          ]
+        }
+      ],
+      "evidence": "사실 아무것도 이동시키지 않는다"
+    }
+  ],
+  "terms": [
+    {
+      "term": "관련된 필수 연산",
+      "definition": {
+        "text": "생성자와 소멸자, 복사와 이동은 논리적으로 서로 구분되지 않는 관련 연산이다.",
+        "refs": [
+          {
+            "source": "T",
+            "section": "5.1.1 필수적인 연산",
+            "pages": [
+              118
+            ]
+          }
+        ],
+        "evidence": "생성자와 소멸자, 복사, 이동 연산은 논리적으로 서로 구분되지 않는데"
+      }
+    },
+    {
+      "term": "=default",
+      "definition": {
+        "text": "일반적인 생성자를 제외한 특수 멤버 함수의 기본 구현을 명시적으로 만들고 싶을 때 =default를 사용한다.",
+        "refs": [
+          {
+            "source": "T",
+            "section": "5.1.1 필수적인 연산",
+            "pages": [
+              119
+            ]
+          }
+        ],
+        "evidence": "기본 구현을 명시적으로"
+      }
+    },
+    {
+      "term": "=delete",
+      "definition": {
+        "text": "=delete로 제거한 함수를 사용하면 컴파일 시간 에러가 발생한다.",
+        "refs": [
+          {
+            "source": "T",
+            "section": "5.1.1 필수적인 연산",
+            "pages": [
+              120
+            ]
+          }
+        ],
+        "evidence": "컴파일 시간 에러가 발생"
+      }
+    },
+    {
+      "term": "Vector 복사 생성자",
+      "definition": {
+        "text": "원문의 Vector 복사 생성자는 새 저장 공간을 할당하고 요소를 복사하여 각 Vector가 자기 요소의 복사본을 갖게 한다.",
+        "refs": [
+          {
+            "source": "T",
+            "section": "5.2.1 컨테이너 복사",
+            "pages": [
+              124
+            ]
+          }
+        ],
+        "evidence": "각자 요소의 복사본을 갖게 된다"
+      }
+    },
+    {
+      "term": "복사 생성자·복사 대입",
+      "definition": {
+        "text": "클래스 객체의 복사는 복사 생성자와 복사 대입이라는 두 멤버로 정의할 수 있다.",
+        "refs": [
+          {
+            "source": "T",
+            "section": "5.2.1 컨테이너 복사",
+            "pages": [
+              124
+            ]
+          }
+        ],
+        "evidence": "복사 생성자와 복사 대입"
+      }
+    },
+    {
+      "term": "Vector 이동 생성자",
+      "definition": {
+        "text": "원문의 Vector 이동 생성자는 원본의 elem과 sz를 가져오고 원본을 nullptr와 크기 0으로 만든다.",
+        "refs": [
+          {
+            "source": "T",
+            "section": "5.2.2 컨테이너 이동",
+            "pages": [
+              127
+            ]
+          }
+        ],
+        "evidence": "a.elem=nullptr"
+      }
+    },
+    {
+      "term": "rvalue 참조",
+      "definition": {
+        "text": "&&는 rvalue 참조를 나타내며, 누구도 다시는 대입할 수 없는 것의 참조로 값을 이동시킬 수 있다.",
+        "refs": [
+          {
+            "source": "T",
+            "section": "5.2.2 컨테이너 이동",
+            "pages": [
+              127
+            ]
+          }
+        ],
+        "evidence": "&&는 rvalue 참조"
+      }
+    },
+    {
+      "term": "std::move",
+      "definition": {
+        "text": "move()는 아무것도 이동시키지 않고 앞으로 이동시킬 인자의 rvalue 참조를 반환하는 일종의 타입 변환이다.",
+        "refs": [
+          {
+            "source": "T",
+            "section": "5.2.2 컨테이너 이동",
+            "pages": [
+              128
+            ]
+          }
+        ],
+        "evidence": "사실 아무것도 이동시키지 않는다"
+      }
+    }
+  ],
+  "summary_basis": "5.5 조언",
+  "summary": [
+    {
+      "text": "생성자와 대입 연산자, 소멸자를 상호 연관된 연산자의 집합으로 설계한다.",
+      "refs": [
+        {
+          "source": "T",
+          "section": "5.5 조언 [2]",
+          "pages": [
+            136
+          ]
+        }
+      ],
+      "evidence": "상호 연관된 연산자의 집합"
+    },
+    {
+      "text": "기본 복사가 적합하지 않은 타입에는 복사를 재정의하거나 막는다.",
+      "refs": [
+        {
+          "source": "T",
+          "section": "5.5 조언 [9]",
+          "pages": [
+            137
+          ]
+        }
+      ],
+      "evidence": "복사를 재정의하거나 막아라"
+    },
+    {
+      "text": "자원으로 취급할 수 있는 어떤 것도 누수되지 않게 강력한 자원 안전성을 제공한다.",
+      "refs": [
+        {
+          "source": "T",
+          "section": "5.5 조언 [12]",
+          "pages": [
+            137
+          ]
+        }
+      ],
+      "evidence": "어떤 것도 누수되지 않게"
+    },
+    {
+      "text": "연산자를 오버로드할 때 관례적인 사용법을 흉내 내고 표준 라이브러리 컨테이너의 설계를 따른다.",
+      "refs": [
+        {
+          "source": "T",
+          "section": "5.5 조언 [14]~[15]",
+          "pages": [
+            137
+          ]
+        }
+      ],
+      "evidence": "관례적인 사용법을 흉내 내자"
+    }
+  ],
+  "review": [
+    {
+      "question": "=default와 =delete는 어떤 목적으로 사용하는가?",
+      "answer": {
+        "text": "=default는 기본 구현을 명시적으로 만들게 하고, =delete는 해당 함수의 사용을 컴파일 시간에 금지한다.",
+        "refs": [
+          {
+            "source": "T",
+            "section": "5.1.1 필수적인 연산",
+            "pages": [
+              119,
+              120
+            ]
+          }
+        ],
+        "evidence": "=delete"
+      }
+    },
+    {
+      "question": "원문의 Vector 복사 생성자는 두 객체의 요소를 어떻게 유지하는가?",
+      "answer": {
+        "text": "원문의 Vector 복사 생성자는 새 저장 공간을 할당하고 요소를 복사하여 각 Vector가 자기 요소의 복사본을 갖게 한다.",
+        "refs": [
+          {
+            "source": "T",
+            "section": "5.2.1 컨테이너 복사",
+            "pages": [
+              124
+            ]
+          }
+        ],
+        "evidence": "각자 요소의 복사본을 갖게 된다"
+      }
+    },
+    {
+      "question": "원문의 Vector 이동 생성자는 원본을 어떤 상태로 만드는가?",
+      "answer": {
+        "text": "원문의 Vector 이동 생성자는 원본의 elem과 sz를 가져오고 원본을 nullptr와 크기 0으로 만든다.",
+        "refs": [
+          {
+            "source": "T",
+            "section": "5.2.2 컨테이너 이동",
+            "pages": [
+              127
+            ]
+          }
+        ],
+        "evidence": "a.elem=nullptr"
+      }
+    },
+    {
+      "question": "move() 함수 자체는 값을 이동시키는가?",
+      "answer": {
+        "text": "move()는 아무것도 이동시키지 않고 앞으로 이동시킬 인자의 rvalue 참조를 반환하는 일종의 타입 변환이다.",
+        "refs": [
+          {
+            "source": "T",
+            "section": "5.2.2 컨테이너 이동",
+            "pages": [
+              128
+            ]
+          }
+        ],
+        "evidence": "사실 아무것도 이동시키지 않는다"
+      }
+    }
+  ],
+  "cheat": {
+    "definitions": [
+      {
+        "term": "Vector 복사 생성자",
+        "definition": {
+          "text": "원문의 Vector 복사 생성자는 새 저장 공간을 할당하고 요소를 복사하여 각 Vector가 자기 요소의 복사본을 갖게 한다.",
+          "refs": [
+            {
+              "source": "T",
+              "section": "5.2.1 컨테이너 복사",
+              "pages": [
+                124
+              ]
+            }
+          ],
+          "evidence": "각자 요소의 복사본을 갖게 된다"
+        }
+      },
+      {
+        "term": "Vector 이동 생성자",
+        "definition": {
+          "text": "원문의 Vector 이동 생성자는 원본의 elem과 sz를 가져오고 원본을 nullptr와 크기 0으로 만든다.",
+          "refs": [
+            {
+              "source": "T",
+              "section": "5.2.2 컨테이너 이동",
+              "pages": [
+                127
+              ]
+            }
+          ],
+          "evidence": "a.elem=nullptr"
+        }
+      },
+      {
+        "term": "std::move",
+        "definition": {
+          "text": "move()는 아무것도 이동시키지 않고 앞으로 이동시킬 인자의 rvalue 참조를 반환하는 일종의 타입 변환이다.",
+          "refs": [
+            {
+              "source": "T",
+              "section": "5.2.2 컨테이너 이동",
+              "pages": [
+                128
+              ]
+            }
+          ],
+          "evidence": "사실 아무것도 이동시키지 않는다"
+        }
+      }
+    ],
+    "comparison_title": "원문 Vector의 복사와 이동",
+    "comparison_headers": [
+      "구분",
+      "책의 설명"
+    ],
+    "comparison_rows": [
+      [
+        {
+          "text": "Vector 복사",
+          "refs": [
+            {
+              "source": "T",
+              "section": "5.2.1 컨테이너 복사",
+              "pages": [
+                124
+              ]
+            }
+          ],
+          "evidence": "각자 요소의 복사본을 갖게 된다"
+        },
+        {
+          "text": "원문의 Vector 복사 생성자는 새 저장 공간을 할당하고 요소를 복사하여 각 Vector가 자기 요소의 복사본을 갖게 한다.",
+          "refs": [
+            {
+              "source": "T",
+              "section": "5.2.1 컨테이너 복사",
+              "pages": [
+                124
+              ]
+            }
+          ],
+          "evidence": "각자 요소의 복사본을 갖게 된다"
+        }
+      ],
+      [
+        {
+          "text": "Vector 이동",
+          "refs": [
+            {
+              "source": "T",
+              "section": "5.2.2 컨테이너 이동",
+              "pages": [
+                127
+              ]
+            }
+          ],
+          "evidence": "a.elem=nullptr"
+        },
+        {
+          "text": "원문의 Vector 이동 생성자는 원본의 elem과 sz를 가져오고 원본을 nullptr와 크기 0으로 만든다.",
+          "refs": [
+            {
+              "source": "T",
+              "section": "5.2.2 컨테이너 이동",
+              "pages": [
+                127
+              ]
+            }
+          ],
+          "evidence": "a.elem=nullptr"
+        }
+      ]
+    ],
+    "formulas": []
+  },
+  "checked_images": [
+    118,
+    119,
+    120,
+    124,
+    127,
+    128,
+    136,
+    137
+  ],
+  "editor_notes": [],
+  "corrections": []
+}

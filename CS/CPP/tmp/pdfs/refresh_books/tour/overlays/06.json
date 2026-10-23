@@ -1,0 +1,417 @@
+{
+  "chapter": 6,
+  "title": "제6장. 템플릿",
+  "source_code": "T",
+  "learning": [
+    {
+      "text": "템플릿은 타입이나 값의 집합을 파라미터화한 클래스나 함수다.",
+      "refs": [
+        {
+          "source": "T",
+          "section": "6.1 소개",
+          "pages": [
+            138
+          ]
+        }
+      ],
+      "evidence": "타입이나 값의 집합을 파라미터화한 클래스나 함수"
+    },
+    {
+      "text": "if constexpr에서는 선택된 경우만 인스턴스화되므로 지역적인 최적화가 가능하다.",
+      "refs": [
+        {
+          "source": "T",
+          "section": "6.4.3 컴파일 시간 if",
+          "pages": [
+            157
+          ]
+        }
+      ],
+      "evidence": "선택된 경우만이 인스턴스화"
+    }
+  ],
+  "terms": [
+    {
+      "term": "템플릿",
+      "definition": {
+        "text": "템플릿은 타입이나 값의 집합을 파라미터화한 클래스나 함수다.",
+        "refs": [
+          {
+            "source": "T",
+            "section": "6.1 소개",
+            "pages": [
+              138
+            ]
+          }
+        ],
+        "evidence": "타입이나 값의 집합을 파라미터화한 클래스나 함수"
+      }
+    },
+    {
+      "term": "제한된 인자·템플릿",
+      "definition": {
+        "text": "컨셉이 적용된 템플릿 인자를 제한된 인자라고 하고, 컨셉이 적용된 인자를 제한된 템플릿이라고 한다.",
+        "refs": [
+          {
+            "source": "T",
+            "section": "6.2.1 제한된 템플릿 인자(C++20)",
+            "pages": [
+              142
+            ]
+          }
+        ],
+        "evidence": "제한된 인자"
+      }
+    },
+    {
+      "term": "값 템플릿 인자",
+      "definition": {
+        "text": "템플릿의 값 인자는 반드시 상수 표현식이어야 한다.",
+        "refs": [
+          {
+            "source": "T",
+            "section": "6.2.2 값 템플릿 인자",
+            "pages": [
+              143
+            ]
+          }
+        ],
+        "evidence": "반드시 상수 표현식"
+      }
+    },
+    {
+      "term": "함수 객체",
+      "definition": {
+        "text": "함수 객체는 함수처럼 호출할 수 있는 객체다.",
+        "refs": [
+          {
+            "source": "T",
+            "section": "6.3.2 함수 객체",
+            "pages": [
+              148
+            ]
+          }
+        ],
+        "evidence": "함수처럼 호출할 수 있는 객체"
+      }
+    },
+    {
+      "term": "술어",
+      "definition": {
+        "text": "술어는 호출 가능하며 그 결과로 true나 false를 반환하는 무언가를 말한다.",
+        "refs": [
+          {
+            "source": "T",
+            "section": "6.3.2 함수 객체",
+            "pages": [
+              149
+            ]
+          }
+        ],
+        "evidence": "그 결과로 true나 false를 반환"
+      }
+    },
+    {
+      "term": "람다 표현식",
+      "definition": {
+        "text": "람다 표현식은 함수 객체를 암묵적으로 만들어내는 표기법이다.",
+        "refs": [
+          {
+            "source": "T",
+            "section": "6.3.3 람다 표현식",
+            "pages": [
+              150
+            ]
+          }
+        ],
+        "evidence": "함수 객체를 암묵적으로 생성"
+      }
+    },
+    {
+      "term": "별칭",
+      "definition": {
+        "text": "별칭은 타입이나 템플릿의 동의어다.",
+        "refs": [
+          {
+            "source": "T",
+            "section": "6.4.2 별칭",
+            "pages": [
+              155
+            ]
+          }
+        ],
+        "evidence": "타입이나 템플릿의 동의어"
+      }
+    },
+    {
+      "term": "if constexpr",
+      "definition": {
+        "text": "if constexpr에서는 선택된 경우만 인스턴스화되므로 지역적인 최적화가 가능하다.",
+        "refs": [
+          {
+            "source": "T",
+            "section": "6.4.3 컴파일 시간 if",
+            "pages": [
+              157
+            ]
+          }
+        ],
+        "evidence": "선택된 경우만이 인스턴스화"
+      }
+    }
+  ],
+  "summary_basis": "6.5 조언",
+  "summary": [
+    {
+      "text": "다양한 인자 타입에 적용할 알고리즘과 컨테이너를 템플릿으로 표현한다.",
+      "refs": [
+        {
+          "source": "T",
+          "section": "6.5 조언 [1]~[2]",
+          "pages": [
+            158
+          ]
+        }
+      ],
+      "evidence": "알고리즘을 템플릿으로 표현하라"
+    },
+    {
+      "text": "간단한 함수 객체를 한 곳에서만 사용한다면 람다를 이용한다.",
+      "refs": [
+        {
+          "source": "T",
+          "section": "6.5 조언 [7]",
+          "pages": [
+            158
+          ]
+        }
+      ],
+      "evidence": "한 곳에서만 사용한다면 람다"
+    },
+    {
+      "text": "표기를 간단히 하고 상세 구현을 숨기기 위해 템플릿 별칭을 사용한다.",
+      "refs": [
+        {
+          "source": "T",
+          "section": "6.5 조언 [9]",
+          "pages": [
+            159
+          ]
+        }
+      ],
+      "evidence": "상세 구현을 숨기기 위해 템플릿 별칭"
+    },
+    {
+      "text": "템플릿을 사용할 때는 선언뿐 아니라 정의가 스코프에 있는지 확인한다.",
+      "refs": [
+        {
+          "source": "T",
+          "section": "6.5 조언 [10]",
+          "pages": [
+            159
+          ]
+        }
+      ],
+      "evidence": "정의가 스코프에 있는지 확인"
+    }
+  ],
+  "review": [
+    {
+      "question": "템플릿이란 무엇인가?",
+      "answer": {
+        "text": "템플릿은 타입이나 값의 집합을 파라미터화한 클래스나 함수다.",
+        "refs": [
+          {
+            "source": "T",
+            "section": "6.1 소개",
+            "pages": [
+              138
+            ]
+          }
+        ],
+        "evidence": "타입이나 값의 집합을 파라미터화한 클래스나 함수"
+      }
+    },
+    {
+      "question": "템플릿의 값 인자가 만족해야 할 조건은 무엇인가?",
+      "answer": {
+        "text": "템플릿의 값 인자는 반드시 상수 표현식이어야 한다.",
+        "refs": [
+          {
+            "source": "T",
+            "section": "6.2.2 값 템플릿 인자",
+            "pages": [
+              143
+            ]
+          }
+        ],
+        "evidence": "반드시 상수 표현식"
+      }
+    },
+    {
+      "question": "함수 객체와 술어는 각각 무엇인가?",
+      "answer": {
+        "text": "함수 객체는 함수처럼 호출할 수 있는 객체이며, 술어는 호출 가능하고 true나 false를 반환하는 무언가다.",
+        "refs": [
+          {
+            "source": "T",
+            "section": "6.3.2 함수 객체",
+            "pages": [
+              148,
+              149
+            ]
+          }
+        ],
+        "evidence": "true나 false"
+      }
+    },
+    {
+      "question": "if constexpr에서 인스턴스화되는 경우는 무엇인가?",
+      "answer": {
+        "text": "if constexpr에서는 선택된 경우만 인스턴스화되므로 지역적인 최적화가 가능하다.",
+        "refs": [
+          {
+            "source": "T",
+            "section": "6.4.3 컴파일 시간 if",
+            "pages": [
+              157
+            ]
+          }
+        ],
+        "evidence": "선택된 경우만이 인스턴스화"
+      }
+    }
+  ],
+  "cheat": {
+    "definitions": [
+      {
+        "term": "템플릿",
+        "definition": {
+          "text": "템플릿은 타입이나 값의 집합을 파라미터화한 클래스나 함수다.",
+          "refs": [
+            {
+              "source": "T",
+              "section": "6.1 소개",
+              "pages": [
+                138
+              ]
+            }
+          ],
+          "evidence": "타입이나 값의 집합을 파라미터화한 클래스나 함수"
+        }
+      },
+      {
+        "term": "함수 객체",
+        "definition": {
+          "text": "함수 객체는 함수처럼 호출할 수 있는 객체다.",
+          "refs": [
+            {
+              "source": "T",
+              "section": "6.3.2 함수 객체",
+              "pages": [
+                148
+              ]
+            }
+          ],
+          "evidence": "함수처럼 호출할 수 있는 객체"
+        }
+      },
+      {
+        "term": "술어",
+        "definition": {
+          "text": "술어는 호출 가능하며 그 결과로 true나 false를 반환하는 무언가를 말한다.",
+          "refs": [
+            {
+              "source": "T",
+              "section": "6.3.2 함수 객체",
+              "pages": [
+                149
+              ]
+            }
+          ],
+          "evidence": "그 결과로 true나 false를 반환"
+        }
+      }
+    ],
+    "comparison_title": "파라미터화된 연산의 표현",
+    "comparison_headers": [
+      "구분",
+      "책의 설명"
+    ],
+    "comparison_rows": [
+      [
+        {
+          "text": "함수 객체",
+          "refs": [
+            {
+              "source": "T",
+              "section": "6.3.2 함수 객체",
+              "pages": [
+                148
+              ]
+            }
+          ],
+          "evidence": "함수처럼 호출할 수 있는 객체"
+        },
+        {
+          "text": "함수 객체는 함수처럼 호출할 수 있는 객체다.",
+          "refs": [
+            {
+              "source": "T",
+              "section": "6.3.2 함수 객체",
+              "pages": [
+                148
+              ]
+            }
+          ],
+          "evidence": "함수처럼 호출할 수 있는 객체"
+        }
+      ],
+      [
+        {
+          "text": "람다 표현식",
+          "refs": [
+            {
+              "source": "T",
+              "section": "6.3.3 람다 표현식",
+              "pages": [
+                150
+              ]
+            }
+          ],
+          "evidence": "함수 객체를 암묵적으로 생성"
+        },
+        {
+          "text": "람다 표현식은 함수 객체를 암묵적으로 만들어내는 표기법이다.",
+          "refs": [
+            {
+              "source": "T",
+              "section": "6.3.3 람다 표현식",
+              "pages": [
+                150
+              ]
+            }
+          ],
+          "evidence": "함수 객체를 암묵적으로 생성"
+        }
+      ]
+    ],
+    "formulas": []
+  },
+  "checked_images": [
+    138,
+    142,
+    143,
+    148,
+    149,
+    150,
+    155,
+    157,
+    158,
+    159
+  ],
+  "editor_notes": [
+    "Buffer의 T[N];와 복사 캡처 설명의 [=x]는 원문 표기를 임의 교정하지 않는다."
+  ],
+  "corrections": []
+}

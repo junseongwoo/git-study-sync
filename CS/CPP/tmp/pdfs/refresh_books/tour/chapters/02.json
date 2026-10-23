@@ -1,0 +1,605 @@
+{
+  "id": "C02",
+  "order": 2,
+  "title": "제2장. 사용자 정의 타입",
+  "source": {
+    "pdf": [
+      48,
+      49,
+      50,
+      51,
+      52,
+      53,
+      54,
+      55,
+      56,
+      57,
+      58,
+      59
+    ],
+    "printed": [
+      49,
+      50,
+      51,
+      52,
+      53,
+      54,
+      55,
+      56,
+      57,
+      58,
+      59,
+      60
+    ]
+  },
+  "overview": [
+    "struct·class·union·enum으로 표현과 연산을 갖춘 타입을 만든다.",
+    "Vector 예제를 데이터 구조→인터페이스 분리→생성자에 의한 초기화로 발전시킨다."
+  ],
+  "flow": [
+    "내장 타입의 한계→관련 데이터 조직화→표현과 연산 결합→대안 값 저장→명명된 상수 집합"
+  ],
+  "sections": [
+    {
+      "number": "2.1",
+      "title": "소개",
+      "source": {
+        "pdf": [
+          48,
+          49
+        ],
+        "printed": [
+          49,
+          50
+        ]
+      },
+      "blocks": [
+        {
+          "type": "p",
+          "text": "기본 타입, const 제한자, 선언 연산에서 만들 수 있는 타입은 내장 타입이다. 원문은 내장 타입이 하드웨어를 직접적·효율적으로 반영하도록 의도적으로 로우레벨에 가깝게 설계되었다고 설명한다. C++는 내장 타입과 연산에 추상화 메커니즘을 조합해 프로그래머가 필요한 하이레벨 기능을 만들도록 한다."
+        },
+        {
+          "type": "p",
+          "text": "이렇게 만든 사용자 정의 타입은 적절한 표현 방식과 연산을 갖추며, 클래스와 열거형을 예로 들 수 있다. 내장 타입이나 다른 사용자 정의 타입을 기반으로 만들 수 있다. 잘 설계한 사용자 정의 타입은 사용하기 쉽고 에러 위험이 적으며 효율적일 수 있다. 표준 라이브러리도 주로 사용자 정의 타입으로 구성된다."
+        }
+      ]
+    },
+    {
+      "number": "2.2",
+      "title": "구조체",
+      "source": {
+        "pdf": [
+          49,
+          50,
+          51
+        ],
+        "printed": [
+          50,
+          51,
+          52
+        ]
+      },
+      "blocks": [
+        {
+          "type": "p",
+          "text": "새로운 타입을 만드는 첫 단계는 필요한 구성 요소를 데이터 구조로 조직화하는 것이다. struct Vector의 첫 버전은 요소의 개수 sz와 요소들을 가리키는 double* elem을 묶는다. Vector 변수를 선언하는 것만으로는 elem이 사용할 배열을 가리킨다는 보장이 없으므로 vector_init()이 별도로 필요하다."
+        },
+        {
+          "type": "code_ref",
+          "id": "C02-E01"
+        },
+        {
+          "type": "code_ref",
+          "id": "C02-E02"
+        },
+        {
+          "type": "p",
+          "text": "new는 자유 저장 영역, 동적 메모리 또는 힙이라고 부르는 곳에 메모리를 할당한다. 그 객체는 생성된 스코프와 무관하게 delete로 소멸할 때까지 유효하다. Vector&는 const가 아닌 참조이므로 vector_init()은 인자로 받은 원본 Vector를 변경할 수 있다. 이름·참조를 통해 struct 멤버에 접근할 때는 .을 쓰고, 포인터를 통해서는 ->를 쓴다."
+        },
+        {
+          "type": "p",
+          "text": "원문의 read_and_sum()은 Vector를 초기화하고 입력을 요소에 저장한 뒤 합을 계산한다. 그러나 사용자는 elem과 sz라는 표현의 세부 사항을 알아야 한다. 원문은 이 Vector를 언어 기능·설계 기법을 설명하기 위한 점진적 예제로 쓰며, 표준 vector나 string을 재발명하기보다 표준 라이브러리 구성 요소를 활용하라고 권한다."
+        }
+      ]
+    },
+    {
+      "number": "2.3",
+      "title": "클래스",
+      "source": {
+        "pdf": [
+          52,
+          53,
+          54
+        ],
+        "printed": [
+          53,
+          54,
+          55
+        ]
+      },
+      "blocks": [
+        {
+          "type": "p",
+          "text": "사용자 정의 타입을 일관되게 사용하고 표현을 나중에 개선하려면, 모두가 쓰는 인터페이스와 외부에서 접근할 수 없는 데이터를 사용하는 구현을 분리한다. class가 이를 지원한다. 클래스는 데이터·함수·타입을 멤버로 가질 수 있고 public 멤버가 인터페이스를 정의한다. private 멤버에 대한 접근은 인터페이스를 통해 이뤄진다."
+        },
+        {
+          "type": "code_ref",
+          "id": "C02-E03"
+        },
+        {
+          "type": "p",
+          "text": "Vector와 이름이 같은 멤버 함수는 생성자다. 객체를 만들 때 생성자가 반드시 사용되므로 별도 초기화 함수 호출을 잊는 실수를 막는다. Vector(int)는 생성 시 요소 개수를 정수로 주어야 함을 드러낸다. 멤버 초깃값 목록의 elem{new double[s]}는 할당된 배열의 주소로 elem을, sz{s}는 s로 sz를 초기화한다."
+        },
+        {
+          "type": "p",
+          "text": "operator[]는 적절한 요소의 double&를 반환해 읽기와 쓰기를 제공하고, size()는 요소 개수를 돌려준다. Vector 객체 자체는 elem과 sz를 갖는 고정 크기의 핸들이며, 실제 요소는 다른 곳에 저장된다. 따라서 객체마다 요소 개수가 달라도 핸들 자체의 크기는 같다. 원문은 이러한 핸들 기법이 개수가 변하는 데이터에 흔히 쓰인다고 설명한다."
+        },
+        {
+          "type": "p",
+          "text": "이 단계의 Vector에는 아직 에러 처리와 할당한 배열의 해제가 없다. 원문은 이를 각각 3.5절과 4.2.2절에서 보완한다. struct와 class에는 근본적 차이가 없으며, struct는 멤버의 기본 접근이 public인 class다. 따라서 struct에도 생성자를 포함한 멤버 함수를 둘 수 있다."
+        }
+      ]
+    },
+    {
+      "number": "2.4",
+      "title": "공용체",
+      "source": {
+        "pdf": [
+          54,
+          55,
+          56
+        ],
+        "printed": [
+          55,
+          56,
+          57
+        ]
+      },
+      "blocks": [
+        {
+          "type": "p",
+          "text": "union은 모든 멤버를 같은 메모리 주소에 할당하는 구조체이며, 원문은 공용체의 크기를 가장 큰 멤버의 크기로 설명한다. 일반적으로 실제 값을 갖는 멤버는 하나뿐이다. 원문의 Entry 예에서는 Node*와 int가 동시에 사용되지 않아 별도 멤버로 두면 공간이 낭비된다. 둘을 union Value에 넣으면 메모리를 절약한다."
+        },
+        {
+          "type": "code_ref",
+          "id": "C02-E04"
+        },
+        {
+          "type": "p",
+          "text": "언어는 union에 현재 어느 종류의 값이 있는지 확인하지 않으므로 프로그래머가 관리해야 한다. Entry의 Type t가 ptr이면 v.p, num이면 v.i를 쓰는 관계를 지켜야 한다. 타입 필드와 실제 저장된 타입의 관계를 직접 관리하면 에러가 발생하기 쉽다. 원문은 공용체와 타입 필드를 캡슐화하고 멤버 함수로만 접근하게 하는 태그된 공용체의 추상화를 권한다."
+        },
+        {
+          "type": "code_ref",
+          "id": "C02-E05"
+        },
+        {
+          "type": "p",
+          "text": "표준 라이브러리 variant는 대안적인 여러 타입 중 하나의 값을 제공하며 대부분의 상황에서 union을 대체할 수 있다. variant<Node*,int>는 Node* 또는 int를 저장한다. holds_alternative<int>()로 int 포함 여부를 확인하고 get<int>()로 값을 가져오는 원문 예는 별도의 타입 필드를 수작업으로 관리하는 경우보다 간단하고 안전하다는 설명에 연결된다."
+        }
+      ]
+    },
+    {
+      "number": "2.5",
+      "title": "열거형",
+      "source": {
+        "pdf": [
+          56,
+          57,
+          58
+        ],
+        "printed": [
+          57,
+          58,
+          59
+        ]
+      },
+      "blocks": [
+        {
+          "type": "p",
+          "text": "열거형은 여러 정수 값의 집합을 명명된 상수들로 표현하는 사용자 정의 타입이다. enum class는 열거자의 스코프를 해당 열거형으로 제한하므로 Color::red와 Traffic_light::red를 혼동하지 않고 같은 red 이름을 사용할 수 있다. 두 열거형은 독립된 타입이며 서로의 값이나 정수와 암묵적으로 혼용할 수 없다."
+        },
+        {
+          "type": "code_ref",
+          "id": "C02-E06"
+        },
+        {
+          "type": "p",
+          "text": "원문은 기반 타입에서 열거형을 초기화할 필요가 있으면 Color{5}나 Color y {6}처럼 명시적 초기화를 할 수 있다고 설명한다. 기본적으로 enum class는 대입·초기화·비교를 정의하며, 사용자 정의 타입이므로 연산을 추가할 수 있다. Traffic_light의 전치 증가 연산은 green→yellow→red→green 순서의 변화를 정의한다."
+        },
+        {
+          "type": "code_ref",
+          "id": "C02-E07"
+        },
+        {
+          "type": "p",
+          "text": "class 없이 enum을 쓰면 열거자 이름은 enum 이름과 같은 스코프에 속하고, 열거자 값은 정수로 암묵 변환된다. 원문의 enum Color { red, green, blue }; int col = green;에서 col은 1이다. 기본 열거자 값은 0에서 시작해 하나씩 증가한다. 원문은 예측하지 못한 에러를 줄이기 위해 enum class를 선호하라고 조언한다."
+        }
+      ]
+    },
+    {
+      "number": "2.6",
+      "title": "조언",
+      "source": {
+        "pdf": [
+          58,
+          59
+        ],
+        "printed": [
+          59,
+          60
+        ]
+      },
+      "blocks": [
+        {
+          "type": "bullets",
+          "items": [
+            "내장 타입이 너무 로우레벨이면 잘 정의된 사용자 정의 타입을 쓰고, 관련 데이터는 struct나 class로 조직한다.",
+            "class로 인터페이스와 구현을 분리하고 생성자로 초기화를 보장·단순화한다.",
+            "벌거벗은 union을 피하고 공용체와 타입 필드를 클래스로 감싼다.",
+            "명명된 상수 집합에는 열거형을 사용한다. enum보다 enum class를 선호하고 안전하고 쉽게 쓸 수 있도록 필요한 연산을 정의한다."
+          ]
+        }
+      ]
+    }
+  ],
+  "codes": [
+    {
+      "id": "C02-E01",
+      "title": "Vector의 데이터 표현",
+      "source": {
+        "pdf": [
+          49
+        ],
+        "printed": [
+          50
+        ]
+      },
+      "code": "struct Vector {\n    int sz;       // 요소의 개수\n    double* elem; // 요소를 가리키는 포인터\n};",
+      "excerpt": false,
+      "excerpt_note": "",
+      "meaning": "요소 개수와 배열을 가리키는 포인터를 하나의 타입으로 묶는다.",
+      "process": [],
+      "output": "[원문에 실행 결과 미제시]",
+      "cautions": []
+    },
+    {
+      "id": "C02-E02",
+      "title": "구조체를 초기화하는 별도 함수",
+      "source": {
+        "pdf": [
+          50
+        ],
+        "printed": [
+          51
+        ]
+      },
+      "code": "void vector_init(Vector& v, int s)\n{\n    v.elem = new double[s]; // s개의 double로 이뤄진 배열 할당\n    v.sz = s;\n}",
+      "excerpt": false,
+      "excerpt_note": "",
+      "meaning": "새 배열을 할당하고 Vector의 포인터와 크기를 설정한다.",
+      "process": [
+        "배열을 할당해 주소를 v.elem에 저장한다.",
+        "v.sz에 s를 저장한다."
+      ],
+      "output": "[원문에 실행 결과 미제시]",
+      "cautions": [
+        "이 버전의 초기화·해제 책임은 아직 클래스에 결합되어 있지 않다."
+      ]
+    },
+    {
+      "id": "C02-E03",
+      "title": "인터페이스와 표현을 분리한 Vector",
+      "source": {
+        "pdf": [
+          52
+        ],
+        "printed": [
+          53
+        ]
+      },
+      "code": "class Vector {\npublic:\n    Vector(int s) :elem{new double[s]}, sz{s} { } // Vector 생성\n    double& operator[](int i) { return elem[i]; } // 요소 접근: 첨자 연산\n    int size() { return sz; }\nprivate:\n    double* elem; // 요소를 가리키는 포인터\n    int sz;       // 요소의 개수\n};",
+      "excerpt": false,
+      "excerpt_note": "",
+      "meaning": "생성·요소 접근·크기 조회를 public 인터페이스로 제공하고 표현은 private에 둔다.",
+      "process": [],
+      "output": "[원문에 실행 결과 미제시]",
+      "cautions": [
+        "원문 이 단계의 예제에는 에러 처리와 소멸자가 아직 없다."
+      ]
+    },
+    {
+      "id": "C02-E04",
+      "title": "Node*와 int의 저장 공간 공유",
+      "source": {
+        "pdf": [
+          55
+        ],
+        "printed": [
+          56
+        ]
+      },
+      "code": "union Value {\n    Node* p;\n    int i;\n};",
+      "excerpt": false,
+      "excerpt_note": "",
+      "meaning": "동시에 쓰지 않는 두 종류의 값을 같은 메모리에 저장한다.",
+      "process": [],
+      "output": "[원문에 실행 결과 미제시]",
+      "cautions": [
+        "어느 멤버가 유효한지는 프로그래머가 관리해야 한다."
+      ]
+    },
+    {
+      "id": "C02-E05",
+      "title": "variant로 표현하는 대안 값",
+      "source": {
+        "pdf": [
+          56
+        ],
+        "printed": [
+          57
+        ]
+      },
+      "code": "struct Entry {\n    string name;\n    variant<Node*,int> v;\n};\n\nvoid f(Entry* pe)\n{\n    if (holds_alternative<int>(pe->v)) // *pe가 int를 포함하는가?(13.5.1절 참고)\n        cout << get<int>(pe->v); // int 가져오기\n    // ...\n}",
+      "excerpt": false,
+      "excerpt_note": "",
+      "meaning": "variant가 int를 포함하는지 확인한 뒤 그 값을 가져온다.",
+      "process": [
+        "holds_alternative<int>가 참인 경우에 get<int>를 사용한다."
+      ],
+      "output": "[원문에 실행 결과 미제시]",
+      "cautions": [
+        "// ...는 원문에서 생략한 부분이다."
+      ]
+    },
+    {
+      "id": "C02-E06",
+      "title": "서로 독립된 enum class",
+      "source": {
+        "pdf": [
+          56
+        ],
+        "printed": [
+          57
+        ]
+      },
+      "code": "enum class Color { red, blue , green };\nenum class Traffic_light { green, yellow, red };\n\nColor col = Color::red;\nTraffic_light light = Traffic_light::red;",
+      "excerpt": false,
+      "excerpt_note": "",
+      "meaning": "열거자의 스코프를 열거형으로 제한해 같은 이름을 구분한다.",
+      "process": [],
+      "output": "[원문에 실행 결과 미제시]",
+      "cautions": []
+    },
+    {
+      "id": "C02-E07",
+      "title": "열거형의 전치 증가 연산 정의",
+      "source": {
+        "pdf": [
+          58
+        ],
+        "printed": [
+          59
+        ]
+      },
+      "code": "Traffic_light& operator++(Traffic_light& t) // 전치 증가: ++\n{\n    switch (t) {\n    case Traffic_light::green: return t=Traffic_light::yellow;\n    case Traffic_light::yellow: return t=Traffic_light::red;\n    case Traffic_light::red: return t=Traffic_light::green;\n    }\n}\n\nTraffic_light next = ++light; // 다음 값은 Traffic_light::green",
+      "excerpt": false,
+      "excerpt_note": "",
+      "meaning": "사용자 정의 타입인 열거형에 신호의 전환을 나타내는 연산을 정의한다.",
+      "process": [],
+      "output": "원문 주석은 다음 값이 Traffic_light::green이라고 명시한다.",
+      "cautions": [
+        "light의 선행 값은 앞 페이지 예제의 Traffic_light::red다."
+      ]
+    }
+  ],
+  "key_points": [
+    "생성자는 객체 생성 시 사용되므로 별도 초기화 호출 누락을 막는다.",
+    "핸들의 크기와 핸들이 참조하는 데이터의 개수는 구별한다.",
+    "union의 저장 공간 공유에는 활성 타입 관리가 필요하며, variant는 대안적인 타입 중 하나의 값을 제공한다.",
+    "enum class는 이름의 스코프와 독립된 타입을 제공한다."
+  ],
+  "comparisons": [
+    {
+      "title": "원문에서 비교한 데이터 표현",
+      "source": {
+        "pdf": [
+          52,
+          53,
+          54,
+          55,
+          56,
+          57,
+          58
+        ],
+        "printed": [
+          53,
+          54,
+          55,
+          56,
+          57,
+          58,
+          59
+        ]
+      },
+      "headers": [
+        "구분",
+        "원문의 핵심 차이"
+      ],
+      "rows": [
+        [
+          "struct / class",
+          "struct는 기본 멤버 접근이 public인 class이며 근본적 차이는 없다."
+        ],
+        [
+          "직접 union / variant",
+          "union의 저장 타입은 프로그래머가 관리한다. variant는 대안 타입 중 하나를 제공한다."
+        ],
+        [
+          "enum / enum class",
+          "enum은 이름이 바깥 스코프에 있고 정수로 암묵 변환된다. enum class는 스코프와 타입을 제한한다."
+        ]
+      ]
+    }
+  ],
+  "review": [
+    "관련 데이터의 구조화에서 표현·인터페이스 분리로 이어지는 Vector의 발전을 복습한다.",
+    "생성자, 초깃값 목록, operator[], size()가 각각 맡는 역할을 연결한다.",
+    "타입 필드와 union의 활성 값 사이 관계를 캡슐화해야 하는 이유를 확인한다.",
+    "Color와 Traffic_light가 같은 red 이름을 가져도 독립된 타입이라는 점을 재확인한다."
+  ],
+  "index_terms": [
+    {
+      "term": "사용자 정의 타입",
+      "section": "2.1"
+    },
+    {
+      "term": "struct",
+      "section": "2.2"
+    },
+    {
+      "term": "생성자",
+      "section": "2.3"
+    },
+    {
+      "term": "public / private",
+      "section": "2.3"
+    },
+    {
+      "term": "핸들",
+      "section": "2.3"
+    },
+    {
+      "term": "union",
+      "section": "2.4"
+    },
+    {
+      "term": "variant",
+      "section": "2.4"
+    },
+    {
+      "term": "enum class",
+      "section": "2.5"
+    }
+  ],
+  "coverage": [
+    {
+      "number": "2.1",
+      "title": "소개",
+      "source": {
+        "pdf": [
+          48,
+          49
+        ],
+        "printed": [
+          49,
+          50
+        ]
+      },
+      "topics": [
+        "기본 타입, const 제한자, 선언 연산에서 만들 수 있는 타입은 내장 타입이다. 원문은 내장 타입이 하드웨어를 직접적·효율적으로 반영하도록 의도적으로 로우레벨에 가깝게 설계되었다고 설명한다. C++는 내장 타입과 연산에 추상화 메커니즘을 조합해 프로그래머가 필요한 하이레벨 기능을 만들도록 한다.",
+        "이렇게 만든 사용자 정의 타입은 적절한 표현 방식과 연산을 갖추며, 클래스와 열거형을 예로 들 수 있다. 내장 타입이나 다른 사용자 정의 타입을 기반으로 만들 수 있다. 잘 설계한 사용자 정의 타입은 사용하기 쉽고 에러 위험이 적으며 효율적일 수 있다. 표준 라이브러리도 주로 사용자 정의 타입으로 구성된다."
+      ]
+    },
+    {
+      "number": "2.2",
+      "title": "구조체",
+      "source": {
+        "pdf": [
+          49,
+          50,
+          51
+        ],
+        "printed": [
+          50,
+          51,
+          52
+        ]
+      },
+      "topics": [
+        "새로운 타입을 만드는 첫 단계는 필요한 구성 요소를 데이터 구조로 조직화하는 것이다. struct Vector의 첫 버전은 요소의 개수 sz와 요소들을 가리키는 double* elem을 묶는다. Vector 변수를 선언하는 것만으로는 elem이 사용할 배열을 가리킨다는 보장이 없으므로 vector_init()이 별도로 필요하다.",
+        "new는 자유 저장 영역, 동적 메모리 또는 힙이라고 부르는 곳에 메모리를 할당한다. 그 객체는 생성된 스코프와 무관하게 delete로 소멸할 때까지 유효하다. Vector&는 const가 아닌 참조이므로 vector_init()은 인자로 받은 원본 Vector를 변경할 수 있다. 이름·참조를 통해 struct 멤버에 접근할 때는 .을 쓰고, 포인터를 통해서는 ->를 쓴다.",
+        "원문의 read_and_sum()은 Vector를 초기화하고 입력을 요소에 저장한 뒤 합을 계산한다. 그러나 사용자는 elem과 sz라는 표현의 세부 사항을 알아야 한다. 원문은 이 Vector를 언어 기능·설계 기법을 설명하기 위한 점진적 예제로 쓰며, 표준 vector나 string을 재발명하기보다 표준 라이브러리 구성 요소를 활용하라고 권한다."
+      ]
+    },
+    {
+      "number": "2.3",
+      "title": "클래스",
+      "source": {
+        "pdf": [
+          52,
+          53,
+          54
+        ],
+        "printed": [
+          53,
+          54,
+          55
+        ]
+      },
+      "topics": [
+        "사용자 정의 타입을 일관되게 사용하고 표현을 나중에 개선하려면, 모두가 쓰는 인터페이스와 외부에서 접근할 수 없는 데이터를 사용하는 구현을 분리한다. class가 이를 지원한다. 클래스는 데이터·함수·타입을 멤버로 가질 수 있고 public 멤버가 인터페이스를 정의한다. private 멤버에 대한 접근은 인터페이스를 통해 이뤄진다.",
+        "Vector와 이름이 같은 멤버 함수는 생성자다. 객체를 만들 때 생성자가 반드시 사용되므로 별도 초기화 함수 호출을 잊는 실수를 막는다. Vector(int)는 생성 시 요소 개수를 정수로 주어야 함을 드러낸다. 멤버 초깃값 목록의 elem{new double[s]}는 할당된 배열의 주소로 elem을, sz{s}는 s로 sz를 초기화한다.",
+        "operator[]는 적절한 요소의 double&를 반환해 읽기와 쓰기를 제공하고, size()는 요소 개수를 돌려준다. Vector 객체 자체는 elem과 sz를 갖는 고정 크기의 핸들이며, 실제 요소는 다른 곳에 저장된다. 따라서 객체마다 요소 개수가 달라도 핸들 자체의 크기는 같다. 원문은 이러한 핸들 기법이 개수가 변하는 데이터에 흔히 쓰인다고 설명한다.",
+        "이 단계의 Vector에는 아직 에러 처리와 할당한 배열의 해제가 없다. 원문은 이를 각각 3.5절과 4.2.2절에서 보완한다. struct와 class에는 근본적 차이가 없으며, struct는 멤버의 기본 접근이 public인 class다. 따라서 struct에도 생성자를 포함한 멤버 함수를 둘 수 있다."
+      ]
+    },
+    {
+      "number": "2.4",
+      "title": "공용체",
+      "source": {
+        "pdf": [
+          54,
+          55,
+          56
+        ],
+        "printed": [
+          55,
+          56,
+          57
+        ]
+      },
+      "topics": [
+        "union은 모든 멤버를 같은 메모리 주소에 할당하는 구조체이며, 원문은 공용체의 크기를 가장 큰 멤버의 크기로 설명한다. 일반적으로 실제 값을 갖는 멤버는 하나뿐이다. 원문의 Entry 예에서는 Node*와 int가 동시에 사용되지 않아 별도 멤버로 두면 공간이 낭비된다. 둘을 union Value에 넣으면 메모리를 절약한다.",
+        "언어는 union에 현재 어느 종류의 값이 있는지 확인하지 않으므로 프로그래머가 관리해야 한다. Entry의 Type t가 ptr이면 v.p, num이면 v.i를 쓰는 관계를 지켜야 한다. 타입 필드와 실제 저장된 타입의 관계를 직접 관리하면 에러가 발생하기 쉽다. 원문은 공용체와 타입 필드를 캡슐화하고 멤버 함수로만 접근하게 하는 태그된 공용체의 추상화를 권한다.",
+        "표준 라이브러리 variant는 대안적인 여러 타입 중 하나의 값을 제공하며 대부분의 상황에서 union을 대체할 수 있다. variant<Node*,int>는 Node* 또는 int를 저장한다. holds_alternative<int>()로 int 포함 여부를 확인하고 get<int>()로 값을 가져오는 원문 예는 별도의 타입 필드를 수작업으로 관리하는 경우보다 간단하고 안전하다는 설명에 연결된다."
+      ]
+    },
+    {
+      "number": "2.5",
+      "title": "열거형",
+      "source": {
+        "pdf": [
+          56,
+          57,
+          58
+        ],
+        "printed": [
+          57,
+          58,
+          59
+        ]
+      },
+      "topics": [
+        "열거형은 여러 정수 값의 집합을 명명된 상수들로 표현하는 사용자 정의 타입이다. enum class는 열거자의 스코프를 해당 열거형으로 제한하므로 Color::red와 Traffic_light::red를 혼동하지 않고 같은 red 이름을 사용할 수 있다. 두 열거형은 독립된 타입이며 서로의 값이나 정수와 암묵적으로 혼용할 수 없다.",
+        "원문은 기반 타입에서 열거형을 초기화할 필요가 있으면 Color{5}나 Color y {6}처럼 명시적 초기화를 할 수 있다고 설명한다. 기본적으로 enum class는 대입·초기화·비교를 정의하며, 사용자 정의 타입이므로 연산을 추가할 수 있다. Traffic_light의 전치 증가 연산은 green→yellow→red→green 순서의 변화를 정의한다.",
+        "class 없이 enum을 쓰면 열거자 이름은 enum 이름과 같은 스코프에 속하고, 열거자 값은 정수로 암묵 변환된다. 원문의 enum Color { red, green, blue }; int col = green;에서 col은 1이다. 기본 열거자 값은 0에서 시작해 하나씩 증가한다. 원문은 예측하지 못한 에러를 줄이기 위해 enum class를 선호하라고 조언한다."
+      ]
+    },
+    {
+      "number": "2.6",
+      "title": "조언",
+      "source": {
+        "pdf": [
+          58,
+          59
+        ],
+        "printed": [
+          59,
+          60
+        ]
+      },
+      "topics": []
+    }
+  ],
+  "limitations": []
+}
